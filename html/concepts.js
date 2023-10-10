@@ -1,6 +1,6 @@
 var concepts =
 [
     [ "utils", "namespaceutils.html", [
-      [ "InjectableAttribute", "conceptutils_1_1_injectable_attribute.html", null ]
+      [ "InjectableAttribute", "conceptutils_1_1InjectableAttribute.html", null ]
     ] ]
 ];

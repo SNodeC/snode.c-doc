@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['cli_0',['CLI',['../namespace_c_l_i.html',1,'']]],
+  ['cli_0',['CLI',['../namespaceCLI.html',1,'']]],
   ['core_1',['core',['../namespacecore.html',1,'']]],
   ['core_3a_3aepoll_2',['epoll',['../namespacecore_1_1epoll.html',1,'core']]],
   ['core_3a_3aeventreceiver_3',['eventreceiver',['../namespacecore_1_1eventreceiver.html',1,'core']]],

@@ -1,12 +1,12 @@
 var namespaceweb_1_1http_1_1server =
 [
-    [ "Request", "classweb_1_1http_1_1server_1_1_request.html", "classweb_1_1http_1_1server_1_1_request" ],
-    [ "RequestContextBase", "classweb_1_1http_1_1server_1_1_request_context_base.html", "classweb_1_1http_1_1server_1_1_request_context_base" ],
-    [ "RequestParser", "classweb_1_1http_1_1server_1_1_request_parser.html", "classweb_1_1http_1_1server_1_1_request_parser" ],
-    [ "Response", "classweb_1_1http_1_1server_1_1_response.html", "classweb_1_1http_1_1server_1_1_response" ],
-    [ "Server", "classweb_1_1http_1_1server_1_1_server.html", "classweb_1_1http_1_1server_1_1_server" ],
-    [ "SocketContext", "classweb_1_1http_1_1server_1_1_socket_context.html", "classweb_1_1http_1_1server_1_1_socket_context" ],
-    [ "SocketContextFactory", "classweb_1_1http_1_1server_1_1_socket_context_factory.html", "classweb_1_1http_1_1server_1_1_socket_context_factory" ],
-    [ "SocketContextUpgradeFactory", "classweb_1_1http_1_1server_1_1_socket_context_upgrade_factory.html", "classweb_1_1http_1_1server_1_1_socket_context_upgrade_factory" ],
-    [ "SocketContextUpgradeFactorySelector", "classweb_1_1http_1_1server_1_1_socket_context_upgrade_factory_selector.html", "classweb_1_1http_1_1server_1_1_socket_context_upgrade_factory_selector" ]
+    [ "Request", "classweb_1_1http_1_1server_1_1Request.html", "classweb_1_1http_1_1server_1_1Request" ],
+    [ "RequestContextBase", "classweb_1_1http_1_1server_1_1RequestContextBase.html", "classweb_1_1http_1_1server_1_1RequestContextBase" ],
+    [ "RequestParser", "classweb_1_1http_1_1server_1_1RequestParser.html", "classweb_1_1http_1_1server_1_1RequestParser" ],
+    [ "Response", "classweb_1_1http_1_1server_1_1Response.html", "classweb_1_1http_1_1server_1_1Response" ],
+    [ "Server", "classweb_1_1http_1_1server_1_1Server.html", "classweb_1_1http_1_1server_1_1Server" ],
+    [ "SocketContext", "classweb_1_1http_1_1server_1_1SocketContext.html", "classweb_1_1http_1_1server_1_1SocketContext" ],
+    [ "SocketContextFactory", "classweb_1_1http_1_1server_1_1SocketContextFactory.html", "classweb_1_1http_1_1server_1_1SocketContextFactory" ],
+    [ "SocketContextUpgradeFactory", "classweb_1_1http_1_1server_1_1SocketContextUpgradeFactory.html", "classweb_1_1http_1_1server_1_1SocketContextUpgradeFactory" ],
+    [ "SocketContextUpgradeFactorySelector", "classweb_1_1http_1_1server_1_1SocketContextUpgradeFactorySelector.html", "classweb_1_1http_1_1server_1_1SocketContextUpgradeFactorySelector" ]
 ];

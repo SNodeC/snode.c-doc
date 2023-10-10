@@ -1,8 +1,8 @@
 var namespaceexpress_1_1dispatcher =
 [
-    [ "ApplicationDispatcher", "classexpress_1_1dispatcher_1_1_application_dispatcher.html", "classexpress_1_1dispatcher_1_1_application_dispatcher" ],
-    [ "MiddlewareDispatcher", "classexpress_1_1dispatcher_1_1_middleware_dispatcher.html", "classexpress_1_1dispatcher_1_1_middleware_dispatcher" ],
-    [ "RouterDispatcher", "classexpress_1_1dispatcher_1_1_router_dispatcher.html", "classexpress_1_1dispatcher_1_1_router_dispatcher" ],
+    [ "ApplicationDispatcher", "classexpress_1_1dispatcher_1_1ApplicationDispatcher.html", "classexpress_1_1dispatcher_1_1ApplicationDispatcher" ],
+    [ "MiddlewareDispatcher", "classexpress_1_1dispatcher_1_1MiddlewareDispatcher.html", "classexpress_1_1dispatcher_1_1MiddlewareDispatcher" ],
+    [ "RouterDispatcher", "classexpress_1_1dispatcher_1_1RouterDispatcher.html", "classexpress_1_1dispatcher_1_1RouterDispatcher" ],
     [ "checkForUrlMatch", "namespaceexpress_1_1dispatcher.html#a2b6de0cc8c5234f7908f51b740b4eb91", null ],
     [ "explode", "namespaceexpress_1_1dispatcher.html#af6eaef9d6c3edcc196a8009f327e73a3", null ],
     [ "hasResult", "namespaceexpress_1_1dispatcher.html#a8a7580a939d02f430b311ebe2285c651", null ],

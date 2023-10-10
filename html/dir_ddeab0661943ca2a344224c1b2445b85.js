@@ -10,8 +10,8 @@ var dir_ddeab0661943ca2a344224c1b2445b85 =
     [ "poll.h", "poll_8h.html", "poll_8h" ],
     [ "select.cpp", "select_8cpp.html", "select_8cpp" ],
     [ "select.h", "select_8h.html", "select_8h" ],
-    [ "socket.cpp", "core_2system_2_socket_8cpp.html", "core_2system_2_socket_8cpp" ],
-    [ "socket.h", "core_2system_2_socket_8h.html", "core_2system_2_socket_8h" ],
+    [ "socket.cpp", "socket_8cpp.html", "socket_8cpp" ],
+    [ "socket.h", "socket_8h.html", "socket_8h" ],
     [ "unistd.cpp", "unistd_8cpp.html", "unistd_8cpp" ],
     [ "unistd.h", "unistd_8h.html", "unistd_8h" ]
 ];

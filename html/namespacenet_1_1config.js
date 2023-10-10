@@ -1,17 +1,18 @@
 var namespacenet_1_1config =
 [
-    [ "ConfigAddress", "classnet_1_1config_1_1_config_address.html", "classnet_1_1config_1_1_config_address" ],
-    [ "ConfigAddressLocal", "classnet_1_1config_1_1_config_address_local.html", "classnet_1_1config_1_1_config_address_local" ],
-    [ "ConfigAddressRemote", "classnet_1_1config_1_1_config_address_remote.html", "classnet_1_1config_1_1_config_address_remote" ],
-    [ "ConfigConnection", "classnet_1_1config_1_1_config_connection.html", "classnet_1_1config_1_1_config_connection" ],
-    [ "ConfigInstance", "classnet_1_1config_1_1_config_instance.html", "classnet_1_1config_1_1_config_instance" ],
-    [ "ConfigLegacy", "classnet_1_1config_1_1_config_legacy.html", "classnet_1_1config_1_1_config_legacy" ],
-    [ "ConfigListen", "classnet_1_1config_1_1_config_listen.html", "classnet_1_1config_1_1_config_listen" ],
-    [ "ConfigPhysicalSocket", "classnet_1_1config_1_1_config_physical_socket.html", "classnet_1_1config_1_1_config_physical_socket" ],
-    [ "ConfigPhysicalSocketClient", "classnet_1_1config_1_1_config_physical_socket_client.html", "classnet_1_1config_1_1_config_physical_socket_client" ],
-    [ "ConfigPhysicalSocketServer", "classnet_1_1config_1_1_config_physical_socket_server.html", "classnet_1_1config_1_1_config_physical_socket_server" ],
-    [ "ConfigSection", "classnet_1_1config_1_1_config_section.html", "classnet_1_1config_1_1_config_section" ],
-    [ "ConfigTls", "classnet_1_1config_1_1_config_tls.html", "classnet_1_1config_1_1_config_tls" ],
-    [ "ConfigTlsClient", "classnet_1_1config_1_1_config_tls_client.html", "classnet_1_1config_1_1_config_tls_client" ],
-    [ "ConfigTlsServer", "classnet_1_1config_1_1_config_tls_server.html", "classnet_1_1config_1_1_config_tls_server" ]
+    [ "stream", "namespacenet_1_1config_1_1stream.html", "namespacenet_1_1config_1_1stream" ],
+    [ "ConfigAddress", "classnet_1_1config_1_1ConfigAddress.html", "classnet_1_1config_1_1ConfigAddress" ],
+    [ "ConfigAddressLocal", "classnet_1_1config_1_1ConfigAddressLocal.html", "classnet_1_1config_1_1ConfigAddressLocal" ],
+    [ "ConfigAddressRemote", "classnet_1_1config_1_1ConfigAddressRemote.html", "classnet_1_1config_1_1ConfigAddressRemote" ],
+    [ "ConfigConnection", "classnet_1_1config_1_1ConfigConnection.html", "classnet_1_1config_1_1ConfigConnection" ],
+    [ "ConfigInstance", "classnet_1_1config_1_1ConfigInstance.html", "classnet_1_1config_1_1ConfigInstance" ],
+    [ "ConfigLegacy", "classnet_1_1config_1_1ConfigLegacy.html", "classnet_1_1config_1_1ConfigLegacy" ],
+    [ "ConfigListen", "classnet_1_1config_1_1ConfigListen.html", "classnet_1_1config_1_1ConfigListen" ],
+    [ "ConfigPhysicalSocket", "classnet_1_1config_1_1ConfigPhysicalSocket.html", "classnet_1_1config_1_1ConfigPhysicalSocket" ],
+    [ "ConfigPhysicalSocketClient", "classnet_1_1config_1_1ConfigPhysicalSocketClient.html", "classnet_1_1config_1_1ConfigPhysicalSocketClient" ],
+    [ "ConfigPhysicalSocketServer", "classnet_1_1config_1_1ConfigPhysicalSocketServer.html", "classnet_1_1config_1_1ConfigPhysicalSocketServer" ],
+    [ "ConfigSection", "classnet_1_1config_1_1ConfigSection.html", "classnet_1_1config_1_1ConfigSection" ],
+    [ "ConfigTls", "classnet_1_1config_1_1ConfigTls.html", "classnet_1_1config_1_1ConfigTls" ],
+    [ "ConfigTlsClient", "classnet_1_1config_1_1ConfigTlsClient.html", "classnet_1_1config_1_1ConfigTlsClient" ],
+    [ "ConfigTlsServer", "classnet_1_1config_1_1ConfigTlsServer.html", "classnet_1_1config_1_1ConfigTlsServer" ]
 ];

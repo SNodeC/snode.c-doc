@@ -143,7 +143,7 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 </li>
 </ul>
 </div>
-<div class="textblock"><p><a class="anchor" id="md__2home_2voc_2projects_2snodec_2snode_8c_2_r_e_a_d_m_e__dox"></a> <a href="https://volkerchristian.github.io/snode.c-doc/html/index.html">SNode.C</a> is a very simple to use lightweight highly extendable event driven layer-based framework for network applications in the spirit of node.js written entirely in C++.</p>
+<div class="textblock"><p><a class="anchor" id="md__2home_2voc_2projects_2snodec_2snode_8c_2README__dox"></a> <a href="https://volkerchristian.github.io/snode.c-doc/html/index.html">SNode.C</a> is a very simple to use lightweight highly extendable event driven layer-based framework for network applications in the spirit of node.js written entirely in C++.</p>
 <p>The development of the framework started during the summer semester 2020 in the context of the course <b>Network and Distributed Systems</b> of the masters program <a href="https://www.fh-ooe.at/en/hagenberg-campus/studiengaenge/master/interactive-media/"><b>Interactive Media</b></a> at the departement <a href="https://www.fh-ooe.at/en/hagenberg-campus/"><b>Informatics, Communications and Media</b></a> at the <a href="https://www.fh-ooe.at/en/"><b>University of Applied Sciences Upper Austria, Campus Hagenberg</b></a> to give students an insight into the fundamental techniques of network and web frameworks.</p>
 <p>Main focus (but not only) of the framework is "Machine to Machine" (M2M) communication and here especially the field of "Internet of Things" (IoT).</p>
 <h1><a class="anchor" id="autotoc_md1"></a>
@@ -193,11 +193,11 @@ An \"Echo\" Application</h2>
 <h3><a class="anchor" id="autotoc_md5"></a>
 SocketServer and SocketClient</h3>
 <p>For the server role we just need to create an object of type</p>
-<div class="fragment"><div class="line"><a class="code hl_class" href="classnet_1_1in_1_1stream_1_1_socket_server.html">net::in::stream::legacy::SocketServer&lt;SocketContextFactory&gt;</a></div>
-<div class="ttc" id="aclassnet_1_1in_1_1stream_1_1_socket_server_html"><div class="ttname"><a href="classnet_1_1in_1_1stream_1_1_socket_server.html">net::in::stream::SocketServer</a></div><div class="ttdef"><b>Definition</b> <a href="net_2in_2stream_2_socket_server_8h_source.html#l00038">SocketServer.h:40</a></div></div>
+<div class="fragment"><div class="line"><a class="code hl_class" href="classnet_1_1in_1_1stream_1_1SocketServer.html">net::in::stream::legacy::SocketServer&lt;SocketContextFactory&gt;</a></div>
+<div class="ttc" id="aclassnet_1_1in_1_1stream_1_1SocketServer_html"><div class="ttname"><a href="classnet_1_1in_1_1stream_1_1SocketServer.html">net::in::stream::SocketServer</a></div><div class="ttdef"><b>Definition</b> <a href="net_2in_2stream_2SocketServer_8h_source.html#l00038">SocketServer.h:40</a></div></div>
 </div><!-- fragment --><p>called a <em>server instance</em> and for the client role an object of type</p>
-<div class="fragment"><div class="line"><a class="code hl_class" href="classnet_1_1in_1_1stream_1_1_socket_client.html">net::in::stream::legacy::SocketClient&lt;SocketContextFactory&gt;</a></div>
-<div class="ttc" id="aclassnet_1_1in_1_1stream_1_1_socket_client_html"><div class="ttname"><a href="classnet_1_1in_1_1stream_1_1_socket_client.html">net::in::stream::SocketClient</a></div><div class="ttdef"><b>Definition</b> <a href="net_2in_2stream_2_socket_client_8h_source.html#l00038">SocketClient.h:40</a></div></div>
+<div class="fragment"><div class="line"><a class="code hl_class" href="classnet_1_1in_1_1stream_1_1SocketClient.html">net::in::stream::legacy::SocketClient&lt;SocketContextFactory&gt;</a></div>
+<div class="ttc" id="aclassnet_1_1in_1_1stream_1_1SocketClient_html"><div class="ttname"><a href="classnet_1_1in_1_1stream_1_1SocketClient.html">net::in::stream::SocketClient</a></div><div class="ttdef"><b>Definition</b> <a href="net_2in_2stream_2SocketClient_8h_source.html#l00038">SocketClient.h:40</a></div></div>
 </div><!-- fragment --><p>called <em>client instance</em> is needed.</p>
 <p>Both <em>instance-classes</em> have a <em>default constructor</em> and a <em>constructor expecting an instance name</em> as argument.</p>
 <ul>
@@ -206,31 +206,31 @@ SocketServer and SocketClient</h3>
 <li>For named instances <em>command line arguments and configuration file entries are created automatically</em> to configure the instance.</li>
 </ul>
 <p>A class <code>SocketContextFactory</code> is used for both instances as template argument. Such a <code>SocketContextFactory</code> is used internally by the <code>SocketServer</code> and the <code>SocketClient</code> for creating a concrete <code>SocketContext</code> object for each established connection. This <code>SocketContext</code> represents a concrete application protocol.</p>
-<p>Thus, for our echo application we need to implement the application logic (application protocol) for server and client in classes derived from <code><a class="el" href="classcore_1_1socket_1_1stream_1_1_socket_context.html">core::socket::stream::SocketContext</a></code>, which is the base class of all connection-oriented (stream) application protocols, and factories derived from <code><a class="el" href="classcore_1_1socket_1_1stream_1_1_socket_context_factory.html">core::socket::stream::SocketContextFactory</a></code>.</p>
+<p>Thus, for our echo application we need to implement the application logic (application protocol) for server and client in classes derived from <code><a class="el" href="classcore_1_1socket_1_1stream_1_1SocketContext.html">core::socket::stream::SocketContext</a></code>, which is the base class of all connection-oriented (stream) application protocols, and factories derived from <code><a class="el" href="classcore_1_1socket_1_1stream_1_1SocketContextFactory.html">core::socket::stream::SocketContextFactory</a></code>.</p>
 <h3><a class="anchor" id="autotoc_md6"></a>
 SocketContextFactories</h3>
 <p>Let\'s focus on the SocketContextFactories for our server and client first.</p>
-<p>All what needs to be done is to implement a pure virtual method <code>create()</code>witch expects a pointer to a <code><a class="el" href="classcore_1_1socket_1_1stream_1_1_socket_connection.html">core::socket::stream::SocketConnection</a></code> as argument and returns a concrete application SocketContext.</p>
-<p>The <code><a class="el" href="classcore_1_1socket_1_1stream_1_1_socket_connection.html">core::socket::stream::SocketConnection</a></code> object involved is managed internally by SNode.C and represents the <em>physical connection</em> between the server and a client. This <code><a class="el" href="classcore_1_1socket_1_1stream_1_1_socket_connection.html">core::socket::stream::SocketConnection</a></code> is used internally by the <code><a class="el" href="classcore_1_1socket_1_1stream_1_1_socket_context.html">core::socket::stream::SocketContext</a></code> to handle the physical data transfer between server and client.</p>
+<p>All what needs to be done is to implement a pure virtual method <code>create()</code>witch expects a pointer to a <code><a class="el" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html">core::socket::stream::SocketConnection</a></code> as argument and returns a concrete application SocketContext.</p>
+<p>The <code><a class="el" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html">core::socket::stream::SocketConnection</a></code> object involved is managed internally by SNode.C and represents the <em>physical connection</em> between the server and a client. This <code><a class="el" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html">core::socket::stream::SocketConnection</a></code> is used internally by the <code><a class="el" href="classcore_1_1socket_1_1stream_1_1SocketContext.html">core::socket::stream::SocketContext</a></code> to handle the physical data transfer between server and client.</p>
 <h4><a class="anchor" id="autotoc_md7"></a>
 Echo-Server ContextFactory</h4>
 <p>The <code>create()</code> method of our <code>EchoServerContextFactory</code> returns the <code>EchoServerContext</code> whose implementation is presented in the SocketContexts section below.</p>
-<div class="fragment"><div class="line"><span class="keyword">class </span>EchoServerContextFactory : <span class="keyword">public</span> <a class="code hl_class" href="classcore_1_1socket_1_1stream_1_1_socket_context_factory.html">core::socket::stream::SocketContextFactory</a> {</div>
+<div class="fragment"><div class="line"><span class="keyword">class </span>EchoServerContextFactory : <span class="keyword">public</span> <a class="code hl_class" href="classcore_1_1socket_1_1stream_1_1SocketContextFactory.html">core::socket::stream::SocketContextFactory</a> {</div>
 <div class="line"><span class="keyword">private</span>:</div>
-<div class="line">    <a class="code hl_class" href="classcore_1_1socket_1_1stream_1_1_socket_context.html">core::socket::stream::SocketContext</a>* <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1_socket_context_factory.html#a949c1b855fb495f0ab80d179e6a8c0b9">create</a>(<a class="code hl_class" href="classcore_1_1socket_1_1stream_1_1_socket_connection.html">core::socket::stream::SocketConnection</a>* socketConnection)<span class="keyword"> override </span>{</div>
+<div class="line">    <a class="code hl_class" href="classcore_1_1socket_1_1stream_1_1SocketContext.html">core::socket::stream::SocketContext</a>* <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketContextFactory.html#a949c1b855fb495f0ab80d179e6a8c0b9">create</a>(<a class="code hl_class" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html">core::socket::stream::SocketConnection</a>* socketConnection)<span class="keyword"> override </span>{</div>
 <div class="line">        <span class="keywordflow">return</span> <span class="keyword">new</span> EchoServerContext(socketConnection);</div>
 <div class="line">    }</div>
 <div class="line">};</div>
-<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1_socket_connection_html"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1_socket_connection.html">core::socket::stream::SocketConnection</a></div><div class="ttdef"><b>Definition</b> <a href="_socket_connection_8h_source.html#l00048">SocketConnection.h:48</a></div></div>
-<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1_socket_context_factory_html"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1_socket_context_factory.html">core::socket::stream::SocketContextFactory</a></div><div class="ttdef"><b>Definition</b> <a href="core_2socket_2stream_2_socket_context_factory_8h_source.html#l00033">SocketContextFactory.h:33</a></div></div>
-<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1_socket_context_factory_html_a949c1b855fb495f0ab80d179e6a8c0b9"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1_socket_context_factory.html#a949c1b855fb495f0ab80d179e6a8c0b9">core::socket::stream::SocketContextFactory::create</a></div><div class="ttdeci">virtual core::socket::stream::SocketContext * create(core::socket::stream::SocketConnection *socketConnection)=0</div></div>
-<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1_socket_context_html"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1_socket_context.html">core::socket::stream::SocketContext</a></div><div class="ttdef"><b>Definition</b> <a href="core_2socket_2stream_2_socket_context_8h_source.html#l00040">SocketContext.h:40</a></div></div>
+<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketConnection_html"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1SocketConnection.html">core::socket::stream::SocketConnection</a></div><div class="ttdef"><b>Definition</b> <a href="SocketConnection_8h_source.html#l00048">SocketConnection.h:48</a></div></div>
+<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketContextFactory_html"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1SocketContextFactory.html">core::socket::stream::SocketContextFactory</a></div><div class="ttdef"><b>Definition</b> <a href="core_2socket_2stream_2SocketContextFactory_8h_source.html#l00033">SocketContextFactory.h:33</a></div></div>
+<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketContextFactory_html_a949c1b855fb495f0ab80d179e6a8c0b9"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1SocketContextFactory.html#a949c1b855fb495f0ab80d179e6a8c0b9">core::socket::stream::SocketContextFactory::create</a></div><div class="ttdeci">virtual core::socket::stream::SocketContext * create(core::socket::stream::SocketConnection *socketConnection)=0</div></div>
+<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketContext_html"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1SocketContext.html">core::socket::stream::SocketContext</a></div><div class="ttdef"><b>Definition</b> <a href="core_2socket_2stream_2SocketContext_8h_source.html#l00040">SocketContext.h:40</a></div></div>
 </div><!-- fragment --><h4><a class="anchor" id="autotoc_md8"></a>
 Echo-Client ContextFactory</h4>
 <p>The <code>create()</code> method of our <code>EchoClientContextFactory</code> returns the <code>EchoClientContext</code> whose implementation is also presented in the SocketContexts section below.</p>
-<div class="fragment"><div class="line"><span class="keyword">class </span>EchoClientContextFactory : <span class="keyword">public</span> <a class="code hl_class" href="classcore_1_1socket_1_1stream_1_1_socket_context_factory.html">core::socket::stream::SocketContextFactory</a> {</div>
+<div class="fragment"><div class="line"><span class="keyword">class </span>EchoClientContextFactory : <span class="keyword">public</span> <a class="code hl_class" href="classcore_1_1socket_1_1stream_1_1SocketContextFactory.html">core::socket::stream::SocketContextFactory</a> {</div>
 <div class="line"><span class="keyword">private</span>:</div>
-<div class="line">    <a class="code hl_class" href="classcore_1_1socket_1_1stream_1_1_socket_context.html">core::socket::stream::SocketContext</a>* <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1_socket_context_factory.html#a949c1b855fb495f0ab80d179e6a8c0b9">create</a>(<a class="code hl_class" href="classcore_1_1socket_1_1stream_1_1_socket_connection.html">core::socket::stream::SocketConnection</a>* socketConnection)<span class="keyword"> override </span>{</div>
+<div class="line">    <a class="code hl_class" href="classcore_1_1socket_1_1stream_1_1SocketContext.html">core::socket::stream::SocketContext</a>* <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketContextFactory.html#a949c1b855fb495f0ab80d179e6a8c0b9">create</a>(<a class="code hl_class" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html">core::socket::stream::SocketConnection</a>* socketConnection)<span class="keyword"> override </span>{</div>
 <div class="line">        <span class="keywordflow">return</span> <span class="keyword">new</span> EchoClientContext(socketConnection);</div>
 <div class="line">    }  </div>
 <div class="line">};</div>
@@ -240,35 +240,35 @@ SocketContexts</h3>
 <p>It is also not difficult to implement the SocketContext classes for the server and the client.</p>
 <ul>
 <li>Remember, the required functionality: The server shall reflect the received data back to the client!</li>
-<li>And also remember we need to derive from the base class <code><a class="el" href="classcore_1_1socket_1_1stream_1_1_socket_context.html">core::socket::stream::SocketContext</a></code>.</li>
-<li>And at last remember that the class <code><a class="el" href="classcore_1_1socket_1_1stream_1_1_socket_context.html">core::socket::stream::SocketContext</a></code> needs the <code><a class="el" href="classcore_1_1socket_1_1stream_1_1_socket_connection.html">core::socket::stream::SocketConnection</a></code> to handle the physical data exchange. Thus, we have to pass the pointer to the SocketConnection to the constructor of the base <code><a class="el" href="classcore_1_1socket_1_1stream_1_1_socket_context.html">core::socket::stream::SocketContext</a></code> class.</li>
+<li>And also remember we need to derive from the base class <code><a class="el" href="classcore_1_1socket_1_1stream_1_1SocketContext.html">core::socket::stream::SocketContext</a></code>.</li>
+<li>And at last remember that the class <code><a class="el" href="classcore_1_1socket_1_1stream_1_1SocketContext.html">core::socket::stream::SocketContext</a></code> needs the <code><a class="el" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html">core::socket::stream::SocketConnection</a></code> to handle the physical data exchange. Thus, we have to pass the pointer to the SocketConnection to the constructor of the base <code><a class="el" href="classcore_1_1socket_1_1stream_1_1SocketContext.html">core::socket::stream::SocketContext</a></code> class.</li>
 </ul>
-<p>The base class <code><a class="el" href="classcore_1_1socket_1_1stream_1_1_socket_context.html">core::socket::stream::SocketContext</a></code> provides <em>some virtual methods</em> which can be overridden in an concrete SocketContext class. These methods will be <em>called by the framework automatically</em>.</p>
+<p>The base class <code><a class="el" href="classcore_1_1socket_1_1stream_1_1SocketContext.html">core::socket::stream::SocketContext</a></code> provides <em>some virtual methods</em> which can be overridden in an concrete SocketContext class. These methods will be <em>called by the framework automatically</em>.</p>
 <h4><a class="anchor" id="autotoc_md10"></a>
 Echo-Server Context</h4>
 <p>For our echo server application it would be sufficient to override the <code>onReceivedFromPeer()</code> method only. This method is called by the framework in case some data have already been received from the client. Nevertheless, for more information of what is going on in behind the methods <code>onConnected</code> and <code>onDisconnected</code> are overridden also.</p>
-<p>In the <code>onReceivedFromPeer()</code> method we can fetch data already received by SNode.C by using the <code>readFromPeer()</code> method provided by the <code><a class="el" href="classcore_1_1socket_1_1stream_1_1_socket_context.html">core::socket::stream::SocketContext</a></code> class.</p>
-<p>Sending data to the client is done using the method <code>sendToPeer()</code> which is also provided by the <code><a class="el" href="classcore_1_1socket_1_1stream_1_1_socket_context.html">core::socket::stream::SocketContext</a></code> class.</p>
-<div class="fragment"><div class="line"><span class="keyword">class </span>EchoServerContext : <span class="keyword">public</span> <a class="code hl_class" href="classcore_1_1socket_1_1stream_1_1_socket_context.html">core::socket::stream::SocketContext</a> {</div>
+<p>In the <code>onReceivedFromPeer()</code> method we can fetch data already received by SNode.C by using the <code>readFromPeer()</code> method provided by the <code><a class="el" href="classcore_1_1socket_1_1stream_1_1SocketContext.html">core::socket::stream::SocketContext</a></code> class.</p>
+<p>Sending data to the client is done using the method <code>sendToPeer()</code> which is also provided by the <code><a class="el" href="classcore_1_1socket_1_1stream_1_1SocketContext.html">core::socket::stream::SocketContext</a></code> class.</p>
+<div class="fragment"><div class="line"><span class="keyword">class </span>EchoServerContext : <span class="keyword">public</span> <a class="code hl_class" href="classcore_1_1socket_1_1stream_1_1SocketContext.html">core::socket::stream::SocketContext</a> {</div>
 <div class="line"><span class="keyword">public</span>:</div>
-<div class="line">    <span class="keyword">explicit</span> EchoServerContext(<a class="code hl_class" href="classcore_1_1socket_1_1stream_1_1_socket_connection.html">core::socket::stream::SocketConnection</a>* socketConnection) </div>
+<div class="line">    <span class="keyword">explicit</span> EchoServerContext(<a class="code hl_class" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html">core::socket::stream::SocketConnection</a>* socketConnection) </div>
 <div class="line">        : <a class="code hl_namespace" href="namespacecore.html">core</a>::socket::stream::SocketContext(socketConnection) {</div>
 <div class="line">    }</div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">private</span>: </div>
-<div class="line">    <span class="keywordtype">void</span> <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1_socket_context.html#a716a54b882173251b584439499ca0446">onConnected</a>()<span class="keyword"> override </span>{ <span class="comment">// Called in case a connection has been established successfully.</span></div>
+<div class="line">    <span class="keywordtype">void</span> <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a716a54b882173251b584439499ca0446">onConnected</a>()<span class="keyword"> override </span>{ <span class="comment">// Called in case a connection has been established successfully.</span></div>
 <div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;Echo connected to &quot;</span> &lt;&lt; socketConnection-&gt;getRemoteAddress().toString() &lt;&lt; std::endl;</div>
 <div class="line">    }</div>
 <div class="line">    </div>
-<div class="line">    <span class="keywordtype">void</span> <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1_socket_context.html#ab9c932c5c1b706ffb84d97634514d20e">onDisconnected</a>()<span class="keyword"> override </span>{ <span class="comment">// Called in case the connection has been closed.</span></div>
+<div class="line">    <span class="keywordtype">void</span> <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketContext.html#ab9c932c5c1b706ffb84d97634514d20e">onDisconnected</a>()<span class="keyword"> override </span>{ <span class="comment">// Called in case the connection has been closed.</span></div>
 <div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;Echo disconnected from &quot;</span> &lt;&lt; socketConnection-&gt;getRemoteAddress().toString() &lt;&lt; std::endl;</div>
 <div class="line">    }</div>
 <div class="line">    </div>
-<div class="line">    std::size_t <a class="code hl_function" href="classcore_1_1socket_1_1_socket_context.html#a34c520f17818f029395d2d2b4babc882">onReceivedFromPeer</a>()<span class="keyword"> override </span>{ <span class="comment">// Called in case data have already been received by the framework</span></div>
+<div class="line">    std::size_t <a class="code hl_function" href="classcore_1_1socket_1_1SocketContext.html#a34c520f17818f029395d2d2b4babc882">onReceivedFromPeer</a>()<span class="keyword"> override </span>{ <span class="comment">// Called in case data have already been received by the framework</span></div>
 <div class="line">                                                <span class="comment">// and thus are ready for preccessing.</span></div>
 <div class="line">        <span class="keywordtype">char</span> junk[4096];</div>
 <div class="line"> </div>
-<div class="line">        std::size_t junkLen = <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1_socket_context.html#a633b74ee5bf62e5041da75f4bab58bb1">readFromPeer</a>(junk, 4096); <span class="comment">// Fetch data.</span></div>
+<div class="line">        std::size_t junkLen = <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a633b74ee5bf62e5041da75f4bab58bb1">readFromPeer</a>(junk, 4096); <span class="comment">// Fetch data.</span></div>
 <div class="line">                                                        <span class="comment">// In case there are less than 4096 bytes available return at </span></div>
 <div class="line">                                                        <span class="comment">// least that amount of data.</span></div>
 <div class="line">                                                        <span class="comment">// In case more than 4096 bytes are available </span></div>
@@ -276,46 +276,46 @@ Echo-Server Context</h4>
 <div class="line">                                                        <span class="comment">// No error can occure here.</span></div>
 <div class="line">        <span class="keywordflow">if</span> (junkLen &gt; 0) {</div>
 <div class="line">            std::cout &lt;&lt; <span class="stringliteral">&quot;Data to reflect: &quot;</span> &lt;&lt; std::string(junk, junklen);</div>
-<div class="line">            <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1_socket_context.html#a7ab4e5580dbb64d509ffe2573205c600">sendToPeer</a>(junk, junklen); <span class="comment">// Reflect the received data back to the client.</span></div>
+<div class="line">            <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a7ab4e5580dbb64d509ffe2573205c600">sendToPeer</a>(junk, junklen); <span class="comment">// Reflect the received data back to the client.</span></div>
 <div class="line">                                       <span class="comment">// Out of memory is the only error which can occure here.</span></div>
 <div class="line">        }</div>
 <div class="line"> </div>
 <div class="line">        <span class="keywordflow">return</span> junkLen; <span class="comment">// Return the amount of data processed to the framework.</span></div>
 <div class="line">    }</div>
 <div class="line">};</div>
-<div class="ttc" id="aclasscore_1_1socket_1_1_socket_context_html_a34c520f17818f029395d2d2b4babc882"><div class="ttname"><a href="classcore_1_1socket_1_1_socket_context.html#a34c520f17818f029395d2d2b4babc882">core::socket::SocketContext::onReceivedFromPeer</a></div><div class="ttdeci">virtual std::size_t onReceivedFromPeer()=0</div></div>
-<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1_socket_context_html_a633b74ee5bf62e5041da75f4bab58bb1"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1_socket_context.html#a633b74ee5bf62e5041da75f4bab58bb1">core::socket::stream::SocketContext::readFromPeer</a></div><div class="ttdeci">std::size_t readFromPeer(char *junk, std::size_t junklen) const final</div><div class="ttdef"><b>Definition</b> <a href="core_2socket_2stream_2_socket_context_8cpp_source.html#l00045">SocketContext.cpp:45</a></div></div>
-<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1_socket_context_html_a716a54b882173251b584439499ca0446"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1_socket_context.html#a716a54b882173251b584439499ca0446">core::socket::stream::SocketContext::onConnected</a></div><div class="ttdeci">virtual void onConnected()=0</div></div>
-<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1_socket_context_html_a7ab4e5580dbb64d509ffe2573205c600"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1_socket_context.html#a7ab4e5580dbb64d509ffe2573205c600">core::socket::stream::SocketContext::sendToPeer</a></div><div class="ttdeci">void sendToPeer(const char *junk, std::size_t junkLen) const final</div><div class="ttdef"><b>Definition</b> <a href="core_2socket_2stream_2_socket_context_8cpp_source.html#l00041">SocketContext.cpp:41</a></div></div>
-<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1_socket_context_html_ab9c932c5c1b706ffb84d97634514d20e"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1_socket_context.html#ab9c932c5c1b706ffb84d97634514d20e">core::socket::stream::SocketContext::onDisconnected</a></div><div class="ttdeci">virtual void onDisconnected()=0</div></div>
-<div class="ttc" id="anamespacecore_html"><div class="ttname"><a href="namespacecore.html">core</a></div><div class="ttdef"><b>Definition</b> <a href="_descriptor_8cpp_source.html#l00027">Descriptor.cpp:27</a></div></div>
+<div class="ttc" id="aclasscore_1_1socket_1_1SocketContext_html_a34c520f17818f029395d2d2b4babc882"><div class="ttname"><a href="classcore_1_1socket_1_1SocketContext.html#a34c520f17818f029395d2d2b4babc882">core::socket::SocketContext::onReceivedFromPeer</a></div><div class="ttdeci">virtual std::size_t onReceivedFromPeer()=0</div></div>
+<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketContext_html_a633b74ee5bf62e5041da75f4bab58bb1"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a633b74ee5bf62e5041da75f4bab58bb1">core::socket::stream::SocketContext::readFromPeer</a></div><div class="ttdeci">std::size_t readFromPeer(char *junk, std::size_t junklen) const final</div><div class="ttdef"><b>Definition</b> <a href="core_2socket_2stream_2SocketContext_8cpp_source.html#l00045">SocketContext.cpp:45</a></div></div>
+<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketContext_html_a716a54b882173251b584439499ca0446"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a716a54b882173251b584439499ca0446">core::socket::stream::SocketContext::onConnected</a></div><div class="ttdeci">virtual void onConnected()=0</div></div>
+<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketContext_html_a7ab4e5580dbb64d509ffe2573205c600"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a7ab4e5580dbb64d509ffe2573205c600">core::socket::stream::SocketContext::sendToPeer</a></div><div class="ttdeci">void sendToPeer(const char *junk, std::size_t junkLen) const final</div><div class="ttdef"><b>Definition</b> <a href="core_2socket_2stream_2SocketContext_8cpp_source.html#l00041">SocketContext.cpp:41</a></div></div>
+<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketContext_html_ab9c932c5c1b706ffb84d97634514d20e"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1SocketContext.html#ab9c932c5c1b706ffb84d97634514d20e">core::socket::stream::SocketContext::onDisconnected</a></div><div class="ttdeci">virtual void onDisconnected()=0</div></div>
+<div class="ttc" id="anamespacecore_html"><div class="ttname"><a href="namespacecore.html">core</a></div><div class="ttdef"><b>Definition</b> <a href="Descriptor_8cpp_source.html#l00027">Descriptor.cpp:27</a></div></div>
 </div><!-- fragment --><h4><a class="anchor" id="autotoc_md11"></a>
 Echo-Client Context</h4>
 <p>The echo client SocketContext in contrast to the server SocketContext, <em>needs</em> an overridden <code>onConnected</code> method, to initiate the ping-pong data exchange.</p>
 <p>Like in the <code>EchoServerContext</code> <code>readFromPeer()</code> and <code>sendToPeer()</code> is used in the <code>onReceivedFromPeer()</code> method. In addition <code>sendToPeer()</code> is also used in the <code>onConnected()</code> method to initiate the ping-pong data exchange.</p>
-<div class="fragment"><div class="line"><span class="keyword">class </span>EchoClientContext : <span class="keyword">public</span> <a class="code hl_class" href="classcore_1_1socket_1_1stream_1_1_socket_context.html">core::socket::stream::SocketContext</a> {</div>
+<div class="fragment"><div class="line"><span class="keyword">class </span>EchoClientContext : <span class="keyword">public</span> <a class="code hl_class" href="classcore_1_1socket_1_1stream_1_1SocketContext.html">core::socket::stream::SocketContext</a> {</div>
 <div class="line"><span class="keyword">public</span>:</div>
-<div class="line">    <span class="keyword">explicit</span> EchoClientContext(<a class="code hl_class" href="classcore_1_1socket_1_1stream_1_1_socket_connection.html">core::socket::stream::SocketConnection</a>* socketConnection) </div>
+<div class="line">    <span class="keyword">explicit</span> EchoClientContext(<a class="code hl_class" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html">core::socket::stream::SocketConnection</a>* socketConnection) </div>
 <div class="line">        : <a class="code hl_namespace" href="namespacecore.html">core</a>::socket::stream::SocketContext(socketConnection) {</div>
 <div class="line">    }</div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">private</span>:</div>
-<div class="line">    <span class="keywordtype">void</span> <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1_socket_context.html#a716a54b882173251b584439499ca0446">onConnected</a>()<span class="keyword"> override </span>{ <span class="comment">// Called in case a connection has been established successfully.</span></div>
+<div class="line">    <span class="keywordtype">void</span> <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a716a54b882173251b584439499ca0446">onConnected</a>()<span class="keyword"> override </span>{ <span class="comment">// Called in case a connection has been established successfully.</span></div>
 <div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;Echo connected to &quot;</span> &lt;&lt; socketConnection-&gt;getRemoteAddress().toString() &lt;&lt; std::endl;</div>
 <div class="line">        </div>
 <div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;Initiating data exchange&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line">        <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1_socket_context.html#a7ab4e5580dbb64d509ffe2573205c600">sendToPeer</a>(<span class="stringliteral">&quot;Hello peer! It&#39;s nice talking to you!!!&quot;</span>); <span class="comment">// Initiate the ping-pong data exchange.</span></div>
+<div class="line">        <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a7ab4e5580dbb64d509ffe2573205c600">sendToPeer</a>(<span class="stringliteral">&quot;Hello peer! It&#39;s nice talking to you!!!&quot;</span>); <span class="comment">// Initiate the ping-pong data exchange.</span></div>
 <div class="line">    }</div>
 <div class="line">    </div>
-<div class="line">    <span class="keywordtype">void</span> <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1_socket_context.html#ab9c932c5c1b706ffb84d97634514d20e">onDisconnected</a>()<span class="keyword"> override </span>{ <span class="comment">// Called in case the connection has been closed.</span></div>
+<div class="line">    <span class="keywordtype">void</span> <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketContext.html#ab9c932c5c1b706ffb84d97634514d20e">onDisconnected</a>()<span class="keyword"> override </span>{ <span class="comment">// Called in case the connection has been closed.</span></div>
 <div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;Echo disconnected from &quot;</span> &lt;&lt; socketConnection-&gt;getRemoteAddress().toString() &lt;&lt; std::endl;</div>
 <div class="line">    }</div>
 <div class="line">    </div>
-<div class="line">    std::size_t <a class="code hl_function" href="classcore_1_1socket_1_1_socket_context.html#a34c520f17818f029395d2d2b4babc882">onReceivedFromPeer</a>()<span class="keyword"> override </span>{ <span class="comment">// Called in case data have already been received by the framework</span></div>
+<div class="line">    std::size_t <a class="code hl_function" href="classcore_1_1socket_1_1SocketContext.html#a34c520f17818f029395d2d2b4babc882">onReceivedFromPeer</a>()<span class="keyword"> override </span>{ <span class="comment">// Called in case data have already been received by the framework</span></div>
 <div class="line">                                                <span class="comment">// and thus are ready for preccessing.</span></div>
 <div class="line">        <span class="keywordtype">char</span> junk[4096];</div>
 <div class="line"> </div>
-<div class="line">        std::size_t junkLen = <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1_socket_context.html#a633b74ee5bf62e5041da75f4bab58bb1">readFromPeer</a>(junk, 4096); <span class="comment">// Fetch data.</span></div>
+<div class="line">        std::size_t junkLen = <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a633b74ee5bf62e5041da75f4bab58bb1">readFromPeer</a>(junk, 4096); <span class="comment">// Fetch data.</span></div>
 <div class="line">                                                        <span class="comment">// In case there are less than 4096 bytes available return at </span></div>
 <div class="line">                                                        <span class="comment">// least that amount of data.</span></div>
 <div class="line">                                                        <span class="comment">// In case more than 4096 bytes are available </span></div>
@@ -323,7 +323,7 @@ Echo-Client Context</h4>
 <div class="line">                                                        <span class="comment">// No error can occure here.</span></div>
 <div class="line">        <span class="keywordflow">if</span> (junkLen &gt; 0) {</div>
 <div class="line">            std::cout &lt;&lt; <span class="stringliteral">&quot;Data to reflect: &quot;</span> &lt;&lt; std::string(junk, junklen);</div>
-<div class="line">            <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1_socket_context.html#a7ab4e5580dbb64d509ffe2573205c600">sendToPeer</a>(junk, junklen); <span class="comment">// Reflect the received data back to the server.</span></div>
+<div class="line">            <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a7ab4e5580dbb64d509ffe2573205c600">sendToPeer</a>(junk, junklen); <span class="comment">// Reflect the received data back to the server.</span></div>
 <div class="line">                                       <span class="comment">// Out of memory is the only error which can occure here.</span></div>
 <div class="line">        }</div>
 <div class="line"> </div>
@@ -334,17 +334,17 @@ Echo-Client Context</h4>
 Main Applications for Server and Client</h3>
 <p>Now we can put all together and implement the server and client main applications. Here <em>anonymous instances</em> are used, thus we will not get command line arguments automatically.</p>
 <p>Note the use of our previously implemented <code>EchoServerContextFactory</code> and <code>EchoClientContextFactory</code> as template arguments.</p>
-<p>At the very beginning SNode.C must be <em>initialized</em> by calling <code>core::SNodeC::init(argc, argv)</code>. And at the end of the main applications the <em>event-loop</em> of SNode.C is started by calling <code><a class="el" href="classcore_1_1_s_node_c.html#ac3d0dcb6c216ae72d9bbb77fe080e461">core::SNodeC::start()</a></code>.</p>
+<p>At the very beginning SNode.C must be <em>initialized</em> by calling <code>core::SNodeC::init(argc, argv)</code>. And at the end of the main applications the <em>event-loop</em> of SNode.C is started by calling <code><a class="el" href="classcore_1_1SNodeC.html#ac3d0dcb6c216ae72d9bbb77fe080e461">core::SNodeC::start()</a></code>.</p>
 <h4><a class="anchor" id="autotoc_md13"></a>
 Echo-Server Main Application</h4>
 <p>The server instance <code>echoServer</code> must be <em>activated</em> by calling <code>echoServer.listen()</code>.</p>
 <p>SNode.C provides a view overloaded <code>listen()</code> methods whose arguments vary depending on the network layer (IPv4, IPv6, RFCOM, L2CAP, or unix domain sockets) used. Though, every <code>listen()</code> method expects a lambda function as last argument. Here we use IPv4 and the <code>listen()</code> method which expects a port number as argument.</p>
 <p>If we would have created a named server instance than a special <code>listen()</code> method which only expects the lambda function as argument can be used. In that case the configuration of this named instance would be done using command line arguments and/or a configuration file.</p>
 <div class="fragment"><div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* argv[]) {</div>
-<div class="line">    <a class="code hl_function" href="classcore_1_1_s_node_c.html#a2c8b01c5fc6ecc3036cb48a76f76f3b5">core::SNodeC::init</a>(argc, argv); <span class="comment">// Initialize the framework.</span></div>
+<div class="line">    <a class="code hl_function" href="classcore_1_1SNodeC.html#a2c8b01c5fc6ecc3036cb48a76f76f3b5">core::SNodeC::init</a>(argc, argv); <span class="comment">// Initialize the framework.</span></div>
 <div class="line">                                    <span class="comment">// Configure logging, create command line arguments, daemonize if requested.</span></div>
 <div class="line">    </div>
-<div class="line">    <span class="keyword">using </span>EchoServer = <a class="code hl_class" href="classnet_1_1in_1_1stream_1_1_socket_server.html">net::in::stream::legacy::SocketServer&lt;EchoServerContextFactory&gt;</a>; <span class="comment">// Simplify data type</span></div>
+<div class="line">    <span class="keyword">using </span>EchoServer = <a class="code hl_class" href="classnet_1_1in_1_1stream_1_1SocketServer.html">net::in::stream::legacy::SocketServer&lt;EchoServerContextFactory&gt;</a>; <span class="comment">// Simplify data type</span></div>
 <div class="line">                                                                                        <span class="comment">// Note the use of our implemented</span></div>
 <div class="line">                                                                                        <span class="comment">// EchoServerContextFactory as</span></div>
 <div class="line">                                                                                        <span class="comment">// template argument</span></div>
@@ -352,7 +352,7 @@ Echo-Server Main Application</h4>
 <div class="line">    </div>
 <div class="line">    EchoServer echoServer; <span class="comment">// Create server instance</span></div>
 <div class="line">    </div>
-<div class="line">    echoServer.<a class="code hl_function" href="classnet_1_1in_1_1stream_1_1_socket_server.html#aa3cc212accfc0a77b0954a21155f19b3">listen</a>(8001, [](<span class="keyword">const</span> SocketAddress&amp; socketAddress, <span class="keywordtype">int</span> err) -&gt; <span class="keywordtype">void</span> { <span class="comment">// Listen on port 8001 on all interfaces</span></div>
+<div class="line">    echoServer.<a class="code hl_function" href="classnet_1_1in_1_1stream_1_1SocketServer.html#a18ad1f454f2899d9bb326230222b2cf0">listen</a>(8001, [](<span class="keyword">const</span> SocketAddress&amp; socketAddress, <span class="keywordtype">int</span> err) -&gt; <span class="keywordtype">void</span> { <span class="comment">// Listen on port 8001 on all interfaces</span></div>
 <div class="line">        <span class="keywordflow">if</span> (err == 0){</div>
 <div class="line">            std::cout &lt;&lt; <span class="stringliteral">&quot;Success: Echo server listening on &quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; std::endl;</div>
 <div class="line">        } <span class="keywordflow">else</span> {</div>
@@ -360,21 +360,21 @@ Echo-Server Main Application</h4>
 <div class="line">        }</div>
 <div class="line">    });</div>
 <div class="line">    </div>
-<div class="line">    <span class="keywordflow">return</span> <a class="code hl_function" href="classcore_1_1_s_node_c.html#ac3d0dcb6c216ae72d9bbb77fe080e461">core::SNodeC::start</a>(); <span class="comment">// Start the event loop.</span></div>
+<div class="line">    <span class="keywordflow">return</span> <a class="code hl_function" href="classcore_1_1SNodeC.html#ac3d0dcb6c216ae72d9bbb77fe080e461">core::SNodeC::start</a>(); <span class="comment">// Start the event loop.</span></div>
 <div class="line">}</div>
-<div class="ttc" id="aclasscore_1_1_s_node_c_html_a2c8b01c5fc6ecc3036cb48a76f76f3b5"><div class="ttname"><a href="classcore_1_1_s_node_c.html#a2c8b01c5fc6ecc3036cb48a76f76f3b5">core::SNodeC::init</a></div><div class="ttdeci">static void init(int argc, char *argv[])</div><div class="ttdef"><b>Definition</b> <a href="_s_node_c_8cpp_source.html#l00031">SNodeC.cpp:31</a></div></div>
-<div class="ttc" id="aclasscore_1_1_s_node_c_html_ac3d0dcb6c216ae72d9bbb77fe080e461"><div class="ttname"><a href="classcore_1_1_s_node_c.html#ac3d0dcb6c216ae72d9bbb77fe080e461">core::SNodeC::start</a></div><div class="ttdeci">static int start(const utils::Timeval &amp;timeOut={LONG_MAX, 0})</div><div class="ttdef"><b>Definition</b> <a href="_s_node_c_8cpp_source.html#l00037">SNodeC.cpp:37</a></div></div>
-<div class="ttc" id="aclassnet_1_1in_1_1stream_1_1_socket_server_html_aa3cc212accfc0a77b0954a21155f19b3"><div class="ttname"><a href="classnet_1_1in_1_1stream_1_1_socket_server.html#aa3cc212accfc0a77b0954a21155f19b3">net::in::stream::SocketServer::listen</a></div><div class="ttdeci">void listen(uint16_t port, const std::function&lt; void(const core::ProgressLog &amp;)&gt; &amp;onError) const</div><div class="ttdef"><b>Definition</b> <a href="net_2in_2stream_2_socket_server_8h_source.html#l00050">SocketServer.h:50</a></div></div>
+<div class="ttc" id="aclasscore_1_1SNodeC_html_a2c8b01c5fc6ecc3036cb48a76f76f3b5"><div class="ttname"><a href="classcore_1_1SNodeC.html#a2c8b01c5fc6ecc3036cb48a76f76f3b5">core::SNodeC::init</a></div><div class="ttdeci">static void init(int argc, char *argv[])</div><div class="ttdef"><b>Definition</b> <a href="SNodeC_8cpp_source.html#l00031">SNodeC.cpp:31</a></div></div>
+<div class="ttc" id="aclasscore_1_1SNodeC_html_ac3d0dcb6c216ae72d9bbb77fe080e461"><div class="ttname"><a href="classcore_1_1SNodeC.html#ac3d0dcb6c216ae72d9bbb77fe080e461">core::SNodeC::start</a></div><div class="ttdeci">static int start(const utils::Timeval &amp;timeOut={LONG_MAX, 0})</div><div class="ttdef"><b>Definition</b> <a href="SNodeC_8cpp_source.html#l00037">SNodeC.cpp:37</a></div></div>
+<div class="ttc" id="aclassnet_1_1in_1_1stream_1_1SocketServer_html_a18ad1f454f2899d9bb326230222b2cf0"><div class="ttname"><a href="classnet_1_1in_1_1stream_1_1SocketServer.html#a18ad1f454f2899d9bb326230222b2cf0">net::in::stream::SocketServer::listen</a></div><div class="ttdeci">void listen(uint16_t port, const std::function&lt; void(const SocketAddress &amp;, core::socket::State)&gt; &amp;onStatus) const</div><div class="ttdef"><b>Definition</b> <a href="net_2in_2stream_2SocketServer_8h_source.html#l00050">SocketServer.h:50</a></div></div>
 </div><!-- fragment --><h4><a class="anchor" id="autotoc_md14"></a>
 Echo-Client Main Application</h4>
 <p>The client instance <code>echoClient</code> must <em>connect</em> to the server by calling <code>echoClient.connect()</code>.</p>
 <p>Equivalent to the server instance a client instance provides a view overloaded <code>connect()</code> methods whose arguments also vary depending on the network layer used. Here it is assumed that we talk to an IPv4 server which runs on the same machine (localhost) as the client. Thus we pass the hostname "localhost" and port number 8001 to the <code>connect()</code> method.</p>
 <p>If we would have created a named client instance than a special <code>connect()</code> method which only expects the lambda function can be used. In that case the configuration of this named instance would be done using command line arguments and/or a configuration file.</p>
 <div class="fragment"><div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* argv[]) {</div>
-<div class="line">    <a class="code hl_function" href="classcore_1_1_s_node_c.html#a2c8b01c5fc6ecc3036cb48a76f76f3b5">core::SNodeC::init</a>(argc, argv); <span class="comment">// Initialize the framework.</span></div>
+<div class="line">    <a class="code hl_function" href="classcore_1_1SNodeC.html#a2c8b01c5fc6ecc3036cb48a76f76f3b5">core::SNodeC::init</a>(argc, argv); <span class="comment">// Initialize the framework.</span></div>
 <div class="line">                                    <span class="comment">// Configure logging, create command line arguments, daemonize if requested.</span></div>
 <div class="line">    </div>
-<div class="line">    <span class="keyword">using </span>EchoClient = <a class="code hl_class" href="classnet_1_1in_1_1stream_1_1_socket_client.html">net::in::stream::legacy::SocketClient&lt;EchoClientContextFactory&gt;</a>; <span class="comment">// Simplify data type</span></div>
+<div class="line">    <span class="keyword">using </span>EchoClient = <a class="code hl_class" href="classnet_1_1in_1_1stream_1_1SocketClient.html">net::in::stream::legacy::SocketClient&lt;EchoClientContextFactory&gt;</a>; <span class="comment">// Simplify data type</span></div>
 <div class="line">                                                                                         <span class="comment">// Note the use of our implemented</span></div>
 <div class="line">                                                                                         <span class="comment">// EchoClientContextFactory as</span></div>
 <div class="line">                                                                                         <span class="comment">// template argument</span></div>
@@ -382,7 +382,7 @@ Echo-Client Main Application</h4>
 <div class="line">    </div>
 <div class="line">    EchoClient echoClient; <span class="comment">// Create client instance</span></div>
 <div class="line">    </div>
-<div class="line">    echoClient.<a class="code hl_function" href="classnet_1_1in_1_1stream_1_1_socket_client.html#a6eebbc4d5486106e6afd423dad199f0c">connect</a>(<span class="stringliteral">&quot;localhost&quot;</span>, 8001, [](<span class="keyword">const</span> SocketAddress&amp; socketAddress, <span class="keywordtype">int</span> err) -&gt; <span class="keywordtype">void</span> { <span class="comment">// Connect to server</span></div>
+<div class="line">    echoClient.<a class="code hl_function" href="classnet_1_1in_1_1stream_1_1SocketClient.html#a9d780defa3cb9fb3a39682ddf547b393">connect</a>(<span class="stringliteral">&quot;localhost&quot;</span>, 8001, [](<span class="keyword">const</span> SocketAddress&amp; socketAddress, <span class="keywordtype">int</span> err) -&gt; <span class="keywordtype">void</span> { <span class="comment">// Connect to server</span></div>
 <div class="line">        <span class="keywordflow">if</span> (err == 0){</div>
 <div class="line">            std::cout &lt;&lt; <span class="stringliteral">&quot;Success: Echo connecting to &quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; std::endl;</div>
 <div class="line">        } <span class="keywordflow">else</span> {</div>
@@ -390,9 +390,9 @@ Echo-Client Main Application</h4>
 <div class="line">        }</div>
 <div class="line">    });</div>
 <div class="line">    </div>
-<div class="line">    <span class="keywordflow">return</span> <a class="code hl_function" href="classcore_1_1_s_node_c.html#ac3d0dcb6c216ae72d9bbb77fe080e461">core::SNodeC::start</a>(); <span class="comment">// Start the event loop.</span></div>
+<div class="line">    <span class="keywordflow">return</span> <a class="code hl_function" href="classcore_1_1SNodeC.html#ac3d0dcb6c216ae72d9bbb77fe080e461">core::SNodeC::start</a>(); <span class="comment">// Start the event loop.</span></div>
 <div class="line">}</div>
-<div class="ttc" id="aclassnet_1_1in_1_1stream_1_1_socket_client_html_a6eebbc4d5486106e6afd423dad199f0c"><div class="ttname"><a href="classnet_1_1in_1_1stream_1_1_socket_client.html#a6eebbc4d5486106e6afd423dad199f0c">net::in::stream::SocketClient::connect</a></div><div class="ttdeci">void connect(const std::string &amp;ipOrHostname, uint16_t port, const std::function&lt; void(const core::ProgressLog &amp;)&gt; &amp;onError)</div><div class="ttdef"><b>Definition</b> <a href="net_2in_2stream_2_socket_client_8h_source.html#l00050">SocketClient.h:50</a></div></div>
+<div class="ttc" id="aclassnet_1_1in_1_1stream_1_1SocketClient_html_a9d780defa3cb9fb3a39682ddf547b393"><div class="ttname"><a href="classnet_1_1in_1_1stream_1_1SocketClient.html#a9d780defa3cb9fb3a39682ddf547b393">net::in::stream::SocketClient::connect</a></div><div class="ttdeci">void connect(const std::string &amp;ipOrHostname, uint16_t port, const std::function&lt; void(const SocketAddress &amp;, core::socket::State)&gt; &amp;onStatus)</div><div class="ttdef"><b>Definition</b> <a href="net_2in_2stream_2SocketClient_8h_source.html#l00050">SocketClient.h:50</a></div></div>
 </div><!-- fragment --><h2><a class="anchor" id="autotoc_md15"></a>
 Summary</h2>
 <p>The echo application shows the typical architecture of servers and clients using SNode.C.</p>
@@ -402,8 +402,8 @@ Summary</h2>
 <li>SocketContext</li>
 </ul>
 <p class="startli">which need be be derived from the base classes</p><ul>
-<li><code><a class="el" href="classcore_1_1socket_1_1stream_1_1_socket_context_factory.html">core::socket::stream::SocketContextFactory</a></code></li>
-<li><code><a class="el" href="classcore_1_1socket_1_1stream_1_1_socket_context.html">core::socket::stream::SocketContext</a></code></li>
+<li><code><a class="el" href="classcore_1_1socket_1_1stream_1_1SocketContextFactory.html">core::socket::stream::SocketContextFactory</a></code></li>
+<li><code><a class="el" href="classcore_1_1socket_1_1stream_1_1SocketContext.html">core::socket::stream::SocketContext</a></code></li>
 </ul>
 </li>
 <li>The framework provides<ul>
@@ -560,16 +560,16 @@ Example Applications</h1>
 HTTP/S Web-Server for Static HTML-Pages</h2>
 <p>This application uses the high-level web API <em>express</em> which is very similar to the API of node.js/express. The <code>StaticMiddleware</code> is used to deliver the static HTML-pages.</p>
 <p>The use of X.509 certificates for encrypted communication is demonstrated also.</p>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="legacy_2in_2_web_app_8h.html">express/legacy/in/WebApp.h</a>&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="tls_2in_2_web_app_8h.html">express/tls/in/WebApp.h</a>&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="_static_middleware_8h.html">express/middleware/StaticMiddleware.h</a>&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="_logger_8h.html">log/Logger.h</a>&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="_config_8h.html">utils/Config.h</a>&gt;</span></div>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="legacy_2in_2WebApp_8h.html">express/legacy/in/WebApp.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="tls_2in_2WebApp_8h.html">express/tls/in/WebApp.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="StaticMiddleware_8h.html">express/middleware/StaticMiddleware.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="Logger_8h.html">log/Logger.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="Config_8h.html">utils/Config.h</a>&gt;</span></div>
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* argv[]) {</div>
-<div class="line">    <a class="code hl_function" href="classutils_1_1_config.html#a48e7f8ae23aafd44e164f62afa6675ed">utils::Config::add_string_option</a>(<span class="stringliteral">&quot;--web-root&quot;</span>, <span class="stringliteral">&quot;Root directory of the web site&quot;</span>, <span class="stringliteral">&quot;[path]&quot;</span>);</div>
+<div class="line">    <a class="code hl_function" href="classutils_1_1Config.html#a48e7f8ae23aafd44e164f62afa6675ed">utils::Config::add_string_option</a>(<span class="stringliteral">&quot;--web-root&quot;</span>, <span class="stringliteral">&quot;Root directory of the web site&quot;</span>, <span class="stringliteral">&quot;[path]&quot;</span>);</div>
 <div class="line"> </div>
-<div class="line">    <a class="code hl_function" href="classexpress_1_1_web_app.html#a0a01439a0cc8dfc86ed14f1094826b7e">express::WebApp::init</a>(argc, argv);</div>
+<div class="line">    <a class="code hl_function" href="classexpress_1_1WebApp.html#a0a01439a0cc8dfc86ed14f1094826b7e">express::WebApp::init</a>(argc, argv);</div>
 <div class="line">    </div>
 <div class="line">    <span class="keyword">using </span>LegacyWebApp = <a class="code hl_typedef" href="namespaceexpress_1_1legacy_1_1in.html#a100edb4786f87c3e88f0518b4feb59e7">express::legacy::in::WebApp</a>;</div>
 <div class="line">    <span class="keyword">using </span>LegacySocketAddress = LegacyWebApp::SocketAddress;</div>
@@ -577,7 +577,7 @@ HTTP/S Web-Server for Static HTML-Pages</h2>
 <div class="line">    LegacyWebApp legacyApp;</div>
 <div class="line">    legacyApp.getConfig().setReuseAddress();</div>
 <div class="line"> </div>
-<div class="line">    legacyApp.use(<a class="code hl_class" href="classexpress_1_1middleware_1_1_static_middleware.html">express::middleware::StaticMiddleware</a>(<a class="code hl_function" href="classutils_1_1_config.html#a047a9b9e0f92a75e6bc4bcb9f188e28e">utils::Config::get_string_option_value</a>(<span class="stringliteral">&quot;--web-root&quot;</span>)));</div>
+<div class="line">    legacyApp.use(<a class="code hl_class" href="classexpress_1_1middleware_1_1StaticMiddleware.html">express::middleware::StaticMiddleware</a>(<a class="code hl_function" href="classutils_1_1Config.html#a047a9b9e0f92a75e6bc4bcb9f188e28e">utils::Config::get_string_option_value</a>(<span class="stringliteral">&quot;--web-root&quot;</span>)));</div>
 <div class="line"> </div>
 <div class="line">    legacyApp.listen(8080, [](<span class="keyword">const</span> LegacySocketAddress&amp; socketAddress, <span class="keywordtype">int</span> errnum) {</div>
 <div class="line">        <span class="keywordflow">if</span> (errnum &lt; 0) {</div>
@@ -599,7 +599,7 @@ HTTP/S Web-Server for Static HTML-Pages</h2>
 <div class="line">    tlsApp.getConfig().setCertKey(<span class="stringliteral">&quot;&lt;path to X.509 certificate key&gt;&quot;</span>);</div>
 <div class="line">    tlsApp.getConfig().setCertKeyPassword(<span class="stringliteral">&quot;&lt;certificate key password&gt;&quot;</span>);</div>
 <div class="line"> </div>
-<div class="line">    tlsApp.use(<a class="code hl_class" href="classexpress_1_1middleware_1_1_static_middleware.html">express::middleware::StaticMiddleware</a>(<a class="code hl_function" href="classutils_1_1_config.html#a047a9b9e0f92a75e6bc4bcb9f188e28e">utils::Config::get_string_option_value</a>(<span class="stringliteral">&quot;--web-root&quot;</span>)));</div>
+<div class="line">    tlsApp.use(<a class="code hl_class" href="classexpress_1_1middleware_1_1StaticMiddleware.html">express::middleware::StaticMiddleware</a>(<a class="code hl_function" href="classutils_1_1Config.html#a047a9b9e0f92a75e6bc4bcb9f188e28e">utils::Config::get_string_option_value</a>(<span class="stringliteral">&quot;--web-root&quot;</span>)));</div>
 <div class="line"> </div>
 <div class="line">    tlsApp.listen(8088, [](<span class="keyword">const</span> TLSSocketAddress&amp; socketAddress, <span class="keywordtype">int</span> errnum) {</div>
 <div class="line">        <span class="keywordflow">if</span> (errnum &lt; 0) {</div>
@@ -611,29 +611,29 @@ HTTP/S Web-Server for Static HTML-Pages</h2>
 <div class="line">        }</div>
 <div class="line">    });</div>
 <div class="line"> </div>
-<div class="line">    <span class="keywordflow">return</span> <a class="code hl_function" href="classexpress_1_1_web_app.html#a54e6910c9466c61d0b217490b7d9bb5a">express::WebApp::start</a>();</div>
+<div class="line">    <span class="keywordflow">return</span> <a class="code hl_function" href="classexpress_1_1WebApp.html#a54e6910c9466c61d0b217490b7d9bb5a">express::WebApp::start</a>();</div>
 <div class="line">}</div>
-<div class="ttc" id="a_config_8h_html"><div class="ttname"><a href="_config_8h.html">Config.h</a></div></div>
-<div class="ttc" id="a_logger_8h_html"><div class="ttname"><a href="_logger_8h.html">Logger.h</a></div></div>
-<div class="ttc" id="a_static_middleware_8h_html"><div class="ttname"><a href="_static_middleware_8h.html">StaticMiddleware.h</a></div></div>
-<div class="ttc" id="aclassexpress_1_1_web_app_html_a0a01439a0cc8dfc86ed14f1094826b7e"><div class="ttname"><a href="classexpress_1_1_web_app.html#a0a01439a0cc8dfc86ed14f1094826b7e">express::WebApp::init</a></div><div class="ttdeci">static void init(int argc, char *argv[])</div><div class="ttdef"><b>Definition</b> <a href="_web_app_8cpp_source.html#l00033">WebApp.cpp:33</a></div></div>
-<div class="ttc" id="aclassexpress_1_1_web_app_html_a54e6910c9466c61d0b217490b7d9bb5a"><div class="ttname"><a href="classexpress_1_1_web_app.html#a54e6910c9466c61d0b217490b7d9bb5a">express::WebApp::start</a></div><div class="ttdeci">static int start(const utils::Timeval &amp;timeOut={LONG_MAX, 0})</div><div class="ttdef"><b>Definition</b> <a href="_web_app_8cpp_source.html#l00037">WebApp.cpp:37</a></div></div>
-<div class="ttc" id="aclassexpress_1_1middleware_1_1_static_middleware_html"><div class="ttname"><a href="classexpress_1_1middleware_1_1_static_middleware.html">express::middleware::StaticMiddleware</a></div><div class="ttdef"><b>Definition</b> <a href="_static_middleware_8h_source.html#l00035">StaticMiddleware.h:35</a></div></div>
-<div class="ttc" id="aclassutils_1_1_config_html_a047a9b9e0f92a75e6bc4bcb9f188e28e"><div class="ttname"><a href="classutils_1_1_config.html#a047a9b9e0f92a75e6bc4bcb9f188e28e">utils::Config::get_string_option_value</a></div><div class="ttdeci">static std::string get_string_option_value(const std::string &amp;name)</div><div class="ttdef"><b>Definition</b> <a href="_config_8cpp_source.html#l00942">Config.cpp:942</a></div></div>
-<div class="ttc" id="aclassutils_1_1_config_html_a48e7f8ae23aafd44e164f62afa6675ed"><div class="ttname"><a href="classutils_1_1_config.html#a48e7f8ae23aafd44e164f62afa6675ed">utils::Config::add_string_option</a></div><div class="ttdeci">static void add_string_option(const std::string &amp;name, const std::string &amp;description, const std::string &amp;typeName)</div><div class="ttdef"><b>Definition</b> <a href="_config_8cpp_source.html#l00892">Config.cpp:892</a></div></div>
-<div class="ttc" id="alegacy_2in_2_web_app_8h_html"><div class="ttname"><a href="legacy_2in_2_web_app_8h.html">WebApp.h</a></div></div>
-<div class="ttc" id="anamespaceexpress_1_1legacy_1_1in_html_a100edb4786f87c3e88f0518b4feb59e7"><div class="ttname"><a href="namespaceexpress_1_1legacy_1_1in.html#a100edb4786f87c3e88f0518b4feb59e7">express::legacy::in::WebApp</a></div><div class="ttdeci">WebAppT&lt; web::http::legacy::in::Server&lt; express::Request, express::Response &gt; &gt; WebApp</div><div class="ttdef"><b>Definition</b> <a href="legacy_2in_2_web_app_8h_source.html#l00031">WebApp.h:31</a></div></div>
-<div class="ttc" id="anamespaceexpress_1_1tls_1_1in_html_a5a109350536b5f2da903c6cab26c7283"><div class="ttname"><a href="namespaceexpress_1_1tls_1_1in.html#a5a109350536b5f2da903c6cab26c7283">express::tls::in::WebApp</a></div><div class="ttdeci">WebAppT&lt; web::http::tls::in::Server&lt; express::Request, express::Response &gt; &gt; WebApp</div><div class="ttdef"><b>Definition</b> <a href="tls_2in_2_web_app_8h_source.html#l00031">WebApp.h:31</a></div></div>
-<div class="ttc" id="atls_2in_2_web_app_8h_html"><div class="ttname"><a href="tls_2in_2_web_app_8h.html">WebApp.h</a></div></div>
+<div class="ttc" id="aConfig_8h_html"><div class="ttname"><a href="Config_8h.html">Config.h</a></div></div>
+<div class="ttc" id="aLogger_8h_html"><div class="ttname"><a href="Logger_8h.html">Logger.h</a></div></div>
+<div class="ttc" id="aStaticMiddleware_8h_html"><div class="ttname"><a href="StaticMiddleware_8h.html">StaticMiddleware.h</a></div></div>
+<div class="ttc" id="aclassexpress_1_1WebApp_html_a0a01439a0cc8dfc86ed14f1094826b7e"><div class="ttname"><a href="classexpress_1_1WebApp.html#a0a01439a0cc8dfc86ed14f1094826b7e">express::WebApp::init</a></div><div class="ttdeci">static void init(int argc, char *argv[])</div><div class="ttdef"><b>Definition</b> <a href="WebApp_8cpp_source.html#l00033">WebApp.cpp:33</a></div></div>
+<div class="ttc" id="aclassexpress_1_1WebApp_html_a54e6910c9466c61d0b217490b7d9bb5a"><div class="ttname"><a href="classexpress_1_1WebApp.html#a54e6910c9466c61d0b217490b7d9bb5a">express::WebApp::start</a></div><div class="ttdeci">static int start(const utils::Timeval &amp;timeOut={LONG_MAX, 0})</div><div class="ttdef"><b>Definition</b> <a href="WebApp_8cpp_source.html#l00037">WebApp.cpp:37</a></div></div>
+<div class="ttc" id="aclassexpress_1_1middleware_1_1StaticMiddleware_html"><div class="ttname"><a href="classexpress_1_1middleware_1_1StaticMiddleware.html">express::middleware::StaticMiddleware</a></div><div class="ttdef"><b>Definition</b> <a href="StaticMiddleware_8h_source.html#l00035">StaticMiddleware.h:35</a></div></div>
+<div class="ttc" id="aclassutils_1_1Config_html_a047a9b9e0f92a75e6bc4bcb9f188e28e"><div class="ttname"><a href="classutils_1_1Config.html#a047a9b9e0f92a75e6bc4bcb9f188e28e">utils::Config::get_string_option_value</a></div><div class="ttdeci">static std::string get_string_option_value(const std::string &amp;name)</div><div class="ttdef"><b>Definition</b> <a href="Config_8cpp_source.html#l00924">Config.cpp:924</a></div></div>
+<div class="ttc" id="aclassutils_1_1Config_html_a48e7f8ae23aafd44e164f62afa6675ed"><div class="ttname"><a href="classutils_1_1Config.html#a48e7f8ae23aafd44e164f62afa6675ed">utils::Config::add_string_option</a></div><div class="ttdeci">static void add_string_option(const std::string &amp;name, const std::string &amp;description, const std::string &amp;typeName)</div><div class="ttdef"><b>Definition</b> <a href="Config_8cpp_source.html#l00874">Config.cpp:874</a></div></div>
+<div class="ttc" id="alegacy_2in_2WebApp_8h_html"><div class="ttname"><a href="legacy_2in_2WebApp_8h.html">WebApp.h</a></div></div>
+<div class="ttc" id="anamespaceexpress_1_1legacy_1_1in_html_a100edb4786f87c3e88f0518b4feb59e7"><div class="ttname"><a href="namespaceexpress_1_1legacy_1_1in.html#a100edb4786f87c3e88f0518b4feb59e7">express::legacy::in::WebApp</a></div><div class="ttdeci">WebAppT&lt; web::http::legacy::in::Server&lt; express::Request, express::Response &gt; &gt; WebApp</div><div class="ttdef"><b>Definition</b> <a href="legacy_2in_2WebApp_8h_source.html#l00031">WebApp.h:31</a></div></div>
+<div class="ttc" id="anamespaceexpress_1_1tls_1_1in_html_a5a109350536b5f2da903c6cab26c7283"><div class="ttname"><a href="namespaceexpress_1_1tls_1_1in.html#a5a109350536b5f2da903c6cab26c7283">express::tls::in::WebApp</a></div><div class="ttdeci">WebAppT&lt; web::http::tls::in::Server&lt; express::Request, express::Response &gt; &gt; WebApp</div><div class="ttdef"><b>Definition</b> <a href="tls_2in_2WebApp_8h_source.html#l00031">WebApp.h:31</a></div></div>
+<div class="ttc" id="atls_2in_2WebApp_8h_html"><div class="ttname"><a href="tls_2in_2WebApp_8h.html">WebApp.h</a></div></div>
 </div><!-- fragment --><h2><a class="anchor" id="autotoc_md35"></a>
 Receive Data via HTTP-Post Request</h2>
 <p>The high-level web API provides the methods <code>get()</code>, <code>post()</code>, <code>put()</code>, etc like node.js/express.</p>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="legacy_2in_2_web_app_8h.html">express/legacy/in/WebApp.h</a>&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="tls_2in_2_web_app_8h.html">express/tls/in/WebApp.h</a>&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="_logger_8h.html">log/Logger.h</a>&gt;</span></div>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="legacy_2in_2WebApp_8h.html">express/legacy/in/WebApp.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="tls_2in_2WebApp_8h.html">express/tls/in/WebApp.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="Logger_8h.html">log/Logger.h</a>&gt;</span></div>
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* argv[]) {</div>
-<div class="line">    <a class="code hl_function" href="classexpress_1_1_web_app.html#a0a01439a0cc8dfc86ed14f1094826b7e">express::WebApp::init</a>(argc, argv);</div>
+<div class="line">    <a class="code hl_function" href="classexpress_1_1WebApp.html#a0a01439a0cc8dfc86ed14f1094826b7e">express::WebApp::init</a>(argc, argv);</div>
 <div class="line"> </div>
 <div class="line">    <span class="keyword">using </span>LegacyWebApp = <a class="code hl_typedef" href="namespaceexpress_1_1legacy_1_1in.html#a100edb4786f87c3e88f0518b4feb59e7">express::legacy::in::WebApp</a>;</div>
 <div class="line">    <span class="keyword">using </span>LegacySocketAddress = LegacyWebApp::SocketAddress;</div>
@@ -645,7 +645,7 @@ Receive Data via HTTP-Post Request</h2>
 <div class="line">    <span class="comment">//    APPLICATION(req, res)</span></div>
 <div class="line">    <span class="comment">// expands to </span></div>
 <div class="line">    <span class="comment">//    ([[maybe_unused]] express::Request&amp; (req), [[maybe_unused]] express::Response&amp; (res)</span></div>
-<div class="line">    legacyApp.get(<span class="stringliteral">&quot;/&quot;</span>, [] <a class="code hl_define" href="_router_8h.html#a8b7131df91fe7a961e2cdadcedb55232">APPLICATION</a>(req, res) {</div>
+<div class="line">    legacyApp.get(<span class="stringliteral">&quot;/&quot;</span>, [] <a class="code hl_define" href="Router_8h.html#a8b7131df91fe7a961e2cdadcedb55232">APPLICATION</a>(req, res) {</div>
 <div class="line">        res.send(<span class="stringliteral">&quot;&lt;html&gt;&quot;</span></div>
 <div class="line">                 <span class="stringliteral">&quot;    &lt;head&gt;&quot;</span></div>
 <div class="line">                 <span class="stringliteral">&quot;        &lt;style&gt;&quot;</span></div>
@@ -677,7 +677,7 @@ Receive Data via HTTP-Post Request</h2>
 <div class="line">                 <span class="stringliteral">&quot;&lt;/html&gt;&quot;</span>);</div>
 <div class="line">    });</div>
 <div class="line"> </div>
-<div class="line">    legacyApp.post(<span class="stringliteral">&quot;/&quot;</span>, [] <a class="code hl_define" href="_router_8h.html#a8b7131df91fe7a961e2cdadcedb55232">APPLICATION</a>(req, res) {</div>
+<div class="line">    legacyApp.post(<span class="stringliteral">&quot;/&quot;</span>, [] <a class="code hl_define" href="Router_8h.html#a8b7131df91fe7a961e2cdadcedb55232">APPLICATION</a>(req, res) {</div>
 <div class="line">        req.body.push_back(0);</div>
 <div class="line"> </div>
 <div class="line">        res.send(<span class="stringliteral">&quot;&lt;html&gt;&quot;</span></div>
@@ -720,9 +720,9 @@ Receive Data via HTTP-Post Request</h2>
 <div class="line">        }</div>
 <div class="line">    });</div>
 <div class="line"> </div>
-<div class="line">    <span class="keywordflow">return</span> <a class="code hl_function" href="classexpress_1_1_web_app.html#a54e6910c9466c61d0b217490b7d9bb5a">express::WebApp::start</a>();</div>
+<div class="line">    <span class="keywordflow">return</span> <a class="code hl_function" href="classexpress_1_1WebApp.html#a54e6910c9466c61d0b217490b7d9bb5a">express::WebApp::start</a>();</div>
 <div class="line">}</div>
-<div class="ttc" id="a_router_8h_html_a8b7131df91fe7a961e2cdadcedb55232"><div class="ttname"><a href="_router_8h.html#a8b7131df91fe7a961e2cdadcedb55232">APPLICATION</a></div><div class="ttdeci">#define APPLICATION(req, res)</div><div class="ttdef"><b>Definition</b> <a href="_router_8h_source.html#l00042">Router.h:42</a></div></div>
+<div class="ttc" id="aRouter_8h_html_a8b7131df91fe7a961e2cdadcedb55232"><div class="ttname"><a href="Router_8h.html#a8b7131df91fe7a961e2cdadcedb55232">APPLICATION</a></div><div class="ttdeci">#define APPLICATION(req, res)</div><div class="ttdef"><b>Definition</b> <a href="Router_8h_source.html#l00042">Router.h:42</a></div></div>
 </div><!-- fragment --><h2><a class="anchor" id="autotoc_md36"></a>
 Extract Server and Client Information (host name, IP, port, SSL/TLS information)</h2>
 <div class="fragment"><div class="line">To be documented soon</div>
@@ -735,7 +735,7 @@ Using Regular Expressions in Routes</h2>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Mon Oct 2 2023 20:14:08 for snode.c by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Tue Oct 10 2023 10:04:24 for snode.c by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

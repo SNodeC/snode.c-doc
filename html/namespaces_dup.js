@@ -6,7 +6,7 @@ var namespaces_dup =
       [ "is_base64", "namespacebase64.html#a58328d4dcbc51d53a60f168c45b59a79", null ],
       [ "serverWebSocketKey", "namespacebase64.html#a43968536c5e19d8c265e17d08fd91c3e", null ]
     ] ],
-    [ "CLI", "namespace_c_l_i.html", "namespace_c_l_i" ],
+    [ "CLI", "namespaceCLI.html", "namespaceCLI" ],
     [ "core", "namespacecore.html", "namespacecore" ],
     [ "database", "namespacedatabase.html", "namespacedatabase" ],
     [ "express", "namespaceexpress.html", "namespaceexpress" ],

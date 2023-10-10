@@ -1,11 +1,11 @@
 var namespacedatabase_1_1mariadb_1_1commands_1_1async =
 [
-    [ "MariaDBAutoCommitCommand", "classdatabase_1_1mariadb_1_1commands_1_1async_1_1_maria_d_b_auto_commit_command.html", "classdatabase_1_1mariadb_1_1commands_1_1async_1_1_maria_d_b_auto_commit_command" ],
-    [ "MariaDBCommitCommand", "classdatabase_1_1mariadb_1_1commands_1_1async_1_1_maria_d_b_commit_command.html", "classdatabase_1_1mariadb_1_1commands_1_1async_1_1_maria_d_b_commit_command" ],
-    [ "MariaDBConnectCommand", "classdatabase_1_1mariadb_1_1commands_1_1async_1_1_maria_d_b_connect_command.html", "classdatabase_1_1mariadb_1_1commands_1_1async_1_1_maria_d_b_connect_command" ],
-    [ "MariaDBExecCommand", "classdatabase_1_1mariadb_1_1commands_1_1async_1_1_maria_d_b_exec_command.html", "classdatabase_1_1mariadb_1_1commands_1_1async_1_1_maria_d_b_exec_command" ],
-    [ "MariaDBFetchRowCommand", "classdatabase_1_1mariadb_1_1commands_1_1async_1_1_maria_d_b_fetch_row_command.html", "classdatabase_1_1mariadb_1_1commands_1_1async_1_1_maria_d_b_fetch_row_command" ],
-    [ "MariaDBFreeResultCommand", "classdatabase_1_1mariadb_1_1commands_1_1async_1_1_maria_d_b_free_result_command.html", "classdatabase_1_1mariadb_1_1commands_1_1async_1_1_maria_d_b_free_result_command" ],
-    [ "MariaDBQueryCommand", "classdatabase_1_1mariadb_1_1commands_1_1async_1_1_maria_d_b_query_command.html", "classdatabase_1_1mariadb_1_1commands_1_1async_1_1_maria_d_b_query_command" ],
-    [ "MariaDBRollbackCommand", "classdatabase_1_1mariadb_1_1commands_1_1async_1_1_maria_d_b_rollback_command.html", "classdatabase_1_1mariadb_1_1commands_1_1async_1_1_maria_d_b_rollback_command" ]
+    [ "MariaDBAutoCommitCommand", "classdatabase_1_1mariadb_1_1commands_1_1async_1_1MariaDBAutoCommitCommand.html", "classdatabase_1_1mariadb_1_1commands_1_1async_1_1MariaDBAutoCommitCommand" ],
+    [ "MariaDBCommitCommand", "classdatabase_1_1mariadb_1_1commands_1_1async_1_1MariaDBCommitCommand.html", "classdatabase_1_1mariadb_1_1commands_1_1async_1_1MariaDBCommitCommand" ],
+    [ "MariaDBConnectCommand", "classdatabase_1_1mariadb_1_1commands_1_1async_1_1MariaDBConnectCommand.html", "classdatabase_1_1mariadb_1_1commands_1_1async_1_1MariaDBConnectCommand" ],
+    [ "MariaDBExecCommand", "classdatabase_1_1mariadb_1_1commands_1_1async_1_1MariaDBExecCommand.html", "classdatabase_1_1mariadb_1_1commands_1_1async_1_1MariaDBExecCommand" ],
+    [ "MariaDBFetchRowCommand", "classdatabase_1_1mariadb_1_1commands_1_1async_1_1MariaDBFetchRowCommand.html", "classdatabase_1_1mariadb_1_1commands_1_1async_1_1MariaDBFetchRowCommand" ],
+    [ "MariaDBFreeResultCommand", "classdatabase_1_1mariadb_1_1commands_1_1async_1_1MariaDBFreeResultCommand.html", "classdatabase_1_1mariadb_1_1commands_1_1async_1_1MariaDBFreeResultCommand" ],
+    [ "MariaDBQueryCommand", "classdatabase_1_1mariadb_1_1commands_1_1async_1_1MariaDBQueryCommand.html", "classdatabase_1_1mariadb_1_1commands_1_1async_1_1MariaDBQueryCommand" ],
+    [ "MariaDBRollbackCommand", "classdatabase_1_1mariadb_1_1commands_1_1async_1_1MariaDBRollbackCommand.html", "classdatabase_1_1mariadb_1_1commands_1_1async_1_1MariaDBRollbackCommand" ]
 ];

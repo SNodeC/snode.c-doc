@@ -1,12 +1,12 @@
 var namespaceiot_1_1mqtt_1_1types =
 [
-    [ "String", "classiot_1_1mqtt_1_1types_1_1_string.html", "classiot_1_1mqtt_1_1types_1_1_string" ],
-    [ "StringRaw", "classiot_1_1mqtt_1_1types_1_1_string_raw.html", "classiot_1_1mqtt_1_1types_1_1_string_raw" ],
-    [ "TypeBase", "classiot_1_1mqtt_1_1types_1_1_type_base.html", "classiot_1_1mqtt_1_1types_1_1_type_base" ],
-    [ "UInt16", "classiot_1_1mqtt_1_1types_1_1_u_int16.html", "classiot_1_1mqtt_1_1types_1_1_u_int16" ],
-    [ "UInt32", "classiot_1_1mqtt_1_1types_1_1_u_int32.html", "classiot_1_1mqtt_1_1types_1_1_u_int32" ],
-    [ "UInt64", "classiot_1_1mqtt_1_1types_1_1_u_int64.html", "classiot_1_1mqtt_1_1types_1_1_u_int64" ],
-    [ "UInt8", "classiot_1_1mqtt_1_1types_1_1_u_int8.html", "classiot_1_1mqtt_1_1types_1_1_u_int8" ],
-    [ "UInt8List", "classiot_1_1mqtt_1_1types_1_1_u_int8_list.html", "classiot_1_1mqtt_1_1types_1_1_u_int8_list" ],
-    [ "UIntV", "classiot_1_1mqtt_1_1types_1_1_u_int_v.html", "classiot_1_1mqtt_1_1types_1_1_u_int_v" ]
+    [ "String", "classiot_1_1mqtt_1_1types_1_1String.html", "classiot_1_1mqtt_1_1types_1_1String" ],
+    [ "StringRaw", "classiot_1_1mqtt_1_1types_1_1StringRaw.html", "classiot_1_1mqtt_1_1types_1_1StringRaw" ],
+    [ "TypeBase", "classiot_1_1mqtt_1_1types_1_1TypeBase.html", "classiot_1_1mqtt_1_1types_1_1TypeBase" ],
+    [ "UInt16", "classiot_1_1mqtt_1_1types_1_1UInt16.html", "classiot_1_1mqtt_1_1types_1_1UInt16" ],
+    [ "UInt32", "classiot_1_1mqtt_1_1types_1_1UInt32.html", "classiot_1_1mqtt_1_1types_1_1UInt32" ],
+    [ "UInt64", "classiot_1_1mqtt_1_1types_1_1UInt64.html", "classiot_1_1mqtt_1_1types_1_1UInt64" ],
+    [ "UInt8", "classiot_1_1mqtt_1_1types_1_1UInt8.html", "classiot_1_1mqtt_1_1types_1_1UInt8" ],
+    [ "UInt8List", "classiot_1_1mqtt_1_1types_1_1UInt8List.html", "classiot_1_1mqtt_1_1types_1_1UInt8List" ],
+    [ "UIntV", "classiot_1_1mqtt_1_1types_1_1UIntV.html", "classiot_1_1mqtt_1_1types_1_1UIntV" ]
 ];

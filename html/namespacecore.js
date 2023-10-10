@@ -48,21 +48,19 @@ var namespacecore =
       [ "write", "namespacecore_1_1system.html#ae492f0526e716bf3a8bf341386bae61c", null ]
     ] ],
     [ "timer", "namespacecore_1_1timer.html", "namespacecore_1_1timer" ],
-    [ "Descriptor", "classcore_1_1_descriptor.html", "classcore_1_1_descriptor" ],
-    [ "DescriptorEventPublisher", "classcore_1_1_descriptor_event_publisher.html", "classcore_1_1_descriptor_event_publisher" ],
-    [ "DescriptorEventReceiver", "classcore_1_1_descriptor_event_receiver.html", "classcore_1_1_descriptor_event_receiver" ],
-    [ "DynamicLoader", "classcore_1_1_dynamic_loader.html", "classcore_1_1_dynamic_loader" ],
-    [ "Event", "classcore_1_1_event.html", "classcore_1_1_event" ],
-    [ "EventLoop", "classcore_1_1_event_loop.html", "classcore_1_1_event_loop" ],
-    [ "EventMultiplexer", "classcore_1_1_event_multiplexer.html", "classcore_1_1_event_multiplexer" ],
-    [ "EventReceiver", "classcore_1_1_event_receiver.html", "classcore_1_1_event_receiver" ],
-    [ "Observer", "classcore_1_1_observer.html", "classcore_1_1_observer" ],
-    [ "ProgressLog", "classcore_1_1_progress_log.html", "classcore_1_1_progress_log" ],
-    [ "ProgressLogEntry", "structcore_1_1_progress_log_entry.html", "structcore_1_1_progress_log_entry" ],
-    [ "SNodeC", "classcore_1_1_s_node_c.html", "classcore_1_1_s_node_c" ],
-    [ "Timer", "classcore_1_1_timer.html", "classcore_1_1_timer" ],
-    [ "TimerEventPublisher", "classcore_1_1_timer_event_publisher.html", "classcore_1_1_timer_event_publisher" ],
-    [ "TimerEventReceiver", "classcore_1_1_timer_event_receiver.html", "classcore_1_1_timer_event_receiver" ],
+    [ "Descriptor", "classcore_1_1Descriptor.html", "classcore_1_1Descriptor" ],
+    [ "DescriptorEventPublisher", "classcore_1_1DescriptorEventPublisher.html", "classcore_1_1DescriptorEventPublisher" ],
+    [ "DescriptorEventReceiver", "classcore_1_1DescriptorEventReceiver.html", "classcore_1_1DescriptorEventReceiver" ],
+    [ "DynamicLoader", "classcore_1_1DynamicLoader.html", "classcore_1_1DynamicLoader" ],
+    [ "Event", "classcore_1_1Event.html", "classcore_1_1Event" ],
+    [ "EventLoop", "classcore_1_1EventLoop.html", "classcore_1_1EventLoop" ],
+    [ "EventMultiplexer", "classcore_1_1EventMultiplexer.html", "classcore_1_1EventMultiplexer" ],
+    [ "EventReceiver", "classcore_1_1EventReceiver.html", "classcore_1_1EventReceiver" ],
+    [ "Observer", "classcore_1_1Observer.html", "classcore_1_1Observer" ],
+    [ "SNodeC", "classcore_1_1SNodeC.html", "classcore_1_1SNodeC" ],
+    [ "Timer", "classcore_1_1Timer.html", "classcore_1_1Timer" ],
+    [ "TimerEventPublisher", "classcore_1_1TimerEventPublisher.html", "classcore_1_1TimerEventPublisher" ],
+    [ "TimerEventReceiver", "classcore_1_1TimerEventReceiver.html", "classcore_1_1TimerEventReceiver" ],
     [ "State", "namespacecore.html#a6613a3d81c1d25590b1cd31540d08815", [
       [ "LOADED", "namespacecore.html#a6613a3d81c1d25590b1cd31540d08815ab638272ceeff54912f043465e9a28c9b", null ],
       [ "INITIALIZED", "namespacecore.html#a6613a3d81c1d25590b1cd31540d08815adee5f03c2c4e73657824e028494b18c0", null ],
@@ -75,6 +73,5 @@ var namespacecore =
       [ "NOOBSERVER", "namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a4e7d1789953412597b5124514c61cb9b", null ],
       [ "ERROR", "namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749abb1ca97ec761fc37101737ba0aa2e7c5", null ]
     ] ],
-    [ "getTickCounterAsString", "namespacecore.html#ac82d0e7a5fcc66169eb61cb7dd27b814", null ],
-    [ "operator<<", "namespacecore.html#a14952cde5979a24cb7c1ae17e70dc7cf", null ]
+    [ "getTickCounterAsString", "namespacecore.html#ac82d0e7a5fcc66169eb61cb7dd27b814", null ]
 ];

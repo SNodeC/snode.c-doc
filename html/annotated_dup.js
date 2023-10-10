@@ -1,575 +1,559 @@
 var annotated_dup =
 [
-    [ "CLI", "namespace_c_l_i.html", [
-      [ "CallForCommandline", "class_c_l_i_1_1_call_for_commandline.html", "class_c_l_i_1_1_call_for_commandline" ],
-      [ "CallForShowConfig", "class_c_l_i_1_1_call_for_show_config.html", "class_c_l_i_1_1_call_for_show_config" ],
-      [ "CallForWriteConfig", "class_c_l_i_1_1_call_for_write_config.html", "class_c_l_i_1_1_call_for_write_config" ],
-      [ "ConfigFormatter", "class_c_l_i_1_1_config_formatter.html", "class_c_l_i_1_1_config_formatter" ],
-      [ "HelpFormatter", "class_c_l_i_1_1_help_formatter.html", "class_c_l_i_1_1_help_formatter" ],
-      [ "IsValue", "class_c_l_i_1_1_is_value.html", "class_c_l_i_1_1_is_value" ]
+    [ "CLI", "namespaceCLI.html", [
+      [ "CallForCommandline", "classCLI_1_1CallForCommandline.html", "classCLI_1_1CallForCommandline" ],
+      [ "CallForShowConfig", "classCLI_1_1CallForShowConfig.html", "classCLI_1_1CallForShowConfig" ],
+      [ "CallForWriteConfig", "classCLI_1_1CallForWriteConfig.html", "classCLI_1_1CallForWriteConfig" ],
+      [ "ConfigFormatter", "classCLI_1_1ConfigFormatter.html", "classCLI_1_1ConfigFormatter" ],
+      [ "HelpFormatter", "classCLI_1_1HelpFormatter.html", "classCLI_1_1HelpFormatter" ],
+      [ "IsValue", "classCLI_1_1IsValue.html", "classCLI_1_1IsValue" ]
     ] ],
     [ "core", "namespacecore.html", [
       [ "epoll", "namespacecore_1_1epoll.html", [
-        [ "DescriptorEventPublisher", "classcore_1_1epoll_1_1_descriptor_event_publisher.html", "classcore_1_1epoll_1_1_descriptor_event_publisher" ],
-        [ "EventMultiplexer", "classcore_1_1epoll_1_1_event_multiplexer.html", "classcore_1_1epoll_1_1_event_multiplexer" ]
+        [ "DescriptorEventPublisher", "classcore_1_1epoll_1_1DescriptorEventPublisher.html", "classcore_1_1epoll_1_1DescriptorEventPublisher" ],
+        [ "EventMultiplexer", "classcore_1_1epoll_1_1EventMultiplexer.html", "classcore_1_1epoll_1_1EventMultiplexer" ]
       ] ],
       [ "eventreceiver", "namespacecore_1_1eventreceiver.html", [
-        [ "AcceptEventReceiver", "classcore_1_1eventreceiver_1_1_accept_event_receiver.html", "classcore_1_1eventreceiver_1_1_accept_event_receiver" ],
-        [ "ConnectEventReceiver", "classcore_1_1eventreceiver_1_1_connect_event_receiver.html", "classcore_1_1eventreceiver_1_1_connect_event_receiver" ],
-        [ "ExceptionalConditionEventReceiver", "classcore_1_1eventreceiver_1_1_exceptional_condition_event_receiver.html", "classcore_1_1eventreceiver_1_1_exceptional_condition_event_receiver" ],
-        [ "InitAcceptEventReceiver", "classcore_1_1eventreceiver_1_1_init_accept_event_receiver.html", "classcore_1_1eventreceiver_1_1_init_accept_event_receiver" ],
-        [ "InitConnectEventReceiver", "classcore_1_1eventreceiver_1_1_init_connect_event_receiver.html", "classcore_1_1eventreceiver_1_1_init_connect_event_receiver" ],
-        [ "ReadEventReceiver", "classcore_1_1eventreceiver_1_1_read_event_receiver.html", "classcore_1_1eventreceiver_1_1_read_event_receiver" ],
-        [ "WriteEventReceiver", "classcore_1_1eventreceiver_1_1_write_event_receiver.html", "classcore_1_1eventreceiver_1_1_write_event_receiver" ]
+        [ "AcceptEventReceiver", "classcore_1_1eventreceiver_1_1AcceptEventReceiver.html", "classcore_1_1eventreceiver_1_1AcceptEventReceiver" ],
+        [ "ConnectEventReceiver", "classcore_1_1eventreceiver_1_1ConnectEventReceiver.html", "classcore_1_1eventreceiver_1_1ConnectEventReceiver" ],
+        [ "ExceptionalConditionEventReceiver", "classcore_1_1eventreceiver_1_1ExceptionalConditionEventReceiver.html", "classcore_1_1eventreceiver_1_1ExceptionalConditionEventReceiver" ],
+        [ "InitAcceptEventReceiver", "classcore_1_1eventreceiver_1_1InitAcceptEventReceiver.html", "classcore_1_1eventreceiver_1_1InitAcceptEventReceiver" ],
+        [ "InitConnectEventReceiver", "classcore_1_1eventreceiver_1_1InitConnectEventReceiver.html", "classcore_1_1eventreceiver_1_1InitConnectEventReceiver" ],
+        [ "ReadEventReceiver", "classcore_1_1eventreceiver_1_1ReadEventReceiver.html", "classcore_1_1eventreceiver_1_1ReadEventReceiver" ],
+        [ "WriteEventReceiver", "classcore_1_1eventreceiver_1_1WriteEventReceiver.html", "classcore_1_1eventreceiver_1_1WriteEventReceiver" ]
       ] ],
       [ "file", "namespacecore_1_1file.html", [
-        [ "File", "classcore_1_1file_1_1_file.html", "classcore_1_1file_1_1_file" ],
-        [ "FileReader", "classcore_1_1file_1_1_file_reader.html", "classcore_1_1file_1_1_file_reader" ]
+        [ "File", "classcore_1_1file_1_1File.html", "classcore_1_1file_1_1File" ],
+        [ "FileReader", "classcore_1_1file_1_1FileReader.html", "classcore_1_1file_1_1FileReader" ]
       ] ],
       [ "pipe", "namespacecore_1_1pipe.html", [
-        [ "Pipe", "classcore_1_1pipe_1_1_pipe.html", "classcore_1_1pipe_1_1_pipe" ],
-        [ "PipeSink", "classcore_1_1pipe_1_1_pipe_sink.html", "classcore_1_1pipe_1_1_pipe_sink" ],
-        [ "PipeSource", "classcore_1_1pipe_1_1_pipe_source.html", "classcore_1_1pipe_1_1_pipe_source" ],
-        [ "Sink", "classcore_1_1pipe_1_1_sink.html", "classcore_1_1pipe_1_1_sink" ],
-        [ "Source", "classcore_1_1pipe_1_1_source.html", "classcore_1_1pipe_1_1_source" ]
+        [ "Pipe", "classcore_1_1pipe_1_1Pipe.html", "classcore_1_1pipe_1_1Pipe" ],
+        [ "PipeSink", "classcore_1_1pipe_1_1PipeSink.html", "classcore_1_1pipe_1_1PipeSink" ],
+        [ "PipeSource", "classcore_1_1pipe_1_1PipeSource.html", "classcore_1_1pipe_1_1PipeSource" ],
+        [ "Sink", "classcore_1_1pipe_1_1Sink.html", "classcore_1_1pipe_1_1Sink" ],
+        [ "Source", "classcore_1_1pipe_1_1Source.html", "classcore_1_1pipe_1_1Source" ]
       ] ],
       [ "poll", "namespacecore_1_1poll.html", [
-        [ "DescriptorEventPublisher", "classcore_1_1poll_1_1_descriptor_event_publisher.html", "classcore_1_1poll_1_1_descriptor_event_publisher" ],
-        [ "EventMultiplexer", "classcore_1_1poll_1_1_event_multiplexer.html", "classcore_1_1poll_1_1_event_multiplexer" ],
-        [ "PollFdsManager", "classcore_1_1poll_1_1_poll_fds_manager.html", "classcore_1_1poll_1_1_poll_fds_manager" ]
+        [ "DescriptorEventPublisher", "classcore_1_1poll_1_1DescriptorEventPublisher.html", "classcore_1_1poll_1_1DescriptorEventPublisher" ],
+        [ "EventMultiplexer", "classcore_1_1poll_1_1EventMultiplexer.html", "classcore_1_1poll_1_1EventMultiplexer" ],
+        [ "PollFdsManager", "classcore_1_1poll_1_1PollFdsManager.html", "classcore_1_1poll_1_1PollFdsManager" ]
       ] ],
       [ "select", "namespacecore_1_1select.html", [
-        [ "DescriptorEventPublisher", "classcore_1_1select_1_1_descriptor_event_publisher.html", "classcore_1_1select_1_1_descriptor_event_publisher" ],
-        [ "EventMultiplexer", "classcore_1_1select_1_1_event_multiplexer.html", "classcore_1_1select_1_1_event_multiplexer" ],
-        [ "FdSet", "classcore_1_1select_1_1_fd_set.html", "classcore_1_1select_1_1_fd_set" ]
+        [ "DescriptorEventPublisher", "classcore_1_1select_1_1DescriptorEventPublisher.html", "classcore_1_1select_1_1DescriptorEventPublisher" ],
+        [ "EventMultiplexer", "classcore_1_1select_1_1EventMultiplexer.html", "classcore_1_1select_1_1EventMultiplexer" ],
+        [ "FdSet", "classcore_1_1select_1_1FdSet.html", "classcore_1_1select_1_1FdSet" ]
       ] ],
       [ "socket", "namespacecore_1_1socket.html", [
         [ "stream", "namespacecore_1_1socket_1_1stream.html", [
           [ "legacy", "namespacecore_1_1socket_1_1stream_1_1legacy.html", [
-            [ "SocketAcceptor", "classcore_1_1socket_1_1stream_1_1legacy_1_1_socket_acceptor.html", "classcore_1_1socket_1_1stream_1_1legacy_1_1_socket_acceptor" ],
-            [ "SocketConnection", "classcore_1_1socket_1_1stream_1_1legacy_1_1_socket_connection.html", "classcore_1_1socket_1_1stream_1_1legacy_1_1_socket_connection" ],
-            [ "SocketConnector", "classcore_1_1socket_1_1stream_1_1legacy_1_1_socket_connector.html", "classcore_1_1socket_1_1stream_1_1legacy_1_1_socket_connector" ],
-            [ "SocketReader", "classcore_1_1socket_1_1stream_1_1legacy_1_1_socket_reader.html", "classcore_1_1socket_1_1stream_1_1legacy_1_1_socket_reader" ],
-            [ "SocketWriter", "classcore_1_1socket_1_1stream_1_1legacy_1_1_socket_writer.html", "classcore_1_1socket_1_1stream_1_1legacy_1_1_socket_writer" ]
+            [ "SocketAcceptor", "classcore_1_1socket_1_1stream_1_1legacy_1_1SocketAcceptor.html", "classcore_1_1socket_1_1stream_1_1legacy_1_1SocketAcceptor" ],
+            [ "SocketConnection", "classcore_1_1socket_1_1stream_1_1legacy_1_1SocketConnection.html", "classcore_1_1socket_1_1stream_1_1legacy_1_1SocketConnection" ],
+            [ "SocketConnector", "classcore_1_1socket_1_1stream_1_1legacy_1_1SocketConnector.html", "classcore_1_1socket_1_1stream_1_1legacy_1_1SocketConnector" ],
+            [ "SocketReader", "classcore_1_1socket_1_1stream_1_1legacy_1_1SocketReader.html", "classcore_1_1socket_1_1stream_1_1legacy_1_1SocketReader" ],
+            [ "SocketWriter", "classcore_1_1socket_1_1stream_1_1legacy_1_1SocketWriter.html", "classcore_1_1socket_1_1stream_1_1legacy_1_1SocketWriter" ]
           ] ],
           [ "tls", "namespacecore_1_1socket_1_1stream_1_1tls.html", [
-            [ "SocketAcceptor", "classcore_1_1socket_1_1stream_1_1tls_1_1_socket_acceptor.html", "classcore_1_1socket_1_1stream_1_1tls_1_1_socket_acceptor" ],
-            [ "SocketConnection", "classcore_1_1socket_1_1stream_1_1tls_1_1_socket_connection.html", "classcore_1_1socket_1_1stream_1_1tls_1_1_socket_connection" ],
-            [ "SocketConnector", "classcore_1_1socket_1_1stream_1_1tls_1_1_socket_connector.html", "classcore_1_1socket_1_1stream_1_1tls_1_1_socket_connector" ],
-            [ "SocketReader", "classcore_1_1socket_1_1stream_1_1tls_1_1_socket_reader.html", "classcore_1_1socket_1_1stream_1_1tls_1_1_socket_reader" ],
-            [ "SocketWriter", "classcore_1_1socket_1_1stream_1_1tls_1_1_socket_writer.html", "classcore_1_1socket_1_1stream_1_1tls_1_1_socket_writer" ],
-            [ "SslConfig", "structcore_1_1socket_1_1stream_1_1tls_1_1_ssl_config.html", "structcore_1_1socket_1_1stream_1_1tls_1_1_ssl_config" ],
-            [ "TLSHandshake", "classcore_1_1socket_1_1stream_1_1tls_1_1_t_l_s_handshake.html", "classcore_1_1socket_1_1stream_1_1tls_1_1_t_l_s_handshake" ],
-            [ "TLSShutdown", "classcore_1_1socket_1_1stream_1_1tls_1_1_t_l_s_shutdown.html", "classcore_1_1socket_1_1stream_1_1tls_1_1_t_l_s_shutdown" ]
+            [ "SocketAcceptor", "classcore_1_1socket_1_1stream_1_1tls_1_1SocketAcceptor.html", "classcore_1_1socket_1_1stream_1_1tls_1_1SocketAcceptor" ],
+            [ "SocketConnection", "classcore_1_1socket_1_1stream_1_1tls_1_1SocketConnection.html", "classcore_1_1socket_1_1stream_1_1tls_1_1SocketConnection" ],
+            [ "SocketConnector", "classcore_1_1socket_1_1stream_1_1tls_1_1SocketConnector.html", "classcore_1_1socket_1_1stream_1_1tls_1_1SocketConnector" ],
+            [ "SocketReader", "classcore_1_1socket_1_1stream_1_1tls_1_1SocketReader.html", "classcore_1_1socket_1_1stream_1_1tls_1_1SocketReader" ],
+            [ "SocketWriter", "classcore_1_1socket_1_1stream_1_1tls_1_1SocketWriter.html", "classcore_1_1socket_1_1stream_1_1tls_1_1SocketWriter" ],
+            [ "SslConfig", "structcore_1_1socket_1_1stream_1_1tls_1_1SslConfig.html", "structcore_1_1socket_1_1stream_1_1tls_1_1SslConfig" ],
+            [ "TLSHandshake", "classcore_1_1socket_1_1stream_1_1tls_1_1TLSHandshake.html", "classcore_1_1socket_1_1stream_1_1tls_1_1TLSHandshake" ],
+            [ "TLSShutdown", "classcore_1_1socket_1_1stream_1_1tls_1_1TLSShutdown.html", "classcore_1_1socket_1_1stream_1_1tls_1_1TLSShutdown" ]
           ] ],
-          [ "SocketAcceptor", "classcore_1_1socket_1_1stream_1_1_socket_acceptor.html", "classcore_1_1socket_1_1stream_1_1_socket_acceptor" ],
-          [ "SocketClient", "classcore_1_1socket_1_1stream_1_1_socket_client.html", "classcore_1_1socket_1_1stream_1_1_socket_client" ],
-          [ "SocketConnection", "classcore_1_1socket_1_1stream_1_1_socket_connection.html", "classcore_1_1socket_1_1stream_1_1_socket_connection" ],
-          [ "SocketConnectionFactory", "classcore_1_1socket_1_1stream_1_1_socket_connection_factory.html", "classcore_1_1socket_1_1stream_1_1_socket_connection_factory" ],
-          [ "SocketConnectionT", "classcore_1_1socket_1_1stream_1_1_socket_connection_t.html", "classcore_1_1socket_1_1stream_1_1_socket_connection_t" ],
-          [ "SocketConnector", "classcore_1_1socket_1_1stream_1_1_socket_connector.html", "classcore_1_1socket_1_1stream_1_1_socket_connector" ],
-          [ "SocketContext", "classcore_1_1socket_1_1stream_1_1_socket_context.html", "classcore_1_1socket_1_1stream_1_1_socket_context" ],
-          [ "SocketContextFactory", "classcore_1_1socket_1_1stream_1_1_socket_context_factory.html", "classcore_1_1socket_1_1stream_1_1_socket_context_factory" ],
-          [ "SocketReader", "classcore_1_1socket_1_1stream_1_1_socket_reader.html", "classcore_1_1socket_1_1stream_1_1_socket_reader" ],
-          [ "SocketServer", "classcore_1_1socket_1_1stream_1_1_socket_server.html", "classcore_1_1socket_1_1stream_1_1_socket_server" ],
-          [ "SocketWriter", "classcore_1_1socket_1_1stream_1_1_socket_writer.html", "classcore_1_1socket_1_1stream_1_1_socket_writer" ]
+          [ "SocketAcceptor", "classcore_1_1socket_1_1stream_1_1SocketAcceptor.html", "classcore_1_1socket_1_1stream_1_1SocketAcceptor" ],
+          [ "SocketClient", "classcore_1_1socket_1_1stream_1_1SocketClient.html", "classcore_1_1socket_1_1stream_1_1SocketClient" ],
+          [ "SocketConnection", "classcore_1_1socket_1_1stream_1_1SocketConnection.html", "classcore_1_1socket_1_1stream_1_1SocketConnection" ],
+          [ "SocketConnectionFactory", "classcore_1_1socket_1_1stream_1_1SocketConnectionFactory.html", "classcore_1_1socket_1_1stream_1_1SocketConnectionFactory" ],
+          [ "SocketConnectionT", "classcore_1_1socket_1_1stream_1_1SocketConnectionT.html", "classcore_1_1socket_1_1stream_1_1SocketConnectionT" ],
+          [ "SocketConnector", "classcore_1_1socket_1_1stream_1_1SocketConnector.html", "classcore_1_1socket_1_1stream_1_1SocketConnector" ],
+          [ "SocketContext", "classcore_1_1socket_1_1stream_1_1SocketContext.html", "classcore_1_1socket_1_1stream_1_1SocketContext" ],
+          [ "SocketContextFactory", "classcore_1_1socket_1_1stream_1_1SocketContextFactory.html", "classcore_1_1socket_1_1stream_1_1SocketContextFactory" ],
+          [ "SocketReader", "classcore_1_1socket_1_1stream_1_1SocketReader.html", "classcore_1_1socket_1_1stream_1_1SocketReader" ],
+          [ "SocketServer", "classcore_1_1socket_1_1stream_1_1SocketServer.html", "classcore_1_1socket_1_1stream_1_1SocketServer" ],
+          [ "SocketWriter", "classcore_1_1socket_1_1stream_1_1SocketWriter.html", "classcore_1_1socket_1_1stream_1_1SocketWriter" ]
         ] ],
-        [ "LogicalSocket", "classcore_1_1socket_1_1_logical_socket.html", "classcore_1_1socket_1_1_logical_socket" ],
-        [ "SocketAddress", "classcore_1_1socket_1_1_socket_address.html", "classcore_1_1socket_1_1_socket_address" ],
-        [ "SocketContext", "classcore_1_1socket_1_1_socket_context.html", "classcore_1_1socket_1_1_socket_context" ]
+        [ "Socket", "classcore_1_1socket_1_1Socket.html", "classcore_1_1socket_1_1Socket" ],
+        [ "SocketAddress", "classcore_1_1socket_1_1SocketAddress.html", "classcore_1_1socket_1_1SocketAddress" ],
+        [ "SocketContext", "classcore_1_1socket_1_1SocketContext.html", "classcore_1_1socket_1_1SocketContext" ]
       ] ],
       [ "timer", "namespacecore_1_1timer.html", [
-        [ "IntervalTimer", "classcore_1_1timer_1_1_interval_timer.html", "classcore_1_1timer_1_1_interval_timer" ],
-        [ "IntervalTimerStopable", "classcore_1_1timer_1_1_interval_timer_stopable.html", "classcore_1_1timer_1_1_interval_timer_stopable" ],
-        [ "SingleshotTimer", "classcore_1_1timer_1_1_singleshot_timer.html", "classcore_1_1timer_1_1_singleshot_timer" ],
-        [ "Timer", "classcore_1_1timer_1_1_timer.html", "classcore_1_1timer_1_1_timer" ]
+        [ "IntervalTimer", "classcore_1_1timer_1_1IntervalTimer.html", "classcore_1_1timer_1_1IntervalTimer" ],
+        [ "IntervalTimerStopable", "classcore_1_1timer_1_1IntervalTimerStopable.html", "classcore_1_1timer_1_1IntervalTimerStopable" ],
+        [ "SingleshotTimer", "classcore_1_1timer_1_1SingleshotTimer.html", "classcore_1_1timer_1_1SingleshotTimer" ],
+        [ "Timer", "classcore_1_1timer_1_1Timer.html", "classcore_1_1timer_1_1Timer" ]
       ] ],
-      [ "Descriptor", "classcore_1_1_descriptor.html", "classcore_1_1_descriptor" ],
-      [ "DescriptorEventPublisher", "classcore_1_1_descriptor_event_publisher.html", "classcore_1_1_descriptor_event_publisher" ],
-      [ "DescriptorEventReceiver", "classcore_1_1_descriptor_event_receiver.html", "classcore_1_1_descriptor_event_receiver" ],
-      [ "DynamicLoader", "classcore_1_1_dynamic_loader.html", "classcore_1_1_dynamic_loader" ],
-      [ "Event", "classcore_1_1_event.html", "classcore_1_1_event" ],
-      [ "EventLoop", "classcore_1_1_event_loop.html", "classcore_1_1_event_loop" ],
-      [ "EventMultiplexer", "classcore_1_1_event_multiplexer.html", "classcore_1_1_event_multiplexer" ],
-      [ "EventReceiver", "classcore_1_1_event_receiver.html", "classcore_1_1_event_receiver" ],
-      [ "Observer", "classcore_1_1_observer.html", "classcore_1_1_observer" ],
-      [ "ProgressLog", "classcore_1_1_progress_log.html", "classcore_1_1_progress_log" ],
-      [ "ProgressLogEntry", "structcore_1_1_progress_log_entry.html", "structcore_1_1_progress_log_entry" ],
-      [ "SNodeC", "classcore_1_1_s_node_c.html", "classcore_1_1_s_node_c" ],
-      [ "Timer", "classcore_1_1_timer.html", "classcore_1_1_timer" ],
-      [ "TimerEventPublisher", "classcore_1_1_timer_event_publisher.html", "classcore_1_1_timer_event_publisher" ],
-      [ "TimerEventReceiver", "classcore_1_1_timer_event_receiver.html", "classcore_1_1_timer_event_receiver" ]
+      [ "Descriptor", "classcore_1_1Descriptor.html", "classcore_1_1Descriptor" ],
+      [ "DescriptorEventPublisher", "classcore_1_1DescriptorEventPublisher.html", "classcore_1_1DescriptorEventPublisher" ],
+      [ "DescriptorEventReceiver", "classcore_1_1DescriptorEventReceiver.html", "classcore_1_1DescriptorEventReceiver" ],
+      [ "DynamicLoader", "classcore_1_1DynamicLoader.html", "classcore_1_1DynamicLoader" ],
+      [ "Event", "classcore_1_1Event.html", "classcore_1_1Event" ],
+      [ "EventLoop", "classcore_1_1EventLoop.html", "classcore_1_1EventLoop" ],
+      [ "EventMultiplexer", "classcore_1_1EventMultiplexer.html", "classcore_1_1EventMultiplexer" ],
+      [ "EventReceiver", "classcore_1_1EventReceiver.html", "classcore_1_1EventReceiver" ],
+      [ "Observer", "classcore_1_1Observer.html", "classcore_1_1Observer" ],
+      [ "SNodeC", "classcore_1_1SNodeC.html", "classcore_1_1SNodeC" ],
+      [ "Timer", "classcore_1_1Timer.html", "classcore_1_1Timer" ],
+      [ "TimerEventPublisher", "classcore_1_1TimerEventPublisher.html", "classcore_1_1TimerEventPublisher" ],
+      [ "TimerEventReceiver", "classcore_1_1TimerEventReceiver.html", "classcore_1_1TimerEventReceiver" ]
     ] ],
     [ "database", "namespacedatabase.html", [
       [ "mariadb", "namespacedatabase_1_1mariadb.html", [
         [ "commands", "namespacedatabase_1_1mariadb_1_1commands.html", [
           [ "async", "namespacedatabase_1_1mariadb_1_1commands_1_1async.html", [
-            [ "MariaDBAutoCommitCommand", "classdatabase_1_1mariadb_1_1commands_1_1async_1_1_maria_d_b_auto_commit_command.html", "classdatabase_1_1mariadb_1_1commands_1_1async_1_1_maria_d_b_auto_commit_command" ],
-            [ "MariaDBCommitCommand", "classdatabase_1_1mariadb_1_1commands_1_1async_1_1_maria_d_b_commit_command.html", "classdatabase_1_1mariadb_1_1commands_1_1async_1_1_maria_d_b_commit_command" ],
-            [ "MariaDBConnectCommand", "classdatabase_1_1mariadb_1_1commands_1_1async_1_1_maria_d_b_connect_command.html", "classdatabase_1_1mariadb_1_1commands_1_1async_1_1_maria_d_b_connect_command" ],
-            [ "MariaDBExecCommand", "classdatabase_1_1mariadb_1_1commands_1_1async_1_1_maria_d_b_exec_command.html", "classdatabase_1_1mariadb_1_1commands_1_1async_1_1_maria_d_b_exec_command" ],
-            [ "MariaDBFetchRowCommand", "classdatabase_1_1mariadb_1_1commands_1_1async_1_1_maria_d_b_fetch_row_command.html", "classdatabase_1_1mariadb_1_1commands_1_1async_1_1_maria_d_b_fetch_row_command" ],
-            [ "MariaDBFreeResultCommand", "classdatabase_1_1mariadb_1_1commands_1_1async_1_1_maria_d_b_free_result_command.html", "classdatabase_1_1mariadb_1_1commands_1_1async_1_1_maria_d_b_free_result_command" ],
-            [ "MariaDBQueryCommand", "classdatabase_1_1mariadb_1_1commands_1_1async_1_1_maria_d_b_query_command.html", "classdatabase_1_1mariadb_1_1commands_1_1async_1_1_maria_d_b_query_command" ],
-            [ "MariaDBRollbackCommand", "classdatabase_1_1mariadb_1_1commands_1_1async_1_1_maria_d_b_rollback_command.html", "classdatabase_1_1mariadb_1_1commands_1_1async_1_1_maria_d_b_rollback_command" ]
+            [ "MariaDBAutoCommitCommand", "classdatabase_1_1mariadb_1_1commands_1_1async_1_1MariaDBAutoCommitCommand.html", "classdatabase_1_1mariadb_1_1commands_1_1async_1_1MariaDBAutoCommitCommand" ],
+            [ "MariaDBCommitCommand", "classdatabase_1_1mariadb_1_1commands_1_1async_1_1MariaDBCommitCommand.html", "classdatabase_1_1mariadb_1_1commands_1_1async_1_1MariaDBCommitCommand" ],
+            [ "MariaDBConnectCommand", "classdatabase_1_1mariadb_1_1commands_1_1async_1_1MariaDBConnectCommand.html", "classdatabase_1_1mariadb_1_1commands_1_1async_1_1MariaDBConnectCommand" ],
+            [ "MariaDBExecCommand", "classdatabase_1_1mariadb_1_1commands_1_1async_1_1MariaDBExecCommand.html", "classdatabase_1_1mariadb_1_1commands_1_1async_1_1MariaDBExecCommand" ],
+            [ "MariaDBFetchRowCommand", "classdatabase_1_1mariadb_1_1commands_1_1async_1_1MariaDBFetchRowCommand.html", "classdatabase_1_1mariadb_1_1commands_1_1async_1_1MariaDBFetchRowCommand" ],
+            [ "MariaDBFreeResultCommand", "classdatabase_1_1mariadb_1_1commands_1_1async_1_1MariaDBFreeResultCommand.html", "classdatabase_1_1mariadb_1_1commands_1_1async_1_1MariaDBFreeResultCommand" ],
+            [ "MariaDBQueryCommand", "classdatabase_1_1mariadb_1_1commands_1_1async_1_1MariaDBQueryCommand.html", "classdatabase_1_1mariadb_1_1commands_1_1async_1_1MariaDBQueryCommand" ],
+            [ "MariaDBRollbackCommand", "classdatabase_1_1mariadb_1_1commands_1_1async_1_1MariaDBRollbackCommand.html", "classdatabase_1_1mariadb_1_1commands_1_1async_1_1MariaDBRollbackCommand" ]
           ] ],
           [ "sync", "namespacedatabase_1_1mariadb_1_1commands_1_1sync.html", [
-            [ "MariaDBAffectedRowsCommand", "classdatabase_1_1mariadb_1_1commands_1_1sync_1_1_maria_d_b_affected_rows_command.html", "classdatabase_1_1mariadb_1_1commands_1_1sync_1_1_maria_d_b_affected_rows_command" ],
-            [ "MariaDBFieldCountCommand", "classdatabase_1_1mariadb_1_1commands_1_1sync_1_1_maria_d_b_field_count_command.html", "classdatabase_1_1mariadb_1_1commands_1_1sync_1_1_maria_d_b_field_count_command" ],
-            [ "MariaDBUseResultCommand", "classdatabase_1_1mariadb_1_1commands_1_1sync_1_1_maria_d_b_use_result_command.html", "classdatabase_1_1mariadb_1_1commands_1_1sync_1_1_maria_d_b_use_result_command" ]
+            [ "MariaDBAffectedRowsCommand", "classdatabase_1_1mariadb_1_1commands_1_1sync_1_1MariaDBAffectedRowsCommand.html", "classdatabase_1_1mariadb_1_1commands_1_1sync_1_1MariaDBAffectedRowsCommand" ],
+            [ "MariaDBFieldCountCommand", "classdatabase_1_1mariadb_1_1commands_1_1sync_1_1MariaDBFieldCountCommand.html", "classdatabase_1_1mariadb_1_1commands_1_1sync_1_1MariaDBFieldCountCommand" ],
+            [ "MariaDBUseResultCommand", "classdatabase_1_1mariadb_1_1commands_1_1sync_1_1MariaDBUseResultCommand.html", "classdatabase_1_1mariadb_1_1commands_1_1sync_1_1MariaDBUseResultCommand" ]
           ] ]
         ] ],
-        [ "MariaDBClient", "classdatabase_1_1mariadb_1_1_maria_d_b_client.html", "classdatabase_1_1mariadb_1_1_maria_d_b_client" ],
-        [ "MariaDBClientASyncAPI", "classdatabase_1_1mariadb_1_1_maria_d_b_client_a_sync_a_p_i.html", "classdatabase_1_1mariadb_1_1_maria_d_b_client_a_sync_a_p_i" ],
-        [ "MariaDBClientSyncAPI", "classdatabase_1_1mariadb_1_1_maria_d_b_client_sync_a_p_i.html", "classdatabase_1_1mariadb_1_1_maria_d_b_client_sync_a_p_i" ],
-        [ "MariaDBCommand", "classdatabase_1_1mariadb_1_1_maria_d_b_command.html", "classdatabase_1_1mariadb_1_1_maria_d_b_command" ],
-        [ "MariaDBCommandASync", "classdatabase_1_1mariadb_1_1_maria_d_b_command_a_sync.html", "classdatabase_1_1mariadb_1_1_maria_d_b_command_a_sync" ],
-        [ "MariaDBCommandSequence", "classdatabase_1_1mariadb_1_1_maria_d_b_command_sequence.html", "classdatabase_1_1mariadb_1_1_maria_d_b_command_sequence" ],
-        [ "MariaDBCommandStartEvent", "classdatabase_1_1mariadb_1_1_maria_d_b_command_start_event.html", "classdatabase_1_1mariadb_1_1_maria_d_b_command_start_event" ],
-        [ "MariaDBCommandSync", "classdatabase_1_1mariadb_1_1_maria_d_b_command_sync.html", "classdatabase_1_1mariadb_1_1_maria_d_b_command_sync" ],
-        [ "MariaDBConnection", "classdatabase_1_1mariadb_1_1_maria_d_b_connection.html", "classdatabase_1_1mariadb_1_1_maria_d_b_connection" ],
-        [ "MariaDBConnectionDetails", "structdatabase_1_1mariadb_1_1_maria_d_b_connection_details.html", "structdatabase_1_1mariadb_1_1_maria_d_b_connection_details" ]
+        [ "MariaDBClient", "classdatabase_1_1mariadb_1_1MariaDBClient.html", "classdatabase_1_1mariadb_1_1MariaDBClient" ],
+        [ "MariaDBClientASyncAPI", "classdatabase_1_1mariadb_1_1MariaDBClientASyncAPI.html", "classdatabase_1_1mariadb_1_1MariaDBClientASyncAPI" ],
+        [ "MariaDBClientSyncAPI", "classdatabase_1_1mariadb_1_1MariaDBClientSyncAPI.html", "classdatabase_1_1mariadb_1_1MariaDBClientSyncAPI" ],
+        [ "MariaDBCommand", "classdatabase_1_1mariadb_1_1MariaDBCommand.html", "classdatabase_1_1mariadb_1_1MariaDBCommand" ],
+        [ "MariaDBCommandASync", "classdatabase_1_1mariadb_1_1MariaDBCommandASync.html", "classdatabase_1_1mariadb_1_1MariaDBCommandASync" ],
+        [ "MariaDBCommandSequence", "classdatabase_1_1mariadb_1_1MariaDBCommandSequence.html", "classdatabase_1_1mariadb_1_1MariaDBCommandSequence" ],
+        [ "MariaDBCommandStartEvent", "classdatabase_1_1mariadb_1_1MariaDBCommandStartEvent.html", "classdatabase_1_1mariadb_1_1MariaDBCommandStartEvent" ],
+        [ "MariaDBCommandSync", "classdatabase_1_1mariadb_1_1MariaDBCommandSync.html", "classdatabase_1_1mariadb_1_1MariaDBCommandSync" ],
+        [ "MariaDBConnection", "classdatabase_1_1mariadb_1_1MariaDBConnection.html", "classdatabase_1_1mariadb_1_1MariaDBConnection" ],
+        [ "MariaDBConnectionDetails", "structdatabase_1_1mariadb_1_1MariaDBConnectionDetails.html", "structdatabase_1_1mariadb_1_1MariaDBConnectionDetails" ]
       ] ]
     ] ],
     [ "express", "namespaceexpress.html", [
       [ "dispatcher", "namespaceexpress_1_1dispatcher.html", [
-        [ "ApplicationDispatcher", "classexpress_1_1dispatcher_1_1_application_dispatcher.html", "classexpress_1_1dispatcher_1_1_application_dispatcher" ],
-        [ "MiddlewareDispatcher", "classexpress_1_1dispatcher_1_1_middleware_dispatcher.html", "classexpress_1_1dispatcher_1_1_middleware_dispatcher" ],
-        [ "RouterDispatcher", "classexpress_1_1dispatcher_1_1_router_dispatcher.html", "classexpress_1_1dispatcher_1_1_router_dispatcher" ]
+        [ "ApplicationDispatcher", "classexpress_1_1dispatcher_1_1ApplicationDispatcher.html", "classexpress_1_1dispatcher_1_1ApplicationDispatcher" ],
+        [ "MiddlewareDispatcher", "classexpress_1_1dispatcher_1_1MiddlewareDispatcher.html", "classexpress_1_1dispatcher_1_1MiddlewareDispatcher" ],
+        [ "RouterDispatcher", "classexpress_1_1dispatcher_1_1RouterDispatcher.html", "classexpress_1_1dispatcher_1_1RouterDispatcher" ]
       ] ],
       [ "middleware", "namespaceexpress_1_1middleware.html", [
-        [ "BasicAuthentication", "classexpress_1_1middleware_1_1_basic_authentication.html", "classexpress_1_1middleware_1_1_basic_authentication" ],
-        [ "JsonMiddleware", "classexpress_1_1middleware_1_1_json_middleware.html", "classexpress_1_1middleware_1_1_json_middleware" ],
-        [ "StaticMiddleware", "classexpress_1_1middleware_1_1_static_middleware.html", "classexpress_1_1middleware_1_1_static_middleware" ],
-        [ "VHost", "classexpress_1_1middleware_1_1_v_host.html", "classexpress_1_1middleware_1_1_v_host" ]
+        [ "BasicAuthentication", "classexpress_1_1middleware_1_1BasicAuthentication.html", "classexpress_1_1middleware_1_1BasicAuthentication" ],
+        [ "JsonMiddleware", "classexpress_1_1middleware_1_1JsonMiddleware.html", "classexpress_1_1middleware_1_1JsonMiddleware" ],
+        [ "StaticMiddleware", "classexpress_1_1middleware_1_1StaticMiddleware.html", "classexpress_1_1middleware_1_1StaticMiddleware" ],
+        [ "VHost", "classexpress_1_1middleware_1_1VHost.html", "classexpress_1_1middleware_1_1VHost" ]
       ] ],
-      [ "Controller", "classexpress_1_1_controller.html", "classexpress_1_1_controller" ],
-      [ "Dispatcher", "classexpress_1_1_dispatcher.html", "classexpress_1_1_dispatcher" ],
-      [ "MountPoint", "structexpress_1_1_mount_point.html", "structexpress_1_1_mount_point" ],
-      [ "Next", "classexpress_1_1_next.html", "classexpress_1_1_next" ],
-      [ "Request", "classexpress_1_1_request.html", "classexpress_1_1_request" ],
-      [ "Response", "classexpress_1_1_response.html", "classexpress_1_1_response" ],
-      [ "RootRoute", "classexpress_1_1_root_route.html", "classexpress_1_1_root_route" ],
-      [ "Route", "classexpress_1_1_route.html", "classexpress_1_1_route" ],
-      [ "Router", "classexpress_1_1_router.html", "classexpress_1_1_router" ],
-      [ "WebApp", "classexpress_1_1_web_app.html", "classexpress_1_1_web_app" ],
-      [ "WebAppT", "classexpress_1_1_web_app_t.html", "classexpress_1_1_web_app_t" ]
+      [ "Controller", "classexpress_1_1Controller.html", "classexpress_1_1Controller" ],
+      [ "Dispatcher", "classexpress_1_1Dispatcher.html", "classexpress_1_1Dispatcher" ],
+      [ "MountPoint", "structexpress_1_1MountPoint.html", "structexpress_1_1MountPoint" ],
+      [ "Next", "classexpress_1_1Next.html", "classexpress_1_1Next" ],
+      [ "Request", "classexpress_1_1Request.html", "classexpress_1_1Request" ],
+      [ "Response", "classexpress_1_1Response.html", "classexpress_1_1Response" ],
+      [ "RootRoute", "classexpress_1_1RootRoute.html", "classexpress_1_1RootRoute" ],
+      [ "Route", "classexpress_1_1Route.html", "classexpress_1_1Route" ],
+      [ "Router", "classexpress_1_1Router.html", "classexpress_1_1Router" ],
+      [ "WebApp", "classexpress_1_1WebApp.html", "classexpress_1_1WebApp" ],
+      [ "WebAppT", "classexpress_1_1WebAppT.html", "classexpress_1_1WebAppT" ]
     ] ],
     [ "iot", "namespaceiot.html", [
       [ "mqtt", "namespaceiot_1_1mqtt.html", [
         [ "client", "namespaceiot_1_1mqtt_1_1client.html", [
           [ "packets", "namespaceiot_1_1mqtt_1_1client_1_1packets.html", [
-            [ "Connack", "classiot_1_1mqtt_1_1client_1_1packets_1_1_connack.html", "classiot_1_1mqtt_1_1client_1_1packets_1_1_connack" ],
-            [ "Pingresp", "classiot_1_1mqtt_1_1client_1_1packets_1_1_pingresp.html", "classiot_1_1mqtt_1_1client_1_1packets_1_1_pingresp" ],
-            [ "Puback", "classiot_1_1mqtt_1_1client_1_1packets_1_1_puback.html", "classiot_1_1mqtt_1_1client_1_1packets_1_1_puback" ],
-            [ "Pubcomp", "classiot_1_1mqtt_1_1client_1_1packets_1_1_pubcomp.html", "classiot_1_1mqtt_1_1client_1_1packets_1_1_pubcomp" ],
-            [ "Publish", "classiot_1_1mqtt_1_1client_1_1packets_1_1_publish.html", "classiot_1_1mqtt_1_1client_1_1packets_1_1_publish" ],
-            [ "Pubrec", "classiot_1_1mqtt_1_1client_1_1packets_1_1_pubrec.html", "classiot_1_1mqtt_1_1client_1_1packets_1_1_pubrec" ],
-            [ "Pubrel", "classiot_1_1mqtt_1_1client_1_1packets_1_1_pubrel.html", "classiot_1_1mqtt_1_1client_1_1packets_1_1_pubrel" ],
-            [ "Suback", "classiot_1_1mqtt_1_1client_1_1packets_1_1_suback.html", "classiot_1_1mqtt_1_1client_1_1packets_1_1_suback" ],
-            [ "Unsuback", "classiot_1_1mqtt_1_1client_1_1packets_1_1_unsuback.html", "classiot_1_1mqtt_1_1client_1_1packets_1_1_unsuback" ]
+            [ "Connack", "classiot_1_1mqtt_1_1client_1_1packets_1_1Connack.html", "classiot_1_1mqtt_1_1client_1_1packets_1_1Connack" ],
+            [ "Pingresp", "classiot_1_1mqtt_1_1client_1_1packets_1_1Pingresp.html", "classiot_1_1mqtt_1_1client_1_1packets_1_1Pingresp" ],
+            [ "Puback", "classiot_1_1mqtt_1_1client_1_1packets_1_1Puback.html", "classiot_1_1mqtt_1_1client_1_1packets_1_1Puback" ],
+            [ "Pubcomp", "classiot_1_1mqtt_1_1client_1_1packets_1_1Pubcomp.html", "classiot_1_1mqtt_1_1client_1_1packets_1_1Pubcomp" ],
+            [ "Publish", "classiot_1_1mqtt_1_1client_1_1packets_1_1Publish.html", "classiot_1_1mqtt_1_1client_1_1packets_1_1Publish" ],
+            [ "Pubrec", "classiot_1_1mqtt_1_1client_1_1packets_1_1Pubrec.html", "classiot_1_1mqtt_1_1client_1_1packets_1_1Pubrec" ],
+            [ "Pubrel", "classiot_1_1mqtt_1_1client_1_1packets_1_1Pubrel.html", "classiot_1_1mqtt_1_1client_1_1packets_1_1Pubrel" ],
+            [ "Suback", "classiot_1_1mqtt_1_1client_1_1packets_1_1Suback.html", "classiot_1_1mqtt_1_1client_1_1packets_1_1Suback" ],
+            [ "Unsuback", "classiot_1_1mqtt_1_1client_1_1packets_1_1Unsuback.html", "classiot_1_1mqtt_1_1client_1_1packets_1_1Unsuback" ]
           ] ],
-          [ "ControlPacketDeserializer", "classiot_1_1mqtt_1_1client_1_1_control_packet_deserializer.html", "classiot_1_1mqtt_1_1client_1_1_control_packet_deserializer" ],
-          [ "Mqtt", "classiot_1_1mqtt_1_1client_1_1_mqtt.html", "classiot_1_1mqtt_1_1client_1_1_mqtt" ]
+          [ "ControlPacketDeserializer", "classiot_1_1mqtt_1_1client_1_1ControlPacketDeserializer.html", "classiot_1_1mqtt_1_1client_1_1ControlPacketDeserializer" ],
+          [ "Mqtt", "classiot_1_1mqtt_1_1client_1_1Mqtt.html", "classiot_1_1mqtt_1_1client_1_1Mqtt" ]
         ] ],
         [ "packets", "namespaceiot_1_1mqtt_1_1packets.html", [
-          [ "Connack", "classiot_1_1mqtt_1_1packets_1_1_connack.html", "classiot_1_1mqtt_1_1packets_1_1_connack" ],
-          [ "Connect", "classiot_1_1mqtt_1_1packets_1_1_connect.html", "classiot_1_1mqtt_1_1packets_1_1_connect" ],
-          [ "Disconnect", "classiot_1_1mqtt_1_1packets_1_1_disconnect.html", "classiot_1_1mqtt_1_1packets_1_1_disconnect" ],
-          [ "Pingreq", "classiot_1_1mqtt_1_1packets_1_1_pingreq.html", "classiot_1_1mqtt_1_1packets_1_1_pingreq" ],
-          [ "Pingresp", "classiot_1_1mqtt_1_1packets_1_1_pingresp.html", "classiot_1_1mqtt_1_1packets_1_1_pingresp" ],
-          [ "Puback", "classiot_1_1mqtt_1_1packets_1_1_puback.html", "classiot_1_1mqtt_1_1packets_1_1_puback" ],
-          [ "Pubcomp", "classiot_1_1mqtt_1_1packets_1_1_pubcomp.html", "classiot_1_1mqtt_1_1packets_1_1_pubcomp" ],
-          [ "Publish", "classiot_1_1mqtt_1_1packets_1_1_publish.html", "classiot_1_1mqtt_1_1packets_1_1_publish" ],
-          [ "Pubrec", "classiot_1_1mqtt_1_1packets_1_1_pubrec.html", "classiot_1_1mqtt_1_1packets_1_1_pubrec" ],
-          [ "Pubrel", "classiot_1_1mqtt_1_1packets_1_1_pubrel.html", "classiot_1_1mqtt_1_1packets_1_1_pubrel" ],
-          [ "Suback", "classiot_1_1mqtt_1_1packets_1_1_suback.html", "classiot_1_1mqtt_1_1packets_1_1_suback" ],
-          [ "Subscribe", "classiot_1_1mqtt_1_1packets_1_1_subscribe.html", "classiot_1_1mqtt_1_1packets_1_1_subscribe" ],
-          [ "Unsuback", "classiot_1_1mqtt_1_1packets_1_1_unsuback.html", "classiot_1_1mqtt_1_1packets_1_1_unsuback" ],
-          [ "Unsubscribe", "classiot_1_1mqtt_1_1packets_1_1_unsubscribe.html", "classiot_1_1mqtt_1_1packets_1_1_unsubscribe" ]
+          [ "Connack", "classiot_1_1mqtt_1_1packets_1_1Connack.html", "classiot_1_1mqtt_1_1packets_1_1Connack" ],
+          [ "Connect", "classiot_1_1mqtt_1_1packets_1_1Connect.html", "classiot_1_1mqtt_1_1packets_1_1Connect" ],
+          [ "Disconnect", "classiot_1_1mqtt_1_1packets_1_1Disconnect.html", "classiot_1_1mqtt_1_1packets_1_1Disconnect" ],
+          [ "Pingreq", "classiot_1_1mqtt_1_1packets_1_1Pingreq.html", "classiot_1_1mqtt_1_1packets_1_1Pingreq" ],
+          [ "Pingresp", "classiot_1_1mqtt_1_1packets_1_1Pingresp.html", "classiot_1_1mqtt_1_1packets_1_1Pingresp" ],
+          [ "Puback", "classiot_1_1mqtt_1_1packets_1_1Puback.html", "classiot_1_1mqtt_1_1packets_1_1Puback" ],
+          [ "Pubcomp", "classiot_1_1mqtt_1_1packets_1_1Pubcomp.html", "classiot_1_1mqtt_1_1packets_1_1Pubcomp" ],
+          [ "Publish", "classiot_1_1mqtt_1_1packets_1_1Publish.html", "classiot_1_1mqtt_1_1packets_1_1Publish" ],
+          [ "Pubrec", "classiot_1_1mqtt_1_1packets_1_1Pubrec.html", "classiot_1_1mqtt_1_1packets_1_1Pubrec" ],
+          [ "Pubrel", "classiot_1_1mqtt_1_1packets_1_1Pubrel.html", "classiot_1_1mqtt_1_1packets_1_1Pubrel" ],
+          [ "Suback", "classiot_1_1mqtt_1_1packets_1_1Suback.html", "classiot_1_1mqtt_1_1packets_1_1Suback" ],
+          [ "Subscribe", "classiot_1_1mqtt_1_1packets_1_1Subscribe.html", "classiot_1_1mqtt_1_1packets_1_1Subscribe" ],
+          [ "Unsuback", "classiot_1_1mqtt_1_1packets_1_1Unsuback.html", "classiot_1_1mqtt_1_1packets_1_1Unsuback" ],
+          [ "Unsubscribe", "classiot_1_1mqtt_1_1packets_1_1Unsubscribe.html", "classiot_1_1mqtt_1_1packets_1_1Unsubscribe" ]
         ] ],
         [ "server", "namespaceiot_1_1mqtt_1_1server.html", [
           [ "broker", "namespaceiot_1_1mqtt_1_1server_1_1broker.html", [
-            [ "Broker", "classiot_1_1mqtt_1_1server_1_1broker_1_1_broker.html", "classiot_1_1mqtt_1_1server_1_1broker_1_1_broker" ],
-            [ "Message", "classiot_1_1mqtt_1_1server_1_1broker_1_1_message.html", "classiot_1_1mqtt_1_1server_1_1broker_1_1_message" ],
-            [ "RetainTree", "classiot_1_1mqtt_1_1server_1_1broker_1_1_retain_tree.html", "classiot_1_1mqtt_1_1server_1_1broker_1_1_retain_tree" ],
-            [ "Session", "classiot_1_1mqtt_1_1server_1_1broker_1_1_session.html", "classiot_1_1mqtt_1_1server_1_1broker_1_1_session" ],
-            [ "SubscribtionTree", "classiot_1_1mqtt_1_1server_1_1broker_1_1_subscribtion_tree.html", "classiot_1_1mqtt_1_1server_1_1broker_1_1_subscribtion_tree" ]
+            [ "Broker", "classiot_1_1mqtt_1_1server_1_1broker_1_1Broker.html", "classiot_1_1mqtt_1_1server_1_1broker_1_1Broker" ],
+            [ "Message", "classiot_1_1mqtt_1_1server_1_1broker_1_1Message.html", "classiot_1_1mqtt_1_1server_1_1broker_1_1Message" ],
+            [ "RetainTree", "classiot_1_1mqtt_1_1server_1_1broker_1_1RetainTree.html", "classiot_1_1mqtt_1_1server_1_1broker_1_1RetainTree" ],
+            [ "Session", "classiot_1_1mqtt_1_1server_1_1broker_1_1Session.html", "classiot_1_1mqtt_1_1server_1_1broker_1_1Session" ],
+            [ "SubscribtionTree", "classiot_1_1mqtt_1_1server_1_1broker_1_1SubscribtionTree.html", "classiot_1_1mqtt_1_1server_1_1broker_1_1SubscribtionTree" ]
           ] ],
           [ "packets", "namespaceiot_1_1mqtt_1_1server_1_1packets.html", [
-            [ "Connect", "classiot_1_1mqtt_1_1server_1_1packets_1_1_connect.html", "classiot_1_1mqtt_1_1server_1_1packets_1_1_connect" ],
-            [ "Disconnect", "classiot_1_1mqtt_1_1server_1_1packets_1_1_disconnect.html", "classiot_1_1mqtt_1_1server_1_1packets_1_1_disconnect" ],
-            [ "Pingreq", "classiot_1_1mqtt_1_1server_1_1packets_1_1_pingreq.html", "classiot_1_1mqtt_1_1server_1_1packets_1_1_pingreq" ],
-            [ "Puback", "classiot_1_1mqtt_1_1server_1_1packets_1_1_puback.html", "classiot_1_1mqtt_1_1server_1_1packets_1_1_puback" ],
-            [ "Pubcomp", "classiot_1_1mqtt_1_1server_1_1packets_1_1_pubcomp.html", "classiot_1_1mqtt_1_1server_1_1packets_1_1_pubcomp" ],
-            [ "Publish", "classiot_1_1mqtt_1_1server_1_1packets_1_1_publish.html", "classiot_1_1mqtt_1_1server_1_1packets_1_1_publish" ],
-            [ "Pubrec", "classiot_1_1mqtt_1_1server_1_1packets_1_1_pubrec.html", "classiot_1_1mqtt_1_1server_1_1packets_1_1_pubrec" ],
-            [ "Pubrel", "classiot_1_1mqtt_1_1server_1_1packets_1_1_pubrel.html", "classiot_1_1mqtt_1_1server_1_1packets_1_1_pubrel" ],
-            [ "Subscribe", "classiot_1_1mqtt_1_1server_1_1packets_1_1_subscribe.html", "classiot_1_1mqtt_1_1server_1_1packets_1_1_subscribe" ],
-            [ "Unsubscribe", "classiot_1_1mqtt_1_1server_1_1packets_1_1_unsubscribe.html", "classiot_1_1mqtt_1_1server_1_1packets_1_1_unsubscribe" ]
+            [ "Connect", "classiot_1_1mqtt_1_1server_1_1packets_1_1Connect.html", "classiot_1_1mqtt_1_1server_1_1packets_1_1Connect" ],
+            [ "Disconnect", "classiot_1_1mqtt_1_1server_1_1packets_1_1Disconnect.html", "classiot_1_1mqtt_1_1server_1_1packets_1_1Disconnect" ],
+            [ "Pingreq", "classiot_1_1mqtt_1_1server_1_1packets_1_1Pingreq.html", "classiot_1_1mqtt_1_1server_1_1packets_1_1Pingreq" ],
+            [ "Puback", "classiot_1_1mqtt_1_1server_1_1packets_1_1Puback.html", "classiot_1_1mqtt_1_1server_1_1packets_1_1Puback" ],
+            [ "Pubcomp", "classiot_1_1mqtt_1_1server_1_1packets_1_1Pubcomp.html", "classiot_1_1mqtt_1_1server_1_1packets_1_1Pubcomp" ],
+            [ "Publish", "classiot_1_1mqtt_1_1server_1_1packets_1_1Publish.html", "classiot_1_1mqtt_1_1server_1_1packets_1_1Publish" ],
+            [ "Pubrec", "classiot_1_1mqtt_1_1server_1_1packets_1_1Pubrec.html", "classiot_1_1mqtt_1_1server_1_1packets_1_1Pubrec" ],
+            [ "Pubrel", "classiot_1_1mqtt_1_1server_1_1packets_1_1Pubrel.html", "classiot_1_1mqtt_1_1server_1_1packets_1_1Pubrel" ],
+            [ "Subscribe", "classiot_1_1mqtt_1_1server_1_1packets_1_1Subscribe.html", "classiot_1_1mqtt_1_1server_1_1packets_1_1Subscribe" ],
+            [ "Unsubscribe", "classiot_1_1mqtt_1_1server_1_1packets_1_1Unsubscribe.html", "classiot_1_1mqtt_1_1server_1_1packets_1_1Unsubscribe" ]
           ] ],
-          [ "ControlPacketDeserializer", "classiot_1_1mqtt_1_1server_1_1_control_packet_deserializer.html", "classiot_1_1mqtt_1_1server_1_1_control_packet_deserializer" ],
-          [ "Mqtt", "classiot_1_1mqtt_1_1server_1_1_mqtt.html", "classiot_1_1mqtt_1_1server_1_1_mqtt" ],
-          [ "SharedSocketContextFactory", "classiot_1_1mqtt_1_1server_1_1_shared_socket_context_factory.html", "classiot_1_1mqtt_1_1server_1_1_shared_socket_context_factory" ],
-          [ "SocketContextFactory", "classiot_1_1mqtt_1_1server_1_1_socket_context_factory.html", "classiot_1_1mqtt_1_1server_1_1_socket_context_factory" ]
+          [ "ControlPacketDeserializer", "classiot_1_1mqtt_1_1server_1_1ControlPacketDeserializer.html", "classiot_1_1mqtt_1_1server_1_1ControlPacketDeserializer" ],
+          [ "Mqtt", "classiot_1_1mqtt_1_1server_1_1Mqtt.html", "classiot_1_1mqtt_1_1server_1_1Mqtt" ],
+          [ "SharedSocketContextFactory", "classiot_1_1mqtt_1_1server_1_1SharedSocketContextFactory.html", "classiot_1_1mqtt_1_1server_1_1SharedSocketContextFactory" ],
+          [ "SocketContextFactory", "classiot_1_1mqtt_1_1server_1_1SocketContextFactory.html", "classiot_1_1mqtt_1_1server_1_1SocketContextFactory" ]
         ] ],
         [ "types", "namespaceiot_1_1mqtt_1_1types.html", [
-          [ "String", "classiot_1_1mqtt_1_1types_1_1_string.html", "classiot_1_1mqtt_1_1types_1_1_string" ],
-          [ "StringRaw", "classiot_1_1mqtt_1_1types_1_1_string_raw.html", "classiot_1_1mqtt_1_1types_1_1_string_raw" ],
-          [ "TypeBase", "classiot_1_1mqtt_1_1types_1_1_type_base.html", "classiot_1_1mqtt_1_1types_1_1_type_base" ],
-          [ "UInt16", "classiot_1_1mqtt_1_1types_1_1_u_int16.html", "classiot_1_1mqtt_1_1types_1_1_u_int16" ],
-          [ "UInt32", "classiot_1_1mqtt_1_1types_1_1_u_int32.html", "classiot_1_1mqtt_1_1types_1_1_u_int32" ],
-          [ "UInt64", "classiot_1_1mqtt_1_1types_1_1_u_int64.html", "classiot_1_1mqtt_1_1types_1_1_u_int64" ],
-          [ "UInt8", "classiot_1_1mqtt_1_1types_1_1_u_int8.html", "classiot_1_1mqtt_1_1types_1_1_u_int8" ],
-          [ "UInt8List", "classiot_1_1mqtt_1_1types_1_1_u_int8_list.html", "classiot_1_1mqtt_1_1types_1_1_u_int8_list" ],
-          [ "UIntV", "classiot_1_1mqtt_1_1types_1_1_u_int_v.html", "classiot_1_1mqtt_1_1types_1_1_u_int_v" ]
+          [ "String", "classiot_1_1mqtt_1_1types_1_1String.html", "classiot_1_1mqtt_1_1types_1_1String" ],
+          [ "StringRaw", "classiot_1_1mqtt_1_1types_1_1StringRaw.html", "classiot_1_1mqtt_1_1types_1_1StringRaw" ],
+          [ "TypeBase", "classiot_1_1mqtt_1_1types_1_1TypeBase.html", "classiot_1_1mqtt_1_1types_1_1TypeBase" ],
+          [ "UInt16", "classiot_1_1mqtt_1_1types_1_1UInt16.html", "classiot_1_1mqtt_1_1types_1_1UInt16" ],
+          [ "UInt32", "classiot_1_1mqtt_1_1types_1_1UInt32.html", "classiot_1_1mqtt_1_1types_1_1UInt32" ],
+          [ "UInt64", "classiot_1_1mqtt_1_1types_1_1UInt64.html", "classiot_1_1mqtt_1_1types_1_1UInt64" ],
+          [ "UInt8", "classiot_1_1mqtt_1_1types_1_1UInt8.html", "classiot_1_1mqtt_1_1types_1_1UInt8" ],
+          [ "UInt8List", "classiot_1_1mqtt_1_1types_1_1UInt8List.html", "classiot_1_1mqtt_1_1types_1_1UInt8List" ],
+          [ "UIntV", "classiot_1_1mqtt_1_1types_1_1UIntV.html", "classiot_1_1mqtt_1_1types_1_1UIntV" ]
         ] ],
-        [ "ControlPacket", "classiot_1_1mqtt_1_1_control_packet.html", "classiot_1_1mqtt_1_1_control_packet" ],
-        [ "ControlPacketDeserializer", "classiot_1_1mqtt_1_1_control_packet_deserializer.html", "classiot_1_1mqtt_1_1_control_packet_deserializer" ],
-        [ "FixedHeader", "classiot_1_1mqtt_1_1_fixed_header.html", "classiot_1_1mqtt_1_1_fixed_header" ],
-        [ "Mqtt", "classiot_1_1mqtt_1_1_mqtt.html", "classiot_1_1mqtt_1_1_mqtt" ],
-        [ "MqttContext", "classiot_1_1mqtt_1_1_mqtt_context.html", "classiot_1_1mqtt_1_1_mqtt_context" ],
-        [ "OnDataEvent", "classiot_1_1mqtt_1_1_on_data_event.html", "classiot_1_1mqtt_1_1_on_data_event" ],
-        [ "Session", "classiot_1_1mqtt_1_1_session.html", "classiot_1_1mqtt_1_1_session" ],
-        [ "SocketContext", "classiot_1_1mqtt_1_1_socket_context.html", "classiot_1_1mqtt_1_1_socket_context" ],
-        [ "SubProtocol", "classiot_1_1mqtt_1_1_sub_protocol.html", "classiot_1_1mqtt_1_1_sub_protocol" ],
-        [ "Topic", "classiot_1_1mqtt_1_1_topic.html", "classiot_1_1mqtt_1_1_topic" ]
+        [ "ControlPacket", "classiot_1_1mqtt_1_1ControlPacket.html", "classiot_1_1mqtt_1_1ControlPacket" ],
+        [ "ControlPacketDeserializer", "classiot_1_1mqtt_1_1ControlPacketDeserializer.html", "classiot_1_1mqtt_1_1ControlPacketDeserializer" ],
+        [ "FixedHeader", "classiot_1_1mqtt_1_1FixedHeader.html", "classiot_1_1mqtt_1_1FixedHeader" ],
+        [ "Mqtt", "classiot_1_1mqtt_1_1Mqtt.html", "classiot_1_1mqtt_1_1Mqtt" ],
+        [ "MqttContext", "classiot_1_1mqtt_1_1MqttContext.html", "classiot_1_1mqtt_1_1MqttContext" ],
+        [ "OnDataEvent", "classiot_1_1mqtt_1_1OnDataEvent.html", "classiot_1_1mqtt_1_1OnDataEvent" ],
+        [ "Session", "classiot_1_1mqtt_1_1Session.html", "classiot_1_1mqtt_1_1Session" ],
+        [ "SocketContext", "classiot_1_1mqtt_1_1SocketContext.html", "classiot_1_1mqtt_1_1SocketContext" ],
+        [ "SubProtocol", "classiot_1_1mqtt_1_1SubProtocol.html", "classiot_1_1mqtt_1_1SubProtocol" ],
+        [ "Topic", "classiot_1_1mqtt_1_1Topic.html", "classiot_1_1mqtt_1_1Topic" ]
       ] ],
       [ "mqtt_fast", "namespaceiot_1_1mqtt__fast.html", [
         [ "packets", "namespaceiot_1_1mqtt__fast_1_1packets.html", [
-          [ "Connack", "classiot_1_1mqtt__fast_1_1packets_1_1_connack.html", "classiot_1_1mqtt__fast_1_1packets_1_1_connack" ],
-          [ "Connect", "classiot_1_1mqtt__fast_1_1packets_1_1_connect.html", "classiot_1_1mqtt__fast_1_1packets_1_1_connect" ],
-          [ "Disconnect", "classiot_1_1mqtt__fast_1_1packets_1_1_disconnect.html", "classiot_1_1mqtt__fast_1_1packets_1_1_disconnect" ],
-          [ "Pingreq", "classiot_1_1mqtt__fast_1_1packets_1_1_pingreq.html", "classiot_1_1mqtt__fast_1_1packets_1_1_pingreq" ],
-          [ "Pingresp", "classiot_1_1mqtt__fast_1_1packets_1_1_pingresp.html", "classiot_1_1mqtt__fast_1_1packets_1_1_pingresp" ],
-          [ "Puback", "classiot_1_1mqtt__fast_1_1packets_1_1_puback.html", "classiot_1_1mqtt__fast_1_1packets_1_1_puback" ],
-          [ "Pubcomp", "classiot_1_1mqtt__fast_1_1packets_1_1_pubcomp.html", "classiot_1_1mqtt__fast_1_1packets_1_1_pubcomp" ],
-          [ "Publish", "classiot_1_1mqtt__fast_1_1packets_1_1_publish.html", "classiot_1_1mqtt__fast_1_1packets_1_1_publish" ],
-          [ "Pubrec", "classiot_1_1mqtt__fast_1_1packets_1_1_pubrec.html", "classiot_1_1mqtt__fast_1_1packets_1_1_pubrec" ],
-          [ "Pubrel", "classiot_1_1mqtt__fast_1_1packets_1_1_pubrel.html", "classiot_1_1mqtt__fast_1_1packets_1_1_pubrel" ],
-          [ "Suback", "classiot_1_1mqtt__fast_1_1packets_1_1_suback.html", "classiot_1_1mqtt__fast_1_1packets_1_1_suback" ],
-          [ "Subscribe", "classiot_1_1mqtt__fast_1_1packets_1_1_subscribe.html", "classiot_1_1mqtt__fast_1_1packets_1_1_subscribe" ],
-          [ "Unsuback", "classiot_1_1mqtt__fast_1_1packets_1_1_unsuback.html", "classiot_1_1mqtt__fast_1_1packets_1_1_unsuback" ],
-          [ "Unsubscribe", "classiot_1_1mqtt__fast_1_1packets_1_1_unsubscribe.html", "classiot_1_1mqtt__fast_1_1packets_1_1_unsubscribe" ]
+          [ "Connack", "classiot_1_1mqtt__fast_1_1packets_1_1Connack.html", "classiot_1_1mqtt__fast_1_1packets_1_1Connack" ],
+          [ "Connect", "classiot_1_1mqtt__fast_1_1packets_1_1Connect.html", "classiot_1_1mqtt__fast_1_1packets_1_1Connect" ],
+          [ "Disconnect", "classiot_1_1mqtt__fast_1_1packets_1_1Disconnect.html", "classiot_1_1mqtt__fast_1_1packets_1_1Disconnect" ],
+          [ "Pingreq", "classiot_1_1mqtt__fast_1_1packets_1_1Pingreq.html", "classiot_1_1mqtt__fast_1_1packets_1_1Pingreq" ],
+          [ "Pingresp", "classiot_1_1mqtt__fast_1_1packets_1_1Pingresp.html", "classiot_1_1mqtt__fast_1_1packets_1_1Pingresp" ],
+          [ "Puback", "classiot_1_1mqtt__fast_1_1packets_1_1Puback.html", "classiot_1_1mqtt__fast_1_1packets_1_1Puback" ],
+          [ "Pubcomp", "classiot_1_1mqtt__fast_1_1packets_1_1Pubcomp.html", "classiot_1_1mqtt__fast_1_1packets_1_1Pubcomp" ],
+          [ "Publish", "classiot_1_1mqtt__fast_1_1packets_1_1Publish.html", "classiot_1_1mqtt__fast_1_1packets_1_1Publish" ],
+          [ "Pubrec", "classiot_1_1mqtt__fast_1_1packets_1_1Pubrec.html", "classiot_1_1mqtt__fast_1_1packets_1_1Pubrec" ],
+          [ "Pubrel", "classiot_1_1mqtt__fast_1_1packets_1_1Pubrel.html", "classiot_1_1mqtt__fast_1_1packets_1_1Pubrel" ],
+          [ "Suback", "classiot_1_1mqtt__fast_1_1packets_1_1Suback.html", "classiot_1_1mqtt__fast_1_1packets_1_1Suback" ],
+          [ "Subscribe", "classiot_1_1mqtt__fast_1_1packets_1_1Subscribe.html", "classiot_1_1mqtt__fast_1_1packets_1_1Subscribe" ],
+          [ "Unsuback", "classiot_1_1mqtt__fast_1_1packets_1_1Unsuback.html", "classiot_1_1mqtt__fast_1_1packets_1_1Unsuback" ],
+          [ "Unsubscribe", "classiot_1_1mqtt__fast_1_1packets_1_1Unsubscribe.html", "classiot_1_1mqtt__fast_1_1packets_1_1Unsubscribe" ]
         ] ],
         [ "types", "namespaceiot_1_1mqtt__fast_1_1types.html", [
-          [ "Binary", "classiot_1_1mqtt__fast_1_1types_1_1_binary.html", "classiot_1_1mqtt__fast_1_1types_1_1_binary" ],
-          [ "Int_1", "classiot_1_1mqtt__fast_1_1types_1_1_int__1.html", "classiot_1_1mqtt__fast_1_1types_1_1_int__1" ],
-          [ "Int_V", "classiot_1_1mqtt__fast_1_1types_1_1_int___v.html", "classiot_1_1mqtt__fast_1_1types_1_1_int___v" ],
-          [ "TypeBase", "classiot_1_1mqtt__fast_1_1types_1_1_type_base.html", "classiot_1_1mqtt__fast_1_1types_1_1_type_base" ]
+          [ "Binary", "classiot_1_1mqtt__fast_1_1types_1_1Binary.html", "classiot_1_1mqtt__fast_1_1types_1_1Binary" ],
+          [ "Int_1", "classiot_1_1mqtt__fast_1_1types_1_1Int__1.html", "classiot_1_1mqtt__fast_1_1types_1_1Int__1" ],
+          [ "Int_V", "classiot_1_1mqtt__fast_1_1types_1_1Int__V.html", "classiot_1_1mqtt__fast_1_1types_1_1Int__V" ],
+          [ "TypeBase", "classiot_1_1mqtt__fast_1_1types_1_1TypeBase.html", "classiot_1_1mqtt__fast_1_1types_1_1TypeBase" ]
         ] ],
-        [ "ControlPacket", "classiot_1_1mqtt__fast_1_1_control_packet.html", "classiot_1_1mqtt__fast_1_1_control_packet" ],
-        [ "ControlPacketFactory", "classiot_1_1mqtt__fast_1_1_control_packet_factory.html", "classiot_1_1mqtt__fast_1_1_control_packet_factory" ],
-        [ "SocketContext", "classiot_1_1mqtt__fast_1_1_socket_context.html", "classiot_1_1mqtt__fast_1_1_socket_context" ],
-        [ "Topic", "classiot_1_1mqtt__fast_1_1_topic.html", "classiot_1_1mqtt__fast_1_1_topic" ]
+        [ "ControlPacket", "classiot_1_1mqtt__fast_1_1ControlPacket.html", "classiot_1_1mqtt__fast_1_1ControlPacket" ],
+        [ "ControlPacketFactory", "classiot_1_1mqtt__fast_1_1ControlPacketFactory.html", "classiot_1_1mqtt__fast_1_1ControlPacketFactory" ],
+        [ "SocketContext", "classiot_1_1mqtt__fast_1_1SocketContext.html", "classiot_1_1mqtt__fast_1_1SocketContext" ],
+        [ "Topic", "classiot_1_1mqtt__fast_1_1Topic.html", "classiot_1_1mqtt__fast_1_1Topic" ]
       ] ]
     ] ],
     [ "logger", "namespacelogger.html", [
-      [ "Logger", "classlogger_1_1_logger.html", "classlogger_1_1_logger" ]
+      [ "Logger", "classlogger_1_1Logger.html", "classlogger_1_1Logger" ]
     ] ],
     [ "net", "namespacenet.html", [
       [ "config", "namespacenet_1_1config.html", [
-        [ "ConfigAddress", "classnet_1_1config_1_1_config_address.html", "classnet_1_1config_1_1_config_address" ],
-        [ "ConfigAddressLocal", "classnet_1_1config_1_1_config_address_local.html", "classnet_1_1config_1_1_config_address_local" ],
-        [ "ConfigAddressRemote", "classnet_1_1config_1_1_config_address_remote.html", "classnet_1_1config_1_1_config_address_remote" ],
-        [ "ConfigConnection", "classnet_1_1config_1_1_config_connection.html", "classnet_1_1config_1_1_config_connection" ],
-        [ "ConfigInstance", "classnet_1_1config_1_1_config_instance.html", "classnet_1_1config_1_1_config_instance" ],
-        [ "ConfigLegacy", "classnet_1_1config_1_1_config_legacy.html", "classnet_1_1config_1_1_config_legacy" ],
-        [ "ConfigListen", "classnet_1_1config_1_1_config_listen.html", "classnet_1_1config_1_1_config_listen" ],
-        [ "ConfigPhysicalSocket", "classnet_1_1config_1_1_config_physical_socket.html", "classnet_1_1config_1_1_config_physical_socket" ],
-        [ "ConfigPhysicalSocketClient", "classnet_1_1config_1_1_config_physical_socket_client.html", "classnet_1_1config_1_1_config_physical_socket_client" ],
-        [ "ConfigPhysicalSocketServer", "classnet_1_1config_1_1_config_physical_socket_server.html", "classnet_1_1config_1_1_config_physical_socket_server" ],
-        [ "ConfigSection", "classnet_1_1config_1_1_config_section.html", "classnet_1_1config_1_1_config_section" ],
-        [ "ConfigTls", "classnet_1_1config_1_1_config_tls.html", "classnet_1_1config_1_1_config_tls" ],
-        [ "ConfigTlsClient", "classnet_1_1config_1_1_config_tls_client.html", "classnet_1_1config_1_1_config_tls_client" ],
-        [ "ConfigTlsServer", "classnet_1_1config_1_1_config_tls_server.html", "classnet_1_1config_1_1_config_tls_server" ]
-      ] ],
-      [ "dgram", "namespacenet_1_1dgram.html", [
-        [ "PeerSocket", "classnet_1_1dgram_1_1_peer_socket.html", "classnet_1_1dgram_1_1_peer_socket" ]
+        [ "stream", "namespacenet_1_1config_1_1stream.html", [
+          [ "legacy", "namespacenet_1_1config_1_1stream_1_1legacy.html", [
+            [ "ConfigSocketClient", "classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketClient.html", "classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketClient" ],
+            [ "ConfigSocketServer", "classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketServer.html", "classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketServer" ]
+          ] ],
+          [ "tls", "namespacenet_1_1config_1_1stream_1_1tls.html", [
+            [ "ConfigSocketClient", "classnet_1_1config_1_1stream_1_1tls_1_1ConfigSocketClient.html", "classnet_1_1config_1_1stream_1_1tls_1_1ConfigSocketClient" ],
+            [ "ConfigSocketServer", "classnet_1_1config_1_1stream_1_1tls_1_1ConfigSocketServer.html", "classnet_1_1config_1_1stream_1_1tls_1_1ConfigSocketServer" ]
+          ] ],
+          [ "ConfigSocketClient", "classnet_1_1config_1_1stream_1_1ConfigSocketClient.html", "classnet_1_1config_1_1stream_1_1ConfigSocketClient" ],
+          [ "ConfigSocketServer", "classnet_1_1config_1_1stream_1_1ConfigSocketServer.html", "classnet_1_1config_1_1stream_1_1ConfigSocketServer" ]
+        ] ],
+        [ "ConfigAddress", "classnet_1_1config_1_1ConfigAddress.html", "classnet_1_1config_1_1ConfigAddress" ],
+        [ "ConfigAddressLocal", "classnet_1_1config_1_1ConfigAddressLocal.html", "classnet_1_1config_1_1ConfigAddressLocal" ],
+        [ "ConfigAddressRemote", "classnet_1_1config_1_1ConfigAddressRemote.html", "classnet_1_1config_1_1ConfigAddressRemote" ],
+        [ "ConfigConnection", "classnet_1_1config_1_1ConfigConnection.html", "classnet_1_1config_1_1ConfigConnection" ],
+        [ "ConfigInstance", "classnet_1_1config_1_1ConfigInstance.html", "classnet_1_1config_1_1ConfigInstance" ],
+        [ "ConfigLegacy", "classnet_1_1config_1_1ConfigLegacy.html", "classnet_1_1config_1_1ConfigLegacy" ],
+        [ "ConfigListen", "classnet_1_1config_1_1ConfigListen.html", "classnet_1_1config_1_1ConfigListen" ],
+        [ "ConfigPhysicalSocket", "classnet_1_1config_1_1ConfigPhysicalSocket.html", "classnet_1_1config_1_1ConfigPhysicalSocket" ],
+        [ "ConfigPhysicalSocketClient", "classnet_1_1config_1_1ConfigPhysicalSocketClient.html", "classnet_1_1config_1_1ConfigPhysicalSocketClient" ],
+        [ "ConfigPhysicalSocketServer", "classnet_1_1config_1_1ConfigPhysicalSocketServer.html", "classnet_1_1config_1_1ConfigPhysicalSocketServer" ],
+        [ "ConfigSection", "classnet_1_1config_1_1ConfigSection.html", "classnet_1_1config_1_1ConfigSection" ],
+        [ "ConfigTls", "classnet_1_1config_1_1ConfigTls.html", "classnet_1_1config_1_1ConfigTls" ],
+        [ "ConfigTlsClient", "classnet_1_1config_1_1ConfigTlsClient.html", "classnet_1_1config_1_1ConfigTlsClient" ],
+        [ "ConfigTlsServer", "classnet_1_1config_1_1ConfigTlsServer.html", "classnet_1_1config_1_1ConfigTlsServer" ]
       ] ],
       [ "in", "namespacenet_1_1in.html", [
         [ "config", "namespacenet_1_1in_1_1config.html", [
-          [ "ConfigAddress", "classnet_1_1in_1_1config_1_1_config_address.html", "classnet_1_1in_1_1config_1_1_config_address" ]
+          [ "ConfigAddress", "classnet_1_1in_1_1config_1_1ConfigAddress.html", "classnet_1_1in_1_1config_1_1ConfigAddress" ]
+        ] ],
+        [ "phy", "namespacenet_1_1in_1_1phy.html", [
+          [ "stream", "namespacenet_1_1in_1_1phy_1_1stream.html", [
+            [ "PhysicalSocket", "classnet_1_1in_1_1phy_1_1stream_1_1PhysicalSocket.html", "classnet_1_1in_1_1phy_1_1stream_1_1PhysicalSocket" ],
+            [ "PhysicalSocketClient", "classnet_1_1in_1_1phy_1_1stream_1_1PhysicalSocketClient.html", "classnet_1_1in_1_1phy_1_1stream_1_1PhysicalSocketClient" ],
+            [ "PhysicalSocketServer", "classnet_1_1in_1_1phy_1_1stream_1_1PhysicalSocketServer.html", "classnet_1_1in_1_1phy_1_1stream_1_1PhysicalSocketServer" ]
+          ] ],
+          [ "PhysicalSocket", "classnet_1_1in_1_1phy_1_1PhysicalSocket.html", "classnet_1_1in_1_1phy_1_1PhysicalSocket" ]
         ] ],
         [ "stream", "namespacenet_1_1in_1_1stream.html", [
           [ "config", "namespacenet_1_1in_1_1stream_1_1config.html", [
-            [ "ConfigSocketClient", "classnet_1_1in_1_1stream_1_1config_1_1_config_socket_client.html", "classnet_1_1in_1_1stream_1_1config_1_1_config_socket_client" ],
-            [ "ConfigSocketServer", "classnet_1_1in_1_1stream_1_1config_1_1_config_socket_server.html", "classnet_1_1in_1_1stream_1_1config_1_1_config_socket_server" ]
+            [ "ConfigSocketClient", "classnet_1_1in_1_1stream_1_1config_1_1ConfigSocketClient.html", "classnet_1_1in_1_1stream_1_1config_1_1ConfigSocketClient" ],
+            [ "ConfigSocketServer", "classnet_1_1in_1_1stream_1_1config_1_1ConfigSocketServer.html", "classnet_1_1in_1_1stream_1_1config_1_1ConfigSocketServer" ]
           ] ],
           [ "legacy", "namespacenet_1_1in_1_1stream_1_1legacy.html", [
             [ "config", "namespacenet_1_1in_1_1stream_1_1legacy_1_1config.html", [
-              [ "ConfigSocketClient", "classnet_1_1in_1_1stream_1_1legacy_1_1config_1_1_config_socket_client.html", "classnet_1_1in_1_1stream_1_1legacy_1_1config_1_1_config_socket_client" ],
-              [ "ConfigSocketServer", "classnet_1_1in_1_1stream_1_1legacy_1_1config_1_1_config_socket_server.html", "classnet_1_1in_1_1stream_1_1legacy_1_1config_1_1_config_socket_server" ]
+              [ "ConfigSocketClient", "classnet_1_1in_1_1stream_1_1legacy_1_1config_1_1ConfigSocketClient.html", "classnet_1_1in_1_1stream_1_1legacy_1_1config_1_1ConfigSocketClient" ],
+              [ "ConfigSocketServer", "classnet_1_1in_1_1stream_1_1legacy_1_1config_1_1ConfigSocketServer.html", "classnet_1_1in_1_1stream_1_1legacy_1_1config_1_1ConfigSocketServer" ]
             ] ]
           ] ],
           [ "tls", "namespacenet_1_1in_1_1stream_1_1tls.html", [
             [ "config", "namespacenet_1_1in_1_1stream_1_1tls_1_1config.html", [
-              [ "ConfigSocketClient", "classnet_1_1in_1_1stream_1_1tls_1_1config_1_1_config_socket_client.html", "classnet_1_1in_1_1stream_1_1tls_1_1config_1_1_config_socket_client" ],
-              [ "ConfigSocketServer", "classnet_1_1in_1_1stream_1_1tls_1_1config_1_1_config_socket_server.html", "classnet_1_1in_1_1stream_1_1tls_1_1config_1_1_config_socket_server" ]
+              [ "ConfigSocketClient", "classnet_1_1in_1_1stream_1_1tls_1_1config_1_1ConfigSocketClient.html", "classnet_1_1in_1_1stream_1_1tls_1_1config_1_1ConfigSocketClient" ],
+              [ "ConfigSocketServer", "classnet_1_1in_1_1stream_1_1tls_1_1config_1_1ConfigSocketServer.html", "classnet_1_1in_1_1stream_1_1tls_1_1config_1_1ConfigSocketServer" ]
             ] ]
           ] ],
-          [ "PhysicalClientSocket", "classnet_1_1in_1_1stream_1_1_physical_client_socket.html", "classnet_1_1in_1_1stream_1_1_physical_client_socket" ],
-          [ "PhysicalServerSocket", "classnet_1_1in_1_1stream_1_1_physical_server_socket.html", "classnet_1_1in_1_1stream_1_1_physical_server_socket" ],
-          [ "PhysicalSocket", "classnet_1_1in_1_1stream_1_1_physical_socket.html", "classnet_1_1in_1_1stream_1_1_physical_socket" ],
-          [ "SocketClient", "classnet_1_1in_1_1stream_1_1_socket_client.html", "classnet_1_1in_1_1stream_1_1_socket_client" ],
-          [ "SocketServer", "classnet_1_1in_1_1stream_1_1_socket_server.html", "classnet_1_1in_1_1stream_1_1_socket_server" ]
+          [ "SocketClient", "classnet_1_1in_1_1stream_1_1SocketClient.html", "classnet_1_1in_1_1stream_1_1SocketClient" ],
+          [ "SocketServer", "classnet_1_1in_1_1stream_1_1SocketServer.html", "classnet_1_1in_1_1stream_1_1SocketServer" ]
         ] ],
-        [ "PhysicalSocket", "classnet_1_1in_1_1_physical_socket.html", "classnet_1_1in_1_1_physical_socket" ],
-        [ "SocketAddress", "classnet_1_1in_1_1_socket_address.html", "classnet_1_1in_1_1_socket_address" ],
-        [ "SocketAddrInfo", "classnet_1_1in_1_1_socket_addr_info.html", "classnet_1_1in_1_1_socket_addr_info" ]
+        [ "SocketAddress", "classnet_1_1in_1_1SocketAddress.html", "classnet_1_1in_1_1SocketAddress" ],
+        [ "SocketAddrInfo", "classnet_1_1in_1_1SocketAddrInfo.html", "classnet_1_1in_1_1SocketAddrInfo" ]
       ] ],
       [ "in6", "namespacenet_1_1in6.html", [
         [ "config", "namespacenet_1_1in6_1_1config.html", [
-          [ "ConfigAddress", "classnet_1_1in6_1_1config_1_1_config_address.html", "classnet_1_1in6_1_1config_1_1_config_address" ]
+          [ "ConfigAddress", "classnet_1_1in6_1_1config_1_1ConfigAddress.html", "classnet_1_1in6_1_1config_1_1ConfigAddress" ]
+        ] ],
+        [ "phy", "namespacenet_1_1in6_1_1phy.html", [
+          [ "stream", "namespacenet_1_1in6_1_1phy_1_1stream.html", [
+            [ "PhysicalSocket", "classnet_1_1in6_1_1phy_1_1stream_1_1PhysicalSocket.html", "classnet_1_1in6_1_1phy_1_1stream_1_1PhysicalSocket" ],
+            [ "PhysicalSocketClient", "classnet_1_1in6_1_1phy_1_1stream_1_1PhysicalSocketClient.html", "classnet_1_1in6_1_1phy_1_1stream_1_1PhysicalSocketClient" ],
+            [ "PhysicalSocketServer", "classnet_1_1in6_1_1phy_1_1stream_1_1PhysicalSocketServer.html", "classnet_1_1in6_1_1phy_1_1stream_1_1PhysicalSocketServer" ]
+          ] ],
+          [ "PhysicalSocket", "classnet_1_1in6_1_1phy_1_1PhysicalSocket.html", "classnet_1_1in6_1_1phy_1_1PhysicalSocket" ]
         ] ],
         [ "stream", "namespacenet_1_1in6_1_1stream.html", [
           [ "config", "namespacenet_1_1in6_1_1stream_1_1config.html", [
-            [ "ConfigSocketClient", "classnet_1_1in6_1_1stream_1_1config_1_1_config_socket_client.html", "classnet_1_1in6_1_1stream_1_1config_1_1_config_socket_client" ],
-            [ "ConfigSocketServer", "classnet_1_1in6_1_1stream_1_1config_1_1_config_socket_server.html", "classnet_1_1in6_1_1stream_1_1config_1_1_config_socket_server" ]
+            [ "ConfigSocketClient", "classnet_1_1in6_1_1stream_1_1config_1_1ConfigSocketClient.html", "classnet_1_1in6_1_1stream_1_1config_1_1ConfigSocketClient" ],
+            [ "ConfigSocketServer", "classnet_1_1in6_1_1stream_1_1config_1_1ConfigSocketServer.html", "classnet_1_1in6_1_1stream_1_1config_1_1ConfigSocketServer" ]
           ] ],
           [ "legacy", "namespacenet_1_1in6_1_1stream_1_1legacy.html", [
             [ "config", "namespacenet_1_1in6_1_1stream_1_1legacy_1_1config.html", [
-              [ "ConfigSocketClient", "classnet_1_1in6_1_1stream_1_1legacy_1_1config_1_1_config_socket_client.html", "classnet_1_1in6_1_1stream_1_1legacy_1_1config_1_1_config_socket_client" ],
-              [ "ConfigSocketServer", "classnet_1_1in6_1_1stream_1_1legacy_1_1config_1_1_config_socket_server.html", "classnet_1_1in6_1_1stream_1_1legacy_1_1config_1_1_config_socket_server" ]
+              [ "ConfigSocketClient", "classnet_1_1in6_1_1stream_1_1legacy_1_1config_1_1ConfigSocketClient.html", "classnet_1_1in6_1_1stream_1_1legacy_1_1config_1_1ConfigSocketClient" ],
+              [ "ConfigSocketServer", "classnet_1_1in6_1_1stream_1_1legacy_1_1config_1_1ConfigSocketServer.html", "classnet_1_1in6_1_1stream_1_1legacy_1_1config_1_1ConfigSocketServer" ]
             ] ]
           ] ],
           [ "tls", "namespacenet_1_1in6_1_1stream_1_1tls.html", [
             [ "config", "namespacenet_1_1in6_1_1stream_1_1tls_1_1config.html", [
-              [ "ConfigSocketClient", "classnet_1_1in6_1_1stream_1_1tls_1_1config_1_1_config_socket_client.html", "classnet_1_1in6_1_1stream_1_1tls_1_1config_1_1_config_socket_client" ],
-              [ "ConfigSocketServer", "classnet_1_1in6_1_1stream_1_1tls_1_1config_1_1_config_socket_server.html", "classnet_1_1in6_1_1stream_1_1tls_1_1config_1_1_config_socket_server" ]
+              [ "ConfigSocketClient", "classnet_1_1in6_1_1stream_1_1tls_1_1config_1_1ConfigSocketClient.html", "classnet_1_1in6_1_1stream_1_1tls_1_1config_1_1ConfigSocketClient" ],
+              [ "ConfigSocketServer", "classnet_1_1in6_1_1stream_1_1tls_1_1config_1_1ConfigSocketServer.html", "classnet_1_1in6_1_1stream_1_1tls_1_1config_1_1ConfigSocketServer" ]
             ] ]
           ] ],
-          [ "PhysicalClientSocket", "classnet_1_1in6_1_1stream_1_1_physical_client_socket.html", "classnet_1_1in6_1_1stream_1_1_physical_client_socket" ],
-          [ "PhysicalServerSocket", "classnet_1_1in6_1_1stream_1_1_physical_server_socket.html", "classnet_1_1in6_1_1stream_1_1_physical_server_socket" ],
-          [ "PhysicalSocket", "classnet_1_1in6_1_1stream_1_1_physical_socket.html", "classnet_1_1in6_1_1stream_1_1_physical_socket" ],
-          [ "SocketClient", "classnet_1_1in6_1_1stream_1_1_socket_client.html", "classnet_1_1in6_1_1stream_1_1_socket_client" ],
-          [ "SocketServer", "classnet_1_1in6_1_1stream_1_1_socket_server.html", "classnet_1_1in6_1_1stream_1_1_socket_server" ]
+          [ "SocketClient", "classnet_1_1in6_1_1stream_1_1SocketClient.html", "classnet_1_1in6_1_1stream_1_1SocketClient" ],
+          [ "SocketServer", "classnet_1_1in6_1_1stream_1_1SocketServer.html", "classnet_1_1in6_1_1stream_1_1SocketServer" ]
         ] ],
-        [ "PhysicalSocket", "classnet_1_1in6_1_1_physical_socket.html", "classnet_1_1in6_1_1_physical_socket" ],
-        [ "SocketAddress", "classnet_1_1in6_1_1_socket_address.html", "classnet_1_1in6_1_1_socket_address" ],
-        [ "SocketAddrInfo", "classnet_1_1in6_1_1_socket_addr_info.html", "classnet_1_1in6_1_1_socket_addr_info" ]
+        [ "SocketAddress", "classnet_1_1in6_1_1SocketAddress.html", "classnet_1_1in6_1_1SocketAddress" ],
+        [ "SocketAddrInfo", "classnet_1_1in6_1_1SocketAddrInfo.html", "classnet_1_1in6_1_1SocketAddrInfo" ]
       ] ],
       [ "l2", "namespacenet_1_1l2.html", [
         [ "config", "namespacenet_1_1l2_1_1config.html", [
-          [ "ConfigAddress", "classnet_1_1l2_1_1config_1_1_config_address.html", "classnet_1_1l2_1_1config_1_1_config_address" ]
+          [ "ConfigAddress", "classnet_1_1l2_1_1config_1_1ConfigAddress.html", "classnet_1_1l2_1_1config_1_1ConfigAddress" ]
+        ] ],
+        [ "phy", "namespacenet_1_1l2_1_1phy.html", [
+          [ "stream", "namespacenet_1_1l2_1_1phy_1_1stream.html", [
+            [ "PhysicalSocket", "classnet_1_1l2_1_1phy_1_1stream_1_1PhysicalSocket.html", "classnet_1_1l2_1_1phy_1_1stream_1_1PhysicalSocket" ],
+            [ "PhysicalSocketClient", "classnet_1_1l2_1_1phy_1_1stream_1_1PhysicalSocketClient.html", "classnet_1_1l2_1_1phy_1_1stream_1_1PhysicalSocketClient" ],
+            [ "PhysicalSocketServer", "classnet_1_1l2_1_1phy_1_1stream_1_1PhysicalSocketServer.html", "classnet_1_1l2_1_1phy_1_1stream_1_1PhysicalSocketServer" ]
+          ] ],
+          [ "PhysicalSocket", "classnet_1_1l2_1_1phy_1_1PhysicalSocket.html", "classnet_1_1l2_1_1phy_1_1PhysicalSocket" ]
         ] ],
         [ "stream", "namespacenet_1_1l2_1_1stream.html", [
           [ "config", "namespacenet_1_1l2_1_1stream_1_1config.html", [
-            [ "ConfigSocketClient", "classnet_1_1l2_1_1stream_1_1config_1_1_config_socket_client.html", "classnet_1_1l2_1_1stream_1_1config_1_1_config_socket_client" ],
-            [ "ConfigSocketServer", "classnet_1_1l2_1_1stream_1_1config_1_1_config_socket_server.html", "classnet_1_1l2_1_1stream_1_1config_1_1_config_socket_server" ]
+            [ "ConfigSocketClient", "classnet_1_1l2_1_1stream_1_1config_1_1ConfigSocketClient.html", "classnet_1_1l2_1_1stream_1_1config_1_1ConfigSocketClient" ],
+            [ "ConfigSocketServer", "classnet_1_1l2_1_1stream_1_1config_1_1ConfigSocketServer.html", "classnet_1_1l2_1_1stream_1_1config_1_1ConfigSocketServer" ]
           ] ],
           [ "legacy", "namespacenet_1_1l2_1_1stream_1_1legacy.html", [
             [ "config", "namespacenet_1_1l2_1_1stream_1_1legacy_1_1config.html", [
-              [ "ConfigSocketClient", "classnet_1_1l2_1_1stream_1_1legacy_1_1config_1_1_config_socket_client.html", "classnet_1_1l2_1_1stream_1_1legacy_1_1config_1_1_config_socket_client" ],
-              [ "ConfigSocketServer", "classnet_1_1l2_1_1stream_1_1legacy_1_1config_1_1_config_socket_server.html", "classnet_1_1l2_1_1stream_1_1legacy_1_1config_1_1_config_socket_server" ]
+              [ "ConfigSocketClient", "classnet_1_1l2_1_1stream_1_1legacy_1_1config_1_1ConfigSocketClient.html", "classnet_1_1l2_1_1stream_1_1legacy_1_1config_1_1ConfigSocketClient" ],
+              [ "ConfigSocketServer", "classnet_1_1l2_1_1stream_1_1legacy_1_1config_1_1ConfigSocketServer.html", "classnet_1_1l2_1_1stream_1_1legacy_1_1config_1_1ConfigSocketServer" ]
             ] ]
           ] ],
           [ "tls", "namespacenet_1_1l2_1_1stream_1_1tls.html", [
             [ "config", "namespacenet_1_1l2_1_1stream_1_1tls_1_1config.html", [
-              [ "ConfigSocketClient", "classnet_1_1l2_1_1stream_1_1tls_1_1config_1_1_config_socket_client.html", "classnet_1_1l2_1_1stream_1_1tls_1_1config_1_1_config_socket_client" ],
-              [ "ConfigSocketServer", "classnet_1_1l2_1_1stream_1_1tls_1_1config_1_1_config_socket_server.html", "classnet_1_1l2_1_1stream_1_1tls_1_1config_1_1_config_socket_server" ]
+              [ "ConfigSocketClient", "classnet_1_1l2_1_1stream_1_1tls_1_1config_1_1ConfigSocketClient.html", "classnet_1_1l2_1_1stream_1_1tls_1_1config_1_1ConfigSocketClient" ],
+              [ "ConfigSocketServer", "classnet_1_1l2_1_1stream_1_1tls_1_1config_1_1ConfigSocketServer.html", "classnet_1_1l2_1_1stream_1_1tls_1_1config_1_1ConfigSocketServer" ]
             ] ]
           ] ],
-          [ "PhysicalClientSocket", "classnet_1_1l2_1_1stream_1_1_physical_client_socket.html", "classnet_1_1l2_1_1stream_1_1_physical_client_socket" ],
-          [ "PhysicalServerSocket", "classnet_1_1l2_1_1stream_1_1_physical_server_socket.html", "classnet_1_1l2_1_1stream_1_1_physical_server_socket" ],
-          [ "PhysicalSocket", "classnet_1_1l2_1_1stream_1_1_physical_socket.html", "classnet_1_1l2_1_1stream_1_1_physical_socket" ],
-          [ "SocketClient", "classnet_1_1l2_1_1stream_1_1_socket_client.html", "classnet_1_1l2_1_1stream_1_1_socket_client" ],
-          [ "SocketServer", "classnet_1_1l2_1_1stream_1_1_socket_server.html", "classnet_1_1l2_1_1stream_1_1_socket_server" ]
+          [ "SocketClient", "classnet_1_1l2_1_1stream_1_1SocketClient.html", "classnet_1_1l2_1_1stream_1_1SocketClient" ],
+          [ "SocketServer", "classnet_1_1l2_1_1stream_1_1SocketServer.html", "classnet_1_1l2_1_1stream_1_1SocketServer" ]
         ] ],
-        [ "PhysicalSocket", "classnet_1_1l2_1_1_physical_socket.html", "classnet_1_1l2_1_1_physical_socket" ],
-        [ "SocketAddress", "classnet_1_1l2_1_1_socket_address.html", "classnet_1_1l2_1_1_socket_address" ]
+        [ "SocketAddress", "classnet_1_1l2_1_1SocketAddress.html", "classnet_1_1l2_1_1SocketAddress" ]
+      ] ],
+      [ "phy", "namespacenet_1_1phy.html", [
+        [ "dgram", "namespacenet_1_1phy_1_1dgram.html", [
+          [ "PeerSocket", "classnet_1_1phy_1_1dgram_1_1PeerSocket.html", "classnet_1_1phy_1_1dgram_1_1PeerSocket" ]
+        ] ],
+        [ "stream", "namespacenet_1_1phy_1_1stream.html", [
+          [ "PhysicalSocket", "classnet_1_1phy_1_1stream_1_1PhysicalSocket.html", "classnet_1_1phy_1_1stream_1_1PhysicalSocket" ],
+          [ "PhysicalSocketClient", "classnet_1_1phy_1_1stream_1_1PhysicalSocketClient.html", "classnet_1_1phy_1_1stream_1_1PhysicalSocketClient" ],
+          [ "PhysicalSocketServer", "classnet_1_1phy_1_1stream_1_1PhysicalSocketServer.html", "classnet_1_1phy_1_1stream_1_1PhysicalSocketServer" ]
+        ] ],
+        [ "PhysicalSocket", "classnet_1_1phy_1_1PhysicalSocket.html", "classnet_1_1phy_1_1PhysicalSocket" ],
+        [ "PhysicalSocketOption", "classnet_1_1phy_1_1PhysicalSocketOption.html", "classnet_1_1phy_1_1PhysicalSocketOption" ]
       ] ],
       [ "rc", "namespacenet_1_1rc.html", [
         [ "config", "namespacenet_1_1rc_1_1config.html", [
-          [ "ConfigAddress", "classnet_1_1rc_1_1config_1_1_config_address.html", "classnet_1_1rc_1_1config_1_1_config_address" ]
+          [ "ConfigAddress", "classnet_1_1rc_1_1config_1_1ConfigAddress.html", "classnet_1_1rc_1_1config_1_1ConfigAddress" ]
+        ] ],
+        [ "phy", "namespacenet_1_1rc_1_1phy.html", [
+          [ "stream", "namespacenet_1_1rc_1_1phy_1_1stream.html", [
+            [ "PhysicalSocket", "classnet_1_1rc_1_1phy_1_1stream_1_1PhysicalSocket.html", "classnet_1_1rc_1_1phy_1_1stream_1_1PhysicalSocket" ],
+            [ "PhysicalSocketClient", "classnet_1_1rc_1_1phy_1_1stream_1_1PhysicalSocketClient.html", "classnet_1_1rc_1_1phy_1_1stream_1_1PhysicalSocketClient" ],
+            [ "PhysicalSocketServer", "classnet_1_1rc_1_1phy_1_1stream_1_1PhysicalSocketServer.html", "classnet_1_1rc_1_1phy_1_1stream_1_1PhysicalSocketServer" ]
+          ] ],
+          [ "PhysicalSocket", "classnet_1_1rc_1_1phy_1_1PhysicalSocket.html", "classnet_1_1rc_1_1phy_1_1PhysicalSocket" ]
         ] ],
         [ "stream", "namespacenet_1_1rc_1_1stream.html", [
           [ "config", "namespacenet_1_1rc_1_1stream_1_1config.html", [
-            [ "ConfigSocketClient", "classnet_1_1rc_1_1stream_1_1config_1_1_config_socket_client.html", "classnet_1_1rc_1_1stream_1_1config_1_1_config_socket_client" ],
-            [ "ConfigSocketServer", "classnet_1_1rc_1_1stream_1_1config_1_1_config_socket_server.html", "classnet_1_1rc_1_1stream_1_1config_1_1_config_socket_server" ]
+            [ "ConfigSocketClient", "classnet_1_1rc_1_1stream_1_1config_1_1ConfigSocketClient.html", "classnet_1_1rc_1_1stream_1_1config_1_1ConfigSocketClient" ],
+            [ "ConfigSocketServer", "classnet_1_1rc_1_1stream_1_1config_1_1ConfigSocketServer.html", "classnet_1_1rc_1_1stream_1_1config_1_1ConfigSocketServer" ]
           ] ],
           [ "legacy", "namespacenet_1_1rc_1_1stream_1_1legacy.html", [
             [ "config", "namespacenet_1_1rc_1_1stream_1_1legacy_1_1config.html", [
-              [ "ConfigSocketClient", "classnet_1_1rc_1_1stream_1_1legacy_1_1config_1_1_config_socket_client.html", "classnet_1_1rc_1_1stream_1_1legacy_1_1config_1_1_config_socket_client" ],
-              [ "ConfigSocketServer", "classnet_1_1rc_1_1stream_1_1legacy_1_1config_1_1_config_socket_server.html", "classnet_1_1rc_1_1stream_1_1legacy_1_1config_1_1_config_socket_server" ]
+              [ "ConfigSocketClient", "classnet_1_1rc_1_1stream_1_1legacy_1_1config_1_1ConfigSocketClient.html", "classnet_1_1rc_1_1stream_1_1legacy_1_1config_1_1ConfigSocketClient" ],
+              [ "ConfigSocketServer", "classnet_1_1rc_1_1stream_1_1legacy_1_1config_1_1ConfigSocketServer.html", "classnet_1_1rc_1_1stream_1_1legacy_1_1config_1_1ConfigSocketServer" ]
             ] ]
           ] ],
           [ "tls", "namespacenet_1_1rc_1_1stream_1_1tls.html", [
             [ "config", "namespacenet_1_1rc_1_1stream_1_1tls_1_1config.html", [
-              [ "ConfigSocketClient", "classnet_1_1rc_1_1stream_1_1tls_1_1config_1_1_config_socket_client.html", "classnet_1_1rc_1_1stream_1_1tls_1_1config_1_1_config_socket_client" ],
-              [ "ConfigSocketServer", "classnet_1_1rc_1_1stream_1_1tls_1_1config_1_1_config_socket_server.html", "classnet_1_1rc_1_1stream_1_1tls_1_1config_1_1_config_socket_server" ]
+              [ "ConfigSocketClient", "classnet_1_1rc_1_1stream_1_1tls_1_1config_1_1ConfigSocketClient.html", "classnet_1_1rc_1_1stream_1_1tls_1_1config_1_1ConfigSocketClient" ],
+              [ "ConfigSocketServer", "classnet_1_1rc_1_1stream_1_1tls_1_1config_1_1ConfigSocketServer.html", "classnet_1_1rc_1_1stream_1_1tls_1_1config_1_1ConfigSocketServer" ]
             ] ]
           ] ],
-          [ "PhysicalClientSocket", "classnet_1_1rc_1_1stream_1_1_physical_client_socket.html", "classnet_1_1rc_1_1stream_1_1_physical_client_socket" ],
-          [ "PhysicalServerSocket", "classnet_1_1rc_1_1stream_1_1_physical_server_socket.html", "classnet_1_1rc_1_1stream_1_1_physical_server_socket" ],
-          [ "PhysicalSocket", "classnet_1_1rc_1_1stream_1_1_physical_socket.html", "classnet_1_1rc_1_1stream_1_1_physical_socket" ],
-          [ "SocketClient", "classnet_1_1rc_1_1stream_1_1_socket_client.html", "classnet_1_1rc_1_1stream_1_1_socket_client" ],
-          [ "SocketServer", "classnet_1_1rc_1_1stream_1_1_socket_server.html", "classnet_1_1rc_1_1stream_1_1_socket_server" ]
+          [ "SocketClient", "classnet_1_1rc_1_1stream_1_1SocketClient.html", "classnet_1_1rc_1_1stream_1_1SocketClient" ],
+          [ "SocketServer", "classnet_1_1rc_1_1stream_1_1SocketServer.html", "classnet_1_1rc_1_1stream_1_1SocketServer" ]
         ] ],
-        [ "PhysicalSocket", "classnet_1_1rc_1_1_physical_socket.html", "classnet_1_1rc_1_1_physical_socket" ],
-        [ "SocketAddress", "classnet_1_1rc_1_1_socket_address.html", "classnet_1_1rc_1_1_socket_address" ]
-      ] ],
-      [ "stream", "namespacenet_1_1stream.html", [
-        [ "config", "namespacenet_1_1stream_1_1config.html", [
-          [ "legacy", "namespacenet_1_1stream_1_1config_1_1legacy.html", [
-            [ "ConfigSocketClient", "classnet_1_1stream_1_1config_1_1legacy_1_1_config_socket_client.html", "classnet_1_1stream_1_1config_1_1legacy_1_1_config_socket_client" ],
-            [ "ConfigSocketServer", "classnet_1_1stream_1_1config_1_1legacy_1_1_config_socket_server.html", "classnet_1_1stream_1_1config_1_1legacy_1_1_config_socket_server" ]
-          ] ],
-          [ "tls", "namespacenet_1_1stream_1_1config_1_1tls.html", [
-            [ "ConfigSocketClient", "classnet_1_1stream_1_1config_1_1tls_1_1_config_socket_client.html", "classnet_1_1stream_1_1config_1_1tls_1_1_config_socket_client" ],
-            [ "ConfigSocketServer", "classnet_1_1stream_1_1config_1_1tls_1_1_config_socket_server.html", "classnet_1_1stream_1_1config_1_1tls_1_1_config_socket_server" ]
-          ] ],
-          [ "ConfigSocketClient", "classnet_1_1stream_1_1config_1_1_config_socket_client.html", "classnet_1_1stream_1_1config_1_1_config_socket_client" ],
-          [ "ConfigSocketServer", "classnet_1_1stream_1_1config_1_1_config_socket_server.html", "classnet_1_1stream_1_1config_1_1_config_socket_server" ]
-        ] ],
-        [ "PhysicalClientSocket", "classnet_1_1stream_1_1_physical_client_socket.html", "classnet_1_1stream_1_1_physical_client_socket" ],
-        [ "PhysicalServerSocket", "classnet_1_1stream_1_1_physical_server_socket.html", "classnet_1_1stream_1_1_physical_server_socket" ],
-        [ "PhysicalSocket", "classnet_1_1stream_1_1_physical_socket.html", "classnet_1_1stream_1_1_physical_socket" ]
+        [ "SocketAddress", "classnet_1_1rc_1_1SocketAddress.html", "classnet_1_1rc_1_1SocketAddress" ]
       ] ],
       [ "un", "namespacenet_1_1un.html", [
         [ "config", "namespacenet_1_1un_1_1config.html", [
-          [ "ConfigAddress", "classnet_1_1un_1_1config_1_1_config_address.html", "classnet_1_1un_1_1config_1_1_config_address" ]
+          [ "ConfigAddress", "classnet_1_1un_1_1config_1_1ConfigAddress.html", "classnet_1_1un_1_1config_1_1ConfigAddress" ]
         ] ],
         [ "dgram", "namespacenet_1_1un_1_1dgram.html", [
-          [ "Socket", "classnet_1_1un_1_1dgram_1_1_socket.html", "classnet_1_1un_1_1dgram_1_1_socket" ]
+          [ "Socket", "classnet_1_1un_1_1dgram_1_1Socket.html", "classnet_1_1un_1_1dgram_1_1Socket" ]
+        ] ],
+        [ "phy", "namespacenet_1_1un_1_1phy.html", [
+          [ "stream", "namespacenet_1_1un_1_1phy_1_1stream.html", [
+            [ "PhysicalSocket", "classnet_1_1un_1_1phy_1_1stream_1_1PhysicalSocket.html", "classnet_1_1un_1_1phy_1_1stream_1_1PhysicalSocket" ],
+            [ "PhysicalSocketClient", "classnet_1_1un_1_1phy_1_1stream_1_1PhysicalSocketClient.html", "classnet_1_1un_1_1phy_1_1stream_1_1PhysicalSocketClient" ],
+            [ "PhysicalSocketServer", "classnet_1_1un_1_1phy_1_1stream_1_1PhysicalSocketServer.html", "classnet_1_1un_1_1phy_1_1stream_1_1PhysicalSocketServer" ]
+          ] ],
+          [ "PhysicalSocket", "classnet_1_1un_1_1phy_1_1PhysicalSocket.html", "classnet_1_1un_1_1phy_1_1PhysicalSocket" ]
         ] ],
         [ "stream", "namespacenet_1_1un_1_1stream.html", [
           [ "config", "namespacenet_1_1un_1_1stream_1_1config.html", [
-            [ "ConfigSocketClient", "classnet_1_1un_1_1stream_1_1config_1_1_config_socket_client.html", "classnet_1_1un_1_1stream_1_1config_1_1_config_socket_client" ],
-            [ "ConfigSocketServer", "classnet_1_1un_1_1stream_1_1config_1_1_config_socket_server.html", "classnet_1_1un_1_1stream_1_1config_1_1_config_socket_server" ]
+            [ "ConfigSocketClient", "classnet_1_1un_1_1stream_1_1config_1_1ConfigSocketClient.html", "classnet_1_1un_1_1stream_1_1config_1_1ConfigSocketClient" ],
+            [ "ConfigSocketServer", "classnet_1_1un_1_1stream_1_1config_1_1ConfigSocketServer.html", "classnet_1_1un_1_1stream_1_1config_1_1ConfigSocketServer" ]
           ] ],
           [ "legacy", "namespacenet_1_1un_1_1stream_1_1legacy.html", [
             [ "config", "namespacenet_1_1un_1_1stream_1_1legacy_1_1config.html", [
-              [ "ConfigSocketClient", "classnet_1_1un_1_1stream_1_1legacy_1_1config_1_1_config_socket_client.html", "classnet_1_1un_1_1stream_1_1legacy_1_1config_1_1_config_socket_client" ],
-              [ "ConfigSocketServer", "classnet_1_1un_1_1stream_1_1legacy_1_1config_1_1_config_socket_server.html", "classnet_1_1un_1_1stream_1_1legacy_1_1config_1_1_config_socket_server" ]
+              [ "ConfigSocketClient", "classnet_1_1un_1_1stream_1_1legacy_1_1config_1_1ConfigSocketClient.html", "classnet_1_1un_1_1stream_1_1legacy_1_1config_1_1ConfigSocketClient" ],
+              [ "ConfigSocketServer", "classnet_1_1un_1_1stream_1_1legacy_1_1config_1_1ConfigSocketServer.html", "classnet_1_1un_1_1stream_1_1legacy_1_1config_1_1ConfigSocketServer" ]
             ] ]
           ] ],
           [ "tls", "namespacenet_1_1un_1_1stream_1_1tls.html", [
             [ "config", "namespacenet_1_1un_1_1stream_1_1tls_1_1config.html", [
-              [ "ConfigSocketClient", "classnet_1_1un_1_1stream_1_1tls_1_1config_1_1_config_socket_client.html", "classnet_1_1un_1_1stream_1_1tls_1_1config_1_1_config_socket_client" ],
-              [ "ConfigSocketServer", "classnet_1_1un_1_1stream_1_1tls_1_1config_1_1_config_socket_server.html", "classnet_1_1un_1_1stream_1_1tls_1_1config_1_1_config_socket_server" ]
+              [ "ConfigSocketClient", "classnet_1_1un_1_1stream_1_1tls_1_1config_1_1ConfigSocketClient.html", "classnet_1_1un_1_1stream_1_1tls_1_1config_1_1ConfigSocketClient" ],
+              [ "ConfigSocketServer", "classnet_1_1un_1_1stream_1_1tls_1_1config_1_1ConfigSocketServer.html", "classnet_1_1un_1_1stream_1_1tls_1_1config_1_1ConfigSocketServer" ]
             ] ]
           ] ],
-          [ "PhysicalClientSocket", "classnet_1_1un_1_1stream_1_1_physical_client_socket.html", "classnet_1_1un_1_1stream_1_1_physical_client_socket" ],
-          [ "PhysicalServerSocket", "classnet_1_1un_1_1stream_1_1_physical_server_socket.html", "classnet_1_1un_1_1stream_1_1_physical_server_socket" ],
-          [ "PhysicalSocket", "classnet_1_1un_1_1stream_1_1_physical_socket.html", "classnet_1_1un_1_1stream_1_1_physical_socket" ],
-          [ "SocketClient", "classnet_1_1un_1_1stream_1_1_socket_client.html", "classnet_1_1un_1_1stream_1_1_socket_client" ],
-          [ "SocketServer", "classnet_1_1un_1_1stream_1_1_socket_server.html", "classnet_1_1un_1_1stream_1_1_socket_server" ]
+          [ "SocketClient", "classnet_1_1un_1_1stream_1_1SocketClient.html", "classnet_1_1un_1_1stream_1_1SocketClient" ],
+          [ "SocketServer", "classnet_1_1un_1_1stream_1_1SocketServer.html", "classnet_1_1un_1_1stream_1_1SocketServer" ]
         ] ],
-        [ "PhysicalSocket", "classnet_1_1un_1_1_physical_socket.html", "classnet_1_1un_1_1_physical_socket" ],
-        [ "SocketAddress", "classnet_1_1un_1_1_socket_address.html", "classnet_1_1un_1_1_socket_address" ]
+        [ "SocketAddress", "classnet_1_1un_1_1SocketAddress.html", "classnet_1_1un_1_1SocketAddress" ]
       ] ],
-      [ "PhysicalSocket", "classnet_1_1_physical_socket.html", "classnet_1_1_physical_socket" ],
-      [ "PhysicalSocketOption", "classnet_1_1_physical_socket_option.html", "classnet_1_1_physical_socket_option" ],
-      [ "SocketAddress", "classnet_1_1_socket_address.html", "classnet_1_1_socket_address" ]
+      [ "SocketAddress", "classnet_1_1SocketAddress.html", "classnet_1_1SocketAddress" ]
     ] ],
     [ "utils", "namespaceutils.html", [
-      [ "AttributeProxy", "classutils_1_1_attribute_proxy.html", "classutils_1_1_attribute_proxy" ],
-      [ "Config", "classutils_1_1_config.html", "classutils_1_1_config" ],
-      [ "Daemon", "classutils_1_1_daemon.html", "classutils_1_1_daemon" ],
-      [ "DaemonizeError", "classutils_1_1_daemonize_error.html", "classutils_1_1_daemonize_error" ],
-      [ "DaemonizeFailure", "classutils_1_1_daemonize_failure.html", "classutils_1_1_daemonize_failure" ],
-      [ "DaemonizeSuccess", "classutils_1_1_daemonize_success.html", "classutils_1_1_daemonize_success" ],
+      [ "AttributeProxy", "classutils_1_1AttributeProxy.html", "classutils_1_1AttributeProxy" ],
+      [ "Config", "classutils_1_1Config.html", "classutils_1_1Config" ],
+      [ "Daemon", "classutils_1_1Daemon.html", "classutils_1_1Daemon" ],
+      [ "DaemonizeError", "classutils_1_1DaemonizeError.html", "classutils_1_1DaemonizeError" ],
+      [ "DaemonizeFailure", "classutils_1_1DaemonizeFailure.html", "classutils_1_1DaemonizeFailure" ],
+      [ "DaemonizeSuccess", "classutils_1_1DaemonizeSuccess.html", "classutils_1_1DaemonizeSuccess" ],
       [ "fixed_string", "structutils_1_1fixed__string.html", "structutils_1_1fixed__string" ],
-      [ "MultibleAttributeInjector", "classutils_1_1_multible_attribute_injector.html", "classutils_1_1_multible_attribute_injector" ],
-      [ "PreserveErrno", "classutils_1_1_preserve_errno.html", "classutils_1_1_preserve_errno" ],
-      [ "Random", "classutils_1_1_random.html", "classutils_1_1_random" ],
-      [ "ResetToDefault", "classutils_1_1_reset_to_default.html", "classutils_1_1_reset_to_default" ],
-      [ "SingleAttributeInjector", "classutils_1_1_single_attribute_injector.html", "classutils_1_1_single_attribute_injector" ],
-      [ "Timeval", "classutils_1_1_timeval.html", "classutils_1_1_timeval" ],
-      [ "Uuid", "classutils_1_1_uuid.html", "classutils_1_1_uuid" ]
+      [ "MultibleAttributeInjector", "classutils_1_1MultibleAttributeInjector.html", "classutils_1_1MultibleAttributeInjector" ],
+      [ "PreserveErrno", "classutils_1_1PreserveErrno.html", "classutils_1_1PreserveErrno" ],
+      [ "Random", "classutils_1_1Random.html", "classutils_1_1Random" ],
+      [ "ResetToDefault", "classutils_1_1ResetToDefault.html", "classutils_1_1ResetToDefault" ],
+      [ "SingleAttributeInjector", "classutils_1_1SingleAttributeInjector.html", "classutils_1_1SingleAttributeInjector" ],
+      [ "Timeval", "classutils_1_1Timeval.html", "classutils_1_1Timeval" ],
+      [ "Uuid", "classutils_1_1Uuid.html", "classutils_1_1Uuid" ]
     ] ],
     [ "web", "namespaceweb.html", [
       [ "http", "namespaceweb_1_1http.html", [
         [ "client", "namespaceweb_1_1http_1_1client.html", [
-          [ "Client", "classweb_1_1http_1_1client_1_1_client.html", "classweb_1_1http_1_1client_1_1_client" ],
-          [ "Request", "classweb_1_1http_1_1client_1_1_request.html", "classweb_1_1http_1_1client_1_1_request" ],
-          [ "Response", "classweb_1_1http_1_1client_1_1_response.html", "classweb_1_1http_1_1client_1_1_response" ],
-          [ "ResponseParser", "classweb_1_1http_1_1client_1_1_response_parser.html", "classweb_1_1http_1_1client_1_1_response_parser" ],
-          [ "SocketContext", "classweb_1_1http_1_1client_1_1_socket_context.html", "classweb_1_1http_1_1client_1_1_socket_context" ],
-          [ "SocketContextFactory", "classweb_1_1http_1_1client_1_1_socket_context_factory.html", "classweb_1_1http_1_1client_1_1_socket_context_factory" ],
-          [ "SocketContextUpgradeFactory", "classweb_1_1http_1_1client_1_1_socket_context_upgrade_factory.html", "classweb_1_1http_1_1client_1_1_socket_context_upgrade_factory" ],
-          [ "SocketContextUpgradeFactorySelector", "classweb_1_1http_1_1client_1_1_socket_context_upgrade_factory_selector.html", "classweb_1_1http_1_1client_1_1_socket_context_upgrade_factory_selector" ]
-        ] ],
-        [ "legacy", "namespaceweb_1_1http_1_1legacy.html", [
-          [ "in", "namespaceweb_1_1http_1_1legacy_1_1in.html", [
-            [ "Client", "classweb_1_1http_1_1legacy_1_1in_1_1_client.html", null ],
-            [ "Server", "classweb_1_1http_1_1legacy_1_1in_1_1_server.html", null ]
-          ] ],
-          [ "in6", "namespaceweb_1_1http_1_1legacy_1_1in6.html", [
-            [ "Client", "classweb_1_1http_1_1legacy_1_1in6_1_1_client.html", null ],
-            [ "Server", "classweb_1_1http_1_1legacy_1_1in6_1_1_server.html", null ]
-          ] ],
-          [ "rc", "namespaceweb_1_1http_1_1legacy_1_1rc.html", [
-            [ "Client", "classweb_1_1http_1_1legacy_1_1rc_1_1_client.html", null ],
-            [ "Server", "classweb_1_1http_1_1legacy_1_1rc_1_1_server.html", null ]
-          ] ],
-          [ "un", "namespaceweb_1_1http_1_1legacy_1_1un.html", [
-            [ "Client", "classweb_1_1http_1_1legacy_1_1un_1_1_client.html", null ],
-            [ "Server", "classweb_1_1http_1_1legacy_1_1un_1_1_server.html", null ]
-          ] ]
+          [ "Client", "classweb_1_1http_1_1client_1_1Client.html", "classweb_1_1http_1_1client_1_1Client" ],
+          [ "Request", "classweb_1_1http_1_1client_1_1Request.html", "classweb_1_1http_1_1client_1_1Request" ],
+          [ "Response", "classweb_1_1http_1_1client_1_1Response.html", "classweb_1_1http_1_1client_1_1Response" ],
+          [ "ResponseParser", "classweb_1_1http_1_1client_1_1ResponseParser.html", "classweb_1_1http_1_1client_1_1ResponseParser" ],
+          [ "SocketContext", "classweb_1_1http_1_1client_1_1SocketContext.html", "classweb_1_1http_1_1client_1_1SocketContext" ],
+          [ "SocketContextFactory", "classweb_1_1http_1_1client_1_1SocketContextFactory.html", "classweb_1_1http_1_1client_1_1SocketContextFactory" ],
+          [ "SocketContextUpgradeFactory", "classweb_1_1http_1_1client_1_1SocketContextUpgradeFactory.html", "classweb_1_1http_1_1client_1_1SocketContextUpgradeFactory" ],
+          [ "SocketContextUpgradeFactorySelector", "classweb_1_1http_1_1client_1_1SocketContextUpgradeFactorySelector.html", "classweb_1_1http_1_1client_1_1SocketContextUpgradeFactorySelector" ]
         ] ],
         [ "server", "namespaceweb_1_1http_1_1server.html", [
-          [ "Request", "classweb_1_1http_1_1server_1_1_request.html", "classweb_1_1http_1_1server_1_1_request" ],
-          [ "RequestContextBase", "classweb_1_1http_1_1server_1_1_request_context_base.html", "classweb_1_1http_1_1server_1_1_request_context_base" ],
-          [ "RequestParser", "classweb_1_1http_1_1server_1_1_request_parser.html", "classweb_1_1http_1_1server_1_1_request_parser" ],
-          [ "Response", "classweb_1_1http_1_1server_1_1_response.html", "classweb_1_1http_1_1server_1_1_response" ],
-          [ "Server", "classweb_1_1http_1_1server_1_1_server.html", "classweb_1_1http_1_1server_1_1_server" ],
-          [ "SocketContext", "classweb_1_1http_1_1server_1_1_socket_context.html", "classweb_1_1http_1_1server_1_1_socket_context" ],
-          [ "SocketContextFactory", "classweb_1_1http_1_1server_1_1_socket_context_factory.html", "classweb_1_1http_1_1server_1_1_socket_context_factory" ],
-          [ "SocketContextUpgradeFactory", "classweb_1_1http_1_1server_1_1_socket_context_upgrade_factory.html", "classweb_1_1http_1_1server_1_1_socket_context_upgrade_factory" ],
-          [ "SocketContextUpgradeFactorySelector", "classweb_1_1http_1_1server_1_1_socket_context_upgrade_factory_selector.html", "classweb_1_1http_1_1server_1_1_socket_context_upgrade_factory_selector" ]
+          [ "Request", "classweb_1_1http_1_1server_1_1Request.html", "classweb_1_1http_1_1server_1_1Request" ],
+          [ "RequestContextBase", "classweb_1_1http_1_1server_1_1RequestContextBase.html", "classweb_1_1http_1_1server_1_1RequestContextBase" ],
+          [ "RequestParser", "classweb_1_1http_1_1server_1_1RequestParser.html", "classweb_1_1http_1_1server_1_1RequestParser" ],
+          [ "Response", "classweb_1_1http_1_1server_1_1Response.html", "classweb_1_1http_1_1server_1_1Response" ],
+          [ "Server", "classweb_1_1http_1_1server_1_1Server.html", "classweb_1_1http_1_1server_1_1Server" ],
+          [ "SocketContext", "classweb_1_1http_1_1server_1_1SocketContext.html", "classweb_1_1http_1_1server_1_1SocketContext" ],
+          [ "SocketContextFactory", "classweb_1_1http_1_1server_1_1SocketContextFactory.html", "classweb_1_1http_1_1server_1_1SocketContextFactory" ],
+          [ "SocketContextUpgradeFactory", "classweb_1_1http_1_1server_1_1SocketContextUpgradeFactory.html", "classweb_1_1http_1_1server_1_1SocketContextUpgradeFactory" ],
+          [ "SocketContextUpgradeFactorySelector", "classweb_1_1http_1_1server_1_1SocketContextUpgradeFactorySelector.html", "classweb_1_1http_1_1server_1_1SocketContextUpgradeFactorySelector" ]
         ] ],
-        [ "tls", "namespaceweb_1_1http_1_1tls.html", [
-          [ "in", "namespaceweb_1_1http_1_1tls_1_1in.html", [
-            [ "Client", "classweb_1_1http_1_1tls_1_1in_1_1_client.html", null ],
-            [ "Server", "classweb_1_1http_1_1tls_1_1in_1_1_server.html", null ]
-          ] ],
-          [ "in6", "namespaceweb_1_1http_1_1tls_1_1in6.html", [
-            [ "Client", "classweb_1_1http_1_1tls_1_1in6_1_1_client.html", null ],
-            [ "Server", "classweb_1_1http_1_1tls_1_1in6_1_1_server.html", null ]
-          ] ],
-          [ "rc", "namespaceweb_1_1http_1_1tls_1_1rc.html", [
-            [ "Client", "classweb_1_1http_1_1tls_1_1rc_1_1_client.html", null ],
-            [ "Server", "classweb_1_1http_1_1tls_1_1rc_1_1_server.html", null ]
-          ] ],
-          [ "un", "namespaceweb_1_1http_1_1tls_1_1un.html", [
-            [ "Client", "classweb_1_1http_1_1tls_1_1un_1_1_client.html", null ],
-            [ "Server", "classweb_1_1http_1_1tls_1_1un_1_1_server.html", null ]
-          ] ]
-        ] ],
-        [ "CookieOptions", "classweb_1_1http_1_1_cookie_options.html", "classweb_1_1http_1_1_cookie_options" ],
-        [ "MimeTypes", "classweb_1_1http_1_1_mime_types.html", "classweb_1_1http_1_1_mime_types" ],
-        [ "Parser", "classweb_1_1http_1_1_parser.html", "classweb_1_1http_1_1_parser" ],
-        [ "SocketContext", "classweb_1_1http_1_1_socket_context.html", "classweb_1_1http_1_1_socket_context" ],
-        [ "SocketContextFactory", "classweb_1_1http_1_1_socket_context_factory.html", "classweb_1_1http_1_1_socket_context_factory" ],
-        [ "SocketContextUpgrade", "classweb_1_1http_1_1_socket_context_upgrade.html", "classweb_1_1http_1_1_socket_context_upgrade" ],
-        [ "SocketContextUpgradeFactory", "classweb_1_1http_1_1_socket_context_upgrade_factory.html", "classweb_1_1http_1_1_socket_context_upgrade_factory" ],
-        [ "SocketContextUpgradeFactorySelector", "classweb_1_1http_1_1_socket_context_upgrade_factory_selector.html", "classweb_1_1http_1_1_socket_context_upgrade_factory_selector" ],
-        [ "StatusCode", "classweb_1_1http_1_1_status_code.html", "classweb_1_1http_1_1_status_code" ]
+        [ "CookieOptions", "classweb_1_1http_1_1CookieOptions.html", "classweb_1_1http_1_1CookieOptions" ],
+        [ "MimeTypes", "classweb_1_1http_1_1MimeTypes.html", "classweb_1_1http_1_1MimeTypes" ],
+        [ "Parser", "classweb_1_1http_1_1Parser.html", "classweb_1_1http_1_1Parser" ],
+        [ "SocketContext", "classweb_1_1http_1_1SocketContext.html", "classweb_1_1http_1_1SocketContext" ],
+        [ "SocketContextFactory", "classweb_1_1http_1_1SocketContextFactory.html", "classweb_1_1http_1_1SocketContextFactory" ],
+        [ "SocketContextUpgrade", "classweb_1_1http_1_1SocketContextUpgrade.html", "classweb_1_1http_1_1SocketContextUpgrade" ],
+        [ "SocketContextUpgradeFactory", "classweb_1_1http_1_1SocketContextUpgradeFactory.html", "classweb_1_1http_1_1SocketContextUpgradeFactory" ],
+        [ "SocketContextUpgradeFactorySelector", "classweb_1_1http_1_1SocketContextUpgradeFactorySelector.html", "classweb_1_1http_1_1SocketContextUpgradeFactorySelector" ],
+        [ "StatusCode", "classweb_1_1http_1_1StatusCode.html", "classweb_1_1http_1_1StatusCode" ]
       ] ],
       [ "websocket", "namespaceweb_1_1websocket.html", [
         [ "client", "namespaceweb_1_1websocket_1_1client.html", [
-          [ "SocketContextUpgrade", "classweb_1_1websocket_1_1client_1_1_socket_context_upgrade.html", "classweb_1_1websocket_1_1client_1_1_socket_context_upgrade" ],
-          [ "SocketContextUpgradeFactory", "classweb_1_1websocket_1_1client_1_1_socket_context_upgrade_factory.html", "classweb_1_1websocket_1_1client_1_1_socket_context_upgrade_factory" ],
-          [ "SubProtocol", "classweb_1_1websocket_1_1client_1_1_sub_protocol.html", "classweb_1_1websocket_1_1client_1_1_sub_protocol" ],
-          [ "SubProtocolFactorySelector", "classweb_1_1websocket_1_1client_1_1_sub_protocol_factory_selector.html", "classweb_1_1websocket_1_1client_1_1_sub_protocol_factory_selector" ]
+          [ "SocketContextUpgrade", "classweb_1_1websocket_1_1client_1_1SocketContextUpgrade.html", "classweb_1_1websocket_1_1client_1_1SocketContextUpgrade" ],
+          [ "SocketContextUpgradeFactory", "classweb_1_1websocket_1_1client_1_1SocketContextUpgradeFactory.html", "classweb_1_1websocket_1_1client_1_1SocketContextUpgradeFactory" ],
+          [ "SubProtocol", "classweb_1_1websocket_1_1client_1_1SubProtocol.html", "classweb_1_1websocket_1_1client_1_1SubProtocol" ],
+          [ "SubProtocolFactorySelector", "classweb_1_1websocket_1_1client_1_1SubProtocolFactorySelector.html", "classweb_1_1websocket_1_1client_1_1SubProtocolFactorySelector" ]
         ] ],
         [ "server", "namespaceweb_1_1websocket_1_1server.html", [
-          [ "GroupsManager", "classweb_1_1websocket_1_1server_1_1_groups_manager.html", "classweb_1_1websocket_1_1server_1_1_groups_manager" ],
-          [ "SocketContextUpgrade", "classweb_1_1websocket_1_1server_1_1_socket_context_upgrade.html", "classweb_1_1websocket_1_1server_1_1_socket_context_upgrade" ],
-          [ "SocketContextUpgradeFactory", "classweb_1_1websocket_1_1server_1_1_socket_context_upgrade_factory.html", "classweb_1_1websocket_1_1server_1_1_socket_context_upgrade_factory" ],
-          [ "SubProtocol", "classweb_1_1websocket_1_1server_1_1_sub_protocol.html", "classweb_1_1websocket_1_1server_1_1_sub_protocol" ],
-          [ "SubProtocolFactorySelector", "classweb_1_1websocket_1_1server_1_1_sub_protocol_factory_selector.html", "classweb_1_1websocket_1_1server_1_1_sub_protocol_factory_selector" ]
+          [ "GroupsManager", "classweb_1_1websocket_1_1server_1_1GroupsManager.html", "classweb_1_1websocket_1_1server_1_1GroupsManager" ],
+          [ "SocketContextUpgrade", "classweb_1_1websocket_1_1server_1_1SocketContextUpgrade.html", "classweb_1_1websocket_1_1server_1_1SocketContextUpgrade" ],
+          [ "SocketContextUpgradeFactory", "classweb_1_1websocket_1_1server_1_1SocketContextUpgradeFactory.html", "classweb_1_1websocket_1_1server_1_1SocketContextUpgradeFactory" ],
+          [ "SubProtocol", "classweb_1_1websocket_1_1server_1_1SubProtocol.html", "classweb_1_1websocket_1_1server_1_1SubProtocol" ],
+          [ "SubProtocolFactorySelector", "classweb_1_1websocket_1_1server_1_1SubProtocolFactorySelector.html", "classweb_1_1websocket_1_1server_1_1SubProtocolFactorySelector" ]
         ] ],
-        [ "Receiver", "classweb_1_1websocket_1_1_receiver.html", "classweb_1_1websocket_1_1_receiver" ],
-        [ "SocketContextUpgrade", "classweb_1_1websocket_1_1_socket_context_upgrade.html", "classweb_1_1websocket_1_1_socket_context_upgrade" ],
-        [ "SubProtocol", "classweb_1_1websocket_1_1_sub_protocol.html", "classweb_1_1websocket_1_1_sub_protocol" ],
-        [ "SubProtocolContext", "classweb_1_1websocket_1_1_sub_protocol_context.html", "classweb_1_1websocket_1_1_sub_protocol_context" ],
-        [ "SubProtocolFactory", "classweb_1_1websocket_1_1_sub_protocol_factory.html", "classweb_1_1websocket_1_1_sub_protocol_factory" ],
-        [ "SubProtocolFactorySelector", "classweb_1_1websocket_1_1_sub_protocol_factory_selector.html", "classweb_1_1websocket_1_1_sub_protocol_factory_selector" ],
-        [ "Transmitter", "classweb_1_1websocket_1_1_transmitter.html", "classweb_1_1websocket_1_1_transmitter" ]
+        [ "Receiver", "classweb_1_1websocket_1_1Receiver.html", "classweb_1_1websocket_1_1Receiver" ],
+        [ "SocketContextUpgrade", "classweb_1_1websocket_1_1SocketContextUpgrade.html", "classweb_1_1websocket_1_1SocketContextUpgrade" ],
+        [ "SubProtocol", "classweb_1_1websocket_1_1SubProtocol.html", "classweb_1_1websocket_1_1SubProtocol" ],
+        [ "SubProtocolContext", "classweb_1_1websocket_1_1SubProtocolContext.html", "classweb_1_1websocket_1_1SubProtocolContext" ],
+        [ "SubProtocolFactory", "classweb_1_1websocket_1_1SubProtocolFactory.html", "classweb_1_1websocket_1_1SubProtocolFactory" ],
+        [ "SubProtocolFactorySelector", "classweb_1_1websocket_1_1SubProtocolFactorySelector.html", "classweb_1_1websocket_1_1SubProtocolFactorySelector" ],
+        [ "Transmitter", "classweb_1_1websocket_1_1Transmitter.html", "classweb_1_1websocket_1_1Transmitter" ]
       ] ]
     ] ],
-    [ "SHA1", "class_s_h_a1.html", "class_s_h_a1" ]
+    [ "SHA1", "classSHA1.html", "classSHA1" ]
 ];

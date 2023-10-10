@@ -1,7 +1,7 @@
 var namespacecore_1_1timer =
 [
-    [ "IntervalTimer", "classcore_1_1timer_1_1_interval_timer.html", "classcore_1_1timer_1_1_interval_timer" ],
-    [ "IntervalTimerStopable", "classcore_1_1timer_1_1_interval_timer_stopable.html", "classcore_1_1timer_1_1_interval_timer_stopable" ],
-    [ "SingleshotTimer", "classcore_1_1timer_1_1_singleshot_timer.html", "classcore_1_1timer_1_1_singleshot_timer" ],
-    [ "Timer", "classcore_1_1timer_1_1_timer.html", "classcore_1_1timer_1_1_timer" ]
+    [ "IntervalTimer", "classcore_1_1timer_1_1IntervalTimer.html", "classcore_1_1timer_1_1IntervalTimer" ],
+    [ "IntervalTimerStopable", "classcore_1_1timer_1_1IntervalTimerStopable.html", "classcore_1_1timer_1_1IntervalTimerStopable" ],
+    [ "SingleshotTimer", "classcore_1_1timer_1_1SingleshotTimer.html", "classcore_1_1timer_1_1SingleshotTimer" ],
+    [ "Timer", "classcore_1_1timer_1_1Timer.html", "classcore_1_1timer_1_1Timer" ]
 ];
