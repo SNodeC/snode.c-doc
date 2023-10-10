@@ -9,7 +9,7 @@ var http__utils_8cpp =
     [ "str_split_last", "http__utils_8cpp.html#a80eaf509829378ed76d2dad7fd41bef0", null ],
     [ "str_substr_char", "http__utils_8cpp.html#a939bb9485e032fbb00e8ca7e050e9b59", null ],
     [ "str_trimm", "http__utils_8cpp.html#aaa1e55d83548ea4ebf224d695f73c874", null ],
-    [ "to_http_date", "http__utils_8cpp.html#a01539c1af68e4d072d3507ae44c0b02a", null ],
+    [ "to_http_date", "http__utils_8cpp.html#ad53daa08390598493f3f4ae09164a60a", null ],
     [ "to_lower", "http__utils_8cpp.html#a4dd60a8e2472042c70e00dec22ebf927", null ],
     [ "url_decode", "http__utils_8cpp.html#a818b4991d32a494fb64a2f7cf1b25087", null ],
     [ "url_encode", "http__utils_8cpp.html#a386473920285bded181a38ffac8fe833", null ]

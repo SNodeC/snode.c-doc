@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>snode.c: iot/mqtt/server/packets/Disconnect.cpp Source File</title>
+<title>SNode.C: iot/mqtt/server/packets/Disconnect.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">snode.c
+   <div id="projectname">SNode.C
    </div>
   </td>
  </tr>
@@ -98,78 +98,70 @@ $(document).ready(function(){initNavTree('mqtt_2server_2packets_2Disconnect_8cpp
 </div><!--header-->
 <div class="contents">
 <a href="mqtt_2server_2packets_2Disconnect_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * snode.c - a slim toolkit for network communication</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * Copyright (C) 2020, 2021, 2022, 2023 Volker Christian &lt;me@vchrist.at&gt;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> *</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * This program is free software: you can redistribute it and/or modify</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * it under the terms of the GNU Lesser General Public License as published</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * by the Free Software Foundation, either version 3 of the License, or</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> * (at your option) any later version.</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment"> *</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment"> * This program is distributed in the hope that it will be useful,</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment"> * but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment"> * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment"> * GNU Lesser General Public License for more details.</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment"> *</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment"> * You should have received a copy of the GNU Lesser General Public License</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment"> * along with this program. If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> */</span></div>
+<div class="line"><span class="lineno">    2</span><span class="comment"> * snode.c - a slim toolkit for network communication</span></div>
+<div class="line"><span class="lineno">    3</span><span class="comment"> * Copyright (C) 2020, 2021, 2022, 2023 Volker Christian &lt;me@vchrist.at&gt;</span></div>
+<div class="line"><span class="lineno">    4</span><span class="comment"> *</span></div>
+<div class="line"><span class="lineno">    5</span><span class="comment"> * This program is free software: you can redistribute it and/or modify</span></div>
+<div class="line"><span class="lineno">    6</span><span class="comment"> * it under the terms of the GNU Lesser General Public License as published</span></div>
+<div class="line"><span class="lineno">    7</span><span class="comment"> * by the Free Software Foundation, either version 3 of the License, or</span></div>
+<div class="line"><span class="lineno">    8</span><span class="comment"> * (at your option) any later version.</span></div>
+<div class="line"><span class="lineno">    9</span><span class="comment"> *</span></div>
+<div class="line"><span class="lineno">   10</span><span class="comment"> * This program is distributed in the hope that it will be useful,</span></div>
+<div class="line"><span class="lineno">   11</span><span class="comment"> * but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
+<div class="line"><span class="lineno">   12</span><span class="comment"> * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the</span></div>
+<div class="line"><span class="lineno">   13</span><span class="comment"> * GNU Lesser General Public License for more details.</span></div>
+<div class="line"><span class="lineno">   14</span><span class="comment"> *</span></div>
+<div class="line"><span class="lineno">   15</span><span class="comment"> * You should have received a copy of the GNU Lesser General Public License</span></div>
+<div class="line"><span class="lineno">   16</span><span class="comment"> * along with this program. If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
+<div class="line"><span class="lineno">   17</span><span class="comment"> */</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &quot;<a class="code" href="mqtt_2server_2packets_2Disconnect_8h.html">iot/mqtt/server/packets/Disconnect.h</a>&quot;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&quot;iot/mqtt/server/packets/Disconnect.h&quot;</span></div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &quot;<a class="code" href="server_2Mqtt_8h.html">iot/mqtt/server/Mqtt.h</a>&quot;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&quot;iot/mqtt/server/Mqtt.h&quot;</span></div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#ifndef DOXYGEN_SHOULD_SKIP_THIS</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#</span><span class="preprocessor">ifndef</span> <span class="preprocessor">DOXYGEN_SHOULD_SKIP_THIS</span></div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#endif </span><span class="comment">// DOXYGEN_SHOULD_SKIP_THIS</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#</span><span class="preprocessor">endif</span> <span class="comment">// DOXYGEN_SHOULD_SKIP_THIS</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceiot_1_1mqtt_1_1server_1_1packets.html">iot::mqtt::server::packets</a> {</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keyword">namespace</span> iot::mqtt::server::<a class="code hl_namespace" href="namespaceiot_1_1mqtt_1_1server_1_1packets.html">packets</a> {</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="foldopen" id="foldopen00029" data-start="{" data-end="}">
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="classiot_1_1mqtt_1_1server_1_1packets_1_1Disconnect.html#a469fcd4a8e52f63d6b8230edf1ec1d7a">   29</a></span>    <a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Disconnect.html#a77e3c3be7a0e610ecd961f20bf541d40">Disconnect::Disconnect</a>(uint32_t remainingLength, uint8_t flags)</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        : <a class="code hl_namespace" href="namespaceiot.html">iot</a>::mqtt::server::<a class="code hl_class" href="classiot_1_1mqtt_1_1server_1_1ControlPacketDeserializer.html">ControlPacketDeserializer</a>(remainingLength, flags, <a class="code hl_define" href="mqtt_2ControlPacket_8h.html#a8959dffc1268faf26fbce16dc7dd6c38">MQTT_DISCONNECT_FLAGS</a>) {</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        this-&gt;flags = <a class="code hl_variable" href="classiot_1_1mqtt_1_1ControlPacket.html#a8c7e68464f261bbb0ff6412c58ffbab0">flags</a>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="classiot_1_1mqtt_1_1server_1_1packets_1_1Disconnect.html#a469fcd4a8e52f63d6b8230edf1ec1d7a">   29</a></span>    <a class="code hl_class" href="classiot_1_1mqtt_1_1server_1_1packets_1_1Disconnect.html">Disconnect</a>::<a class="code hl_function" href="classiot_1_1mqtt_1_1server_1_1packets_1_1Disconnect.html#a469fcd4a8e52f63d6b8230edf1ec1d7a">Disconnect</a>(uint32_t remainingLength, uint8_t flags)</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        : iot::mqtt::server::<a class="code hl_class" href="classiot_1_1mqtt_1_1server_1_1ControlPacketDeserializer.html">ControlPacketDeserializer</a>(remainingLength, flags, <a class="code hl_define" href="mqtt_2ControlPacket_8h.html#a8959dffc1268faf26fbce16dc7dd6c38">MQTT_DISCONNECT_FLAGS</a>) {</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <span class="keyword">this</span><a class="code hl_variable" href="classiot_1_1mqtt_1_1ControlPacket.html#a8c7e68464f261bbb0ff6412c58ffbab0">-&gt;</a><a class="code hl_variable" href="classiot_1_1mqtt_1_1ControlPacket.html#a8c7e68464f261bbb0ff6412c58ffbab0">flags</a> = flags;</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    }</div>
-</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="foldopen" id="foldopen00034" data-start="{" data-end="}">
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="classiot_1_1mqtt_1_1server_1_1packets_1_1Disconnect.html#acda99da5a4bc761b0e7e00f8975ba591">   34</a></span>    std::size_t <a class="code hl_function" href="classiot_1_1mqtt_1_1server_1_1packets_1_1Disconnect.html#acda99da5a4bc761b0e7e00f8975ba591">Disconnect::deserializeVP</a>([[maybe_unused]] <a class="code hl_class" href="classiot_1_1mqtt_1_1MqttContext.html">iot::mqtt::MqttContext</a>* mqttContext) {</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="classiot_1_1mqtt_1_1server_1_1packets_1_1Disconnect.html#acda99da5a4bc761b0e7e00f8975ba591">   34</a></span>    std::size_t <a class="code hl_class" href="classiot_1_1mqtt_1_1server_1_1packets_1_1Disconnect.html">Disconnect</a>::<a class="code hl_function" href="classiot_1_1mqtt_1_1server_1_1packets_1_1Disconnect.html#acda99da5a4bc761b0e7e00f8975ba591">deserializeVP</a>([[<a class="code hl_function" href="classiot_1_1mqtt_1_1server_1_1packets_1_1Disconnect.html#acda99da5a4bc761b0e7e00f8975ba591">maybe_unused</a>]] iot::mqtt::<a class="code hl_class" href="classiot_1_1mqtt_1_1MqttContext.html">MqttContext</a>* mqttContext) {</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <span class="comment">// no V-Header</span></div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <span class="comment">// no Payload</span></div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <a class="code hl_variable" href="classiot_1_1mqtt_1_1ControlPacketDeserializer.html#a189f6f1d92c9a40d49c0d8a169106df3">complete</a> = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    }</div>
-</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="foldopen" id="foldopen00042" data-start="{" data-end="}">
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="classiot_1_1mqtt_1_1server_1_1packets_1_1Disconnect.html#a4a7bd6392390f068c69ccfe3351afde5">   42</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classiot_1_1mqtt_1_1server_1_1packets_1_1Disconnect.html#a4a7bd6392390f068c69ccfe3351afde5">Disconnect::deliverPacket</a>(<a class="code hl_class" href="classiot_1_1mqtt_1_1server_1_1Mqtt.html">iot::mqtt::server::Mqtt</a>* mqtt) {</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        mqtt-&gt;<a class="code hl_function" href="classiot_1_1mqtt_1_1server_1_1Mqtt.html#ad0f447348d30b1f3446b9f9dfe50dbf4">_onDisconnect</a>(*<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="classiot_1_1mqtt_1_1server_1_1packets_1_1Disconnect.html#a4a7bd6392390f068c69ccfe3351afde5">   42</a></span>    <span class="keywordtype">void</span> <a class="code hl_class" href="classiot_1_1mqtt_1_1server_1_1packets_1_1Disconnect.html">Disconnect</a>::<a class="code hl_function" href="classiot_1_1mqtt_1_1server_1_1packets_1_1Disconnect.html#a4a7bd6392390f068c69ccfe3351afde5">deliverPacket</a>(iot::mqtt::server::<a class="code hl_class" href="classiot_1_1mqtt_1_1server_1_1Mqtt.html">Mqtt</a>* mqtt) {</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        mqtt<a class="code hl_function" href="classiot_1_1mqtt_1_1server_1_1Mqtt.html#ad0f447348d30b1f3446b9f9dfe50dbf4">-&gt;</a><a class="code hl_function" href="classiot_1_1mqtt_1_1server_1_1Mqtt.html#ad0f447348d30b1f3446b9f9dfe50dbf4">_onDisconnect</a><a class="code hl_function" href="classiot_1_1mqtt_1_1server_1_1Mqtt.html#ad0f447348d30b1f3446b9f9dfe50dbf4">(</a>*<span class="keyword">this</span><a class="code hl_function" href="classiot_1_1mqtt_1_1server_1_1Mqtt.html#ad0f447348d30b1f3446b9f9dfe50dbf4">)</a>;</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    }</div>
-</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>} <span class="comment">// namespace iot::mqtt::server::packets</span></div>
 <div class="ttc" id="aclassiot_1_1mqtt_1_1ControlPacketDeserializer_html_a189f6f1d92c9a40d49c0d8a169106df3"><div class="ttname"><a href="classiot_1_1mqtt_1_1ControlPacketDeserializer.html#a189f6f1d92c9a40d49c0d8a169106df3">iot::mqtt::ControlPacketDeserializer::complete</a></div><div class="ttdeci">bool complete</div><div class="ttdef"><b>Definition</b> <a href="ControlPacketDeserializer_8h_source.html#l00059">ControlPacketDeserializer.h:59</a></div></div>
 <div class="ttc" id="aclassiot_1_1mqtt_1_1ControlPacket_html_a8c7e68464f261bbb0ff6412c58ffbab0"><div class="ttname"><a href="classiot_1_1mqtt_1_1ControlPacket.html#a8c7e68464f261bbb0ff6412c58ffbab0">iot::mqtt::ControlPacket::flags</a></div><div class="ttdeci">uint8_t flags</div><div class="ttdef"><b>Definition</b> <a href="mqtt_2ControlPacket_8h_source.html#l00081">ControlPacket.h:81</a></div></div>
 <div class="ttc" id="aclassiot_1_1mqtt_1_1MqttContext_html"><div class="ttname"><a href="classiot_1_1mqtt_1_1MqttContext.html">iot::mqtt::MqttContext</a></div><div class="ttdef"><b>Definition</b> <a href="MqttContext_8h_source.html#l00038">MqttContext.h:38</a></div></div>
-<div class="ttc" id="aclassiot_1_1mqtt_1_1packets_1_1Disconnect_html_a77e3c3be7a0e610ecd961f20bf541d40"><div class="ttname"><a href="classiot_1_1mqtt_1_1packets_1_1Disconnect.html#a77e3c3be7a0e610ecd961f20bf541d40">iot::mqtt::packets::Disconnect::Disconnect</a></div><div class="ttdeci">Disconnect()</div><div class="ttdef"><b>Definition</b> <a href="mqtt_2packets_2Disconnect_8cpp_source.html#l00027">Disconnect.cpp:27</a></div></div>
 <div class="ttc" id="aclassiot_1_1mqtt_1_1server_1_1ControlPacketDeserializer_html"><div class="ttname"><a href="classiot_1_1mqtt_1_1server_1_1ControlPacketDeserializer.html">iot::mqtt::server::ControlPacketDeserializer</a></div><div class="ttdef"><b>Definition</b> <a href="server_2ControlPacketDeserializer_8h_source.html#l00034">ControlPacketDeserializer.h:34</a></div></div>
 <div class="ttc" id="aclassiot_1_1mqtt_1_1server_1_1Mqtt_html"><div class="ttname"><a href="classiot_1_1mqtt_1_1server_1_1Mqtt.html">iot::mqtt::server::Mqtt</a></div><div class="ttdef"><b>Definition</b> <a href="server_2Mqtt_8h_source.html#l00068">Mqtt.h:68</a></div></div>
 <div class="ttc" id="aclassiot_1_1mqtt_1_1server_1_1Mqtt_html_ad0f447348d30b1f3446b9f9dfe50dbf4"><div class="ttname"><a href="classiot_1_1mqtt_1_1server_1_1Mqtt.html#ad0f447348d30b1f3446b9f9dfe50dbf4">iot::mqtt::server::Mqtt::_onDisconnect</a></div><div class="ttdeci">void _onDisconnect(const iot::mqtt::server::packets::Disconnect &amp;disconnect)</div><div class="ttdef"><b>Definition</b> <a href="server_2Mqtt_8cpp_source.html#l00320">Mqtt.cpp:320</a></div></div>
+<div class="ttc" id="aclassiot_1_1mqtt_1_1server_1_1packets_1_1Disconnect_html"><div class="ttname"><a href="classiot_1_1mqtt_1_1server_1_1packets_1_1Disconnect.html">iot::mqtt::server::packets::Disconnect</a></div><div class="ttdef"><b>Definition</b> <a href="mqtt_2server_2packets_2Disconnect_8h_source.html#l00038">Disconnect.h:40</a></div></div>
+<div class="ttc" id="aclassiot_1_1mqtt_1_1server_1_1packets_1_1Disconnect_html_a469fcd4a8e52f63d6b8230edf1ec1d7a"><div class="ttname"><a href="classiot_1_1mqtt_1_1server_1_1packets_1_1Disconnect.html#a469fcd4a8e52f63d6b8230edf1ec1d7a">iot::mqtt::server::packets::Disconnect::Disconnect</a></div><div class="ttdeci">Disconnect(uint32_t remainingLength, uint8_t flags)</div><div class="ttdef"><b>Definition</b> <a href="mqtt_2server_2packets_2Disconnect_8cpp_source.html#l00029">Disconnect.cpp:29</a></div></div>
 <div class="ttc" id="aclassiot_1_1mqtt_1_1server_1_1packets_1_1Disconnect_html_a4a7bd6392390f068c69ccfe3351afde5"><div class="ttname"><a href="classiot_1_1mqtt_1_1server_1_1packets_1_1Disconnect.html#a4a7bd6392390f068c69ccfe3351afde5">iot::mqtt::server::packets::Disconnect::deliverPacket</a></div><div class="ttdeci">void deliverPacket(iot::mqtt::server::Mqtt *mqtt) override</div><div class="ttdef"><b>Definition</b> <a href="mqtt_2server_2packets_2Disconnect_8cpp_source.html#l00042">Disconnect.cpp:42</a></div></div>
 <div class="ttc" id="aclassiot_1_1mqtt_1_1server_1_1packets_1_1Disconnect_html_acda99da5a4bc761b0e7e00f8975ba591"><div class="ttname"><a href="classiot_1_1mqtt_1_1server_1_1packets_1_1Disconnect.html#acda99da5a4bc761b0e7e00f8975ba591">iot::mqtt::server::packets::Disconnect::deserializeVP</a></div><div class="ttdeci">std::size_t deserializeVP(iot::mqtt::MqttContext *mqttContext) override</div><div class="ttdef"><b>Definition</b> <a href="mqtt_2server_2packets_2Disconnect_8cpp_source.html#l00034">Disconnect.cpp:34</a></div></div>
 <div class="ttc" id="amqtt_2ControlPacket_8h_html_a8959dffc1268faf26fbce16dc7dd6c38"><div class="ttname"><a href="mqtt_2ControlPacket_8h.html#a8959dffc1268faf26fbce16dc7dd6c38">MQTT_DISCONNECT_FLAGS</a></div><div class="ttdeci">#define MQTT_DISCONNECT_FLAGS</div><div class="ttdef"><b>Definition</b> <a href="mqtt_2ControlPacket_8h_source.html#l00057">ControlPacket.h:57</a></div></div>
-<div class="ttc" id="amqtt_2server_2packets_2Disconnect_8h_html"><div class="ttname"><a href="mqtt_2server_2packets_2Disconnect_8h.html">Disconnect.h</a></div></div>
-<div class="ttc" id="anamespaceiot_1_1mqtt_1_1server_1_1packets_html"><div class="ttname"><a href="namespaceiot_1_1mqtt_1_1server_1_1packets.html">iot::mqtt::server::packets</a></div><div class="ttdef"><b>Definition</b> <a href="server_2Mqtt_8h_source.html#l00041">Mqtt.h:41</a></div></div>
-<div class="ttc" id="anamespaceiot_html"><div class="ttname"><a href="namespaceiot.html">iot</a></div><div class="ttdef"><b>Definition</b> <a href="mqtt-fast_2ControlPacket_8cpp_source.html#l00029">ControlPacket.cpp:29</a></div></div>
-<div class="ttc" id="aserver_2Mqtt_8h_html"><div class="ttname"><a href="server_2Mqtt_8h.html">Mqtt.h</a></div></div>
+<div class="ttc" id="anamespaceiot_1_1mqtt_1_1server_1_1packets_html"><div class="ttname"><a href="namespaceiot_1_1mqtt_1_1server_1_1packets.html">iot::mqtt::server::packets</a></div><div class="ttdef"><b>Definition</b> <a href="mqtt_2server_2packets_2Connect_8cpp_source.html#l00029">Connect.cpp:29</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_28592ecdec30ec29223e366148bdb66c.html">iot</a></li><li class="navelem"><a class="el" href="dir_9fa9cc1bc73227ba3c1e7b2368f5d654.html">mqtt</a></li><li class="navelem"><a class="el" href="dir_5d430ec0119a24aa36955188ab39bab2.html">server</a></li><li class="navelem"><a class="el" href="dir_3927eccd54de4e90f8c3a4b188a002c6.html">packets</a></li><li class="navelem"><a class="el" href="mqtt_2server_2packets_2Disconnect_8cpp.html">Disconnect.cpp</a></li>
-    <li class="footer">Generated on Tue Oct 10 2023 10:11:46 for snode.c by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Tue Oct 10 2023 10:23:24 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

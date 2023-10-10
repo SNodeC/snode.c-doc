@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>snode.c: iot/mqtt/packets/Puback.h Source File</title>
+<title>SNode.C: iot/mqtt/packets/Puback.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">snode.c
+   <div id="projectname">SNode.C
    </div>
   </td>
  </tr>
@@ -98,72 +98,85 @@ $(document).ready(function(){initNavTree('mqtt_2packets_2Puback_8h_source.html',
 </div><!--header-->
 <div class="contents">
 <a href="mqtt_2packets_2Puback_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * snode.c - a slim toolkit for network communication</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * Copyright (C) 2020, 2021, 2022, 2023 Volker Christian &lt;me@vchrist.at&gt;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> *</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * This program is free software: you can redistribute it and/or modify</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * it under the terms of the GNU Lesser General Public License as published</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * by the Free Software Foundation, either version 3 of the License, or</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> * (at your option) any later version.</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment"> *</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment"> * This program is distributed in the hope that it will be useful,</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment"> * but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment"> * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment"> * GNU Lesser General Public License for more details.</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment"> *</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment"> * You should have received a copy of the GNU Lesser General Public License</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment"> * along with this program. If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> */</span></div>
+<div class="line"><span class="lineno">    2</span><span class="comment"> * snode.c - a slim toolkit for network communication</span></div>
+<div class="line"><span class="lineno">    3</span><span class="comment"> * Copyright (C) 2020, 2021, 2022, 2023 Volker Christian &lt;me@vchrist.at&gt;</span></div>
+<div class="line"><span class="lineno">    4</span><span class="comment"> *</span></div>
+<div class="line"><span class="lineno">    5</span><span class="comment"> * This program is free software: you can redistribute it and/or modify</span></div>
+<div class="line"><span class="lineno">    6</span><span class="comment"> * it under the terms of the GNU Lesser General Public License as published</span></div>
+<div class="line"><span class="lineno">    7</span><span class="comment"> * by the Free Software Foundation, either version 3 of the License, or</span></div>
+<div class="line"><span class="lineno">    8</span><span class="comment"> * (at your option) any later version.</span></div>
+<div class="line"><span class="lineno">    9</span><span class="comment"> *</span></div>
+<div class="line"><span class="lineno">   10</span><span class="comment"> * This program is distributed in the hope that it will be useful,</span></div>
+<div class="line"><span class="lineno">   11</span><span class="comment"> * but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
+<div class="line"><span class="lineno">   12</span><span class="comment"> * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the</span></div>
+<div class="line"><span class="lineno">   13</span><span class="comment"> * GNU Lesser General Public License for more details.</span></div>
+<div class="line"><span class="lineno">   14</span><span class="comment"> *</span></div>
+<div class="line"><span class="lineno">   15</span><span class="comment"> * You should have received a copy of the GNU Lesser General Public License</span></div>
+<div class="line"><span class="lineno">   16</span><span class="comment"> * along with this program. If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
+<div class="line"><span class="lineno">   17</span><span class="comment"> */</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#ifndef IOT_MQTT_PACKETS_PUBASK_H</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#define IOT_MQTT_PACKETS_PUBASK_H</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#</span><span class="preprocessor">ifndef</span> <span class="preprocessor">IOT_MQTT_PACKETS_PUBASK_H</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#</span><span class="preprocessor">define</span> <span class="preprocessor">IOT_MQTT_PACKETS_PUBASK_H</span></div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &quot;<a class="code" href="mqtt_2ControlPacket_8h.html">iot/mqtt/ControlPacket.h</a>&quot;</span> <span class="comment">// IWYU pragma: export</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &quot;<a class="code" href="UInt16_8h.html">iot/mqtt/types/UInt16.h</a>&quot;</span>  <span class="comment">// IWYU pragma: export</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&quot;iot/mqtt/ControlPacket.h&quot;</span> <span class="comment">// IWYU pragma: export</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&quot;iot/mqtt/types/UInt16.h&quot;</span>  <span class="comment">// IWYU pragma: export</span></div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#ifndef DOXYGEN_SHOULD_SKIP_THIS</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#</span><span class="preprocessor">ifndef</span> <span class="preprocessor">DOXYGEN_SHOULD_SKIP_THIS</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#endif </span><span class="comment">// DOXYGEN_SHOULD_SKIP_THIS</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#</span><span class="preprocessor">endif</span> <span class="comment">// DOXYGEN_SHOULD_SKIP_THIS</span></div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceiot_1_1mqtt_1_1packets.html">iot::mqtt::packets</a> {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">namespace</span> iot::mqtt::<a class="code hl_namespace" href="namespaceiot_1_1mqtt_1_1packets.html">packets</a> {</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="foldopen" id="foldopen00031" data-start="{" data-end="};">
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="classiot_1_1mqtt_1_1packets_1_1Puback.html">   31</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classiot_1_1mqtt_1_1packets_1_1Puback.html">Puback</a> : <span class="keyword">public</span> <a class="code hl_class" href="classiot_1_1mqtt_1_1ControlPacket.html">iot::mqtt::ControlPacket</a> {</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="classiot_1_1mqtt_1_1packets_1_1Puback.html">   31</a></span>    <span class="keyword">class</span> <a class="code hl_class" href="classiot_1_1mqtt_1_1packets_1_1Puback.html">Puback</a> : <span class="keyword">public</span> iot::mqtt::<a class="code hl_class" href="classiot_1_1mqtt_1_1ControlPacket.html">ControlPacket</a> {</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Puback.html#a610e656b86a745f5f85bc867695bdae8">Puback</a>();</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <span class="keyword">explicit</span> <a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Puback.html#a610e656b86a745f5f85bc867695bdae8">Puback</a>(<span class="keyword">const</span> uint16_t <a class="code hl_variable" href="classiot_1_1mqtt_1_1packets_1_1Puback.html#a8f0950234238c626d34e7d1ab7461596">packetIdentifier</a>);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <span class="keyword">explicit</span> <a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Puback.html#ad88c355116a464d6719c9a8dd862e456">Puback</a>(<span class="keyword">const</span> uint16_t packetIdentifier);</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        std::vector&lt;char&gt; <a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Puback.html#accf2b7abb774e4e09066a7fa9535e156">serializeVP</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        std::vector&lt;<span class="keywordtype">char</span>&gt; <a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Puback.html#accf2b7abb774e4e09066a7fa9535e156">serializeVP</a>() <span class="keyword">const</span> <span class="keyword">override</span>;</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        uint16_t <a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Puback.html#aa0456f45a53bb55fb5ac1e9991283ee0">getPacketIdentifier</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="classiot_1_1mqtt_1_1packets_1_1Puback.html#a8f0950234238c626d34e7d1ab7461596">   43</a></span>        <a class="code hl_class" href="classiot_1_1mqtt_1_1types_1_1UInt16.html">iot::mqtt::types::UInt16</a> <a class="code hl_variable" href="classiot_1_1mqtt_1_1packets_1_1Puback.html#a8f0950234238c626d34e7d1ab7461596">packetIdentifier</a>;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="classiot_1_1mqtt_1_1packets_1_1Puback.html#a8f0950234238c626d34e7d1ab7461596">   43</a></span>        iot::mqtt::<a class="code hl_namespace" href="namespaceiot_1_1mqtt_1_1types.html">types</a>::<a class="code hl_class" href="classiot_1_1mqtt_1_1types_1_1UInt16.html">UInt16</a> <a class="code hl_variable" href="classiot_1_1mqtt_1_1packets_1_1Puback.html#a8f0950234238c626d34e7d1ab7461596">packetIdentifier</a>;</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    };</div>
-</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>} <span class="comment">// namespace iot::mqtt::packets</span></div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="preprocessor">#endif </span><span class="comment">// IOT_MQTT_PACKETS_PUBASK_H</span></div>
-<div class="ttc" id="aUInt16_8h_html"><div class="ttname"><a href="UInt16_8h.html">UInt16.h</a></div></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="preprocessor">#</span><span class="preprocessor">endif</span> <span class="comment">// IOT_MQTT_PACKETS_PUBASK_H</span></div>
+<div class="ttc" id="aclassiot_1_1mqtt_1_1ControlPacketDeserializer_html_a189f6f1d92c9a40d49c0d8a169106df3"><div class="ttname"><a href="classiot_1_1mqtt_1_1ControlPacketDeserializer.html#a189f6f1d92c9a40d49c0d8a169106df3">iot::mqtt::ControlPacketDeserializer::complete</a></div><div class="ttdeci">bool complete</div><div class="ttdef"><b>Definition</b> <a href="ControlPacketDeserializer_8h_source.html#l00059">ControlPacketDeserializer.h:59</a></div></div>
 <div class="ttc" id="aclassiot_1_1mqtt_1_1ControlPacket_html"><div class="ttname"><a href="classiot_1_1mqtt_1_1ControlPacket.html">iot::mqtt::ControlPacket</a></div><div class="ttdef"><b>Definition</b> <a href="mqtt_2ControlPacket_8h_source.html#l00061">ControlPacket.h:61</a></div></div>
+<div class="ttc" id="aclassiot_1_1mqtt_1_1ControlPacket_html_a8c7e68464f261bbb0ff6412c58ffbab0"><div class="ttname"><a href="classiot_1_1mqtt_1_1ControlPacket.html#a8c7e68464f261bbb0ff6412c58ffbab0">iot::mqtt::ControlPacket::flags</a></div><div class="ttdeci">uint8_t flags</div><div class="ttdef"><b>Definition</b> <a href="mqtt_2ControlPacket_8h_source.html#l00081">ControlPacket.h:81</a></div></div>
+<div class="ttc" id="aclassiot_1_1mqtt_1_1MqttContext_html"><div class="ttname"><a href="classiot_1_1mqtt_1_1MqttContext.html">iot::mqtt::MqttContext</a></div><div class="ttdef"><b>Definition</b> <a href="MqttContext_8h_source.html#l00038">MqttContext.h:38</a></div></div>
+<div class="ttc" id="aclassiot_1_1mqtt_1_1Mqtt_html_afc4f16e682a0a049d51f182c4fbe8362"><div class="ttname"><a href="classiot_1_1mqtt_1_1Mqtt.html#afc4f16e682a0a049d51f182c4fbe8362">iot::mqtt::Mqtt::_onPuback</a></div><div class="ttdeci">void _onPuback(const iot::mqtt::packets::Puback &amp;puback)</div><div class="ttdef"><b>Definition</b> <a href="Mqtt_8cpp_source.html#l00279">Mqtt.cpp:279</a></div></div>
+<div class="ttc" id="aclassiot_1_1mqtt_1_1client_1_1ControlPacketDeserializer_html"><div class="ttname"><a href="classiot_1_1mqtt_1_1client_1_1ControlPacketDeserializer.html">iot::mqtt::client::ControlPacketDeserializer</a></div><div class="ttdef"><b>Definition</b> <a href="client_2ControlPacketDeserializer_8h_source.html#l00034">ControlPacketDeserializer.h:34</a></div></div>
+<div class="ttc" id="aclassiot_1_1mqtt_1_1client_1_1Mqtt_html"><div class="ttname"><a href="classiot_1_1mqtt_1_1client_1_1Mqtt.html">iot::mqtt::client::Mqtt</a></div><div class="ttdef"><b>Definition</b> <a href="client_2Mqtt_8h_source.html#l00062">Mqtt.h:62</a></div></div>
+<div class="ttc" id="aclassiot_1_1mqtt_1_1client_1_1packets_1_1Puback_html"><div class="ttname"><a href="classiot_1_1mqtt_1_1client_1_1packets_1_1Puback.html">iot::mqtt::client::packets::Puback</a></div><div class="ttdef"><b>Definition</b> <a href="mqtt_2client_2packets_2Puback_8h_source.html#l00038">Puback.h:40</a></div></div>
+<div class="ttc" id="aclassiot_1_1mqtt_1_1client_1_1packets_1_1Puback_html_a1d9902afc7593d5de5088fbf5bccd799"><div class="ttname"><a href="classiot_1_1mqtt_1_1client_1_1packets_1_1Puback.html#a1d9902afc7593d5de5088fbf5bccd799">iot::mqtt::client::packets::Puback::deserializeVP</a></div><div class="ttdeci">std::size_t deserializeVP(iot::mqtt::MqttContext *mqttContext) override</div><div class="ttdef"><b>Definition</b> <a href="mqtt_2client_2packets_2Puback_8cpp_source.html#l00034">Puback.cpp:34</a></div></div>
+<div class="ttc" id="aclassiot_1_1mqtt_1_1client_1_1packets_1_1Puback_html_a2256daac87c17472e6363dfe671b605e"><div class="ttname"><a href="classiot_1_1mqtt_1_1client_1_1packets_1_1Puback.html#a2256daac87c17472e6363dfe671b605e">iot::mqtt::client::packets::Puback::deliverPacket</a></div><div class="ttdeci">void deliverPacket(iot::mqtt::client::Mqtt *mqtt) override</div><div class="ttdef"><b>Definition</b> <a href="mqtt_2client_2packets_2Puback_8cpp_source.html#l00044">Puback.cpp:44</a></div></div>
+<div class="ttc" id="aclassiot_1_1mqtt_1_1client_1_1packets_1_1Puback_html_a876eed85a7ffc4ef9849d09ce9b361f1"><div class="ttname"><a href="classiot_1_1mqtt_1_1client_1_1packets_1_1Puback.html#a876eed85a7ffc4ef9849d09ce9b361f1">iot::mqtt::client::packets::Puback::Puback</a></div><div class="ttdeci">Puback(uint32_t remainingLength, uint8_t flags)</div><div class="ttdef"><b>Definition</b> <a href="mqtt_2client_2packets_2Puback_8cpp_source.html#l00029">Puback.cpp:29</a></div></div>
 <div class="ttc" id="aclassiot_1_1mqtt_1_1packets_1_1Puback_html"><div class="ttname"><a href="classiot_1_1mqtt_1_1packets_1_1Puback.html">iot::mqtt::packets::Puback</a></div><div class="ttdef"><b>Definition</b> <a href="mqtt_2packets_2Puback_8h_source.html#l00031">Puback.h:31</a></div></div>
 <div class="ttc" id="aclassiot_1_1mqtt_1_1packets_1_1Puback_html_a610e656b86a745f5f85bc867695bdae8"><div class="ttname"><a href="classiot_1_1mqtt_1_1packets_1_1Puback.html#a610e656b86a745f5f85bc867695bdae8">iot::mqtt::packets::Puback::Puback</a></div><div class="ttdeci">Puback()</div><div class="ttdef"><b>Definition</b> <a href="mqtt_2packets_2Puback_8cpp_source.html#l00027">Puback.cpp:27</a></div></div>
 <div class="ttc" id="aclassiot_1_1mqtt_1_1packets_1_1Puback_html_a8f0950234238c626d34e7d1ab7461596"><div class="ttname"><a href="classiot_1_1mqtt_1_1packets_1_1Puback.html#a8f0950234238c626d34e7d1ab7461596">iot::mqtt::packets::Puback::packetIdentifier</a></div><div class="ttdeci">iot::mqtt::types::UInt16 packetIdentifier</div><div class="ttdef"><b>Definition</b> <a href="mqtt_2packets_2Puback_8h_source.html#l00043">Puback.h:43</a></div></div>
 <div class="ttc" id="aclassiot_1_1mqtt_1_1packets_1_1Puback_html_aa0456f45a53bb55fb5ac1e9991283ee0"><div class="ttname"><a href="classiot_1_1mqtt_1_1packets_1_1Puback.html#aa0456f45a53bb55fb5ac1e9991283ee0">iot::mqtt::packets::Puback::getPacketIdentifier</a></div><div class="ttdeci">uint16_t getPacketIdentifier() const</div><div class="ttdef"><b>Definition</b> <a href="mqtt_2packets_2Puback_8cpp_source.html#l00040">Puback.cpp:40</a></div></div>
 <div class="ttc" id="aclassiot_1_1mqtt_1_1packets_1_1Puback_html_accf2b7abb774e4e09066a7fa9535e156"><div class="ttname"><a href="classiot_1_1mqtt_1_1packets_1_1Puback.html#accf2b7abb774e4e09066a7fa9535e156">iot::mqtt::packets::Puback::serializeVP</a></div><div class="ttdeci">std::vector&lt; char &gt; serializeVP() const override</div><div class="ttdef"><b>Definition</b> <a href="mqtt_2packets_2Puback_8cpp_source.html#l00036">Puback.cpp:36</a></div></div>
+<div class="ttc" id="aclassiot_1_1mqtt_1_1packets_1_1Puback_html_ad88c355116a464d6719c9a8dd862e456"><div class="ttname"><a href="classiot_1_1mqtt_1_1packets_1_1Puback.html#ad88c355116a464d6719c9a8dd862e456">iot::mqtt::packets::Puback::Puback</a></div><div class="ttdeci">Puback(const uint16_t packetIdentifier)</div><div class="ttdef"><b>Definition</b> <a href="mqtt_2packets_2Puback_8cpp_source.html#l00031">Puback.cpp:31</a></div></div>
+<div class="ttc" id="aclassiot_1_1mqtt_1_1types_1_1TypeBase_html_a4a7c0fd8cae9084005a1ef4424dfde34"><div class="ttname"><a href="classiot_1_1mqtt_1_1types_1_1TypeBase.html#a4a7c0fd8cae9084005a1ef4424dfde34">iot::mqtt::types::TypeBase::isComplete</a></div><div class="ttdeci">bool isComplete() const</div><div class="ttdef"><b>Definition</b> <a href="TypeBase_8hpp_source.html#l00065">TypeBase.hpp:65</a></div></div>
+<div class="ttc" id="aclassiot_1_1mqtt_1_1types_1_1TypeBase_html_aa3a0e0e868be87764c87378e27f2818a"><div class="ttname"><a href="classiot_1_1mqtt_1_1types_1_1TypeBase.html#aa3a0e0e868be87764c87378e27f2818a">iot::mqtt::types::TypeBase::deserialize</a></div><div class="ttdeci">virtual std::size_t deserialize(iot::mqtt::MqttContext *mqttContext)</div><div class="ttdef"><b>Definition</b> <a href="TypeBase_8hpp_source.html#l00036">TypeBase.hpp:36</a></div></div>
 <div class="ttc" id="aclassiot_1_1mqtt_1_1types_1_1UInt16_html"><div class="ttname"><a href="classiot_1_1mqtt_1_1types_1_1UInt16.html">iot::mqtt::types::UInt16</a></div><div class="ttdef"><b>Definition</b> <a href="UInt16_8h_source.html#l00034">UInt16.h:34</a></div></div>
-<div class="ttc" id="amqtt_2ControlPacket_8h_html"><div class="ttname"><a href="mqtt_2ControlPacket_8h.html">ControlPacket.h</a></div></div>
+<div class="ttc" id="amqtt_2ControlPacket_8h_html_a9623dd161d14f4755b3b210835ac1b9e"><div class="ttname"><a href="mqtt_2ControlPacket_8h.html#a9623dd161d14f4755b3b210835ac1b9e">MQTT_PUBACK_FLAGS</a></div><div class="ttdeci">#define MQTT_PUBACK_FLAGS</div><div class="ttdef"><b>Definition</b> <a href="mqtt_2ControlPacket_8h_source.html#l00047">ControlPacket.h:47</a></div></div>
+<div class="ttc" id="anamespaceiot_1_1mqtt_1_1client_1_1packets_html"><div class="ttname"><a href="namespaceiot_1_1mqtt_1_1client_1_1packets.html">iot::mqtt::client::packets</a></div><div class="ttdef"><b>Definition</b> <a href="mqtt_2client_2packets_2Connack_8cpp_source.html#l00027">Connack.cpp:27</a></div></div>
 <div class="ttc" id="anamespaceiot_1_1mqtt_1_1packets_html"><div class="ttname"><a href="namespaceiot_1_1mqtt_1_1packets.html">iot::mqtt::packets</a></div><div class="ttdef"><b>Definition</b> <a href="client_2Mqtt_8h_source.html#l00030">Mqtt.h:30</a></div></div>
+<div class="ttc" id="anamespaceiot_1_1mqtt_1_1types_html"><div class="ttname"><a href="namespaceiot_1_1mqtt_1_1types.html">iot::mqtt::types</a></div><div class="ttdef"><b>Definition</b> <a href="String_8h_source.html#l00037">String.h:37</a></div></div>
+<div class="ttc" id="anamespaceiot_1_1mqtt_html"><div class="ttname"><a href="namespaceiot_1_1mqtt.html">iot::mqtt</a></div><div class="ttdef"><b>Definition</b> <a href="client_2ControlPacketDeserializer_8cpp_source.html#l00025">ControlPacketDeserializer.cpp:25</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_28592ecdec30ec29223e366148bdb66c.html">iot</a></li><li class="navelem"><a class="el" href="dir_9fa9cc1bc73227ba3c1e7b2368f5d654.html">mqtt</a></li><li class="navelem"><a class="el" href="dir_10488b53962af46d097f29192687f02d.html">packets</a></li><li class="navelem"><a class="el" href="mqtt_2packets_2Puback_8h.html">Puback.h</a></li>
-    <li class="footer">Generated on Tue Oct 10 2023 10:11:45 for snode.c by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Tue Oct 10 2023 10:23:26 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>snode.c: log/Logger.cpp Source File</title>
+<title>SNode.C: log/Logger.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">snode.c
+   <div id="projectname">SNode.C
    </div>
   </td>
  </tr>
@@ -98,40 +98,38 @@ $(document).ready(function(){initNavTree('Logger_8cpp_source.html',''); initResi
 </div><!--header-->
 <div class="contents">
 <a href="Logger_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * snode.c - a slim toolkit for network communication</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * Copyright (C) 2020, 2021, 2022, 2023 Volker Christian &lt;me@vchrist.at&gt;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> *</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * This program is free software: you can redistribute it and/or modify</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * it under the terms of the GNU Lesser General Public License as published</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * by the Free Software Foundation, either version 3 of the License, or</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> * (at your option) any later version.</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment"> *</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment"> * This program is distributed in the hope that it will be useful,</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment"> * but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment"> * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment"> * GNU Lesser General Public License for more details.</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment"> *</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment"> * You should have received a copy of the GNU Lesser General Public License</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment"> * along with this program. If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> */</span></div>
+<div class="line"><span class="lineno">    2</span><span class="comment"> * snode.c - a slim toolkit for network communication</span></div>
+<div class="line"><span class="lineno">    3</span><span class="comment"> * Copyright (C) 2020, 2021, 2022, 2023 Volker Christian &lt;me@vchrist.at&gt;</span></div>
+<div class="line"><span class="lineno">    4</span><span class="comment"> *</span></div>
+<div class="line"><span class="lineno">    5</span><span class="comment"> * This program is free software: you can redistribute it and/or modify</span></div>
+<div class="line"><span class="lineno">    6</span><span class="comment"> * it under the terms of the GNU Lesser General Public License as published</span></div>
+<div class="line"><span class="lineno">    7</span><span class="comment"> * by the Free Software Foundation, either version 3 of the License, or</span></div>
+<div class="line"><span class="lineno">    8</span><span class="comment"> * (at your option) any later version.</span></div>
+<div class="line"><span class="lineno">    9</span><span class="comment"> *</span></div>
+<div class="line"><span class="lineno">   10</span><span class="comment"> * This program is distributed in the hope that it will be useful,</span></div>
+<div class="line"><span class="lineno">   11</span><span class="comment"> * but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
+<div class="line"><span class="lineno">   12</span><span class="comment"> * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the</span></div>
+<div class="line"><span class="lineno">   13</span><span class="comment"> * GNU Lesser General Public License for more details.</span></div>
+<div class="line"><span class="lineno">   14</span><span class="comment"> *</span></div>
+<div class="line"><span class="lineno">   15</span><span class="comment"> * You should have received a copy of the GNU Lesser General Public License</span></div>
+<div class="line"><span class="lineno">   16</span><span class="comment"> * along with this program. If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
+<div class="line"><span class="lineno">   17</span><span class="comment"> */</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#ifndef DOXYGEN_SHOULD_SKIP_THIS</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#</span><span class="preprocessor">ifndef</span> <span class="preprocessor">DOXYGEN_SHOULD_SKIP_THIS</span></div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &quot;<a class="code" href="Logger_8h.html">log/Logger.h</a>&quot;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&quot;log/Logger.h&quot;</span></div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">string</span><span class="preprocessor">&gt;</span></div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#endif </span><span class="comment">/* DOXYGEN_SHOULD_SKIP_THIS */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#</span><span class="preprocessor">endif</span> <span class="comment">/* DOXYGEN_SHOULD_SKIP_THIS */</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>INITIALIZE_EASYLOGGINGPP</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="foldopen" id="foldopen00029" data-start="{" data-end="}">
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="namespacelogger.html">   29</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacelogger.html">logger</a> {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="namespacelogger.html">   29</a></span><span class="keyword">namespace</span> <a class="code hl_namespace" href="namespacelogger.html">logger</a> {</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    el::Configurations <a class="code hl_variable" href="classlogger_1_1Logger.html#a3413c6dcf67227ebec44cfb499998d2d">Logger::conf</a>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    el::Configurations <a class="code hl_class" href="classlogger_1_1Logger.html">Logger</a>::<a class="code hl_variable" href="classlogger_1_1Logger.html#a3413c6dcf67227ebec44cfb499998d2d">conf</a>;</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="foldopen" id="foldopen00033" data-start="{" data-end="}">
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="classlogger_1_1Logger.html#abab0f18929e134d658ea323245f6cab8">   33</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classlogger_1_1Logger.html#abab0f18929e134d658ea323245f6cab8">Logger::init</a>() {</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="classlogger_1_1Logger.html#abab0f18929e134d658ea323245f6cab8">   33</a></span>    <span class="keywordtype">void</span> <a class="code hl_class" href="classlogger_1_1Logger.html">Logger</a>::<a class="code hl_function" href="classlogger_1_1Logger.html#abab0f18929e134d658ea323245f6cab8">init</a>() {</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <a class="code hl_variable" href="classlogger_1_1Logger.html#a3413c6dcf67227ebec44cfb499998d2d">conf</a>.setGlobally(el::ConfigurationType::Enabled, <span class="stringliteral">&quot;true&quot;</span>);</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <a class="code hl_variable" href="classlogger_1_1Logger.html#a3413c6dcf67227ebec44cfb499998d2d">conf</a>.setGlobally(el::ConfigurationType::Format, <span class="stringliteral">&quot;%datetime{%Y-%M-%d %H:%m:%s} %tick: %level %msg&quot;</span>);</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <a class="code hl_variable" href="classlogger_1_1Logger.html#a3413c6dcf67227ebec44cfb499998d2d">conf</a>.setGlobally(el::ConfigurationType::ToFile, <span class="stringliteral">&quot;false&quot;</span>);</div>
@@ -150,29 +148,25 @@ $(document).ready(function(){initNavTree('Logger_8cpp_source.html',''); initResi
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        el::Loggers::reconfigureLogger(<span class="stringliteral">&quot;default&quot;</span>, <a class="code hl_variable" href="classlogger_1_1Logger.html#a3413c6dcf67227ebec44cfb499998d2d">conf</a>);</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        el::Logger* <a class="code hl_namespace" href="namespacelogger.html">logger</a> = el::Loggers::getLogger(<span class="stringliteral">&quot;default&quot;</span>);</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        std::string logFilename = <a class="code hl_namespace" href="namespacelogger.html">logger</a>-&gt;typedConfigurations()-&gt;filename(el::Level::Verbose).c_str();</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        el::Logger* logger = el::Loggers::getLogger(<span class="stringliteral">&quot;default&quot;</span>);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        std::string logFilename = logger-&gt;typedConfigurations()-&gt;filename(el::Level::Verbose).c_str();</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <span class="keywordflow">if</span> (logFilename != <span class="stringliteral">&quot;/dev/null&quot;</span>) {</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            <a class="code hl_variable" href="classlogger_1_1Logger.html#a3413c6dcf67227ebec44cfb499998d2d">conf</a>.setGlobally(el::ConfigurationType::ToFile, <span class="stringliteral">&quot;true&quot;</span>);</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            el::Loggers::reconfigureLogger(<span class="stringliteral">&quot;default&quot;</span>, <a class="code hl_variable" href="classlogger_1_1Logger.html#a3413c6dcf67227ebec44cfb499998d2d">conf</a>);</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        }</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <a class="code hl_function" href="classlogger_1_1Logger.html#a31d2cc6f94e95cea600c9579c981875c">setVerboseLevel</a>(0);</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <a class="code hl_function" href="classlogger_1_1Logger.html#a7d70e6711ec68f00c5c68946fd030ff9">setLogLevel</a>(0);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <a class="code hl_function" href="classlogger_1_1Logger.html#a31d2cc6f94e95cea600c9579c981875c">setVerboseLevel</a><a class="code hl_function" href="classlogger_1_1Logger.html#a31d2cc6f94e95cea600c9579c981875c">(</a>0<a class="code hl_function" href="classlogger_1_1Logger.html#a31d2cc6f94e95cea600c9579c981875c">)</a>;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <a class="code hl_function" href="classlogger_1_1Logger.html#a7d70e6711ec68f00c5c68946fd030ff9">setLogLevel</a><a class="code hl_function" href="classlogger_1_1Logger.html#a7d70e6711ec68f00c5c68946fd030ff9">(</a>0<a class="code hl_function" href="classlogger_1_1Logger.html#a7d70e6711ec68f00c5c68946fd030ff9">)</a>;</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    }</div>
-</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
-<div class="foldopen" id="foldopen00064" data-start="{" data-end="}">
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="classlogger_1_1Logger.html#a545211a93eadc019ebe4301426594a69">   64</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classlogger_1_1Logger.html#a545211a93eadc019ebe4301426594a69">Logger::setCustomFormatSpec</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* format, <span class="keyword">const</span> el::FormatSpecifierValueResolver&amp; resolver) {</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="classlogger_1_1Logger.html#a545211a93eadc019ebe4301426594a69">   64</a></span>    <span class="keywordtype">void</span> <a class="code hl_class" href="classlogger_1_1Logger.html">Logger</a>::<a class="code hl_function" href="classlogger_1_1Logger.html#a545211a93eadc019ebe4301426594a69">setCustomFormatSpec</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* format, <span class="keyword">const</span> el::FormatSpecifierValueResolver&amp; resolver) {</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        el::Helpers::installCustomFormatSpecifier(el::CustomFormatSpecifier(format, resolver));</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    }</div>
-</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="comment">// Application logging should be done with VLOG(loglevel)</span></div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="comment">// Framework logging should use one of the following levels</span></div>
-<div class="foldopen" id="foldopen00070" data-start="{" data-end="}">
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="classlogger_1_1Logger.html#a7d70e6711ec68f00c5c68946fd030ff9">   70</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classlogger_1_1Logger.html#a7d70e6711ec68f00c5c68946fd030ff9">Logger::setLogLevel</a>(<span class="keywordtype">int</span> level) {</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="classlogger_1_1Logger.html#a7d70e6711ec68f00c5c68946fd030ff9">   70</a></span>    <span class="keywordtype">void</span> <a class="code hl_class" href="classlogger_1_1Logger.html">Logger</a>::<a class="code hl_function" href="classlogger_1_1Logger.html#a7d70e6711ec68f00c5c68946fd030ff9">setLogLevel</a>(<span class="keywordtype">int</span> level) {</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        <a class="code hl_variable" href="classlogger_1_1Logger.html#a3413c6dcf67227ebec44cfb499998d2d">conf</a>.set(el::Level::Trace, el::ConfigurationType::Enabled, <span class="stringliteral">&quot;false&quot;</span>);   <span class="comment">// trace method/function calling</span></div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        <a class="code hl_variable" href="classlogger_1_1Logger.html#a3413c6dcf67227ebec44cfb499998d2d">conf</a>.set(el::Level::Debug, el::ConfigurationType::Enabled, <span class="stringliteral">&quot;false&quot;</span>);   <span class="comment">// typical assert messages - but we can go on</span></div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        <a class="code hl_variable" href="classlogger_1_1Logger.html#a3413c6dcf67227ebec44cfb499998d2d">conf</a>.set(el::Level::Info, el::ConfigurationType::Enabled, <span class="stringliteral">&quot;false&quot;</span>);    <span class="comment">// additional infos - what &#39;s going on</span></div>
@@ -206,36 +200,28 @@ $(document).ready(function(){initNavTree('Logger_8cpp_source.html',''); initResi
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        el::Loggers::reconfigureLogger(<span class="stringliteral">&quot;default&quot;</span>, <a class="code hl_variable" href="classlogger_1_1Logger.html#a3413c6dcf67227ebec44cfb499998d2d">conf</a>);</div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    }</div>
-</div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
-<div class="foldopen" id="foldopen00105" data-start="{" data-end="}">
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno"><a class="line" href="classlogger_1_1Logger.html#a31d2cc6f94e95cea600c9579c981875c">  105</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classlogger_1_1Logger.html#a31d2cc6f94e95cea600c9579c981875c">Logger::setVerboseLevel</a>(<span class="keywordtype">int</span> level) {</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno"><a class="line" href="classlogger_1_1Logger.html#a31d2cc6f94e95cea600c9579c981875c">  105</a></span>    <span class="keywordtype">void</span> <a class="code hl_class" href="classlogger_1_1Logger.html">Logger</a>::<a class="code hl_function" href="classlogger_1_1Logger.html#a31d2cc6f94e95cea600c9579c981875c">setVerboseLevel</a>(<span class="keywordtype">int</span> level) {</div>
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        <span class="keywordflow">if</span> (level &gt;= 0) {</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>            el::Loggers::setVerboseLevel(<span class="keyword">static_cast&lt;</span>el::base::type::VerboseLevel<span class="keyword">&gt;</span>(level));</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>            el::Loggers::setVerboseLevel(<span class="keyword">static_cast</span>&lt;el::base::type::VerboseLevel&gt;(level));</div>
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        }</div>
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    }</div>
-</div>
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
-<div class="foldopen" id="foldopen00111" data-start="{" data-end="}">
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno"><a class="line" href="classlogger_1_1Logger.html#a2fe71814296a418393065c3c7299ff41">  111</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classlogger_1_1Logger.html#a2fe71814296a418393065c3c7299ff41">Logger::logToFile</a>(<span class="keyword">const</span> std::string&amp; logFile) {</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno"><a class="line" href="classlogger_1_1Logger.html#a2fe71814296a418393065c3c7299ff41">  111</a></span>    <span class="keywordtype">void</span> <a class="code hl_class" href="classlogger_1_1Logger.html">Logger</a>::<a class="code hl_function" href="classlogger_1_1Logger.html#a2fe71814296a418393065c3c7299ff41">logToFile</a>(<span class="keyword">const</span> std::string&amp; logFile) {</div>
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        <a class="code hl_variable" href="classlogger_1_1Logger.html#a3413c6dcf67227ebec44cfb499998d2d">conf</a>.setGlobally(el::ConfigurationType::Filename, logFile);</div>
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        <a class="code hl_variable" href="classlogger_1_1Logger.html#a3413c6dcf67227ebec44cfb499998d2d">conf</a>.setGlobally(el::ConfigurationType::ToFile, <span class="stringliteral">&quot;true&quot;</span>);</div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        el::Loggers::reconfigureLogger(<span class="stringliteral">&quot;default&quot;</span>, <a class="code hl_variable" href="classlogger_1_1Logger.html#a3413c6dcf67227ebec44cfb499998d2d">conf</a>);</div>
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    }</div>
-</div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
-<div class="foldopen" id="foldopen00118" data-start="{" data-end="}">
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno"><a class="line" href="classlogger_1_1Logger.html#a9eece213fbcc8ebf67fd69fc73a0dd4b">  118</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classlogger_1_1Logger.html#a9eece213fbcc8ebf67fd69fc73a0dd4b">Logger::quiet</a>() {</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno"><a class="line" href="classlogger_1_1Logger.html#a9eece213fbcc8ebf67fd69fc73a0dd4b">  118</a></span>    <span class="keywordtype">void</span> <a class="code hl_class" href="classlogger_1_1Logger.html">Logger</a>::<a class="code hl_function" href="classlogger_1_1Logger.html#a9eece213fbcc8ebf67fd69fc73a0dd4b">quiet</a>() {</div>
 <div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        <a class="code hl_variable" href="classlogger_1_1Logger.html#a3413c6dcf67227ebec44cfb499998d2d">conf</a>.setGlobally(el::ConfigurationType::ToStandardOutput, <span class="stringliteral">&quot;false&quot;</span>);</div>
 <div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
 <div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>        el::Loggers::reconfigureLogger(<span class="stringliteral">&quot;default&quot;</span>, <a class="code hl_variable" href="classlogger_1_1Logger.html#a3413c6dcf67227ebec44cfb499998d2d">conf</a>);</div>
 <div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    }</div>
-</div>
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
 <div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>} <span class="comment">// namespace logger</span></div>
-</div>
-<div class="ttc" id="aLogger_8h_html"><div class="ttname"><a href="Logger_8h.html">Logger.h</a></div></div>
+<div class="ttc" id="aclasslogger_1_1Logger_html"><div class="ttname"><a href="classlogger_1_1Logger.html">logger::Logger</a></div><div class="ttdef"><b>Definition</b> <a href="Logger_8h_source.html#l00039">Logger.h:39</a></div></div>
 <div class="ttc" id="aclasslogger_1_1Logger_html_a2fe71814296a418393065c3c7299ff41"><div class="ttname"><a href="classlogger_1_1Logger.html#a2fe71814296a418393065c3c7299ff41">logger::Logger::logToFile</a></div><div class="ttdeci">static void logToFile(const std::string &amp;logFile)</div><div class="ttdef"><b>Definition</b> <a href="Logger_8cpp_source.html#l00111">Logger.cpp:111</a></div></div>
 <div class="ttc" id="aclasslogger_1_1Logger_html_a31d2cc6f94e95cea600c9579c981875c"><div class="ttname"><a href="classlogger_1_1Logger.html#a31d2cc6f94e95cea600c9579c981875c">logger::Logger::setVerboseLevel</a></div><div class="ttdeci">static void setVerboseLevel(int level)</div><div class="ttdef"><b>Definition</b> <a href="Logger_8cpp_source.html#l00105">Logger.cpp:105</a></div></div>
 <div class="ttc" id="aclasslogger_1_1Logger_html_a3413c6dcf67227ebec44cfb499998d2d"><div class="ttname"><a href="classlogger_1_1Logger.html#a3413c6dcf67227ebec44cfb499998d2d">logger::Logger::conf</a></div><div class="ttdeci">static el::Configurations conf</div><div class="ttdef"><b>Definition</b> <a href="Logger_8h_source.html#l00058">Logger.h:58</a></div></div>
@@ -250,7 +236,7 @@ $(document).ready(function(){initNavTree('Logger_8cpp_source.html',''); initResi
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_9381a7bbd03577d6d8720c7f35c94ffa.html">log</a></li><li class="navelem"><a class="el" href="Logger_8cpp.html">Logger.cpp</a></li>
-    <li class="footer">Generated on Tue Oct 10 2023 10:11:46 for snode.c by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Tue Oct 10 2023 10:23:45 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

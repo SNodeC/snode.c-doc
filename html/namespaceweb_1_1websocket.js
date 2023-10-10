@@ -9,6 +9,6 @@ var namespaceweb_1_1websocket =
     [ "SubProtocolFactory", "classweb_1_1websocket_1_1SubProtocolFactory.html", "classweb_1_1websocket_1_1SubProtocolFactory" ],
     [ "SubProtocolFactorySelector", "classweb_1_1websocket_1_1SubProtocolFactorySelector.html", "classweb_1_1websocket_1_1SubProtocolFactorySelector" ],
     [ "Transmitter", "classweb_1_1websocket_1_1Transmitter.html", "classweb_1_1websocket_1_1Transmitter" ],
-    [ "distribution", "namespaceweb_1_1websocket.html#aa80d7ccc297879d67337acba7afc2c19", null ],
-    [ "randomDevice", "namespaceweb_1_1websocket.html#a50a5bb0a87e9f66e5359ba4c7c6af1d4", null ]
+    [ "distribution", "namespaceweb_1_1websocket.html#ad676394029419e8f99f7d4cb6081b56e", null ],
+    [ "randomDevice", "namespaceweb_1_1websocket.html#ace7ea3d1de990b03e60384682a087765", null ]
 ];

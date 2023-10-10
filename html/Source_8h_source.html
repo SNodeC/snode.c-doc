@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>snode.c: core/pipe/Source.h Source File</title>
+<title>SNode.C: core/pipe/Source.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">snode.c
+   <div id="projectname">SNode.C
    </div>
   </td>
  </tr>
@@ -98,46 +98,45 @@ $(document).ready(function(){initNavTree('Source_8h_source.html',''); initResiza
 </div><!--header-->
 <div class="contents">
 <a href="Source_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * snode.c - a slim toolkit for network communication</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * Copyright (C) 2020, 2021, 2022, 2023 Volker Christian &lt;me@vchrist.at&gt;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> *</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * This program is free software: you can redistribute it and/or modify</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * it under the terms of the GNU Lesser General Public License as published</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * by the Free Software Foundation, either version 3 of the License, or</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> * (at your option) any later version.</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment"> *</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment"> * This program is distributed in the hope that it will be useful,</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment"> * but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment"> * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment"> * GNU Lesser General Public License for more details.</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment"> *</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment"> * You should have received a copy of the GNU Lesser General Public License</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment"> * along with this program. If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> */</span></div>
+<div class="line"><span class="lineno">    2</span><span class="comment"> * snode.c - a slim toolkit for network communication</span></div>
+<div class="line"><span class="lineno">    3</span><span class="comment"> * Copyright (C) 2020, 2021, 2022, 2023 Volker Christian &lt;me@vchrist.at&gt;</span></div>
+<div class="line"><span class="lineno">    4</span><span class="comment"> *</span></div>
+<div class="line"><span class="lineno">    5</span><span class="comment"> * This program is free software: you can redistribute it and/or modify</span></div>
+<div class="line"><span class="lineno">    6</span><span class="comment"> * it under the terms of the GNU Lesser General Public License as published</span></div>
+<div class="line"><span class="lineno">    7</span><span class="comment"> * by the Free Software Foundation, either version 3 of the License, or</span></div>
+<div class="line"><span class="lineno">    8</span><span class="comment"> * (at your option) any later version.</span></div>
+<div class="line"><span class="lineno">    9</span><span class="comment"> *</span></div>
+<div class="line"><span class="lineno">   10</span><span class="comment"> * This program is distributed in the hope that it will be useful,</span></div>
+<div class="line"><span class="lineno">   11</span><span class="comment"> * but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
+<div class="line"><span class="lineno">   12</span><span class="comment"> * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the</span></div>
+<div class="line"><span class="lineno">   13</span><span class="comment"> * GNU Lesser General Public License for more details.</span></div>
+<div class="line"><span class="lineno">   14</span><span class="comment"> *</span></div>
+<div class="line"><span class="lineno">   15</span><span class="comment"> * You should have received a copy of the GNU Lesser General Public License</span></div>
+<div class="line"><span class="lineno">   16</span><span class="comment"> * along with this program. If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
+<div class="line"><span class="lineno">   17</span><span class="comment"> */</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#ifndef CORE_PIPE_SOURCE_H</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#define CORE_PIPE_SOURCE_H</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#</span><span class="preprocessor">ifndef</span> <span class="preprocessor">CORE_PIPE_SOURCE_H</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#</span><span class="preprocessor">define</span> <span class="preprocessor">CORE_PIPE_SOURCE_H</span></div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#ifndef DOXYGEN_SHOULD_SKIP_THIS</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#</span><span class="preprocessor">ifndef</span> <span class="preprocessor">DOXYGEN_SHOULD_SKIP_THIS</span></div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &lt;cstddef&gt;</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &lt;sys/types.h&gt;</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">cstddef</span><span class="preprocessor">&gt;</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">sys</span><span class="preprocessor">/</span><span class="preprocessor">types</span><span class="preprocessor">.</span><span class="preprocessor">h</span><span class="preprocessor">&gt;</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#endif </span><span class="comment">/* DOXYGEN_SHOULD_SKIP_THIS */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#</span><span class="preprocessor">endif</span> <span class="comment">/* DOXYGEN_SHOULD_SKIP_THIS */</span></div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacecore_1_1pipe.html">core::pipe</a> {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">namespace</span> <a class="code hl_namespace" href="namespacecore.html">core</a>::<a class="code hl_namespace" href="namespacecore_1_1pipe.html">pipe</a> {</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keyword">class </span>Sink;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keyword">class</span> <a class="code hl_class" href="classcore_1_1pipe_1_1Sink.html">Sink</a>;</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="foldopen" id="foldopen00033" data-start="{" data-end="};">
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="classcore_1_1pipe_1_1Source.html">   33</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classcore_1_1pipe_1_1Source.html">Source</a> {</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="classcore_1_1pipe_1_1Source.html">   33</a></span>    <span class="keyword">class</span> <a class="code hl_class" href="classcore_1_1pipe_1_1Source.html">Source</a> {</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <a class="code hl_function" href="classcore_1_1pipe_1_1Source.html#afdbf414da9b28223735961164158e649">Source</a>();</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <span class="keyword">virtual</span> <a class="code hl_function" href="classcore_1_1pipe_1_1Source.html#a65bd1161b69a637cdea3dae25604af59">~Source</a>();</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <span class="keyword">virtual</span> ~<a class="code hl_function" href="classcore_1_1pipe_1_1Source.html#a65bd1161b69a637cdea3dae25604af59">Source</a>();</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classcore_1_1pipe_1_1Source.html#aa2400665fff92a97aec7d84dbb7b698b">disconnect</a>();</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classcore_1_1pipe_1_1Source.html#a15f331e8ca7bebe0fb64c7a2605bc9ef">connect</a>(<a class="code hl_class" href="classcore_1_1pipe_1_1Sink.html">Sink</a>&amp; <a class="code hl_variable" href="classcore_1_1pipe_1_1Source.html#a4d25af23c75f9ad83fc75f46be1c27cc">sink</a>);</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classcore_1_1pipe_1_1Source.html#aa2400665fff92a97aec7d84dbb7b698b">disconnect</a>(<a class="code hl_class" href="classcore_1_1pipe_1_1Sink.html">Sink</a>&amp; <a class="code hl_variable" href="classcore_1_1pipe_1_1Source.html#a4d25af23c75f9ad83fc75f46be1c27cc">sink</a>);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classcore_1_1pipe_1_1Source.html#a15f331e8ca7bebe0fb64c7a2605bc9ef">connect</a>(<a class="code hl_class" href="classcore_1_1pipe_1_1Sink.html">Sink</a>&amp; sink);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classcore_1_1pipe_1_1Source.html#a1e857ed0ce002f12acc3ec68f2408d4c">disconnect</a>(<a class="code hl_class" href="classcore_1_1pipe_1_1Sink.html">Sink</a>&amp; sink);</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        ssize_t <a class="code hl_function" href="classcore_1_1pipe_1_1Source.html#a7363d1d567c71b78ebfd2c098a8993f2">send</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* junk, std::size_t junkLen);</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classcore_1_1pipe_1_1Source.html#a7cdfe3494b76d59780750d8af228f1d1">eof</a>();</div>
@@ -146,29 +145,52 @@ $(document).ready(function(){initNavTree('Source_8h_source.html',''); initResiza
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keyword">private</span>:</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="classcore_1_1pipe_1_1Source.html#a4d25af23c75f9ad83fc75f46be1c27cc">   47</a></span>        <a class="code hl_class" href="classcore_1_1pipe_1_1Sink.html">Sink</a>* <a class="code hl_variable" href="classcore_1_1pipe_1_1Source.html#a4d25af23c75f9ad83fc75f46be1c27cc">sink</a>;</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    };</div>
-</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>} <span class="comment">// namespace core::pipe</span></div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="preprocessor">#endif </span><span class="comment">// CORE_PIPE_SOURCE_H</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="preprocessor">#</span><span class="preprocessor">endif</span> <span class="comment">// CORE_PIPE_SOURCE_H</span></div>
+<div class="ttc" id="aFileReader_8cpp_html_ad44f6a2b5ed7272fb034e45b060f002b"><div class="ttname"><a href="FileReader_8cpp.html#ad44f6a2b5ed7272fb034e45b060f002b">MF_READSIZE</a></div><div class="ttdeci">#define MF_READSIZE</div><div class="ttdef"><b>Definition</b> <a href="FileReader_8cpp_source.html#l00030">FileReader.cpp:30</a></div></div>
+<div class="ttc" id="aclasscore_1_1Descriptor_html"><div class="ttname"><a href="classcore_1_1Descriptor.html">core::Descriptor</a></div><div class="ttdef"><b>Definition</b> <a href="Descriptor_8h_source.html#l00028">Descriptor.h:28</a></div></div>
+<div class="ttc" id="aclasscore_1_1Descriptor_html_a9a25cc592b32b6d4eb890ed9852753ca"><div class="ttname"><a href="classcore_1_1Descriptor.html#a9a25cc592b32b6d4eb890ed9852753ca">core::Descriptor::Descriptor</a></div><div class="ttdeci">Descriptor(int fd)</div><div class="ttdef"><b>Definition</b> <a href="Descriptor_8cpp_source.html#l00029">Descriptor.cpp:29</a></div></div>
+<div class="ttc" id="aclasscore_1_1Descriptor_html_af1ac9826d5c5f44bb357c845932ea5e4"><div class="ttname"><a href="classcore_1_1Descriptor.html#af1ac9826d5c5f44bb357c845932ea5e4">core::Descriptor::getFd</a></div><div class="ttdeci">int getFd() const</div><div class="ttdef"><b>Definition</b> <a href="Descriptor_8cpp_source.html#l00046">Descriptor.cpp:46</a></div></div>
+<div class="ttc" id="aclasscore_1_1EventReceiver_html"><div class="ttname"><a href="classcore_1_1EventReceiver.html">core::EventReceiver</a></div><div class="ttdef"><b>Definition</b> <a href="EventReceiver_8h_source.html#l00036">EventReceiver.h:36</a></div></div>
+<div class="ttc" id="aclasscore_1_1EventReceiver_html_ad353e97a9089b2769e52f8825e4878b1"><div class="ttname"><a href="classcore_1_1EventReceiver.html#ad353e97a9089b2769e52f8825e4878b1">core::EventReceiver::span</a></div><div class="ttdeci">void span()</div><div class="ttdef"><b>Definition</b> <a href="EventReceiver_8cpp_source.html#l00035">EventReceiver.cpp:35</a></div></div>
+<div class="ttc" id="aclasscore_1_1EventReceiver_html_adec275118bd8a68e2b4cb71fa94d79b6"><div class="ttname"><a href="classcore_1_1EventReceiver.html#adec275118bd8a68e2b4cb71fa94d79b6">core::EventReceiver::EventReceiver</a></div><div class="ttdeci">EventReceiver(const std::string &amp;name)</div><div class="ttdef"><b>Definition</b> <a href="EventReceiver_8cpp_source.html#l00027">EventReceiver.cpp:27</a></div></div>
+<div class="ttc" id="aclasscore_1_1file_1_1FileReader_html"><div class="ttname"><a href="classcore_1_1file_1_1FileReader.html">core::file::FileReader</a></div><div class="ttdef"><b>Definition</b> <a href="FileReader_8h_source.html#l00043">FileReader.h:46</a></div></div>
+<div class="ttc" id="aclasscore_1_1file_1_1FileReader_html_a1283a619871fb6ae3ecaa472afdab866"><div class="ttname"><a href="classcore_1_1file_1_1FileReader.html#a1283a619871fb6ae3ecaa472afdab866">core::file::FileReader::connect</a></div><div class="ttdeci">static FileReader * connect(const std::string &amp;path, core::pipe::Sink &amp;writeStream, const std::function&lt; void(int err)&gt; &amp;onError)</div><div class="ttdef"><b>Definition</b> <a href="FileReader_8cpp_source.html#l00042">FileReader.cpp:42</a></div></div>
+<div class="ttc" id="aclasscore_1_1file_1_1FileReader_html_a31865695a9f314b6077afca674e82508"><div class="ttname"><a href="classcore_1_1file_1_1FileReader.html#a31865695a9f314b6077afca674e82508">core::file::FileReader::suspend</a></div><div class="ttdeci">void suspend()</div><div class="ttdef"><b>Definition</b> <a href="FileReader_8cpp_source.html#l00082">FileReader.cpp:82</a></div></div>
+<div class="ttc" id="aclasscore_1_1file_1_1FileReader_html_a4d9266c6804d36f5bf203df026f89a0c"><div class="ttname"><a href="classcore_1_1file_1_1FileReader.html#a4d9266c6804d36f5bf203df026f89a0c">core::file::FileReader::onEvent</a></div><div class="ttdeci">void onEvent(const utils::Timeval &amp;currentTime) override</div><div class="ttdef"><b>Definition</b> <a href="FileReader_8cpp_source.html#l00058">FileReader.cpp:58</a></div></div>
+<div class="ttc" id="aclasscore_1_1file_1_1FileReader_html_a528c00603662070fffba7df4cffa067c"><div class="ttname"><a href="classcore_1_1file_1_1FileReader.html#a528c00603662070fffba7df4cffa067c">core::file::FileReader::FileReader</a></div><div class="ttdeci">FileReader(int fd, core::pipe::Sink &amp;writeStream, const std::string &amp;name)</div><div class="ttdef"><b>Definition</b> <a href="FileReader_8cpp_source.html#l00034">FileReader.cpp:34</a></div></div>
+<div class="ttc" id="aclasscore_1_1file_1_1FileReader_html_ae16913239b7e1137fc9da4df483fb3ec"><div class="ttname"><a href="classcore_1_1file_1_1FileReader.html#ae16913239b7e1137fc9da4df483fb3ec">core::file::FileReader::resume</a></div><div class="ttdeci">void resume()</div><div class="ttdef"><b>Definition</b> <a href="FileReader_8cpp_source.html#l00086">FileReader.cpp:86</a></div></div>
+<div class="ttc" id="aclasscore_1_1file_1_1FileReader_html_aeb217c305e6ce9f7d61e50d14039cc8e"><div class="ttname"><a href="classcore_1_1file_1_1FileReader.html#aeb217c305e6ce9f7d61e50d14039cc8e">core::file::FileReader::suspended</a></div><div class="ttdeci">bool suspended</div><div class="ttdef"><b>Definition</b> <a href="FileReader_8h_source.html#l00061">FileReader.h:61</a></div></div>
+<div class="ttc" id="aclasscore_1_1file_1_1FileReader_html_af5b1778d5de8b3bb7c6023d2436e9904"><div class="ttname"><a href="classcore_1_1file_1_1FileReader.html#af5b1778d5de8b3bb7c6023d2436e9904">core::file::FileReader::isSuspended</a></div><div class="ttdeci">bool isSuspended()</div><div class="ttdef"><b>Definition</b> <a href="FileReader_8cpp_source.html#l00091">FileReader.cpp:91</a></div></div>
+<div class="ttc" id="aclasscore_1_1file_1_1File_html"><div class="ttname"><a href="classcore_1_1file_1_1File.html">core::file::File</a></div><div class="ttdef"><b>Definition</b> <a href="File_8h_source.html#l00029">File.h:29</a></div></div>
 <div class="ttc" id="aclasscore_1_1pipe_1_1Sink_html"><div class="ttname"><a href="classcore_1_1pipe_1_1Sink.html">core::pipe::Sink</a></div><div class="ttdef"><b>Definition</b> <a href="Sink_8h_source.html#l00032">Sink.h:32</a></div></div>
 <div class="ttc" id="aclasscore_1_1pipe_1_1Source_html"><div class="ttname"><a href="classcore_1_1pipe_1_1Source.html">core::pipe::Source</a></div><div class="ttdef"><b>Definition</b> <a href="Source_8h_source.html#l00033">Source.h:33</a></div></div>
 <div class="ttc" id="aclasscore_1_1pipe_1_1Source_html_a15f331e8ca7bebe0fb64c7a2605bc9ef"><div class="ttname"><a href="classcore_1_1pipe_1_1Source.html#a15f331e8ca7bebe0fb64c7a2605bc9ef">core::pipe::Source::connect</a></div><div class="ttdeci">void connect(Sink &amp;sink)</div><div class="ttdef"><b>Definition</b> <a href="Source_8cpp_source.html#l00045">Source.cpp:45</a></div></div>
 <div class="ttc" id="aclasscore_1_1pipe_1_1Source_html_a179b74c2582275beb312423905f9cbd4"><div class="ttname"><a href="classcore_1_1pipe_1_1Source.html#a179b74c2582275beb312423905f9cbd4">core::pipe::Source::error</a></div><div class="ttdeci">void error(int errnum)</div><div class="ttdef"><b>Definition</b> <a href="Source_8cpp_source.html#l00071">Source.cpp:71</a></div></div>
+<div class="ttc" id="aclasscore_1_1pipe_1_1Source_html_a1e857ed0ce002f12acc3ec68f2408d4c"><div class="ttname"><a href="classcore_1_1pipe_1_1Source.html#a1e857ed0ce002f12acc3ec68f2408d4c">core::pipe::Source::disconnect</a></div><div class="ttdeci">void disconnect(Sink &amp;sink)</div><div class="ttdef"><b>Definition</b> <a href="Source_8cpp_source.html#l00052">Source.cpp:52</a></div></div>
 <div class="ttc" id="aclasscore_1_1pipe_1_1Source_html_a4d25af23c75f9ad83fc75f46be1c27cc"><div class="ttname"><a href="classcore_1_1pipe_1_1Source.html#a4d25af23c75f9ad83fc75f46be1c27cc">core::pipe::Source::sink</a></div><div class="ttdeci">Sink * sink</div><div class="ttdef"><b>Definition</b> <a href="Source_8h_source.html#l00047">Source.h:47</a></div></div>
 <div class="ttc" id="aclasscore_1_1pipe_1_1Source_html_a65bd1161b69a637cdea3dae25604af59"><div class="ttname"><a href="classcore_1_1pipe_1_1Source.html#a65bd1161b69a637cdea3dae25604af59">core::pipe::Source::~Source</a></div><div class="ttdeci">virtual ~Source()</div><div class="ttdef"><b>Definition</b> <a href="Source_8cpp_source.html#l00035">Source.cpp:35</a></div></div>
 <div class="ttc" id="aclasscore_1_1pipe_1_1Source_html_a7363d1d567c71b78ebfd2c098a8993f2"><div class="ttname"><a href="classcore_1_1pipe_1_1Source.html#a7363d1d567c71b78ebfd2c098a8993f2">core::pipe::Source::send</a></div><div class="ttdeci">ssize_t send(const char *junk, std::size_t junkLen)</div><div class="ttdef"><b>Definition</b> <a href="Source_8cpp_source.html#l00058">Source.cpp:58</a></div></div>
 <div class="ttc" id="aclasscore_1_1pipe_1_1Source_html_a7cdfe3494b76d59780750d8af228f1d1"><div class="ttname"><a href="classcore_1_1pipe_1_1Source.html#a7cdfe3494b76d59780750d8af228f1d1">core::pipe::Source::eof</a></div><div class="ttdeci">void eof()</div><div class="ttdef"><b>Definition</b> <a href="Source_8cpp_source.html#l00077">Source.cpp:77</a></div></div>
 <div class="ttc" id="aclasscore_1_1pipe_1_1Source_html_aa2400665fff92a97aec7d84dbb7b698b"><div class="ttname"><a href="classcore_1_1pipe_1_1Source.html#aa2400665fff92a97aec7d84dbb7b698b">core::pipe::Source::disconnect</a></div><div class="ttdeci">void disconnect()</div><div class="ttdef"><b>Definition</b> <a href="Source_8cpp_source.html#l00039">Source.cpp:39</a></div></div>
 <div class="ttc" id="aclasscore_1_1pipe_1_1Source_html_afdbf414da9b28223735961164158e649"><div class="ttname"><a href="classcore_1_1pipe_1_1Source.html#afdbf414da9b28223735961164158e649">core::pipe::Source::Source</a></div><div class="ttdeci">Source()</div><div class="ttdef"><b>Definition</b> <a href="Source_8cpp_source.html#l00031">Source.cpp:31</a></div></div>
+<div class="ttc" id="aclassutils_1_1Timeval_html"><div class="ttname"><a href="classutils_1_1Timeval.html">utils::Timeval</a></div><div class="ttdef"><b>Definition</b> <a href="Timeval_8h_source.html#l00036">Timeval.h:36</a></div></div>
+<div class="ttc" id="anamespacecore_1_1file_html"><div class="ttname"><a href="namespacecore_1_1file.html">core::file</a></div><div class="ttdef"><b>Definition</b> <a href="File_8cpp_source.html#l00025">File.cpp:25</a></div></div>
 <div class="ttc" id="anamespacecore_1_1pipe_html"><div class="ttname"><a href="namespacecore_1_1pipe.html">core::pipe</a></div><div class="ttdef"><b>Definition</b> <a href="FileReader_8h_source.html#l00037">FileReader.h:37</a></div></div>
+<div class="ttc" id="anamespacecore_1_1system_html"><div class="ttname"><a href="namespacecore_1_1system.html">core::system</a></div><div class="ttdef"><b>Definition</b> <a href="dlfcn_8cpp_source.html#l00027">dlfcn.cpp:27</a></div></div>
+<div class="ttc" id="anamespacecore_1_1system_html_a38a2ef544196b684eb5850c42e8ee770"><div class="ttname"><a href="namespacecore_1_1system.html#a38a2ef544196b684eb5850c42e8ee770">core::system::read</a></div><div class="ttdeci">ssize_t read(int fd, void *buf, std::size_t count)</div><div class="ttdef"><b>Definition</b> <a href="unistd_8cpp_source.html#l00034">unistd.cpp:34</a></div></div>
+<div class="ttc" id="anamespacecore_1_1system_html_af932d59deb1d46aca925c487cebf0ab5"><div class="ttname"><a href="namespacecore_1_1system.html#af932d59deb1d46aca925c487cebf0ab5">core::system::open</a></div><div class="ttdeci">int open(const char *pathname, int flags)</div><div class="ttdef"><b>Definition</b> <a href="unistd_8cpp_source.html#l00029">unistd.cpp:29</a></div></div>
+<div class="ttc" id="anamespacecore_html"><div class="ttname"><a href="namespacecore.html">core</a></div><div class="ttdef"><b>Definition</b> <a href="Descriptor_8cpp_source.html#l00027">Descriptor.cpp:27</a></div></div>
+<div class="ttc" id="anamespaceutils_html"><div class="ttname"><a href="namespaceutils.html">utils</a></div><div class="ttdef"><b>Definition</b> <a href="DescriptorEventPublisher_8h_source.html#l00026">DescriptorEventPublisher.h:26</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_4270bfced15e0e73154b13468c7c9ad9.html">core</a></li><li class="navelem"><a class="el" href="dir_cf8ea94354c522c63d0b1962aa12ff4c.html">pipe</a></li><li class="navelem"><a class="el" href="Source_8h.html">Source.h</a></li>
-    <li class="footer">Generated on Tue Oct 10 2023 10:11:44 for snode.c by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Tue Oct 10 2023 10:23:06 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

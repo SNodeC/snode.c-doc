@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>snode.c: core/file/FileReader.h Source File</title>
+<title>SNode.C: core/file/FileReader.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">snode.c
+   <div id="projectname">SNode.C
    </div>
   </td>
  </tr>
@@ -98,61 +98,58 @@ $(document).ready(function(){initNavTree('FileReader_8h_source.html',''); initRe
 </div><!--header-->
 <div class="contents">
 <a href="FileReader_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * snode.c - a slim toolkit for network communication</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * Copyright (C) 2020, 2021, 2022, 2023 Volker Christian &lt;me@vchrist.at&gt;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> *</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * This program is free software: you can redistribute it and/or modify</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * it under the terms of the GNU Lesser General Public License as published</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * by the Free Software Foundation, either version 3 of the License, or</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> * (at your option) any later version.</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment"> *</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment"> * This program is distributed in the hope that it will be useful,</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment"> * but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment"> * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment"> * GNU Lesser General Public License for more details.</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment"> *</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment"> * You should have received a copy of the GNU Lesser General Public License</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment"> * along with this program. If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> */</span></div>
+<div class="line"><span class="lineno">    2</span><span class="comment"> * snode.c - a slim toolkit for network communication</span></div>
+<div class="line"><span class="lineno">    3</span><span class="comment"> * Copyright (C) 2020, 2021, 2022, 2023 Volker Christian &lt;me@vchrist.at&gt;</span></div>
+<div class="line"><span class="lineno">    4</span><span class="comment"> *</span></div>
+<div class="line"><span class="lineno">    5</span><span class="comment"> * This program is free software: you can redistribute it and/or modify</span></div>
+<div class="line"><span class="lineno">    6</span><span class="comment"> * it under the terms of the GNU Lesser General Public License as published</span></div>
+<div class="line"><span class="lineno">    7</span><span class="comment"> * by the Free Software Foundation, either version 3 of the License, or</span></div>
+<div class="line"><span class="lineno">    8</span><span class="comment"> * (at your option) any later version.</span></div>
+<div class="line"><span class="lineno">    9</span><span class="comment"> *</span></div>
+<div class="line"><span class="lineno">   10</span><span class="comment"> * This program is distributed in the hope that it will be useful,</span></div>
+<div class="line"><span class="lineno">   11</span><span class="comment"> * but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
+<div class="line"><span class="lineno">   12</span><span class="comment"> * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the</span></div>
+<div class="line"><span class="lineno">   13</span><span class="comment"> * GNU Lesser General Public License for more details.</span></div>
+<div class="line"><span class="lineno">   14</span><span class="comment"> *</span></div>
+<div class="line"><span class="lineno">   15</span><span class="comment"> * You should have received a copy of the GNU Lesser General Public License</span></div>
+<div class="line"><span class="lineno">   16</span><span class="comment"> * along with this program. If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
+<div class="line"><span class="lineno">   17</span><span class="comment"> */</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#ifndef CORE_FILE_FILEREADER_H</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#define CORE_FILE_FILEREADER_H</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#</span><span class="preprocessor">ifndef</span> <span class="preprocessor">CORE_FILE_FILEREADER_H</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#</span><span class="preprocessor">define</span> <span class="preprocessor">CORE_FILE_FILEREADER_H</span></div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &quot;<a class="code" href="EventReceiver_8h.html">core/EventReceiver.h</a>&quot;</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &quot;<a class="code" href="File_8h.html">core/file/File.h</a>&quot;</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &quot;<a class="code" href="Source_8h.html">core/pipe/Source.h</a>&quot;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&quot;core/EventReceiver.h&quot;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&quot;core/file/File.h&quot;</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&quot;core/pipe/Source.h&quot;</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#ifndef DOXYGEN_SHOULD_SKIP_THIS</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#</span><span class="preprocessor">ifndef</span> <span class="preprocessor">DOXYGEN_SHOULD_SKIP_THIS</span></div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceutils.html">utils</a> {</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keyword">class </span>Timeval;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keyword">namespace</span> <a class="code hl_namespace" href="namespaceutils.html">utils</a> {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keyword">class</span> <a class="code hl_class" href="classutils_1_1Timeval.html">Timeval</a>;</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>} <span class="comment">// namespace utils</span></div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &lt;functional&gt;</span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">functional</span><span class="preprocessor">&gt;</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">string</span><span class="preprocessor">&gt;</span></div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#endif </span><span class="comment">/* DOXYGEN_SHOULD_SKIP_THIS */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#</span><span class="preprocessor">endif</span> <span class="comment">/* DOXYGEN_SHOULD_SKIP_THIS */</span></div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
-<div class="foldopen" id="foldopen00037" data-start="{" data-end="}">
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="namespacecore_1_1pipe.html">   37</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacecore_1_1pipe.html">core::pipe</a> {</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keyword">class </span><a class="code hl_class" href="classcore_1_1pipe_1_1Sink.html">Sink</a>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="namespacecore_1_1pipe.html">   37</a></span><span class="keyword">namespace</span> <a class="code hl_namespace" href="namespacecore.html">core</a>::<a class="code hl_namespace" href="namespacecore_1_1pipe.html">pipe</a> {</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keyword">class</span> <a class="code hl_class" href="classcore_1_1pipe_1_1Sink.html">Sink</a>;</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>} <span class="comment">// namespace core::pipe</span></div>
-</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacecore_1_1file.html">core::file</a> {</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="keyword">namespace</span> <a class="code hl_namespace" href="namespacecore.html">core</a>::<a class="code hl_namespace" href="namespacecore_1_1file.html">file</a> {</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
-<div class="foldopen" id="foldopen00043" data-start="{" data-end="};">
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="classcore_1_1file_1_1FileReader.html">   43</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classcore_1_1file_1_1FileReader.html">FileReader</a></div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        : <span class="keyword">public</span> <a class="code hl_class" href="classcore_1_1EventReceiver.html">core::EventReceiver</a></div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        , <span class="keyword">public</span> <a class="code hl_class" href="classcore_1_1pipe_1_1Source.html">core::pipe::Source</a></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="classcore_1_1file_1_1FileReader.html">   43</a></span>    <span class="keyword">class</span> <a class="code hl_class" href="classcore_1_1file_1_1FileReader.html">FileReader</a></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        : <span class="keyword">public</span> <a class="code hl_namespace" href="namespacecore.html">core</a>::<a class="code hl_class" href="classcore_1_1EventReceiver.html">EventReceiver</a></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        , <span class="keyword">public</span> <a class="code hl_namespace" href="namespacecore.html">core</a>::<a class="code hl_namespace" href="namespacecore_1_1pipe.html">pipe</a>::<a class="code hl_class" href="classcore_1_1pipe_1_1Source.html">Source</a></div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        , <span class="keyword">virtual</span> <span class="keyword">public</span> <a class="code hl_class" href="classcore_1_1file_1_1File.html">File</a> {</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <a class="code hl_class" href="classcore_1_1file_1_1FileReader.html">FileReader</a>(<span class="keywordtype">int</span> <a class="code hl_variable" href="classcore_1_1Descriptor.html#a359e01790fa87afb5e1b75df7904bc2d">fd</a>, <a class="code hl_class" href="classcore_1_1pipe_1_1Sink.html">core::pipe::Sink</a>&amp; writeStream, <span class="keyword">const</span> std::string&amp; name);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <a class="code hl_function" href="classcore_1_1file_1_1FileReader.html#a528c00603662070fffba7df4cffa067c">FileReader</a>(<span class="keywordtype">int</span> fd, <a class="code hl_namespace" href="namespacecore.html">core</a>::<a class="code hl_namespace" href="namespacecore_1_1pipe.html">pipe</a>::<a class="code hl_class" href="classcore_1_1pipe_1_1Sink.html">Sink</a>&amp; writeStream, <span class="keyword">const</span> std::string&amp; name);</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <span class="keyword">static</span> <a class="code hl_class" href="classcore_1_1file_1_1FileReader.html">FileReader</a>* <a class="code hl_function" href="classcore_1_1file_1_1FileReader.html#a1283a619871fb6ae3ecaa472afdab866">connect</a>(<span class="keyword">const</span> std::string&amp; path, <a class="code hl_class" href="classcore_1_1pipe_1_1Sink.html">core::pipe::Sink</a>&amp; writeStream, <span class="keyword">const</span> std::function&lt;<span class="keywordtype">void</span>(<span class="keywordtype">int</span> err)&gt;&amp; onError);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <span class="keyword">static</span> <a class="code hl_class" href="classcore_1_1file_1_1FileReader.html">FileReader</a>* <a class="code hl_function" href="classcore_1_1file_1_1FileReader.html#a1283a619871fb6ae3ecaa472afdab866">connect</a>(<span class="keyword">const</span> std::string&amp; path, <a class="code hl_namespace" href="namespacecore.html">core</a>::<a class="code hl_namespace" href="namespacecore_1_1pipe.html">pipe</a>::<a class="code hl_class" href="classcore_1_1pipe_1_1Sink.html">Sink</a>&amp; writeStream, <span class="keyword">const</span> std::function&lt;<span class="keywordtype">void</span>(<span class="keywordtype">int</span> err)&gt;&amp; onError);</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classcore_1_1file_1_1FileReader.html#a4d9266c6804d36f5bf203df026f89a0c">onEvent</a>(<span class="keyword">const</span> <a class="code hl_class" href="classutils_1_1Timeval.html">utils::Timeval</a>&amp; currentTime) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classcore_1_1file_1_1FileReader.html#a4d9266c6804d36f5bf203df026f89a0c">onEvent</a>(<span class="keyword">const</span> <a class="code hl_namespace" href="namespaceutils.html">utils</a>::<a class="code hl_class" href="classutils_1_1Timeval.html">Timeval</a>&amp; currentTime) <span class="keyword">override</span>;</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classcore_1_1file_1_1FileReader.html#a31865695a9f314b6077afca674e82508">suspend</a>();</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classcore_1_1file_1_1FileReader.html#ae16913239b7e1137fc9da4df483fb3ec">resume</a>();</div>
@@ -162,29 +159,39 @@ $(document).ready(function(){initNavTree('FileReader_8h_source.html',''); initRe
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keyword">private</span>:</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="classcore_1_1file_1_1FileReader.html#aeb217c305e6ce9f7d61e50d14039cc8e">   61</a></span>        <span class="keywordtype">bool</span> <a class="code hl_variable" href="classcore_1_1file_1_1FileReader.html#aeb217c305e6ce9f7d61e50d14039cc8e">suspended</a> = <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    };</div>
-</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>} <span class="comment">// namespace core::file</span></div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="preprocessor">#endif </span><span class="comment">// CORE_FILE_FILEREADER_H</span></div>
-<div class="ttc" id="aEventReceiver_8h_html"><div class="ttname"><a href="EventReceiver_8h.html">EventReceiver.h</a></div></div>
-<div class="ttc" id="aFile_8h_html"><div class="ttname"><a href="File_8h.html">File.h</a></div></div>
-<div class="ttc" id="aSource_8h_html"><div class="ttname"><a href="Source_8h.html">Source.h</a></div></div>
-<div class="ttc" id="aclasscore_1_1Descriptor_html_a359e01790fa87afb5e1b75df7904bc2d"><div class="ttname"><a href="classcore_1_1Descriptor.html#a359e01790fa87afb5e1b75df7904bc2d">core::Descriptor::fd</a></div><div class="ttdeci">int fd</div><div class="ttdef"><b>Definition</b> <a href="Descriptor_8h_source.html#l00049">Descriptor.h:49</a></div></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="preprocessor">#</span><span class="preprocessor">endif</span> <span class="comment">// CORE_FILE_FILEREADER_H</span></div>
+<div class="ttc" id="aFileReader_8cpp_html_ad44f6a2b5ed7272fb034e45b060f002b"><div class="ttname"><a href="FileReader_8cpp.html#ad44f6a2b5ed7272fb034e45b060f002b">MF_READSIZE</a></div><div class="ttdeci">#define MF_READSIZE</div><div class="ttdef"><b>Definition</b> <a href="FileReader_8cpp_source.html#l00030">FileReader.cpp:30</a></div></div>
+<div class="ttc" id="aclasscore_1_1Descriptor_html"><div class="ttname"><a href="classcore_1_1Descriptor.html">core::Descriptor</a></div><div class="ttdef"><b>Definition</b> <a href="Descriptor_8h_source.html#l00028">Descriptor.h:28</a></div></div>
+<div class="ttc" id="aclasscore_1_1Descriptor_html_a9a25cc592b32b6d4eb890ed9852753ca"><div class="ttname"><a href="classcore_1_1Descriptor.html#a9a25cc592b32b6d4eb890ed9852753ca">core::Descriptor::Descriptor</a></div><div class="ttdeci">Descriptor(int fd)</div><div class="ttdef"><b>Definition</b> <a href="Descriptor_8cpp_source.html#l00029">Descriptor.cpp:29</a></div></div>
+<div class="ttc" id="aclasscore_1_1Descriptor_html_af1ac9826d5c5f44bb357c845932ea5e4"><div class="ttname"><a href="classcore_1_1Descriptor.html#af1ac9826d5c5f44bb357c845932ea5e4">core::Descriptor::getFd</a></div><div class="ttdeci">int getFd() const</div><div class="ttdef"><b>Definition</b> <a href="Descriptor_8cpp_source.html#l00046">Descriptor.cpp:46</a></div></div>
 <div class="ttc" id="aclasscore_1_1EventReceiver_html"><div class="ttname"><a href="classcore_1_1EventReceiver.html">core::EventReceiver</a></div><div class="ttdef"><b>Definition</b> <a href="EventReceiver_8h_source.html#l00036">EventReceiver.h:36</a></div></div>
+<div class="ttc" id="aclasscore_1_1EventReceiver_html_ad353e97a9089b2769e52f8825e4878b1"><div class="ttname"><a href="classcore_1_1EventReceiver.html#ad353e97a9089b2769e52f8825e4878b1">core::EventReceiver::span</a></div><div class="ttdeci">void span()</div><div class="ttdef"><b>Definition</b> <a href="EventReceiver_8cpp_source.html#l00035">EventReceiver.cpp:35</a></div></div>
+<div class="ttc" id="aclasscore_1_1EventReceiver_html_adec275118bd8a68e2b4cb71fa94d79b6"><div class="ttname"><a href="classcore_1_1EventReceiver.html#adec275118bd8a68e2b4cb71fa94d79b6">core::EventReceiver::EventReceiver</a></div><div class="ttdeci">EventReceiver(const std::string &amp;name)</div><div class="ttdef"><b>Definition</b> <a href="EventReceiver_8cpp_source.html#l00027">EventReceiver.cpp:27</a></div></div>
 <div class="ttc" id="aclasscore_1_1file_1_1FileReader_html"><div class="ttname"><a href="classcore_1_1file_1_1FileReader.html">core::file::FileReader</a></div><div class="ttdef"><b>Definition</b> <a href="FileReader_8h_source.html#l00043">FileReader.h:46</a></div></div>
 <div class="ttc" id="aclasscore_1_1file_1_1FileReader_html_a1283a619871fb6ae3ecaa472afdab866"><div class="ttname"><a href="classcore_1_1file_1_1FileReader.html#a1283a619871fb6ae3ecaa472afdab866">core::file::FileReader::connect</a></div><div class="ttdeci">static FileReader * connect(const std::string &amp;path, core::pipe::Sink &amp;writeStream, const std::function&lt; void(int err)&gt; &amp;onError)</div><div class="ttdef"><b>Definition</b> <a href="FileReader_8cpp_source.html#l00042">FileReader.cpp:42</a></div></div>
 <div class="ttc" id="aclasscore_1_1file_1_1FileReader_html_a31865695a9f314b6077afca674e82508"><div class="ttname"><a href="classcore_1_1file_1_1FileReader.html#a31865695a9f314b6077afca674e82508">core::file::FileReader::suspend</a></div><div class="ttdeci">void suspend()</div><div class="ttdef"><b>Definition</b> <a href="FileReader_8cpp_source.html#l00082">FileReader.cpp:82</a></div></div>
 <div class="ttc" id="aclasscore_1_1file_1_1FileReader_html_a4d9266c6804d36f5bf203df026f89a0c"><div class="ttname"><a href="classcore_1_1file_1_1FileReader.html#a4d9266c6804d36f5bf203df026f89a0c">core::file::FileReader::onEvent</a></div><div class="ttdeci">void onEvent(const utils::Timeval &amp;currentTime) override</div><div class="ttdef"><b>Definition</b> <a href="FileReader_8cpp_source.html#l00058">FileReader.cpp:58</a></div></div>
+<div class="ttc" id="aclasscore_1_1file_1_1FileReader_html_a528c00603662070fffba7df4cffa067c"><div class="ttname"><a href="classcore_1_1file_1_1FileReader.html#a528c00603662070fffba7df4cffa067c">core::file::FileReader::FileReader</a></div><div class="ttdeci">FileReader(int fd, core::pipe::Sink &amp;writeStream, const std::string &amp;name)</div><div class="ttdef"><b>Definition</b> <a href="FileReader_8cpp_source.html#l00034">FileReader.cpp:34</a></div></div>
 <div class="ttc" id="aclasscore_1_1file_1_1FileReader_html_ae16913239b7e1137fc9da4df483fb3ec"><div class="ttname"><a href="classcore_1_1file_1_1FileReader.html#ae16913239b7e1137fc9da4df483fb3ec">core::file::FileReader::resume</a></div><div class="ttdeci">void resume()</div><div class="ttdef"><b>Definition</b> <a href="FileReader_8cpp_source.html#l00086">FileReader.cpp:86</a></div></div>
 <div class="ttc" id="aclasscore_1_1file_1_1FileReader_html_aeb217c305e6ce9f7d61e50d14039cc8e"><div class="ttname"><a href="classcore_1_1file_1_1FileReader.html#aeb217c305e6ce9f7d61e50d14039cc8e">core::file::FileReader::suspended</a></div><div class="ttdeci">bool suspended</div><div class="ttdef"><b>Definition</b> <a href="FileReader_8h_source.html#l00061">FileReader.h:61</a></div></div>
 <div class="ttc" id="aclasscore_1_1file_1_1FileReader_html_af5b1778d5de8b3bb7c6023d2436e9904"><div class="ttname"><a href="classcore_1_1file_1_1FileReader.html#af5b1778d5de8b3bb7c6023d2436e9904">core::file::FileReader::isSuspended</a></div><div class="ttdeci">bool isSuspended()</div><div class="ttdef"><b>Definition</b> <a href="FileReader_8cpp_source.html#l00091">FileReader.cpp:91</a></div></div>
 <div class="ttc" id="aclasscore_1_1file_1_1File_html"><div class="ttname"><a href="classcore_1_1file_1_1File.html">core::file::File</a></div><div class="ttdef"><b>Definition</b> <a href="File_8h_source.html#l00029">File.h:29</a></div></div>
 <div class="ttc" id="aclasscore_1_1pipe_1_1Sink_html"><div class="ttname"><a href="classcore_1_1pipe_1_1Sink.html">core::pipe::Sink</a></div><div class="ttdef"><b>Definition</b> <a href="Sink_8h_source.html#l00032">Sink.h:32</a></div></div>
 <div class="ttc" id="aclasscore_1_1pipe_1_1Source_html"><div class="ttname"><a href="classcore_1_1pipe_1_1Source.html">core::pipe::Source</a></div><div class="ttdef"><b>Definition</b> <a href="Source_8h_source.html#l00033">Source.h:33</a></div></div>
+<div class="ttc" id="aclasscore_1_1pipe_1_1Source_html_a15f331e8ca7bebe0fb64c7a2605bc9ef"><div class="ttname"><a href="classcore_1_1pipe_1_1Source.html#a15f331e8ca7bebe0fb64c7a2605bc9ef">core::pipe::Source::connect</a></div><div class="ttdeci">void connect(Sink &amp;sink)</div><div class="ttdef"><b>Definition</b> <a href="Source_8cpp_source.html#l00045">Source.cpp:45</a></div></div>
+<div class="ttc" id="aclasscore_1_1pipe_1_1Source_html_a179b74c2582275beb312423905f9cbd4"><div class="ttname"><a href="classcore_1_1pipe_1_1Source.html#a179b74c2582275beb312423905f9cbd4">core::pipe::Source::error</a></div><div class="ttdeci">void error(int errnum)</div><div class="ttdef"><b>Definition</b> <a href="Source_8cpp_source.html#l00071">Source.cpp:71</a></div></div>
+<div class="ttc" id="aclasscore_1_1pipe_1_1Source_html_a7363d1d567c71b78ebfd2c098a8993f2"><div class="ttname"><a href="classcore_1_1pipe_1_1Source.html#a7363d1d567c71b78ebfd2c098a8993f2">core::pipe::Source::send</a></div><div class="ttdeci">ssize_t send(const char *junk, std::size_t junkLen)</div><div class="ttdef"><b>Definition</b> <a href="Source_8cpp_source.html#l00058">Source.cpp:58</a></div></div>
+<div class="ttc" id="aclasscore_1_1pipe_1_1Source_html_a7cdfe3494b76d59780750d8af228f1d1"><div class="ttname"><a href="classcore_1_1pipe_1_1Source.html#a7cdfe3494b76d59780750d8af228f1d1">core::pipe::Source::eof</a></div><div class="ttdeci">void eof()</div><div class="ttdef"><b>Definition</b> <a href="Source_8cpp_source.html#l00077">Source.cpp:77</a></div></div>
 <div class="ttc" id="aclassutils_1_1Timeval_html"><div class="ttname"><a href="classutils_1_1Timeval.html">utils::Timeval</a></div><div class="ttdef"><b>Definition</b> <a href="Timeval_8h_source.html#l00036">Timeval.h:36</a></div></div>
 <div class="ttc" id="anamespacecore_1_1file_html"><div class="ttname"><a href="namespacecore_1_1file.html">core::file</a></div><div class="ttdef"><b>Definition</b> <a href="File_8cpp_source.html#l00025">File.cpp:25</a></div></div>
 <div class="ttc" id="anamespacecore_1_1pipe_html"><div class="ttname"><a href="namespacecore_1_1pipe.html">core::pipe</a></div><div class="ttdef"><b>Definition</b> <a href="FileReader_8h_source.html#l00037">FileReader.h:37</a></div></div>
+<div class="ttc" id="anamespacecore_1_1system_html"><div class="ttname"><a href="namespacecore_1_1system.html">core::system</a></div><div class="ttdef"><b>Definition</b> <a href="dlfcn_8cpp_source.html#l00027">dlfcn.cpp:27</a></div></div>
+<div class="ttc" id="anamespacecore_1_1system_html_a38a2ef544196b684eb5850c42e8ee770"><div class="ttname"><a href="namespacecore_1_1system.html#a38a2ef544196b684eb5850c42e8ee770">core::system::read</a></div><div class="ttdeci">ssize_t read(int fd, void *buf, std::size_t count)</div><div class="ttdef"><b>Definition</b> <a href="unistd_8cpp_source.html#l00034">unistd.cpp:34</a></div></div>
+<div class="ttc" id="anamespacecore_1_1system_html_af932d59deb1d46aca925c487cebf0ab5"><div class="ttname"><a href="namespacecore_1_1system.html#af932d59deb1d46aca925c487cebf0ab5">core::system::open</a></div><div class="ttdeci">int open(const char *pathname, int flags)</div><div class="ttdef"><b>Definition</b> <a href="unistd_8cpp_source.html#l00029">unistd.cpp:29</a></div></div>
+<div class="ttc" id="anamespacecore_html"><div class="ttname"><a href="namespacecore.html">core</a></div><div class="ttdef"><b>Definition</b> <a href="Descriptor_8cpp_source.html#l00027">Descriptor.cpp:27</a></div></div>
 <div class="ttc" id="anamespaceutils_html"><div class="ttname"><a href="namespaceutils.html">utils</a></div><div class="ttdef"><b>Definition</b> <a href="DescriptorEventPublisher_8h_source.html#l00026">DescriptorEventPublisher.h:26</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
@@ -192,7 +199,7 @@ $(document).ready(function(){initNavTree('FileReader_8h_source.html',''); initRe
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_4270bfced15e0e73154b13468c7c9ad9.html">core</a></li><li class="navelem"><a class="el" href="dir_3cf79a01c77d233dd5dadaf9c60ce692.html">file</a></li><li class="navelem"><a class="el" href="FileReader_8h.html">FileReader.h</a></li>
-    <li class="footer">Generated on Tue Oct 10 2023 10:11:44 for snode.c by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Tue Oct 10 2023 10:23:06 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

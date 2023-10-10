@@ -10,7 +10,7 @@ var searchData=
   ['line_7',['line',['../classweb_1_1http_1_1Parser.html#af961ee96cda4105c5422fe4cbfa38b0d',1,'web::http::Parser']]],
   ['linkedsocketcontextupgradeplugins_8',['linkedSocketContextUpgradePlugins',['../classweb_1_1http_1_1SocketContextUpgradeFactorySelector.html#a2c292130080c1a659f8110baadd3dd4f',1,'web::http::SocketContextUpgradeFactorySelector']]],
   ['linkedsubprotocolfactories_9',['linkedSubProtocolFactories',['../classweb_1_1websocket_1_1SubProtocolFactorySelector.html#ae71856f91e3f5c2baa0fcc4bceef22cb',1,'web::websocket::SubProtocolFactorySelector']]],
-  ['localaddress_10',['localaddress',['../classcore_1_1socket_1_1stream_1_1SocketAcceptor.html#a5456ff66bc0888109fc16beac6e182f9',1,'core::socket::stream::SocketAcceptor::localAddress'],['../classcore_1_1socket_1_1stream_1_1SocketConnectionT.html#a01b40307f2844c0b18d8f8b92845596e',1,'core::socket::stream::SocketConnectionT::localAddress']]],
+  ['localaddress_10',['localaddress',['../classcore_1_1socket_1_1stream_1_1SocketConnectionT.html#a01b40307f2844c0b18d8f8b92845596e',1,'core::socket::stream::SocketConnectionT::localAddress'],['../classcore_1_1socket_1_1stream_1_1SocketAcceptor.html#a5456ff66bc0888109fc16beac6e182f9',1,'core::socket::stream::SocketAcceptor::localAddress']]],
   ['logdirectory_11',['logDirectory',['../classutils_1_1Config.html#ad6436881181bbd9fe0ae1e96c0cbae82',1,'utils::Config']]],
   ['logfileopt_12',['logFileOpt',['../classutils_1_1Config.html#aba2faeb0b03f445e691bae4c9f1a62c9',1,'utils::Config']]],
   ['loglevelopt_13',['logLevelOpt',['../classutils_1_1Config.html#a3f78a0bd8709f7321b269697983ca6bd',1,'utils::Config']]]

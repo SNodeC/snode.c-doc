@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>snode.c: utils/Config.cpp File Reference</title>
+<title>SNode.C: utils/Config.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">snode.c
+   <div id="projectname">SNode.C
    </div>
   </td>
  </tr>
@@ -105,7 +105,7 @@ $(document).ready(function(){initNavTree('Config_8cpp.html',''); initResizable()
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for Config.cpp:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="Config_8cpp__incl.svg" width="562" height="110"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="Config_8cpp__incl.svg" width="610" height="110"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <p><a href="Config_8cpp_source.html">Go to the source code of this file.</a></p>
@@ -164,6 +164,88 @@ Enumerations</h2></td></tr>
 , <a class="el" href="namespaceutils_1_1Color.html#a32f4a227bdc79ba6b98af53dfc126808a6048affb47a52a91de89790038b5ab27">utils::Color::BG_BLUE</a> = 44
 , <br />
 &#160;&#160;<a class="el" href="namespaceutils_1_1Color.html#a32f4a227bdc79ba6b98af53dfc126808a1b6f054082feceb002af4726d29c463f">utils::Color::BG_DEFAULT</a> = 49
+, <a class="el" href="namespaceutils_1_1Color.html#a32f4a227bdc79ba6b98af53dfc126808aec939dfa85c55fe16445f3c02bb012d8">utils::Color::FG_DEFAULT</a> = 39
+, <a class="el" href="namespaceutils_1_1Color.html#a32f4a227bdc79ba6b98af53dfc126808a10f1284e24fad88e7ac5966b6f000496">utils::Color::FG_BLACK</a> = 30
+, <a class="el" href="namespaceutils_1_1Color.html#a32f4a227bdc79ba6b98af53dfc126808a0343bd45782960b4bfc275e16237cfc8">utils::Color::FG_RED</a> = 31
+, <br />
+&#160;&#160;<a class="el" href="namespaceutils_1_1Color.html#a32f4a227bdc79ba6b98af53dfc126808ac5e2716a4915a3f96c501cbe821f553b">utils::Color::FG_GREEN</a> = 32
+, <a class="el" href="namespaceutils_1_1Color.html#a32f4a227bdc79ba6b98af53dfc126808acc0e43ab784d780cfa1e500b4cc8d65e">utils::Color::FG_YELLOW</a> = 33
+, <a class="el" href="namespaceutils_1_1Color.html#a32f4a227bdc79ba6b98af53dfc126808abc692cd3754240e2f8efac99386f1cb3">utils::Color::FG_BLUE</a> = 34
+, <a class="el" href="namespaceutils_1_1Color.html#a32f4a227bdc79ba6b98af53dfc126808aefc55f771cb0ce45ce6a3c15d78e9b88">utils::Color::FG_MAGENTA</a> = 35
+, <br />
+&#160;&#160;<a class="el" href="namespaceutils_1_1Color.html#a32f4a227bdc79ba6b98af53dfc126808a933cab284b423af64a24fc8ac79df16b">utils::Color::FG_CYAN</a> = 36
+, <a class="el" href="namespaceutils_1_1Color.html#a32f4a227bdc79ba6b98af53dfc126808a8bbd766c4b3754a29dfb3a52ab86eb6b">utils::Color::FG_LIGHT_GRAY</a> = 37
+, <a class="el" href="namespaceutils_1_1Color.html#a32f4a227bdc79ba6b98af53dfc126808a4dffb07f61fb3b5693c646d246666101">utils::Color::FG_DARK_GRAY</a> = 90
+, <a class="el" href="namespaceutils_1_1Color.html#a32f4a227bdc79ba6b98af53dfc126808a7e6318e2639475603215a294f36fa414">utils::Color::FG_LIGHT_RED</a> = 91
+, <br />
+&#160;&#160;<a class="el" href="namespaceutils_1_1Color.html#a32f4a227bdc79ba6b98af53dfc126808a4b008ef745c3dca8f33a8ca0b12d8582">utils::Color::FG_LIGHT_GREEN</a> = 92
+, <a class="el" href="namespaceutils_1_1Color.html#a32f4a227bdc79ba6b98af53dfc126808a283fb285620d8f6d9d8a10b616159897">utils::Color::FG_LIGHT_YELLOW</a> = 93
+, <a class="el" href="namespaceutils_1_1Color.html#a32f4a227bdc79ba6b98af53dfc126808a9dfcab60a5ea7665cc1721632ffbb227">utils::Color::FG_LIGHT_BLUE</a> = 94
+, <a class="el" href="namespaceutils_1_1Color.html#a32f4a227bdc79ba6b98af53dfc126808a9cd415314e334bb0bcc932979031173a">utils::Color::FG_LIGHT_MAGENTA</a> = 95
+, <br />
+&#160;&#160;<a class="el" href="namespaceutils_1_1Color.html#a32f4a227bdc79ba6b98af53dfc126808a02cd3bf8465ed6a202da3647c9d26bf9">utils::Color::FG_LIGHT_CYAN</a> = 96
+, <a class="el" href="namespaceutils_1_1Color.html#a32f4a227bdc79ba6b98af53dfc126808ac70d7b5a6ca66e8ba0f1d5f528515573">utils::Color::FG_WHITE</a> = 97
+, <a class="el" href="namespaceutils_1_1Color.html#a32f4a227bdc79ba6b98af53dfc126808a839d5bffda997d1e41da5978ddb260e3">utils::Color::BG_RED</a> = 41
+, <a class="el" href="namespaceutils_1_1Color.html#a32f4a227bdc79ba6b98af53dfc126808a52be40da845c5ad545356e5d8573cb78">utils::Color::BG_GREEN</a> = 42
+, <br />
+&#160;&#160;<a class="el" href="namespaceutils_1_1Color.html#a32f4a227bdc79ba6b98af53dfc126808a6048affb47a52a91de89790038b5ab27">utils::Color::BG_BLUE</a> = 44
+, <a class="el" href="namespaceutils_1_1Color.html#a32f4a227bdc79ba6b98af53dfc126808a1b6f054082feceb002af4726d29c463f">utils::Color::BG_DEFAULT</a> = 49
+<br />
+ }</td></tr>
+<tr class="separator:a32f4a227bdc79ba6b98af53dfc126808"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32f4a227bdc79ba6b98af53dfc126808" id="r_a32f4a227bdc79ba6b98af53dfc126808"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutils_1_1Color.html#a32f4a227bdc79ba6b98af53dfc126808">utils::Color::Code</a> { <br />
+&#160;&#160;<a class="el" href="namespaceutils_1_1Color.html#a32f4a227bdc79ba6b98af53dfc126808aec939dfa85c55fe16445f3c02bb012d8">utils::Color::FG_DEFAULT</a> = 39
+, <a class="el" href="namespaceutils_1_1Color.html#a32f4a227bdc79ba6b98af53dfc126808a10f1284e24fad88e7ac5966b6f000496">utils::Color::FG_BLACK</a> = 30
+, <a class="el" href="namespaceutils_1_1Color.html#a32f4a227bdc79ba6b98af53dfc126808a0343bd45782960b4bfc275e16237cfc8">utils::Color::FG_RED</a> = 31
+, <a class="el" href="namespaceutils_1_1Color.html#a32f4a227bdc79ba6b98af53dfc126808ac5e2716a4915a3f96c501cbe821f553b">utils::Color::FG_GREEN</a> = 32
+, <br />
+&#160;&#160;<a class="el" href="namespaceutils_1_1Color.html#a32f4a227bdc79ba6b98af53dfc126808acc0e43ab784d780cfa1e500b4cc8d65e">utils::Color::FG_YELLOW</a> = 33
+, <a class="el" href="namespaceutils_1_1Color.html#a32f4a227bdc79ba6b98af53dfc126808abc692cd3754240e2f8efac99386f1cb3">utils::Color::FG_BLUE</a> = 34
+, <a class="el" href="namespaceutils_1_1Color.html#a32f4a227bdc79ba6b98af53dfc126808aefc55f771cb0ce45ce6a3c15d78e9b88">utils::Color::FG_MAGENTA</a> = 35
+, <a class="el" href="namespaceutils_1_1Color.html#a32f4a227bdc79ba6b98af53dfc126808a933cab284b423af64a24fc8ac79df16b">utils::Color::FG_CYAN</a> = 36
+, <br />
+&#160;&#160;<a class="el" href="namespaceutils_1_1Color.html#a32f4a227bdc79ba6b98af53dfc126808a8bbd766c4b3754a29dfb3a52ab86eb6b">utils::Color::FG_LIGHT_GRAY</a> = 37
+, <a class="el" href="namespaceutils_1_1Color.html#a32f4a227bdc79ba6b98af53dfc126808a4dffb07f61fb3b5693c646d246666101">utils::Color::FG_DARK_GRAY</a> = 90
+, <a class="el" href="namespaceutils_1_1Color.html#a32f4a227bdc79ba6b98af53dfc126808a7e6318e2639475603215a294f36fa414">utils::Color::FG_LIGHT_RED</a> = 91
+, <a class="el" href="namespaceutils_1_1Color.html#a32f4a227bdc79ba6b98af53dfc126808a4b008ef745c3dca8f33a8ca0b12d8582">utils::Color::FG_LIGHT_GREEN</a> = 92
+, <br />
+&#160;&#160;<a class="el" href="namespaceutils_1_1Color.html#a32f4a227bdc79ba6b98af53dfc126808a283fb285620d8f6d9d8a10b616159897">utils::Color::FG_LIGHT_YELLOW</a> = 93
+, <a class="el" href="namespaceutils_1_1Color.html#a32f4a227bdc79ba6b98af53dfc126808a9dfcab60a5ea7665cc1721632ffbb227">utils::Color::FG_LIGHT_BLUE</a> = 94
+, <a class="el" href="namespaceutils_1_1Color.html#a32f4a227bdc79ba6b98af53dfc126808a9cd415314e334bb0bcc932979031173a">utils::Color::FG_LIGHT_MAGENTA</a> = 95
+, <a class="el" href="namespaceutils_1_1Color.html#a32f4a227bdc79ba6b98af53dfc126808a02cd3bf8465ed6a202da3647c9d26bf9">utils::Color::FG_LIGHT_CYAN</a> = 96
+, <br />
+&#160;&#160;<a class="el" href="namespaceutils_1_1Color.html#a32f4a227bdc79ba6b98af53dfc126808ac70d7b5a6ca66e8ba0f1d5f528515573">utils::Color::FG_WHITE</a> = 97
+, <a class="el" href="namespaceutils_1_1Color.html#a32f4a227bdc79ba6b98af53dfc126808a839d5bffda997d1e41da5978ddb260e3">utils::Color::BG_RED</a> = 41
+, <a class="el" href="namespaceutils_1_1Color.html#a32f4a227bdc79ba6b98af53dfc126808a52be40da845c5ad545356e5d8573cb78">utils::Color::BG_GREEN</a> = 42
+, <a class="el" href="namespaceutils_1_1Color.html#a32f4a227bdc79ba6b98af53dfc126808a6048affb47a52a91de89790038b5ab27">utils::Color::BG_BLUE</a> = 44
+, <br />
+&#160;&#160;<a class="el" href="namespaceutils_1_1Color.html#a32f4a227bdc79ba6b98af53dfc126808a1b6f054082feceb002af4726d29c463f">utils::Color::BG_DEFAULT</a> = 49
+, <a class="el" href="namespaceutils_1_1Color.html#a32f4a227bdc79ba6b98af53dfc126808aec939dfa85c55fe16445f3c02bb012d8">utils::Color::FG_DEFAULT</a> = 39
+, <a class="el" href="namespaceutils_1_1Color.html#a32f4a227bdc79ba6b98af53dfc126808a10f1284e24fad88e7ac5966b6f000496">utils::Color::FG_BLACK</a> = 30
+, <a class="el" href="namespaceutils_1_1Color.html#a32f4a227bdc79ba6b98af53dfc126808a0343bd45782960b4bfc275e16237cfc8">utils::Color::FG_RED</a> = 31
+, <br />
+&#160;&#160;<a class="el" href="namespaceutils_1_1Color.html#a32f4a227bdc79ba6b98af53dfc126808ac5e2716a4915a3f96c501cbe821f553b">utils::Color::FG_GREEN</a> = 32
+, <a class="el" href="namespaceutils_1_1Color.html#a32f4a227bdc79ba6b98af53dfc126808acc0e43ab784d780cfa1e500b4cc8d65e">utils::Color::FG_YELLOW</a> = 33
+, <a class="el" href="namespaceutils_1_1Color.html#a32f4a227bdc79ba6b98af53dfc126808abc692cd3754240e2f8efac99386f1cb3">utils::Color::FG_BLUE</a> = 34
+, <a class="el" href="namespaceutils_1_1Color.html#a32f4a227bdc79ba6b98af53dfc126808aefc55f771cb0ce45ce6a3c15d78e9b88">utils::Color::FG_MAGENTA</a> = 35
+, <br />
+&#160;&#160;<a class="el" href="namespaceutils_1_1Color.html#a32f4a227bdc79ba6b98af53dfc126808a933cab284b423af64a24fc8ac79df16b">utils::Color::FG_CYAN</a> = 36
+, <a class="el" href="namespaceutils_1_1Color.html#a32f4a227bdc79ba6b98af53dfc126808a8bbd766c4b3754a29dfb3a52ab86eb6b">utils::Color::FG_LIGHT_GRAY</a> = 37
+, <a class="el" href="namespaceutils_1_1Color.html#a32f4a227bdc79ba6b98af53dfc126808a4dffb07f61fb3b5693c646d246666101">utils::Color::FG_DARK_GRAY</a> = 90
+, <a class="el" href="namespaceutils_1_1Color.html#a32f4a227bdc79ba6b98af53dfc126808a7e6318e2639475603215a294f36fa414">utils::Color::FG_LIGHT_RED</a> = 91
+, <br />
+&#160;&#160;<a class="el" href="namespaceutils_1_1Color.html#a32f4a227bdc79ba6b98af53dfc126808a4b008ef745c3dca8f33a8ca0b12d8582">utils::Color::FG_LIGHT_GREEN</a> = 92
+, <a class="el" href="namespaceutils_1_1Color.html#a32f4a227bdc79ba6b98af53dfc126808a283fb285620d8f6d9d8a10b616159897">utils::Color::FG_LIGHT_YELLOW</a> = 93
+, <a class="el" href="namespaceutils_1_1Color.html#a32f4a227bdc79ba6b98af53dfc126808a9dfcab60a5ea7665cc1721632ffbb227">utils::Color::FG_LIGHT_BLUE</a> = 94
+, <a class="el" href="namespaceutils_1_1Color.html#a32f4a227bdc79ba6b98af53dfc126808a9cd415314e334bb0bcc932979031173a">utils::Color::FG_LIGHT_MAGENTA</a> = 95
+, <br />
+&#160;&#160;<a class="el" href="namespaceutils_1_1Color.html#a32f4a227bdc79ba6b98af53dfc126808a02cd3bf8465ed6a202da3647c9d26bf9">utils::Color::FG_LIGHT_CYAN</a> = 96
+, <a class="el" href="namespaceutils_1_1Color.html#a32f4a227bdc79ba6b98af53dfc126808ac70d7b5a6ca66e8ba0f1d5f528515573">utils::Color::FG_WHITE</a> = 97
+, <a class="el" href="namespaceutils_1_1Color.html#a32f4a227bdc79ba6b98af53dfc126808a839d5bffda997d1e41da5978ddb260e3">utils::Color::BG_RED</a> = 41
+, <a class="el" href="namespaceutils_1_1Color.html#a32f4a227bdc79ba6b98af53dfc126808a52be40da845c5ad545356e5d8573cb78">utils::Color::BG_GREEN</a> = 42
+, <br />
+&#160;&#160;<a class="el" href="namespaceutils_1_1Color.html#a32f4a227bdc79ba6b98af53dfc126808a6048affb47a52a91de89790038b5ab27">utils::Color::BG_BLUE</a> = 44
+, <a class="el" href="namespaceutils_1_1Color.html#a32f4a227bdc79ba6b98af53dfc126808a1b6f054082feceb002af4726d29c463f">utils::Color::BG_DEFAULT</a> = 49
 <br />
  }</td></tr>
 <tr class="separator:a32f4a227bdc79ba6b98af53dfc126808"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -230,7 +312,7 @@ Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_cbdb8362360e11eafe2fa3bc74cf0ffd.html">utils</a></li><li class="navelem"><a class="el" href="Config_8cpp.html">Config.cpp</a></li>
-    <li class="footer">Generated on Tue Oct 10 2023 10:11:47 for snode.c by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Tue Oct 10 2023 10:25:03 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

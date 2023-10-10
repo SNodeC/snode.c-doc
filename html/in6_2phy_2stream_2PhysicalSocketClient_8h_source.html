@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>snode.c: net/in6/phy/stream/PhysicalSocketClient.h Source File</title>
+<title>SNode.C: net/in6/phy/stream/PhysicalSocketClient.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">snode.c
+   <div id="projectname">SNode.C
    </div>
   </td>
  </tr>
@@ -98,74 +98,73 @@ $(document).ready(function(){initNavTree('in6_2phy_2stream_2PhysicalSocketClient
 </div><!--header-->
 <div class="contents">
 <a href="in6_2phy_2stream_2PhysicalSocketClient_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * snode.c - a slim toolkit for network communication</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * Copyright (C) 2020, 2021, 2022, 2023 Volker Christian &lt;me@vchrist.at&gt;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> *</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * This program is free software: you can redistribute it and/or modify</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * it under the terms of the GNU Lesser General Public License as published</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * by the Free Software Foundation, either version 3 of the License, or</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> * (at your option) any later version.</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment"> *</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment"> * This program is distributed in the hope that it will be useful,</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment"> * but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment"> * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment"> * GNU Lesser General Public License for more details.</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment"> *</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment"> * You should have received a copy of the GNU Lesser General Public License</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment"> * along with this program. If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> */</span></div>
+<div class="line"><span class="lineno">    2</span><span class="comment"> * snode.c - a slim toolkit for network communication</span></div>
+<div class="line"><span class="lineno">    3</span><span class="comment"> * Copyright (C) 2020, 2021, 2022, 2023 Volker Christian &lt;me@vchrist.at&gt;</span></div>
+<div class="line"><span class="lineno">    4</span><span class="comment"> *</span></div>
+<div class="line"><span class="lineno">    5</span><span class="comment"> * This program is free software: you can redistribute it and/or modify</span></div>
+<div class="line"><span class="lineno">    6</span><span class="comment"> * it under the terms of the GNU Lesser General Public License as published</span></div>
+<div class="line"><span class="lineno">    7</span><span class="comment"> * by the Free Software Foundation, either version 3 of the License, or</span></div>
+<div class="line"><span class="lineno">    8</span><span class="comment"> * (at your option) any later version.</span></div>
+<div class="line"><span class="lineno">    9</span><span class="comment"> *</span></div>
+<div class="line"><span class="lineno">   10</span><span class="comment"> * This program is distributed in the hope that it will be useful,</span></div>
+<div class="line"><span class="lineno">   11</span><span class="comment"> * but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
+<div class="line"><span class="lineno">   12</span><span class="comment"> * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the</span></div>
+<div class="line"><span class="lineno">   13</span><span class="comment"> * GNU Lesser General Public License for more details.</span></div>
+<div class="line"><span class="lineno">   14</span><span class="comment"> *</span></div>
+<div class="line"><span class="lineno">   15</span><span class="comment"> * You should have received a copy of the GNU Lesser General Public License</span></div>
+<div class="line"><span class="lineno">   16</span><span class="comment"> * along with this program. If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
+<div class="line"><span class="lineno">   17</span><span class="comment"> */</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#ifndef NET_IN6_PHY_STREAM_PHYSICALSOCKETCLIENT_H</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#define NET_IN6_PHY_STREAM_PHYSICALSOCKETCLIENT_H</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#</span><span class="preprocessor">ifndef</span> <span class="preprocessor">NET_IN6_PHY_STREAM_PHYSICALSOCKETCLIENT_H</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#</span><span class="preprocessor">define</span> <span class="preprocessor">NET_IN6_PHY_STREAM_PHYSICALSOCKETCLIENT_H</span></div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &quot;<a class="code" href="in6_2phy_2stream_2PhysicalSocket_8h.html">net/in6/phy/stream/PhysicalSocket.h</a>&quot;</span>   <span class="comment">// IWYU pragma: export</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &quot;<a class="code" href="phy_2stream_2PhysicalSocketClient_8h.html">net/phy/stream/PhysicalSocketClient.h</a>&quot;</span> <span class="comment">// IWYU pragma: export</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&quot;net/in6/phy/stream/PhysicalSocket.h&quot;</span>   <span class="comment">// IWYU pragma: export</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&quot;net/phy/stream/PhysicalSocketClient.h&quot;</span> <span class="comment">// IWYU pragma: export</span></div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment">// IWYU pragma: no_include &quot;net/in6/phy/stream/PhysicalSocket.hpp&quot;</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#ifndef DOXYGEN_SHOULD_SKIP_THIS</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#</span><span class="preprocessor">ifndef</span> <span class="preprocessor">DOXYGEN_SHOULD_SKIP_THIS</span></div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#endif </span><span class="comment">/* DOXYGEN_SHOULD_SKIP_THIS */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#</span><span class="preprocessor">endif</span> <span class="comment">/* DOXYGEN_SHOULD_SKIP_THIS */</span></div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacenet_1_1in6_1_1phy_1_1stream.html">net::in6::phy::stream</a> {</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">namespace</span> net::in6::<a class="code hl_namespace" href="namespacenet_1_1in6_1_1phy.html">phy</a>::<a class="code hl_namespace" href="namespacenet_1_1in6_1_1phy_1_1stream.html">stream</a> {</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="foldopen" id="foldopen00033" data-start="{" data-end="};">
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="classnet_1_1in6_1_1phy_1_1stream_1_1PhysicalSocketClient.html">   33</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classnet_1_1in6_1_1phy_1_1stream_1_1PhysicalSocketClient.html">PhysicalSocketClient</a> : <span class="keyword">public</span> <a class="code hl_class" href="classnet_1_1in6_1_1phy_1_1stream_1_1PhysicalSocket.html">net::in6::phy::stream::PhysicalSocket</a>&lt;net::phy::stream::PhysicalSocketClient&gt; {</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="classnet_1_1in6_1_1phy_1_1stream_1_1PhysicalSocketClient.html">   33</a></span>    <span class="keyword">class</span> <a class="code hl_class" href="classnet_1_1in6_1_1phy_1_1stream_1_1PhysicalSocketClient.html">PhysicalSocketClient</a> : <span class="keyword">public</span> net::in6::<a class="code hl_namespace" href="namespacenet_1_1in6_1_1phy.html">phy</a>::<a class="code hl_namespace" href="namespacenet_1_1in6_1_1phy_1_1stream.html">stream</a>::<a class="code hl_class" href="classnet_1_1in6_1_1phy_1_1stream_1_1PhysicalSocket.html">PhysicalSocket</a>&lt;net::<a class="code hl_namespace" href="namespacenet_1_1phy.html">phy</a>::<a class="code hl_namespace" href="namespacenet_1_1phy_1_1stream.html">stream</a>::<a class="code hl_class" href="classnet_1_1phy_1_1stream_1_1PhysicalSocketClient.html">PhysicalSocketClient</a>&gt; {</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="classnet_1_1in6_1_1phy_1_1stream_1_1PhysicalSocketClient.html#a7fa9447e7339c9985aa9f600c2344a59">   35</a></span>        <span class="keyword">using </span><a class="code hl_class" href="classnet_1_1in6_1_1phy_1_1stream_1_1PhysicalSocket.html">Super</a> = <a class="code hl_class" href="classnet_1_1in6_1_1phy_1_1stream_1_1PhysicalSocket.html">net::in6::phy::stream::PhysicalSocket&lt;net::phy::stream::PhysicalSocketClient&gt;</a>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="classnet_1_1in6_1_1phy_1_1stream_1_1PhysicalSocketClient.html#a7fa9447e7339c9985aa9f600c2344a59">   35</a></span>        <span class="keyword">using</span> Super = net::in6::<a class="code hl_namespace" href="namespacenet_1_1in6_1_1phy.html">phy</a>::<a class="code hl_namespace" href="namespacenet_1_1in6_1_1phy_1_1stream.html">stream</a>::<a class="code hl_class" href="classnet_1_1in6_1_1phy_1_1stream_1_1PhysicalSocket.html">PhysicalSocket</a>&lt;net::<a class="code hl_namespace" href="namespacenet_1_1phy.html">phy</a>::<a class="code hl_namespace" href="namespacenet_1_1phy_1_1stream.html">stream</a>::<a class="code hl_class" href="classnet_1_1phy_1_1stream_1_1PhysicalSocketClient.html">PhysicalSocketClient</a>&gt;;</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="keyword">using </span><a class="code hl_class" href="classnet_1_1in6_1_1phy_1_1PhysicalSocket.html">Super::Super</a>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="keyword">using</span> Super::Super;</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="classnet_1_1in6_1_1phy_1_1stream_1_1PhysicalSocketClient.html#af4652a4d9370202462f7b979b37fe1c7">   40</a></span>        <a class="code hl_function" href="classnet_1_1in6_1_1phy_1_1stream_1_1PhysicalSocketClient.html#af4652a4d9370202462f7b979b37fe1c7">PhysicalSocketClient</a>(<span class="keyword">const</span> <a class="code hl_class" href="classnet_1_1in6_1_1phy_1_1stream_1_1PhysicalSocketClient.html">PhysicalSocketClient</a>&amp;) = <span class="keywordflow">default</span>;</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <a class="code hl_function" href="classnet_1_1in6_1_1phy_1_1stream_1_1PhysicalSocketClient.html#ade6a300fe6e2161776252bfe48fc8270">~PhysicalSocketClient</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        ~<a class="code hl_function" href="classnet_1_1in6_1_1phy_1_1stream_1_1PhysicalSocketClient.html#ade6a300fe6e2161776252bfe48fc8270">PhysicalSocketClient</a>() override;</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    };</div>
-</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>} <span class="comment">// namespace net::in6::phy::stream</span></div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="keyword">extern</span> <span class="keyword">template</span> <span class="keyword">class </span><a class="code hl_class" href="classnet_1_1phy_1_1stream_1_1PhysicalSocketClient.html">net::phy::stream::PhysicalSocketClient&lt;net::in6::SocketAddress&gt;</a>;</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="keyword">extern</span> <span class="keyword">template</span> <span class="keyword">class </span><a class="code hl_class" href="classnet_1_1in6_1_1phy_1_1stream_1_1PhysicalSocket.html">net::in6::phy::stream::PhysicalSocket&lt;net::phy::stream::PhysicalSocketClient&gt;</a>;</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="keyword">extern</span> <span class="keyword">template</span> <span class="keyword">class </span><a class="code hl_class" href="classnet_1_1in6_1_1phy_1_1PhysicalSocket.html">net::in6::phy::PhysicalSocket&lt;net::phy::stream::PhysicalSocketClient&gt;</a>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="keyword">extern</span> <span class="keyword">template</span> <span class="keyword">class</span> <a class="code hl_class" href="classnet_1_1phy_1_1stream_1_1PhysicalSocketClient.html">net</a>::<a class="code hl_class" href="classnet_1_1phy_1_1stream_1_1PhysicalSocketClient.html">phy</a>::<a class="code hl_class" href="classnet_1_1phy_1_1stream_1_1PhysicalSocketClient.html">stream</a>::<a class="code hl_class" href="classnet_1_1phy_1_1stream_1_1PhysicalSocketClient.html">PhysicalSocketClient</a>&lt;net::in6::SocketAddress&gt;;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="keyword">extern</span> <span class="keyword">template</span> <span class="keyword">class</span> <a class="code hl_class" href="classnet_1_1in6_1_1phy_1_1stream_1_1PhysicalSocket.html">net</a>::<a class="code hl_class" href="classnet_1_1in6_1_1phy_1_1stream_1_1PhysicalSocket.html">in6</a>::<a class="code hl_class" href="classnet_1_1in6_1_1phy_1_1stream_1_1PhysicalSocket.html">phy</a>::<a class="code hl_class" href="classnet_1_1in6_1_1phy_1_1stream_1_1PhysicalSocket.html">stream</a>::<a class="code hl_class" href="classnet_1_1in6_1_1phy_1_1stream_1_1PhysicalSocket.html">PhysicalSocket</a>&lt;net::<a class="code hl_namespace" href="namespacenet_1_1phy.html">phy</a>::<a class="code hl_namespace" href="namespacenet_1_1phy_1_1stream.html">stream</a>::<a class="code hl_class" href="classnet_1_1phy_1_1stream_1_1PhysicalSocketClient.html">PhysicalSocketClient</a>&gt;;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="keyword">extern</span> <span class="keyword">template</span> <span class="keyword">class</span> <a class="code hl_class" href="classnet_1_1in6_1_1phy_1_1PhysicalSocket.html">net</a>::<a class="code hl_class" href="classnet_1_1in6_1_1phy_1_1PhysicalSocket.html">in6</a>::<a class="code hl_class" href="classnet_1_1in6_1_1phy_1_1PhysicalSocket.html">phy</a>::<a class="code hl_class" href="classnet_1_1in6_1_1phy_1_1PhysicalSocket.html">PhysicalSocket</a>&lt;net::<a class="code hl_namespace" href="namespacenet_1_1phy.html">phy</a>::<a class="code hl_namespace" href="namespacenet_1_1phy_1_1stream.html">stream</a>::<a class="code hl_class" href="classnet_1_1phy_1_1stream_1_1PhysicalSocketClient.html">PhysicalSocketClient</a>&gt;;</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="preprocessor">#endif </span><span class="comment">// NET_IN6_PHY_STREAM_PHYSICALSOCKETCLIENT_H</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="preprocessor">#</span><span class="preprocessor">endif</span> <span class="comment">// NET_IN6_PHY_STREAM_PHYSICALSOCKETCLIENT_H</span></div>
 <div class="ttc" id="aclassnet_1_1in6_1_1phy_1_1PhysicalSocket_html"><div class="ttname"><a href="classnet_1_1in6_1_1phy_1_1PhysicalSocket.html">net::in6::phy::PhysicalSocket</a></div><div class="ttdef"><b>Definition</b> <a href="in6_2phy_2PhysicalSocket_8h_source.html#l00032">PhysicalSocket.h:32</a></div></div>
 <div class="ttc" id="aclassnet_1_1in6_1_1phy_1_1stream_1_1PhysicalSocketClient_html"><div class="ttname"><a href="classnet_1_1in6_1_1phy_1_1stream_1_1PhysicalSocketClient.html">net::in6::phy::stream::PhysicalSocketClient</a></div><div class="ttdef"><b>Definition</b> <a href="in6_2phy_2stream_2PhysicalSocketClient_8h_source.html#l00033">PhysicalSocketClient.h:33</a></div></div>
 <div class="ttc" id="aclassnet_1_1in6_1_1phy_1_1stream_1_1PhysicalSocketClient_html_ade6a300fe6e2161776252bfe48fc8270"><div class="ttname"><a href="classnet_1_1in6_1_1phy_1_1stream_1_1PhysicalSocketClient.html#ade6a300fe6e2161776252bfe48fc8270">net::in6::phy::stream::PhysicalSocketClient::~PhysicalSocketClient</a></div><div class="ttdeci">~PhysicalSocketClient() override</div><div class="ttdef"><b>Definition</b> <a href="in6_2phy_2stream_2PhysicalSocketClient_8cpp_source.html#l00030">PhysicalSocketClient.cpp:30</a></div></div>
 <div class="ttc" id="aclassnet_1_1in6_1_1phy_1_1stream_1_1PhysicalSocketClient_html_af4652a4d9370202462f7b979b37fe1c7"><div class="ttname"><a href="classnet_1_1in6_1_1phy_1_1stream_1_1PhysicalSocketClient.html#af4652a4d9370202462f7b979b37fe1c7">net::in6::phy::stream::PhysicalSocketClient::PhysicalSocketClient</a></div><div class="ttdeci">PhysicalSocketClient(const PhysicalSocketClient &amp;)=default</div></div>
 <div class="ttc" id="aclassnet_1_1in6_1_1phy_1_1stream_1_1PhysicalSocket_html"><div class="ttname"><a href="classnet_1_1in6_1_1phy_1_1stream_1_1PhysicalSocket.html">net::in6::phy::stream::PhysicalSocket</a></div><div class="ttdef"><b>Definition</b> <a href="in6_2phy_2stream_2PhysicalSocket_8h_source.html#l00032">PhysicalSocket.h:32</a></div></div>
 <div class="ttc" id="aclassnet_1_1phy_1_1stream_1_1PhysicalSocketClient_html"><div class="ttname"><a href="classnet_1_1phy_1_1stream_1_1PhysicalSocketClient.html">net::phy::stream::PhysicalSocketClient</a></div><div class="ttdef"><b>Definition</b> <a href="phy_2stream_2PhysicalSocketClient_8h_source.html#l00033">PhysicalSocketClient.h:33</a></div></div>
-<div class="ttc" id="ain6_2phy_2stream_2PhysicalSocket_8h_html"><div class="ttname"><a href="in6_2phy_2stream_2PhysicalSocket_8h.html">PhysicalSocket.h</a></div></div>
 <div class="ttc" id="anamespacenet_1_1in6_1_1phy_1_1stream_html"><div class="ttname"><a href="namespacenet_1_1in6_1_1phy_1_1stream.html">net::in6::phy::stream</a></div><div class="ttdef"><b>Definition</b> <a href="in6_2phy_2stream_2PhysicalSocket_8cpp_source.html#l00027">PhysicalSocket.cpp:27</a></div></div>
-<div class="ttc" id="aphy_2stream_2PhysicalSocketClient_8h_html"><div class="ttname"><a href="phy_2stream_2PhysicalSocketClient_8h.html">PhysicalSocketClient.h</a></div></div>
+<div class="ttc" id="anamespacenet_1_1in6_1_1phy_html"><div class="ttname"><a href="namespacenet_1_1in6_1_1phy.html">net::in6::phy</a></div><div class="ttdef"><b>Definition</b> <a href="in6_2phy_2PhysicalSocket_8cpp_source.html#l00028">PhysicalSocket.cpp:28</a></div></div>
+<div class="ttc" id="anamespacenet_1_1phy_1_1stream_html"><div class="ttname"><a href="namespacenet_1_1phy_1_1stream.html">net::phy::stream</a></div><div class="ttdef"><b>Definition</b> <a href="phy_2stream_2PhysicalSocket_8hpp_source.html#l00025">PhysicalSocket.hpp:25</a></div></div>
+<div class="ttc" id="anamespacenet_1_1phy_html"><div class="ttname"><a href="namespacenet_1_1phy.html">net::phy</a></div><div class="ttdef"><b>Definition</b> <a href="phy_2PhysicalSocket_8hpp_source.html#l00027">PhysicalSocket.hpp:27</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_427baa8a9a5be237f298d4545d0d1ce2.html">net</a></li><li class="navelem"><a class="el" href="dir_2a582851531259f833c8b72a803f9d6e.html">in6</a></li><li class="navelem"><a class="el" href="dir_0bc8fc04c63b3c69d9bc94fec2019bf3.html">phy</a></li><li class="navelem"><a class="el" href="dir_97ce1eb164cc61bafb7369fca83df127.html">stream</a></li><li class="navelem"><a class="el" href="in6_2phy_2stream_2PhysicalSocketClient_8h.html">PhysicalSocketClient.h</a></li>
-    <li class="footer">Generated on Tue Oct 10 2023 10:11:46 for snode.c by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Tue Oct 10 2023 10:24:03 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

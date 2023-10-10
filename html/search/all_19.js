@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['x86_2064_20arm_0',['Installation on Debian Style Systems (x86-64, Arm)',['../index.html#autotoc_md26',1,'']]],
-  ['xstr_1',['XSTR',['../Config_8cpp.html#a03943706e48069237cd57f2d35ca987e',1,'Config.cpp']]]
+  ['zero_0',['zero',['../classcore_1_1select_1_1FdSet.html#a71cd1c8ca7be6bc9a7c52c64decc52f7',1,'core::select::FdSet']]]
 ];

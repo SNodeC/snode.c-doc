@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>snode.c: net/config/ConfigLegacy.cpp Source File</title>
+<title>SNode.C: net/config/ConfigLegacy.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">snode.c
+   <div id="projectname">SNode.C
    </div>
   </td>
  </tr>
@@ -98,57 +98,55 @@ $(document).ready(function(){initNavTree('ConfigLegacy_8cpp_source.html',''); in
 </div><!--header-->
 <div class="contents">
 <a href="ConfigLegacy_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * snode.c - a slim toolkit for network communication</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * Copyright (C) 2020, 2021, 2022, 2023 Volker Christian &lt;me@vchrist.at&gt;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> *</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * This program is free software: you can redistribute it and/or modify</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * it under the terms of the GNU Lesser General Public License as published</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * by the Free Software Foundation, either version 3 of the License, or</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> * (at your option) any later version.</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment"> *</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment"> * This program is distributed in the hope that it will be useful,</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment"> * but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment"> * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment"> * GNU Lesser General Public License for more details.</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment"> *</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment"> * You should have received a copy of the GNU Lesser General Public License</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment"> * along with this program. If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> */</span></div>
+<div class="line"><span class="lineno">    2</span><span class="comment"> * snode.c - a slim toolkit for network communication</span></div>
+<div class="line"><span class="lineno">    3</span><span class="comment"> * Copyright (C) 2020, 2021, 2022, 2023 Volker Christian &lt;me@vchrist.at&gt;</span></div>
+<div class="line"><span class="lineno">    4</span><span class="comment"> *</span></div>
+<div class="line"><span class="lineno">    5</span><span class="comment"> * This program is free software: you can redistribute it and/or modify</span></div>
+<div class="line"><span class="lineno">    6</span><span class="comment"> * it under the terms of the GNU Lesser General Public License as published</span></div>
+<div class="line"><span class="lineno">    7</span><span class="comment"> * by the Free Software Foundation, either version 3 of the License, or</span></div>
+<div class="line"><span class="lineno">    8</span><span class="comment"> * (at your option) any later version.</span></div>
+<div class="line"><span class="lineno">    9</span><span class="comment"> *</span></div>
+<div class="line"><span class="lineno">   10</span><span class="comment"> * This program is distributed in the hope that it will be useful,</span></div>
+<div class="line"><span class="lineno">   11</span><span class="comment"> * but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
+<div class="line"><span class="lineno">   12</span><span class="comment"> * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the</span></div>
+<div class="line"><span class="lineno">   13</span><span class="comment"> * GNU Lesser General Public License for more details.</span></div>
+<div class="line"><span class="lineno">   14</span><span class="comment"> *</span></div>
+<div class="line"><span class="lineno">   15</span><span class="comment"> * You should have received a copy of the GNU Lesser General Public License</span></div>
+<div class="line"><span class="lineno">   16</span><span class="comment"> * along with this program. If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
+<div class="line"><span class="lineno">   17</span><span class="comment"> */</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &quot;<a class="code" href="ConfigLegacy_8h.html">net/config/ConfigLegacy.h</a>&quot;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&quot;net/config/ConfigLegacy.h&quot;</span></div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &quot;<a class="code" href="ConfigInstance_8h.html">net/config/ConfigInstance.h</a>&quot;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&quot;net/config/ConfigInstance.h&quot;</span></div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#ifndef DOXYGEN_SHOULD_SKIP_THIS</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#</span><span class="preprocessor">ifndef</span> <span class="preprocessor">DOXYGEN_SHOULD_SKIP_THIS</span></div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">string</span><span class="preprocessor">&gt;</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#endif </span><span class="comment">/* DOXYGEN_SHOULD_SKIP_THIS */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#</span><span class="preprocessor">endif</span> <span class="comment">/* DOXYGEN_SHOULD_SKIP_THIS */</span></div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacenet_1_1config.html">net::config</a> {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">namespace</span> net::<a class="code hl_namespace" href="namespacenet.html">config</a> {</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="foldopen" id="foldopen00031" data-start="{" data-end="}">
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="classnet_1_1config_1_1ConfigLegacy.html#ac72aa72fe5d4e7c11753158194f5f439">   31</a></span>    <a class="code hl_function" href="classnet_1_1config_1_1ConfigLegacy.html#ac72aa72fe5d4e7c11753158194f5f439">ConfigLegacy::ConfigLegacy</a>(<a class="code hl_class" href="classnet_1_1config_1_1ConfigInstance.html">ConfigInstance</a>* instance)</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        : <a class="code hl_namespace" href="namespacenet.html">net</a>::config::<a class="code hl_class" href="classnet_1_1config_1_1ConfigSection.html">ConfigSection</a>(</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>              instance, <span class="stringliteral">&quot;legacy&quot;</span>, <span class="stringliteral">&quot;Configuration of legacy behaviour for instance &#39;&quot;</span> + instance-&gt;getInstanceName() + <span class="stringliteral">&quot;&#39;&quot;</span>, true) {</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="classnet_1_1config_1_1ConfigLegacy.html#ac72aa72fe5d4e7c11753158194f5f439">   31</a></span>    <a class="code hl_class" href="classnet_1_1config_1_1ConfigLegacy.html">ConfigLegacy</a>::<a class="code hl_function" href="classnet_1_1config_1_1ConfigLegacy.html#ac72aa72fe5d4e7c11753158194f5f439">ConfigLegacy</a>(<a class="code hl_class" href="classnet_1_1config_1_1ConfigInstance.html">ConfigInstance</a>* instance)</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        : net::<a class="code hl_namespace" href="namespacenet.html">config</a>::<a class="code hl_class" href="classnet_1_1config_1_1ConfigSection.html">ConfigSection</a><a class="code hl_function" href="classnet_1_1config_1_1ConfigSection.html#a010c9d787a0040215390a76ae7797545">(</a></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>              instance<a class="code hl_function" href="classnet_1_1config_1_1ConfigSection.html#a010c9d787a0040215390a76ae7797545">,</a> <span class="stringliteral">&quot;legacy&quot;</span><a class="code hl_function" href="classnet_1_1config_1_1ConfigSection.html#a010c9d787a0040215390a76ae7797545">,</a> <span class="stringliteral">&quot;Configuration of legacy behaviour for instance &#39;&quot;</span> + instance<a class="code hl_function" href="classnet_1_1config_1_1ConfigInstance.html#adc690b51a4fcfeedb061577884a09f1f">-&gt;</a><a class="code hl_function" href="classnet_1_1config_1_1ConfigInstance.html#adc690b51a4fcfeedb061577884a09f1f">getInstanceName</a><a class="code hl_function" href="classnet_1_1config_1_1ConfigInstance.html#adc690b51a4fcfeedb061577884a09f1f">(</a><a class="code hl_function" href="classnet_1_1config_1_1ConfigInstance.html#adc690b51a4fcfeedb061577884a09f1f">)</a> + <span class="stringliteral">&quot;&#39;&quot;</span><a class="code hl_function" href="classnet_1_1config_1_1ConfigSection.html#a010c9d787a0040215390a76ae7797545">,</a> <span class="keyword">true</span><a class="code hl_function" href="classnet_1_1config_1_1ConfigSection.html#a010c9d787a0040215390a76ae7797545">)</a> {</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    }</div>
-</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>} <span class="comment">// namespace net::config</span></div>
-<div class="ttc" id="aConfigInstance_8h_html"><div class="ttname"><a href="ConfigInstance_8h.html">ConfigInstance.h</a></div></div>
-<div class="ttc" id="aConfigLegacy_8h_html"><div class="ttname"><a href="ConfigLegacy_8h.html">ConfigLegacy.h</a></div></div>
 <div class="ttc" id="aclassnet_1_1config_1_1ConfigInstance_html"><div class="ttname"><a href="classnet_1_1config_1_1ConfigInstance.html">net::config::ConfigInstance</a></div><div class="ttdef"><b>Definition</b> <a href="ConfigInstance_8h_source.html#l00036">ConfigInstance.h:36</a></div></div>
+<div class="ttc" id="aclassnet_1_1config_1_1ConfigInstance_html_adc690b51a4fcfeedb061577884a09f1f"><div class="ttname"><a href="classnet_1_1config_1_1ConfigInstance.html#adc690b51a4fcfeedb061577884a09f1f">net::config::ConfigInstance::getInstanceName</a></div><div class="ttdeci">const std::string &amp; getInstanceName() const</div><div class="ttdef"><b>Definition</b> <a href="ConfigInstance_8cpp_source.html#l00081">ConfigInstance.cpp:81</a></div></div>
+<div class="ttc" id="aclassnet_1_1config_1_1ConfigLegacy_html"><div class="ttname"><a href="classnet_1_1config_1_1ConfigLegacy.html">net::config::ConfigLegacy</a></div><div class="ttdef"><b>Definition</b> <a href="ConfigLegacy_8h_source.html#l00034">ConfigLegacy.h:34</a></div></div>
 <div class="ttc" id="aclassnet_1_1config_1_1ConfigLegacy_html_ac72aa72fe5d4e7c11753158194f5f439"><div class="ttname"><a href="classnet_1_1config_1_1ConfigLegacy.html#ac72aa72fe5d4e7c11753158194f5f439">net::config::ConfigLegacy::ConfigLegacy</a></div><div class="ttdeci">ConfigLegacy(ConfigInstance *instance)</div><div class="ttdef"><b>Definition</b> <a href="ConfigLegacy_8cpp_source.html#l00031">ConfigLegacy.cpp:31</a></div></div>
 <div class="ttc" id="aclassnet_1_1config_1_1ConfigSection_html"><div class="ttname"><a href="classnet_1_1config_1_1ConfigSection.html">net::config::ConfigSection</a></div><div class="ttdef"><b>Definition</b> <a href="ConfigSection_8h_source.html#l00042">ConfigSection.h:42</a></div></div>
-<div class="ttc" id="anamespacenet_1_1config_html"><div class="ttname"><a href="namespacenet_1_1config.html">net::config</a></div><div class="ttdef"><b>Definition</b> <a href="ssl__utils_8h_source.html#l00022">ssl_utils.h:22</a></div></div>
-<div class="ttc" id="anamespacenet_html"><div class="ttname"><a href="namespacenet.html">net</a></div><div class="ttdef"><b>Definition</b> <a href="ssl__utils_8h_source.html#l00022">ssl_utils.h:22</a></div></div>
+<div class="ttc" id="aclassnet_1_1config_1_1ConfigSection_html_a010c9d787a0040215390a76ae7797545"><div class="ttname"><a href="classnet_1_1config_1_1ConfigSection.html#a010c9d787a0040215390a76ae7797545">net::config::ConfigSection::ConfigSection</a></div><div class="ttdeci">ConfigSection(ConfigInstance *instance, const std::string &amp;name, const std::string &amp;description, bool hidden=false)</div><div class="ttdef"><b>Definition</b> <a href="ConfigSection_8cpp_source.html#l00050">ConfigSection.cpp:50</a></div></div>
+<div class="ttc" id="anamespacenet_html"><div class="ttname"><a href="namespacenet.html">net</a></div><div class="ttdef"><b>Definition</b> <a href="ConfigConnection_8cpp_source.html#l00030">ConfigConnection.cpp:30</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_427baa8a9a5be237f298d4545d0d1ce2.html">net</a></li><li class="navelem"><a class="el" href="dir_87a4925d145c2dd6dc9f82c7d21b0c42.html">config</a></li><li class="navelem"><a class="el" href="ConfigLegacy_8cpp.html">ConfigLegacy.cpp</a></li>
-    <li class="footer">Generated on Tue Oct 10 2023 10:11:46 for snode.c by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Tue Oct 10 2023 10:23:47 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

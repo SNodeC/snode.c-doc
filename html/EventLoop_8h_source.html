@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>snode.c: core/EventLoop.h Source File</title>
+<title>SNode.C: core/EventLoop.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">snode.c
+   <div id="projectname">SNode.C
    </div>
   </td>
  </tr>
@@ -98,55 +98,54 @@ $(document).ready(function(){initNavTree('EventLoop_8h_source.html',''); initRes
 </div><!--header-->
 <div class="contents">
 <a href="EventLoop_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * snode.c - a slim toolkit for network communication</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * Copyright (C) 2020, 2021, 2022, 2023 Volker Christian &lt;me@vchrist.at&gt;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> *</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * This program is free software: you can redistribute it and/or modify</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * it under the terms of the GNU Lesser General Public License as published</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * by the Free Software Foundation, either version 3 of the License, or</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> * (at your option) any later version.</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment"> *</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment"> * This program is distributed in the hope that it will be useful,</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment"> * but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment"> * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment"> * GNU Lesser General Public License for more details.</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment"> *</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment"> * You should have received a copy of the GNU Lesser General Public License</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment"> * along with this program. If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> */</span></div>
+<div class="line"><span class="lineno">    2</span><span class="comment"> * snode.c - a slim toolkit for network communication</span></div>
+<div class="line"><span class="lineno">    3</span><span class="comment"> * Copyright (C) 2020, 2021, 2022, 2023 Volker Christian &lt;me@vchrist.at&gt;</span></div>
+<div class="line"><span class="lineno">    4</span><span class="comment"> *</span></div>
+<div class="line"><span class="lineno">    5</span><span class="comment"> * This program is free software: you can redistribute it and/or modify</span></div>
+<div class="line"><span class="lineno">    6</span><span class="comment"> * it under the terms of the GNU Lesser General Public License as published</span></div>
+<div class="line"><span class="lineno">    7</span><span class="comment"> * by the Free Software Foundation, either version 3 of the License, or</span></div>
+<div class="line"><span class="lineno">    8</span><span class="comment"> * (at your option) any later version.</span></div>
+<div class="line"><span class="lineno">    9</span><span class="comment"> *</span></div>
+<div class="line"><span class="lineno">   10</span><span class="comment"> * This program is distributed in the hope that it will be useful,</span></div>
+<div class="line"><span class="lineno">   11</span><span class="comment"> * but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
+<div class="line"><span class="lineno">   12</span><span class="comment"> * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the</span></div>
+<div class="line"><span class="lineno">   13</span><span class="comment"> * GNU Lesser General Public License for more details.</span></div>
+<div class="line"><span class="lineno">   14</span><span class="comment"> *</span></div>
+<div class="line"><span class="lineno">   15</span><span class="comment"> * You should have received a copy of the GNU Lesser General Public License</span></div>
+<div class="line"><span class="lineno">   16</span><span class="comment"> * along with this program. If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
+<div class="line"><span class="lineno">   17</span><span class="comment"> */</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#ifndef CORE_EVENTLOOP_H</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#define CORE_EVENTLOOP_H</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#</span><span class="preprocessor">ifndef</span> <span class="preprocessor">CORE_EVENTLOOP_H</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#</span><span class="preprocessor">define</span> <span class="preprocessor">CORE_EVENTLOOP_H</span></div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &quot;<a class="code" href="State_8h.html">core/State.h</a>&quot;</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &quot;<a class="code" href="TickStatus_8h.html">core/TickStatus.h</a>&quot;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&quot;core/State.h&quot;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&quot;core/TickStatus.h&quot;</span></div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacecore.html">core</a> {</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keyword">class </span><a class="code hl_function" href="EventLoop_8cpp.html#aef05b5fc565eb05ca364b23aa53bc197">EventMultiplexer</a>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">namespace</span> <a class="code hl_namespace" href="namespacecore.html">core</a> {</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keyword">class</span> <a class="code hl_class" href="classcore_1_1EventMultiplexer.html">EventMultiplexer</a>;</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>} <span class="comment">// namespace core</span></div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#ifndef DOXYGEN_SHOULD_SKIP_THIS</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#</span><span class="preprocessor">ifndef</span> <span class="preprocessor">DOXYGEN_SHOULD_SKIP_THIS</span></div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceutils.html">utils</a> {</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keyword">class </span>Timeval;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">namespace</span> <a class="code hl_namespace" href="namespaceutils.html">utils</a> {</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keyword">class</span> <a class="code hl_class" href="classutils_1_1Timeval.html">Timeval</a>;</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>}</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#include &lt;csignal&gt;</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">csignal</span><span class="preprocessor">&gt;</span></div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">#endif </span><span class="comment">/* DOXYGEN_SHOULD_SKIP_THIS */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">#</span><span class="preprocessor">endif</span> <span class="comment">/* DOXYGEN_SHOULD_SKIP_THIS */</span></div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacecore.html">core</a> {</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="keyword">namespace</span> <a class="code hl_namespace" href="namespacecore.html">core</a> {</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
-<div class="foldopen" id="foldopen00041" data-start="{" data-end="};">
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="classcore_1_1EventLoop.html">   41</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classcore_1_1EventLoop.html">EventLoop</a> {</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="classcore_1_1EventLoop.html">   41</a></span>    <span class="keyword">class</span> <a class="code hl_class" href="classcore_1_1EventLoop.html">EventLoop</a> {</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="classcore_1_1EventLoop.html#a21b97f050c2787cee94abb07c6071ef5">   43</a></span>        <a class="code hl_function" href="classcore_1_1EventLoop.html#a21b97f050c2787cee94abb07c6071ef5">EventLoop</a>(<span class="keyword">const</span> <a class="code hl_class" href="classcore_1_1EventLoop.html">EventLoop</a>&amp; eventLoop) = <span class="keyword">delete</span>;</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="classcore_1_1EventLoop.html#a933e5756c69d0d3cb55f5e39b20706be">   45</a></span>        <a class="code hl_class" href="classcore_1_1EventLoop.html">EventLoop</a>&amp; <a class="code hl_function" href="classcore_1_1EventLoop.html#a933e5756c69d0d3cb55f5e39b20706be">operator=</a>(<span class="keyword">const</span> <a class="code hl_class" href="classcore_1_1EventLoop.html">EventLoop</a>&amp; eventLoop) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="classcore_1_1EventLoop.html#a933e5756c69d0d3cb55f5e39b20706be">   45</a></span>        <a class="code hl_class" href="classcore_1_1EventLoop.html">EventLoop</a>&amp; <a class="code hl_function" href="classcore_1_1EventLoop.html#a933e5756c69d0d3cb55f5e39b20706be">operator</a>=(<span class="keyword">const</span> <a class="code hl_class" href="classcore_1_1EventLoop.html">EventLoop</a>&amp; eventLoop) = <span class="keyword">delete</span>;</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keyword">private</span>:</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <a class="code hl_function" href="classcore_1_1EventLoop.html#adbd1cef1a239898d5e176586f87322cb">EventLoop</a>();</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="classcore_1_1EventLoop.html#aaeeaff35643a1b9721c3629e5097afa5">   49</a></span>        <a class="code hl_function" href="classcore_1_1EventLoop.html#aaeeaff35643a1b9721c3629e5097afa5">~EventLoop</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="classcore_1_1EventLoop.html#aaeeaff35643a1b9721c3629e5097afa5">   49</a></span>        ~<a class="code hl_function" href="classcore_1_1EventLoop.html#aaeeaff35643a1b9721c3629e5097afa5">EventLoop</a>() = <span class="keywordflow">default</span>;</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="keyword">static</span> <a class="code hl_class" href="classcore_1_1EventLoop.html">EventLoop</a>&amp; <a class="code hl_function" href="classcore_1_1EventLoop.html#a413d227511f68c2c9939719bd2590794">instance</a>();</div>
@@ -157,35 +156,31 @@ $(document).ready(function(){initNavTree('EventLoop_8h_source.html',''); initRes
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keyword">private</span>:</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <span class="comment">// NOLINTNEXTLINE(cppcoreguidelines-avoid-c-arrays, hicpp-avoid-c-arrays, modernize-avoid-c-arrays)</span></div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classcore_1_1EventLoop.html#add5491dc1f6a70714ce62f80db91098e">init</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* argv[]);</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <a class="code hl_enumeration" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749">TickStatus</a> <a class="code hl_function" href="classcore_1_1EventLoop.html#a3ce638b4895c765df8e60a804be90339">_tick</a>(<span class="keyword">const</span> <a class="code hl_class" href="classutils_1_1Timeval.html">utils::Timeval</a>&amp; timeOut);</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <span class="keyword">static</span> <a class="code hl_enumeration" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749">TickStatus</a> <a class="code hl_function" href="classcore_1_1EventLoop.html#ad61057e89520dae76c6e0a098c595e57">tick</a>(<span class="keyword">const</span> <a class="code hl_class" href="classutils_1_1Timeval.html">utils::Timeval</a>&amp; timeOut);</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classcore_1_1EventLoop.html#aaa2c3856fed808d00542d573c2b3a737">start</a>(<span class="keyword">const</span> <a class="code hl_class" href="classutils_1_1Timeval.html">utils::Timeval</a>&amp; timeOut);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <a class="code hl_enumeration" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749">TickStatus</a> <a class="code hl_function" href="classcore_1_1EventLoop.html#a3ce638b4895c765df8e60a804be90339">_tick</a>(<span class="keyword">const</span> <a class="code hl_namespace" href="namespaceutils.html">utils</a>::<a class="code hl_class" href="classutils_1_1Timeval.html">Timeval</a>&amp; timeOut);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <span class="keyword">static</span> <a class="code hl_enumeration" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749">TickStatus</a> <a class="code hl_function" href="classcore_1_1EventLoop.html#ad61057e89520dae76c6e0a098c595e57">tick</a>(<span class="keyword">const</span> <a class="code hl_namespace" href="namespaceutils.html">utils</a>::<a class="code hl_class" href="classutils_1_1Timeval.html">Timeval</a>&amp; timeOut);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classcore_1_1EventLoop.html#aaa2c3856fed808d00542d573c2b3a737">start</a>(<span class="keyword">const</span> <a class="code hl_namespace" href="namespaceutils.html">utils</a>::<a class="code hl_class" href="classutils_1_1Timeval.html">Timeval</a>&amp; timeOut);</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classcore_1_1EventLoop.html#aaa96da1dffd0e1800ba0c134ad07f97e">stop</a>();</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classcore_1_1EventLoop.html#a947a48b55989f94a07971219d7284b93">free</a>(<a class="code hl_enumeration" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749">TickStatus</a> tickStatus);</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <span class="keyword">static</span> <a class="code hl_enumeration" href="namespacecore.html#a6613a3d81c1d25590b1cd31540d08815">core::State</a> <a class="code hl_function" href="classcore_1_1EventLoop.html#a9020c01f3848b03be68811901f39f160">state</a>();</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <span class="keyword">static</span> <a class="code hl_namespace" href="namespacecore.html">core</a>::<a class="code hl_enumeration" href="namespacecore.html#a6613a3d81c1d25590b1cd31540d08815">State</a> <a class="code hl_function" href="classcore_1_1EventLoop.html#a9020c01f3848b03be68811901f39f160">state</a>();</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classcore_1_1EventLoop.html#a96a2e40259e00e7560dc8dde4d85131f">stoponsig</a>(<span class="keywordtype">int</span> sig);</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="classcore_1_1EventLoop.html#a452aae73011bfe648dc5ba6222c9c449">   70</a></span>        <a class="code hl_class" href="classcore_1_1EventMultiplexer.html">core::EventMultiplexer</a>&amp; <a class="code hl_variable" href="classcore_1_1EventLoop.html#a452aae73011bfe648dc5ba6222c9c449">eventMultiplexer</a>;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="classcore_1_1EventLoop.html#a452aae73011bfe648dc5ba6222c9c449">   70</a></span>        <a class="code hl_namespace" href="namespacecore.html">core</a>::<a class="code hl_class" href="classcore_1_1EventMultiplexer.html">EventMultiplexer</a>&amp; <a class="code hl_variable" href="classcore_1_1EventLoop.html#a452aae73011bfe648dc5ba6222c9c449">eventMultiplexer</a>;</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="keyword">private</span>:</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="classcore_1_1EventLoop.html#abbc45d23031f92f212cf223c2561fa81">   73</a></span>        <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="classcore_1_1EventLoop.html#abbc45d23031f92f212cf223c2561fa81">stopsig</a>;</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="classcore_1_1EventLoop.html#a056d31c1e85280295f8b10cc80d6cbc1">   75</a></span>        <span class="keyword">static</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <a class="code hl_variable" href="classcore_1_1EventLoop.html#a056d31c1e85280295f8b10cc80d6cbc1">tickCounter</a>;</div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="classcore_1_1EventLoop.html#a57083902353848e5235d48539e31c7cf">   77</a></span>        <span class="keyword">static</span> <a class="code hl_enumeration" href="namespacecore.html#a6613a3d81c1d25590b1cd31540d08815">core::State</a> <a class="code hl_variable" href="classcore_1_1EventLoop.html#a57083902353848e5235d48539e31c7cf">eventLoopState</a>;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="classcore_1_1EventLoop.html#a57083902353848e5235d48539e31c7cf">   77</a></span>        <span class="keyword">static</span> <a class="code hl_namespace" href="namespacecore.html">core</a>::<a class="code hl_enumeration" href="namespacecore.html#a6613a3d81c1d25590b1cd31540d08815">State</a> <a class="code hl_variable" href="classcore_1_1EventLoop.html#a57083902353848e5235d48539e31c7cf">eventLoopState</a>;</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="classcore_1_1EventLoop.html#ab84101a4341e7fdedf48702c35067cd4">   79</a></span>        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code hl_class" href="classcore_1_1SNodeC.html">SNodeC</a>;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="classcore_1_1EventLoop.html#ab84101a4341e7fdedf48702c35067cd4">   79</a></span>        <span class="keyword">friend</span> <span class="keyword">class</span> <a class="code hl_class" href="classcore_1_1SNodeC.html">SNodeC</a>;</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    };</div>
-</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>} <span class="comment">// namespace core</span></div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="preprocessor">#endif </span><span class="comment">// CORE_EVENTLOOP_H</span></div>
-<div class="ttc" id="aEventLoop_8cpp_html_aef05b5fc565eb05ca364b23aa53bc197"><div class="ttname"><a href="EventLoop_8cpp.html#aef05b5fc565eb05ca364b23aa53bc197">EventMultiplexer</a></div><div class="ttdeci">core::EventMultiplexer &amp; EventMultiplexer()</div><div class="ttdef"><b>Definition</b> <a href="DynamicLoader_8h_source.html#l00071">DynamicLoader.h:71</a></div></div>
-<div class="ttc" id="aState_8h_html"><div class="ttname"><a href="State_8h.html">State.h</a></div></div>
-<div class="ttc" id="aTickStatus_8h_html"><div class="ttname"><a href="TickStatus_8h.html">TickStatus.h</a></div></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="preprocessor">#</span><span class="preprocessor">endif</span> <span class="comment">// CORE_EVENTLOOP_H</span></div>
 <div class="ttc" id="aclasscore_1_1EventLoop_html"><div class="ttname"><a href="classcore_1_1EventLoop.html">core::EventLoop</a></div><div class="ttdef"><b>Definition</b> <a href="EventLoop_8h_source.html#l00041">EventLoop.h:41</a></div></div>
 <div class="ttc" id="aclasscore_1_1EventLoop_html_a056d31c1e85280295f8b10cc80d6cbc1"><div class="ttname"><a href="classcore_1_1EventLoop.html#a056d31c1e85280295f8b10cc80d6cbc1">core::EventLoop::tickCounter</a></div><div class="ttdeci">static unsigned long tickCounter</div><div class="ttdef"><b>Definition</b> <a href="EventLoop_8h_source.html#l00075">EventLoop.h:75</a></div></div>
 <div class="ttc" id="aclasscore_1_1EventLoop_html_a17f1623de6ca2ea2682c63cf502c3c36"><div class="ttname"><a href="classcore_1_1EventLoop.html#a17f1623de6ca2ea2682c63cf502c3c36">core::EventLoop::getEventMultiplexer</a></div><div class="ttdeci">EventMultiplexer &amp; getEventMultiplexer()</div><div class="ttdef"><b>Definition</b> <a href="EventLoop_8cpp_source.html#l00073">EventLoop.cpp:73</a></div></div>
@@ -207,6 +202,22 @@ $(document).ready(function(){initNavTree('EventLoop_8h_source.html',''); initRes
 <div class="ttc" id="aclasscore_1_1EventLoop_html_add5491dc1f6a70714ce62f80db91098e"><div class="ttname"><a href="classcore_1_1EventLoop.html#add5491dc1f6a70714ce62f80db91098e">core::EventLoop::init</a></div><div class="ttdeci">static bool init(int argc, char *argv[])</div><div class="ttdef"><b>Definition</b> <a href="EventLoop_8cpp_source.html#l00078">EventLoop.cpp:78</a></div></div>
 <div class="ttc" id="aclasscore_1_1EventLoop_html_aef20810c9fcf4c7b33a5b6dbab1973b9"><div class="ttname"><a href="classcore_1_1EventLoop.html#aef20810c9fcf4c7b33a5b6dbab1973b9">core::EventLoop::getTickCounter</a></div><div class="ttdeci">static unsigned long getTickCounter()</div><div class="ttdef"><b>Definition</b> <a href="EventLoop_8cpp_source.html#l00069">EventLoop.cpp:69</a></div></div>
 <div class="ttc" id="aclasscore_1_1EventMultiplexer_html"><div class="ttname"><a href="classcore_1_1EventMultiplexer.html">core::EventMultiplexer</a></div><div class="ttdef"><b>Definition</b> <a href="EventMultiplexer_8h_source.html#l00046">EventMultiplexer.h:46</a></div></div>
+<div class="ttc" id="aclasscore_1_1EventMultiplexer_html_a61d96e95daaebfe6c3b980a2a847bb21"><div class="ttname"><a href="classcore_1_1EventMultiplexer.html#a61d96e95daaebfe6c3b980a2a847bb21">core::EventMultiplexer::span</a></div><div class="ttdeci">void span(core::Event *event)</div><div class="ttdef"><b>Definition</b> <a href="EventMultiplexer_8cpp_source.html#l00061">EventMultiplexer.cpp:61</a></div></div>
+<div class="ttc" id="aclasscore_1_1EventMultiplexer_html_ad6682a86b733db20eda6f94f4b14b51b"><div class="ttname"><a href="classcore_1_1EventMultiplexer.html#ad6682a86b733db20eda6f94f4b14b51b">core::EventMultiplexer::relax</a></div><div class="ttdeci">void relax(core::Event *event)</div><div class="ttdef"><b>Definition</b> <a href="EventMultiplexer_8cpp_source.html#l00065">EventMultiplexer.cpp:65</a></div></div>
+<div class="ttc" id="aclasscore_1_1EventReceiver_html"><div class="ttname"><a href="classcore_1_1EventReceiver.html">core::EventReceiver</a></div><div class="ttdef"><b>Definition</b> <a href="EventReceiver_8h_source.html#l00036">EventReceiver.h:36</a></div></div>
+<div class="ttc" id="aclasscore_1_1EventReceiver_html_a56ea1c965cafe4f26ed05c723f3e9c95"><div class="ttname"><a href="classcore_1_1EventReceiver.html#a56ea1c965cafe4f26ed05c723f3e9c95">core::EventReceiver::onEvent</a></div><div class="ttdeci">virtual void onEvent(const utils::Timeval &amp;currentTime)=0</div></div>
+<div class="ttc" id="aclasscore_1_1Event_html"><div class="ttname"><a href="classcore_1_1Event.html">core::Event</a></div><div class="ttdef"><b>Definition</b> <a href="Event_8h_source.html#l00039">Event.h:39</a></div></div>
+<div class="ttc" id="aclasscore_1_1Event_html_a05c376fa493325816c0ed301805bdb6b"><div class="ttname"><a href="classcore_1_1Event.html#a05c376fa493325816c0ed301805bdb6b">core::Event::published</a></div><div class="ttdeci">bool published</div><div class="ttdef"><b>Definition</b> <a href="Event_8h_source.html#l00060">Event.h:60</a></div></div>
+<div class="ttc" id="aclasscore_1_1Event_html_a0a68a616082e2b1aece96499a439884f"><div class="ttname"><a href="classcore_1_1Event.html#a0a68a616082e2b1aece96499a439884f">core::Event::span</a></div><div class="ttdeci">void span()</div><div class="ttdef"><b>Definition</b> <a href="Event_8cpp_source.html#l00044">Event.cpp:44</a></div></div>
+<div class="ttc" id="aclasscore_1_1Event_html_a0ab010154200ef32e875dc673e921c94"><div class="ttname"><a href="classcore_1_1Event.html#a0ab010154200ef32e875dc673e921c94">core::Event::getName</a></div><div class="ttdeci">const std::string &amp; getName() const</div><div class="ttdef"><b>Definition</b> <a href="Event_8cpp_source.html#l00058">Event.cpp:58</a></div></div>
+<div class="ttc" id="aclasscore_1_1Event_html_a291009de1804cd94c8df62eeff684085"><div class="ttname"><a href="classcore_1_1Event.html#a291009de1804cd94c8df62eeff684085">core::Event::dispatch</a></div><div class="ttdeci">void dispatch(const utils::Timeval &amp;currentTime)</div><div class="ttdef"><b>Definition</b> <a href="Event_8cpp_source.html#l00062">Event.cpp:62</a></div></div>
+<div class="ttc" id="aclasscore_1_1Event_html_a40b0ef7abc12e43c928b9629bbd406fc"><div class="ttname"><a href="classcore_1_1Event.html#a40b0ef7abc12e43c928b9629bbd406fc">core::Event::eventMultiplexer</a></div><div class="ttdeci">EventMultiplexer &amp; eventMultiplexer</div><div class="ttdef"><b>Definition</b> <a href="Event_8h_source.html#l00058">Event.h:58</a></div></div>
+<div class="ttc" id="aclasscore_1_1Event_html_a528011a68f62f5387e4e4c007a601f4e"><div class="ttname"><a href="classcore_1_1Event.html#a528011a68f62f5387e4e4c007a601f4e">core::Event::eventReceiver</a></div><div class="ttdeci">EventReceiver * eventReceiver</div><div class="ttdef"><b>Definition</b> <a href="Event_8h_source.html#l00057">Event.h:57</a></div></div>
+<div class="ttc" id="aclasscore_1_1Event_html_a758b05af852442c771627046aca2aa40"><div class="ttname"><a href="classcore_1_1Event.html#a758b05af852442c771627046aca2aa40">core::Event::name</a></div><div class="ttdeci">std::string name</div><div class="ttdef"><b>Definition</b> <a href="Event_8h_source.html#l00055">Event.h:55</a></div></div>
+<div class="ttc" id="aclasscore_1_1Event_html_a81e45f64219d897d59324c9dd0573936"><div class="ttname"><a href="classcore_1_1Event.html#a81e45f64219d897d59324c9dd0573936">core::Event::Event</a></div><div class="ttdeci">Event(EventReceiver *eventReceiver, const std::string &amp;name)</div><div class="ttdef"><b>Definition</b> <a href="Event_8cpp_source.html#l00032">Event.cpp:32</a></div></div>
+<div class="ttc" id="aclasscore_1_1Event_html_aae77d3214f54e03b751bb7cfd297b430"><div class="ttname"><a href="classcore_1_1Event.html#aae77d3214f54e03b751bb7cfd297b430">core::Event::getEventReceiver</a></div><div class="ttdeci">EventReceiver * getEventReceiver() const</div><div class="ttdef"><b>Definition</b> <a href="Event_8cpp_source.html#l00067">Event.cpp:67</a></div></div>
+<div class="ttc" id="aclasscore_1_1Event_html_ab87988cefcf233dfd2a2d256ca355faf"><div class="ttname"><a href="classcore_1_1Event.html#ab87988cefcf233dfd2a2d256ca355faf">core::Event::relax</a></div><div class="ttdeci">void relax()</div><div class="ttdef"><b>Definition</b> <a href="Event_8cpp_source.html#l00051">Event.cpp:51</a></div></div>
+<div class="ttc" id="aclasscore_1_1Event_html_acd66513f9527dff20335c45e0723a5f4"><div class="ttname"><a href="classcore_1_1Event.html#acd66513f9527dff20335c45e0723a5f4">core::Event::~Event</a></div><div class="ttdeci">~Event()</div><div class="ttdef"><b>Definition</b> <a href="Event_8cpp_source.html#l00038">Event.cpp:38</a></div></div>
 <div class="ttc" id="aclasscore_1_1SNodeC_html"><div class="ttname"><a href="classcore_1_1SNodeC.html">core::SNodeC</a></div><div class="ttdef"><b>Definition</b> <a href="SNodeC_8h_source.html#l00035">SNodeC.h:35</a></div></div>
 <div class="ttc" id="aclassutils_1_1Timeval_html"><div class="ttname"><a href="classutils_1_1Timeval.html">utils::Timeval</a></div><div class="ttdef"><b>Definition</b> <a href="Timeval_8h_source.html#l00036">Timeval.h:36</a></div></div>
 <div class="ttc" id="anamespacecore_html"><div class="ttname"><a href="namespacecore.html">core</a></div><div class="ttdef"><b>Definition</b> <a href="Descriptor_8cpp_source.html#l00027">Descriptor.cpp:27</a></div></div>
@@ -219,7 +230,7 @@ $(document).ready(function(){initNavTree('EventLoop_8h_source.html',''); initRes
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_4270bfced15e0e73154b13468c7c9ad9.html">core</a></li><li class="navelem"><a class="el" href="EventLoop_8h.html">EventLoop.h</a></li>
-    <li class="footer">Generated on Tue Oct 10 2023 10:11:44 for snode.c by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Tue Oct 10 2023 10:23:02 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>
