@@ -5,7 +5,10 @@ var classweb_1_1http_1_1server_1_1Response =
     [ "~Response", "classweb_1_1http_1_1server_1_1Response.html#a480aaea6351950d6852307f01016d470", null ],
     [ "append", "classweb_1_1http_1_1server_1_1Response.html#aca4f9f371930dfc5cbe938a6a1c8ecb9", null ],
     [ "clearCookie", "classweb_1_1http_1_1server_1_1Response.html#ae75d88513b5d350cdb9348ebcbf98939", null ],
+    [ "connect", "classweb_1_1http_1_1server_1_1Response.html#acab62d4cb95b3675c361e5f6597603d7", null ],
     [ "cookie", "classweb_1_1http_1_1server_1_1Response.html#aa9a6f2cbf1a4f186db94f9a2d5d6da08", null ],
+    [ "disconnect", "classweb_1_1http_1_1server_1_1Response.html#aeb741efc48ebf6d816c4de2df66a61e2", null ],
+    [ "disconnect", "classweb_1_1http_1_1server_1_1Response.html#abab741642c6c68374c3ed2668883bcaa", null ],
     [ "end", "classweb_1_1http_1_1server_1_1Response.html#a761cba48efb6eed2fa816750670c03db", null ],
     [ "enqueue", "classweb_1_1http_1_1server_1_1Response.html#a6bdff1ff4fb13a952df7bfefd0b87667", null ],
     [ "enqueue", "classweb_1_1http_1_1server_1_1Response.html#a9c5834911394dedb7faed2e52ceb7a1d", null ],
@@ -30,5 +33,6 @@ var classweb_1_1http_1_1server_1_1Response =
     [ "headersSent", "classweb_1_1http_1_1server_1_1Response.html#a3812dfe54b772402f9fc944e8350b69a", null ],
     [ "requestContext", "classweb_1_1http_1_1server_1_1Response.html#abebc42b5212b1c981868419acd2c1fe7", null ],
     [ "responseStatus", "classweb_1_1http_1_1server_1_1Response.html#adff0a4f1e7e67fa647d7e726e74f0966", null ],
-    [ "sendHeaderInProgress", "classweb_1_1http_1_1server_1_1Response.html#a6910a90430da0172d9c6ce12ea2d85cb", null ]
+    [ "sendHeaderInProgress", "classweb_1_1http_1_1server_1_1Response.html#a6910a90430da0172d9c6ce12ea2d85cb", null ],
+    [ "source", "classweb_1_1http_1_1server_1_1Response.html#a626e0ac9ec30956fc7988e09790d526f", null ]
 ];

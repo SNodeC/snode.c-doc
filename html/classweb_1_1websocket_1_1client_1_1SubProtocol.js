@@ -1,6 +1,30 @@
 var classweb_1_1websocket_1_1client_1_1SubProtocol =
 [
+    [ "SocketContextUpgrade", "classweb_1_1websocket_1_1client_1_1SubProtocol.html#adc5e24ed30935e0c45fa6dc55d7ad01c", null ],
     [ "Super", "classweb_1_1websocket_1_1client_1_1SubProtocol.html#a54339a52b4459a6bada6ba9e7e99ec42", null ],
     [ "~SubProtocol", "classweb_1_1websocket_1_1client_1_1SubProtocol.html#ae4502645b1a287dbf747ef394d196da6", null ],
-    [ "web::websocket::SocketContextUpgrade", "classweb_1_1websocket_1_1client_1_1SubProtocol.html#a1d575c1146ab69eba0ab27c1acd913a3", null ]
+    [ "getName", "classweb_1_1websocket_1_1client_1_1SubProtocol.html#a6a92ef9f2d043106d162be91682e41b0", null ],
+    [ "onConnected", "classweb_1_1websocket_1_1client_1_1SubProtocol.html#ab94b233f93b45647eb5312840f374f6d", null ],
+    [ "onDisconnected", "classweb_1_1websocket_1_1client_1_1SubProtocol.html#a4535792a01b7851ea3fb29ce3e311bc9", null ],
+    [ "onExit", "classweb_1_1websocket_1_1client_1_1SubProtocol.html#a3e502042e6099dc58987bb72a0fd247b", null ],
+    [ "onMessageData", "classweb_1_1websocket_1_1client_1_1SubProtocol.html#ae3ed3efef628cf6b257ec1cbd6c58701", null ],
+    [ "onMessageEnd", "classweb_1_1websocket_1_1client_1_1SubProtocol.html#aa6066bd9df592d27064b3faceca627be", null ],
+    [ "onMessageError", "classweb_1_1websocket_1_1client_1_1SubProtocol.html#a2952f166d40ff3cc6fa0ee91ed3a312f", null ],
+    [ "onMessageStart", "classweb_1_1websocket_1_1client_1_1SubProtocol.html#adfb6784d29000fd34407cebb8f9f6076", null ],
+    [ "onPongReceived", "classweb_1_1websocket_1_1client_1_1SubProtocol.html#a675355f07c347cff7abb4bdda0b59d9a", null ],
+    [ "sendClose", "classweb_1_1websocket_1_1client_1_1SubProtocol.html#a4265ec13381df7043031cb584cfcedfe", null ],
+    [ "sendMessage", "classweb_1_1websocket_1_1client_1_1SubProtocol.html#aad1925cfb75fff830ee5636198fb201e", null ],
+    [ "sendMessage", "classweb_1_1websocket_1_1client_1_1SubProtocol.html#a327161b7f0a6f74a12d342e85832e2c2", null ],
+    [ "sendMessageEnd", "classweb_1_1websocket_1_1client_1_1SubProtocol.html#ac8c480794ae401c72619bfdf2bfd68ec", null ],
+    [ "sendMessageEnd", "classweb_1_1websocket_1_1client_1_1SubProtocol.html#aa59165be028623ddd2ed079d7a79f29a", null ],
+    [ "sendMessageFrame", "classweb_1_1websocket_1_1client_1_1SubProtocol.html#ad54892ac83147c8ac8b3c1776eb72d15", null ],
+    [ "sendMessageFrame", "classweb_1_1websocket_1_1client_1_1SubProtocol.html#a17dacc13610e79541d0071cee4965b6d", null ],
+    [ "sendMessageStart", "classweb_1_1websocket_1_1client_1_1SubProtocol.html#a4ddd2f1b685d717abc85dcf9783696f8", null ],
+    [ "sendMessageStart", "classweb_1_1websocket_1_1client_1_1SubProtocol.html#a08becf8d2464d4be83eeb8226f839ce2", null ],
+    [ "sendPing", "classweb_1_1websocket_1_1client_1_1SubProtocol.html#a7e0db9bb5ab7c393ed69ebda0e7ce696", null ],
+    [ "web::websocket::SocketContextUpgrade", "classweb_1_1websocket_1_1client_1_1SubProtocol.html#a1d575c1146ab69eba0ab27c1acd913a3", null ],
+    [ "flyingPings", "classweb_1_1websocket_1_1client_1_1SubProtocol.html#a963d677c331d68c323ffa5e75064a1f0", null ],
+    [ "name", "classweb_1_1websocket_1_1client_1_1SubProtocol.html#aaeacbe92b928cad57ecd5038a466002d", null ],
+    [ "pingTimer", "classweb_1_1websocket_1_1client_1_1SubProtocol.html#afc5f714978cd4db140b6f54832b52cef", null ],
+    [ "subProtocolContext", "classweb_1_1websocket_1_1client_1_1SubProtocol.html#a7919dbb1aedb9c77815dfde8cafb6d6b", null ]
 ];

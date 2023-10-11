@@ -8,6 +8,7 @@ var namespacecore_1_1socket_1_1stream_1_1tls =
     [ "SslConfig", "structcore_1_1socket_1_1stream_1_1tls_1_1SslConfig.html", "structcore_1_1socket_1_1stream_1_1tls_1_1SslConfig" ],
     [ "TLSHandshake", "classcore_1_1socket_1_1stream_1_1tls_1_1TLSHandshake.html", "classcore_1_1socket_1_1stream_1_1tls_1_1TLSHandshake" ],
     [ "TLSShutdown", "classcore_1_1socket_1_1stream_1_1tls_1_1TLSShutdown.html", "classcore_1_1socket_1_1stream_1_1tls_1_1TLSShutdown" ],
+    [ "match", "namespacecore_1_1socket_1_1stream_1_1tls.html#a30e53f6d342e6345afe3a14e2d848894", null ],
     [ "password_callback", "namespacecore_1_1socket_1_1stream_1_1tls.html#aba798191552c9bfa63469e93c8a8ca48", null ],
     [ "ssl_ctx_free", "namespacecore_1_1socket_1_1stream_1_1tls.html#adde4230d032163f2dc88e773632f9413", null ],
     [ "ssl_ctx_new", "namespacecore_1_1socket_1_1stream_1_1tls.html#aefd777e1f1c17197ec24d244bb46c047", null ],

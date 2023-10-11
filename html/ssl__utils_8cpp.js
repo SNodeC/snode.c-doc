@@ -2,6 +2,7 @@ var ssl__utils_8cpp =
 [
     [ "core::socket::stream::tls::SslConfig", "structcore_1_1socket_1_1stream_1_1tls_1_1SslConfig.html", "structcore_1_1socket_1_1stream_1_1tls_1_1SslConfig" ],
     [ "SSL_VERIFY_FLAGS", "ssl__utils_8cpp.html#a0c3fa47eefc13655f03571ce3cf71b69", null ],
+    [ "match", "ssl__utils_8cpp.html#a30e53f6d342e6345afe3a14e2d848894", null ],
     [ "password_callback", "ssl__utils_8cpp.html#aba798191552c9bfa63469e93c8a8ca48", null ],
     [ "ssl_ctx_free", "ssl__utils_8cpp.html#adde4230d032163f2dc88e773632f9413", null ],
     [ "ssl_ctx_new", "ssl__utils_8cpp.html#aefd777e1f1c17197ec24d244bb46c047", null ],

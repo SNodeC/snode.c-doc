@@ -1,5 +1,6 @@
 var classnet_1_1in6_1_1SocketAddress =
 [
+    [ "SockAddr", "classnet_1_1in6_1_1SocketAddress.html#a327d4d8a2a81db30985b94e29a643e01", null ],
     [ "SocketAddress", "classnet_1_1in6_1_1SocketAddress.html#ab35c80e6d63c134527a33c05ec64ac75", null ],
     [ "SocketAddress", "classnet_1_1in6_1_1SocketAddress.html#a72e0f16aadbf44771d2fc595eb3f06ea", null ],
     [ "SocketAddress", "classnet_1_1in6_1_1SocketAddress.html#ab6d1b74c2d16f04b535ecc633c2677da", null ],
@@ -10,6 +11,7 @@ var classnet_1_1in6_1_1SocketAddress =
     [ "getPort", "classnet_1_1in6_1_1SocketAddress.html#a386ed3ce3388cda24f1401e7942e6334", null ],
     [ "getServ", "classnet_1_1in6_1_1SocketAddress.html#a0ec3efdbb6190f213f065e55dc0a6b12", null ],
     [ "getSockAddr", "classnet_1_1in6_1_1SocketAddress.html#a12f3beda91cf5804befd810276451359", null ],
+    [ "getSockAddrLen", "classnet_1_1in6_1_1SocketAddress.html#a009c2f04faeaef20fae628d3f0c07e1b", null ],
     [ "init", "classnet_1_1in6_1_1SocketAddress.html#aeceabc387479363f6924b577bdde1522", null ],
     [ "setAiFlags", "classnet_1_1in6_1_1SocketAddress.html#a0ec7ae891ead9395b4f00beefe346330", null ],
     [ "setAiProtocol", "classnet_1_1in6_1_1SocketAddress.html#aba048107680f351c10360ec5ed8029f0", null ],
@@ -24,5 +26,7 @@ var classnet_1_1in6_1_1SocketAddress =
     [ "host", "classnet_1_1in6_1_1SocketAddress.html#a05daff9be91a5d4eb324ff9e4b888e55", null ],
     [ "port", "classnet_1_1in6_1_1SocketAddress.html#ab95f78f244bae1eed572ded4632df62a", null ],
     [ "serv", "classnet_1_1in6_1_1SocketAddress.html#a96165186e16093fc4fd3f7b1e6eab334", null ],
+    [ "sockAddr", "classnet_1_1in6_1_1SocketAddress.html#a4012f9aeeeb9e80e919ecc5d88f0aa9a", null ],
+    [ "sockAddrLen", "classnet_1_1in6_1_1SocketAddress.html#a523d7ce30bb45dbcca8b0026755d00c0", null ],
     [ "socketAddrInfo", "classnet_1_1in6_1_1SocketAddress.html#ab349c6bd78378f3a214ed6c20c44b1f4", null ]
 ];

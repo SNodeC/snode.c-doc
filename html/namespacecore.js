@@ -71,7 +71,7 @@ var namespacecore =
       [ "SUCCESS", "namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749ad0749aaba8b833466dfcbb0428e4f89c", null ],
       [ "INTERRUPTED", "namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a658f2cadfdf09b6046246e9314f7cd43", null ],
       [ "NOOBSERVER", "namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a4e7d1789953412597b5124514c61cb9b", null ],
-      [ "ERROR", "namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749abb1ca97ec761fc37101737ba0aa2e7c5", null ]
+      [ "TRACE", "namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6", null ]
     ] ],
     [ "getTickCounterAsString", "namespacecore.html#ac82d0e7a5fcc66169eb61cb7dd27b814", null ]
 ];

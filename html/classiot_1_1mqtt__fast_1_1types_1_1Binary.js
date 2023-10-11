@@ -12,6 +12,8 @@ var classiot_1_1mqtt__fast_1_1types_1_1Binary =
     [ "getStringRaw", "classiot_1_1mqtt__fast_1_1types_1_1Binary.html#a3c695c9bf452a45ed7ee9f0334bc6440", null ],
     [ "getUint8ListRaw", "classiot_1_1mqtt__fast_1_1types_1_1Binary.html#a269f25dc0de9c32005cca71706d8d35a", null ],
     [ "getValue", "classiot_1_1mqtt__fast_1_1types_1_1Binary.html#ac7bf7f96ddc87f7cf79eda642cacbfa3", null ],
+    [ "isCompleted", "classiot_1_1mqtt__fast_1_1types_1_1Binary.html#a050071fc3948eb0e0e528262946709ad", null ],
+    [ "isError", "classiot_1_1mqtt__fast_1_1types_1_1Binary.html#a0f70695f91adc8ef743f46d34ec83873", null ],
     [ "putInt16", "classiot_1_1mqtt__fast_1_1types_1_1Binary.html#af8e71e490efa99c2387deab66fb6ad86", null ],
     [ "putInt32", "classiot_1_1mqtt__fast_1_1types_1_1Binary.html#abe55b0ffa3c529d2923c39af8d7b3d32", null ],
     [ "putInt64", "classiot_1_1mqtt__fast_1_1types_1_1Binary.html#a23df8f48e0ed6e74c1ec55a5ab7adeec", null ],
@@ -20,10 +22,14 @@ var classiot_1_1mqtt__fast_1_1types_1_1Binary =
     [ "putString", "classiot_1_1mqtt__fast_1_1types_1_1Binary.html#ade63fff9246720817c7d0477bc2c5c31", null ],
     [ "putStringRaw", "classiot_1_1mqtt__fast_1_1types_1_1Binary.html#a3e398cd76ecae99ac447843667ef826e", null ],
     [ "putUint8ListRaw", "classiot_1_1mqtt__fast_1_1types_1_1Binary.html#a18ac72a3555a22fd707bd2373a8e37a7", null ],
+    [ "read", "classiot_1_1mqtt__fast_1_1types_1_1Binary.html#ae47211fba285c9b067fc316ac88b420e", null ],
     [ "reset", "classiot_1_1mqtt__fast_1_1types_1_1Binary.html#aa3ec7c8dc1fa027e55d4e6db27dabf41", null ],
     [ "setLength", "classiot_1_1mqtt__fast_1_1types_1_1Binary.html#ae87da59c86cb9f253884de135e4f1878", null ],
     [ "binary", "classiot_1_1mqtt__fast_1_1types_1_1Binary.html#a5b8dc0027304445746bcdfe7bb621fc3", null ],
+    [ "completed", "classiot_1_1mqtt__fast_1_1types_1_1Binary.html#ac50d491c064a1cd033ca26701939455a", null ],
+    [ "error", "classiot_1_1mqtt__fast_1_1types_1_1Binary.html#a81c72042531bdd7691c72d1e4b039eb6", null ],
     [ "length", "classiot_1_1mqtt__fast_1_1types_1_1Binary.html#a0595d6107526d5f8e58a96622b5079c2", null ],
     [ "needed", "classiot_1_1mqtt__fast_1_1types_1_1Binary.html#a01b06b65a7a5258ed38f249ba65bbfef", null ],
-    [ "pointer", "classiot_1_1mqtt__fast_1_1types_1_1Binary.html#afbd7284bdf80fe99ca21217ced755d38", null ]
+    [ "pointer", "classiot_1_1mqtt__fast_1_1types_1_1Binary.html#afbd7284bdf80fe99ca21217ced755d38", null ],
+    [ "socketContext", "classiot_1_1mqtt__fast_1_1types_1_1Binary.html#a67e786e4a7cbc600ffdf68cdf26dd9d7", null ]
 ];

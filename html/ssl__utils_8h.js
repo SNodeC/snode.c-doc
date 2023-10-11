@@ -1,5 +1,6 @@
 var ssl__utils_8h =
 [
+    [ "match", "ssl__utils_8h.html#a30e53f6d342e6345afe3a14e2d848894", null ],
     [ "ssl_ctx_free", "ssl__utils_8h.html#adde4230d032163f2dc88e773632f9413", null ],
     [ "ssl_ctx_new", "ssl__utils_8h.html#a4248694d15e48a99933c00d9600ceee8", null ],
     [ "ssl_ctx_new", "ssl__utils_8h.html#a4660661da7880950bf8d445ccdc24f79", null ],

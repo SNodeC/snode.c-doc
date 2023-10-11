@@ -125,8 +125,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:add572f951f3e5267c5092c2c36a16f03"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a49b02d691b760b249fdc133581f0b942" id="r_a49b02d691b760b249fdc133581f0b942"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnet_1_1config_1_1ConfigInstance.html#a49b02d691b760b249fdc133581f0b942">~ConfigInstance</a> ()</td></tr>
 <tr class="separator:a49b02d691b760b249fdc133581f0b942"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adc690b51a4fcfeedb061577884a09f1f" id="r_adc690b51a4fcfeedb061577884a09f1f"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnet_1_1config_1_1ConfigInstance.html#adc690b51a4fcfeedb061577884a09f1f">getInstanceName</a> () const</td></tr>
-<tr class="separator:adc690b51a4fcfeedb061577884a09f1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bc88857eccb7e850ae85fada576cb69" id="r_a6bc88857eccb7e850ae85fada576cb69"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnet_1_1config_1_1ConfigInstance.html#a6bc88857eccb7e850ae85fada576cb69">getInstanceName</a> () const</td></tr>
+<tr class="separator:a6bc88857eccb7e850ae85fada576cb69"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a90d65c7f0497bb5636c7efef37bcfd1f" id="r_a90d65c7f0497bb5636c7efef37bcfd1f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnet_1_1config_1_1ConfigInstance.html#a90d65c7f0497bb5636c7efef37bcfd1f">getDisabled</a> () const</td></tr>
 <tr class="separator:a90d65c7f0497bb5636c7efef37bcfd1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a513b580faa06a43d0b25b14d3ba58128" id="r_a513b580faa06a43d0b25b14d3ba58128"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnet_1_1config_1_1ConfigInstance.html#a513b580faa06a43d0b25b14d3ba58128">setDisabled</a> (bool disabled=true)</td></tr>
@@ -442,14 +442,14 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="adc690b51a4fcfeedb061577884a09f1f" name="adc690b51a4fcfeedb061577884a09f1f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adc690b51a4fcfeedb061577884a09f1f">&#9670;&#160;</a></span>getInstanceName()</h2>
+<a id="a6bc88857eccb7e850ae85fada576cb69" name="a6bc88857eccb7e850ae85fada576cb69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6bc88857eccb7e850ae85fada576cb69">&#9670;&#160;</a></span>getInstanceName()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const std::string &amp; net::config::ConfigInstance::getInstanceName </td>
+          <td class="memname">std::string net::config::ConfigInstance::getInstanceName </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -458,8 +458,8 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ConfigInstance_8cpp_source.html#l00081">81</a> of file <a class="el" href="ConfigInstance_8cpp_source.html">ConfigInstance.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   81</span>                                                           {</div>
-<div class="line"><span class="lineno">   82</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classnet_1_1config_1_1ConfigInstance.html#a9e81dd0fe0f5a613a54658ac32cea1e9">name</a>;</div>
+<div class="fragment"><div class="line"><span class="lineno">   81</span>                                                    {</div>
+<div class="line"><span class="lineno">   82</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classnet_1_1config_1_1ConfigInstance.html#a9e81dd0fe0f5a613a54658ac32cea1e9">name</a>.empty() ? <span class="stringliteral">&quot;&lt;anonymous&gt;&quot;</span> : <a class="code hl_variable" href="classnet_1_1config_1_1ConfigInstance.html#a9e81dd0fe0f5a613a54658ac32cea1e9">name</a>;</div>
 <div class="line"><span class="lineno">   83</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="ConfigInstance_8h_source.html#l00062">name</a>.</p>
@@ -468,7 +468,7 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classnet_1_1config_1_1ConfigInstance_adc690b51a4fcfeedb061577884a09f1f_icgraph.svg" width="784" height="619"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classnet_1_1config_1_1ConfigInstance_a6bc88857eccb7e850ae85fada576cb69_icgraph.svg" width="784" height="619"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -755,7 +755,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacenet.html">net</a></li><li class="navelem"><a class="el" href="namespacenet_1_1config.html">config</a></li><li class="navelem"><a class="el" href="classnet_1_1config_1_1ConfigInstance.html">ConfigInstance</a></li>
-    <li class="footer">Generated on Tue Oct 10 2023 10:25:04 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Fri Oct 13 2023 08:51:17 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

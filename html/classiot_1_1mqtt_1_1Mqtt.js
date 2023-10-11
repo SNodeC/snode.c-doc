@@ -1,6 +1,7 @@
 var classiot_1_1mqtt_1_1Mqtt =
 [
     [ "Mqtt", "classiot_1_1mqtt_1_1Mqtt.html#aea2e584bde8a2ccbb43f76a95c7031d1", null ],
+    [ "Mqtt", "classiot_1_1mqtt_1_1Mqtt.html#a23e107eae968ba31e7d1587c1dab3426", null ],
     [ "~Mqtt", "classiot_1_1mqtt_1_1Mqtt.html#a968880be379ead547eb7107537029489", null ],
     [ "_onPuback", "classiot_1_1mqtt_1_1Mqtt.html#afc4f16e682a0a049d51f182c4fbe8362", null ],
     [ "_onPubcomp", "classiot_1_1mqtt_1_1Mqtt.html#af9d3d4076d46f8d1d78686d375ccc85d", null ],
@@ -22,7 +23,8 @@ var classiot_1_1mqtt_1_1Mqtt =
     [ "onPublish", "classiot_1_1mqtt_1_1Mqtt.html#a186716f44067e3b0c6ba668833db6938", null ],
     [ "onPubrec", "classiot_1_1mqtt_1_1Mqtt.html#ab847146d78d9361b354f401f58b8d3c8", null ],
     [ "onPubrel", "classiot_1_1mqtt_1_1Mqtt.html#abe532682b0c001ba1819d95ecb4b99f3", null ],
-    [ "printStandardHeader", "classiot_1_1mqtt_1_1Mqtt.html#aad0ebe3e81b0c159295be7ff0c491bd1", null ],
+    [ "printFixedHeader", "classiot_1_1mqtt_1_1Mqtt.html#af5c2505fdcc87ddff237d7ea2981df92", null ],
+    [ "printVP", "classiot_1_1mqtt_1_1Mqtt.html#a88e2ee2580bc457b6f01a8b8edf71460", null ],
     [ "send", "classiot_1_1mqtt_1_1Mqtt.html#ac2c838576318814d55feaaf87cdca5b9", null ],
     [ "send", "classiot_1_1mqtt_1_1Mqtt.html#a594844a93633d9acce2794ef5bc23c5a", null ],
     [ "sendPuback", "classiot_1_1mqtt_1_1Mqtt.html#a64f2e5213d4954df3bc653617cd14455", null ],
@@ -31,7 +33,9 @@ var classiot_1_1mqtt_1_1Mqtt =
     [ "sendPubrec", "classiot_1_1mqtt_1_1Mqtt.html#aefeb8db9cebbe5fdb28dee626f6389f3", null ],
     [ "sendPubrel", "classiot_1_1mqtt_1_1Mqtt.html#a83cc8ae2aed0a7973bfde515b35bb0fe", null ],
     [ "setMqttContext", "classiot_1_1mqtt_1_1Mqtt.html#a5cabe1c4713cb3e7e50a67cf5151c074", null ],
+    [ "stringToHexString", "classiot_1_1mqtt_1_1Mqtt.html#a5fa34f738f94a3911b8fe82661a99ca7", null ],
     [ "_packetIdentifier", "classiot_1_1mqtt_1_1Mqtt.html#aa182df86437bb6678f4f9aeec6796671", null ],
+    [ "clientId", "classiot_1_1mqtt_1_1Mqtt.html#ac724b5224b3fd33fc03485589bf726d7", null ],
     [ "controlPacketDeserializer", "classiot_1_1mqtt_1_1Mqtt.html#aed008b980ca9bb79e15a9c4111b4014d", null ],
     [ "fixedHeader", "classiot_1_1mqtt_1_1Mqtt.html#a2468bbd7ce38673dc434e40a6c79c2c3", null ],
     [ "keepAliveTimer", "classiot_1_1mqtt_1_1Mqtt.html#a2079fa08e512ff3d1a42555609a4ed6f", null ],

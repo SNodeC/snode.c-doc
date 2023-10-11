@@ -7,7 +7,7 @@ var classnet_1_1config_1_1ConfigInstance =
     [ "~ConfigInstance", "classnet_1_1config_1_1ConfigInstance.html#a49b02d691b760b249fdc133581f0b942", null ],
     [ "add_section", "classnet_1_1config_1_1ConfigInstance.html#aa36fa2407117e32617a82a64d33d56c3", null ],
     [ "getDisabled", "classnet_1_1config_1_1ConfigInstance.html#a90d65c7f0497bb5636c7efef37bcfd1f", null ],
-    [ "getInstanceName", "classnet_1_1config_1_1ConfigInstance.html#adc690b51a4fcfeedb061577884a09f1f", null ],
+    [ "getInstanceName", "classnet_1_1config_1_1ConfigInstance.html#a6bc88857eccb7e850ae85fada576cb69", null ],
     [ "getRequired", "classnet_1_1config_1_1ConfigInstance.html#a508316f29b4a5c8e3f47f0c403132708", null ],
     [ "operator=", "classnet_1_1config_1_1ConfigInstance.html#add572f951f3e5267c5092c2c36a16f03", null ],
     [ "operator=", "classnet_1_1config_1_1ConfigInstance.html#aa20ee023d8c15e0cbc65244f8bfd6223", null ],

@@ -11,5 +11,5 @@ var namespaceexpress_1_1dispatcher =
     [ "path_concat", "namespaceexpress_1_1dispatcher.html#aa3e19560ddadf646b6fe1de2df85aa69", null ],
     [ "path_concat", "namespaceexpress_1_1dispatcher.html#aacf7e88044f162ed0a8bea3a00c068be", null ],
     [ "pathRegex", "namespaceexpress_1_1dispatcher.html#af0eb131eb8db907ff38d832318c57153", null ],
-    [ "setParams", "namespaceexpress_1_1dispatcher.html#a2fe5a89e778177cd139c6283ab7937d8", null ]
+    [ "setParams", "namespaceexpress_1_1dispatcher.html#a383db1fb291317caf5c61e4922f123d8", null ]
 ];

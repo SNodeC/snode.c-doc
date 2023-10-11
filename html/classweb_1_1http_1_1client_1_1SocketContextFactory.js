@@ -2,6 +2,7 @@ var classweb_1_1http_1_1client_1_1SocketContextFactory =
 [
     [ "Request", "classweb_1_1http_1_1client_1_1SocketContextFactory.html#a70d5eafdfbbc5ef57ca971644628b971", null ],
     [ "Response", "classweb_1_1http_1_1client_1_1SocketContextFactory.html#ab4b2348d28e8bd691c41a68ff16213b6", null ],
+    [ "SocketContext", "classweb_1_1http_1_1client_1_1SocketContextFactory.html#aa584be453b799a1f22cceb4d4875798e", null ],
     [ "SocketContextFactory", "classweb_1_1http_1_1client_1_1SocketContextFactory.html#a863d142ba62cadd3f5c638601683dd97", null ],
     [ "~SocketContextFactory", "classweb_1_1http_1_1client_1_1SocketContextFactory.html#adaac2069d954fea9752bcb3b9c648b40", null ],
     [ "SocketContextFactory", "classweb_1_1http_1_1client_1_1SocketContextFactory.html#a66159c2457e1c219114dddd087071307", null ],

@@ -9,5 +9,5 @@ var regex__utils_8cpp =
     [ "path_concat", "regex__utils_8cpp.html#aa3e19560ddadf646b6fe1de2df85aa69", null ],
     [ "path_concat", "regex__utils_8cpp.html#aacf7e88044f162ed0a8bea3a00c068be", null ],
     [ "pathRegex", "regex__utils_8cpp.html#af0eb131eb8db907ff38d832318c57153", null ],
-    [ "setParams", "regex__utils_8cpp.html#a2fe5a89e778177cd139c6283ab7937d8", null ]
+    [ "setParams", "regex__utils_8cpp.html#a383db1fb291317caf5c61e4922f123d8", null ]
 ];

@@ -1,10 +1,26 @@
 var classcore_1_1select_1_1DescriptorEventPublisher =
 [
     [ "DescriptorEventPublisher", "classcore_1_1select_1_1DescriptorEventPublisher.html#a165492074931d053270c22b2f7f85d5d", null ],
+    [ "checkTimedOutEvents", "classcore_1_1select_1_1DescriptorEventPublisher.html#a12c2d15ad39f066de6fd6177e01d1837", null ],
+    [ "disable", "classcore_1_1select_1_1DescriptorEventPublisher.html#a998d681666ff72ed73cf0799ff4aca77", null ],
+    [ "enable", "classcore_1_1select_1_1DescriptorEventPublisher.html#ab1ba62f94b1882616f47a3cc8045b28d", null ],
+    [ "getName", "classcore_1_1select_1_1DescriptorEventPublisher.html#ad03ab776ccbb3f4d24371d1c32b6cde2", null ],
+    [ "getNextTimeout", "classcore_1_1select_1_1DescriptorEventPublisher.html#a11a19622f6801435d16aad631296b36e", null ],
+    [ "getObservedEventReceiverCount", "classcore_1_1select_1_1DescriptorEventPublisher.html#a885e82b43c0163ae3b2748ae20babe0e", null ],
+    [ "maxFd", "classcore_1_1select_1_1DescriptorEventPublisher.html#a6bbd4b1a53e43ef598d729b4059cae2d", null ],
     [ "muxAdd", "classcore_1_1select_1_1DescriptorEventPublisher.html#a5100eb5545a45223273568d9c67d9db5", null ],
     [ "muxDel", "classcore_1_1select_1_1DescriptorEventPublisher.html#a1c757695f8afff856c63b4b8c66b1e39", null ],
     [ "muxOff", "classcore_1_1select_1_1DescriptorEventPublisher.html#a89a04f6dd752dd51aef968a558a2b5e8", null ],
     [ "muxOn", "classcore_1_1select_1_1DescriptorEventPublisher.html#a2e05969de6555245b0bde2e4845c5801", null ],
+    [ "releaseDisabledEvents", "classcore_1_1select_1_1DescriptorEventPublisher.html#a75b032abf55f5bc5cacc69690f9f02e3", null ],
+    [ "resume", "classcore_1_1select_1_1DescriptorEventPublisher.html#adef0cdee352a13b99772af079fb7bfe1", null ],
+    [ "sigExit", "classcore_1_1select_1_1DescriptorEventPublisher.html#afa6315f134217cab9c3d63ae5c3782ef", null ],
     [ "spanActiveEvents", "classcore_1_1select_1_1DescriptorEventPublisher.html#a36564cbb6c3ef7b38e0d29b0f83710ed", null ],
-    [ "fdSet", "classcore_1_1select_1_1DescriptorEventPublisher.html#a42aed038cc11845e99f6a047fde6be96", null ]
+    [ "stop", "classcore_1_1select_1_1DescriptorEventPublisher.html#a7f72e6de3fcd6c2b7d43042131279bd7", null ],
+    [ "suspend", "classcore_1_1select_1_1DescriptorEventPublisher.html#ac1bfb115c6aba58d380862a43db457e8", null ],
+    [ "eventCounter", "classcore_1_1select_1_1DescriptorEventPublisher.html#aead8608132c8130834c2c9d5224ca429", null ],
+    [ "fdSet", "classcore_1_1select_1_1DescriptorEventPublisher.html#a42aed038cc11845e99f6a047fde6be96", null ],
+    [ "name", "classcore_1_1select_1_1DescriptorEventPublisher.html#ae23721809892c6ea43a68a7f04b7c567", null ],
+    [ "observedEventReceivers", "classcore_1_1select_1_1DescriptorEventPublisher.html#ab3ba1ddd022eac76ca6b1a1181e3676b", null ],
+    [ "observedEventReceiversDirty", "classcore_1_1select_1_1DescriptorEventPublisher.html#a73f4e1767b7bb5a06a8d40d9db6963d0", null ]
 ];

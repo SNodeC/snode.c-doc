@@ -684,6 +684,7 @@ var hierarchy =
       [ "core::file::FileReader", "classcore_1_1file_1_1FileReader.html", null ]
     ] ],
     [ "core::socket::stream::tls::SslConfig", "structcore_1_1socket_1_1stream_1_1tls_1_1SslConfig.html", null ],
+    [ "core::socket::State", "classcore_1_1socket_1_1State.html", null ],
     [ "web::http::StatusCode", "classweb_1_1http_1_1StatusCode.html", null ],
     [ "web::websocket::SubProtocol< SocketContextUpgradeT >", "classweb_1_1websocket_1_1SubProtocol.html", null ],
     [ "web::websocket::SubProtocol< web::websocket::client::SocketContextUpgrade >", "classweb_1_1websocket_1_1SubProtocol.html", [

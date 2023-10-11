@@ -4,7 +4,7 @@ var classcore_1_1EventLoop =
     [ "EventLoop", "classcore_1_1EventLoop.html#adbd1cef1a239898d5e176586f87322cb", null ],
     [ "~EventLoop", "classcore_1_1EventLoop.html#aaeeaff35643a1b9721c3629e5097afa5", null ],
     [ "_tick", "classcore_1_1EventLoop.html#a3ce638b4895c765df8e60a804be90339", null ],
-    [ "free", "classcore_1_1EventLoop.html#a947a48b55989f94a07971219d7284b93", null ],
+    [ "free", "classcore_1_1EventLoop.html#a3125b6361565df4753affc73eb83984a", null ],
     [ "getEventMultiplexer", "classcore_1_1EventLoop.html#a17f1623de6ca2ea2682c63cf502c3c36", null ],
     [ "getTickCounter", "classcore_1_1EventLoop.html#aef20810c9fcf4c7b33a5b6dbab1973b9", null ],
     [ "init", "classcore_1_1EventLoop.html#add5491dc1f6a70714ce62f80db91098e", null ],

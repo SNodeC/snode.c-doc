@@ -76,7 +76,8 @@ var annotated_dup =
         ] ],
         [ "Socket", "classcore_1_1socket_1_1Socket.html", "classcore_1_1socket_1_1Socket" ],
         [ "SocketAddress", "classcore_1_1socket_1_1SocketAddress.html", "classcore_1_1socket_1_1SocketAddress" ],
-        [ "SocketContext", "classcore_1_1socket_1_1SocketContext.html", "classcore_1_1socket_1_1SocketContext" ]
+        [ "SocketContext", "classcore_1_1socket_1_1SocketContext.html", "classcore_1_1socket_1_1SocketContext" ],
+        [ "State", "classcore_1_1socket_1_1State.html", "classcore_1_1socket_1_1State" ]
       ] ],
       [ "timer", "namespacecore_1_1timer.html", [
         [ "IntervalTimer", "classcore_1_1timer_1_1IntervalTimer.html", "classcore_1_1timer_1_1IntervalTimer" ],

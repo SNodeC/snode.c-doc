@@ -1,5 +1,6 @@
 var classcore_1_1socket_1_1stream_1_1SocketServer =
 [
+    [ "Config", "classcore_1_1socket_1_1stream_1_1SocketServer.html#a8322727680d1b398830d8d88faf79b8a", null ],
     [ "SocketAcceptor", "classcore_1_1socket_1_1stream_1_1SocketServer.html#a313979203aedcd8c66a7903842883199", null ],
     [ "SocketAddress", "classcore_1_1socket_1_1stream_1_1SocketServer.html#a50b4a160820bf724e997e8c980723e71", null ],
     [ "SocketConnection", "classcore_1_1socket_1_1stream_1_1SocketServer.html#ab41b361bf826dbeff83977b512643afc", null ],
@@ -13,6 +14,7 @@ var classcore_1_1socket_1_1stream_1_1SocketServer =
     [ "SocketServer", "classcore_1_1socket_1_1stream_1_1SocketServer.html#a28d541e51e262ac11a7f331cf5afcf75", null ],
     [ "SocketServer", "classcore_1_1socket_1_1stream_1_1SocketServer.html#a9de5d1a0782d4a6edd889bf657c5743d", null ],
     [ "SocketServer", "classcore_1_1socket_1_1stream_1_1SocketServer.html#a09a05ee5640d40b38c6ddac355d19652", null ],
+    [ "getConfig", "classcore_1_1socket_1_1stream_1_1SocketServer.html#ac9b7df3682b2a24b5c7fce9bcff1c441", null ],
     [ "getSocketContextFactory", "classcore_1_1socket_1_1stream_1_1SocketServer.html#a83200cfda0bbd176ee2d4b2dbce3f3ec", null ],
     [ "listen", "classcore_1_1socket_1_1stream_1_1SocketServer.html#a68508dea2f5b198fbc9daae2714e9a38", null ],
     [ "listen", "classcore_1_1socket_1_1stream_1_1SocketServer.html#a02033429d731fcbf022e7d6ac0b4341e", null ],
@@ -21,6 +23,7 @@ var classcore_1_1socket_1_1stream_1_1SocketServer =
     [ "setOnConnect", "classcore_1_1socket_1_1stream_1_1SocketServer.html#a4a650580d118d27d896e8751a8d2e033", null ],
     [ "setOnConnected", "classcore_1_1socket_1_1stream_1_1SocketServer.html#ada8c8c3fe5f42b5a71a57bc281dc61eb", null ],
     [ "setOnDisconnect", "classcore_1_1socket_1_1stream_1_1SocketServer.html#abc842084fca334fff5b7e160ba17a66d", null ],
+    [ "config", "classcore_1_1socket_1_1stream_1_1SocketServer.html#acc9aa0fd3ebc8742df03d69d675ad02d", null ],
     [ "onConnect", "classcore_1_1socket_1_1stream_1_1SocketServer.html#aae276892df84574a5a130e9aad97aeda", null ],
     [ "onConnected", "classcore_1_1socket_1_1stream_1_1SocketServer.html#af7b76b8f14667d0c22ee092cc552d58c", null ],
     [ "onDisconnect", "classcore_1_1socket_1_1stream_1_1SocketServer.html#a16a8a3c3926455c9524070b6dfaa43a7", null ],

@@ -10,6 +10,6 @@ var classiot_1_1mqtt_1_1server_1_1broker_1_1SubscribtionTree_1_1TopicLevel =
     [ "unsubscribe", "classiot_1_1mqtt_1_1server_1_1broker_1_1SubscribtionTree_1_1TopicLevel.html#acbe9ed5326fa905c2f164b5a6388fad8", null ],
     [ "unsubscribe", "classiot_1_1mqtt_1_1server_1_1broker_1_1SubscribtionTree_1_1TopicLevel.html#a8f66eea4f1d83b8826244f176f017ed9", null ],
     [ "broker", "classiot_1_1mqtt_1_1server_1_1broker_1_1SubscribtionTree_1_1TopicLevel.html#acc1a53e26f396dedad733f4e5addfb0f", null ],
-    [ "qoSMap", "classiot_1_1mqtt_1_1server_1_1broker_1_1SubscribtionTree_1_1TopicLevel.html#ac435d6bd29a90b051e1d04853c9844e5", null ],
+    [ "clientIds", "classiot_1_1mqtt_1_1server_1_1broker_1_1SubscribtionTree_1_1TopicLevel.html#a601ffce5ea7471613f93f6689b0cbab0", null ],
     [ "topicLevels", "classiot_1_1mqtt_1_1server_1_1broker_1_1SubscribtionTree_1_1TopicLevel.html#a0e506bd4213d06a2e65462b09c499d8d", null ]
 ];

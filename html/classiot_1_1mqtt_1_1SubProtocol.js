@@ -18,6 +18,7 @@ var classiot_1_1mqtt_1_1SubProtocol =
     [ "buffer", "classiot_1_1mqtt_1_1SubProtocol.html#a909b20ba8cdcc96b046443ecbf26ba68", null ],
     [ "cursor", "classiot_1_1mqtt_1_1SubProtocol.html#a9da4275a1d27f0865a1c0d4eae118070", null ],
     [ "data", "classiot_1_1mqtt_1_1SubProtocol.html#a1baf49c27b240f67f80d47b016785484", null ],
+    [ "mqtt", "classiot_1_1mqtt_1_1SubProtocol.html#aa284836e39e2cce1603f318d52b25d11", null ],
     [ "onData", "classiot_1_1mqtt_1_1SubProtocol.html#ac185c12bfc584a56608dfaff5006b187", null ],
     [ "size", "classiot_1_1mqtt_1_1SubProtocol.html#aec499c88752f3e8e13ed07c14d7f6bed", null ]
 ];
