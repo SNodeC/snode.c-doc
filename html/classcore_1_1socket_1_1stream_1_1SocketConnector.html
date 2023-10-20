@@ -106,12 +106,12 @@ $(document).ready(function(){initNavTree('classcore_1_1socket_1_1stream_1_1Socke
 <div class="dynheader">
 Inheritance diagram for core::socket::stream::SocketConnector&lt; PhysicalSocketClientT, ConfigT, SocketConnectionT &gt;:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1socket_1_1stream_1_1SocketConnector__inherit__graph.svg" width="404" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1socket_1_1stream_1_1SocketConnector__inherit__graph.svg" width="375" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Collaboration diagram for core::socket::stream::SocketConnector&lt; PhysicalSocketClientT, ConfigT, SocketConnectionT &gt;:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1socket_1_1stream_1_1SocketConnector__coll__graph.svg" width="1958" height="722"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1socket_1_1stream_1_1SocketConnector__coll__graph.svg" width="1810" height="722"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -556,7 +556,7 @@ template&lt;typename PhysicalSocketClient , typename <a class="el" href="classco
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1socket_1_1stream_1_1SocketConnector_adfc9c27364cc6402e2cf8d14e5f642ab_cgraph.svg" width="1084" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1socket_1_1stream_1_1SocketConnector_adfc9c27364cc6402e2cf8d14e5f642ab_cgraph.svg" width="1014" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -639,12 +639,12 @@ template&lt;typename PhysicalSocketClient , typename <a class="el" href="classco
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DescriptorEventReceiver_ae04e87c4f44979a04d3839759a63220a_cgraph.svg" width="728" height="200"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DescriptorEventReceiver_ae04e87c4f44979a04d3839759a63220a_cgraph.svg" width="674" height="200"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DescriptorEventReceiver_ae04e87c4f44979a04d3839759a63220a_icgraph.svg" width="2012" height="138"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DescriptorEventReceiver_ae04e87c4f44979a04d3839759a63220a_icgraph.svg" width="1878" height="138"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -681,53 +681,54 @@ template&lt;typename PhysicalSocketClient , typename <a class="el" href="classco
 <div class="line"><span class="lineno">  164</span>        <span class="keywordtype">int</span> cErrno;</div>
 <div class="line"><span class="lineno">  165</span> </div>
 <div class="line"><span class="lineno">  166</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a2e4d0212c705d44b072fbfefcaf3a3ef">physicalClientSocket</a>-&gt;getSockError(cErrno) == 0) { <span class="comment">//  == 0-&gt;return valid : &lt; 0-&gt;getsockopt failed errno = cErrno;</span></div>
-<div class="line"><span class="lineno">  167</span>            <a class="code hl_class" href="classcore_1_1socket_1_1State.html">core::socket::State</a> state = core::socket::STATE_OK;</div>
+<div class="line"><span class="lineno">  167</span>            <a class="code hl_class" href="classutils_1_1PreserveErrno.html">utils::PreserveErrno</a> pe(cErrno);</div>
 <div class="line"><span class="lineno">  168</span> </div>
-<div class="line"><span class="lineno">  169</span>            <span class="keywordflow">if</span> (cErrno == 0) {</div>
-<div class="line"><span class="lineno">  170</span>                LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a91c598275749ce41f26c19940d26cef9">config</a>-&gt;getInstanceName() &lt;&lt; <span class="stringliteral">&quot;: connect success &#39;&quot;</span> &lt;&lt; <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a1537713bab1c228fe49a7e3e804c461e">remoteAddress</a>.toString() &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
-<div class="line"><span class="lineno">  171</span> </div>
-<div class="line"><span class="lineno">  172</span>                <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a3b8242696da2e881d5c7a601146b8d44">onStatus</a>(<a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a1537713bab1c228fe49a7e3e804c461e">remoteAddress</a>, state);</div>
-<div class="line"><span class="lineno">  173</span>                <a class="code hl_function" href="classcore_1_1DescriptorEventReceiver.html#a4ab422ce6622a29cee38a0108ee6ccc1">disable</a>();</div>
-<div class="line"><span class="lineno">  174</span> </div>
-<div class="line"><span class="lineno">  175</span>                <a class="code hl_typedef" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a8528c6ba6e1f26fc26eef81323cdb9fc">SocketConnectionFactory</a>(<a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#ab821939276a3b5a000a77296704538a6">onConnect</a>, <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a6c78d1635423072b874b370413f88f63">onConnected</a>, <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a9c6092754f10aae4c186ec90548afa53">onDisconnect</a>).create(*<a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a2e4d0212c705d44b072fbfefcaf3a3ef">physicalClientSocket</a>, <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a91c598275749ce41f26c19940d26cef9">config</a>);</div>
-<div class="line"><span class="lineno">  176</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a2e4d0212c705d44b072fbfefcaf3a3ef">physicalClientSocket</a>-&gt;connectInProgress(cErrno)) {</div>
-<div class="line"><span class="lineno">  177</span>                <span class="comment">// Connect still in progress</span></div>
-<div class="line"><span class="lineno">  178</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a1537713bab1c228fe49a7e3e804c461e">remoteAddress</a>.useNext()) {</div>
-<div class="line"><span class="lineno">  179</span>                LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a91c598275749ce41f26c19940d26cef9">config</a>-&gt;getInstanceName() &lt;&lt; <span class="stringliteral">&quot;: using next SocketAddress &#39;&quot;</span> &lt;&lt; <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a91c598275749ce41f26c19940d26cef9">config</a>-&gt;Remote::getSocketAddress().toString()</div>
-<div class="line"><span class="lineno">  180</span>                           &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
-<div class="line"><span class="lineno">  181</span> </div>
-<div class="line"><span class="lineno">  182</span>                <span class="keyword">new</span> <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a10c91e58b624d140506dc91a479980bf">SocketConnector</a>(<a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a94e869a1fbfe740b4aa6c1472032e19a">socketContextFactory</a>, <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#ab821939276a3b5a000a77296704538a6">onConnect</a>, <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a6c78d1635423072b874b370413f88f63">onConnected</a>, <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a9c6092754f10aae4c186ec90548afa53">onDisconnect</a>, <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a3b8242696da2e881d5c7a601146b8d44">onStatus</a>, <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a91c598275749ce41f26c19940d26cef9">config</a>);</div>
-<div class="line"><span class="lineno">  183</span> </div>
-<div class="line"><span class="lineno">  184</span>                <a class="code hl_function" href="classcore_1_1DescriptorEventReceiver.html#a4ab422ce6622a29cee38a0108ee6ccc1">disable</a>();</div>
-<div class="line"><span class="lineno">  185</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  186</span>                <a class="code hl_class" href="classutils_1_1PreserveErrno.html">utils::PreserveErrno</a> pe(cErrno);</div>
-<div class="line"><span class="lineno">  187</span> </div>
-<div class="line"><span class="lineno">  188</span>                <span class="keywordflow">switch</span> (errno) {</div>
-<div class="line"><span class="lineno">  189</span>                    <span class="keywordflow">case</span> EADDRINUSE:</div>
-<div class="line"><span class="lineno">  190</span>                    <span class="keywordflow">case</span> EADDRNOTAVAIL:</div>
-<div class="line"><span class="lineno">  191</span>                    <span class="keywordflow">case</span> ECONNREFUSED:</div>
-<div class="line"><span class="lineno">  192</span>                    <span class="keywordflow">case</span> ENETUNREACH:</div>
-<div class="line"><span class="lineno">  193</span>                        PLOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a91c598275749ce41f26c19940d26cef9">config</a>-&gt;getInstanceName() &lt;&lt; <span class="stringliteral">&quot;: connect failed &#39;&quot;</span> &lt;&lt; <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a1537713bab1c228fe49a7e3e804c461e">remoteAddress</a>.toString() &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
-<div class="line"><span class="lineno">  194</span> </div>
-<div class="line"><span class="lineno">  195</span>                        state = core::socket::STATE_ERROR;</div>
-<div class="line"><span class="lineno">  196</span>                        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  197</span>                    <span class="keywordflow">default</span>:</div>
-<div class="line"><span class="lineno">  198</span>                        PLOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a91c598275749ce41f26c19940d26cef9">config</a>-&gt;getInstanceName() &lt;&lt; <span class="stringliteral">&quot;: connect failed &#39;&quot;</span> &lt;&lt; <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a1537713bab1c228fe49a7e3e804c461e">remoteAddress</a>.toString() &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
-<div class="line"><span class="lineno">  199</span> </div>
-<div class="line"><span class="lineno">  200</span>                        state = core::socket::STATE_FATAL;</div>
-<div class="line"><span class="lineno">  201</span>                        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  202</span>                }</div>
-<div class="line"><span class="lineno">  203</span> </div>
-<div class="line"><span class="lineno">  204</span>                <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a3b8242696da2e881d5c7a601146b8d44">onStatus</a>(<a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a1537713bab1c228fe49a7e3e804c461e">remoteAddress</a>, state);</div>
-<div class="line"><span class="lineno">  205</span>                <a class="code hl_function" href="classcore_1_1DescriptorEventReceiver.html#a4ab422ce6622a29cee38a0108ee6ccc1">disable</a>();</div>
-<div class="line"><span class="lineno">  206</span>            }</div>
-<div class="line"><span class="lineno">  207</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  208</span>            PLOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a91c598275749ce41f26c19940d26cef9">config</a>-&gt;getInstanceName() &lt;&lt; <span class="stringliteral">&quot;: getsockopt syscall error &#39;&quot;</span> &lt;&lt; <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a1537713bab1c228fe49a7e3e804c461e">remoteAddress</a>.toString() &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
-<div class="line"><span class="lineno">  209</span> </div>
-<div class="line"><span class="lineno">  210</span>            <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a3b8242696da2e881d5c7a601146b8d44">onStatus</a>(<a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a1537713bab1c228fe49a7e3e804c461e">remoteAddress</a>, core::socket::STATE_FATAL);</div>
-<div class="line"><span class="lineno">  211</span>            <a class="code hl_function" href="classcore_1_1DescriptorEventReceiver.html#a4ab422ce6622a29cee38a0108ee6ccc1">disable</a>();</div>
-<div class="line"><span class="lineno">  212</span>        }</div>
-<div class="line"><span class="lineno">  213</span>    }</div>
+<div class="line"><span class="lineno">  169</span>            <a class="code hl_class" href="classcore_1_1socket_1_1State.html">core::socket::State</a> state = core::socket::STATE_OK;</div>
+<div class="line"><span class="lineno">  170</span> </div>
+<div class="line"><span class="lineno">  171</span>            <span class="keywordflow">if</span> (errno == 0) {</div>
+<div class="line"><span class="lineno">  172</span>                LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a91c598275749ce41f26c19940d26cef9">config</a>-&gt;getInstanceName() &lt;&lt; <span class="stringliteral">&quot;: connect success &#39;&quot;</span> &lt;&lt; <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a1537713bab1c228fe49a7e3e804c461e">remoteAddress</a>.toString() &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
+<div class="line"><span class="lineno">  173</span> </div>
+<div class="line"><span class="lineno">  174</span>                <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a3b8242696da2e881d5c7a601146b8d44">onStatus</a>(<a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a1537713bab1c228fe49a7e3e804c461e">remoteAddress</a>, state);</div>
+<div class="line"><span class="lineno">  175</span>                <a class="code hl_function" href="classcore_1_1DescriptorEventReceiver.html#a4ab422ce6622a29cee38a0108ee6ccc1">disable</a>();</div>
+<div class="line"><span class="lineno">  176</span> </div>
+<div class="line"><span class="lineno">  177</span>                <a class="code hl_typedef" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a8528c6ba6e1f26fc26eef81323cdb9fc">SocketConnectionFactory</a>(<a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#ab821939276a3b5a000a77296704538a6">onConnect</a>, <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a6c78d1635423072b874b370413f88f63">onConnected</a>, <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a9c6092754f10aae4c186ec90548afa53">onDisconnect</a>).create(*<a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a2e4d0212c705d44b072fbfefcaf3a3ef">physicalClientSocket</a>, <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a91c598275749ce41f26c19940d26cef9">config</a>);</div>
+<div class="line"><span class="lineno">  178</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a2e4d0212c705d44b072fbfefcaf3a3ef">physicalClientSocket</a>-&gt;connectInProgress(errno)) {</div>
+<div class="line"><span class="lineno">  179</span>                LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a91c598275749ce41f26c19940d26cef9">config</a>-&gt;getInstanceName() &lt;&lt; <span class="stringliteral">&quot;: connect still in progress &#39;&quot;</span> &lt;&lt; <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a1537713bab1c228fe49a7e3e804c461e">remoteAddress</a>.toString() &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
+<div class="line"><span class="lineno">  180</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a1537713bab1c228fe49a7e3e804c461e">remoteAddress</a>.useNext()) {</div>
+<div class="line"><span class="lineno">  181</span>                PLOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a91c598275749ce41f26c19940d26cef9">config</a>-&gt;getInstanceName() &lt;&lt; <span class="stringliteral">&quot;: connect failed &#39;&quot;</span> &lt;&lt; <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a1537713bab1c228fe49a7e3e804c461e">remoteAddress</a>.toString() &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
+<div class="line"><span class="lineno">  182</span>                LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a91c598275749ce41f26c19940d26cef9">config</a>-&gt;getInstanceName() &lt;&lt; <span class="stringliteral">&quot;: using next SocketAddress &#39;&quot;</span> &lt;&lt; <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a91c598275749ce41f26c19940d26cef9">config</a>-&gt;Remote::getSocketAddress().toString()</div>
+<div class="line"><span class="lineno">  183</span>                           &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
+<div class="line"><span class="lineno">  184</span> </div>
+<div class="line"><span class="lineno">  185</span>                <span class="keyword">new</span> <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a10c91e58b624d140506dc91a479980bf">SocketConnector</a>(<a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a94e869a1fbfe740b4aa6c1472032e19a">socketContextFactory</a>, <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#ab821939276a3b5a000a77296704538a6">onConnect</a>, <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a6c78d1635423072b874b370413f88f63">onConnected</a>, <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a9c6092754f10aae4c186ec90548afa53">onDisconnect</a>, <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a3b8242696da2e881d5c7a601146b8d44">onStatus</a>, <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a91c598275749ce41f26c19940d26cef9">config</a>);</div>
+<div class="line"><span class="lineno">  186</span> </div>
+<div class="line"><span class="lineno">  187</span>                <a class="code hl_function" href="classcore_1_1DescriptorEventReceiver.html#a4ab422ce6622a29cee38a0108ee6ccc1">disable</a>();</div>
+<div class="line"><span class="lineno">  188</span>            } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  189</span>                <span class="keywordflow">switch</span> (errno) {</div>
+<div class="line"><span class="lineno">  190</span>                    <span class="keywordflow">case</span> EADDRINUSE:</div>
+<div class="line"><span class="lineno">  191</span>                    <span class="keywordflow">case</span> EADDRNOTAVAIL:</div>
+<div class="line"><span class="lineno">  192</span>                    <span class="keywordflow">case</span> ECONNREFUSED:</div>
+<div class="line"><span class="lineno">  193</span>                    <span class="keywordflow">case</span> ENETUNREACH:</div>
+<div class="line"><span class="lineno">  194</span>                        PLOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a91c598275749ce41f26c19940d26cef9">config</a>-&gt;getInstanceName() &lt;&lt; <span class="stringliteral">&quot;: connect failed &#39;&quot;</span> &lt;&lt; <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a1537713bab1c228fe49a7e3e804c461e">remoteAddress</a>.toString() &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
+<div class="line"><span class="lineno">  195</span> </div>
+<div class="line"><span class="lineno">  196</span>                        state = core::socket::STATE_ERROR;</div>
+<div class="line"><span class="lineno">  197</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  198</span>                    <span class="keywordflow">default</span>:</div>
+<div class="line"><span class="lineno">  199</span>                        PLOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a91c598275749ce41f26c19940d26cef9">config</a>-&gt;getInstanceName() &lt;&lt; <span class="stringliteral">&quot;: connect failed &#39;&quot;</span> &lt;&lt; <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a1537713bab1c228fe49a7e3e804c461e">remoteAddress</a>.toString() &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
+<div class="line"><span class="lineno">  200</span> </div>
+<div class="line"><span class="lineno">  201</span>                        state = core::socket::STATE_FATAL;</div>
+<div class="line"><span class="lineno">  202</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  203</span>                }</div>
+<div class="line"><span class="lineno">  204</span> </div>
+<div class="line"><span class="lineno">  205</span>                <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a3b8242696da2e881d5c7a601146b8d44">onStatus</a>(<a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a1537713bab1c228fe49a7e3e804c461e">remoteAddress</a>, state);</div>
+<div class="line"><span class="lineno">  206</span>                <a class="code hl_function" href="classcore_1_1DescriptorEventReceiver.html#a4ab422ce6622a29cee38a0108ee6ccc1">disable</a>();</div>
+<div class="line"><span class="lineno">  207</span>            }</div>
+<div class="line"><span class="lineno">  208</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  209</span>            PLOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a91c598275749ce41f26c19940d26cef9">config</a>-&gt;getInstanceName() &lt;&lt; <span class="stringliteral">&quot;: getsockopt syscall error &#39;&quot;</span> &lt;&lt; <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a1537713bab1c228fe49a7e3e804c461e">remoteAddress</a>.toString() &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
+<div class="line"><span class="lineno">  210</span> </div>
+<div class="line"><span class="lineno">  211</span>            <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a3b8242696da2e881d5c7a601146b8d44">onStatus</a>(<a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a1537713bab1c228fe49a7e3e804c461e">remoteAddress</a>, core::socket::STATE_FATAL);</div>
+<div class="line"><span class="lineno">  212</span>            <a class="code hl_function" href="classcore_1_1DescriptorEventReceiver.html#a4ab422ce6622a29cee38a0108ee6ccc1">disable</a>();</div>
+<div class="line"><span class="lineno">  213</span>        }</div>
+<div class="line"><span class="lineno">  214</span>    }</div>
 <div class="ttc" id="aclasscore_1_1DescriptorEventReceiver_html_a4ab422ce6622a29cee38a0108ee6ccc1"><div class="ttname"><a href="classcore_1_1DescriptorEventReceiver.html#a4ab422ce6622a29cee38a0108ee6ccc1">core::DescriptorEventReceiver::disable</a></div><div class="ttdeci">void disable()</div><div class="ttdef"><b>Definition</b> <a href="DescriptorEventReceiver_8cpp_source.html#l00067">DescriptorEventReceiver.cpp:67</a></div></div>
 <div class="ttc" id="aclasscore_1_1socket_1_1State_html"><div class="ttname"><a href="classcore_1_1socket_1_1State.html">core::socket::State</a></div><div class="ttdef"><b>Definition</b> <a href="socket_2State_8h_source.html#l00032">State.h:32</a></div></div>
 <div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketConnector_html_a10c91e58b624d140506dc91a479980bf"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a10c91e58b624d140506dc91a479980bf">core::socket::stream::SocketConnector::SocketConnector</a></div><div class="ttdeci">SocketConnector()=delete</div></div>
@@ -740,7 +741,7 @@ template&lt;typename PhysicalSocketClient , typename <a class="el" href="classco
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1socket_1_1stream_1_1SocketConnector_a5d02c3dfcdd86079438ff5775a866971_cgraph.svg" width="1324" height="258"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1socket_1_1stream_1_1SocketConnector_a5d02c3dfcdd86079438ff5775a866971_cgraph.svg" width="1231" height="258"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -772,29 +773,29 @@ template&lt;typename PhysicalSocketClient , typename <a class="el" href="classco
 
 <p>Reimplemented from <a class="el" href="classcore_1_1eventreceiver_1_1ConnectEventReceiver.html#a6e1a6306ec6a7d9045a871134383c026">core::eventreceiver::ConnectEventReceiver</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="SocketConnector_8hpp_source.html#l00226">226</a> of file <a class="el" href="SocketConnector_8hpp_source.html">SocketConnector.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  226</span>                                                                                         {</div>
-<div class="line"><span class="lineno">  227</span>        LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a91c598275749ce41f26c19940d26cef9">config</a>-&gt;getInstanceName() &lt;&lt; <span class="stringliteral">&quot;: connect timeout &quot;</span> &lt;&lt; <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a1537713bab1c228fe49a7e3e804c461e">remoteAddress</a>.toString();</div>
-<div class="line"><span class="lineno">  228</span> </div>
-<div class="line"><span class="lineno">  229</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a1537713bab1c228fe49a7e3e804c461e">remoteAddress</a>.useNext()) {</div>
-<div class="line"><span class="lineno">  230</span>            LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a91c598275749ce41f26c19940d26cef9">config</a>-&gt;getInstanceName() &lt;&lt; <span class="stringliteral">&quot;: using next SocketAddress &#39;&quot;</span> &lt;&lt; <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a91c598275749ce41f26c19940d26cef9">config</a>-&gt;Remote::getSocketAddress().toString()</div>
-<div class="line"><span class="lineno">  231</span>                       &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
-<div class="line"><span class="lineno">  232</span> </div>
-<div class="line"><span class="lineno">  233</span>            <span class="keyword">new</span> <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a10c91e58b624d140506dc91a479980bf">SocketConnector</a>(<a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a94e869a1fbfe740b4aa6c1472032e19a">socketContextFactory</a>, <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#ab821939276a3b5a000a77296704538a6">onConnect</a>, <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a6c78d1635423072b874b370413f88f63">onConnected</a>, <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a9c6092754f10aae4c186ec90548afa53">onDisconnect</a>, <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a3b8242696da2e881d5c7a601146b8d44">onStatus</a>, <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a91c598275749ce41f26c19940d26cef9">config</a>);</div>
-<div class="line"><span class="lineno">  234</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  235</span>            LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a91c598275749ce41f26c19940d26cef9">config</a>-&gt;getInstanceName() &lt;&lt; <span class="stringliteral">&quot;: connect timeout &#39;&quot;</span> &lt;&lt; <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a1537713bab1c228fe49a7e3e804c461e">remoteAddress</a>.toString() &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
-<div class="line"><span class="lineno">  236</span> </div>
-<div class="line"><span class="lineno">  237</span>            <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a3b8242696da2e881d5c7a601146b8d44">onStatus</a>(<a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a1537713bab1c228fe49a7e3e804c461e">remoteAddress</a>, core::socket::STATE_ERROR);</div>
-<div class="line"><span class="lineno">  238</span>        }</div>
-<div class="line"><span class="lineno">  239</span> </div>
-<div class="line"><span class="lineno">  240</span>        <a class="code hl_function" href="classcore_1_1DescriptorEventReceiver.html#a4ab422ce6622a29cee38a0108ee6ccc1">disable</a>();</div>
-<div class="line"><span class="lineno">  241</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="SocketConnector_8hpp_source.html#l00227">227</a> of file <a class="el" href="SocketConnector_8hpp_source.html">SocketConnector.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  227</span>                                                                                         {</div>
+<div class="line"><span class="lineno">  228</span>        LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a91c598275749ce41f26c19940d26cef9">config</a>-&gt;getInstanceName() &lt;&lt; <span class="stringliteral">&quot;: connect timeout &quot;</span> &lt;&lt; <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a1537713bab1c228fe49a7e3e804c461e">remoteAddress</a>.toString();</div>
+<div class="line"><span class="lineno">  229</span> </div>
+<div class="line"><span class="lineno">  230</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a1537713bab1c228fe49a7e3e804c461e">remoteAddress</a>.useNext()) {</div>
+<div class="line"><span class="lineno">  231</span>            LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a91c598275749ce41f26c19940d26cef9">config</a>-&gt;getInstanceName() &lt;&lt; <span class="stringliteral">&quot;: using next SocketAddress &#39;&quot;</span> &lt;&lt; <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a91c598275749ce41f26c19940d26cef9">config</a>-&gt;Remote::getSocketAddress().toString()</div>
+<div class="line"><span class="lineno">  232</span>                       &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
+<div class="line"><span class="lineno">  233</span> </div>
+<div class="line"><span class="lineno">  234</span>            <span class="keyword">new</span> <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a10c91e58b624d140506dc91a479980bf">SocketConnector</a>(<a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a94e869a1fbfe740b4aa6c1472032e19a">socketContextFactory</a>, <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#ab821939276a3b5a000a77296704538a6">onConnect</a>, <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a6c78d1635423072b874b370413f88f63">onConnected</a>, <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a9c6092754f10aae4c186ec90548afa53">onDisconnect</a>, <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a3b8242696da2e881d5c7a601146b8d44">onStatus</a>, <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a91c598275749ce41f26c19940d26cef9">config</a>);</div>
+<div class="line"><span class="lineno">  235</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  236</span>            LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a91c598275749ce41f26c19940d26cef9">config</a>-&gt;getInstanceName() &lt;&lt; <span class="stringliteral">&quot;: connect timeout &#39;&quot;</span> &lt;&lt; <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a1537713bab1c228fe49a7e3e804c461e">remoteAddress</a>.toString() &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
+<div class="line"><span class="lineno">  237</span> </div>
+<div class="line"><span class="lineno">  238</span>            <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a3b8242696da2e881d5c7a601146b8d44">onStatus</a>(<a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a1537713bab1c228fe49a7e3e804c461e">remoteAddress</a>, core::socket::STATE_ERROR);</div>
+<div class="line"><span class="lineno">  239</span>        }</div>
+<div class="line"><span class="lineno">  240</span> </div>
+<div class="line"><span class="lineno">  241</span>        <a class="code hl_function" href="classcore_1_1DescriptorEventReceiver.html#a4ab422ce6622a29cee38a0108ee6ccc1">disable</a>();</div>
+<div class="line"><span class="lineno">  242</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="SocketConnector_8h_source.html#l00092">core::socket::stream::SocketConnector&lt; PhysicalSocketClientT, ConfigT, SocketConnectionT &gt;::config</a>, <a class="el" href="DescriptorEventReceiver_8cpp_source.html#l00067">core::DescriptorEventReceiver::disable()</a>, <a class="el" href="SocketConnector_8h_source.html#l00086">core::socket::stream::SocketConnector&lt; PhysicalSocketClientT, ConfigT, SocketConnectionT &gt;::onConnect</a>, <a class="el" href="SocketConnector_8h_source.html#l00087">core::socket::stream::SocketConnector&lt; PhysicalSocketClientT, ConfigT, SocketConnectionT &gt;::onConnected</a>, <a class="el" href="SocketConnector_8h_source.html#l00088">core::socket::stream::SocketConnector&lt; PhysicalSocketClientT, ConfigT, SocketConnectionT &gt;::onDisconnect</a>, <a class="el" href="SocketConnector_8h_source.html#l00090">core::socket::stream::SocketConnector&lt; PhysicalSocketClientT, ConfigT, SocketConnectionT &gt;::onStatus</a>, <a class="el" href="SocketConnector_8h_source.html#l00081">core::socket::stream::SocketConnector&lt; PhysicalSocketClientT, ConfigT, SocketConnectionT &gt;::remoteAddress</a>, and <a class="el" href="SocketConnector_8h_source.html#l00084">core::socket::stream::SocketConnector&lt; PhysicalSocketClientT, ConfigT, SocketConnectionT &gt;::socketContextFactory</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1socket_1_1stream_1_1SocketConnector_a2c184f30ec33415264a1cc4caea7e839_cgraph.svg" width="1340" height="258"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1socket_1_1stream_1_1SocketConnector_a2c184f30ec33415264a1cc4caea7e839_cgraph.svg" width="1244" height="258"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -826,16 +827,16 @@ template&lt;typename PhysicalSocketClient , typename <a class="el" href="classco
 
 <p>Reimplemented from <a class="el" href="classcore_1_1EventReceiver.html#a0af009a224c3a4020ed30f5586c0394c">core::EventReceiver</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="SocketConnector_8hpp_source.html#l00216">216</a> of file <a class="el" href="SocketConnector_8hpp_source.html">SocketConnector.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  216</span>                                                                                   {</div>
-<div class="line"><span class="lineno">  217</span>        <span class="keyword">delete</span> <span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">  218</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="SocketConnector_8hpp_source.html#l00217">217</a> of file <a class="el" href="SocketConnector_8hpp_source.html">SocketConnector.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  217</span>                                                                                   {</div>
+<div class="line"><span class="lineno">  218</span>        <span class="keyword">delete</span> <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">  219</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="SocketConnector_8hpp_source.html#l00226">core::socket::stream::SocketConnector&lt; PhysicalClientSocketT, ConfigT, core::socket::stream::legacy::SocketConnection &gt;::connectTimeout()</a>, and <a class="el" href="SocketConnector_8hpp_source.html#l00221">core::socket::stream::SocketConnector&lt; PhysicalSocketClientT, ConfigT, SocketConnectionT &gt;::unobservedEvent()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SocketConnector_8hpp_source.html#l00227">core::socket::stream::SocketConnector&lt; PhysicalClientSocketT, ConfigT, core::socket::stream::legacy::SocketConnection &gt;::connectTimeout()</a>, and <a class="el" href="SocketConnector_8hpp_source.html#l00222">core::socket::stream::SocketConnector&lt; PhysicalSocketClientT, ConfigT, SocketConnectionT &gt;::unobservedEvent()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1socket_1_1stream_1_1SocketConnector_acb03092786e852e56c2886bba0787d32_icgraph.svg" width="559" height="174"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1socket_1_1stream_1_1SocketConnector_acb03092786e852e56c2886bba0787d32_icgraph.svg" width="524" height="174"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -886,16 +887,16 @@ Here is the caller graph for this function:</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="DescriptorEventReceiver_8h_source.html#l00112">core::DescriptorEventReceiver::descriptorEventPublisher</a>, <a class="el" href="DescriptorEventPublisher_8cpp_source.html#l00055">core::DescriptorEventPublisher::disable()</a>, <a class="el" href="DescriptorEventReceiver_8h_source.html#l00116">core::DescriptorEventReceiver::enabled</a>, <a class="el" href="EventReceiver_8cpp_source.html#l00043">core::EventReceiver::getName()</a>, <a class="el" href="DescriptorEventReceiver_8cpp_source.html#l00121">core::DescriptorEventReceiver::isSuspended()</a>, <a class="el" href="DescriptorEventReceiver_8h_source.html#l00114">core::DescriptorEventReceiver::observedFd</a>, and <a class="el" href="DescriptorEventReceiver_8cpp_source.html#l00088">core::DescriptorEventReceiver::suspend()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="AcceptEventReceiver_8cpp_source.html#l00037">core::eventreceiver::AcceptEventReceiver::acceptTimeout()</a>, <a class="el" href="MariaDBConnection_8cpp_source.html#l00137">database::mariadb::MariaDBConnection::commandContinue()</a>, <a class="el" href="MariaDBConnection_8cpp_source.html#l00120">database::mariadb::MariaDBConnection::commandStart()</a>, <a class="el" href="SocketConnector_8hpp_source.html#l00163">core::socket::stream::SocketConnector&lt; PhysicalSocketClientT, ConfigT, SocketConnectionT &gt;::connectEvent()</a>, <a class="el" href="ConnectEventReceiver_8cpp_source.html#l00037">core::eventreceiver::ConnectEventReceiver::connectTimeout()</a>, <a class="el" href="SocketConnector_8hpp_source.html#l00226">core::socket::stream::SocketConnector&lt; PhysicalSocketClientT, ConfigT, SocketConnectionT &gt;::connectTimeout()</a>, <a class="el" href="SocketReader_8hpp_source.html#l00048">core::socket::stream::SocketReader&lt; PhysicalSocketT &gt;::doRead()</a>, <a class="el" href="SocketWriter_8hpp_source.html#l00046">core::socket::stream::SocketWriter&lt; PhysicalSocketT &gt;::doWrite()</a>, <a class="el" href="PipeSource_8cpp_source.html#l00062">core::pipe::PipeSource::eof()</a>, <a class="el" href="ExceptionalConditionEventReceiver_8cpp_source.html#l00037">core::eventreceiver::ExceptionalConditionEventReceiver::outOfBandTimeout()</a>, <a class="el" href="TLSHandshake_8cpp_source.html#l00086">core::socket::stream::tls::TLSHandshake::readEvent()</a>, <a class="el" href="TLSShutdown_8cpp_source.html#l00084">core::socket::stream::tls::TLSShutdown::readEvent()</a>, <a class="el" href="PipeSink_8cpp_source.html#l00045">core::pipe::PipeSink::readEvent()</a>, <a class="el" href="ReadEventReceiver_8cpp_source.html#l00037">core::eventreceiver::ReadEventReceiver::readTimeout()</a>, <a class="el" href="TLSHandshake_8cpp_source.html#l00142">core::socket::stream::tls::TLSHandshake::readTimeout()</a>, <a class="el" href="TLSShutdown_8cpp_source.html#l00140">core::socket::stream::tls::TLSShutdown::readTimeout()</a>, <a class="el" href="DescriptorEventReceiver_8cpp_source.html#l00125">core::DescriptorEventReceiver::terminate()</a>, <a class="el" href="SocketWriter_8hpp_source.html#l00124">core::socket::stream::SocketWriter&lt; PhysicalSocketT &gt;::terminate()</a>, <a class="el" href="TLSHandshake_8cpp_source.html#l00114">core::socket::stream::tls::TLSHandshake::writeEvent()</a>, <a class="el" href="TLSShutdown_8cpp_source.html#l00112">core::socket::stream::tls::TLSShutdown::writeEvent()</a>, <a class="el" href="PipeSource_8cpp_source.html#l00066">core::pipe::PipeSource::writeEvent()</a>, <a class="el" href="WriteEventReceiver_8cpp_source.html#l00037">core::eventreceiver::WriteEventReceiver::writeTimeout()</a>, <a class="el" href="TLSHandshake_8cpp_source.html#l00151">core::socket::stream::tls::TLSHandshake::writeTimeout()</a>, and <a class="el" href="TLSShutdown_8cpp_source.html#l00149">core::socket::stream::tls::TLSShutdown::writeTimeout()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="AcceptEventReceiver_8cpp_source.html#l00037">core::eventreceiver::AcceptEventReceiver::acceptTimeout()</a>, <a class="el" href="MariaDBConnection_8cpp_source.html#l00137">database::mariadb::MariaDBConnection::commandContinue()</a>, <a class="el" href="MariaDBConnection_8cpp_source.html#l00120">database::mariadb::MariaDBConnection::commandStart()</a>, <a class="el" href="SocketConnector_8hpp_source.html#l00163">core::socket::stream::SocketConnector&lt; PhysicalSocketClientT, ConfigT, SocketConnectionT &gt;::connectEvent()</a>, <a class="el" href="ConnectEventReceiver_8cpp_source.html#l00037">core::eventreceiver::ConnectEventReceiver::connectTimeout()</a>, <a class="el" href="SocketConnector_8hpp_source.html#l00227">core::socket::stream::SocketConnector&lt; PhysicalSocketClientT, ConfigT, SocketConnectionT &gt;::connectTimeout()</a>, <a class="el" href="SocketReader_8hpp_source.html#l00048">core::socket::stream::SocketReader&lt; PhysicalSocketT &gt;::doRead()</a>, <a class="el" href="SocketWriter_8hpp_source.html#l00046">core::socket::stream::SocketWriter&lt; PhysicalSocketT &gt;::doWrite()</a>, <a class="el" href="PipeSource_8cpp_source.html#l00062">core::pipe::PipeSource::eof()</a>, <a class="el" href="ExceptionalConditionEventReceiver_8cpp_source.html#l00037">core::eventreceiver::ExceptionalConditionEventReceiver::outOfBandTimeout()</a>, <a class="el" href="TLSHandshake_8cpp_source.html#l00086">core::socket::stream::tls::TLSHandshake::readEvent()</a>, <a class="el" href="TLSShutdown_8cpp_source.html#l00084">core::socket::stream::tls::TLSShutdown::readEvent()</a>, <a class="el" href="PipeSink_8cpp_source.html#l00045">core::pipe::PipeSink::readEvent()</a>, <a class="el" href="ReadEventReceiver_8cpp_source.html#l00037">core::eventreceiver::ReadEventReceiver::readTimeout()</a>, <a class="el" href="TLSHandshake_8cpp_source.html#l00142">core::socket::stream::tls::TLSHandshake::readTimeout()</a>, <a class="el" href="TLSShutdown_8cpp_source.html#l00140">core::socket::stream::tls::TLSShutdown::readTimeout()</a>, <a class="el" href="DescriptorEventReceiver_8cpp_source.html#l00125">core::DescriptorEventReceiver::terminate()</a>, <a class="el" href="SocketWriter_8hpp_source.html#l00124">core::socket::stream::SocketWriter&lt; PhysicalSocketT &gt;::terminate()</a>, <a class="el" href="TLSHandshake_8cpp_source.html#l00114">core::socket::stream::tls::TLSHandshake::writeEvent()</a>, <a class="el" href="TLSShutdown_8cpp_source.html#l00112">core::socket::stream::tls::TLSShutdown::writeEvent()</a>, <a class="el" href="PipeSource_8cpp_source.html#l00066">core::pipe::PipeSource::writeEvent()</a>, <a class="el" href="WriteEventReceiver_8cpp_source.html#l00037">core::eventreceiver::WriteEventReceiver::writeTimeout()</a>, <a class="el" href="TLSHandshake_8cpp_source.html#l00151">core::socket::stream::tls::TLSHandshake::writeTimeout()</a>, and <a class="el" href="TLSShutdown_8cpp_source.html#l00149">core::socket::stream::tls::TLSShutdown::writeTimeout()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DescriptorEventReceiver_a4ab422ce6622a29cee38a0108ee6ccc1_cgraph.svg" width="1042" height="258"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DescriptorEventReceiver_a4ab422ce6622a29cee38a0108ee6ccc1_cgraph.svg" width="964" height="258"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DescriptorEventReceiver_a4ab422ce6622a29cee38a0108ee6ccc1_icgraph.svg" width="1875" height="1678"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DescriptorEventReceiver_a4ab422ce6622a29cee38a0108ee6ccc1_icgraph.svg" width="1746" height="1678"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -935,7 +936,7 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1eventreceiver_1_1ConnectEventReceiver_af06da4eb300b9abe8a933dc86bc09ebe_cgraph.svg" width="414" height="66"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1eventreceiver_1_1ConnectEventReceiver_af06da4eb300b9abe8a933dc86bc09ebe_cgraph.svg" width="390" height="66"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -979,16 +980,16 @@ Here is the call graph for this function:</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="DescriptorEventReceiver_8h_source.html#l00112">core::DescriptorEventReceiver::descriptorEventPublisher</a>, <a class="el" href="DescriptorEventPublisher_8cpp_source.html#l00045">core::DescriptorEventPublisher::enable()</a>, <a class="el" href="DescriptorEventReceiver_8h_source.html#l00116">core::DescriptorEventReceiver::enabled</a>, <a class="el" href="EventReceiver_8cpp_source.html#l00043">core::EventReceiver::getName()</a>, and <a class="el" href="DescriptorEventReceiver_8h_source.html#l00114">core::DescriptorEventReceiver::observedFd</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SocketConnector_8hpp_source.html#l00226">core::socket::stream::SocketConnector&lt; PhysicalClientSocketT, ConfigT, core::socket::stream::legacy::SocketConnection &gt;::connectTimeout()</a>, <a class="el" href="PipeSink_8cpp_source.html#l00036">core::pipe::PipeSink::PipeSink()</a>, <a class="el" href="PipeSource_8cpp_source.html#l00036">core::pipe::PipeSource::PipeSource()</a>, <a class="el" href="TLSHandshake_8cpp_source.html#l00042">core::socket::stream::tls::TLSHandshake::TLSHandshake()</a>, and <a class="el" href="TLSShutdown_8cpp_source.html#l00042">core::socket::stream::tls::TLSShutdown::TLSShutdown()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SocketConnector_8hpp_source.html#l00227">core::socket::stream::SocketConnector&lt; PhysicalClientSocketT, ConfigT, core::socket::stream::legacy::SocketConnection &gt;::connectTimeout()</a>, <a class="el" href="PipeSink_8cpp_source.html#l00036">core::pipe::PipeSink::PipeSink()</a>, <a class="el" href="PipeSource_8cpp_source.html#l00036">core::pipe::PipeSource::PipeSource()</a>, <a class="el" href="TLSHandshake_8cpp_source.html#l00042">core::socket::stream::tls::TLSHandshake::TLSHandshake()</a>, and <a class="el" href="TLSShutdown_8cpp_source.html#l00042">core::socket::stream::tls::TLSShutdown::TLSShutdown()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DescriptorEventReceiver_ac8611e3a44e67126e1418844dea4a326_cgraph.svg" width="1022" height="431"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DescriptorEventReceiver_ac8611e3a44e67126e1418844dea4a326_cgraph.svg" width="942" height="431"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DescriptorEventReceiver_ac8611e3a44e67126e1418844dea4a326_icgraph.svg" width="1074" height="380"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DescriptorEventReceiver_ac8611e3a44e67126e1418844dea4a326_icgraph.svg" width="1008" height="380"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -1027,12 +1028,12 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1EventReceiver_a0735c234c7848cf4d45473a6f7ce11b2_cgraph.svg" width="374" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1EventReceiver_a0735c234c7848cf4d45473a6f7ce11b2_cgraph.svg" width="351" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1EventReceiver_a0735c234c7848cf4d45473a6f7ce11b2_icgraph.svg" width="2360" height="2043"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1EventReceiver_a0735c234c7848cf4d45473a6f7ce11b2_icgraph.svg" width="2208" height="2043"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -1071,12 +1072,12 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1EventReceiver_a0735c234c7848cf4d45473a6f7ce11b2_cgraph.svg" width="374" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1EventReceiver_a0735c234c7848cf4d45473a6f7ce11b2_cgraph.svg" width="351" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1EventReceiver_a0735c234c7848cf4d45473a6f7ce11b2_icgraph.svg" width="2360" height="2043"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1EventReceiver_a0735c234c7848cf4d45473a6f7ce11b2_icgraph.svg" width="2208" height="2043"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -1144,11 +1145,11 @@ Here is the caller graph for this function:</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="DescriptorEventReceiver_8h_source.html#l00114">core::DescriptorEventReceiver::observedFd</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="DescriptorEventPublisher_8cpp_source.html#l00045">core::DescriptorEventPublisher::enable()</a>, <a class="el" href="multiplexer_2epoll_2DescriptorEventPublisher_8cpp_source.html#l00040">core::epoll::DescriptorEventPublisher::EPollEvents::muxAdd()</a>, <a class="el" href="multiplexer_2select_2DescriptorEventPublisher_8cpp_source.html#l00068">core::select::DescriptorEventPublisher::muxAdd()</a>, <a class="el" href="multiplexer_2poll_2EventMultiplexer_8cpp_source.html#l00048">core::poll::PollFdsManager::muxAdd()</a>, <a class="el" href="multiplexer_2epoll_2DescriptorEventPublisher_8cpp_source.html#l00087">core::epoll::DescriptorEventPublisher::EPollEvents::muxOff()</a>, <a class="el" href="multiplexer_2select_2DescriptorEventPublisher_8cpp_source.html#l00080">core::select::DescriptorEventPublisher::muxOff()</a>, <a class="el" href="multiplexer_2epoll_2DescriptorEventPublisher_8cpp_source.html#l00083">core::epoll::DescriptorEventPublisher::EPollEvents::muxOn()</a>, <a class="el" href="multiplexer_2select_2DescriptorEventPublisher_8cpp_source.html#l00076">core::select::DescriptorEventPublisher::muxOn()</a>, <a class="el" href="multiplexer_2poll_2EventMultiplexer_8cpp_source.html#l00090">core::poll::PollFdsManager::muxOn()</a>, <a class="el" href="PipeSink_8cpp_source.html#l00045">core::pipe::PipeSink::readEvent()</a>, <a class="el" href="PipeSource_8cpp_source.html#l00066">core::pipe::PipeSource::writeEvent()</a>, <a class="el" href="PipeSink_8cpp_source.html#l00041">core::pipe::PipeSink::~PipeSink()</a>, and <a class="el" href="PipeSource_8cpp_source.html#l00042">core::pipe::PipeSource::~PipeSource()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="DescriptorEventPublisher_8cpp_source.html#l00045">core::DescriptorEventPublisher::enable()</a>, <a class="el" href="multiplexer_2epoll_2DescriptorEventPublisher_8cpp_source.html#l00040">core::epoll::DescriptorEventPublisher::EPollEvents::muxAdd()</a>, <a class="el" href="multiplexer_2select_2DescriptorEventPublisher_8cpp_source.html#l00072">core::select::DescriptorEventPublisher::muxAdd()</a>, <a class="el" href="multiplexer_2poll_2EventMultiplexer_8cpp_source.html#l00048">core::poll::PollFdsManager::muxAdd()</a>, <a class="el" href="multiplexer_2epoll_2DescriptorEventPublisher_8cpp_source.html#l00087">core::epoll::DescriptorEventPublisher::EPollEvents::muxOff()</a>, <a class="el" href="multiplexer_2select_2DescriptorEventPublisher_8cpp_source.html#l00084">core::select::DescriptorEventPublisher::muxOff()</a>, <a class="el" href="multiplexer_2epoll_2DescriptorEventPublisher_8cpp_source.html#l00083">core::epoll::DescriptorEventPublisher::EPollEvents::muxOn()</a>, <a class="el" href="multiplexer_2select_2DescriptorEventPublisher_8cpp_source.html#l00080">core::select::DescriptorEventPublisher::muxOn()</a>, <a class="el" href="multiplexer_2poll_2EventMultiplexer_8cpp_source.html#l00090">core::poll::PollFdsManager::muxOn()</a>, <a class="el" href="PipeSink_8cpp_source.html#l00045">core::pipe::PipeSink::readEvent()</a>, <a class="el" href="PipeSource_8cpp_source.html#l00066">core::pipe::PipeSource::writeEvent()</a>, <a class="el" href="PipeSink_8cpp_source.html#l00041">core::pipe::PipeSink::~PipeSink()</a>, and <a class="el" href="PipeSource_8cpp_source.html#l00042">core::pipe::PipeSource::~PipeSource()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DescriptorEventReceiver_a445606dc995a71972d83e7683ada144b_icgraph.svg" width="1616" height="992"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DescriptorEventReceiver_a445606dc995a71972d83e7683ada144b_icgraph.svg" width="1518" height="992"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -1188,12 +1189,12 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DescriptorEventReceiver_af169839f390fc4695734ec7248fd3af2_cgraph.svg" width="694" height="86"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DescriptorEventReceiver_af169839f390fc4695734ec7248fd3af2_cgraph.svg" width="635" height="86"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DescriptorEventReceiver_af169839f390fc4695734ec7248fd3af2_icgraph.svg" width="2224" height="138"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DescriptorEventReceiver_af169839f390fc4695734ec7248fd3af2_icgraph.svg" width="2067" height="138"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -1334,13 +1335,13 @@ template&lt;typename PhysicalSocketClient , typename <a class="el" href="classco
 <div class="ttc" id="aclasscore_1_1DescriptorEventReceiver_html_ac8611e3a44e67126e1418844dea4a326"><div class="ttname"><a href="classcore_1_1DescriptorEventReceiver.html#ac8611e3a44e67126e1418844dea4a326">core::DescriptorEventReceiver::enable</a></div><div class="ttdeci">void enable(int fd)</div><div class="ttdef"><b>Definition</b> <a href="DescriptorEventReceiver_8cpp_source.html#l00050">DescriptorEventReceiver.cpp:50</a></div></div>
 <div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketConnector_html_a129471adf94d653baa0e0add8f570d8e"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a129471adf94d653baa0e0add8f570d8e">core::socket::stream::SocketConnector::SocketAddress</a></div><div class="ttdeci">typename PhysicalClientSocket::SocketAddress SocketAddress</div><div class="ttdef"><b>Definition</b> <a href="SocketConnector_8h_source.html#l00044">SocketConnector.h:44</a></div></div>
 <div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketConnector_html_aa1cab9eee4a6038352eb9e9328f2083b"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#aa1cab9eee4a6038352eb9e9328f2083b">core::socket::stream::SocketConnector::PhysicalClientSocket</a></div><div class="ttdeci">PhysicalSocketClientT PhysicalClientSocket</div><div class="ttdef"><b>Definition</b> <a href="SocketConnector_8h_source.html#l00040">SocketConnector.h:40</a></div></div>
-<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketConnector_html_acb03092786e852e56c2886bba0787d32"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#acb03092786e852e56c2886bba0787d32">core::socket::stream::SocketConnector::destruct</a></div><div class="ttdeci">void destruct() final</div><div class="ttdef"><b>Definition</b> <a href="SocketConnector_8hpp_source.html#l00216">SocketConnector.hpp:216</a></div></div>
+<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketConnector_html_acb03092786e852e56c2886bba0787d32"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#acb03092786e852e56c2886bba0787d32">core::socket::stream::SocketConnector::destruct</a></div><div class="ttdeci">void destruct() final</div><div class="ttdef"><b>Definition</b> <a href="SocketConnector_8hpp_source.html#l00217">SocketConnector.hpp:217</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="SocketConnector_8h_source.html#l00092">core::socket::stream::SocketConnector&lt; PhysicalSocketClientT, ConfigT, SocketConnectionT &gt;::config</a>, and <a class="el" href="DescriptorEventReceiver_8cpp_source.html#l00131">core::DescriptorEventReceiver::setTimeout()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1socket_1_1stream_1_1SocketConnector_ad600933d90cdf94842c50b744c69baec_cgraph.svg" width="1248" height="259"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1socket_1_1stream_1_1SocketConnector_ad600933d90cdf94842c50b744c69baec_cgraph.svg" width="1154" height="259"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -1375,11 +1376,11 @@ Here is the call graph for this function:</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="DescriptorEventReceiver_8h_source.html#l00116">core::DescriptorEventReceiver::enabled</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="MariaDBConnection_8cpp_source.html#l00163">database::mariadb::MariaDBConnection::checkStatus()</a>, <a class="el" href="MariaDBConnection_8cpp_source.html#l00120">database::mariadb::MariaDBConnection::commandStart()</a>, <a class="el" href="SocketConnector_8hpp_source.html#l00226">core::socket::stream::SocketConnector&lt; PhysicalClientSocketT, ConfigT, core::socket::stream::legacy::SocketConnection &gt;::connectTimeout()</a>, <a class="el" href="SocketWriter_8hpp_source.html#l00088">core::socket::stream::SocketWriter&lt; PhysicalSocketT &gt;::sendToPeer()</a>, and <a class="el" href="DescriptorEventReceiver_8cpp_source.html#l00125">core::DescriptorEventReceiver::terminate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="MariaDBConnection_8cpp_source.html#l00163">database::mariadb::MariaDBConnection::checkStatus()</a>, <a class="el" href="MariaDBConnection_8cpp_source.html#l00120">database::mariadb::MariaDBConnection::commandStart()</a>, <a class="el" href="SocketConnector_8hpp_source.html#l00227">core::socket::stream::SocketConnector&lt; PhysicalClientSocketT, ConfigT, core::socket::stream::legacy::SocketConnection &gt;::connectTimeout()</a>, <a class="el" href="SocketWriter_8hpp_source.html#l00088">core::socket::stream::SocketWriter&lt; PhysicalSocketT &gt;::sendToPeer()</a>, and <a class="el" href="DescriptorEventReceiver_8cpp_source.html#l00125">core::DescriptorEventReceiver::terminate()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DescriptorEventReceiver_ac5dc7e86ddad09f5bd3eeb0c74f2e7f9_icgraph.svg" width="1926" height="443"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DescriptorEventReceiver_ac5dc7e86ddad09f5bd3eeb0c74f2e7f9_icgraph.svg" width="1794" height="443"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -1418,7 +1419,7 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1Observer_a12bf1ddfdb90f05f28d16c09ce0658f8_icgraph.svg" width="2407" height="2051"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1Observer_a12bf1ddfdb90f05f28d16c09ce0658f8_icgraph.svg" width="2250" height="2051"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -1458,7 +1459,7 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DescriptorEventReceiver_ac80fc901f941c059a6ebdb28147b25a2_icgraph.svg" width="2244" height="2016"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DescriptorEventReceiver_ac80fc901f941c059a6ebdb28147b25a2_icgraph.svg" width="2104" height="2016"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -1497,7 +1498,7 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1Observer_aeff595f74f25efea85406cf700e13550_icgraph.svg" width="1844" height="380"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1Observer_aeff595f74f25efea85406cf700e13550_icgraph.svg" width="1726" height="380"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -1538,7 +1539,7 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1eventreceiver_1_1InitConnectEventReceiver_aa2bf62a6283d6040c6278d0d4682fc6f_cgraph.svg" width="456" height="66"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1eventreceiver_1_1InitConnectEventReceiver_aa2bf62a6283d6040c6278d0d4682fc6f_cgraph.svg" width="424" height="66"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -1575,7 +1576,7 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DescriptorEventReceiver_a713f04c3d808ce4677d2a019101f1eb9_icgraph.svg" width="1576" height="86"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DescriptorEventReceiver_a713f04c3d808ce4677d2a019101f1eb9_icgraph.svg" width="1466" height="86"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -1668,7 +1669,7 @@ template&lt;typename PhysicalSocketClientT , typename ConfigT , template&lt; typ
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1EventReceiver_a748159baa69a639df53ac5675ae8425f_cgraph.svg" width="782" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1EventReceiver_a748159baa69a639df53ac5675ae8425f_cgraph.svg" width="727" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -1705,7 +1706,7 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1EventReceiver_a748159baa69a639df53ac5675ae8425f_cgraph.svg" width="782" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1EventReceiver_a748159baa69a639df53ac5675ae8425f_cgraph.svg" width="727" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -1760,12 +1761,12 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DescriptorEventReceiver_afa983ac6b0ba8f28ce4c0fc16cd914f8_cgraph.svg" width="771" height="311"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DescriptorEventReceiver_afa983ac6b0ba8f28ce4c0fc16cd914f8_cgraph.svg" width="714" height="311"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DescriptorEventReceiver_afa983ac6b0ba8f28ce4c0fc16cd914f8_icgraph.svg" width="788" height="690"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DescriptorEventReceiver_afa983ac6b0ba8f28ce4c0fc16cd914f8_icgraph.svg" width="732" height="690"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -1803,7 +1804,7 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DescriptorEventReceiver_a53b16eb14da654bfaf9a7e28e3024ff1_cgraph.svg" width="480" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DescriptorEventReceiver_a53b16eb14da654bfaf9a7e28e3024ff1_cgraph.svg" width="447" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -1846,12 +1847,12 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DescriptorEventReceiver_a7d590ffb163531deb55223472bfc8400_cgraph.svg" width="463" height="86"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DescriptorEventReceiver_a7d590ffb163531deb55223472bfc8400_cgraph.svg" width="430" height="86"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DescriptorEventReceiver_a7d590ffb163531deb55223472bfc8400_icgraph.svg" width="1611" height="380"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DescriptorEventReceiver_a7d590ffb163531deb55223472bfc8400_icgraph.svg" width="1508" height="380"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -1900,12 +1901,12 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DescriptorEventReceiver_ab7891fad490ecab4a5bd98dc9b6f65b2_cgraph.svg" width="979" height="259"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DescriptorEventReceiver_ab7891fad490ecab4a5bd98dc9b6f65b2_cgraph.svg" width="900" height="259"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DescriptorEventReceiver_ab7891fad490ecab4a5bd98dc9b6f65b2_icgraph.svg" width="788" height="346"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DescriptorEventReceiver_ab7891fad490ecab4a5bd98dc9b6f65b2_icgraph.svg" width="732" height="346"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -1940,16 +1941,16 @@ Here is the caller graph for this function:</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="EventReceiver_8h_source.html#l00054">core::EventReceiver::event</a>, and <a class="el" href="Event_8cpp_source.html#l00044">core::Event::span()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="MariaDBConnection_8cpp_source.html#l00163">database::mariadb::MariaDBConnection::checkStatus()</a>, <a class="el" href="SocketReader_8hpp_source.html#l00048">core::socket::stream::SocketReader&lt; PhysicalSocketT &gt;::doRead()</a>, <a class="el" href="SocketWriter_8hpp_source.html#l00046">core::socket::stream::SocketWriter&lt; PhysicalSocketT &gt;::doWrite()</a>, <a class="el" href="MariaDBConnection_8cpp_source.html#l00097">database::mariadb::MariaDBConnection::execute_async()</a>, <a class="el" href="FileReader_8cpp_source.html#l00034">core::file::FileReader::FileReader()</a>, <a class="el" href="FileReader_8cpp_source.html#l00058">core::file::FileReader::onEvent()</a>, <a class="el" href="iot_2mqtt_2SubProtocol_8hpp_source.html#l00131">iot::mqtt::SubProtocol&lt; WSSubProtocolRoleT &gt;::onMessageEnd()</a>, <a class="el" href="FileReader_8cpp_source.html#l00086">core::file::FileReader::resume()</a>, <a class="el" href="SocketAcceptor_8hpp_source.html#l00032">core::socket::stream::SocketAcceptor&lt; PhysicalSocketServerT, ConfigT, SocketConnectionT &gt;::SocketAcceptor()</a>, <a class="el" href="SocketConnector_8hpp_source.html#l00032">core::socket::stream::SocketConnector&lt; PhysicalSocketClientT, ConfigT, SocketConnectionT &gt;::SocketConnector()</a>, <a class="el" href="multiplexer_2epoll_2DescriptorEventPublisher_8cpp_source.html#l00125">core::epoll::DescriptorEventPublisher::spanActiveEvents()</a>, <a class="el" href="multiplexer_2poll_2DescriptorEventPublisher_8cpp_source.html#l00055">core::poll::DescriptorEventPublisher::spanActiveEvents()</a>, <a class="el" href="multiplexer_2select_2DescriptorEventPublisher_8cpp_source.html#l00084">core::select::DescriptorEventPublisher::spanActiveEvents()</a>, <a class="el" href="TimerEventPublisher_8cpp_source.html#l00042">core::TimerEventPublisher::spanActiveEvents()</a>, and <a class="el" href="iot_2mqtt_2SubProtocol_8hpp_source.html#l00048">iot::mqtt::SubProtocol&lt; WSSubProtocolRoleT &gt;::SubProtocol()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="MariaDBConnection_8cpp_source.html#l00163">database::mariadb::MariaDBConnection::checkStatus()</a>, <a class="el" href="SocketReader_8hpp_source.html#l00048">core::socket::stream::SocketReader&lt; PhysicalSocketT &gt;::doRead()</a>, <a class="el" href="SocketWriter_8hpp_source.html#l00046">core::socket::stream::SocketWriter&lt; PhysicalSocketT &gt;::doWrite()</a>, <a class="el" href="MariaDBConnection_8cpp_source.html#l00097">database::mariadb::MariaDBConnection::execute_async()</a>, <a class="el" href="FileReader_8cpp_source.html#l00034">core::file::FileReader::FileReader()</a>, <a class="el" href="FileReader_8cpp_source.html#l00058">core::file::FileReader::onEvent()</a>, <a class="el" href="iot_2mqtt_2SubProtocol_8hpp_source.html#l00131">iot::mqtt::SubProtocol&lt; WSSubProtocolRoleT &gt;::onMessageEnd()</a>, <a class="el" href="FileReader_8cpp_source.html#l00086">core::file::FileReader::resume()</a>, <a class="el" href="SocketAcceptor_8hpp_source.html#l00032">core::socket::stream::SocketAcceptor&lt; PhysicalSocketServerT, ConfigT, SocketConnectionT &gt;::SocketAcceptor()</a>, <a class="el" href="SocketConnector_8hpp_source.html#l00032">core::socket::stream::SocketConnector&lt; PhysicalSocketClientT, ConfigT, SocketConnectionT &gt;::SocketConnector()</a>, <a class="el" href="multiplexer_2epoll_2DescriptorEventPublisher_8cpp_source.html#l00125">core::epoll::DescriptorEventPublisher::spanActiveEvents()</a>, <a class="el" href="multiplexer_2poll_2DescriptorEventPublisher_8cpp_source.html#l00055">core::poll::DescriptorEventPublisher::spanActiveEvents()</a>, <a class="el" href="multiplexer_2select_2DescriptorEventPublisher_8cpp_source.html#l00088">core::select::DescriptorEventPublisher::spanActiveEvents()</a>, <a class="el" href="TimerEventPublisher_8cpp_source.html#l00042">core::TimerEventPublisher::spanActiveEvents()</a>, and <a class="el" href="iot_2mqtt_2SubProtocol_8hpp_source.html#l00048">iot::mqtt::SubProtocol&lt; WSSubProtocolRoleT &gt;::SubProtocol()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1EventReceiver_ad353e97a9089b2769e52f8825e4878b1_cgraph.svg" width="780" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1EventReceiver_ad353e97a9089b2769e52f8825e4878b1_cgraph.svg" width="726" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1EventReceiver_ad353e97a9089b2769e52f8825e4878b1_icgraph.svg" width="2028" height="963"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1EventReceiver_ad353e97a9089b2769e52f8825e4878b1_icgraph.svg" width="1896" height="963"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -1984,16 +1985,16 @@ Here is the caller graph for this function:</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="EventReceiver_8h_source.html#l00054">core::EventReceiver::event</a>, and <a class="el" href="Event_8cpp_source.html#l00044">core::Event::span()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="MariaDBConnection_8cpp_source.html#l00163">database::mariadb::MariaDBConnection::checkStatus()</a>, <a class="el" href="SocketReader_8hpp_source.html#l00048">core::socket::stream::SocketReader&lt; PhysicalSocketT &gt;::doRead()</a>, <a class="el" href="SocketWriter_8hpp_source.html#l00046">core::socket::stream::SocketWriter&lt; PhysicalSocketT &gt;::doWrite()</a>, <a class="el" href="MariaDBConnection_8cpp_source.html#l00097">database::mariadb::MariaDBConnection::execute_async()</a>, <a class="el" href="FileReader_8cpp_source.html#l00034">core::file::FileReader::FileReader()</a>, <a class="el" href="FileReader_8cpp_source.html#l00058">core::file::FileReader::onEvent()</a>, <a class="el" href="iot_2mqtt_2SubProtocol_8hpp_source.html#l00131">iot::mqtt::SubProtocol&lt; WSSubProtocolRoleT &gt;::onMessageEnd()</a>, <a class="el" href="FileReader_8cpp_source.html#l00086">core::file::FileReader::resume()</a>, <a class="el" href="SocketAcceptor_8hpp_source.html#l00032">core::socket::stream::SocketAcceptor&lt; PhysicalSocketServerT, ConfigT, SocketConnectionT &gt;::SocketAcceptor()</a>, <a class="el" href="SocketConnector_8hpp_source.html#l00032">core::socket::stream::SocketConnector&lt; PhysicalSocketClientT, ConfigT, SocketConnectionT &gt;::SocketConnector()</a>, <a class="el" href="multiplexer_2epoll_2DescriptorEventPublisher_8cpp_source.html#l00125">core::epoll::DescriptorEventPublisher::spanActiveEvents()</a>, <a class="el" href="multiplexer_2poll_2DescriptorEventPublisher_8cpp_source.html#l00055">core::poll::DescriptorEventPublisher::spanActiveEvents()</a>, <a class="el" href="multiplexer_2select_2DescriptorEventPublisher_8cpp_source.html#l00084">core::select::DescriptorEventPublisher::spanActiveEvents()</a>, <a class="el" href="TimerEventPublisher_8cpp_source.html#l00042">core::TimerEventPublisher::spanActiveEvents()</a>, and <a class="el" href="iot_2mqtt_2SubProtocol_8hpp_source.html#l00048">iot::mqtt::SubProtocol&lt; WSSubProtocolRoleT &gt;::SubProtocol()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="MariaDBConnection_8cpp_source.html#l00163">database::mariadb::MariaDBConnection::checkStatus()</a>, <a class="el" href="SocketReader_8hpp_source.html#l00048">core::socket::stream::SocketReader&lt; PhysicalSocketT &gt;::doRead()</a>, <a class="el" href="SocketWriter_8hpp_source.html#l00046">core::socket::stream::SocketWriter&lt; PhysicalSocketT &gt;::doWrite()</a>, <a class="el" href="MariaDBConnection_8cpp_source.html#l00097">database::mariadb::MariaDBConnection::execute_async()</a>, <a class="el" href="FileReader_8cpp_source.html#l00034">core::file::FileReader::FileReader()</a>, <a class="el" href="FileReader_8cpp_source.html#l00058">core::file::FileReader::onEvent()</a>, <a class="el" href="iot_2mqtt_2SubProtocol_8hpp_source.html#l00131">iot::mqtt::SubProtocol&lt; WSSubProtocolRoleT &gt;::onMessageEnd()</a>, <a class="el" href="FileReader_8cpp_source.html#l00086">core::file::FileReader::resume()</a>, <a class="el" href="SocketAcceptor_8hpp_source.html#l00032">core::socket::stream::SocketAcceptor&lt; PhysicalSocketServerT, ConfigT, SocketConnectionT &gt;::SocketAcceptor()</a>, <a class="el" href="SocketConnector_8hpp_source.html#l00032">core::socket::stream::SocketConnector&lt; PhysicalSocketClientT, ConfigT, SocketConnectionT &gt;::SocketConnector()</a>, <a class="el" href="multiplexer_2epoll_2DescriptorEventPublisher_8cpp_source.html#l00125">core::epoll::DescriptorEventPublisher::spanActiveEvents()</a>, <a class="el" href="multiplexer_2poll_2DescriptorEventPublisher_8cpp_source.html#l00055">core::poll::DescriptorEventPublisher::spanActiveEvents()</a>, <a class="el" href="multiplexer_2select_2DescriptorEventPublisher_8cpp_source.html#l00088">core::select::DescriptorEventPublisher::spanActiveEvents()</a>, <a class="el" href="TimerEventPublisher_8cpp_source.html#l00042">core::TimerEventPublisher::spanActiveEvents()</a>, and <a class="el" href="iot_2mqtt_2SubProtocol_8hpp_source.html#l00048">iot::mqtt::SubProtocol&lt; WSSubProtocolRoleT &gt;::SubProtocol()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1EventReceiver_ad353e97a9089b2769e52f8825e4878b1_cgraph.svg" width="780" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1EventReceiver_ad353e97a9089b2769e52f8825e4878b1_cgraph.svg" width="726" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1EventReceiver_ad353e97a9089b2769e52f8825e4878b1_icgraph.svg" width="2028" height="963"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1EventReceiver_ad353e97a9089b2769e52f8825e4878b1_icgraph.svg" width="1896" height="963"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -2045,12 +2046,12 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DescriptorEventReceiver_aab5e466759c83194c5bc4b41f1a33103_cgraph.svg" width="771" height="166"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DescriptorEventReceiver_aab5e466759c83194c5bc4b41f1a33103_cgraph.svg" width="714" height="166"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DescriptorEventReceiver_aab5e466759c83194c5bc4b41f1a33103_icgraph.svg" width="2162" height="1883"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DescriptorEventReceiver_aab5e466759c83194c5bc4b41f1a33103_icgraph.svg" width="2018" height="1883"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -2093,12 +2094,12 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DescriptorEventReceiver_a89834bfd8d8f74d4570c45838239eeb8_cgraph.svg" width="1308" height="258"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DescriptorEventReceiver_a89834bfd8d8f74d4570c45838239eeb8_cgraph.svg" width="1214" height="258"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DescriptorEventReceiver_a89834bfd8d8f74d4570c45838239eeb8_icgraph.svg" width="1576" height="198"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DescriptorEventReceiver_a89834bfd8d8f74d4570c45838239eeb8_icgraph.svg" width="1466" height="198"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -2138,7 +2139,7 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1eventreceiver_1_1ConnectEventReceiver_a24107f1a6e60ee7b954f686bd82a63a1_cgraph.svg" width="1492" height="258"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1eventreceiver_1_1ConnectEventReceiver_a24107f1a6e60ee7b954f686bd82a63a1_cgraph.svg" width="1391" height="258"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -2178,12 +2179,12 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DescriptorEventReceiver_a550c1ba95dcb4e286eaf680eed1ca11b_cgraph.svg" width="462" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DescriptorEventReceiver_a550c1ba95dcb4e286eaf680eed1ca11b_cgraph.svg" width="423" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DescriptorEventReceiver_a550c1ba95dcb4e286eaf680eed1ca11b_icgraph.svg" width="2135" height="463"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DescriptorEventReceiver_a550c1ba95dcb4e286eaf680eed1ca11b_icgraph.svg" width="1987" height="463"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -2222,7 +2223,7 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1Observer_a00846551b99f8dbde144dd8b7a0a2aef_icgraph.svg" width="480" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1Observer_a00846551b99f8dbde144dd8b7a0a2aef_icgraph.svg" width="447" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -2254,16 +2255,16 @@ template&lt;typename PhysicalSocketClient , typename <a class="el" href="classco
 
 <p>Implements <a class="el" href="classcore_1_1Observer.html#ab67ac92682df570b0ac712351f5a064a">core::Observer</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="SocketConnector_8hpp_source.html#l00221">221</a> of file <a class="el" href="SocketConnector_8hpp_source.html">SocketConnector.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  221</span>                                                                                          {</div>
-<div class="line"><span class="lineno">  222</span>        <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#acb03092786e852e56c2886bba0787d32">destruct</a>();</div>
-<div class="line"><span class="lineno">  223</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="SocketConnector_8hpp_source.html#l00222">222</a> of file <a class="el" href="SocketConnector_8hpp_source.html">SocketConnector.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  222</span>                                                                                          {</div>
+<div class="line"><span class="lineno">  223</span>        <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#acb03092786e852e56c2886bba0787d32">destruct</a>();</div>
+<div class="line"><span class="lineno">  224</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="SocketConnector_8hpp_source.html#l00216">core::socket::stream::SocketConnector&lt; PhysicalSocketClientT, ConfigT, SocketConnectionT &gt;::destruct()</a>.</p>
+<p class="reference">References <a class="el" href="SocketConnector_8hpp_source.html#l00217">core::socket::stream::SocketConnector&lt; PhysicalSocketClientT, ConfigT, SocketConnectionT &gt;::destruct()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1socket_1_1stream_1_1SocketConnector_abf780ddf074ec75e9baad5cf5430d24e_cgraph.svg" width="482" height="66"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1socket_1_1stream_1_1SocketConnector_abf780ddf074ec75e9baad5cf5430d24e_cgraph.svg" width="452" height="66"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -2293,7 +2294,7 @@ template&lt;typename PhysicalSocketClientT , typename ConfigT , template&lt; typ
 
 <p class="definition">Definition at line <a class="el" href="SocketConnector_8h_source.html#l00092">92</a> of file <a class="el" href="SocketConnector_8h_source.html">SocketConnector.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SocketConnector_8hpp_source.html#l00163">core::socket::stream::SocketConnector&lt; PhysicalSocketClientT, ConfigT, SocketConnectionT &gt;::connectEvent()</a>, <a class="el" href="SocketConnector_8hpp_source.html#l00226">core::socket::stream::SocketConnector&lt; PhysicalSocketClientT, ConfigT, SocketConnectionT &gt;::connectTimeout()</a>, <a class="el" href="SocketConnector_8hpp_source.html#l00226">core::socket::stream::SocketConnector&lt; PhysicalClientSocketT, ConfigT, core::socket::stream::legacy::SocketConnection &gt;::connectTimeout()</a>, <a class="el" href="SocketConnector_8hpp_source.html#l00058">core::socket::stream::SocketConnector&lt; PhysicalSocketClientT, ConfigT, SocketConnectionT &gt;::initConnectEvent()</a>, <a class="el" href="SocketConnector_8hpp_source.html#l00032">core::socket::stream::SocketConnector&lt; PhysicalSocketClientT, ConfigT, SocketConnectionT &gt;::SocketConnector()</a>, and <a class="el" href="SocketConnector_8hpp_source.html#l00051">core::socket::stream::SocketConnector&lt; PhysicalClientSocketT, ConfigT, core::socket::stream::legacy::SocketConnection &gt;::~SocketConnector()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SocketConnector_8hpp_source.html#l00163">core::socket::stream::SocketConnector&lt; PhysicalSocketClientT, ConfigT, SocketConnectionT &gt;::connectEvent()</a>, <a class="el" href="SocketConnector_8hpp_source.html#l00227">core::socket::stream::SocketConnector&lt; PhysicalSocketClientT, ConfigT, SocketConnectionT &gt;::connectTimeout()</a>, <a class="el" href="SocketConnector_8hpp_source.html#l00227">core::socket::stream::SocketConnector&lt; PhysicalClientSocketT, ConfigT, core::socket::stream::legacy::SocketConnection &gt;::connectTimeout()</a>, <a class="el" href="SocketConnector_8hpp_source.html#l00058">core::socket::stream::SocketConnector&lt; PhysicalSocketClientT, ConfigT, SocketConnectionT &gt;::initConnectEvent()</a>, <a class="el" href="SocketConnector_8hpp_source.html#l00032">core::socket::stream::SocketConnector&lt; PhysicalSocketClientT, ConfigT, SocketConnectionT &gt;::SocketConnector()</a>, and <a class="el" href="SocketConnector_8hpp_source.html#l00051">core::socket::stream::SocketConnector&lt; PhysicalClientSocketT, ConfigT, core::socket::stream::legacy::SocketConnection &gt;::~SocketConnector()</a>.</p>
 
 </div>
 </div>
@@ -2555,7 +2556,7 @@ template&lt;typename PhysicalSocketClientT , typename ConfigT , template&lt; typ
 
 <p class="definition">Definition at line <a class="el" href="SocketConnector_8h_source.html#l00086">86</a> of file <a class="el" href="SocketConnector_8h_source.html">SocketConnector.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SocketConnector_8hpp_source.html#l00163">core::socket::stream::SocketConnector&lt; PhysicalSocketClientT, ConfigT, SocketConnectionT &gt;::connectEvent()</a>, <a class="el" href="SocketConnector_8hpp_source.html#l00226">core::socket::stream::SocketConnector&lt; PhysicalSocketClientT, ConfigT, SocketConnectionT &gt;::connectTimeout()</a>, <a class="el" href="SocketConnector_8hpp_source.html#l00226">core::socket::stream::SocketConnector&lt; PhysicalClientSocketT, ConfigT, core::socket::stream::legacy::SocketConnection &gt;::connectTimeout()</a>, and <a class="el" href="SocketConnector_8hpp_source.html#l00032">core::socket::stream::SocketConnector&lt; PhysicalSocketClientT, ConfigT, SocketConnectionT &gt;::SocketConnector()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SocketConnector_8hpp_source.html#l00163">core::socket::stream::SocketConnector&lt; PhysicalSocketClientT, ConfigT, SocketConnectionT &gt;::connectEvent()</a>, <a class="el" href="SocketConnector_8hpp_source.html#l00227">core::socket::stream::SocketConnector&lt; PhysicalSocketClientT, ConfigT, SocketConnectionT &gt;::connectTimeout()</a>, <a class="el" href="SocketConnector_8hpp_source.html#l00227">core::socket::stream::SocketConnector&lt; PhysicalClientSocketT, ConfigT, core::socket::stream::legacy::SocketConnection &gt;::connectTimeout()</a>, and <a class="el" href="SocketConnector_8hpp_source.html#l00032">core::socket::stream::SocketConnector&lt; PhysicalSocketClientT, ConfigT, SocketConnectionT &gt;::SocketConnector()</a>.</p>
 
 </div>
 </div>
@@ -2583,7 +2584,7 @@ template&lt;typename PhysicalSocketClientT , typename ConfigT , template&lt; typ
 
 <p class="definition">Definition at line <a class="el" href="SocketConnector_8h_source.html#l00087">87</a> of file <a class="el" href="SocketConnector_8h_source.html">SocketConnector.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SocketConnector_8hpp_source.html#l00163">core::socket::stream::SocketConnector&lt; PhysicalSocketClientT, ConfigT, SocketConnectionT &gt;::connectEvent()</a>, <a class="el" href="SocketConnector_8hpp_source.html#l00226">core::socket::stream::SocketConnector&lt; PhysicalSocketClientT, ConfigT, SocketConnectionT &gt;::connectTimeout()</a>, <a class="el" href="SocketConnector_8hpp_source.html#l00226">core::socket::stream::SocketConnector&lt; PhysicalClientSocketT, ConfigT, core::socket::stream::legacy::SocketConnection &gt;::connectTimeout()</a>, and <a class="el" href="SocketConnector_8hpp_source.html#l00032">core::socket::stream::SocketConnector&lt; PhysicalSocketClientT, ConfigT, SocketConnectionT &gt;::SocketConnector()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SocketConnector_8hpp_source.html#l00163">core::socket::stream::SocketConnector&lt; PhysicalSocketClientT, ConfigT, SocketConnectionT &gt;::connectEvent()</a>, <a class="el" href="SocketConnector_8hpp_source.html#l00227">core::socket::stream::SocketConnector&lt; PhysicalSocketClientT, ConfigT, SocketConnectionT &gt;::connectTimeout()</a>, <a class="el" href="SocketConnector_8hpp_source.html#l00227">core::socket::stream::SocketConnector&lt; PhysicalClientSocketT, ConfigT, core::socket::stream::legacy::SocketConnection &gt;::connectTimeout()</a>, and <a class="el" href="SocketConnector_8hpp_source.html#l00032">core::socket::stream::SocketConnector&lt; PhysicalSocketClientT, ConfigT, SocketConnectionT &gt;::SocketConnector()</a>.</p>
 
 </div>
 </div>
@@ -2611,7 +2612,7 @@ template&lt;typename PhysicalSocketClientT , typename ConfigT , template&lt; typ
 
 <p class="definition">Definition at line <a class="el" href="SocketConnector_8h_source.html#l00088">88</a> of file <a class="el" href="SocketConnector_8h_source.html">SocketConnector.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SocketConnector_8hpp_source.html#l00163">core::socket::stream::SocketConnector&lt; PhysicalSocketClientT, ConfigT, SocketConnectionT &gt;::connectEvent()</a>, <a class="el" href="SocketConnector_8hpp_source.html#l00226">core::socket::stream::SocketConnector&lt; PhysicalSocketClientT, ConfigT, SocketConnectionT &gt;::connectTimeout()</a>, <a class="el" href="SocketConnector_8hpp_source.html#l00226">core::socket::stream::SocketConnector&lt; PhysicalClientSocketT, ConfigT, core::socket::stream::legacy::SocketConnection &gt;::connectTimeout()</a>, and <a class="el" href="SocketConnector_8hpp_source.html#l00032">core::socket::stream::SocketConnector&lt; PhysicalSocketClientT, ConfigT, SocketConnectionT &gt;::SocketConnector()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SocketConnector_8hpp_source.html#l00163">core::socket::stream::SocketConnector&lt; PhysicalSocketClientT, ConfigT, SocketConnectionT &gt;::connectEvent()</a>, <a class="el" href="SocketConnector_8hpp_source.html#l00227">core::socket::stream::SocketConnector&lt; PhysicalSocketClientT, ConfigT, SocketConnectionT &gt;::connectTimeout()</a>, <a class="el" href="SocketConnector_8hpp_source.html#l00227">core::socket::stream::SocketConnector&lt; PhysicalClientSocketT, ConfigT, core::socket::stream::legacy::SocketConnection &gt;::connectTimeout()</a>, and <a class="el" href="SocketConnector_8hpp_source.html#l00032">core::socket::stream::SocketConnector&lt; PhysicalSocketClientT, ConfigT, SocketConnectionT &gt;::SocketConnector()</a>.</p>
 
 </div>
 </div>
@@ -2639,7 +2640,7 @@ template&lt;typename PhysicalSocketClientT , typename ConfigT , template&lt; typ
 
 <p class="definition">Definition at line <a class="el" href="SocketConnector_8h_source.html#l00090">90</a> of file <a class="el" href="SocketConnector_8h_source.html">SocketConnector.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SocketConnector_8hpp_source.html#l00163">core::socket::stream::SocketConnector&lt; PhysicalSocketClientT, ConfigT, SocketConnectionT &gt;::connectEvent()</a>, <a class="el" href="SocketConnector_8hpp_source.html#l00226">core::socket::stream::SocketConnector&lt; PhysicalSocketClientT, ConfigT, SocketConnectionT &gt;::connectTimeout()</a>, <a class="el" href="SocketConnector_8hpp_source.html#l00226">core::socket::stream::SocketConnector&lt; PhysicalClientSocketT, ConfigT, core::socket::stream::legacy::SocketConnection &gt;::connectTimeout()</a>, and <a class="el" href="SocketConnector_8hpp_source.html#l00032">core::socket::stream::SocketConnector&lt; PhysicalSocketClientT, ConfigT, SocketConnectionT &gt;::SocketConnector()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SocketConnector_8hpp_source.html#l00163">core::socket::stream::SocketConnector&lt; PhysicalSocketClientT, ConfigT, SocketConnectionT &gt;::connectEvent()</a>, <a class="el" href="SocketConnector_8hpp_source.html#l00227">core::socket::stream::SocketConnector&lt; PhysicalSocketClientT, ConfigT, SocketConnectionT &gt;::connectTimeout()</a>, <a class="el" href="SocketConnector_8hpp_source.html#l00227">core::socket::stream::SocketConnector&lt; PhysicalClientSocketT, ConfigT, core::socket::stream::legacy::SocketConnection &gt;::connectTimeout()</a>, and <a class="el" href="SocketConnector_8hpp_source.html#l00032">core::socket::stream::SocketConnector&lt; PhysicalSocketClientT, ConfigT, SocketConnectionT &gt;::SocketConnector()</a>.</p>
 
 </div>
 </div>
@@ -2667,7 +2668,7 @@ template&lt;typename PhysicalSocketClientT , typename ConfigT , template&lt; typ
 
 <p class="definition">Definition at line <a class="el" href="SocketConnector_8h_source.html#l00080">80</a> of file <a class="el" href="SocketConnector_8h_source.html">SocketConnector.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SocketConnector_8hpp_source.html#l00163">core::socket::stream::SocketConnector&lt; PhysicalSocketClientT, ConfigT, SocketConnectionT &gt;::connectEvent()</a>, <a class="el" href="SocketConnector_8hpp_source.html#l00226">core::socket::stream::SocketConnector&lt; PhysicalClientSocketT, ConfigT, core::socket::stream::legacy::SocketConnection &gt;::connectTimeout()</a>, and <a class="el" href="SocketConnector_8hpp_source.html#l00051">core::socket::stream::SocketConnector&lt; PhysicalSocketClientT, ConfigT, SocketConnectionT &gt;::~SocketConnector()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SocketConnector_8hpp_source.html#l00163">core::socket::stream::SocketConnector&lt; PhysicalSocketClientT, ConfigT, SocketConnectionT &gt;::connectEvent()</a>, <a class="el" href="SocketConnector_8hpp_source.html#l00227">core::socket::stream::SocketConnector&lt; PhysicalClientSocketT, ConfigT, core::socket::stream::legacy::SocketConnection &gt;::connectTimeout()</a>, and <a class="el" href="SocketConnector_8hpp_source.html#l00051">core::socket::stream::SocketConnector&lt; PhysicalSocketClientT, ConfigT, SocketConnectionT &gt;::~SocketConnector()</a>.</p>
 
 </div>
 </div>
@@ -2695,7 +2696,7 @@ template&lt;typename PhysicalSocketClientT , typename ConfigT , template&lt; typ
 
 <p class="definition">Definition at line <a class="el" href="SocketConnector_8h_source.html#l00081">81</a> of file <a class="el" href="SocketConnector_8h_source.html">SocketConnector.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SocketConnector_8hpp_source.html#l00163">core::socket::stream::SocketConnector&lt; PhysicalSocketClientT, ConfigT, SocketConnectionT &gt;::connectEvent()</a>, <a class="el" href="SocketConnector_8hpp_source.html#l00226">core::socket::stream::SocketConnector&lt; PhysicalSocketClientT, ConfigT, SocketConnectionT &gt;::connectTimeout()</a>, and <a class="el" href="SocketConnector_8hpp_source.html#l00226">core::socket::stream::SocketConnector&lt; PhysicalClientSocketT, ConfigT, core::socket::stream::legacy::SocketConnection &gt;::connectTimeout()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SocketConnector_8hpp_source.html#l00163">core::socket::stream::SocketConnector&lt; PhysicalSocketClientT, ConfigT, SocketConnectionT &gt;::connectEvent()</a>, <a class="el" href="SocketConnector_8hpp_source.html#l00227">core::socket::stream::SocketConnector&lt; PhysicalSocketClientT, ConfigT, SocketConnectionT &gt;::connectTimeout()</a>, and <a class="el" href="SocketConnector_8hpp_source.html#l00227">core::socket::stream::SocketConnector&lt; PhysicalClientSocketT, ConfigT, core::socket::stream::legacy::SocketConnection &gt;::connectTimeout()</a>.</p>
 
 </div>
 </div>
@@ -2723,7 +2724,7 @@ template&lt;typename PhysicalSocketClientT , typename ConfigT , template&lt; typ
 
 <p class="definition">Definition at line <a class="el" href="SocketConnector_8h_source.html#l00084">84</a> of file <a class="el" href="SocketConnector_8h_source.html">SocketConnector.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SocketConnector_8hpp_source.html#l00163">core::socket::stream::SocketConnector&lt; PhysicalSocketClientT, ConfigT, SocketConnectionT &gt;::connectEvent()</a>, <a class="el" href="SocketConnector_8hpp_source.html#l00226">core::socket::stream::SocketConnector&lt; PhysicalSocketClientT, ConfigT, SocketConnectionT &gt;::connectTimeout()</a>, <a class="el" href="SocketConnector_8hpp_source.html#l00226">core::socket::stream::SocketConnector&lt; PhysicalClientSocketT, ConfigT, core::socket::stream::legacy::SocketConnection &gt;::connectTimeout()</a>, and <a class="el" href="SocketConnector_8hpp_source.html#l00032">core::socket::stream::SocketConnector&lt; PhysicalSocketClientT, ConfigT, SocketConnectionT &gt;::SocketConnector()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SocketConnector_8hpp_source.html#l00163">core::socket::stream::SocketConnector&lt; PhysicalSocketClientT, ConfigT, SocketConnectionT &gt;::connectEvent()</a>, <a class="el" href="SocketConnector_8hpp_source.html#l00227">core::socket::stream::SocketConnector&lt; PhysicalSocketClientT, ConfigT, SocketConnectionT &gt;::connectTimeout()</a>, <a class="el" href="SocketConnector_8hpp_source.html#l00227">core::socket::stream::SocketConnector&lt; PhysicalClientSocketT, ConfigT, core::socket::stream::legacy::SocketConnection &gt;::connectTimeout()</a>, and <a class="el" href="SocketConnector_8hpp_source.html#l00032">core::socket::stream::SocketConnector&lt; PhysicalSocketClientT, ConfigT, SocketConnectionT &gt;::SocketConnector()</a>.</p>
 
 </div>
 </div>
@@ -2763,7 +2764,7 @@ template&lt;typename PhysicalSocketClientT , typename ConfigT , template&lt; typ
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacecore.html">core</a></li><li class="navelem"><a class="el" href="namespacecore_1_1socket.html">socket</a></li><li class="navelem"><a class="el" href="namespacecore_1_1socket_1_1stream.html">stream</a></li><li class="navelem"><a class="el" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html">SocketConnector</a></li>
-    <li class="footer">Generated on Fri Oct 13 2023 08:51:17 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Fri Oct 20 2023 14:01:11 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

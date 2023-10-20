@@ -694,7 +694,8 @@ var hierarchy =
       [ "web::websocket::server::SubProtocol", "classweb_1_1websocket_1_1server_1_1SubProtocol.html", null ]
     ] ],
     [ "web::websocket::SubProtocolFactory< SubProtocolT >", "classweb_1_1websocket_1_1SubProtocolFactory.html", null ],
-    [ "web::websocket::SubProtocolFactory< SubProtocol >", "classweb_1_1websocket_1_1SubProtocolFactory.html", null ],
+    [ "web::websocket::SubProtocolFactory< web::websocket::client::SubProtocol >", "classweb_1_1websocket_1_1SubProtocolFactory.html", null ],
+    [ "web::websocket::SubProtocolFactory< web::websocket::server::SubProtocol >", "classweb_1_1websocket_1_1SubProtocolFactory.html", null ],
     [ "web::websocket::SubProtocolFactorySelector< SubProtocolFactoryT >", "classweb_1_1websocket_1_1SubProtocolFactorySelector.html", null ],
     [ "web::websocket::SubProtocolFactorySelector< web::websocket::SubProtocolFactory< web::websocket::client::SubProtocol > >", "classweb_1_1websocket_1_1SubProtocolFactorySelector.html", [
       [ "web::websocket::client::SubProtocolFactorySelector", "classweb_1_1websocket_1_1client_1_1SubProtocolFactorySelector.html", null ]
@@ -705,10 +706,7 @@ var hierarchy =
     [ "iot::mqtt::server::broker::SubscribtionTree", "classiot_1_1mqtt_1_1server_1_1broker_1_1SubscribtionTree.html", null ],
     [ "CLI::Success", null, [
       [ "CLI::CallForCommandline", "classCLI_1_1CallForCommandline.html", null ],
-      [ "CLI::CallForCommandline", "classCLI_1_1CallForCommandline.html", null ],
       [ "CLI::CallForShowConfig", "classCLI_1_1CallForShowConfig.html", null ],
-      [ "CLI::CallForShowConfig", "classCLI_1_1CallForShowConfig.html", null ],
-      [ "CLI::CallForWriteConfig", "classCLI_1_1CallForWriteConfig.html", null ],
       [ "CLI::CallForWriteConfig", "classCLI_1_1CallForWriteConfig.html", null ]
     ] ],
     [ "core::DescriptorEventReceiver::TIMEOUT", "structcore_1_1DescriptorEventReceiver_1_1TIMEOUT.html", null ],

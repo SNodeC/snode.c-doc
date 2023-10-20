@@ -143,6 +143,9 @@ Concepts</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a087c65a976bbdbf8e3978d55cf44bcf3" id="r_a087c65a976bbdbf8e3978d55cf44bcf3"><td class="memTemplParams" colspan="2">template&lt;unsigned N&gt; </td></tr>
+<tr class="memitem:a087c65a976bbdbf8e3978d55cf44bcf3"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceutils.html#a087c65a976bbdbf8e3978d55cf44bcf3">fixed_string</a> (char const (&amp;)[N]) -&gt; <a class="el" href="structutils_1_1fixed__string.html">fixed_string</a>&lt; N - 1 &gt;</td></tr>
+<tr class="separator:a087c65a976bbdbf8e3978d55cf44bcf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad8d4413504d5f4da6850cbb88a0571bf" id="r_ad8d4413504d5f4da6850cbb88a0571bf"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutils.html#ad8d4413504d5f4da6850cbb88a0571bf">createCommandLineOptions</a> (CLI::App *app, <a class="el" href="classCLI_1_1CallForCommandline.html#a772a59d089ea19572527641273cb339d">CLI::CallForCommandline::Mode</a> mode)</td></tr>
 <tr class="separator:ad8d4413504d5f4da6850cbb88a0571bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac8959e45881eac2ddd8177a68c40c588" id="r_ac8959e45881eac2ddd8177a68c40c588"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutils.html#ac8959e45881eac2ddd8177a68c40c588">createCommandLineOptions</a> (std::stringstream &amp;out, CLI::App *app, <a class="el" href="classCLI_1_1CallForCommandline.html#a772a59d089ea19572527641273cb339d">CLI::CallForCommandline::Mode</a> mode)</td></tr>
@@ -155,9 +158,6 @@ Functions</h2></td></tr>
 <tr class="separator:a1a80f43b44109216f2c37fe9bdb3dc2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a94ea12976058468fed45202315c247a2" id="r_a94ea12976058468fed45202315c247a2"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutils.html#a94ea12976058468fed45202315c247a2">operator&lt;&lt;</a> (std::ostream &amp;ostream, const <a class="el" href="classutils_1_1Timeval.html">utils::Timeval</a> &amp;timeVal)</td></tr>
 <tr class="separator:a94ea12976058468fed45202315c247a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a087c65a976bbdbf8e3978d55cf44bcf3" id="r_a087c65a976bbdbf8e3978d55cf44bcf3"><td class="memTemplParams" colspan="2">template&lt;unsigned N&gt; </td></tr>
-<tr class="memitem:a087c65a976bbdbf8e3978d55cf44bcf3"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceutils.html#a087c65a976bbdbf8e3978d55cf44bcf3">fixed_string</a> (char const (&amp;)[N]) -&gt; <a class="el" href="structutils_1_1fixed__string.html">fixed_string</a>&lt; N - 1 &gt;</td></tr>
-<tr class="separator:a087c65a976bbdbf8e3978d55cf44bcf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="ad8d4413504d5f4da6850cbb88a0571bf" name="ad8d4413504d5f4da6850cbb88a0571bf"></a>
@@ -194,33 +194,33 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Config_8cpp_source.html#l00572">572</a> of file <a class="el" href="Config_8cpp_source.html">Config.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  572</span>                                                                                           {</div>
-<div class="line"><span class="lineno">  573</span>        std::stringstream out;</div>
-<div class="line"><span class="lineno">  574</span> </div>
-<div class="line"><span class="lineno">  575</span>        <a class="code hl_function" href="namespaceutils.html#ad8d4413504d5f4da6850cbb88a0571bf">createCommandLineOptions</a>(out, app, mode);</div>
-<div class="line"><span class="lineno">  576</span> </div>
-<div class="line"><span class="lineno">  577</span>        std::string optionString = out.str();</div>
-<div class="line"><span class="lineno">  578</span>        <span class="keywordflow">if</span> (optionString.back() == <span class="charliteral">&#39; &#39;</span>) {</div>
-<div class="line"><span class="lineno">  579</span>            optionString.pop_back();</div>
-<div class="line"><span class="lineno">  580</span>        }</div>
-<div class="line"><span class="lineno">  581</span> </div>
-<div class="line"><span class="lineno">  582</span>        <span class="keywordflow">return</span> optionString;</div>
-<div class="line"><span class="lineno">  583</span>    }</div>
-<div class="ttc" id="anamespaceutils_html_ad8d4413504d5f4da6850cbb88a0571bf"><div class="ttname"><a href="namespaceutils.html#ad8d4413504d5f4da6850cbb88a0571bf">utils::createCommandLineOptions</a></div><div class="ttdeci">static std::string createCommandLineOptions(CLI::App *app, CLI::CallForCommandline::Mode mode)</div><div class="ttdef"><b>Definition</b> <a href="Config_8cpp_source.html#l00572">Config.cpp:572</a></div></div>
+<p class="definition">Definition at line <a class="el" href="Config_8cpp_source.html#l00578">578</a> of file <a class="el" href="Config_8cpp_source.html">Config.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  578</span>                                                                                           {</div>
+<div class="line"><span class="lineno">  579</span>        std::stringstream out;</div>
+<div class="line"><span class="lineno">  580</span> </div>
+<div class="line"><span class="lineno">  581</span>        <a class="code hl_function" href="namespaceutils.html#ad8d4413504d5f4da6850cbb88a0571bf">createCommandLineOptions</a>(out, app, mode);</div>
+<div class="line"><span class="lineno">  582</span> </div>
+<div class="line"><span class="lineno">  583</span>        std::string optionString = out.str();</div>
+<div class="line"><span class="lineno">  584</span>        <span class="keywordflow">if</span> (optionString.back() == <span class="charliteral">&#39; &#39;</span>) {</div>
+<div class="line"><span class="lineno">  585</span>            optionString.pop_back();</div>
+<div class="line"><span class="lineno">  586</span>        }</div>
+<div class="line"><span class="lineno">  587</span> </div>
+<div class="line"><span class="lineno">  588</span>        <span class="keywordflow">return</span> optionString;</div>
+<div class="line"><span class="lineno">  589</span>    }</div>
+<div class="ttc" id="anamespaceutils_html_ad8d4413504d5f4da6850cbb88a0571bf"><div class="ttname"><a href="namespaceutils.html#ad8d4413504d5f4da6850cbb88a0571bf">utils::createCommandLineOptions</a></div><div class="ttdeci">static std::string createCommandLineOptions(CLI::App *app, CLI::CallForCommandline::Mode mode)</div><div class="ttdef"><b>Definition</b> <a href="Config_8cpp_source.html#l00578">Config.cpp:578</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Config_8cpp_source.html#l00544">createCommandLineOptions()</a>.</p>
+<p class="reference">References <a class="el" href="Config_8cpp_source.html#l00550">createCommandLineOptions()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Config_8cpp_source.html#l00613">createCommandLineTemplate()</a>, and <a class="el" href="Config_8cpp_source.html#l00599">createCommandLineTemplate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Config_8cpp_source.html#l00619">createCommandLineTemplate()</a>, and <a class="el" href="Config_8cpp_source.html#l00605">createCommandLineTemplate()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="namespaceutils_ad8d4413504d5f4da6850cbb88a0571bf_cgraph.svg" width="446" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespaceutils_ad8d4413504d5f4da6850cbb88a0571bf_cgraph.svg" width="408" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="namespaceutils_ad8d4413504d5f4da6850cbb88a0571bf_icgraph.svg" width="1734" height="115"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespaceutils_ad8d4413504d5f4da6850cbb88a0571bf_icgraph.svg" width="1612" height="115"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -265,44 +265,44 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Config_8cpp_source.html#l00544">544</a> of file <a class="el" href="Config_8cpp_source.html">Config.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  544</span>                                                                                                            {</div>
-<div class="line"><span class="lineno">  545</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> CLI::Option* option : app-&gt;get_options()) {</div>
-<div class="line"><span class="lineno">  546</span>            <span class="keywordflow">if</span> (option-&gt;get_configurable()) {</div>
-<div class="line"><span class="lineno">  547</span>                std::string value;</div>
-<div class="line"><span class="lineno">  548</span> </div>
-<div class="line"><span class="lineno">  549</span>                <span class="keywordflow">if</span> (option-&gt;reduced_results().size() &gt; 0 &amp;&amp; ((option-&gt;get_required() || mode == <a class="code hl_enumvalue" href="classCLI_1_1CallForCommandline.html#a772a59d089ea19572527641273cb339da5fb1f955b45e38e31789286a1790398d">CLI::CallForCommandline::Mode::ALL</a>) ||</div>
-<div class="line"><span class="lineno">  550</span>                                                             mode == <a class="code hl_enumvalue" href="classCLI_1_1CallForCommandline.html#a772a59d089ea19572527641273cb339da5e19e4f4c52af8b10f36af4b717266be">CLI::CallForCommandline::Mode::CONFIGURED</a>)) {</div>
-<div class="line"><span class="lineno">  551</span>                    value = option-&gt;reduced_results()[0];</div>
-<div class="line"><span class="lineno">  552</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!option-&gt;get_default_str().empty()) {</div>
-<div class="line"><span class="lineno">  553</span>                    value = (mode == <a class="code hl_enumvalue" href="classCLI_1_1CallForCommandline.html#a772a59d089ea19572527641273cb339da5fb1f955b45e38e31789286a1790398d">CLI::CallForCommandline::Mode::ALL</a> || option-&gt;get_required()) ? option-&gt;get_default_str() : <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">  554</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (option-&gt;get_required()) {</div>
-<div class="line"><span class="lineno">  555</span>                    value = <span class="stringliteral">&quot;&lt;REQUIRED&gt;&quot;</span>;</div>
-<div class="line"><span class="lineno">  556</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  557</span>                    value = mode == <a class="code hl_enumvalue" href="classCLI_1_1CallForCommandline.html#a772a59d089ea19572527641273cb339da5fb1f955b45e38e31789286a1790398d">CLI::CallForCommandline::Mode::ALL</a> ? <span class="stringliteral">&quot;\&quot;\&quot;&quot;</span> : <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">  558</span>                }</div>
-<div class="line"><span class="lineno">  559</span> </div>
-<div class="line"><span class="lineno">  560</span>                <span class="keywordflow">if</span> (value.empty() &amp;&amp; option-&gt;count() &gt; 0 &amp;&amp;</div>
-<div class="line"><span class="lineno">  561</span>                    (mode == <a class="code hl_enumvalue" href="classCLI_1_1CallForCommandline.html#a772a59d089ea19572527641273cb339da5fb1f955b45e38e31789286a1790398d">CLI::CallForCommandline::Mode::ALL</a> || mode == <a class="code hl_enumvalue" href="classCLI_1_1CallForCommandline.html#a772a59d089ea19572527641273cb339da5e19e4f4c52af8b10f36af4b717266be">CLI::CallForCommandline::Mode::CONFIGURED</a>)) {</div>
-<div class="line"><span class="lineno">  562</span>                    value = <span class="stringliteral">&quot;\&quot;\&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">  563</span>                }</div>
-<div class="line"><span class="lineno">  564</span> </div>
-<div class="line"><span class="lineno">  565</span>                <span class="keywordflow">if</span> (!value.empty()) {</div>
-<div class="line"><span class="lineno">  566</span>                    out &lt;&lt; <span class="stringliteral">&quot;--&quot;</span> &lt;&lt; option-&gt;get_single_name() &lt;&lt; ((option-&gt;get_items_expected_max() == 0) ? <span class="stringliteral">&quot;=&quot;</span> : <span class="stringliteral">&quot; &quot;</span>) &lt;&lt; value &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
-<div class="line"><span class="lineno">  567</span>                }</div>
-<div class="line"><span class="lineno">  568</span>            }</div>
-<div class="line"><span class="lineno">  569</span>        }</div>
-<div class="line"><span class="lineno">  570</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Config_8cpp_source.html#l00550">550</a> of file <a class="el" href="Config_8cpp_source.html">Config.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  550</span>                                                                                                            {</div>
+<div class="line"><span class="lineno">  551</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> CLI::Option* option : app-&gt;get_options()) {</div>
+<div class="line"><span class="lineno">  552</span>            <span class="keywordflow">if</span> (option-&gt;get_configurable()) {</div>
+<div class="line"><span class="lineno">  553</span>                std::string value;</div>
+<div class="line"><span class="lineno">  554</span> </div>
+<div class="line"><span class="lineno">  555</span>                <span class="keywordflow">if</span> (option-&gt;reduced_results().size() &gt; 0 &amp;&amp; ((option-&gt;get_required() || mode == <a class="code hl_enumvalue" href="classCLI_1_1CallForCommandline.html#a772a59d089ea19572527641273cb339da5fb1f955b45e38e31789286a1790398d">CLI::CallForCommandline::Mode::ALL</a>) ||</div>
+<div class="line"><span class="lineno">  556</span>                                                             mode == <a class="code hl_enumvalue" href="classCLI_1_1CallForCommandline.html#a772a59d089ea19572527641273cb339da5e19e4f4c52af8b10f36af4b717266be">CLI::CallForCommandline::Mode::CONFIGURED</a>)) {</div>
+<div class="line"><span class="lineno">  557</span>                    value = option-&gt;reduced_results()[0];</div>
+<div class="line"><span class="lineno">  558</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!option-&gt;get_default_str().empty()) {</div>
+<div class="line"><span class="lineno">  559</span>                    value = (mode == <a class="code hl_enumvalue" href="classCLI_1_1CallForCommandline.html#a772a59d089ea19572527641273cb339da5fb1f955b45e38e31789286a1790398d">CLI::CallForCommandline::Mode::ALL</a> || option-&gt;get_required()) ? option-&gt;get_default_str() : <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">  560</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (option-&gt;get_required()) {</div>
+<div class="line"><span class="lineno">  561</span>                    value = <span class="stringliteral">&quot;&lt;REQUIRED&gt;&quot;</span>;</div>
+<div class="line"><span class="lineno">  562</span>                } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  563</span>                    value = mode == <a class="code hl_enumvalue" href="classCLI_1_1CallForCommandline.html#a772a59d089ea19572527641273cb339da5fb1f955b45e38e31789286a1790398d">CLI::CallForCommandline::Mode::ALL</a> ? <span class="stringliteral">&quot;\&quot;\&quot;&quot;</span> : <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">  564</span>                }</div>
+<div class="line"><span class="lineno">  565</span> </div>
+<div class="line"><span class="lineno">  566</span>                <span class="keywordflow">if</span> (value.empty() &amp;&amp; option-&gt;count() &gt; 0 &amp;&amp;</div>
+<div class="line"><span class="lineno">  567</span>                    (mode == <a class="code hl_enumvalue" href="classCLI_1_1CallForCommandline.html#a772a59d089ea19572527641273cb339da5fb1f955b45e38e31789286a1790398d">CLI::CallForCommandline::Mode::ALL</a> || mode == <a class="code hl_enumvalue" href="classCLI_1_1CallForCommandline.html#a772a59d089ea19572527641273cb339da5e19e4f4c52af8b10f36af4b717266be">CLI::CallForCommandline::Mode::CONFIGURED</a>)) {</div>
+<div class="line"><span class="lineno">  568</span>                    value = <span class="stringliteral">&quot;\&quot;\&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">  569</span>                }</div>
+<div class="line"><span class="lineno">  570</span> </div>
+<div class="line"><span class="lineno">  571</span>                <span class="keywordflow">if</span> (!value.empty()) {</div>
+<div class="line"><span class="lineno">  572</span>                    out &lt;&lt; <span class="stringliteral">&quot;--&quot;</span> &lt;&lt; option-&gt;get_single_name() &lt;&lt; ((option-&gt;get_items_expected_max() == 0) ? <span class="stringliteral">&quot;=&quot;</span> : <span class="stringliteral">&quot; &quot;</span>) &lt;&lt; value &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line"><span class="lineno">  573</span>                }</div>
+<div class="line"><span class="lineno">  574</span>            }</div>
+<div class="line"><span class="lineno">  575</span>        }</div>
+<div class="line"><span class="lineno">  576</span>    }</div>
 <div class="ttc" id="aclassCLI_1_1CallForCommandline_html_a772a59d089ea19572527641273cb339da5e19e4f4c52af8b10f36af4b717266be"><div class="ttname"><a href="classCLI_1_1CallForCommandline.html#a772a59d089ea19572527641273cb339da5e19e4f4c52af8b10f36af4b717266be">CLI::CallForCommandline::Mode::CONFIGURED</a></div><div class="ttdeci">@ CONFIGURED</div></div>
 <div class="ttc" id="aclassCLI_1_1CallForCommandline_html_a772a59d089ea19572527641273cb339da5fb1f955b45e38e31789286a1790398d"><div class="ttname"><a href="classCLI_1_1CallForCommandline.html#a772a59d089ea19572527641273cb339da5fb1f955b45e38e31789286a1790398d">CLI::CallForCommandline::Mode::ALL</a></div><div class="ttdeci">@ ALL</div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="classCLI_1_1CallForCommandline.html#a772a59d089ea19572527641273cb339da5fb1f955b45e38e31789286a1790398d">CLI::CallForCommandline::ALL</a>, and <a class="el" href="classCLI_1_1CallForCommandline.html#a772a59d089ea19572527641273cb339da5e19e4f4c52af8b10f36af4b717266be">CLI::CallForCommandline::CONFIGURED</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Config_8cpp_source.html#l00572">createCommandLineOptions()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Config_8cpp_source.html#l00578">createCommandLineOptions()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="namespaceutils_ac8959e45881eac2ddd8177a68c40c588_icgraph.svg" width="1975" height="115"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespaceutils_ac8959e45881eac2ddd8177a68c40c588_icgraph.svg" width="1835" height="115"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -341,33 +341,33 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Config_8cpp_source.html#l00585">585</a> of file <a class="el" href="Config_8cpp_source.html">Config.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  585</span>                                                                                               {</div>
-<div class="line"><span class="lineno">  586</span>        std::stringstream out;</div>
-<div class="line"><span class="lineno">  587</span> </div>
-<div class="line"><span class="lineno">  588</span>        <span class="keywordflow">for</span> (CLI::App* subcommand : app-&gt;get_subcommands({})) {</div>
-<div class="line"><span class="lineno">  589</span>            <span class="keywordflow">if</span> (!subcommand-&gt;get_name().empty()) {</div>
-<div class="line"><span class="lineno">  590</span>                createCommandLineTemplate(out, subcommand, mode);</div>
-<div class="line"><span class="lineno">  591</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  592</span>                std::cout &lt;&lt; subcommand-&gt;get_description() &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">  593</span>            }</div>
-<div class="line"><span class="lineno">  594</span>        }</div>
-<div class="line"><span class="lineno">  595</span> </div>
-<div class="line"><span class="lineno">  596</span>        <span class="keywordflow">return</span> out.str();</div>
-<div class="line"><span class="lineno">  597</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Config_8cpp_source.html#l00591">591</a> of file <a class="el" href="Config_8cpp_source.html">Config.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  591</span>                                                                                               {</div>
+<div class="line"><span class="lineno">  592</span>        std::stringstream out;</div>
+<div class="line"><span class="lineno">  593</span> </div>
+<div class="line"><span class="lineno">  594</span>        <span class="keywordflow">for</span> (CLI::App* subcommand : app-&gt;get_subcommands({})) {</div>
+<div class="line"><span class="lineno">  595</span>            <span class="keywordflow">if</span> (!subcommand-&gt;get_name().empty()) {</div>
+<div class="line"><span class="lineno">  596</span>                createCommandLineTemplate(out, subcommand, mode);</div>
+<div class="line"><span class="lineno">  597</span>            } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  598</span>                std::cout &lt;&lt; subcommand-&gt;get_description() &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  599</span>            }</div>
+<div class="line"><span class="lineno">  600</span>        }</div>
+<div class="line"><span class="lineno">  601</span> </div>
+<div class="line"><span class="lineno">  602</span>        <span class="keywordflow">return</span> out.str();</div>
+<div class="line"><span class="lineno">  603</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Config_8cpp_source.html#l00599">createCommandLineTemplate()</a>.</p>
+<p class="reference">References <a class="el" href="Config_8cpp_source.html#l00605">createCommandLineTemplate()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Config_8cpp_source.html#l00599">createCommandLineTemplate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Config_8cpp_source.html#l00605">createCommandLineTemplate()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="namespaceutils_afc6e2169ae509cef3713b646e651c65e_cgraph.svg" width="928" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespaceutils_afc6e2169ae509cef3713b646e651c65e_cgraph.svg" width="854" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="namespaceutils_afc6e2169ae509cef3713b646e651c65e_icgraph.svg" width="1734" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespaceutils_afc6e2169ae509cef3713b646e651c65e_icgraph.svg" width="1612" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -406,39 +406,39 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Config_8cpp_source.html#l00613">613</a> of file <a class="el" href="Config_8cpp_source.html">Config.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  613</span>                                                                                            {</div>
-<div class="line"><span class="lineno">  614</span>        std::stringstream out;</div>
-<div class="line"><span class="lineno">  615</span> </div>
-<div class="line"><span class="lineno">  616</span>        <a class="code hl_function" href="namespaceutils.html#aac7436ed2ed454cbef6765b7e381b2f7">createCommandLineTemplate</a>(out, app, mode);</div>
-<div class="line"><span class="lineno">  617</span> </div>
-<div class="line"><span class="lineno">  618</span>        std::string outString = out.str();</div>
-<div class="line"><span class="lineno">  619</span>        <span class="keywordflow">while</span> (app-&gt;get_parent() != <span class="keyword">nullptr</span>) {</div>
-<div class="line"><span class="lineno">  620</span>            app = app-&gt;get_parent();</div>
-<div class="line"><span class="lineno">  621</span>            std::string parentOptions = <a class="code hl_function" href="namespaceutils.html#ad8d4413504d5f4da6850cbb88a0571bf">createCommandLineOptions</a>(app, mode);</div>
-<div class="line"><span class="lineno">  622</span>            outString = app-&gt;get_name() + <span class="stringliteral">&quot; &quot;</span> + (!parentOptions.empty() ? parentOptions + <span class="stringliteral">&quot; &quot;</span> : <span class="stringliteral">&quot;&quot;</span>) + outString;</div>
-<div class="line"><span class="lineno">  623</span>        }</div>
-<div class="line"><span class="lineno">  624</span> </div>
-<div class="line"><span class="lineno">  625</span>        <span class="keywordflow">if</span> (outString.empty()) {</div>
-<div class="line"><span class="lineno">  626</span>            outString = Config::getApplicationName();</div>
-<div class="line"><span class="lineno">  627</span>        }</div>
-<div class="line"><span class="lineno">  628</span> </div>
-<div class="line"><span class="lineno">  629</span>        <span class="keywordflow">return</span> outString;</div>
-<div class="line"><span class="lineno">  630</span>    }</div>
-<div class="ttc" id="anamespaceutils_html_aac7436ed2ed454cbef6765b7e381b2f7"><div class="ttname"><a href="namespaceutils.html#aac7436ed2ed454cbef6765b7e381b2f7">utils::createCommandLineTemplate</a></div><div class="ttdeci">static void createCommandLineTemplate(std::stringstream &amp;out, CLI::App *app, CLI::CallForCommandline::Mode mode)</div><div class="ttdef"><b>Definition</b> <a href="Config_8cpp_source.html#l00599">Config.cpp:599</a></div></div>
+<p class="definition">Definition at line <a class="el" href="Config_8cpp_source.html#l00619">619</a> of file <a class="el" href="Config_8cpp_source.html">Config.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  619</span>                                                                                            {</div>
+<div class="line"><span class="lineno">  620</span>        std::stringstream out;</div>
+<div class="line"><span class="lineno">  621</span> </div>
+<div class="line"><span class="lineno">  622</span>        <a class="code hl_function" href="namespaceutils.html#aac7436ed2ed454cbef6765b7e381b2f7">createCommandLineTemplate</a>(out, app, mode);</div>
+<div class="line"><span class="lineno">  623</span> </div>
+<div class="line"><span class="lineno">  624</span>        std::string outString = out.str();</div>
+<div class="line"><span class="lineno">  625</span>        <span class="keywordflow">while</span> (app-&gt;get_parent() != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><span class="lineno">  626</span>            app = app-&gt;get_parent();</div>
+<div class="line"><span class="lineno">  627</span>            std::string parentOptions = <a class="code hl_function" href="namespaceutils.html#ad8d4413504d5f4da6850cbb88a0571bf">createCommandLineOptions</a>(app, mode);</div>
+<div class="line"><span class="lineno">  628</span>            outString = app-&gt;get_name() + <span class="stringliteral">&quot; &quot;</span> + (!parentOptions.empty() ? parentOptions + <span class="stringliteral">&quot; &quot;</span> : <span class="stringliteral">&quot;&quot;</span>) + outString;</div>
+<div class="line"><span class="lineno">  629</span>        }</div>
+<div class="line"><span class="lineno">  630</span> </div>
+<div class="line"><span class="lineno">  631</span>        <span class="keywordflow">if</span> (outString.empty()) {</div>
+<div class="line"><span class="lineno">  632</span>            outString = Config::getApplicationName();</div>
+<div class="line"><span class="lineno">  633</span>        }</div>
+<div class="line"><span class="lineno">  634</span> </div>
+<div class="line"><span class="lineno">  635</span>        <span class="keywordflow">return</span> outString;</div>
+<div class="line"><span class="lineno">  636</span>    }</div>
+<div class="ttc" id="anamespaceutils_html_aac7436ed2ed454cbef6765b7e381b2f7"><div class="ttname"><a href="namespaceutils.html#aac7436ed2ed454cbef6765b7e381b2f7">utils::createCommandLineTemplate</a></div><div class="ttdeci">static void createCommandLineTemplate(std::stringstream &amp;out, CLI::App *app, CLI::CallForCommandline::Mode mode)</div><div class="ttdef"><b>Definition</b> <a href="Config_8cpp_source.html#l00605">Config.cpp:605</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Config_8cpp_source.html#l00572">createCommandLineOptions()</a>, <a class="el" href="Config_8cpp_source.html#l00599">createCommandLineTemplate()</a>, and <a class="el" href="Config_8cpp_source.html#l00960">utils::Config::getApplicationName()</a>.</p>
+<p class="reference">References <a class="el" href="Config_8cpp_source.html#l00578">createCommandLineOptions()</a>, <a class="el" href="Config_8cpp_source.html#l00605">createCommandLineTemplate()</a>, and <a class="el" href="Config_8cpp_source.html#l00966">utils::Config::getApplicationName()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Config_8cpp_source.html#l00684">utils::Config::parse2()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Config_8cpp_source.html#l00690">utils::Config::parse2()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="namespaceutils_a1a80f43b44109216f2c37fe9bdb3dc2d_cgraph.svg" width="976" height="164"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespaceutils_a1a80f43b44109216f2c37fe9bdb3dc2d_cgraph.svg" width="896" height="164"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="namespaceutils_a1a80f43b44109216f2c37fe9bdb3dc2d_icgraph.svg" width="1251" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespaceutils_a1a80f43b44109216f2c37fe9bdb3dc2d_icgraph.svg" width="1167" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -483,33 +483,33 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Config_8cpp_source.html#l00599">599</a> of file <a class="el" href="Config_8cpp_source.html">Config.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  599</span>                                                                                                             {</div>
-<div class="line"><span class="lineno">  600</span>        std::string outString;</div>
-<div class="line"><span class="lineno">  601</span> </div>
-<div class="line"><span class="lineno">  602</span>        outString = <a class="code hl_function" href="namespaceutils.html#ad8d4413504d5f4da6850cbb88a0571bf">createCommandLineOptions</a>(app, mode);</div>
-<div class="line"><span class="lineno">  603</span>        <span class="keywordflow">if</span> (!outString.empty()) {</div>
-<div class="line"><span class="lineno">  604</span>            outString += <span class="stringliteral">&quot; &quot;</span>;</div>
-<div class="line"><span class="lineno">  605</span>        }</div>
-<div class="line"><span class="lineno">  606</span> </div>
-<div class="line"><span class="lineno">  607</span>        outString += createCommandLineSubcommands(app, mode);</div>
-<div class="line"><span class="lineno">  608</span>        <span class="keywordflow">if</span> (!outString.empty()) {</div>
-<div class="line"><span class="lineno">  609</span>            out &lt;&lt; app-&gt;get_name() &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; outString;</div>
-<div class="line"><span class="lineno">  610</span>        }</div>
-<div class="line"><span class="lineno">  611</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Config_8cpp_source.html#l00605">605</a> of file <a class="el" href="Config_8cpp_source.html">Config.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  605</span>                                                                                                             {</div>
+<div class="line"><span class="lineno">  606</span>        std::string outString;</div>
+<div class="line"><span class="lineno">  607</span> </div>
+<div class="line"><span class="lineno">  608</span>        outString = <a class="code hl_function" href="namespaceutils.html#ad8d4413504d5f4da6850cbb88a0571bf">createCommandLineOptions</a>(app, mode);</div>
+<div class="line"><span class="lineno">  609</span>        <span class="keywordflow">if</span> (!outString.empty()) {</div>
+<div class="line"><span class="lineno">  610</span>            outString += <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line"><span class="lineno">  611</span>        }</div>
+<div class="line"><span class="lineno">  612</span> </div>
+<div class="line"><span class="lineno">  613</span>        outString += createCommandLineSubcommands(app, mode);</div>
+<div class="line"><span class="lineno">  614</span>        <span class="keywordflow">if</span> (!outString.empty()) {</div>
+<div class="line"><span class="lineno">  615</span>            out &lt;&lt; app-&gt;get_name() &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; outString;</div>
+<div class="line"><span class="lineno">  616</span>        }</div>
+<div class="line"><span class="lineno">  617</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Config_8cpp_source.html#l00572">createCommandLineOptions()</a>, and <a class="el" href="Config_8cpp_source.html#l00585">createCommandLineSubcommands()</a>.</p>
+<p class="reference">References <a class="el" href="Config_8cpp_source.html#l00578">createCommandLineOptions()</a>, and <a class="el" href="Config_8cpp_source.html#l00591">createCommandLineSubcommands()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Config_8cpp_source.html#l00585">createCommandLineSubcommands()</a>, and <a class="el" href="Config_8cpp_source.html#l00613">createCommandLineTemplate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Config_8cpp_source.html#l00591">createCommandLineSubcommands()</a>, and <a class="el" href="Config_8cpp_source.html#l00619">createCommandLineTemplate()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="namespaceutils_aac7436ed2ed454cbef6765b7e381b2f7_cgraph.svg" width="687" height="115"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespaceutils_aac7436ed2ed454cbef6765b7e381b2f7_cgraph.svg" width="631" height="115"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="namespaceutils_aac7436ed2ed454cbef6765b7e381b2f7_icgraph.svg" width="1492" height="115"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespaceutils_aac7436ed2ed454cbef6765b7e381b2f7_icgraph.svg" width="1390" height="115"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -575,7 +575,7 @@ template&lt;unsigned N&gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceutils.html">utils</a></li>
-    <li class="footer">Generated on Fri Oct 13 2023 08:51:18 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Fri Oct 20 2023 14:01:12 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

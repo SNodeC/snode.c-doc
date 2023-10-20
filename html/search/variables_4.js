@@ -14,7 +14,7 @@ var searchData=
   ['disabled_11',['DISABLED',['../classcore_1_1socket_1_1State.html#a26b8a9154524cfbba2729255cb184331',1,'core::socket::State']]],
   ['disableopt_12',['disableOpt',['../classnet_1_1config_1_1ConfigInstance.html#a903207c799a648bf5742f5941465ed7c',1,'net::config::ConfigInstance']]],
   ['dispatcher_13',['dispatcher',['../classcore_1_1timer_1_1IntervalTimer.html#a197b46a64f340168faf976c5d75a4f76',1,'core::timer::IntervalTimer::dispatcher'],['../classcore_1_1timer_1_1IntervalTimerStopable.html#a10ae84978daba41361e577c223c57fa1',1,'core::timer::IntervalTimerStopable::dispatcher'],['../classcore_1_1timer_1_1SingleshotTimer.html#a1d60d337115da278c22308979e23eff3',1,'core::timer::SingleshotTimer::dispatcher'],['../classexpress_1_1Route.html#a35432e8c2edafc9174a5bebf4c388029',1,'express::Route::dispatcher']]],
-  ['distribution_14',['distribution',['../namespaceweb_1_1websocket.html#ad676394029419e8f99f7d4cb6081b56e',1,'web::websocket']]],
+  ['distribution_14',['distribution',['../namespaceweb_1_1websocket.html#aa80d7ccc297879d67337acba7afc2c19',1,'web::websocket']]],
   ['dlopenedlibraries_15',['dlOpenedLibraries',['../classcore_1_1DynamicLoader.html#a686abfc426926c79f8801c98555c7a4b',1,'core::DynamicLoader']]],
   ['domain_16',['domain',['../classnet_1_1phy_1_1PhysicalSocket.html#ad83aee8bbfd88bd20051580704984c8b',1,'net::phy::PhysicalSocket']]],
   ['donotremove_17',['doNotRemove',['../classnet_1_1un_1_1phy_1_1PhysicalSocket.html#a0468d481c745dfc0cd7d8083a285e6ee',1,'net::un::phy::PhysicalSocket']]],

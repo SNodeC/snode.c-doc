@@ -8,8 +8,13 @@ var searchData=
   ['sha1_5fr4_5',['SHA1_R4',['../sha1_8cpp.html#ad9c3007957cd0659e2624a48a9f05660',1,'sha1.cpp']]],
   ['sha1_5frol_6',['SHA1_ROL',['../sha1_8cpp.html#a10a5814e9b5a23d64388c0d4cb9e12f1',1,'sha1.cpp']]],
   ['ssl_5fverify_5fflags_7',['SSL_VERIFY_FLAGS',['../ssl__utils_8cpp.html#a0c3fa47eefc13655f03571ce3cf71b69',1,'ssl_utils.cpp']]],
-  ['str_8',['STR',['../Config_8cpp.html#a6388870e639eee9c0a69446876f1f8cc',1,'Config.cpp']]],
-  ['subscribtion_5ffailure_9',['SUBSCRIBTION_FAILURE',['../Broker_8h.html#a0e73eb6e384705b7a0e61de58100c7b4',1,'Broker.h']]],
-  ['subscribtion_5fmax_5fqos_10',['SUBSCRIBTION_MAX_QOS',['../Broker_8h.html#a0ecdc7f6f9478bf5fd4b8ad9643d1dbe',1,'Broker.h']]],
-  ['subscribtion_5fsuccess_11',['SUBSCRIBTION_SUCCESS',['../Broker_8h.html#ac339495d5c43ebae8f4dc9175b6aa31d',1,'Broker.h']]]
+  ['state_8',['STATE',['../socket_2State_8h.html#a53981e67338240e580679fd148a9076c',1,'State.h']]],
+  ['state_5fdisabled_9',['STATE_DISABLED',['../socket_2State_8h.html#aa18350015cc92658a3733d3b34bf6566',1,'State.h']]],
+  ['state_5ferror_10',['STATE_ERROR',['../socket_2State_8h.html#a7bf0c086c7c41c12cc63324327932d91',1,'State.h']]],
+  ['state_5ffatal_11',['STATE_FATAL',['../socket_2State_8h.html#ad840439eae415fd84eea213e5bd96ea9',1,'State.h']]],
+  ['state_5fok_12',['STATE_OK',['../socket_2State_8h.html#a35937514c20ebac19d6598f04416db7e',1,'State.h']]],
+  ['str_13',['STR',['../Config_8cpp.html#a6388870e639eee9c0a69446876f1f8cc',1,'Config.cpp']]],
+  ['subscribtion_5ffailure_14',['SUBSCRIBTION_FAILURE',['../Broker_8h.html#a0e73eb6e384705b7a0e61de58100c7b4',1,'Broker.h']]],
+  ['subscribtion_5fmax_5fqos_15',['SUBSCRIBTION_MAX_QOS',['../Broker_8h.html#a0ecdc7f6f9478bf5fd4b8ad9643d1dbe',1,'Broker.h']]],
+  ['subscribtion_5fsuccess_16',['SUBSCRIBTION_SUCCESS',['../Broker_8h.html#ac339495d5c43ebae8f4dc9175b6aa31d',1,'Broker.h']]]
 ];

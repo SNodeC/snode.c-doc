@@ -105,12 +105,12 @@ $(document).ready(function(){initNavTree('classcore_1_1socket_1_1stream_1_1Socke
 <div class="dynheader">
 Inheritance diagram for core::socket::stream::SocketServer&lt; SocketAcceptorT, SocketContextFactoryT &gt;:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1socket_1_1stream_1_1SocketServer__inherit__graph.svg" width="232" height="154"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1socket_1_1stream_1_1SocketServer__inherit__graph.svg" width="216" height="154"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Collaboration diagram for core::socket::stream::SocketServer&lt; SocketAcceptorT, SocketContextFactoryT &gt;:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1socket_1_1stream_1_1SocketServer__coll__graph.svg" width="470" height="256"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1socket_1_1stream_1_1SocketServer__coll__graph.svg" width="430" height="256"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
@@ -477,9 +477,9 @@ template&lt;typename SocketAcceptorT , typename SocketContextFactoryT &gt; </div
 <div class="line"><span class="lineno">   74</span>                  [name](<a class="code hl_typedef" href="classcore_1_1socket_1_1stream_1_1SocketServer.html#ab41b361bf826dbeff83977b512643afc">SocketConnection</a>* socketConnection) -&gt; <span class="keywordtype">void</span> { <span class="comment">// onConnect</span></div>
 <div class="line"><span class="lineno">   75</span>                      LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;OnConnect - &quot;</span> &lt;&lt; name;</div>
 <div class="line"><span class="lineno">   76</span> </div>
-<div class="line"><span class="lineno">   77</span>                      LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;\tLocal: (&quot;</span> + socketConnection-&gt;getLocalAddress().address() + <span class="stringliteral">&quot;) &quot;</span> +</div>
+<div class="line"><span class="lineno">   77</span>                      LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;\tLocal: (&quot;</span> + socketConnection-&gt;getLocalAddress().getAddress() + <span class="stringliteral">&quot;) &quot;</span> +</div>
 <div class="line"><span class="lineno">   78</span>                                       socketConnection-&gt;getLocalAddress().toString();</div>
-<div class="line"><span class="lineno">   79</span>                      LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;\tPeer:  (&quot;</span> + socketConnection-&gt;getRemoteAddress().address() + <span class="stringliteral">&quot;) &quot;</span> +</div>
+<div class="line"><span class="lineno">   79</span>                      LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;\tPeer:  (&quot;</span> + socketConnection-&gt;getRemoteAddress().getAddress() + <span class="stringliteral">&quot;) &quot;</span> +</div>
 <div class="line"><span class="lineno">   80</span>                                       socketConnection-&gt;getRemoteAddress().toString();</div>
 <div class="line"><span class="lineno">   81</span>                  },</div>
 <div class="line"><span class="lineno">   82</span>                  [name]([[maybe_unused]] <a class="code hl_typedef" href="classcore_1_1socket_1_1stream_1_1SocketServer.html#ab41b361bf826dbeff83977b512643afc">SocketConnection</a>* socketConnection) -&gt; <span class="keywordtype">void</span> { <span class="comment">// onConnected</span></div>
@@ -488,9 +488,9 @@ template&lt;typename SocketAcceptorT , typename SocketContextFactoryT &gt; </div
 <div class="line"><span class="lineno">   85</span>                  [name](<a class="code hl_typedef" href="classcore_1_1socket_1_1stream_1_1SocketServer.html#ab41b361bf826dbeff83977b512643afc">SocketConnection</a>* socketConnection) -&gt; <span class="keywordtype">void</span> { <span class="comment">// onDisconnect</span></div>
 <div class="line"><span class="lineno">   86</span>                      LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;OnDisconnect &quot;</span> &lt;&lt; name;</div>
 <div class="line"><span class="lineno">   87</span> </div>
-<div class="line"><span class="lineno">   88</span>                      LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;\tLocal: (&quot;</span> + socketConnection-&gt;getLocalAddress().address() + <span class="stringliteral">&quot;) &quot;</span> +</div>
+<div class="line"><span class="lineno">   88</span>                      LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;\tLocal: (&quot;</span> + socketConnection-&gt;getLocalAddress().getAddress() + <span class="stringliteral">&quot;) &quot;</span> +</div>
 <div class="line"><span class="lineno">   89</span>                                       socketConnection-&gt;getLocalAddress().toString();</div>
-<div class="line"><span class="lineno">   90</span>                      LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;\tPeer:  (&quot;</span> + socketConnection-&gt;getRemoteAddress().address() + <span class="stringliteral">&quot;) &quot;</span> +</div>
+<div class="line"><span class="lineno">   90</span>                      LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;\tPeer:  (&quot;</span> + socketConnection-&gt;getRemoteAddress().getAddress() + <span class="stringliteral">&quot;) &quot;</span> +</div>
 <div class="line"><span class="lineno">   91</span>                                       socketConnection-&gt;getRemoteAddress().toString();</div>
 <div class="line"><span class="lineno">   92</span>                  }) {</div>
 <div class="line"><span class="lineno">   93</span>        }</div>
@@ -691,9 +691,9 @@ template&lt;typename SocketAcceptorT , typename SocketContextFactoryT &gt; </div
 <div class="line"><span class="lineno">  121</span>                  [name](<a class="code hl_typedef" href="classcore_1_1socket_1_1stream_1_1SocketServer.html#ab41b361bf826dbeff83977b512643afc">SocketConnection</a>* socketConnection) -&gt; <span class="keywordtype">void</span> { <span class="comment">// onConnect</span></div>
 <div class="line"><span class="lineno">  122</span>                      LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;OnConnect &quot;</span> &lt;&lt; name;</div>
 <div class="line"><span class="lineno">  123</span> </div>
-<div class="line"><span class="lineno">  124</span>                      LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;\tLocal: (&quot;</span> + socketConnection-&gt;getLocalAddress().address() + <span class="stringliteral">&quot;) &quot;</span> +</div>
+<div class="line"><span class="lineno">  124</span>                      LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;\tLocal: (&quot;</span> + socketConnection-&gt;getLocalAddress().getAddress() + <span class="stringliteral">&quot;) &quot;</span> +</div>
 <div class="line"><span class="lineno">  125</span>                                       socketConnection-&gt;getLocalAddress().toString();</div>
-<div class="line"><span class="lineno">  126</span>                      LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;\tPeer:  (&quot;</span> + socketConnection-&gt;getRemoteAddress().address() + <span class="stringliteral">&quot;) &quot;</span> +</div>
+<div class="line"><span class="lineno">  126</span>                      LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;\tPeer:  (&quot;</span> + socketConnection-&gt;getRemoteAddress().getAddress() + <span class="stringliteral">&quot;) &quot;</span> +</div>
 <div class="line"><span class="lineno">  127</span>                                       socketConnection-&gt;getRemoteAddress().toString();</div>
 <div class="line"><span class="lineno">  128</span>                  },</div>
 <div class="line"><span class="lineno">  129</span>                  [name]([[maybe_unused]] <a class="code hl_typedef" href="classcore_1_1socket_1_1stream_1_1SocketServer.html#ab41b361bf826dbeff83977b512643afc">SocketConnection</a>* socketConnection) -&gt; <span class="keywordtype">void</span> { <span class="comment">// onConnected</span></div>
@@ -702,9 +702,9 @@ template&lt;typename SocketAcceptorT , typename SocketContextFactoryT &gt; </div
 <div class="line"><span class="lineno">  132</span>                  [name](<a class="code hl_typedef" href="classcore_1_1socket_1_1stream_1_1SocketServer.html#ab41b361bf826dbeff83977b512643afc">SocketConnection</a>* socketConnection) -&gt; <span class="keywordtype">void</span> { <span class="comment">// onDisconnect</span></div>
 <div class="line"><span class="lineno">  133</span>                      LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;OnDisconnect &quot;</span> &lt;&lt; name;</div>
 <div class="line"><span class="lineno">  134</span> </div>
-<div class="line"><span class="lineno">  135</span>                      LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;\tLocal: (&quot;</span> + socketConnection-&gt;getLocalAddress().address() + <span class="stringliteral">&quot;) &quot;</span> +</div>
+<div class="line"><span class="lineno">  135</span>                      LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;\tLocal: (&quot;</span> + socketConnection-&gt;getLocalAddress().getAddress() + <span class="stringliteral">&quot;) &quot;</span> +</div>
 <div class="line"><span class="lineno">  136</span>                                       socketConnection-&gt;getLocalAddress().toString();</div>
-<div class="line"><span class="lineno">  137</span>                      LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;\tPeer:  (&quot;</span> + socketConnection-&gt;getRemoteAddress().address() + <span class="stringliteral">&quot;) &quot;</span> +</div>
+<div class="line"><span class="lineno">  137</span>                      LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;\tPeer:  (&quot;</span> + socketConnection-&gt;getRemoteAddress().getAddress() + <span class="stringliteral">&quot;) &quot;</span> +</div>
 <div class="line"><span class="lineno">  138</span>                                       socketConnection-&gt;getRemoteAddress().toString();</div>
 <div class="line"><span class="lineno">  139</span>                  },</div>
 <div class="line"><span class="lineno">  140</span>                  <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketServer.html#a8ba31976e9b605aba17b55ead74190ee">socketContextFactory</a>) {</div>
@@ -943,7 +943,7 @@ template&lt;typename SocketAcceptorT , typename SocketContextFactoryT &gt; </div
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1socket_1_1stream_1_1SocketServer_a284e4c110a989e14c5f5a5772e0384e2_cgraph.svg" width="1874" height="415"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1socket_1_1stream_1_1SocketServer_a284e4c110a989e14c5f5a5772e0384e2_cgraph.svg" width="1743" height="415"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -1054,12 +1054,12 @@ template&lt;typename SocketAcceptorT , typename SocketContextFactoryT &gt; </div
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1socket_1_1stream_1_1SocketServer_a25849aad9a7b7549dc9f6dc36673f507_cgraph.svg" width="1667" height="415"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1socket_1_1stream_1_1SocketServer_a25849aad9a7b7549dc9f6dc36673f507_cgraph.svg" width="1547" height="415"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1socket_1_1stream_1_1SocketServer_a25849aad9a7b7549dc9f6dc36673f507_icgraph.svg" width="404" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1socket_1_1stream_1_1SocketServer_a25849aad9a7b7549dc9f6dc36673f507_icgraph.svg" width="380" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -1321,7 +1321,7 @@ template&lt;typename SocketAcceptorT , typename SocketContextFactoryT &gt; </div
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacecore.html">core</a></li><li class="navelem"><a class="el" href="namespacecore_1_1socket.html">socket</a></li><li class="navelem"><a class="el" href="namespacecore_1_1socket_1_1stream.html">stream</a></li><li class="navelem"><a class="el" href="classcore_1_1socket_1_1stream_1_1SocketServer.html">SocketServer</a></li>
-    <li class="footer">Generated on Fri Oct 13 2023 08:51:17 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Fri Oct 20 2023 14:01:11 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

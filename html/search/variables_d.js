@@ -6,5 +6,5 @@ var searchData=
   ['next_3',['next',['../classexpress_1_1Dispatcher.html#afb95ef17f1ff079e9f8e960f4b84e8af',1,'express::Dispatcher']]],
   ['nextindex_4',['nextIndex',['../classcore_1_1poll_1_1PollFdsManager.html#a23abb83c4a74cec2f16892351154f6d7',1,'core::poll::PollFdsManager']]],
   ['node_5',['node',['../classnet_1_1in_1_1SocketAddrInfo.html#a716d991728ffe2ac078f82e636be04b7',1,'net::in::SocketAddrInfo::node'],['../classnet_1_1in6_1_1SocketAddrInfo.html#ab95f8f12cd368e7edfbc57d9f4a5141a',1,'net::in6::SocketAddrInfo::node']]],
-  ['nullstr_6',['nullstr',['../classweb_1_1http_1_1client_1_1Request.html#a884e73b7107cc8c46f405a602071d63c',1,'web::http::client::Request::nullstr'],['../classweb_1_1http_1_1client_1_1Response.html#a17d7f9b54bbcc3a75d52b7b78bd235ac',1,'web::http::client::Response::nullstr'],['../classweb_1_1http_1_1server_1_1Request.html#abbc56ed49a648427ea68413cc20a353c',1,'web::http::server::Request::nullstr']]]
+  ['nullstr_6',['nullstr',['../classweb_1_1http_1_1server_1_1Request.html#abbc56ed49a648427ea68413cc20a353c',1,'web::http::server::Request::nullstr'],['../classweb_1_1http_1_1client_1_1Request.html#a884e73b7107cc8c46f405a602071d63c',1,'web::http::client::Request::nullstr'],['../classweb_1_1http_1_1client_1_1Response.html#a17d7f9b54bbcc3a75d52b7b78bd235ac',1,'web::http::client::Response::nullstr']]]
 ];

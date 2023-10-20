@@ -105,7 +105,7 @@ $(document).ready(function(){initNavTree('classcore_1_1DynamicLoader.html',''); 
 <div class="dynheader">
 Collaboration diagram for core::DynamicLoader:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DynamicLoader__coll__graph.svg" width="358" height="419"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DynamicLoader__coll__graph.svg" width="323" height="419"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
@@ -150,8 +150,8 @@ Static Private Member Functions</h2></td></tr>
 Static Private Attributes</h2></td></tr>
 <tr class="memitem:a686abfc426926c79f8801c98555c7a4b" id="r_a686abfc426926c79f8801c98555c7a4b"><td class="memItemLeft" align="right" valign="top">static std::map&lt; void *, <a class="el" href="structcore_1_1DynamicLoader_1_1Library.html">Library</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcore_1_1DynamicLoader.html#a686abfc426926c79f8801c98555c7a4b">dlOpenedLibraries</a></td></tr>
 <tr class="separator:a686abfc426926c79f8801c98555c7a4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a81f8198dcbce23aceb2804c1a170692a" id="r_a81f8198dcbce23aceb2804c1a170692a"><td class="memItemLeft" align="right" valign="top">static std::set&lt; void * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcore_1_1DynamicLoader.html#a81f8198dcbce23aceb2804c1a170692a">closeHandles</a></td></tr>
-<tr class="separator:a81f8198dcbce23aceb2804c1a170692a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d9c00c6e839bbdb31894887b8407fe4" id="r_a3d9c00c6e839bbdb31894887b8407fe4"><td class="memItemLeft" align="right" valign="top">static std::list&lt; void * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcore_1_1DynamicLoader.html#a3d9c00c6e839bbdb31894887b8407fe4">closeHandles</a></td></tr>
+<tr class="separator:a3d9c00c6e839bbdb31894887b8407fe4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
 Friends</h2></td></tr>
@@ -265,12 +265,12 @@ Friends</h2></td></tr>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DynamicLoader_a94acb7071e8e3c99bfa33146b374d1c8_cgraph.svg" width="795" height="115"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DynamicLoader_a94acb7071e8e3c99bfa33146b374d1c8_cgraph.svg" width="742" height="115"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DynamicLoader_a94acb7071e8e3c99bfa33146b374d1c8_icgraph.svg" width="1368" height="218"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DynamicLoader_a94acb7071e8e3c99bfa33146b374d1c8_icgraph.svg" width="1279" height="218"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -304,7 +304,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">   70</span>        <span class="keywordtype">int</span> ret = 0;</div>
 <div class="line"><span class="lineno">   71</span> </div>
 <div class="line"><span class="lineno">   72</span>        <span class="keywordflow">if</span> (handle != <span class="keyword">nullptr</span>) {</div>
-<div class="line"><span class="lineno">   73</span>            <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classcore_1_1DynamicLoader.html#a81f8198dcbce23aceb2804c1a170692a">closeHandles</a>.contains(handle)) {</div>
+<div class="line"><span class="lineno">   73</span>            <span class="keywordflow">if</span> (std::find(<a class="code hl_variable" href="classcore_1_1DynamicLoader.html#a3d9c00c6e839bbdb31894887b8407fe4">closeHandles</a>.begin(), <a class="code hl_variable" href="classcore_1_1DynamicLoader.html#a3d9c00c6e839bbdb31894887b8407fe4">closeHandles</a>.end(), handle) != <a class="code hl_variable" href="classcore_1_1DynamicLoader.html#a3d9c00c6e839bbdb31894887b8407fe4">closeHandles</a>.end()) {</div>
 <div class="line"><span class="lineno">   74</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="classcore_1_1DynamicLoader.html#a686abfc426926c79f8801c98555c7a4b">dlOpenedLibraries</a>.contains(handle)) {</div>
 <div class="line"><span class="lineno">   75</span>                    LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <span class="stringliteral">&quot;dlClose file = &quot;</span> &lt;&lt; <a class="code hl_variable" href="classcore_1_1DynamicLoader.html#a686abfc426926c79f8801c98555c7a4b">dlOpenedLibraries</a>[handle].fileName &lt;&lt; <span class="stringliteral">&quot;: registered&quot;</span>;</div>
 <div class="line"><span class="lineno">   76</span>                    ret = <a class="code hl_function" href="classcore_1_1DynamicLoader.html#a42ac52cda1ec4534f1cc9e225dcb31b0">dlClose</a>(<a class="code hl_variable" href="classcore_1_1DynamicLoader.html#a686abfc426926c79f8801c98555c7a4b">dlOpenedLibraries</a>[handle]);</div>
@@ -322,9 +322,9 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">   88</span> </div>
 <div class="line"><span class="lineno">   89</span>        <span class="keywordflow">return</span> ret;</div>
 <div class="line"><span class="lineno">   90</span>    }</div>
+<div class="ttc" id="aclasscore_1_1DynamicLoader_html_a3d9c00c6e839bbdb31894887b8407fe4"><div class="ttname"><a href="classcore_1_1DynamicLoader.html#a3d9c00c6e839bbdb31894887b8407fe4">core::DynamicLoader::closeHandles</a></div><div class="ttdeci">static std::list&lt; void * &gt; closeHandles</div><div class="ttdef"><b>Definition</b> <a href="DynamicLoader_8h_source.html#l00068">DynamicLoader.h:68</a></div></div>
 <div class="ttc" id="aclasscore_1_1DynamicLoader_html_a42ac52cda1ec4534f1cc9e225dcb31b0"><div class="ttname"><a href="classcore_1_1DynamicLoader.html#a42ac52cda1ec4534f1cc9e225dcb31b0">core::DynamicLoader::dlClose</a></div><div class="ttdeci">static int dlClose(void *handle)</div><div class="ttdef"><b>Definition</b> <a href="DynamicLoader_8cpp_source.html#l00069">DynamicLoader.cpp:69</a></div></div>
 <div class="ttc" id="aclasscore_1_1DynamicLoader_html_a686abfc426926c79f8801c98555c7a4b"><div class="ttname"><a href="classcore_1_1DynamicLoader.html#a686abfc426926c79f8801c98555c7a4b">core::DynamicLoader::dlOpenedLibraries</a></div><div class="ttdeci">static std::map&lt; void *, Library &gt; dlOpenedLibraries</div><div class="ttdef"><b>Definition</b> <a href="DynamicLoader_8h_source.html#l00067">DynamicLoader.h:67</a></div></div>
-<div class="ttc" id="aclasscore_1_1DynamicLoader_html_a81f8198dcbce23aceb2804c1a170692a"><div class="ttname"><a href="classcore_1_1DynamicLoader.html#a81f8198dcbce23aceb2804c1a170692a">core::DynamicLoader::closeHandles</a></div><div class="ttdeci">static std::set&lt; void * &gt; closeHandles</div><div class="ttdef"><b>Definition</b> <a href="DynamicLoader_8h_source.html#l00068">DynamicLoader.h:68</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="DynamicLoader_8h_source.html#l00068">closeHandles</a>, <a class="el" href="DynamicLoader_8cpp_source.html#l00092">dlClose()</a>, <a class="el" href="DynamicLoader_8h_source.html#l00067">dlOpenedLibraries</a>, and <a class="el" href="DynamicLoader_8h_source.html#l00038">core::DynamicLoader::Library::fileName</a>.</p>
 
@@ -332,12 +332,12 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DynamicLoader_a42ac52cda1ec4534f1cc9e225dcb31b0_cgraph.svg" width="1003" height="115"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DynamicLoader_a42ac52cda1ec4534f1cc9e225dcb31b0_cgraph.svg" width="936" height="115"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DynamicLoader_a42ac52cda1ec4534f1cc9e225dcb31b0_icgraph.svg" width="722" height="115"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DynamicLoader_a42ac52cda1ec4534f1cc9e225dcb31b0_icgraph.svg" width="675" height="115"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -370,10 +370,10 @@ Here is the caller graph for this function:</div>
 <div class="fragment"><div class="line"><span class="lineno">   50</span>                                                   {</div>
 <div class="line"><span class="lineno">   51</span>        <span class="keywordflow">if</span> (handle != <span class="keyword">nullptr</span>) {</div>
 <div class="line"><span class="lineno">   52</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classcore_1_1DynamicLoader.html#a686abfc426926c79f8801c98555c7a4b">dlOpenedLibraries</a>.contains(handle)) {</div>
-<div class="line"><span class="lineno">   53</span>                <span class="keywordflow">if</span> (std::find(<a class="code hl_variable" href="classcore_1_1DynamicLoader.html#a81f8198dcbce23aceb2804c1a170692a">closeHandles</a>.begin(), <a class="code hl_variable" href="classcore_1_1DynamicLoader.html#a81f8198dcbce23aceb2804c1a170692a">closeHandles</a>.end(), handle) == <a class="code hl_variable" href="classcore_1_1DynamicLoader.html#a81f8198dcbce23aceb2804c1a170692a">closeHandles</a>.end()) {</div>
+<div class="line"><span class="lineno">   53</span>                <span class="keywordflow">if</span> (std::find(<a class="code hl_variable" href="classcore_1_1DynamicLoader.html#a3d9c00c6e839bbdb31894887b8407fe4">closeHandles</a>.begin(), <a class="code hl_variable" href="classcore_1_1DynamicLoader.html#a3d9c00c6e839bbdb31894887b8407fe4">closeHandles</a>.end(), handle) == <a class="code hl_variable" href="classcore_1_1DynamicLoader.html#a3d9c00c6e839bbdb31894887b8407fe4">closeHandles</a>.end()) {</div>
 <div class="line"><span class="lineno">   54</span>                    LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <span class="stringliteral">&quot;dlCloseDelayed file = &quot;</span> &lt;&lt; <a class="code hl_variable" href="classcore_1_1DynamicLoader.html#a686abfc426926c79f8801c98555c7a4b">dlOpenedLibraries</a>[handle].fileName &lt;&lt; <span class="stringliteral">&quot;: registered&quot;</span>;</div>
 <div class="line"><span class="lineno">   55</span> </div>
-<div class="line"><span class="lineno">   56</span>                    <a class="code hl_variable" href="classcore_1_1DynamicLoader.html#a81f8198dcbce23aceb2804c1a170692a">closeHandles</a>.insert(handle);</div>
+<div class="line"><span class="lineno">   56</span>                    <a class="code hl_variable" href="classcore_1_1DynamicLoader.html#a3d9c00c6e839bbdb31894887b8407fe4">closeHandles</a>.push_back(handle);</div>
 <div class="line"><span class="lineno">   57</span>                } <span class="keywordflow">else</span> {</div>
 <div class="line"><span class="lineno">   58</span>                    LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <span class="stringliteral">&quot;dlCloseDelayed file = &quot;</span> &lt;&lt; <a class="code hl_variable" href="classcore_1_1DynamicLoader.html#a686abfc426926c79f8801c98555c7a4b">dlOpenedLibraries</a>[handle].fileName</div>
 <div class="line"><span class="lineno">   59</span>                               &lt;&lt; <span class="stringliteral">&quot;: already registered for dlCloseDelayed&quot;</span>;</div>
@@ -392,7 +392,7 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DynamicLoader_aea517617ba189573803a8c3a4c5e9575_icgraph.svg" width="880" height="302"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DynamicLoader_aea517617ba189573803a8c3a4c5e9575_icgraph.svg" width="911" height="370"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -432,12 +432,12 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DynamicLoader_a28d14f3029339351d8bb8b328a6110b0_cgraph.svg" width="376" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DynamicLoader_a28d14f3029339351d8bb8b328a6110b0_cgraph.svg" width="348" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DynamicLoader_a28d14f3029339351d8bb8b328a6110b0_icgraph.svg" width="2036" height="342"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DynamicLoader_a28d14f3029339351d8bb8b328a6110b0_icgraph.svg" width="1906" height="342"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -484,7 +484,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">   39</span>                <a class="code hl_variable" href="classcore_1_1DynamicLoader.html#a686abfc426926c79f8801c98555c7a4b">dlOpenedLibraries</a>[handle].handle = handle;</div>
 <div class="line"><span class="lineno">   40</span>            }</div>
 <div class="line"><span class="lineno">   41</span>            <a class="code hl_variable" href="classcore_1_1DynamicLoader.html#a686abfc426926c79f8801c98555c7a4b">dlOpenedLibraries</a>[handle].refCount++;</div>
-<div class="line"><span class="lineno">   42</span>            LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <span class="stringliteral">&quot;dlOpen: &#39;&quot;</span> &lt;&lt; libFile &lt;&lt; <span class="stringliteral">&quot;&#39; success: handle=0x&quot;</span> &lt;&lt; std::hex &lt;&lt; handle;</div>
+<div class="line"><span class="lineno">   42</span>            LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <span class="stringliteral">&quot;dlOpen: &quot;</span> &lt;&lt; libFile &lt;&lt; <span class="stringliteral">&quot; success: handle=0x&quot;</span> &lt;&lt; std::hex &lt;&lt; handle;</div>
 <div class="line"><span class="lineno">   43</span>        } <span class="keywordflow">else</span> {</div>
 <div class="line"><span class="lineno">   44</span>            LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <span class="stringliteral">&quot;dlOpen: &quot;</span> &lt;&lt; <a class="code hl_function" href="classcore_1_1DynamicLoader.html#a28d14f3029339351d8bb8b328a6110b0">DynamicLoader::dlError</a>();</div>
 <div class="line"><span class="lineno">   45</span>        }</div>
@@ -496,7 +496,7 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DynamicLoader_a07036b08e93d0082219c6fa7fdf8c66c_cgraph.svg" width="584" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DynamicLoader_a07036b08e93d0082219c6fa7fdf8c66c_cgraph.svg" width="543" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -547,12 +547,12 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DynamicLoader_a708b7adb431acbc8976968c59692625e_cgraph.svg" width="374" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DynamicLoader_a708b7adb431acbc8976968c59692625e_cgraph.svg" width="347" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DynamicLoader_a708b7adb431acbc8976968c59692625e_icgraph.svg" width="722" height="115"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DynamicLoader_a708b7adb431acbc8976968c59692625e_icgraph.svg" width="675" height="115"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -592,12 +592,12 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DynamicLoader_a0eb6f36d1c50f7233455d0e2798a71e4_cgraph.svg" width="587" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DynamicLoader_a0eb6f36d1c50f7233455d0e2798a71e4_cgraph.svg" width="547" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DynamicLoader_a0eb6f36d1c50f7233455d0e2798a71e4_icgraph.svg" width="2036" height="327"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DynamicLoader_a0eb6f36d1c50f7233455d0e2798a71e4_icgraph.svg" width="1906" height="327"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -638,12 +638,12 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DynamicLoader_afea22388177ead6ebd12f9ef041e6d2b_cgraph.svg" width="379" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DynamicLoader_afea22388177ead6ebd12f9ef041e6d2b_cgraph.svg" width="352" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DynamicLoader_afea22388177ead6ebd12f9ef041e6d2b_icgraph.svg" width="2244" height="327"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DynamicLoader_afea22388177ead6ebd12f9ef041e6d2b_icgraph.svg" width="2100" height="327"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -695,12 +695,12 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DynamicLoader_acff0a66e885a7bc718171eede89a1c9a_cgraph.svg" width="1008" height="134"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DynamicLoader_acff0a66e885a7bc718171eede89a1c9a_cgraph.svg" width="943" height="134"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DynamicLoader_acff0a66e885a7bc718171eede89a1c9a_icgraph.svg" width="1030" height="86"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DynamicLoader_acff0a66e885a7bc718171eede89a1c9a_icgraph.svg" width="960" height="86"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -730,7 +730,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="DynamicLoader_8cpp_source.html#l00124">124</a> of file <a class="el" href="DynamicLoader_8cpp_source.html">DynamicLoader.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  124</span>                                           {</div>
-<div class="line"><span class="lineno">  125</span>        <span class="keywordflow">for</span> (<span class="keywordtype">void</span>* handle : <a class="code hl_variable" href="classcore_1_1DynamicLoader.html#a81f8198dcbce23aceb2804c1a170692a">closeHandles</a>) {</div>
+<div class="line"><span class="lineno">  125</span>        <span class="keywordflow">for</span> (<span class="keywordtype">void</span>* handle : <a class="code hl_variable" href="classcore_1_1DynamicLoader.html#a3d9c00c6e839bbdb31894887b8407fe4">closeHandles</a>) {</div>
 <div class="line"><span class="lineno">  126</span>            Library&amp; library = <a class="code hl_variable" href="classcore_1_1DynamicLoader.html#a686abfc426926c79f8801c98555c7a4b">dlOpenedLibraries</a>[handle];</div>
 <div class="line"><span class="lineno">  127</span> </div>
 <div class="line"><span class="lineno">  128</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="classcore_1_1DynamicLoader.html#afea22388177ead6ebd12f9ef041e6d2b">execDlClose</a>(library) != 0) {</div>
@@ -742,7 +742,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">  134</span>            <a class="code hl_variable" href="classcore_1_1DynamicLoader.html#a686abfc426926c79f8801c98555c7a4b">dlOpenedLibraries</a>.erase(handle);</div>
 <div class="line"><span class="lineno">  135</span>        }</div>
 <div class="line"><span class="lineno">  136</span> </div>
-<div class="line"><span class="lineno">  137</span>        <a class="code hl_variable" href="classcore_1_1DynamicLoader.html#a81f8198dcbce23aceb2804c1a170692a">closeHandles</a>.clear();</div>
+<div class="line"><span class="lineno">  137</span>        <a class="code hl_variable" href="classcore_1_1DynamicLoader.html#a3d9c00c6e839bbdb31894887b8407fe4">closeHandles</a>.clear();</div>
 <div class="line"><span class="lineno">  138</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="DynamicLoader_8h_source.html#l00068">closeHandles</a>, <a class="el" href="DynamicLoader_8cpp_source.html#l00112">dlError()</a>, <a class="el" href="DynamicLoader_8h_source.html#l00067">dlOpenedLibraries</a>, <a class="el" href="DynamicLoader_8cpp_source.html#l00120">execDlClose()</a>, and <a class="el" href="DynamicLoader_8h_source.html#l00038">core::DynamicLoader::Library::fileName</a>.</p>
@@ -751,12 +751,12 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DynamicLoader_a8c4d850882c7177f93a543b96eb450a0_cgraph.svg" width="800" height="115"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DynamicLoader_a8c4d850882c7177f93a543b96eb450a0_cgraph.svg" width="748" height="115"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DynamicLoader_a8c4d850882c7177f93a543b96eb450a0_icgraph.svg" width="1708" height="203"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DynamicLoader_a8c4d850882c7177f93a543b96eb450a0_icgraph.svg" width="1595" height="203"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -811,8 +811,8 @@ Here is the caller graph for this function:</div>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a81f8198dcbce23aceb2804c1a170692a" name="a81f8198dcbce23aceb2804c1a170692a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a81f8198dcbce23aceb2804c1a170692a">&#9670;&#160;</a></span>closeHandles</h2>
+<a id="a3d9c00c6e839bbdb31894887b8407fe4" name="a3d9c00c6e839bbdb31894887b8407fe4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d9c00c6e839bbdb31894887b8407fe4">&#9670;&#160;</a></span>closeHandles</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -821,7 +821,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::set&lt; void * &gt; core::DynamicLoader::closeHandles</td>
+          <td class="memname">std::list&lt; void * &gt; core::DynamicLoader::closeHandles</td>
         </tr>
       </table>
   </td>
@@ -873,7 +873,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacecore.html">core</a></li><li class="navelem"><a class="el" href="classcore_1_1DynamicLoader.html">DynamicLoader</a></li>
-    <li class="footer">Generated on Fri Oct 13 2023 08:51:17 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Fri Oct 20 2023 14:01:10 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

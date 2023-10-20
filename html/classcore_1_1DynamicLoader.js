@@ -15,6 +15,6 @@ var classcore_1_1DynamicLoader =
     [ "execDlCloseDeleyed", "classcore_1_1DynamicLoader.html#a8c4d850882c7177f93a543b96eb450a0", null ],
     [ "EventLoop", "classcore_1_1DynamicLoader.html#aca25e36665670fcb6909dd8ab04b1d05", null ],
     [ "EventMultiplexer", "classcore_1_1DynamicLoader.html#a223d62cb28785eb6f6dd34e25f0d61ed", null ],
-    [ "closeHandles", "classcore_1_1DynamicLoader.html#a81f8198dcbce23aceb2804c1a170692a", null ],
+    [ "closeHandles", "classcore_1_1DynamicLoader.html#a3d9c00c6e839bbdb31894887b8407fe4", null ],
     [ "dlOpenedLibraries", "classcore_1_1DynamicLoader.html#a686abfc426926c79f8801c98555c7a4b", null ]
 ];

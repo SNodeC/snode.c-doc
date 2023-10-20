@@ -23,7 +23,7 @@ var classnet_1_1config_1_1ConfigAddressRemote =
     [ "required", "classnet_1_1config_1_1ConfigAddressRemote.html#a118e54017223e71db5cf1a1ec690dc4a", null ],
     [ "required", "classnet_1_1config_1_1ConfigAddressRemote.html#afe7a0030f5ef727586a4dc6d32410ce7", null ],
     [ "reset", "classnet_1_1config_1_1ConfigAddressRemote.html#afbde4c97e2ef54f7661ddc29fbd2bb59", null ],
-    [ "setSocketAddress", "classnet_1_1config_1_1ConfigAddressRemote.html#ad72ca31921b70567cf4ba75665241cdc", null ],
+    [ "setSocketAddress", "classnet_1_1config_1_1ConfigAddressRemote.html#a5a315c700cda237e2b39d0aaa98ac8a9", null ],
     [ "instance", "classnet_1_1config_1_1ConfigAddressRemote.html#abb79a8f4f69c1730bf7716eea73384c4", null ],
     [ "requiredCount", "classnet_1_1config_1_1ConfigAddressRemote.html#ab27dc40ed9c1564341868bdc4da4448d", null ],
     [ "section", "classnet_1_1config_1_1ConfigAddressRemote.html#ace462619a37549762b6dc2583fcd14c3", null ],

@@ -4,7 +4,7 @@ var classnet_1_1un_1_1SocketAddress =
     [ "Super", "classnet_1_1un_1_1SocketAddress.html#a3c2cbcf0afaeb77e1e7b4518acc353c7", null ],
     [ "SocketAddress", "classnet_1_1un_1_1SocketAddress.html#af20aa53a2d0f4d9684b9a27d33176568", null ],
     [ "SocketAddress", "classnet_1_1un_1_1SocketAddress.html#a642b5904081eae12c546ad22f81022a9", null ],
-    [ "address", "classnet_1_1un_1_1SocketAddress.html#ac670b2f6989641a126dc9c763b885587", null ],
+    [ "getAddress", "classnet_1_1un_1_1SocketAddress.html#afe0be2b1d955a9dcf0cfbb2051a28877", null ],
     [ "getSockAddr", "classnet_1_1un_1_1SocketAddress.html#adbd6c7d00301f8356ebc350889d2d7e5", null ],
     [ "getSockAddrLen", "classnet_1_1un_1_1SocketAddress.html#a009c2f04faeaef20fae628d3f0c07e1b", null ],
     [ "setSunPath", "classnet_1_1un_1_1SocketAddress.html#add306afe588dd79d32b7e0357d640753", null ],

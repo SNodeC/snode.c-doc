@@ -28,7 +28,7 @@ var classweb_1_1websocket_1_1SocketContextUpgrade =
     ] ],
     [ "SocketContextUpgrade", "classweb_1_1websocket_1_1SocketContextUpgrade.html#aa630fad44c5a7187a230ef617ec35725", null ],
     [ "SocketContextUpgrade", "classweb_1_1websocket_1_1SocketContextUpgrade.html#a38dfdce9ae721f940f473b9789b84b66", null ],
-    [ "SocketContextUpgrade", "classweb_1_1websocket_1_1SocketContextUpgrade.html#a70247f8d1dd35afdd814f0eb08e3ba8c", null ],
+    [ "SocketContextUpgrade", "classweb_1_1websocket_1_1SocketContextUpgrade.html#ab386b7f37216874ec8951f70e7cc264b", null ],
     [ "~SocketContextUpgrade", "classweb_1_1websocket_1_1SocketContextUpgrade.html#a2b7ead4ce5fe5c6dcfdedea86ea6d921", null ],
     [ "close", "classweb_1_1websocket_1_1SocketContextUpgrade.html#a47b23b8583dfd3880232e748f284f380", null ],
     [ "dumpFrame", "classweb_1_1websocket_1_1SocketContextUpgrade.html#a9ab19a92b496407ca92d256c334bc150", null ],
@@ -100,6 +100,5 @@ var classweb_1_1websocket_1_1SocketContextUpgrade =
     [ "receivedOpCode", "classweb_1_1websocket_1_1SocketContextUpgrade.html#a94ba0c562169286da147b8bd513ee028", null ],
     [ "socketConnection", "classweb_1_1websocket_1_1SocketContextUpgrade.html#aa1eeb9f67270ffa53d9416c88d08c7fb", null ],
     [ "socketContextUpgradeFactory", "classweb_1_1websocket_1_1SocketContextUpgrade.html#aa199a60563ff55495a3d4f0addcf31b1", null ],
-    [ "subProtocol", "classweb_1_1websocket_1_1SocketContextUpgrade.html#a79cd867f9becf5b3a1b88f2021b9936a", null ],
-    [ "subProtocolFactory", "classweb_1_1websocket_1_1SocketContextUpgrade.html#a9c6cb7e28427f9aae048aeee3ea109fa", null ]
+    [ "subProtocol", "classweb_1_1websocket_1_1SocketContextUpgrade.html#a79cd867f9becf5b3a1b88f2021b9936a", null ]
 ];

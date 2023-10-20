@@ -4,7 +4,7 @@ var classnet_1_1SocketAddress =
     [ "SocketAddress", "classnet_1_1SocketAddress.html#aaa9bb89ecaae2febd35385f95d658268", null ],
     [ "SocketAddress", "classnet_1_1SocketAddress.html#a1f14a26467e35d8f60275dcc60b7494a", null ],
     [ "SocketAddress", "classnet_1_1SocketAddress.html#a6213acc9e4a96302be09aa7750ce1cd2", null ],
-    [ "address", "classnet_1_1SocketAddress.html#a8e9474167e957b2c98493dba01f5b7a9", null ],
+    [ "getAddress", "classnet_1_1SocketAddress.html#a47ca3c811785f82029c0d88f2a5798af", null ],
     [ "getSockAddr", "classnet_1_1SocketAddress.html#adbd6c7d00301f8356ebc350889d2d7e5", null ],
     [ "getSockAddrLen", "classnet_1_1SocketAddress.html#a009c2f04faeaef20fae628d3f0c07e1b", null ],
     [ "operator=", "classnet_1_1SocketAddress.html#a191caa38f84f24ff43af81dadd6efc70", null ],

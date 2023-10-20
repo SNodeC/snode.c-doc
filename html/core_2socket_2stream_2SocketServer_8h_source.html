@@ -173,9 +173,9 @@ $(document).ready(function(){initNavTree('core_2socket_2stream_2SocketServer_8h_
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>                  [name](SocketConnection* socketConnection) -&gt; <span class="keywordtype">void</span> { <span class="comment">// onConnect</span></div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>                      LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;OnConnect - &quot;</span> &lt;&lt; name;</div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>                      LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;\tLocal: (&quot;</span> + socketConnection-&gt;getLocalAddress().address() + <span class="stringliteral">&quot;) &quot;</span> +</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>                      LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;\tLocal: (&quot;</span> + socketConnection-&gt;getLocalAddress().getAddress() + <span class="stringliteral">&quot;) &quot;</span> +</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>                                       socketConnection-&gt;getLocalAddress().toString();</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>                      LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;\tPeer:  (&quot;</span> + socketConnection-&gt;getRemoteAddress().address() + <span class="stringliteral">&quot;) &quot;</span> +</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>                      LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;\tPeer:  (&quot;</span> + socketConnection-&gt;getRemoteAddress().getAddress() + <span class="stringliteral">&quot;) &quot;</span> +</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>                                       socketConnection-&gt;getRemoteAddress().toString();</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>                  },</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>                  [name]([[maybe_unused]] SocketConnection* socketConnection) -&gt; <span class="keywordtype">void</span> { <span class="comment">// onConnected</span></div>
@@ -184,9 +184,9 @@ $(document).ready(function(){initNavTree('core_2socket_2stream_2SocketServer_8h_
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>                  [name](SocketConnection* socketConnection) -&gt; <span class="keywordtype">void</span> { <span class="comment">// onDisconnect</span></div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>                      LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;OnDisconnect &quot;</span> &lt;&lt; name;</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>                      LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;\tLocal: (&quot;</span> + socketConnection-&gt;getLocalAddress().address() + <span class="stringliteral">&quot;) &quot;</span> +</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>                      LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;\tLocal: (&quot;</span> + socketConnection-&gt;getLocalAddress().getAddress() + <span class="stringliteral">&quot;) &quot;</span> +</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>                                       socketConnection-&gt;getLocalAddress().toString();</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>                      LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;\tPeer:  (&quot;</span> + socketConnection-&gt;getRemoteAddress().address() + <span class="stringliteral">&quot;) &quot;</span> +</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>                      LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;\tPeer:  (&quot;</span> + socketConnection-&gt;getRemoteAddress().getAddress() + <span class="stringliteral">&quot;) &quot;</span> +</div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>                                       socketConnection-&gt;getRemoteAddress().toString();</div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>                  }) {</div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        }</div>
@@ -220,9 +220,9 @@ $(document).ready(function(){initNavTree('core_2socket_2stream_2SocketServer_8h_
 <div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>                  [name](SocketConnection* socketConnection) -&gt; <span class="keywordtype">void</span> { <span class="comment">// onConnect</span></div>
 <div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>                      LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;OnConnect &quot;</span> &lt;&lt; name;</div>
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>                      LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;\tLocal: (&quot;</span> + socketConnection-&gt;getLocalAddress().address() + <span class="stringliteral">&quot;) &quot;</span> +</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>                      LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;\tLocal: (&quot;</span> + socketConnection-&gt;getLocalAddress().getAddress() + <span class="stringliteral">&quot;) &quot;</span> +</div>
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>                                       socketConnection-&gt;getLocalAddress().toString();</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>                      LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;\tPeer:  (&quot;</span> + socketConnection-&gt;getRemoteAddress().address() + <span class="stringliteral">&quot;) &quot;</span> +</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>                      LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;\tPeer:  (&quot;</span> + socketConnection-&gt;getRemoteAddress().getAddress() + <span class="stringliteral">&quot;) &quot;</span> +</div>
 <div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>                                       socketConnection-&gt;getRemoteAddress().toString();</div>
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>                  },</div>
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>                  [name]([[maybe_unused]] SocketConnection* socketConnection) -&gt; <span class="keywordtype">void</span> { <span class="comment">// onConnected</span></div>
@@ -231,9 +231,9 @@ $(document).ready(function(){initNavTree('core_2socket_2stream_2SocketServer_8h_
 <div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>                  [name](SocketConnection* socketConnection) -&gt; <span class="keywordtype">void</span> { <span class="comment">// onDisconnect</span></div>
 <div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>                      LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;OnDisconnect &quot;</span> &lt;&lt; name;</div>
 <div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span> </div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>                      LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;\tLocal: (&quot;</span> + socketConnection-&gt;getLocalAddress().address() + <span class="stringliteral">&quot;) &quot;</span> +</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>                      LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;\tLocal: (&quot;</span> + socketConnection-&gt;getLocalAddress().getAddress() + <span class="stringliteral">&quot;) &quot;</span> +</div>
 <div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>                                       socketConnection-&gt;getLocalAddress().toString();</div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>                      LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;\tPeer:  (&quot;</span> + socketConnection-&gt;getRemoteAddress().address() + <span class="stringliteral">&quot;) &quot;</span> +</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>                      LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;\tPeer:  (&quot;</span> + socketConnection-&gt;getRemoteAddress().getAddress() + <span class="stringliteral">&quot;) &quot;</span> +</div>
 <div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>                                       socketConnection-&gt;getRemoteAddress().toString();</div>
 <div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>                  },</div>
 <div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>                  socketContextFactory) {</div>
@@ -437,7 +437,7 @@ $(document).ready(function(){initNavTree('core_2socket_2stream_2SocketServer_8h_
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_4270bfced15e0e73154b13468c7c9ad9.html">core</a></li><li class="navelem"><a class="el" href="dir_55e2b5896cfedaa9128ab09eb6ffed25.html">socket</a></li><li class="navelem"><a class="el" href="dir_fda6a541e73aa8ed23b6fa172f5dc60d.html">stream</a></li><li class="navelem"><a class="el" href="core_2socket_2stream_2SocketServer_8h.html">SocketServer.h</a></li>
-    <li class="footer">Generated on Fri Oct 13 2023 08:50:38 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Fri Oct 20 2023 14:00:25 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>
