@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['header_0',['HEADER',['../classweb_1_1http_1_1Parser.html#a94ab44c0d65451be6ba3e6e389a8b7d5a7ad4905b4543ab4a1637dd23c50e36ce',1,'web::http::Parser']]]
+  ['initialized_0',['INITIALIZED',['../namespacecore.html#a6613a3d81c1d25590b1cd31540d08815adee5f03c2c4e73657824e028494b18c0',1,'core']]],
+  ['interrupted_1',['INTERRUPTED',['../namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a658f2cadfdf09b6046246e9314f7cd43',1,'core']]]
 ];

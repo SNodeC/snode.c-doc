@@ -103,12 +103,12 @@ $(document).ready(function(){initNavTree('classiot_1_1mqtt__fast_1_1packets_1_1S
 <div class="dynheader">
 Inheritance diagram for iot::mqtt_fast::packets::Subscribe:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classiot_1_1mqtt__fast_1_1packets_1_1Subscribe__inherit__graph.svg" width="192" height="124"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classiot_1_1mqtt__fast_1_1packets_1_1Subscribe__inherit__graph.svg" width="208" height="124"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Collaboration diagram for iot::mqtt_fast::packets::Subscribe:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classiot_1_1mqtt__fast_1_1packets_1_1Subscribe__coll__graph.svg" width="460" height="506"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classiot_1_1mqtt__fast_1_1packets_1_1Subscribe__coll__graph.svg" width="510" height="506"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -219,19 +219,19 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mqtt-fast_2packets_2Subscribe_8cpp_source.html#l00030">30</a> of file <a class="el" href="mqtt-fast_2packets_2Subscribe_8cpp_source.html">Subscribe.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   31</span>        : <a class="code hl_class" href="classiot_1_1mqtt__fast_1_1ControlPacket.html">iot::mqtt_fast::ControlPacket</a>(<a class="code hl_define" href="mqtt-fast_2packets_2Subscribe_8h.html#a177f987722aa2d30b323d74be95d42be">MQTT_SUBSCRIBE</a>, 0x02)</div>
-<div class="line"><span class="lineno">   32</span>        , <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1packets_1_1Subscribe.html#aa7d2ad90d98b87007d78c54a8a8ade19">packetIdentifier</a>(<a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1packets_1_1Subscribe.html#aa7d2ad90d98b87007d78c54a8a8ade19">packetIdentifier</a>)</div>
-<div class="line"><span class="lineno">   33</span>        , <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1packets_1_1Subscribe.html#a3374ec5d47c1e5e9668dd06f29a0f844">topics</a>(std::move(<a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1packets_1_1Subscribe.html#a3374ec5d47c1e5e9668dd06f29a0f844">topics</a>)) {</div>
-<div class="line"><span class="lineno">   34</span>        <span class="comment">// V-Header</span></div>
-<div class="line"><span class="lineno">   35</span>        <a class="code hl_function" href="classiot_1_1mqtt__fast_1_1ControlPacket.html#a68489018481e5e672b28b242cb9c71f8">putInt16</a>(this-&gt;<a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1packets_1_1Subscribe.html#aa7d2ad90d98b87007d78c54a8a8ade19">packetIdentifier</a>);</div>
-<div class="line"><span class="lineno">   36</span> </div>
-<div class="line"><span class="lineno">   37</span>        <span class="comment">// Payload</span></div>
-<div class="line"><span class="lineno">   38</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code hl_class" href="classiot_1_1mqtt__fast_1_1Topic.html">iot::mqtt_fast::Topic</a>&amp; topic : this-&gt;<a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1packets_1_1Subscribe.html#a3374ec5d47c1e5e9668dd06f29a0f844">topics</a>) {</div>
-<div class="line"><span class="lineno">   39</span>            <a class="code hl_function" href="classiot_1_1mqtt__fast_1_1ControlPacket.html#a7068147ccc82c54eb8d434ce5ad5126d">putString</a>(topic.getName());</div>
-<div class="line"><span class="lineno">   40</span>            <a class="code hl_function" href="classiot_1_1mqtt__fast_1_1ControlPacket.html#a56f27153885907d80fed2d06cef26f78">putInt8</a>(topic.getRequestedQoS());</div>
-<div class="line"><span class="lineno">   41</span>        }</div>
-<div class="line"><span class="lineno">   42</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="mqtt-fast_2packets_2Subscribe_8cpp_source.html#l00029">29</a> of file <a class="el" href="mqtt-fast_2packets_2Subscribe_8cpp_source.html">Subscribe.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   30</span>        : <a class="code hl_class" href="classiot_1_1mqtt__fast_1_1ControlPacket.html">iot::mqtt_fast::ControlPacket</a>(<a class="code hl_define" href="mqtt-fast_2packets_2Subscribe_8h.html#a177f987722aa2d30b323d74be95d42be">MQTT_SUBSCRIBE</a>, 0x02)</div>
+<div class="line"><span class="lineno">   31</span>        , <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1packets_1_1Subscribe.html#aa7d2ad90d98b87007d78c54a8a8ade19">packetIdentifier</a>(<a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1packets_1_1Subscribe.html#aa7d2ad90d98b87007d78c54a8a8ade19">packetIdentifier</a>)</div>
+<div class="line"><span class="lineno">   32</span>        , <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1packets_1_1Subscribe.html#a3374ec5d47c1e5e9668dd06f29a0f844">topics</a>(<a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1packets_1_1Subscribe.html#a3374ec5d47c1e5e9668dd06f29a0f844">topics</a>) {</div>
+<div class="line"><span class="lineno">   33</span>        <span class="comment">// V-Header</span></div>
+<div class="line"><span class="lineno">   34</span>        <a class="code hl_function" href="classiot_1_1mqtt__fast_1_1ControlPacket.html#a68489018481e5e672b28b242cb9c71f8">putInt16</a>(this-&gt;<a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1packets_1_1Subscribe.html#aa7d2ad90d98b87007d78c54a8a8ade19">packetIdentifier</a>);</div>
+<div class="line"><span class="lineno">   35</span> </div>
+<div class="line"><span class="lineno">   36</span>        <span class="comment">// Payload</span></div>
+<div class="line"><span class="lineno">   37</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code hl_class" href="classiot_1_1mqtt__fast_1_1Topic.html">iot::mqtt_fast::Topic</a>&amp; topic : this-&gt;<a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1packets_1_1Subscribe.html#a3374ec5d47c1e5e9668dd06f29a0f844">topics</a>) {</div>
+<div class="line"><span class="lineno">   38</span>            <a class="code hl_function" href="classiot_1_1mqtt__fast_1_1ControlPacket.html#a7068147ccc82c54eb8d434ce5ad5126d">putString</a>(topic.getName());</div>
+<div class="line"><span class="lineno">   39</span>            <a class="code hl_function" href="classiot_1_1mqtt__fast_1_1ControlPacket.html#a56f27153885907d80fed2d06cef26f78">putInt8</a>(topic.getRequestedQoS());</div>
+<div class="line"><span class="lineno">   40</span>        }</div>
+<div class="line"><span class="lineno">   41</span>    }</div>
 <div class="ttc" id="aclassiot_1_1mqtt__fast_1_1ControlPacket_html"><div class="ttname"><a href="classiot_1_1mqtt__fast_1_1ControlPacket.html">iot::mqtt_fast::ControlPacket</a></div><div class="ttdef"><b>Definition</b> <a href="mqtt-fast_2ControlPacket_8h_source.html#l00039">ControlPacket.h:39</a></div></div>
 <div class="ttc" id="aclassiot_1_1mqtt__fast_1_1ControlPacket_html_a56f27153885907d80fed2d06cef26f78"><div class="ttname"><a href="classiot_1_1mqtt__fast_1_1ControlPacket.html#a56f27153885907d80fed2d06cef26f78">iot::mqtt_fast::ControlPacket::putInt8</a></div><div class="ttdeci">void putInt8(uint8_t value)</div><div class="ttdef"><b>Definition</b> <a href="mqtt-fast_2ControlPacket_8cpp_source.html#l00114">ControlPacket.cpp:114</a></div></div>
 <div class="ttc" id="aclassiot_1_1mqtt__fast_1_1ControlPacket_html_a68489018481e5e672b28b242cb9c71f8"><div class="ttname"><a href="classiot_1_1mqtt__fast_1_1ControlPacket.html#a68489018481e5e672b28b242cb9c71f8">iot::mqtt_fast::ControlPacket::putInt16</a></div><div class="ttdeci">void putInt16(uint16_t value)</div><div class="ttdef"><b>Definition</b> <a href="mqtt-fast_2ControlPacket_8cpp_source.html#l00118">ControlPacket.cpp:118</a></div></div>
@@ -247,12 +247,12 @@ Private Attributes</h2></td></tr>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classiot_1_1mqtt__fast_1_1packets_1_1Subscribe_a487c0c7a64ba7fdbd8659676ccafb95d_cgraph.svg" width="846" height="358"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classiot_1_1mqtt__fast_1_1packets_1_1Subscribe_a487c0c7a64ba7fdbd8659676ccafb95d_cgraph.svg" width="906" height="358"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classiot_1_1mqtt__fast_1_1packets_1_1Subscribe_a487c0c7a64ba7fdbd8659676ccafb95d_icgraph.svg" width="408" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classiot_1_1mqtt__fast_1_1packets_1_1Subscribe_a487c0c7a64ba7fdbd8659676ccafb95d_icgraph.svg" width="439" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -281,39 +281,39 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mqtt-fast_2packets_2Subscribe_8cpp_source.html#l00044">44</a> of file <a class="el" href="mqtt-fast_2packets_2Subscribe_8cpp_source.html">Subscribe.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   45</span>        : <a class="code hl_class" href="classiot_1_1mqtt__fast_1_1ControlPacket.html">iot::mqtt_fast::ControlPacket</a>(controlPacketFactory) {</div>
-<div class="line"><span class="lineno">   46</span>        <span class="comment">// V-Header</span></div>
-<div class="line"><span class="lineno">   47</span>        <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1packets_1_1Subscribe.html#aa7d2ad90d98b87007d78c54a8a8ade19">packetIdentifier</a> = <a class="code hl_function" href="classiot_1_1mqtt__fast_1_1ControlPacket.html#aea50d9246057e847d964e557017a23b0">getInt16</a>();</div>
-<div class="line"><span class="lineno">   48</span> </div>
-<div class="line"><span class="lineno">   49</span>        <span class="comment">// Payload</span></div>
-<div class="line"><span class="lineno">   50</span>        <span class="keywordflow">for</span> (std::string name = <a class="code hl_function" href="classiot_1_1mqtt__fast_1_1ControlPacket.html#af2524dcf1d33c71ef8fb06176c6330fb">getString</a>(); !name.empty(); name = <a class="code hl_function" href="classiot_1_1mqtt__fast_1_1ControlPacket.html#af2524dcf1d33c71ef8fb06176c6330fb">getString</a>()) {</div>
-<div class="line"><span class="lineno">   51</span>            uint8_t requestedQoS = <a class="code hl_function" href="classiot_1_1mqtt__fast_1_1ControlPacket.html#a42cbac56f01d1c74251795304ad9a820">getInt8</a>();</div>
-<div class="line"><span class="lineno">   52</span>            <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1packets_1_1Subscribe.html#a3374ec5d47c1e5e9668dd06f29a0f844">topics</a>.push_back(<a class="code hl_class" href="classiot_1_1mqtt__fast_1_1Topic.html">iot::mqtt_fast::Topic</a>(name, requestedQoS));</div>
-<div class="line"><span class="lineno">   53</span>        }</div>
-<div class="line"><span class="lineno">   54</span> </div>
-<div class="line"><span class="lineno">   55</span>        <span class="keywordflow">if</span> (!<a class="code hl_function" href="classiot_1_1mqtt__fast_1_1ControlPacket.html#ad6820f6ec0269ca24235937fba45f116">isError</a>()) {</div>
-<div class="line"><span class="lineno">   56</span>            <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1ControlPacket.html#afc2dd5f16f2e19be51f2376d65df421c">error</a> = <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1packets_1_1Subscribe.html#a3374ec5d47c1e5e9668dd06f29a0f844">topics</a>.empty();</div>
-<div class="line"><span class="lineno">   57</span>        }</div>
-<div class="line"><span class="lineno">   58</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="mqtt-fast_2packets_2Subscribe_8cpp_source.html#l00043">43</a> of file <a class="el" href="mqtt-fast_2packets_2Subscribe_8cpp_source.html">Subscribe.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   44</span>        : <a class="code hl_class" href="classiot_1_1mqtt__fast_1_1ControlPacket.html">iot::mqtt_fast::ControlPacket</a>(controlPacketFactory) {</div>
+<div class="line"><span class="lineno">   45</span>        <span class="comment">// V-Header</span></div>
+<div class="line"><span class="lineno">   46</span>        <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1packets_1_1Subscribe.html#aa7d2ad90d98b87007d78c54a8a8ade19">packetIdentifier</a> = <a class="code hl_function" href="classiot_1_1mqtt__fast_1_1ControlPacket.html#aea50d9246057e847d964e557017a23b0">getInt16</a>();</div>
+<div class="line"><span class="lineno">   47</span> </div>
+<div class="line"><span class="lineno">   48</span>        <span class="comment">// Payload</span></div>
+<div class="line"><span class="lineno">   49</span>        <span class="keywordflow">for</span> (std::string name = <a class="code hl_function" href="classiot_1_1mqtt__fast_1_1ControlPacket.html#af2524dcf1d33c71ef8fb06176c6330fb">getString</a>(); !name.empty(); name = <a class="code hl_function" href="classiot_1_1mqtt__fast_1_1ControlPacket.html#af2524dcf1d33c71ef8fb06176c6330fb">getString</a>()) {</div>
+<div class="line"><span class="lineno">   50</span>            <span class="keyword">const</span> uint8_t requestedQoS = <a class="code hl_function" href="classiot_1_1mqtt__fast_1_1ControlPacket.html#a42cbac56f01d1c74251795304ad9a820">getInt8</a>();</div>
+<div class="line"><span class="lineno">   51</span>            <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1packets_1_1Subscribe.html#a3374ec5d47c1e5e9668dd06f29a0f844">topics</a>.emplace_back(name, requestedQoS);</div>
+<div class="line"><span class="lineno">   52</span>        }</div>
+<div class="line"><span class="lineno">   53</span> </div>
+<div class="line"><span class="lineno">   54</span>        <span class="keywordflow">if</span> (!<a class="code hl_function" href="classiot_1_1mqtt__fast_1_1ControlPacket.html#ad6820f6ec0269ca24235937fba45f116">isError</a>()) {</div>
+<div class="line"><span class="lineno">   55</span>            <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1ControlPacket.html#afc2dd5f16f2e19be51f2376d65df421c">error</a> = <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1packets_1_1Subscribe.html#a3374ec5d47c1e5e9668dd06f29a0f844">topics</a>.empty();</div>
+<div class="line"><span class="lineno">   56</span>        }</div>
+<div class="line"><span class="lineno">   57</span>    }</div>
 <div class="ttc" id="aclassiot_1_1mqtt__fast_1_1ControlPacket_html_a42cbac56f01d1c74251795304ad9a820"><div class="ttname"><a href="classiot_1_1mqtt__fast_1_1ControlPacket.html#a42cbac56f01d1c74251795304ad9a820">iot::mqtt_fast::ControlPacket::getInt8</a></div><div class="ttdeci">uint8_t getInt8()</div><div class="ttdef"><b>Definition</b> <a href="mqtt-fast_2ControlPacket_8cpp_source.html#l00082">ControlPacket.cpp:82</a></div></div>
 <div class="ttc" id="aclassiot_1_1mqtt__fast_1_1ControlPacket_html_ad6820f6ec0269ca24235937fba45f116"><div class="ttname"><a href="classiot_1_1mqtt__fast_1_1ControlPacket.html#ad6820f6ec0269ca24235937fba45f116">iot::mqtt_fast::ControlPacket::isError</a></div><div class="ttdeci">bool isError() const</div><div class="ttdef"><b>Definition</b> <a href="mqtt-fast_2ControlPacket_8cpp_source.html#l00074">ControlPacket.cpp:74</a></div></div>
 <div class="ttc" id="aclassiot_1_1mqtt__fast_1_1ControlPacket_html_aea50d9246057e847d964e557017a23b0"><div class="ttname"><a href="classiot_1_1mqtt__fast_1_1ControlPacket.html#aea50d9246057e847d964e557017a23b0">iot::mqtt_fast::ControlPacket::getInt16</a></div><div class="ttdeci">uint16_t getInt16()</div><div class="ttdef"><b>Definition</b> <a href="mqtt-fast_2ControlPacket_8cpp_source.html#l00086">ControlPacket.cpp:86</a></div></div>
 <div class="ttc" id="aclassiot_1_1mqtt__fast_1_1ControlPacket_html_af2524dcf1d33c71ef8fb06176c6330fb"><div class="ttname"><a href="classiot_1_1mqtt__fast_1_1ControlPacket.html#af2524dcf1d33c71ef8fb06176c6330fb">iot::mqtt_fast::ControlPacket::getString</a></div><div class="ttdeci">std::string getString()</div><div class="ttdef"><b>Definition</b> <a href="mqtt-fast_2ControlPacket_8cpp_source.html#l00102">ControlPacket.cpp:102</a></div></div>
 <div class="ttc" id="aclassiot_1_1mqtt__fast_1_1ControlPacket_html_afc2dd5f16f2e19be51f2376d65df421c"><div class="ttname"><a href="classiot_1_1mqtt__fast_1_1ControlPacket.html#afc2dd5f16f2e19be51f2376d65df421c">iot::mqtt_fast::ControlPacket::error</a></div><div class="ttdeci">bool error</div><div class="ttdef"><b>Definition</b> <a href="mqtt-fast_2ControlPacket_8h_source.html#l00087">ControlPacket.h:87</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00036">iot::mqtt_fast::ControlPacket::ControlPacket()</a>, <a class="el" href="mqtt-fast_2ControlPacket_8h_source.html#l00087">iot::mqtt_fast::ControlPacket::error</a>, <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00086">iot::mqtt_fast::ControlPacket::getInt16()</a>, <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00082">iot::mqtt_fast::ControlPacket::getInt8()</a>, <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00102">iot::mqtt_fast::ControlPacket::getString()</a>, <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00146">iot::mqtt_fast::ControlPacket::isError()</a>, <a class="el" href="mqtt-fast_2packets_2Subscribe_8h_source.html#l00049">packetIdentifier</a>, <a class="el" href="mqtt-fast_2Topic_8cpp_source.html#l00027">iot::mqtt_fast::Topic::Topic()</a>, and <a class="el" href="mqtt-fast_2packets_2Subscribe_8h_source.html#l00051">topics</a>.</p>
+<p class="reference">References <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00036">iot::mqtt_fast::ControlPacket::ControlPacket()</a>, <a class="el" href="mqtt-fast_2ControlPacket_8h_source.html#l00087">iot::mqtt_fast::ControlPacket::error</a>, <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00086">iot::mqtt_fast::ControlPacket::getInt16()</a>, <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00082">iot::mqtt_fast::ControlPacket::getInt8()</a>, <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00102">iot::mqtt_fast::ControlPacket::getString()</a>, <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00146">iot::mqtt_fast::ControlPacket::isError()</a>, <a class="el" href="mqtt-fast_2packets_2Subscribe_8h_source.html#l00049">packetIdentifier</a>, and <a class="el" href="mqtt-fast_2packets_2Subscribe_8h_source.html#l00051">topics</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="iot_2mqtt-fast_2SocketContext_8cpp_source.html#l00139">iot::mqtt_fast::SocketContext::onReceivedFromPeer()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classiot_1_1mqtt__fast_1_1packets_1_1Subscribe_aa818d2bafb7cf827a5727a4a255cd50c_cgraph.svg" width="830" height="486"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classiot_1_1mqtt__fast_1_1packets_1_1Subscribe_aa818d2bafb7cf827a5727a4a255cd50c_cgraph.svg" width="894" height="422"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classiot_1_1mqtt__fast_1_1packets_1_1Subscribe_aa818d2bafb7cf827a5727a4a255cd50c_icgraph.svg" width="408" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classiot_1_1mqtt__fast_1_1packets_1_1Subscribe_aa818d2bafb7cf827a5727a4a255cd50c_icgraph.svg" width="439" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -351,16 +351,16 @@ Here is the caller graph for this function:</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="mqtt-fast_2ControlPacket_8h_source.html#l00084">iot::mqtt_fast::ControlPacket::data</a>, and <a class="el" href="Binary_8cpp_source.html#l00071">iot::mqtt_fast::types::Binary::getInt16()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mqtt-fast_2packets_2Connect_8cpp_source.html#l00044">iot::mqtt_fast::packets::Connect::Connect()</a>, <a class="el" href="mqtt-fast_2packets_2Puback_8cpp_source.html#l00036">iot::mqtt_fast::packets::Puback::Puback()</a>, <a class="el" href="mqtt-fast_2packets_2Pubcomp_8cpp_source.html#l00036">iot::mqtt_fast::packets::Pubcomp::Pubcomp()</a>, <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html#l00049">iot::mqtt_fast::packets::Publish::Publish()</a>, <a class="el" href="mqtt-fast_2packets_2Pubrec_8cpp_source.html#l00036">iot::mqtt_fast::packets::Pubrec::Pubrec()</a>, <a class="el" href="mqtt-fast_2packets_2Pubrel_8cpp_source.html#l00036">iot::mqtt_fast::packets::Pubrel::Pubrel()</a>, <a class="el" href="mqtt-fast_2packets_2Suback_8cpp_source.html#l00040">iot::mqtt_fast::packets::Suback::Suback()</a>, <a class="el" href="mqtt-fast_2packets_2Subscribe_8cpp_source.html#l00044">Subscribe()</a>, <a class="el" href="mqtt-fast_2packets_2Unsuback_8cpp_source.html#l00036">iot::mqtt_fast::packets::Unsuback::Unsuback()</a>, and <a class="el" href="mqtt-fast_2packets_2Unsubscribe_8cpp_source.html#l00042">iot::mqtt_fast::packets::Unsubscribe::Unsubscribe()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mqtt-fast_2packets_2Connect_8cpp_source.html#l00044">iot::mqtt_fast::packets::Connect::Connect()</a>, <a class="el" href="mqtt-fast_2packets_2Puback_8cpp_source.html#l00036">iot::mqtt_fast::packets::Puback::Puback()</a>, <a class="el" href="mqtt-fast_2packets_2Pubcomp_8cpp_source.html#l00036">iot::mqtt_fast::packets::Pubcomp::Pubcomp()</a>, <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html#l00049">iot::mqtt_fast::packets::Publish::Publish()</a>, <a class="el" href="mqtt-fast_2packets_2Pubrec_8cpp_source.html#l00036">iot::mqtt_fast::packets::Pubrec::Pubrec()</a>, <a class="el" href="mqtt-fast_2packets_2Pubrel_8cpp_source.html#l00036">iot::mqtt_fast::packets::Pubrel::Pubrel()</a>, <a class="el" href="mqtt-fast_2packets_2Suback_8cpp_source.html#l00038">iot::mqtt_fast::packets::Suback::Suback()</a>, <a class="el" href="mqtt-fast_2packets_2Subscribe_8cpp_source.html#l00043">Subscribe()</a>, <a class="el" href="mqtt-fast_2packets_2Unsuback_8cpp_source.html#l00036">iot::mqtt_fast::packets::Unsuback::Unsuback()</a>, and <a class="el" href="mqtt-fast_2packets_2Unsubscribe_8cpp_source.html#l00040">iot::mqtt_fast::packets::Unsubscribe::Unsubscribe()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classiot_1_1mqtt__fast_1_1ControlPacket_aea50d9246057e847d964e557017a23b0_cgraph.svg" width="388" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classiot_1_1mqtt__fast_1_1ControlPacket_aea50d9246057e847d964e557017a23b0_cgraph.svg" width="422" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classiot_1_1mqtt__fast_1_1ControlPacket_aea50d9246057e847d964e557017a23b0_icgraph.svg" width="676" height="627"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classiot_1_1mqtt__fast_1_1ControlPacket_aea50d9246057e847d964e557017a23b0_icgraph.svg" width="726" height="627"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -398,7 +398,7 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classiot_1_1mqtt__fast_1_1ControlPacket_ac468d6c9f9bb86a7dc46a7ffc8e1d212_cgraph.svg" width="388" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classiot_1_1mqtt__fast_1_1ControlPacket_ac468d6c9f9bb86a7dc46a7ffc8e1d212_cgraph.svg" width="422" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -436,7 +436,7 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classiot_1_1mqtt__fast_1_1ControlPacket_a34908eb85f39f324cdfb75ba0bd5cb7c_cgraph.svg" width="388" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classiot_1_1mqtt__fast_1_1ControlPacket_a34908eb85f39f324cdfb75ba0bd5cb7c_cgraph.svg" width="422" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -472,16 +472,16 @@ Here is the call graph for this function:</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="mqtt-fast_2ControlPacket_8h_source.html#l00084">iot::mqtt_fast::ControlPacket::data</a>, and <a class="el" href="Binary_8cpp_source.html#l00057">iot::mqtt_fast::types::Binary::getInt8()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mqtt-fast_2packets_2Connack_8cpp_source.html#l00038">iot::mqtt_fast::packets::Connack::Connack()</a>, <a class="el" href="mqtt-fast_2packets_2Connect_8cpp_source.html#l00044">iot::mqtt_fast::packets::Connect::Connect()</a>, and <a class="el" href="mqtt-fast_2packets_2Subscribe_8cpp_source.html#l00044">Subscribe()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mqtt-fast_2packets_2Connack_8cpp_source.html#l00038">iot::mqtt_fast::packets::Connack::Connack()</a>, <a class="el" href="mqtt-fast_2packets_2Connect_8cpp_source.html#l00044">iot::mqtt_fast::packets::Connect::Connect()</a>, and <a class="el" href="mqtt-fast_2packets_2Subscribe_8cpp_source.html#l00043">Subscribe()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classiot_1_1mqtt__fast_1_1ControlPacket_a42cbac56f01d1c74251795304ad9a820_cgraph.svg" width="388" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classiot_1_1mqtt__fast_1_1ControlPacket_a42cbac56f01d1c74251795304ad9a820_cgraph.svg" width="422" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classiot_1_1mqtt__fast_1_1ControlPacket_a42cbac56f01d1c74251795304ad9a820_icgraph.svg" width="647" height="179"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classiot_1_1mqtt__fast_1_1ControlPacket_a42cbac56f01d1c74251795304ad9a820_icgraph.svg" width="695" height="179"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -519,7 +519,7 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classiot_1_1mqtt__fast_1_1ControlPacket_aea588b98ba34af6b5c3d98e84ec1d72f_cgraph.svg" width="388" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classiot_1_1mqtt__fast_1_1ControlPacket_aea588b98ba34af6b5c3d98e84ec1d72f_cgraph.svg" width="422" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -578,12 +578,12 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classiot_1_1mqtt__fast_1_1ControlPacket_a0ecf57322b57d796e14f30a925f4bb0d_cgraph.svg" width="388" height="115"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classiot_1_1mqtt__fast_1_1ControlPacket_a0ecf57322b57d796e14f30a925f4bb0d_cgraph.svg" width="422" height="115"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classiot_1_1mqtt__fast_1_1ControlPacket_a0ecf57322b57d796e14f30a925f4bb0d_icgraph.svg" width="687" height="883"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classiot_1_1mqtt__fast_1_1ControlPacket_a0ecf57322b57d796e14f30a925f4bb0d_icgraph.svg" width="739" height="883"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -603,10 +603,10 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mqtt-fast_2packets_2Subscribe_8cpp_source.html#l00060">60</a> of file <a class="el" href="mqtt-fast_2packets_2Subscribe_8cpp_source.html">Subscribe.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   60</span>                                                  {</div>
-<div class="line"><span class="lineno">   61</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1packets_1_1Subscribe.html#aa7d2ad90d98b87007d78c54a8a8ade19">packetIdentifier</a>;</div>
-<div class="line"><span class="lineno">   62</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="mqtt-fast_2packets_2Subscribe_8cpp_source.html#l00059">59</a> of file <a class="el" href="mqtt-fast_2packets_2Subscribe_8cpp_source.html">Subscribe.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   59</span>                                                  {</div>
+<div class="line"><span class="lineno">   60</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1packets_1_1Subscribe.html#aa7d2ad90d98b87007d78c54a8a8ade19">packetIdentifier</a>;</div>
+<div class="line"><span class="lineno">   61</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="mqtt-fast_2packets_2Subscribe_8h_source.html#l00049">packetIdentifier</a>.</p>
 
@@ -644,7 +644,7 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classiot_1_1mqtt__fast_1_1ControlPacket_a93e1e4cb89e5fe7b9d0cad1b1ee610a5_cgraph.svg" width="388" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classiot_1_1mqtt__fast_1_1ControlPacket_a93e1e4cb89e5fe7b9d0cad1b1ee610a5_cgraph.svg" width="422" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -712,16 +712,16 @@ Here is the call graph for this function:</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="mqtt-fast_2ControlPacket_8h_source.html#l00084">iot::mqtt_fast::ControlPacket::data</a>, and <a class="el" href="Binary_8cpp_source.html#l00138">iot::mqtt_fast::types::Binary::getString()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mqtt-fast_2packets_2Connect_8cpp_source.html#l00044">iot::mqtt_fast::packets::Connect::Connect()</a>, <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html#l00049">iot::mqtt_fast::packets::Publish::Publish()</a>, <a class="el" href="mqtt-fast_2packets_2Subscribe_8cpp_source.html#l00044">Subscribe()</a>, and <a class="el" href="mqtt-fast_2packets_2Unsubscribe_8cpp_source.html#l00042">iot::mqtt_fast::packets::Unsubscribe::Unsubscribe()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mqtt-fast_2packets_2Connect_8cpp_source.html#l00044">iot::mqtt_fast::packets::Connect::Connect()</a>, <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html#l00049">iot::mqtt_fast::packets::Publish::Publish()</a>, <a class="el" href="mqtt-fast_2packets_2Subscribe_8cpp_source.html#l00043">Subscribe()</a>, and <a class="el" href="mqtt-fast_2packets_2Unsubscribe_8cpp_source.html#l00040">iot::mqtt_fast::packets::Unsubscribe::Unsubscribe()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classiot_1_1mqtt__fast_1_1ControlPacket_af2524dcf1d33c71ef8fb06176c6330fb_cgraph.svg" width="575" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classiot_1_1mqtt__fast_1_1ControlPacket_af2524dcf1d33c71ef8fb06176c6330fb_cgraph.svg" width="624" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classiot_1_1mqtt__fast_1_1ControlPacket_af2524dcf1d33c71ef8fb06176c6330fb_icgraph.svg" width="676" height="243"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classiot_1_1mqtt__fast_1_1ControlPacket_af2524dcf1d33c71ef8fb06176c6330fb_icgraph.svg" width="726" height="243"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -761,12 +761,12 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classiot_1_1mqtt__fast_1_1ControlPacket_ae15e0c0ed7a6ab8d7cfec9e95112ed9f_cgraph.svg" width="404" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classiot_1_1mqtt__fast_1_1ControlPacket_ae15e0c0ed7a6ab8d7cfec9e95112ed9f_cgraph.svg" width="434" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classiot_1_1mqtt__fast_1_1ControlPacket_ae15e0c0ed7a6ab8d7cfec9e95112ed9f_icgraph.svg" width="646" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classiot_1_1mqtt__fast_1_1ControlPacket_ae15e0c0ed7a6ab8d7cfec9e95112ed9f_icgraph.svg" width="695" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -786,10 +786,10 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mqtt-fast_2packets_2Subscribe_8cpp_source.html#l00064">64</a> of file <a class="el" href="mqtt-fast_2packets_2Subscribe_8cpp_source.html">Subscribe.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   64</span>                                                                 {</div>
-<div class="line"><span class="lineno">   65</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1packets_1_1Subscribe.html#a3374ec5d47c1e5e9668dd06f29a0f844">topics</a>;</div>
-<div class="line"><span class="lineno">   66</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="mqtt-fast_2packets_2Subscribe_8cpp_source.html#l00063">63</a> of file <a class="el" href="mqtt-fast_2packets_2Subscribe_8cpp_source.html">Subscribe.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   63</span>                                                                 {</div>
+<div class="line"><span class="lineno">   64</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1packets_1_1Subscribe.html#a3374ec5d47c1e5e9668dd06f29a0f844">topics</a>;</div>
+<div class="line"><span class="lineno">   65</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="mqtt-fast_2packets_2Subscribe_8h_source.html#l00051">topics</a>.</p>
 
@@ -858,16 +858,16 @@ Here is the caller graph for this function:</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="mqtt-fast_2ControlPacket_8h_source.html#l00084">iot::mqtt_fast::ControlPacket::data</a>, and <a class="el" href="Binary_8cpp_source.html#l00171">iot::mqtt_fast::types::Binary::getUint8ListRaw()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mqtt-fast_2packets_2Suback_8cpp_source.html#l00040">iot::mqtt_fast::packets::Suback::Suback()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mqtt-fast_2packets_2Suback_8cpp_source.html#l00038">iot::mqtt_fast::packets::Suback::Suback()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classiot_1_1mqtt__fast_1_1ControlPacket_ac6d7436570932cb02368315ea860c9e2_cgraph.svg" width="422" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classiot_1_1mqtt__fast_1_1ControlPacket_ac6d7436570932cb02368315ea860c9e2_cgraph.svg" width="454" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classiot_1_1mqtt__fast_1_1ControlPacket_ac6d7436570932cb02368315ea860c9e2_icgraph.svg" width="646" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classiot_1_1mqtt__fast_1_1ControlPacket_ac6d7436570932cb02368315ea860c9e2_icgraph.svg" width="695" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -904,7 +904,7 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classiot_1_1mqtt__fast_1_1ControlPacket_adc733791bca3ce2f6093b211a3ae8add_cgraph.svg" width="388" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classiot_1_1mqtt__fast_1_1ControlPacket_adc733791bca3ce2f6093b211a3ae8add_cgraph.svg" width="422" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -934,22 +934,22 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00146">146</a> of file <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html">ControlPacket.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  146</span>                                {</div>
-<div class="line"><span class="lineno">  147</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1ControlPacket.html#a7f4b077d3b38f543c13d110bf453184a">data</a>.<a class="code hl_function" href="classiot_1_1mqtt__fast_1_1types_1_1TypeBase.html#a0f70695f91adc8ef743f46d34ec83873">isError</a>();</div>
+<div class="line"><span class="lineno">  147</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1ControlPacket.html#a7f4b077d3b38f543c13d110bf453184a">data</a>.<a class="code hl_function" href="classiot_1_1mqtt__fast_1_1types_1_1TypeBase.html#acdac8394728fb7fa7fa1a78549650f82">isError</a>();</div>
 <div class="line"><span class="lineno">  148</span>    }</div>
-<div class="ttc" id="aclassiot_1_1mqtt__fast_1_1types_1_1TypeBase_html_a0f70695f91adc8ef743f46d34ec83873"><div class="ttname"><a href="classiot_1_1mqtt__fast_1_1types_1_1TypeBase.html#a0f70695f91adc8ef743f46d34ec83873">iot::mqtt_fast::types::TypeBase::isError</a></div><div class="ttdeci">bool isError()</div><div class="ttdef"><b>Definition</b> <a href="TypeBase_8cpp_source.html#l00037">TypeBase.cpp:37</a></div></div>
+<div class="ttc" id="aclassiot_1_1mqtt__fast_1_1types_1_1TypeBase_html_acdac8394728fb7fa7fa1a78549650f82"><div class="ttname"><a href="classiot_1_1mqtt__fast_1_1types_1_1TypeBase.html#acdac8394728fb7fa7fa1a78549650f82">iot::mqtt_fast::types::TypeBase::isError</a></div><div class="ttdeci">bool isError() const</div><div class="ttdef"><b>Definition</b> <a href="TypeBase_8cpp_source.html#l00037">TypeBase.cpp:37</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="mqtt-fast_2ControlPacket_8h_source.html#l00084">iot::mqtt_fast::ControlPacket::data</a>, and <a class="el" href="TypeBase_8cpp_source.html#l00037">iot::mqtt_fast::types::TypeBase::isError()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mqtt-fast_2packets_2Connack_8cpp_source.html#l00038">iot::mqtt_fast::packets::Connack::Connack()</a>, <a class="el" href="mqtt-fast_2packets_2Connect_8cpp_source.html#l00044">iot::mqtt_fast::packets::Connect::Connect()</a>, <a class="el" href="mqtt-fast_2packets_2Disconnect_8cpp_source.html#l00033">iot::mqtt_fast::packets::Disconnect::Disconnect()</a>, <a class="el" href="mqtt-fast_2packets_2Pingreq_8cpp_source.html#l00033">iot::mqtt_fast::packets::Pingreq::Pingreq()</a>, <a class="el" href="mqtt-fast_2packets_2Pingresp_8cpp_source.html#l00033">iot::mqtt_fast::packets::Pingresp::Pingresp()</a>, <a class="el" href="mqtt-fast_2packets_2Puback_8cpp_source.html#l00036">iot::mqtt_fast::packets::Puback::Puback()</a>, <a class="el" href="mqtt-fast_2packets_2Pubcomp_8cpp_source.html#l00036">iot::mqtt_fast::packets::Pubcomp::Pubcomp()</a>, <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html#l00049">iot::mqtt_fast::packets::Publish::Publish()</a>, <a class="el" href="mqtt-fast_2packets_2Pubrec_8cpp_source.html#l00036">iot::mqtt_fast::packets::Pubrec::Pubrec()</a>, <a class="el" href="mqtt-fast_2packets_2Pubrel_8cpp_source.html#l00036">iot::mqtt_fast::packets::Pubrel::Pubrel()</a>, <a class="el" href="mqtt-fast_2packets_2Suback_8cpp_source.html#l00040">iot::mqtt_fast::packets::Suback::Suback()</a>, <a class="el" href="mqtt-fast_2packets_2Subscribe_8cpp_source.html#l00044">Subscribe()</a>, <a class="el" href="mqtt-fast_2packets_2Unsuback_8cpp_source.html#l00036">iot::mqtt_fast::packets::Unsuback::Unsuback()</a>, and <a class="el" href="mqtt-fast_2packets_2Unsubscribe_8cpp_source.html#l00042">iot::mqtt_fast::packets::Unsubscribe::Unsubscribe()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mqtt-fast_2packets_2Connack_8cpp_source.html#l00038">iot::mqtt_fast::packets::Connack::Connack()</a>, <a class="el" href="mqtt-fast_2packets_2Connect_8cpp_source.html#l00044">iot::mqtt_fast::packets::Connect::Connect()</a>, <a class="el" href="mqtt-fast_2packets_2Disconnect_8cpp_source.html#l00033">iot::mqtt_fast::packets::Disconnect::Disconnect()</a>, <a class="el" href="mqtt-fast_2packets_2Pingreq_8cpp_source.html#l00033">iot::mqtt_fast::packets::Pingreq::Pingreq()</a>, <a class="el" href="mqtt-fast_2packets_2Pingresp_8cpp_source.html#l00033">iot::mqtt_fast::packets::Pingresp::Pingresp()</a>, <a class="el" href="mqtt-fast_2packets_2Puback_8cpp_source.html#l00036">iot::mqtt_fast::packets::Puback::Puback()</a>, <a class="el" href="mqtt-fast_2packets_2Pubcomp_8cpp_source.html#l00036">iot::mqtt_fast::packets::Pubcomp::Pubcomp()</a>, <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html#l00049">iot::mqtt_fast::packets::Publish::Publish()</a>, <a class="el" href="mqtt-fast_2packets_2Pubrec_8cpp_source.html#l00036">iot::mqtt_fast::packets::Pubrec::Pubrec()</a>, <a class="el" href="mqtt-fast_2packets_2Pubrel_8cpp_source.html#l00036">iot::mqtt_fast::packets::Pubrel::Pubrel()</a>, <a class="el" href="mqtt-fast_2packets_2Suback_8cpp_source.html#l00038">iot::mqtt_fast::packets::Suback::Suback()</a>, <a class="el" href="mqtt-fast_2packets_2Subscribe_8cpp_source.html#l00043">Subscribe()</a>, <a class="el" href="mqtt-fast_2packets_2Unsuback_8cpp_source.html#l00036">iot::mqtt_fast::packets::Unsuback::Unsuback()</a>, and <a class="el" href="mqtt-fast_2packets_2Unsubscribe_8cpp_source.html#l00040">iot::mqtt_fast::packets::Unsubscribe::Unsubscribe()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classiot_1_1mqtt__fast_1_1ControlPacket_a2479d750960520c98327ac471b4f5403_cgraph.svg" width="388" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classiot_1_1mqtt__fast_1_1ControlPacket_a2479d750960520c98327ac471b4f5403_cgraph.svg" width="422" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classiot_1_1mqtt__fast_1_1ControlPacket_a2479d750960520c98327ac471b4f5403_icgraph.svg" width="676" height="883"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classiot_1_1mqtt__fast_1_1ControlPacket_a2479d750960520c98327ac471b4f5403_icgraph.svg" width="726" height="883"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -1018,16 +1018,16 @@ Here is the caller graph for this function:</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="mqtt-fast_2ControlPacket_8h_source.html#l00084">iot::mqtt_fast::ControlPacket::data</a>, and <a class="el" href="Binary_8cpp_source.html#l00191">iot::mqtt_fast::types::Binary::putInt16()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mqtt-fast_2packets_2Connect_8cpp_source.html#l00027">iot::mqtt_fast::packets::Connect::Connect()</a>, <a class="el" href="mqtt-fast_2packets_2Puback_8cpp_source.html#l00027">iot::mqtt_fast::packets::Puback::Puback()</a>, <a class="el" href="mqtt-fast_2packets_2Pubcomp_8cpp_source.html#l00027">iot::mqtt_fast::packets::Pubcomp::Pubcomp()</a>, <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html#l00029">iot::mqtt_fast::packets::Publish::Publish()</a>, <a class="el" href="mqtt-fast_2packets_2Pubrec_8cpp_source.html#l00027">iot::mqtt_fast::packets::Pubrec::Pubrec()</a>, <a class="el" href="mqtt-fast_2packets_2Pubrel_8cpp_source.html#l00027">iot::mqtt_fast::packets::Pubrel::Pubrel()</a>, <a class="el" href="mqtt-fast_2packets_2Suback_8cpp_source.html#l00029">iot::mqtt_fast::packets::Suback::Suback()</a>, <a class="el" href="mqtt-fast_2packets_2Subscribe_8cpp_source.html#l00030">Subscribe()</a>, <a class="el" href="mqtt-fast_2packets_2Unsuback_8cpp_source.html#l00027">iot::mqtt_fast::packets::Unsuback::Unsuback()</a>, and <a class="el" href="mqtt-fast_2packets_2Unsubscribe_8cpp_source.html#l00029">iot::mqtt_fast::packets::Unsubscribe::Unsubscribe()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mqtt-fast_2packets_2Connect_8cpp_source.html#l00027">iot::mqtt_fast::packets::Connect::Connect()</a>, <a class="el" href="mqtt-fast_2packets_2Puback_8cpp_source.html#l00027">iot::mqtt_fast::packets::Puback::Puback()</a>, <a class="el" href="mqtt-fast_2packets_2Pubcomp_8cpp_source.html#l00027">iot::mqtt_fast::packets::Pubcomp::Pubcomp()</a>, <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html#l00029">iot::mqtt_fast::packets::Publish::Publish()</a>, <a class="el" href="mqtt-fast_2packets_2Pubrec_8cpp_source.html#l00027">iot::mqtt_fast::packets::Pubrec::Pubrec()</a>, <a class="el" href="mqtt-fast_2packets_2Pubrel_8cpp_source.html#l00027">iot::mqtt_fast::packets::Pubrel::Pubrel()</a>, <a class="el" href="mqtt-fast_2packets_2Suback_8cpp_source.html#l00027">iot::mqtt_fast::packets::Suback::Suback()</a>, <a class="el" href="mqtt-fast_2packets_2Subscribe_8cpp_source.html#l00029">Subscribe()</a>, <a class="el" href="mqtt-fast_2packets_2Unsuback_8cpp_source.html#l00027">iot::mqtt_fast::packets::Unsuback::Unsuback()</a>, and <a class="el" href="mqtt-fast_2packets_2Unsubscribe_8cpp_source.html#l00027">iot::mqtt_fast::packets::Unsubscribe::Unsubscribe()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classiot_1_1mqtt__fast_1_1ControlPacket_a68489018481e5e672b28b242cb9c71f8_cgraph.svg" width="388" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classiot_1_1mqtt__fast_1_1ControlPacket_a68489018481e5e672b28b242cb9c71f8_cgraph.svg" width="422" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classiot_1_1mqtt__fast_1_1ControlPacket_a68489018481e5e672b28b242cb9c71f8_icgraph.svg" width="676" height="627"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classiot_1_1mqtt__fast_1_1ControlPacket_a68489018481e5e672b28b242cb9c71f8_icgraph.svg" width="726" height="627"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -1066,7 +1066,7 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classiot_1_1mqtt__fast_1_1ControlPacket_a99d19aec3cd4fa6732d682dba4afa163_cgraph.svg" width="388" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classiot_1_1mqtt__fast_1_1ControlPacket_a99d19aec3cd4fa6732d682dba4afa163_cgraph.svg" width="422" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -1105,7 +1105,7 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classiot_1_1mqtt__fast_1_1ControlPacket_ad47bf3a5fc8ae3ca60832862fa0ecf81_cgraph.svg" width="388" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classiot_1_1mqtt__fast_1_1ControlPacket_ad47bf3a5fc8ae3ca60832862fa0ecf81_cgraph.svg" width="422" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -1142,16 +1142,16 @@ Here is the call graph for this function:</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="mqtt-fast_2ControlPacket_8h_source.html#l00084">iot::mqtt_fast::ControlPacket::data</a>, and <a class="el" href="Binary_8cpp_source.html#l00185">iot::mqtt_fast::types::Binary::putInt8()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mqtt-fast_2packets_2Connack_8cpp_source.html#l00027">iot::mqtt_fast::packets::Connack::Connack()</a>, <a class="el" href="mqtt-fast_2packets_2Connect_8cpp_source.html#l00027">iot::mqtt_fast::packets::Connect::Connect()</a>, and <a class="el" href="mqtt-fast_2packets_2Subscribe_8cpp_source.html#l00030">Subscribe()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mqtt-fast_2packets_2Connack_8cpp_source.html#l00027">iot::mqtt_fast::packets::Connack::Connack()</a>, <a class="el" href="mqtt-fast_2packets_2Connect_8cpp_source.html#l00027">iot::mqtt_fast::packets::Connect::Connect()</a>, and <a class="el" href="mqtt-fast_2packets_2Subscribe_8cpp_source.html#l00029">Subscribe()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classiot_1_1mqtt__fast_1_1ControlPacket_a56f27153885907d80fed2d06cef26f78_cgraph.svg" width="388" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classiot_1_1mqtt__fast_1_1ControlPacket_a56f27153885907d80fed2d06cef26f78_cgraph.svg" width="422" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classiot_1_1mqtt__fast_1_1ControlPacket_a56f27153885907d80fed2d06cef26f78_icgraph.svg" width="647" height="179"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classiot_1_1mqtt__fast_1_1ControlPacket_a56f27153885907d80fed2d06cef26f78_icgraph.svg" width="695" height="179"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -1190,7 +1190,7 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classiot_1_1mqtt__fast_1_1ControlPacket_a89876cf0d27cdf0cb7bb9ee552e2e732_cgraph.svg" width="575" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classiot_1_1mqtt__fast_1_1ControlPacket_a89876cf0d27cdf0cb7bb9ee552e2e732_cgraph.svg" width="624" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -1227,16 +1227,16 @@ Here is the call graph for this function:</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="mqtt-fast_2ControlPacket_8h_source.html#l00084">iot::mqtt_fast::ControlPacket::data</a>, and <a class="el" href="Binary_8cpp_source.html#l00233">iot::mqtt_fast::types::Binary::putString()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mqtt-fast_2packets_2Connect_8cpp_source.html#l00027">iot::mqtt_fast::packets::Connect::Connect()</a>, <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html#l00029">iot::mqtt_fast::packets::Publish::Publish()</a>, <a class="el" href="mqtt-fast_2packets_2Subscribe_8cpp_source.html#l00030">Subscribe()</a>, and <a class="el" href="mqtt-fast_2packets_2Unsubscribe_8cpp_source.html#l00029">iot::mqtt_fast::packets::Unsubscribe::Unsubscribe()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mqtt-fast_2packets_2Connect_8cpp_source.html#l00027">iot::mqtt_fast::packets::Connect::Connect()</a>, <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html#l00029">iot::mqtt_fast::packets::Publish::Publish()</a>, <a class="el" href="mqtt-fast_2packets_2Subscribe_8cpp_source.html#l00029">Subscribe()</a>, and <a class="el" href="mqtt-fast_2packets_2Unsubscribe_8cpp_source.html#l00027">iot::mqtt_fast::packets::Unsubscribe::Unsubscribe()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classiot_1_1mqtt__fast_1_1ControlPacket_a7068147ccc82c54eb8d434ce5ad5126d_cgraph.svg" width="591" height="115"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classiot_1_1mqtt__fast_1_1ControlPacket_a7068147ccc82c54eb8d434ce5ad5126d_cgraph.svg" width="636" height="115"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classiot_1_1mqtt__fast_1_1ControlPacket_a7068147ccc82c54eb8d434ce5ad5126d_icgraph.svg" width="676" height="243"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classiot_1_1mqtt__fast_1_1ControlPacket_a7068147ccc82c54eb8d434ce5ad5126d_icgraph.svg" width="726" height="243"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -1277,12 +1277,12 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classiot_1_1mqtt__fast_1_1ControlPacket_a932fc3991ceea669191f85b28b9d1de2_cgraph.svg" width="404" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classiot_1_1mqtt__fast_1_1ControlPacket_a932fc3991ceea669191f85b28b9d1de2_cgraph.svg" width="434" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classiot_1_1mqtt__fast_1_1ControlPacket_a932fc3991ceea669191f85b28b9d1de2_icgraph.svg" width="646" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classiot_1_1mqtt__fast_1_1ControlPacket_a932fc3991ceea669191f85b28b9d1de2_icgraph.svg" width="695" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -1319,16 +1319,16 @@ Here is the caller graph for this function:</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="mqtt-fast_2ControlPacket_8h_source.html#l00084">iot::mqtt_fast::ControlPacket::data</a>, and <a class="el" href="Binary_8cpp_source.html#l00246">iot::mqtt_fast::types::Binary::putUint8ListRaw()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mqtt-fast_2packets_2Suback_8cpp_source.html#l00029">iot::mqtt_fast::packets::Suback::Suback()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mqtt-fast_2packets_2Suback_8cpp_source.html#l00027">iot::mqtt_fast::packets::Suback::Suback()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classiot_1_1mqtt__fast_1_1ControlPacket_ad3af70877b662b88f63a7b236b88ffed_cgraph.svg" width="608" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classiot_1_1mqtt__fast_1_1ControlPacket_ad3af70877b662b88f63a7b236b88ffed_cgraph.svg" width="656" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classiot_1_1mqtt__fast_1_1ControlPacket_ad3af70877b662b88f63a7b236b88ffed_icgraph.svg" width="646" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classiot_1_1mqtt__fast_1_1ControlPacket_ad3af70877b662b88f63a7b236b88ffed_icgraph.svg" width="695" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -1382,7 +1382,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="mqtt-fast_2ControlPacket_8h_source.html#l00087">87</a> of file <a class="el" href="mqtt-fast_2ControlPacket_8h_source.html">ControlPacket.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mqtt-fast_2packets_2Connack_8cpp_source.html#l00038">iot::mqtt_fast::packets::Connack::Connack()</a>, <a class="el" href="mqtt-fast_2packets_2Connect_8cpp_source.html#l00044">iot::mqtt_fast::packets::Connect::Connect()</a>, <a class="el" href="mqtt-fast_2packets_2Disconnect_8cpp_source.html#l00033">iot::mqtt_fast::packets::Disconnect::Disconnect()</a>, <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00074">iot::mqtt_fast::ControlPacket::isError()</a>, <a class="el" href="mqtt-fast_2packets_2Pingreq_8cpp_source.html#l00033">iot::mqtt_fast::packets::Pingreq::Pingreq()</a>, <a class="el" href="mqtt-fast_2packets_2Pingresp_8cpp_source.html#l00033">iot::mqtt_fast::packets::Pingresp::Pingresp()</a>, <a class="el" href="mqtt-fast_2packets_2Puback_8cpp_source.html#l00036">iot::mqtt_fast::packets::Puback::Puback()</a>, <a class="el" href="mqtt-fast_2packets_2Pubcomp_8cpp_source.html#l00036">iot::mqtt_fast::packets::Pubcomp::Pubcomp()</a>, <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html#l00049">iot::mqtt_fast::packets::Publish::Publish()</a>, <a class="el" href="mqtt-fast_2packets_2Pubrec_8cpp_source.html#l00036">iot::mqtt_fast::packets::Pubrec::Pubrec()</a>, <a class="el" href="mqtt-fast_2packets_2Pubrel_8cpp_source.html#l00036">iot::mqtt_fast::packets::Pubrel::Pubrel()</a>, <a class="el" href="mqtt-fast_2packets_2Suback_8cpp_source.html#l00040">iot::mqtt_fast::packets::Suback::Suback()</a>, <a class="el" href="mqtt-fast_2packets_2Subscribe_8cpp_source.html#l00044">Subscribe()</a>, <a class="el" href="mqtt-fast_2packets_2Unsuback_8cpp_source.html#l00036">iot::mqtt_fast::packets::Unsuback::Unsuback()</a>, and <a class="el" href="mqtt-fast_2packets_2Unsubscribe_8cpp_source.html#l00042">iot::mqtt_fast::packets::Unsubscribe::Unsubscribe()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mqtt-fast_2packets_2Connack_8cpp_source.html#l00038">iot::mqtt_fast::packets::Connack::Connack()</a>, <a class="el" href="mqtt-fast_2packets_2Connect_8cpp_source.html#l00044">iot::mqtt_fast::packets::Connect::Connect()</a>, <a class="el" href="mqtt-fast_2packets_2Disconnect_8cpp_source.html#l00033">iot::mqtt_fast::packets::Disconnect::Disconnect()</a>, <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00074">iot::mqtt_fast::ControlPacket::isError()</a>, <a class="el" href="mqtt-fast_2packets_2Pingreq_8cpp_source.html#l00033">iot::mqtt_fast::packets::Pingreq::Pingreq()</a>, <a class="el" href="mqtt-fast_2packets_2Pingresp_8cpp_source.html#l00033">iot::mqtt_fast::packets::Pingresp::Pingresp()</a>, <a class="el" href="mqtt-fast_2packets_2Puback_8cpp_source.html#l00036">iot::mqtt_fast::packets::Puback::Puback()</a>, <a class="el" href="mqtt-fast_2packets_2Pubcomp_8cpp_source.html#l00036">iot::mqtt_fast::packets::Pubcomp::Pubcomp()</a>, <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html#l00049">iot::mqtt_fast::packets::Publish::Publish()</a>, <a class="el" href="mqtt-fast_2packets_2Pubrec_8cpp_source.html#l00036">iot::mqtt_fast::packets::Pubrec::Pubrec()</a>, <a class="el" href="mqtt-fast_2packets_2Pubrel_8cpp_source.html#l00036">iot::mqtt_fast::packets::Pubrel::Pubrel()</a>, <a class="el" href="mqtt-fast_2packets_2Suback_8cpp_source.html#l00038">iot::mqtt_fast::packets::Suback::Suback()</a>, <a class="el" href="mqtt-fast_2packets_2Subscribe_8cpp_source.html#l00043">Subscribe()</a>, <a class="el" href="mqtt-fast_2packets_2Unsuback_8cpp_source.html#l00036">iot::mqtt_fast::packets::Unsuback::Unsuback()</a>, and <a class="el" href="mqtt-fast_2packets_2Unsubscribe_8cpp_source.html#l00040">iot::mqtt_fast::packets::Unsubscribe::Unsubscribe()</a>.</p>
 
 </div>
 </div>
@@ -1408,7 +1408,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="mqtt-fast_2packets_2Subscribe_8h_source.html#l00049">49</a> of file <a class="el" href="mqtt-fast_2packets_2Subscribe_8h_source.html">Subscribe.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mqtt-fast_2packets_2Subscribe_8cpp_source.html#l00060">getPacketIdentifier()</a>, <a class="el" href="mqtt-fast_2packets_2Subscribe_8cpp_source.html#l00044">Subscribe()</a>, and <a class="el" href="mqtt-fast_2packets_2Subscribe_8cpp_source.html#l00030">Subscribe()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mqtt-fast_2packets_2Subscribe_8cpp_source.html#l00059">getPacketIdentifier()</a>, <a class="el" href="mqtt-fast_2packets_2Subscribe_8cpp_source.html#l00043">Subscribe()</a>, and <a class="el" href="mqtt-fast_2packets_2Subscribe_8cpp_source.html#l00029">Subscribe()</a>.</p>
 
 </div>
 </div>
@@ -1460,7 +1460,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="mqtt-fast_2packets_2Subscribe_8h_source.html#l00051">51</a> of file <a class="el" href="mqtt-fast_2packets_2Subscribe_8h_source.html">Subscribe.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mqtt-fast_2packets_2Subscribe_8cpp_source.html#l00064">getTopics()</a>, <a class="el" href="mqtt-fast_2packets_2Subscribe_8cpp_source.html#l00044">Subscribe()</a>, and <a class="el" href="mqtt-fast_2packets_2Subscribe_8cpp_source.html#l00030">Subscribe()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mqtt-fast_2packets_2Subscribe_8cpp_source.html#l00063">getTopics()</a>, <a class="el" href="mqtt-fast_2packets_2Subscribe_8cpp_source.html#l00043">Subscribe()</a>, and <a class="el" href="mqtt-fast_2packets_2Subscribe_8cpp_source.html#l00029">Subscribe()</a>.</p>
 
 </div>
 </div>
@@ -1500,7 +1500,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceiot.html">iot</a></li><li class="navelem"><a class="el" href="namespaceiot_1_1mqtt__fast.html">mqtt_fast</a></li><li class="navelem"><a class="el" href="namespaceiot_1_1mqtt__fast_1_1packets.html">packets</a></li><li class="navelem"><a class="el" href="classiot_1_1mqtt__fast_1_1packets_1_1Subscribe.html">Subscribe</a></li>
-    <li class="footer">Generated on Fri Oct 20 2023 14:01:11 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Sun Jan 21 2024 23:58:10 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

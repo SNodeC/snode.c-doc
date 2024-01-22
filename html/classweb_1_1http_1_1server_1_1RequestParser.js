@@ -45,7 +45,7 @@ var classweb_1_1http_1_1server_1_1RequestParser =
     [ "httpMajor", "classweb_1_1http_1_1server_1_1RequestParser.html#a5f798669b1499a78ccf0cd6267a56ece", null ],
     [ "httpMinor", "classweb_1_1http_1_1server_1_1RequestParser.html#a8e81fa6248bcc037558c796ec76e80d2", null ],
     [ "httpVersion", "classweb_1_1http_1_1server_1_1RequestParser.html#a7cb4927722c94e5e18312563fe06c128", null ],
-    [ "httpVersionRegex", "classweb_1_1http_1_1server_1_1RequestParser.html#a55b72f49cd7bc28f418a7737bfda63d6", null ],
+    [ "httpVersionRegex", "classweb_1_1http_1_1server_1_1RequestParser.html#a4e2c4dc8666af3b74b0476b35c1c4d03", null ],
     [ "line", "classweb_1_1http_1_1server_1_1RequestParser.html#af961ee96cda4105c5422fe4cbfa38b0d", null ],
     [ "method", "classweb_1_1http_1_1server_1_1RequestParser.html#ac9a3c3b1ad0cb66021cabdd17042fe06", null ],
     [ "onContent", "classweb_1_1http_1_1server_1_1RequestParser.html#aaad7789eeb124ed2175eda90f2712235", null ],

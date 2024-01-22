@@ -98,58 +98,66 @@ $(document).ready(function(){initNavTree('UInt32_8cpp_source.html',''); initResi
 </div><!--header-->
 <div class="contents">
 <a href="UInt32_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
-<div class="line"><span class="lineno">    2</span><span class="comment"> * snode.c - a slim toolkit for network communication</span></div>
-<div class="line"><span class="lineno">    3</span><span class="comment"> * Copyright (C) 2020, 2021, 2022, 2023 Volker Christian &lt;me@vchrist.at&gt;</span></div>
-<div class="line"><span class="lineno">    4</span><span class="comment"> *</span></div>
-<div class="line"><span class="lineno">    5</span><span class="comment"> * This program is free software: you can redistribute it and/or modify</span></div>
-<div class="line"><span class="lineno">    6</span><span class="comment"> * it under the terms of the GNU Lesser General Public License as published</span></div>
-<div class="line"><span class="lineno">    7</span><span class="comment"> * by the Free Software Foundation, either version 3 of the License, or</span></div>
-<div class="line"><span class="lineno">    8</span><span class="comment"> * (at your option) any later version.</span></div>
-<div class="line"><span class="lineno">    9</span><span class="comment"> *</span></div>
-<div class="line"><span class="lineno">   10</span><span class="comment"> * This program is distributed in the hope that it will be useful,</span></div>
-<div class="line"><span class="lineno">   11</span><span class="comment"> * but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
-<div class="line"><span class="lineno">   12</span><span class="comment"> * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the</span></div>
-<div class="line"><span class="lineno">   13</span><span class="comment"> * GNU Lesser General Public License for more details.</span></div>
-<div class="line"><span class="lineno">   14</span><span class="comment"> *</span></div>
-<div class="line"><span class="lineno">   15</span><span class="comment"> * You should have received a copy of the GNU Lesser General Public License</span></div>
-<div class="line"><span class="lineno">   16</span><span class="comment"> * along with this program. If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
-<div class="line"><span class="lineno">   17</span><span class="comment"> */</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&quot;iot/mqtt/types/UInt32.h&quot;</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&quot;iot/mqtt/types/TypeBase.hpp&quot;</span> <span class="comment">// IWYU pragma: keep</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#</span><span class="preprocessor">ifndef</span> <span class="preprocessor">DOXYGEN_SHOULD_SKIP_THIS</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">endian</span><span class="preprocessor">.</span><span class="preprocessor">h</span><span class="preprocessor">&gt;</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#</span><span class="preprocessor">endif</span> <span class="comment">// DOXYGEN_SHOULD_SKIP_THIS</span></div>
+<div class="line"><span class="lineno">    2</span><span class="comment"> * SNode.C - a slim toolkit for network communication</span></div>
+<div class="line"><span class="lineno">    3</span><span class="comment"> * Copyright (C) Volker Christian &lt;me@vchrist.at&gt;</span></div>
+<div class="line"><span class="lineno">    4</span><span class="comment"> *               2020, 2021, 2022, 2023, 2024</span></div>
+<div class="line"><span class="lineno">    5</span><span class="comment"> *</span></div>
+<div class="line"><span class="lineno">    6</span><span class="comment"> * This program is free software: you can redistribute it and/or modify</span></div>
+<div class="line"><span class="lineno">    7</span><span class="comment"> * it under the terms of the GNU Lesser General Public License as published</span></div>
+<div class="line"><span class="lineno">    8</span><span class="comment"> * by the Free Software Foundation, either version 3 of the License, or</span></div>
+<div class="line"><span class="lineno">    9</span><span class="comment"> * (at your option) any later version.</span></div>
+<div class="line"><span class="lineno">   10</span><span class="comment"> *</span></div>
+<div class="line"><span class="lineno">   11</span><span class="comment"> * This program is distributed in the hope that it will be useful,</span></div>
+<div class="line"><span class="lineno">   12</span><span class="comment"> * but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
+<div class="line"><span class="lineno">   13</span><span class="comment"> * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the</span></div>
+<div class="line"><span class="lineno">   14</span><span class="comment"> * GNU Lesser General Public License for more details.</span></div>
+<div class="line"><span class="lineno">   15</span><span class="comment"> *</span></div>
+<div class="line"><span class="lineno">   16</span><span class="comment"> * You should have received a copy of the GNU Lesser General Public License</span></div>
+<div class="line"><span class="lineno">   17</span><span class="comment"> * along with this program. If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
+<div class="line"><span class="lineno">   18</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&quot;iot/mqtt/types/UInt32.h&quot;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&quot;iot/mqtt/types/TypeBase.hpp&quot;</span> <span class="comment">// IWYU pragma: keep</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#</span><span class="preprocessor">ifndef</span> <span class="preprocessor">DOXYGEN_SHOULD_SKIP_THIS</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">endian</span><span class="preprocessor">.</span><span class="preprocessor">h</span><span class="preprocessor">&gt;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">vector</span><span class="preprocessor">&gt;</span></div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">namespace</span> iot::mqtt::<a class="code hl_namespace" href="namespaceiot_1_1mqtt_1_1types.html">types</a> {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#</span><span class="preprocessor">endif</span> <span class="comment">// DOXYGEN_SHOULD_SKIP_THIS</span></div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="classiot_1_1mqtt_1_1types_1_1UInt32.html#aeaab27a7640883d16ce45d7856e5005d">   31</a></span>    uint32_t <a class="code hl_class" href="classiot_1_1mqtt_1_1types_1_1UInt32.html">UInt32</a>::<a class="code hl_function" href="classiot_1_1mqtt_1_1types_1_1UInt32.html#aeaab27a7640883d16ce45d7856e5005d">operator</a>=(<span class="keyword">const</span> uint32_t&amp; newValue) {</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="keywordflow">return</span> *<span class="keyword">reinterpret_cast</span>&lt;uint32_t*&gt;(value.data()) = htobe32(newValue);</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    }</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="classiot_1_1mqtt_1_1types_1_1UInt32.html#a39a749b1df511ffa4291cacad23f4b22">   35</a></span>    <a class="code hl_class" href="classiot_1_1mqtt_1_1types_1_1UInt32.html">UInt32</a>::<a class="code hl_function" href="classiot_1_1mqtt_1_1types_1_1UInt32.html#a39a749b1df511ffa4291cacad23f4b22">operator</a> uint32_t() <span class="keyword">const</span> {</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <span class="keywordflow">return</span> be32toh(*<span class="keyword">reinterpret_cast</span>&lt;uint32_t*&gt;(<span class="keyword">const_cast</span>&lt;<span class="keywordtype">char</span>*&gt;(value.data())));</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    }</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">namespace</span> iot::mqtt::<a class="code hl_namespace" href="namespaceiot_1_1mqtt_1_1types.html">types</a> {</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="classiot_1_1mqtt_1_1types_1_1UInt32.html#a499c91e3e15eb4ead6d22bffa00d8b56">   33</a></span>    <a class="code hl_class" href="classiot_1_1mqtt_1_1types_1_1UInt32.html">UInt32</a>::~<a class="code hl_function" href="classiot_1_1mqtt_1_1types_1_1UInt32.html#a499c91e3e15eb4ead6d22bffa00d8b56">UInt32</a>() {</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    }</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="classiot_1_1mqtt_1_1types_1_1UInt32.html#a83aed64d234cb26297780d110d7426be">   36</a></span>    <a class="code hl_class" href="classiot_1_1mqtt_1_1types_1_1UInt32.html">UInt32</a>&amp; <a class="code hl_class" href="classiot_1_1mqtt_1_1types_1_1UInt32.html">UInt32</a>::<a class="code hl_function" href="classiot_1_1mqtt_1_1types_1_1UInt32.html#a83aed64d234cb26297780d110d7426be">operator</a>=(<span class="keyword">const</span> uint32_t&amp; newValue) {</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        *<span class="keyword">reinterpret_cast</span>&lt;uint32_t*&gt;(value.data()) = htobe32(newValue);</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keyword">template</span> <span class="keyword">class</span> <a class="code hl_class" href="classiot_1_1mqtt_1_1types_1_1TypeBase.html">TypeBase</a>&lt;uint32_t&gt;;</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>} <span class="comment">// namespace iot::mqtt::types</span></div>
-<div class="ttc" id="aclassiot_1_1mqtt_1_1types_1_1TypeBase_html"><div class="ttname"><a href="classiot_1_1mqtt_1_1types_1_1TypeBase.html">iot::mqtt::types::TypeBase</a></div><div class="ttdef"><b>Definition</b> <a href="mqtt_2types_2TypeBase_8h_source.html#l00036">TypeBase.h:36</a></div></div>
-<div class="ttc" id="aclassiot_1_1mqtt_1_1types_1_1UInt32_html"><div class="ttname"><a href="classiot_1_1mqtt_1_1types_1_1UInt32.html">iot::mqtt::types::UInt32</a></div><div class="ttdef"><b>Definition</b> <a href="UInt32_8h_source.html#l00034">UInt32.h:34</a></div></div>
-<div class="ttc" id="aclassiot_1_1mqtt_1_1types_1_1UInt32_html_a39a749b1df511ffa4291cacad23f4b22"><div class="ttname"><a href="classiot_1_1mqtt_1_1types_1_1UInt32.html#a39a749b1df511ffa4291cacad23f4b22">iot::mqtt::types::UInt32::operator uint32_t</a></div><div class="ttdeci">operator uint32_t() const override</div><div class="ttdef"><b>Definition</b> <a href="UInt32_8cpp_source.html#l00035">UInt32.cpp:35</a></div></div>
-<div class="ttc" id="aclassiot_1_1mqtt_1_1types_1_1UInt32_html_aeaab27a7640883d16ce45d7856e5005d"><div class="ttname"><a href="classiot_1_1mqtt_1_1types_1_1UInt32.html#aeaab27a7640883d16ce45d7856e5005d">iot::mqtt::types::UInt32::operator=</a></div><div class="ttdeci">uint32_t operator=(const uint32_t &amp;newValue) override</div><div class="ttdef"><b>Definition</b> <a href="UInt32_8cpp_source.html#l00031">UInt32.cpp:31</a></div></div>
-<div class="ttc" id="anamespaceiot_1_1mqtt_1_1types_html"><div class="ttname"><a href="namespaceiot_1_1mqtt_1_1types.html">iot::mqtt::types</a></div><div class="ttdef"><b>Definition</b> <a href="UInt8_8h_source.html#l00032">UInt8.h:32</a></div></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    }</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="classiot_1_1mqtt_1_1types_1_1UInt32.html#a260e1e66a43661df184851da1f6e5950">   42</a></span>    <a class="code hl_class" href="classiot_1_1mqtt_1_1types_1_1UInt32.html">UInt32</a>::<a class="code hl_function" href="classiot_1_1mqtt_1_1types_1_1UInt32.html#a260e1e66a43661df184851da1f6e5950">operator</a> uint32_t() <span class="keyword">const</span> {</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="keywordflow">return</span> be32toh(*<span class="keyword">reinterpret_cast</span>&lt;uint32_t*&gt;(<span class="keyword">const_cast</span>&lt;<span class="keywordtype">char</span>*&gt;(value.data())));</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    }</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keyword">template</span> <span class="keyword">class</span> <a class="code hl_class" href="classiot_1_1mqtt_1_1types_1_1TypeBase.html">TypeBase</a>&lt;uint32_t&gt;;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>} <span class="comment">// namespace iot::mqtt::types</span></div>
+<div class="ttc" id="aclassiot_1_1mqtt_1_1types_1_1TypeBase_html"><div class="ttname"><a href="classiot_1_1mqtt_1_1types_1_1TypeBase.html">iot::mqtt::types::TypeBase</a></div><div class="ttdef"><b>Definition</b> <a href="mqtt_2types_2TypeBase_8h_source.html#l00037">TypeBase.h:37</a></div></div>
+<div class="ttc" id="aclassiot_1_1mqtt_1_1types_1_1UInt32_html"><div class="ttname"><a href="classiot_1_1mqtt_1_1types_1_1UInt32.html">iot::mqtt::types::UInt32</a></div><div class="ttdef"><b>Definition</b> <a href="UInt32_8h_source.html#l00035">UInt32.h:35</a></div></div>
+<div class="ttc" id="aclassiot_1_1mqtt_1_1types_1_1UInt32_html_a260e1e66a43661df184851da1f6e5950"><div class="ttname"><a href="classiot_1_1mqtt_1_1types_1_1UInt32.html#a260e1e66a43661df184851da1f6e5950">iot::mqtt::types::UInt32::operator uint32_t</a></div><div class="ttdeci">operator uint32_t() const</div><div class="ttdef"><b>Definition</b> <a href="UInt32_8cpp_source.html#l00042">UInt32.cpp:42</a></div></div>
+<div class="ttc" id="aclassiot_1_1mqtt_1_1types_1_1UInt32_html_a499c91e3e15eb4ead6d22bffa00d8b56"><div class="ttname"><a href="classiot_1_1mqtt_1_1types_1_1UInt32.html#a499c91e3e15eb4ead6d22bffa00d8b56">iot::mqtt::types::UInt32::~UInt32</a></div><div class="ttdeci">~UInt32() override</div><div class="ttdef"><b>Definition</b> <a href="UInt32_8cpp_source.html#l00033">UInt32.cpp:33</a></div></div>
+<div class="ttc" id="aclassiot_1_1mqtt_1_1types_1_1UInt32_html_a83aed64d234cb26297780d110d7426be"><div class="ttname"><a href="classiot_1_1mqtt_1_1types_1_1UInt32.html#a83aed64d234cb26297780d110d7426be">iot::mqtt::types::UInt32::operator=</a></div><div class="ttdeci">UInt32 &amp; operator=(const uint32_t &amp;newValue)</div><div class="ttdef"><b>Definition</b> <a href="UInt32_8cpp_source.html#l00036">UInt32.cpp:36</a></div></div>
+<div class="ttc" id="anamespaceiot_1_1mqtt_1_1types_html"><div class="ttname"><a href="namespaceiot_1_1mqtt_1_1types.html">iot::mqtt::types</a></div><div class="ttdef"><b>Definition</b> <a href="UInt8_8h_source.html#l00033">UInt8.h:33</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_28592ecdec30ec29223e366148bdb66c.html">iot</a></li><li class="navelem"><a class="el" href="dir_9fa9cc1bc73227ba3c1e7b2368f5d654.html">mqtt</a></li><li class="navelem"><a class="el" href="dir_15ad2040b1476f495de20441425ecb0f.html">types</a></li><li class="navelem"><a class="el" href="UInt32_8cpp.html">UInt32.cpp</a></li>
-    <li class="footer">Generated on Fri Oct 20 2023 13:59:42 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Sun Jan 21 2024 23:56:54 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

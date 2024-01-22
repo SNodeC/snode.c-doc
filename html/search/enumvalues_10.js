@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['text_0',['TEXT',['../classweb_1_1websocket_1_1SubProtocolContext.html#abf18d0b53484f49844a1315b9730e511a0aa452ab2256e501457b18f9937bd7c0',1,'web::websocket::SubProtocolContext']]],
-  ['trace_1',['TRACE',['../namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6',1,'core']]]
+  ['waiting_0',['WAITING',['../classTowerCalculator.html#a7318f1bb8e79ba28e7a33bac4ba8a490a1869d56535e8b1449a6da54ff5e11f50',1,'TowerCalculator']]],
+  ['wr_1',['wr',['../classnet_1_1phy_1_1stream_1_1PhysicalSocket.html#abc1cca417fccc52ea36dbfe55bad77fdabffb78c9f13fef2abe18bc0747673839',1,'net::phy::stream::PhysicalSocket::WR'],['../classcore_1_1EventMultiplexer.html#a922f1b8ccf15265807a9f7ebce6d5097a861593a7d9f4abff46ef45b13df6fc53',1,'core::EventMultiplexer::WR']]]
 ];

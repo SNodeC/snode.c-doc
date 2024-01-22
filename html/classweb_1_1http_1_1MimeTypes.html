@@ -103,7 +103,7 @@ $(document).ready(function(){initNavTree('classweb_1_1http_1_1MimeTypes.html',''
 <div class="dynheader">
 Collaboration diagram for web::http::MimeTypes:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classweb_1_1http_1_1MimeTypes__coll__graph.svg" width="252" height="331"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classweb_1_1http_1_1MimeTypes__coll__graph.svg" width="166" height="331"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -127,14 +127,12 @@ Private Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
 Static Private Attributes</h2></td></tr>
-<tr class="memitem:af42601f332363291f1ccd354fb1c3c3c" id="r_af42601f332363291f1ccd354fb1c3c3c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classweb_1_1http_1_1MimeTypes.html">MimeTypes</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classweb_1_1http_1_1MimeTypes.html#af42601f332363291f1ccd354fb1c3c3c">mimeTypes</a></td></tr>
-<tr class="separator:af42601f332363291f1ccd354fb1c3c3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b63cc1eaa5b7bd338d8354a336609d0" id="r_a8b63cc1eaa5b7bd338d8354a336609d0"><td class="memItemLeft" align="right" valign="top">static std::map&lt; std::string, std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classweb_1_1http_1_1MimeTypes.html#a8b63cc1eaa5b7bd338d8354a336609d0">mimeType</a></td></tr>
 <tr class="separator:a8b63cc1eaa5b7bd338d8354a336609d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="MimeTypes_8h_source.html#l00035">35</a> of file <a class="el" href="MimeTypes_8h_source.html">MimeTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="MimeTypes_8h_source.html#l00036">36</a> of file <a class="el" href="MimeTypes_8h_source.html">MimeTypes.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a72f3eeb74bcec78269d98f425b0abde7" name="a72f3eeb74bcec78269d98f425b0abde7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a72f3eeb74bcec78269d98f425b0abde7">&#9670;&#160;</a></span>MimeTypes() <span class="overload">[1/2]</span></h2>
@@ -185,18 +183,18 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="MimeTypes_8cpp_source.html#l00223">223</a> of file <a class="el" href="MimeTypes_8cpp_source.html">MimeTypes.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  223</span>                         {</div>
-<div class="line"><span class="lineno">  224</span><span class="preprocessor">#ifdef HAS_LIBMAGIC</span></div>
-<div class="line"><span class="lineno">  225</span>        MimeTypes::magic = magic_open(MAGIC_MIME);</div>
-<div class="line"><span class="lineno">  226</span> </div>
-<div class="line"><span class="lineno">  227</span>        <span class="keywordflow">if</span> (magic_load(magic, <span class="keyword">nullptr</span>) != 0) {</div>
-<div class="line"><span class="lineno">  228</span>            LOG(DEBUG) &lt;&lt; <span class="stringliteral">&quot;cannot load magic database - &quot;</span> + std::string(magic_error(magic));</div>
-<div class="line"><span class="lineno">  229</span>            magic_close(magic);</div>
-<div class="line"><span class="lineno">  230</span>            magic = <span class="keyword">nullptr</span>;</div>
-<div class="line"><span class="lineno">  231</span>        }</div>
-<div class="line"><span class="lineno">  232</span><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="lineno">  233</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="MimeTypes_8cpp_source.html#l00222">222</a> of file <a class="el" href="MimeTypes_8cpp_source.html">MimeTypes.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  222</span>                         {</div>
+<div class="line"><span class="lineno">  223</span><span class="preprocessor">#ifdef HAS_LIBMAGIC</span></div>
+<div class="line"><span class="lineno">  224</span>        MimeTypes::magic = magic_open(MAGIC_MIME);</div>
+<div class="line"><span class="lineno">  225</span> </div>
+<div class="line"><span class="lineno">  226</span>        <span class="keywordflow">if</span> (magic_load(magic, <span class="keyword">nullptr</span>) != 0) {</div>
+<div class="line"><span class="lineno">  227</span>            LOG(DEBUG) &lt;&lt; <span class="stringliteral">&quot;HTTP: Cannot load magic database - &quot;</span> + std::string(magic_error(magic));</div>
+<div class="line"><span class="lineno">  228</span>            magic_close(magic);</div>
+<div class="line"><span class="lineno">  229</span>            magic = <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">  230</span>        }</div>
+<div class="line"><span class="lineno">  231</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  232</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -223,12 +221,12 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="MimeTypes_8cpp_source.html#l00235">235</a> of file <a class="el" href="MimeTypes_8cpp_source.html">MimeTypes.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  235</span>                          {</div>
-<div class="line"><span class="lineno">  236</span><span class="preprocessor">#ifdef HAS_LIBMAGIC</span></div>
-<div class="line"><span class="lineno">  237</span>        magic_close(MimeTypes::magic);</div>
-<div class="line"><span class="lineno">  238</span><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="lineno">  239</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="MimeTypes_8cpp_source.html#l00234">234</a> of file <a class="el" href="MimeTypes_8cpp_source.html">MimeTypes.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  234</span>                          {</div>
+<div class="line"><span class="lineno">  235</span><span class="preprocessor">#ifdef HAS_LIBMAGIC</span></div>
+<div class="line"><span class="lineno">  236</span>        magic_close(MimeTypes::magic);</div>
+<div class="line"><span class="lineno">  237</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  238</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -257,33 +255,33 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="MimeTypes_8cpp_source.html#l00241">241</a> of file <a class="el" href="MimeTypes_8cpp_source.html">MimeTypes.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  241</span>                                                          {</div>
-<div class="line"><span class="lineno">  242</span>        std::map&lt;std::string, std::string&gt;::iterator it = <a class="code hl_variable" href="classweb_1_1http_1_1MimeTypes.html#a8b63cc1eaa5b7bd338d8354a336609d0">mimeType</a>.find(std::filesystem::path(file).extension());</div>
-<div class="line"><span class="lineno">  243</span> </div>
-<div class="line"><span class="lineno">  244</span>        std::string type;</div>
-<div class="line"><span class="lineno">  245</span> </div>
-<div class="line"><span class="lineno">  246</span>        <span class="keywordflow">if</span> (it != <a class="code hl_variable" href="classweb_1_1http_1_1MimeTypes.html#a8b63cc1eaa5b7bd338d8354a336609d0">mimeType</a>.end()) {</div>
-<div class="line"><span class="lineno">  247</span>            type = it-&gt;second;</div>
-<div class="line"><span class="lineno">  248</span>        }</div>
-<div class="line"><span class="lineno">  249</span><span class="preprocessor">#ifdef HAS_LIBMAGIC</span></div>
-<div class="line"><span class="lineno">  250</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (magic != <span class="keyword">nullptr</span>) {</div>
-<div class="line"><span class="lineno">  251</span>            <span class="keyword">const</span> <span class="keywordtype">char</span>* magicType = magic_file(MimeTypes::magic, file.c_str());</div>
-<div class="line"><span class="lineno">  252</span>            type = magicType != <span class="keyword">nullptr</span> ? magicType : std::string();</div>
-<div class="line"><span class="lineno">  253</span>        }</div>
-<div class="line"><span class="lineno">  254</span><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="lineno">  255</span> </div>
-<div class="line"><span class="lineno">  256</span>        <span class="keywordflow">return</span> !type.empty() ? type : <span class="stringliteral">&quot;application/octet-stream&quot;</span>;</div>
-<div class="line"><span class="lineno">  257</span>    }</div>
-<div class="ttc" id="aclassweb_1_1http_1_1MimeTypes_html_a8b63cc1eaa5b7bd338d8354a336609d0"><div class="ttname"><a href="classweb_1_1http_1_1MimeTypes.html#a8b63cc1eaa5b7bd338d8354a336609d0">web::http::MimeTypes::mimeType</a></div><div class="ttdeci">static std::map&lt; std::string, std::string &gt; mimeType</div><div class="ttdef"><b>Definition</b> <a href="MimeTypes_8h_source.html#l00055">MimeTypes.h:55</a></div></div>
+<p class="definition">Definition at line <a class="el" href="MimeTypes_8cpp_source.html#l00240">240</a> of file <a class="el" href="MimeTypes_8cpp_source.html">MimeTypes.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  240</span>                                                          {</div>
+<div class="line"><span class="lineno">  241</span>        <span class="keyword">const</span> std::map&lt;std::string, std::string&gt;::iterator it = <a class="code hl_variable" href="classweb_1_1http_1_1MimeTypes.html#a8b63cc1eaa5b7bd338d8354a336609d0">mimeType</a>.find(std::filesystem::path(file).extension());</div>
+<div class="line"><span class="lineno">  242</span> </div>
+<div class="line"><span class="lineno">  243</span>        std::string type;</div>
+<div class="line"><span class="lineno">  244</span> </div>
+<div class="line"><span class="lineno">  245</span>        <span class="keywordflow">if</span> (it != <a class="code hl_variable" href="classweb_1_1http_1_1MimeTypes.html#a8b63cc1eaa5b7bd338d8354a336609d0">mimeType</a>.end()) {</div>
+<div class="line"><span class="lineno">  246</span>            type = it-&gt;second;</div>
+<div class="line"><span class="lineno">  247</span>        }</div>
+<div class="line"><span class="lineno">  248</span><span class="preprocessor">#ifdef HAS_LIBMAGIC</span></div>
+<div class="line"><span class="lineno">  249</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (magic != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><span class="lineno">  250</span>            <span class="keyword">const</span> <span class="keywordtype">char</span>* magicType = magic_file(MimeTypes::magic, file.c_str());</div>
+<div class="line"><span class="lineno">  251</span>            type = magicType != <span class="keyword">nullptr</span> ? magicType : std::string();</div>
+<div class="line"><span class="lineno">  252</span>        }</div>
+<div class="line"><span class="lineno">  253</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  254</span> </div>
+<div class="line"><span class="lineno">  255</span>        <span class="keywordflow">return</span> !type.empty() ? type : <span class="stringliteral">&quot;application/octet-stream&quot;</span>;</div>
+<div class="line"><span class="lineno">  256</span>    }</div>
+<div class="ttc" id="aclassweb_1_1http_1_1MimeTypes_html_a8b63cc1eaa5b7bd338d8354a336609d0"><div class="ttname"><a href="classweb_1_1http_1_1MimeTypes.html#a8b63cc1eaa5b7bd338d8354a336609d0">web::http::MimeTypes::mimeType</a></div><div class="ttdeci">static std::map&lt; std::string, std::string &gt; mimeType</div><div class="ttdef"><b>Definition</b> <a href="MimeTypes_8h_source.html#l00054">MimeTypes.h:54</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="MimeTypes_8h_source.html#l00055">mimeType</a>.</p>
+<p class="reference">References <a class="el" href="MimeTypes_8h_source.html#l00054">mimeType</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00182">web::http::server::Response::sendFile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00189">web::http::server::Response::sendFile()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classweb_1_1http_1_1MimeTypes_a08aa7365e19c29f97369a3bedfcc3721_icgraph.svg" width="920" height="131"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classweb_1_1http_1_1MimeTypes_a08aa7365e19c29f97369a3bedfcc3721_icgraph.svg" width="778" height="180"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -335,33 +333,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="MimeTypes_8h_source.html#l00055">55</a> of file <a class="el" href="MimeTypes_8h_source.html">MimeTypes.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="MimeTypes_8h_source.html#l00054">54</a> of file <a class="el" href="MimeTypes_8h_source.html">MimeTypes.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="MimeTypes_8cpp_source.html#l00241">contentType()</a>.</p>
-
-</div>
-</div>
-<a id="af42601f332363291f1ccd354fb1c3c3c" name="af42601f332363291f1ccd354fb1c3c3c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af42601f332363291f1ccd354fb1c3c3c">&#9670;&#160;</a></span>mimeTypes</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classweb_1_1http_1_1MimeTypes.html">MimeTypes</a> web::http::MimeTypes::mimeTypes</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="MimeTypes_8h_source.html#l00053">53</a> of file <a class="el" href="MimeTypes_8h_source.html">MimeTypes.h</a>.</p>
+<p class="reference">Referenced by <a class="el" href="MimeTypes_8cpp_source.html#l00240">contentType()</a>.</p>
 
 </div>
 </div>
@@ -375,7 +349,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceweb.html">web</a></li><li class="navelem"><a class="el" href="namespaceweb_1_1http.html">http</a></li><li class="navelem"><a class="el" href="classweb_1_1http_1_1MimeTypes.html">MimeTypes</a></li>
-    <li class="footer">Generated on Fri Oct 20 2023 14:01:12 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Sun Jan 21 2024 23:58:11 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

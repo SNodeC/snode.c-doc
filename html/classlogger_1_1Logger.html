@@ -92,7 +92,6 @@ $(document).ready(function(){initNavTree('classlogger_1_1Logger.html',''); initR
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
-<a href="#pro-static-attribs">Static Protected Attributes</a> &#124;
 <a href="classlogger_1_1Logger-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">logger::Logger Class Reference</div></div>
 </div><!--header-->
@@ -102,7 +101,7 @@ $(document).ready(function(){initNavTree('classlogger_1_1Logger.html',''); initR
 <div class="dynheader">
 Collaboration diagram for logger::Logger:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classlogger_1_1Logger__coll__graph.svg" width="104" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classlogger_1_1Logger__coll__graph.svg" width="115" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -122,19 +121,14 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:a31d2cc6f94e95cea600c9579c981875c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2fe71814296a418393065c3c7299ff41" id="r_a2fe71814296a418393065c3c7299ff41"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlogger_1_1Logger.html#a2fe71814296a418393065c3c7299ff41">logToFile</a> (const std::string &amp;logFile)</td></tr>
 <tr class="separator:a2fe71814296a418393065c3c7299ff41"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9eece213fbcc8ebf67fd69fc73a0dd4b" id="r_a9eece213fbcc8ebf67fd69fc73a0dd4b"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlogger_1_1Logger.html#a9eece213fbcc8ebf67fd69fc73a0dd4b">quiet</a> ()</td></tr>
-<tr class="separator:a9eece213fbcc8ebf67fd69fc73a0dd4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbe17b0b008e0db4cc58ca239f3a4f03" id="r_abbe17b0b008e0db4cc58ca239f3a4f03"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlogger_1_1Logger.html#abbe17b0b008e0db4cc58ca239f3a4f03">setQuiet</a> (bool quiet=true)</td></tr>
+<tr class="separator:abbe17b0b008e0db4cc58ca239f3a4f03"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a545211a93eadc019ebe4301426594a69" id="r_a545211a93eadc019ebe4301426594a69"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlogger_1_1Logger.html#a545211a93eadc019ebe4301426594a69">setCustomFormatSpec</a> (const char *format, const el::FormatSpecifierValueResolver &amp;resolver)</td></tr>
 <tr class="separator:a545211a93eadc019ebe4301426594a69"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-static-attribs" name="pro-static-attribs"></a>
-Static Protected Attributes</h2></td></tr>
-<tr class="memitem:a3413c6dcf67227ebec44cfb499998d2d" id="r_a3413c6dcf67227ebec44cfb499998d2d"><td class="memItemLeft" align="right" valign="top">static el::Configurations&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlogger_1_1Logger.html#a3413c6dcf67227ebec44cfb499998d2d">conf</a></td></tr>
-<tr class="separator:a3413c6dcf67227ebec44cfb499998d2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="Logger_8h_source.html#l00043">43</a> of file <a class="el" href="Logger_8h_source.html">Logger.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Logger_8h_source.html#l00074">74</a> of file <a class="el" href="Logger_8h_source.html">Logger.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ad5affb2d6011eb2cd807c43516fd0f56" name="ad5affb2d6011eb2cd807c43516fd0f56"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad5affb2d6011eb2cd807c43516fd0f56">&#9670;&#160;</a></span>Logger()</h2>
@@ -210,54 +204,45 @@ Static Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Logger_8cpp_source.html#l00033">33</a> of file <a class="el" href="Logger_8cpp_source.html">Logger.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   33</span>                      {</div>
-<div class="line"><span class="lineno">   34</span>        <a class="code hl_variable" href="classlogger_1_1Logger.html#a3413c6dcf67227ebec44cfb499998d2d">conf</a>.setGlobally(el::ConfigurationType::Enabled, <span class="stringliteral">&quot;true&quot;</span>);</div>
-<div class="line"><span class="lineno">   35</span>        <a class="code hl_variable" href="classlogger_1_1Logger.html#a3413c6dcf67227ebec44cfb499998d2d">conf</a>.setGlobally(el::ConfigurationType::Format, <span class="stringliteral">&quot;%datetime{%Y-%M-%d %H:%m:%s} %tick: %level %msg&quot;</span>);</div>
-<div class="line"><span class="lineno">   36</span>        <a class="code hl_variable" href="classlogger_1_1Logger.html#a3413c6dcf67227ebec44cfb499998d2d">conf</a>.setGlobally(el::ConfigurationType::ToFile, <span class="stringliteral">&quot;false&quot;</span>);</div>
-<div class="line"><span class="lineno">   37</span>        <a class="code hl_variable" href="classlogger_1_1Logger.html#a3413c6dcf67227ebec44cfb499998d2d">conf</a>.setGlobally(el::ConfigurationType::ToStandardOutput, <span class="stringliteral">&quot;true&quot;</span>);</div>
-<div class="line"><span class="lineno">   38</span>        <a class="code hl_variable" href="classlogger_1_1Logger.html#a3413c6dcf67227ebec44cfb499998d2d">conf</a>.setGlobally(el::ConfigurationType::SubsecondPrecision, <span class="stringliteral">&quot;2&quot;</span>);</div>
-<div class="line"><span class="lineno">   39</span>        <a class="code hl_variable" href="classlogger_1_1Logger.html#a3413c6dcf67227ebec44cfb499998d2d">conf</a>.setGlobally(el::ConfigurationType::PerformanceTracking, <span class="stringliteral">&quot;false&quot;</span>);</div>
-<div class="line"><span class="lineno">   40</span>        <a class="code hl_variable" href="classlogger_1_1Logger.html#a3413c6dcf67227ebec44cfb499998d2d">conf</a>.setGlobally(el::ConfigurationType::MaxLogFileSize, <span class="stringliteral">&quot;2097152&quot;</span>);</div>
-<div class="line"><span class="lineno">   41</span>        <a class="code hl_variable" href="classlogger_1_1Logger.html#a3413c6dcf67227ebec44cfb499998d2d">conf</a>.setGlobally(el::ConfigurationType::LogFlushThreshold, <span class="stringliteral">&quot;0&quot;</span>);</div>
-<div class="line"><span class="lineno">   42</span>        <a class="code hl_variable" href="classlogger_1_1Logger.html#a3413c6dcf67227ebec44cfb499998d2d">conf</a>.set(el::Level::Verbose, el::ConfigurationType::Format, <span class="stringliteral">&quot;%datetime{%Y-%M-%d %H:%m:%s} %tick: %msg&quot;</span>);</div>
-<div class="line"><span class="lineno">   43</span> </div>
-<div class="line"><span class="lineno">   44</span>        el::Loggers::addFlag(el::LoggingFlag::DisableApplicationAbortOnFatalLog);</div>
-<div class="line"><span class="lineno">   45</span>        el::Loggers::addFlag(el::LoggingFlag::DisablePerformanceTrackingCheckpointComparison);</div>
-<div class="line"><span class="lineno">   46</span>        el::Loggers::addFlag(el::LoggingFlag::ColoredTerminalOutput);</div>
-<div class="line"><span class="lineno">   47</span> </div>
+<p class="definition">Definition at line <a class="el" href="Logger_8cpp_source.html#l00032">32</a> of file <a class="el" href="Logger_8cpp_source.html">Logger.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   32</span>                      {</div>
+<div class="line"><span class="lineno">   33</span>        el::Configurations conf = *el::Loggers::defaultConfigurations();</div>
+<div class="line"><span class="lineno">   34</span> </div>
+<div class="line"><span class="lineno">   35</span>        conf.setGlobally(el::ConfigurationType::Enabled, <span class="stringliteral">&quot;true&quot;</span>);</div>
+<div class="line"><span class="lineno">   36</span>        conf.setGlobally(el::ConfigurationType::Format, <span class="stringliteral">&quot;%datetime{%Y-%M-%d %H:%m:%s} %tick: %level %msg&quot;</span>);</div>
+<div class="line"><span class="lineno">   37</span>        conf.setGlobally(el::ConfigurationType::ToFile, <span class="stringliteral">&quot;false&quot;</span>);</div>
+<div class="line"><span class="lineno">   38</span>        conf.setGlobally(el::ConfigurationType::ToStandardOutput, <span class="stringliteral">&quot;true&quot;</span>);</div>
+<div class="line"><span class="lineno">   39</span>        conf.setGlobally(el::ConfigurationType::SubsecondPrecision, <span class="stringliteral">&quot;2&quot;</span>);</div>
+<div class="line"><span class="lineno">   40</span>        conf.setGlobally(el::ConfigurationType::PerformanceTracking, <span class="stringliteral">&quot;false&quot;</span>);</div>
+<div class="line"><span class="lineno">   41</span>        conf.setGlobally(el::ConfigurationType::MaxLogFileSize, <span class="stringliteral">&quot;2097152&quot;</span>);</div>
+<div class="line"><span class="lineno">   42</span>        conf.setGlobally(el::ConfigurationType::LogFlushThreshold, <span class="stringliteral">&quot;0&quot;</span>);</div>
+<div class="line"><span class="lineno">   43</span>        conf.set(el::Level::Verbose, el::ConfigurationType::Format, <span class="stringliteral">&quot;%datetime{%Y-%M-%d %H:%m:%s} %tick: %msg&quot;</span>);</div>
+<div class="line"><span class="lineno">   44</span> </div>
+<div class="line"><span class="lineno">   45</span>        el::Loggers::addFlag(el::LoggingFlag::DisableApplicationAbortOnFatalLog);</div>
+<div class="line"><span class="lineno">   46</span>        el::Loggers::addFlag(el::LoggingFlag::DisablePerformanceTrackingCheckpointComparison);</div>
+<div class="line"><span class="lineno">   47</span>        el::Loggers::addFlag(el::LoggingFlag::ColoredTerminalOutput);</div>
 <div class="line"><span class="lineno">   48</span>        el::Loggers::removeFlag(el::LoggingFlag::AllowVerboseIfModuleNotSpecified);</div>
 <div class="line"><span class="lineno">   49</span> </div>
-<div class="line"><span class="lineno">   50</span>        el::Loggers::reconfigureLogger(<span class="stringliteral">&quot;default&quot;</span>, <a class="code hl_variable" href="classlogger_1_1Logger.html#a3413c6dcf67227ebec44cfb499998d2d">conf</a>);</div>
+<div class="line"><span class="lineno">   50</span>        el::Loggers::setDefaultConfigurations(conf, <span class="keyword">true</span>);</div>
 <div class="line"><span class="lineno">   51</span> </div>
-<div class="line"><span class="lineno">   52</span>        el::Logger* <a class="code hl_namespace" href="namespacelogger.html">logger</a> = el::Loggers::getLogger(<span class="stringliteral">&quot;default&quot;</span>);</div>
-<div class="line"><span class="lineno">   53</span>        std::string logFilename = <a class="code hl_namespace" href="namespacelogger.html">logger</a>-&gt;typedConfigurations()-&gt;filename(el::Level::Verbose).c_str();</div>
-<div class="line"><span class="lineno">   54</span> </div>
-<div class="line"><span class="lineno">   55</span>        <span class="keywordflow">if</span> (logFilename != <span class="stringliteral">&quot;/dev/null&quot;</span>) {</div>
-<div class="line"><span class="lineno">   56</span>            <a class="code hl_variable" href="classlogger_1_1Logger.html#a3413c6dcf67227ebec44cfb499998d2d">conf</a>.setGlobally(el::ConfigurationType::ToFile, <span class="stringliteral">&quot;true&quot;</span>);</div>
-<div class="line"><span class="lineno">   57</span>            el::Loggers::reconfigureLogger(<span class="stringliteral">&quot;default&quot;</span>, <a class="code hl_variable" href="classlogger_1_1Logger.html#a3413c6dcf67227ebec44cfb499998d2d">conf</a>);</div>
-<div class="line"><span class="lineno">   58</span>        }</div>
-<div class="line"><span class="lineno">   59</span> </div>
-<div class="line"><span class="lineno">   60</span>        <a class="code hl_function" href="classlogger_1_1Logger.html#a31d2cc6f94e95cea600c9579c981875c">setVerboseLevel</a>(0);</div>
-<div class="line"><span class="lineno">   61</span>        <a class="code hl_function" href="classlogger_1_1Logger.html#a7d70e6711ec68f00c5c68946fd030ff9">setLogLevel</a>(0);</div>
-<div class="line"><span class="lineno">   62</span>    }</div>
-<div class="ttc" id="aclasslogger_1_1Logger_html_a31d2cc6f94e95cea600c9579c981875c"><div class="ttname"><a href="classlogger_1_1Logger.html#a31d2cc6f94e95cea600c9579c981875c">logger::Logger::setVerboseLevel</a></div><div class="ttdeci">static void setVerboseLevel(int level)</div><div class="ttdef"><b>Definition</b> <a href="Logger_8cpp_source.html#l00105">Logger.cpp:105</a></div></div>
-<div class="ttc" id="aclasslogger_1_1Logger_html_a3413c6dcf67227ebec44cfb499998d2d"><div class="ttname"><a href="classlogger_1_1Logger.html#a3413c6dcf67227ebec44cfb499998d2d">logger::Logger::conf</a></div><div class="ttdeci">static el::Configurations conf</div><div class="ttdef"><b>Definition</b> <a href="Logger_8h_source.html#l00062">Logger.h:62</a></div></div>
-<div class="ttc" id="aclasslogger_1_1Logger_html_a7d70e6711ec68f00c5c68946fd030ff9"><div class="ttname"><a href="classlogger_1_1Logger.html#a7d70e6711ec68f00c5c68946fd030ff9">logger::Logger::setLogLevel</a></div><div class="ttdeci">static void setLogLevel(int level)</div><div class="ttdef"><b>Definition</b> <a href="Logger_8cpp_source.html#l00070">Logger.cpp:70</a></div></div>
-<div class="ttc" id="anamespacelogger_html"><div class="ttname"><a href="namespacelogger.html">logger</a></div><div class="ttdef"><b>Definition</b> <a href="Logger_8h_source.html#l00041">Logger.h:41</a></div></div>
+<div class="line"><span class="lineno">   52</span>        <a class="code hl_function" href="classlogger_1_1Logger.html#a31d2cc6f94e95cea600c9579c981875c">setVerboseLevel</a>(0);</div>
+<div class="line"><span class="lineno">   53</span>        <a class="code hl_function" href="classlogger_1_1Logger.html#a7d70e6711ec68f00c5c68946fd030ff9">setLogLevel</a>(0);</div>
+<div class="line"><span class="lineno">   54</span>    }</div>
+<div class="ttc" id="aclasslogger_1_1Logger_html_a31d2cc6f94e95cea600c9579c981875c"><div class="ttname"><a href="classlogger_1_1Logger.html#a31d2cc6f94e95cea600c9579c981875c">logger::Logger::setVerboseLevel</a></div><div class="ttdeci">static void setVerboseLevel(int level)</div><div class="ttdef"><b>Definition</b> <a href="Logger_8cpp_source.html#l00099">Logger.cpp:99</a></div></div>
+<div class="ttc" id="aclasslogger_1_1Logger_html_a7d70e6711ec68f00c5c68946fd030ff9"><div class="ttname"><a href="classlogger_1_1Logger.html#a7d70e6711ec68f00c5c68946fd030ff9">logger::Logger::setLogLevel</a></div><div class="ttdeci">static void setLogLevel(int level)</div><div class="ttdef"><b>Definition</b> <a href="Logger_8cpp_source.html#l00062">Logger.cpp:62</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Logger_8h_source.html#l00062">conf</a>, <a class="el" href="Logger_8cpp_source.html#l00070">setLogLevel()</a>, and <a class="el" href="Logger_8cpp_source.html#l00105">setVerboseLevel()</a>.</p>
+<p class="reference">References <a class="el" href="Logger_8cpp_source.html#l00062">setLogLevel()</a>, and <a class="el" href="Logger_8cpp_source.html#l00099">setVerboseLevel()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Config_8cpp_source.html#l00160">utils::Config::init()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="testparsers_8cpp_source.html#l00038">main()</a>, and <a class="el" href="Config_8cpp_source.html#l00070">utils::makeApp()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classlogger_1_1Logger_abab0f18929e134d658ea323245f6cab8_cgraph.svg" width="371" height="102"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classlogger_1_1Logger_abab0f18929e134d658ea323245f6cab8_cgraph.svg" width="404" height="102"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classlogger_1_1Logger_abab0f18929e134d658ea323245f6cab8_icgraph.svg" width="874" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classlogger_1_1Logger_abab0f18929e134d658ea323245f6cab8_icgraph.svg" width="322" height="86"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -286,62 +271,21 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Logger_8cpp_source.html#l00111">111</a> of file <a class="el" href="Logger_8cpp_source.html">Logger.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  111</span>                                                   {</div>
-<div class="line"><span class="lineno">  112</span>        <a class="code hl_variable" href="classlogger_1_1Logger.html#a3413c6dcf67227ebec44cfb499998d2d">conf</a>.setGlobally(el::ConfigurationType::Filename, logFile);</div>
-<div class="line"><span class="lineno">  113</span>        <a class="code hl_variable" href="classlogger_1_1Logger.html#a3413c6dcf67227ebec44cfb499998d2d">conf</a>.setGlobally(el::ConfigurationType::ToFile, <span class="stringliteral">&quot;true&quot;</span>);</div>
-<div class="line"><span class="lineno">  114</span> </div>
-<div class="line"><span class="lineno">  115</span>        el::Loggers::reconfigureLogger(<span class="stringliteral">&quot;default&quot;</span>, <a class="code hl_variable" href="classlogger_1_1Logger.html#a3413c6dcf67227ebec44cfb499998d2d">conf</a>);</div>
-<div class="line"><span class="lineno">  116</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Logger_8cpp_source.html#l00105">105</a> of file <a class="el" href="Logger_8cpp_source.html">Logger.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  105</span>                                                   {</div>
+<div class="line"><span class="lineno">  106</span>        el::Configurations conf = *el::Loggers::defaultConfigurations();</div>
+<div class="line"><span class="lineno">  107</span> </div>
+<div class="line"><span class="lineno">  108</span>        conf.setGlobally(el::ConfigurationType::Filename, logFile);</div>
+<div class="line"><span class="lineno">  109</span>        conf.setGlobally(el::ConfigurationType::ToFile, <span class="stringliteral">&quot;true&quot;</span>);</div>
+<div class="line"><span class="lineno">  110</span> </div>
+<div class="line"><span class="lineno">  111</span>        el::Loggers::setDefaultConfigurations(conf, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  112</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Logger_8h_source.html#l00062">conf</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="Config_8cpp_source.html#l00511">utils::Config::bootstrap()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Config_8cpp_source.html#l00339">utils::Config::bootstrap()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classlogger_1_1Logger_a2fe71814296a418393065c3c7299ff41_icgraph.svg" width="970" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-
-</div>
-</div>
-<a id="a9eece213fbcc8ebf67fd69fc73a0dd4b" name="a9eece213fbcc8ebf67fd69fc73a0dd4b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9eece213fbcc8ebf67fd69fc73a0dd4b">&#9670;&#160;</a></span>quiet()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void logger::Logger::quiet </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="Logger_8cpp_source.html#l00118">118</a> of file <a class="el" href="Logger_8cpp_source.html">Logger.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  118</span>                       {</div>
-<div class="line"><span class="lineno">  119</span>        <a class="code hl_variable" href="classlogger_1_1Logger.html#a3413c6dcf67227ebec44cfb499998d2d">conf</a>.setGlobally(el::ConfigurationType::ToStandardOutput, <span class="stringliteral">&quot;false&quot;</span>);</div>
-<div class="line"><span class="lineno">  120</span> </div>
-<div class="line"><span class="lineno">  121</span>        el::Loggers::reconfigureLogger(<span class="stringliteral">&quot;default&quot;</span>, <a class="code hl_variable" href="classlogger_1_1Logger.html#a3413c6dcf67227ebec44cfb499998d2d">conf</a>);</div>
-<div class="line"><span class="lineno">  122</span>    }</div>
-</div><!-- fragment -->
-<p class="reference">References <a class="el" href="Logger_8h_source.html#l00062">conf</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="Config_8cpp_source.html#l00511">utils::Config::bootstrap()</a>, and <a class="el" href="Config_8cpp_source.html#l00671">utils::Config::parse1()</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classlogger_1_1Logger_a9eece213fbcc8ebf67fd69fc73a0dd4b_icgraph.svg" width="1148" height="86"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classlogger_1_1Logger_a2fe71814296a418393065c3c7299ff41_icgraph.svg" width="1139" height="86"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -380,16 +324,16 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Logger_8cpp_source.html#l00064">64</a> of file <a class="el" href="Logger_8cpp_source.html">Logger.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   64</span>                                                                                                       {</div>
-<div class="line"><span class="lineno">   65</span>        el::Helpers::installCustomFormatSpecifier(el::CustomFormatSpecifier(format, resolver));</div>
-<div class="line"><span class="lineno">   66</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Logger_8cpp_source.html#l00056">56</a> of file <a class="el" href="Logger_8cpp_source.html">Logger.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   56</span>                                                                                                       {</div>
+<div class="line"><span class="lineno">   57</span>        el::Helpers::installCustomFormatSpecifier(el::CustomFormatSpecifier(format, resolver));</div>
+<div class="line"><span class="lineno">   58</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="EventLoop_8cpp_source.html#l00078">core::EventLoop::init()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classlogger_1_1Logger_a545211a93eadc019ebe4301426594a69_icgraph.svg" width="755" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classlogger_1_1Logger_a545211a93eadc019ebe4301426594a69_icgraph.svg" width="908" height="86"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -418,49 +362,91 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Logger_8cpp_source.html#l00070">70</a> of file <a class="el" href="Logger_8cpp_source.html">Logger.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   70</span>                                      {</div>
-<div class="line"><span class="lineno">   71</span>        <a class="code hl_variable" href="classlogger_1_1Logger.html#a3413c6dcf67227ebec44cfb499998d2d">conf</a>.set(el::Level::Trace, el::ConfigurationType::Enabled, <span class="stringliteral">&quot;false&quot;</span>);   <span class="comment">// trace method/function calling</span></div>
-<div class="line"><span class="lineno">   72</span>        <a class="code hl_variable" href="classlogger_1_1Logger.html#a3413c6dcf67227ebec44cfb499998d2d">conf</a>.set(el::Level::Debug, el::ConfigurationType::Enabled, <span class="stringliteral">&quot;false&quot;</span>);   <span class="comment">// typical assert messages - but we can go on</span></div>
-<div class="line"><span class="lineno">   73</span>        <a class="code hl_variable" href="classlogger_1_1Logger.html#a3413c6dcf67227ebec44cfb499998d2d">conf</a>.set(el::Level::Info, el::ConfigurationType::Enabled, <span class="stringliteral">&quot;false&quot;</span>);    <span class="comment">// additional infos - what &#39;s going on</span></div>
-<div class="line"><span class="lineno">   74</span>        <a class="code hl_variable" href="classlogger_1_1Logger.html#a3413c6dcf67227ebec44cfb499998d2d">conf</a>.set(el::Level::Warning, el::ConfigurationType::Enabled, <span class="stringliteral">&quot;false&quot;</span>); <span class="comment">// not that serious but mentioning</span></div>
-<div class="line"><span class="lineno">   75</span>        <a class="code hl_variable" href="classlogger_1_1Logger.html#a3413c6dcf67227ebec44cfb499998d2d">conf</a>.set(el::Level::Error, el::ConfigurationType::Enabled, <span class="stringliteral">&quot;false&quot;</span>);   <span class="comment">// serious errors - but we can go on</span></div>
-<div class="line"><span class="lineno">   76</span>        <a class="code hl_variable" href="classlogger_1_1Logger.html#a3413c6dcf67227ebec44cfb499998d2d">conf</a>.set(el::Level::Fatal, el::ConfigurationType::Enabled, <span class="stringliteral">&quot;false&quot;</span>);   <span class="comment">// asserts - stop - we can not go on</span></div>
-<div class="line"><span class="lineno">   77</span> </div>
-<div class="line"><span class="lineno">   78</span>        <span class="keywordflow">switch</span> (level) {</div>
-<div class="line"><span class="lineno">   79</span>            <span class="keywordflow">case</span> 6:</div>
-<div class="line"><span class="lineno">   80</span>                <a class="code hl_variable" href="classlogger_1_1Logger.html#a3413c6dcf67227ebec44cfb499998d2d">conf</a>.set(el::Level::Trace, el::ConfigurationType::Enabled, <span class="stringliteral">&quot;true&quot;</span>);</div>
+<p class="definition">Definition at line <a class="el" href="Logger_8cpp_source.html#l00062">62</a> of file <a class="el" href="Logger_8cpp_source.html">Logger.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   62</span>                                      {</div>
+<div class="line"><span class="lineno">   63</span>        el::Configurations conf = *el::Loggers::defaultConfigurations();</div>
+<div class="line"><span class="lineno">   64</span> </div>
+<div class="line"><span class="lineno">   65</span>        conf.set(el::Level::Trace, el::ConfigurationType::Enabled, <span class="stringliteral">&quot;false&quot;</span>);   <span class="comment">// trace method/function calling</span></div>
+<div class="line"><span class="lineno">   66</span>        conf.set(el::Level::Debug, el::ConfigurationType::Enabled, <span class="stringliteral">&quot;false&quot;</span>);   <span class="comment">// typical assert messages - but we can go on</span></div>
+<div class="line"><span class="lineno">   67</span>        conf.set(el::Level::Info, el::ConfigurationType::Enabled, <span class="stringliteral">&quot;false&quot;</span>);    <span class="comment">// additional infos - what &#39;s going on</span></div>
+<div class="line"><span class="lineno">   68</span>        conf.set(el::Level::Warning, el::ConfigurationType::Enabled, <span class="stringliteral">&quot;false&quot;</span>); <span class="comment">// not that serious but mentioning</span></div>
+<div class="line"><span class="lineno">   69</span>        conf.set(el::Level::Error, el::ConfigurationType::Enabled, <span class="stringliteral">&quot;false&quot;</span>);   <span class="comment">// serious errors - but we can go on</span></div>
+<div class="line"><span class="lineno">   70</span>        conf.set(el::Level::Fatal, el::ConfigurationType::Enabled, <span class="stringliteral">&quot;false&quot;</span>);   <span class="comment">// asserts - stop - we can not go on</span></div>
+<div class="line"><span class="lineno">   71</span> </div>
+<div class="line"><span class="lineno">   72</span>        <span class="keywordflow">switch</span> (level) {</div>
+<div class="line"><span class="lineno">   73</span>            <span class="keywordflow">case</span> 6:</div>
+<div class="line"><span class="lineno">   74</span>                conf.set(el::Level::Trace, el::ConfigurationType::Enabled, <span class="stringliteral">&quot;true&quot;</span>);</div>
+<div class="line"><span class="lineno">   75</span>                [[fallthrough]];</div>
+<div class="line"><span class="lineno">   76</span>            <span class="keywordflow">case</span> 5:</div>
+<div class="line"><span class="lineno">   77</span>                conf.set(el::Level::Debug, el::ConfigurationType::Enabled, <span class="stringliteral">&quot;true&quot;</span>);</div>
+<div class="line"><span class="lineno">   78</span>                [[fallthrough]];</div>
+<div class="line"><span class="lineno">   79</span>            <span class="keywordflow">case</span> 4:</div>
+<div class="line"><span class="lineno">   80</span>                conf.set(el::Level::Info, el::ConfigurationType::Enabled, <span class="stringliteral">&quot;true&quot;</span>);</div>
 <div class="line"><span class="lineno">   81</span>                [[fallthrough]];</div>
-<div class="line"><span class="lineno">   82</span>            <span class="keywordflow">case</span> 5:</div>
-<div class="line"><span class="lineno">   83</span>                <a class="code hl_variable" href="classlogger_1_1Logger.html#a3413c6dcf67227ebec44cfb499998d2d">conf</a>.set(el::Level::Debug, el::ConfigurationType::Enabled, <span class="stringliteral">&quot;true&quot;</span>);</div>
+<div class="line"><span class="lineno">   82</span>            <span class="keywordflow">case</span> 3:</div>
+<div class="line"><span class="lineno">   83</span>                conf.set(el::Level::Warning, el::ConfigurationType::Enabled, <span class="stringliteral">&quot;true&quot;</span>);</div>
 <div class="line"><span class="lineno">   84</span>                [[fallthrough]];</div>
-<div class="line"><span class="lineno">   85</span>            <span class="keywordflow">case</span> 4:</div>
-<div class="line"><span class="lineno">   86</span>                <a class="code hl_variable" href="classlogger_1_1Logger.html#a3413c6dcf67227ebec44cfb499998d2d">conf</a>.set(el::Level::Info, el::ConfigurationType::Enabled, <span class="stringliteral">&quot;true&quot;</span>);</div>
+<div class="line"><span class="lineno">   85</span>            <span class="keywordflow">case</span> 2:</div>
+<div class="line"><span class="lineno">   86</span>                conf.set(el::Level::Error, el::ConfigurationType::Enabled, <span class="stringliteral">&quot;true&quot;</span>);</div>
 <div class="line"><span class="lineno">   87</span>                [[fallthrough]];</div>
-<div class="line"><span class="lineno">   88</span>            <span class="keywordflow">case</span> 3:</div>
-<div class="line"><span class="lineno">   89</span>                <a class="code hl_variable" href="classlogger_1_1Logger.html#a3413c6dcf67227ebec44cfb499998d2d">conf</a>.set(el::Level::Warning, el::ConfigurationType::Enabled, <span class="stringliteral">&quot;true&quot;</span>);</div>
+<div class="line"><span class="lineno">   88</span>            <span class="keywordflow">case</span> 1:</div>
+<div class="line"><span class="lineno">   89</span>                conf.set(el::Level::Fatal, el::ConfigurationType::Enabled, <span class="stringliteral">&quot;true&quot;</span>);</div>
 <div class="line"><span class="lineno">   90</span>                [[fallthrough]];</div>
-<div class="line"><span class="lineno">   91</span>            <span class="keywordflow">case</span> 2:</div>
-<div class="line"><span class="lineno">   92</span>                <a class="code hl_variable" href="classlogger_1_1Logger.html#a3413c6dcf67227ebec44cfb499998d2d">conf</a>.set(el::Level::Error, el::ConfigurationType::Enabled, <span class="stringliteral">&quot;true&quot;</span>);</div>
-<div class="line"><span class="lineno">   93</span>                [[fallthrough]];</div>
-<div class="line"><span class="lineno">   94</span>            <span class="keywordflow">case</span> 1:</div>
-<div class="line"><span class="lineno">   95</span>                <a class="code hl_variable" href="classlogger_1_1Logger.html#a3413c6dcf67227ebec44cfb499998d2d">conf</a>.set(el::Level::Fatal, el::ConfigurationType::Enabled, <span class="stringliteral">&quot;true&quot;</span>);</div>
-<div class="line"><span class="lineno">   96</span>                [[fallthrough]];</div>
-<div class="line"><span class="lineno">   97</span>            <span class="keywordflow">case</span> 0:</div>
-<div class="line"><span class="lineno">   98</span>                [[fallthrough]];</div>
-<div class="line"><span class="lineno">   99</span>            <span class="keywordflow">default</span>:;</div>
-<div class="line"><span class="lineno">  100</span>        }</div>
-<div class="line"><span class="lineno">  101</span> </div>
-<div class="line"><span class="lineno">  102</span>        el::Loggers::reconfigureLogger(<span class="stringliteral">&quot;default&quot;</span>, <a class="code hl_variable" href="classlogger_1_1Logger.html#a3413c6dcf67227ebec44cfb499998d2d">conf</a>);</div>
-<div class="line"><span class="lineno">  103</span>    }</div>
+<div class="line"><span class="lineno">   91</span>            <span class="keywordflow">case</span> 0:</div>
+<div class="line"><span class="lineno">   92</span>                [[fallthrough]];</div>
+<div class="line"><span class="lineno">   93</span>            <span class="keywordflow">default</span>:;</div>
+<div class="line"><span class="lineno">   94</span>        }</div>
+<div class="line"><span class="lineno">   95</span> </div>
+<div class="line"><span class="lineno">   96</span>        el::Loggers::setDefaultConfigurations(conf, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   97</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Logger_8h_source.html#l00062">conf</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="Logger_8cpp_source.html#l00033">init()</a>, and <a class="el" href="Config_8cpp_source.html#l00671">utils::Config::parse1()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Logger_8cpp_source.html#l00032">init()</a>, and <a class="el" href="Config_8cpp_source.html#l00369">utils::Config::parse1()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classlogger_1_1Logger_a7d70e6711ec68f00c5c68946fd030ff9_icgraph.svg" width="1114" height="86"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classlogger_1_1Logger_a7d70e6711ec68f00c5c68946fd030ff9_icgraph.svg" width="1294" height="159"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="abbe17b0b008e0db4cc58ca239f3a4f03" name="abbe17b0b008e0db4cc58ca239f3a4f03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbe17b0b008e0db4cc58ca239f3a4f03">&#9670;&#160;</a></span>setQuiet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void logger::Logger::setQuiet </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>quiet</em> = <code>true</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="Logger_8cpp_source.html#l00114">114</a> of file <a class="el" href="Logger_8cpp_source.html">Logger.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  114</span>                                    {</div>
+<div class="line"><span class="lineno">  115</span>        el::Configurations conf = *el::Loggers::defaultConfigurations();</div>
+<div class="line"><span class="lineno">  116</span> </div>
+<div class="line"><span class="lineno">  117</span>        conf.setGlobally(el::ConfigurationType::ToStandardOutput, quiet ? <span class="stringliteral">&quot;false&quot;</span> : <span class="stringliteral">&quot;true&quot;</span>);</div>
+<div class="line"><span class="lineno">  118</span> </div>
+<div class="line"><span class="lineno">  119</span>        el::Loggers::setDefaultConfigurations(conf, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  120</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="Config_8cpp_source.html#l00339">utils::Config::bootstrap()</a>, <a class="el" href="Config_8cpp_source.html#l00369">utils::Config::parse1()</a>, and <a class="el" href="Config_8cpp_source.html#l00530">utils::Config::parse2()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classlogger_1_1Logger_abbe17b0b008e0db4cc58ca239f3a4f03_icgraph.svg" width="1339" height="135"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -489,46 +475,19 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Logger_8cpp_source.html#l00105">105</a> of file <a class="el" href="Logger_8cpp_source.html">Logger.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  105</span>                                          {</div>
-<div class="line"><span class="lineno">  106</span>        <span class="keywordflow">if</span> (level &gt;= 0) {</div>
-<div class="line"><span class="lineno">  107</span>            el::Loggers::setVerboseLevel(<span class="keyword">static_cast&lt;</span>el::base::type::VerboseLevel<span class="keyword">&gt;</span>(level));</div>
-<div class="line"><span class="lineno">  108</span>        }</div>
-<div class="line"><span class="lineno">  109</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Logger_8cpp_source.html#l00099">99</a> of file <a class="el" href="Logger_8cpp_source.html">Logger.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   99</span>                                          {</div>
+<div class="line"><span class="lineno">  100</span>        <span class="keywordflow">if</span> (level &gt;= 0) {</div>
+<div class="line"><span class="lineno">  101</span>            el::Loggers::setVerboseLevel(<span class="keyword">static_cast&lt;</span>el::base::type::VerboseLevel<span class="keyword">&gt;</span>(level));</div>
+<div class="line"><span class="lineno">  102</span>        }</div>
+<div class="line"><span class="lineno">  103</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="Logger_8cpp_source.html#l00033">init()</a>, and <a class="el" href="Config_8cpp_source.html#l00671">utils::Config::parse1()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Logger_8cpp_source.html#l00032">init()</a>, and <a class="el" href="Config_8cpp_source.html#l00369">utils::Config::parse1()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classlogger_1_1Logger_a31d2cc6f94e95cea600c9579c981875c_icgraph.svg" width="1110" height="86"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classlogger_1_1Logger_a31d2cc6f94e95cea600c9579c981875c_icgraph.svg" width="1288" height="159"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
-
-</div>
-</div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a id="a3413c6dcf67227ebec44cfb499998d2d" name="a3413c6dcf67227ebec44cfb499998d2d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3413c6dcf67227ebec44cfb499998d2d">&#9670;&#160;</a></span>conf</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">el::Configurations logger::Logger::conf</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="Logger_8h_source.html#l00062">62</a> of file <a class="el" href="Logger_8h_source.html">Logger.h</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="Logger_8cpp_source.html#l00033">init()</a>, <a class="el" href="Logger_8cpp_source.html#l00111">logToFile()</a>, <a class="el" href="Logger_8cpp_source.html#l00118">quiet()</a>, and <a class="el" href="Logger_8cpp_source.html#l00070">setLogLevel()</a>.</p>
 
 </div>
 </div>
@@ -542,7 +501,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelogger.html">logger</a></li><li class="navelem"><a class="el" href="classlogger_1_1Logger.html">Logger</a></li>
-    <li class="footer">Generated on Fri Oct 20 2023 14:01:11 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Sun Jan 21 2024 23:58:10 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

@@ -1,9 +1,9 @@
 var searchData=
 [
   ['daemon_0',['Daemon',['../classutils_1_1Daemon.html',1,'utils']]],
-  ['daemonizeerror_1',['DaemonizeError',['../classutils_1_1DaemonizeError.html',1,'utils']]],
-  ['daemonizefailure_2',['DaemonizeFailure',['../classutils_1_1DaemonizeFailure.html',1,'utils']]],
-  ['daemonizesuccess_3',['DaemonizeSuccess',['../classutils_1_1DaemonizeSuccess.html',1,'utils']]],
+  ['daemonerror_1',['DaemonError',['../classutils_1_1DaemonError.html',1,'utils']]],
+  ['daemonfailure_2',['DaemonFailure',['../classutils_1_1DaemonFailure.html',1,'utils']]],
+  ['daemonsignaled_3',['DaemonSignaled',['../classutils_1_1DaemonSignaled.html',1,'utils']]],
   ['descriptor_4',['Descriptor',['../classcore_1_1Descriptor.html',1,'core']]],
   ['descriptoreventpublisher_5',['descriptoreventpublisher',['../classcore_1_1DescriptorEventPublisher.html',1,'core::DescriptorEventPublisher'],['../classcore_1_1epoll_1_1DescriptorEventPublisher.html',1,'core::epoll::DescriptorEventPublisher'],['../classcore_1_1poll_1_1DescriptorEventPublisher.html',1,'core::poll::DescriptorEventPublisher'],['../classcore_1_1select_1_1DescriptorEventPublisher.html',1,'core::select::DescriptorEventPublisher']]],
   ['descriptoreventreceiver_6',['DescriptorEventReceiver',['../classcore_1_1DescriptorEventReceiver.html',1,'core']]],

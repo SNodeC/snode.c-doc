@@ -1,5 +1,9 @@
 var classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketClient =
 [
+    [ "Role", "classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketClient.html#a21ca5568aa45bd1bb91d2fa79687a9e2", [
+      [ "SERVER", "classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketClient.html#a21ca5568aa45bd1bb91d2fa79687a9e2a3d27c95bfdbea691b250894d96852844", null ],
+      [ "CLIENT", "classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketClient.html#a21ca5568aa45bd1bb91d2fa79687a9e2aef10c650df47bffd6399e5e78da2a9b1", null ]
+    ] ],
     [ "ConfigSocketClient", "classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketClient.html#a4c9c3d74ca66e1593ffb43430b1489be", null ],
     [ "add_flag", "classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketClient.html#af26607e24749b8cb27217276dbe0ef74", null ],
     [ "add_flag", "classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketClient.html#a50bdc014ba2f32815a42f3da1c48668f", null ],
@@ -18,16 +22,20 @@ var classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketClient =
     [ "add_option", "classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketClient.html#a6af25fa8c477330b2d58656b6f1e7914", null ],
     [ "add_section", "classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketClient.html#aa36fa2407117e32617a82a64d33d56c3", null ],
     [ "getDisabled", "classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketClient.html#a90d65c7f0497bb5636c7efef37bcfd1f", null ],
-    [ "getInstanceName", "classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketClient.html#a6bc88857eccb7e850ae85fada576cb69", null ],
+    [ "getInstanceName", "classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketClient.html#adc690b51a4fcfeedb061577884a09f1f", null ],
     [ "getRequired", "classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketClient.html#a508316f29b4a5c8e3f47f0c403132708", null ],
+    [ "getRole", "classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketClient.html#abbe00f748aa3027f85e57ed3a35e2d54", null ],
     [ "required", "classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketClient.html#a118e54017223e71db5cf1a1ec690dc4a", null ],
     [ "required", "classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketClient.html#afc1c3ec014ddd8cc8a08113feed00fe5", null ],
     [ "required", "classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketClient.html#afe7a0030f5ef727586a4dc6d32410ce7", null ],
     [ "setDisabled", "classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketClient.html#a513b580faa06a43d0b25b14d3ba58128", null ],
+    [ "setInstanceName", "classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketClient.html#a674f358ab15c39d47580a50be0f803e3", null ],
     [ "disableOpt", "classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketClient.html#a903207c799a648bf5742f5941465ed7c", null ],
     [ "instance", "classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketClient.html#abb79a8f4f69c1730bf7716eea73384c4", null ],
+    [ "instanceName", "classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketClient.html#afc45c33c68307d087a96e36039d832cc", null ],
     [ "instanceSc", "classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketClient.html#a7a695588c7946a1eeb547db4b69e1b44", null ],
-    [ "name", "classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketClient.html#a9e81dd0fe0f5a613a54658ac32cea1e9", null ],
+    [ "nameAnonymous", "classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketClient.html#a89cea1ed580b431417a98cdb1e3bc94f", null ],
     [ "requiredCount", "classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketClient.html#a3c312e8ce5b01a90f60e22369393e099", null ],
+    [ "role", "classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketClient.html#a909cf1595a45032459773a412533cf14", null ],
     [ "section", "classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketClient.html#ace462619a37549762b6dc2583fcd14c3", null ]
 ];

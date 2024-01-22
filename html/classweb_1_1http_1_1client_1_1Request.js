@@ -17,7 +17,7 @@ var classweb_1_1http_1_1client_1_1Request =
     [ "setHost", "classweb_1_1http_1_1client_1_1Request.html#a3d58b4cc764ddd5978debeeb594383ac", null ],
     [ "start", "classweb_1_1http_1_1client_1_1Request.html#a6472d642f595b7434bf8377b343f893f", null ],
     [ "type", "classweb_1_1http_1_1client_1_1Request.html#ae7437846bdfcb4aece26f611b09b6248", null ],
-    [ "upgrade", "classweb_1_1http_1_1client_1_1Request.html#ade3f2c0c18eb527560f212631a627a0d", null ],
+    [ "upgrade", "classweb_1_1http_1_1client_1_1Request.html#a6c9a7f0301863f6ca46afeff6ca20bb8", null ],
     [ "SocketContext", "classweb_1_1http_1_1client_1_1Request.html#aa3d4727b864f12bef775c2184047d68a", null ],
     [ "connectionState", "classweb_1_1http_1_1client_1_1Request.html#a173928ec88fc1b76bd597d282246a882", null ],
     [ "contentLength", "classweb_1_1http_1_1client_1_1Request.html#ab2c6a6617013404ecd17707da8e873d3", null ],

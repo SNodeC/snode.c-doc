@@ -7,6 +7,7 @@ var classcore_1_1pipe_1_1Source =
     [ "disconnect", "classcore_1_1pipe_1_1Source.html#a1e857ed0ce002f12acc3ec68f2408d4c", null ],
     [ "eof", "classcore_1_1pipe_1_1Source.html#a7cdfe3494b76d59780750d8af228f1d1", null ],
     [ "error", "classcore_1_1pipe_1_1Source.html#a179b74c2582275beb312423905f9cbd4", null ],
+    [ "read", "classcore_1_1pipe_1_1Source.html#acff249087d44b6472c7f212c06f62ae4", null ],
     [ "send", "classcore_1_1pipe_1_1Source.html#a7363d1d567c71b78ebfd2c098a8993f2", null ],
     [ "sink", "classcore_1_1pipe_1_1Source.html#a4d25af23c75f9ad83fc75f46be1c27cc", null ]
 ];

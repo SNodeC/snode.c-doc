@@ -2,8 +2,10 @@ var namespacenet_1_1config =
 [
     [ "stream", "namespacenet_1_1config_1_1stream.html", "namespacenet_1_1config_1_1stream" ],
     [ "ConfigAddress", "classnet_1_1config_1_1ConfigAddress.html", "classnet_1_1config_1_1ConfigAddress" ],
+    [ "ConfigAddressBase", "classnet_1_1config_1_1ConfigAddressBase.html", "classnet_1_1config_1_1ConfigAddressBase" ],
     [ "ConfigAddressLocal", "classnet_1_1config_1_1ConfigAddressLocal.html", "classnet_1_1config_1_1ConfigAddressLocal" ],
     [ "ConfigAddressRemote", "classnet_1_1config_1_1ConfigAddressRemote.html", "classnet_1_1config_1_1ConfigAddressRemote" ],
+    [ "ConfigAddressReverse", "classnet_1_1config_1_1ConfigAddressReverse.html", "classnet_1_1config_1_1ConfigAddressReverse" ],
     [ "ConfigConnection", "classnet_1_1config_1_1ConfigConnection.html", "classnet_1_1config_1_1ConfigConnection" ],
     [ "ConfigInstance", "classnet_1_1config_1_1ConfigInstance.html", "classnet_1_1config_1_1ConfigInstance" ],
     [ "ConfigLegacy", "classnet_1_1config_1_1ConfigLegacy.html", "classnet_1_1config_1_1ConfigLegacy" ],

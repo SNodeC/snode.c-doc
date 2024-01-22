@@ -25,6 +25,7 @@ var namespacecore =
       [ "epoll_ctl", "namespacecore_1_1system.html#a6452ec3ca95af0cb07911423312187a9", null ],
       [ "epoll_pwait", "namespacecore_1_1system.html#a0596afbc44422b1cbf85c796d53f374b", null ],
       [ "epoll_wait", "namespacecore_1_1system.html#aca4c1cc239b442807ff249c33aa23388", null ],
+      [ "flock", "namespacecore_1_1system.html#a953f1322a8f2399624aa90be84556474", null ],
       [ "freeaddrinfo", "namespacecore_1_1system.html#a6aae4d2a37b9b40e65b3f7e28a21382c", null ],
       [ "getaddrinfo", "namespacecore_1_1system.html#a86e636682d33db526f7502ab0e6ff57c", null ],
       [ "getnameinfo", "namespacecore_1_1system.html#a4e256dfd12c78c20f9ff550a14a43bef", null ],
@@ -65,7 +66,7 @@ var namespacecore =
       [ "LOADED", "namespacecore.html#a6613a3d81c1d25590b1cd31540d08815ab638272ceeff54912f043465e9a28c9b", null ],
       [ "INITIALIZED", "namespacecore.html#a6613a3d81c1d25590b1cd31540d08815adee5f03c2c4e73657824e028494b18c0", null ],
       [ "RUNNING", "namespacecore.html#a6613a3d81c1d25590b1cd31540d08815a43491564ebcfd38568918efbd6e840fd", null ],
-      [ "STOPING", "namespacecore.html#a6613a3d81c1d25590b1cd31540d08815acb731497e19065ff80675af16552213b", null ]
+      [ "STOPPING", "namespacecore.html#a6613a3d81c1d25590b1cd31540d08815af6cdb3c6710b50ec65ee07f740847e10", null ]
     ] ],
     [ "TickStatus", "namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749", [
       [ "SUCCESS", "namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749ad0749aaba8b833466dfcbb0428e4f89c", null ],
@@ -73,5 +74,6 @@ var namespacecore =
       [ "NOOBSERVER", "namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a4e7d1789953412597b5124514c61cb9b", null ],
       [ "TRACE", "namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6", null ]
     ] ],
-    [ "getTickCounterAsString", "namespacecore.html#ac82d0e7a5fcc66169eb61cb7dd27b814", null ]
+    [ "eventLoopState", "namespacecore.html#ac748365ac1e79353b3d6218a60216bd4", null ],
+    [ "getTickCounterAsString", "namespacecore.html#afa4820103fc04304728d100f70b0216c", null ]
 ];

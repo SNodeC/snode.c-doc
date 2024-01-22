@@ -6,7 +6,7 @@ var classcore_1_1epoll_1_1DescriptorEventPublisher_1_1EPollEvents =
     [ "getInterestCount", "classcore_1_1epoll_1_1DescriptorEventPublisher_1_1EPollEvents.html#a6085a982d044303330ca55abad57b496", null ],
     [ "muxAdd", "classcore_1_1epoll_1_1DescriptorEventPublisher_1_1EPollEvents.html#a6fcbf91fcf33ad26c2df6ee22f1f91d8", null ],
     [ "muxDel", "classcore_1_1epoll_1_1DescriptorEventPublisher_1_1EPollEvents.html#a3dfa0bc812d34099e1053818655e521e", null ],
-    [ "muxMod", "classcore_1_1epoll_1_1DescriptorEventPublisher_1_1EPollEvents.html#a0ee7e484305eb1f59974c14e836268d6", null ],
+    [ "muxMod", "classcore_1_1epoll_1_1DescriptorEventPublisher_1_1EPollEvents.html#aecb9fe681daac2f5ea7c46f5c8d5f8ce", null ],
     [ "muxOff", "classcore_1_1epoll_1_1DescriptorEventPublisher_1_1EPollEvents.html#aed2ceb41400871239965801463b54c30", null ],
     [ "muxOn", "classcore_1_1epoll_1_1DescriptorEventPublisher_1_1EPollEvents.html#aef056d0392e02c55350d8783e213632a", null ],
     [ "epfd", "classcore_1_1epoll_1_1DescriptorEventPublisher_1_1EPollEvents.html#afb9f169d0e1d44028a89419e37de32a4", null ],

@@ -20,6 +20,8 @@ var mqtt_2ControlPacket_8h =
     [ "MQTT_PUBREC_FLAGS", "mqtt_2ControlPacket_8h.html#ae4d2d397d45bc17b13ee492d42d3a8cb", null ],
     [ "MQTT_PUBREL", "mqtt_2ControlPacket_8h.html#a8f672c2b5f68e723d8862f06a3d7eea9", null ],
     [ "MQTT_PUBREL_FLAGS", "mqtt_2ControlPacket_8h.html#a2728dcf486df3febc3b4c5ec9ffda324", null ],
+    [ "MQTT_RESERVED_00", "mqtt_2ControlPacket_8h.html#a49c80d240f968a998b44c8db5b175bb1", null ],
+    [ "MQTT_RESERVED_0F", "mqtt_2ControlPacket_8h.html#a9e585067d74ff4f7b5ea34adf7725b17", null ],
     [ "MQTT_SUBACK", "mqtt_2ControlPacket_8h.html#a8c5dda67f018a226499f0c44531fd5d6", null ],
     [ "MQTT_SUBACK_FLAGS", "mqtt_2ControlPacket_8h.html#a7328013dbc586dc070fb553d94b7a4e0", null ],
     [ "MQTT_SUBSCRIBE", "mqtt_2ControlPacket_8h.html#a177f987722aa2d30b323d74be95d42be", null ],
@@ -27,5 +29,6 @@ var mqtt_2ControlPacket_8h =
     [ "MQTT_UNSUBACK", "mqtt_2ControlPacket_8h.html#a3005381a33134aecab624da1435eb5df", null ],
     [ "MQTT_UNSUBACK_FLAGS", "mqtt_2ControlPacket_8h.html#aeac3dabf0e36e0abc5f60c66250e94eb", null ],
     [ "MQTT_UNSUBSCRIBE", "mqtt_2ControlPacket_8h.html#afd5875c39ef308270a5c7bf22a05c247", null ],
-    [ "MQTT_UNSUBSCRIBE_FLAGS", "mqtt_2ControlPacket_8h.html#aa4c3185025b6bc71734b90a9fda3eeac", null ]
+    [ "MQTT_UNSUBSCRIBE_FLAGS", "mqtt_2ControlPacket_8h.html#aa4c3185025b6bc71734b90a9fda3eeac", null ],
+    [ "mqttPackageName", "mqtt_2ControlPacket_8h.html#a70fead8ec78413d17233cd6b454e6534", null ]
 ];

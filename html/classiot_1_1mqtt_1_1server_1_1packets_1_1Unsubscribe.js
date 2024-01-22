@@ -23,7 +23,7 @@ var classiot_1_1mqtt_1_1server_1_1packets_1_1Unsubscribe =
     [ "packetIdentifier", "classiot_1_1mqtt_1_1server_1_1packets_1_1Unsubscribe.html#ac30933811e44ceba181d827bfd14a90b", null ],
     [ "remainingLength", "classiot_1_1mqtt_1_1server_1_1packets_1_1Unsubscribe.html#aaeeb35a97fc0b3b745e14c874d1bd378", null ],
     [ "state", "classiot_1_1mqtt_1_1server_1_1packets_1_1Unsubscribe.html#a6e9db414deac5f145614988193eeac2a", null ],
-    [ "topic", "classiot_1_1mqtt_1_1server_1_1packets_1_1Unsubscribe.html#a375e849f41e957e71153df467754619a", null ],
+    [ "topic", "classiot_1_1mqtt_1_1server_1_1packets_1_1Unsubscribe.html#aa22dca6f8a60fb556a13c833e5042502", null ],
     [ "topics", "classiot_1_1mqtt_1_1server_1_1packets_1_1Unsubscribe.html#a5410da048f388988d23d55f73bdfbf94", null ],
     [ "type", "classiot_1_1mqtt_1_1server_1_1packets_1_1Unsubscribe.html#ad8f30bf63c16e2d2321333eb2923bd4c", null ]
 ];

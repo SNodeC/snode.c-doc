@@ -13,6 +13,5 @@ var searchData=
   ['flags_10',['flags',['../structdatabase_1_1mariadb_1_1MariaDBConnectionDetails.html#ad189b5330fbba5651eaed354fa498a6a',1,'database::mariadb::MariaDBConnectionDetails::flags'],['../classexpress_1_1Controller.html#a2c8a785f7f6f98c96ff7d0a898ede357',1,'express::Controller::flags'],['../classiot_1_1mqtt__fast_1_1packets_1_1Connack.html#a582e3f56148cf8b3dc3d3ee4c2bf7059',1,'iot::mqtt_fast::packets::Connack::flags'],['../classiot_1_1mqtt__fast_1_1packets_1_1Connect.html#a1f624c1f57711e5fa066ceeb01518352',1,'iot::mqtt_fast::packets::Connect::flags'],['../classiot_1_1mqtt_1_1ControlPacket.html#a8c7e68464f261bbb0ff6412c58ffbab0',1,'iot::mqtt::ControlPacket::flags']]],
   ['flyingpings_11',['flyingPings',['../classweb_1_1websocket_1_1SubProtocol.html#a963d677c331d68c323ffa5e75064a1f0',1,'web::websocket::SubProtocol']]],
   ['forceclose_12',['forceClose',['../classexpress_1_1middleware_1_1StaticMiddleware.html#ace402c8dfebf4b12ffa99a42aa01a755',1,'express::middleware::StaticMiddleware']]],
-  ['forcesni_13',['forceSni',['../classcore_1_1socket_1_1stream_1_1tls_1_1SocketAcceptor.html#af4d1ff41ad0689f62fedcbd7080a8f78',1,'core::socket::stream::tls::SocketAcceptor']]],
-  ['forcesniopt_14',['forceSniOpt',['../classnet_1_1config_1_1ConfigTlsServer.html#a682744dc3b42e828002c14f8d213a2c7',1,'net::config::ConfigTlsServer']]]
+  ['forcesniopt_13',['forceSniOpt',['../classnet_1_1config_1_1ConfigTlsServer.html#a682744dc3b42e828002c14f8d213a2c7',1,'net::config::ConfigTlsServer']]]
 ];

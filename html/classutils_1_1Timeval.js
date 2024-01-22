@@ -13,6 +13,8 @@ var classutils_1_1Timeval =
     [ "operator!=", "classutils_1_1Timeval.html#a72795dc49a378b6e82a392562272eee3", null ],
     [ "operator&", "classutils_1_1Timeval.html#a4a554848a362fa40feef1c3f93c0c2e5", null ],
     [ "operator&", "classutils_1_1Timeval.html#a09c93683f8c399644adff88b92577624", null ],
+    [ "operator*", "classutils_1_1Timeval.html#a3013eef64df12e28fcbb6287d675dbf1", null ],
+    [ "operator*=", "classutils_1_1Timeval.html#ad1d2adfbc52d3fb0de37dc9fc8a1eb5e", null ],
     [ "operator+", "classutils_1_1Timeval.html#ab2603e981dfbf12b15cbcfe4be2780a2", null ],
     [ "operator+=", "classutils_1_1Timeval.html#a9a7d30a6e6c5f2ef0e01808daabb4764", null ],
     [ "operator-", "classutils_1_1Timeval.html#a4f981cd57890638a323ca4de800b7f35", null ],
@@ -25,6 +27,7 @@ var classutils_1_1Timeval =
     [ "operator==", "classutils_1_1Timeval.html#a9c49ffd69cd0e5ea799fecafa2af798d", null ],
     [ "operator>", "classutils_1_1Timeval.html#a0a9d21f05cc48b208a95d269305fb7ec", null ],
     [ "operator>=", "classutils_1_1Timeval.html#ad2c64952dc08b9e5be444b0ba8779146", null ],
+    [ "operator*", "classutils_1_1Timeval.html#a0bbf715e0238b4f751114c8423f831e2", null ],
     [ "operator<<", "classutils_1_1Timeval.html#af10e6850a77a042e09e426816cddcb3e", null ],
     [ "timeVal", "classutils_1_1Timeval.html#a553ae25c0399d9e68393779f41de83d2", null ]
 ];

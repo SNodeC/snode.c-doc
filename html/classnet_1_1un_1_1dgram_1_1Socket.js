@@ -7,5 +7,5 @@ var classnet_1_1un_1_1dgram_1_1Socket =
     [ "recvFd", "classnet_1_1un_1_1dgram_1_1Socket.html#a06ee2dd2b27156aa5fe8a17ecab2a3ef", null ],
     [ "sendFd", "classnet_1_1un_1_1dgram_1_1Socket.html#a5c383fd45091fe80caf33a605aa2ed91", null ],
     [ "sendFd", "classnet_1_1un_1_1dgram_1_1Socket.html#ae4acf7f5f7aaf40039bf6eebc1ab9798", null ],
-    [ "doNotRemove", "classnet_1_1un_1_1dgram_1_1Socket.html#a0468d481c745dfc0cd7d8083a285e6ee", null ]
+    [ "lockFd", "classnet_1_1un_1_1dgram_1_1Socket.html#a14dc63ccddb1a032d84902bb9b733e31", null ]
 ];

@@ -18,8 +18,9 @@ var dir_9fa9cc1bc73227ba3c1e7b2368f5d654 =
     [ "Session.h", "Session_8h.html", "Session_8h" ],
     [ "SocketContext.cpp", "iot_2mqtt_2SocketContext_8cpp.html", null ],
     [ "SocketContext.h", "iot_2mqtt_2SocketContext_8h.html", "iot_2mqtt_2SocketContext_8h" ],
+    [ "SubProtocol.cpp", "iot_2mqtt_2SubProtocol_8cpp.html", null ],
     [ "SubProtocol.h", "iot_2mqtt_2SubProtocol_8h.html", "iot_2mqtt_2SubProtocol_8h" ],
-    [ "SubProtocol.hpp", "iot_2mqtt_2SubProtocol_8hpp.html", "iot_2mqtt_2SubProtocol_8hpp" ],
+    [ "SubProtocol.hpp", "iot_2mqtt_2SubProtocol_8hpp.html", null ],
     [ "Topic.cpp", "mqtt_2Topic_8cpp.html", null ],
     [ "Topic.h", "mqtt_2Topic_8h.html", "mqtt_2Topic_8h" ]
 ];

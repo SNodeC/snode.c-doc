@@ -1,6 +1,6 @@
 var namespacenet_1_1in_1_1stream_1_1legacy =
 [
     [ "config", "namespacenet_1_1in_1_1stream_1_1legacy_1_1config.html", "namespacenet_1_1in_1_1stream_1_1legacy_1_1config" ],
-    [ "SocketClient", "namespacenet_1_1in_1_1stream_1_1legacy.html#a59996f49f1f9031c38fc63cd48a8bc72", null ],
-    [ "SocketServer", "namespacenet_1_1in_1_1stream_1_1legacy.html#ae52fafe376a2bdf0f7df2adc2101621d", null ]
+    [ "SocketClient", "namespacenet_1_1in_1_1stream_1_1legacy.html#a7fdc645ae5ba5ba62556cfc1bfce2bb2", null ],
+    [ "SocketServer", "namespacenet_1_1in_1_1stream_1_1legacy.html#afd6d1311055dcbd5feabf2e4c2da3269", null ]
 ];

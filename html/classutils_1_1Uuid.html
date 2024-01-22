@@ -101,7 +101,7 @@ $(document).ready(function(){initNavTree('classutils_1_1Uuid.html',''); initResi
 <div class="dynheader">
 Collaboration diagram for utils::Uuid:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classutils_1_1Uuid__coll__graph.svg" width="83" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classutils_1_1Uuid__coll__graph.svg" width="88" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -118,7 +118,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="Uuid_8h_source.html#l00030">30</a> of file <a class="el" href="Uuid_8h_source.html">Uuid.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Uuid_8h_source.html#l00031">31</a> of file <a class="el" href="Uuid_8h_source.html">Uuid.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a8532377122a6072e66041b71a748be54" name="a8532377122a6072e66041b71a748be54"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8532377122a6072e66041b71a748be54">&#9670;&#160;</a></span>Uuid() <span class="overload">[1/2]</span></h2>
@@ -195,31 +195,32 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Uuid_8cpp_source.html#l00029">29</a> of file <a class="el" href="Uuid_8cpp_source.html">Uuid.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   29</span>                            {</div>
-<div class="line"><span class="lineno">   30</span>        <span class="keyword">static</span> std::random_device dev;</div>
-<div class="line"><span class="lineno">   31</span>        <span class="keyword">static</span> std::mt19937 rng(dev());</div>
-<div class="line"><span class="lineno">   32</span> </div>
-<div class="line"><span class="lineno">   33</span>        std::uniform_int_distribution&lt;int&gt; dist(0, 15);</div>
-<div class="line"><span class="lineno">   34</span> </div>
-<div class="line"><span class="lineno">   35</span>        <span class="keyword">const</span> <span class="keywordtype">char</span>* v = <span class="stringliteral">&quot;0123456789abcdef&quot;</span>;</div>
-<div class="line"><span class="lineno">   36</span>        <span class="keyword">const</span> <span class="keywordtype">bool</span> dash[] = {0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0};</div>
-<div class="line"><span class="lineno">   37</span> </div>
-<div class="line"><span class="lineno">   38</span>        std::string res;</div>
-<div class="line"><span class="lineno">   39</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 16; i++) {</div>
-<div class="line"><span class="lineno">   40</span>            <span class="keywordflow">if</span> (dash[i])</div>
-<div class="line"><span class="lineno">   41</span>                res += <span class="stringliteral">&quot;-&quot;</span>;</div>
-<div class="line"><span class="lineno">   42</span>            res += v[dist(rng)];</div>
-<div class="line"><span class="lineno">   43</span>            res += v[dist(rng)];</div>
-<div class="line"><span class="lineno">   44</span>        }</div>
-<div class="line"><span class="lineno">   45</span>        <span class="keywordflow">return</span> res;</div>
-<div class="line"><span class="lineno">   46</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Uuid_8cpp_source.html#l00030">30</a> of file <a class="el" href="Uuid_8cpp_source.html">Uuid.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   30</span>                            {</div>
+<div class="line"><span class="lineno">   31</span>        <span class="keyword">static</span> std::random_device dev;</div>
+<div class="line"><span class="lineno">   32</span>        <span class="keyword">static</span> std::mt19937 rng(dev());</div>
+<div class="line"><span class="lineno">   33</span> </div>
+<div class="line"><span class="lineno">   34</span>        std::uniform_int_distribution&lt;int&gt; dist(0, 15);</div>
+<div class="line"><span class="lineno">   35</span> </div>
+<div class="line"><span class="lineno">   36</span>        <span class="keyword">const</span> <span class="keywordtype">char</span>* v = <span class="stringliteral">&quot;0123456789abcdef&quot;</span>;</div>
+<div class="line"><span class="lineno">   37</span>        <span class="keyword">const</span> <span class="keywordtype">bool</span> dash[] = {<span class="keyword">false</span>, <span class="keyword">false</span>, <span class="keyword">false</span>, <span class="keyword">false</span>, <span class="keyword">true</span>, <span class="keyword">false</span>, <span class="keyword">true</span>, <span class="keyword">false</span>, <span class="keyword">true</span>, <span class="keyword">false</span>, <span class="keyword">true</span>, <span class="keyword">false</span>, <span class="keyword">false</span>, <span class="keyword">false</span>, <span class="keyword">false</span>, <span class="keyword">false</span>};</div>
+<div class="line"><span class="lineno">   38</span> </div>
+<div class="line"><span class="lineno">   39</span>        std::string res;</div>
+<div class="line"><span class="lineno">   40</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keywordtype">bool</span> isDash : dash) {</div>
+<div class="line"><span class="lineno">   41</span>            <span class="keywordflow">if</span> (isDash) {</div>
+<div class="line"><span class="lineno">   42</span>                res += <span class="stringliteral">&quot;-&quot;</span>;</div>
+<div class="line"><span class="lineno">   43</span>            }</div>
+<div class="line"><span class="lineno">   44</span>            res += v[dist(rng)];</div>
+<div class="line"><span class="lineno">   45</span>            res += v[dist(rng)];</div>
+<div class="line"><span class="lineno">   46</span>        }</div>
+<div class="line"><span class="lineno">   47</span>        <span class="keywordflow">return</span> res;</div>
+<div class="line"><span class="lineno">   48</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="un_2config_2ConfigAddress_8cpp_source.html#l00039">net::un::config::ConfigAddress&lt; ConfigAddressTypeT &gt;::ConfigAddress()</a>, and <a class="el" href="mqtt_2server_2packets_2Connect_8cpp_source.html#l00036">iot::mqtt::server::packets::Connect::deserializeVP()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="un_2config_2ConfigAddress_8cpp_source.html#l00040">net::un::config::ConfigAddress&lt; ConfigAddressTypeT &gt;::ConfigAddress()</a>, and <a class="el" href="mqtt_2server_2packets_2Connect_8cpp_source.html#l00037">iot::mqtt::server::packets::Connect::deserializeVP()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classutils_1_1Uuid_acf5f02e6df1829504bf9a1c210254bb4_icgraph.svg" width="407" height="115"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classutils_1_1Uuid_acf5f02e6df1829504bf9a1c210254bb4_icgraph.svg" width="435" height="115"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -234,7 +235,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceutils.html">utils</a></li><li class="navelem"><a class="el" href="classutils_1_1Uuid.html">Uuid</a></li>
-    <li class="footer">Generated on Fri Oct 20 2023 14:01:12 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Sun Jan 21 2024 23:58:11 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

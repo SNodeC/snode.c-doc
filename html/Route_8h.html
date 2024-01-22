@@ -101,12 +101,12 @@ $(document).ready(function(){initNavTree('Route_8h.html',''); initResizable(); }
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for Route.h:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="Route_8h__incl.svg" width="318" height="110"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="Route_8h__incl.svg" width="342" height="110"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="Route_8h__dep__incl.svg" width="1558" height="462"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="Route_8h__dep__incl.svg" width="3067" height="623"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <p><a href="Route_8h_source.html">Go to the source code of this file.</a></p>
@@ -144,56 +144,56 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">    Route&amp; METHOD(<span class="keyword">const</span> std::function&lt;<span class="keywordtype">void</span>(Request &amp; req, Response &amp; res)&gt;&amp; lambda);                                                       \</div>
-<div class="line">    Route&amp; METHOD(<span class="keyword">const</span> std::function&lt;<span class="keywordtype">void</span>(Request &amp; req, Response &amp; res, Next &amp; next)&gt;&amp; lambda);                                          \</div>
+<b>Value:</b><div class="fragment"><div class="line">    Route&amp; METHOD(<span class="keyword">const</span> std::function&lt;<span class="keywordtype">void</span>(Request &amp; req, Response &amp; res)&gt;&amp; lambda) <span class="keyword">const</span>;                                                 \</div>
+<div class="line">    Route&amp; METHOD(<span class="keyword">const</span> std::function&lt;<span class="keywordtype">void</span>(Request &amp; req, Response &amp; res, Next &amp; next)&gt;&amp; lambda) <span class="keyword">const</span>;                                    \</div>
 <div class="line">    <span class="keyword">template</span> &lt;<span class="keyword">typename</span>... Lambdas&gt;                                                                                                         \</div>
-<div class="line">    Route&amp; METHOD(<span class="keyword">const</span> std::function&lt;<span class="keywordtype">void</span>(Request &amp; req, Response &amp; res)&gt;&amp; lambda, Lambdas... lambdas);                                   \</div>
+<div class="line">    Route&amp; METHOD(<span class="keyword">const</span> std::function&lt;<span class="keywordtype">void</span>(Request &amp; req, Response &amp; res)&gt;&amp; lambda, Lambdas... lambdas) <span class="keyword">const</span>;                             \</div>
 <div class="line">    <span class="keyword">template</span> &lt;<span class="keyword">typename</span>... Lambdas&gt;                                                                                                         \</div>
-<div class="line">    Route&amp; METHOD(<span class="keyword">const</span> std::function&lt;<span class="keywordtype">void</span>(Request &amp; req, Response &amp; res, Next &amp; next)&gt;&amp; lambda, Lambdas... lambdas);</div>
+<div class="line">    Route&amp; METHOD(<span class="keyword">const</span> std::function&lt;<span class="keywordtype">void</span>(Request &amp; req, Response &amp; res, Next &amp; next)&gt;&amp; lambda, Lambdas... lambdas) <span class="keyword">const</span>;</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="Route_8h_source.html#l00045">45</a> of file <a class="el" href="Route_8h_source.html">Route.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   52</span>                  {</div>
-<div class="line"><span class="lineno">   53</span> </div>
-<div class="line"><span class="lineno">   54</span>    <span class="keyword">class </span>Route {</div>
-<div class="line"><span class="lineno">   55</span>    <span class="keyword">public</span>:</div>
-<div class="line"><span class="lineno">   56</span>        Route(<span class="keyword">const</span> std::string&amp; method, <span class="keyword">const</span> std::string&amp; relativeMountPath, <span class="keyword">const</span> std::shared_ptr&lt;Dispatcher&gt;&amp; dispatcher);</div>
-<div class="line"><span class="lineno">   57</span> </div>
-<div class="line"><span class="lineno">   58</span>    <span class="keyword">protected</span>:</div>
-<div class="line"><span class="lineno">   59</span>        Route();</div>
-<div class="line"><span class="lineno">   60</span> </div>
-<div class="line"><span class="lineno">   61</span>        <span class="keywordtype">bool</span> dispatch(Controller&amp; controller);</div>
-<div class="line"><span class="lineno">   62</span>        <span class="keywordtype">bool</span> dispatch(Controller&amp; controller, <span class="keyword">const</span> std::string&amp; parentMountPath);</div>
-<div class="line"><span class="lineno">   63</span>        <span class="keywordtype">bool</span> dispatchNext(Controller&amp; controller, <span class="keyword">const</span> std::string&amp; parentMountPath);</div>
-<div class="line"><span class="lineno">   64</span> </div>
-<div class="line"><span class="lineno">   65</span>    <span class="keyword">private</span>:</div>
-<div class="line"><span class="lineno">   66</span>        MountPoint mountPoint;</div>
-<div class="line"><span class="lineno">   67</span>        std::shared_ptr&lt;Dispatcher&gt; dispatcher;</div>
-<div class="line"><span class="lineno">   68</span> </div>
-<div class="line"><span class="lineno">   69</span>    <span class="keyword">public</span>:</div>
-<div class="line"><span class="lineno">   70</span>        <a class="code hl_define" href="Route_8h.html#afb42d09395542d8e91f0fe835ff7ea8a">DECLARE_ROUTE_REQUESTMETHOD</a>(use)</div>
-<div class="line"><span class="lineno">   71</span>        <a class="code hl_define" href="Route_8h.html#afb42d09395542d8e91f0fe835ff7ea8a">DECLARE_ROUTE_REQUESTMETHOD</a>(all)</div>
-<div class="line"><span class="lineno">   72</span>        <a class="code hl_define" href="Route_8h.html#afb42d09395542d8e91f0fe835ff7ea8a">DECLARE_ROUTE_REQUESTMETHOD</a>(<span class="keyword">get</span>)</div>
-<div class="line"><span class="lineno">   73</span>        <a class="code hl_define" href="Route_8h.html#afb42d09395542d8e91f0fe835ff7ea8a">DECLARE_ROUTE_REQUESTMETHOD</a>(put)</div>
-<div class="line"><span class="lineno">   74</span>        <a class="code hl_define" href="Route_8h.html#afb42d09395542d8e91f0fe835ff7ea8a">DECLARE_ROUTE_REQUESTMETHOD</a>(post)</div>
-<div class="line"><span class="lineno">   75</span>        <a class="code hl_define" href="Route_8h.html#afb42d09395542d8e91f0fe835ff7ea8a">DECLARE_ROUTE_REQUESTMETHOD</a>(del)</div>
-<div class="line"><span class="lineno">   76</span>        <a class="code hl_define" href="Route_8h.html#afb42d09395542d8e91f0fe835ff7ea8a">DECLARE_ROUTE_REQUESTMETHOD</a>(connect)</div>
-<div class="line"><span class="lineno">   77</span>        <a class="code hl_define" href="Route_8h.html#afb42d09395542d8e91f0fe835ff7ea8a">DECLARE_ROUTE_REQUESTMETHOD</a>(options)</div>
-<div class="line"><span class="lineno">   78</span>        <a class="code hl_define" href="Route_8h.html#afb42d09395542d8e91f0fe835ff7ea8a">DECLARE_ROUTE_REQUESTMETHOD</a>(trace)</div>
-<div class="line"><span class="lineno">   79</span>        <a class="code hl_define" href="Route_8h.html#afb42d09395542d8e91f0fe835ff7ea8a">DECLARE_ROUTE_REQUESTMETHOD</a>(patch)</div>
-<div class="line"><span class="lineno">   80</span>        <a class="code hl_define" href="Route_8h.html#afb42d09395542d8e91f0fe835ff7ea8a">DECLARE_ROUTE_REQUESTMETHOD</a>(head)</div>
-<div class="line"><span class="lineno">   81</span> </div>
-<div class="line"><span class="lineno">   82</span>        friend class dispatcher::RouterDispatcher;</div>
-<div class="line"><span class="lineno">   83</span>        friend class Dispatcher;</div>
-<div class="line"><span class="lineno">   84</span>        friend class RootRoute;</div>
-<div class="line"><span class="lineno">   85</span>        friend class Controller;</div>
-<div class="line"><span class="lineno">   86</span>    };</div>
-<div class="line"><span class="lineno">   87</span> </div>
-<div class="line"><span class="lineno">   88</span>} <span class="comment">// namespace express</span></div>
-<div class="line"><span class="lineno">   89</span> </div>
-<div class="line"><span class="lineno">   90</span><span class="preprocessor">#include &quot;express/Route.hpp&quot; </span><span class="comment">// IWYU pragma: export</span></div>
-<div class="line"><span class="lineno">   91</span> </div>
-<div class="line"><span class="lineno">   92</span><span class="preprocessor">#endif </span><span class="comment">// EXPRESS_ROUTE_H</span></div>
-<div class="ttc" id="aRoute_8h_html_afb42d09395542d8e91f0fe835ff7ea8a"><div class="ttname"><a href="Route_8h.html#afb42d09395542d8e91f0fe835ff7ea8a">DECLARE_ROUTE_REQUESTMETHOD</a></div><div class="ttdeci">#define DECLARE_ROUTE_REQUESTMETHOD(METHOD)</div><div class="ttdef"><b>Definition</b> <a href="Route_8h_source.html#l00045">Route.h:45</a></div></div>
+<p class="definition">Definition at line <a class="el" href="Route_8h_source.html#l00046">46</a> of file <a class="el" href="Route_8h_source.html">Route.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   53</span>                  {</div>
+<div class="line"><span class="lineno">   54</span> </div>
+<div class="line"><span class="lineno">   55</span>    <span class="keyword">class </span>Route {</div>
+<div class="line"><span class="lineno">   56</span>    <span class="keyword">public</span>:</div>
+<div class="line"><span class="lineno">   57</span>        Route(<span class="keyword">const</span> std::string&amp; method, <span class="keyword">const</span> std::string&amp; relativeMountPath, <span class="keyword">const</span> std::shared_ptr&lt;Dispatcher&gt;&amp; dispatcher);</div>
+<div class="line"><span class="lineno">   58</span> </div>
+<div class="line"><span class="lineno">   59</span>    <span class="keyword">protected</span>:</div>
+<div class="line"><span class="lineno">   60</span>        Route();</div>
+<div class="line"><span class="lineno">   61</span> </div>
+<div class="line"><span class="lineno">   62</span>        <span class="keywordtype">bool</span> dispatch(Controller&amp; controller);</div>
+<div class="line"><span class="lineno">   63</span>        <span class="keywordtype">bool</span> dispatch(Controller&amp; controller, <span class="keyword">const</span> std::string&amp; parentMountPath);</div>
+<div class="line"><span class="lineno">   64</span>        <span class="keywordtype">bool</span> dispatchNext(Controller&amp; controller, <span class="keyword">const</span> std::string&amp; parentMountPath);</div>
+<div class="line"><span class="lineno">   65</span> </div>
+<div class="line"><span class="lineno">   66</span>    <span class="keyword">private</span>:</div>
+<div class="line"><span class="lineno">   67</span>        MountPoint mountPoint;</div>
+<div class="line"><span class="lineno">   68</span>        std::shared_ptr&lt;Dispatcher&gt; dispatcher;</div>
+<div class="line"><span class="lineno">   69</span> </div>
+<div class="line"><span class="lineno">   70</span>    <span class="keyword">public</span>:</div>
+<div class="line"><span class="lineno">   71</span>        <a class="code hl_define" href="Route_8h.html#afb42d09395542d8e91f0fe835ff7ea8a">DECLARE_ROUTE_REQUESTMETHOD</a>(use)</div>
+<div class="line"><span class="lineno">   72</span>        <a class="code hl_define" href="Route_8h.html#afb42d09395542d8e91f0fe835ff7ea8a">DECLARE_ROUTE_REQUESTMETHOD</a>(all)</div>
+<div class="line"><span class="lineno">   73</span>        <a class="code hl_define" href="Route_8h.html#afb42d09395542d8e91f0fe835ff7ea8a">DECLARE_ROUTE_REQUESTMETHOD</a>(<span class="keyword">get</span>)</div>
+<div class="line"><span class="lineno">   74</span>        <a class="code hl_define" href="Route_8h.html#afb42d09395542d8e91f0fe835ff7ea8a">DECLARE_ROUTE_REQUESTMETHOD</a>(put)</div>
+<div class="line"><span class="lineno">   75</span>        <a class="code hl_define" href="Route_8h.html#afb42d09395542d8e91f0fe835ff7ea8a">DECLARE_ROUTE_REQUESTMETHOD</a>(post)</div>
+<div class="line"><span class="lineno">   76</span>        <a class="code hl_define" href="Route_8h.html#afb42d09395542d8e91f0fe835ff7ea8a">DECLARE_ROUTE_REQUESTMETHOD</a>(del)</div>
+<div class="line"><span class="lineno">   77</span>        <a class="code hl_define" href="Route_8h.html#afb42d09395542d8e91f0fe835ff7ea8a">DECLARE_ROUTE_REQUESTMETHOD</a>(connect)</div>
+<div class="line"><span class="lineno">   78</span>        <a class="code hl_define" href="Route_8h.html#afb42d09395542d8e91f0fe835ff7ea8a">DECLARE_ROUTE_REQUESTMETHOD</a>(options)</div>
+<div class="line"><span class="lineno">   79</span>        <a class="code hl_define" href="Route_8h.html#afb42d09395542d8e91f0fe835ff7ea8a">DECLARE_ROUTE_REQUESTMETHOD</a>(trace)</div>
+<div class="line"><span class="lineno">   80</span>        <a class="code hl_define" href="Route_8h.html#afb42d09395542d8e91f0fe835ff7ea8a">DECLARE_ROUTE_REQUESTMETHOD</a>(patch)</div>
+<div class="line"><span class="lineno">   81</span>        <a class="code hl_define" href="Route_8h.html#afb42d09395542d8e91f0fe835ff7ea8a">DECLARE_ROUTE_REQUESTMETHOD</a>(head)</div>
+<div class="line"><span class="lineno">   82</span> </div>
+<div class="line"><span class="lineno">   83</span>        friend class dispatcher::RouterDispatcher;</div>
+<div class="line"><span class="lineno">   84</span>        friend class Dispatcher;</div>
+<div class="line"><span class="lineno">   85</span>        friend class RootRoute;</div>
+<div class="line"><span class="lineno">   86</span>        friend class Controller;</div>
+<div class="line"><span class="lineno">   87</span>    };</div>
+<div class="line"><span class="lineno">   88</span> </div>
+<div class="line"><span class="lineno">   89</span>} <span class="comment">// namespace express</span></div>
+<div class="line"><span class="lineno">   90</span> </div>
+<div class="line"><span class="lineno">   91</span><span class="preprocessor">#include &quot;express/Route.hpp&quot; </span><span class="comment">// IWYU pragma: export</span></div>
+<div class="line"><span class="lineno">   92</span> </div>
+<div class="line"><span class="lineno">   93</span><span class="preprocessor">#endif </span><span class="comment">// EXPRESS_ROUTE_H</span></div>
+<div class="ttc" id="aRoute_8h_html_afb42d09395542d8e91f0fe835ff7ea8a"><div class="ttname"><a href="Route_8h.html#afb42d09395542d8e91f0fe835ff7ea8a">DECLARE_ROUTE_REQUESTMETHOD</a></div><div class="ttdeci">#define DECLARE_ROUTE_REQUESTMETHOD(METHOD)</div><div class="ttdef"><b>Definition</b> <a href="Route_8h_source.html#l00046">Route.h:46</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -203,7 +203,7 @@ Macros</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_e2b20abddc1d75e9fa824bc5544f9c72.html">express</a></li><li class="navelem"><a class="el" href="Route_8h.html">Route.h</a></li>
-    <li class="footer">Generated on Fri Oct 20 2023 14:01:10 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Sun Jan 21 2024 23:58:09 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

@@ -1,9 +1,4 @@
 var searchData=
 [
-  ['next_0',['NEXT',['../classexpress_1_1Controller.html#acbbd6f9ce9c84b3a72a50f0aedaa6c48adc4bb866930db1ffbe036d7c5b8f0323',1,'express::Controller']]],
-  ['next_5froute_1',['NEXT_ROUTE',['../classexpress_1_1Controller.html#acbbd6f9ce9c84b3a72a50f0aedaa6c48a80a7d61efbcd0e82eb23e4e9c0de575c',1,'express::Controller']]],
-  ['next_5frouter_2',['NEXT_ROUTER',['../classexpress_1_1Controller.html#acbbd6f9ce9c84b3a72a50f0aedaa6c48a96db53e6bdc559125ed34f56beb7ae78',1,'express::Controller']]],
-  ['nonblock_3',['NONBLOCK',['../classnet_1_1phy_1_1PhysicalSocket.html#ababfe8607820fbd9c4674b538303325aa620dc36fc3ae8915e4a2a54abada4595',1,'net::phy::PhysicalSocket']]],
-  ['none_4',['none',['../classexpress_1_1Controller.html#acbbd6f9ce9c84b3a72a50f0aedaa6c48a88fca32b4b386f5fe4ce6294292f05f0',1,'express::Controller::NONE'],['../classnet_1_1phy_1_1PhysicalSocket.html#ababfe8607820fbd9c4674b538303325aa3e891d1037e082b75c7bd6945f61d3f3',1,'net::phy::PhysicalSocket::NONE']]],
-  ['noobserver_5',['NOOBSERVER',['../namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a4e7d1789953412597b5124514c61cb9b',1,'core']]]
+  ['opcode_0',['OPCODE',['../classweb_1_1websocket_1_1Receiver.html#a3cf4e2588c5333541e445cd7aef1eb9ba11bdee9fdefbd8d33a25257557bddbef',1,'web::websocket::Receiver']]]
 ];

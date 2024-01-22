@@ -1,31 +1,5 @@
 var namespaceutils =
 [
-    [ "Color", "namespaceutils_1_1Color.html", [
-      [ "Code", "namespaceutils_1_1Color.html#a32f4a227bdc79ba6b98af53dfc126808", [
-        [ "FG_DEFAULT", "namespaceutils_1_1Color.html#a32f4a227bdc79ba6b98af53dfc126808aec939dfa85c55fe16445f3c02bb012d8", null ],
-        [ "FG_BLACK", "namespaceutils_1_1Color.html#a32f4a227bdc79ba6b98af53dfc126808a10f1284e24fad88e7ac5966b6f000496", null ],
-        [ "FG_RED", "namespaceutils_1_1Color.html#a32f4a227bdc79ba6b98af53dfc126808a0343bd45782960b4bfc275e16237cfc8", null ],
-        [ "FG_GREEN", "namespaceutils_1_1Color.html#a32f4a227bdc79ba6b98af53dfc126808ac5e2716a4915a3f96c501cbe821f553b", null ],
-        [ "FG_YELLOW", "namespaceutils_1_1Color.html#a32f4a227bdc79ba6b98af53dfc126808acc0e43ab784d780cfa1e500b4cc8d65e", null ],
-        [ "FG_BLUE", "namespaceutils_1_1Color.html#a32f4a227bdc79ba6b98af53dfc126808abc692cd3754240e2f8efac99386f1cb3", null ],
-        [ "FG_MAGENTA", "namespaceutils_1_1Color.html#a32f4a227bdc79ba6b98af53dfc126808aefc55f771cb0ce45ce6a3c15d78e9b88", null ],
-        [ "FG_CYAN", "namespaceutils_1_1Color.html#a32f4a227bdc79ba6b98af53dfc126808a933cab284b423af64a24fc8ac79df16b", null ],
-        [ "FG_LIGHT_GRAY", "namespaceutils_1_1Color.html#a32f4a227bdc79ba6b98af53dfc126808a8bbd766c4b3754a29dfb3a52ab86eb6b", null ],
-        [ "FG_DARK_GRAY", "namespaceutils_1_1Color.html#a32f4a227bdc79ba6b98af53dfc126808a4dffb07f61fb3b5693c646d246666101", null ],
-        [ "FG_LIGHT_RED", "namespaceutils_1_1Color.html#a32f4a227bdc79ba6b98af53dfc126808a7e6318e2639475603215a294f36fa414", null ],
-        [ "FG_LIGHT_GREEN", "namespaceutils_1_1Color.html#a32f4a227bdc79ba6b98af53dfc126808a4b008ef745c3dca8f33a8ca0b12d8582", null ],
-        [ "FG_LIGHT_YELLOW", "namespaceutils_1_1Color.html#a32f4a227bdc79ba6b98af53dfc126808a283fb285620d8f6d9d8a10b616159897", null ],
-        [ "FG_LIGHT_BLUE", "namespaceutils_1_1Color.html#a32f4a227bdc79ba6b98af53dfc126808a9dfcab60a5ea7665cc1721632ffbb227", null ],
-        [ "FG_LIGHT_MAGENTA", "namespaceutils_1_1Color.html#a32f4a227bdc79ba6b98af53dfc126808a9cd415314e334bb0bcc932979031173a", null ],
-        [ "FG_LIGHT_CYAN", "namespaceutils_1_1Color.html#a32f4a227bdc79ba6b98af53dfc126808a02cd3bf8465ed6a202da3647c9d26bf9", null ],
-        [ "FG_WHITE", "namespaceutils_1_1Color.html#a32f4a227bdc79ba6b98af53dfc126808ac70d7b5a6ca66e8ba0f1d5f528515573", null ],
-        [ "BG_RED", "namespaceutils_1_1Color.html#a32f4a227bdc79ba6b98af53dfc126808a839d5bffda997d1e41da5978ddb260e3", null ],
-        [ "BG_GREEN", "namespaceutils_1_1Color.html#a32f4a227bdc79ba6b98af53dfc126808a52be40da845c5ad545356e5d8573cb78", null ],
-        [ "BG_BLUE", "namespaceutils_1_1Color.html#a32f4a227bdc79ba6b98af53dfc126808a6048affb47a52a91de89790038b5ab27", null ],
-        [ "BG_DEFAULT", "namespaceutils_1_1Color.html#a32f4a227bdc79ba6b98af53dfc126808a1b6f054082feceb002af4726d29c463f", null ]
-      ] ],
-      [ "operator<<", "namespaceutils_1_1Color.html#a96df09509103e5a728c3cfba1207dfb0", null ]
-    ] ],
     [ "system", "namespaceutils_1_1system.html", [
       [ "gettimeofday", "namespaceutils_1_1system.html#ad594b7afe9fa80d3db04591c966422b2", null ],
       [ "gmtime", "namespaceutils_1_1system.html#a629a1ebec50192eff5587cdd5d51bf20", null ],
@@ -37,14 +11,13 @@ var namespaceutils =
     [ "AttributeProxy", "classutils_1_1AttributeProxy.html", "classutils_1_1AttributeProxy" ],
     [ "Config", "classutils_1_1Config.html", "classutils_1_1Config" ],
     [ "Daemon", "classutils_1_1Daemon.html", "classutils_1_1Daemon" ],
-    [ "DaemonizeError", "classutils_1_1DaemonizeError.html", "classutils_1_1DaemonizeError" ],
-    [ "DaemonizeFailure", "classutils_1_1DaemonizeFailure.html", "classutils_1_1DaemonizeFailure" ],
-    [ "DaemonizeSuccess", "classutils_1_1DaemonizeSuccess.html", "classutils_1_1DaemonizeSuccess" ],
+    [ "DaemonError", "classutils_1_1DaemonError.html", "classutils_1_1DaemonError" ],
+    [ "DaemonFailure", "classutils_1_1DaemonFailure.html", "classutils_1_1DaemonFailure" ],
+    [ "DaemonSignaled", "classutils_1_1DaemonSignaled.html", "classutils_1_1DaemonSignaled" ],
     [ "fixed_string", "structutils_1_1fixed__string.html", "structutils_1_1fixed__string" ],
     [ "MultibleAttributeInjector", "classutils_1_1MultibleAttributeInjector.html", "classutils_1_1MultibleAttributeInjector" ],
     [ "PreserveErrno", "classutils_1_1PreserveErrno.html", "classutils_1_1PreserveErrno" ],
     [ "Random", "classutils_1_1Random.html", "classutils_1_1Random" ],
-    [ "ResetToDefault", "classutils_1_1ResetToDefault.html", "classutils_1_1ResetToDefault" ],
     [ "SingleAttributeInjector", "classutils_1_1SingleAttributeInjector.html", "classutils_1_1SingleAttributeInjector" ],
     [ "Timeval", "classutils_1_1Timeval.html", "classutils_1_1Timeval" ],
     [ "Uuid", "classutils_1_1Uuid.html", "classutils_1_1Uuid" ],
@@ -55,5 +28,8 @@ var namespaceutils =
     [ "createCommandLineTemplate", "namespaceutils.html#a1a80f43b44109216f2c37fe9bdb3dc2d", null ],
     [ "createCommandLineTemplate", "namespaceutils.html#aac7436ed2ed454cbef6765b7e381b2f7", null ],
     [ "fixed_string", "namespaceutils.html#a087c65a976bbdbf8e3978d55cf44bcf3", null ],
+    [ "makeApp", "namespaceutils.html#acf24bc1d3f8119c40b2b0e715e99c428", null ],
+    [ "makeSectionFormatter", "namespaceutils.html#ae4dca857dbbb3a4fcaf8dd65df86d6b8", null ],
+    [ "operator*", "namespaceutils.html#abbf97f2fdf33120069baf3646d96229b", null ],
     [ "operator<<", "namespaceutils.html#a94ea12976058468fed45202315c247a2", null ]
 ];

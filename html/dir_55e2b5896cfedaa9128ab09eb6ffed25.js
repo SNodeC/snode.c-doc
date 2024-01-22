@@ -7,6 +7,6 @@ var dir_55e2b5896cfedaa9128ab09eb6ffed25 =
     [ "SocketAddress.h", "core_2socket_2SocketAddress_8h.html", "core_2socket_2SocketAddress_8h" ],
     [ "SocketContext.cpp", "core_2socket_2SocketContext_8cpp.html", null ],
     [ "SocketContext.h", "core_2socket_2SocketContext_8h.html", "core_2socket_2SocketContext_8h" ],
-    [ "State.cpp", "State_8cpp.html", null ],
+    [ "State.cpp", "socket_2State_8cpp.html", null ],
     [ "State.h", "socket_2State_8h.html", "socket_2State_8h" ]
 ];

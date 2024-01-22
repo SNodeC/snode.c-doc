@@ -1,18 +1,25 @@
 var classnet_1_1rc_1_1SocketAddress =
 [
     [ "SockAddr", "classnet_1_1rc_1_1SocketAddress.html#a327d4d8a2a81db30985b94e29a643e01", null ],
+    [ "SockLen", "classnet_1_1rc_1_1SocketAddress.html#a49e99c0b17c0289615fb7cd14f046535", null ],
+    [ "Super", "classnet_1_1rc_1_1SocketAddress.html#a61bd207dd0fed8db485b5539687aa695", null ],
     [ "SocketAddress", "classnet_1_1rc_1_1SocketAddress.html#ac337eacfde6e455694216694fd4f7eeb", null ],
     [ "SocketAddress", "classnet_1_1rc_1_1SocketAddress.html#a7fb9a2440f8e17170c9b6ad02b2eab97", null ],
-    [ "SocketAddress", "classnet_1_1rc_1_1SocketAddress.html#a4b5bf908d8cf00162d68918357184a66", null ],
     [ "SocketAddress", "classnet_1_1rc_1_1SocketAddress.html#ae1ebf22215c7b69e0fd9b60a35ae3c17", null ],
-    [ "getAddress", "classnet_1_1rc_1_1SocketAddress.html#a6857148623fdd5dcb648e8c506c0b7e0", null ],
+    [ "SocketAddress", "classnet_1_1rc_1_1SocketAddress.html#a4b5bf908d8cf00162d68918357184a66", null ],
+    [ "SocketAddress", "classnet_1_1rc_1_1SocketAddress.html#abaf19a0ba47c1eb62b7542e1a40b684d", null ],
+    [ "getAddressFamily", "classnet_1_1rc_1_1SocketAddress.html#afe9795445d318ad8dbc6a7685899e004", null ],
+    [ "getBtAddress", "classnet_1_1rc_1_1SocketAddress.html#ae18e016621315cccfdbd0ccee665a833", null ],
     [ "getChannel", "classnet_1_1rc_1_1SocketAddress.html#a0bb94f9fc85e83cbbfce4820edd8ec1f", null ],
     [ "getSockAddr", "classnet_1_1rc_1_1SocketAddress.html#adbd6c7d00301f8356ebc350889d2d7e5", null ],
-    [ "getSockAddrLen", "classnet_1_1rc_1_1SocketAddress.html#a009c2f04faeaef20fae628d3f0c07e1b", null ],
-    [ "setBtAddress", "classnet_1_1rc_1_1SocketAddress.html#a20e1723b01c0dd49f9b8df19486e8461", null ],
-    [ "setChannel", "classnet_1_1rc_1_1SocketAddress.html#a883dc3afe86fc63787455b721d07899e", null ],
-    [ "toString", "classnet_1_1rc_1_1SocketAddress.html#ac1dcea17b72045db2c3e5ca1623d9a72", null ],
+    [ "getSockAddrLen", "classnet_1_1rc_1_1SocketAddress.html#a13c04d23d0541be74f989e175aa8f231", null ],
+    [ "init", "classnet_1_1rc_1_1SocketAddress.html#acd634266908aae7d7c4fd193d0f1d99a", null ],
+    [ "setBtAddress", "classnet_1_1rc_1_1SocketAddress.html#ab14b70612513103bfe34e5c4a4f7ee61", null ],
+    [ "setChannel", "classnet_1_1rc_1_1SocketAddress.html#a46a8f5f9119f57e0d4a4d925eab9a03d", null ],
+    [ "toString", "classnet_1_1rc_1_1SocketAddress.html#a6148b1379db98f9b9d5f407c8e316f29", null ],
     [ "useNext", "classnet_1_1rc_1_1SocketAddress.html#af8e0b074ba6a997cc5dfe6ff9de96d76", null ],
+    [ "btAddress", "classnet_1_1rc_1_1SocketAddress.html#ae261e32349e392fc0f87856b20b6fcad", null ],
+    [ "channel", "classnet_1_1rc_1_1SocketAddress.html#a1c9cc68d461fff8e745c448b55cce01c", null ],
     [ "sockAddr", "classnet_1_1rc_1_1SocketAddress.html#a4012f9aeeeb9e80e919ecc5d88f0aa9a", null ],
-    [ "sockAddrLen", "classnet_1_1rc_1_1SocketAddress.html#a523d7ce30bb45dbcca8b0026755d00c0", null ]
+    [ "sockAddrLen", "classnet_1_1rc_1_1SocketAddress.html#a47fe58d1faab634ab3919159071e2217", null ]
 ];

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['local_0',['local',['../classnet_1_1config_1_1stream_1_1ConfigSocketClient.html#ad420c20e00e10cb9a104f2b006d79570',1,'net::config::stream::ConfigSocketClient::Local'],['../classnet_1_1config_1_1stream_1_1ConfigSocketServer.html#a2244a60618c2c5933fca6737b147e19b',1,'net::config::stream::ConfigSocketServer::Local']]]
+  ['echosocketclient_0',['EchoSocketClient',['../namespaceapps_1_1echo_1_1model_1_1legacy.html#aca883873690d6c02dd7bcd461fb47357',1,'apps::echo::model::legacy']]],
+  ['echosocketserver_1',['EchoSocketServer',['../namespaceapps_1_1echo_1_1model_1_1legacy.html#ab87cbaf60a2490c74798f370973e7f8a',1,'apps::echo::model::legacy']]]
 ];

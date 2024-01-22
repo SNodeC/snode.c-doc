@@ -17,7 +17,6 @@ var classcore_1_1timer_1_1SingleshotTimer =
     [ "span", "classcore_1_1timer_1_1SingleshotTimer.html#ad353e97a9089b2769e52f8825e4878b1", null ],
     [ "unobservedEvent", "classcore_1_1timer_1_1SingleshotTimer.html#aec675db0cfe1876ce352a1f479aa6e91", null ],
     [ "update", "classcore_1_1timer_1_1SingleshotTimer.html#a76f5d4b39a8976397f057c70b1b2ebdb", null ],
-    [ "updateTimeout", "classcore_1_1timer_1_1SingleshotTimer.html#a5bb70c923080e42ea4f371af076f462f", null ],
     [ "~SingleshotTimer", "classcore_1_1timer_1_1SingleshotTimer.html#a66b7a1706b49422144e843a3a1291031", null ],
     [ "Timer", "classcore_1_1timer_1_1SingleshotTimer.html#a50de43af5bed41f30c071d8cce0e81bc", null ],
     [ "absoluteTimeout", "classcore_1_1timer_1_1SingleshotTimer.html#ae61589579af003e54574e972b20e627f", null ],

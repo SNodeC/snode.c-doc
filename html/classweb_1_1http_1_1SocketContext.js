@@ -7,9 +7,9 @@ var classweb_1_1http_1_1SocketContext =
     [ "getSocketConnection", "classweb_1_1http_1_1SocketContext.html#a02f0b93ac0ea376dabd6921c7589a8cf", null ],
     [ "onConnected", "classweb_1_1http_1_1SocketContext.html#a716a54b882173251b584439499ca0446", null ],
     [ "onDisconnected", "classweb_1_1http_1_1SocketContext.html#ab9c932c5c1b706ffb84d97634514d20e", null ],
-    [ "onExit", "classweb_1_1http_1_1SocketContext.html#a81ad70c3fce7f2e54a58ce0f0c6c0c7f", null ],
     [ "onReadError", "classweb_1_1http_1_1SocketContext.html#a6c721eab494ef7c1566defe4361e6af6", null ],
     [ "onReceivedFromPeer", "classweb_1_1http_1_1SocketContext.html#aaa6da1bd9e96d3bfa556cbc33da88457", null ],
+    [ "onSignal", "classweb_1_1http_1_1SocketContext.html#ad5a47157710544f1d90f1ebdf15fe49e", null ],
     [ "onWriteError", "classweb_1_1http_1_1SocketContext.html#a9ac0bc41b2d3020850c106ea84e274fb", null ],
     [ "operator=", "classweb_1_1http_1_1SocketContext.html#a92849bee192bf58bd9bf416f7235cb17", null ],
     [ "readFromPeer", "classweb_1_1http_1_1SocketContext.html#a633b74ee5bf62e5041da75f4bab58bb1", null ],
@@ -18,9 +18,9 @@ var classweb_1_1http_1_1SocketContext =
     [ "sendToPeer", "classweb_1_1http_1_1SocketContext.html#a171ec3bb2190630276ff2e6cb5fd9ccf", null ],
     [ "sendToPeerCompleted", "classweb_1_1http_1_1SocketContext.html#a3d37b0a17a47ce6c9ebf96900bfe2a74", null ],
     [ "setTimeout", "classweb_1_1http_1_1SocketContext.html#af2dbfff5f7495cf483a2b28133d5cc49", null ],
-    [ "shutdown", "classweb_1_1http_1_1SocketContext.html#ad816e45ad4a38fd64794591446e4c57d", null ],
     [ "shutdownRead", "classweb_1_1http_1_1SocketContext.html#abe74f8904842a349e29846b10828fba8", null ],
     [ "shutdownWrite", "classweb_1_1http_1_1SocketContext.html#a853d83e3e3cd8dfcce992ab688c0f63e", null ],
-    [ "switchSocketContext", "classweb_1_1http_1_1SocketContext.html#ae8c575304d718a2b3c6b7eec638d2e06", null ],
+    [ "streamToPeer", "classweb_1_1http_1_1SocketContext.html#a9dba4f9478d4c9bb3eac26b4a2050552", null ],
+    [ "switchSocketContext", "classweb_1_1http_1_1SocketContext.html#a153fd05f8c588f882b322dcbd47667b4", null ],
     [ "socketConnection", "classweb_1_1http_1_1SocketContext.html#aa1eeb9f67270ffa53d9416c88d08c7fb", null ]
 ];

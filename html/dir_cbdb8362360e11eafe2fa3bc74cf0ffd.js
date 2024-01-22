@@ -8,19 +8,18 @@ var dir_cbdb8362360e11eafe2fa3bc74cf0ffd =
     [ "Config.h", "Config_8h.html", "Config_8h" ],
     [ "Daemon.cpp", "Daemon_8cpp.html", null ],
     [ "Daemon.h", "Daemon_8h.html", "Daemon_8h" ],
+    [ "Exceptions.cpp", "Exceptions_8cpp.html", null ],
+    [ "Exceptions.h", "Exceptions_8h.html", "Exceptions_8h" ],
     [ "Formatter.cpp", "Formatter_8cpp.html", null ],
     [ "Formatter.h", "Formatter_8h.html", "Formatter_8h" ],
     [ "PreserveErrno.cpp", "PreserveErrno_8cpp.html", null ],
     [ "PreserveErrno.h", "PreserveErrno_8h.html", "PreserveErrno_8h" ],
     [ "Random.cpp", "Random_8cpp.html", null ],
     [ "Random.h", "Random_8h.html", "Random_8h" ],
-    [ "ResetToDefault.cpp", "ResetToDefault_8cpp.html", null ],
-    [ "ResetToDefault.h", "ResetToDefault_8h.html", "ResetToDefault_8h" ],
     [ "sha1.cpp", "sha1_8cpp.html", "sha1_8cpp" ],
     [ "sha1.h", "sha1_8h.html", "sha1_8h" ],
     [ "Timeval.cpp", "Timeval_8cpp.html", "Timeval_8cpp" ],
     [ "Timeval.h", "Timeval_8h.html", "Timeval_8h" ],
     [ "Uuid.cpp", "Uuid_8cpp.html", null ],
-    [ "Uuid.h", "Uuid_8h.html", "Uuid_8h" ],
-    [ "Validators.hpp", "Validators_8hpp.html", "Validators_8hpp" ]
+    [ "Uuid.h", "Uuid_8h.html", "Uuid_8h" ]
 ];

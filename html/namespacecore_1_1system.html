@@ -163,6 +163,8 @@ Functions</h2></td></tr>
 <tr class="separator:a2aa41abc7d6ba9da2e5035b74608919a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aed100e752a00ffbde81be386936053ca" id="r_aed100e752a00ffbde81be386936053ca"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecore_1_1system.html#aed100e752a00ffbde81be386936053ca">pipe2</a> (int pipefd[2], int flags)</td></tr>
 <tr class="separator:aed100e752a00ffbde81be386936053ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a953f1322a8f2399624aa90be84556474" id="r_a953f1322a8f2399624aa90be84556474"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecore_1_1system.html#a953f1322a8f2399624aa90be84556474">flock</a> (int lockFd, int operation)</td></tr>
+<tr class="separator:a953f1322a8f2399624aa90be84556474"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a85bd9f2c14b8c78bdabd4f149cd82264" id="r_a85bd9f2c14b8c78bdabd4f149cd82264"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecore_1_1system.html#a85bd9f2c14b8c78bdabd4f149cd82264">pselect</a> (int nfds, fd_set *readfds, fd_set *writefds, fd_set *exceptfds, const timespec *timeout, const sigset_t *sigMask)</td></tr>
 <tr class="separator:a85bd9f2c14b8c78bdabd4f149cd82264"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -199,17 +201,17 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="socket_8cpp_source.html#l00044">44</a> of file <a class="el" href="socket_8cpp_source.html">socket.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   44</span>                                                               {</div>
-<div class="line"><span class="lineno">   45</span>        errno = 0;</div>
-<div class="line"><span class="lineno">   46</span>        return ::accept(sockfd, addr, addrlen);</div>
-<div class="line"><span class="lineno">   47</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="socket_8cpp_source.html#l00045">45</a> of file <a class="el" href="socket_8cpp_source.html">socket.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   45</span>                                                               {</div>
+<div class="line"><span class="lineno">   46</span>        errno = 0;</div>
+<div class="line"><span class="lineno">   47</span>        return ::accept(sockfd, addr, addrlen);</div>
+<div class="line"><span class="lineno">   48</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="PhysicalSocketServer_8hpp_source.html#l00035">net::phy::stream::PhysicalSocketServer&lt; SocketAddressT &gt;::accept()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="PhysicalSocketServer_8hpp_source.html#l00036">net::phy::stream::PhysicalSocketServer&lt; SocketAddressT &gt;::accept()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="namespacecore_1_1system_a8b506c06e449e6bdf5aba1c6fdcad779_icgraph.svg" width="379" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacecore_1_1system_a8b506c06e449e6bdf5aba1c6fdcad779_icgraph.svg" width="407" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -252,17 +254,17 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="socket_8cpp_source.html#l00049">49</a> of file <a class="el" href="socket_8cpp_source.html">socket.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   49</span>                                                                           {</div>
-<div class="line"><span class="lineno">   50</span>        errno = 0;</div>
-<div class="line"><span class="lineno">   51</span>        return ::accept4(sockfd, addr, addrlen, flags);</div>
-<div class="line"><span class="lineno">   52</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="socket_8cpp_source.html#l00050">50</a> of file <a class="el" href="socket_8cpp_source.html">socket.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   50</span>                                                                           {</div>
+<div class="line"><span class="lineno">   51</span>        errno = 0;</div>
+<div class="line"><span class="lineno">   52</span>        return ::accept4(sockfd, addr, addrlen, flags);</div>
+<div class="line"><span class="lineno">   53</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="PhysicalSocketServer_8hpp_source.html#l00040">net::phy::stream::PhysicalSocketServer&lt; SocketAddressT &gt;::accept4()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="PhysicalSocketServer_8hpp_source.html#l00041">net::phy::stream::PhysicalSocketServer&lt; SocketAddressT &gt;::accept4()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="namespacecore_1_1system_ae6281ec9ee570c4a9af06541892cd952_icgraph.svg" width="386" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacecore_1_1system_ae6281ec9ee570c4a9af06541892cd952_icgraph.svg" width="415" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -299,17 +301,17 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="socket_8cpp_source.html#l00034">34</a> of file <a class="el" href="socket_8cpp_source.html">socket.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   34</span>                                                                  {</div>
-<div class="line"><span class="lineno">   35</span>        errno = 0;</div>
-<div class="line"><span class="lineno">   36</span>        return ::bind(sockfd, addr, addrlen);</div>
-<div class="line"><span class="lineno">   37</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="socket_8cpp_source.html#l00035">35</a> of file <a class="el" href="socket_8cpp_source.html">socket.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   35</span>                                                                  {</div>
+<div class="line"><span class="lineno">   36</span>        errno = 0;</div>
+<div class="line"><span class="lineno">   37</span>        return ::bind(sockfd, addr, addrlen);</div>
+<div class="line"><span class="lineno">   38</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="phy_2PhysicalSocket_8hpp_source.html#l00083">net::phy::PhysicalSocket&lt; SocketAddressT &gt;::bind()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="phy_2PhysicalSocket_8hpp_source.html#l00078">net::phy::PhysicalSocket&lt; SocketAddressT &gt;::bind()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="namespacecore_1_1system_a726f40f6a8ebf70f5a83bd41d3a028de_icgraph.svg" width="358" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacecore_1_1system_a726f40f6a8ebf70f5a83bd41d3a028de_icgraph.svg" width="380" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -330,17 +332,17 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="unistd_8cpp_source.html#l00044">44</a> of file <a class="el" href="unistd_8cpp_source.html">unistd.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   44</span>                      {</div>
-<div class="line"><span class="lineno">   45</span>        errno = 0;</div>
-<div class="line"><span class="lineno">   46</span>        return ::close(fd);</div>
-<div class="line"><span class="lineno">   47</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="unistd_8cpp_source.html#l00045">45</a> of file <a class="el" href="unistd_8cpp_source.html">unistd.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   45</span>                      {</div>
+<div class="line"><span class="lineno">   46</span>        errno = 0;</div>
+<div class="line"><span class="lineno">   47</span>        return ::close(fd);</div>
+<div class="line"><span class="lineno">   48</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="Descriptor_8cpp_source.html#l00039">core::Descriptor::~Descriptor()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="un_2phy_2PhysicalSocket_8hpp_source.html#l00083">net::un::phy::PhysicalSocket&lt; PhysicalPeerSocketT &gt;::bind()</a>, <a class="el" href="Descriptor_8cpp_source.html#l00052">core::Descriptor::~Descriptor()</a>, and <a class="el" href="un_2phy_2PhysicalSocket_8hpp_source.html#l00057">net::un::phy::PhysicalSocket&lt; PhysicalPeerSocketT &gt;::~PhysicalSocket()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="namespacecore_1_1system_a2aa41abc7d6ba9da2e5035b74608919a_icgraph.svg" width="319" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacecore_1_1system_a2aa41abc7d6ba9da2e5035b74608919a_icgraph.svg" width="410" height="179"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -377,17 +379,17 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="socket_8cpp_source.html#l00053">53</a> of file <a class="el" href="socket_8cpp_source.html">socket.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   53</span>                                                                     {</div>
-<div class="line"><span class="lineno">   54</span>        errno = 0;</div>
-<div class="line"><span class="lineno">   55</span>        return ::connect(sockfd, addr, addrlen);</div>
-<div class="line"><span class="lineno">   56</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="socket_8cpp_source.html#l00054">54</a> of file <a class="el" href="socket_8cpp_source.html">socket.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   54</span>                                                                     {</div>
+<div class="line"><span class="lineno">   55</span>        errno = 0;</div>
+<div class="line"><span class="lineno">   56</span>        return ::connect(sockfd, addr, addrlen);</div>
+<div class="line"><span class="lineno">   57</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="PhysicalSocketClient_8hpp_source.html#l00032">net::phy::stream::PhysicalSocketClient&lt; SocketAddressT &gt;::connect()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="PhysicalSocketClient_8hpp_source.html#l00033">net::phy::stream::PhysicalSocketClient&lt; SocketAddressT &gt;::connect()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="namespacecore_1_1system_a1f27caa888ac8809434c3338df8eeae1_icgraph.svg" width="386" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacecore_1_1system_a1f27caa888ac8809434c3338df8eeae1_icgraph.svg" width="415" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -408,17 +410,17 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="dlfcn_8cpp_source.html#l00034">34</a> of file <a class="el" href="dlfcn_8cpp_source.html">dlfcn.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   34</span>                              {</div>
-<div class="line"><span class="lineno">   35</span>        errno = 0;</div>
-<div class="line"><span class="lineno">   36</span>        return ::dlclose(handle);</div>
-<div class="line"><span class="lineno">   37</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="dlfcn_8cpp_source.html#l00035">35</a> of file <a class="el" href="dlfcn_8cpp_source.html">dlfcn.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   35</span>                              {</div>
+<div class="line"><span class="lineno">   36</span>        errno = 0;</div>
+<div class="line"><span class="lineno">   37</span>        return ::dlclose(handle);</div>
+<div class="line"><span class="lineno">   38</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="DynamicLoader_8cpp_source.html#l00116">core::DynamicLoader::execDlClose()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="DynamicLoader_8cpp_source.html#l00100">core::DynamicLoader::realExecDlClose()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="namespacecore_1_1system_a4317d54914cd18248143183ea71252d3_icgraph.svg" width="2295" height="327"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacecore_1_1system_a4317d54914cd18248143183ea71252d3_icgraph.svg" width="2563" height="436"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -438,17 +440,17 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="dlfcn_8cpp_source.html#l00044">44</a> of file <a class="el" href="dlfcn_8cpp_source.html">dlfcn.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   44</span>                    {</div>
-<div class="line"><span class="lineno">   45</span>        errno = 0;</div>
-<div class="line"><span class="lineno">   46</span>        return ::dlerror();</div>
-<div class="line"><span class="lineno">   47</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="dlfcn_8cpp_source.html#l00045">45</a> of file <a class="el" href="dlfcn_8cpp_source.html">dlfcn.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   45</span>                    {</div>
+<div class="line"><span class="lineno">   46</span>        errno = 0;</div>
+<div class="line"><span class="lineno">   47</span>        return ::dlerror();</div>
+<div class="line"><span class="lineno">   48</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="DynamicLoader_8cpp_source.html#l00112">core::DynamicLoader::dlError()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="DynamicLoader_8cpp_source.html#l00096">core::DynamicLoader::dlError()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="namespacecore_1_1system_ad04dc647899e7a1c52498190f5e16f1c_icgraph.svg" width="2096" height="342"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacecore_1_1system_ad04dc647899e7a1c52498190f5e16f1c_icgraph.svg" width="2560" height="419"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -479,11 +481,11 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="dlfcn_8cpp_source.html#l00029">29</a> of file <a class="el" href="dlfcn_8cpp_source.html">dlfcn.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   29</span>                                                  {</div>
-<div class="line"><span class="lineno">   30</span>        errno = 0;</div>
-<div class="line"><span class="lineno">   31</span>        return ::dlopen(filename, flags);</div>
-<div class="line"><span class="lineno">   32</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="dlfcn_8cpp_source.html#l00030">30</a> of file <a class="el" href="dlfcn_8cpp_source.html">dlfcn.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   30</span>                                                  {</div>
+<div class="line"><span class="lineno">   31</span>        errno = 0;</div>
+<div class="line"><span class="lineno">   32</span>        return ::dlopen(filename, flags);</div>
+<div class="line"><span class="lineno">   33</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -513,17 +515,17 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="dlfcn_8cpp_source.html#l00039">39</a> of file <a class="el" href="dlfcn_8cpp_source.html">dlfcn.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   39</span>                                                  {</div>
-<div class="line"><span class="lineno">   40</span>        errno = 0;</div>
-<div class="line"><span class="lineno">   41</span>        return ::dlsym(handle, symbol);</div>
-<div class="line"><span class="lineno">   42</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="dlfcn_8cpp_source.html#l00040">40</a> of file <a class="el" href="dlfcn_8cpp_source.html">dlfcn.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   40</span>                                                  {</div>
+<div class="line"><span class="lineno">   41</span>        errno = 0;</div>
+<div class="line"><span class="lineno">   42</span>        return ::dlsym(handle, symbol);</div>
+<div class="line"><span class="lineno">   43</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="DynamicLoader_8cpp_source.html#l00108">core::DynamicLoader::dlSym()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="DynamicLoader_8cpp_source.html#l00092">core::DynamicLoader::dlSym()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="namespacecore_1_1system_a83d3862b9812ad39b93753bbea40238b_icgraph.svg" width="864" height="115"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacecore_1_1system_a83d3862b9812ad39b93753bbea40238b_icgraph.svg" width="958" height="176"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -544,17 +546,17 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="epoll_8cpp_source.html#l00029">29</a> of file <a class="el" href="epoll_8cpp_source.html">epoll.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   29</span>                                 {</div>
-<div class="line"><span class="lineno">   30</span>        errno = 0;</div>
-<div class="line"><span class="lineno">   31</span>        return ::epoll_create1(flags);</div>
-<div class="line"><span class="lineno">   32</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="epoll_8cpp_source.html#l00030">30</a> of file <a class="el" href="epoll_8cpp_source.html">epoll.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   30</span>                                 {</div>
+<div class="line"><span class="lineno">   31</span>        errno = 0;</div>
+<div class="line"><span class="lineno">   32</span>        return ::epoll_create1(flags);</div>
+<div class="line"><span class="lineno">   33</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="multiplexer_2epoll_2DescriptorEventPublisher_8cpp_source.html#l00033">core::epoll::DescriptorEventPublisher::EPollEvents::EPollEvents()</a>, and <a class="el" href="multiplexer_2epoll_2EventMultiplexer_8cpp_source.html#l00038">core::epoll::EventMultiplexer::EventMultiplexer()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="multiplexer_2epoll_2DescriptorEventPublisher_8cpp_source.html#l00034">core::epoll::DescriptorEventPublisher::EPollEvents::EPollEvents()</a>, and <a class="el" href="multiplexer_2epoll_2EventMultiplexer_8cpp_source.html#l00042">core::epoll::EventMultiplexer::EventMultiplexer()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="namespacecore_1_1system_a09b439f42917e350a4c7124993e05723_icgraph.svg" width="891" height="96"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacecore_1_1system_a09b439f42917e350a4c7124993e05723_icgraph.svg" width="968" height="96"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -597,17 +599,17 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="epoll_8cpp_source.html#l00044">44</a> of file <a class="el" href="epoll_8cpp_source.html">epoll.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   44</span>                                                                {</div>
-<div class="line"><span class="lineno">   45</span>        errno = 0;</div>
-<div class="line"><span class="lineno">   46</span>        return ::epoll_ctl(epfd, op, fd, event);</div>
-<div class="line"><span class="lineno">   47</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="epoll_8cpp_source.html#l00045">45</a> of file <a class="el" href="epoll_8cpp_source.html">epoll.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   45</span>                                                                {</div>
+<div class="line"><span class="lineno">   46</span>        errno = 0;</div>
+<div class="line"><span class="lineno">   47</span>        return ::epoll_ctl(epfd, op, fd, event);</div>
+<div class="line"><span class="lineno">   48</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="multiplexer_2epoll_2EventMultiplexer_8cpp_source.html#l00038">core::epoll::EventMultiplexer::EventMultiplexer()</a>, <a class="el" href="multiplexer_2epoll_2DescriptorEventPublisher_8cpp_source.html#l00040">core::epoll::DescriptorEventPublisher::EPollEvents::muxAdd()</a>, <a class="el" href="multiplexer_2epoll_2DescriptorEventPublisher_8cpp_source.html#l00059">core::epoll::DescriptorEventPublisher::EPollEvents::muxDel()</a>, and <a class="el" href="multiplexer_2epoll_2DescriptorEventPublisher_8cpp_source.html#l00072">core::epoll::DescriptorEventPublisher::EPollEvents::muxMod()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="multiplexer_2epoll_2EventMultiplexer_8cpp_source.html#l00042">core::epoll::EventMultiplexer::EventMultiplexer()</a>, <a class="el" href="multiplexer_2epoll_2DescriptorEventPublisher_8cpp_source.html#l00041">core::epoll::DescriptorEventPublisher::EPollEvents::muxAdd()</a>, <a class="el" href="multiplexer_2epoll_2DescriptorEventPublisher_8cpp_source.html#l00060">core::epoll::DescriptorEventPublisher::EPollEvents::muxDel()</a>, and <a class="el" href="multiplexer_2epoll_2DescriptorEventPublisher_8cpp_source.html#l00073">core::epoll::DescriptorEventPublisher::EPollEvents::muxMod()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="namespacecore_1_1system_a6452ec3ca95af0cb07911423312187a9_icgraph.svg" width="920" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacecore_1_1system_a6452ec3ca95af0cb07911423312187a9_icgraph.svg" width="986" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -656,17 +658,17 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="epoll_8cpp_source.html#l00039">39</a> of file <a class="el" href="epoll_8cpp_source.html">epoll.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   39</span>                                                                                                               {</div>
-<div class="line"><span class="lineno">   40</span>        errno = 0;</div>
-<div class="line"><span class="lineno">   41</span>        return ::epoll_pwait(epfd, events, maxevents, timeout, sigMask);</div>
-<div class="line"><span class="lineno">   42</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="epoll_8cpp_source.html#l00040">40</a> of file <a class="el" href="epoll_8cpp_source.html">epoll.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   40</span>                                                                                                               {</div>
+<div class="line"><span class="lineno">   41</span>        errno = 0;</div>
+<div class="line"><span class="lineno">   42</span>        return ::epoll_pwait(epfd, events, maxevents, timeout, sigMask);</div>
+<div class="line"><span class="lineno">   43</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="multiplexer_2epoll_2EventMultiplexer_8cpp_source.html#l00060">core::epoll::EventMultiplexer::monitorDescriptors()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="multiplexer_2epoll_2EventMultiplexer_8cpp_source.html#l00064">core::epoll::EventMultiplexer::monitorDescriptors()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="namespacecore_1_1system_a0596afbc44422b1cbf85c796d53f374b_icgraph.svg" width="379" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacecore_1_1system_a0596afbc44422b1cbf85c796d53f374b_icgraph.svg" width="415" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -709,17 +711,58 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="epoll_8cpp_source.html#l00034">34</a> of file <a class="el" href="epoll_8cpp_source.html">epoll.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   34</span>                                                                              {</div>
-<div class="line"><span class="lineno">   35</span>        errno = 0;</div>
-<div class="line"><span class="lineno">   36</span>        return ::epoll_wait(epfd, events, maxevents, timeout);</div>
-<div class="line"><span class="lineno">   37</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="epoll_8cpp_source.html#l00035">35</a> of file <a class="el" href="epoll_8cpp_source.html">epoll.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   35</span>                                                                              {</div>
+<div class="line"><span class="lineno">   36</span>        errno = 0;</div>
+<div class="line"><span class="lineno">   37</span>        return ::epoll_wait(epfd, events, maxevents, timeout);</div>
+<div class="line"><span class="lineno">   38</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="multiplexer_2epoll_2DescriptorEventPublisher_8cpp_source.html#l00125">core::epoll::DescriptorEventPublisher::spanActiveEvents()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="multiplexer_2epoll_2DescriptorEventPublisher_8cpp_source.html#l00126">core::epoll::DescriptorEventPublisher::spanActiveEvents()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="namespacecore_1_1system_aca4c1cc239b442807ff249c33aa23388_icgraph.svg" width="414" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacecore_1_1system_aca4c1cc239b442807ff249c33aa23388_icgraph.svg" width="447" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a953f1322a8f2399624aa90be84556474" name="a953f1322a8f2399624aa90be84556474"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a953f1322a8f2399624aa90be84556474">&#9670;&#160;</a></span>flock()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int core::system::flock </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>lockFd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>operation</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="unistd_8cpp_source.html#l00055">55</a> of file <a class="el" href="unistd_8cpp_source.html">unistd.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   55</span>                                         {</div>
+<div class="line"><span class="lineno">   56</span>        errno = 0;</div>
+<div class="line"><span class="lineno">   57</span>        return ::flock(lockFd, operation);</div>
+<div class="line"><span class="lineno">   58</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="un_2phy_2PhysicalSocket_8hpp_source.html#l00083">net::un::phy::PhysicalSocket&lt; PhysicalPeerSocketT &gt;::bind()</a>, and <a class="el" href="un_2phy_2PhysicalSocket_8hpp_source.html#l00057">net::un::phy::PhysicalSocket&lt; PhysicalPeerSocketT &gt;::~PhysicalSocket()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacecore_1_1system_a953f1322a8f2399624aa90be84556474_icgraph.svg" width="408" height="115"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -740,11 +783,11 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="netdb_8cpp_source.html#l00034">34</a> of file <a class="el" href="netdb_8cpp_source.html">netdb.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   34</span>                                            {</div>
-<div class="line"><span class="lineno">   35</span>        errno = 0;</div>
-<div class="line"><span class="lineno">   36</span>        return ::freeaddrinfo(res);</div>
-<div class="line"><span class="lineno">   37</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="netdb_8cpp_source.html#l00035">35</a> of file <a class="el" href="netdb_8cpp_source.html">netdb.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   35</span>                                            {</div>
+<div class="line"><span class="lineno">   36</span>        errno = 0;</div>
+<div class="line"><span class="lineno">   37</span>        ::freeaddrinfo(res);</div>
+<div class="line"><span class="lineno">   38</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -786,17 +829,17 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="netdb_8cpp_source.html#l00029">29</a> of file <a class="el" href="netdb_8cpp_source.html">netdb.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   29</span>                                                                                                                {</div>
-<div class="line"><span class="lineno">   30</span>        errno = 0;</div>
-<div class="line"><span class="lineno">   31</span>        return ::getaddrinfo(node, service, hints, res);</div>
-<div class="line"><span class="lineno">   32</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="netdb_8cpp_source.html#l00030">30</a> of file <a class="el" href="netdb_8cpp_source.html">netdb.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   30</span>                                                                                                                {</div>
+<div class="line"><span class="lineno">   31</span>        errno = 0;</div>
+<div class="line"><span class="lineno">   32</span>        return ::getaddrinfo(node, service, hints, res);</div>
+<div class="line"><span class="lineno">   33</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="in_2SocketAddrInfo_8cpp_source.html#l00038">net::in::SocketAddrInfo::init()</a>, and <a class="el" href="in6_2SocketAddrInfo_8cpp_source.html#l00038">net::in6::SocketAddrInfo::init()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="in_2SocketAddrInfo_8cpp_source.html#l00039">net::in::SocketAddrInfo::resolve()</a>, and <a class="el" href="in6_2SocketAddrInfo_8cpp_source.html#l00039">net::in6::SocketAddrInfo::resolve()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="namespacecore_1_1system_a86e636682d33db526f7502ab0e6ff57c_icgraph.svg" width="392" height="115"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacecore_1_1system_a86e636682d33db526f7502ab0e6ff57c_icgraph.svg" width="426" height="115"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -857,11 +900,11 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="netdb_8cpp_source.html#l00039">39</a> of file <a class="el" href="netdb_8cpp_source.html">netdb.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   39</span>                                                                                                                                      {</div>
-<div class="line"><span class="lineno">   40</span>        errno = 0;</div>
-<div class="line"><span class="lineno">   41</span>        return ::getnameinfo(addr, addrlen, host, hostlen, serv, servlen, flags);</div>
-<div class="line"><span class="lineno">   42</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="netdb_8cpp_source.html#l00040">40</a> of file <a class="el" href="netdb_8cpp_source.html">netdb.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   40</span>                                                                                                                                      {</div>
+<div class="line"><span class="lineno">   41</span>        errno = 0;</div>
+<div class="line"><span class="lineno">   42</span>        return ::getnameinfo(addr, addrlen, host, hostlen, serv, servlen, flags);</div>
+<div class="line"><span class="lineno">   43</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -897,17 +940,17 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="socket_8cpp_source.html#l00063">63</a> of file <a class="el" href="socket_8cpp_source.html">socket.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   63</span>                                                                    {</div>
-<div class="line"><span class="lineno">   64</span>        errno = 0;</div>
-<div class="line"><span class="lineno">   65</span>        return ::getpeername(sockfd, addr, addrlen);</div>
-<div class="line"><span class="lineno">   66</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="socket_8cpp_source.html#l00064">64</a> of file <a class="el" href="socket_8cpp_source.html">socket.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   64</span>                                                                    {</div>
+<div class="line"><span class="lineno">   65</span>        errno = 0;</div>
+<div class="line"><span class="lineno">   66</span>        return ::getpeername(sockfd, addr, addrlen);</div>
+<div class="line"><span class="lineno">   67</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="phy_2PhysicalSocket_8hpp_source.html#l00120">net::phy::PhysicalSocket&lt; SocketAddressT &gt;::getPeername()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="phy_2PhysicalSocket_8hpp_source.html#l00117">net::phy::PhysicalSocket&lt; SocketAddressT &gt;::getPeerName()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="namespacecore_1_1system_a6c12f08bc8a1d08ee4585204eb0745b1_icgraph.svg" width="408" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacecore_1_1system_a6c12f08bc8a1d08ee4585204eb0745b1_icgraph.svg" width="439" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -944,17 +987,17 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="socket_8cpp_source.html#l00058">58</a> of file <a class="el" href="socket_8cpp_source.html">socket.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   58</span>                                                                    {</div>
-<div class="line"><span class="lineno">   59</span>        errno = 0;</div>
-<div class="line"><span class="lineno">   60</span>        return ::getsockname(sockfd, addr, addrlen);</div>
-<div class="line"><span class="lineno">   61</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="socket_8cpp_source.html#l00059">59</a> of file <a class="el" href="socket_8cpp_source.html">socket.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   59</span>                                                                    {</div>
+<div class="line"><span class="lineno">   60</span>        errno = 0;</div>
+<div class="line"><span class="lineno">   61</span>        return ::getsockname(sockfd, addr, addrlen);</div>
+<div class="line"><span class="lineno">   62</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="phy_2PhysicalSocket_8hpp_source.html#l00115">net::phy::PhysicalSocket&lt; SocketAddressT &gt;::getSockname()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="phy_2PhysicalSocket_8hpp_source.html#l00111">net::phy::PhysicalSocket&lt; SocketAddressT &gt;::getSockName()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="namespacecore_1_1system_a09b7b5fd5a49db5b0abee54dfda17ba1_icgraph.svg" width="411" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacecore_1_1system_a09b7b5fd5a49db5b0abee54dfda17ba1_icgraph.svg" width="440" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -1003,17 +1046,17 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="socket_8cpp_source.html#l00078">78</a> of file <a class="el" href="socket_8cpp_source.html">socket.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   78</span>                                                                                        {</div>
-<div class="line"><span class="lineno">   79</span>        errno = 0;</div>
-<div class="line"><span class="lineno">   80</span>        return ::getsockopt(sockfd, level, optname, optval, optlen);</div>
-<div class="line"><span class="lineno">   81</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="socket_8cpp_source.html#l00079">79</a> of file <a class="el" href="socket_8cpp_source.html">socket.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   79</span>                                                                                        {</div>
+<div class="line"><span class="lineno">   80</span>        errno = 0;</div>
+<div class="line"><span class="lineno">   81</span>        return ::getsockopt(sockfd, level, optname, optval, optlen);</div>
+<div class="line"><span class="lineno">   82</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="phy_2PhysicalSocket_8hpp_source.html#l00110">net::phy::PhysicalSocket&lt; SocketAddressT &gt;::getSockopt()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="phy_2PhysicalSocket_8hpp_source.html#l00106">net::phy::PhysicalSocket&lt; SocketAddressT &gt;::getSockopt()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="namespacecore_1_1system_a5658d0ea06a95cb8f07412b13f393ecb_icgraph.svg" width="614" height="115"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacecore_1_1system_a5658d0ea06a95cb8f07412b13f393ecb_icgraph.svg" width="650" height="115"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -1044,17 +1087,17 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="socket_8cpp_source.html#l00039">39</a> of file <a class="el" href="socket_8cpp_source.html">socket.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   39</span>                                        {</div>
-<div class="line"><span class="lineno">   40</span>        errno = 0;</div>
-<div class="line"><span class="lineno">   41</span>        return ::listen(sockfd, backlog);</div>
-<div class="line"><span class="lineno">   42</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="socket_8cpp_source.html#l00040">40</a> of file <a class="el" href="socket_8cpp_source.html">socket.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   40</span>                                        {</div>
+<div class="line"><span class="lineno">   41</span>        errno = 0;</div>
+<div class="line"><span class="lineno">   42</span>        return ::listen(sockfd, backlog);</div>
+<div class="line"><span class="lineno">   43</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="PhysicalSocketServer_8hpp_source.html#l00030">net::phy::stream::PhysicalSocketServer&lt; SocketAddressT &gt;::listen()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="PhysicalSocketServer_8hpp_source.html#l00031">net::phy::stream::PhysicalSocketServer&lt; SocketAddressT &gt;::listen()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="namespacecore_1_1system_a8d02857d418a45aa380ebafec930b18f_icgraph.svg" width="371" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacecore_1_1system_a8d02857d418a45aa380ebafec930b18f_icgraph.svg" width="400" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -1085,17 +1128,17 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="unistd_8cpp_source.html#l00029">29</a> of file <a class="el" href="unistd_8cpp_source.html">unistd.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   29</span>                                              {</div>
-<div class="line"><span class="lineno">   30</span>        errno = 0;</div>
-<div class="line"><span class="lineno">   31</span>        return ::open(pathname, flags);</div>
-<div class="line"><span class="lineno">   32</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="unistd_8cpp_source.html#l00030">30</a> of file <a class="el" href="unistd_8cpp_source.html">unistd.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   30</span>                                              {</div>
+<div class="line"><span class="lineno">   31</span>        errno = 0;</div>
+<div class="line"><span class="lineno">   32</span>        return ::open(pathname, flags);</div>
+<div class="line"><span class="lineno">   33</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="FileReader_8cpp_source.html#l00042">core::file::FileReader::connect()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="FileReader_8cpp_source.html#l00052">core::file::FileReader::open()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="namespacecore_1_1system_af932d59deb1d46aca925c487cebf0ab5_icgraph.svg" width="1095" height="131"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacecore_1_1system_af932d59deb1d46aca925c487cebf0ab5_icgraph.svg" width="962" height="180"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -1126,17 +1169,17 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="unistd_8cpp_source.html#l00049">49</a> of file <a class="el" href="unistd_8cpp_source.html">unistd.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   49</span>                                        {</div>
-<div class="line"><span class="lineno">   50</span>        errno = 0;</div>
-<div class="line"><span class="lineno">   51</span>        return ::pipe2(pipefd, flags);</div>
-<div class="line"><span class="lineno">   52</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="unistd_8cpp_source.html#l00050">50</a> of file <a class="el" href="unistd_8cpp_source.html">unistd.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   50</span>                                        {</div>
+<div class="line"><span class="lineno">   51</span>        errno = 0;</div>
+<div class="line"><span class="lineno">   52</span>        return ::pipe2(pipefd, flags);</div>
+<div class="line"><span class="lineno">   53</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="Pipe_8cpp_source.html#l00034">core::pipe::Pipe::Pipe()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Pipe_8cpp_source.html#l00035">core::pipe::Pipe::Pipe()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="namespacecore_1_1system_aed100e752a00ffbde81be386936053ca_icgraph.svg" width="343" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacecore_1_1system_aed100e752a00ffbde81be386936053ca_icgraph.svg" width="471" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -1173,11 +1216,11 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="poll_8cpp_source.html#l00029">29</a> of file <a class="el" href="poll_8cpp_source.html">poll.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   29</span>                                                    {</div>
-<div class="line"><span class="lineno">   30</span>        errno = 0;</div>
-<div class="line"><span class="lineno">   31</span>        return ::poll(fds, nfds, timeout);</div>
-<div class="line"><span class="lineno">   32</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="poll_8cpp_source.html#l00030">30</a> of file <a class="el" href="poll_8cpp_source.html">poll.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   30</span>                                                    {</div>
+<div class="line"><span class="lineno">   31</span>        errno = 0;</div>
+<div class="line"><span class="lineno">   32</span>        return ::poll(fds, nfds, timeout);</div>
+<div class="line"><span class="lineno">   33</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1219,11 +1262,11 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="poll_8cpp_source.html#l00034">34</a> of file <a class="el" href="poll_8cpp_source.html">poll.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   34</span>                                                                                                 {</div>
-<div class="line"><span class="lineno">   35</span>        errno = 0;</div>
-<div class="line"><span class="lineno">   36</span>        return ::ppoll(fds, nfds, timeout, sigMask);</div>
-<div class="line"><span class="lineno">   37</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="poll_8cpp_source.html#l00035">35</a> of file <a class="el" href="poll_8cpp_source.html">poll.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   35</span>                                                                                                 {</div>
+<div class="line"><span class="lineno">   36</span>        errno = 0;</div>
+<div class="line"><span class="lineno">   37</span>        return ::ppoll(fds, nfds, timeout, sigMask);</div>
+<div class="line"><span class="lineno">   38</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1277,17 +1320,17 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="select_8cpp_source.html#l00034">34</a> of file <a class="el" href="select_8cpp_source.html">select.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   34</span>                                                                                                                                         {</div>
-<div class="line"><span class="lineno">   35</span>        errno = 0;</div>
-<div class="line"><span class="lineno">   36</span>        return ::pselect(nfds, readfds, writefds, exceptfds, timeout, sigMask);</div>
-<div class="line"><span class="lineno">   37</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="select_8cpp_source.html#l00035">35</a> of file <a class="el" href="select_8cpp_source.html">select.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   35</span>                                                                                                                                         {</div>
+<div class="line"><span class="lineno">   36</span>        errno = 0;</div>
+<div class="line"><span class="lineno">   37</span>        return ::pselect(nfds, readfds, writefds, exceptfds, timeout, sigMask);</div>
+<div class="line"><span class="lineno">   38</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="multiplexer_2select_2EventMultiplexer_8cpp_source.html#l00044">core::select::EventMultiplexer::monitorDescriptors()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="multiplexer_2select_2EventMultiplexer_8cpp_source.html#l00048">core::select::EventMultiplexer::monitorDescriptors()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="namespacecore_1_1system_a818cf81c3431eedd1beaacdcd1107712_icgraph.svg" width="402" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacecore_1_1system_a818cf81c3431eedd1beaacdcd1107712_icgraph.svg" width="436" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -1376,17 +1419,17 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="unistd_8cpp_source.html#l00034">34</a> of file <a class="el" href="unistd_8cpp_source.html">unistd.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   34</span>                                                     {</div>
-<div class="line"><span class="lineno">   35</span>        errno = 0;</div>
-<div class="line"><span class="lineno">   36</span>        return ::read(fd, buf, count);</div>
-<div class="line"><span class="lineno">   37</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="unistd_8cpp_source.html#l00035">35</a> of file <a class="el" href="unistd_8cpp_source.html">unistd.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   35</span>                                                     {</div>
+<div class="line"><span class="lineno">   36</span>        errno = 0;</div>
+<div class="line"><span class="lineno">   37</span>        return ::read(fd, buf, count);</div>
+<div class="line"><span class="lineno">   38</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="FileReader_8cpp_source.html#l00058">core::file::FileReader::onEvent()</a>, and <a class="el" href="PipeSink_8cpp_source.html#l00045">core::pipe::PipeSink::readEvent()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="FileReader_8cpp_source.html#l00068">core::file::FileReader::read()</a>, and <a class="el" href="PipeSink_8cpp_source.html#l00048">core::pipe::PipeSink::readEvent()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="namespacecore_1_1system_a38a2ef544196b684eb5850c42e8ee770_icgraph.svg" width="332" height="115"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacecore_1_1system_a38a2ef544196b684eb5850c42e8ee770_icgraph.svg" width="559" height="115"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -1429,17 +1472,17 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="socket_8cpp_source.html#l00068">68</a> of file <a class="el" href="socket_8cpp_source.html">socket.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   68</span>                                                                  {</div>
-<div class="line"><span class="lineno">   69</span>        errno = 0;</div>
-<div class="line"><span class="lineno">   70</span>        return ::recv(sockfd, buf, len, flags);</div>
-<div class="line"><span class="lineno">   71</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="socket_8cpp_source.html#l00069">69</a> of file <a class="el" href="socket_8cpp_source.html">socket.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   69</span>                                                                  {</div>
+<div class="line"><span class="lineno">   70</span>        errno = 0;</div>
+<div class="line"><span class="lineno">   71</span>        return ::recv(sockfd, buf, len, flags);</div>
+<div class="line"><span class="lineno">   72</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="legacy_2SocketReader_8hpp_source.html#l00031">core::socket::stream::legacy::SocketReader&lt; PhysicalSocketT &gt;::read()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="legacy_2SocketReader_8cpp_source.html#l00030">core::socket::stream::legacy::SocketReader::read()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="namespacecore_1_1system_a37ca251adecc564c59a9420200b20a9f_icgraph.svg" width="382" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacecore_1_1system_a37ca251adecc564c59a9420200b20a9f_icgraph.svg" width="408" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -1488,11 +1531,11 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="select_8cpp_source.html#l00029">29</a> of file <a class="el" href="select_8cpp_source.html">select.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   29</span>                                                                                                        {</div>
-<div class="line"><span class="lineno">   30</span>        errno = 0;</div>
-<div class="line"><span class="lineno">   31</span>        return ::select(nfds, readfds, writefds, exceptfds, timeout);</div>
-<div class="line"><span class="lineno">   32</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="select_8cpp_source.html#l00030">30</a> of file <a class="el" href="select_8cpp_source.html">select.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   30</span>                                                                                                        {</div>
+<div class="line"><span class="lineno">   31</span>        errno = 0;</div>
+<div class="line"><span class="lineno">   32</span>        return ::select(nfds, readfds, writefds, exceptfds, timeout);</div>
+<div class="line"><span class="lineno">   33</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1534,17 +1577,17 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="socket_8cpp_source.html#l00073">73</a> of file <a class="el" href="socket_8cpp_source.html">socket.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   73</span>                                                                        {</div>
-<div class="line"><span class="lineno">   74</span>        errno = 0;</div>
-<div class="line"><span class="lineno">   75</span>        return ::send(sockfd, buf, len, flags);</div>
-<div class="line"><span class="lineno">   76</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="socket_8cpp_source.html#l00074">74</a> of file <a class="el" href="socket_8cpp_source.html">socket.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   74</span>                                                                        {</div>
+<div class="line"><span class="lineno">   75</span>        errno = 0;</div>
+<div class="line"><span class="lineno">   76</span>        return ::send(sockfd, buf, len, flags);</div>
+<div class="line"><span class="lineno">   77</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="legacy_2SocketWriter_8hpp_source.html#l00031">core::socket::stream::legacy::SocketWriter&lt; PhysicalSocketT &gt;::write()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="legacy_2SocketWriter_8cpp_source.html#l00030">core::socket::stream::legacy::SocketWriter::write()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="namespacecore_1_1system_afc000fbe5ae2216ddf84c0f24eb8aa33_icgraph.svg" width="344" height="66"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacecore_1_1system_afc000fbe5ae2216ddf84c0f24eb8aa33_icgraph.svg" width="367" height="66"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -1593,17 +1636,17 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="socket_8cpp_source.html#l00083">83</a> of file <a class="el" href="socket_8cpp_source.html">socket.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   83</span>                                                                                             {</div>
-<div class="line"><span class="lineno">   84</span>        errno = 0;</div>
-<div class="line"><span class="lineno">   85</span>        return ::setsockopt(sockfd, level, optname, optval, optlen);</div>
-<div class="line"><span class="lineno">   86</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="socket_8cpp_source.html#l00084">84</a> of file <a class="el" href="socket_8cpp_source.html">socket.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   84</span>                                                                                             {</div>
+<div class="line"><span class="lineno">   85</span>        errno = 0;</div>
+<div class="line"><span class="lineno">   86</span>        return ::setsockopt(sockfd, level, optname, optval, optlen);</div>
+<div class="line"><span class="lineno">   87</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="phy_2PhysicalSocket_8hpp_source.html#l00105">net::phy::PhysicalSocket&lt; SocketAddressT &gt;::setSockopt()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="phy_2PhysicalSocket_8hpp_source.html#l00101">net::phy::PhysicalSocket&lt; SocketAddressT &gt;::setSockopt()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="namespacecore_1_1system_a69ae50ef904b60224906b7ba04ca8261_icgraph.svg" width="614" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacecore_1_1system_a69ae50ef904b60224906b7ba04ca8261_icgraph.svg" width="648" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -1634,17 +1677,17 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="socket_8cpp_source.html#l00088">88</a> of file <a class="el" href="socket_8cpp_source.html">socket.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   88</span>                                      {</div>
-<div class="line"><span class="lineno">   89</span>        errno = 0;</div>
-<div class="line"><span class="lineno">   90</span>        return ::shutdown(sockfd, how);</div>
-<div class="line"><span class="lineno">   91</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="socket_8cpp_source.html#l00089">89</a> of file <a class="el" href="socket_8cpp_source.html">socket.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   89</span>                                      {</div>
+<div class="line"><span class="lineno">   90</span>        errno = 0;</div>
+<div class="line"><span class="lineno">   91</span>        return ::shutdown(sockfd, how);</div>
+<div class="line"><span class="lineno">   92</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="phy_2stream_2PhysicalSocket_8hpp_source.html#l00028">net::phy::stream::PhysicalSocket&lt; SocketAddressT &gt;::shutdown()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="phy_2stream_2PhysicalSocket_8hpp_source.html#l00029">net::phy::stream::PhysicalSocket&lt; SocketAddressT &gt;::shutdown()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="namespacecore_1_1system_a09a73e9e38f3f98d7ca380cd663facef_icgraph.svg" width="396" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacecore_1_1system_a09a73e9e38f3f98d7ca380cd663facef_icgraph.svg" width="427" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -1681,17 +1724,17 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="socket_8cpp_source.html#l00029">29</a> of file <a class="el" href="socket_8cpp_source.html">socket.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   29</span>                                                   {</div>
-<div class="line"><span class="lineno">   30</span>        errno = 0;</div>
-<div class="line"><span class="lineno">   31</span>        return ::socket(domain, type, protocol);</div>
-<div class="line"><span class="lineno">   32</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="socket_8cpp_source.html#l00030">30</a> of file <a class="el" href="socket_8cpp_source.html">socket.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   30</span>                                                   {</div>
+<div class="line"><span class="lineno">   31</span>        errno = 0;</div>
+<div class="line"><span class="lineno">   32</span>        return ::socket(domain, type, protocol);</div>
+<div class="line"><span class="lineno">   33</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="phy_2PhysicalSocket_8hpp_source.html#l00063">net::phy::PhysicalSocket&lt; SocketAddressT &gt;::open()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="phy_2PhysicalSocket_8hpp_source.html#l00058">net::phy::PhysicalSocket&lt; SocketAddressT &gt;::open()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="namespacecore_1_1system_a5ffaddeca7b0ee1c5ee33addd15e02db_icgraph.svg" width="372" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacecore_1_1system_a5ffaddeca7b0ee1c5ee33addd15e02db_icgraph.svg" width="394" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -1728,17 +1771,17 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="unistd_8cpp_source.html#l00039">39</a> of file <a class="el" href="unistd_8cpp_source.html">unistd.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   39</span>                                                            {</div>
-<div class="line"><span class="lineno">   40</span>        errno = 0;</div>
-<div class="line"><span class="lineno">   41</span>        return ::write(fd, buf, count);</div>
-<div class="line"><span class="lineno">   42</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="unistd_8cpp_source.html#l00040">40</a> of file <a class="el" href="unistd_8cpp_source.html">unistd.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   40</span>                                                            {</div>
+<div class="line"><span class="lineno">   41</span>        errno = 0;</div>
+<div class="line"><span class="lineno">   42</span>        return ::write(fd, buf, count);</div>
+<div class="line"><span class="lineno">   43</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="PipeSource_8cpp_source.html#l00066">core::pipe::PipeSource::writeEvent()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="PipeSource_8cpp_source.html#l00070">core::pipe::PipeSource::writeEvent()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="namespacecore_1_1system_ae492f0526e716bf3a8bf341386bae61c_icgraph.svg" width="348" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacecore_1_1system_ae492f0526e716bf3a8bf341386bae61c_icgraph.svg" width="372" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -1749,7 +1792,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacecore.html">core</a></li><li class="navelem"><a class="el" href="namespacecore_1_1system.html">system</a></li>
-    <li class="footer">Generated on Fri Oct 20 2023 14:01:11 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Sun Jan 21 2024 23:58:10 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

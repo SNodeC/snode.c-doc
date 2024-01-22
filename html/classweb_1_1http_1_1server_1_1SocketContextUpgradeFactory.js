@@ -13,7 +13,9 @@ var classweb_1_1http_1_1server_1_1SocketContextUpgradeFactory =
     [ "link", "classweb_1_1http_1_1server_1_1SocketContextUpgradeFactory.html#a2e553e76ad8cc76fb226b7bb4c3c5aed", null ],
     [ "name", "classweb_1_1http_1_1server_1_1SocketContextUpgradeFactory.html#afae3ffca7956a1db027b587fe0c218f7", null ],
     [ "prepare", "classweb_1_1http_1_1server_1_1SocketContextUpgradeFactory.html#a81283c605a48063535f02cfc5db150e9", null ],
+    [ "SocketContextUpgradeFactorySelector", "classweb_1_1http_1_1server_1_1SocketContextUpgradeFactory.html#aa9713cc824852272642f8b56967a4cc7", null ],
     [ "refCount", "classweb_1_1http_1_1server_1_1SocketContextUpgradeFactory.html#a5ec0d8e1bd68308db21a518ac1ce283f", null ],
     [ "request", "classweb_1_1http_1_1server_1_1SocketContextUpgradeFactory.html#a49afbcd1387bc71ce80b052882472a71", null ],
-    [ "response", "classweb_1_1http_1_1server_1_1SocketContextUpgradeFactory.html#a47a5b6d2ccfad6bcc6882108ddee6b57", null ]
+    [ "response", "classweb_1_1http_1_1server_1_1SocketContextUpgradeFactory.html#a47a5b6d2ccfad6bcc6882108ddee6b57", null ],
+    [ "Response", "classweb_1_1http_1_1server_1_1SocketContextUpgradeFactory.html#a2bc04b42909d2c5f60ca16595381ed23", null ]
 ];

@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['web_5fhttp_5fsocketcontextupgradefactoryselector_5fh_0',['WEB_HTTP_SOCKETCONTEXTUPGRADEFACTORYSELECTOR_H',['../SocketContextUpgradeFactorySelector_8h.html#abf795d60145f975ec9b472489f562fb5',1,'SocketContextUpgradeFactorySelector.h']]],
-  ['wsmaxframepayloadlength_1',['WSMAXFRAMEPAYLOADLENGTH',['../Transmitter_8cpp.html#acd2ce7799f0d25910828566fb9a5bf2a',1,'Transmitter.cpp']]]
+  ['quote_5finclude_0',['quote_include',['../echo_2model_2clients_8h.html#a267906fae74ea1925332de04c23e9c56',1,'QUOTE_INCLUDE:&#160;clients.h'],['../echo_2model_2servers_8h.html#a267906fae74ea1925332de04c23e9c56',1,'QUOTE_INCLUDE:&#160;servers.h'],['../http_2model_2clients_8h.html#a267906fae74ea1925332de04c23e9c56',1,'QUOTE_INCLUDE:&#160;clients.h'],['../http_2model_2servers_8h.html#a267906fae74ea1925332de04c23e9c56',1,'QUOTE_INCLUDE:&#160;servers.h']]]
 ];

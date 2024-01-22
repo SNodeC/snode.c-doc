@@ -1,7 +1,7 @@
 var classiot_1_1mqtt_1_1packets_1_1Publish =
 [
     [ "Publish", "classiot_1_1mqtt_1_1packets_1_1Publish.html#a9bfd14e069dd1fcf5ccf276c8c36b498", null ],
-    [ "Publish", "classiot_1_1mqtt_1_1packets_1_1Publish.html#a63528c0e73a6b5a1621fd6ae4940403c", null ],
+    [ "Publish", "classiot_1_1mqtt_1_1packets_1_1Publish.html#a6f44eef1471a1160e21f602bd93f417d", null ],
     [ "getDup", "classiot_1_1mqtt_1_1packets_1_1Publish.html#ac28fb8146c897130f1834fcdec89fabe", null ],
     [ "getFlags", "classiot_1_1mqtt_1_1packets_1_1Publish.html#a5010a3ec8f0c9d1a95b1fd1e85d77f71", null ],
     [ "getMessage", "classiot_1_1mqtt_1_1packets_1_1Publish.html#a5ff7a6ef5d6d227e3870b9247a30eade", null ],

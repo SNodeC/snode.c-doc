@@ -3,7 +3,7 @@ var classweb_1_1websocket_1_1server_1_1GroupsManager =
     [ "GroupsManager", "classweb_1_1websocket_1_1server_1_1GroupsManager.html#a73759ac5c8a8dbf9f6012b421f9437eb", null ],
     [ "GroupsManager", "classweb_1_1websocket_1_1server_1_1GroupsManager.html#aa56a4196154f0bb15ea5cd90c01bbd76", null ],
     [ "~GroupsManager", "classweb_1_1websocket_1_1server_1_1GroupsManager.html#a02e636d08adfcc34bc14594fe950337f", null ],
-    [ "forEachClient", "classweb_1_1websocket_1_1server_1_1GroupsManager.html#a489c2b1127c24a8d63cef0b6ed881ede", null ],
+    [ "forEachClient", "classweb_1_1websocket_1_1server_1_1GroupsManager.html#a63ea56a08e9b4bdbb9d44100b1399f81", null ],
     [ "instance", "classweb_1_1websocket_1_1server_1_1GroupsManager.html#a2d12a1772a93240abb5be124c1589354", null ],
     [ "operator=", "classweb_1_1websocket_1_1server_1_1GroupsManager.html#a5d31224fdf087118232ef7543c5c493d", null ],
     [ "sendBroadcast", "classweb_1_1websocket_1_1server_1_1GroupsManager.html#a273c6fb60ed7071c7d96e793b0ad4c89", null ],

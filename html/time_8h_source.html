@@ -98,63 +98,64 @@ $(document).ready(function(){initNavTree('time_8h_source.html',''); initResizabl
 </div><!--header-->
 <div class="contents">
 <a href="time_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
-<div class="line"><span class="lineno">    2</span><span class="comment"> * snode.c - a slim toolkit for network communication</span></div>
-<div class="line"><span class="lineno">    3</span><span class="comment"> * Copyright (C) 2020, 2021, 2022, 2023 Volker Christian &lt;me@vchrist.at&gt;</span></div>
-<div class="line"><span class="lineno">    4</span><span class="comment"> *</span></div>
-<div class="line"><span class="lineno">    5</span><span class="comment"> * This program is free software: you can redistribute it and/or modify</span></div>
-<div class="line"><span class="lineno">    6</span><span class="comment"> * it under the terms of the GNU Lesser General Public License as published</span></div>
-<div class="line"><span class="lineno">    7</span><span class="comment"> * by the Free Software Foundation, either version 3 of the License, or</span></div>
-<div class="line"><span class="lineno">    8</span><span class="comment"> * (at your option) any later version.</span></div>
-<div class="line"><span class="lineno">    9</span><span class="comment"> *</span></div>
-<div class="line"><span class="lineno">   10</span><span class="comment"> * This program is distributed in the hope that it will be useful,</span></div>
-<div class="line"><span class="lineno">   11</span><span class="comment"> * but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
-<div class="line"><span class="lineno">   12</span><span class="comment"> * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the</span></div>
-<div class="line"><span class="lineno">   13</span><span class="comment"> * GNU Lesser General Public License for more details.</span></div>
-<div class="line"><span class="lineno">   14</span><span class="comment"> *</span></div>
-<div class="line"><span class="lineno">   15</span><span class="comment"> * You should have received a copy of the GNU Lesser General Public License</span></div>
-<div class="line"><span class="lineno">   16</span><span class="comment"> * along with this program. If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
-<div class="line"><span class="lineno">   17</span><span class="comment"> */</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#</span><span class="preprocessor">ifndef</span> <span class="preprocessor">NET_SYSTEM_TIME_H</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#</span><span class="preprocessor">define</span> <span class="preprocessor">NET_SYSTEM_TIME_H</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#</span><span class="preprocessor">ifndef</span> <span class="preprocessor">DOXYGEN_SHOULD_SKIP_THIS</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">// IWYU pragma: begin_exports</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">ctime</span><span class="preprocessor">&gt;</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">sys</span><span class="preprocessor">/</span><span class="preprocessor">time</span><span class="preprocessor">.</span><span class="preprocessor">h</span><span class="preprocessor">&gt;</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment">// IWYU pragma: end_exports</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#</span><span class="preprocessor">endif</span> <span class="comment">/* DOXYGEN_SHOULD_SKIP_THIS */</span></div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keyword">namespace</span> <a class="code hl_namespace" href="namespaceutils.html">utils</a>::<a class="code hl_namespace" href="namespaceutils_1_1system.html">system</a> {</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="comment">// #include &lt;time.h&gt; = &lt;ctime&gt;</span></div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    time_t <a class="code hl_function" href="namespaceutils_1_1system.html#aa36252afed0ca4903feb511649270d1c">time</a>(time_t* tloc);</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keyword">struct</span> tm* <a class="code hl_function" href="namespaceutils_1_1system.html#a629a1ebec50192eff5587cdd5d51bf20">gmtime</a>(<span class="keyword">const</span> time_t* timep);</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    time_t <a class="code hl_function" href="namespaceutils_1_1system.html#a66eaf14c632914f8685b6ad36def2704">mktime</a>(<span class="keyword">struct</span> tm* tm);</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="comment">// #include &lt;sys/time.h&gt;</span></div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="namespaceutils_1_1system.html#ad594b7afe9fa80d3db04591c966422b2">gettimeofday</a>(<span class="keyword">struct</span> timeval* tv, <span class="keyword">struct</span> timezone* tz);</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>} <span class="comment">// namespace utils::system</span></div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="preprocessor">#</span><span class="preprocessor">endif</span> <span class="comment">// NET_SYSTEM_TIME_H</span></div>
-<div class="ttc" id="anamespaceutils_1_1system_html"><div class="ttname"><a href="namespaceutils_1_1system.html">utils::system</a></div><div class="ttdef"><b>Definition</b> <a href="signal_8h_source.html#l00033">signal.h:33</a></div></div>
-<div class="ttc" id="anamespaceutils_1_1system_html_a629a1ebec50192eff5587cdd5d51bf20"><div class="ttname"><a href="namespaceutils_1_1system.html#a629a1ebec50192eff5587cdd5d51bf20">utils::system::gmtime</a></div><div class="ttdeci">struct tm * gmtime(const time_t *timep)</div><div class="ttdef"><b>Definition</b> <a href="time_8cpp_source.html#l00039">time.cpp:39</a></div></div>
-<div class="ttc" id="anamespaceutils_1_1system_html_a66eaf14c632914f8685b6ad36def2704"><div class="ttname"><a href="namespaceutils_1_1system.html#a66eaf14c632914f8685b6ad36def2704">utils::system::mktime</a></div><div class="ttdeci">time_t mktime(struct tm *tm)</div><div class="ttdef"><b>Definition</b> <a href="time_8cpp_source.html#l00044">time.cpp:44</a></div></div>
-<div class="ttc" id="anamespaceutils_1_1system_html_aa36252afed0ca4903feb511649270d1c"><div class="ttname"><a href="namespaceutils_1_1system.html#aa36252afed0ca4903feb511649270d1c">utils::system::time</a></div><div class="ttdeci">time_t time(time_t *tloc)</div><div class="ttdef"><b>Definition</b> <a href="time_8cpp_source.html#l00029">time.cpp:29</a></div></div>
-<div class="ttc" id="anamespaceutils_1_1system_html_ad594b7afe9fa80d3db04591c966422b2"><div class="ttname"><a href="namespaceutils_1_1system.html#ad594b7afe9fa80d3db04591c966422b2">utils::system::gettimeofday</a></div><div class="ttdeci">int gettimeofday(struct timeval *tv, struct timezone *tz)</div><div class="ttdef"><b>Definition</b> <a href="time_8cpp_source.html#l00034">time.cpp:34</a></div></div>
-<div class="ttc" id="anamespaceutils_html"><div class="ttname"><a href="namespaceutils.html">utils</a></div><div class="ttdef"><b>Definition</b> <a href="DescriptorEventPublisher_8h_source.html#l00026">DescriptorEventPublisher.h:26</a></div></div>
+<div class="line"><span class="lineno">    2</span><span class="comment"> * SNode.C - a slim toolkit for network communication</span></div>
+<div class="line"><span class="lineno">    3</span><span class="comment"> * Copyright (C) Volker Christian &lt;me@vchrist.at&gt;</span></div>
+<div class="line"><span class="lineno">    4</span><span class="comment"> *               2020, 2021, 2022, 2023, 2024</span></div>
+<div class="line"><span class="lineno">    5</span><span class="comment"> *</span></div>
+<div class="line"><span class="lineno">    6</span><span class="comment"> * This program is free software: you can redistribute it and/or modify</span></div>
+<div class="line"><span class="lineno">    7</span><span class="comment"> * it under the terms of the GNU Lesser General Public License as published</span></div>
+<div class="line"><span class="lineno">    8</span><span class="comment"> * by the Free Software Foundation, either version 3 of the License, or</span></div>
+<div class="line"><span class="lineno">    9</span><span class="comment"> * (at your option) any later version.</span></div>
+<div class="line"><span class="lineno">   10</span><span class="comment"> *</span></div>
+<div class="line"><span class="lineno">   11</span><span class="comment"> * This program is distributed in the hope that it will be useful,</span></div>
+<div class="line"><span class="lineno">   12</span><span class="comment"> * but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
+<div class="line"><span class="lineno">   13</span><span class="comment"> * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the</span></div>
+<div class="line"><span class="lineno">   14</span><span class="comment"> * GNU Lesser General Public License for more details.</span></div>
+<div class="line"><span class="lineno">   15</span><span class="comment"> *</span></div>
+<div class="line"><span class="lineno">   16</span><span class="comment"> * You should have received a copy of the GNU Lesser General Public License</span></div>
+<div class="line"><span class="lineno">   17</span><span class="comment"> * along with this program. If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
+<div class="line"><span class="lineno">   18</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#</span><span class="preprocessor">ifndef</span> <span class="preprocessor">NET_SYSTEM_TIME_H</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#</span><span class="preprocessor">define</span> <span class="preprocessor">NET_SYSTEM_TIME_H</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#</span><span class="preprocessor">ifndef</span> <span class="preprocessor">DOXYGEN_SHOULD_SKIP_THIS</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment">// IWYU pragma: begin_exports</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">ctime</span><span class="preprocessor">&gt;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">sys</span><span class="preprocessor">/</span><span class="preprocessor">time</span><span class="preprocessor">.</span><span class="preprocessor">h</span><span class="preprocessor">&gt;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="comment">// IWYU pragma: end_exports</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#</span><span class="preprocessor">endif</span> <span class="comment">/* DOXYGEN_SHOULD_SKIP_THIS */</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="keyword">namespace</span> <a class="code hl_namespace" href="namespaceutils.html">utils</a>::<a class="code hl_namespace" href="namespaceutils_1_1system.html">system</a> {</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="comment">// #include &lt;time.h&gt; = &lt;ctime&gt;</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    time_t <a class="code hl_function" href="namespaceutils_1_1system.html#aa36252afed0ca4903feb511649270d1c">time</a>(time_t* tloc);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keyword">struct</span> tm* <a class="code hl_function" href="namespaceutils_1_1system.html#a629a1ebec50192eff5587cdd5d51bf20">gmtime</a>(<span class="keyword">const</span> time_t* timep);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    time_t <a class="code hl_function" href="namespaceutils_1_1system.html#a66eaf14c632914f8685b6ad36def2704">mktime</a>(<span class="keyword">struct</span> tm* tm);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="comment">// #include &lt;sys/time.h&gt;</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="namespaceutils_1_1system.html#ad594b7afe9fa80d3db04591c966422b2">gettimeofday</a>(<span class="keyword">struct</span> timeval* tv, <span class="keyword">struct</span> timezone* tz);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>} <span class="comment">// namespace utils::system</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="preprocessor">#</span><span class="preprocessor">endif</span> <span class="comment">// NET_SYSTEM_TIME_H</span></div>
+<div class="ttc" id="anamespaceutils_1_1system_html"><div class="ttname"><a href="namespaceutils_1_1system.html">utils::system</a></div><div class="ttdef"><b>Definition</b> <a href="signal_8h_source.html#l00034">signal.h:34</a></div></div>
+<div class="ttc" id="anamespaceutils_1_1system_html_a629a1ebec50192eff5587cdd5d51bf20"><div class="ttname"><a href="namespaceutils_1_1system.html#a629a1ebec50192eff5587cdd5d51bf20">utils::system::gmtime</a></div><div class="ttdeci">struct tm * gmtime(const time_t *timep)</div><div class="ttdef"><b>Definition</b> <a href="time_8cpp_source.html#l00040">time.cpp:40</a></div></div>
+<div class="ttc" id="anamespaceutils_1_1system_html_a66eaf14c632914f8685b6ad36def2704"><div class="ttname"><a href="namespaceutils_1_1system.html#a66eaf14c632914f8685b6ad36def2704">utils::system::mktime</a></div><div class="ttdeci">time_t mktime(struct tm *tm)</div><div class="ttdef"><b>Definition</b> <a href="time_8cpp_source.html#l00045">time.cpp:45</a></div></div>
+<div class="ttc" id="anamespaceutils_1_1system_html_aa36252afed0ca4903feb511649270d1c"><div class="ttname"><a href="namespaceutils_1_1system.html#aa36252afed0ca4903feb511649270d1c">utils::system::time</a></div><div class="ttdeci">time_t time(time_t *tloc)</div><div class="ttdef"><b>Definition</b> <a href="time_8cpp_source.html#l00030">time.cpp:30</a></div></div>
+<div class="ttc" id="anamespaceutils_1_1system_html_ad594b7afe9fa80d3db04591c966422b2"><div class="ttname"><a href="namespaceutils_1_1system.html#ad594b7afe9fa80d3db04591c966422b2">utils::system::gettimeofday</a></div><div class="ttdeci">int gettimeofday(struct timeval *tv, struct timezone *tz)</div><div class="ttdef"><b>Definition</b> <a href="time_8cpp_source.html#l00035">time.cpp:35</a></div></div>
+<div class="ttc" id="anamespaceutils_html"><div class="ttname"><a href="namespaceutils.html">utils</a></div><div class="ttdef"><b>Definition</b> <a href="Config_8h_source.html#l00037">Config.h:37</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_cbdb8362360e11eafe2fa3bc74cf0ffd.html">utils</a></li><li class="navelem"><a class="el" href="dir_3c9ab163ad0c753469f2eeab0cb39946.html">system</a></li><li class="navelem"><a class="el" href="time_8h.html">time.h</a></li>
-    <li class="footer">Generated on Fri Oct 20 2023 14:00:56 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Sun Jan 21 2024 23:58:03 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

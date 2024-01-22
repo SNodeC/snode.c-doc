@@ -18,7 +18,6 @@ var classcore_1_1TimerEventReceiver =
     [ "span", "classcore_1_1TimerEventReceiver.html#ad353e97a9089b2769e52f8825e4878b1", null ],
     [ "unobservedEvent", "classcore_1_1TimerEventReceiver.html#a52b86119e9c36bf5e736eb8db5d93cbf", null ],
     [ "update", "classcore_1_1TimerEventReceiver.html#a76f5d4b39a8976397f057c70b1b2ebdb", null ],
-    [ "updateTimeout", "classcore_1_1TimerEventReceiver.html#a5bb70c923080e42ea4f371af076f462f", null ],
     [ "Timer", "classcore_1_1TimerEventReceiver.html#a50de43af5bed41f30c071d8cce0e81bc", null ],
     [ "TimerEventPublisher", "classcore_1_1TimerEventReceiver.html#a92e16b5c0b561fe2c4290686037571a7", null ],
     [ "absoluteTimeout", "classcore_1_1TimerEventReceiver.html#ae61589579af003e54574e972b20e627f", null ],

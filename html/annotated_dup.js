@@ -1,12 +1,34 @@
 var annotated_dup =
 [
+    [ "apps", "namespaceapps.html", [
+      [ "echo", "namespaceapps_1_1echo.html", [
+        [ "model", "namespaceapps_1_1echo_1_1model.html", [
+          [ "EchoClientSocketContextFactory", "classapps_1_1echo_1_1model_1_1EchoClientSocketContextFactory.html", "classapps_1_1echo_1_1model_1_1EchoClientSocketContextFactory" ],
+          [ "EchoServerSocketContextFactory", "classapps_1_1echo_1_1model_1_1EchoServerSocketContextFactory.html", "classapps_1_1echo_1_1model_1_1EchoServerSocketContextFactory" ],
+          [ "EchoSocketContext", "classapps_1_1echo_1_1model_1_1EchoSocketContext.html", "classapps_1_1echo_1_1model_1_1EchoSocketContext" ]
+        ] ]
+      ] ],
+      [ "websocket", "namespaceapps_1_1websocket.html", [
+        [ "subprotocol", "namespaceapps_1_1websocket_1_1subprotocol.html", [
+          [ "echo", "namespaceapps_1_1websocket_1_1subprotocol_1_1echo.html", [
+            [ "client", "namespaceapps_1_1websocket_1_1subprotocol_1_1echo_1_1client.html", [
+              [ "Echo", "classapps_1_1websocket_1_1subprotocol_1_1echo_1_1client_1_1Echo.html", "classapps_1_1websocket_1_1subprotocol_1_1echo_1_1client_1_1Echo" ],
+              [ "EchoFactory", "classapps_1_1websocket_1_1subprotocol_1_1echo_1_1client_1_1EchoFactory.html", "classapps_1_1websocket_1_1subprotocol_1_1echo_1_1client_1_1EchoFactory" ]
+            ] ],
+            [ "server", "namespaceapps_1_1websocket_1_1subprotocol_1_1echo_1_1server.html", [
+              [ "Echo", "classapps_1_1websocket_1_1subprotocol_1_1echo_1_1server_1_1Echo.html", "classapps_1_1websocket_1_1subprotocol_1_1echo_1_1server_1_1Echo" ],
+              [ "EchoFactory", "classapps_1_1websocket_1_1subprotocol_1_1echo_1_1server_1_1EchoFactory.html", "classapps_1_1websocket_1_1subprotocol_1_1echo_1_1server_1_1EchoFactory" ]
+            ] ]
+          ] ]
+        ] ]
+      ] ]
+    ] ],
     [ "CLI", "namespaceCLI.html", [
       [ "CallForCommandline", "classCLI_1_1CallForCommandline.html", "classCLI_1_1CallForCommandline" ],
       [ "CallForShowConfig", "classCLI_1_1CallForShowConfig.html", "classCLI_1_1CallForShowConfig" ],
       [ "CallForWriteConfig", "classCLI_1_1CallForWriteConfig.html", "classCLI_1_1CallForWriteConfig" ],
       [ "ConfigFormatter", "classCLI_1_1ConfigFormatter.html", "classCLI_1_1ConfigFormatter" ],
-      [ "HelpFormatter", "classCLI_1_1HelpFormatter.html", "classCLI_1_1HelpFormatter" ],
-      [ "IsValue", "classCLI_1_1IsValue.html", "classCLI_1_1IsValue" ]
+      [ "HelpFormatter", "classCLI_1_1HelpFormatter.html", "classCLI_1_1HelpFormatter" ]
     ] ],
     [ "core", "namespacecore.html", [
       [ "epoll", "namespacecore_1_1epoll.html", [
@@ -65,7 +87,6 @@ var annotated_dup =
           [ "SocketAcceptor", "classcore_1_1socket_1_1stream_1_1SocketAcceptor.html", "classcore_1_1socket_1_1stream_1_1SocketAcceptor" ],
           [ "SocketClient", "classcore_1_1socket_1_1stream_1_1SocketClient.html", "classcore_1_1socket_1_1stream_1_1SocketClient" ],
           [ "SocketConnection", "classcore_1_1socket_1_1stream_1_1SocketConnection.html", "classcore_1_1socket_1_1stream_1_1SocketConnection" ],
-          [ "SocketConnectionFactory", "classcore_1_1socket_1_1stream_1_1SocketConnectionFactory.html", "classcore_1_1socket_1_1stream_1_1SocketConnectionFactory" ],
           [ "SocketConnectionT", "classcore_1_1socket_1_1stream_1_1SocketConnectionT.html", "classcore_1_1socket_1_1stream_1_1SocketConnectionT" ],
           [ "SocketConnector", "classcore_1_1socket_1_1stream_1_1SocketConnector.html", "classcore_1_1socket_1_1stream_1_1SocketConnector" ],
           [ "SocketContext", "classcore_1_1socket_1_1stream_1_1SocketContext.html", "classcore_1_1socket_1_1stream_1_1SocketContext" ],
@@ -228,7 +249,7 @@ var annotated_dup =
         [ "FixedHeader", "classiot_1_1mqtt_1_1FixedHeader.html", "classiot_1_1mqtt_1_1FixedHeader" ],
         [ "Mqtt", "classiot_1_1mqtt_1_1Mqtt.html", "classiot_1_1mqtt_1_1Mqtt" ],
         [ "MqttContext", "classiot_1_1mqtt_1_1MqttContext.html", "classiot_1_1mqtt_1_1MqttContext" ],
-        [ "OnDataEvent", "classiot_1_1mqtt_1_1OnDataEvent.html", "classiot_1_1mqtt_1_1OnDataEvent" ],
+        [ "OnReceivedFromPeerEvent", "classiot_1_1mqtt_1_1OnReceivedFromPeerEvent.html", "classiot_1_1mqtt_1_1OnReceivedFromPeerEvent" ],
         [ "Session", "classiot_1_1mqtt_1_1Session.html", "classiot_1_1mqtt_1_1Session" ],
         [ "SocketContext", "classiot_1_1mqtt_1_1SocketContext.html", "classiot_1_1mqtt_1_1SocketContext" ],
         [ "SubProtocol", "classiot_1_1mqtt_1_1SubProtocol.html", "classiot_1_1mqtt_1_1SubProtocol" ],
@@ -281,8 +302,10 @@ var annotated_dup =
           [ "ConfigSocketServer", "classnet_1_1config_1_1stream_1_1ConfigSocketServer.html", "classnet_1_1config_1_1stream_1_1ConfigSocketServer" ]
         ] ],
         [ "ConfigAddress", "classnet_1_1config_1_1ConfigAddress.html", "classnet_1_1config_1_1ConfigAddress" ],
+        [ "ConfigAddressBase", "classnet_1_1config_1_1ConfigAddressBase.html", "classnet_1_1config_1_1ConfigAddressBase" ],
         [ "ConfigAddressLocal", "classnet_1_1config_1_1ConfigAddressLocal.html", "classnet_1_1config_1_1ConfigAddressLocal" ],
         [ "ConfigAddressRemote", "classnet_1_1config_1_1ConfigAddressRemote.html", "classnet_1_1config_1_1ConfigAddressRemote" ],
+        [ "ConfigAddressReverse", "classnet_1_1config_1_1ConfigAddressReverse.html", "classnet_1_1config_1_1ConfigAddressReverse" ],
         [ "ConfigConnection", "classnet_1_1config_1_1ConfigConnection.html", "classnet_1_1config_1_1ConfigConnection" ],
         [ "ConfigInstance", "classnet_1_1config_1_1ConfigInstance.html", "classnet_1_1config_1_1ConfigInstance" ],
         [ "ConfigLegacy", "classnet_1_1config_1_1ConfigLegacy.html", "classnet_1_1config_1_1ConfigLegacy" ],
@@ -297,7 +320,8 @@ var annotated_dup =
       ] ],
       [ "in", "namespacenet_1_1in.html", [
         [ "config", "namespacenet_1_1in_1_1config.html", [
-          [ "ConfigAddress", "classnet_1_1in_1_1config_1_1ConfigAddress.html", "classnet_1_1in_1_1config_1_1ConfigAddress" ]
+          [ "ConfigAddress", "classnet_1_1in_1_1config_1_1ConfigAddress.html", "classnet_1_1in_1_1config_1_1ConfigAddress" ],
+          [ "ConfigAddressReverse", "classnet_1_1in_1_1config_1_1ConfigAddressReverse.html", "classnet_1_1in_1_1config_1_1ConfigAddressReverse" ]
         ] ],
         [ "phy", "namespacenet_1_1in_1_1phy.html", [
           [ "stream", "namespacenet_1_1in_1_1phy_1_1stream.html", [
@@ -332,7 +356,8 @@ var annotated_dup =
       ] ],
       [ "in6", "namespacenet_1_1in6.html", [
         [ "config", "namespacenet_1_1in6_1_1config.html", [
-          [ "ConfigAddress", "classnet_1_1in6_1_1config_1_1ConfigAddress.html", "classnet_1_1in6_1_1config_1_1ConfigAddress" ]
+          [ "ConfigAddress", "classnet_1_1in6_1_1config_1_1ConfigAddress.html", "classnet_1_1in6_1_1config_1_1ConfigAddress" ],
+          [ "ConfigAddressReverse", "classnet_1_1in6_1_1config_1_1ConfigAddressReverse.html", "classnet_1_1in6_1_1config_1_1ConfigAddressReverse" ]
         ] ],
         [ "phy", "namespacenet_1_1in6_1_1phy.html", [
           [ "stream", "namespacenet_1_1in6_1_1phy_1_1stream.html", [
@@ -367,7 +392,8 @@ var annotated_dup =
       ] ],
       [ "l2", "namespacenet_1_1l2.html", [
         [ "config", "namespacenet_1_1l2_1_1config.html", [
-          [ "ConfigAddress", "classnet_1_1l2_1_1config_1_1ConfigAddress.html", "classnet_1_1l2_1_1config_1_1ConfigAddress" ]
+          [ "ConfigAddress", "classnet_1_1l2_1_1config_1_1ConfigAddress.html", "classnet_1_1l2_1_1config_1_1ConfigAddress" ],
+          [ "ConfigAddressReverse", "classnet_1_1l2_1_1config_1_1ConfigAddressReverse.html", "classnet_1_1l2_1_1config_1_1ConfigAddressReverse" ]
         ] ],
         [ "phy", "namespacenet_1_1l2_1_1phy.html", [
           [ "stream", "namespacenet_1_1l2_1_1phy_1_1stream.html", [
@@ -413,7 +439,8 @@ var annotated_dup =
       ] ],
       [ "rc", "namespacenet_1_1rc.html", [
         [ "config", "namespacenet_1_1rc_1_1config.html", [
-          [ "ConfigAddress", "classnet_1_1rc_1_1config_1_1ConfigAddress.html", "classnet_1_1rc_1_1config_1_1ConfigAddress" ]
+          [ "ConfigAddress", "classnet_1_1rc_1_1config_1_1ConfigAddress.html", "classnet_1_1rc_1_1config_1_1ConfigAddress" ],
+          [ "ConfigAddressReverse", "classnet_1_1rc_1_1config_1_1ConfigAddressReverse.html", "classnet_1_1rc_1_1config_1_1ConfigAddressReverse" ]
         ] ],
         [ "phy", "namespacenet_1_1rc_1_1phy.html", [
           [ "stream", "namespacenet_1_1rc_1_1phy_1_1stream.html", [
@@ -447,7 +474,8 @@ var annotated_dup =
       ] ],
       [ "un", "namespacenet_1_1un.html", [
         [ "config", "namespacenet_1_1un_1_1config.html", [
-          [ "ConfigAddress", "classnet_1_1un_1_1config_1_1ConfigAddress.html", "classnet_1_1un_1_1config_1_1ConfigAddress" ]
+          [ "ConfigAddress", "classnet_1_1un_1_1config_1_1ConfigAddress.html", "classnet_1_1un_1_1config_1_1ConfigAddress" ],
+          [ "ConfigAddressReverse", "classnet_1_1un_1_1config_1_1ConfigAddressReverse.html", "classnet_1_1un_1_1config_1_1ConfigAddressReverse" ]
         ] ],
         [ "dgram", "namespacenet_1_1un_1_1dgram.html", [
           [ "Socket", "classnet_1_1un_1_1dgram_1_1Socket.html", "classnet_1_1un_1_1dgram_1_1Socket" ]
@@ -488,14 +516,13 @@ var annotated_dup =
       [ "AttributeProxy", "classutils_1_1AttributeProxy.html", "classutils_1_1AttributeProxy" ],
       [ "Config", "classutils_1_1Config.html", "classutils_1_1Config" ],
       [ "Daemon", "classutils_1_1Daemon.html", "classutils_1_1Daemon" ],
-      [ "DaemonizeError", "classutils_1_1DaemonizeError.html", "classutils_1_1DaemonizeError" ],
-      [ "DaemonizeFailure", "classutils_1_1DaemonizeFailure.html", "classutils_1_1DaemonizeFailure" ],
-      [ "DaemonizeSuccess", "classutils_1_1DaemonizeSuccess.html", "classutils_1_1DaemonizeSuccess" ],
+      [ "DaemonError", "classutils_1_1DaemonError.html", "classutils_1_1DaemonError" ],
+      [ "DaemonFailure", "classutils_1_1DaemonFailure.html", "classutils_1_1DaemonFailure" ],
+      [ "DaemonSignaled", "classutils_1_1DaemonSignaled.html", "classutils_1_1DaemonSignaled" ],
       [ "fixed_string", "structutils_1_1fixed__string.html", "structutils_1_1fixed__string" ],
       [ "MultibleAttributeInjector", "classutils_1_1MultibleAttributeInjector.html", "classutils_1_1MultibleAttributeInjector" ],
       [ "PreserveErrno", "classutils_1_1PreserveErrno.html", "classutils_1_1PreserveErrno" ],
       [ "Random", "classutils_1_1Random.html", "classutils_1_1Random" ],
-      [ "ResetToDefault", "classutils_1_1ResetToDefault.html", "classutils_1_1ResetToDefault" ],
       [ "SingleAttributeInjector", "classutils_1_1SingleAttributeInjector.html", "classutils_1_1SingleAttributeInjector" ],
       [ "Timeval", "classutils_1_1Timeval.html", "classutils_1_1Timeval" ],
       [ "Uuid", "classutils_1_1Uuid.html", "classutils_1_1Uuid" ]
@@ -556,5 +583,11 @@ var annotated_dup =
         [ "Transmitter", "classweb_1_1websocket_1_1Transmitter.html", "classweb_1_1websocket_1_1Transmitter" ]
       ] ]
     ] ],
-    [ "SHA1", "classSHA1.html", "classSHA1" ]
+    [ "KeyboardReader", "classKeyboardReader.html", "classKeyboardReader" ],
+    [ "Member", "classMember.html", "classMember" ],
+    [ "SHA1", "classSHA1.html", "classSHA1" ],
+    [ "SimpleSocketProtocol", "classSimpleSocketProtocol.html", "classSimpleSocketProtocol" ],
+    [ "SimpleSocketProtocolFactory", "classSimpleSocketProtocolFactory.html", "classSimpleSocketProtocolFactory" ],
+    [ "Test", "classTest.html", "classTest" ],
+    [ "TowerCalculator", "classTowerCalculator.html", "classTowerCalculator" ]
 ];

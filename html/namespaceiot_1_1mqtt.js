@@ -9,9 +9,10 @@ var namespaceiot_1_1mqtt =
     [ "FixedHeader", "classiot_1_1mqtt_1_1FixedHeader.html", "classiot_1_1mqtt_1_1FixedHeader" ],
     [ "Mqtt", "classiot_1_1mqtt_1_1Mqtt.html", "classiot_1_1mqtt_1_1Mqtt" ],
     [ "MqttContext", "classiot_1_1mqtt_1_1MqttContext.html", "classiot_1_1mqtt_1_1MqttContext" ],
-    [ "OnDataEvent", "classiot_1_1mqtt_1_1OnDataEvent.html", "classiot_1_1mqtt_1_1OnDataEvent" ],
+    [ "OnReceivedFromPeerEvent", "classiot_1_1mqtt_1_1OnReceivedFromPeerEvent.html", "classiot_1_1mqtt_1_1OnReceivedFromPeerEvent" ],
     [ "Session", "classiot_1_1mqtt_1_1Session.html", "classiot_1_1mqtt_1_1Session" ],
     [ "SocketContext", "classiot_1_1mqtt_1_1SocketContext.html", "classiot_1_1mqtt_1_1SocketContext" ],
     [ "SubProtocol", "classiot_1_1mqtt_1_1SubProtocol.html", "classiot_1_1mqtt_1_1SubProtocol" ],
-    [ "Topic", "classiot_1_1mqtt_1_1Topic.html", "classiot_1_1mqtt_1_1Topic" ]
+    [ "Topic", "classiot_1_1mqtt_1_1Topic.html", "classiot_1_1mqtt_1_1Topic" ],
+    [ "mqttPackageName", "namespaceiot_1_1mqtt.html#a70fead8ec78413d17233cd6b454e6534", null ]
 ];

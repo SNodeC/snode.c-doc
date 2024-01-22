@@ -1,10 +1,7 @@
 var searchData=
 [
-  ['begin_0',['begin',['../classweb_1_1http_1_1Parser.html#a94ab44c0d65451be6ba3e6e389a8b7d5a19aad9f2fe3ce0023298ab83f7e75775',1,'web::http::Parser::BEGIN'],['../classweb_1_1websocket_1_1Receiver.html#a3cf4e2588c5333541e445cd7aef1eb9ba19aad9f2fe3ce0023298ab83f7e75775',1,'web::websocket::Receiver::BEGIN']]],
-  ['bg_5fblue_1',['BG_BLUE',['../namespaceutils_1_1Color.html#a32f4a227bdc79ba6b98af53dfc126808a6048affb47a52a91de89790038b5ab27',1,'utils::Color']]],
-  ['bg_5fdefault_2',['BG_DEFAULT',['../namespaceutils_1_1Color.html#a32f4a227bdc79ba6b98af53dfc126808a1b6f054082feceb002af4726d29c463f',1,'utils::Color']]],
-  ['bg_5fgreen_3',['BG_GREEN',['../namespaceutils_1_1Color.html#a32f4a227bdc79ba6b98af53dfc126808a52be40da845c5ad545356e5d8573cb78',1,'utils::Color']]],
-  ['bg_5fred_4',['BG_RED',['../namespaceutils_1_1Color.html#a32f4a227bdc79ba6b98af53dfc126808a839d5bffda997d1e41da5978ddb260e3',1,'utils::Color']]],
-  ['binary_5',['BINARY',['../classweb_1_1websocket_1_1SubProtocolContext.html#abf18d0b53484f49844a1315b9730e511a3acf4667336b9fd1f2361d951a61158e',1,'web::websocket::SubProtocolContext']]],
-  ['body_6',['BODY',['../classweb_1_1http_1_1Parser.html#a94ab44c0d65451be6ba3e6e389a8b7d5a786329b34bbe53ab40a54a19cd597f2d',1,'web::http::Parser']]]
+  ['client_0',['client',['../classapps_1_1echo_1_1model_1_1EchoSocketContext.html#af2f207a1b7dd61a01a7a1dc716070edbaef10c650df47bffd6399e5e78da2a9b1',1,'apps::echo::model::EchoSocketContext::CLIENT'],['../classnet_1_1config_1_1ConfigInstance.html#a21ca5568aa45bd1bb91d2fa79687a9e2aef10c650df47bffd6399e5e78da2a9b1',1,'net::config::ConfigInstance::CLIENT'],['../classweb_1_1websocket_1_1SubProtocolFactorySelector.html#aaa9000a982c5189a90dc1f14074a90bfaef10c650df47bffd6399e5e78da2a9b1',1,'web::websocket::SubProtocolFactorySelector::CLIENT'],['../classweb_1_1websocket_1_1SocketContextUpgrade.html#aa97f7fa1f915b6090b7c7b3dabf8726baef10c650df47bffd6399e5e78da2a9b1',1,'web::websocket::SocketContextUpgrade::CLIENT']]],
+  ['cloexit_1',['CLOEXIT',['../classnet_1_1phy_1_1PhysicalSocket.html#ababfe8607820fbd9c4674b538303325aacd9e3370a2597ba83feb299fd374a35e',1,'net::phy::PhysicalSocket']]],
+  ['close_2',['close',['../classweb_1_1websocket_1_1SubProtocolContext.html#abf18d0b53484f49844a1315b9730e511a9c7d45219a23ec556beb1a2164b29ff4',1,'web::websocket::SubProtocolContext::CLOSE'],['../namespaceweb_1_1http.html#ac27fdcf348c7472940ecd0e34342dca1a31333582a62633255ac3791bd7f5af0b',1,'web::http::Close']]],
+  ['continuation_3',['CONTINUATION',['../classweb_1_1websocket_1_1SubProtocolContext.html#abf18d0b53484f49844a1315b9730e511aeaa2d00f12ace4d32ca1fcdad17475e7',1,'web::websocket::SubProtocolContext']]]
 ];

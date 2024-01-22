@@ -12,8 +12,6 @@ var classiot_1_1mqtt_1_1packets_1_1Subscribe =
     [ "flags", "classiot_1_1mqtt_1_1packets_1_1Subscribe.html#a8c7e68464f261bbb0ff6412c58ffbab0", null ],
     [ "name", "classiot_1_1mqtt_1_1packets_1_1Subscribe.html#a081c745b59b0976dd603712f1b351a40", null ],
     [ "packetIdentifier", "classiot_1_1mqtt_1_1packets_1_1Subscribe.html#ae0b220f53a69f06afd8914716649d98e", null ],
-    [ "qoS", "classiot_1_1mqtt_1_1packets_1_1Subscribe.html#af14a1bdb416a8ad7d7820e9f3e2ea60c", null ],
-    [ "topic", "classiot_1_1mqtt_1_1packets_1_1Subscribe.html#a2a158715b9f16591f5ef857a1da21d50", null ],
     [ "topics", "classiot_1_1mqtt_1_1packets_1_1Subscribe.html#a82b08a441088c4a770aff5d189e84959", null ],
     [ "type", "classiot_1_1mqtt_1_1packets_1_1Subscribe.html#ad8f30bf63c16e2d2321333eb2923bd4c", null ]
 ];

@@ -1,7 +1,7 @@
 var classiot_1_1mqtt_1_1packets_1_1Connect =
 [
     [ "Connect", "classiot_1_1mqtt_1_1packets_1_1Connect.html#acf053d26c7a20aee2a080f41845839a5", null ],
-    [ "Connect", "classiot_1_1mqtt_1_1packets_1_1Connect.html#a3b5e9aab655014d988964f31f2837999", null ],
+    [ "Connect", "classiot_1_1mqtt_1_1packets_1_1Connect.html#a606cd6aa53120fd33e4713cd186a647d", null ],
     [ "getCleanSession", "classiot_1_1mqtt_1_1packets_1_1Connect.html#a9150e7e9eef5684b634e019923b90495", null ],
     [ "getClientId", "classiot_1_1mqtt_1_1packets_1_1Connect.html#a5fa5a01b5c0a62f00da08367b1619fb0", null ],
     [ "getConnectFlags", "classiot_1_1mqtt_1_1packets_1_1Connect.html#a9d6fc06bb9dbd5cfb17332d6f9734736", null ],
@@ -12,6 +12,7 @@ var classiot_1_1mqtt_1_1packets_1_1Connect =
     [ "getPassword", "classiot_1_1mqtt_1_1packets_1_1Connect.html#aba1d390375199e6f2f29d92a93b7b9ab", null ],
     [ "getPasswordFlag", "classiot_1_1mqtt_1_1packets_1_1Connect.html#a9faf69cdc79db80b54b58b0910510da3", null ],
     [ "getProtocol", "classiot_1_1mqtt_1_1packets_1_1Connect.html#af7f30f3ac98f21b6cccf76984af2ea52", null ],
+    [ "getReflect", "classiot_1_1mqtt_1_1packets_1_1Connect.html#a5e2bdae6abf09ff4d08c22973c871301", null ],
     [ "getType", "classiot_1_1mqtt_1_1packets_1_1Connect.html#a2010ac4f0ef53a8c8140faa953b5a6cd", null ],
     [ "getUsername", "classiot_1_1mqtt_1_1packets_1_1Connect.html#a949599abe69e6c57ac1cad1f919712b1", null ],
     [ "getUsernameFlag", "classiot_1_1mqtt_1_1packets_1_1Connect.html#a8b34cb107b66dfa8b450d12eabf0a7d5", null ],
@@ -32,6 +33,7 @@ var classiot_1_1mqtt_1_1packets_1_1Connect =
     [ "password", "classiot_1_1mqtt_1_1packets_1_1Connect.html#af4abba1d6a2ced124128796d3f9410c9", null ],
     [ "passwordFlag", "classiot_1_1mqtt_1_1packets_1_1Connect.html#a0638b7f481b8e163790763e6b75cb6f4", null ],
     [ "protocol", "classiot_1_1mqtt_1_1packets_1_1Connect.html#a3eaa2a5b80cd43ddbde7355474e85de4", null ],
+    [ "reflect", "classiot_1_1mqtt_1_1packets_1_1Connect.html#a899fe1e3506ba7b7fecf043b58ffc57a", null ],
     [ "reserved", "classiot_1_1mqtt_1_1packets_1_1Connect.html#af3e938b7df31c726ff2085a83338a408", null ],
     [ "type", "classiot_1_1mqtt_1_1packets_1_1Connect.html#ad8f30bf63c16e2d2321333eb2923bd4c", null ],
     [ "username", "classiot_1_1mqtt_1_1packets_1_1Connect.html#abb20e9d4b08ca6f0e637c7510a4f5804", null ],

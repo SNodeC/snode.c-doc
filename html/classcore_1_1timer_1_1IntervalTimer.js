@@ -17,7 +17,6 @@ var classcore_1_1timer_1_1IntervalTimer =
     [ "span", "classcore_1_1timer_1_1IntervalTimer.html#ad353e97a9089b2769e52f8825e4878b1", null ],
     [ "unobservedEvent", "classcore_1_1timer_1_1IntervalTimer.html#abe96cc36b3cbddf77cbbd85b8dac8b6f", null ],
     [ "update", "classcore_1_1timer_1_1IntervalTimer.html#a76f5d4b39a8976397f057c70b1b2ebdb", null ],
-    [ "updateTimeout", "classcore_1_1timer_1_1IntervalTimer.html#a5bb70c923080e42ea4f371af076f462f", null ],
     [ "~IntervalTimer", "classcore_1_1timer_1_1IntervalTimer.html#aab3034977644df07fc5983ae393f0b40", null ],
     [ "Timer", "classcore_1_1timer_1_1IntervalTimer.html#a50de43af5bed41f30c071d8cce0e81bc", null ],
     [ "absoluteTimeout", "classcore_1_1timer_1_1IntervalTimer.html#ae61589579af003e54574e972b20e627f", null ],
