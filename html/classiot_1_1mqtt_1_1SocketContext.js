@@ -21,7 +21,8 @@ var classiot_1_1mqtt_1_1SocketContext =
     [ "setTimeout", "classiot_1_1mqtt_1_1SocketContext.html#af2dbfff5f7495cf483a2b28133d5cc49", null ],
     [ "shutdownRead", "classiot_1_1mqtt_1_1SocketContext.html#abe74f8904842a349e29846b10828fba8", null ],
     [ "shutdownWrite", "classiot_1_1mqtt_1_1SocketContext.html#a853d83e3e3cd8dfcce992ab688c0f63e", null ],
-    [ "streamToPeer", "classiot_1_1mqtt_1_1SocketContext.html#a9dba4f9478d4c9bb3eac26b4a2050552", null ],
+    [ "streamEof", "classiot_1_1mqtt_1_1SocketContext.html#a3e06fd9a548c8608b81d816fedb0b37d", null ],
+    [ "streamToPeer", "classiot_1_1mqtt_1_1SocketContext.html#a9cce0f4a5eeb2308ba1437aafcfae085", null ],
     [ "switchSocketContext", "classiot_1_1mqtt_1_1SocketContext.html#a153fd05f8c588f882b322dcbd47667b4", null ],
     [ "mqtt", "classiot_1_1mqtt_1_1SocketContext.html#aa284836e39e2cce1603f318d52b25d11", null ],
     [ "socketConnection", "classiot_1_1mqtt_1_1SocketContext.html#aa1eeb9f67270ffa53d9416c88d08c7fb", null ]

@@ -1,7 +1,6 @@
 var namespaceweb_1_1http_1_1server =
 [
     [ "Request", "classweb_1_1http_1_1server_1_1Request.html", "classweb_1_1http_1_1server_1_1Request" ],
-    [ "RequestContextBase", "classweb_1_1http_1_1server_1_1RequestContextBase.html", "classweb_1_1http_1_1server_1_1RequestContextBase" ],
     [ "RequestParser", "classweb_1_1http_1_1server_1_1RequestParser.html", "classweb_1_1http_1_1server_1_1RequestParser" ],
     [ "Response", "classweb_1_1http_1_1server_1_1Response.html", "classweb_1_1http_1_1server_1_1Response" ],
     [ "Server", "classweb_1_1http_1_1server_1_1Server.html", "classweb_1_1http_1_1server_1_1Server" ],

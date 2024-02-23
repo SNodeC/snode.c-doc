@@ -2,6 +2,7 @@ var classcore_1_1timer_1_1IntervalTimer =
 [
     [ "IntervalTimer", "classcore_1_1timer_1_1IntervalTimer.html#a63650f7c339902905980381efcf94091", null ],
     [ "IntervalTimer", "classcore_1_1timer_1_1IntervalTimer.html#a43563100fc459ce781dac1a12e9dea69", null ],
+    [ "atNextTick", "classcore_1_1timer_1_1IntervalTimer.html#a2e8d915eca53e827be4f493a63ae058d", null ],
     [ "cancel", "classcore_1_1timer_1_1IntervalTimer.html#ae4772b0cd2211c02e4ec10432368395a", null ],
     [ "destruct", "classcore_1_1timer_1_1IntervalTimer.html#a0af009a224c3a4020ed30f5586c0394c", null ],
     [ "dispatchEvent", "classcore_1_1timer_1_1IntervalTimer.html#a4ba7992afdc48d50b85f0603647e2e7e", null ],

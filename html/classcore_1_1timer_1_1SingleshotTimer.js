@@ -2,6 +2,7 @@ var classcore_1_1timer_1_1SingleshotTimer =
 [
     [ "SingleshotTimer", "classcore_1_1timer_1_1SingleshotTimer.html#ae15e07fbd3105ee802367d987555dfd0", null ],
     [ "SingleshotTimer", "classcore_1_1timer_1_1SingleshotTimer.html#a021ce2f4c49323449bbe12b5f7025ab2", null ],
+    [ "atNextTick", "classcore_1_1timer_1_1SingleshotTimer.html#a2e8d915eca53e827be4f493a63ae058d", null ],
     [ "cancel", "classcore_1_1timer_1_1SingleshotTimer.html#ae4772b0cd2211c02e4ec10432368395a", null ],
     [ "destruct", "classcore_1_1timer_1_1SingleshotTimer.html#a0af009a224c3a4020ed30f5586c0394c", null ],
     [ "dispatchEvent", "classcore_1_1timer_1_1SingleshotTimer.html#ac295163335c73b76eda6701e7bdc6560", null ],

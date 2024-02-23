@@ -1,6 +1,7 @@
 var classcore_1_1socket_1_1stream_1_1legacy_1_1SocketReader =
 [
     [ "Super", "classcore_1_1socket_1_1stream_1_1legacy_1_1SocketReader.html#ab49564997b1849289e01f15d29ef281f", null ],
+    [ "atNextTick", "classcore_1_1socket_1_1stream_1_1legacy_1_1SocketReader.html#a2e8d915eca53e827be4f493a63ae058d", null ],
     [ "checkTimeout", "classcore_1_1socket_1_1stream_1_1legacy_1_1SocketReader.html#ae04e87c4f44979a04d3839759a63220a", null ],
     [ "destruct", "classcore_1_1socket_1_1stream_1_1legacy_1_1SocketReader.html#a0af009a224c3a4020ed30f5586c0394c", null ],
     [ "disable", "classcore_1_1socket_1_1stream_1_1legacy_1_1SocketReader.html#a4ab422ce6622a29cee38a0108ee6ccc1", null ],

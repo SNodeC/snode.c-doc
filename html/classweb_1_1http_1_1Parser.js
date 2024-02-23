@@ -42,7 +42,6 @@ var classweb_1_1http_1_1Parser =
     [ "hTTPCompliance", "classweb_1_1http_1_1Parser.html#a47816f45ef2eef65b2e88e3548c5b969", null ],
     [ "httpMajor", "classweb_1_1http_1_1Parser.html#a5f798669b1499a78ccf0cd6267a56ece", null ],
     [ "httpMinor", "classweb_1_1http_1_1Parser.html#a8e81fa6248bcc037558c796ec76e80d2", null ],
-    [ "httpVersion", "classweb_1_1http_1_1Parser.html#a7cb4927722c94e5e18312563fe06c128", null ],
     [ "httpVersionRegex", "classweb_1_1http_1_1Parser.html#a4e2c4dc8666af3b74b0476b35c1c4d03", null ],
     [ "line", "classweb_1_1http_1_1Parser.html#af961ee96cda4105c5422fe4cbfa38b0d", null ],
     [ "parserState", "classweb_1_1http_1_1Parser.html#a0e858c3c2fa4c9416538d738444c2db3", null ],

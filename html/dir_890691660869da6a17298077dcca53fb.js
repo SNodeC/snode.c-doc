@@ -12,8 +12,6 @@ var dir_890691660869da6a17298077dcca53fb =
     [ "MimeTypes.h", "MimeTypes_8h.html", "MimeTypes_8h" ],
     [ "Parser.cpp", "Parser_8cpp.html", "Parser_8cpp" ],
     [ "Parser.h", "Parser_8h.html", "Parser_8h" ],
-    [ "SocketContext.cpp", "web_2http_2SocketContext_8cpp.html", null ],
-    [ "SocketContext.h", "web_2http_2SocketContext_8h.html", "web_2http_2SocketContext_8h" ],
     [ "SocketContextFactory.h", "web_2http_2SocketContextFactory_8h.html", "web_2http_2SocketContextFactory_8h" ],
     [ "SocketContextUpgrade.h", "http_2SocketContextUpgrade_8h.html", "http_2SocketContextUpgrade_8h" ],
     [ "SocketContextUpgradeFactory.h", "http_2SocketContextUpgradeFactory_8h.html", "http_2SocketContextUpgradeFactory_8h" ],

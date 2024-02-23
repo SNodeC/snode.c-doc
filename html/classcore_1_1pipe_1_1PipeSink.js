@@ -3,6 +3,7 @@ var classcore_1_1pipe_1_1PipeSink =
     [ "PipeSink", "classcore_1_1pipe_1_1PipeSink.html#a6fe95dfcf5d65959202bdbbfb5fffaa5", null ],
     [ "PipeSink", "classcore_1_1pipe_1_1PipeSink.html#abfdb292fe8bd66fac2a78dcefe678fdf", null ],
     [ "~PipeSink", "classcore_1_1pipe_1_1PipeSink.html#a2c1fac1885d45bedf52e62b567d4a2eb", null ],
+    [ "atNextTick", "classcore_1_1pipe_1_1PipeSink.html#a2e8d915eca53e827be4f493a63ae058d", null ],
     [ "checkTimeout", "classcore_1_1pipe_1_1PipeSink.html#ae04e87c4f44979a04d3839759a63220a", null ],
     [ "destruct", "classcore_1_1pipe_1_1PipeSink.html#a0af009a224c3a4020ed30f5586c0394c", null ],
     [ "disable", "classcore_1_1pipe_1_1PipeSink.html#a4ab422ce6622a29cee38a0108ee6ccc1", null ],

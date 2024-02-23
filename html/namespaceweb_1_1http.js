@@ -7,7 +7,6 @@ var namespaceweb_1_1http =
     [ "CookieOptions", "classweb_1_1http_1_1CookieOptions.html", "classweb_1_1http_1_1CookieOptions" ],
     [ "MimeTypes", "classweb_1_1http_1_1MimeTypes.html", "classweb_1_1http_1_1MimeTypes" ],
     [ "Parser", "classweb_1_1http_1_1Parser.html", "classweb_1_1http_1_1Parser" ],
-    [ "SocketContext", "classweb_1_1http_1_1SocketContext.html", "classweb_1_1http_1_1SocketContext" ],
     [ "SocketContextFactory", "classweb_1_1http_1_1SocketContextFactory.html", "classweb_1_1http_1_1SocketContextFactory" ],
     [ "SocketContextUpgrade", "classweb_1_1http_1_1SocketContextUpgrade.html", "classweb_1_1http_1_1SocketContextUpgrade" ],
     [ "SocketContextUpgradeFactory", "classweb_1_1http_1_1SocketContextUpgradeFactory.html", "classweb_1_1http_1_1SocketContextUpgradeFactory" ],

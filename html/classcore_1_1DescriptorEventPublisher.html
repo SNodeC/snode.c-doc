@@ -326,7 +326,7 @@ Here is the caller graph for this function:</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="DescriptorEventReceiver_8cpp_source.html#l00171">core::DescriptorEventReceiver::checkTimeout()</a>, and <a class="el" href="DescriptorEventPublisher_8h_source.html#l00081">observedEventReceivers</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventMultiplexer_8cpp_source.html#l00141">core::EventMultiplexer::checkTimedOutEvents()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventMultiplexer_8cpp_source.html#l00143">core::EventMultiplexer::checkTimedOutEvents()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -335,7 +335,7 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DescriptorEventPublisher_a12c2d15ad39f066de6fd6177e01d1837_icgraph.svg" width="1848" height="159"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DescriptorEventPublisher_a12c2d15ad39f066de6fd6177e01d1837_icgraph.svg" width="1746" height="135"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -375,7 +375,7 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DescriptorEventPublisher_aaff82593acb46709b9291081314cf587_icgraph.svg" width="1412" height="135"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DescriptorEventPublisher_aaff82593acb46709b9291081314cf587_icgraph.svg" width="1310" height="135"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -408,7 +408,7 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DescriptorEventPublisher_a998d681666ff72ed73cf0799ff4aca77_icgraph.svg" width="2022" height="2071"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DescriptorEventPublisher_a998d681666ff72ed73cf0799ff4aca77_icgraph.svg" width="1946" height="2215"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -432,12 +432,12 @@ Here is the caller graph for this function:</div>
 <p class="definition">Definition at line <a class="el" href="DescriptorEventPublisher_8cpp_source.html#l00043">43</a> of file <a class="el" href="DescriptorEventPublisher_8cpp_source.html">DescriptorEventPublisher.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   43</span>                                                                                          {</div>
 <div class="line"><span class="lineno">   44</span>        <span class="keyword">const</span> <span class="keywordtype">int</span> fd = descriptorEventReceiver-&gt;getRegisteredFd();</div>
-<div class="line"><span class="lineno">   45</span>        descriptorEventReceiver-&gt;setEnabled(<a class="code hl_function" href="classutils_1_1Timeval.html#a54b232dc1ffeea007100dcd1caad1987">utils::Timeval::currentTime</a>());</div>
-<div class="line"><span class="lineno">   46</span>        <a class="code hl_variable" href="classcore_1_1DescriptorEventPublisher.html#ab3ba1ddd022eac76ca6b1a1181e3676b">observedEventReceivers</a>[fd].push_front(descriptorEventReceiver);</div>
-<div class="line"><span class="lineno">   47</span>        <a class="code hl_function" href="classcore_1_1DescriptorEventPublisher.html#a010d889407017a69f9635271587aab9a">muxAdd</a>(descriptorEventReceiver);</div>
-<div class="line"><span class="lineno">   48</span>        <span class="keywordflow">if</span> (descriptorEventReceiver-&gt;isSuspended()) {</div>
-<div class="line"><span class="lineno">   49</span>            <a class="code hl_function" href="classcore_1_1DescriptorEventPublisher.html#a5e0e1a78a4bae48537ba6d0425a7c1cf">muxOff</a>(descriptorEventReceiver);</div>
-<div class="line"><span class="lineno">   50</span>        }</div>
+<div class="line"><span class="lineno">   45</span>        <a class="code hl_variable" href="classcore_1_1DescriptorEventPublisher.html#ab3ba1ddd022eac76ca6b1a1181e3676b">observedEventReceivers</a>[fd].push_front(descriptorEventReceiver);</div>
+<div class="line"><span class="lineno">   46</span>        <a class="code hl_function" href="classcore_1_1DescriptorEventPublisher.html#a010d889407017a69f9635271587aab9a">muxAdd</a>(descriptorEventReceiver);</div>
+<div class="line"><span class="lineno">   47</span>        <span class="keywordflow">if</span> (descriptorEventReceiver-&gt;isSuspended()) {</div>
+<div class="line"><span class="lineno">   48</span>            <a class="code hl_function" href="classcore_1_1DescriptorEventPublisher.html#a5e0e1a78a4bae48537ba6d0425a7c1cf">muxOff</a>(descriptorEventReceiver);</div>
+<div class="line"><span class="lineno">   49</span>        }</div>
+<div class="line"><span class="lineno">   50</span>        descriptorEventReceiver-&gt;setEnabled(<a class="code hl_function" href="classutils_1_1Timeval.html#a54b232dc1ffeea007100dcd1caad1987">utils::Timeval::currentTime</a>());</div>
 <div class="line"><span class="lineno">   51</span>    }</div>
 <div class="ttc" id="aclasscore_1_1DescriptorEventPublisher_html_a010d889407017a69f9635271587aab9a"><div class="ttname"><a href="classcore_1_1DescriptorEventPublisher.html#a010d889407017a69f9635271587aab9a">core::DescriptorEventPublisher::muxAdd</a></div><div class="ttdeci">virtual void muxAdd(DescriptorEventReceiver *descriptorEventReceiver)=0</div></div>
 <div class="ttc" id="aclasscore_1_1DescriptorEventPublisher_html_a5e0e1a78a4bae48537ba6d0425a7c1cf"><div class="ttname"><a href="classcore_1_1DescriptorEventPublisher.html#a5e0e1a78a4bae48537ba6d0425a7c1cf">core::DescriptorEventPublisher::muxOff</a></div><div class="ttdeci">virtual void muxOff(DescriptorEventReceiver *descriptorEventReceiver)=0</div></div>
@@ -454,7 +454,7 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DescriptorEventPublisher_ab1ba62f94b1882616f47a3cc8045b28d_icgraph.svg" width="1280" height="430"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DescriptorEventPublisher_ab1ba62f94b1882616f47a3cc8045b28d_icgraph.svg" width="1307" height="464"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -518,7 +518,7 @@ Here is the caller graph for this function:</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="DescriptorEventReceiver_8cpp_source.html#l00152">core::DescriptorEventReceiver::getTimeout()</a>, <a class="el" href="DescriptorEventReceiver_8h_source.html#l00067">core::DescriptorEventReceiver::TIMEOUT::MAX</a>, <a class="el" href="DescriptorEventPublisher_8h_source.html#l00081">observedEventReceivers</a>, <a class="el" href="DescriptorEventPublisher_8h_source.html#l00084">observedEventReceiversDirty</a>, and <a class="el" href="Timeval_8cpp_source.html#l00061">utils::Timeval::operator=()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventMultiplexer_8cpp_source.html#l00155">core::EventMultiplexer::getNextTimeout()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventMultiplexer_8cpp_source.html#l00157">core::EventMultiplexer::getNextTimeout()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -527,7 +527,7 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DescriptorEventPublisher_a11a19622f6801435d16aad631296b36e_icgraph.svg" width="2060" height="159"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DescriptorEventPublisher_a11a19622f6801435d16aad631296b36e_icgraph.svg" width="1958" height="135"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -554,11 +554,11 @@ Here is the caller graph for this function:</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="DescriptorEventPublisher_8h_source.html#l00081">observedEventReceivers</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventMultiplexer_8cpp_source.html#l00171">core::EventMultiplexer::observedEventReceiverCount()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventMultiplexer_8cpp_source.html#l00174">core::EventMultiplexer::observedEventReceiverCount()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DescriptorEventPublisher_a885e82b43c0163ae3b2748ae20babe0e_icgraph.svg" width="2136" height="159"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DescriptorEventPublisher_a885e82b43c0163ae3b2748ae20babe0e_icgraph.svg" width="2034" height="135"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -592,7 +592,7 @@ Here is the caller graph for this function:</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="DescriptorEventPublisher_8h_source.html#l00081">observedEventReceivers</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventMultiplexer_8cpp_source.html#l00180">core::EventMultiplexer::maxFd()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventMultiplexer_8cpp_source.html#l00183">core::EventMultiplexer::maxFd()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -631,7 +631,7 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DescriptorEventPublisher_a010d889407017a69f9635271587aab9a_icgraph.svg" width="1551" height="430"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DescriptorEventPublisher_a010d889407017a69f9635271587aab9a_icgraph.svg" width="1578" height="464"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -666,7 +666,7 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DescriptorEventPublisher_a28bc1eb205ca9783d96a4bfedf344e8f_icgraph.svg" width="2143" height="250"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DescriptorEventPublisher_a28bc1eb205ca9783d96a4bfedf344e8f_icgraph.svg" width="2040" height="202"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -701,7 +701,7 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DescriptorEventPublisher_a5e0e1a78a4bae48537ba6d0425a7c1cf_icgraph.svg" width="2307" height="1162"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DescriptorEventPublisher_a5e0e1a78a4bae48537ba6d0425a7c1cf_icgraph.svg" width="2231" height="1196"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -736,7 +736,7 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DescriptorEventPublisher_a8cdba59fd3522f1e108a21f6f818840e_icgraph.svg" width="2291" height="952"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DescriptorEventPublisher_a8cdba59fd3522f1e108a21f6f818840e_icgraph.svg" width="2204" height="1038"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -820,7 +820,7 @@ Here is the caller graph for this function:</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="DescriptorEventReceiver_8cpp_source.html#l00138">core::DescriptorEventReceiver::isSuspended()</a>, <a class="el" href="classcore_1_1DescriptorEventPublisher.html#a28bc1eb205ca9783d96a4bfedf344e8f">muxDel()</a>, <a class="el" href="classcore_1_1DescriptorEventPublisher.html#a5e0e1a78a4bae48537ba6d0425a7c1cf">muxOff()</a>, <a class="el" href="classcore_1_1DescriptorEventPublisher.html#a8cdba59fd3522f1e108a21f6f818840e">muxOn()</a>, <a class="el" href="DescriptorEventPublisher_8h_source.html#l00081">observedEventReceivers</a>, <a class="el" href="DescriptorEventPublisher_8h_source.html#l00084">observedEventReceiversDirty</a>, and <a class="el" href="DescriptorEventReceiver_8cpp_source.html#l00167">core::DescriptorEventReceiver::triggered()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventMultiplexer_8cpp_source.html#l00147">core::EventMultiplexer::releaseExpiredResources()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventMultiplexer_8cpp_source.html#l00149">core::EventMultiplexer::releaseExpiredResources()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -829,7 +829,7 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DescriptorEventPublisher_a75b032abf55f5bc5cacc69690f9f02e3_icgraph.svg" width="1872" height="250"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DescriptorEventPublisher_a75b032abf55f5bc5cacc69690f9f02e3_icgraph.svg" width="1770" height="202"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -866,7 +866,7 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DescriptorEventPublisher_adef0cdee352a13b99772af079fb7bfe1_icgraph.svg" width="1162" height="690"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DescriptorEventPublisher_adef0cdee352a13b99772af079fb7bfe1_icgraph.svg" width="1283" height="834"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -907,7 +907,7 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DescriptorEventPublisher_ab7af96e02343c99d3f830d859c0d5927_icgraph.svg" width="1412" height="135"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1DescriptorEventPublisher_ab7af96e02343c99d3f830d859c0d5927_icgraph.svg" width="1310" height="135"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -1098,7 +1098,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacecore.html">core</a></li><li class="navelem"><a class="el" href="classcore_1_1DescriptorEventPublisher.html">DescriptorEventPublisher</a></li>
-    <li class="footer">Generated on Sun Jan 21 2024 23:58:09 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Fri Feb 23 2024 10:00:57 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

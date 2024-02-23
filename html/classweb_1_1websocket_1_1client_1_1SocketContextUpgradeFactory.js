@@ -18,6 +18,7 @@ var classweb_1_1websocket_1_1client_1_1SocketContextUpgradeFactory =
     [ "prepare", "classweb_1_1websocket_1_1client_1_1SocketContextUpgradeFactory.html#ac9987e6802325e3f70a94b92fe5c17ca", null ],
     [ "refCount", "classweb_1_1websocket_1_1client_1_1SocketContextUpgradeFactory.html#a5ec0d8e1bd68308db21a518ac1ce283f", null ],
     [ "request", "classweb_1_1websocket_1_1client_1_1SocketContextUpgradeFactory.html#a49afbcd1387bc71ce80b052882472a71", null ],
+    [ "Request", "classweb_1_1websocket_1_1client_1_1SocketContextUpgradeFactory.html#a7c7ee905e2b175bd61137a92c8a13780", null ],
     [ "response", "classweb_1_1websocket_1_1client_1_1SocketContextUpgradeFactory.html#a47a5b6d2ccfad6bcc6882108ddee6b57", null ],
     [ "Response", "classweb_1_1websocket_1_1client_1_1SocketContextUpgradeFactory.html#a2bc04b42909d2c5f60ca16595381ed23", null ]
 ];

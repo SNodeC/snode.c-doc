@@ -6,6 +6,8 @@ var dir_a40e7579b6101fdd4a0cbf3e727ecb1c =
     [ "JsonMiddleware.h", "JsonMiddleware_8h.html", "JsonMiddleware_8h" ],
     [ "StaticMiddleware.cpp", "StaticMiddleware_8cpp.html", "StaticMiddleware_8cpp" ],
     [ "StaticMiddleware.h", "StaticMiddleware_8h.html", "StaticMiddleware_8h" ],
+    [ "VerboseRequest.cpp", "VerboseRequest_8cpp.html", "VerboseRequest_8cpp" ],
+    [ "VerboseRequest.h", "VerboseRequest_8h.html", "VerboseRequest_8h" ],
     [ "VHost.cpp", "VHost_8cpp.html", "VHost_8cpp" ],
     [ "VHost.h", "VHost_8h.html", "VHost_8h" ]
 ];

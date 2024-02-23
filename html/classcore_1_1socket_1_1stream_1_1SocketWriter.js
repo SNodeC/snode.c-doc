@@ -1,8 +1,8 @@
 var classcore_1_1socket_1_1stream_1_1SocketWriter =
 [
     [ "SocketWriter", "classcore_1_1socket_1_1stream_1_1SocketWriter.html#a1c5be2c6d022c15793dfd2eed6520587", null ],
-    [ "SocketWriter", "classcore_1_1socket_1_1stream_1_1SocketWriter.html#a82059ebe513af8928e1a1fcc069aa85e", null ],
-    [ "~SocketWriter", "classcore_1_1socket_1_1stream_1_1SocketWriter.html#ac5cc50a9b9dc1f80ed7cb449a5e5bb7a", null ],
+    [ "SocketWriter", "classcore_1_1socket_1_1stream_1_1SocketWriter.html#afa023211b7313ab80d92a705702a4f2e", null ],
+    [ "atNextTick", "classcore_1_1socket_1_1stream_1_1SocketWriter.html#a2e8d915eca53e827be4f493a63ae058d", null ],
     [ "checkTimeout", "classcore_1_1socket_1_1stream_1_1SocketWriter.html#ae04e87c4f44979a04d3839759a63220a", null ],
     [ "destruct", "classcore_1_1socket_1_1stream_1_1SocketWriter.html#a0af009a224c3a4020ed30f5586c0394c", null ],
     [ "disable", "classcore_1_1socket_1_1stream_1_1SocketWriter.html#a4ab422ce6622a29cee38a0108ee6ccc1", null ],
@@ -28,7 +28,8 @@ var classcore_1_1socket_1_1stream_1_1SocketWriter =
     [ "shutdownWrite", "classcore_1_1socket_1_1stream_1_1SocketWriter.html#abd61595d46548f991c15c5abf50aa1dd", null ],
     [ "signalEvent", "classcore_1_1socket_1_1stream_1_1SocketWriter.html#a7fab5663fc6fe81ac7978084446bfb22", null ],
     [ "span", "classcore_1_1socket_1_1stream_1_1SocketWriter.html#ad353e97a9089b2769e52f8825e4878b1", null ],
-    [ "streamToPeer", "classcore_1_1socket_1_1stream_1_1SocketWriter.html#a1c163be019464322c58c238542d9c039", null ],
+    [ "streamEof", "classcore_1_1socket_1_1stream_1_1SocketWriter.html#a6f13c171dd3c5284612d61418d676337", null ],
+    [ "streamToPeer", "classcore_1_1socket_1_1stream_1_1SocketWriter.html#aed91fe252c55ee6c12df56808161ec57", null ],
     [ "suspend", "classcore_1_1socket_1_1stream_1_1SocketWriter.html#aab5e466759c83194c5bc4b41f1a33103", null ],
     [ "timeoutEvent", "classcore_1_1socket_1_1stream_1_1SocketWriter.html#ac2573380ee490ca0039e4746cff1303c", null ],
     [ "triggered", "classcore_1_1socket_1_1stream_1_1SocketWriter.html#a550c1ba95dcb4e286eaf680eed1ca11b", null ],

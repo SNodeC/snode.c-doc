@@ -3,6 +3,7 @@ var classcore_1_1TimerEventReceiver =
     [ "TimerEventReceiver", "classcore_1_1TimerEventReceiver.html#a31044eb7aa2338951eb3e7bae1933b38", null ],
     [ "TimerEventReceiver", "classcore_1_1TimerEventReceiver.html#a807e13fae610d76c12480935855046aa", null ],
     [ "~TimerEventReceiver", "classcore_1_1TimerEventReceiver.html#ae76ed3c7a33bc4b7224d662f9f16a3a1", null ],
+    [ "atNextTick", "classcore_1_1TimerEventReceiver.html#a2e8d915eca53e827be4f493a63ae058d", null ],
     [ "cancel", "classcore_1_1TimerEventReceiver.html#ae4772b0cd2211c02e4ec10432368395a", null ],
     [ "destruct", "classcore_1_1TimerEventReceiver.html#a0af009a224c3a4020ed30f5586c0394c", null ],
     [ "dispatchEvent", "classcore_1_1TimerEventReceiver.html#a33a3c3c6d9503087dfb628c8e86646d6", null ],

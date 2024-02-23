@@ -1,13 +1,15 @@
 var classcore_1_1socket_1_1stream_1_1tls_1_1TLSHandshake =
 [
-    [ "TLSHandshake", "classcore_1_1socket_1_1stream_1_1tls_1_1TLSHandshake.html#acb9ee6484eb6227611fff186b06213ef", null ],
+    [ "TLSHandshake", "classcore_1_1socket_1_1stream_1_1tls_1_1TLSHandshake.html#a61e66727ff26660649083539c7a2495a", null ],
+    [ "atNextTick", "classcore_1_1socket_1_1stream_1_1tls_1_1TLSHandshake.html#a2e8d915eca53e827be4f493a63ae058d", null ],
+    [ "atNextTick", "classcore_1_1socket_1_1stream_1_1tls_1_1TLSHandshake.html#a2e8d915eca53e827be4f493a63ae058d", null ],
     [ "checkTimeout", "classcore_1_1socket_1_1stream_1_1tls_1_1TLSHandshake.html#ae04e87c4f44979a04d3839759a63220a", null ],
     [ "checkTimeout", "classcore_1_1socket_1_1stream_1_1tls_1_1TLSHandshake.html#ae04e87c4f44979a04d3839759a63220a", null ],
     [ "destruct", "classcore_1_1socket_1_1stream_1_1tls_1_1TLSHandshake.html#a0af009a224c3a4020ed30f5586c0394c", null ],
     [ "disable", "classcore_1_1socket_1_1stream_1_1tls_1_1TLSHandshake.html#a4ab422ce6622a29cee38a0108ee6ccc1", null ],
     [ "disable", "classcore_1_1socket_1_1stream_1_1tls_1_1TLSHandshake.html#a4ab422ce6622a29cee38a0108ee6ccc1", null ],
     [ "dispatchEvent", "classcore_1_1socket_1_1stream_1_1tls_1_1TLSHandshake.html#a58933c891baec91619116999a4d40aa2", null ],
-    [ "doHandshake", "classcore_1_1socket_1_1stream_1_1tls_1_1TLSHandshake.html#ababf4f47e030b83eea2df885d9c62874", null ],
+    [ "doHandshake", "classcore_1_1socket_1_1stream_1_1tls_1_1TLSHandshake.html#a4fa969478e53adfb271cb6afcf86fd32", null ],
     [ "enable", "classcore_1_1socket_1_1stream_1_1tls_1_1TLSHandshake.html#ace4fa96fa2d29ef1bcaf8fc1cf28100a", null ],
     [ "enable", "classcore_1_1socket_1_1stream_1_1tls_1_1TLSHandshake.html#ace4fa96fa2d29ef1bcaf8fc1cf28100a", null ],
     [ "getName", "classcore_1_1socket_1_1stream_1_1tls_1_1TLSHandshake.html#a0735c234c7848cf4d45473a6f7ce11b2", null ],

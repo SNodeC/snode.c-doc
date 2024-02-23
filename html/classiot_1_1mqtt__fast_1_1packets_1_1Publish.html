@@ -207,7 +207,7 @@ Private Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="mqtt-fast_2packets_2Publish_8h_source.html#l00039">39</a> of file <a class="el" href="mqtt-fast_2packets_2Publish_8h_source.html">Publish.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mqtt-fast_2packets_2Publish_8h_source.html#l00040">40</a> of file <a class="el" href="mqtt-fast_2packets_2Publish_8h_source.html">Publish.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="adef513dcadaed7c773da9659ebe59c70" name="adef513dcadaed7c773da9659ebe59c70"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adef513dcadaed7c773da9659ebe59c70">&#9670;&#160;</a></span>Publish() <span class="overload">[1/2]</span></h2>
@@ -259,37 +259,37 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html#l00029">29</a> of file <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html">Publish.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   30</span>        : <a class="code hl_class" href="classiot_1_1mqtt__fast_1_1ControlPacket.html">iot::mqtt_fast::ControlPacket</a>(<a class="code hl_define" href="mqtt-fast_2packets_2Publish_8h.html#a3dc6a4b0dc54027175ff59c5c41ecd1d">MQTT_PUBLISH</a>,</div>
-<div class="line"><span class="lineno">   31</span>                                        <span class="keyword">static_cast&lt;</span>uint8_t<span class="keyword">&gt;</span>((<a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1packets_1_1Publish.html#a64f254a2cffea87d9a69e36b91cb4b95">dup</a> ? 0x04 : 0x00) | ((<a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1packets_1_1Publish.html#a31d8c3322aca125da403ea285d860972">qoS</a> &lt;&lt; 1) &amp; 0x06) | (<a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1packets_1_1Publish.html#a12ed609468e1ba77a62b16ffc96d540a">retain</a> ? 0x01 : 0x00)))</div>
-<div class="line"><span class="lineno">   32</span>        , <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1packets_1_1Publish.html#a21838b76b498b4202ccbb8d7b8edb37f">packetIdentifier</a>(<a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1packets_1_1Publish.html#a21838b76b498b4202ccbb8d7b8edb37f">packetIdentifier</a>)</div>
-<div class="line"><span class="lineno">   33</span>        , <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1packets_1_1Publish.html#ad86eab2e4c12c52c266a340848e9a396">topic</a>(<a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1packets_1_1Publish.html#ad86eab2e4c12c52c266a340848e9a396">topic</a>)</div>
-<div class="line"><span class="lineno">   34</span>        , <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1packets_1_1Publish.html#ae911602c79a2cb531f053261b9a67aa9">message</a>(<a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1packets_1_1Publish.html#ae911602c79a2cb531f053261b9a67aa9">message</a>)</div>
-<div class="line"><span class="lineno">   35</span>        , <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1packets_1_1Publish.html#a64f254a2cffea87d9a69e36b91cb4b95">dup</a>(<a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1packets_1_1Publish.html#a64f254a2cffea87d9a69e36b91cb4b95">dup</a>)</div>
-<div class="line"><span class="lineno">   36</span>        , <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1packets_1_1Publish.html#a31d8c3322aca125da403ea285d860972">qoS</a>(<a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1packets_1_1Publish.html#a31d8c3322aca125da403ea285d860972">qoS</a>)</div>
-<div class="line"><span class="lineno">   37</span>        , <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1packets_1_1Publish.html#a12ed609468e1ba77a62b16ffc96d540a">retain</a>(<a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1packets_1_1Publish.html#a12ed609468e1ba77a62b16ffc96d540a">retain</a>) {</div>
-<div class="line"><span class="lineno">   38</span>        <span class="comment">// V-Header</span></div>
-<div class="line"><span class="lineno">   39</span>        putString(this-&gt;topic);</div>
-<div class="line"><span class="lineno">   40</span> </div>
-<div class="line"><span class="lineno">   41</span>        <span class="keywordflow">if</span> (this-&gt;qoS &gt; 0) {</div>
-<div class="line"><span class="lineno">   42</span>            putInt16(this-&gt;packetIdentifier);</div>
-<div class="line"><span class="lineno">   43</span>        }</div>
-<div class="line"><span class="lineno">   44</span> </div>
-<div class="line"><span class="lineno">   45</span>        <span class="comment">// Payload</span></div>
-<div class="line"><span class="lineno">   46</span>        putStringRaw(this-&gt;message);</div>
-<div class="line"><span class="lineno">   47</span>    }</div>
-<div class="ttc" id="aclassiot_1_1mqtt__fast_1_1ControlPacket_html"><div class="ttname"><a href="classiot_1_1mqtt__fast_1_1ControlPacket.html">iot::mqtt_fast::ControlPacket</a></div><div class="ttdef"><b>Definition</b> <a href="mqtt-fast_2ControlPacket_8h_source.html#l00039">ControlPacket.h:39</a></div></div>
-<div class="ttc" id="aclassiot_1_1mqtt__fast_1_1packets_1_1Publish_html_a12ed609468e1ba77a62b16ffc96d540a"><div class="ttname"><a href="classiot_1_1mqtt__fast_1_1packets_1_1Publish.html#a12ed609468e1ba77a62b16ffc96d540a">iot::mqtt_fast::packets::Publish::retain</a></div><div class="ttdeci">bool retain</div><div class="ttdef"><b>Definition</b> <a href="mqtt-fast_2packets_2Publish_8h_source.html#l00063">Publish.h:63</a></div></div>
-<div class="ttc" id="aclassiot_1_1mqtt__fast_1_1packets_1_1Publish_html_a21838b76b498b4202ccbb8d7b8edb37f"><div class="ttname"><a href="classiot_1_1mqtt__fast_1_1packets_1_1Publish.html#a21838b76b498b4202ccbb8d7b8edb37f">iot::mqtt_fast::packets::Publish::packetIdentifier</a></div><div class="ttdeci">uint16_t packetIdentifier</div><div class="ttdef"><b>Definition</b> <a href="mqtt-fast_2packets_2Publish_8h_source.html#l00058">Publish.h:58</a></div></div>
-<div class="ttc" id="aclassiot_1_1mqtt__fast_1_1packets_1_1Publish_html_a31d8c3322aca125da403ea285d860972"><div class="ttname"><a href="classiot_1_1mqtt__fast_1_1packets_1_1Publish.html#a31d8c3322aca125da403ea285d860972">iot::mqtt_fast::packets::Publish::qoS</a></div><div class="ttdeci">uint8_t qoS</div><div class="ttdef"><b>Definition</b> <a href="mqtt-fast_2packets_2Publish_8h_source.html#l00062">Publish.h:62</a></div></div>
-<div class="ttc" id="aclassiot_1_1mqtt__fast_1_1packets_1_1Publish_html_a64f254a2cffea87d9a69e36b91cb4b95"><div class="ttname"><a href="classiot_1_1mqtt__fast_1_1packets_1_1Publish.html#a64f254a2cffea87d9a69e36b91cb4b95">iot::mqtt_fast::packets::Publish::dup</a></div><div class="ttdeci">bool dup</div><div class="ttdef"><b>Definition</b> <a href="mqtt-fast_2packets_2Publish_8h_source.html#l00061">Publish.h:61</a></div></div>
-<div class="ttc" id="aclassiot_1_1mqtt__fast_1_1packets_1_1Publish_html_ad86eab2e4c12c52c266a340848e9a396"><div class="ttname"><a href="classiot_1_1mqtt__fast_1_1packets_1_1Publish.html#ad86eab2e4c12c52c266a340848e9a396">iot::mqtt_fast::packets::Publish::topic</a></div><div class="ttdeci">std::string topic</div><div class="ttdef"><b>Definition</b> <a href="mqtt-fast_2packets_2Publish_8h_source.html#l00059">Publish.h:59</a></div></div>
-<div class="ttc" id="aclassiot_1_1mqtt__fast_1_1packets_1_1Publish_html_ae911602c79a2cb531f053261b9a67aa9"><div class="ttname"><a href="classiot_1_1mqtt__fast_1_1packets_1_1Publish.html#ae911602c79a2cb531f053261b9a67aa9">iot::mqtt_fast::packets::Publish::message</a></div><div class="ttdeci">std::string message</div><div class="ttdef"><b>Definition</b> <a href="mqtt-fast_2packets_2Publish_8h_source.html#l00060">Publish.h:60</a></div></div>
-<div class="ttc" id="amqtt-fast_2packets_2Publish_8h_html_a3dc6a4b0dc54027175ff59c5c41ecd1d"><div class="ttname"><a href="mqtt-fast_2packets_2Publish_8h.html#a3dc6a4b0dc54027175ff59c5c41ecd1d">MQTT_PUBLISH</a></div><div class="ttdeci">#define MQTT_PUBLISH</div><div class="ttdef"><b>Definition</b> <a href="mqtt-fast_2packets_2Publish_8h_source.html#l00035">Publish.h:35</a></div></div>
+<p class="definition">Definition at line <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html#l00030">30</a> of file <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html">Publish.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   31</span>        : <a class="code hl_class" href="classiot_1_1mqtt__fast_1_1ControlPacket.html">iot::mqtt_fast::ControlPacket</a>(<a class="code hl_define" href="mqtt-fast_2packets_2Publish_8h.html#a3dc6a4b0dc54027175ff59c5c41ecd1d">MQTT_PUBLISH</a>,</div>
+<div class="line"><span class="lineno">   32</span>                                        <span class="keyword">static_cast&lt;</span>uint8_t<span class="keyword">&gt;</span>((<a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1packets_1_1Publish.html#a64f254a2cffea87d9a69e36b91cb4b95">dup</a> ? 0x04 : 0x00) | ((<a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1packets_1_1Publish.html#a31d8c3322aca125da403ea285d860972">qoS</a> &lt;&lt; 1) &amp; 0x06) | (<a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1packets_1_1Publish.html#a12ed609468e1ba77a62b16ffc96d540a">retain</a> ? 0x01 : 0x00)))</div>
+<div class="line"><span class="lineno">   33</span>        , <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1packets_1_1Publish.html#a21838b76b498b4202ccbb8d7b8edb37f">packetIdentifier</a>(<a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1packets_1_1Publish.html#a21838b76b498b4202ccbb8d7b8edb37f">packetIdentifier</a>)</div>
+<div class="line"><span class="lineno">   34</span>        , <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1packets_1_1Publish.html#ad86eab2e4c12c52c266a340848e9a396">topic</a>(<a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1packets_1_1Publish.html#ad86eab2e4c12c52c266a340848e9a396">topic</a>)</div>
+<div class="line"><span class="lineno">   35</span>        , <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1packets_1_1Publish.html#ae911602c79a2cb531f053261b9a67aa9">message</a>(<a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1packets_1_1Publish.html#ae911602c79a2cb531f053261b9a67aa9">message</a>)</div>
+<div class="line"><span class="lineno">   36</span>        , <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1packets_1_1Publish.html#a64f254a2cffea87d9a69e36b91cb4b95">dup</a>(<a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1packets_1_1Publish.html#a64f254a2cffea87d9a69e36b91cb4b95">dup</a>)</div>
+<div class="line"><span class="lineno">   37</span>        , <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1packets_1_1Publish.html#a31d8c3322aca125da403ea285d860972">qoS</a>(<a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1packets_1_1Publish.html#a31d8c3322aca125da403ea285d860972">qoS</a>)</div>
+<div class="line"><span class="lineno">   38</span>        , <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1packets_1_1Publish.html#a12ed609468e1ba77a62b16ffc96d540a">retain</a>(<a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1packets_1_1Publish.html#a12ed609468e1ba77a62b16ffc96d540a">retain</a>) {</div>
+<div class="line"><span class="lineno">   39</span>        <span class="comment">// V-Header</span></div>
+<div class="line"><span class="lineno">   40</span>        putString(this-&gt;topic);</div>
+<div class="line"><span class="lineno">   41</span> </div>
+<div class="line"><span class="lineno">   42</span>        <span class="keywordflow">if</span> (this-&gt;qoS &gt; 0) {</div>
+<div class="line"><span class="lineno">   43</span>            putInt16(this-&gt;packetIdentifier);</div>
+<div class="line"><span class="lineno">   44</span>        }</div>
+<div class="line"><span class="lineno">   45</span> </div>
+<div class="line"><span class="lineno">   46</span>        <span class="comment">// Payload</span></div>
+<div class="line"><span class="lineno">   47</span>        putStringRaw(this-&gt;message);</div>
+<div class="line"><span class="lineno">   48</span>    }</div>
+<div class="ttc" id="aclassiot_1_1mqtt__fast_1_1ControlPacket_html"><div class="ttname"><a href="classiot_1_1mqtt__fast_1_1ControlPacket.html">iot::mqtt_fast::ControlPacket</a></div><div class="ttdef"><b>Definition</b> <a href="mqtt-fast_2ControlPacket_8h_source.html#l00040">ControlPacket.h:40</a></div></div>
+<div class="ttc" id="aclassiot_1_1mqtt__fast_1_1packets_1_1Publish_html_a12ed609468e1ba77a62b16ffc96d540a"><div class="ttname"><a href="classiot_1_1mqtt__fast_1_1packets_1_1Publish.html#a12ed609468e1ba77a62b16ffc96d540a">iot::mqtt_fast::packets::Publish::retain</a></div><div class="ttdeci">bool retain</div><div class="ttdef"><b>Definition</b> <a href="mqtt-fast_2packets_2Publish_8h_source.html#l00064">Publish.h:64</a></div></div>
+<div class="ttc" id="aclassiot_1_1mqtt__fast_1_1packets_1_1Publish_html_a21838b76b498b4202ccbb8d7b8edb37f"><div class="ttname"><a href="classiot_1_1mqtt__fast_1_1packets_1_1Publish.html#a21838b76b498b4202ccbb8d7b8edb37f">iot::mqtt_fast::packets::Publish::packetIdentifier</a></div><div class="ttdeci">uint16_t packetIdentifier</div><div class="ttdef"><b>Definition</b> <a href="mqtt-fast_2packets_2Publish_8h_source.html#l00059">Publish.h:59</a></div></div>
+<div class="ttc" id="aclassiot_1_1mqtt__fast_1_1packets_1_1Publish_html_a31d8c3322aca125da403ea285d860972"><div class="ttname"><a href="classiot_1_1mqtt__fast_1_1packets_1_1Publish.html#a31d8c3322aca125da403ea285d860972">iot::mqtt_fast::packets::Publish::qoS</a></div><div class="ttdeci">uint8_t qoS</div><div class="ttdef"><b>Definition</b> <a href="mqtt-fast_2packets_2Publish_8h_source.html#l00063">Publish.h:63</a></div></div>
+<div class="ttc" id="aclassiot_1_1mqtt__fast_1_1packets_1_1Publish_html_a64f254a2cffea87d9a69e36b91cb4b95"><div class="ttname"><a href="classiot_1_1mqtt__fast_1_1packets_1_1Publish.html#a64f254a2cffea87d9a69e36b91cb4b95">iot::mqtt_fast::packets::Publish::dup</a></div><div class="ttdeci">bool dup</div><div class="ttdef"><b>Definition</b> <a href="mqtt-fast_2packets_2Publish_8h_source.html#l00062">Publish.h:62</a></div></div>
+<div class="ttc" id="aclassiot_1_1mqtt__fast_1_1packets_1_1Publish_html_ad86eab2e4c12c52c266a340848e9a396"><div class="ttname"><a href="classiot_1_1mqtt__fast_1_1packets_1_1Publish.html#ad86eab2e4c12c52c266a340848e9a396">iot::mqtt_fast::packets::Publish::topic</a></div><div class="ttdeci">std::string topic</div><div class="ttdef"><b>Definition</b> <a href="mqtt-fast_2packets_2Publish_8h_source.html#l00060">Publish.h:60</a></div></div>
+<div class="ttc" id="aclassiot_1_1mqtt__fast_1_1packets_1_1Publish_html_ae911602c79a2cb531f053261b9a67aa9"><div class="ttname"><a href="classiot_1_1mqtt__fast_1_1packets_1_1Publish.html#ae911602c79a2cb531f053261b9a67aa9">iot::mqtt_fast::packets::Publish::message</a></div><div class="ttdeci">std::string message</div><div class="ttdef"><b>Definition</b> <a href="mqtt-fast_2packets_2Publish_8h_source.html#l00061">Publish.h:61</a></div></div>
+<div class="ttc" id="amqtt-fast_2packets_2Publish_8h_html_a3dc6a4b0dc54027175ff59c5c41ecd1d"><div class="ttname"><a href="mqtt-fast_2packets_2Publish_8h.html#a3dc6a4b0dc54027175ff59c5c41ecd1d">MQTT_PUBLISH</a></div><div class="ttdeci">#define MQTT_PUBLISH</div><div class="ttdef"><b>Definition</b> <a href="mqtt-fast_2packets_2Publish_8h_source.html#l00036">Publish.h:36</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00031">iot::mqtt_fast::ControlPacket::ControlPacket()</a>, <a class="el" href="mqtt-fast_2packets_2Publish_8h_source.html#l00061">dup</a>, <a class="el" href="mqtt-fast_2packets_2Publish_8h_source.html#l00060">message</a>, <a class="el" href="mqtt-fast_2packets_2Publish_8h_source.html#l00058">packetIdentifier</a>, <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00118">iot::mqtt_fast::ControlPacket::putInt16()</a>, <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00134">iot::mqtt_fast::ControlPacket::putString()</a>, <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00138">iot::mqtt_fast::ControlPacket::putStringRaw()</a>, <a class="el" href="mqtt-fast_2packets_2Publish_8h_source.html#l00062">qoS</a>, <a class="el" href="mqtt-fast_2packets_2Publish_8h_source.html#l00063">retain</a>, and <a class="el" href="mqtt-fast_2packets_2Publish_8h_source.html#l00059">topic</a>.</p>
+<p class="reference">References <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00032">iot::mqtt_fast::ControlPacket::ControlPacket()</a>, <a class="el" href="mqtt-fast_2packets_2Publish_8h_source.html#l00062">dup</a>, <a class="el" href="mqtt-fast_2packets_2Publish_8h_source.html#l00061">message</a>, <a class="el" href="mqtt-fast_2packets_2Publish_8h_source.html#l00059">packetIdentifier</a>, <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00119">iot::mqtt_fast::ControlPacket::putInt16()</a>, <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00135">iot::mqtt_fast::ControlPacket::putString()</a>, <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00139">iot::mqtt_fast::ControlPacket::putStringRaw()</a>, <a class="el" href="mqtt-fast_2packets_2Publish_8h_source.html#l00063">qoS</a>, <a class="el" href="mqtt-fast_2packets_2Publish_8h_source.html#l00064">retain</a>, and <a class="el" href="mqtt-fast_2packets_2Publish_8h_source.html#l00060">topic</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="iot_2mqtt-fast_2SocketContext_8cpp_source.html#l00055">iot::mqtt_fast::SocketContext::sendPublish()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="iot_2mqtt-fast_2SocketContext_8cpp_source.html#l00056">iot::mqtt_fast::SocketContext::sendPublish()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -327,34 +327,34 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html#l00049">49</a> of file <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html">Publish.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   50</span>        : <a class="code hl_class" href="classiot_1_1mqtt__fast_1_1ControlPacket.html">iot::mqtt_fast::ControlPacket</a>(controlPacketFactory) {</div>
-<div class="line"><span class="lineno">   51</span>        <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1packets_1_1Publish.html#a64f254a2cffea87d9a69e36b91cb4b95">dup</a> = (controlPacketFactory.<a class="code hl_function" href="classiot_1_1mqtt__fast_1_1ControlPacketFactory.html#afbd8fc525ad92651391a72acbad10bfc">getPacketFlags</a>() &amp; 0x08) != 0;</div>
-<div class="line"><span class="lineno">   52</span>        <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1packets_1_1Publish.html#a31d8c3322aca125da403ea285d860972">qoS</a> = <span class="keyword">static_cast&lt;</span>uint8_t<span class="keyword">&gt;</span>((controlPacketFactory.<a class="code hl_function" href="classiot_1_1mqtt__fast_1_1ControlPacketFactory.html#afbd8fc525ad92651391a72acbad10bfc">getPacketFlags</a>() &amp; 0x06) &gt;&gt; 1);</div>
-<div class="line"><span class="lineno">   53</span>        <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1packets_1_1Publish.html#a12ed609468e1ba77a62b16ffc96d540a">retain</a> = (controlPacketFactory.<a class="code hl_function" href="classiot_1_1mqtt__fast_1_1ControlPacketFactory.html#afbd8fc525ad92651391a72acbad10bfc">getPacketFlags</a>() &amp; 0x01) != 0;</div>
-<div class="line"><span class="lineno">   54</span> </div>
-<div class="line"><span class="lineno">   55</span>        <span class="comment">// V-Header</span></div>
-<div class="line"><span class="lineno">   56</span>        <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1packets_1_1Publish.html#ad86eab2e4c12c52c266a340848e9a396">topic</a> = <a class="code hl_function" href="classiot_1_1mqtt__fast_1_1ControlPacket.html#af2524dcf1d33c71ef8fb06176c6330fb">getString</a>();</div>
-<div class="line"><span class="lineno">   57</span> </div>
-<div class="line"><span class="lineno">   58</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1packets_1_1Publish.html#a31d8c3322aca125da403ea285d860972">qoS</a> != 0) {</div>
-<div class="line"><span class="lineno">   59</span>            <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1packets_1_1Publish.html#a21838b76b498b4202ccbb8d7b8edb37f">packetIdentifier</a> = <a class="code hl_function" href="classiot_1_1mqtt__fast_1_1ControlPacket.html#aea50d9246057e847d964e557017a23b0">getInt16</a>();</div>
-<div class="line"><span class="lineno">   60</span>        }</div>
-<div class="line"><span class="lineno">   61</span> </div>
-<div class="line"><span class="lineno">   62</span>        <span class="comment">// Payload</span></div>
-<div class="line"><span class="lineno">   63</span>        <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1packets_1_1Publish.html#ae911602c79a2cb531f053261b9a67aa9">message</a> = <a class="code hl_function" href="classiot_1_1mqtt__fast_1_1ControlPacket.html#ae15e0c0ed7a6ab8d7cfec9e95112ed9f">getStringRaw</a>();</div>
-<div class="line"><span class="lineno">   64</span> </div>
-<div class="line"><span class="lineno">   65</span>        <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1ControlPacket.html#afc2dd5f16f2e19be51f2376d65df421c">error</a> = <a class="code hl_function" href="classiot_1_1mqtt__fast_1_1ControlPacket.html#ad6820f6ec0269ca24235937fba45f116">isError</a>();</div>
-<div class="line"><span class="lineno">   66</span>    }</div>
-<div class="ttc" id="aclassiot_1_1mqtt__fast_1_1ControlPacketFactory_html_afbd8fc525ad92651391a72acbad10bfc"><div class="ttname"><a href="classiot_1_1mqtt__fast_1_1ControlPacketFactory.html#afbd8fc525ad92651391a72acbad10bfc">iot::mqtt_fast::ControlPacketFactory::getPacketFlags</a></div><div class="ttdeci">uint8_t getPacketFlags()</div><div class="ttdef"><b>Definition</b> <a href="ControlPacketFactory_8cpp_source.html#l00087">ControlPacketFactory.cpp:87</a></div></div>
-<div class="ttc" id="aclassiot_1_1mqtt__fast_1_1ControlPacket_html_ad6820f6ec0269ca24235937fba45f116"><div class="ttname"><a href="classiot_1_1mqtt__fast_1_1ControlPacket.html#ad6820f6ec0269ca24235937fba45f116">iot::mqtt_fast::ControlPacket::isError</a></div><div class="ttdeci">bool isError() const</div><div class="ttdef"><b>Definition</b> <a href="mqtt-fast_2ControlPacket_8cpp_source.html#l00074">ControlPacket.cpp:74</a></div></div>
-<div class="ttc" id="aclassiot_1_1mqtt__fast_1_1ControlPacket_html_ae15e0c0ed7a6ab8d7cfec9e95112ed9f"><div class="ttname"><a href="classiot_1_1mqtt__fast_1_1ControlPacket.html#ae15e0c0ed7a6ab8d7cfec9e95112ed9f">iot::mqtt_fast::ControlPacket::getStringRaw</a></div><div class="ttdeci">std::string getStringRaw()</div><div class="ttdef"><b>Definition</b> <a href="mqtt-fast_2ControlPacket_8cpp_source.html#l00106">ControlPacket.cpp:106</a></div></div>
-<div class="ttc" id="aclassiot_1_1mqtt__fast_1_1ControlPacket_html_aea50d9246057e847d964e557017a23b0"><div class="ttname"><a href="classiot_1_1mqtt__fast_1_1ControlPacket.html#aea50d9246057e847d964e557017a23b0">iot::mqtt_fast::ControlPacket::getInt16</a></div><div class="ttdeci">uint16_t getInt16()</div><div class="ttdef"><b>Definition</b> <a href="mqtt-fast_2ControlPacket_8cpp_source.html#l00086">ControlPacket.cpp:86</a></div></div>
-<div class="ttc" id="aclassiot_1_1mqtt__fast_1_1ControlPacket_html_af2524dcf1d33c71ef8fb06176c6330fb"><div class="ttname"><a href="classiot_1_1mqtt__fast_1_1ControlPacket.html#af2524dcf1d33c71ef8fb06176c6330fb">iot::mqtt_fast::ControlPacket::getString</a></div><div class="ttdeci">std::string getString()</div><div class="ttdef"><b>Definition</b> <a href="mqtt-fast_2ControlPacket_8cpp_source.html#l00102">ControlPacket.cpp:102</a></div></div>
-<div class="ttc" id="aclassiot_1_1mqtt__fast_1_1ControlPacket_html_afc2dd5f16f2e19be51f2376d65df421c"><div class="ttname"><a href="classiot_1_1mqtt__fast_1_1ControlPacket.html#afc2dd5f16f2e19be51f2376d65df421c">iot::mqtt_fast::ControlPacket::error</a></div><div class="ttdeci">bool error</div><div class="ttdef"><b>Definition</b> <a href="mqtt-fast_2ControlPacket_8h_source.html#l00087">ControlPacket.h:87</a></div></div>
+<p class="definition">Definition at line <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html#l00050">50</a> of file <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html">Publish.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   51</span>        : <a class="code hl_class" href="classiot_1_1mqtt__fast_1_1ControlPacket.html">iot::mqtt_fast::ControlPacket</a>(controlPacketFactory) {</div>
+<div class="line"><span class="lineno">   52</span>        <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1packets_1_1Publish.html#a64f254a2cffea87d9a69e36b91cb4b95">dup</a> = (controlPacketFactory.<a class="code hl_function" href="classiot_1_1mqtt__fast_1_1ControlPacketFactory.html#afbd8fc525ad92651391a72acbad10bfc">getPacketFlags</a>() &amp; 0x08) != 0;</div>
+<div class="line"><span class="lineno">   53</span>        <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1packets_1_1Publish.html#a31d8c3322aca125da403ea285d860972">qoS</a> = <span class="keyword">static_cast&lt;</span>uint8_t<span class="keyword">&gt;</span>((controlPacketFactory.<a class="code hl_function" href="classiot_1_1mqtt__fast_1_1ControlPacketFactory.html#afbd8fc525ad92651391a72acbad10bfc">getPacketFlags</a>() &amp; 0x06) &gt;&gt; 1);</div>
+<div class="line"><span class="lineno">   54</span>        <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1packets_1_1Publish.html#a12ed609468e1ba77a62b16ffc96d540a">retain</a> = (controlPacketFactory.<a class="code hl_function" href="classiot_1_1mqtt__fast_1_1ControlPacketFactory.html#afbd8fc525ad92651391a72acbad10bfc">getPacketFlags</a>() &amp; 0x01) != 0;</div>
+<div class="line"><span class="lineno">   55</span> </div>
+<div class="line"><span class="lineno">   56</span>        <span class="comment">// V-Header</span></div>
+<div class="line"><span class="lineno">   57</span>        <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1packets_1_1Publish.html#ad86eab2e4c12c52c266a340848e9a396">topic</a> = <a class="code hl_function" href="classiot_1_1mqtt__fast_1_1ControlPacket.html#af2524dcf1d33c71ef8fb06176c6330fb">getString</a>();</div>
+<div class="line"><span class="lineno">   58</span> </div>
+<div class="line"><span class="lineno">   59</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1packets_1_1Publish.html#a31d8c3322aca125da403ea285d860972">qoS</a> != 0) {</div>
+<div class="line"><span class="lineno">   60</span>            <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1packets_1_1Publish.html#a21838b76b498b4202ccbb8d7b8edb37f">packetIdentifier</a> = <a class="code hl_function" href="classiot_1_1mqtt__fast_1_1ControlPacket.html#aea50d9246057e847d964e557017a23b0">getInt16</a>();</div>
+<div class="line"><span class="lineno">   61</span>        }</div>
+<div class="line"><span class="lineno">   62</span> </div>
+<div class="line"><span class="lineno">   63</span>        <span class="comment">// Payload</span></div>
+<div class="line"><span class="lineno">   64</span>        <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1packets_1_1Publish.html#ae911602c79a2cb531f053261b9a67aa9">message</a> = <a class="code hl_function" href="classiot_1_1mqtt__fast_1_1ControlPacket.html#ae15e0c0ed7a6ab8d7cfec9e95112ed9f">getStringRaw</a>();</div>
+<div class="line"><span class="lineno">   65</span> </div>
+<div class="line"><span class="lineno">   66</span>        <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1ControlPacket.html#afc2dd5f16f2e19be51f2376d65df421c">error</a> = <a class="code hl_function" href="classiot_1_1mqtt__fast_1_1ControlPacket.html#ad6820f6ec0269ca24235937fba45f116">isError</a>();</div>
+<div class="line"><span class="lineno">   67</span>    }</div>
+<div class="ttc" id="aclassiot_1_1mqtt__fast_1_1ControlPacketFactory_html_afbd8fc525ad92651391a72acbad10bfc"><div class="ttname"><a href="classiot_1_1mqtt__fast_1_1ControlPacketFactory.html#afbd8fc525ad92651391a72acbad10bfc">iot::mqtt_fast::ControlPacketFactory::getPacketFlags</a></div><div class="ttdeci">uint8_t getPacketFlags()</div><div class="ttdef"><b>Definition</b> <a href="ControlPacketFactory_8cpp_source.html#l00088">ControlPacketFactory.cpp:88</a></div></div>
+<div class="ttc" id="aclassiot_1_1mqtt__fast_1_1ControlPacket_html_ad6820f6ec0269ca24235937fba45f116"><div class="ttname"><a href="classiot_1_1mqtt__fast_1_1ControlPacket.html#ad6820f6ec0269ca24235937fba45f116">iot::mqtt_fast::ControlPacket::isError</a></div><div class="ttdeci">bool isError() const</div><div class="ttdef"><b>Definition</b> <a href="mqtt-fast_2ControlPacket_8cpp_source.html#l00075">ControlPacket.cpp:75</a></div></div>
+<div class="ttc" id="aclassiot_1_1mqtt__fast_1_1ControlPacket_html_ae15e0c0ed7a6ab8d7cfec9e95112ed9f"><div class="ttname"><a href="classiot_1_1mqtt__fast_1_1ControlPacket.html#ae15e0c0ed7a6ab8d7cfec9e95112ed9f">iot::mqtt_fast::ControlPacket::getStringRaw</a></div><div class="ttdeci">std::string getStringRaw()</div><div class="ttdef"><b>Definition</b> <a href="mqtt-fast_2ControlPacket_8cpp_source.html#l00107">ControlPacket.cpp:107</a></div></div>
+<div class="ttc" id="aclassiot_1_1mqtt__fast_1_1ControlPacket_html_aea50d9246057e847d964e557017a23b0"><div class="ttname"><a href="classiot_1_1mqtt__fast_1_1ControlPacket.html#aea50d9246057e847d964e557017a23b0">iot::mqtt_fast::ControlPacket::getInt16</a></div><div class="ttdeci">uint16_t getInt16()</div><div class="ttdef"><b>Definition</b> <a href="mqtt-fast_2ControlPacket_8cpp_source.html#l00087">ControlPacket.cpp:87</a></div></div>
+<div class="ttc" id="aclassiot_1_1mqtt__fast_1_1ControlPacket_html_af2524dcf1d33c71ef8fb06176c6330fb"><div class="ttname"><a href="classiot_1_1mqtt__fast_1_1ControlPacket.html#af2524dcf1d33c71ef8fb06176c6330fb">iot::mqtt_fast::ControlPacket::getString</a></div><div class="ttdeci">std::string getString()</div><div class="ttdef"><b>Definition</b> <a href="mqtt-fast_2ControlPacket_8cpp_source.html#l00103">ControlPacket.cpp:103</a></div></div>
+<div class="ttc" id="aclassiot_1_1mqtt__fast_1_1ControlPacket_html_afc2dd5f16f2e19be51f2376d65df421c"><div class="ttname"><a href="classiot_1_1mqtt__fast_1_1ControlPacket.html#afc2dd5f16f2e19be51f2376d65df421c">iot::mqtt_fast::ControlPacket::error</a></div><div class="ttdeci">bool error</div><div class="ttdef"><b>Definition</b> <a href="mqtt-fast_2ControlPacket_8h_source.html#l00088">ControlPacket.h:88</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00036">iot::mqtt_fast::ControlPacket::ControlPacket()</a>, <a class="el" href="mqtt-fast_2packets_2Publish_8h_source.html#l00061">dup</a>, <a class="el" href="mqtt-fast_2ControlPacket_8h_source.html#l00087">iot::mqtt_fast::ControlPacket::error</a>, <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00086">iot::mqtt_fast::ControlPacket::getInt16()</a>, <a class="el" href="ControlPacketFactory_8cpp_source.html#l00087">iot::mqtt_fast::ControlPacketFactory::getPacketFlags()</a>, <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00102">iot::mqtt_fast::ControlPacket::getString()</a>, <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00106">iot::mqtt_fast::ControlPacket::getStringRaw()</a>, <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00146">iot::mqtt_fast::ControlPacket::isError()</a>, <a class="el" href="mqtt-fast_2packets_2Publish_8h_source.html#l00060">message</a>, <a class="el" href="mqtt-fast_2packets_2Publish_8h_source.html#l00058">packetIdentifier</a>, <a class="el" href="mqtt-fast_2packets_2Publish_8h_source.html#l00062">qoS</a>, <a class="el" href="mqtt-fast_2packets_2Publish_8h_source.html#l00063">retain</a>, and <a class="el" href="mqtt-fast_2packets_2Publish_8h_source.html#l00059">topic</a>.</p>
+<p class="reference">References <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00037">iot::mqtt_fast::ControlPacket::ControlPacket()</a>, <a class="el" href="mqtt-fast_2packets_2Publish_8h_source.html#l00062">dup</a>, <a class="el" href="mqtt-fast_2ControlPacket_8h_source.html#l00088">iot::mqtt_fast::ControlPacket::error</a>, <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00087">iot::mqtt_fast::ControlPacket::getInt16()</a>, <a class="el" href="ControlPacketFactory_8cpp_source.html#l00088">iot::mqtt_fast::ControlPacketFactory::getPacketFlags()</a>, <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00103">iot::mqtt_fast::ControlPacket::getString()</a>, <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00107">iot::mqtt_fast::ControlPacket::getStringRaw()</a>, <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00147">iot::mqtt_fast::ControlPacket::isError()</a>, <a class="el" href="mqtt-fast_2packets_2Publish_8h_source.html#l00061">message</a>, <a class="el" href="mqtt-fast_2packets_2Publish_8h_source.html#l00059">packetIdentifier</a>, <a class="el" href="mqtt-fast_2packets_2Publish_8h_source.html#l00063">qoS</a>, <a class="el" href="mqtt-fast_2packets_2Publish_8h_source.html#l00064">retain</a>, and <a class="el" href="mqtt-fast_2packets_2Publish_8h_source.html#l00060">topic</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="iot_2mqtt-fast_2SocketContext_8cpp_source.html#l00139">iot::mqtt_fast::SocketContext::onReceivedFromPeer()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="iot_2mqtt-fast_2SocketContext_8cpp_source.html#l00140">iot::mqtt_fast::SocketContext::onReceivedFromPeer()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -384,12 +384,12 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html#l00068">68</a> of file <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html">Publish.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   68</span>                               {</div>
-<div class="line"><span class="lineno">   69</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1packets_1_1Publish.html#a64f254a2cffea87d9a69e36b91cb4b95">dup</a>;</div>
-<div class="line"><span class="lineno">   70</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html#l00069">69</a> of file <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html">Publish.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   69</span>                               {</div>
+<div class="line"><span class="lineno">   70</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1packets_1_1Publish.html#a64f254a2cffea87d9a69e36b91cb4b95">dup</a>;</div>
+<div class="line"><span class="lineno">   71</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="mqtt-fast_2packets_2Publish_8h_source.html#l00061">dup</a>.</p>
+<p class="reference">References <a class="el" href="mqtt-fast_2packets_2Publish_8h_source.html#l00062">dup</a>.</p>
 
 </div>
 </div>
@@ -416,16 +416,16 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00086">86</a> of file <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html">ControlPacket.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   86</span>                                     {</div>
-<div class="line"><span class="lineno">   87</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1ControlPacket.html#a7f4b077d3b38f543c13d110bf453184a">data</a>.<a class="code hl_function" href="classiot_1_1mqtt__fast_1_1types_1_1Binary.html#a214e0f0aadd3e548e10bab50c9dbbcdc">getInt16</a>();</div>
-<div class="line"><span class="lineno">   88</span>    }</div>
-<div class="ttc" id="aclassiot_1_1mqtt__fast_1_1ControlPacket_html_a7f4b077d3b38f543c13d110bf453184a"><div class="ttname"><a href="classiot_1_1mqtt__fast_1_1ControlPacket.html#a7f4b077d3b38f543c13d110bf453184a">iot::mqtt_fast::ControlPacket::data</a></div><div class="ttdeci">iot::mqtt_fast::types::Binary data</div><div class="ttdef"><b>Definition</b> <a href="mqtt-fast_2ControlPacket_8h_source.html#l00084">ControlPacket.h:84</a></div></div>
-<div class="ttc" id="aclassiot_1_1mqtt__fast_1_1types_1_1Binary_html_a214e0f0aadd3e548e10bab50c9dbbcdc"><div class="ttname"><a href="classiot_1_1mqtt__fast_1_1types_1_1Binary.html#a214e0f0aadd3e548e10bab50c9dbbcdc">iot::mqtt_fast::types::Binary::getInt16</a></div><div class="ttdeci">uint16_t getInt16()</div><div class="ttdef"><b>Definition</b> <a href="Binary_8cpp_source.html#l00071">Binary.cpp:71</a></div></div>
+<p class="definition">Definition at line <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00087">87</a> of file <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html">ControlPacket.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   87</span>                                     {</div>
+<div class="line"><span class="lineno">   88</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1ControlPacket.html#a7f4b077d3b38f543c13d110bf453184a">data</a>.<a class="code hl_function" href="classiot_1_1mqtt__fast_1_1types_1_1Binary.html#a214e0f0aadd3e548e10bab50c9dbbcdc">getInt16</a>();</div>
+<div class="line"><span class="lineno">   89</span>    }</div>
+<div class="ttc" id="aclassiot_1_1mqtt__fast_1_1ControlPacket_html_a7f4b077d3b38f543c13d110bf453184a"><div class="ttname"><a href="classiot_1_1mqtt__fast_1_1ControlPacket.html#a7f4b077d3b38f543c13d110bf453184a">iot::mqtt_fast::ControlPacket::data</a></div><div class="ttdeci">iot::mqtt_fast::types::Binary data</div><div class="ttdef"><b>Definition</b> <a href="mqtt-fast_2ControlPacket_8h_source.html#l00085">ControlPacket.h:85</a></div></div>
+<div class="ttc" id="aclassiot_1_1mqtt__fast_1_1types_1_1Binary_html_a214e0f0aadd3e548e10bab50c9dbbcdc"><div class="ttname"><a href="classiot_1_1mqtt__fast_1_1types_1_1Binary.html#a214e0f0aadd3e548e10bab50c9dbbcdc">iot::mqtt_fast::types::Binary::getInt16</a></div><div class="ttdeci">uint16_t getInt16()</div><div class="ttdef"><b>Definition</b> <a href="Binary_8cpp_source.html#l00072">Binary.cpp:72</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="mqtt-fast_2ControlPacket_8h_source.html#l00084">iot::mqtt_fast::ControlPacket::data</a>, and <a class="el" href="Binary_8cpp_source.html#l00071">iot::mqtt_fast::types::Binary::getInt16()</a>.</p>
+<p class="reference">References <a class="el" href="mqtt-fast_2ControlPacket_8h_source.html#l00085">iot::mqtt_fast::ControlPacket::data</a>, and <a class="el" href="Binary_8cpp_source.html#l00072">iot::mqtt_fast::types::Binary::getInt16()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mqtt-fast_2packets_2Connect_8cpp_source.html#l00044">iot::mqtt_fast::packets::Connect::Connect()</a>, <a class="el" href="mqtt-fast_2packets_2Puback_8cpp_source.html#l00036">iot::mqtt_fast::packets::Puback::Puback()</a>, <a class="el" href="mqtt-fast_2packets_2Pubcomp_8cpp_source.html#l00036">iot::mqtt_fast::packets::Pubcomp::Pubcomp()</a>, <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html#l00049">Publish()</a>, <a class="el" href="mqtt-fast_2packets_2Pubrec_8cpp_source.html#l00036">iot::mqtt_fast::packets::Pubrec::Pubrec()</a>, <a class="el" href="mqtt-fast_2packets_2Pubrel_8cpp_source.html#l00036">iot::mqtt_fast::packets::Pubrel::Pubrel()</a>, <a class="el" href="mqtt-fast_2packets_2Suback_8cpp_source.html#l00038">iot::mqtt_fast::packets::Suback::Suback()</a>, <a class="el" href="mqtt-fast_2packets_2Subscribe_8cpp_source.html#l00043">iot::mqtt_fast::packets::Subscribe::Subscribe()</a>, <a class="el" href="mqtt-fast_2packets_2Unsuback_8cpp_source.html#l00036">iot::mqtt_fast::packets::Unsuback::Unsuback()</a>, and <a class="el" href="mqtt-fast_2packets_2Unsubscribe_8cpp_source.html#l00040">iot::mqtt_fast::packets::Unsubscribe::Unsubscribe()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mqtt-fast_2packets_2Connect_8cpp_source.html#l00045">iot::mqtt_fast::packets::Connect::Connect()</a>, <a class="el" href="mqtt-fast_2packets_2Puback_8cpp_source.html#l00037">iot::mqtt_fast::packets::Puback::Puback()</a>, <a class="el" href="mqtt-fast_2packets_2Pubcomp_8cpp_source.html#l00037">iot::mqtt_fast::packets::Pubcomp::Pubcomp()</a>, <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html#l00050">Publish()</a>, <a class="el" href="mqtt-fast_2packets_2Pubrec_8cpp_source.html#l00037">iot::mqtt_fast::packets::Pubrec::Pubrec()</a>, <a class="el" href="mqtt-fast_2packets_2Pubrel_8cpp_source.html#l00037">iot::mqtt_fast::packets::Pubrel::Pubrel()</a>, <a class="el" href="mqtt-fast_2packets_2Suback_8cpp_source.html#l00039">iot::mqtt_fast::packets::Suback::Suback()</a>, <a class="el" href="mqtt-fast_2packets_2Subscribe_8cpp_source.html#l00044">iot::mqtt_fast::packets::Subscribe::Subscribe()</a>, <a class="el" href="mqtt-fast_2packets_2Unsuback_8cpp_source.html#l00037">iot::mqtt_fast::packets::Unsuback::Unsuback()</a>, and <a class="el" href="mqtt-fast_2packets_2Unsubscribe_8cpp_source.html#l00041">iot::mqtt_fast::packets::Unsubscribe::Unsubscribe()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -462,13 +462,13 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00090">90</a> of file <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html">ControlPacket.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   90</span>                                     {</div>
-<div class="line"><span class="lineno">   91</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1ControlPacket.html#a7f4b077d3b38f543c13d110bf453184a">data</a>.<a class="code hl_function" href="classiot_1_1mqtt__fast_1_1types_1_1Binary.html#a3a2dc3e0f59a358c3f84329d22ed12bd">getInt32</a>();</div>
-<div class="line"><span class="lineno">   92</span>    }</div>
-<div class="ttc" id="aclassiot_1_1mqtt__fast_1_1types_1_1Binary_html_a3a2dc3e0f59a358c3f84329d22ed12bd"><div class="ttname"><a href="classiot_1_1mqtt__fast_1_1types_1_1Binary.html#a3a2dc3e0f59a358c3f84329d22ed12bd">iot::mqtt_fast::types::Binary::getInt32</a></div><div class="ttdeci">uint32_t getInt32()</div><div class="ttdef"><b>Definition</b> <a href="Binary_8cpp_source.html#l00085">Binary.cpp:85</a></div></div>
+<p class="definition">Definition at line <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00091">91</a> of file <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html">ControlPacket.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   91</span>                                     {</div>
+<div class="line"><span class="lineno">   92</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1ControlPacket.html#a7f4b077d3b38f543c13d110bf453184a">data</a>.<a class="code hl_function" href="classiot_1_1mqtt__fast_1_1types_1_1Binary.html#a3a2dc3e0f59a358c3f84329d22ed12bd">getInt32</a>();</div>
+<div class="line"><span class="lineno">   93</span>    }</div>
+<div class="ttc" id="aclassiot_1_1mqtt__fast_1_1types_1_1Binary_html_a3a2dc3e0f59a358c3f84329d22ed12bd"><div class="ttname"><a href="classiot_1_1mqtt__fast_1_1types_1_1Binary.html#a3a2dc3e0f59a358c3f84329d22ed12bd">iot::mqtt_fast::types::Binary::getInt32</a></div><div class="ttdeci">uint32_t getInt32()</div><div class="ttdef"><b>Definition</b> <a href="Binary_8cpp_source.html#l00086">Binary.cpp:86</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="mqtt-fast_2ControlPacket_8h_source.html#l00084">iot::mqtt_fast::ControlPacket::data</a>, and <a class="el" href="Binary_8cpp_source.html#l00085">iot::mqtt_fast::types::Binary::getInt32()</a>.</p>
+<p class="reference">References <a class="el" href="mqtt-fast_2ControlPacket_8h_source.html#l00085">iot::mqtt_fast::ControlPacket::data</a>, and <a class="el" href="Binary_8cpp_source.html#l00086">iot::mqtt_fast::types::Binary::getInt32()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -500,13 +500,13 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00094">94</a> of file <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html">ControlPacket.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   94</span>                                     {</div>
-<div class="line"><span class="lineno">   95</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1ControlPacket.html#a7f4b077d3b38f543c13d110bf453184a">data</a>.<a class="code hl_function" href="classiot_1_1mqtt__fast_1_1types_1_1Binary.html#a948a981d70958498a5bd7869ef905dc9">getInt64</a>();</div>
-<div class="line"><span class="lineno">   96</span>    }</div>
-<div class="ttc" id="aclassiot_1_1mqtt__fast_1_1types_1_1Binary_html_a948a981d70958498a5bd7869ef905dc9"><div class="ttname"><a href="classiot_1_1mqtt__fast_1_1types_1_1Binary.html#a948a981d70958498a5bd7869ef905dc9">iot::mqtt_fast::types::Binary::getInt64</a></div><div class="ttdeci">uint64_t getInt64()</div><div class="ttdef"><b>Definition</b> <a href="Binary_8cpp_source.html#l00099">Binary.cpp:99</a></div></div>
+<p class="definition">Definition at line <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00095">95</a> of file <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html">ControlPacket.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   95</span>                                     {</div>
+<div class="line"><span class="lineno">   96</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1ControlPacket.html#a7f4b077d3b38f543c13d110bf453184a">data</a>.<a class="code hl_function" href="classiot_1_1mqtt__fast_1_1types_1_1Binary.html#a948a981d70958498a5bd7869ef905dc9">getInt64</a>();</div>
+<div class="line"><span class="lineno">   97</span>    }</div>
+<div class="ttc" id="aclassiot_1_1mqtt__fast_1_1types_1_1Binary_html_a948a981d70958498a5bd7869ef905dc9"><div class="ttname"><a href="classiot_1_1mqtt__fast_1_1types_1_1Binary.html#a948a981d70958498a5bd7869ef905dc9">iot::mqtt_fast::types::Binary::getInt64</a></div><div class="ttdeci">uint64_t getInt64()</div><div class="ttdef"><b>Definition</b> <a href="Binary_8cpp_source.html#l00100">Binary.cpp:100</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="mqtt-fast_2ControlPacket_8h_source.html#l00084">iot::mqtt_fast::ControlPacket::data</a>, and <a class="el" href="Binary_8cpp_source.html#l00099">iot::mqtt_fast::types::Binary::getInt64()</a>.</p>
+<p class="reference">References <a class="el" href="mqtt-fast_2ControlPacket_8h_source.html#l00085">iot::mqtt_fast::ControlPacket::data</a>, and <a class="el" href="Binary_8cpp_source.html#l00100">iot::mqtt_fast::types::Binary::getInt64()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -538,15 +538,15 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00082">82</a> of file <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html">ControlPacket.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   82</span>                                   {</div>
-<div class="line"><span class="lineno">   83</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1ControlPacket.html#a7f4b077d3b38f543c13d110bf453184a">data</a>.<a class="code hl_function" href="classiot_1_1mqtt__fast_1_1types_1_1Binary.html#a878237276a8c2657cedcd4ecf528d62d">getInt8</a>();</div>
-<div class="line"><span class="lineno">   84</span>    }</div>
-<div class="ttc" id="aclassiot_1_1mqtt__fast_1_1types_1_1Binary_html_a878237276a8c2657cedcd4ecf528d62d"><div class="ttname"><a href="classiot_1_1mqtt__fast_1_1types_1_1Binary.html#a878237276a8c2657cedcd4ecf528d62d">iot::mqtt_fast::types::Binary::getInt8</a></div><div class="ttdeci">uint8_t getInt8()</div><div class="ttdef"><b>Definition</b> <a href="Binary_8cpp_source.html#l00057">Binary.cpp:57</a></div></div>
+<p class="definition">Definition at line <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00083">83</a> of file <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html">ControlPacket.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   83</span>                                   {</div>
+<div class="line"><span class="lineno">   84</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1ControlPacket.html#a7f4b077d3b38f543c13d110bf453184a">data</a>.<a class="code hl_function" href="classiot_1_1mqtt__fast_1_1types_1_1Binary.html#a878237276a8c2657cedcd4ecf528d62d">getInt8</a>();</div>
+<div class="line"><span class="lineno">   85</span>    }</div>
+<div class="ttc" id="aclassiot_1_1mqtt__fast_1_1types_1_1Binary_html_a878237276a8c2657cedcd4ecf528d62d"><div class="ttname"><a href="classiot_1_1mqtt__fast_1_1types_1_1Binary.html#a878237276a8c2657cedcd4ecf528d62d">iot::mqtt_fast::types::Binary::getInt8</a></div><div class="ttdeci">uint8_t getInt8()</div><div class="ttdef"><b>Definition</b> <a href="Binary_8cpp_source.html#l00058">Binary.cpp:58</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="mqtt-fast_2ControlPacket_8h_source.html#l00084">iot::mqtt_fast::ControlPacket::data</a>, and <a class="el" href="Binary_8cpp_source.html#l00057">iot::mqtt_fast::types::Binary::getInt8()</a>.</p>
+<p class="reference">References <a class="el" href="mqtt-fast_2ControlPacket_8h_source.html#l00085">iot::mqtt_fast::ControlPacket::data</a>, and <a class="el" href="Binary_8cpp_source.html#l00058">iot::mqtt_fast::types::Binary::getInt8()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mqtt-fast_2packets_2Connack_8cpp_source.html#l00038">iot::mqtt_fast::packets::Connack::Connack()</a>, <a class="el" href="mqtt-fast_2packets_2Connect_8cpp_source.html#l00044">iot::mqtt_fast::packets::Connect::Connect()</a>, and <a class="el" href="mqtt-fast_2packets_2Subscribe_8cpp_source.html#l00043">iot::mqtt_fast::packets::Subscribe::Subscribe()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mqtt-fast_2packets_2Connack_8cpp_source.html#l00039">iot::mqtt_fast::packets::Connack::Connack()</a>, <a class="el" href="mqtt-fast_2packets_2Connect_8cpp_source.html#l00045">iot::mqtt_fast::packets::Connect::Connect()</a>, and <a class="el" href="mqtt-fast_2packets_2Subscribe_8cpp_source.html#l00044">iot::mqtt_fast::packets::Subscribe::Subscribe()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -583,13 +583,13 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00098">98</a> of file <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html">ControlPacket.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   98</span>                                    {</div>
-<div class="line"><span class="lineno">   99</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1ControlPacket.html#a7f4b077d3b38f543c13d110bf453184a">data</a>.<a class="code hl_function" href="classiot_1_1mqtt__fast_1_1types_1_1Binary.html#a891d5ecc3eda6ee22e721b73a84501fe">getIntV</a>();</div>
-<div class="line"><span class="lineno">  100</span>    }</div>
-<div class="ttc" id="aclassiot_1_1mqtt__fast_1_1types_1_1Binary_html_a891d5ecc3eda6ee22e721b73a84501fe"><div class="ttname"><a href="classiot_1_1mqtt__fast_1_1types_1_1Binary.html#a891d5ecc3eda6ee22e721b73a84501fe">iot::mqtt_fast::types::Binary::getIntV</a></div><div class="ttdeci">uint32_t getIntV()</div><div class="ttdef"><b>Definition</b> <a href="Binary_8cpp_source.html#l00113">Binary.cpp:113</a></div></div>
+<p class="definition">Definition at line <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00099">99</a> of file <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html">ControlPacket.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   99</span>                                    {</div>
+<div class="line"><span class="lineno">  100</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1ControlPacket.html#a7f4b077d3b38f543c13d110bf453184a">data</a>.<a class="code hl_function" href="classiot_1_1mqtt__fast_1_1types_1_1Binary.html#a891d5ecc3eda6ee22e721b73a84501fe">getIntV</a>();</div>
+<div class="line"><span class="lineno">  101</span>    }</div>
+<div class="ttc" id="aclassiot_1_1mqtt__fast_1_1types_1_1Binary_html_a891d5ecc3eda6ee22e721b73a84501fe"><div class="ttname"><a href="classiot_1_1mqtt__fast_1_1types_1_1Binary.html#a891d5ecc3eda6ee22e721b73a84501fe">iot::mqtt_fast::types::Binary::getIntV</a></div><div class="ttdeci">uint32_t getIntV()</div><div class="ttdef"><b>Definition</b> <a href="Binary_8cpp_source.html#l00114">Binary.cpp:114</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="mqtt-fast_2ControlPacket_8h_source.html#l00084">iot::mqtt_fast::ControlPacket::data</a>, and <a class="el" href="Binary_8cpp_source.html#l00113">iot::mqtt_fast::types::Binary::getIntV()</a>.</p>
+<p class="reference">References <a class="el" href="mqtt-fast_2ControlPacket_8h_source.html#l00085">iot::mqtt_fast::ControlPacket::data</a>, and <a class="el" href="Binary_8cpp_source.html#l00114">iot::mqtt_fast::types::Binary::getIntV()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -613,12 +613,12 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html#l00084">84</a> of file <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html">Publish.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   84</span>                                               {</div>
-<div class="line"><span class="lineno">   85</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1packets_1_1Publish.html#ae911602c79a2cb531f053261b9a67aa9">message</a>;</div>
-<div class="line"><span class="lineno">   86</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html#l00085">85</a> of file <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html">Publish.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   85</span>                                               {</div>
+<div class="line"><span class="lineno">   86</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1packets_1_1Publish.html#ae911602c79a2cb531f053261b9a67aa9">message</a>;</div>
+<div class="line"><span class="lineno">   87</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="mqtt-fast_2packets_2Publish_8h_source.html#l00060">message</a>.</p>
+<p class="reference">References <a class="el" href="mqtt-fast_2packets_2Publish_8h_source.html#l00061">message</a>.</p>
 
 </div>
 </div>
@@ -645,34 +645,34 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00054">54</a> of file <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html">ControlPacket.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   54</span>                                             {</div>
-<div class="line"><span class="lineno">   55</span>        std::vector&lt;char&gt; packet;</div>
-<div class="line"><span class="lineno">   56</span> </div>
-<div class="line"><span class="lineno">   57</span>        packet.push_back(<span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span><span class="keyword">&gt;</span>((<a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1ControlPacket.html#addbbeca8e3583165f9dd98a20aa49a23">type</a> &lt;&lt; 0x04) | (<a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1ControlPacket.html#a21ab8362671e2c48d83f9d34478506ee">reserved</a> &amp; 0x0F)));</div>
-<div class="line"><span class="lineno">   58</span> </div>
-<div class="line"><span class="lineno">   59</span>        uint64_t remainingLength = <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1ControlPacket.html#a7f4b077d3b38f543c13d110bf453184a">data</a>.<a class="code hl_function" href="classiot_1_1mqtt__fast_1_1types_1_1Binary.html#ae6e3d4c99926d8ce815eb4738fe8f230">getLength</a>();</div>
-<div class="line"><span class="lineno">   60</span>        <span class="keywordflow">do</span> {</div>
-<div class="line"><span class="lineno">   61</span>            uint8_t encodedByte = <span class="keyword">static_cast&lt;</span>uint8_t<span class="keyword">&gt;</span>(remainingLength % 0x80);</div>
-<div class="line"><span class="lineno">   62</span>            remainingLength /= 0x80;</div>
-<div class="line"><span class="lineno">   63</span>            <span class="keywordflow">if</span> (remainingLength &gt; 0) {</div>
-<div class="line"><span class="lineno">   64</span>                encodedByte |= 0x80;</div>
-<div class="line"><span class="lineno">   65</span>            }</div>
-<div class="line"><span class="lineno">   66</span>            packet.push_back(<span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span><span class="keyword">&gt;</span>(encodedByte));</div>
-<div class="line"><span class="lineno">   67</span>        } <span class="keywordflow">while</span> (remainingLength &gt; 0);</div>
-<div class="line"><span class="lineno">   68</span> </div>
-<div class="line"><span class="lineno">   69</span>        packet.insert(packet.end(), <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1ControlPacket.html#a7f4b077d3b38f543c13d110bf453184a">data</a>.<a class="code hl_function" href="classiot_1_1mqtt__fast_1_1types_1_1Binary.html#ac7bf7f96ddc87f7cf79eda642cacbfa3">getValue</a>().begin(), <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1ControlPacket.html#a7f4b077d3b38f543c13d110bf453184a">data</a>.<a class="code hl_function" href="classiot_1_1mqtt__fast_1_1types_1_1Binary.html#ac7bf7f96ddc87f7cf79eda642cacbfa3">getValue</a>().end());</div>
-<div class="line"><span class="lineno">   70</span> </div>
-<div class="line"><span class="lineno">   71</span>        <span class="keywordflow">return</span> packet;</div>
-<div class="line"><span class="lineno">   72</span>    }</div>
-<div class="ttc" id="aclassiot_1_1mqtt__fast_1_1ControlPacket_html_a21ab8362671e2c48d83f9d34478506ee"><div class="ttname"><a href="classiot_1_1mqtt__fast_1_1ControlPacket.html#a21ab8362671e2c48d83f9d34478506ee">iot::mqtt_fast::ControlPacket::reserved</a></div><div class="ttdeci">uint8_t reserved</div><div class="ttdef"><b>Definition</b> <a href="mqtt-fast_2ControlPacket_8h_source.html#l00082">ControlPacket.h:82</a></div></div>
-<div class="ttc" id="aclassiot_1_1mqtt__fast_1_1ControlPacket_html_addbbeca8e3583165f9dd98a20aa49a23"><div class="ttname"><a href="classiot_1_1mqtt__fast_1_1ControlPacket.html#addbbeca8e3583165f9dd98a20aa49a23">iot::mqtt_fast::ControlPacket::type</a></div><div class="ttdeci">uint8_t type</div><div class="ttdef"><b>Definition</b> <a href="mqtt-fast_2ControlPacket_8h_source.html#l00081">ControlPacket.h:81</a></div></div>
-<div class="ttc" id="aclassiot_1_1mqtt__fast_1_1types_1_1Binary_html_ac7bf7f96ddc87f7cf79eda642cacbfa3"><div class="ttname"><a href="classiot_1_1mqtt__fast_1_1types_1_1Binary.html#ac7bf7f96ddc87f7cf79eda642cacbfa3">iot::mqtt_fast::types::Binary::getValue</a></div><div class="ttdeci">std::vector&lt; char &gt; &amp; getValue()</div><div class="ttdef"><b>Definition</b> <a href="Binary_8cpp_source.html#l00053">Binary.cpp:53</a></div></div>
-<div class="ttc" id="aclassiot_1_1mqtt__fast_1_1types_1_1Binary_html_ae6e3d4c99926d8ce815eb4738fe8f230"><div class="ttname"><a href="classiot_1_1mqtt__fast_1_1types_1_1Binary.html#ae6e3d4c99926d8ce815eb4738fe8f230">iot::mqtt_fast::types::Binary::getLength</a></div><div class="ttdeci">std::vector&lt; char &gt;::size_type getLength() const</div><div class="ttdef"><b>Definition</b> <a href="Binary_8cpp_source.html#l00039">Binary.cpp:39</a></div></div>
+<p class="definition">Definition at line <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00055">55</a> of file <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html">ControlPacket.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   55</span>                                             {</div>
+<div class="line"><span class="lineno">   56</span>        std::vector&lt;char&gt; packet;</div>
+<div class="line"><span class="lineno">   57</span> </div>
+<div class="line"><span class="lineno">   58</span>        packet.push_back(<span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span><span class="keyword">&gt;</span>((<a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1ControlPacket.html#addbbeca8e3583165f9dd98a20aa49a23">type</a> &lt;&lt; 0x04) | (<a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1ControlPacket.html#a21ab8362671e2c48d83f9d34478506ee">reserved</a> &amp; 0x0F)));</div>
+<div class="line"><span class="lineno">   59</span> </div>
+<div class="line"><span class="lineno">   60</span>        uint64_t remainingLength = <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1ControlPacket.html#a7f4b077d3b38f543c13d110bf453184a">data</a>.<a class="code hl_function" href="classiot_1_1mqtt__fast_1_1types_1_1Binary.html#ae6e3d4c99926d8ce815eb4738fe8f230">getLength</a>();</div>
+<div class="line"><span class="lineno">   61</span>        <span class="keywordflow">do</span> {</div>
+<div class="line"><span class="lineno">   62</span>            uint8_t encodedByte = <span class="keyword">static_cast&lt;</span>uint8_t<span class="keyword">&gt;</span>(remainingLength % 0x80);</div>
+<div class="line"><span class="lineno">   63</span>            remainingLength /= 0x80;</div>
+<div class="line"><span class="lineno">   64</span>            <span class="keywordflow">if</span> (remainingLength &gt; 0) {</div>
+<div class="line"><span class="lineno">   65</span>                encodedByte |= 0x80;</div>
+<div class="line"><span class="lineno">   66</span>            }</div>
+<div class="line"><span class="lineno">   67</span>            packet.push_back(<span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span><span class="keyword">&gt;</span>(encodedByte));</div>
+<div class="line"><span class="lineno">   68</span>        } <span class="keywordflow">while</span> (remainingLength &gt; 0);</div>
+<div class="line"><span class="lineno">   69</span> </div>
+<div class="line"><span class="lineno">   70</span>        packet.insert(packet.end(), <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1ControlPacket.html#a7f4b077d3b38f543c13d110bf453184a">data</a>.<a class="code hl_function" href="classiot_1_1mqtt__fast_1_1types_1_1Binary.html#ac7bf7f96ddc87f7cf79eda642cacbfa3">getValue</a>().begin(), <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1ControlPacket.html#a7f4b077d3b38f543c13d110bf453184a">data</a>.<a class="code hl_function" href="classiot_1_1mqtt__fast_1_1types_1_1Binary.html#ac7bf7f96ddc87f7cf79eda642cacbfa3">getValue</a>().end());</div>
+<div class="line"><span class="lineno">   71</span> </div>
+<div class="line"><span class="lineno">   72</span>        <span class="keywordflow">return</span> packet;</div>
+<div class="line"><span class="lineno">   73</span>    }</div>
+<div class="ttc" id="aclassiot_1_1mqtt__fast_1_1ControlPacket_html_a21ab8362671e2c48d83f9d34478506ee"><div class="ttname"><a href="classiot_1_1mqtt__fast_1_1ControlPacket.html#a21ab8362671e2c48d83f9d34478506ee">iot::mqtt_fast::ControlPacket::reserved</a></div><div class="ttdeci">uint8_t reserved</div><div class="ttdef"><b>Definition</b> <a href="mqtt-fast_2ControlPacket_8h_source.html#l00083">ControlPacket.h:83</a></div></div>
+<div class="ttc" id="aclassiot_1_1mqtt__fast_1_1ControlPacket_html_addbbeca8e3583165f9dd98a20aa49a23"><div class="ttname"><a href="classiot_1_1mqtt__fast_1_1ControlPacket.html#addbbeca8e3583165f9dd98a20aa49a23">iot::mqtt_fast::ControlPacket::type</a></div><div class="ttdeci">uint8_t type</div><div class="ttdef"><b>Definition</b> <a href="mqtt-fast_2ControlPacket_8h_source.html#l00082">ControlPacket.h:82</a></div></div>
+<div class="ttc" id="aclassiot_1_1mqtt__fast_1_1types_1_1Binary_html_ac7bf7f96ddc87f7cf79eda642cacbfa3"><div class="ttname"><a href="classiot_1_1mqtt__fast_1_1types_1_1Binary.html#ac7bf7f96ddc87f7cf79eda642cacbfa3">iot::mqtt_fast::types::Binary::getValue</a></div><div class="ttdeci">std::vector&lt; char &gt; &amp; getValue()</div><div class="ttdef"><b>Definition</b> <a href="Binary_8cpp_source.html#l00054">Binary.cpp:54</a></div></div>
+<div class="ttc" id="aclassiot_1_1mqtt__fast_1_1types_1_1Binary_html_ae6e3d4c99926d8ce815eb4738fe8f230"><div class="ttname"><a href="classiot_1_1mqtt__fast_1_1types_1_1Binary.html#ae6e3d4c99926d8ce815eb4738fe8f230">iot::mqtt_fast::types::Binary::getLength</a></div><div class="ttdeci">std::vector&lt; char &gt;::size_type getLength() const</div><div class="ttdef"><b>Definition</b> <a href="Binary_8cpp_source.html#l00040">Binary.cpp:40</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="mqtt-fast_2ControlPacket_8h_source.html#l00084">iot::mqtt_fast::ControlPacket::data</a>, <a class="el" href="Binary_8cpp_source.html#l00039">iot::mqtt_fast::types::Binary::getLength()</a>, <a class="el" href="Binary_8cpp_source.html#l00053">iot::mqtt_fast::types::Binary::getValue()</a>, <a class="el" href="mqtt-fast_2ControlPacket_8h_source.html#l00082">iot::mqtt_fast::ControlPacket::reserved</a>, and <a class="el" href="mqtt-fast_2ControlPacket_8h_source.html#l00081">iot::mqtt_fast::ControlPacket::type</a>.</p>
+<p class="reference">References <a class="el" href="mqtt-fast_2ControlPacket_8h_source.html#l00085">iot::mqtt_fast::ControlPacket::data</a>, <a class="el" href="Binary_8cpp_source.html#l00040">iot::mqtt_fast::types::Binary::getLength()</a>, <a class="el" href="Binary_8cpp_source.html#l00054">iot::mqtt_fast::types::Binary::getValue()</a>, <a class="el" href="mqtt-fast_2ControlPacket_8h_source.html#l00083">iot::mqtt_fast::ControlPacket::reserved</a>, and <a class="el" href="mqtt-fast_2ControlPacket_8h_source.html#l00082">iot::mqtt_fast::ControlPacket::type</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="iot_2mqtt-fast_2SocketContext_8cpp_source.html#l00207">iot::mqtt_fast::SocketContext::send()</a>, and <a class="el" href="iot_2mqtt-fast_2SocketContext_8cpp_source.html#l00211">iot::mqtt_fast::SocketContext::send()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="iot_2mqtt-fast_2SocketContext_8cpp_source.html#l00208">iot::mqtt_fast::SocketContext::send()</a>, and <a class="el" href="iot_2mqtt-fast_2SocketContext_8cpp_source.html#l00212">iot::mqtt_fast::SocketContext::send()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -701,12 +701,12 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html#l00076">76</a> of file <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html">Publish.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   76</span>                                                {</div>
-<div class="line"><span class="lineno">   77</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1packets_1_1Publish.html#a21838b76b498b4202ccbb8d7b8edb37f">packetIdentifier</a>;</div>
-<div class="line"><span class="lineno">   78</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html#l00077">77</a> of file <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html">Publish.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   77</span>                                                {</div>
+<div class="line"><span class="lineno">   78</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1packets_1_1Publish.html#a21838b76b498b4202ccbb8d7b8edb37f">packetIdentifier</a>;</div>
+<div class="line"><span class="lineno">   79</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="mqtt-fast_2packets_2Publish_8h_source.html#l00058">packetIdentifier</a>.</p>
+<p class="reference">References <a class="el" href="mqtt-fast_2packets_2Publish_8h_source.html#l00059">packetIdentifier</a>.</p>
 
 </div>
 </div>
@@ -725,12 +725,12 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html#l00072">72</a> of file <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html">Publish.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   72</span>                                  {</div>
-<div class="line"><span class="lineno">   73</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1packets_1_1Publish.html#a31d8c3322aca125da403ea285d860972">qoS</a>;</div>
-<div class="line"><span class="lineno">   74</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html#l00073">73</a> of file <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html">Publish.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   73</span>                                  {</div>
+<div class="line"><span class="lineno">   74</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1packets_1_1Publish.html#a31d8c3322aca125da403ea285d860972">qoS</a>;</div>
+<div class="line"><span class="lineno">   75</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="mqtt-fast_2packets_2Publish_8h_source.html#l00062">qoS</a>.</p>
+<p class="reference">References <a class="el" href="mqtt-fast_2packets_2Publish_8h_source.html#l00063">qoS</a>.</p>
 
 </div>
 </div>
@@ -757,12 +757,12 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00050">50</a> of file <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html">ControlPacket.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   50</span>                                                     {</div>
-<div class="line"><span class="lineno">   51</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1ControlPacket.html#a7f4b077d3b38f543c13d110bf453184a">data</a>.<a class="code hl_function" href="classiot_1_1mqtt__fast_1_1types_1_1Binary.html#ae6e3d4c99926d8ce815eb4738fe8f230">getLength</a>();</div>
-<div class="line"><span class="lineno">   52</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00051">51</a> of file <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html">ControlPacket.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   51</span>                                                     {</div>
+<div class="line"><span class="lineno">   52</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1ControlPacket.html#a7f4b077d3b38f543c13d110bf453184a">data</a>.<a class="code hl_function" href="classiot_1_1mqtt__fast_1_1types_1_1Binary.html#ae6e3d4c99926d8ce815eb4738fe8f230">getLength</a>();</div>
+<div class="line"><span class="lineno">   53</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="mqtt-fast_2ControlPacket_8h_source.html#l00084">iot::mqtt_fast::ControlPacket::data</a>, and <a class="el" href="Binary_8cpp_source.html#l00039">iot::mqtt_fast::types::Binary::getLength()</a>.</p>
+<p class="reference">References <a class="el" href="mqtt-fast_2ControlPacket_8h_source.html#l00085">iot::mqtt_fast::ControlPacket::data</a>, and <a class="el" href="Binary_8cpp_source.html#l00040">iot::mqtt_fast::types::Binary::getLength()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -794,12 +794,12 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00046">46</a> of file <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html">ControlPacket.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   46</span>                                             {</div>
-<div class="line"><span class="lineno">   47</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1ControlPacket.html#a21ab8362671e2c48d83f9d34478506ee">reserved</a>;</div>
-<div class="line"><span class="lineno">   48</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00047">47</a> of file <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html">ControlPacket.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   47</span>                                             {</div>
+<div class="line"><span class="lineno">   48</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1ControlPacket.html#a21ab8362671e2c48d83f9d34478506ee">reserved</a>;</div>
+<div class="line"><span class="lineno">   49</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="mqtt-fast_2ControlPacket_8h_source.html#l00082">iot::mqtt_fast::ControlPacket::reserved</a>.</p>
+<p class="reference">References <a class="el" href="mqtt-fast_2ControlPacket_8h_source.html#l00083">iot::mqtt_fast::ControlPacket::reserved</a>.</p>
 
 </div>
 </div>
@@ -818,12 +818,12 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html#l00088">88</a> of file <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html">Publish.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   88</span>                                  {</div>
-<div class="line"><span class="lineno">   89</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1packets_1_1Publish.html#a12ed609468e1ba77a62b16ffc96d540a">retain</a>;</div>
-<div class="line"><span class="lineno">   90</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html#l00089">89</a> of file <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html">Publish.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   89</span>                                  {</div>
+<div class="line"><span class="lineno">   90</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1packets_1_1Publish.html#a12ed609468e1ba77a62b16ffc96d540a">retain</a>;</div>
+<div class="line"><span class="lineno">   91</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="mqtt-fast_2packets_2Publish_8h_source.html#l00063">retain</a>.</p>
+<p class="reference">References <a class="el" href="mqtt-fast_2packets_2Publish_8h_source.html#l00064">retain</a>.</p>
 
 </div>
 </div>
@@ -850,15 +850,15 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00102">102</a> of file <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html">ControlPacket.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  102</span>                                       {</div>
-<div class="line"><span class="lineno">  103</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1ControlPacket.html#a7f4b077d3b38f543c13d110bf453184a">data</a>.<a class="code hl_function" href="classiot_1_1mqtt__fast_1_1types_1_1Binary.html#ad2e128868a9fe4ecc3401eabf93f3531">getString</a>();</div>
-<div class="line"><span class="lineno">  104</span>    }</div>
-<div class="ttc" id="aclassiot_1_1mqtt__fast_1_1types_1_1Binary_html_ad2e128868a9fe4ecc3401eabf93f3531"><div class="ttname"><a href="classiot_1_1mqtt__fast_1_1types_1_1Binary.html#ad2e128868a9fe4ecc3401eabf93f3531">iot::mqtt_fast::types::Binary::getString</a></div><div class="ttdeci">std::string getString()</div><div class="ttdef"><b>Definition</b> <a href="Binary_8cpp_source.html#l00138">Binary.cpp:138</a></div></div>
+<p class="definition">Definition at line <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00103">103</a> of file <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html">ControlPacket.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  103</span>                                       {</div>
+<div class="line"><span class="lineno">  104</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1ControlPacket.html#a7f4b077d3b38f543c13d110bf453184a">data</a>.<a class="code hl_function" href="classiot_1_1mqtt__fast_1_1types_1_1Binary.html#ad2e128868a9fe4ecc3401eabf93f3531">getString</a>();</div>
+<div class="line"><span class="lineno">  105</span>    }</div>
+<div class="ttc" id="aclassiot_1_1mqtt__fast_1_1types_1_1Binary_html_ad2e128868a9fe4ecc3401eabf93f3531"><div class="ttname"><a href="classiot_1_1mqtt__fast_1_1types_1_1Binary.html#ad2e128868a9fe4ecc3401eabf93f3531">iot::mqtt_fast::types::Binary::getString</a></div><div class="ttdeci">std::string getString()</div><div class="ttdef"><b>Definition</b> <a href="Binary_8cpp_source.html#l00139">Binary.cpp:139</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="mqtt-fast_2ControlPacket_8h_source.html#l00084">iot::mqtt_fast::ControlPacket::data</a>, and <a class="el" href="Binary_8cpp_source.html#l00138">iot::mqtt_fast::types::Binary::getString()</a>.</p>
+<p class="reference">References <a class="el" href="mqtt-fast_2ControlPacket_8h_source.html#l00085">iot::mqtt_fast::ControlPacket::data</a>, and <a class="el" href="Binary_8cpp_source.html#l00139">iot::mqtt_fast::types::Binary::getString()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mqtt-fast_2packets_2Connect_8cpp_source.html#l00044">iot::mqtt_fast::packets::Connect::Connect()</a>, <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html#l00049">Publish()</a>, <a class="el" href="mqtt-fast_2packets_2Subscribe_8cpp_source.html#l00043">iot::mqtt_fast::packets::Subscribe::Subscribe()</a>, and <a class="el" href="mqtt-fast_2packets_2Unsubscribe_8cpp_source.html#l00040">iot::mqtt_fast::packets::Unsubscribe::Unsubscribe()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mqtt-fast_2packets_2Connect_8cpp_source.html#l00045">iot::mqtt_fast::packets::Connect::Connect()</a>, <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html#l00050">Publish()</a>, <a class="el" href="mqtt-fast_2packets_2Subscribe_8cpp_source.html#l00044">iot::mqtt_fast::packets::Subscribe::Subscribe()</a>, and <a class="el" href="mqtt-fast_2packets_2Unsubscribe_8cpp_source.html#l00041">iot::mqtt_fast::packets::Unsubscribe::Unsubscribe()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -895,15 +895,15 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00106">106</a> of file <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html">ControlPacket.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  106</span>                                          {</div>
-<div class="line"><span class="lineno">  107</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1ControlPacket.html#a7f4b077d3b38f543c13d110bf453184a">data</a>.<a class="code hl_function" href="classiot_1_1mqtt__fast_1_1types_1_1Binary.html#a3c695c9bf452a45ed7ee9f0334bc6440">getStringRaw</a>();</div>
-<div class="line"><span class="lineno">  108</span>    }</div>
-<div class="ttc" id="aclassiot_1_1mqtt__fast_1_1types_1_1Binary_html_a3c695c9bf452a45ed7ee9f0334bc6440"><div class="ttname"><a href="classiot_1_1mqtt__fast_1_1types_1_1Binary.html#a3c695c9bf452a45ed7ee9f0334bc6440">iot::mqtt_fast::types::Binary::getStringRaw</a></div><div class="ttdeci">std::string getStringRaw()</div><div class="ttdef"><b>Definition</b> <a href="Binary_8cpp_source.html#l00158">Binary.cpp:158</a></div></div>
+<p class="definition">Definition at line <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00107">107</a> of file <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html">ControlPacket.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  107</span>                                          {</div>
+<div class="line"><span class="lineno">  108</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1ControlPacket.html#a7f4b077d3b38f543c13d110bf453184a">data</a>.<a class="code hl_function" href="classiot_1_1mqtt__fast_1_1types_1_1Binary.html#a3c695c9bf452a45ed7ee9f0334bc6440">getStringRaw</a>();</div>
+<div class="line"><span class="lineno">  109</span>    }</div>
+<div class="ttc" id="aclassiot_1_1mqtt__fast_1_1types_1_1Binary_html_a3c695c9bf452a45ed7ee9f0334bc6440"><div class="ttname"><a href="classiot_1_1mqtt__fast_1_1types_1_1Binary.html#a3c695c9bf452a45ed7ee9f0334bc6440">iot::mqtt_fast::types::Binary::getStringRaw</a></div><div class="ttdeci">std::string getStringRaw()</div><div class="ttdef"><b>Definition</b> <a href="Binary_8cpp_source.html#l00159">Binary.cpp:159</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="mqtt-fast_2ControlPacket_8h_source.html#l00084">iot::mqtt_fast::ControlPacket::data</a>, and <a class="el" href="Binary_8cpp_source.html#l00158">iot::mqtt_fast::types::Binary::getStringRaw()</a>.</p>
+<p class="reference">References <a class="el" href="mqtt-fast_2ControlPacket_8h_source.html#l00085">iot::mqtt_fast::ControlPacket::data</a>, and <a class="el" href="Binary_8cpp_source.html#l00159">iot::mqtt_fast::types::Binary::getStringRaw()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html#l00049">Publish()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html#l00050">Publish()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -932,12 +932,12 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html#l00080">80</a> of file <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html">Publish.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   80</span>                                             {</div>
-<div class="line"><span class="lineno">   81</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1packets_1_1Publish.html#ad86eab2e4c12c52c266a340848e9a396">topic</a>;</div>
-<div class="line"><span class="lineno">   82</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html#l00081">81</a> of file <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html">Publish.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   81</span>                                             {</div>
+<div class="line"><span class="lineno">   82</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1packets_1_1Publish.html#ad86eab2e4c12c52c266a340848e9a396">topic</a>;</div>
+<div class="line"><span class="lineno">   83</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="mqtt-fast_2packets_2Publish_8h_source.html#l00059">topic</a>.</p>
+<p class="reference">References <a class="el" href="mqtt-fast_2packets_2Publish_8h_source.html#l00060">topic</a>.</p>
 
 </div>
 </div>
@@ -964,12 +964,12 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00042">42</a> of file <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html">ControlPacket.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   42</span>                                         {</div>
-<div class="line"><span class="lineno">   43</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1ControlPacket.html#addbbeca8e3583165f9dd98a20aa49a23">type</a>;</div>
-<div class="line"><span class="lineno">   44</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00043">43</a> of file <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html">ControlPacket.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   43</span>                                         {</div>
+<div class="line"><span class="lineno">   44</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1ControlPacket.html#addbbeca8e3583165f9dd98a20aa49a23">type</a>;</div>
+<div class="line"><span class="lineno">   45</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="mqtt-fast_2ControlPacket_8h_source.html#l00081">iot::mqtt_fast::ControlPacket::type</a>.</p>
+<p class="reference">References <a class="el" href="mqtt-fast_2ControlPacket_8h_source.html#l00082">iot::mqtt_fast::ControlPacket::type</a>.</p>
 
 </div>
 </div>
@@ -996,15 +996,15 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00110">110</a> of file <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html">ControlPacket.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  110</span>                                                    {</div>
-<div class="line"><span class="lineno">  111</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1ControlPacket.html#a7f4b077d3b38f543c13d110bf453184a">data</a>.<a class="code hl_function" href="classiot_1_1mqtt__fast_1_1types_1_1Binary.html#a269f25dc0de9c32005cca71706d8d35a">getUint8ListRaw</a>();</div>
-<div class="line"><span class="lineno">  112</span>    }</div>
-<div class="ttc" id="aclassiot_1_1mqtt__fast_1_1types_1_1Binary_html_a269f25dc0de9c32005cca71706d8d35a"><div class="ttname"><a href="classiot_1_1mqtt__fast_1_1types_1_1Binary.html#a269f25dc0de9c32005cca71706d8d35a">iot::mqtt_fast::types::Binary::getUint8ListRaw</a></div><div class="ttdeci">std::list&lt; uint8_t &gt; getUint8ListRaw()</div><div class="ttdef"><b>Definition</b> <a href="Binary_8cpp_source.html#l00171">Binary.cpp:171</a></div></div>
+<p class="definition">Definition at line <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00111">111</a> of file <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html">ControlPacket.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  111</span>                                                    {</div>
+<div class="line"><span class="lineno">  112</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1ControlPacket.html#a7f4b077d3b38f543c13d110bf453184a">data</a>.<a class="code hl_function" href="classiot_1_1mqtt__fast_1_1types_1_1Binary.html#a269f25dc0de9c32005cca71706d8d35a">getUint8ListRaw</a>();</div>
+<div class="line"><span class="lineno">  113</span>    }</div>
+<div class="ttc" id="aclassiot_1_1mqtt__fast_1_1types_1_1Binary_html_a269f25dc0de9c32005cca71706d8d35a"><div class="ttname"><a href="classiot_1_1mqtt__fast_1_1types_1_1Binary.html#a269f25dc0de9c32005cca71706d8d35a">iot::mqtt_fast::types::Binary::getUint8ListRaw</a></div><div class="ttdeci">std::list&lt; uint8_t &gt; getUint8ListRaw()</div><div class="ttdef"><b>Definition</b> <a href="Binary_8cpp_source.html#l00172">Binary.cpp:172</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="mqtt-fast_2ControlPacket_8h_source.html#l00084">iot::mqtt_fast::ControlPacket::data</a>, and <a class="el" href="Binary_8cpp_source.html#l00171">iot::mqtt_fast::types::Binary::getUint8ListRaw()</a>.</p>
+<p class="reference">References <a class="el" href="mqtt-fast_2ControlPacket_8h_source.html#l00085">iot::mqtt_fast::ControlPacket::data</a>, and <a class="el" href="Binary_8cpp_source.html#l00172">iot::mqtt_fast::types::Binary::getUint8ListRaw()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mqtt-fast_2packets_2Suback_8cpp_source.html#l00038">iot::mqtt_fast::packets::Suback::Suback()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mqtt-fast_2packets_2Suback_8cpp_source.html#l00039">iot::mqtt_fast::packets::Suback::Suback()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1041,12 +1041,12 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00078">78</a> of file <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html">ControlPacket.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   78</span>                                             {</div>
-<div class="line"><span class="lineno">   79</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1ControlPacket.html#a7f4b077d3b38f543c13d110bf453184a">data</a>.<a class="code hl_function" href="classiot_1_1mqtt__fast_1_1types_1_1Binary.html#ac7bf7f96ddc87f7cf79eda642cacbfa3">getValue</a>();</div>
-<div class="line"><span class="lineno">   80</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00079">79</a> of file <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html">ControlPacket.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   79</span>                                             {</div>
+<div class="line"><span class="lineno">   80</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1ControlPacket.html#a7f4b077d3b38f543c13d110bf453184a">data</a>.<a class="code hl_function" href="classiot_1_1mqtt__fast_1_1types_1_1Binary.html#ac7bf7f96ddc87f7cf79eda642cacbfa3">getValue</a>();</div>
+<div class="line"><span class="lineno">   81</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="mqtt-fast_2ControlPacket_8h_source.html#l00084">iot::mqtt_fast::ControlPacket::data</a>, and <a class="el" href="Binary_8cpp_source.html#l00053">iot::mqtt_fast::types::Binary::getValue()</a>.</p>
+<p class="reference">References <a class="el" href="mqtt-fast_2ControlPacket_8h_source.html#l00085">iot::mqtt_fast::ControlPacket::data</a>, and <a class="el" href="Binary_8cpp_source.html#l00054">iot::mqtt_fast::types::Binary::getValue()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1078,15 +1078,15 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00146">146</a> of file <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html">ControlPacket.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  146</span>                                {</div>
-<div class="line"><span class="lineno">  147</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1ControlPacket.html#a7f4b077d3b38f543c13d110bf453184a">data</a>.<a class="code hl_function" href="classiot_1_1mqtt__fast_1_1types_1_1TypeBase.html#acdac8394728fb7fa7fa1a78549650f82">isError</a>();</div>
-<div class="line"><span class="lineno">  148</span>    }</div>
-<div class="ttc" id="aclassiot_1_1mqtt__fast_1_1types_1_1TypeBase_html_acdac8394728fb7fa7fa1a78549650f82"><div class="ttname"><a href="classiot_1_1mqtt__fast_1_1types_1_1TypeBase.html#acdac8394728fb7fa7fa1a78549650f82">iot::mqtt_fast::types::TypeBase::isError</a></div><div class="ttdeci">bool isError() const</div><div class="ttdef"><b>Definition</b> <a href="TypeBase_8cpp_source.html#l00037">TypeBase.cpp:37</a></div></div>
+<p class="definition">Definition at line <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00147">147</a> of file <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html">ControlPacket.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  147</span>                                {</div>
+<div class="line"><span class="lineno">  148</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1ControlPacket.html#a7f4b077d3b38f543c13d110bf453184a">data</a>.<a class="code hl_function" href="classiot_1_1mqtt__fast_1_1types_1_1TypeBase.html#acdac8394728fb7fa7fa1a78549650f82">isError</a>();</div>
+<div class="line"><span class="lineno">  149</span>    }</div>
+<div class="ttc" id="aclassiot_1_1mqtt__fast_1_1types_1_1TypeBase_html_acdac8394728fb7fa7fa1a78549650f82"><div class="ttname"><a href="classiot_1_1mqtt__fast_1_1types_1_1TypeBase.html#acdac8394728fb7fa7fa1a78549650f82">iot::mqtt_fast::types::TypeBase::isError</a></div><div class="ttdeci">bool isError() const</div><div class="ttdef"><b>Definition</b> <a href="TypeBase_8cpp_source.html#l00038">TypeBase.cpp:38</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="mqtt-fast_2ControlPacket_8h_source.html#l00084">iot::mqtt_fast::ControlPacket::data</a>, and <a class="el" href="TypeBase_8cpp_source.html#l00037">iot::mqtt_fast::types::TypeBase::isError()</a>.</p>
+<p class="reference">References <a class="el" href="mqtt-fast_2ControlPacket_8h_source.html#l00085">iot::mqtt_fast::ControlPacket::data</a>, and <a class="el" href="TypeBase_8cpp_source.html#l00038">iot::mqtt_fast::types::TypeBase::isError()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mqtt-fast_2packets_2Connack_8cpp_source.html#l00038">iot::mqtt_fast::packets::Connack::Connack()</a>, <a class="el" href="mqtt-fast_2packets_2Connect_8cpp_source.html#l00044">iot::mqtt_fast::packets::Connect::Connect()</a>, <a class="el" href="mqtt-fast_2packets_2Disconnect_8cpp_source.html#l00033">iot::mqtt_fast::packets::Disconnect::Disconnect()</a>, <a class="el" href="mqtt-fast_2packets_2Pingreq_8cpp_source.html#l00033">iot::mqtt_fast::packets::Pingreq::Pingreq()</a>, <a class="el" href="mqtt-fast_2packets_2Pingresp_8cpp_source.html#l00033">iot::mqtt_fast::packets::Pingresp::Pingresp()</a>, <a class="el" href="mqtt-fast_2packets_2Puback_8cpp_source.html#l00036">iot::mqtt_fast::packets::Puback::Puback()</a>, <a class="el" href="mqtt-fast_2packets_2Pubcomp_8cpp_source.html#l00036">iot::mqtt_fast::packets::Pubcomp::Pubcomp()</a>, <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html#l00049">Publish()</a>, <a class="el" href="mqtt-fast_2packets_2Pubrec_8cpp_source.html#l00036">iot::mqtt_fast::packets::Pubrec::Pubrec()</a>, <a class="el" href="mqtt-fast_2packets_2Pubrel_8cpp_source.html#l00036">iot::mqtt_fast::packets::Pubrel::Pubrel()</a>, <a class="el" href="mqtt-fast_2packets_2Suback_8cpp_source.html#l00038">iot::mqtt_fast::packets::Suback::Suback()</a>, <a class="el" href="mqtt-fast_2packets_2Subscribe_8cpp_source.html#l00043">iot::mqtt_fast::packets::Subscribe::Subscribe()</a>, <a class="el" href="mqtt-fast_2packets_2Unsuback_8cpp_source.html#l00036">iot::mqtt_fast::packets::Unsuback::Unsuback()</a>, and <a class="el" href="mqtt-fast_2packets_2Unsubscribe_8cpp_source.html#l00040">iot::mqtt_fast::packets::Unsubscribe::Unsubscribe()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mqtt-fast_2packets_2Connack_8cpp_source.html#l00039">iot::mqtt_fast::packets::Connack::Connack()</a>, <a class="el" href="mqtt-fast_2packets_2Connect_8cpp_source.html#l00045">iot::mqtt_fast::packets::Connect::Connect()</a>, <a class="el" href="mqtt-fast_2packets_2Disconnect_8cpp_source.html#l00034">iot::mqtt_fast::packets::Disconnect::Disconnect()</a>, <a class="el" href="mqtt-fast_2packets_2Pingreq_8cpp_source.html#l00034">iot::mqtt_fast::packets::Pingreq::Pingreq()</a>, <a class="el" href="mqtt-fast_2packets_2Pingresp_8cpp_source.html#l00034">iot::mqtt_fast::packets::Pingresp::Pingresp()</a>, <a class="el" href="mqtt-fast_2packets_2Puback_8cpp_source.html#l00037">iot::mqtt_fast::packets::Puback::Puback()</a>, <a class="el" href="mqtt-fast_2packets_2Pubcomp_8cpp_source.html#l00037">iot::mqtt_fast::packets::Pubcomp::Pubcomp()</a>, <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html#l00050">Publish()</a>, <a class="el" href="mqtt-fast_2packets_2Pubrec_8cpp_source.html#l00037">iot::mqtt_fast::packets::Pubrec::Pubrec()</a>, <a class="el" href="mqtt-fast_2packets_2Pubrel_8cpp_source.html#l00037">iot::mqtt_fast::packets::Pubrel::Pubrel()</a>, <a class="el" href="mqtt-fast_2packets_2Suback_8cpp_source.html#l00039">iot::mqtt_fast::packets::Suback::Suback()</a>, <a class="el" href="mqtt-fast_2packets_2Subscribe_8cpp_source.html#l00044">iot::mqtt_fast::packets::Subscribe::Subscribe()</a>, <a class="el" href="mqtt-fast_2packets_2Unsuback_8cpp_source.html#l00037">iot::mqtt_fast::packets::Unsuback::Unsuback()</a>, and <a class="el" href="mqtt-fast_2packets_2Unsubscribe_8cpp_source.html#l00041">iot::mqtt_fast::packets::Unsubscribe::Unsubscribe()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1123,12 +1123,12 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00074">74</a> of file <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html">ControlPacket.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   74</span>                                      {</div>
-<div class="line"><span class="lineno">   75</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1ControlPacket.html#afc2dd5f16f2e19be51f2376d65df421c">error</a>;</div>
-<div class="line"><span class="lineno">   76</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00075">75</a> of file <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html">ControlPacket.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   75</span>                                      {</div>
+<div class="line"><span class="lineno">   76</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1ControlPacket.html#afc2dd5f16f2e19be51f2376d65df421c">error</a>;</div>
+<div class="line"><span class="lineno">   77</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="mqtt-fast_2ControlPacket_8h_source.html#l00087">iot::mqtt_fast::ControlPacket::error</a>.</p>
+<p class="reference">References <a class="el" href="mqtt-fast_2ControlPacket_8h_source.html#l00088">iot::mqtt_fast::ControlPacket::error</a>.</p>
 
 </div>
 </div>
@@ -1156,15 +1156,15 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00118">118</a> of file <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html">ControlPacket.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  118</span>                                               {</div>
-<div class="line"><span class="lineno">  119</span>        <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1ControlPacket.html#a7f4b077d3b38f543c13d110bf453184a">data</a>.<a class="code hl_function" href="classiot_1_1mqtt__fast_1_1types_1_1Binary.html#af8e71e490efa99c2387deab66fb6ad86">putInt16</a>(value);</div>
-<div class="line"><span class="lineno">  120</span>    }</div>
-<div class="ttc" id="aclassiot_1_1mqtt__fast_1_1types_1_1Binary_html_af8e71e490efa99c2387deab66fb6ad86"><div class="ttname"><a href="classiot_1_1mqtt__fast_1_1types_1_1Binary.html#af8e71e490efa99c2387deab66fb6ad86">iot::mqtt_fast::types::Binary::putInt16</a></div><div class="ttdeci">void putInt16(uint16_t value)</div><div class="ttdef"><b>Definition</b> <a href="Binary_8cpp_source.html#l00191">Binary.cpp:191</a></div></div>
+<p class="definition">Definition at line <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00119">119</a> of file <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html">ControlPacket.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  119</span>                                               {</div>
+<div class="line"><span class="lineno">  120</span>        <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1ControlPacket.html#a7f4b077d3b38f543c13d110bf453184a">data</a>.<a class="code hl_function" href="classiot_1_1mqtt__fast_1_1types_1_1Binary.html#af8e71e490efa99c2387deab66fb6ad86">putInt16</a>(value);</div>
+<div class="line"><span class="lineno">  121</span>    }</div>
+<div class="ttc" id="aclassiot_1_1mqtt__fast_1_1types_1_1Binary_html_af8e71e490efa99c2387deab66fb6ad86"><div class="ttname"><a href="classiot_1_1mqtt__fast_1_1types_1_1Binary.html#af8e71e490efa99c2387deab66fb6ad86">iot::mqtt_fast::types::Binary::putInt16</a></div><div class="ttdeci">void putInt16(uint16_t value)</div><div class="ttdef"><b>Definition</b> <a href="Binary_8cpp_source.html#l00192">Binary.cpp:192</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="mqtt-fast_2ControlPacket_8h_source.html#l00084">iot::mqtt_fast::ControlPacket::data</a>, and <a class="el" href="Binary_8cpp_source.html#l00191">iot::mqtt_fast::types::Binary::putInt16()</a>.</p>
+<p class="reference">References <a class="el" href="mqtt-fast_2ControlPacket_8h_source.html#l00085">iot::mqtt_fast::ControlPacket::data</a>, and <a class="el" href="Binary_8cpp_source.html#l00192">iot::mqtt_fast::types::Binary::putInt16()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mqtt-fast_2packets_2Connect_8cpp_source.html#l00027">iot::mqtt_fast::packets::Connect::Connect()</a>, <a class="el" href="mqtt-fast_2packets_2Puback_8cpp_source.html#l00027">iot::mqtt_fast::packets::Puback::Puback()</a>, <a class="el" href="mqtt-fast_2packets_2Pubcomp_8cpp_source.html#l00027">iot::mqtt_fast::packets::Pubcomp::Pubcomp()</a>, <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html#l00029">Publish()</a>, <a class="el" href="mqtt-fast_2packets_2Pubrec_8cpp_source.html#l00027">iot::mqtt_fast::packets::Pubrec::Pubrec()</a>, <a class="el" href="mqtt-fast_2packets_2Pubrel_8cpp_source.html#l00027">iot::mqtt_fast::packets::Pubrel::Pubrel()</a>, <a class="el" href="mqtt-fast_2packets_2Suback_8cpp_source.html#l00027">iot::mqtt_fast::packets::Suback::Suback()</a>, <a class="el" href="mqtt-fast_2packets_2Subscribe_8cpp_source.html#l00029">iot::mqtt_fast::packets::Subscribe::Subscribe()</a>, <a class="el" href="mqtt-fast_2packets_2Unsuback_8cpp_source.html#l00027">iot::mqtt_fast::packets::Unsuback::Unsuback()</a>, and <a class="el" href="mqtt-fast_2packets_2Unsubscribe_8cpp_source.html#l00027">iot::mqtt_fast::packets::Unsubscribe::Unsubscribe()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mqtt-fast_2packets_2Connect_8cpp_source.html#l00028">iot::mqtt_fast::packets::Connect::Connect()</a>, <a class="el" href="mqtt-fast_2packets_2Puback_8cpp_source.html#l00028">iot::mqtt_fast::packets::Puback::Puback()</a>, <a class="el" href="mqtt-fast_2packets_2Pubcomp_8cpp_source.html#l00028">iot::mqtt_fast::packets::Pubcomp::Pubcomp()</a>, <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html#l00030">Publish()</a>, <a class="el" href="mqtt-fast_2packets_2Pubrec_8cpp_source.html#l00028">iot::mqtt_fast::packets::Pubrec::Pubrec()</a>, <a class="el" href="mqtt-fast_2packets_2Pubrel_8cpp_source.html#l00028">iot::mqtt_fast::packets::Pubrel::Pubrel()</a>, <a class="el" href="mqtt-fast_2packets_2Suback_8cpp_source.html#l00028">iot::mqtt_fast::packets::Suback::Suback()</a>, <a class="el" href="mqtt-fast_2packets_2Subscribe_8cpp_source.html#l00030">iot::mqtt_fast::packets::Subscribe::Subscribe()</a>, <a class="el" href="mqtt-fast_2packets_2Unsuback_8cpp_source.html#l00028">iot::mqtt_fast::packets::Unsuback::Unsuback()</a>, and <a class="el" href="mqtt-fast_2packets_2Unsubscribe_8cpp_source.html#l00028">iot::mqtt_fast::packets::Unsubscribe::Unsubscribe()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1202,13 +1202,13 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00122">122</a> of file <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html">ControlPacket.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  122</span>                                               {</div>
-<div class="line"><span class="lineno">  123</span>        <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1ControlPacket.html#a7f4b077d3b38f543c13d110bf453184a">data</a>.<a class="code hl_function" href="classiot_1_1mqtt__fast_1_1types_1_1Binary.html#abe55b0ffa3c529d2923c39af8d7b3d32">putInt32</a>(value);</div>
-<div class="line"><span class="lineno">  124</span>    }</div>
-<div class="ttc" id="aclassiot_1_1mqtt__fast_1_1types_1_1Binary_html_abe55b0ffa3c529d2923c39af8d7b3d32"><div class="ttname"><a href="classiot_1_1mqtt__fast_1_1types_1_1Binary.html#abe55b0ffa3c529d2923c39af8d7b3d32">iot::mqtt_fast::types::Binary::putInt32</a></div><div class="ttdeci">void putInt32(uint32_t value)</div><div class="ttdef"><b>Definition</b> <a href="Binary_8cpp_source.html#l00198">Binary.cpp:198</a></div></div>
+<p class="definition">Definition at line <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00123">123</a> of file <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html">ControlPacket.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  123</span>                                               {</div>
+<div class="line"><span class="lineno">  124</span>        <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1ControlPacket.html#a7f4b077d3b38f543c13d110bf453184a">data</a>.<a class="code hl_function" href="classiot_1_1mqtt__fast_1_1types_1_1Binary.html#abe55b0ffa3c529d2923c39af8d7b3d32">putInt32</a>(value);</div>
+<div class="line"><span class="lineno">  125</span>    }</div>
+<div class="ttc" id="aclassiot_1_1mqtt__fast_1_1types_1_1Binary_html_abe55b0ffa3c529d2923c39af8d7b3d32"><div class="ttname"><a href="classiot_1_1mqtt__fast_1_1types_1_1Binary.html#abe55b0ffa3c529d2923c39af8d7b3d32">iot::mqtt_fast::types::Binary::putInt32</a></div><div class="ttdeci">void putInt32(uint32_t value)</div><div class="ttdef"><b>Definition</b> <a href="Binary_8cpp_source.html#l00199">Binary.cpp:199</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="mqtt-fast_2ControlPacket_8h_source.html#l00084">iot::mqtt_fast::ControlPacket::data</a>, and <a class="el" href="Binary_8cpp_source.html#l00198">iot::mqtt_fast::types::Binary::putInt32()</a>.</p>
+<p class="reference">References <a class="el" href="mqtt-fast_2ControlPacket_8h_source.html#l00085">iot::mqtt_fast::ControlPacket::data</a>, and <a class="el" href="Binary_8cpp_source.html#l00199">iot::mqtt_fast::types::Binary::putInt32()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1241,13 +1241,13 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00126">126</a> of file <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html">ControlPacket.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  126</span>                                               {</div>
-<div class="line"><span class="lineno">  127</span>        <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1ControlPacket.html#a7f4b077d3b38f543c13d110bf453184a">data</a>.<a class="code hl_function" href="classiot_1_1mqtt__fast_1_1types_1_1Binary.html#a23df8f48e0ed6e74c1ec55a5ab7adeec">putInt64</a>(value);</div>
-<div class="line"><span class="lineno">  128</span>    }</div>
-<div class="ttc" id="aclassiot_1_1mqtt__fast_1_1types_1_1Binary_html_a23df8f48e0ed6e74c1ec55a5ab7adeec"><div class="ttname"><a href="classiot_1_1mqtt__fast_1_1types_1_1Binary.html#a23df8f48e0ed6e74c1ec55a5ab7adeec">iot::mqtt_fast::types::Binary::putInt64</a></div><div class="ttdeci">void putInt64(uint64_t value)</div><div class="ttdef"><b>Definition</b> <a href="Binary_8cpp_source.html#l00207">Binary.cpp:207</a></div></div>
+<p class="definition">Definition at line <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00127">127</a> of file <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html">ControlPacket.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  127</span>                                               {</div>
+<div class="line"><span class="lineno">  128</span>        <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1ControlPacket.html#a7f4b077d3b38f543c13d110bf453184a">data</a>.<a class="code hl_function" href="classiot_1_1mqtt__fast_1_1types_1_1Binary.html#a23df8f48e0ed6e74c1ec55a5ab7adeec">putInt64</a>(value);</div>
+<div class="line"><span class="lineno">  129</span>    }</div>
+<div class="ttc" id="aclassiot_1_1mqtt__fast_1_1types_1_1Binary_html_a23df8f48e0ed6e74c1ec55a5ab7adeec"><div class="ttname"><a href="classiot_1_1mqtt__fast_1_1types_1_1Binary.html#a23df8f48e0ed6e74c1ec55a5ab7adeec">iot::mqtt_fast::types::Binary::putInt64</a></div><div class="ttdeci">void putInt64(uint64_t value)</div><div class="ttdef"><b>Definition</b> <a href="Binary_8cpp_source.html#l00208">Binary.cpp:208</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="mqtt-fast_2ControlPacket_8h_source.html#l00084">iot::mqtt_fast::ControlPacket::data</a>, and <a class="el" href="Binary_8cpp_source.html#l00207">iot::mqtt_fast::types::Binary::putInt64()</a>.</p>
+<p class="reference">References <a class="el" href="mqtt-fast_2ControlPacket_8h_source.html#l00085">iot::mqtt_fast::ControlPacket::data</a>, and <a class="el" href="Binary_8cpp_source.html#l00208">iot::mqtt_fast::types::Binary::putInt64()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1280,15 +1280,15 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00114">114</a> of file <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html">ControlPacket.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  114</span>                                             {</div>
-<div class="line"><span class="lineno">  115</span>        <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1ControlPacket.html#a7f4b077d3b38f543c13d110bf453184a">data</a>.<a class="code hl_function" href="classiot_1_1mqtt__fast_1_1types_1_1Binary.html#a5d4733bdcf86dc7c44716864e147d63d">putInt8</a>(value);</div>
-<div class="line"><span class="lineno">  116</span>    }</div>
-<div class="ttc" id="aclassiot_1_1mqtt__fast_1_1types_1_1Binary_html_a5d4733bdcf86dc7c44716864e147d63d"><div class="ttname"><a href="classiot_1_1mqtt__fast_1_1types_1_1Binary.html#a5d4733bdcf86dc7c44716864e147d63d">iot::mqtt_fast::types::Binary::putInt8</a></div><div class="ttdeci">void putInt8(uint8_t value)</div><div class="ttdef"><b>Definition</b> <a href="Binary_8cpp_source.html#l00185">Binary.cpp:185</a></div></div>
+<p class="definition">Definition at line <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00115">115</a> of file <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html">ControlPacket.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  115</span>                                             {</div>
+<div class="line"><span class="lineno">  116</span>        <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1ControlPacket.html#a7f4b077d3b38f543c13d110bf453184a">data</a>.<a class="code hl_function" href="classiot_1_1mqtt__fast_1_1types_1_1Binary.html#a5d4733bdcf86dc7c44716864e147d63d">putInt8</a>(value);</div>
+<div class="line"><span class="lineno">  117</span>    }</div>
+<div class="ttc" id="aclassiot_1_1mqtt__fast_1_1types_1_1Binary_html_a5d4733bdcf86dc7c44716864e147d63d"><div class="ttname"><a href="classiot_1_1mqtt__fast_1_1types_1_1Binary.html#a5d4733bdcf86dc7c44716864e147d63d">iot::mqtt_fast::types::Binary::putInt8</a></div><div class="ttdeci">void putInt8(uint8_t value)</div><div class="ttdef"><b>Definition</b> <a href="Binary_8cpp_source.html#l00186">Binary.cpp:186</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="mqtt-fast_2ControlPacket_8h_source.html#l00084">iot::mqtt_fast::ControlPacket::data</a>, and <a class="el" href="Binary_8cpp_source.html#l00185">iot::mqtt_fast::types::Binary::putInt8()</a>.</p>
+<p class="reference">References <a class="el" href="mqtt-fast_2ControlPacket_8h_source.html#l00085">iot::mqtt_fast::ControlPacket::data</a>, and <a class="el" href="Binary_8cpp_source.html#l00186">iot::mqtt_fast::types::Binary::putInt8()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mqtt-fast_2packets_2Connack_8cpp_source.html#l00027">iot::mqtt_fast::packets::Connack::Connack()</a>, <a class="el" href="mqtt-fast_2packets_2Connect_8cpp_source.html#l00027">iot::mqtt_fast::packets::Connect::Connect()</a>, and <a class="el" href="mqtt-fast_2packets_2Subscribe_8cpp_source.html#l00029">iot::mqtt_fast::packets::Subscribe::Subscribe()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mqtt-fast_2packets_2Connack_8cpp_source.html#l00028">iot::mqtt_fast::packets::Connack::Connack()</a>, <a class="el" href="mqtt-fast_2packets_2Connect_8cpp_source.html#l00028">iot::mqtt_fast::packets::Connect::Connect()</a>, and <a class="el" href="mqtt-fast_2packets_2Subscribe_8cpp_source.html#l00030">iot::mqtt_fast::packets::Subscribe::Subscribe()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1326,13 +1326,13 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00130">130</a> of file <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html">ControlPacket.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  130</span>                                              {</div>
-<div class="line"><span class="lineno">  131</span>        <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1ControlPacket.html#a7f4b077d3b38f543c13d110bf453184a">data</a>.<a class="code hl_function" href="classiot_1_1mqtt__fast_1_1types_1_1Binary.html#aedf4b24467b5b592d7151964e9383d7a">putIntV</a>(value);</div>
-<div class="line"><span class="lineno">  132</span>    }</div>
-<div class="ttc" id="aclassiot_1_1mqtt__fast_1_1types_1_1Binary_html_aedf4b24467b5b592d7151964e9383d7a"><div class="ttname"><a href="classiot_1_1mqtt__fast_1_1types_1_1Binary.html#aedf4b24467b5b592d7151964e9383d7a">iot::mqtt_fast::types::Binary::putIntV</a></div><div class="ttdeci">void putIntV(uint32_t value)</div><div class="ttdef"><b>Definition</b> <a href="Binary_8cpp_source.html#l00220">Binary.cpp:220</a></div></div>
+<p class="definition">Definition at line <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00131">131</a> of file <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html">ControlPacket.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  131</span>                                              {</div>
+<div class="line"><span class="lineno">  132</span>        <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1ControlPacket.html#a7f4b077d3b38f543c13d110bf453184a">data</a>.<a class="code hl_function" href="classiot_1_1mqtt__fast_1_1types_1_1Binary.html#aedf4b24467b5b592d7151964e9383d7a">putIntV</a>(value);</div>
+<div class="line"><span class="lineno">  133</span>    }</div>
+<div class="ttc" id="aclassiot_1_1mqtt__fast_1_1types_1_1Binary_html_aedf4b24467b5b592d7151964e9383d7a"><div class="ttname"><a href="classiot_1_1mqtt__fast_1_1types_1_1Binary.html#aedf4b24467b5b592d7151964e9383d7a">iot::mqtt_fast::types::Binary::putIntV</a></div><div class="ttdeci">void putIntV(uint32_t value)</div><div class="ttdef"><b>Definition</b> <a href="Binary_8cpp_source.html#l00221">Binary.cpp:221</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="mqtt-fast_2ControlPacket_8h_source.html#l00084">iot::mqtt_fast::ControlPacket::data</a>, and <a class="el" href="Binary_8cpp_source.html#l00220">iot::mqtt_fast::types::Binary::putIntV()</a>.</p>
+<p class="reference">References <a class="el" href="mqtt-fast_2ControlPacket_8h_source.html#l00085">iot::mqtt_fast::ControlPacket::data</a>, and <a class="el" href="Binary_8cpp_source.html#l00221">iot::mqtt_fast::types::Binary::putIntV()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1365,15 +1365,15 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00134">134</a> of file <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html">ControlPacket.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  134</span>                                                        {</div>
-<div class="line"><span class="lineno">  135</span>        <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1ControlPacket.html#a7f4b077d3b38f543c13d110bf453184a">data</a>.<a class="code hl_function" href="classiot_1_1mqtt__fast_1_1types_1_1Binary.html#ade63fff9246720817c7d0477bc2c5c31">putString</a>(value);</div>
-<div class="line"><span class="lineno">  136</span>    }</div>
-<div class="ttc" id="aclassiot_1_1mqtt__fast_1_1types_1_1Binary_html_ade63fff9246720817c7d0477bc2c5c31"><div class="ttname"><a href="classiot_1_1mqtt__fast_1_1types_1_1Binary.html#ade63fff9246720817c7d0477bc2c5c31">iot::mqtt_fast::types::Binary::putString</a></div><div class="ttdeci">void putString(const std::string &amp;string)</div><div class="ttdef"><b>Definition</b> <a href="Binary_8cpp_source.html#l00233">Binary.cpp:233</a></div></div>
+<p class="definition">Definition at line <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00135">135</a> of file <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html">ControlPacket.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  135</span>                                                        {</div>
+<div class="line"><span class="lineno">  136</span>        <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1ControlPacket.html#a7f4b077d3b38f543c13d110bf453184a">data</a>.<a class="code hl_function" href="classiot_1_1mqtt__fast_1_1types_1_1Binary.html#ade63fff9246720817c7d0477bc2c5c31">putString</a>(value);</div>
+<div class="line"><span class="lineno">  137</span>    }</div>
+<div class="ttc" id="aclassiot_1_1mqtt__fast_1_1types_1_1Binary_html_ade63fff9246720817c7d0477bc2c5c31"><div class="ttname"><a href="classiot_1_1mqtt__fast_1_1types_1_1Binary.html#ade63fff9246720817c7d0477bc2c5c31">iot::mqtt_fast::types::Binary::putString</a></div><div class="ttdeci">void putString(const std::string &amp;string)</div><div class="ttdef"><b>Definition</b> <a href="Binary_8cpp_source.html#l00234">Binary.cpp:234</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="mqtt-fast_2ControlPacket_8h_source.html#l00084">iot::mqtt_fast::ControlPacket::data</a>, and <a class="el" href="Binary_8cpp_source.html#l00233">iot::mqtt_fast::types::Binary::putString()</a>.</p>
+<p class="reference">References <a class="el" href="mqtt-fast_2ControlPacket_8h_source.html#l00085">iot::mqtt_fast::ControlPacket::data</a>, and <a class="el" href="Binary_8cpp_source.html#l00234">iot::mqtt_fast::types::Binary::putString()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mqtt-fast_2packets_2Connect_8cpp_source.html#l00027">iot::mqtt_fast::packets::Connect::Connect()</a>, <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html#l00029">Publish()</a>, <a class="el" href="mqtt-fast_2packets_2Subscribe_8cpp_source.html#l00029">iot::mqtt_fast::packets::Subscribe::Subscribe()</a>, and <a class="el" href="mqtt-fast_2packets_2Unsubscribe_8cpp_source.html#l00027">iot::mqtt_fast::packets::Unsubscribe::Unsubscribe()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mqtt-fast_2packets_2Connect_8cpp_source.html#l00028">iot::mqtt_fast::packets::Connect::Connect()</a>, <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html#l00030">Publish()</a>, <a class="el" href="mqtt-fast_2packets_2Subscribe_8cpp_source.html#l00030">iot::mqtt_fast::packets::Subscribe::Subscribe()</a>, and <a class="el" href="mqtt-fast_2packets_2Unsubscribe_8cpp_source.html#l00028">iot::mqtt_fast::packets::Unsubscribe::Unsubscribe()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1411,15 +1411,15 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00138">138</a> of file <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html">ControlPacket.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  138</span>                                                           {</div>
-<div class="line"><span class="lineno">  139</span>        <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1ControlPacket.html#a7f4b077d3b38f543c13d110bf453184a">data</a>.<a class="code hl_function" href="classiot_1_1mqtt__fast_1_1types_1_1Binary.html#a3e398cd76ecae99ac447843667ef826e">putStringRaw</a>(value);</div>
-<div class="line"><span class="lineno">  140</span>    }</div>
-<div class="ttc" id="aclassiot_1_1mqtt__fast_1_1types_1_1Binary_html_a3e398cd76ecae99ac447843667ef826e"><div class="ttname"><a href="classiot_1_1mqtt__fast_1_1types_1_1Binary.html#a3e398cd76ecae99ac447843667ef826e">iot::mqtt_fast::types::Binary::putStringRaw</a></div><div class="ttdeci">void putStringRaw(const std::string &amp;string)</div><div class="ttdef"><b>Definition</b> <a href="Binary_8cpp_source.html#l00240">Binary.cpp:240</a></div></div>
+<p class="definition">Definition at line <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00139">139</a> of file <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html">ControlPacket.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  139</span>                                                           {</div>
+<div class="line"><span class="lineno">  140</span>        <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1ControlPacket.html#a7f4b077d3b38f543c13d110bf453184a">data</a>.<a class="code hl_function" href="classiot_1_1mqtt__fast_1_1types_1_1Binary.html#a3e398cd76ecae99ac447843667ef826e">putStringRaw</a>(value);</div>
+<div class="line"><span class="lineno">  141</span>    }</div>
+<div class="ttc" id="aclassiot_1_1mqtt__fast_1_1types_1_1Binary_html_a3e398cd76ecae99ac447843667ef826e"><div class="ttname"><a href="classiot_1_1mqtt__fast_1_1types_1_1Binary.html#a3e398cd76ecae99ac447843667ef826e">iot::mqtt_fast::types::Binary::putStringRaw</a></div><div class="ttdeci">void putStringRaw(const std::string &amp;string)</div><div class="ttdef"><b>Definition</b> <a href="Binary_8cpp_source.html#l00241">Binary.cpp:241</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="mqtt-fast_2ControlPacket_8h_source.html#l00084">iot::mqtt_fast::ControlPacket::data</a>, and <a class="el" href="Binary_8cpp_source.html#l00240">iot::mqtt_fast::types::Binary::putStringRaw()</a>.</p>
+<p class="reference">References <a class="el" href="mqtt-fast_2ControlPacket_8h_source.html#l00085">iot::mqtt_fast::ControlPacket::data</a>, and <a class="el" href="Binary_8cpp_source.html#l00241">iot::mqtt_fast::types::Binary::putStringRaw()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html#l00029">Publish()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html#l00030">Publish()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1457,15 +1457,15 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00142">142</a> of file <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html">ControlPacket.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  142</span>                                                                     {</div>
-<div class="line"><span class="lineno">  143</span>        <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1ControlPacket.html#a7f4b077d3b38f543c13d110bf453184a">data</a>.<a class="code hl_function" href="classiot_1_1mqtt__fast_1_1types_1_1Binary.html#a18ac72a3555a22fd707bd2373a8e37a7">putUint8ListRaw</a>(value);</div>
-<div class="line"><span class="lineno">  144</span>    }</div>
-<div class="ttc" id="aclassiot_1_1mqtt__fast_1_1types_1_1Binary_html_a18ac72a3555a22fd707bd2373a8e37a7"><div class="ttname"><a href="classiot_1_1mqtt__fast_1_1types_1_1Binary.html#a18ac72a3555a22fd707bd2373a8e37a7">iot::mqtt_fast::types::Binary::putUint8ListRaw</a></div><div class="ttdeci">void putUint8ListRaw(const std::list&lt; uint8_t &gt; &amp;values)</div><div class="ttdef"><b>Definition</b> <a href="Binary_8cpp_source.html#l00246">Binary.cpp:246</a></div></div>
+<p class="definition">Definition at line <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00143">143</a> of file <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html">ControlPacket.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  143</span>                                                                     {</div>
+<div class="line"><span class="lineno">  144</span>        <a class="code hl_variable" href="classiot_1_1mqtt__fast_1_1ControlPacket.html#a7f4b077d3b38f543c13d110bf453184a">data</a>.<a class="code hl_function" href="classiot_1_1mqtt__fast_1_1types_1_1Binary.html#a18ac72a3555a22fd707bd2373a8e37a7">putUint8ListRaw</a>(value);</div>
+<div class="line"><span class="lineno">  145</span>    }</div>
+<div class="ttc" id="aclassiot_1_1mqtt__fast_1_1types_1_1Binary_html_a18ac72a3555a22fd707bd2373a8e37a7"><div class="ttname"><a href="classiot_1_1mqtt__fast_1_1types_1_1Binary.html#a18ac72a3555a22fd707bd2373a8e37a7">iot::mqtt_fast::types::Binary::putUint8ListRaw</a></div><div class="ttdeci">void putUint8ListRaw(const std::list&lt; uint8_t &gt; &amp;values)</div><div class="ttdef"><b>Definition</b> <a href="Binary_8cpp_source.html#l00247">Binary.cpp:247</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="mqtt-fast_2ControlPacket_8h_source.html#l00084">iot::mqtt_fast::ControlPacket::data</a>, and <a class="el" href="Binary_8cpp_source.html#l00246">iot::mqtt_fast::types::Binary::putUint8ListRaw()</a>.</p>
+<p class="reference">References <a class="el" href="mqtt-fast_2ControlPacket_8h_source.html#l00085">iot::mqtt_fast::ControlPacket::data</a>, and <a class="el" href="Binary_8cpp_source.html#l00247">iot::mqtt_fast::types::Binary::putUint8ListRaw()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mqtt-fast_2packets_2Suback_8cpp_source.html#l00027">iot::mqtt_fast::packets::Suback::Suback()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mqtt-fast_2packets_2Suback_8cpp_source.html#l00028">iot::mqtt_fast::packets::Suback::Suback()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1500,9 +1500,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mqtt-fast_2ControlPacket_8h_source.html#l00084">84</a> of file <a class="el" href="mqtt-fast_2ControlPacket_8h_source.html">ControlPacket.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mqtt-fast_2ControlPacket_8h_source.html#l00085">85</a> of file <a class="el" href="mqtt-fast_2ControlPacket_8h_source.html">ControlPacket.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00036">iot::mqtt_fast::ControlPacket::ControlPacket()</a>, <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00086">iot::mqtt_fast::ControlPacket::getInt16()</a>, <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00090">iot::mqtt_fast::ControlPacket::getInt32()</a>, <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00094">iot::mqtt_fast::ControlPacket::getInt64()</a>, <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00082">iot::mqtt_fast::ControlPacket::getInt8()</a>, <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00098">iot::mqtt_fast::ControlPacket::getIntV()</a>, <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00054">iot::mqtt_fast::ControlPacket::getPacket()</a>, <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00050">iot::mqtt_fast::ControlPacket::getRemainingLength()</a>, <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00102">iot::mqtt_fast::ControlPacket::getString()</a>, <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00106">iot::mqtt_fast::ControlPacket::getStringRaw()</a>, <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00110">iot::mqtt_fast::ControlPacket::getUint8ListRaw()</a>, <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00078">iot::mqtt_fast::ControlPacket::getValue()</a>, <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00146">iot::mqtt_fast::ControlPacket::isError()</a>, <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00118">iot::mqtt_fast::ControlPacket::putInt16()</a>, <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00122">iot::mqtt_fast::ControlPacket::putInt32()</a>, <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00126">iot::mqtt_fast::ControlPacket::putInt64()</a>, <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00114">iot::mqtt_fast::ControlPacket::putInt8()</a>, <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00130">iot::mqtt_fast::ControlPacket::putIntV()</a>, <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00134">iot::mqtt_fast::ControlPacket::putString()</a>, <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00138">iot::mqtt_fast::ControlPacket::putStringRaw()</a>, and <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00142">iot::mqtt_fast::ControlPacket::putUint8ListRaw()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00037">iot::mqtt_fast::ControlPacket::ControlPacket()</a>, <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00087">iot::mqtt_fast::ControlPacket::getInt16()</a>, <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00091">iot::mqtt_fast::ControlPacket::getInt32()</a>, <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00095">iot::mqtt_fast::ControlPacket::getInt64()</a>, <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00083">iot::mqtt_fast::ControlPacket::getInt8()</a>, <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00099">iot::mqtt_fast::ControlPacket::getIntV()</a>, <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00055">iot::mqtt_fast::ControlPacket::getPacket()</a>, <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00051">iot::mqtt_fast::ControlPacket::getRemainingLength()</a>, <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00103">iot::mqtt_fast::ControlPacket::getString()</a>, <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00107">iot::mqtt_fast::ControlPacket::getStringRaw()</a>, <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00111">iot::mqtt_fast::ControlPacket::getUint8ListRaw()</a>, <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00079">iot::mqtt_fast::ControlPacket::getValue()</a>, <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00147">iot::mqtt_fast::ControlPacket::isError()</a>, <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00119">iot::mqtt_fast::ControlPacket::putInt16()</a>, <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00123">iot::mqtt_fast::ControlPacket::putInt32()</a>, <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00127">iot::mqtt_fast::ControlPacket::putInt64()</a>, <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00115">iot::mqtt_fast::ControlPacket::putInt8()</a>, <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00131">iot::mqtt_fast::ControlPacket::putIntV()</a>, <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00135">iot::mqtt_fast::ControlPacket::putString()</a>, <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00139">iot::mqtt_fast::ControlPacket::putStringRaw()</a>, and <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00143">iot::mqtt_fast::ControlPacket::putUint8ListRaw()</a>.</p>
 
 </div>
 </div>
@@ -1526,9 +1526,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mqtt-fast_2packets_2Publish_8h_source.html#l00061">61</a> of file <a class="el" href="mqtt-fast_2packets_2Publish_8h_source.html">Publish.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mqtt-fast_2packets_2Publish_8h_source.html#l00062">62</a> of file <a class="el" href="mqtt-fast_2packets_2Publish_8h_source.html">Publish.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html#l00068">getDup()</a>, <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html#l00049">Publish()</a>, and <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html#l00029">Publish()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html#l00069">getDup()</a>, <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html#l00050">Publish()</a>, and <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html#l00030">Publish()</a>.</p>
 
 </div>
 </div>
@@ -1552,9 +1552,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mqtt-fast_2ControlPacket_8h_source.html#l00087">87</a> of file <a class="el" href="mqtt-fast_2ControlPacket_8h_source.html">ControlPacket.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mqtt-fast_2ControlPacket_8h_source.html#l00088">88</a> of file <a class="el" href="mqtt-fast_2ControlPacket_8h_source.html">ControlPacket.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mqtt-fast_2packets_2Connack_8cpp_source.html#l00038">iot::mqtt_fast::packets::Connack::Connack()</a>, <a class="el" href="mqtt-fast_2packets_2Connect_8cpp_source.html#l00044">iot::mqtt_fast::packets::Connect::Connect()</a>, <a class="el" href="mqtt-fast_2packets_2Disconnect_8cpp_source.html#l00033">iot::mqtt_fast::packets::Disconnect::Disconnect()</a>, <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00074">iot::mqtt_fast::ControlPacket::isError()</a>, <a class="el" href="mqtt-fast_2packets_2Pingreq_8cpp_source.html#l00033">iot::mqtt_fast::packets::Pingreq::Pingreq()</a>, <a class="el" href="mqtt-fast_2packets_2Pingresp_8cpp_source.html#l00033">iot::mqtt_fast::packets::Pingresp::Pingresp()</a>, <a class="el" href="mqtt-fast_2packets_2Puback_8cpp_source.html#l00036">iot::mqtt_fast::packets::Puback::Puback()</a>, <a class="el" href="mqtt-fast_2packets_2Pubcomp_8cpp_source.html#l00036">iot::mqtt_fast::packets::Pubcomp::Pubcomp()</a>, <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html#l00049">Publish()</a>, <a class="el" href="mqtt-fast_2packets_2Pubrec_8cpp_source.html#l00036">iot::mqtt_fast::packets::Pubrec::Pubrec()</a>, <a class="el" href="mqtt-fast_2packets_2Pubrel_8cpp_source.html#l00036">iot::mqtt_fast::packets::Pubrel::Pubrel()</a>, <a class="el" href="mqtt-fast_2packets_2Suback_8cpp_source.html#l00038">iot::mqtt_fast::packets::Suback::Suback()</a>, <a class="el" href="mqtt-fast_2packets_2Subscribe_8cpp_source.html#l00043">iot::mqtt_fast::packets::Subscribe::Subscribe()</a>, <a class="el" href="mqtt-fast_2packets_2Unsuback_8cpp_source.html#l00036">iot::mqtt_fast::packets::Unsuback::Unsuback()</a>, and <a class="el" href="mqtt-fast_2packets_2Unsubscribe_8cpp_source.html#l00040">iot::mqtt_fast::packets::Unsubscribe::Unsubscribe()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mqtt-fast_2packets_2Connack_8cpp_source.html#l00039">iot::mqtt_fast::packets::Connack::Connack()</a>, <a class="el" href="mqtt-fast_2packets_2Connect_8cpp_source.html#l00045">iot::mqtt_fast::packets::Connect::Connect()</a>, <a class="el" href="mqtt-fast_2packets_2Disconnect_8cpp_source.html#l00034">iot::mqtt_fast::packets::Disconnect::Disconnect()</a>, <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00075">iot::mqtt_fast::ControlPacket::isError()</a>, <a class="el" href="mqtt-fast_2packets_2Pingreq_8cpp_source.html#l00034">iot::mqtt_fast::packets::Pingreq::Pingreq()</a>, <a class="el" href="mqtt-fast_2packets_2Pingresp_8cpp_source.html#l00034">iot::mqtt_fast::packets::Pingresp::Pingresp()</a>, <a class="el" href="mqtt-fast_2packets_2Puback_8cpp_source.html#l00037">iot::mqtt_fast::packets::Puback::Puback()</a>, <a class="el" href="mqtt-fast_2packets_2Pubcomp_8cpp_source.html#l00037">iot::mqtt_fast::packets::Pubcomp::Pubcomp()</a>, <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html#l00050">Publish()</a>, <a class="el" href="mqtt-fast_2packets_2Pubrec_8cpp_source.html#l00037">iot::mqtt_fast::packets::Pubrec::Pubrec()</a>, <a class="el" href="mqtt-fast_2packets_2Pubrel_8cpp_source.html#l00037">iot::mqtt_fast::packets::Pubrel::Pubrel()</a>, <a class="el" href="mqtt-fast_2packets_2Suback_8cpp_source.html#l00039">iot::mqtt_fast::packets::Suback::Suback()</a>, <a class="el" href="mqtt-fast_2packets_2Subscribe_8cpp_source.html#l00044">iot::mqtt_fast::packets::Subscribe::Subscribe()</a>, <a class="el" href="mqtt-fast_2packets_2Unsuback_8cpp_source.html#l00037">iot::mqtt_fast::packets::Unsuback::Unsuback()</a>, and <a class="el" href="mqtt-fast_2packets_2Unsubscribe_8cpp_source.html#l00041">iot::mqtt_fast::packets::Unsubscribe::Unsubscribe()</a>.</p>
 
 </div>
 </div>
@@ -1578,9 +1578,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mqtt-fast_2packets_2Publish_8h_source.html#l00060">60</a> of file <a class="el" href="mqtt-fast_2packets_2Publish_8h_source.html">Publish.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mqtt-fast_2packets_2Publish_8h_source.html#l00061">61</a> of file <a class="el" href="mqtt-fast_2packets_2Publish_8h_source.html">Publish.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html#l00084">getMessage()</a>, <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html#l00049">Publish()</a>, and <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html#l00029">Publish()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html#l00085">getMessage()</a>, <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html#l00050">Publish()</a>, and <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html#l00030">Publish()</a>.</p>
 
 </div>
 </div>
@@ -1604,9 +1604,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mqtt-fast_2packets_2Publish_8h_source.html#l00058">58</a> of file <a class="el" href="mqtt-fast_2packets_2Publish_8h_source.html">Publish.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mqtt-fast_2packets_2Publish_8h_source.html#l00059">59</a> of file <a class="el" href="mqtt-fast_2packets_2Publish_8h_source.html">Publish.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html#l00076">getPacketIdentifier()</a>, <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html#l00049">Publish()</a>, and <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html#l00029">Publish()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html#l00077">getPacketIdentifier()</a>, <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html#l00050">Publish()</a>, and <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html#l00030">Publish()</a>.</p>
 
 </div>
 </div>
@@ -1630,9 +1630,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mqtt-fast_2packets_2Publish_8h_source.html#l00062">62</a> of file <a class="el" href="mqtt-fast_2packets_2Publish_8h_source.html">Publish.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mqtt-fast_2packets_2Publish_8h_source.html#l00063">63</a> of file <a class="el" href="mqtt-fast_2packets_2Publish_8h_source.html">Publish.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html#l00072">getQoS()</a>, <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html#l00049">Publish()</a>, and <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html#l00029">Publish()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html#l00073">getQoS()</a>, <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html#l00050">Publish()</a>, and <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html#l00030">Publish()</a>.</p>
 
 </div>
 </div>
@@ -1656,9 +1656,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mqtt-fast_2ControlPacket_8h_source.html#l00082">82</a> of file <a class="el" href="mqtt-fast_2ControlPacket_8h_source.html">ControlPacket.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mqtt-fast_2ControlPacket_8h_source.html#l00083">83</a> of file <a class="el" href="mqtt-fast_2ControlPacket_8h_source.html">ControlPacket.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00036">iot::mqtt_fast::ControlPacket::ControlPacket()</a>, <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00031">iot::mqtt_fast::ControlPacket::ControlPacket()</a>, <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00054">iot::mqtt_fast::ControlPacket::getPacket()</a>, and <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00046">iot::mqtt_fast::ControlPacket::getReserved()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00037">iot::mqtt_fast::ControlPacket::ControlPacket()</a>, <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00032">iot::mqtt_fast::ControlPacket::ControlPacket()</a>, <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00055">iot::mqtt_fast::ControlPacket::getPacket()</a>, and <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00047">iot::mqtt_fast::ControlPacket::getReserved()</a>.</p>
 
 </div>
 </div>
@@ -1682,9 +1682,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mqtt-fast_2packets_2Publish_8h_source.html#l00063">63</a> of file <a class="el" href="mqtt-fast_2packets_2Publish_8h_source.html">Publish.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mqtt-fast_2packets_2Publish_8h_source.html#l00064">64</a> of file <a class="el" href="mqtt-fast_2packets_2Publish_8h_source.html">Publish.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html#l00088">getRetain()</a>, <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html#l00049">Publish()</a>, and <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html#l00029">Publish()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html#l00089">getRetain()</a>, <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html#l00050">Publish()</a>, and <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html#l00030">Publish()</a>.</p>
 
 </div>
 </div>
@@ -1708,9 +1708,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mqtt-fast_2packets_2Publish_8h_source.html#l00059">59</a> of file <a class="el" href="mqtt-fast_2packets_2Publish_8h_source.html">Publish.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mqtt-fast_2packets_2Publish_8h_source.html#l00060">60</a> of file <a class="el" href="mqtt-fast_2packets_2Publish_8h_source.html">Publish.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html#l00080">getTopic()</a>, <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html#l00049">Publish()</a>, and <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html#l00029">Publish()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html#l00081">getTopic()</a>, <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html#l00050">Publish()</a>, and <a class="el" href="mqtt-fast_2packets_2Publish_8cpp_source.html#l00030">Publish()</a>.</p>
 
 </div>
 </div>
@@ -1734,9 +1734,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mqtt-fast_2ControlPacket_8h_source.html#l00081">81</a> of file <a class="el" href="mqtt-fast_2ControlPacket_8h_source.html">ControlPacket.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mqtt-fast_2ControlPacket_8h_source.html#l00082">82</a> of file <a class="el" href="mqtt-fast_2ControlPacket_8h_source.html">ControlPacket.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00036">iot::mqtt_fast::ControlPacket::ControlPacket()</a>, <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00031">iot::mqtt_fast::ControlPacket::ControlPacket()</a>, <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00054">iot::mqtt_fast::ControlPacket::getPacket()</a>, and <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00042">iot::mqtt_fast::ControlPacket::getType()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00037">iot::mqtt_fast::ControlPacket::ControlPacket()</a>, <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00032">iot::mqtt_fast::ControlPacket::ControlPacket()</a>, <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00055">iot::mqtt_fast::ControlPacket::getPacket()</a>, and <a class="el" href="mqtt-fast_2ControlPacket_8cpp_source.html#l00043">iot::mqtt_fast::ControlPacket::getType()</a>.</p>
 
 </div>
 </div>
@@ -1750,7 +1750,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceiot.html">iot</a></li><li class="navelem"><a class="el" href="namespaceiot_1_1mqtt__fast.html">mqtt_fast</a></li><li class="navelem"><a class="el" href="namespaceiot_1_1mqtt__fast_1_1packets.html">packets</a></li><li class="navelem"><a class="el" href="classiot_1_1mqtt__fast_1_1packets_1_1Publish.html">Publish</a></li>
-    <li class="footer">Generated on Sun Jan 21 2024 23:58:10 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Fri Feb 23 2024 10:00:58 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

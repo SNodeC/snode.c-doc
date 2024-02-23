@@ -527,9 +527,8 @@ template&lt;template&lt; typename <a class="el" href="classnet_1_1in_1_1SocketAd
 
 <p class="definition">Definition at line <a class="el" href="in_2config_2ConfigAddress_8cpp_source.html#l00115">115</a> of file <a class="el" href="in_2config_2ConfigAddress_8cpp_source.html">ConfigAddress.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  116</span>                                                                                                       {</div>
-<div class="line"><span class="lineno">  117</span>        <span class="keywordflow">return</span> <a class="code hl_typedef" href="namespacetls.html#a5a0dd7cfa9356ca8c778cc2440ffac26">SocketAddress</a>(sockAddr, sockAddrLen, <a class="code hl_variable" href="classnet_1_1in_1_1config_1_1ConfigAddress.html#afa9959074b2d5983c0b9c71349603126">numericReverseOpt</a>-&gt;as&lt;<span class="keywordtype">bool</span>&gt;());</div>
+<div class="line"><span class="lineno">  117</span>        <span class="keywordflow">return</span> SocketAddress(sockAddr, sockAddrLen, <a class="code hl_variable" href="classnet_1_1in_1_1config_1_1ConfigAddress.html#afa9959074b2d5983c0b9c71349603126">numericReverseOpt</a>-&gt;as&lt;<span class="keywordtype">bool</span>&gt;());</div>
 <div class="line"><span class="lineno">  118</span>    }</div>
-<div class="ttc" id="anamespacetls_html_a5a0dd7cfa9356ca8c778cc2440ffac26"><div class="ttname"><a href="namespacetls.html#a5a0dd7cfa9356ca8c778cc2440ffac26">tls::SocketAddress</a></div><div class="ttdeci">SocketClient::SocketAddress SocketAddress</div><div class="ttdef"><b>Definition</b> <a href="httplowlevelclient_8cpp_source.html#l00146">httplowlevelclient.cpp:146</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="in_2config_2ConfigAddress_8h_source.html#l00115">net::in::config::ConfigAddress&lt; ConfigAddressTypeT &gt;::numericReverseOpt</a>, and <a class="el" href="net_2in_2SocketAddress_8cpp_source.html#l00058">net::in::SocketAddress::SocketAddress()</a>.</p>
 <div class="dynheader">
@@ -567,7 +566,7 @@ template&lt;template&lt; typename <a class="el" href="classnet_1_1in_1_1SocketAd
 
 <p class="definition">Definition at line <a class="el" href="in_2config_2ConfigAddress_8cpp_source.html#l00107">107</a> of file <a class="el" href="in_2config_2ConfigAddress_8cpp_source.html">ConfigAddress.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  107</span>                                                          {</div>
-<div class="line"><span class="lineno">  108</span>        <span class="keywordflow">return</span> &amp;(<span class="keyword">new</span> <a class="code hl_typedef" href="namespacetls.html#a5a0dd7cfa9356ca8c778cc2440ffac26">SocketAddress</a>(<a class="code hl_variable" href="classnet_1_1in_1_1config_1_1ConfigAddress.html#a9bbf9311f6271ed0e8fb2cf6352d7eb1">hostOpt</a>-&gt;as&lt;std::string&gt;(), <a class="code hl_variable" href="classnet_1_1in_1_1config_1_1ConfigAddress.html#acff7360356ca3b546a51871c0848a7d6">portOpt</a>-&gt;as&lt;uint16_t&gt;()))</div>
+<div class="line"><span class="lineno">  108</span>        <span class="keywordflow">return</span> &amp;(<span class="keyword">new</span> SocketAddress(<a class="code hl_variable" href="classnet_1_1in_1_1config_1_1ConfigAddress.html#a9bbf9311f6271ed0e8fb2cf6352d7eb1">hostOpt</a>-&gt;as&lt;std::string&gt;(), <a class="code hl_variable" href="classnet_1_1in_1_1config_1_1ConfigAddress.html#acff7360356ca3b546a51871c0848a7d6">portOpt</a>-&gt;as&lt;uint16_t&gt;()))</div>
 <div class="line"><span class="lineno">  109</span>                    -&gt;<a class="code hl_function" href="classnet_1_1in_1_1config_1_1ConfigAddress.html#a7c495ecbd26cca879e29d8887f5e6f0c">init</a>({.aiFlags = (<a class="code hl_variable" href="classnet_1_1in_1_1config_1_1ConfigAddress.html#a139540a20b71293e5f6c75624a3ec1a2">aiFlags</a> &amp; ~AI_NUMERICHOST) | (<a class="code hl_variable" href="classnet_1_1in_1_1config_1_1ConfigAddress.html#acf83b5d4be54906889e54b7e06b9d5ad">numericOpt</a>-&gt;as&lt;<span class="keywordtype">bool</span>&gt;() ? AI_NUMERICHOST : 0),</div>
 <div class="line"><span class="lineno">  110</span>                            .<a class="code hl_variable" href="classnet_1_1in_1_1config_1_1ConfigAddress.html#a7029c0ec4fa093272f88c780745f8b12">aiSockType</a> = <a class="code hl_variable" href="classnet_1_1in_1_1config_1_1ConfigAddress.html#a7029c0ec4fa093272f88c780745f8b12">aiSockType</a>,</div>
 <div class="line"><span class="lineno">  111</span>                            .<a class="code hl_variable" href="classnet_1_1in_1_1config_1_1ConfigAddress.html#ac3341b7ea3a556070ecfebf4dc3f551a">aiProtocol</a> = <a class="code hl_variable" href="classnet_1_1in_1_1config_1_1ConfigAddress.html#ac3341b7ea3a556070ecfebf4dc3f551a">aiProtocol</a>});</div>
@@ -727,6 +726,13 @@ template&lt;template&lt; typename <a class="el" href="classnet_1_1in_1_1SocketAd
 <div class="ttc" id="aclassutils_1_1PreserveErrno_html"><div class="ttname"><a href="classutils_1_1PreserveErrno.html">utils::PreserveErrno</a></div><div class="ttdef"><b>Definition</b> <a href="PreserveErrno_8h_source.html#l00031">PreserveErrno.h:31</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="in_2config_2ConfigAddress_8h_source.html#l00112">net::in::config::ConfigAddress&lt; ConfigAddressTypeT &gt;::hostOpt</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="in_2config_2ConfigAddress_8cpp_source.html#l00121">net::in::config::ConfigAddress&lt; ConfigAddressTypeT &gt;::setSocketAddress()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classnet_1_1in_1_1config_1_1ConfigAddress_a7c3072ee1154a50adb9714c9c58d0115_icgraph.svg" width="486" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 
 </div>
 </div>
@@ -951,11 +957,11 @@ template&lt;template&lt; typename <a class="el" href="classnet_1_1in_1_1SocketAd
 <div class="ttc" id="aclassnet_1_1in_1_1config_1_1ConfigAddress_html_a7c3072ee1154a50adb9714c9c58d0115"><div class="ttname"><a href="classnet_1_1in_1_1config_1_1ConfigAddress.html#a7c3072ee1154a50adb9714c9c58d0115">net::in::config::ConfigAddress::setHost</a></div><div class="ttdeci">ConfigAddress &amp; setHost(const std::string &amp;ipOrHostname)</div><div class="ttdef"><b>Definition</b> <a href="in_2config_2ConfigAddress_8cpp_source.html#l00129">ConfigAddress.cpp:129</a></div></div>
 <div class="ttc" id="aclassnet_1_1in_1_1config_1_1ConfigAddress_html_adc3d4142f5b6b41cc172351618103343"><div class="ttname"><a href="classnet_1_1in_1_1config_1_1ConfigAddress.html#adc3d4142f5b6b41cc172351618103343">net::in::config::ConfigAddress::setPort</a></div><div class="ttdeci">ConfigAddress &amp; setPort(uint16_t port)</div><div class="ttdef"><b>Definition</b> <a href="in_2config_2ConfigAddress_8cpp_source.html#l00146">ConfigAddress.cpp:146</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="net_2in_2SocketAddress_8cpp_source.html#l00136">net::in::SocketAddress::getHost()</a>, <a class="el" href="net_2in_2SocketAddress_8cpp_source.html#l00146">net::in::SocketAddress::getPort()</a>, and <a class="el" href="in_2config_2ConfigAddress_8cpp_source.html#l00146">net::in::config::ConfigAddress&lt; ConfigAddressTypeT &gt;::setPort()</a>.</p>
+<p class="reference">References <a class="el" href="net_2in_2SocketAddress_8cpp_source.html#l00136">net::in::SocketAddress::getHost()</a>, <a class="el" href="net_2in_2SocketAddress_8cpp_source.html#l00146">net::in::SocketAddress::getPort()</a>, <a class="el" href="in_2config_2ConfigAddress_8cpp_source.html#l00129">net::in::config::ConfigAddress&lt; ConfigAddressTypeT &gt;::setHost()</a>, and <a class="el" href="in_2config_2ConfigAddress_8cpp_source.html#l00146">net::in::config::ConfigAddress&lt; ConfigAddressTypeT &gt;::setPort()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classnet_1_1in_1_1config_1_1ConfigAddress_a2e40c236266732b35eba814c14169bd9_cgraph.svg" width="486" height="179"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classnet_1_1in_1_1config_1_1ConfigAddress_a2e40c236266732b35eba814c14169bd9_cgraph.svg" width="486" height="243"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -1167,7 +1173,7 @@ template&lt;template&lt; typename SocketAddressT &gt; typename ConfigAddressType
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacenet.html">net</a></li><li class="navelem"><a class="el" href="namespacenet_1_1in.html">in</a></li><li class="navelem"><a class="el" href="namespacenet_1_1in_1_1config.html">config</a></li><li class="navelem"><a class="el" href="classnet_1_1in_1_1config_1_1ConfigAddress.html">ConfigAddress</a></li>
-    <li class="footer">Generated on Sun Jan 21 2024 23:58:11 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Fri Feb 23 2024 10:00:58 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

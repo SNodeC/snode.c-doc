@@ -3,6 +3,7 @@ var classcore_1_1DescriptorEventReceiver =
     [ "TIMEOUT", "structcore_1_1DescriptorEventReceiver_1_1TIMEOUT.html", "structcore_1_1DescriptorEventReceiver_1_1TIMEOUT" ],
     [ "DescriptorEventReceiver", "classcore_1_1DescriptorEventReceiver.html#acda68fdd6262cecc1c4814b42a1d2a52", null ],
     [ "DescriptorEventReceiver", "classcore_1_1DescriptorEventReceiver.html#a1c88ab07dd31cc902fdfeb071f11956e", null ],
+    [ "atNextTick", "classcore_1_1DescriptorEventReceiver.html#a2e8d915eca53e827be4f493a63ae058d", null ],
     [ "checkTimeout", "classcore_1_1DescriptorEventReceiver.html#ae04e87c4f44979a04d3839759a63220a", null ],
     [ "destruct", "classcore_1_1DescriptorEventReceiver.html#a0af009a224c3a4020ed30f5586c0394c", null ],
     [ "disable", "classcore_1_1DescriptorEventReceiver.html#a4ab422ce6622a29cee38a0108ee6ccc1", null ],

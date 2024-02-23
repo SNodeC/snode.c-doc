@@ -21,7 +21,8 @@ var classweb_1_1http_1_1SocketContextUpgrade =
     [ "setTimeout", "classweb_1_1http_1_1SocketContextUpgrade.html#af2dbfff5f7495cf483a2b28133d5cc49", null ],
     [ "shutdownRead", "classweb_1_1http_1_1SocketContextUpgrade.html#abe74f8904842a349e29846b10828fba8", null ],
     [ "shutdownWrite", "classweb_1_1http_1_1SocketContextUpgrade.html#a853d83e3e3cd8dfcce992ab688c0f63e", null ],
-    [ "streamToPeer", "classweb_1_1http_1_1SocketContextUpgrade.html#a9dba4f9478d4c9bb3eac26b4a2050552", null ],
+    [ "streamEof", "classweb_1_1http_1_1SocketContextUpgrade.html#a3e06fd9a548c8608b81d816fedb0b37d", null ],
+    [ "streamToPeer", "classweb_1_1http_1_1SocketContextUpgrade.html#a9cce0f4a5eeb2308ba1437aafcfae085", null ],
     [ "switchSocketContext", "classweb_1_1http_1_1SocketContextUpgrade.html#a153fd05f8c588f882b322dcbd47667b4", null ],
     [ "socketConnection", "classweb_1_1http_1_1SocketContextUpgrade.html#aa1eeb9f67270ffa53d9416c88d08c7fb", null ],
     [ "socketContextUpgradeFactory", "classweb_1_1http_1_1SocketContextUpgrade.html#aa199a60563ff55495a3d4f0addcf31b1", null ]

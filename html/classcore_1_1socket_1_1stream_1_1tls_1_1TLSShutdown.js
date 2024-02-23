@@ -1,13 +1,15 @@
 var classcore_1_1socket_1_1stream_1_1tls_1_1TLSShutdown =
 [
-    [ "TLSShutdown", "classcore_1_1socket_1_1stream_1_1tls_1_1TLSShutdown.html#a711ecd2757457637b1b70119076a2c03", null ],
+    [ "TLSShutdown", "classcore_1_1socket_1_1stream_1_1tls_1_1TLSShutdown.html#a65af96d7ac042893046ff2332e47ae8e", null ],
+    [ "atNextTick", "classcore_1_1socket_1_1stream_1_1tls_1_1TLSShutdown.html#a2e8d915eca53e827be4f493a63ae058d", null ],
+    [ "atNextTick", "classcore_1_1socket_1_1stream_1_1tls_1_1TLSShutdown.html#a2e8d915eca53e827be4f493a63ae058d", null ],
     [ "checkTimeout", "classcore_1_1socket_1_1stream_1_1tls_1_1TLSShutdown.html#ae04e87c4f44979a04d3839759a63220a", null ],
     [ "checkTimeout", "classcore_1_1socket_1_1stream_1_1tls_1_1TLSShutdown.html#ae04e87c4f44979a04d3839759a63220a", null ],
     [ "destruct", "classcore_1_1socket_1_1stream_1_1tls_1_1TLSShutdown.html#a0af009a224c3a4020ed30f5586c0394c", null ],
     [ "disable", "classcore_1_1socket_1_1stream_1_1tls_1_1TLSShutdown.html#a4ab422ce6622a29cee38a0108ee6ccc1", null ],
     [ "disable", "classcore_1_1socket_1_1stream_1_1tls_1_1TLSShutdown.html#a4ab422ce6622a29cee38a0108ee6ccc1", null ],
     [ "dispatchEvent", "classcore_1_1socket_1_1stream_1_1tls_1_1TLSShutdown.html#a58933c891baec91619116999a4d40aa2", null ],
-    [ "doShutdown", "classcore_1_1socket_1_1stream_1_1tls_1_1TLSShutdown.html#a659f067dbeef54bf96c08167bf7cf738", null ],
+    [ "doShutdown", "classcore_1_1socket_1_1stream_1_1tls_1_1TLSShutdown.html#a3fa5f2766d74bdea0127800c7ba9d4e9", null ],
     [ "enable", "classcore_1_1socket_1_1stream_1_1tls_1_1TLSShutdown.html#ace4fa96fa2d29ef1bcaf8fc1cf28100a", null ],
     [ "enable", "classcore_1_1socket_1_1stream_1_1tls_1_1TLSShutdown.html#ace4fa96fa2d29ef1bcaf8fc1cf28100a", null ],
     [ "getName", "classcore_1_1socket_1_1stream_1_1tls_1_1TLSShutdown.html#a0735c234c7848cf4d45473a6f7ce11b2", null ],

@@ -6,6 +6,7 @@ var structcore_1_1socket_1_1stream_1_1tls_1_1SslConfig =
     [ "certChain", "structcore_1_1socket_1_1stream_1_1tls_1_1SslConfig.html#a080e881b76b866f221a533b21aaf9d04", null ],
     [ "certChainKey", "structcore_1_1socket_1_1stream_1_1tls_1_1SslConfig.html#acdce0d5fd103f69f6250dfe636edb0a2", null ],
     [ "cipherList", "structcore_1_1socket_1_1stream_1_1tls_1_1SslConfig.html#a33a8d93d7567d77da06080aaedbf187d", null ],
+    [ "instanceName", "structcore_1_1socket_1_1stream_1_1tls_1_1SslConfig.html#a7a0f684bd941089509d2969db44aa367", null ],
     [ "password", "structcore_1_1socket_1_1stream_1_1tls_1_1SslConfig.html#ab8a8ba44527486af047569a2a924e9a2", null ],
     [ "server", "structcore_1_1socket_1_1stream_1_1tls_1_1SslConfig.html#ab6b8b76342f2a8ea36abd7509c119b8d", null ],
     [ "sslOptions", "structcore_1_1socket_1_1stream_1_1tls_1_1SslConfig.html#ab4bec78475cf6af6131a11e40727a115", null ],

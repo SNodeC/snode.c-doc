@@ -1,6 +1,6 @@
 var namespacenet_1_1in6_1_1stream_1_1tls =
 [
     [ "config", "namespacenet_1_1in6_1_1stream_1_1tls_1_1config.html", "namespacenet_1_1in6_1_1stream_1_1tls_1_1config" ],
-    [ "SocketClient", "namespacenet_1_1in6_1_1stream_1_1tls.html#a656169ee54907cb07cd2ee99d744d50e", null ],
-    [ "SocketServer", "namespacenet_1_1in6_1_1stream_1_1tls.html#ad4216fd0a139644ba873d3a7ab89d78a", null ]
+    [ "SocketClient", "namespacenet_1_1in6_1_1stream_1_1tls.html#a8a531e3d7fb0033c229515240ffa8f38", null ],
+    [ "SocketServer", "namespacenet_1_1in6_1_1stream_1_1tls.html#a63ccffdb0d054ff7a7e70dff11bc5278", null ]
 ];

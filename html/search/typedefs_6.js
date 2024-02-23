@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['valuetype_0',['ValueType',['../classiot_1_1mqtt_1_1types_1_1TypeBase.html#a986355a14b710f4d97debabfd8474001',1,'iot::mqtt::types::TypeBase']]]
+  ['webapp_0',['webapp',['../namespaceexpress_1_1legacy_1_1in.html#a3ef8ead8024e519d81f6b42169de98b7',1,'express::legacy::in::WebApp'],['../namespaceexpress_1_1legacy_1_1in6.html#a082730927ba2a15242654835d0ed6b15',1,'express::legacy::in6::WebApp'],['../namespaceexpress_1_1legacy_1_1rc.html#a2f68eba6e9710e0c934ecfab09363996',1,'express::legacy::rc::WebApp'],['../namespaceexpress_1_1legacy_1_1un.html#a83611f4e1ab954721456985c4c8e5dfc',1,'express::legacy::un::WebApp'],['../namespaceexpress_1_1tls_1_1in.html#a88473950a2f3ab7ff78cce900cb8756c',1,'express::tls::in::WebApp'],['../namespaceexpress_1_1tls_1_1in6.html#aef82ee7368b48d8664fce9b6657ec133',1,'express::tls::in6::WebApp'],['../namespaceexpress_1_1tls_1_1rc.html#aa820503e5b8e76f9b570d4e347afe3fd',1,'express::tls::rc::WebApp'],['../namespaceexpress_1_1tls_1_1un.html#a283ae686ba5d8d13b921537b6a8f42dd',1,'express::tls::un::WebApp']]],
+  ['wssubprotocolrole_1',['WSSubProtocolRole',['../classiot_1_1mqtt_1_1SubProtocol.html#a5345cef391e55bbafc6156b0c8860c2d',1,'iot::mqtt::SubProtocol']]]
 ];

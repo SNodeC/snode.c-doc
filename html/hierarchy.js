@@ -364,7 +364,6 @@ var hierarchy =
     ] ],
     [ "core::EventMultiplexer::EventQueue", "classcore_1_1EventMultiplexer_1_1EventQueue.html", null ],
     [ "core::EventReceiver", "classcore_1_1EventReceiver.html", [
-      [ "TowerCalculator", "classTowerCalculator.html", null ],
       [ "core::DescriptorEventReceiver", "classcore_1_1DescriptorEventReceiver.html", [
         [ "core::eventreceiver::AcceptEventReceiver", "classcore_1_1eventreceiver_1_1AcceptEventReceiver.html", [
           [ "core::socket::stream::SocketAcceptor< PhysicalServerSocketT, ConfigT, core::socket::stream::legacy::SocketConnection >", "classcore_1_1socket_1_1stream_1_1SocketAcceptor.html", [
@@ -388,7 +387,6 @@ var hierarchy =
           [ "database::mariadb::MariaDBConnection", "classdatabase_1_1mariadb_1_1MariaDBConnection.html", null ]
         ] ],
         [ "core::eventreceiver::ReadEventReceiver", "classcore_1_1eventreceiver_1_1ReadEventReceiver.html", [
-          [ "KeyboardReader", "classKeyboardReader.html", null ],
           [ "core::pipe::PipeSink", "classcore_1_1pipe_1_1PipeSink.html", null ],
           [ "core::socket::stream::SocketReader", "classcore_1_1socket_1_1stream_1_1SocketReader.html", [
             [ "core::socket::stream::legacy::SocketReader", "classcore_1_1socket_1_1stream_1_1legacy_1_1SocketReader.html", null ],
@@ -413,16 +411,6 @@ var hierarchy =
         [ "core::timer::IntervalTimer", "classcore_1_1timer_1_1IntervalTimer.html", null ],
         [ "core::timer::IntervalTimerStopable", "classcore_1_1timer_1_1IntervalTimerStopable.html", null ],
         [ "core::timer::SingleshotTimer", "classcore_1_1timer_1_1SingleshotTimer.html", null ]
-      ] ],
-      [ "core::eventreceiver::InitAcceptEventReceiver", "classcore_1_1eventreceiver_1_1InitAcceptEventReceiver.html", [
-        [ "core::socket::stream::SocketAcceptor< PhysicalServerSocketT, ConfigT, core::socket::stream::legacy::SocketConnection >", "classcore_1_1socket_1_1stream_1_1SocketAcceptor.html", null ],
-        [ "core::socket::stream::SocketAcceptor< PhysicalSocketServerT, ConfigT, core::socket::stream::tls::SocketConnection >", "classcore_1_1socket_1_1stream_1_1SocketAcceptor.html", null ],
-        [ "core::socket::stream::SocketAcceptor< PhysicalSocketServerT, ConfigT, SocketConnectionT >", "classcore_1_1socket_1_1stream_1_1SocketAcceptor.html", null ]
-      ] ],
-      [ "core::eventreceiver::InitConnectEventReceiver", "classcore_1_1eventreceiver_1_1InitConnectEventReceiver.html", [
-        [ "core::socket::stream::SocketConnector< PhysicalClientSocketT, ConfigT, core::socket::stream::legacy::SocketConnection >", "classcore_1_1socket_1_1stream_1_1SocketConnector.html", null ],
-        [ "core::socket::stream::SocketConnector< PhysicalSocketClientT, ConfigT, core::socket::stream::tls::SocketConnection >", "classcore_1_1socket_1_1stream_1_1SocketConnector.html", null ],
-        [ "core::socket::stream::SocketConnector< PhysicalSocketClientT, ConfigT, SocketConnectionT >", "classcore_1_1socket_1_1stream_1_1SocketConnector.html", null ]
       ] ],
       [ "core::file::FileReader", "classcore_1_1file_1_1FileReader.html", null ],
       [ "database::mariadb::MariaDBCommandStartEvent", "classdatabase_1_1mariadb_1_1MariaDBCommandStartEvent.html", null ],
@@ -475,7 +463,6 @@ var hierarchy =
     ] ],
     [ "database::mariadb::MariaDBConnectionDetails", "structdatabase_1_1mariadb_1_1MariaDBConnectionDetails.html", null ],
     [ "web::websocket::Receiver::MaskingKey", "unionweb_1_1websocket_1_1Receiver_1_1MaskingKey.html", null ],
-    [ "Member", "classMember.html", null ],
     [ "iot::mqtt::server::broker::Message", "classiot_1_1mqtt_1_1server_1_1broker_1_1Message.html", null ],
     [ "web::http::MimeTypes", "classweb_1_1http_1_1MimeTypes.html", null ],
     [ "express::MountPoint", "structexpress_1_1MountPoint.html", null ],
@@ -488,9 +475,7 @@ var hierarchy =
       [ "iot::mqtt::SubProtocol< WSSubProtocolRoleT >", "classiot_1_1mqtt_1_1SubProtocol.html", null ]
     ] ],
     [ "utils::MultibleAttributeInjector", "classutils_1_1MultibleAttributeInjector.html", [
-      [ "web::http::server::Request", "classweb_1_1http_1_1server_1_1Request.html", [
-        [ "express::Request", "classexpress_1_1Request.html", null ]
-      ] ]
+      [ "express::Request", "classexpress_1_1Request.html", null ]
     ] ],
     [ "express::Next", "classexpress_1_1Next.html", null ],
     [ "core::Observer", "classcore_1_1Observer.html", [
@@ -557,10 +542,15 @@ var hierarchy =
         [ "web::websocket::SocketContextUpgrade< SubProtocolT, RequestT, ResponseT >", "classweb_1_1websocket_1_1SocketContextUpgrade.html", null ]
       ] ]
     ] ],
-    [ "web::http::client::Request", "classweb_1_1http_1_1client_1_1Request.html", null ],
-    [ "web::http::server::RequestContextBase", "classweb_1_1http_1_1server_1_1RequestContextBase.html", [
-      [ "web::http::server::SocketContext< RequestT, ResponseT >::RequestContext", "classweb_1_1http_1_1server_1_1SocketContext_1_1RequestContext.html", null ]
+    [ "web::http::server::Request", "classweb_1_1http_1_1server_1_1Request.html", null ],
+    [ "web::http::client::RequestCommand", "classweb_1_1http_1_1client_1_1RequestCommand.html", [
+      [ "web::http::client::commands::EndCommand", "classweb_1_1http_1_1client_1_1commands_1_1EndCommand.html", null ],
+      [ "web::http::client::commands::SendFileCommand", "classweb_1_1http_1_1client_1_1commands_1_1SendFileCommand.html", null ],
+      [ "web::http::client::commands::SendFragmentCommand", "classweb_1_1http_1_1client_1_1commands_1_1SendFragmentCommand.html", null ],
+      [ "web::http::client::commands::SendHeaderCommand", "classweb_1_1http_1_1client_1_1commands_1_1SendHeaderCommand.html", null ],
+      [ "web::http::client::commands::UpgradeCommand", "classweb_1_1http_1_1client_1_1commands_1_1UpgradeCommand.html", null ]
     ] ],
+    [ "express::Response", "classexpress_1_1Response.html", null ],
     [ "web::http::client::Response", "classweb_1_1http_1_1client_1_1Response.html", null ],
     [ "iot::mqtt::server::broker::RetainTree", "classiot_1_1mqtt_1_1server_1_1broker_1_1RetainTree.html", null ],
     [ "express::Route", "classexpress_1_1Route.html", [
@@ -573,7 +563,8 @@ var hierarchy =
       [ "express::middleware::BasicAuthentication", "classexpress_1_1middleware_1_1BasicAuthentication.html", null ],
       [ "express::middleware::JsonMiddleware", "classexpress_1_1middleware_1_1JsonMiddleware.html", null ],
       [ "express::middleware::StaticMiddleware", "classexpress_1_1middleware_1_1StaticMiddleware.html", null ],
-      [ "express::middleware::VHost", "classexpress_1_1middleware_1_1VHost.html", null ]
+      [ "express::middleware::VHost", "classexpress_1_1middleware_1_1VHost.html", null ],
+      [ "express::middleware::VerboseRequest", "classexpress_1_1middleware_1_1VerboseRequest.html", null ]
     ] ],
     [ "ServerT", null, [
       [ "express::WebAppT< ServerT >", "classexpress_1_1WebAppT.html", null ]
@@ -584,44 +575,43 @@ var hierarchy =
     [ "SHA1", "classSHA1.html", null ],
     [ "utils::SingleAttributeInjector", "classutils_1_1SingleAttributeInjector.html", null ],
     [ "core::pipe::Sink", "classcore_1_1pipe_1_1Sink.html", [
-      [ "web::http::server::Response", "classweb_1_1http_1_1server_1_1Response.html", [
-        [ "express::Response", "classexpress_1_1Response.html", null ]
-      ] ]
+      [ "web::http::client::Request", "classweb_1_1http_1_1client_1_1Request.html", null ],
+      [ "web::http::server::Response", "classweb_1_1http_1_1server_1_1Response.html", null ]
     ] ],
     [ "core::SNodeC", "classcore_1_1SNodeC.html", null ],
     [ "core::socket::Socket< ConfigT >", "classcore_1_1socket_1_1Socket.html", null ],
     [ "core::socket::Socket< SocketAcceptorT::Config >", "classcore_1_1socket_1_1Socket.html", [
-      [ "core::socket::stream::SocketServer< SocketAcceptorT< net::in6::phy::stream::PhysicalSocketServer, ConfigSocketServerT >, SocketContextFactoryT, Args &&... >", "classcore_1_1socket_1_1stream_1_1SocketServer.html", [
+      [ "core::socket::stream::SocketServer< SocketAcceptorT< net::in6::phy::stream::PhysicalSocketServer, ConfigSocketServerT >, SocketContextFactoryT, Args... >", "classcore_1_1socket_1_1stream_1_1SocketServer.html", [
         [ "net::in6::stream::SocketServer< SocketAcceptorT, ConfigSocketServerT, SocketContextFactoryT, Args >", "classnet_1_1in6_1_1stream_1_1SocketServer.html", null ]
       ] ],
-      [ "core::socket::stream::SocketServer< SocketAcceptorT< net::in::phy::stream::PhysicalSocketServer, ConfigSocketServerT >, SocketContextFactoryT, Args &&... >", "classcore_1_1socket_1_1stream_1_1SocketServer.html", [
+      [ "core::socket::stream::SocketServer< SocketAcceptorT< net::in::phy::stream::PhysicalSocketServer, ConfigSocketServerT >, SocketContextFactoryT, Args... >", "classcore_1_1socket_1_1stream_1_1SocketServer.html", [
         [ "net::in::stream::SocketServer< SocketAcceptorT, ConfigSocketServerT, SocketContextFactoryT, Args >", "classnet_1_1in_1_1stream_1_1SocketServer.html", null ]
       ] ],
-      [ "core::socket::stream::SocketServer< SocketAcceptorT< net::l2::phy::stream::PhysicalSocketServer, ConfigSocketServerT >, SocketContextFactoryT, Args &&... >", "classcore_1_1socket_1_1stream_1_1SocketServer.html", [
+      [ "core::socket::stream::SocketServer< SocketAcceptorT< net::l2::phy::stream::PhysicalSocketServer, ConfigSocketServerT >, SocketContextFactoryT, Args... >", "classcore_1_1socket_1_1stream_1_1SocketServer.html", [
         [ "net::l2::stream::SocketServer< SocketAcceptorT, ConfigSocketServerT, SocketContextFactoryT, Args >", "classnet_1_1l2_1_1stream_1_1SocketServer.html", null ]
       ] ],
-      [ "core::socket::stream::SocketServer< SocketAcceptorT< net::rc::phy::stream::PhysicalSocketServer, ConfigSocketServerT >, SocketContextFactoryT, Args &&... >", "classcore_1_1socket_1_1stream_1_1SocketServer.html", [
+      [ "core::socket::stream::SocketServer< SocketAcceptorT< net::rc::phy::stream::PhysicalSocketServer, ConfigSocketServerT >, SocketContextFactoryT, Args... >", "classcore_1_1socket_1_1stream_1_1SocketServer.html", [
         [ "net::rc::stream::SocketServer< SocketAcceptorT, ConfigSocketServerT, SocketContextFactoryT, Args >", "classnet_1_1rc_1_1stream_1_1SocketServer.html", null ]
       ] ],
-      [ "core::socket::stream::SocketServer< SocketAcceptorT< net::un::phy::stream::PhysicalSocketServer, ConfigSocketServerT >, SocketContextFactoryT, Args &&... >", "classcore_1_1socket_1_1stream_1_1SocketServer.html", [
+      [ "core::socket::stream::SocketServer< SocketAcceptorT< net::un::phy::stream::PhysicalSocketServer, ConfigSocketServerT >, SocketContextFactoryT, Args... >", "classcore_1_1socket_1_1stream_1_1SocketServer.html", [
         [ "net::un::stream::SocketServer< SocketAcceptorT, ConfigSocketServerT, SocketContextFactoryT, Args >", "classnet_1_1un_1_1stream_1_1SocketServer.html", null ]
       ] ],
       [ "core::socket::stream::SocketServer< SocketAcceptorT, SocketContextFactoryT, Args >", "classcore_1_1socket_1_1stream_1_1SocketServer.html", null ]
     ] ],
     [ "core::socket::Socket< SocketConnectorT::Config >", "classcore_1_1socket_1_1Socket.html", [
-      [ "core::socket::stream::SocketClient< SocketConnectorT< net::in6::phy::stream::PhysicalSocketClient, ConfigSocketClientT >, SocketContextFactoryT, Args &&... >", "classcore_1_1socket_1_1stream_1_1SocketClient.html", [
+      [ "core::socket::stream::SocketClient< SocketConnectorT< net::in6::phy::stream::PhysicalSocketClient, ConfigSocketClientT >, SocketContextFactoryT, Args... >", "classcore_1_1socket_1_1stream_1_1SocketClient.html", [
         [ "net::in6::stream::SocketClient< SocketConnectorT, ConfigSocketClientT, SocketContextFactoryT, Args >", "classnet_1_1in6_1_1stream_1_1SocketClient.html", null ]
       ] ],
-      [ "core::socket::stream::SocketClient< SocketConnectorT< net::in::phy::stream::PhysicalSocketClient, ConfigSocketClientT >, SocketContextFactoryT, Args &&... >", "classcore_1_1socket_1_1stream_1_1SocketClient.html", [
+      [ "core::socket::stream::SocketClient< SocketConnectorT< net::in::phy::stream::PhysicalSocketClient, ConfigSocketClientT >, SocketContextFactoryT, Args... >", "classcore_1_1socket_1_1stream_1_1SocketClient.html", [
         [ "net::in::stream::SocketClient< SocketConnectorT, ConfigSocketClientT, SocketContextFactoryT, Args >", "classnet_1_1in_1_1stream_1_1SocketClient.html", null ]
       ] ],
-      [ "core::socket::stream::SocketClient< SocketConnectorT< net::l2::phy::stream::PhysicalSocketClient, ConfigSocketClientT >, SocketContextFactoryT, Args &&... >", "classcore_1_1socket_1_1stream_1_1SocketClient.html", [
+      [ "core::socket::stream::SocketClient< SocketConnectorT< net::l2::phy::stream::PhysicalSocketClient, ConfigSocketClientT >, SocketContextFactoryT, Args... >", "classcore_1_1socket_1_1stream_1_1SocketClient.html", [
         [ "net::l2::stream::SocketClient< SocketConnectorT, ConfigSocketClientT, SocketContextFactoryT, Args >", "classnet_1_1l2_1_1stream_1_1SocketClient.html", null ]
       ] ],
-      [ "core::socket::stream::SocketClient< SocketConnectorT< net::rc::phy::stream::PhysicalSocketClient, ConfigSocketClientT >, SocketContextFactoryT, Args &&... >", "classcore_1_1socket_1_1stream_1_1SocketClient.html", [
+      [ "core::socket::stream::SocketClient< SocketConnectorT< net::rc::phy::stream::PhysicalSocketClient, ConfigSocketClientT >, SocketContextFactoryT, Args... >", "classcore_1_1socket_1_1stream_1_1SocketClient.html", [
         [ "net::rc::stream::SocketClient< SocketConnectorT, ConfigSocketClientT, SocketContextFactoryT, Args >", "classnet_1_1rc_1_1stream_1_1SocketClient.html", null ]
       ] ],
-      [ "core::socket::stream::SocketClient< SocketConnectorT< net::un::phy::stream::PhysicalSocketClient, ConfigSocketClientT >, SocketContextFactoryT, Args &&... >", "classcore_1_1socket_1_1stream_1_1SocketClient.html", [
+      [ "core::socket::stream::SocketClient< SocketConnectorT< net::un::phy::stream::PhysicalSocketClient, ConfigSocketClientT >, SocketContextFactoryT, Args... >", "classcore_1_1socket_1_1stream_1_1SocketClient.html", [
         [ "net::un::stream::SocketClient< SocketConnectorT, ConfigSocketClientT, SocketContextFactoryT, Args >", "classnet_1_1un_1_1stream_1_1SocketClient.html", null ]
       ] ],
       [ "core::socket::stream::SocketClient< SocketConnectorT, SocketContextFactoryT, Args >", "classcore_1_1socket_1_1stream_1_1SocketClient.html", null ]
@@ -656,19 +646,15 @@ var hierarchy =
       [ "core::socket::stream::SocketContext", "classcore_1_1socket_1_1stream_1_1SocketContext.html", [
         [ "web::http::SocketContextUpgrade< web::http::client::Request, web::http::client::Response >", "classweb_1_1http_1_1SocketContextUpgrade.html", null ],
         [ "web::http::SocketContextUpgrade< web::http::server::Request, web::http::server::Response >", "classweb_1_1http_1_1SocketContextUpgrade.html", null ],
-        [ "SimpleSocketProtocol", "classSimpleSocketProtocol.html", null ],
-        [ "apps::echo::model::EchoSocketContext", "classapps_1_1echo_1_1model_1_1EchoSocketContext.html", null ],
         [ "iot::mqtt::SocketContext", "classiot_1_1mqtt_1_1SocketContext.html", null ],
         [ "iot::mqtt_fast::SocketContext", "classiot_1_1mqtt__fast_1_1SocketContext.html", null ],
-        [ "web::http::SocketContext", "classweb_1_1http_1_1SocketContext.html", [
-          [ "web::http::client::SocketContext< RequestT, ResponseT >", "classweb_1_1http_1_1client_1_1SocketContext.html", null ],
-          [ "web::http::server::SocketContext< RequestT, ResponseT >", "classweb_1_1http_1_1server_1_1SocketContext.html", null ]
-        ] ],
         [ "web::http::SocketContextUpgrade< RequestT, ResponseT >", "classweb_1_1http_1_1SocketContextUpgrade.html", [
           [ "web::websocket::SocketContextUpgrade< SubProtocol, web::http::client::Request, web::http::client::Response >", "classweb_1_1websocket_1_1SocketContextUpgrade.html", null ],
           [ "web::websocket::SocketContextUpgrade< SubProtocol, web::http::server::Request, web::http::server::Response >", "classweb_1_1websocket_1_1SocketContextUpgrade.html", null ],
           [ "web::websocket::SocketContextUpgrade< SubProtocolT, RequestT, ResponseT >", "classweb_1_1websocket_1_1SocketContextUpgrade.html", null ]
-        ] ]
+        ] ],
+        [ "web::http::client::SocketContext", "classweb_1_1http_1_1client_1_1SocketContext.html", null ],
+        [ "web::http::server::SocketContext", "classweb_1_1http_1_1server_1_1SocketContext.html", null ]
       ] ]
     ] ],
     [ "core::socket::stream::SocketContextFactory", "classcore_1_1socket_1_1stream_1_1SocketContextFactory.html", [
@@ -688,9 +674,6 @@ var hierarchy =
           [ "web::websocket::server::SocketContextUpgradeFactory", "classweb_1_1websocket_1_1server_1_1SocketContextUpgradeFactory.html", null ]
         ] ]
       ] ],
-      [ "SimpleSocketProtocolFactory", "classSimpleSocketProtocolFactory.html", null ],
-      [ "apps::echo::model::EchoClientSocketContextFactory", "classapps_1_1echo_1_1model_1_1EchoClientSocketContextFactory.html", null ],
-      [ "apps::echo::model::EchoServerSocketContextFactory", "classapps_1_1echo_1_1model_1_1EchoServerSocketContextFactory.html", null ],
       [ "iot::mqtt::server::SharedSocketContextFactory", "classiot_1_1mqtt_1_1server_1_1SharedSocketContextFactory.html", null ],
       [ "iot::mqtt::server::SocketContextFactory", "classiot_1_1mqtt_1_1server_1_1SocketContextFactory.html", null ],
       [ "web::http::SocketContextFactory< SocketContextT, RequestT, ResponseT >", "classweb_1_1http_1_1SocketContextFactory.html", null ],
@@ -721,20 +704,12 @@ var hierarchy =
     [ "web::http::StatusCode", "classweb_1_1http_1_1StatusCode.html", null ],
     [ "web::websocket::SubProtocol< SocketContextUpgradeT >", "classweb_1_1websocket_1_1SubProtocol.html", null ],
     [ "web::websocket::SubProtocol< web::websocket::client::SocketContextUpgrade >", "classweb_1_1websocket_1_1SubProtocol.html", [
-      [ "web::websocket::client::SubProtocol", "classweb_1_1websocket_1_1client_1_1SubProtocol.html", [
-        [ "apps::websocket::subprotocol::echo::client::Echo", "classapps_1_1websocket_1_1subprotocol_1_1echo_1_1client_1_1Echo.html", null ]
-      ] ]
+      [ "web::websocket::client::SubProtocol", "classweb_1_1websocket_1_1client_1_1SubProtocol.html", null ]
     ] ],
     [ "web::websocket::SubProtocol< web::websocket::server::SocketContextUpgrade >", "classweb_1_1websocket_1_1SubProtocol.html", [
-      [ "web::websocket::server::SubProtocol", "classweb_1_1websocket_1_1server_1_1SubProtocol.html", [
-        [ "apps::websocket::subprotocol::echo::server::Echo", "classapps_1_1websocket_1_1subprotocol_1_1echo_1_1server_1_1Echo.html", null ]
-      ] ]
+      [ "web::websocket::server::SubProtocol", "classweb_1_1websocket_1_1server_1_1SubProtocol.html", null ]
     ] ],
     [ "web::websocket::SubProtocolFactory< SubProtocolT >", "classweb_1_1websocket_1_1SubProtocolFactory.html", null ],
-    [ "web::websocket::SubProtocolFactory< Echo >", "classweb_1_1websocket_1_1SubProtocolFactory.html", [
-      [ "apps::websocket::subprotocol::echo::client::EchoFactory", "classapps_1_1websocket_1_1subprotocol_1_1echo_1_1client_1_1EchoFactory.html", null ],
-      [ "apps::websocket::subprotocol::echo::server::EchoFactory", "classapps_1_1websocket_1_1subprotocol_1_1echo_1_1server_1_1EchoFactory.html", null ]
-    ] ],
     [ "web::websocket::SubProtocolFactory< web::websocket::client::SubProtocol >", "classweb_1_1websocket_1_1SubProtocolFactory.html", null ],
     [ "web::websocket::SubProtocolFactory< web::websocket::server::SubProtocol >", "classweb_1_1websocket_1_1SubProtocolFactory.html", null ],
     [ "web::websocket::SubProtocolFactorySelector< SubProtocolFactoryT >", "classweb_1_1websocket_1_1SubProtocolFactorySelector.html", null ],
@@ -750,7 +725,6 @@ var hierarchy =
       [ "CLI::CallForShowConfig", "classCLI_1_1CallForShowConfig.html", null ],
       [ "CLI::CallForWriteConfig", "classCLI_1_1CallForWriteConfig.html", null ]
     ] ],
-    [ "Test", "classTest.html", null ],
     [ "core::DescriptorEventReceiver::TIMEOUT", "structcore_1_1DescriptorEventReceiver_1_1TIMEOUT.html", null ],
     [ "core::Timer", "classcore_1_1Timer.html", [
       [ "core::timer::Timer", "classcore_1_1timer_1_1Timer.html", null ]

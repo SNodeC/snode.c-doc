@@ -1,28 +1,5 @@
 var annotated_dup =
 [
-    [ "apps", "namespaceapps.html", [
-      [ "echo", "namespaceapps_1_1echo.html", [
-        [ "model", "namespaceapps_1_1echo_1_1model.html", [
-          [ "EchoClientSocketContextFactory", "classapps_1_1echo_1_1model_1_1EchoClientSocketContextFactory.html", "classapps_1_1echo_1_1model_1_1EchoClientSocketContextFactory" ],
-          [ "EchoServerSocketContextFactory", "classapps_1_1echo_1_1model_1_1EchoServerSocketContextFactory.html", "classapps_1_1echo_1_1model_1_1EchoServerSocketContextFactory" ],
-          [ "EchoSocketContext", "classapps_1_1echo_1_1model_1_1EchoSocketContext.html", "classapps_1_1echo_1_1model_1_1EchoSocketContext" ]
-        ] ]
-      ] ],
-      [ "websocket", "namespaceapps_1_1websocket.html", [
-        [ "subprotocol", "namespaceapps_1_1websocket_1_1subprotocol.html", [
-          [ "echo", "namespaceapps_1_1websocket_1_1subprotocol_1_1echo.html", [
-            [ "client", "namespaceapps_1_1websocket_1_1subprotocol_1_1echo_1_1client.html", [
-              [ "Echo", "classapps_1_1websocket_1_1subprotocol_1_1echo_1_1client_1_1Echo.html", "classapps_1_1websocket_1_1subprotocol_1_1echo_1_1client_1_1Echo" ],
-              [ "EchoFactory", "classapps_1_1websocket_1_1subprotocol_1_1echo_1_1client_1_1EchoFactory.html", "classapps_1_1websocket_1_1subprotocol_1_1echo_1_1client_1_1EchoFactory" ]
-            ] ],
-            [ "server", "namespaceapps_1_1websocket_1_1subprotocol_1_1echo_1_1server.html", [
-              [ "Echo", "classapps_1_1websocket_1_1subprotocol_1_1echo_1_1server_1_1Echo.html", "classapps_1_1websocket_1_1subprotocol_1_1echo_1_1server_1_1Echo" ],
-              [ "EchoFactory", "classapps_1_1websocket_1_1subprotocol_1_1echo_1_1server_1_1EchoFactory.html", "classapps_1_1websocket_1_1subprotocol_1_1echo_1_1server_1_1EchoFactory" ]
-            ] ]
-          ] ]
-        ] ]
-      ] ]
-    ] ],
     [ "CLI", "namespaceCLI.html", [
       [ "CallForCommandline", "classCLI_1_1CallForCommandline.html", "classCLI_1_1CallForCommandline" ],
       [ "CallForShowConfig", "classCLI_1_1CallForShowConfig.html", "classCLI_1_1CallForShowConfig" ],
@@ -39,8 +16,6 @@ var annotated_dup =
         [ "AcceptEventReceiver", "classcore_1_1eventreceiver_1_1AcceptEventReceiver.html", "classcore_1_1eventreceiver_1_1AcceptEventReceiver" ],
         [ "ConnectEventReceiver", "classcore_1_1eventreceiver_1_1ConnectEventReceiver.html", "classcore_1_1eventreceiver_1_1ConnectEventReceiver" ],
         [ "ExceptionalConditionEventReceiver", "classcore_1_1eventreceiver_1_1ExceptionalConditionEventReceiver.html", "classcore_1_1eventreceiver_1_1ExceptionalConditionEventReceiver" ],
-        [ "InitAcceptEventReceiver", "classcore_1_1eventreceiver_1_1InitAcceptEventReceiver.html", "classcore_1_1eventreceiver_1_1InitAcceptEventReceiver" ],
-        [ "InitConnectEventReceiver", "classcore_1_1eventreceiver_1_1InitConnectEventReceiver.html", "classcore_1_1eventreceiver_1_1InitConnectEventReceiver" ],
         [ "ReadEventReceiver", "classcore_1_1eventreceiver_1_1ReadEventReceiver.html", "classcore_1_1eventreceiver_1_1ReadEventReceiver" ],
         [ "WriteEventReceiver", "classcore_1_1eventreceiver_1_1WriteEventReceiver.html", "classcore_1_1eventreceiver_1_1WriteEventReceiver" ]
       ] ],
@@ -161,6 +136,7 @@ var annotated_dup =
         [ "BasicAuthentication", "classexpress_1_1middleware_1_1BasicAuthentication.html", "classexpress_1_1middleware_1_1BasicAuthentication" ],
         [ "JsonMiddleware", "classexpress_1_1middleware_1_1JsonMiddleware.html", "classexpress_1_1middleware_1_1JsonMiddleware" ],
         [ "StaticMiddleware", "classexpress_1_1middleware_1_1StaticMiddleware.html", "classexpress_1_1middleware_1_1StaticMiddleware" ],
+        [ "VerboseRequest", "classexpress_1_1middleware_1_1VerboseRequest.html", "classexpress_1_1middleware_1_1VerboseRequest" ],
         [ "VHost", "classexpress_1_1middleware_1_1VHost.html", "classexpress_1_1middleware_1_1VHost" ]
       ] ],
       [ "Controller", "classexpress_1_1Controller.html", "classexpress_1_1Controller" ],
@@ -530,8 +506,16 @@ var annotated_dup =
     [ "web", "namespaceweb.html", [
       [ "http", "namespaceweb_1_1http.html", [
         [ "client", "namespaceweb_1_1http_1_1client.html", [
+          [ "commands", "namespaceweb_1_1http_1_1client_1_1commands.html", [
+            [ "EndCommand", "classweb_1_1http_1_1client_1_1commands_1_1EndCommand.html", "classweb_1_1http_1_1client_1_1commands_1_1EndCommand" ],
+            [ "SendFileCommand", "classweb_1_1http_1_1client_1_1commands_1_1SendFileCommand.html", "classweb_1_1http_1_1client_1_1commands_1_1SendFileCommand" ],
+            [ "SendFragmentCommand", "classweb_1_1http_1_1client_1_1commands_1_1SendFragmentCommand.html", "classweb_1_1http_1_1client_1_1commands_1_1SendFragmentCommand" ],
+            [ "SendHeaderCommand", "classweb_1_1http_1_1client_1_1commands_1_1SendHeaderCommand.html", "classweb_1_1http_1_1client_1_1commands_1_1SendHeaderCommand" ],
+            [ "UpgradeCommand", "classweb_1_1http_1_1client_1_1commands_1_1UpgradeCommand.html", "classweb_1_1http_1_1client_1_1commands_1_1UpgradeCommand" ]
+          ] ],
           [ "Client", "classweb_1_1http_1_1client_1_1Client.html", "classweb_1_1http_1_1client_1_1Client" ],
           [ "Request", "classweb_1_1http_1_1client_1_1Request.html", "classweb_1_1http_1_1client_1_1Request" ],
+          [ "RequestCommand", "classweb_1_1http_1_1client_1_1RequestCommand.html", "classweb_1_1http_1_1client_1_1RequestCommand" ],
           [ "Response", "classweb_1_1http_1_1client_1_1Response.html", "classweb_1_1http_1_1client_1_1Response" ],
           [ "ResponseParser", "classweb_1_1http_1_1client_1_1ResponseParser.html", "classweb_1_1http_1_1client_1_1ResponseParser" ],
           [ "SocketContext", "classweb_1_1http_1_1client_1_1SocketContext.html", "classweb_1_1http_1_1client_1_1SocketContext" ],
@@ -541,7 +525,6 @@ var annotated_dup =
         ] ],
         [ "server", "namespaceweb_1_1http_1_1server.html", [
           [ "Request", "classweb_1_1http_1_1server_1_1Request.html", "classweb_1_1http_1_1server_1_1Request" ],
-          [ "RequestContextBase", "classweb_1_1http_1_1server_1_1RequestContextBase.html", "classweb_1_1http_1_1server_1_1RequestContextBase" ],
           [ "RequestParser", "classweb_1_1http_1_1server_1_1RequestParser.html", "classweb_1_1http_1_1server_1_1RequestParser" ],
           [ "Response", "classweb_1_1http_1_1server_1_1Response.html", "classweb_1_1http_1_1server_1_1Response" ],
           [ "Server", "classweb_1_1http_1_1server_1_1Server.html", "classweb_1_1http_1_1server_1_1Server" ],
@@ -553,7 +536,6 @@ var annotated_dup =
         [ "CookieOptions", "classweb_1_1http_1_1CookieOptions.html", "classweb_1_1http_1_1CookieOptions" ],
         [ "MimeTypes", "classweb_1_1http_1_1MimeTypes.html", "classweb_1_1http_1_1MimeTypes" ],
         [ "Parser", "classweb_1_1http_1_1Parser.html", "classweb_1_1http_1_1Parser" ],
-        [ "SocketContext", "classweb_1_1http_1_1SocketContext.html", "classweb_1_1http_1_1SocketContext" ],
         [ "SocketContextFactory", "classweb_1_1http_1_1SocketContextFactory.html", "classweb_1_1http_1_1SocketContextFactory" ],
         [ "SocketContextUpgrade", "classweb_1_1http_1_1SocketContextUpgrade.html", "classweb_1_1http_1_1SocketContextUpgrade" ],
         [ "SocketContextUpgradeFactory", "classweb_1_1http_1_1SocketContextUpgradeFactory.html", "classweb_1_1http_1_1SocketContextUpgradeFactory" ],
@@ -583,11 +565,5 @@ var annotated_dup =
         [ "Transmitter", "classweb_1_1websocket_1_1Transmitter.html", "classweb_1_1websocket_1_1Transmitter" ]
       ] ]
     ] ],
-    [ "KeyboardReader", "classKeyboardReader.html", "classKeyboardReader" ],
-    [ "Member", "classMember.html", "classMember" ],
-    [ "SHA1", "classSHA1.html", "classSHA1" ],
-    [ "SimpleSocketProtocol", "classSimpleSocketProtocol.html", "classSimpleSocketProtocol" ],
-    [ "SimpleSocketProtocolFactory", "classSimpleSocketProtocolFactory.html", "classSimpleSocketProtocolFactory" ],
-    [ "Test", "classTest.html", "classTest" ],
-    [ "TowerCalculator", "classTowerCalculator.html", "classTowerCalculator" ]
+    [ "SHA1", "classSHA1.html", "classSHA1" ]
 ];

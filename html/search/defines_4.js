@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['name_0',['name',['../client_2echo_2EchoFactory_8cpp.html#a47f2e62c0dbebc787052c165afcada0e',1,'NAME:&#160;EchoFactory.cpp'],['../server_2echo_2EchoFactory_8cpp.html#a47f2e62c0dbebc787052c165afcada0e',1,'NAME:&#160;EchoFactory.cpp']]]
+  ['path_5fregex_0',['PATH_REGEX',['../regex__utils_8cpp.html#aeb2f79c23644bb1964618b028dce3896',1,'regex_utils.cpp']]]
 ];

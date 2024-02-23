@@ -1,13 +1,22 @@
 var classcore_1_1pipe_1_1Source =
 [
-    [ "Source", "classcore_1_1pipe_1_1Source.html#afdbf414da9b28223735961164158e649", null ],
+    [ "Source", "classcore_1_1pipe_1_1Source.html#a3324b3414b8ab193e8762c5379fa1198", null ],
+    [ "Source", "classcore_1_1pipe_1_1Source.html#a1cfd55dc13fa08df172d11cd6b21bb41", null ],
+    [ "Source", "classcore_1_1pipe_1_1Source.html#a567107e4847fbc1647e83ea4d56727bd", null ],
     [ "~Source", "classcore_1_1pipe_1_1Source.html#a65bd1161b69a637cdea3dae25604af59", null ],
-    [ "connect", "classcore_1_1pipe_1_1Source.html#a15f331e8ca7bebe0fb64c7a2605bc9ef", null ],
-    [ "disconnect", "classcore_1_1pipe_1_1Source.html#aa2400665fff92a97aec7d84dbb7b698b", null ],
-    [ "disconnect", "classcore_1_1pipe_1_1Source.html#a1e857ed0ce002f12acc3ec68f2408d4c", null ],
+    [ "disconnect", "classcore_1_1pipe_1_1Source.html#aa435bf91173fd2039b8462044826df7c", null ],
     [ "eof", "classcore_1_1pipe_1_1Source.html#a7cdfe3494b76d59780750d8af228f1d1", null ],
     [ "error", "classcore_1_1pipe_1_1Source.html#a179b74c2582275beb312423905f9cbd4", null ],
-    [ "read", "classcore_1_1pipe_1_1Source.html#acff249087d44b6472c7f212c06f62ae4", null ],
+    [ "isOpen", "classcore_1_1pipe_1_1Source.html#a6f31ada3d980c408e59161b7a2ad7abd", null ],
+    [ "operator=", "classcore_1_1pipe_1_1Source.html#a9be1bb3956f765682bd9d951c0655e72", null ],
+    [ "operator=", "classcore_1_1pipe_1_1Source.html#ae1a301d2c767f0e7816276cd1d2b66f5", null ],
+    [ "pipe", "classcore_1_1pipe_1_1Source.html#a72fcbad62e50f52a962e6024da0b5445", null ],
+    [ "pipe", "classcore_1_1pipe_1_1Source.html#a1248df5825dfd407639435badc731732", null ],
+    [ "resume", "classcore_1_1pipe_1_1Source.html#adf9fac077c0b9ce8545186c12dcd51ff", null ],
     [ "send", "classcore_1_1pipe_1_1Source.html#a7363d1d567c71b78ebfd2c098a8993f2", null ],
+    [ "start", "classcore_1_1pipe_1_1Source.html#aff2dbd7ea45b5b8fcaa8bece4572c003", null ],
+    [ "stop", "classcore_1_1pipe_1_1Source.html#a1f2713b56b2210fade76e3699d4bc95d", null ],
+    [ "suspend", "classcore_1_1pipe_1_1Source.html#a51d8a3566775c32c88eabfde0cd836d5", null ],
+    [ "Sink", "classcore_1_1pipe_1_1Source.html#a2f972637720c07a54cdefcf57ab1ee67", null ],
     [ "sink", "classcore_1_1pipe_1_1Source.html#a4d25af23c75f9ad83fc75f46be1c27cc", null ]
 ];

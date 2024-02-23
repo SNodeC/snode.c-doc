@@ -5,7 +5,7 @@ var classnet_1_1in6_1_1stream_1_1SocketServer =
     [ "SocketAddress", "classnet_1_1in6_1_1stream_1_1SocketServer.html#a2cbf0748db2e1cc9f61f44b439e402d2", null ],
     [ "SocketConnection", "classnet_1_1in6_1_1stream_1_1SocketServer.html#abac2fce09101ae45fe6913c524e6f9e6", null ],
     [ "SocketContextFactory", "classnet_1_1in6_1_1stream_1_1SocketServer.html#acd28bb073c9bf31a71f00a3cdb845772", null ],
-    [ "Super", "classnet_1_1in6_1_1stream_1_1SocketServer.html#a4a6cd8ee4224f6f40d0c2f95dc623070", null ],
+    [ "Super", "classnet_1_1in6_1_1stream_1_1SocketServer.html#a8aeb1d9fe8d50edf4880fede0420c43f", null ],
     [ "getConfig", "classnet_1_1in6_1_1stream_1_1SocketServer.html#ac9b7df3682b2a24b5c7fce9bcff1c441", null ],
     [ "getSocketContextFactory", "classnet_1_1in6_1_1stream_1_1SocketServer.html#ad172e64bdfc2befd0e0f56c52e03585f", null ],
     [ "listen", "classnet_1_1in6_1_1stream_1_1SocketServer.html#a8e06926bdf456389bdd810fad2c26309", null ],

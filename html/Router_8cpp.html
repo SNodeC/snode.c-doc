@@ -99,7 +99,7 @@ $(document).ready(function(){initNavTree('Router_8cpp.html',''); initResizable()
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for Router.cpp:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="Router_8cpp__incl.svg" width="1131" height="330"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="Router_8cpp__incl.svg" width="868" height="330"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <p><a href="Router_8cpp_source.html">Go to the source code of this file.</a></p>
@@ -140,47 +140,56 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">    Route&amp; Router::METHOD(<span class="keyword">const</span> Router&amp; <a class="code hl_function" href="testregex_8cpp.html#ab024e3c77aeb1487da4b33877cdfc1fb">router</a>)<span class="keyword"> const </span>{                                                                                    \</div>
-<div class="line">        <span class="keywordflow">return</span> rootRoute-&gt;METHOD(*<a class="code hl_function" href="testregex_8cpp.html#ab024e3c77aeb1487da4b33877cdfc1fb">router</a>.rootRoute.get());                                                                                 \</div>
+<b>Value:</b><div class="fragment"><div class="line">    Route&amp; Router::METHOD(<span class="keyword">const</span> Router&amp; router)<span class="keyword"> const </span>{                                                                                    \</div>
+<div class="line">        <span class="keywordflow">return</span> rootRoute-&gt;METHOD(*router.rootRoute.get());                                                                                 \</div>
 <div class="line">    }                                                                                                                                      \</div>
-<div class="line">    Route&amp; Router::METHOD(<span class="keyword">const</span> std::string&amp; relativeMountPath, <span class="keyword">const</span> Router&amp; <a class="code hl_function" href="testregex_8cpp.html#ab024e3c77aeb1487da4b33877cdfc1fb">router</a>)<span class="keyword"> const </span>{                                              \</div>
-<div class="line">        <span class="keywordflow">return</span> rootRoute-&gt;METHOD(relativeMountPath, *<a class="code hl_function" href="testregex_8cpp.html#ab024e3c77aeb1487da4b33877cdfc1fb">router</a>.rootRoute.get());                                                              \</div>
+<div class="line">    Route&amp; Router::METHOD(<span class="keyword">const</span> std::string&amp; relativeMountPath, <span class="keyword">const</span> Router&amp; router)<span class="keyword"> const </span>{                                              \</div>
+<div class="line">        <span class="keywordflow">return</span> rootRoute-&gt;METHOD(relativeMountPath, *router.rootRoute.get());                                                              \</div>
+<div class="line">    }                                                                                                                                      \</div>
+<div class="line">    Route&amp; Router::METHOD(                                                                                                                 \</div>
+<div class="line">        <span class="keyword">const</span> std::string&amp; relativeMountPath,                                                                                              \</div>
+<div class="line">        <span class="keyword">const</span> std::function&lt;<span class="keywordtype">void</span>(<span class="keyword">const</span> std::shared_ptr&lt;Request&gt;&amp; req, <span class="keyword">const</span> std::shared_ptr&lt;Response&gt;&amp; res, Next&amp; next)&gt;&amp; lambda)<span class="keyword"> const </span>{  \</div>
+<div class="line">        <span class="keywordflow">return</span> rootRoute-&gt;METHOD(relativeMountPath, lambda);                                                                               \</div>
+<div class="line">    }                                                                                                                                      \</div>
+<div class="line">    Route&amp; Router::METHOD(                                                                                                                 \</div>
+<div class="line">        <span class="keyword">const</span> std::function&lt;<span class="keywordtype">void</span>(<span class="keyword">const</span> std::shared_ptr&lt;Request&gt;&amp; req, <span class="keyword">const</span> std::shared_ptr&lt;Response&gt;&amp; res, Next&amp; next)&gt;&amp; lambda)<span class="keyword"> const </span>{  \</div>
+<div class="line">        <span class="keywordflow">return</span> rootRoute-&gt;METHOD(lambda);                                                                                                  \</div>
 <div class="line">    }                                                                                                                                      \</div>
 <div class="line">    Route&amp; Router::METHOD(<span class="keyword">const</span> std::string&amp; relativeMountPath,                                                                            \</div>
-<div class="line">                          <span class="keyword">const</span> std::function&lt;<span class="keywordtype">void</span>(Request &amp; req, Response &amp; res, Next &amp; next)&gt;&amp; lambda)<span class="keyword"> const </span>{                           \</div>
+<div class="line">                          <span class="keyword">const</span> std::function&lt;<span class="keywordtype">void</span>(<span class="keyword">const</span> std::shared_ptr&lt;Request&gt;&amp; req, <span class="keyword">const</span> std::shared_ptr&lt;Response&gt;&amp; res)&gt;&amp; lambda)    \</div>
+<div class="line">        <span class="keyword">const</span> {                                                                                                                            \</div>
 <div class="line">        <span class="keywordflow">return</span> rootRoute-&gt;METHOD(relativeMountPath, lambda);                                                                               \</div>
 <div class="line">    }                                                                                                                                      \</div>
-<div class="line">    Route&amp; Router::METHOD(<span class="keyword">const</span> std::function&lt;<span class="keywordtype">void</span>(Request &amp; req, Response &amp; res, Next &amp; next)&gt;&amp; lambda)<span class="keyword"> const </span>{                           \</div>
-<div class="line">        <span class="keywordflow">return</span> rootRoute-&gt;METHOD(lambda);                                                                                                  \</div>
-<div class="line">    }                                                                                                                                      \</div>
-<div class="line">    Route&amp; Router::METHOD(<span class="keyword">const</span> std::string&amp; relativeMountPath, <span class="keyword">const</span> std::function&lt;<span class="keywordtype">void</span>(Request &amp; req, Response &amp; res)&gt;&amp; lambda)<span class="keyword"> const </span>{  \</div>
-<div class="line">        <span class="keywordflow">return</span> rootRoute-&gt;METHOD(relativeMountPath, lambda);                                                                               \</div>
-<div class="line">    }                                                                                                                                      \</div>
-<div class="line">    Route&amp; Router::METHOD(<span class="keyword">const</span> std::function&lt;<span class="keywordtype">void</span>(Request &amp; req, Response &amp; res)&gt;&amp; lambda)<span class="keyword"> const </span>{                                        \</div>
+<div class="line">    Route&amp; Router::METHOD(<span class="keyword">const</span> std::function&lt;<span class="keywordtype">void</span>(<span class="keyword">const</span> std::shared_ptr&lt;Request&gt;&amp; req, <span class="keyword">const</span> std::shared_ptr&lt;Response&gt;&amp; res)&gt;&amp; lambda)    \</div>
+<div class="line">        <span class="keyword">const</span> {                                                                                                                            \</div>
 <div class="line">        <span class="keywordflow">return</span> rootRoute-&gt;METHOD(lambda);                                                                                                  \</div>
 <div class="line">    }</div>
-<div class="ttc" id="atestregex_8cpp_html_ab024e3c77aeb1487da4b33877cdfc1fb"><div class="ttname"><a href="testregex_8cpp.html#ab024e3c77aeb1487da4b33877cdfc1fb">router</a></div><div class="ttdeci">Router router(database::mariadb::MariaDBClient &amp;db)</div><div class="ttdef"><b>Definition</b> <a href="testregex_8cpp_source.html#l00047">testregex.cpp:47</a></div></div>
 </div><!-- fragment -->
 <p class="definition">Definition at line <a class="el" href="Router_8cpp_source.html#l00026">26</a> of file <a class="el" href="Router_8cpp_source.html">Router.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   27</span>                                                    {                                                                                    \</div>
-<div class="line"><span class="lineno">   28</span>        <span class="keywordflow">return</span> rootRoute-&gt;METHOD(*<a class="code hl_function" href="testregex_8cpp.html#ab024e3c77aeb1487da4b33877cdfc1fb">router</a>.rootRoute.get());                                                                                 \</div>
+<div class="line"><span class="lineno">   28</span>        <span class="keywordflow">return</span> rootRoute-&gt;METHOD(*router.rootRoute.get());                                                                                 \</div>
 <div class="line"><span class="lineno">   29</span>    }                                                                                                                                      \</div>
-<div class="line"><span class="lineno">   30</span>    Route&amp; Router::METHOD(<span class="keyword">const</span> std::string&amp; relativeMountPath, <span class="keyword">const</span> Router&amp; <a class="code hl_function" href="testregex_8cpp.html#ab024e3c77aeb1487da4b33877cdfc1fb">router</a>)<span class="keyword"> const </span>{                                              \</div>
-<div class="line"><span class="lineno">   31</span>        <span class="keywordflow">return</span> rootRoute-&gt;METHOD(relativeMountPath, *<a class="code hl_function" href="testregex_8cpp.html#ab024e3c77aeb1487da4b33877cdfc1fb">router</a>.rootRoute.get());                                                              \</div>
+<div class="line"><span class="lineno">   30</span>    Route&amp; Router::METHOD(<span class="keyword">const</span> std::string&amp; relativeMountPath, <span class="keyword">const</span> Router&amp; router)<span class="keyword"> const </span>{                                              \</div>
+<div class="line"><span class="lineno">   31</span>        <span class="keywordflow">return</span> rootRoute-&gt;METHOD(relativeMountPath, *router.rootRoute.get());                                                              \</div>
 <div class="line"><span class="lineno">   32</span>    }                                                                                                                                      \</div>
-<div class="line"><span class="lineno">   33</span>    Route&amp; Router::METHOD(<span class="keyword">const</span> std::string&amp; relativeMountPath,                                                                            \</div>
-<div class="line"><span class="lineno">   34</span>                          <span class="keyword">const</span> std::function&lt;<span class="keywordtype">void</span>(Request &amp; req, Response &amp; res, Next &amp; next)&gt;&amp; lambda)<span class="keyword"> const </span>{                           \</div>
-<div class="line"><span class="lineno">   35</span>        <span class="keywordflow">return</span> rootRoute-&gt;METHOD(relativeMountPath, lambda);                                                                               \</div>
-<div class="line"><span class="lineno">   36</span>    }                                                                                                                                      \</div>
-<div class="line"><span class="lineno">   37</span>    Route&amp; Router::METHOD(<span class="keyword">const</span> std::function&lt;<span class="keywordtype">void</span>(Request &amp; req, Response &amp; res, Next &amp; next)&gt;&amp; lambda)<span class="keyword"> const </span>{                           \</div>
-<div class="line"><span class="lineno">   38</span>        <span class="keywordflow">return</span> rootRoute-&gt;METHOD(lambda);                                                                                                  \</div>
-<div class="line"><span class="lineno">   39</span>    }                                                                                                                                      \</div>
-<div class="line"><span class="lineno">   40</span>    Route&amp; Router::METHOD(<span class="keyword">const</span> std::string&amp; relativeMountPath, <span class="keyword">const</span> std::function&lt;<span class="keywordtype">void</span>(Request &amp; req, Response &amp; res)&gt;&amp; lambda)<span class="keyword"> const </span>{  \</div>
-<div class="line"><span class="lineno">   41</span>        <span class="keywordflow">return</span> rootRoute-&gt;METHOD(relativeMountPath, lambda);                                                                               \</div>
-<div class="line"><span class="lineno">   42</span>    }                                                                                                                                      \</div>
-<div class="line"><span class="lineno">   43</span>    Route&amp; Router::METHOD(<span class="keyword">const</span> std::function&lt;<span class="keywordtype">void</span>(Request &amp; req, Response &amp; res)&gt;&amp; lambda)<span class="keyword"> const </span>{                                        \</div>
-<div class="line"><span class="lineno">   44</span>        <span class="keywordflow">return</span> rootRoute-&gt;METHOD(lambda);                                                                                                  \</div>
-<div class="line"><span class="lineno">   45</span>    }</div>
+<div class="line"><span class="lineno">   33</span>    Route&amp; Router::METHOD(                                                                                                                 \</div>
+<div class="line"><span class="lineno">   34</span>        <span class="keyword">const</span> std::string&amp; relativeMountPath,                                                                                              \</div>
+<div class="line"><span class="lineno">   35</span>        <span class="keyword">const</span> std::function&lt;<span class="keywordtype">void</span>(<span class="keyword">const</span> std::shared_ptr&lt;Request&gt;&amp; req, <span class="keyword">const</span> std::shared_ptr&lt;Response&gt;&amp; res, Next&amp; next)&gt;&amp; lambda)<span class="keyword"> const </span>{  \</div>
+<div class="line"><span class="lineno">   36</span>        <span class="keywordflow">return</span> rootRoute-&gt;METHOD(relativeMountPath, lambda);                                                                               \</div>
+<div class="line"><span class="lineno">   37</span>    }                                                                                                                                      \</div>
+<div class="line"><span class="lineno">   38</span>    Route&amp; Router::METHOD(                                                                                                                 \</div>
+<div class="line"><span class="lineno">   39</span>        <span class="keyword">const</span> std::function&lt;<span class="keywordtype">void</span>(<span class="keyword">const</span> std::shared_ptr&lt;Request&gt;&amp; req, <span class="keyword">const</span> std::shared_ptr&lt;Response&gt;&amp; res, Next&amp; next)&gt;&amp; lambda)<span class="keyword"> const </span>{  \</div>
+<div class="line"><span class="lineno">   40</span>        <span class="keywordflow">return</span> rootRoute-&gt;METHOD(lambda);                                                                                                  \</div>
+<div class="line"><span class="lineno">   41</span>    }                                                                                                                                      \</div>
+<div class="line"><span class="lineno">   42</span>    Route&amp; Router::METHOD(<span class="keyword">const</span> std::string&amp; relativeMountPath,                                                                            \</div>
+<div class="line"><span class="lineno">   43</span>                          <span class="keyword">const</span> std::function&lt;<span class="keywordtype">void</span>(<span class="keyword">const</span> std::shared_ptr&lt;Request&gt;&amp; req, <span class="keyword">const</span> std::shared_ptr&lt;Response&gt;&amp; res)&gt;&amp; lambda)    \</div>
+<div class="line"><span class="lineno">   44</span>        <span class="keyword">const</span> {                                                                                                                            \</div>
+<div class="line"><span class="lineno">   45</span>        <span class="keywordflow">return</span> rootRoute-&gt;METHOD(relativeMountPath, lambda);                                                                               \</div>
+<div class="line"><span class="lineno">   46</span>    }                                                                                                                                      \</div>
+<div class="line"><span class="lineno">   47</span>    Route&amp; Router::METHOD(<span class="keyword">const</span> std::function&lt;<span class="keywordtype">void</span>(<span class="keyword">const</span> std::shared_ptr&lt;Request&gt;&amp; req, <span class="keyword">const</span> std::shared_ptr&lt;Response&gt;&amp; res)&gt;&amp; lambda)    \</div>
+<div class="line"><span class="lineno">   48</span>        <span class="keyword">const</span> {                                                                                                                            \</div>
+<div class="line"><span class="lineno">   49</span>        <span class="keywordflow">return</span> rootRoute-&gt;METHOD(lambda);                                                                                                  \</div>
+<div class="line"><span class="lineno">   50</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -190,7 +199,7 @@ Macros</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_e2b20abddc1d75e9fa824bc5544f9c72.html">express</a></li><li class="navelem"><a class="el" href="Router_8cpp.html">Router.cpp</a></li>
-    <li class="footer">Generated on Sun Jan 21 2024 23:58:09 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Fri Feb 23 2024 10:00:57 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

@@ -7,5 +7,5 @@ var classexpress_1_1Dispatcher =
     [ "dispatchNext", "classexpress_1_1Dispatcher.html#a8b5e4f0eb3d02c5f8c5452980a8845c2", null ],
     [ "operator=", "classexpress_1_1Dispatcher.html#a2aa3048879818882660f3735d883dab6", null ],
     [ "Route", "classexpress_1_1Dispatcher.html#a82eb8d8152124f42f8bad8770270f4fc", null ],
-    [ "next", "classexpress_1_1Dispatcher.html#afb95ef17f1ff079e9f8e960f4b84e8af", null ]
+    [ "nextRoute", "classexpress_1_1Dispatcher.html#a396a6e7c45153985e900ca8f2b526b9f", null ]
 ];

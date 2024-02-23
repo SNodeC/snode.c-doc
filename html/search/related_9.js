@@ -1,6 +1,8 @@
 var searchData=
 [
-  ['requestcontextbase_0',['RequestContextBase',['../classweb_1_1http_1_1server_1_1SocketContext.html#a10a0573951cc6cf93a467a695a51aad0',1,'web::http::server::SocketContext']]],
-  ['rootroute_1',['rootroute',['../classexpress_1_1Router.html#adae34d50b8e74146566b05400257bcb0',1,'express::Router::RootRoute'],['../classexpress_1_1Route.html#adae34d50b8e74146566b05400257bcb0',1,'express::Route::RootRoute']]],
-  ['route_2',['route',['../classexpress_1_1Router.html#a82eb8d8152124f42f8bad8770270f4fc',1,'express::Router::Route'],['../classexpress_1_1RootRoute.html#a82eb8d8152124f42f8bad8770270f4fc',1,'express::RootRoute::Route'],['../classexpress_1_1Dispatcher.html#a82eb8d8152124f42f8bad8770270f4fc',1,'express::Dispatcher::Route']]]
+  ['requestparser_0',['RequestParser',['../classweb_1_1http_1_1server_1_1Request.html#a7e5d4b64950ddf4505834a0a088c0f3a',1,'web::http::server::Request']]],
+  ['response_1',['Response',['../classexpress_1_1Request.html#a0bb0e5a2fcd99881ef189293e209db7f',1,'express::Request']]],
+  ['responseparser_2',['ResponseParser',['../classweb_1_1http_1_1client_1_1Response.html#a1aae57ed7f20772fc4063aa3f7214674',1,'web::http::client::Response']]],
+  ['rootroute_3',['rootroute',['../classexpress_1_1Route.html#adae34d50b8e74146566b05400257bcb0',1,'express::Route::RootRoute'],['../classexpress_1_1Router.html#adae34d50b8e74146566b05400257bcb0',1,'express::Router::RootRoute']]],
+  ['route_4',['route',['../classexpress_1_1RootRoute.html#a82eb8d8152124f42f8bad8770270f4fc',1,'express::RootRoute::Route'],['../classexpress_1_1Dispatcher.html#a82eb8d8152124f42f8bad8770270f4fc',1,'express::Dispatcher::Route'],['../classexpress_1_1Router.html#a82eb8d8152124f42f8bad8770270f4fc',1,'express::Router::Route']]]
 ];

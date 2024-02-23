@@ -490,8 +490,8 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="server_2SubProtocolFactorySelector_8cpp_source.html#l00052">52</a> of file <a class="el" href="server_2SubProtocolFactorySelector_8cpp_source.html">SubProtocolFactorySelector.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   52</span>                                                                                                                   {</div>
-<div class="line"><span class="lineno">   53</span>        <span class="keyword">const</span> std::string websocketSubprotocolInstallLibraryFile = <span class="stringliteral">&quot;libsnodec-websocket-&quot;</span> + subProtocolName + <span class="stringliteral">&quot;-server.so.&quot;</span> SOVERSION;</div>
-<div class="line"><span class="lineno">   54</span>        <span class="keyword">const</span> std::string websocketSubprotocolInstallFunctionName = subProtocolName + <span class="stringliteral">&quot;ServerSubProtocolFactory&quot;</span>;</div>
+<div class="line"><span class="lineno">   53</span>        <span class="keyword">const</span> std::string websocketSubprotocolLibraryFile = <span class="stringliteral">&quot;libsnodec-websocket-&quot;</span> + subProtocolName + <span class="stringliteral">&quot;-server.so.&quot;</span> SOVERSION;</div>
+<div class="line"><span class="lineno">   54</span>        <span class="keyword">const</span> std::string websocketSubprotocolFunctionName = subProtocolName + <span class="stringliteral">&quot;ServerSubProtocolFactory&quot;</span>;</div>
 <div class="line"><span class="lineno">   55</span> </div>
 <div class="line"><span class="lineno">   56</span>        std::string websocketSubprotocolInstallLibdir = WEBSOCKET_SUBPROTOCO_INSTALL_LIBDIR;</div>
 <div class="line"><span class="lineno">   57</span> </div>
@@ -507,12 +507,12 @@ Here is the call graph for this function:</div>
 <div class="line"><span class="lineno">   67</span>        <span class="keywordflow">if</span> (std::filesystem::is_directory(websocketSubprotocolInstallLibdir + <span class="stringliteral">&quot;/&quot;</span> + <a class="code hl_function" href="classutils_1_1Config.html#ab85f6c9403162ed99bd1a32240df4d09">utils::Config::getApplicationName</a>())) {</div>
 <div class="line"><span class="lineno">   68</span>            subProtocolFactory = <a class="code hl_function" href="classweb_1_1websocket_1_1SubProtocolFactorySelector.html#ac9b112b29b013f7f5c3ba4bc6573508c">Super::load</a>(subProtocolName,</div>
 <div class="line"><span class="lineno">   69</span>                                             websocketSubprotocolInstallLibdir + <span class="stringliteral">&quot;/&quot;</span> + <a class="code hl_function" href="classutils_1_1Config.html#ab85f6c9403162ed99bd1a32240df4d09">utils::Config::getApplicationName</a>() + <span class="stringliteral">&quot;/&quot;</span> +</div>
-<div class="line"><span class="lineno">   70</span>                                                 websocketSubprotocolInstallLibraryFile,</div>
-<div class="line"><span class="lineno">   71</span>                                             websocketSubprotocolInstallFunctionName);</div>
+<div class="line"><span class="lineno">   70</span>                                                 websocketSubprotocolLibraryFile,</div>
+<div class="line"><span class="lineno">   71</span>                                             websocketSubprotocolFunctionName);</div>
 <div class="line"><span class="lineno">   72</span>        } <span class="keywordflow">else</span> {</div>
 <div class="line"><span class="lineno">   73</span>            subProtocolFactory = <a class="code hl_function" href="classweb_1_1websocket_1_1SubProtocolFactorySelector.html#ac9b112b29b013f7f5c3ba4bc6573508c">Super::load</a>(subProtocolName,</div>
-<div class="line"><span class="lineno">   74</span>                                             websocketSubprotocolInstallLibdir + <span class="stringliteral">&quot;/&quot;</span> + websocketSubprotocolInstallLibraryFile,</div>
-<div class="line"><span class="lineno">   75</span>                                             websocketSubprotocolInstallFunctionName);</div>
+<div class="line"><span class="lineno">   74</span>                                             websocketSubprotocolInstallLibdir + <span class="stringliteral">&quot;/&quot;</span> + websocketSubprotocolLibraryFile,</div>
+<div class="line"><span class="lineno">   75</span>                                             websocketSubprotocolFunctionName);</div>
 <div class="line"><span class="lineno">   76</span>        }</div>
 <div class="line"><span class="lineno">   77</span> </div>
 <div class="line"><span class="lineno">   78</span>        <span class="keywordflow">return</span> subProtocolFactory;</div>
@@ -851,7 +851,7 @@ Here is the call graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceweb.html">web</a></li><li class="navelem"><a class="el" href="namespaceweb_1_1websocket.html">websocket</a></li><li class="navelem"><a class="el" href="namespaceweb_1_1websocket_1_1server.html">server</a></li><li class="navelem"><a class="el" href="classweb_1_1websocket_1_1server_1_1SubProtocolFactorySelector.html">SubProtocolFactorySelector</a></li>
-    <li class="footer">Generated on Sun Jan 21 2024 23:58:11 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Fri Feb 23 2024 10:00:59 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

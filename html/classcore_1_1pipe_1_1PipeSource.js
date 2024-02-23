@@ -3,6 +3,7 @@ var classcore_1_1pipe_1_1PipeSource =
     [ "PipeSource", "classcore_1_1pipe_1_1PipeSource.html#af4140a78974106220882dcfc4cf1d839", null ],
     [ "PipeSource", "classcore_1_1pipe_1_1PipeSource.html#a6804eb1f9c27124f36a2bf37454af2c7", null ],
     [ "~PipeSource", "classcore_1_1pipe_1_1PipeSource.html#a3ce6372cca5ef1c1a822507a74246fd0", null ],
+    [ "atNextTick", "classcore_1_1pipe_1_1PipeSource.html#a2e8d915eca53e827be4f493a63ae058d", null ],
     [ "checkTimeout", "classcore_1_1pipe_1_1PipeSource.html#ae04e87c4f44979a04d3839759a63220a", null ],
     [ "destruct", "classcore_1_1pipe_1_1PipeSource.html#a0af009a224c3a4020ed30f5586c0394c", null ],
     [ "disable", "classcore_1_1pipe_1_1PipeSource.html#a4ab422ce6622a29cee38a0108ee6ccc1", null ],
