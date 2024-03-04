@@ -11,7 +11,7 @@ var classiot_1_1mqtt_1_1MqttContext =
     [ "onReceivedFromPeer", "classiot_1_1mqtt_1_1MqttContext.html#a614ee4495a17d7f004355578f73cc29c", null ],
     [ "onSignal", "classiot_1_1mqtt_1_1MqttContext.html#a4b3add04a435f82bc1b8599adce9e966", null ],
     [ "operator=", "classiot_1_1mqtt_1_1MqttContext.html#aa141a8bedcf4ad0d3fcb6eaaa1382f48", null ],
-    [ "recv", "classiot_1_1mqtt_1_1MqttContext.html#abfe11050d024d7e3d2a5c83771b5d760", null ],
-    [ "send", "classiot_1_1mqtt_1_1MqttContext.html#a26a6997aff68a55407e12cf3269ab28f", null ],
+    [ "recv", "classiot_1_1mqtt_1_1MqttContext.html#a319ea16029337ef5b2f08b51d5b26d1a", null ],
+    [ "send", "classiot_1_1mqtt_1_1MqttContext.html#ab674b33f357f43982863a67c0429dd5b", null ],
     [ "mqtt", "classiot_1_1mqtt_1_1MqttContext.html#aa284836e39e2cce1603f318d52b25d11", null ]
 ];

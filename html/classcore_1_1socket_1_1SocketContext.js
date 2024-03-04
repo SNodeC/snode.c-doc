@@ -11,8 +11,8 @@ var classcore_1_1socket_1_1SocketContext =
     [ "onWriteError", "classcore_1_1socket_1_1SocketContext.html#a7ea5556d3111d203134f31035a8e11c9", null ],
     [ "operator=", "classcore_1_1socket_1_1SocketContext.html#acbeb853d6a71e0dcedcba06727b9e7ab", null ],
     [ "operator=", "classcore_1_1socket_1_1SocketContext.html#af8aa9bad48f47609ce372e24bff6900a", null ],
-    [ "readFromPeer", "classcore_1_1socket_1_1SocketContext.html#a525d1843b190b0c6f10e2f095a86a341", null ],
-    [ "sendToPeer", "classcore_1_1socket_1_1SocketContext.html#a22f19b6279af079ad97b71eb08427b06", null ],
+    [ "readFromPeer", "classcore_1_1socket_1_1SocketContext.html#a3b9e77659efd9e86e15dbf0a65824a42", null ],
+    [ "sendToPeer", "classcore_1_1socket_1_1SocketContext.html#ad483b080be706b99648da684b74cdcd9", null ],
     [ "sendToPeer", "classcore_1_1socket_1_1SocketContext.html#a171ec3bb2190630276ff2e6cb5fd9ccf", null ],
     [ "setTimeout", "classcore_1_1socket_1_1SocketContext.html#a4d263707531739a36a95774481bec0f0", null ]
 ];

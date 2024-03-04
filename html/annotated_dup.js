@@ -523,6 +523,11 @@ var annotated_dup =
           [ "SocketContextUpgradeFactory", "classweb_1_1http_1_1client_1_1SocketContextUpgradeFactory.html", "classweb_1_1http_1_1client_1_1SocketContextUpgradeFactory" ],
           [ "SocketContextUpgradeFactorySelector", "classweb_1_1http_1_1client_1_1SocketContextUpgradeFactorySelector.html", "classweb_1_1http_1_1client_1_1SocketContextUpgradeFactorySelector" ]
         ] ],
+        [ "decoder", "namespaceweb_1_1http_1_1decoder.html", [
+          [ "Chunked", "classweb_1_1http_1_1decoder_1_1Chunked.html", "classweb_1_1http_1_1decoder_1_1Chunked" ],
+          [ "HTTP10Response", "classweb_1_1http_1_1decoder_1_1HTTP10Response.html", "classweb_1_1http_1_1decoder_1_1HTTP10Response" ],
+          [ "Identity", "classweb_1_1http_1_1decoder_1_1Identity.html", "classweb_1_1http_1_1decoder_1_1Identity" ]
+        ] ],
         [ "server", "namespaceweb_1_1http_1_1server.html", [
           [ "Request", "classweb_1_1http_1_1server_1_1Request.html", "classweb_1_1http_1_1server_1_1Request" ],
           [ "RequestParser", "classweb_1_1http_1_1server_1_1RequestParser.html", "classweb_1_1http_1_1server_1_1RequestParser" ],
@@ -533,6 +538,9 @@ var annotated_dup =
           [ "SocketContextUpgradeFactory", "classweb_1_1http_1_1server_1_1SocketContextUpgradeFactory.html", "classweb_1_1http_1_1server_1_1SocketContextUpgradeFactory" ],
           [ "SocketContextUpgradeFactorySelector", "classweb_1_1http_1_1server_1_1SocketContextUpgradeFactorySelector.html", "classweb_1_1http_1_1server_1_1SocketContextUpgradeFactorySelector" ]
         ] ],
+        [ "ciLess", "structweb_1_1http_1_1ciLess.html", "structweb_1_1http_1_1ciLess" ],
+        [ "CiStringMap", "classweb_1_1http_1_1CiStringMap.html", null ],
+        [ "ContentDecoder", "classweb_1_1http_1_1ContentDecoder.html", "classweb_1_1http_1_1ContentDecoder" ],
         [ "CookieOptions", "classweb_1_1http_1_1CookieOptions.html", "classweb_1_1http_1_1CookieOptions" ],
         [ "MimeTypes", "classweb_1_1http_1_1MimeTypes.html", "classweb_1_1http_1_1MimeTypes" ],
         [ "Parser", "classweb_1_1http_1_1Parser.html", "classweb_1_1http_1_1Parser" ],

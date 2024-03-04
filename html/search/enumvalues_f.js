@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['text_0',['TEXT',['../classweb_1_1websocket_1_1SubProtocolContext.html#abf18d0b53484f49844a1315b9730e511a0aa452ab2256e501457b18f9937bd7c0',1,'web::websocket::SubProtocolContext']]],
-  ['trace_1',['TRACE',['../namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6',1,'core']]]
+  ['server_0',['server',['../classnet_1_1config_1_1ConfigInstance.html#a21ca5568aa45bd1bb91d2fa79687a9e2a3d27c95bfdbea691b250894d96852844',1,'net::config::ConfigInstance::SERVER'],['../classweb_1_1websocket_1_1SubProtocolFactorySelector.html#aaa9000a982c5189a90dc1f14074a90bfa3d27c95bfdbea691b250894d96852844',1,'web::websocket::SubProtocolFactorySelector::SERVER'],['../classweb_1_1websocket_1_1SocketContextUpgrade.html#aa97f7fa1f915b6090b7c7b3dabf8726ba3d27c95bfdbea691b250894d96852844',1,'web::websocket::SocketContextUpgrade::SERVER']]],
+  ['stopping_1',['STOPPING',['../namespacecore.html#a6613a3d81c1d25590b1cd31540d08815af6cdb3c6710b50ec65ee07f740847e10',1,'core']]],
+  ['success_2',['SUCCESS',['../namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749ad0749aaba8b833466dfcbb0428e4f89c',1,'core']]]
 ];

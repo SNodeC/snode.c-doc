@@ -1,8 +1,10 @@
 var classweb_1_1http_1_1client_1_1commands_1_1SendFragmentCommand =
 [
-    [ "SendFragmentCommand", "classweb_1_1http_1_1client_1_1commands_1_1SendFragmentCommand.html#a73598468bb817bca473a8dbe066b2cda", null ],
-    [ "~SendFragmentCommand", "classweb_1_1http_1_1client_1_1commands_1_1SendFragmentCommand.html#a9388233bd97fc27534da6c89abf0ba20", null ],
-    [ "execute", "classweb_1_1http_1_1client_1_1commands_1_1SendFragmentCommand.html#a5560bbff35da262781cce9171c67e33b", null ],
-    [ "junk", "classweb_1_1http_1_1client_1_1commands_1_1SendFragmentCommand.html#a6f5b899000f64089d988489acdd922da", null ],
-    [ "junkLen", "classweb_1_1http_1_1client_1_1commands_1_1SendFragmentCommand.html#a76dfb0adbbda935b57d0f54887c71209", null ]
+    [ "SendFragmentCommand", "classweb_1_1http_1_1client_1_1commands_1_1SendFragmentCommand.html#aefd08732703b15c8e9071b10ba4f2caf", null ],
+    [ "~SendFragmentCommand", "classweb_1_1http_1_1client_1_1commands_1_1SendFragmentCommand.html#a1b61b48815e65c47d872f0e9e6c7c833", null ],
+    [ "execute", "classweb_1_1http_1_1client_1_1commands_1_1SendFragmentCommand.html#a0e4c2b8f862cab4f7a4d3f5c90379714", null ],
+    [ "getError", "classweb_1_1http_1_1client_1_1commands_1_1SendFragmentCommand.html#a996ea2745b48ee690b40babe54c142c2", null ],
+    [ "chunk", "classweb_1_1http_1_1client_1_1commands_1_1SendFragmentCommand.html#a0da63f0322cfbf3c68c2ae2c4b442c09", null ],
+    [ "chunkLen", "classweb_1_1http_1_1client_1_1commands_1_1SendFragmentCommand.html#acbe8ee24e59b3419f6e7f5a6e6eb8fdc", null ],
+    [ "error", "classweb_1_1http_1_1client_1_1commands_1_1SendFragmentCommand.html#a7cfd1e7741258376bd2da1e2043d3a47", null ]
 ];

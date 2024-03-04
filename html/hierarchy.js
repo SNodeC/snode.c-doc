@@ -6,6 +6,8 @@ var hierarchy =
     ] ],
     [ "utils::AttributeProxy< Attribute >", "classutils_1_1AttributeProxy.html", null ],
     [ "iot::mqtt::server::broker::Broker", "classiot_1_1mqtt_1_1server_1_1broker_1_1Broker.html", null ],
+    [ "web::http::decoder::Chunked::Chunk", "classweb_1_1http_1_1decoder_1_1Chunked_1_1Chunk.html", null ],
+    [ "web::http::ciLess", "structweb_1_1http_1_1ciLess.html", null ],
     [ "utils::Config", "classutils_1_1Config.html", null ],
     [ "net::in6::config::ConfigAddress", null, [
       [ "net::config::stream::ConfigSocketClient< net::in6::config::ConfigAddress >", "classnet_1_1config_1_1stream_1_1ConfigSocketClient.html", [
@@ -237,6 +239,11 @@ var hierarchy =
       [ "net::config::stream::legacy::ConfigSocketServer< ConfigSocketServerBaseT >", "classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketServer.html", null ],
       [ "net::config::stream::tls::ConfigSocketServer< ConfigSocketServerBaseT >", "classnet_1_1config_1_1stream_1_1tls_1_1ConfigSocketServer.html", null ]
     ] ],
+    [ "web::http::ContentDecoder", "classweb_1_1http_1_1ContentDecoder.html", [
+      [ "web::http::decoder::Chunked", "classweb_1_1http_1_1decoder_1_1Chunked.html", null ],
+      [ "web::http::decoder::HTTP10Response", "classweb_1_1http_1_1decoder_1_1HTTP10Response.html", null ],
+      [ "web::http::decoder::Identity", "classweb_1_1http_1_1decoder_1_1Identity.html", null ]
+    ] ],
     [ "express::Controller", "classexpress_1_1Controller.html", null ],
     [ "iot::mqtt::ControlPacket", "classiot_1_1mqtt_1_1ControlPacket.html", [
       [ "iot::mqtt::packets::Connack", "classiot_1_1mqtt_1_1packets_1_1Connack.html", [
@@ -436,6 +443,11 @@ var hierarchy =
     [ "net::in::SocketAddress::Hints", "structnet_1_1in_1_1SocketAddress_1_1Hints.html", null ],
     [ "core::DynamicLoader::Library", "structcore_1_1DynamicLoader_1_1Library.html", null ],
     [ "logger::Logger", "classlogger_1_1Logger.html", null ],
+    [ "std::map< K, T >", null, [
+      [ "web::http::CiStringMap< std::string >", "classweb_1_1http_1_1CiStringMap.html", null ],
+      [ "web::http::CiStringMap< web::http::CookieOptions >", "classweb_1_1http_1_1CiStringMap.html", null ],
+      [ "web::http::CiStringMap< ValueT >", "classweb_1_1http_1_1CiStringMap.html", null ]
+    ] ],
     [ "database::mariadb::MariaDBClientASyncAPI", "classdatabase_1_1mariadb_1_1MariaDBClientASyncAPI.html", [
       [ "database::mariadb::MariaDBClient", "classdatabase_1_1mariadb_1_1MariaDBClient.html", null ],
       [ "database::mariadb::MariaDBCommandSequence", "classdatabase_1_1mariadb_1_1MariaDBCommandSequence.html", null ]

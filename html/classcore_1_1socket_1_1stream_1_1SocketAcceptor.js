@@ -48,6 +48,7 @@ var classcore_1_1socket_1_1stream_1_1SocketAcceptor =
     [ "eventCounter", "classcore_1_1socket_1_1stream_1_1SocketAcceptor.html#acc69d093acc72b3d6963ae7f35f12ec9", null ],
     [ "initialTimeout", "classcore_1_1socket_1_1stream_1_1SocketAcceptor.html#a137779aa6ae35d8bb2c57871d280fea8", null ],
     [ "lastTriggered", "classcore_1_1socket_1_1stream_1_1SocketAcceptor.html#a026ce37e5bf35f3a3dc91dcbb382d926", null ],
+    [ "localAddress", "classcore_1_1socket_1_1stream_1_1SocketAcceptor.html#a5456ff66bc0888109fc16beac6e182f9", null ],
     [ "maxInactivity", "classcore_1_1socket_1_1stream_1_1SocketAcceptor.html#a1f1288f7ed5140d353e24b611a942618", null ],
     [ "observationCounter", "classcore_1_1socket_1_1stream_1_1SocketAcceptor.html#aa68f3199c5333c954a69f5f4cc7e13dd", null ],
     [ "observedFd", "classcore_1_1socket_1_1stream_1_1SocketAcceptor.html#a2aa3074ba3125d5045d754eaca0d8ffe", null ],

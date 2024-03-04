@@ -24,7 +24,7 @@ var classcore_1_1pipe_1_1PipeSink =
     [ "resume", "classcore_1_1pipe_1_1PipeSink.html#afa983ac6b0ba8f28ce4c0fc16cd914f8", null ],
     [ "setDisabled", "classcore_1_1pipe_1_1PipeSink.html#a53b16eb14da654bfaf9a7e28e3024ff1", null ],
     [ "setEnabled", "classcore_1_1pipe_1_1PipeSink.html#a7d590ffb163531deb55223472bfc8400", null ],
-    [ "setOnData", "classcore_1_1pipe_1_1PipeSink.html#a1889c51e90b8cd55c691d28d318bee57", null ],
+    [ "setOnData", "classcore_1_1pipe_1_1PipeSink.html#a3955f271eb347831cbd5985912648ba2", null ],
     [ "setOnEof", "classcore_1_1pipe_1_1PipeSink.html#a9943a3cb786f7726f6ae7d78666cac6d", null ],
     [ "setOnError", "classcore_1_1pipe_1_1PipeSink.html#a75cb48a5d1b35e6d0410278fad940a2a", null ],
     [ "setTimeout", "classcore_1_1pipe_1_1PipeSink.html#ab7891fad490ecab4a5bd98dc9b6f65b2", null ],
@@ -44,7 +44,7 @@ var classcore_1_1pipe_1_1PipeSink =
     [ "maxInactivity", "classcore_1_1pipe_1_1PipeSink.html#a1f1288f7ed5140d353e24b611a942618", null ],
     [ "observationCounter", "classcore_1_1pipe_1_1PipeSink.html#aa68f3199c5333c954a69f5f4cc7e13dd", null ],
     [ "observedFd", "classcore_1_1pipe_1_1PipeSink.html#a2aa3074ba3125d5045d754eaca0d8ffe", null ],
-    [ "onData", "classcore_1_1pipe_1_1PipeSink.html#aad79fff984b6d2a610c3708e54923fbd", null ],
+    [ "onData", "classcore_1_1pipe_1_1PipeSink.html#a55a0bdedf2b5a9dc16dee46cae2f63bb", null ],
     [ "onEof", "classcore_1_1pipe_1_1PipeSink.html#a5b4b3948290c96709b187114addd3820", null ],
     [ "onError", "classcore_1_1pipe_1_1PipeSink.html#af0e2ee8e24401066c472b0335dacda48", null ],
     [ "suspended", "classcore_1_1pipe_1_1PipeSink.html#a507b153285b7a1a02ba072305f57069c", null ]

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['max_5fcontent_5fjunk_5flen_0',['MAX_CONTENT_JUNK_LEN',['../Parser_8cpp.html#a0ad27d7ec7120fa53f22c232518a9397',1,'Parser.cpp']]],
+  ['max_5fcontent_5fchunk_5flen_0',['MAX_CONTENT_CHUNK_LEN',['../HTTP10Response_8cpp.html#ac4a5fb5f683de580aaf239bc09d96e65',1,'HTTP10Response.cpp']]],
   ['max_5foutofband_5finactivity_1',['MAX_OUTOFBAND_INACTIVITY',['../ExceptionalConditionEventReceiver_8h.html#a31a3a0c980be8522487e08efb548376a',1,'ExceptionalConditionEventReceiver.h']]],
   ['max_5fpayload_5fjunk_5flen_2',['MAX_PAYLOAD_JUNK_LEN',['../Receiver_8h.html#a7427dfaf41448656924afb2886b36637',1,'Receiver.h']]],
   ['max_5fread_5fjunksize_3',['MAX_READ_JUNKSIZE',['../PipeSink_8cpp.html#ad64da5cbb2a93af7c8ac5419d7d0c5cd',1,'PipeSink.cpp']]],

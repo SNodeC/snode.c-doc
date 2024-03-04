@@ -21,7 +21,7 @@ var classcore_1_1pipe_1_1PipeSource =
     [ "operator=", "classcore_1_1pipe_1_1PipeSource.html#a9157daf981fb844456734f137004e32f", null ],
     [ "relax", "classcore_1_1pipe_1_1PipeSource.html#a748159baa69a639df53ac5675ae8425f", null ],
     [ "resume", "classcore_1_1pipe_1_1PipeSource.html#afa983ac6b0ba8f28ce4c0fc16cd914f8", null ],
-    [ "send", "classcore_1_1pipe_1_1PipeSource.html#afc3c43fb43ed99f9ca7d68e9fba9dc1b", null ],
+    [ "send", "classcore_1_1pipe_1_1PipeSource.html#a2ba3cc78619bdac77b168df677bf9f6f", null ],
     [ "send", "classcore_1_1pipe_1_1PipeSource.html#a402476cf32128425a28224c8e91a4978", null ],
     [ "setDisabled", "classcore_1_1pipe_1_1PipeSource.html#a53b16eb14da654bfaf9a7e28e3024ff1", null ],
     [ "setEnabled", "classcore_1_1pipe_1_1PipeSource.html#a7d590ffb163531deb55223472bfc8400", null ],
