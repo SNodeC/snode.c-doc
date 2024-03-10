@@ -433,6 +433,7 @@ var hierarchy =
       ] ]
     ] ],
     [ "core::select::FdSet", "classcore_1_1select_1_1FdSet.html", null ],
+    [ "web::http::decoder::Fields", "classweb_1_1http_1_1decoder_1_1Fields.html", null ],
     [ "utils::fixed_string< N >", "structutils_1_1fixed__string.html", null ],
     [ "iot::mqtt::FixedHeader", "classiot_1_1mqtt_1_1FixedHeader.html", null ],
     [ "CLI::Formatter", null, [

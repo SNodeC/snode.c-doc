@@ -25,7 +25,7 @@ var classcore_1_1pipe_1_1PipeSource =
     [ "send", "classcore_1_1pipe_1_1PipeSource.html#a402476cf32128425a28224c8e91a4978", null ],
     [ "setDisabled", "classcore_1_1pipe_1_1PipeSource.html#a53b16eb14da654bfaf9a7e28e3024ff1", null ],
     [ "setEnabled", "classcore_1_1pipe_1_1PipeSource.html#a7d590ffb163531deb55223472bfc8400", null ],
-    [ "setOnError", "classcore_1_1pipe_1_1PipeSource.html#ab33fd206f4f5ae55ff8626a16b28b9ea", null ],
+    [ "setOnError", "classcore_1_1pipe_1_1PipeSource.html#a6df55ff9a88cc3e8f342ec266cbfb60c", null ],
     [ "setTimeout", "classcore_1_1pipe_1_1PipeSource.html#ab7891fad490ecab4a5bd98dc9b6f65b2", null ],
     [ "signalEvent", "classcore_1_1pipe_1_1PipeSource.html#a7d8f5494a623c3baa9cf1c453befe8a0", null ],
     [ "span", "classcore_1_1pipe_1_1PipeSource.html#ad353e97a9089b2769e52f8825e4878b1", null ],

@@ -5,7 +5,7 @@ var classweb_1_1http_1_1decoder_1_1HTTP10Response =
     [ "HTTP10Response", "classweb_1_1http_1_1decoder_1_1HTTP10Response.html#a659241b04cd9b8c2ce600cd56dca29b5", null ],
     [ "~HTTP10Response", "classweb_1_1http_1_1decoder_1_1HTTP10Response.html#a023ba6f2bcc8c34d90c17da05339ef33", null ],
     [ "getContent", "classweb_1_1http_1_1decoder_1_1HTTP10Response.html#adbf14c6c888b80753369c01f6fa1f901", null ],
-    [ "isCompleted", "classweb_1_1http_1_1decoder_1_1HTTP10Response.html#a87938c095efae27c00f2719e5fc5db0d", null ],
+    [ "isComplete", "classweb_1_1http_1_1decoder_1_1HTTP10Response.html#a889a8fa6bcaae53ec47d804dc995f879", null ],
     [ "isError", "classweb_1_1http_1_1decoder_1_1HTTP10Response.html#a8bcbb930f2782618f8104e17fc258315", null ],
     [ "operator=", "classweb_1_1http_1_1decoder_1_1HTTP10Response.html#ad9ead373ab1bb17a714824a48c277d2c", null ],
     [ "operator=", "classweb_1_1http_1_1decoder_1_1HTTP10Response.html#a0e82f38f2ede2962ad4c192cf8cc518b", null ],

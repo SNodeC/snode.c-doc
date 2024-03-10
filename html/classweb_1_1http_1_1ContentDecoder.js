@@ -5,7 +5,7 @@ var classweb_1_1http_1_1ContentDecoder =
     [ "ContentDecoder", "classweb_1_1http_1_1ContentDecoder.html#a825acdc651a9c8c9479cdd7dfda1a6ab", null ],
     [ "~ContentDecoder", "classweb_1_1http_1_1ContentDecoder.html#abb69817e13d84f577b61b808e13e7a0e", null ],
     [ "getContent", "classweb_1_1http_1_1ContentDecoder.html#adbf14c6c888b80753369c01f6fa1f901", null ],
-    [ "isCompleted", "classweb_1_1http_1_1ContentDecoder.html#a87938c095efae27c00f2719e5fc5db0d", null ],
+    [ "isComplete", "classweb_1_1http_1_1ContentDecoder.html#a889a8fa6bcaae53ec47d804dc995f879", null ],
     [ "isError", "classweb_1_1http_1_1ContentDecoder.html#a8bcbb930f2782618f8104e17fc258315", null ],
     [ "operator=", "classweb_1_1http_1_1ContentDecoder.html#a47bdc45edbb6a3757fe99de38f08b7f7", null ],
     [ "operator=", "classweb_1_1http_1_1ContentDecoder.html#a19f85a7f56321d0a42c333ef0742f00e", null ],

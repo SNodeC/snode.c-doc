@@ -12,7 +12,7 @@ var classiot_1_1mqtt__fast_1_1types_1_1Binary =
     [ "getStringRaw", "classiot_1_1mqtt__fast_1_1types_1_1Binary.html#a3c695c9bf452a45ed7ee9f0334bc6440", null ],
     [ "getUint8ListRaw", "classiot_1_1mqtt__fast_1_1types_1_1Binary.html#a269f25dc0de9c32005cca71706d8d35a", null ],
     [ "getValue", "classiot_1_1mqtt__fast_1_1types_1_1Binary.html#ac7bf7f96ddc87f7cf79eda642cacbfa3", null ],
-    [ "isCompleted", "classiot_1_1mqtt__fast_1_1types_1_1Binary.html#ae8f4db583f9aec3677799ad064913cde", null ],
+    [ "isComplete", "classiot_1_1mqtt__fast_1_1types_1_1Binary.html#a5f4a122c2cb4ebed924e90817f6c681d", null ],
     [ "isError", "classiot_1_1mqtt__fast_1_1types_1_1Binary.html#acdac8394728fb7fa7fa1a78549650f82", null ],
     [ "putInt16", "classiot_1_1mqtt__fast_1_1types_1_1Binary.html#af8e71e490efa99c2387deab66fb6ad86", null ],
     [ "putInt32", "classiot_1_1mqtt__fast_1_1types_1_1Binary.html#abe55b0ffa3c529d2923c39af8d7b3d32", null ],

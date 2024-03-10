@@ -3,7 +3,7 @@ var classiot_1_1mqtt__fast_1_1types_1_1Int__1 =
     [ "Int_1", "classiot_1_1mqtt__fast_1_1types_1_1Int__1.html#afa89ede2d2ffb866af76288957997783", null ],
     [ "construct", "classiot_1_1mqtt__fast_1_1types_1_1Int__1.html#a5a33ebd1764e1b17950e427ff4f63dfd", null ],
     [ "getValue", "classiot_1_1mqtt__fast_1_1types_1_1Int__1.html#afd6320c1c89f3506648fa5fd09c6e1bc", null ],
-    [ "isCompleted", "classiot_1_1mqtt__fast_1_1types_1_1Int__1.html#ae8f4db583f9aec3677799ad064913cde", null ],
+    [ "isComplete", "classiot_1_1mqtt__fast_1_1types_1_1Int__1.html#a5f4a122c2cb4ebed924e90817f6c681d", null ],
     [ "isError", "classiot_1_1mqtt__fast_1_1types_1_1Int__1.html#acdac8394728fb7fa7fa1a78549650f82", null ],
     [ "read", "classiot_1_1mqtt__fast_1_1types_1_1Int__1.html#ae47211fba285c9b067fc316ac88b420e", null ],
     [ "reset", "classiot_1_1mqtt__fast_1_1types_1_1Int__1.html#aa0903726a950a16affad9b2a765d1a84", null ],

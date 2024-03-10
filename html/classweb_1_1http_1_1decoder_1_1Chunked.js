@@ -5,7 +5,7 @@ var classweb_1_1http_1_1decoder_1_1Chunked =
     [ "Chunked", "classweb_1_1http_1_1decoder_1_1Chunked.html#ad4d3e12fcdf1f2eba2ff0460aaf5ffea", null ],
     [ "Chunked", "classweb_1_1http_1_1decoder_1_1Chunked.html#a612a793e7f125daf561866afedeff706", null ],
     [ "getContent", "classweb_1_1http_1_1decoder_1_1Chunked.html#adbf14c6c888b80753369c01f6fa1f901", null ],
-    [ "isCompleted", "classweb_1_1http_1_1decoder_1_1Chunked.html#a87938c095efae27c00f2719e5fc5db0d", null ],
+    [ "isComplete", "classweb_1_1http_1_1decoder_1_1Chunked.html#a889a8fa6bcaae53ec47d804dc995f879", null ],
     [ "isError", "classweb_1_1http_1_1decoder_1_1Chunked.html#a8bcbb930f2782618f8104e17fc258315", null ],
     [ "operator=", "classweb_1_1http_1_1decoder_1_1Chunked.html#ac6aa825b473aa04ddf15ebe5ea908290", null ],
     [ "operator=", "classweb_1_1http_1_1decoder_1_1Chunked.html#af454a4579a8386c87fa5fed8e647628d", null ],

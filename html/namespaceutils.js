@@ -28,6 +28,7 @@ var namespaceutils =
     [ "createCommandLineTemplate", "namespaceutils.html#a1a80f43b44109216f2c37fe9bdb3dc2d", null ],
     [ "createCommandLineTemplate", "namespaceutils.html#aac7436ed2ed454cbef6765b7e381b2f7", null ],
     [ "fixed_string", "namespaceutils.html#a087c65a976bbdbf8e3978d55cf44bcf3", null ],
+    [ "hexDump", "namespaceutils.html#a3bd46aa5d1ad27cb939eda58b9ef4e67", null ],
     [ "makeApp", "namespaceutils.html#acf24bc1d3f8119c40b2b0e715e99c428", null ],
     [ "makeSectionFormatter", "namespaceutils.html#ae4dca857dbbb3a4fcaf8dd65df86d6b8", null ],
     [ "operator*", "namespaceutils.html#abbf97f2fdf33120069baf3646d96229b", null ],

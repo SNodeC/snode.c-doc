@@ -45,6 +45,8 @@ var namespaces_dup =
       [ "str_trimm", "namespacehttputils.html#aaa1e55d83548ea4ebf224d695f73c874", null ],
       [ "to_http_date", "namespacehttputils.html#a01539c1af68e4d072d3507ae44c0b02a", null ],
       [ "to_lower", "namespacehttputils.html#a4dd60a8e2472042c70e00dec22ebf927", null ],
+      [ "toString", "namespacehttputils.html#af7ff5dae5306b760dc94a3d86366b711", null ],
+      [ "toString", "namespacehttputils.html#a0bddb3cfe692a3ccb900548313a99768", null ],
       [ "url_decode", "namespacehttputils.html#a818b4991d32a494fb64a2f7cf1b25087", null ],
       [ "url_encode", "namespacehttputils.html#a386473920285bded181a38ffac8fe833", null ]
     ] ],

@@ -1,7 +1,7 @@
 var classcore_1_1pipe_1_1Sink =
 [
-    [ "Sink", "classcore_1_1pipe_1_1Sink.html#ab410f0dd5f55469f3285347f73a41c88", null ],
     [ "Sink", "classcore_1_1pipe_1_1Sink.html#a841fe7658810877fd019c847f8c5f4ac", null ],
+    [ "Sink", "classcore_1_1pipe_1_1Sink.html#a3deb210f432f85a46c35b470e7682d2d", null ],
     [ "Sink", "classcore_1_1pipe_1_1Sink.html#a7398ddb7d2300f1af8552870d3fc43f8", null ],
     [ "~Sink", "classcore_1_1pipe_1_1Sink.html#ae2dfdb6dd8dabb991b9e03dd05a616ec", null ],
     [ "disconnect", "classcore_1_1pipe_1_1Sink.html#a9a1e49e75508e894158714e823db77e8", null ],

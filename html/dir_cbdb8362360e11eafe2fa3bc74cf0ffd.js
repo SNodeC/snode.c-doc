@@ -12,6 +12,8 @@ var dir_cbdb8362360e11eafe2fa3bc74cf0ffd =
     [ "Exceptions.h", "Exceptions_8h.html", "Exceptions_8h" ],
     [ "Formatter.cpp", "Formatter_8cpp.html", null ],
     [ "Formatter.h", "Formatter_8h.html", "Formatter_8h" ],
+    [ "hexdump.cpp", "hexdump_8cpp.html", "hexdump_8cpp" ],
+    [ "hexdump.h", "hexdump_8h.html", "hexdump_8h" ],
     [ "PreserveErrno.cpp", "PreserveErrno_8cpp.html", null ],
     [ "PreserveErrno.h", "PreserveErrno_8h.html", "PreserveErrno_8h" ],
     [ "Random.cpp", "Random_8cpp.html", null ],

@@ -11,8 +11,8 @@ var classcore_1_1file_1_1FileReader =
     [ "isOpen", "classcore_1_1file_1_1FileReader.html#ad5df0b4e8ac6342cf66355ae8f2d8bd3", null ],
     [ "onEvent", "classcore_1_1file_1_1FileReader.html#a4d9266c6804d36f5bf203df026f89a0c", null ],
     [ "open", "classcore_1_1file_1_1FileReader.html#a7306f5c11029eae021ef7e8e316ecab3", null ],
-    [ "pipe", "classcore_1_1file_1_1FileReader.html#a3d688c76f674edcde9ea3790e8382db2", null ],
-    [ "pipe", "classcore_1_1file_1_1FileReader.html#a09786d4407847334fe0d9d286f4ede03", null ],
+    [ "pipe", "classcore_1_1file_1_1FileReader.html#a63fee5af8e013c9b35d38ad5656c2671", null ],
+    [ "pipe", "classcore_1_1file_1_1FileReader.html#ad1bb128733e51d68daed7217fa452b85", null ],
     [ "relax", "classcore_1_1file_1_1FileReader.html#a748159baa69a639df53ac5675ae8425f", null ],
     [ "resume", "classcore_1_1file_1_1FileReader.html#af83912ccbca743cd6c65f904171a27e9", null ],
     [ "send", "classcore_1_1file_1_1FileReader.html#a400ff14fdb42b001f6cd9ad6de306ea3", null ],
@@ -24,6 +24,7 @@ var classcore_1_1file_1_1FileReader =
     [ "fd", "classcore_1_1file_1_1FileReader.html#a359e01790fa87afb5e1b75df7904bc2d", null ],
     [ "openErrno", "classcore_1_1file_1_1FileReader.html#abafafdbae8654ea4b41d62f56a1fe4bf", null ],
     [ "pufferSize", "classcore_1_1file_1_1FileReader.html#a3aea93f6b1049bb9e1e28eb020db16a5", null ],
+    [ "running", "classcore_1_1file_1_1FileReader.html#a5860e2119f1b02f4ab3f5189f17c7e57", null ],
     [ "sink", "classcore_1_1file_1_1FileReader.html#a4d25af23c75f9ad83fc75f46be1c27cc", null ],
     [ "suspended", "classcore_1_1file_1_1FileReader.html#aeb217c305e6ce9f7d61e50d14039cc8e", null ]
 ];
