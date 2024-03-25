@@ -66,7 +66,7 @@ var searchData=
   ['netdb_2eh_63',['netdb.h',['../netdb_8h.html',1,'']]],
   ['newsession_64',['newSession',['../classiot_1_1mqtt_1_1server_1_1broker_1_1Broker.html#ae279f1495ecadb45957043e461840a1b',1,'iot::mqtt::server::broker::Broker']]],
   ['newsocketcontext_65',['newSocketContext',['../classcore_1_1socket_1_1stream_1_1SocketConnection.html#a17ddc2779f02bced3e42036891f66227',1,'core::socket::stream::SocketConnection']]],
-  ['next_66',['next',['../classexpress_1_1Controller.html#a37349835c6e195cd3b2f264cfcf97fae',1,'express::Controller::next()'],['../classexpress_1_1Next.html',1,'express::Next'],['../classexpress_1_1Next.html#a56688da7e87fc0f08c40505220e80cf1',1,'express::Next::Next()'],['../classexpress_1_1Controller.html#acbbd6f9ce9c84b3a72a50f0aedaa6c48adc4bb866930db1ffbe036d7c5b8f0323',1,'express::Controller::NEXT']]],
+  ['next_66',['next',['../classexpress_1_1Next.html#a56688da7e87fc0f08c40505220e80cf1',1,'express::Next::Next()'],['../classexpress_1_1Next.html',1,'express::Next'],['../classexpress_1_1Controller.html#acbbd6f9ce9c84b3a72a50f0aedaa6c48adc4bb866930db1ffbe036d7c5b8f0323',1,'express::Controller::NEXT'],['../classexpress_1_1Controller.html#a37349835c6e195cd3b2f264cfcf97fae',1,'express::Controller::next(const std::string &amp;how) const']]],
   ['next_2ecpp_67',['Next.cpp',['../Next_8cpp.html',1,'']]],
   ['next_2eh_68',['Next.h',['../Next_8h.html',1,'']]],
   ['next_5froute_69',['NEXT_ROUTE',['../classexpress_1_1Controller.html#acbbd6f9ce9c84b3a72a50f0aedaa6c48a80a7d61efbcd0e82eb23e4e9c0de575c',1,'express::Controller']]],

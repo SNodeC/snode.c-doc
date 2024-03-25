@@ -514,6 +514,7 @@ var annotated_dup =
             [ "UpgradeCommand", "classweb_1_1http_1_1client_1_1commands_1_1UpgradeCommand.html", "classweb_1_1http_1_1client_1_1commands_1_1UpgradeCommand" ]
           ] ],
           [ "Client", "classweb_1_1http_1_1client_1_1Client.html", "classweb_1_1http_1_1client_1_1Client" ],
+          [ "ConfigHTTP", "classweb_1_1http_1_1client_1_1ConfigHTTP.html", "classweb_1_1http_1_1client_1_1ConfigHTTP" ],
           [ "Request", "classweb_1_1http_1_1client_1_1Request.html", "classweb_1_1http_1_1client_1_1Request" ],
           [ "RequestCommand", "classweb_1_1http_1_1client_1_1RequestCommand.html", "classweb_1_1http_1_1client_1_1RequestCommand" ],
           [ "Response", "classweb_1_1http_1_1client_1_1Response.html", "classweb_1_1http_1_1client_1_1Response" ],

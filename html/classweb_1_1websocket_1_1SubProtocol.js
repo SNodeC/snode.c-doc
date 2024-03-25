@@ -1,8 +1,8 @@
 var classweb_1_1websocket_1_1SubProtocol =
 [
     [ "SocketContextUpgrade", "classweb_1_1websocket_1_1SubProtocol.html#adc5e24ed30935e0c45fa6dc55d7ad01c", null ],
-    [ "SubProtocol", "classweb_1_1websocket_1_1SubProtocol.html#a0381918fdb6500a361bdd2da58a692f5", null ],
-    [ "SubProtocol", "classweb_1_1websocket_1_1SubProtocol.html#ab58e224579cd3e0562c0cd230fdd0630", null ],
+    [ "SubProtocol", "classweb_1_1websocket_1_1SubProtocol.html#aa1809460adecbd77b1f5e03e00ffbd4e", null ],
+    [ "SubProtocol", "classweb_1_1websocket_1_1SubProtocol.html#a54ed68dccf6ed98948c6414748c6c3c3", null ],
     [ "SubProtocol", "classweb_1_1websocket_1_1SubProtocol.html#aba63b26735de0b3cb691ae4cb4e6af5c", null ],
     [ "~SubProtocol", "classweb_1_1websocket_1_1SubProtocol.html#ad1a1f4430c71d616faf273e0ef2f2e14", null ],
     [ "getName", "classweb_1_1websocket_1_1SubProtocol.html#a6a92ef9f2d043106d162be91682e41b0", null ],
@@ -15,7 +15,8 @@ var classweb_1_1websocket_1_1SubProtocol =
     [ "onMessageStart", "classweb_1_1websocket_1_1SubProtocol.html#adfb6784d29000fd34407cebb8f9f6076", null ],
     [ "onPongReceived", "classweb_1_1websocket_1_1SubProtocol.html#a675355f07c347cff7abb4bdda0b59d9a", null ],
     [ "onSignal", "classweb_1_1websocket_1_1SubProtocol.html#afa1d8ba8c6821632c469f5f992353834", null ],
-    [ "operator=", "classweb_1_1websocket_1_1SubProtocol.html#a7bee951ec1544f15cb220ae66d5b65f1", null ],
+    [ "operator=", "classweb_1_1websocket_1_1SubProtocol.html#ae433e4b54f24500a17ecbdeb360fe0f6", null ],
+    [ "operator=", "classweb_1_1websocket_1_1SubProtocol.html#a5318f2fd2a0d933fff29e0c660dd7365", null ],
     [ "sendClose", "classweb_1_1websocket_1_1SubProtocol.html#a4265ec13381df7043031cb584cfcedfe", null ],
     [ "sendMessage", "classweb_1_1websocket_1_1SubProtocol.html#aad1925cfb75fff830ee5636198fb201e", null ],
     [ "sendMessage", "classweb_1_1websocket_1_1SubProtocol.html#a327161b7f0a6f74a12d342e85832e2c2", null ],

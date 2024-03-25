@@ -13,6 +13,8 @@ var classnet_1_1config_1_1ConfigInstance =
     [ "getInstanceName", "classnet_1_1config_1_1ConfigInstance.html#adc690b51a4fcfeedb061577884a09f1f", null ],
     [ "getRequired", "classnet_1_1config_1_1ConfigInstance.html#a508316f29b4a5c8e3f47f0c403132708", null ],
     [ "getRole", "classnet_1_1config_1_1ConfigInstance.html#abbe00f748aa3027f85e57ed3a35e2d54", null ],
+    [ "getSection", "classnet_1_1config_1_1ConfigInstance.html#a136eba882e2c0e32a43e77db30dc6332", null ],
+    [ "hasSection", "classnet_1_1config_1_1ConfigInstance.html#aa7a82eba5049276a8978dbd526c84d73", null ],
     [ "operator=", "classnet_1_1config_1_1ConfigInstance.html#add572f951f3e5267c5092c2c36a16f03", null ],
     [ "operator=", "classnet_1_1config_1_1ConfigInstance.html#aa20ee023d8c15e0cbc65244f8bfd6223", null ],
     [ "required", "classnet_1_1config_1_1ConfigInstance.html#afc1c3ec014ddd8cc8a08113feed00fe5", null ],

@@ -526,7 +526,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">   72</span> </div>
 <div class="line"><span class="lineno">   73</span>                        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classweb_1_1http_1_1decoder_1_1Fields.html#a8b64c58013a446ad00038cd8ba8a787c">lastButOne</a> == <span class="charliteral">&#39;\r&#39;</span> &amp;&amp; <a class="code hl_variable" href="classweb_1_1http_1_1decoder_1_1Fields.html#a4ce4b313e4e831f4bfad7b6ec3238ab4">last</a> == <span class="charliteral">&#39;\n&#39;</span>) {</div>
 <div class="line"><span class="lineno">   74</span>                            <a class="code hl_variable" href="classweb_1_1http_1_1decoder_1_1Fields.html#a665019dd9425b0ab70f2c4fdf6ec8c53">line</a>.pop_back(); <span class="comment">// Remove \n</span></div>
-<div class="line"><span class="lineno">   75</span>                            <a class="code hl_variable" href="classweb_1_1http_1_1decoder_1_1Fields.html#a665019dd9425b0ab70f2c4fdf6ec8c53">line</a>.pop_back(); <span class="comment">// Remove \r#</span></div>
+<div class="line"><span class="lineno">   75</span>                            <a class="code hl_variable" href="classweb_1_1http_1_1decoder_1_1Fields.html#a665019dd9425b0ab70f2c4fdf6ec8c53">line</a>.pop_back(); <span class="comment">// Remove \r</span></div>
 <div class="line"><span class="lineno">   76</span> </div>
 <div class="line"><span class="lineno">   77</span>                            <a class="code hl_variable" href="classweb_1_1http_1_1decoder_1_1Fields.html#a437f269cb04d03a8abfb20d562b7aa59">completed</a> = <a class="code hl_variable" href="classweb_1_1http_1_1decoder_1_1Fields.html#a665019dd9425b0ab70f2c4fdf6ec8c53">line</a>.empty();</div>
 <div class="line"><span class="lineno">   78</span>                            <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classweb_1_1http_1_1decoder_1_1Fields.html#a437f269cb04d03a8abfb20d562b7aa59">completed</a>) {</div>
@@ -654,7 +654,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">  122</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classweb_1_1http_1_1decoder_1_1Fields.html#a96b3f3b4566a2163b0d060059d5caac0">fieldsExpected</a>.empty() || <a class="code hl_variable" href="classweb_1_1http_1_1decoder_1_1Fields.html#a96b3f3b4566a2163b0d060059d5caac0">fieldsExpected</a>.contains(headerFieldName)) {</div>
 <div class="line"><span class="lineno">  123</span>                <a class="code hl_function" href="namespacehttputils.html#aaa1e55d83548ea4ebf224d695f73c874">httputils::str_trimm</a>(value);</div>
 <div class="line"><span class="lineno">  124</span> </div>
-<div class="line"><span class="lineno">  125</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="classweb_1_1http_1_1decoder_1_1Fields.html#a540270f2a59ec170a8d54e340f474340">fields</a>.find(headerFieldName) == <a class="code hl_variable" href="classweb_1_1http_1_1decoder_1_1Fields.html#a540270f2a59ec170a8d54e340f474340">fields</a>.end()) {</div>
+<div class="line"><span class="lineno">  125</span>                <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classweb_1_1http_1_1decoder_1_1Fields.html#a540270f2a59ec170a8d54e340f474340">fields</a>.contains(headerFieldName)) {</div>
 <div class="line"><span class="lineno">  126</span>                    <a class="code hl_variable" href="classweb_1_1http_1_1decoder_1_1Fields.html#a540270f2a59ec170a8d54e340f474340">fields</a>.emplace(headerFieldName, value);</div>
 <div class="line"><span class="lineno">  127</span>                } <span class="keywordflow">else</span> {</div>
 <div class="line"><span class="lineno">  128</span>                    <a class="code hl_variable" href="classweb_1_1http_1_1decoder_1_1Fields.html#a540270f2a59ec170a8d54e340f474340">fields</a>[headerFieldName] += <span class="stringliteral">&quot;,&quot;</span> + value;</div>
@@ -955,7 +955,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceweb.html">web</a></li><li class="navelem"><a class="el" href="namespaceweb_1_1http.html">http</a></li><li class="navelem"><a class="el" href="namespaceweb_1_1http_1_1decoder.html">decoder</a></li><li class="navelem"><a class="el" href="classweb_1_1http_1_1decoder_1_1Fields.html">Fields</a></li>
-    <li class="footer">Generated on Sun Mar 10 2024 23:19:16 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Mon Mar 25 2024 16:41:50 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

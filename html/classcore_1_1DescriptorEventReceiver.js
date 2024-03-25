@@ -1,7 +1,6 @@
 var classcore_1_1DescriptorEventReceiver =
 [
     [ "TIMEOUT", "structcore_1_1DescriptorEventReceiver_1_1TIMEOUT.html", "structcore_1_1DescriptorEventReceiver_1_1TIMEOUT" ],
-    [ "DescriptorEventReceiver", "classcore_1_1DescriptorEventReceiver.html#acda68fdd6262cecc1c4814b42a1d2a52", null ],
     [ "DescriptorEventReceiver", "classcore_1_1DescriptorEventReceiver.html#a1c88ab07dd31cc902fdfeb071f11956e", null ],
     [ "atNextTick", "classcore_1_1DescriptorEventReceiver.html#a2e8d915eca53e827be4f493a63ae058d", null ],
     [ "checkTimeout", "classcore_1_1DescriptorEventReceiver.html#ae04e87c4f44979a04d3839759a63220a", null ],
@@ -17,7 +16,6 @@ var classcore_1_1DescriptorEventReceiver =
     [ "observed", "classcore_1_1DescriptorEventReceiver.html#aeff595f74f25efea85406cf700e13550", null ],
     [ "onEvent", "classcore_1_1DescriptorEventReceiver.html#aa0c0922c02cd86d913987035fe3a8f80", null ],
     [ "onSignal", "classcore_1_1DescriptorEventReceiver.html#a4f774310060571d7d0c1cb53129333e1", null ],
-    [ "operator=", "classcore_1_1DescriptorEventReceiver.html#a5347f00976f5a8abb84ff3a690d9fea9", null ],
     [ "relax", "classcore_1_1DescriptorEventReceiver.html#a748159baa69a639df53ac5675ae8425f", null ],
     [ "resume", "classcore_1_1DescriptorEventReceiver.html#afa983ac6b0ba8f28ce4c0fc16cd914f8", null ],
     [ "setDisabled", "classcore_1_1DescriptorEventReceiver.html#a53b16eb14da654bfaf9a7e28e3024ff1", null ],

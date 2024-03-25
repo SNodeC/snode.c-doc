@@ -25,6 +25,8 @@ var classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketClient =
     [ "getInstanceName", "classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketClient.html#adc690b51a4fcfeedb061577884a09f1f", null ],
     [ "getRequired", "classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketClient.html#a508316f29b4a5c8e3f47f0c403132708", null ],
     [ "getRole", "classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketClient.html#abbe00f748aa3027f85e57ed3a35e2d54", null ],
+    [ "getSection", "classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketClient.html#a136eba882e2c0e32a43e77db30dc6332", null ],
+    [ "hasSection", "classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketClient.html#aa7a82eba5049276a8978dbd526c84d73", null ],
     [ "required", "classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketClient.html#a118e54017223e71db5cf1a1ec690dc4a", null ],
     [ "required", "classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketClient.html#afc1c3ec014ddd8cc8a08113feed00fe5", null ],
     [ "required", "classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketClient.html#afe7a0030f5ef727586a4dc6d32410ce7", null ],

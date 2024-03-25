@@ -10,7 +10,7 @@ var classweb_1_1http_1_1client_1_1SocketContext =
       [ "KEEPALIVE", "classweb_1_1http_1_1client_1_1SocketContext.html#a8b77acfd23e58ee4c2f92c6706a2a19da653663bbdea0077cfe0b912ca6e312e9", null ],
       [ "CLOSE", "classweb_1_1http_1_1client_1_1SocketContext.html#a8b77acfd23e58ee4c2f92c6706a2a19da2c455b887c1406aedb69d3d907429bff", null ]
     ] ],
-    [ "SocketContext", "classweb_1_1http_1_1client_1_1SocketContext.html#adaa32831c07b8112bde3f104764dcc9c", null ],
+    [ "SocketContext", "classweb_1_1http_1_1client_1_1SocketContext.html#a0754188f54b00c9c0bd27c4e8719fe1e", null ],
     [ "close", "classweb_1_1http_1_1client_1_1SocketContext.html#a47b23b8583dfd3880232e748f284f380", null ],
     [ "deliverResponse", "classweb_1_1http_1_1client_1_1SocketContext.html#a6f79ecb4ce289ad0f871779111fd2431", null ],
     [ "deliverResponseParseError", "classweb_1_1http_1_1client_1_1SocketContext.html#a3a75cd5183a6b7673d8ffdaeddb5a9e6", null ],
@@ -24,7 +24,7 @@ var classweb_1_1http_1_1client_1_1SocketContext =
     [ "onWriteError", "classweb_1_1http_1_1client_1_1SocketContext.html#a7767200ffdd687219876813f862d327f", null ],
     [ "readFromPeer", "classweb_1_1http_1_1client_1_1SocketContext.html#a5401a6174dbad9a6637c684a0fb952d9", null ],
     [ "requestDelivered", "classweb_1_1http_1_1client_1_1SocketContext.html#a3529cb877746853e23470699822ea754", null ],
-    [ "requestPrepared", "classweb_1_1http_1_1client_1_1SocketContext.html#af53b2d5c7d26df5dec1019f5d749ca7f", null ],
+    [ "requestPrepared", "classweb_1_1http_1_1client_1_1SocketContext.html#a10e2151d4e39455e6075b5b65ede94cd", null ],
     [ "responseDelivered", "classweb_1_1http_1_1client_1_1SocketContext.html#ac94e07af416d5484040ee42080b134b1", null ],
     [ "responseStarted", "classweb_1_1http_1_1client_1_1SocketContext.html#aab626f8549a72def02f8f48df50bb6ac", null ],
     [ "sendToPeer", "classweb_1_1http_1_1client_1_1SocketContext.html#a7e80affcdada3ef5f1c52c283d65a89c", null ],
@@ -45,5 +45,6 @@ var classweb_1_1http_1_1client_1_1SocketContext =
     [ "onRequestEnd", "classweb_1_1http_1_1client_1_1SocketContext.html#ab5e55c29b067b84a01a5088eb0a498c0", null ],
     [ "parser", "classweb_1_1http_1_1client_1_1SocketContext.html#a7e9d413b83914332e03c4852e53f7716", null ],
     [ "pendingRequests", "classweb_1_1http_1_1client_1_1SocketContext.html#acc199b697cb6289266024d4204661dad", null ],
+    [ "pipelinedRequests", "classweb_1_1http_1_1client_1_1SocketContext.html#a8a0896278bb28d3a7c44bbd0de1462e9", null ],
     [ "socketConnection", "classweb_1_1http_1_1client_1_1SocketContext.html#aa1eeb9f67270ffa53d9416c88d08c7fb", null ]
 ];

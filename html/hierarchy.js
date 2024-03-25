@@ -132,6 +132,7 @@ var hierarchy =
     [ "ConfigBase", null, [
       [ "CLI::ConfigFormatter", "classCLI_1_1ConfigFormatter.html", null ]
     ] ],
+    [ "web::http::client::ConfigHTTP", "classweb_1_1http_1_1client_1_1ConfigHTTP.html", null ],
     [ "net::config::ConfigInstance", "classnet_1_1config_1_1ConfigInstance.html", [
       [ "net::config::stream::legacy::ConfigSocketClient< net::in6::stream::config::ConfigSocketClient >", "classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketClient.html", null ],
       [ "net::config::stream::legacy::ConfigSocketClient< net::in::stream::config::ConfigSocketClient >", "classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketClient.html", null ],

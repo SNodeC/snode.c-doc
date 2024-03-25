@@ -159,8 +159,8 @@ Private Types</h2></td></tr>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:acb1edea8d1f6cae646cd2e989a45a471" id="r_acb1edea8d1f6cae646cd2e989a45a471"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classweb_1_1http_1_1server_1_1SocketContext.html#acb1edea8d1f6cae646cd2e989a45a471">requestStarted</a> ()</td></tr>
 <tr class="separator:acb1edea8d1f6cae646cd2e989a45a471"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5675385890169d56e843ddac9e2551ae" id="r_a5675385890169d56e843ddac9e2551ae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classweb_1_1http_1_1server_1_1SocketContext.html#a5675385890169d56e843ddac9e2551ae">deliverRequest</a> (<a class="el" href="classweb_1_1http_1_1server_1_1Request.html">web::http::server::Request</a> &amp;&amp;request)</td></tr>
-<tr class="separator:a5675385890169d56e843ddac9e2551ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee45214696fd33daacf221fc961975d3" id="r_aee45214696fd33daacf221fc961975d3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classweb_1_1http_1_1server_1_1SocketContext.html#aee45214696fd33daacf221fc961975d3">deliverRequest</a> (<a class="el" href="classweb_1_1http_1_1server_1_1Request.html">web::http::server::Request</a> &amp;request)</td></tr>
+<tr class="separator:aee45214696fd33daacf221fc961975d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3fb957f3a38174ca3d067750d0fadafe" id="r_a3fb957f3a38174ca3d067750d0fadafe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classweb_1_1http_1_1server_1_1SocketContext.html#a3fb957f3a38174ca3d067750d0fadafe">responseStarted</a> ()</td></tr>
 <tr class="separator:a3fb957f3a38174ca3d067750d0fadafe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a445fce1f4b75291dbc566f79f8795765" id="r_a445fce1f4b75291dbc566f79f8795765"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classweb_1_1http_1_1server_1_1SocketContext.html#a445fce1f4b75291dbc566f79f8795765">responseCompleted</a> (bool success)</td></tr>
@@ -311,7 +311,7 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">   47</span>              },</div>
 <div class="line"><span class="lineno">   48</span>              [<span class="keyword">this</span>](<a class="code hl_class" href="classweb_1_1http_1_1server_1_1Request.html">web::http::server::Request</a>&amp;&amp; request) -&gt; <span class="keywordtype">void</span> {</div>
 <div class="line"><span class="lineno">   49</span>                  <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classweb_1_1http_1_1server_1_1SocketContext.html#a18de56931b5093ff0a51185d9a0bf0e1">currentRequest</a>) {</div>
-<div class="line"><span class="lineno">   50</span>                      <a class="code hl_function" href="classweb_1_1http_1_1server_1_1SocketContext.html#a5675385890169d56e843ddac9e2551ae">deliverRequest</a>(std::move(request));</div>
+<div class="line"><span class="lineno">   50</span>                      <a class="code hl_function" href="classweb_1_1http_1_1server_1_1SocketContext.html#aee45214696fd33daacf221fc961975d3">deliverRequest</a>(request);</div>
 <div class="line"><span class="lineno">   51</span>                  } <span class="keywordflow">else</span> {</div>
 <div class="line"><span class="lineno">   52</span>                      <a class="code hl_variable" href="classweb_1_1http_1_1server_1_1SocketContext.html#a8d172b0e9fe3b82faf5941547688689a">pendingRequests</a>.emplace_back(std::move(request));</div>
 <div class="line"><span class="lineno">   53</span>                  }</div>
@@ -331,13 +331,13 @@ Private Attributes</h2></td></tr>
 <div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketContext_html_aa1eeb9f67270ffa53d9416c88d08c7fb"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1SocketContext.html#aa1eeb9f67270ffa53d9416c88d08c7fb">core::socket::stream::SocketContext::socketConnection</a></div><div class="ttdeci">core::socket::stream::SocketConnection * socketConnection</div><div class="ttdef"><b>Definition</b> <a href="core_2socket_2stream_2SocketContext_8h_source.html#l00078">SocketContext.h:78</a></div></div>
 <div class="ttc" id="aclassweb_1_1http_1_1server_1_1Request_html"><div class="ttname"><a href="classweb_1_1http_1_1server_1_1Request.html">web::http::server::Request</a></div><div class="ttdef"><b>Definition</b> <a href="web_2http_2server_2Request_8h_source.html#l00038">Request.h:38</a></div></div>
 <div class="ttc" id="aclassweb_1_1http_1_1server_1_1SocketContext_html_a18de56931b5093ff0a51185d9a0bf0e1"><div class="ttname"><a href="classweb_1_1http_1_1server_1_1SocketContext.html#a18de56931b5093ff0a51185d9a0bf0e1">web::http::server::SocketContext::currentRequest</a></div><div class="ttdeci">std::shared_ptr&lt; Request &gt; currentRequest</div><div class="ttdef"><b>Definition</b> <a href="web_2http_2server_2SocketContext_8h_source.html#l00073">SocketContext.h:73</a></div></div>
-<div class="ttc" id="aclassweb_1_1http_1_1server_1_1SocketContext_html_a5675385890169d56e843ddac9e2551ae"><div class="ttname"><a href="classweb_1_1http_1_1server_1_1SocketContext.html#a5675385890169d56e843ddac9e2551ae">web::http::server::SocketContext::deliverRequest</a></div><div class="ttdeci">void deliverRequest(web::http::server::Request &amp;&amp;request)</div><div class="ttdef"><b>Definition</b> <a href="web_2http_2server_2SocketContext_8cpp_source.html#l00069">SocketContext.cpp:69</a></div></div>
 <div class="ttc" id="aclassweb_1_1http_1_1server_1_1SocketContext_html_a6f19c485ddf2b2ddc1805006a7d423e6"><div class="ttname"><a href="classweb_1_1http_1_1server_1_1SocketContext.html#a6f19c485ddf2b2ddc1805006a7d423e6">web::http::server::SocketContext::masterResponse</a></div><div class="ttdeci">std::shared_ptr&lt; Response &gt; masterResponse</div><div class="ttdef"><b>Definition</b> <a href="web_2http_2server_2SocketContext_8h_source.html#l00074">SocketContext.h:74</a></div></div>
 <div class="ttc" id="aclassweb_1_1http_1_1server_1_1SocketContext_html_a7409b2d92610851a95f2d11e8356009e"><div class="ttname"><a href="classweb_1_1http_1_1server_1_1SocketContext.html#a7409b2d92610851a95f2d11e8356009e">web::http::server::SocketContext::Super</a></div><div class="ttdeci">core::socket::stream::SocketContext Super</div><div class="ttdef"><b>Definition</b> <a href="web_2http_2server_2SocketContext_8h_source.html#l00047">SocketContext.h:47</a></div></div>
 <div class="ttc" id="aclassweb_1_1http_1_1server_1_1SocketContext_html_a8d172b0e9fe3b82faf5941547688689a"><div class="ttname"><a href="classweb_1_1http_1_1server_1_1SocketContext.html#a8d172b0e9fe3b82faf5941547688689a">web::http::server::SocketContext::pendingRequests</a></div><div class="ttdeci">std::list&lt; Request &gt; pendingRequests</div><div class="ttdef"><b>Definition</b> <a href="web_2http_2server_2SocketContext_8h_source.html#l00071">SocketContext.h:71</a></div></div>
 <div class="ttc" id="aclassweb_1_1http_1_1server_1_1SocketContext_html_ab1b443170605afb9a8dbb5fb39af0c12"><div class="ttname"><a href="classweb_1_1http_1_1server_1_1SocketContext.html#ab1b443170605afb9a8dbb5fb39af0c12">web::http::server::SocketContext::parser</a></div><div class="ttdeci">RequestParser parser</div><div class="ttdef"><b>Definition</b> <a href="web_2http_2server_2SocketContext_8h_source.html#l00076">SocketContext.h:76</a></div></div>
 <div class="ttc" id="aclassweb_1_1http_1_1server_1_1SocketContext_html_ac2e57456f05d3fdeaa2b5940a1495466"><div class="ttname"><a href="classweb_1_1http_1_1server_1_1SocketContext.html#ac2e57456f05d3fdeaa2b5940a1495466">web::http::server::SocketContext::onRequestReady</a></div><div class="ttdeci">std::function&lt; void(const std::shared_ptr&lt; Request &gt; &amp;, const std::shared_ptr&lt; Response &gt; &amp;)&gt; onRequestReady</div><div class="ttdef"><b>Definition</b> <a href="web_2http_2server_2SocketContext_8h_source.html#l00063">SocketContext.h:63</a></div></div>
 <div class="ttc" id="aclassweb_1_1http_1_1server_1_1SocketContext_html_acb1edea8d1f6cae646cd2e989a45a471"><div class="ttname"><a href="classweb_1_1http_1_1server_1_1SocketContext.html#acb1edea8d1f6cae646cd2e989a45a471">web::http::server::SocketContext::requestStarted</a></div><div class="ttdeci">void requestStarted()</div><div class="ttdef"><b>Definition</b> <a href="web_2http_2server_2SocketContext_8cpp_source.html#l00065">SocketContext.cpp:65</a></div></div>
+<div class="ttc" id="aclassweb_1_1http_1_1server_1_1SocketContext_html_aee45214696fd33daacf221fc961975d3"><div class="ttname"><a href="classweb_1_1http_1_1server_1_1SocketContext.html#aee45214696fd33daacf221fc961975d3">web::http::server::SocketContext::deliverRequest</a></div><div class="ttdeci">void deliverRequest(web::http::server::Request &amp;request)</div><div class="ttdef"><b>Definition</b> <a href="web_2http_2server_2SocketContext_8cpp_source.html#l00069">SocketContext.cpp:69</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="web_2http_2server_2SocketContext_8h_source.html#l00074">masterResponse</a>, <a class="el" href="web_2http_2server_2SocketContext_8h_source.html#l00063">onRequestReady</a>, <a class="el" href="web_2http_2server_2SocketContext_8h_source.html#l00076">parser</a>, <a class="el" href="RequestParser_8cpp_source.html#l00034">web::http::server::RequestParser::RequestParser()</a>, <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00065">requestStarted()</a>, and <a class="el" href="core_2socket_2stream_2SocketContext_8cpp_source.html#l00030">core::socket::stream::SocketContext::SocketContext()</a>.</p>
 <div class="dynheader">
@@ -384,7 +384,7 @@ Here is the call graph for this function:</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#aed398e81ede92d1d1cfae2597580ad2c">core::socket::stream::SocketConnection::close()</a>, and <a class="el" href="core_2socket_2stream_2SocketContext_8h_source.html#l00078">core::socket::stream::SocketContext::socketConnection</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="iot_2mqtt_2SocketContext_8cpp_source.html#l00065">iot::mqtt::SocketContext::close()</a>, <a class="el" href="web_2http_2client_2Request_8cpp_source.html#l00463">web::http::client::Request::executeUpgrade()</a>, <a class="el" href="iot_2mqtt-fast_2SocketContext_8cpp_source.html#l00140">iot::mqtt_fast::SocketContext::onReceivedFromPeer()</a>, <a class="el" href="web_2http_2client_2Request_8cpp_source.html#l00585">web::http::client::Request::onSourceError()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00395">web::http::server::Response::onSourceError()</a>, and <a class="el" href="web_2http_2client_2Request_8cpp_source.html#l00292">web::http::client::Request::upgrade()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="iot_2mqtt_2SocketContext_8cpp_source.html#l00065">iot::mqtt::SocketContext::close()</a>, <a class="el" href="web_2http_2client_2Request_8cpp_source.html#l00468">web::http::client::Request::executeUpgrade()</a>, <a class="el" href="iot_2mqtt-fast_2SocketContext_8cpp_source.html#l00140">iot::mqtt_fast::SocketContext::onReceivedFromPeer()</a>, <a class="el" href="web_2http_2client_2Request_8cpp_source.html#l00593">web::http::client::Request::onSourceError()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00395">web::http::server::Response::onSourceError()</a>, and <a class="el" href="web_2http_2client_2Request_8cpp_source.html#l00297">web::http::client::Request::upgrade()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -398,8 +398,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a5675385890169d56e843ddac9e2551ae" name="a5675385890169d56e843ddac9e2551ae"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5675385890169d56e843ddac9e2551ae">&#9670;&#160;</a></span>deliverRequest()</h2>
+<a id="aee45214696fd33daacf221fc961975d3" name="aee45214696fd33daacf221fc961975d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee45214696fd33daacf221fc961975d3">&#9670;&#160;</a></span>deliverRequest()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -410,7 +410,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">void web::http::server::SocketContext::deliverRequest </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classweb_1_1http_1_1server_1_1Request.html">web::http::server::Request</a> &amp;&amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classweb_1_1http_1_1server_1_1Request.html">web::http::server::Request</a> &amp;&#160;</td>
           <td class="paramname"><em>request</em></td><td>)</td>
           <td></td>
         </tr>
@@ -423,7 +423,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00069">69</a> of file <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html">SocketContext.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   69</span>                                                                     {</div>
+<div class="fragment"><div class="line"><span class="lineno">   69</span>                                                                    {</div>
 <div class="line"><span class="lineno">   70</span>        LOG(TRACE) &lt;&lt; <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a02f0b93ac0ea376dabd6921c7589a8cf">getSocketConnection</a>()-&gt;<a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#aff2eb3e752c798455541e85054bf91de">getInstanceName</a>() &lt;&lt; <span class="stringliteral">&quot; HTTP: Request parsed &quot;</span> &lt;&lt; request.<a class="code hl_variable" href="classweb_1_1http_1_1server_1_1Request.html#a7bbff0c0900a11bab6fbb98b95d74a01">method</a> &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; request.<a class="code hl_variable" href="classweb_1_1http_1_1server_1_1Request.html#a2c2ef2815be183f1130e9a4fd43f9851">url</a>;</div>
 <div class="line"><span class="lineno">   71</span> </div>
 <div class="line"><span class="lineno">   72</span>        <a class="code hl_variable" href="classweb_1_1http_1_1server_1_1SocketContext.html#a18de56931b5093ff0a51185d9a0bf0e1">currentRequest</a> = std::make_shared&lt;Request&gt;(std::move(request));</div>
@@ -447,12 +447,12 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classweb_1_1http_1_1server_1_1SocketContext_a5675385890169d56e843ddac9e2551ae_cgraph.svg" width="758" height="324"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classweb_1_1http_1_1server_1_1SocketContext_aee45214696fd33daacf221fc961975d3_cgraph.svg" width="758" height="324"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classweb_1_1http_1_1server_1_1SocketContext_a5675385890169d56e843ddac9e2551ae_icgraph.svg" width="3514" height="528"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classweb_1_1http_1_1server_1_1SocketContext_aee45214696fd33daacf221fc961975d3_icgraph.svg" width="3514" height="528"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -487,11 +487,11 @@ Here is the caller graph for this function:</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="core_2socket_2stream_2SocketContext_8h_source.html#l00078">core::socket::stream::SocketContext::socketConnection</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00069">deliverRequest()</a>, <a class="el" href="web_2http_2client_2SocketContext_8cpp_source.html#l00168">web::http::client::SocketContext::deliverResponse()</a>, <a class="el" href="web_2http_2client_2SocketContext_8cpp_source.html#l00194">web::http::client::SocketContext::deliverResponseParseError()</a>, <a class="el" href="iot_2mqtt_2SocketContext_8cpp_source.html#l00045">iot::mqtt::SocketContext::getSocketConnection()</a>, <a class="el" href="web_2http_2client_2SocketContext_8cpp_source.html#l00089">web::http::client::SocketContext::initiateRequest()</a>, <a class="el" href="web_2http_2client_2SocketContext_8cpp_source.html#l00222">web::http::client::SocketContext::onConnected()</a>, <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00127">onConnected()</a>, <a class="el" href="web_2http_2client_2SocketContext_8cpp_source.html#l00240">web::http::client::SocketContext::onDisconnected()</a>, <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00143">onDisconnected()</a>, <a class="el" href="web_2http_2client_2SocketContext_8cpp_source.html#l00253">web::http::client::SocketContext::onSignal()</a>, <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00151">onSignal()</a>, <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00104">requestCompleted()</a>, <a class="el" href="web_2http_2client_2SocketContext_8cpp_source.html#l00120">web::http::client::SocketContext::requestDelivered()</a>, <a class="el" href="web_2http_2client_2SocketContext_8cpp_source.html#l00057">web::http::client::SocketContext::requestPrepared()</a>, <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00065">requestStarted()</a>, <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00089">responseCompleted()</a>, <a class="el" href="web_2http_2client_2SocketContext_8cpp_source.html#l00212">web::http::client::SocketContext::responseDelivered()</a>, <a class="el" href="web_2http_2client_2SocketContext_8cpp_source.html#l00151">web::http::client::SocketContext::responseStarted()</a>, <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00085">responseStarted()</a>, <a class="el" href="web_2http_2client_2SocketContext_8cpp_source.html#l00036">web::http::client::SocketContext::SocketContext()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00211">web::http::server::Response::upgrade()</a>, <a class="el" href="web_2http_2client_2Request_8cpp_source.html#l00292">web::http::client::Request::upgrade()</a>, and <a class="el" href="VerboseRequest_8cpp_source.html#l00036">express::middleware::VerboseRequest::VerboseRequest()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00069">deliverRequest()</a>, <a class="el" href="web_2http_2client_2SocketContext_8cpp_source.html#l00173">web::http::client::SocketContext::deliverResponse()</a>, <a class="el" href="web_2http_2client_2SocketContext_8cpp_source.html#l00199">web::http::client::SocketContext::deliverResponseParseError()</a>, <a class="el" href="iot_2mqtt_2SocketContext_8cpp_source.html#l00045">iot::mqtt::SocketContext::getSocketConnection()</a>, <a class="el" href="web_2http_2client_2SocketContext_8cpp_source.html#l00092">web::http::client::SocketContext::initiateRequest()</a>, <a class="el" href="web_2http_2client_2SocketContext_8cpp_source.html#l00240">web::http::client::SocketContext::onConnected()</a>, <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00127">onConnected()</a>, <a class="el" href="web_2http_2client_2SocketContext_8cpp_source.html#l00256">web::http::client::SocketContext::onDisconnected()</a>, <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00143">onDisconnected()</a>, <a class="el" href="web_2http_2client_2SocketContext_8cpp_source.html#l00269">web::http::client::SocketContext::onSignal()</a>, <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00151">onSignal()</a>, <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00104">requestCompleted()</a>, <a class="el" href="web_2http_2client_2SocketContext_8cpp_source.html#l00123">web::http::client::SocketContext::requestDelivered()</a>, <a class="el" href="web_2http_2client_2SocketContext_8cpp_source.html#l00062">web::http::client::SocketContext::requestPrepared()</a>, <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00065">requestStarted()</a>, <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00089">responseCompleted()</a>, <a class="el" href="web_2http_2client_2SocketContext_8cpp_source.html#l00217">web::http::client::SocketContext::responseDelivered()</a>, <a class="el" href="web_2http_2client_2SocketContext_8cpp_source.html#l00156">web::http::client::SocketContext::responseStarted()</a>, <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00085">responseStarted()</a>, <a class="el" href="web_2http_2client_2SocketContext_8cpp_source.html#l00039">web::http::client::SocketContext::SocketContext()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00211">web::http::server::Response::upgrade()</a>, <a class="el" href="web_2http_2client_2Request_8cpp_source.html#l00297">web::http::client::Request::upgrade()</a>, and <a class="el" href="VerboseRequest_8cpp_source.html#l00036">express::middleware::VerboseRequest::VerboseRequest()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1socket_1_1stream_1_1SocketContext_a02f0b93ac0ea376dabd6921c7589a8cf_icgraph.svg" width="3855" height="1478"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1socket_1_1stream_1_1SocketContext_a02f0b93ac0ea376dabd6921c7589a8cf_icgraph.svg" width="3876" height="1431"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -844,7 +844,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">  114</span>            <a class="code hl_function" href="classcore_1_1EventReceiver.html#a2e8d915eca53e827be4f493a63ae058d">core::EventReceiver::atNextTick</a>([<span class="keyword">this</span>, response = <span class="keyword">static_cast&lt;</span>std::weak_ptr&lt;Response&gt;<span class="keyword">&gt;</span>(this-&gt;<a class="code hl_variable" href="classweb_1_1http_1_1server_1_1SocketContext.html#a6f19c485ddf2b2ddc1805006a7d423e6">masterResponse</a>)]() -&gt; <span class="keywordtype">void</span> {</div>
 <div class="line"><span class="lineno">  115</span>                <span class="keywordflow">if</span> (!response.expired()) {</div>
 <div class="line"><span class="lineno">  116</span>                    if (!pendingRequests.empty()) {</div>
-<div class="line"><span class="lineno">  117</span>                        deliverRequest(std::move(pendingRequests.front()));</div>
+<div class="line"><span class="lineno">  117</span>                        deliverRequest(pendingRequests.front());</div>
 <div class="line"><span class="lineno">  118</span>                        pendingRequests.pop_front();</div>
 <div class="line"><span class="lineno">  119</span>                    } <span class="keywordflow">else</span> {</div>
 <div class="line"><span class="lineno">  120</span>                        currentRequest = nullptr;</div>
@@ -1062,7 +1062,7 @@ Here is the caller graph for this function:</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#a0e8eedcbfe5dc63e1c1682b5beaf90da">core::socket::stream::SocketConnection::sendToPeer()</a>, and <a class="el" href="core_2socket_2stream_2SocketContext_8h_source.html#l00078">core::socket::stream::SocketContext::socketConnection</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="web_2http_2client_2Request_8cpp_source.html#l00520">web::http::client::Request::executeSendFragment()</a>, <a class="el" href="iot_2mqtt_2SocketContext_8cpp_source.html#l00057">iot::mqtt::SocketContext::send()</a>, <a class="el" href="iot_2mqtt-fast_2SocketContext_8cpp_source.html#l00216">iot::mqtt_fast::SocketContext::send()</a>, and <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00325">web::http::server::Response::sendFragment()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="web_2http_2client_2Request_8cpp_source.html#l00525">web::http::client::Request::executeSendFragment()</a>, <a class="el" href="iot_2mqtt_2SocketContext_8cpp_source.html#l00057">iot::mqtt::SocketContext::send()</a>, <a class="el" href="iot_2mqtt-fast_2SocketContext_8cpp_source.html#l00216">iot::mqtt_fast::SocketContext::send()</a>, and <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00325">web::http::server::Response::sendFragment()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1071,7 +1071,7 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1socket_1_1stream_1_1SocketContext_a7e80affcdada3ef5f1c52c283d65a89c_icgraph.svg" width="3600" height="1674"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1socket_1_1stream_1_1SocketContext_a7e80affcdada3ef5f1c52c283d65a89c_icgraph.svg" width="3710" height="1572"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -1264,7 +1264,7 @@ Here is the caller graph for this function:</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#ab4496d58a35b0fa62a01f8aa78869522">core::socket::stream::SocketConnection::shutdownWrite()</a>, and <a class="el" href="core_2socket_2stream_2SocketContext_8h_source.html#l00078">core::socket::stream::SocketContext::socketConnection</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="web_2http_2client_2SocketContext_8cpp_source.html#l00194">web::http::client::SocketContext::deliverResponseParseError()</a>, <a class="el" href="iot_2mqtt_2SocketContext_8cpp_source.html#l00061">iot::mqtt::SocketContext::end()</a>, <a class="el" href="core_2socket_2stream_2SocketContext_8cpp_source.html#l00078">core::socket::stream::SocketContext::onReadError()</a>, <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00104">requestCompleted()</a>, <a class="el" href="web_2http_2client_2SocketContext_8cpp_source.html#l00120">web::http::client::SocketContext::requestDelivered()</a>, <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00089">responseCompleted()</a>, <a class="el" href="web_2http_2client_2SocketContext_8cpp_source.html#l00212">web::http::client::SocketContext::responseDelivered()</a>, and <a class="el" href="web_2http_2client_2SocketContext_8cpp_source.html#l00151">web::http::client::SocketContext::responseStarted()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="web_2http_2client_2SocketContext_8cpp_source.html#l00199">web::http::client::SocketContext::deliverResponseParseError()</a>, <a class="el" href="iot_2mqtt_2SocketContext_8cpp_source.html#l00061">iot::mqtt::SocketContext::end()</a>, <a class="el" href="core_2socket_2stream_2SocketContext_8cpp_source.html#l00078">core::socket::stream::SocketContext::onReadError()</a>, <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00104">requestCompleted()</a>, <a class="el" href="web_2http_2client_2SocketContext_8cpp_source.html#l00123">web::http::client::SocketContext::requestDelivered()</a>, <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00089">responseCompleted()</a>, <a class="el" href="web_2http_2client_2SocketContext_8cpp_source.html#l00217">web::http::client::SocketContext::responseDelivered()</a>, and <a class="el" href="web_2http_2client_2SocketContext_8cpp_source.html#l00156">web::http::client::SocketContext::responseStarted()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1273,7 +1273,7 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1socket_1_1stream_1_1SocketContext_a853d83e3e3cd8dfcce992ab688c0f63e_icgraph.svg" width="3644" height="567"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1socket_1_1stream_1_1SocketContext_a853d83e3e3cd8dfcce992ab688c0f63e_icgraph.svg" width="3723" height="719"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -1309,7 +1309,7 @@ Here is the caller graph for this function:</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="core_2socket_2stream_2SocketContext_8h_source.html#l00078">core::socket::stream::SocketContext::socketConnection</a>, and <a class="el" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#aa97ffc0eb464e9c1c4f22db55d2edc67">core::socket::stream::SocketConnection::streamEof()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="web_2http_2client_2Request_8cpp_source.html#l00577">web::http::client::Request::onSourceEof()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00387">web::http::server::Response::onSourceEof()</a>, <a class="el" href="web_2http_2client_2Request_8cpp_source.html#l00585">web::http::client::Request::onSourceError()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00395">web::http::server::Response::onSourceError()</a>, <a class="el" href="web_2http_2client_2Request_8cpp_source.html#l00078">web::http::client::Request::~Request()</a>, and <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00051">web::http::server::Response::~Response()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="web_2http_2client_2Request_8cpp_source.html#l00585">web::http::client::Request::onSourceEof()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00387">web::http::server::Response::onSourceEof()</a>, <a class="el" href="web_2http_2client_2Request_8cpp_source.html#l00593">web::http::client::Request::onSourceError()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00395">web::http::server::Response::onSourceError()</a>, <a class="el" href="web_2http_2client_2Request_8cpp_source.html#l00080">web::http::client::Request::~Request()</a>, and <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00051">web::http::server::Response::~Response()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1355,7 +1355,7 @@ Here is the caller graph for this function:</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="core_2socket_2stream_2SocketContext_8h_source.html#l00078">core::socket::stream::SocketContext::socketConnection</a>, and <a class="el" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#afd5970a79ee4dbf1d18652d2c338fe44">core::socket::stream::SocketConnection::streamToPeer()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="web_2http_2client_2Request_8cpp_source.html#l00563">web::http::client::Request::onSourceConnect()</a>, and <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00369">web::http::server::Response::onSourceConnect()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="web_2http_2client_2Request_8cpp_source.html#l00571">web::http::client::Request::onSourceConnect()</a>, and <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00369">web::http::server::Response::onSourceConnect()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1401,7 +1401,7 @@ Here is the caller graph for this function:</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="core_2socket_2stream_2SocketContext_8h_source.html#l00078">core::socket::stream::SocketContext::socketConnection</a>, and <a class="el" href="SocketConnection_8cpp_source.html#l00041">core::socket::stream::SocketConnection::switchSocketContext()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00347">web::http::server::Response::sendCompleted()</a>, and <a class="el" href="web_2http_2client_2Request_8cpp_source.html#l00292">web::http::client::Request::upgrade()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00347">web::http::server::Response::sendCompleted()</a>, and <a class="el" href="web_2http_2client_2Request_8cpp_source.html#l00297">web::http::client::Request::upgrade()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1632,7 +1632,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceweb.html">web</a></li><li class="navelem"><a class="el" href="namespaceweb_1_1http.html">http</a></li><li class="navelem"><a class="el" href="namespaceweb_1_1http_1_1server.html">server</a></li><li class="navelem"><a class="el" href="classweb_1_1http_1_1server_1_1SocketContext.html">SocketContext</a></li>
-    <li class="footer">Generated on Sun Mar 10 2024 23:19:16 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Mon Mar 25 2024 16:41:50 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

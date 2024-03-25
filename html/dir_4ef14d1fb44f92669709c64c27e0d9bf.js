@@ -2,6 +2,8 @@ var dir_4ef14d1fb44f92669709c64c27e0d9bf =
 [
     [ "commands", "dir_60c825c2359768fb2cfadeb3425c6211.html", "dir_60c825c2359768fb2cfadeb3425c6211" ],
     [ "Client.h", "client_2Client_8h.html", "client_2Client_8h" ],
+    [ "ConfigHTTP.cpp", "ConfigHTTP_8cpp.html", "ConfigHTTP_8cpp" ],
+    [ "ConfigHTTP.h", "ConfigHTTP_8h.html", "ConfigHTTP_8h" ],
     [ "Request.cpp", "web_2http_2client_2Request_8cpp.html", "web_2http_2client_2Request_8cpp" ],
     [ "Request.h", "web_2http_2client_2Request_8h.html", "web_2http_2client_2Request_8h" ],
     [ "RequestCommand.cpp", "RequestCommand_8cpp.html", null ],
