@@ -197,14 +197,6 @@ var hierarchy =
         [ "net::config::stream::legacy::ConfigSocketClient< ConfigSocketClientBaseT >", "classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketClient.html", null ],
         [ "net::config::stream::legacy::ConfigSocketServer< ConfigSocketServerBaseT >", "classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketServer.html", null ]
       ] ],
-      [ "net::config::ConfigListen", "classnet_1_1config_1_1ConfigListen.html", [
-        [ "net::config::stream::ConfigSocketServer< net::in6::config::ConfigAddress, net::in6::config::ConfigAddressReverse >", "classnet_1_1config_1_1stream_1_1ConfigSocketServer.html", null ],
-        [ "net::config::stream::ConfigSocketServer< net::in::config::ConfigAddress, net::in::config::ConfigAddressReverse >", "classnet_1_1config_1_1stream_1_1ConfigSocketServer.html", null ],
-        [ "net::config::stream::ConfigSocketServer< net::l2::config::ConfigAddress, net::l2::config::ConfigAddressReverse >", "classnet_1_1config_1_1stream_1_1ConfigSocketServer.html", null ],
-        [ "net::config::stream::ConfigSocketServer< net::rc::config::ConfigAddress, net::rc::config::ConfigAddressReverse >", "classnet_1_1config_1_1stream_1_1ConfigSocketServer.html", null ],
-        [ "net::config::stream::ConfigSocketServer< net::un::config::ConfigAddress, net::un::config::ConfigAddressReverse >", "classnet_1_1config_1_1stream_1_1ConfigSocketServer.html", null ],
-        [ "net::config::stream::ConfigSocketServer< ConfigAddressLocalT, ConfigAddressRemoteT >", "classnet_1_1config_1_1stream_1_1ConfigSocketServer.html", null ]
-      ] ],
       [ "net::config::ConfigPhysicalSocket", "classnet_1_1config_1_1ConfigPhysicalSocket.html", [
         [ "net::config::ConfigPhysicalSocketClient", "classnet_1_1config_1_1ConfigPhysicalSocketClient.html", [
           [ "net::config::stream::ConfigSocketClient< net::in6::config::ConfigAddress >", "classnet_1_1config_1_1stream_1_1ConfigSocketClient.html", null ],
@@ -352,9 +344,9 @@ var hierarchy =
       ] ]
     ] ],
     [ "core::DescriptorEventPublisher", "classcore_1_1DescriptorEventPublisher.html", [
-      [ "core::epoll::DescriptorEventPublisher", "classcore_1_1epoll_1_1DescriptorEventPublisher.html", null ],
-      [ "core::poll::DescriptorEventPublisher", "classcore_1_1poll_1_1DescriptorEventPublisher.html", null ],
-      [ "core::select::DescriptorEventPublisher", "classcore_1_1select_1_1DescriptorEventPublisher.html", null ]
+      [ "core::multiplexer::epoll::DescriptorEventPublisher", "classcore_1_1multiplexer_1_1epoll_1_1DescriptorEventPublisher.html", null ],
+      [ "core::multiplexer::poll::DescriptorEventPublisher", "classcore_1_1multiplexer_1_1poll_1_1DescriptorEventPublisher.html", null ],
+      [ "core::multiplexer::select::DescriptorEventPublisher", "classcore_1_1multiplexer_1_1select_1_1DescriptorEventPublisher.html", null ]
     ] ],
     [ "express::Dispatcher", "classexpress_1_1Dispatcher.html", [
       [ "express::dispatcher::ApplicationDispatcher", "classexpress_1_1dispatcher_1_1ApplicationDispatcher.html", null ],
@@ -362,13 +354,13 @@ var hierarchy =
       [ "express::dispatcher::RouterDispatcher", "classexpress_1_1dispatcher_1_1RouterDispatcher.html", null ]
     ] ],
     [ "core::DynamicLoader", "classcore_1_1DynamicLoader.html", null ],
-    [ "core::epoll::DescriptorEventPublisher::EPollEvents", "classcore_1_1epoll_1_1DescriptorEventPublisher_1_1EPollEvents.html", null ],
+    [ "core::multiplexer::epoll::DescriptorEventPublisher::EPollEvents", "classcore_1_1multiplexer_1_1epoll_1_1DescriptorEventPublisher_1_1EPollEvents.html", null ],
     [ "core::Event", "classcore_1_1Event.html", null ],
     [ "core::EventLoop", "classcore_1_1EventLoop.html", null ],
     [ "core::EventMultiplexer", "classcore_1_1EventMultiplexer.html", [
-      [ "core::epoll::EventMultiplexer", "classcore_1_1epoll_1_1EventMultiplexer.html", null ],
-      [ "core::poll::EventMultiplexer", "classcore_1_1poll_1_1EventMultiplexer.html", null ],
-      [ "core::select::EventMultiplexer", "classcore_1_1select_1_1EventMultiplexer.html", null ]
+      [ "core::multiplexer::epoll::EventMultiplexer", "classcore_1_1multiplexer_1_1epoll_1_1EventMultiplexer.html", null ],
+      [ "core::multiplexer::poll::EventMultiplexer", "classcore_1_1multiplexer_1_1poll_1_1EventMultiplexer.html", null ],
+      [ "core::multiplexer::select::EventMultiplexer", "classcore_1_1multiplexer_1_1select_1_1EventMultiplexer.html", null ]
     ] ],
     [ "core::EventMultiplexer::EventQueue", "classcore_1_1EventMultiplexer_1_1EventQueue.html", null ],
     [ "core::EventReceiver", "classcore_1_1EventReceiver.html", [
@@ -424,16 +416,7 @@ var hierarchy =
       [ "database::mariadb::MariaDBCommandStartEvent", "classdatabase_1_1mariadb_1_1MariaDBCommandStartEvent.html", null ],
       [ "iot::mqtt::OnReceivedFromPeerEvent", "classiot_1_1mqtt_1_1OnReceivedFromPeerEvent.html", null ]
     ] ],
-    [ "std::exception", null, [
-      [ "std::runtime_error", null, [
-        [ "core::socket::SocketAddress::BadSocketAddress", "classcore_1_1socket_1_1SocketAddress_1_1BadSocketAddress.html", null ],
-        [ "utils::DaemonFailure", "classutils_1_1DaemonFailure.html", [
-          [ "utils::DaemonError", "classutils_1_1DaemonError.html", null ]
-        ] ],
-        [ "utils::DaemonSignaled", "classutils_1_1DaemonSignaled.html", null ]
-      ] ]
-    ] ],
-    [ "core::select::FdSet", "classcore_1_1select_1_1FdSet.html", null ],
+    [ "core::multiplexer::select::FdSet", "classcore_1_1multiplexer_1_1select_1_1FdSet.html", null ],
     [ "web::http::decoder::Fields", "classweb_1_1http_1_1decoder_1_1Fields.html", null ],
     [ "utils::fixed_string< N >", "structutils_1_1fixed__string.html", null ],
     [ "iot::mqtt::FixedHeader", "classiot_1_1mqtt_1_1FixedHeader.html", null ],
@@ -445,7 +428,7 @@ var hierarchy =
     [ "net::in::SocketAddress::Hints", "structnet_1_1in_1_1SocketAddress_1_1Hints.html", null ],
     [ "core::DynamicLoader::Library", "structcore_1_1DynamicLoader_1_1Library.html", null ],
     [ "logger::Logger", "classlogger_1_1Logger.html", null ],
-    [ "std::map< K, T >", null, [
+    [ "std::map", null, [
       [ "web::http::CiStringMap< std::string >", "classweb_1_1http_1_1CiStringMap.html", null ],
       [ "web::http::CiStringMap< web::http::CookieOptions >", "classweb_1_1http_1_1CiStringMap.html", null ],
       [ "web::http::CiStringMap< ValueT >", "classweb_1_1http_1_1CiStringMap.html", null ]
@@ -541,8 +524,8 @@ var hierarchy =
     ] ],
     [ "net::phy::PhysicalSocketOption", "classnet_1_1phy_1_1PhysicalSocketOption.html", null ],
     [ "core::pipe::Pipe", "classcore_1_1pipe_1_1Pipe.html", null ],
-    [ "core::poll::PollFdsManager::PollFdIndex", "structcore_1_1poll_1_1PollFdsManager_1_1PollFdIndex.html", null ],
-    [ "core::poll::PollFdsManager", "classcore_1_1poll_1_1PollFdsManager.html", null ],
+    [ "core::multiplexer::poll::PollFdsManager::PollFdIndex", "structcore_1_1multiplexer_1_1poll_1_1PollFdsManager_1_1PollFdIndex.html", null ],
+    [ "core::multiplexer::poll::PollFdsManager", "classcore_1_1multiplexer_1_1poll_1_1PollFdsManager.html", null ],
     [ "utils::PreserveErrno", "classutils_1_1PreserveErrno.html", null ],
     [ "utils::Random", "classutils_1_1Random.html", null ],
     [ "web::websocket::Receiver", "classweb_1_1websocket_1_1Receiver.html", [
@@ -579,6 +562,13 @@ var hierarchy =
       [ "express::middleware::StaticMiddleware", "classexpress_1_1middleware_1_1StaticMiddleware.html", null ],
       [ "express::middleware::VHost", "classexpress_1_1middleware_1_1VHost.html", null ],
       [ "express::middleware::VerboseRequest", "classexpress_1_1middleware_1_1VerboseRequest.html", null ]
+    ] ],
+    [ "std::runtime_error", null, [
+      [ "core::socket::SocketAddress::BadSocketAddress", "classcore_1_1socket_1_1SocketAddress_1_1BadSocketAddress.html", null ],
+      [ "utils::DaemonFailure", "classutils_1_1DaemonFailure.html", [
+        [ "utils::DaemonError", "classutils_1_1DaemonError.html", null ]
+      ] ],
+      [ "utils::DaemonSignaled", "classutils_1_1DaemonSignaled.html", null ]
     ] ],
     [ "ServerT", null, [
       [ "express::WebAppT< ServerT >", "classexpress_1_1WebAppT.html", null ]
@@ -759,12 +749,13 @@ var hierarchy =
       [ "iot::mqtt_fast::types::Int_1", "classiot_1_1mqtt__fast_1_1types_1_1Int__1.html", null ],
       [ "iot::mqtt_fast::types::Int_V", "classiot_1_1mqtt__fast_1_1types_1_1Int__V.html", null ]
     ] ],
-    [ "iot::mqtt::types::TypeBase< std::list< uint8_t > >", "classiot_1_1mqtt_1_1types_1_1TypeBase.html", [
-      [ "iot::mqtt::types::UInt8List", "classiot_1_1mqtt_1_1types_1_1UInt8List.html", null ]
-    ] ],
     [ "iot::mqtt::types::TypeBase< std::string >", "classiot_1_1mqtt_1_1types_1_1TypeBase.html", [
       [ "iot::mqtt::types::String", "classiot_1_1mqtt_1_1types_1_1String.html", null ],
       [ "iot::mqtt::types::StringRaw", "classiot_1_1mqtt_1_1types_1_1StringRaw.html", null ]
+    ] ],
+    [ "iot::mqtt::types::TypeBase< std::vector< char > >", "classiot_1_1mqtt_1_1types_1_1TypeBase.html", [
+      [ "iot::mqtt::types::BinaryData", "classiot_1_1mqtt_1_1types_1_1BinaryData.html", null ],
+      [ "iot::mqtt::types::StringPair", "classiot_1_1mqtt_1_1types_1_1StringPair.html", null ]
     ] ],
     [ "iot::mqtt::types::TypeBase< uint16_t >", "classiot_1_1mqtt_1_1types_1_1TypeBase.html", [
       [ "iot::mqtt::types::UInt16", "classiot_1_1mqtt_1_1types_1_1UInt16.html", null ]
@@ -772,9 +763,6 @@ var hierarchy =
     [ "iot::mqtt::types::TypeBase< uint32_t >", "classiot_1_1mqtt_1_1types_1_1TypeBase.html", [
       [ "iot::mqtt::types::UInt32", "classiot_1_1mqtt_1_1types_1_1UInt32.html", null ],
       [ "iot::mqtt::types::UIntV", "classiot_1_1mqtt_1_1types_1_1UIntV.html", null ]
-    ] ],
-    [ "iot::mqtt::types::TypeBase< uint64_t >", "classiot_1_1mqtt_1_1types_1_1TypeBase.html", [
-      [ "iot::mqtt::types::UInt64", "classiot_1_1mqtt_1_1types_1_1UInt64.html", null ]
     ] ],
     [ "iot::mqtt::types::TypeBase< uint8_t >", "classiot_1_1mqtt_1_1types_1_1TypeBase.html", [
       [ "iot::mqtt::types::UInt8", "classiot_1_1mqtt_1_1types_1_1UInt8.html", null ]

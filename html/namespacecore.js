@@ -1,11 +1,9 @@
 var namespacecore =
 [
-    [ "epoll", "namespacecore_1_1epoll.html", "namespacecore_1_1epoll" ],
     [ "eventreceiver", "namespacecore_1_1eventreceiver.html", "namespacecore_1_1eventreceiver" ],
     [ "file", "namespacecore_1_1file.html", "namespacecore_1_1file" ],
+    [ "multiplexer", "namespacecore_1_1multiplexer.html", "namespacecore_1_1multiplexer" ],
     [ "pipe", "namespacecore_1_1pipe.html", "namespacecore_1_1pipe" ],
-    [ "poll", "namespacecore_1_1poll.html", "namespacecore_1_1poll" ],
-    [ "select", "namespacecore_1_1select.html", "namespacecore_1_1select" ],
     [ "socket", "namespacecore_1_1socket.html", "namespacecore_1_1socket" ],
     [ "ssl", "namespacecore_1_1ssl.html", [
       [ "SSL_read", "namespacecore_1_1ssl.html#a7a7db589912354e9adb47a18b8c5433f", null ],

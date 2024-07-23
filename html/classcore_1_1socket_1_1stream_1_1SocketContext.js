@@ -7,8 +7,6 @@ var classcore_1_1socket_1_1stream_1_1SocketContext =
     [ "onConnected", "classcore_1_1socket_1_1stream_1_1SocketContext.html#a716a54b882173251b584439499ca0446", null ],
     [ "onDisconnected", "classcore_1_1socket_1_1stream_1_1SocketContext.html#ab9c932c5c1b706ffb84d97634514d20e", null ],
     [ "onReadError", "classcore_1_1socket_1_1stream_1_1SocketContext.html#a6c721eab494ef7c1566defe4361e6af6", null ],
-    [ "onReceivedFromPeer", "classcore_1_1socket_1_1stream_1_1SocketContext.html#a34c520f17818f029395d2d2b4babc882", null ],
-    [ "onSignal", "classcore_1_1socket_1_1stream_1_1SocketContext.html#ad5a47157710544f1d90f1ebdf15fe49e", null ],
     [ "onWriteError", "classcore_1_1socket_1_1stream_1_1SocketContext.html#a9ac0bc41b2d3020850c106ea84e274fb", null ],
     [ "readFromPeer", "classcore_1_1socket_1_1stream_1_1SocketContext.html#a5401a6174dbad9a6637c684a0fb952d9", null ],
     [ "sendToPeer", "classcore_1_1socket_1_1stream_1_1SocketContext.html#a7e80affcdada3ef5f1c52c283d65a89c", null ],

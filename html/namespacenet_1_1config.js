@@ -9,7 +9,6 @@ var namespacenet_1_1config =
     [ "ConfigConnection", "classnet_1_1config_1_1ConfigConnection.html", "classnet_1_1config_1_1ConfigConnection" ],
     [ "ConfigInstance", "classnet_1_1config_1_1ConfigInstance.html", "classnet_1_1config_1_1ConfigInstance" ],
     [ "ConfigLegacy", "classnet_1_1config_1_1ConfigLegacy.html", "classnet_1_1config_1_1ConfigLegacy" ],
-    [ "ConfigListen", "classnet_1_1config_1_1ConfigListen.html", "classnet_1_1config_1_1ConfigListen" ],
     [ "ConfigPhysicalSocket", "classnet_1_1config_1_1ConfigPhysicalSocket.html", "classnet_1_1config_1_1ConfigPhysicalSocket" ],
     [ "ConfigPhysicalSocketClient", "classnet_1_1config_1_1ConfigPhysicalSocketClient.html", "classnet_1_1config_1_1ConfigPhysicalSocketClient" ],
     [ "ConfigPhysicalSocketServer", "classnet_1_1config_1_1ConfigPhysicalSocketServer.html", "classnet_1_1config_1_1ConfigPhysicalSocketServer" ],

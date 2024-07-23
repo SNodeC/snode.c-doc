@@ -8,7 +8,7 @@ var classiot_1_1mqtt_1_1server_1_1broker_1_1SubscribtionTree =
     [ "publish", "classiot_1_1mqtt_1_1server_1_1broker_1_1SubscribtionTree.html#a8a6dd98dadafb0d42bc76d612d226240", null ],
     [ "subscribe", "classiot_1_1mqtt_1_1server_1_1broker_1_1SubscribtionTree.html#af8521e619eb939add17315baf3857bcd", null ],
     [ "toJson", "classiot_1_1mqtt_1_1server_1_1broker_1_1SubscribtionTree.html#a02414f9f862e59977a14aec108995da2", null ],
-    [ "unsubscribe", "classiot_1_1mqtt_1_1server_1_1broker_1_1SubscribtionTree.html#af3bcb9816c5d2e9aa939123053f9f5f5", null ],
-    [ "unsubscribe", "classiot_1_1mqtt_1_1server_1_1broker_1_1SubscribtionTree.html#afeb0349def7a9e0f991d6026bb44d627", null ],
+    [ "unsubscribe", "classiot_1_1mqtt_1_1server_1_1broker_1_1SubscribtionTree.html#a96711168759331a5a4eaf61c9262a998", null ],
+    [ "unsubscribe", "classiot_1_1mqtt_1_1server_1_1broker_1_1SubscribtionTree.html#ab150ae6cf4aa4d29335de8462257ad02", null ],
     [ "head", "classiot_1_1mqtt_1_1server_1_1broker_1_1SubscribtionTree.html#a06cb4918578bd60cc28de8aec9dc97a5", null ]
 ];

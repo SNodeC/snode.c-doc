@@ -1,8 +1,7 @@
 var searchData=
 [
-  ['requestparser_0',['RequestParser',['../classweb_1_1http_1_1server_1_1Request.html#a7e5d4b64950ddf4505834a0a088c0f3a',1,'web::http::server::Request']]],
-  ['response_1',['Response',['../classexpress_1_1Request.html#a0bb0e5a2fcd99881ef189293e209db7f',1,'express::Request']]],
-  ['responseparser_2',['ResponseParser',['../classweb_1_1http_1_1client_1_1Response.html#a1aae57ed7f20772fc4063aa3f7214674',1,'web::http::client::Response']]],
-  ['rootroute_3',['rootroute',['../classexpress_1_1Route.html#adae34d50b8e74146566b05400257bcb0',1,'express::Route::RootRoute'],['../classexpress_1_1Router.html#adae34d50b8e74146566b05400257bcb0',1,'express::Router::RootRoute']]],
-  ['route_4',['route',['../classexpress_1_1RootRoute.html#a82eb8d8152124f42f8bad8770270f4fc',1,'express::RootRoute::Route'],['../classexpress_1_1Dispatcher.html#a82eb8d8152124f42f8bad8770270f4fc',1,'express::Dispatcher::Route'],['../classexpress_1_1Router.html#a82eb8d8152124f42f8bad8770270f4fc',1,'express::Router::Route']]]
+  ['operator_26_0',['operator&amp;',['../classweb_1_1http_1_1Parser.html#a1585b2d50f55f49611187d326591f03c',1,'web::http::Parser']]],
+  ['operator_2a_1',['operator*',['../classutils_1_1Timeval.html#a0bbf715e0238b4f751114c8423f831e2',1,'utils::Timeval']]],
+  ['operator_3c_3c_2',['operator&lt;&lt;',['../classutils_1_1Timeval.html#af10e6850a77a042e09e426816cddcb3e',1,'utils::Timeval']]],
+  ['operator_7c_3',['operator|',['../classweb_1_1http_1_1Parser.html#a504270bcd1736c62e66e80918151d611',1,'web::http::Parser']]]
 ];

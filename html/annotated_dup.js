@@ -8,10 +8,6 @@ var annotated_dup =
       [ "HelpFormatter", "classCLI_1_1HelpFormatter.html", "classCLI_1_1HelpFormatter" ]
     ] ],
     [ "core", "namespacecore.html", [
-      [ "epoll", "namespacecore_1_1epoll.html", [
-        [ "DescriptorEventPublisher", "classcore_1_1epoll_1_1DescriptorEventPublisher.html", "classcore_1_1epoll_1_1DescriptorEventPublisher" ],
-        [ "EventMultiplexer", "classcore_1_1epoll_1_1EventMultiplexer.html", "classcore_1_1epoll_1_1EventMultiplexer" ]
-      ] ],
       [ "eventreceiver", "namespacecore_1_1eventreceiver.html", [
         [ "AcceptEventReceiver", "classcore_1_1eventreceiver_1_1AcceptEventReceiver.html", "classcore_1_1eventreceiver_1_1AcceptEventReceiver" ],
         [ "ConnectEventReceiver", "classcore_1_1eventreceiver_1_1ConnectEventReceiver.html", "classcore_1_1eventreceiver_1_1ConnectEventReceiver" ],
@@ -23,22 +19,28 @@ var annotated_dup =
         [ "File", "classcore_1_1file_1_1File.html", "classcore_1_1file_1_1File" ],
         [ "FileReader", "classcore_1_1file_1_1FileReader.html", "classcore_1_1file_1_1FileReader" ]
       ] ],
+      [ "multiplexer", "namespacecore_1_1multiplexer.html", [
+        [ "epoll", "namespacecore_1_1multiplexer_1_1epoll.html", [
+          [ "DescriptorEventPublisher", "classcore_1_1multiplexer_1_1epoll_1_1DescriptorEventPublisher.html", "classcore_1_1multiplexer_1_1epoll_1_1DescriptorEventPublisher" ],
+          [ "EventMultiplexer", "classcore_1_1multiplexer_1_1epoll_1_1EventMultiplexer.html", "classcore_1_1multiplexer_1_1epoll_1_1EventMultiplexer" ]
+        ] ],
+        [ "poll", "namespacecore_1_1multiplexer_1_1poll.html", [
+          [ "DescriptorEventPublisher", "classcore_1_1multiplexer_1_1poll_1_1DescriptorEventPublisher.html", "classcore_1_1multiplexer_1_1poll_1_1DescriptorEventPublisher" ],
+          [ "EventMultiplexer", "classcore_1_1multiplexer_1_1poll_1_1EventMultiplexer.html", "classcore_1_1multiplexer_1_1poll_1_1EventMultiplexer" ],
+          [ "PollFdsManager", "classcore_1_1multiplexer_1_1poll_1_1PollFdsManager.html", "classcore_1_1multiplexer_1_1poll_1_1PollFdsManager" ]
+        ] ],
+        [ "select", "namespacecore_1_1multiplexer_1_1select.html", [
+          [ "DescriptorEventPublisher", "classcore_1_1multiplexer_1_1select_1_1DescriptorEventPublisher.html", "classcore_1_1multiplexer_1_1select_1_1DescriptorEventPublisher" ],
+          [ "EventMultiplexer", "classcore_1_1multiplexer_1_1select_1_1EventMultiplexer.html", "classcore_1_1multiplexer_1_1select_1_1EventMultiplexer" ],
+          [ "FdSet", "classcore_1_1multiplexer_1_1select_1_1FdSet.html", "classcore_1_1multiplexer_1_1select_1_1FdSet" ]
+        ] ]
+      ] ],
       [ "pipe", "namespacecore_1_1pipe.html", [
         [ "Pipe", "classcore_1_1pipe_1_1Pipe.html", "classcore_1_1pipe_1_1Pipe" ],
         [ "PipeSink", "classcore_1_1pipe_1_1PipeSink.html", "classcore_1_1pipe_1_1PipeSink" ],
         [ "PipeSource", "classcore_1_1pipe_1_1PipeSource.html", "classcore_1_1pipe_1_1PipeSource" ],
         [ "Sink", "classcore_1_1pipe_1_1Sink.html", "classcore_1_1pipe_1_1Sink" ],
         [ "Source", "classcore_1_1pipe_1_1Source.html", "classcore_1_1pipe_1_1Source" ]
-      ] ],
-      [ "poll", "namespacecore_1_1poll.html", [
-        [ "DescriptorEventPublisher", "classcore_1_1poll_1_1DescriptorEventPublisher.html", "classcore_1_1poll_1_1DescriptorEventPublisher" ],
-        [ "EventMultiplexer", "classcore_1_1poll_1_1EventMultiplexer.html", "classcore_1_1poll_1_1EventMultiplexer" ],
-        [ "PollFdsManager", "classcore_1_1poll_1_1PollFdsManager.html", "classcore_1_1poll_1_1PollFdsManager" ]
-      ] ],
-      [ "select", "namespacecore_1_1select.html", [
-        [ "DescriptorEventPublisher", "classcore_1_1select_1_1DescriptorEventPublisher.html", "classcore_1_1select_1_1DescriptorEventPublisher" ],
-        [ "EventMultiplexer", "classcore_1_1select_1_1EventMultiplexer.html", "classcore_1_1select_1_1EventMultiplexer" ],
-        [ "FdSet", "classcore_1_1select_1_1FdSet.html", "classcore_1_1select_1_1FdSet" ]
       ] ],
       [ "socket", "namespacecore_1_1socket.html", [
         [ "stream", "namespacecore_1_1socket_1_1stream.html", [
@@ -210,14 +212,14 @@ var annotated_dup =
           [ "SocketContextFactory", "classiot_1_1mqtt_1_1server_1_1SocketContextFactory.html", "classiot_1_1mqtt_1_1server_1_1SocketContextFactory" ]
         ] ],
         [ "types", "namespaceiot_1_1mqtt_1_1types.html", [
+          [ "BinaryData", "classiot_1_1mqtt_1_1types_1_1BinaryData.html", "classiot_1_1mqtt_1_1types_1_1BinaryData" ],
           [ "String", "classiot_1_1mqtt_1_1types_1_1String.html", "classiot_1_1mqtt_1_1types_1_1String" ],
+          [ "StringPair", "classiot_1_1mqtt_1_1types_1_1StringPair.html", "classiot_1_1mqtt_1_1types_1_1StringPair" ],
           [ "StringRaw", "classiot_1_1mqtt_1_1types_1_1StringRaw.html", "classiot_1_1mqtt_1_1types_1_1StringRaw" ],
           [ "TypeBase", "classiot_1_1mqtt_1_1types_1_1TypeBase.html", "classiot_1_1mqtt_1_1types_1_1TypeBase" ],
           [ "UInt16", "classiot_1_1mqtt_1_1types_1_1UInt16.html", "classiot_1_1mqtt_1_1types_1_1UInt16" ],
           [ "UInt32", "classiot_1_1mqtt_1_1types_1_1UInt32.html", "classiot_1_1mqtt_1_1types_1_1UInt32" ],
-          [ "UInt64", "classiot_1_1mqtt_1_1types_1_1UInt64.html", "classiot_1_1mqtt_1_1types_1_1UInt64" ],
           [ "UInt8", "classiot_1_1mqtt_1_1types_1_1UInt8.html", "classiot_1_1mqtt_1_1types_1_1UInt8" ],
-          [ "UInt8List", "classiot_1_1mqtt_1_1types_1_1UInt8List.html", "classiot_1_1mqtt_1_1types_1_1UInt8List" ],
           [ "UIntV", "classiot_1_1mqtt_1_1types_1_1UIntV.html", "classiot_1_1mqtt_1_1types_1_1UIntV" ]
         ] ],
         [ "ControlPacket", "classiot_1_1mqtt_1_1ControlPacket.html", "classiot_1_1mqtt_1_1ControlPacket" ],
@@ -285,7 +287,6 @@ var annotated_dup =
         [ "ConfigConnection", "classnet_1_1config_1_1ConfigConnection.html", "classnet_1_1config_1_1ConfigConnection" ],
         [ "ConfigInstance", "classnet_1_1config_1_1ConfigInstance.html", "classnet_1_1config_1_1ConfigInstance" ],
         [ "ConfigLegacy", "classnet_1_1config_1_1ConfigLegacy.html", "classnet_1_1config_1_1ConfigLegacy" ],
-        [ "ConfigListen", "classnet_1_1config_1_1ConfigListen.html", "classnet_1_1config_1_1ConfigListen" ],
         [ "ConfigPhysicalSocket", "classnet_1_1config_1_1ConfigPhysicalSocket.html", "classnet_1_1config_1_1ConfigPhysicalSocket" ],
         [ "ConfigPhysicalSocketClient", "classnet_1_1config_1_1ConfigPhysicalSocketClient.html", "classnet_1_1config_1_1ConfigPhysicalSocketClient" ],
         [ "ConfigPhysicalSocketServer", "classnet_1_1config_1_1ConfigPhysicalSocketServer.html", "classnet_1_1config_1_1ConfigPhysicalSocketServer" ],

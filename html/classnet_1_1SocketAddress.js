@@ -9,8 +9,6 @@ var classnet_1_1SocketAddress =
     [ "getSockAddr", "classnet_1_1SocketAddress.html#adbd6c7d00301f8356ebc350889d2d7e5", null ],
     [ "getSockAddrLen", "classnet_1_1SocketAddress.html#a13c04d23d0541be74f989e175aa8f231", null ],
     [ "operator=", "classnet_1_1SocketAddress.html#a191caa38f84f24ff43af81dadd6efc70", null ],
-    [ "toString", "classnet_1_1SocketAddress.html#a46b6e56ceceba959ca208ef4acf00137", null ],
-    [ "useNext", "classnet_1_1SocketAddress.html#af8e0b074ba6a997cc5dfe6ff9de96d76", null ],
     [ "sockAddr", "classnet_1_1SocketAddress.html#a4012f9aeeeb9e80e919ecc5d88f0aa9a", null ],
     [ "sockAddrLen", "classnet_1_1SocketAddress.html#a47fe58d1faab634ab3919159071e2217", null ]
 ];

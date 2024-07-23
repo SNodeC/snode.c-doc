@@ -12,14 +12,12 @@ var classiot_1_1mqtt_1_1SubProtocol =
     [ "onMessageEnd", "classiot_1_1mqtt_1_1SubProtocol.html#ad05d4435c7512624bb216d72b54e2eae", null ],
     [ "onMessageError", "classiot_1_1mqtt_1_1SubProtocol.html#a0dbc9da88938607df28f3af7a105d583", null ],
     [ "onMessageStart", "classiot_1_1mqtt_1_1SubProtocol.html#ad164180dcd4d3659dec3172c155aaeff", null ],
-    [ "onReceivedFromPeer", "classiot_1_1mqtt_1_1SubProtocol.html#a614ee4495a17d7f004355578f73cc29c", null ],
     [ "onSignal", "classiot_1_1mqtt_1_1SubProtocol.html#a0e719a29942ab0abb4fad152e56f462a", null ],
     [ "recv", "classiot_1_1mqtt_1_1SubProtocol.html#a877111561247a663285a227325a1cb08", null ],
     [ "send", "classiot_1_1mqtt_1_1SubProtocol.html#a0e728fd614be1393e9a50ff4765863a3", null ],
     [ "buffer", "classiot_1_1mqtt_1_1SubProtocol.html#a909b20ba8cdcc96b046443ecbf26ba68", null ],
     [ "cursor", "classiot_1_1mqtt_1_1SubProtocol.html#a9da4275a1d27f0865a1c0d4eae118070", null ],
     [ "data", "classiot_1_1mqtt_1_1SubProtocol.html#a1baf49c27b240f67f80d47b016785484", null ],
-    [ "mqtt", "classiot_1_1mqtt_1_1SubProtocol.html#aa284836e39e2cce1603f318d52b25d11", null ],
     [ "onReceivedFromPeerEvent", "classiot_1_1mqtt_1_1SubProtocol.html#aa234357f48c39d7ad8a7599b2eda29a0", null ],
     [ "size", "classiot_1_1mqtt_1_1SubProtocol.html#aec499c88752f3e8e13ed07c14d7f6bed", null ]
 ];

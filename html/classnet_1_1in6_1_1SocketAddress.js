@@ -1,21 +1,16 @@
 var classnet_1_1in6_1_1SocketAddress =
 [
     [ "Hints", "structnet_1_1in6_1_1SocketAddress_1_1Hints.html", "structnet_1_1in6_1_1SocketAddress_1_1Hints" ],
-    [ "SockAddr", "classnet_1_1in6_1_1SocketAddress.html#a327d4d8a2a81db30985b94e29a643e01", null ],
-    [ "SockLen", "classnet_1_1in6_1_1SocketAddress.html#a49e99c0b17c0289615fb7cd14f046535", null ],
     [ "Super", "classnet_1_1in6_1_1SocketAddress.html#a79042555a0e6584408556dae4b817792", null ],
     [ "SocketAddress", "classnet_1_1in6_1_1SocketAddress.html#ab35c80e6d63c134527a33c05ec64ac75", null ],
     [ "SocketAddress", "classnet_1_1in6_1_1SocketAddress.html#a72e0f16aadbf44771d2fc595eb3f06ea", null ],
     [ "SocketAddress", "classnet_1_1in6_1_1SocketAddress.html#a0f84284a49b0dd3128bfad1720013a13", null ],
     [ "SocketAddress", "classnet_1_1in6_1_1SocketAddress.html#ab6d1b74c2d16f04b535ecc633c2677da", null ],
     [ "SocketAddress", "classnet_1_1in6_1_1SocketAddress.html#ab6e68fb9bcad3ebbd175105a71e3686a", null ],
-    [ "getAddressFamily", "classnet_1_1in6_1_1SocketAddress.html#afe9795445d318ad8dbc6a7685899e004", null ],
     [ "getCanonName", "classnet_1_1in6_1_1SocketAddress.html#a6c6a6134207e0d1dcfa9d7a80b512f87", null ],
     [ "getHost", "classnet_1_1in6_1_1SocketAddress.html#a7bb837f5df5c218f2270af7a5271df79", null ],
     [ "getPort", "classnet_1_1in6_1_1SocketAddress.html#a386ed3ce3388cda24f1401e7942e6334", null ],
-    [ "getSockAddr", "classnet_1_1in6_1_1SocketAddress.html#adbd6c7d00301f8356ebc350889d2d7e5", null ],
-    [ "getSockAddrLen", "classnet_1_1in6_1_1SocketAddress.html#a13c04d23d0541be74f989e175aa8f231", null ],
-    [ "init", "classnet_1_1in6_1_1SocketAddress.html#a9ace8e1226f263e624e344a652bcda32", null ],
+    [ "init", "classnet_1_1in6_1_1SocketAddress.html#a4466bc0cc6fcbf160df94ac58aed0f54", null ],
     [ "setHost", "classnet_1_1in6_1_1SocketAddress.html#a167ab679f27e2318a61325e820cc114b", null ],
     [ "setPort", "classnet_1_1in6_1_1SocketAddress.html#a2b57393f20fe8a9bebf17e0338250d54", null ],
     [ "toString", "classnet_1_1in6_1_1SocketAddress.html#a9bfaca78da4c3c9a1200507704b77d00", null ],
@@ -23,7 +18,5 @@ var classnet_1_1in6_1_1SocketAddress =
     [ "canonName", "classnet_1_1in6_1_1SocketAddress.html#ac586a6f72b2f22c4e7f5c59f1e6d4c79", null ],
     [ "host", "classnet_1_1in6_1_1SocketAddress.html#a05daff9be91a5d4eb324ff9e4b888e55", null ],
     [ "port", "classnet_1_1in6_1_1SocketAddress.html#ab95f78f244bae1eed572ded4632df62a", null ],
-    [ "sockAddr", "classnet_1_1in6_1_1SocketAddress.html#a4012f9aeeeb9e80e919ecc5d88f0aa9a", null ],
-    [ "sockAddrLen", "classnet_1_1in6_1_1SocketAddress.html#a47fe58d1faab634ab3919159071e2217", null ],
     [ "socketAddrInfo", "classnet_1_1in6_1_1SocketAddress.html#ab349c6bd78378f3a214ed6c20c44b1f4", null ]
 ];

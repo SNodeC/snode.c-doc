@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['fdset_0',['FdSet',['../classcore_1_1select_1_1FdSet.html#ae62680ecfedc74d7619785d8af674fdb',1,'core::select::FdSet']]],
+  ['fdset_0',['FdSet',['../classcore_1_1multiplexer_1_1select_1_1FdSet.html#ae8c91d47e5c8d18525552128294b1c31',1,'core::multiplexer::select::FdSet']]],
   ['fieldcount_1',['fieldCount',['../classdatabase_1_1mariadb_1_1MariaDBClientSyncAPI.html#a55cffdc71b44ec52ec7e5e1aaada030c',1,'database::mariadb::MariaDBClientSyncAPI']]],
   ['fields_2',['fields',['../classweb_1_1http_1_1decoder_1_1Fields.html#a412b17deed48ad91691dc442f5db1f1e',1,'web::http::decoder::Fields::Fields(core::socket::stream::SocketContext *socketContext, std::set&lt; std::string &gt; fieldsExpected={})'],['../classweb_1_1http_1_1decoder_1_1Fields.html#ad10b924ea908431e8a8f19fa14916401',1,'web::http::decoder::Fields::Fields(Fields &amp;)=delete'],['../classweb_1_1http_1_1decoder_1_1Fields.html#a8fd50c644f021c325997c0ec7d8514b1',1,'web::http::decoder::Fields::Fields(Fields &amp;&amp;)=delete']]],
   ['file_3',['File',['../classcore_1_1file_1_1File.html#ab3393ffba53ff5d7e5f5c9afdffef785',1,'core::file::File']]],

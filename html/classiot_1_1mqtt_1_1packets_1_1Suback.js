@@ -2,18 +2,11 @@ var classiot_1_1mqtt_1_1packets_1_1Suback =
 [
     [ "Suback", "classiot_1_1mqtt_1_1packets_1_1Suback.html#a94f32b641b8dfc54ebf94596629803d8", null ],
     [ "Suback", "classiot_1_1mqtt_1_1packets_1_1Suback.html#ae38cffbf332ab03390bb810fb2f2f469", null ],
-    [ "getFlags", "classiot_1_1mqtt_1_1packets_1_1Suback.html#a5010a3ec8f0c9d1a95b1fd1e85d77f71", null ],
-    [ "getName", "classiot_1_1mqtt_1_1packets_1_1Suback.html#a1d35b63fe04256fa31650462db1b311a", null ],
     [ "getPacketIdentifier", "classiot_1_1mqtt_1_1packets_1_1Suback.html#a4b210bb967888e97f375d51b564a8256", null ],
     [ "getReturnCodes", "classiot_1_1mqtt_1_1packets_1_1Suback.html#aeda5db3357a382a8e27124f849fe3787", null ],
-    [ "getType", "classiot_1_1mqtt_1_1packets_1_1Suback.html#a2010ac4f0ef53a8c8140faa953b5a6cd", null ],
-    [ "serialize", "classiot_1_1mqtt_1_1packets_1_1Suback.html#a05bfc24d7ae7380ef9b2fcb64ce37526", null ],
     [ "serializeVP", "classiot_1_1mqtt_1_1packets_1_1Suback.html#ac63ce89808399c51c92d2692b457a0d1", null ],
-    [ "flags", "classiot_1_1mqtt_1_1packets_1_1Suback.html#a8c7e68464f261bbb0ff6412c58ffbab0", null ],
-    [ "name", "classiot_1_1mqtt_1_1packets_1_1Suback.html#a081c745b59b0976dd603712f1b351a40", null ],
     [ "packetIdentifier", "classiot_1_1mqtt_1_1packets_1_1Suback.html#a430219bf044e32f4d4fe7a725e80c569", null ],
     [ "returnCode", "classiot_1_1mqtt_1_1packets_1_1Suback.html#a68c1a028f8666ca4d9580a3e7f9a3bb7", null ],
     [ "returnCodes", "classiot_1_1mqtt_1_1packets_1_1Suback.html#aa53e392a7bd9ee6d8766f3d7de541382", null ],
-    [ "state", "classiot_1_1mqtt_1_1packets_1_1Suback.html#a839b06264711c1586495af0d46314967", null ],
-    [ "type", "classiot_1_1mqtt_1_1packets_1_1Suback.html#ad8f30bf63c16e2d2321333eb2923bd4c", null ]
+    [ "state", "classiot_1_1mqtt_1_1packets_1_1Suback.html#a839b06264711c1586495af0d46314967", null ]
 ];

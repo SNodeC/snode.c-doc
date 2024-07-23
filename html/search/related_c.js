@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['verboserequest_0',['VerboseRequest',['../classexpress_1_1middleware_1_1VerboseRequest.html#a545ed22b9d5d978a745b06a25533e544',1,'express::middleware::VerboseRequest']]],
-  ['vhost_1',['VHost',['../classexpress_1_1middleware_1_1VHost.html#a0c0c8ae51cc23dc35d0444d98dfd41a8',1,'express::middleware::VHost']]]
+  ['timer_0',['timer',['../classcore_1_1TimerEventReceiver.html#a50de43af5bed41f30c071d8cce0e81bc',1,'core::TimerEventReceiver::Timer'],['../classcore_1_1timer_1_1IntervalTimer.html#a50de43af5bed41f30c071d8cce0e81bc',1,'core::timer::IntervalTimer::Timer'],['../classcore_1_1timer_1_1IntervalTimerStopable.html#a50de43af5bed41f30c071d8cce0e81bc',1,'core::timer::IntervalTimerStopable::Timer'],['../classcore_1_1timer_1_1SingleshotTimer.html#a50de43af5bed41f30c071d8cce0e81bc',1,'core::timer::SingleshotTimer::Timer']]],
+  ['timereventpublisher_1',['TimerEventPublisher',['../classcore_1_1TimerEventReceiver.html#a92e16b5c0b561fe2c4290686037571a7',1,'core::TimerEventReceiver']]]
 ];

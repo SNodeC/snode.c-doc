@@ -22,8 +22,8 @@ var classcore_1_1DescriptorEventPublisher =
     [ "signal", "classcore_1_1DescriptorEventPublisher.html#ab7af96e02343c99d3f830d859c0d5927", null ],
     [ "spanActiveEvents", "classcore_1_1DescriptorEventPublisher.html#a9a7060a83819cd3f2871932360c11955", null ],
     [ "suspend", "classcore_1_1DescriptorEventPublisher.html#ac1bfb115c6aba58d380862a43db457e8", null ],
+    [ "dirtyEventReceiverLists", "classcore_1_1DescriptorEventPublisher.html#aca9a0461b906c61ac8a9954026daf649", null ],
     [ "eventCounter", "classcore_1_1DescriptorEventPublisher.html#aead8608132c8130834c2c9d5224ca429", null ],
     [ "name", "classcore_1_1DescriptorEventPublisher.html#ae23721809892c6ea43a68a7f04b7c567", null ],
-    [ "observedEventReceivers", "classcore_1_1DescriptorEventPublisher.html#ab3ba1ddd022eac76ca6b1a1181e3676b", null ],
-    [ "observedEventReceiversDirty", "classcore_1_1DescriptorEventPublisher.html#a73f4e1767b7bb5a06a8d40d9db6963d0", null ]
+    [ "observedEventReceiverLists", "classcore_1_1DescriptorEventPublisher.html#ab5ee883b6628a1cbc7c9295d216eef83", null ]
 ];
