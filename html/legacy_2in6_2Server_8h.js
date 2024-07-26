@@ -1,5 +1,5 @@
 var legacy_2in6_2Server_8h =
 [
-    [ "Server", "legacy_2in6_2Server_8h.html#ad1a1042e5b3d6da0942769beee6675dc", null ],
-    [ "ServerBase", "legacy_2in6_2Server_8h.html#abf17ee6fdfedf3b9fdceffb08c537bf0", null ]
+    [ "Server", "legacy_2in6_2Server_8h.html#a4ff53d7b869956962e5dfd1f71bd52c4", null ],
+    [ "ServerBase", "legacy_2in6_2Server_8h.html#ac10a4b049085be7891f1255d3abda8c6", null ]
 ];

@@ -2,7 +2,7 @@ var classCLI_1_1CallForCommandline =
 [
     [ "Mode", "classCLI_1_1CallForCommandline.html#a772a59d089ea19572527641273cb339d", [
       [ "REQUIRED", "classCLI_1_1CallForCommandline.html#a772a59d089ea19572527641273cb339daebdf9721be38d1fc1cd6db8c737d1be0", null ],
-      [ "NONEDEFAULT", "classCLI_1_1CallForCommandline.html#a772a59d089ea19572527641273cb339da6801366d8a88c69ae87f0613804c65ec", null ],
+      [ "STANDARD", "classCLI_1_1CallForCommandline.html#a772a59d089ea19572527641273cb339da94e94133f4bdc1794c6b647b8ea134d0", null ],
       [ "FULL", "classCLI_1_1CallForCommandline.html#a772a59d089ea19572527641273cb339daba7de5bc6888294e5884b024a4c894f1", null ],
       [ "DEFAULT", "classCLI_1_1CallForCommandline.html#a772a59d089ea19572527641273cb339da5b39c8b553c821e7cddc6da64b5bd2ee", null ]
     ] ],

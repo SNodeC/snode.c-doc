@@ -1,5 +1,5 @@
 var legacy_2in_2Client_8h =
 [
-    [ "Client", "legacy_2in_2Client_8h.html#ae8850b75675a2401d194d19b58b9da3b", null ],
-    [ "ClientBase", "legacy_2in_2Client_8h.html#a5fc1956438a64b8b71c876eddec41ba1", null ]
+    [ "Client", "legacy_2in_2Client_8h.html#ac48fb0921eb9777a1e1cfa5e75b1d92d", null ],
+    [ "ClientBase", "legacy_2in_2Client_8h.html#a004b05737ad5fce976025901abf1503c", null ]
 ];

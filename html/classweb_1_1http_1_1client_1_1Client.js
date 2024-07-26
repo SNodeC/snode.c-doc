@@ -4,7 +4,7 @@ var classweb_1_1http_1_1client_1_1Client =
     [ "Response", "classweb_1_1http_1_1client_1_1Client.html#a76861920b49ccdbd04c1e248a7f28498", null ],
     [ "SocketAddress", "classweb_1_1http_1_1client_1_1Client.html#a9d4688d352cbaa102d877193e5cead9d", null ],
     [ "SocketConnection", "classweb_1_1http_1_1client_1_1Client.html#a320d376b21c2928d8e859ec2ab150a48", null ],
-    [ "Super", "classweb_1_1http_1_1client_1_1Client.html#acbbcb8ac71f0a87abd374d4e7bd1e354", null ],
+    [ "Super", "classweb_1_1http_1_1client_1_1Client.html#acc1d1d5bcf95c80c25d0dc61f4495fff", null ],
     [ "Client", "classweb_1_1http_1_1client_1_1Client.html#ace00f3ff62e095905df4d3fc006212ef", null ],
     [ "Client", "classweb_1_1http_1_1client_1_1Client.html#a8bae265ac68366d385e34f35d4898766", null ],
     [ "Client", "classweb_1_1http_1_1client_1_1Client.html#a8b85b5922f5c2be448a2e9133200d5ec", null ],
