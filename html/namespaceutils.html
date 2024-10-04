@@ -411,19 +411,17 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">  515</span>        std::string outString = out.str();</div>
 <div class="line"><span class="lineno">  516</span>        <span class="keywordflow">while</span> (app-&gt;get_parent() != <span class="keyword">nullptr</span>) {</div>
 <div class="line"><span class="lineno">  517</span>            app = app-&gt;get_parent();</div>
-<div class="line"><span class="lineno">  518</span>            <span class="keyword">const</span> std::string parentOptions = <a class="code hl_function" href="#ac8959e45881eac2ddd8177a68c40c588">createCommandLineOptions</a>(app, mode);</div>
-<div class="line"><span class="lineno">  519</span>            outString = std::string(app-&gt;get_name())</div>
-<div class="line"><span class="lineno">  520</span>                            .append(<span class="stringliteral">&quot; &quot;</span>)</div>
-<div class="line"><span class="lineno">  521</span>                            .append(!parentOptions.empty() ? std::string(parentOptions).append(<span class="stringliteral">&quot; &quot;</span>) : <span class="stringliteral">&quot;&quot;</span>)</div>
-<div class="line"><span class="lineno">  522</span>                            .append(outString);</div>
-<div class="line"><span class="lineno">  523</span>        }</div>
-<div class="line"><span class="lineno">  524</span> </div>
-<div class="line"><span class="lineno">  525</span>        <span class="keywordflow">if</span> (outString.empty()) {</div>
-<div class="line"><span class="lineno">  526</span>            outString = Config::getApplicationName();</div>
-<div class="line"><span class="lineno">  527</span>        }</div>
-<div class="line"><span class="lineno">  528</span> </div>
-<div class="line"><span class="lineno">  529</span>        <span class="keywordflow">return</span> outString;</div>
-<div class="line"><span class="lineno">  530</span>    }</div>
+<div class="line"><span class="lineno">  518</span>            std::string parentOptions = <a class="code hl_function" href="#ac8959e45881eac2ddd8177a68c40c588">createCommandLineOptions</a>(app, mode);</div>
+<div class="line"><span class="lineno">  519</span>            outString =</div>
+<div class="line"><span class="lineno">  520</span>                std::string(app-&gt;get_name()).append(<span class="stringliteral">&quot; &quot;</span>).append(!parentOptions.empty() ? parentOptions.append(<span class="stringliteral">&quot; &quot;</span>) : <span class="stringliteral">&quot;&quot;</span>).append(outString);</div>
+<div class="line"><span class="lineno">  521</span>        }</div>
+<div class="line"><span class="lineno">  522</span> </div>
+<div class="line"><span class="lineno">  523</span>        <span class="keywordflow">if</span> (outString.empty()) {</div>
+<div class="line"><span class="lineno">  524</span>            outString = Config::getApplicationName();</div>
+<div class="line"><span class="lineno">  525</span>        }</div>
+<div class="line"><span class="lineno">  526</span> </div>
+<div class="line"><span class="lineno">  527</span>        <span class="keywordflow">return</span> outString;</div>
+<div class="line"><span class="lineno">  528</span>    }</div>
 <div class="ttc" id="anamespaceutils_html_aac7436ed2ed454cbef6765b7e381b2f7"><div class="ttname"><a href="#aac7436ed2ed454cbef6765b7e381b2f7">utils::createCommandLineTemplate</a></div><div class="ttdeci">static void createCommandLineTemplate(std::stringstream &amp;out, CLI::App *app, CLI::CallForCommandline::Mode mode)</div><div class="ttdef"><b>Definition</b> <a href="Config_8cpp_source.html#l00495">Config.cpp:495</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="Config_8cpp_source.html#l00495">createCommandLineTemplate()</a>.</p>
@@ -683,23 +681,23 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Config_8cpp_source.html#l00638">638</a> of file <a class="el" href="Config_8cpp_source.html">Config.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  638</span>                                                                  {</div>
-<div class="line"><span class="lineno">  639</span>        std::shared_ptr&lt;CLI::HelpFormatter&gt; sectionFormatter = std::make_shared&lt;CLI::HelpFormatter&gt;();</div>
-<div class="line"><span class="lineno">  640</span> </div>
-<div class="line"><span class="lineno">  641</span>        sectionFormatter-&gt;label(<span class="stringliteral">&quot;SUBCOMMAND&quot;</span>, <span class="stringliteral">&quot;SECTION&quot;</span>);</div>
-<div class="line"><span class="lineno">  642</span>        sectionFormatter-&gt;label(<span class="stringliteral">&quot;SUBCOMMANDS&quot;</span>, <span class="stringliteral">&quot;SECTIONS&quot;</span>);</div>
-<div class="line"><span class="lineno">  643</span>        sectionFormatter-&gt;label(<span class="stringliteral">&quot;PERSISTENT&quot;</span>, <span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><span class="lineno">  644</span>        sectionFormatter-&gt;label(<span class="stringliteral">&quot;Persistent Options&quot;</span>, <span class="stringliteral">&quot;Options (persistent)&quot;</span>);</div>
-<div class="line"><span class="lineno">  645</span>        sectionFormatter-&gt;label(<span class="stringliteral">&quot;Nonpersistent Options&quot;</span>, <span class="stringliteral">&quot;Options (nonpersistent)&quot;</span>);</div>
-<div class="line"><span class="lineno">  646</span>        sectionFormatter-&gt;label(<span class="stringliteral">&quot;Usage&quot;</span>, <span class="stringliteral">&quot;\nUsage&quot;</span>);</div>
-<div class="line"><span class="lineno">  647</span>        sectionFormatter-&gt;label(<span class="stringliteral">&quot;bool:{true,false}&quot;</span>, <span class="stringliteral">&quot;{true,false}&quot;</span>);</div>
-<div class="line"><span class="lineno">  648</span>        sectionFormatter-&gt;label(<span class="stringliteral">&quot;:{standard,required,full,default}&quot;</span>, <span class="stringliteral">&quot;{standard,required,full,default}&quot;</span>);</div>
-<div class="line"><span class="lineno">  649</span>        sectionFormatter-&gt;label(<span class="stringliteral">&quot;:{standard,expanded}&quot;</span>, <span class="stringliteral">&quot;{standard,expanded}&quot;</span>);</div>
-<div class="line"><span class="lineno">  650</span>        sectionFormatter-&gt;column_width(7);</div>
-<div class="line"><span class="lineno">  651</span> </div>
-<div class="line"><span class="lineno">  652</span>        <span class="keywordflow">return</span> sectionFormatter;</div>
-<div class="line"><span class="lineno">  653</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Config_8cpp_source.html#l00636">636</a> of file <a class="el" href="Config_8cpp_source.html">Config.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  636</span>                                                                  {</div>
+<div class="line"><span class="lineno">  637</span>        std::shared_ptr&lt;CLI::HelpFormatter&gt; sectionFormatter = std::make_shared&lt;CLI::HelpFormatter&gt;();</div>
+<div class="line"><span class="lineno">  638</span> </div>
+<div class="line"><span class="lineno">  639</span>        sectionFormatter-&gt;label(<span class="stringliteral">&quot;SUBCOMMAND&quot;</span>, <span class="stringliteral">&quot;SECTION&quot;</span>);</div>
+<div class="line"><span class="lineno">  640</span>        sectionFormatter-&gt;label(<span class="stringliteral">&quot;SUBCOMMANDS&quot;</span>, <span class="stringliteral">&quot;SECTIONS&quot;</span>);</div>
+<div class="line"><span class="lineno">  641</span>        sectionFormatter-&gt;label(<span class="stringliteral">&quot;PERSISTENT&quot;</span>, <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">  642</span>        sectionFormatter-&gt;label(<span class="stringliteral">&quot;Persistent Options&quot;</span>, <span class="stringliteral">&quot;Options (persistent)&quot;</span>);</div>
+<div class="line"><span class="lineno">  643</span>        sectionFormatter-&gt;label(<span class="stringliteral">&quot;Nonpersistent Options&quot;</span>, <span class="stringliteral">&quot;Options (nonpersistent)&quot;</span>);</div>
+<div class="line"><span class="lineno">  644</span>        sectionFormatter-&gt;label(<span class="stringliteral">&quot;Usage&quot;</span>, <span class="stringliteral">&quot;\nUsage&quot;</span>);</div>
+<div class="line"><span class="lineno">  645</span>        sectionFormatter-&gt;label(<span class="stringliteral">&quot;bool:{true,false}&quot;</span>, <span class="stringliteral">&quot;{true,false}&quot;</span>);</div>
+<div class="line"><span class="lineno">  646</span>        sectionFormatter-&gt;label(<span class="stringliteral">&quot;:{standard,required,full,default}&quot;</span>, <span class="stringliteral">&quot;{standard,required,full,default}&quot;</span>);</div>
+<div class="line"><span class="lineno">  647</span>        sectionFormatter-&gt;label(<span class="stringliteral">&quot;:{standard,expanded}&quot;</span>, <span class="stringliteral">&quot;{standard,expanded}&quot;</span>);</div>
+<div class="line"><span class="lineno">  648</span>        sectionFormatter-&gt;column_width(7);</div>
+<div class="line"><span class="lineno">  649</span> </div>
+<div class="line"><span class="lineno">  650</span>        <span class="keywordflow">return</span> sectionFormatter;</div>
+<div class="line"><span class="lineno">  651</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -770,7 +768,7 @@ Here is the call graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceutils.html">utils</a></li>
-    <li class="footer">Generated on Fri Jul 26 2024 14:37:35 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generated on Fri Oct 4 2024 21:57:08 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>

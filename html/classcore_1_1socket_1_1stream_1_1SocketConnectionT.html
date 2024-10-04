@@ -502,9 +502,9 @@ template&lt;typename <a class="el" href="#a28c5851987fc33bf8e40b8f3b827bc7b">Phy
 <div class="line"><span class="lineno">   75</span>              writeBlockSize,</div>
 <div class="line"><span class="lineno">   76</span>              terminateTimeout)</div>
 <div class="line"><span class="lineno">   77</span>        , <a class="code hl_variable" href="#a9fab76462ae22ac6bad708407b76b4bd">physicalSocket</a>(std::move(<a class="code hl_variable" href="#a9fab76462ae22ac6bad708407b76b4bd">physicalSocket</a>))</div>
-<div class="line"><span class="lineno">   78</span>        , <a class="code hl_variable" href="#adf8cf3845521f39bc9a24de02cd82aa1">onDisconnect</a>(<a class="code hl_variable" href="#adf8cf3845521f39bc9a24de02cd82aa1">onDisconnect</a>)</div>
-<div class="line"><span class="lineno">   79</span>        , <a class="code hl_variable" href="#a01b40307f2844c0b18d8f8b92845596e">localAddress</a>(<a class="code hl_variable" href="#a01b40307f2844c0b18d8f8b92845596e">localAddress</a>)</div>
-<div class="line"><span class="lineno">   80</span>        , <a class="code hl_variable" href="#a04c593f8d66d2e8df44f0700f9b8c3b9">remoteAddress</a>(<a class="code hl_variable" href="#a04c593f8d66d2e8df44f0700f9b8c3b9">remoteAddress</a>) {</div>
+<div class="line"><span class="lineno">   78</span>        , <a class="code hl_variable" href="#adf8cf3845521f39bc9a24de02cd82aa1">onDisconnect</a>(<a class="code hl_variable" href="#adf8cf3845521f39bc9a24de02cd82aa1">onDisconnect</a>)     <span class="comment">// cppcheck-suppress selfInitialization</span></div>
+<div class="line"><span class="lineno">   79</span>        , <a class="code hl_variable" href="#a01b40307f2844c0b18d8f8b92845596e">localAddress</a>(<a class="code hl_variable" href="#a01b40307f2844c0b18d8f8b92845596e">localAddress</a>)     <span class="comment">// cppcheck-suppress selfInitialization</span></div>
+<div class="line"><span class="lineno">   80</span>        , <a class="code hl_variable" href="#a04c593f8d66d2e8df44f0700f9b8c3b9">remoteAddress</a>(<a class="code hl_variable" href="#a04c593f8d66d2e8df44f0700f9b8c3b9">remoteAddress</a>) { <span class="comment">// cppcheck-suppress selfInitialization</span></div>
 <div class="line"><span class="lineno">   81</span>        <span class="keywordflow">if</span> (!<a class="code hl_function" href="classcore_1_1DescriptorEventReceiver.html#ace4fa96fa2d29ef1bcaf8fc1cf28100a">SocketReader::enable</a>(this-&gt;<a class="code hl_variable" href="#a9fab76462ae22ac6bad708407b76b4bd">physicalSocket</a>.getFd())) {</div>
 <div class="line"><span class="lineno">   82</span>            <span class="keyword">delete</span> <span class="keyword">this</span>;</div>
 <div class="line"><span class="lineno">   83</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!<a class="code hl_function" href="classcore_1_1DescriptorEventReceiver.html#ace4fa96fa2d29ef1bcaf8fc1cf28100a">SocketWriter::enable</a>(this-&gt;<a class="code hl_variable" href="#a9fab76462ae22ac6bad708407b76b4bd">physicalSocket</a>.getFd())) {</div>
@@ -1526,7 +1526,7 @@ template&lt;typename PhysicalSocketT , typename SocketReaderT , typename SocketW
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacecore.html">core</a></li><li class="navelem"><a class="el" href="namespacecore_1_1socket.html">socket</a></li><li class="navelem"><a class="el" href="namespacecore_1_1socket_1_1stream.html">stream</a></li><li class="navelem"><a class="el" href="classcore_1_1socket_1_1stream_1_1SocketConnectionT.html">SocketConnectionT</a></li>
-    <li class="footer">Generated on Fri Jul 26 2024 14:37:35 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generated on Fri Oct 4 2024 21:57:07 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>

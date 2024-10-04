@@ -1,5 +1,11 @@
 var NAVTREEINDEX37 =
 {
+"classweb_1_1websocket_1_1server_1_1SubProtocolFactorySelector.html#af5d7d529a2382d67ecb39abaf61f5f9b":[0,0,11,1,1,4,5],
+"classweb_1_1websocket_1_1server_1_1SubProtocolFactorySelector.html#af5d7d529a2382d67ecb39abaf61f5f9b":[2,0,8,1,1,4,5],
+"classweb_1_1websocket_1_1server_1_1SubProtocolFactorySelector.html#afb192588195a6b26a60879cb3e4b8f45":[0,0,11,1,1,4,8],
+"classweb_1_1websocket_1_1server_1_1SubProtocolFactorySelector.html#afb192588195a6b26a60879cb3e4b8f45":[2,0,8,1,1,4,8],
+"client_2Client_8h.html":[3,0,7,0,0,1],
+"client_2Client_8h_source.html":[3,0,7,0,0,1],
 "client_2ControlPacketDeserializer_8cpp.html":[3,0,3,0,0,1],
 "client_2ControlPacketDeserializer_8cpp_source.html":[3,0,3,0,0,1],
 "client_2ControlPacketDeserializer_8h.html":[3,0,3,0,0,2],
@@ -243,11 +249,5 @@ var NAVTREEINDEX37 =
 "functions_func_n.html":[2,3,1,13],
 "functions_func_o.html":[2,3,1,14],
 "functions_func_p.html":[2,3,1,15],
-"functions_func_q.html":[2,3,1,16],
-"functions_func_r.html":[2,3,1,17],
-"functions_func_s.html":[2,3,1,18],
-"functions_func_t.html":[2,3,1,19],
-"functions_func_u.html":[2,3,1,20],
-"functions_func_v.html":[2,3,1,21],
-"functions_func_w.html":[2,3,1,22]
+"functions_func_q.html":[2,3,1,16]
 };

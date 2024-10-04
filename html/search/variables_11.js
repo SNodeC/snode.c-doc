@@ -9,7 +9,7 @@ var searchData=
   ['receivedopcode_6',['receivedOpCode',['../classweb_1_1websocket_1_1SocketContextUpgrade.html#a94ba0c562169286da147b8bd513ee028',1,'web::websocket::SocketContextUpgrade']]],
   ['reconnectopt_7',['reconnectOpt',['../classnet_1_1config_1_1ConfigPhysicalSocketClient.html#a61fa538483379a77311a6537876c7556',1,'net::config::ConfigPhysicalSocketClient']]],
   ['reconnecttimeopt_8',['reconnectTimeOpt',['../classnet_1_1config_1_1ConfigPhysicalSocketClient.html#a1c64c9855b712f23383f826358539d5f',1,'net::config::ConfigPhysicalSocketClient']]],
-  ['refcount_9',['refCount',['../classweb_1_1websocket_1_1SubProtocolFactory.html#aaed4b8ca0e0755f973109cfd86e8c815',1,'web::websocket::SubProtocolFactory::refCount'],['../classweb_1_1http_1_1SocketContextUpgradeFactory.html#a5ec0d8e1bd68308db21a518ac1ce283f',1,'web::http::SocketContextUpgradeFactory::refCount']]],
+  ['refcount_9',['refCount',['../classweb_1_1http_1_1SocketContextUpgradeFactory.html#a5ec0d8e1bd68308db21a518ac1ce283f',1,'web::http::SocketContextUpgradeFactory::refCount'],['../classweb_1_1websocket_1_1SubProtocolFactory.html#aaed4b8ca0e0755f973109cfd86e8c815',1,'web::websocket::SubProtocolFactory::refCount']]],
   ['reflect_10',['reflect',['../classiot_1_1mqtt_1_1packets_1_1Connect.html#a899fe1e3506ba7b7fecf043b58ffc57a',1,'iot::mqtt::packets::Connect::reflect'],['../classiot_1_1mqtt_1_1server_1_1Mqtt.html#a37d6af187fc05629f1d8a582aae244f1',1,'iot::mqtt::server::Mqtt::reflect']]],
   ['registered_11',['registered',['../classcore_1_1multiplexer_1_1select_1_1FdSet.html#a40b54bdf5b3fe0e910939a84be10d52d',1,'core::multiplexer::select::FdSet']]],
   ['relativemountpath_12',['relativeMountPath',['../structexpress_1_1MountPoint.html#aed029c8a9eaefcf7878ce5c9d882dd1a',1,'express::MountPoint']]],

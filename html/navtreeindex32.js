@@ -1,5 +1,9 @@
 var NAVTREEINDEX32 =
 {
+"classweb_1_1http_1_1client_1_1Request.html#ace40b235271be62abed4293651055dfb":[0,0,11,0,0,3,65],
+"classweb_1_1http_1_1client_1_1Request.html#ace40b235271be62abed4293651055dfb":[2,0,8,0,0,3,65],
+"classweb_1_1http_1_1client_1_1Request.html#ad094d913a9507829dcdb69fb5a00bc4e":[0,0,11,0,0,3,7],
+"classweb_1_1http_1_1client_1_1Request.html#ad094d913a9507829dcdb69fb5a00bc4e":[2,0,8,0,0,3,7],
 "classweb_1_1http_1_1client_1_1Request.html#ad5594e9fd3abf39cf9af4d1283e5d2f1":[0,0,11,0,0,3,33],
 "classweb_1_1http_1_1client_1_1Request.html#ad5594e9fd3abf39cf9af4d1283e5d2f1":[2,0,8,0,0,3,33],
 "classweb_1_1http_1_1client_1_1Request.html#ad5f3015c918bd46f12841c641855ab35":[0,0,11,0,0,3,16],
@@ -245,9 +249,5 @@ var NAVTREEINDEX32 =
 "classweb_1_1http_1_1client_1_1commands_1_1SendFileCommand.html#a6466681b0ef63842506b9ce037ad4c4e":[0,0,11,0,0,0,1,0],
 "classweb_1_1http_1_1client_1_1commands_1_1SendFileCommand.html#a6466681b0ef63842506b9ce037ad4c4e":[2,0,8,0,0,0,1,0],
 "classweb_1_1http_1_1client_1_1commands_1_1SendFileCommand.html#adb4e03e4cdfc5d92c47564ff0d7996a0":[0,0,11,0,0,0,1,4],
-"classweb_1_1http_1_1client_1_1commands_1_1SendFileCommand.html#adb4e03e4cdfc5d92c47564ff0d7996a0":[2,0,8,0,0,0,1,4],
-"classweb_1_1http_1_1client_1_1commands_1_1SendFragmentCommand.html":[0,0,11,0,0,0,2],
-"classweb_1_1http_1_1client_1_1commands_1_1SendFragmentCommand.html":[2,0,8,0,0,0,2],
-"classweb_1_1http_1_1client_1_1commands_1_1SendFragmentCommand.html#a0da63f0322cfbf3c68c2ae2c4b442c09":[0,0,11,0,0,0,2,3],
-"classweb_1_1http_1_1client_1_1commands_1_1SendFragmentCommand.html#a0da63f0322cfbf3c68c2ae2c4b442c09":[2,0,8,0,0,0,2,3]
+"classweb_1_1http_1_1client_1_1commands_1_1SendFileCommand.html#adb4e03e4cdfc5d92c47564ff0d7996a0":[2,0,8,0,0,0,1,4]
 };

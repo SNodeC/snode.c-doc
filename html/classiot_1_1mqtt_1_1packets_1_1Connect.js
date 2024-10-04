@@ -1,7 +1,7 @@
 var classiot_1_1mqtt_1_1packets_1_1Connect =
 [
     [ "Connect", "classiot_1_1mqtt_1_1packets_1_1Connect.html#acf053d26c7a20aee2a080f41845839a5", null ],
-    [ "Connect", "classiot_1_1mqtt_1_1packets_1_1Connect.html#a606cd6aa53120fd33e4713cd186a647d", null ],
+    [ "Connect", "classiot_1_1mqtt_1_1packets_1_1Connect.html#a4bacc225bd20f3e7116a31974d7df04e", null ],
     [ "getCleanSession", "classiot_1_1mqtt_1_1packets_1_1Connect.html#a9150e7e9eef5684b634e019923b90495", null ],
     [ "getClientId", "classiot_1_1mqtt_1_1packets_1_1Connect.html#a5fa5a01b5c0a62f00da08367b1619fb0", null ],
     [ "getConnectFlags", "classiot_1_1mqtt_1_1packets_1_1Connect.html#a9d6fc06bb9dbd5cfb17332d6f9734736", null ],
