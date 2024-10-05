@@ -54,5 +54,5 @@ var searchData=
   ['sunpath_51',['sunPath',['../classnet_1_1un_1_1SocketAddress.html#aefe8360969e8b87946de1969c5df6b07',1,'net::un::SocketAddress']]],
   ['sunpathopt_52',['sunPathOpt',['../classnet_1_1un_1_1config_1_1ConfigAddress.html#aa44e437db475489fdabefeeb712d97a6',1,'net::un::config::ConfigAddress']]],
   ['supportedmethods_53',['supportedMethods',['../classweb_1_1http_1_1server_1_1RequestParser.html#aa832ea93246b42a2de1aa37bc010aa28',1,'web::http::server::RequestParser']]],
-  ['suspended_54',['suspended',['../classcore_1_1DescriptorEventReceiver.html#a507b153285b7a1a02ba072305f57069c',1,'core::DescriptorEventReceiver::suspended'],['../classcore_1_1file_1_1FileReader.html#aeb217c305e6ce9f7d61e50d14039cc8e',1,'core::file::FileReader::suspended']]]
+  ['suspended_54',['suspended',['../classcore_1_1file_1_1FileReader.html#aeb217c305e6ce9f7d61e50d14039cc8e',1,'core::file::FileReader::suspended'],['../classcore_1_1DescriptorEventReceiver.html#a507b153285b7a1a02ba072305f57069c',1,'core::DescriptorEventReceiver::suspended']]]
 ];
