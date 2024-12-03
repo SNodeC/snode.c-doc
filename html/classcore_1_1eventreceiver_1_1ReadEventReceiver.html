@@ -120,6 +120,8 @@ Collaboration diagram for core::eventreceiver::ReadEventReceiver:</div>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:aca8a2e9521718d70233491cffbf09f3d" id="r_aca8a2e9521718d70233491cffbf09f3d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aca8a2e9521718d70233491cffbf09f3d">ReadEventReceiver</a> (const std::string &amp;name, const <a class="el" href="classutils_1_1Timeval.html">utils::Timeval</a> &amp;timeout)</td></tr>
 <tr class="separator:aca8a2e9521718d70233491cffbf09f3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a200fd809003fdd94839f07aaec13a144" id="r_a200fd809003fdd94839f07aaec13a144"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a200fd809003fdd94839f07aaec13a144">readTimeout</a> ()</td></tr>
+<tr class="separator:a200fd809003fdd94839f07aaec13a144"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classcore_1_1DescriptorEventReceiver"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_classcore_1_1DescriptorEventReceiver')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classcore_1_1DescriptorEventReceiver.html">core::DescriptorEventReceiver</a></td></tr>
 <tr class="memitem:ace4fa96fa2d29ef1bcaf8fc1cf28100a inherit pro_methods_classcore_1_1DescriptorEventReceiver" id="r_ace4fa96fa2d29ef1bcaf8fc1cf28100a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcore_1_1DescriptorEventReceiver.html#ace4fa96fa2d29ef1bcaf8fc1cf28100a">enable</a> (int fd)</td></tr>
 <tr class="separator:ace4fa96fa2d29ef1bcaf8fc1cf28100a inherit pro_methods_classcore_1_1DescriptorEventReceiver"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -170,8 +172,6 @@ Protected Member Functions</h2></td></tr>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:a9396a2e4334dc4fc5c5e63ab551ed35a" id="r_a9396a2e4334dc4fc5c5e63ab551ed35a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9396a2e4334dc4fc5c5e63ab551ed35a">readEvent</a> ()=0</td></tr>
 <tr class="separator:a9396a2e4334dc4fc5c5e63ab551ed35a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a200fd809003fdd94839f07aaec13a144" id="r_a200fd809003fdd94839f07aaec13a144"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a200fd809003fdd94839f07aaec13a144">readTimeout</a> ()</td></tr>
-<tr class="separator:a200fd809003fdd94839f07aaec13a144"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a58933c891baec91619116999a4d40aa2" id="r_a58933c891baec91619116999a4d40aa2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a58933c891baec91619116999a4d40aa2">dispatchEvent</a> () final</td></tr>
 <tr class="separator:a58933c891baec91619116999a4d40aa2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab68961c7203875b4b5dda79b9a74a5a7" id="r_ab68961c7203875b4b5dda79b9a74a5a7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab68961c7203875b4b5dda79b9a74a5a7">timeoutEvent</a> () final</td></tr>
@@ -260,10 +260,10 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   35</span>              timeout) {</div>
 <div class="line"><span class="lineno">   36</span>    }</div>
 <div class="ttc" id="aclasscore_1_1DescriptorEventReceiver_html"><div class="ttname"><a href="classcore_1_1DescriptorEventReceiver.html">core::DescriptorEventReceiver</a></div><div class="ttdef"><b>Definition</b> <a href="DescriptorEventReceiver_8h_source.html#l00057">DescriptorEventReceiver.h:59</a></div></div>
-<div class="ttc" id="aclasscore_1_1EventLoop_html_a413d227511f68c2c9939719bd2590794"><div class="ttname"><a href="classcore_1_1EventLoop.html#a413d227511f68c2c9939719bd2590794">core::EventLoop::instance</a></div><div class="ttdeci">static EventLoop &amp; instance()</div><div class="ttdef"><b>Definition</b> <a href="EventLoop_8cpp_source.html#l00059">EventLoop.cpp:59</a></div></div>
+<div class="ttc" id="aclasscore_1_1EventLoop_html_a413d227511f68c2c9939719bd2590794"><div class="ttname"><a href="classcore_1_1EventLoop.html#a413d227511f68c2c9939719bd2590794">core::EventLoop::instance</a></div><div class="ttdeci">static EventLoop &amp; instance()</div><div class="ttdef"><b>Definition</b> <a href="EventLoop_8cpp_source.html#l00057">EventLoop.cpp:57</a></div></div>
 <div class="ttc" id="aclasscore_1_1EventMultiplexer_html_a922f1b8ccf15265807a9f7ebce6d5097aa8e35bc1e33b67b5996ae8754d1d5b39"><div class="ttname"><a href="classcore_1_1EventMultiplexer.html#a922f1b8ccf15265807a9f7ebce6d5097aa8e35bc1e33b67b5996ae8754d1d5b39">core::EventMultiplexer::RD</a></div><div class="ttdeci">@ RD</div><div class="ttdef"><b>Definition</b> <a href="EventMultiplexer_8h_source.html#l00084">EventMultiplexer.h:84</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="EventMultiplexer_8cpp_source.html#l00054">core::EventMultiplexer::getDescriptorEventPublisher()</a>, <a class="el" href="EventLoop_8cpp_source.html#l00069">core::EventLoop::getEventMultiplexer()</a>, <a class="el" href="EventLoop_8cpp_source.html#l00059">core::EventLoop::instance()</a>, and <a class="el" href="EventMultiplexer_8h_source.html#l00084">core::EventMultiplexer::RD</a>.</p>
+<p class="reference">References <a class="el" href="EventMultiplexer_8cpp_source.html#l00054">core::EventMultiplexer::getDescriptorEventPublisher()</a>, <a class="el" href="EventLoop_8cpp_source.html#l00067">core::EventLoop::getEventMultiplexer()</a>, <a class="el" href="EventLoop_8cpp_source.html#l00057">core::EventLoop::instance()</a>, and <a class="el" href="EventMultiplexer_8h_source.html#l00084">core::EventMultiplexer::RD</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="SocketReader_8cpp_source.html#l00031">core::socket::stream::SocketReader::SocketReader()</a>.</p>
 <div class="dynheader">
@@ -372,7 +372,7 @@ Here is the caller graph for this function:</div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -383,9 +383,9 @@ Here is the caller graph for this function:</div>
 <div class="fragment"><div class="line"><span class="lineno">   38</span>                                        {</div>
 <div class="line"><span class="lineno">   39</span>        <a class="code hl_function" href="classcore_1_1DescriptorEventReceiver.html#a4ab422ce6622a29cee38a0108ee6ccc1">disable</a>();</div>
 <div class="line"><span class="lineno">   40</span>    }</div>
-<div class="ttc" id="aclasscore_1_1DescriptorEventReceiver_html_a4ab422ce6622a29cee38a0108ee6ccc1"><div class="ttname"><a href="classcore_1_1DescriptorEventReceiver.html#a4ab422ce6622a29cee38a0108ee6ccc1">core::DescriptorEventReceiver::disable</a></div><div class="ttdeci">void disable()</div><div class="ttdef"><b>Definition</b> <a href="DescriptorEventReceiver_8cpp_source.html#l00090">DescriptorEventReceiver.cpp:90</a></div></div>
+<div class="ttc" id="aclasscore_1_1DescriptorEventReceiver_html_a4ab422ce6622a29cee38a0108ee6ccc1"><div class="ttname"><a href="classcore_1_1DescriptorEventReceiver.html#a4ab422ce6622a29cee38a0108ee6ccc1">core::DescriptorEventReceiver::disable</a></div><div class="ttdeci">void disable()</div><div class="ttdef"><b>Definition</b> <a href="DescriptorEventReceiver_8cpp_source.html#l00086">DescriptorEventReceiver.cpp:86</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="DescriptorEventReceiver_8cpp_source.html#l00090">core::DescriptorEventReceiver::disable()</a>.</p>
+<p class="reference">References <a class="el" href="DescriptorEventReceiver_8cpp_source.html#l00086">core::DescriptorEventReceiver::disable()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="ReadEventReceiver_8cpp_source.html#l00046">timeoutEvent()</a>.</p>
 <div class="dynheader">
@@ -433,7 +433,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">   51</span>        <a class="code hl_function" href="classcore_1_1DescriptorEventReceiver.html#a4ab422ce6622a29cee38a0108ee6ccc1">disable</a>();</div>
 <div class="line"><span class="lineno">   52</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="DescriptorEventReceiver_8cpp_source.html#l00090">core::DescriptorEventReceiver::disable()</a>.</p>
+<p class="reference">References <a class="el" href="DescriptorEventReceiver_8cpp_source.html#l00086">core::DescriptorEventReceiver::disable()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -492,7 +492,7 @@ Here is the call graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacecore.html">core</a></li><li class="navelem"><a class="el" href="namespacecore_1_1eventreceiver.html">eventreceiver</a></li><li class="navelem"><a class="el" href="classcore_1_1eventreceiver_1_1ReadEventReceiver.html">ReadEventReceiver</a></li>
-    <li class="footer">Generated on Sat Oct 5 2024 19:03:11 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generated on Tue Dec 3 2024 20:49:49 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>

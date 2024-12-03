@@ -153,7 +153,7 @@ Private Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="multiplexer_2poll_2EventMultiplexer_8h_source.html#l00040">40</a> of file <a class="el" href="multiplexer_2poll_2EventMultiplexer_8h_source.html">EventMultiplexer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="multiplexer_2poll_2EventMultiplexer_8h_source.html#l00036">36</a> of file <a class="el" href="multiplexer_2poll_2EventMultiplexer_8h_source.html">EventMultiplexer.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="add6f86751dccce4c70f6c4b4f16e989c" name="add6f86751dccce4c70f6c4b4f16e989c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#add6f86751dccce4c70f6c4b4f16e989c">&#9670;&#160;</a></span>PollFdsManager()</h2>
@@ -178,13 +178,13 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="multiplexer_2poll_2EventMultiplexer_8cpp_source.html#l00044">44</a> of file <a class="el" href="multiplexer_2poll_2EventMultiplexer_8cpp_source.html">EventMultiplexer.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   44</span>                                   {</div>
-<div class="line"><span class="lineno">   45</span>        <a class="code hl_variable" href="#a390d6d4a007947279e8e80e7d699a072">pollfds</a>.resize(1, {-1, 0, 0});</div>
-<div class="line"><span class="lineno">   46</span>        <a class="code hl_variable" href="#af7ae5d0d49ccb6c7eef1703760149314">pollFdIndices</a>.reserve(1);</div>
-<div class="line"><span class="lineno">   47</span>    }</div>
-<div class="ttc" id="aclasscore_1_1multiplexer_1_1poll_1_1PollFdsManager_html_a390d6d4a007947279e8e80e7d699a072"><div class="ttname"><a href="#a390d6d4a007947279e8e80e7d699a072">core::multiplexer::poll::PollFdsManager::pollfds</a></div><div class="ttdeci">std::vector&lt; pollfd &gt; pollfds</div><div class="ttdef"><b>Definition</b> <a href="multiplexer_2poll_2EventMultiplexer_8h_source.html#l00064">EventMultiplexer.h:64</a></div></div>
-<div class="ttc" id="aclasscore_1_1multiplexer_1_1poll_1_1PollFdsManager_html_af7ae5d0d49ccb6c7eef1703760149314"><div class="ttname"><a href="#af7ae5d0d49ccb6c7eef1703760149314">core::multiplexer::poll::PollFdsManager::pollFdIndices</a></div><div class="ttdeci">std::unordered_map&lt; int, PollFdIndex &gt; pollFdIndices</div><div class="ttdef"><b>Definition</b> <a href="multiplexer_2poll_2EventMultiplexer_8h_source.html#l00065">EventMultiplexer.h:65</a></div></div>
+<p class="definition">Definition at line <a class="el" href="multiplexer_2poll_2EventMultiplexer_8cpp_source.html#l00045">45</a> of file <a class="el" href="multiplexer_2poll_2EventMultiplexer_8cpp_source.html">EventMultiplexer.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   45</span>                                   {</div>
+<div class="line"><span class="lineno">   46</span>        <a class="code hl_variable" href="#a390d6d4a007947279e8e80e7d699a072">pollfds</a>.resize(1, {-1, 0, 0});</div>
+<div class="line"><span class="lineno">   47</span>        <a class="code hl_variable" href="#af7ae5d0d49ccb6c7eef1703760149314">pollFdIndices</a>.reserve(1);</div>
+<div class="line"><span class="lineno">   48</span>    }</div>
+<div class="ttc" id="aclasscore_1_1multiplexer_1_1poll_1_1PollFdsManager_html_a390d6d4a007947279e8e80e7d699a072"><div class="ttname"><a href="#a390d6d4a007947279e8e80e7d699a072">core::multiplexer::poll::PollFdsManager::pollfds</a></div><div class="ttdeci">std::vector&lt; pollfd &gt; pollfds</div><div class="ttdef"><b>Definition</b> <a href="multiplexer_2poll_2EventMultiplexer_8h_source.html#l00060">EventMultiplexer.h:60</a></div></div>
+<div class="ttc" id="aclasscore_1_1multiplexer_1_1poll_1_1PollFdsManager_html_af7ae5d0d49ccb6c7eef1703760149314"><div class="ttname"><a href="#af7ae5d0d49ccb6c7eef1703760149314">core::multiplexer::poll::PollFdsManager::pollFdIndices</a></div><div class="ttdeci">std::unordered_map&lt; int, PollFdIndex &gt; pollFdIndices</div><div class="ttdef"><b>Definition</b> <a href="multiplexer_2poll_2EventMultiplexer_8h_source.html#l00061">EventMultiplexer.h:61</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -212,25 +212,25 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="multiplexer_2poll_2EventMultiplexer_8cpp_source.html#l00100">100</a> of file <a class="el" href="multiplexer_2poll_2EventMultiplexer_8cpp_source.html">EventMultiplexer.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  100</span>                                  {</div>
-<div class="line"><span class="lineno">  101</span>        (void) std::remove_if(<a class="code hl_variable" href="#a390d6d4a007947279e8e80e7d699a072">pollfds</a>.begin(), <a class="code hl_variable" href="#a390d6d4a007947279e8e80e7d699a072">pollfds</a>.end(), [](<span class="keyword">const</span> pollfd&amp; pollFd) -&gt; <span class="keywordtype">bool</span> {</div>
-<div class="line"><span class="lineno">  102</span>            <span class="keywordflow">return</span> pollFd.fd &lt; 0;</div>
-<div class="line"><span class="lineno">  103</span>        });</div>
-<div class="line"><span class="lineno">  104</span> </div>
-<div class="line"><span class="lineno">  105</span>        <a class="code hl_variable" href="#a390d6d4a007947279e8e80e7d699a072">pollfds</a>.resize(<a class="code hl_variable" href="#af7ae5d0d49ccb6c7eef1703760149314">pollFdIndices</a>.size() + 1, {-1, 0, 0});</div>
-<div class="line"><span class="lineno">  106</span> </div>
-<div class="line"><span class="lineno">  107</span>        <a class="code hl_variable" href="#af7ae5d0d49ccb6c7eef1703760149314">pollFdIndices</a>.reserve(<a class="code hl_variable" href="#af7ae5d0d49ccb6c7eef1703760149314">pollFdIndices</a>.size() + 1);</div>
-<div class="line"><span class="lineno">  108</span> </div>
-<div class="line"><span class="lineno">  109</span>        <span class="keywordflow">for</span> (uint32_t i = 0; i &lt; <a class="code hl_variable" href="#af7ae5d0d49ccb6c7eef1703760149314">pollFdIndices</a>.size(); i++) {</div>
-<div class="line"><span class="lineno">  110</span>            <a class="code hl_variable" href="#af7ae5d0d49ccb6c7eef1703760149314">pollFdIndices</a>[<a class="code hl_variable" href="#a390d6d4a007947279e8e80e7d699a072">pollfds</a>[i].fd].index = i;</div>
-<div class="line"><span class="lineno">  111</span>        }</div>
-<div class="line"><span class="lineno">  112</span> </div>
-<div class="line"><span class="lineno">  113</span>        <a class="code hl_variable" href="#aaa91336a34e514c7302dbf0cf522b324">nextIndex</a> = <a class="code hl_variable" href="#af7ae5d0d49ccb6c7eef1703760149314">pollFdIndices</a>.size();</div>
-<div class="line"><span class="lineno">  114</span>    }</div>
-<div class="ttc" id="aclasscore_1_1multiplexer_1_1poll_1_1PollFdsManager_html_aaa91336a34e514c7302dbf0cf522b324"><div class="ttname"><a href="#aaa91336a34e514c7302dbf0cf522b324">core::multiplexer::poll::PollFdsManager::nextIndex</a></div><div class="ttdeci">nfds_t nextIndex</div><div class="ttdef"><b>Definition</b> <a href="multiplexer_2poll_2EventMultiplexer_8h_source.html#l00061">EventMultiplexer.h:61</a></div></div>
+<p class="definition">Definition at line <a class="el" href="multiplexer_2poll_2EventMultiplexer_8cpp_source.html#l00101">101</a> of file <a class="el" href="multiplexer_2poll_2EventMultiplexer_8cpp_source.html">EventMultiplexer.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  101</span>                                  {</div>
+<div class="line"><span class="lineno">  102</span>        (void) std::remove_if(<a class="code hl_variable" href="#a390d6d4a007947279e8e80e7d699a072">pollfds</a>.begin(), <a class="code hl_variable" href="#a390d6d4a007947279e8e80e7d699a072">pollfds</a>.end(), [](<span class="keyword">const</span> pollfd&amp; pollFd) -&gt; <span class="keywordtype">bool</span> {</div>
+<div class="line"><span class="lineno">  103</span>            <span class="keywordflow">return</span> pollFd.fd &lt; 0;</div>
+<div class="line"><span class="lineno">  104</span>        });</div>
+<div class="line"><span class="lineno">  105</span> </div>
+<div class="line"><span class="lineno">  106</span>        <a class="code hl_variable" href="#a390d6d4a007947279e8e80e7d699a072">pollfds</a>.resize(<a class="code hl_variable" href="#af7ae5d0d49ccb6c7eef1703760149314">pollFdIndices</a>.size() + 1, {-1, 0, 0});</div>
+<div class="line"><span class="lineno">  107</span> </div>
+<div class="line"><span class="lineno">  108</span>        <a class="code hl_variable" href="#af7ae5d0d49ccb6c7eef1703760149314">pollFdIndices</a>.reserve(<a class="code hl_variable" href="#af7ae5d0d49ccb6c7eef1703760149314">pollFdIndices</a>.size() + 1);</div>
+<div class="line"><span class="lineno">  109</span> </div>
+<div class="line"><span class="lineno">  110</span>        <span class="keywordflow">for</span> (uint32_t i = 0; i &lt; <a class="code hl_variable" href="#af7ae5d0d49ccb6c7eef1703760149314">pollFdIndices</a>.size(); i++) {</div>
+<div class="line"><span class="lineno">  111</span>            <a class="code hl_variable" href="#af7ae5d0d49ccb6c7eef1703760149314">pollFdIndices</a>[<a class="code hl_variable" href="#a390d6d4a007947279e8e80e7d699a072">pollfds</a>[i].fd].index = i;</div>
+<div class="line"><span class="lineno">  112</span>        }</div>
+<div class="line"><span class="lineno">  113</span> </div>
+<div class="line"><span class="lineno">  114</span>        <a class="code hl_variable" href="#aaa91336a34e514c7302dbf0cf522b324">nextIndex</a> = <a class="code hl_variable" href="#af7ae5d0d49ccb6c7eef1703760149314">pollFdIndices</a>.size();</div>
+<div class="line"><span class="lineno">  115</span>    }</div>
+<div class="ttc" id="aclasscore_1_1multiplexer_1_1poll_1_1PollFdsManager_html_aaa91336a34e514c7302dbf0cf522b324"><div class="ttname"><a href="#aaa91336a34e514c7302dbf0cf522b324">core::multiplexer::poll::PollFdsManager::nextIndex</a></div><div class="ttdeci">nfds_t nextIndex</div><div class="ttdef"><b>Definition</b> <a href="multiplexer_2poll_2EventMultiplexer_8h_source.html#l00057">EventMultiplexer.h:57</a></div></div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="multiplexer_2poll_2EventMultiplexer_8cpp_source.html#l00073">muxDel()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="multiplexer_2poll_2EventMultiplexer_8cpp_source.html#l00074">muxDel()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -254,10 +254,10 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="multiplexer_2poll_2EventMultiplexer_8cpp_source.html#l00124">124</a> of file <a class="el" href="multiplexer_2poll_2EventMultiplexer_8cpp_source.html">EventMultiplexer.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  124</span>                                                {</div>
-<div class="line"><span class="lineno">  125</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#aaa91336a34e514c7302dbf0cf522b324">nextIndex</a>;</div>
-<div class="line"><span class="lineno">  126</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="multiplexer_2poll_2EventMultiplexer_8cpp_source.html#l00125">125</a> of file <a class="el" href="multiplexer_2poll_2EventMultiplexer_8cpp_source.html">EventMultiplexer.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  125</span>                                                {</div>
+<div class="line"><span class="lineno">  126</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#aaa91336a34e514c7302dbf0cf522b324">nextIndex</a>;</div>
+<div class="line"><span class="lineno">  127</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -276,10 +276,10 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="multiplexer_2poll_2EventMultiplexer_8cpp_source.html#l00116">116</a> of file <a class="el" href="multiplexer_2poll_2EventMultiplexer_8cpp_source.html">EventMultiplexer.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  116</span>                                      {</div>
-<div class="line"><span class="lineno">  117</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#a390d6d4a007947279e8e80e7d699a072">pollfds</a>.data();</div>
-<div class="line"><span class="lineno">  118</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="multiplexer_2poll_2EventMultiplexer_8cpp_source.html#l00117">117</a> of file <a class="el" href="multiplexer_2poll_2EventMultiplexer_8cpp_source.html">EventMultiplexer.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  117</span>                                      {</div>
+<div class="line"><span class="lineno">  118</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#a390d6d4a007947279e8e80e7d699a072">pollfds</a>.data();</div>
+<div class="line"><span class="lineno">  119</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -298,10 +298,10 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="multiplexer_2poll_2EventMultiplexer_8cpp_source.html#l00120">120</a> of file <a class="el" href="multiplexer_2poll_2EventMultiplexer_8cpp_source.html">EventMultiplexer.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  120</span>                                                                                                   {</div>
-<div class="line"><span class="lineno">  121</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#af7ae5d0d49ccb6c7eef1703760149314">pollFdIndices</a>;</div>
-<div class="line"><span class="lineno">  122</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="multiplexer_2poll_2EventMultiplexer_8cpp_source.html#l00121">121</a> of file <a class="el" href="multiplexer_2poll_2EventMultiplexer_8cpp_source.html">EventMultiplexer.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  121</span>                                                                                                   {</div>
+<div class="line"><span class="lineno">  122</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#af7ae5d0d49ccb6c7eef1703760149314">pollFdIndices</a>;</div>
+<div class="line"><span class="lineno">  123</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -324,33 +324,33 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="multiplexer_2poll_2EventMultiplexer_8cpp_source.html#l00049">49</a> of file <a class="el" href="multiplexer_2poll_2EventMultiplexer_8cpp_source.html">EventMultiplexer.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   49</span>                                                                                       {</div>
-<div class="line"><span class="lineno">   50</span>        <span class="keyword">const</span> <span class="keywordtype">int</span> fd = eventReceiver-&gt;<a class="code hl_function" href="classcore_1_1DescriptorEventReceiver.html#a79f301b292a4c64f35f5bf44c9b7ad8f">getRegisteredFd</a>();</div>
-<div class="line"><span class="lineno">   51</span> </div>
-<div class="line"><span class="lineno">   52</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="#af7ae5d0d49ccb6c7eef1703760149314">pollFdIndices</a>.contains(fd)) {</div>
-<div class="line"><span class="lineno">   53</span>            <a class="code hl_variable" href="#a390d6d4a007947279e8e80e7d699a072">pollfds</a>[<a class="code hl_variable" href="#aaa91336a34e514c7302dbf0cf522b324">nextIndex</a>].events = event;</div>
-<div class="line"><span class="lineno">   54</span>            <a class="code hl_variable" href="#a390d6d4a007947279e8e80e7d699a072">pollfds</a>[<a class="code hl_variable" href="#aaa91336a34e514c7302dbf0cf522b324">nextIndex</a>].fd = fd;</div>
-<div class="line"><span class="lineno">   55</span> </div>
-<div class="line"><span class="lineno">   56</span>            <a class="code hl_variable" href="#af7ae5d0d49ccb6c7eef1703760149314">pollFdIndices</a>[fd].index = <a class="code hl_variable" href="#aaa91336a34e514c7302dbf0cf522b324">nextIndex</a>;</div>
-<div class="line"><span class="lineno">   57</span>            <a class="code hl_variable" href="#af7ae5d0d49ccb6c7eef1703760149314">pollFdIndices</a>[fd].events = event;</div>
-<div class="line"><span class="lineno">   58</span> </div>
-<div class="line"><span class="lineno">   59</span>            ++<a class="code hl_variable" href="#aaa91336a34e514c7302dbf0cf522b324">nextIndex</a>;</div>
-<div class="line"><span class="lineno">   60</span> </div>
-<div class="line"><span class="lineno">   61</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="#aaa91336a34e514c7302dbf0cf522b324">nextIndex</a> == <a class="code hl_variable" href="#a390d6d4a007947279e8e80e7d699a072">pollfds</a>.size()) {</div>
-<div class="line"><span class="lineno">   62</span>                <a class="code hl_variable" href="#a390d6d4a007947279e8e80e7d699a072">pollfds</a>.resize(<a class="code hl_variable" href="#a390d6d4a007947279e8e80e7d699a072">pollfds</a>.size() * 2, {-1, 0, 0});</div>
-<div class="line"><span class="lineno">   63</span>                <a class="code hl_variable" href="#af7ae5d0d49ccb6c7eef1703760149314">pollFdIndices</a>.reserve(<a class="code hl_variable" href="#a390d6d4a007947279e8e80e7d699a072">pollfds</a>.size());</div>
-<div class="line"><span class="lineno">   64</span>            }</div>
-<div class="line"><span class="lineno">   65</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   66</span>            PollFdIndex&amp; pollFdIndex = <a class="code hl_variable" href="#af7ae5d0d49ccb6c7eef1703760149314">pollFdIndices</a>[fd];</div>
-<div class="line"><span class="lineno">   67</span> </div>
-<div class="line"><span class="lineno">   68</span>            <a class="code hl_variable" href="#a390d6d4a007947279e8e80e7d699a072">pollfds</a>[pollFdIndex.index].events |= event;</div>
-<div class="line"><span class="lineno">   69</span>            pollFdIndex.events |= event;</div>
-<div class="line"><span class="lineno">   70</span>        }</div>
-<div class="line"><span class="lineno">   71</span>    }</div>
-<div class="ttc" id="aclasscore_1_1DescriptorEventReceiver_html_a79f301b292a4c64f35f5bf44c9b7ad8f"><div class="ttname"><a href="classcore_1_1DescriptorEventReceiver.html#a79f301b292a4c64f35f5bf44c9b7ad8f">core::DescriptorEventReceiver::getRegisteredFd</a></div><div class="ttdeci">int getRegisteredFd() const</div><div class="ttdef"><b>Definition</b> <a href="DescriptorEventReceiver_8cpp_source.html#l00063">DescriptorEventReceiver.cpp:63</a></div></div>
+<p class="definition">Definition at line <a class="el" href="multiplexer_2poll_2EventMultiplexer_8cpp_source.html#l00050">50</a> of file <a class="el" href="multiplexer_2poll_2EventMultiplexer_8cpp_source.html">EventMultiplexer.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   50</span>                                                                                       {</div>
+<div class="line"><span class="lineno">   51</span>        <span class="keyword">const</span> <span class="keywordtype">int</span> fd = eventReceiver-&gt;<a class="code hl_function" href="classcore_1_1DescriptorEventReceiver.html#a79f301b292a4c64f35f5bf44c9b7ad8f">getRegisteredFd</a>();</div>
+<div class="line"><span class="lineno">   52</span> </div>
+<div class="line"><span class="lineno">   53</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="#af7ae5d0d49ccb6c7eef1703760149314">pollFdIndices</a>.contains(fd)) {</div>
+<div class="line"><span class="lineno">   54</span>            <a class="code hl_variable" href="#a390d6d4a007947279e8e80e7d699a072">pollfds</a>[<a class="code hl_variable" href="#aaa91336a34e514c7302dbf0cf522b324">nextIndex</a>].events = event;</div>
+<div class="line"><span class="lineno">   55</span>            <a class="code hl_variable" href="#a390d6d4a007947279e8e80e7d699a072">pollfds</a>[<a class="code hl_variable" href="#aaa91336a34e514c7302dbf0cf522b324">nextIndex</a>].fd = fd;</div>
+<div class="line"><span class="lineno">   56</span> </div>
+<div class="line"><span class="lineno">   57</span>            <a class="code hl_variable" href="#af7ae5d0d49ccb6c7eef1703760149314">pollFdIndices</a>[fd].index = <a class="code hl_variable" href="#aaa91336a34e514c7302dbf0cf522b324">nextIndex</a>;</div>
+<div class="line"><span class="lineno">   58</span>            <a class="code hl_variable" href="#af7ae5d0d49ccb6c7eef1703760149314">pollFdIndices</a>[fd].events = event;</div>
+<div class="line"><span class="lineno">   59</span> </div>
+<div class="line"><span class="lineno">   60</span>            ++<a class="code hl_variable" href="#aaa91336a34e514c7302dbf0cf522b324">nextIndex</a>;</div>
+<div class="line"><span class="lineno">   61</span> </div>
+<div class="line"><span class="lineno">   62</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="#aaa91336a34e514c7302dbf0cf522b324">nextIndex</a> == <a class="code hl_variable" href="#a390d6d4a007947279e8e80e7d699a072">pollfds</a>.size()) {</div>
+<div class="line"><span class="lineno">   63</span>                <a class="code hl_variable" href="#a390d6d4a007947279e8e80e7d699a072">pollfds</a>.resize(<a class="code hl_variable" href="#a390d6d4a007947279e8e80e7d699a072">pollfds</a>.size() * 2, {-1, 0, 0});</div>
+<div class="line"><span class="lineno">   64</span>                <a class="code hl_variable" href="#af7ae5d0d49ccb6c7eef1703760149314">pollFdIndices</a>.reserve(<a class="code hl_variable" href="#a390d6d4a007947279e8e80e7d699a072">pollfds</a>.size());</div>
+<div class="line"><span class="lineno">   65</span>            }</div>
+<div class="line"><span class="lineno">   66</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">   67</span>            PollFdIndex&amp; pollFdIndex = <a class="code hl_variable" href="#af7ae5d0d49ccb6c7eef1703760149314">pollFdIndices</a>[fd];</div>
+<div class="line"><span class="lineno">   68</span> </div>
+<div class="line"><span class="lineno">   69</span>            <a class="code hl_variable" href="#a390d6d4a007947279e8e80e7d699a072">pollfds</a>[pollFdIndex.index].events |= event;</div>
+<div class="line"><span class="lineno">   70</span>            pollFdIndex.events |= event;</div>
+<div class="line"><span class="lineno">   71</span>        }</div>
+<div class="line"><span class="lineno">   72</span>    }</div>
+<div class="ttc" id="aclasscore_1_1DescriptorEventReceiver_html_a79f301b292a4c64f35f5bf44c9b7ad8f"><div class="ttname"><a href="classcore_1_1DescriptorEventReceiver.html#a79f301b292a4c64f35f5bf44c9b7ad8f">core::DescriptorEventReceiver::getRegisteredFd</a></div><div class="ttdeci">int getRegisteredFd() const</div><div class="ttdef"><b>Definition</b> <a href="DescriptorEventReceiver_8cpp_source.html#l00062">DescriptorEventReceiver.cpp:62</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="multiplexer_2poll_2EventMultiplexer_8h_source.html#l00044">core::multiplexer::poll::PollFdsManager::PollFdIndex::events</a>, and <a class="el" href="DescriptorEventReceiver_8cpp_source.html#l00063">core::DescriptorEventReceiver::getRegisteredFd()</a>.</p>
+<p class="reference">References <a class="el" href="multiplexer_2poll_2EventMultiplexer_8h_source.html#l00040">core::multiplexer::poll::PollFdsManager::PollFdIndex::events</a>, and <a class="el" href="DescriptorEventReceiver_8cpp_source.html#l00062">core::DescriptorEventReceiver::getRegisteredFd()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="multiplexer_2poll_2DescriptorEventPublisher_8cpp_source.html#l00042">core::multiplexer::poll::DescriptorEventPublisher::muxAdd()</a>.</p>
 <div class="dynheader">
@@ -385,27 +385,27 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="multiplexer_2poll_2EventMultiplexer_8cpp_source.html#l00073">73</a> of file <a class="el" href="multiplexer_2poll_2EventMultiplexer_8cpp_source.html">EventMultiplexer.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   73</span>                                                   {</div>
-<div class="line"><span class="lineno">   74</span>        <span class="keyword">const</span> std::unordered_map&lt;int, PollFdIndex&gt;::iterator itPollFdIndex = <a class="code hl_variable" href="#af7ae5d0d49ccb6c7eef1703760149314">pollFdIndices</a>.find(fd);</div>
-<div class="line"><span class="lineno">   75</span> </div>
-<div class="line"><span class="lineno">   76</span>        PollFdIndex&amp; pollFdIndex = itPollFdIndex-&gt;second;</div>
-<div class="line"><span class="lineno">   77</span> </div>
-<div class="line"><span class="lineno">   78</span>        <a class="code hl_variable" href="#a390d6d4a007947279e8e80e7d699a072">pollfds</a>[pollFdIndex.index].events &amp;= <span class="keyword">static_cast&lt;</span><span class="keywordtype">short</span><span class="keyword">&gt;</span>(~event); <span class="comment">// tilde promotes to int</span></div>
-<div class="line"><span class="lineno">   79</span>        pollFdIndex.events &amp;= <span class="keyword">static_cast&lt;</span><span class="keywordtype">short</span><span class="keyword">&gt;</span>(~event);                <span class="comment">// tilde promotes to int</span></div>
-<div class="line"><span class="lineno">   80</span> </div>
-<div class="line"><span class="lineno">   81</span>        <span class="keywordflow">if</span> (pollFdIndex.events == 0) {</div>
-<div class="line"><span class="lineno">   82</span>            <a class="code hl_variable" href="#a390d6d4a007947279e8e80e7d699a072">pollfds</a>[pollFdIndex.index].fd = -1; <span class="comment">// Compress will keep track of that descriptor</span></div>
-<div class="line"><span class="lineno">   83</span>            <a class="code hl_variable" href="#af7ae5d0d49ccb6c7eef1703760149314">pollFdIndices</a>.erase(fd);</div>
-<div class="line"><span class="lineno">   84</span> </div>
-<div class="line"><span class="lineno">   85</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a390d6d4a007947279e8e80e7d699a072">pollfds</a>.size() &gt; (<a class="code hl_variable" href="#af7ae5d0d49ccb6c7eef1703760149314">pollFdIndices</a>.size() * 2) + 1) {</div>
-<div class="line"><span class="lineno">   86</span>                <a class="code hl_function" href="#a5fecc046d963886e6a59fb418a3fa932">compress</a>();</div>
-<div class="line"><span class="lineno">   87</span>            }</div>
-<div class="line"><span class="lineno">   88</span>        }</div>
-<div class="line"><span class="lineno">   89</span>    }</div>
-<div class="ttc" id="aclasscore_1_1multiplexer_1_1poll_1_1PollFdsManager_html_a5fecc046d963886e6a59fb418a3fa932"><div class="ttname"><a href="#a5fecc046d963886e6a59fb418a3fa932">core::multiplexer::poll::PollFdsManager::compress</a></div><div class="ttdeci">void compress()</div><div class="ttdef"><b>Definition</b> <a href="multiplexer_2poll_2EventMultiplexer_8cpp_source.html#l00100">EventMultiplexer.cpp:100</a></div></div>
+<p class="definition">Definition at line <a class="el" href="multiplexer_2poll_2EventMultiplexer_8cpp_source.html#l00074">74</a> of file <a class="el" href="multiplexer_2poll_2EventMultiplexer_8cpp_source.html">EventMultiplexer.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   74</span>                                                   {</div>
+<div class="line"><span class="lineno">   75</span>        <span class="keyword">const</span> std::unordered_map&lt;int, PollFdIndex&gt;::iterator itPollFdIndex = <a class="code hl_variable" href="#af7ae5d0d49ccb6c7eef1703760149314">pollFdIndices</a>.find(fd);</div>
+<div class="line"><span class="lineno">   76</span> </div>
+<div class="line"><span class="lineno">   77</span>        PollFdIndex&amp; pollFdIndex = itPollFdIndex-&gt;second;</div>
+<div class="line"><span class="lineno">   78</span> </div>
+<div class="line"><span class="lineno">   79</span>        <a class="code hl_variable" href="#a390d6d4a007947279e8e80e7d699a072">pollfds</a>[pollFdIndex.index].events &amp;= <span class="keyword">static_cast&lt;</span><span class="keywordtype">short</span><span class="keyword">&gt;</span>(~event); <span class="comment">// tilde promotes to int</span></div>
+<div class="line"><span class="lineno">   80</span>        pollFdIndex.events &amp;= <span class="keyword">static_cast&lt;</span><span class="keywordtype">short</span><span class="keyword">&gt;</span>(~event);                <span class="comment">// tilde promotes to int</span></div>
+<div class="line"><span class="lineno">   81</span> </div>
+<div class="line"><span class="lineno">   82</span>        <span class="keywordflow">if</span> (pollFdIndex.events == 0) {</div>
+<div class="line"><span class="lineno">   83</span>            <a class="code hl_variable" href="#a390d6d4a007947279e8e80e7d699a072">pollfds</a>[pollFdIndex.index].fd = -1; <span class="comment">// Compress will keep track of that descriptor</span></div>
+<div class="line"><span class="lineno">   84</span>            <a class="code hl_variable" href="#af7ae5d0d49ccb6c7eef1703760149314">pollFdIndices</a>.erase(fd);</div>
+<div class="line"><span class="lineno">   85</span> </div>
+<div class="line"><span class="lineno">   86</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a390d6d4a007947279e8e80e7d699a072">pollfds</a>.size() &gt; (<a class="code hl_variable" href="#af7ae5d0d49ccb6c7eef1703760149314">pollFdIndices</a>.size() * 2) + 1) {</div>
+<div class="line"><span class="lineno">   87</span>                <a class="code hl_function" href="#a5fecc046d963886e6a59fb418a3fa932">compress</a>();</div>
+<div class="line"><span class="lineno">   88</span>            }</div>
+<div class="line"><span class="lineno">   89</span>        }</div>
+<div class="line"><span class="lineno">   90</span>    }</div>
+<div class="ttc" id="aclasscore_1_1multiplexer_1_1poll_1_1PollFdsManager_html_a5fecc046d963886e6a59fb418a3fa932"><div class="ttname"><a href="#a5fecc046d963886e6a59fb418a3fa932">core::multiplexer::poll::PollFdsManager::compress</a></div><div class="ttdeci">void compress()</div><div class="ttdef"><b>Definition</b> <a href="multiplexer_2poll_2EventMultiplexer_8cpp_source.html#l00101">EventMultiplexer.cpp:101</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="multiplexer_2poll_2EventMultiplexer_8cpp_source.html#l00100">compress()</a>, and <a class="el" href="multiplexer_2poll_2EventMultiplexer_8h_source.html#l00044">core::multiplexer::poll::PollFdsManager::PollFdIndex::events</a>.</p>
+<p class="reference">References <a class="el" href="multiplexer_2poll_2EventMultiplexer_8cpp_source.html#l00101">compress()</a>, and <a class="el" href="multiplexer_2poll_2EventMultiplexer_8h_source.html#l00040">core::multiplexer::poll::PollFdsManager::PollFdIndex::events</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="multiplexer_2poll_2DescriptorEventPublisher_8cpp_source.html#l00046">core::multiplexer::poll::DescriptorEventPublisher::muxDel()</a>.</p>
 <div class="dynheader">
@@ -440,11 +440,11 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="multiplexer_2poll_2EventMultiplexer_8cpp_source.html#l00095">95</a> of file <a class="el" href="multiplexer_2poll_2EventMultiplexer_8cpp_source.html">EventMultiplexer.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   95</span>                                                                                         {</div>
-<div class="line"><span class="lineno">   96</span>        <a class="code hl_variable" href="#a390d6d4a007947279e8e80e7d699a072">pollfds</a>[<a class="code hl_variable" href="#af7ae5d0d49ccb6c7eef1703760149314">pollFdIndices</a>.find(eventReceiver-&gt;getRegisteredFd())-&gt;second.index].events &amp;=</div>
-<div class="line"><span class="lineno">   97</span>            <span class="keyword">static_cast&lt;</span><span class="keywordtype">short</span><span class="keyword">&gt;</span>(~event); <span class="comment">// Tilde promotes to int</span></div>
-<div class="line"><span class="lineno">   98</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="multiplexer_2poll_2EventMultiplexer_8cpp_source.html#l00096">96</a> of file <a class="el" href="multiplexer_2poll_2EventMultiplexer_8cpp_source.html">EventMultiplexer.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   96</span>                                                                                         {</div>
+<div class="line"><span class="lineno">   97</span>        <a class="code hl_variable" href="#a390d6d4a007947279e8e80e7d699a072">pollfds</a>[<a class="code hl_variable" href="#af7ae5d0d49ccb6c7eef1703760149314">pollFdIndices</a>.find(eventReceiver-&gt;getRegisteredFd())-&gt;second.index].events &amp;=</div>
+<div class="line"><span class="lineno">   98</span>            <span class="keyword">static_cast&lt;</span><span class="keywordtype">short</span><span class="keyword">&gt;</span>(~event); <span class="comment">// Tilde promotes to int</span></div>
+<div class="line"><span class="lineno">   99</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="multiplexer_2poll_2DescriptorEventPublisher_8cpp_source.html#l00054">core::multiplexer::poll::DescriptorEventPublisher::muxOff()</a>.</p>
 <div class="dynheader">
@@ -474,10 +474,10 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="multiplexer_2poll_2EventMultiplexer_8cpp_source.html#l00091">91</a> of file <a class="el" href="multiplexer_2poll_2EventMultiplexer_8cpp_source.html">EventMultiplexer.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   91</span>                                                                                        {</div>
-<div class="line"><span class="lineno">   92</span>        <a class="code hl_variable" href="#a390d6d4a007947279e8e80e7d699a072">pollfds</a>[<a class="code hl_variable" href="#af7ae5d0d49ccb6c7eef1703760149314">pollFdIndices</a>.find(eventReceiver-&gt;<a class="code hl_function" href="classcore_1_1DescriptorEventReceiver.html#a79f301b292a4c64f35f5bf44c9b7ad8f">getRegisteredFd</a>())-&gt;second.index].events |= event;</div>
-<div class="line"><span class="lineno">   93</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="multiplexer_2poll_2EventMultiplexer_8cpp_source.html#l00092">92</a> of file <a class="el" href="multiplexer_2poll_2EventMultiplexer_8cpp_source.html">EventMultiplexer.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   92</span>                                                                                        {</div>
+<div class="line"><span class="lineno">   93</span>        <a class="code hl_variable" href="#a390d6d4a007947279e8e80e7d699a072">pollfds</a>[<a class="code hl_variable" href="#af7ae5d0d49ccb6c7eef1703760149314">pollFdIndices</a>.find(eventReceiver-&gt;<a class="code hl_function" href="classcore_1_1DescriptorEventReceiver.html#a79f301b292a4c64f35f5bf44c9b7ad8f">getRegisteredFd</a>())-&gt;second.index].events |= event;</div>
+<div class="line"><span class="lineno">   94</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="multiplexer_2poll_2DescriptorEventPublisher_8cpp_source.html#l00050">core::multiplexer::poll::DescriptorEventPublisher::muxOn()</a>.</p>
 <div class="dynheader">
@@ -509,7 +509,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="multiplexer_2poll_2EventMultiplexer_8h_source.html#l00061">61</a> of file <a class="el" href="multiplexer_2poll_2EventMultiplexer_8h_source.html">EventMultiplexer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="multiplexer_2poll_2EventMultiplexer_8h_source.html#l00057">57</a> of file <a class="el" href="multiplexer_2poll_2EventMultiplexer_8h_source.html">EventMultiplexer.h</a>.</p>
 
 </div>
 </div>
@@ -533,7 +533,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="multiplexer_2poll_2EventMultiplexer_8h_source.html#l00065">65</a> of file <a class="el" href="multiplexer_2poll_2EventMultiplexer_8h_source.html">EventMultiplexer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="multiplexer_2poll_2EventMultiplexer_8h_source.html#l00061">61</a> of file <a class="el" href="multiplexer_2poll_2EventMultiplexer_8h_source.html">EventMultiplexer.h</a>.</p>
 
 </div>
 </div>
@@ -557,7 +557,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="multiplexer_2poll_2EventMultiplexer_8h_source.html#l00064">64</a> of file <a class="el" href="multiplexer_2poll_2EventMultiplexer_8h_source.html">EventMultiplexer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="multiplexer_2poll_2EventMultiplexer_8h_source.html#l00060">60</a> of file <a class="el" href="multiplexer_2poll_2EventMultiplexer_8h_source.html">EventMultiplexer.h</a>.</p>
 
 </div>
 </div>
@@ -571,7 +571,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacecore.html">core</a></li><li class="navelem"><a class="el" href="namespacecore_1_1multiplexer.html">multiplexer</a></li><li class="navelem"><a class="el" href="namespacecore_1_1multiplexer_1_1poll.html">poll</a></li><li class="navelem"><a class="el" href="classcore_1_1multiplexer_1_1poll_1_1PollFdsManager.html">PollFdsManager</a></li>
-    <li class="footer">Generated on Sat Oct 5 2024 19:03:11 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generated on Tue Dec 3 2024 20:49:49 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>
