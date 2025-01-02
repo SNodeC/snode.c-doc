@@ -250,7 +250,7 @@ $(function(){initNavTree('http__utils_8cpp_source.html',''); initResizable(true)
 <div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span> </div>
 <div class="foldopen" id="foldopen00135" data-start="{" data-end="}">
 <div class="line"><a id="l00135" name="l00135"></a><span class="lineno"><a class="line" href="namespacehttputils.html#ae9dad27f616223d074b58f3e0232caa7">  135</a></span>    <span class="keyword">struct</span> tm from_http_date(<span class="keyword">const</span> std::string&amp; http_date) {</div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>        <span class="keyword">struct</span> tm tm {};</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>        <span class="keyword">struct</span> tm tm{};</div>
 <div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span> </div>
 <div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>        strptime(http_date.c_str(), <span class="stringliteral">&quot;%a, %d %b %Y %H:%M:%S&quot;</span>, &amp;tm);</div>
 <div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>        tm.tm_zone = <span class="stringliteral">&quot;GMT&quot;</span>;</div>
@@ -263,7 +263,7 @@ $(function(){initNavTree('http__utils_8cpp_source.html',''); initResizable(true)
 <div class="line"><a id="l00144" name="l00144"></a><span class="lineno"><a class="line" href="namespacehttputils.html#a4a2597267a4c6fae315ab7b85273ea61">  144</a></span>    std::string <a class="code hl_function" href="namespacehttputils.html#a4a2597267a4c6fae315ab7b85273ea61">file_mod_http_date</a>(<span class="keyword">const</span> std::string&amp; filePath) {</div>
 <div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>        <span class="keywordtype">char</span> buf[100];</div>
 <div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span> </div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>        <span class="keyword">struct</span> stat attrib {};</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>        <span class="keyword">struct</span> stat attrib{};</div>
 <div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>        stat(filePath.c_str(), &amp;attrib); <span class="comment">// TODO: to core::system</span></div>
 <div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span> </div>
 <div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>        (<span class="keywordtype">void</span>) strftime(buf, <span class="keyword">sizeof</span> buf, <span class="stringliteral">&quot;%a, %d %b %Y %H:%M:%S %Z&quot;</span>, gmtime(&amp;(attrib.st_mtime))); <span class="comment">// TODO: to core::system</span></div>
@@ -438,14 +438,14 @@ $(function(){initNavTree('http__utils_8cpp_source.html',''); initResizable(true)
 <div class="ttc" id="anamespaceutils_1_1system_html"><div class="ttname"><a href="namespaceutils_1_1system.html">utils::system</a></div><div class="ttdef"><b>Definition</b> <a href="signal_8cpp_source.html#l00030">signal.cpp:30</a></div></div>
 <div class="ttc" id="anamespaceutils_1_1system_html_a629a1ebec50192eff5587cdd5d51bf20"><div class="ttname"><a href="namespaceutils_1_1system.html#a629a1ebec50192eff5587cdd5d51bf20">utils::system::gmtime</a></div><div class="ttdeci">struct tm * gmtime(const time_t *timep)</div><div class="ttdef"><b>Definition</b> <a href="time_8cpp_source.html#l00040">time.cpp:40</a></div></div>
 <div class="ttc" id="anamespaceutils_1_1system_html_aa36252afed0ca4903feb511649270d1c"><div class="ttname"><a href="namespaceutils_1_1system.html#aa36252afed0ca4903feb511649270d1c">utils::system::time</a></div><div class="ttdeci">time_t time(time_t *tloc)</div><div class="ttdef"><b>Definition</b> <a href="time_8cpp_source.html#l00030">time.cpp:30</a></div></div>
-<div class="ttc" id="anamespaceutils_html"><div class="ttname"><a href="namespaceutils.html">utils</a></div><div class="ttdef"><b>Definition</b> <a href="DescriptorEventPublisher_8h_source.html#l00027">DescriptorEventPublisher.h:27</a></div></div>
+<div class="ttc" id="anamespaceutils_html"><div class="ttname"><a href="namespaceutils.html">utils</a></div><div class="ttdef"><b>Definition</b> <a href="EventMultiplexer_8h_source.html#l00031">EventMultiplexer.h:31</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_562abdcd8625d4bf7bad2fe6fe01354c.html">web</a></li><li class="navelem"><a class="el" href="dir_890691660869da6a17298077dcca53fb.html">http</a></li><li class="navelem"><a class="el" href="http__utils_8cpp.html">http_utils.cpp</a></li>
-    <li class="footer">Generated on Thu Jan 2 2025 18:49:46 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generated on Thu Jan 2 2025 21:38:49 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>

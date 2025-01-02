@@ -100,7 +100,7 @@ $(function(){initNavTree('index.html',''); initResizable(true); });
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p><a class="anchor" id="md__2home_2voc_2projects_2snodec_2snode_8c_2README"></a> <a href="https://snodec.github.io/snode.c-doc/html/index.html">SNode.C</a> is a very simple to use, lightweight, highly extensible, event driven, layer-based framework for network applications in the spirit of node.js written entirely in C++.</p>
-<p>The development of the framework began during the summer semester 2020 as part of the course <em>Network and Distributed Systems</em> in the master's program <a href="https://www.fh-ooe.at/en/hagenberg-campus/studiengaenge/master/interactive-media/">Interactive Media</a> at the department <a href="https://www.fh-ooe.at/en/hagenberg-campus/">Informatics, Communications and Media</a> at the <a href="https://www.fh-ooe.at/en/">University of Applied Sciences Upper Austria, Campus Hagenberg</a>, to give students an insight into the fundamental techniques of network and web frameworks.</p>
+<p>The development of the framework began during the summer semester 2020 as part of the course <em>Network and Distributed Systems</em> in the master's program <a href="https://www.fh-ooe.at/en/hagenberg-campus/studiengaenge/master/interactive-media/">Interactive Media</a> at the department <a href="https://www.fh-ooe.at/en/campus-hagenberg/">Informatics, Communications and Media</a> at the <a href="https://www.fh-ooe.at/en/campus-hagenberg/">University of Applied Sciences Upper Austria, Campus Hagenberg</a>, to give students an insight into the fundamental techniques of network and web frameworks.</p>
 <p>Main focus (but not only) of the framework is on <em>Machine to Machine</em> (M2M) communication and in particular on the field of <em>Internet of Things</em> (IoT). As such, the SNode.C reference project <a href="https://github.com/SNodeC/mqttsuite">MQTT-Suite</a> exists, which provides <em>mqttbroker</em>, <em>mqttintegrator</em>, and <em>wsmqttintegrator</em>, <em>mqttbridge</em>, and <em>wsmqttbridge</em> applications.</p>
 <h1><a class="anchor" id="table-of-content"></a>
 Table of Content</h1>
@@ -344,10 +344,10 @@ An "Echo" Application</h2>
 <p>For the <em>server role</em> we just need to create an object of type</p>
 <div class="fragment"><div class="line"><a class="code hl_class" href="classnet_1_1in_1_1stream_1_1SocketServer.html">net::in::stream::legacy::SocketServer&lt;SocketContextFactory&gt;</a></div>
 <div class="ttc" id="aclassnet_1_1in_1_1stream_1_1SocketServer_html"><div class="ttname"><a href="classnet_1_1in_1_1stream_1_1SocketServer.html">net::in::stream::SocketServer</a></div><div class="ttdef"><b>Definition</b> <a href="net_2in_2stream_2SocketServer_8h_source.html#l00040">SocketServer.h:43</a></div></div>
-</div><!-- fragment --><p>called *server instance* and for the <em>client role</em> an object of type</p>
+</div><!-- fragment --><p>called <a class="el" href="#socketserver-classes">*server instance*</a> and for the <em>client role</em> an object of type</p>
 <div class="fragment"><div class="line"><a class="code hl_class" href="classnet_1_1in_1_1stream_1_1SocketClient.html">net::in::stream::legacy::SocketClient&lt;SocketContextFactory&gt;</a></div>
 <div class="ttc" id="aclassnet_1_1in_1_1stream_1_1SocketClient_html"><div class="ttname"><a href="classnet_1_1in_1_1stream_1_1SocketClient.html">net::in::stream::SocketClient</a></div><div class="ttdef"><b>Definition</b> <a href="net_2in_2stream_2SocketClient_8h_source.html#l00040">SocketClient.h:43</a></div></div>
-</div><!-- fragment --><p>is required, called *client instance*.</p>
+</div><!-- fragment --><p>is required, called <a class="el" href="#socketclient-classes">*client instance*</a>.</p>
 <p>A class <code>SocketContextFactory</code> is used for both instances as template argument. Such a <code>SocketContextFactory</code> needs to be provided by the user and is used internally by the <code>SocketServer</code> and the <code>SocketClient</code> instances to create a concrete <code>SocketContext</code> object for each established connection.</p>
 <p>The <code>SocketContext</code> class must also be provided by the user and represents a concrete application protocol.</p>
 <p>Therefore, for our <em>echo</em> application, we need to implement the <em>application protocol</em> for server and client in classes derived from <code><a class="el" href="classcore_1_1socket_1_1stream_1_1SocketContext.html">core::socket::stream::SocketContext</a></code>, the base class of all connection-oriented (<code>stream</code>) application protocols, and factories derived from <code><a class="el" href="classcore_1_1socket_1_1stream_1_1SocketContextFactory.html">core::socket::stream::SocketContextFactory</a></code>.</p>
@@ -775,8 +775,7 @@ Installation on Debian Style Systems (x86-64, Arm)</h2>
 <h3><a class="anchor" id="requirements-and-dependencies-1"></a>
 Requirements and Dependencies</h3>
 <p>To install all dependencies on Debian style systems just run</p>
-<div class="fragment"><div class="line"> sh</div>
-<div class="line">sudo apt update</div>
+<div class="fragment"><div class="line">sudo apt update</div>
 <div class="line">sudo apt install git cmake make ninja-build g++ clang pkg-config</div>
 <div class="line">sudo apt install iwyu clang-format cmake-format doxygen</div>
 <div class="line">sudo apt install libeasyloggingpp-dev libssl-dev nlohmann-json3-dev</div>
@@ -784,8 +783,7 @@ Requirements and Dependencies</h3>
 </div><!-- fragment --><h3><a class="anchor" id="snodec"></a>
 SNode.C</h3>
 <p>After installing all dependencies SNode.C can be cloned from github, compiled and installed.</p>
-<div class="fragment"><div class="line"> sh</div>
-<div class="line">mkdir snode.c</div>
+<div class="fragment"><div class="line">mkdir snode.c</div>
 <div class="line">cd snode.c</div>
 <div class="line">git clone https://github.com/SNodeC/snode.c.git</div>
 <div class="line">mkdir build</div>
@@ -1933,7 +1931,7 @@ Anatomy of the Command Line Interface</h4>
 <p>One can switch between sections by just specifying a different section name.</p>
 <h3><a class="anchor" id="configuration-via-a-configuration-file"></a>
 Configuration via a Configuration File</h3>
-<p>For every application a configuration file can be generated by appending the switch <code>-w</code> or <code>--write-config</code> to the command line. Optionally <code>--write-config</code> takes a filename as value. If no filename is provided a default filename is used (see Default Name of a Configuration File).</p>
+<p>For every application a configuration file can be generated by appending the switch <code>-w</code> or <code>--write-config</code> to the command line. Optionally <code>--write-config</code> takes a filename as value. If no filename is provided a default filename is used (see <a class="el" href="#default-name-of-a-configuration-file">Default Name of a Configuration File</a>).</p>
 <h4><a class="anchor" id="configuration-file-format"></a>
 Configuration File Format</h4>
 <p>Each configuration option which is marked as <em>persistent</em> in the help output can also be configured via a configuration file. The names of the entries for options in such a configuration file follow a well defined structure.</p>
@@ -2654,7 +2652,7 @@ Using Regular Expressions in Routes</h2>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Jan 2 2025 18:50:05 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generated on Thu Jan 2 2025 21:39:08 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>

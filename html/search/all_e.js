@@ -98,7 +98,7 @@ var searchData=
   ['max_5fpayload_5fjunk_5flen_95',['MAX_PAYLOAD_JUNK_LEN',['../Receiver_8h.html#a7427dfaf41448656924afb2886b36637',1,'Receiver.h']]],
   ['max_5fread_5fjunksize_96',['MAX_READ_JUNKSIZE',['../PipeSink_8cpp.html#ad64da5cbb2a93af7c8ac5419d7d0c5cd',1,'PipeSink.cpp']]],
   ['max_5fsend_5fjunksize_97',['MAX_SEND_JUNKSIZE',['../PipeSource_8cpp.html#acc9332e979f894b29288e59adeb83e81',1,'PipeSource.cpp']]],
-  ['maxfd_98',['maxFd',['../classcore_1_1DescriptorEventPublisher.html#a6bbd4b1a53e43ef598d729b4059cae2d',1,'core::DescriptorEventPublisher::maxFd()'],['../classcore_1_1EventMultiplexer.html#aaff5e10ebbdcc07d820f6b1d40ad8c70',1,'core::EventMultiplexer::maxFd()']]],
+  ['maxfd_98',['maxFd',['../classcore_1_1EventMultiplexer.html#aaff5e10ebbdcc07d820f6b1d40ad8c70',1,'core::EventMultiplexer::maxFd()'],['../classcore_1_1DescriptorEventPublisher.html#a6bbd4b1a53e43ef598d729b4059cae2d',1,'core::DescriptorEventPublisher::maxFd()']]],
   ['maxinactivity_99',['maxInactivity',['../classcore_1_1DescriptorEventReceiver.html#a1f1288f7ed5140d353e24b611a942618',1,'core::DescriptorEventReceiver']]],
   ['maxlinelength_100',['maxLineLength',['../classweb_1_1http_1_1decoder_1_1Fields.html#a5b8887b1275f9a2d0ce00e3ad013b37a',1,'web::http::decoder::Fields']]],
   ['maxqos_101',['maxQoS',['../classiot_1_1mqtt_1_1server_1_1broker_1_1Broker.html#a819d7557d683e45a97366b1a54868df5',1,'iot::mqtt::server::broker::Broker']]],
