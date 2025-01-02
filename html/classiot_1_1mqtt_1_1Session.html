@@ -278,12 +278,12 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Session_8cpp_source.html#l00092">92</a> of file <a class="el" href="Session_8cpp_source.html">Session.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   92</span>                        {</div>
-<div class="line"><span class="lineno">   93</span>        <a class="code hl_variable" href="#a630625da247dd9884398d6b4c84b576d">publishMap</a>.clear();</div>
-<div class="line"><span class="lineno">   94</span>        <a class="code hl_variable" href="#af9d26d757ac65b749b4a249d48476974">pubrelPacketIdentifierSet</a>.clear();</div>
-<div class="line"><span class="lineno">   95</span>        <a class="code hl_variable" href="#a1a4317017d45301c31d38960140b3da8">publishPacketIdentifierSet</a>.clear();</div>
-<div class="line"><span class="lineno">   96</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Session_8cpp_source.html#l00089">89</a> of file <a class="el" href="Session_8cpp_source.html">Session.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   89</span>                        {</div>
+<div class="line"><span class="lineno">   90</span>        <a class="code hl_variable" href="#a630625da247dd9884398d6b4c84b576d">publishMap</a>.clear();</div>
+<div class="line"><span class="lineno">   91</span>        <a class="code hl_variable" href="#af9d26d757ac65b749b4a249d48476974">pubrelPacketIdentifierSet</a>.clear();</div>
+<div class="line"><span class="lineno">   92</span>        <a class="code hl_variable" href="#a1a4317017d45301c31d38960140b3da8">publishPacketIdentifierSet</a>.clear();</div>
+<div class="line"><span class="lineno">   93</span>    }</div>
 <div class="ttc" id="aclassiot_1_1mqtt_1_1Session_html_a1a4317017d45301c31d38960140b3da8"><div class="ttname"><a href="#a1a4317017d45301c31d38960140b3da8">iot::mqtt::Session::publishPacketIdentifierSet</a></div><div class="ttdeci">std::set&lt; uint16_t &gt; publishPacketIdentifierSet</div><div class="ttdef"><b>Definition</b> <a href="Session_8h_source.html#l00063">Session.h:63</a></div></div>
 <div class="ttc" id="aclassiot_1_1mqtt_1_1Session_html_a630625da247dd9884398d6b4c84b576d"><div class="ttname"><a href="#a630625da247dd9884398d6b4c84b576d">iot::mqtt::Session::publishMap</a></div><div class="ttdeci">std::map&lt; uint16_t, iot::mqtt::packets::Publish &gt; publishMap</div><div class="ttdef"><b>Definition</b> <a href="Session_8h_source.html#l00059">Session.h:59</a></div></div>
 <div class="ttc" id="aclassiot_1_1mqtt_1_1Session_html_af9d26d757ac65b749b4a249d48476974"><div class="ttname"><a href="#af9d26d757ac65b749b4a249d48476974">iot::mqtt::Session::pubrelPacketIdentifierSet</a></div><div class="ttdeci">std::set&lt; uint16_t &gt; pubrelPacketIdentifierSet</div><div class="ttdef"><b>Definition</b> <a href="Session_8h_source.html#l00060">Session.h:60</a></div></div>
@@ -307,29 +307,26 @@ Friends</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Session_8cpp_source.html#l00067">67</a> of file <a class="el" href="Session_8cpp_source.html">Session.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   67</span>                                                   {</div>
-<div class="line"><span class="lineno">   68</span>        <span class="keywordflow">if</span> (!json.empty()) {</div>
-<div class="line"><span class="lineno">   69</span>            <span class="keywordflow">if</span> (json.contains(<span class="stringliteral">&quot;pubrel_packetidentifier_set&quot;</span>)) {</div>
-<div class="line"><span class="lineno">   70</span>                <a class="code hl_variable" href="#af9d26d757ac65b749b4a249d48476974">pubrelPacketIdentifierSet</a> = <span class="keyword">static_cast&lt;</span>std::set&lt;uint16_t&gt;<span class="keyword">&gt;</span>(json[<span class="stringliteral">&quot;pubrel_packetidentifier_set&quot;</span>]);</div>
-<div class="line"><span class="lineno">   71</span>            }</div>
-<div class="line"><span class="lineno">   72</span>            <span class="keywordflow">if</span> (json.contains(<span class="stringliteral">&quot;publish_packetidentifier_set&quot;</span>)) {</div>
-<div class="line"><span class="lineno">   73</span>                <a class="code hl_variable" href="#a1a4317017d45301c31d38960140b3da8">publishPacketIdentifierSet</a> = <span class="keyword">static_cast&lt;</span>std::set&lt;uint16_t&gt;<span class="keyword">&gt;</span>(json[<span class="stringliteral">&quot;publish_packetidentifier_set&quot;</span>]);</div>
-<div class="line"><span class="lineno">   74</span>            }</div>
-<div class="line"><span class="lineno">   75</span> </div>
-<div class="line"><span class="lineno">   76</span>            <span class="keywordflow">if</span> (json.contains(<span class="stringliteral">&quot;publish_map&quot;</span>)) {</div>
-<div class="line"><span class="lineno">   77</span>                <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; publishJson : json[<span class="stringliteral">&quot;publish_map&quot;</span>]) {</div>
-<div class="line"><span class="lineno">   78</span>                    <span class="keywordflow">if</span> (publishJson.contains(<span class="stringliteral">&quot;packet_identifier&quot;</span>)) {</div>
-<div class="line"><span class="lineno">   79</span>                        <a class="code hl_variable" href="#a630625da247dd9884398d6b4c84b576d">publishMap</a>.emplace(publishJson[<span class="stringliteral">&quot;packet_identifier&quot;</span>],</div>
-<div class="line"><span class="lineno">   80</span>                                           <a class="code hl_class" href="classiot_1_1mqtt_1_1packets_1_1Publish.html">iot::mqtt::packets::Publish</a>(publishJson[<span class="stringliteral">&quot;packet_identifier&quot;</span>],</div>
-<div class="line"><span class="lineno">   81</span>                                                                       publishJson[<span class="stringliteral">&quot;topic&quot;</span>],</div>
-<div class="line"><span class="lineno">   82</span>                                                                       publishJson[<span class="stringliteral">&quot;message&quot;</span>],</div>
-<div class="line"><span class="lineno">   83</span>                                                                       publishJson[<span class="stringliteral">&quot;qos&quot;</span>],</div>
-<div class="line"><span class="lineno">   84</span>                                                                       publishJson[<span class="stringliteral">&quot;dup&quot;</span>],</div>
-<div class="line"><span class="lineno">   85</span>                                                                       publishJson[<span class="stringliteral">&quot;retain&quot;</span>]));</div>
-<div class="line"><span class="lineno">   86</span>                    }</div>
-<div class="line"><span class="lineno">   87</span>                }</div>
-<div class="line"><span class="lineno">   88</span>            }</div>
-<div class="line"><span class="lineno">   89</span>        }</div>
-<div class="line"><span class="lineno">   90</span>    }</div>
+<div class="line"><span class="lineno">   68</span>        <span class="keywordflow">if</span> (json.contains(<span class="stringliteral">&quot;pubrel_packetidentifier_set&quot;</span>)) {</div>
+<div class="line"><span class="lineno">   69</span>            <a class="code hl_variable" href="#af9d26d757ac65b749b4a249d48476974">pubrelPacketIdentifierSet</a> = <span class="keyword">static_cast&lt;</span>std::set&lt;uint16_t&gt;<span class="keyword">&gt;</span>(json[<span class="stringliteral">&quot;pubrel_packetidentifier_set&quot;</span>]);</div>
+<div class="line"><span class="lineno">   70</span>        }</div>
+<div class="line"><span class="lineno">   71</span>        <span class="keywordflow">if</span> (json.contains(<span class="stringliteral">&quot;publish_packetidentifier_set&quot;</span>)) {</div>
+<div class="line"><span class="lineno">   72</span>            <a class="code hl_variable" href="#a1a4317017d45301c31d38960140b3da8">publishPacketIdentifierSet</a> = <span class="keyword">static_cast&lt;</span>std::set&lt;uint16_t&gt;<span class="keyword">&gt;</span>(json[<span class="stringliteral">&quot;publish_packetidentifier_set&quot;</span>]);</div>
+<div class="line"><span class="lineno">   73</span>        }</div>
+<div class="line"><span class="lineno">   74</span>        <span class="keywordflow">if</span> (json.contains(<span class="stringliteral">&quot;publish_map&quot;</span>)) {</div>
+<div class="line"><span class="lineno">   75</span>            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; publishJson : json[<span class="stringliteral">&quot;publish_map&quot;</span>]) {</div>
+<div class="line"><span class="lineno">   76</span>                <span class="keywordflow">if</span> (publishJson.contains(<span class="stringliteral">&quot;packet_identifier&quot;</span>)) {</div>
+<div class="line"><span class="lineno">   77</span>                    <a class="code hl_variable" href="#a630625da247dd9884398d6b4c84b576d">publishMap</a>.emplace(publishJson[<span class="stringliteral">&quot;packet_identifier&quot;</span>],</div>
+<div class="line"><span class="lineno">   78</span>                                       <a class="code hl_class" href="classiot_1_1mqtt_1_1packets_1_1Publish.html">iot::mqtt::packets::Publish</a>(publishJson[<span class="stringliteral">&quot;packet_identifier&quot;</span>],</div>
+<div class="line"><span class="lineno">   79</span>                                                                   publishJson[<span class="stringliteral">&quot;topic&quot;</span>],</div>
+<div class="line"><span class="lineno">   80</span>                                                                   publishJson[<span class="stringliteral">&quot;message&quot;</span>],</div>
+<div class="line"><span class="lineno">   81</span>                                                                   publishJson[<span class="stringliteral">&quot;qos&quot;</span>],</div>
+<div class="line"><span class="lineno">   82</span>                                                                   publishJson[<span class="stringliteral">&quot;dup&quot;</span>],</div>
+<div class="line"><span class="lineno">   83</span>                                                                   publishJson[<span class="stringliteral">&quot;retain&quot;</span>]));</div>
+<div class="line"><span class="lineno">   84</span>                }</div>
+<div class="line"><span class="lineno">   85</span>            }</div>
+<div class="line"><span class="lineno">   86</span>        }</div>
+<div class="line"><span class="lineno">   87</span>    }</div>
 <div class="ttc" id="aclassiot_1_1mqtt_1_1packets_1_1Publish_html"><div class="ttname"><a href="classiot_1_1mqtt_1_1packets_1_1Publish.html">iot::mqtt::packets::Publish</a></div><div class="ttdef"><b>Definition</b> <a href="mqtt_2packets_2Publish_8h_source.html#l00037">Publish.h:37</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -542,7 +539,7 @@ Friends</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceiot.html">iot</a></li><li class="navelem"><a class="el" href="namespaceiot_1_1mqtt.html">mqtt</a></li><li class="navelem"><a class="el" href="classiot_1_1mqtt_1_1Session.html">Session</a></li>
-    <li class="footer">Generated on Tue Dec 3 2024 20:49:49 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generated on Thu Jan 2 2025 18:50:04 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>

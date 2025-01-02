@@ -478,7 +478,7 @@ template&lt;typename <a class="el" href="#abc18b9113d82388b6b5e04d5d930be40">Soc
 <div class="fragment"><div class="line"><span class="lineno">   64</span>                                                                                                                                     {</div>
 <div class="line"><span class="lineno">   65</span>        <a class="code hl_typedef" href="#abc18b9113d82388b6b5e04d5d930be40">SocketContextUpgradeFactory</a>* socketContextUpgradeFactory = <span class="keyword">nullptr</span>;</div>
 <div class="line"><span class="lineno">   66</span> </div>
-<div class="line"><span class="lineno">   67</span>        <span class="keywordtype">void</span>* handle = core::DynamicLoader::dlOpen(socketContextUpgradeFactoryLibraryFile, RTLD_LAZY | RTLD_GLOBAL);</div>
+<div class="line"><span class="lineno">   67</span>        <span class="keywordtype">void</span>* handle = core::DynamicLoader::dlOpen(socketContextUpgradeFactoryLibraryFile);</div>
 <div class="line"><span class="lineno">   68</span> </div>
 <div class="line"><span class="lineno">   69</span>        <span class="keywordflow">if</span> (handle != <span class="keyword">nullptr</span>) {</div>
 <div class="line"><span class="lineno">   70</span>            <a class="code hl_typedef" href="#abc18b9113d82388b6b5e04d5d930be40">SocketContextUpgradeFactory</a>* (*getSocketContextUpgradeFactory)() = <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_typedef" href="#abc18b9113d82388b6b5e04d5d930be40">SocketContextUpgradeFactory</a>* (*) ()<span class="keyword">&gt;</span>(</div>
@@ -509,9 +509,9 @@ template&lt;typename <a class="el" href="#abc18b9113d82388b6b5e04d5d930be40">Soc
 <div class="line"><span class="lineno">   95</span> </div>
 <div class="line"><span class="lineno">   96</span>        <span class="keywordflow">return</span> socketContextUpgradeFactory;</div>
 <div class="line"><span class="lineno">   97</span>    }</div>
-<div class="ttc" id="aclasscore_1_1DynamicLoader_html_a28d14f3029339351d8bb8b328a6110b0"><div class="ttname"><a href="classcore_1_1DynamicLoader.html#a28d14f3029339351d8bb8b328a6110b0">core::DynamicLoader::dlError</a></div><div class="ttdeci">static char * dlError()</div><div class="ttdef"><b>Definition</b> <a href="DynamicLoader_8cpp_source.html#l00095">DynamicLoader.cpp:95</a></div></div>
-<div class="ttc" id="aclasscore_1_1DynamicLoader_html_a42ac52cda1ec4534f1cc9e225dcb31b0"><div class="ttname"><a href="classcore_1_1DynamicLoader.html#a42ac52cda1ec4534f1cc9e225dcb31b0">core::DynamicLoader::dlClose</a></div><div class="ttdeci">static int dlClose(void *handle)</div><div class="ttdef"><b>Definition</b> <a href="DynamicLoader_8cpp_source.html#l00072">DynamicLoader.cpp:72</a></div></div>
-<div class="ttc" id="aclasscore_1_1DynamicLoader_html_a708b7adb431acbc8976968c59692625e"><div class="ttname"><a href="classcore_1_1DynamicLoader.html#a708b7adb431acbc8976968c59692625e">core::DynamicLoader::dlSym</a></div><div class="ttdeci">static void * dlSym(void *handle, const std::string &amp;symbol)</div><div class="ttdef"><b>Definition</b> <a href="DynamicLoader_8cpp_source.html#l00091">DynamicLoader.cpp:91</a></div></div>
+<div class="ttc" id="aclasscore_1_1DynamicLoader_html_a28d14f3029339351d8bb8b328a6110b0"><div class="ttname"><a href="classcore_1_1DynamicLoader.html#a28d14f3029339351d8bb8b328a6110b0">core::DynamicLoader::dlError</a></div><div class="ttdeci">static char * dlError()</div><div class="ttdef"><b>Definition</b> <a href="DynamicLoader_8cpp_source.html#l00100">DynamicLoader.cpp:100</a></div></div>
+<div class="ttc" id="aclasscore_1_1DynamicLoader_html_a42ac52cda1ec4534f1cc9e225dcb31b0"><div class="ttname"><a href="classcore_1_1DynamicLoader.html#a42ac52cda1ec4534f1cc9e225dcb31b0">core::DynamicLoader::dlClose</a></div><div class="ttdeci">static int dlClose(void *handle)</div><div class="ttdef"><b>Definition</b> <a href="DynamicLoader_8cpp_source.html#l00077">DynamicLoader.cpp:77</a></div></div>
+<div class="ttc" id="aclasscore_1_1DynamicLoader_html_a708b7adb431acbc8976968c59692625e"><div class="ttname"><a href="classcore_1_1DynamicLoader.html#a708b7adb431acbc8976968c59692625e">core::DynamicLoader::dlSym</a></div><div class="ttdeci">static void * dlSym(void *handle, const std::string &amp;symbol)</div><div class="ttdef"><b>Definition</b> <a href="DynamicLoader_8cpp_source.html#l00096">DynamicLoader.cpp:96</a></div></div>
 <div class="ttc" id="aclassweb_1_1http_1_1SocketContextUpgradeFactorySelector_html_abc18b9113d82388b6b5e04d5d930be40"><div class="ttname"><a href="#abc18b9113d82388b6b5e04d5d930be40">web::http::SocketContextUpgradeFactorySelector::SocketContextUpgradeFactory</a></div><div class="ttdeci">SocketContextUpgradeFactoryT SocketContextUpgradeFactory</div><div class="ttdef"><b>Definition</b> <a href="SocketContextUpgradeFactorySelector_8h_source.html#l00037">SocketContextUpgradeFactorySelector.h:37</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -627,9 +627,9 @@ template&lt;typename <a class="el" href="#abc18b9113d82388b6b5e04d5d930be40">Soc
 <div class="line"><span class="lineno">  139</span>            }</div>
 <div class="line"><span class="lineno">  140</span>        }</div>
 <div class="line"><span class="lineno">  141</span>    }</div>
-<div class="ttc" id="aclasscore_1_1DynamicLoader_html_aea517617ba189573803a8c3a4c5e9575"><div class="ttname"><a href="classcore_1_1DynamicLoader.html#aea517617ba189573803a8c3a4c5e9575">core::DynamicLoader::dlCloseDelayed</a></div><div class="ttdeci">static void dlCloseDelayed(void *handle)</div><div class="ttdef"><b>Definition</b> <a href="DynamicLoader_8cpp_source.html#l00051">DynamicLoader.cpp:51</a></div></div>
+<div class="ttc" id="aclasscore_1_1DynamicLoader_html_aea517617ba189573803a8c3a4c5e9575"><div class="ttname"><a href="classcore_1_1DynamicLoader.html#aea517617ba189573803a8c3a4c5e9575">core::DynamicLoader::dlCloseDelayed</a></div><div class="ttdeci">static void dlCloseDelayed(void *handle)</div><div class="ttdef"><b>Definition</b> <a href="DynamicLoader_8cpp_source.html#l00056">DynamicLoader.cpp:56</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="DynamicLoader_8cpp_source.html#l00051">core::DynamicLoader::dlCloseDelayed()</a>.</p>
+<p class="reference">References <a class="el" href="DynamicLoader_8cpp_source.html#l00056">core::DynamicLoader::dlCloseDelayed()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -729,7 +729,7 @@ template&lt;typename SocketContextUpgradeFactoryT &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceweb.html">web</a></li><li class="navelem"><a class="el" href="namespaceweb_1_1http.html">http</a></li><li class="navelem"><a class="el" href="classweb_1_1http_1_1SocketContextUpgradeFactorySelector.html">SocketContextUpgradeFactorySelector</a></li>
-    <li class="footer">Generated on Tue Dec 3 2024 20:49:50 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generated on Thu Jan 2 2025 18:50:05 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>

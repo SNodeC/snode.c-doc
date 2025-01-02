@@ -11,7 +11,7 @@ var classcore_1_1socket_1_1stream_1_1SocketWriter =
     [ "signalEvent", "classcore_1_1socket_1_1stream_1_1SocketWriter.html#a7fab5663fc6fe81ac7978084446bfb22", null ],
     [ "streamEof", "classcore_1_1socket_1_1stream_1_1SocketWriter.html#a6f13c171dd3c5284612d61418d676337", null ],
     [ "streamToPeer", "classcore_1_1socket_1_1stream_1_1SocketWriter.html#aed91fe252c55ee6c12df56808161ec57", null ],
-    [ "write", "classcore_1_1socket_1_1stream_1_1SocketWriter.html#a579acefd44317c50cc3fdc93e09a37d6", null ],
+    [ "write", "classcore_1_1socket_1_1stream_1_1SocketWriter.html#af5959c35879f6ea728605ec0bc9a27a0", null ],
     [ "writeEvent", "classcore_1_1socket_1_1stream_1_1SocketWriter.html#a9308f104283a0def976d31fd7b00ad1c", null ],
     [ "blockSize", "classcore_1_1socket_1_1stream_1_1SocketWriter.html#a7add94231e340c46cd66eae310c09365", null ],
     [ "markShutdown", "classcore_1_1socket_1_1stream_1_1SocketWriter.html#a56949d2d152e49ac11f515dcdc8fe2a5", null ],

@@ -1038,42 +1038,42 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Config_8cpp_source.html#l00341">341</a> of file <a class="el" href="Config_8cpp_source.html">Config.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  341</span>                           {</div>
-<div class="line"><span class="lineno">  342</span>        <a class="code hl_variable" href="#aa96c9b4e2274c77f4e64e8c281825c03">aliases</a>.clear();</div>
-<div class="line"><span class="lineno">  343</span> </div>
-<div class="line"><span class="lineno">  344</span>        <a class="code hl_variable" href="#a6d6c3a6b7c77d7f63f69b6a6823cccf3">app</a>-&gt;final_callback([]() -&gt; <span class="keywordtype">void</span> {</div>
-<div class="line"><span class="lineno">  345</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="#aebf83ee0d2bb229abf3e6632be439c43">daemonizeOpt</a>-&gt;as&lt;<span class="keywordtype">bool</span>&gt;() &amp;&amp; (*<a class="code hl_variable" href="#a6d6c3a6b7c77d7f63f69b6a6823cccf3">app</a>)[<span class="stringliteral">&quot;--show-config&quot;</span>]-&gt;count() == 0 &amp;&amp; (*<a class="code hl_variable" href="#a6d6c3a6b7c77d7f63f69b6a6823cccf3">app</a>)[<span class="stringliteral">&quot;--write-config&quot;</span>]-&gt;count() == 0 &amp;&amp;</div>
-<div class="line"><span class="lineno">  346</span>                (*<a class="code hl_variable" href="#a6d6c3a6b7c77d7f63f69b6a6823cccf3">app</a>)[<span class="stringliteral">&quot;--command-line&quot;</span>]-&gt;count() == 0) {</div>
-<div class="line"><span class="lineno">  347</span>                std::cout &lt;&lt; <span class="stringliteral">&quot;Running as daemon (double fork)&quot;</span> &lt;&lt; std::endl;</div>
+<p class="definition">Definition at line <a class="el" href="Config_8cpp_source.html#l00346">346</a> of file <a class="el" href="Config_8cpp_source.html">Config.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  346</span>                           {</div>
+<div class="line"><span class="lineno">  347</span>        <a class="code hl_variable" href="#aa96c9b4e2274c77f4e64e8c281825c03">aliases</a>.clear();</div>
 <div class="line"><span class="lineno">  348</span> </div>
-<div class="line"><span class="lineno">  349</span>                utils::Daemon::startDaemon(</div>
-<div class="line"><span class="lineno">  350</span>                    pidDirectory + <span class="stringliteral">&quot;/&quot;</span> + applicationName + <span class="stringliteral">&quot;.pid&quot;</span>, userNameOpt-&gt;as&lt;std::string&gt;(), groupNameOpt-&gt;as&lt;std::string&gt;());</div>
-<div class="line"><span class="lineno">  351</span> </div>
-<div class="line"><span class="lineno">  352</span>                logger::Logger::setQuiet();</div>
+<div class="line"><span class="lineno">  349</span>        <a class="code hl_variable" href="#a6d6c3a6b7c77d7f63f69b6a6823cccf3">app</a>-&gt;final_callback([]() -&gt; <span class="keywordtype">void</span> {</div>
+<div class="line"><span class="lineno">  350</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="#aebf83ee0d2bb229abf3e6632be439c43">daemonizeOpt</a>-&gt;as&lt;<span class="keywordtype">bool</span>&gt;() &amp;&amp; (*<a class="code hl_variable" href="#a6d6c3a6b7c77d7f63f69b6a6823cccf3">app</a>)[<span class="stringliteral">&quot;--show-config&quot;</span>]-&gt;count() == 0 &amp;&amp; (*<a class="code hl_variable" href="#a6d6c3a6b7c77d7f63f69b6a6823cccf3">app</a>)[<span class="stringliteral">&quot;--write-config&quot;</span>]-&gt;count() == 0 &amp;&amp;</div>
+<div class="line"><span class="lineno">  351</span>                (*<a class="code hl_variable" href="#a6d6c3a6b7c77d7f63f69b6a6823cccf3">app</a>)[<span class="stringliteral">&quot;--command-line&quot;</span>]-&gt;count() == 0) {</div>
+<div class="line"><span class="lineno">  352</span>                std::cout &lt;&lt; <span class="stringliteral">&quot;Running as daemon (double fork)&quot;</span> &lt;&lt; std::endl;</div>
 <div class="line"><span class="lineno">  353</span> </div>
-<div class="line"><span class="lineno">  354</span>                const std::string logFile = logFileOpt-&gt;as&lt;std::string&gt;();</div>
-<div class="line"><span class="lineno">  355</span>                if (!logFile.empty()) {</div>
-<div class="line"><span class="lineno">  356</span>                    logger::Logger::logToFile(logFile);</div>
-<div class="line"><span class="lineno">  357</span>                }</div>
-<div class="line"><span class="lineno">  358</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> ((*<a class="code hl_variable" href="#a6d6c3a6b7c77d7f63f69b6a6823cccf3">app</a>)[<span class="stringliteral">&quot;--enforce-log-file&quot;</span>]-&gt;as&lt;bool&gt;()) {</div>
-<div class="line"><span class="lineno">  359</span>                <span class="keyword">const</span> std::string logFile = <a class="code hl_variable" href="#aba2faeb0b03f445e691bae4c9f1a62c9">logFileOpt</a>-&gt;as&lt;std::string&gt;();</div>
-<div class="line"><span class="lineno">  360</span>                <span class="keywordflow">if</span> (!logFile.empty()) {</div>
-<div class="line"><span class="lineno">  361</span>                    std::cout &lt;&lt; <span class="stringliteral">&quot;Writing logs to file &quot;</span> &lt;&lt; logFile &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">  362</span> </div>
-<div class="line"><span class="lineno">  363</span>                    <a class="code hl_function" href="classlogger_1_1Logger.html#a2fe71814296a418393065c3c7299ff41">logger::Logger::logToFile</a>(logFile);</div>
-<div class="line"><span class="lineno">  364</span>                }</div>
-<div class="line"><span class="lineno">  365</span>            }</div>
-<div class="line"><span class="lineno">  366</span>        });</div>
+<div class="line"><span class="lineno">  354</span>                utils::Daemon::startDaemon(</div>
+<div class="line"><span class="lineno">  355</span>                    pidDirectory + <span class="stringliteral">&quot;/&quot;</span> + applicationName + <span class="stringliteral">&quot;.pid&quot;</span>, userNameOpt-&gt;as&lt;std::string&gt;(), groupNameOpt-&gt;as&lt;std::string&gt;());</div>
+<div class="line"><span class="lineno">  356</span> </div>
+<div class="line"><span class="lineno">  357</span>                logger::Logger::setQuiet();</div>
+<div class="line"><span class="lineno">  358</span> </div>
+<div class="line"><span class="lineno">  359</span>                const std::string logFile = logFileOpt-&gt;as&lt;std::string&gt;();</div>
+<div class="line"><span class="lineno">  360</span>                if (!logFile.empty()) {</div>
+<div class="line"><span class="lineno">  361</span>                    logger::Logger::logToFile(logFile);</div>
+<div class="line"><span class="lineno">  362</span>                }</div>
+<div class="line"><span class="lineno">  363</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> ((*<a class="code hl_variable" href="#a6d6c3a6b7c77d7f63f69b6a6823cccf3">app</a>)[<span class="stringliteral">&quot;--enforce-log-file&quot;</span>]-&gt;as&lt;bool&gt;()) {</div>
+<div class="line"><span class="lineno">  364</span>                <span class="keyword">const</span> std::string logFile = <a class="code hl_variable" href="#aba2faeb0b03f445e691bae4c9f1a62c9">logFileOpt</a>-&gt;as&lt;std::string&gt;();</div>
+<div class="line"><span class="lineno">  365</span>                <span class="keywordflow">if</span> (!logFile.empty()) {</div>
+<div class="line"><span class="lineno">  366</span>                    std::cout &lt;&lt; <span class="stringliteral">&quot;Writing logs to file &quot;</span> &lt;&lt; logFile &lt;&lt; std::endl;</div>
 <div class="line"><span class="lineno">  367</span> </div>
-<div class="line"><span class="lineno">  368</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="#a64c65019364b162f92c0f1eb1fb26ba1">parse2</a>();</div>
-<div class="line"><span class="lineno">  369</span>    }</div>
+<div class="line"><span class="lineno">  368</span>                    <a class="code hl_function" href="classlogger_1_1Logger.html#a2fe71814296a418393065c3c7299ff41">logger::Logger::logToFile</a>(logFile);</div>
+<div class="line"><span class="lineno">  369</span>                }</div>
+<div class="line"><span class="lineno">  370</span>            }</div>
+<div class="line"><span class="lineno">  371</span>        });</div>
+<div class="line"><span class="lineno">  372</span> </div>
+<div class="line"><span class="lineno">  373</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="#a64c65019364b162f92c0f1eb1fb26ba1">parse2</a>();</div>
+<div class="line"><span class="lineno">  374</span>    }</div>
 <div class="ttc" id="aclasslogger_1_1Logger_html_a2fe71814296a418393065c3c7299ff41"><div class="ttname"><a href="classlogger_1_1Logger.html#a2fe71814296a418393065c3c7299ff41">logger::Logger::logToFile</a></div><div class="ttdeci">static void logToFile(const std::string &amp;logFile)</div><div class="ttdef"><b>Definition</b> <a href="Logger_8cpp_source.html#l00105">Logger.cpp:105</a></div></div>
-<div class="ttc" id="aclassutils_1_1Config_html_a64c65019364b162f92c0f1eb1fb26ba1"><div class="ttname"><a href="#a64c65019364b162f92c0f1eb1fb26ba1">utils::Config::parse2</a></div><div class="ttdeci">static bool parse2()</div><div class="ttdef"><b>Definition</b> <a href="Config_8cpp_source.html#l00530">Config.cpp:530</a></div></div>
+<div class="ttc" id="aclassutils_1_1Config_html_a64c65019364b162f92c0f1eb1fb26ba1"><div class="ttname"><a href="#a64c65019364b162f92c0f1eb1fb26ba1">utils::Config::parse2</a></div><div class="ttdeci">static bool parse2()</div><div class="ttdef"><b>Definition</b> <a href="Config_8cpp_source.html#l00535">Config.cpp:535</a></div></div>
 <div class="ttc" id="aclassutils_1_1Config_html_aba2faeb0b03f445e691bae4c9f1a62c9"><div class="ttname"><a href="#aba2faeb0b03f445e691bae4c9f1a62c9">utils::Config::logFileOpt</a></div><div class="ttdeci">static CLI::Option * logFileOpt</div><div class="ttdef"><b>Definition</b> <a href="Config_8h_source.html#l00116">Config.h:116</a></div></div>
 <div class="ttc" id="aclassutils_1_1Config_html_aebf83ee0d2bb229abf3e6632be439c43"><div class="ttname"><a href="#aebf83ee0d2bb229abf3e6632be439c43">utils::Config::daemonizeOpt</a></div><div class="ttdeci">static CLI::Option * daemonizeOpt</div><div class="ttdef"><b>Definition</b> <a href="Config_8h_source.html#l00115">Config.h:115</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Config_8cpp_source.html#l00530">parse2()</a>.</p>
+<p class="reference">References <a class="el" href="Config_8cpp_source.html#l00535">parse2()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="EventLoop_8cpp_source.html#l00162">core::EventLoop::start()</a>.</p>
 <div class="dynheader">
@@ -1121,7 +1121,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">  841</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="#a4bf4f35dbdea895cd31f830b5e874265">disabled</a>) {</div>
 <div class="line"><span class="lineno">  842</span>            <a class="code hl_variable" href="#a6d6c3a6b7c77d7f63f69b6a6823cccf3">app</a>-&gt;remove_needs(instance);</div>
 <div class="line"><span class="lineno">  843</span> </div>
-<div class="line"><span class="lineno">  844</span>            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; sub : instance-&gt;get_subcommands([](<a class="code hl_namespace" href="namespaceCLI.html">CLI</a>::App* sc) -&gt; bool {</div>
+<div class="line"><span class="lineno">  844</span>            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; sub : instance-&gt;get_subcommands([](const <a class="code hl_namespace" href="namespaceCLI.html">CLI</a>::App* sc) -&gt; bool {</div>
 <div class="line"><span class="lineno">  845</span>                     return !sc-&gt;get_disabled();</div>
 <div class="line"><span class="lineno">  846</span>                 })) {</div>
 <div class="line"><span class="lineno">  847</span>                sub-&gt;disabled();</div>
@@ -1133,7 +1133,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">  853</span>        } <span class="keywordflow">else</span> {</div>
 <div class="line"><span class="lineno">  854</span>            <a class="code hl_variable" href="#a6d6c3a6b7c77d7f63f69b6a6823cccf3">app</a>-&gt;needs(instance);</div>
 <div class="line"><span class="lineno">  855</span> </div>
-<div class="line"><span class="lineno">  856</span>            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; sub : instance-&gt;get_subcommands([](<a class="code hl_namespace" href="namespaceCLI.html">CLI</a>::App* sc) -&gt; bool {</div>
+<div class="line"><span class="lineno">  856</span>            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; sub : instance-&gt;get_subcommands([](const <a class="code hl_namespace" href="namespaceCLI.html">CLI</a>::App* sc) -&gt; bool {</div>
 <div class="line"><span class="lineno">  857</span>                     return sc-&gt;get_disabled();</div>
 <div class="line"><span class="lineno">  858</span>                 })) {</div>
 <div class="line"><span class="lineno">  859</span>                sub-&gt;disabled(<span class="keyword">false</span>);</div>
@@ -1147,7 +1147,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">  867</span>        instance-&gt;required(!<a class="code hl_function" href="#a4bf4f35dbdea895cd31f830b5e874265">disabled</a>);</div>
 <div class="line"><span class="lineno">  868</span>    }</div>
 <div class="ttc" id="aclassutils_1_1Config_html_a4bf4f35dbdea895cd31f830b5e874265"><div class="ttname"><a href="#a4bf4f35dbdea895cd31f830b5e874265">utils::Config::disabled</a></div><div class="ttdeci">static void disabled(CLI::App *instance, bool disabled=true)</div><div class="ttdef"><b>Definition</b> <a href="Config_8cpp_source.html#l00840">Config.cpp:840</a></div></div>
-<div class="ttc" id="anamespaceCLI_html"><div class="ttname"><a href="namespaceCLI.html">CLI</a></div><div class="ttdef"><b>Definition</b> <a href="Formatter_8h_source.html#l00046">Formatter.h:46</a></div></div>
+<div class="ttc" id="anamespaceCLI_html"><div class="ttname"><a href="namespaceCLI.html">CLI</a></div><div class="ttdef"><b>Definition</b> <a href="Exceptions_8cpp_source.html#l00028">Exceptions.cpp:28</a></div></div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="ConfigInstance_8cpp_source.html#l00053">net::config::ConfigInstance::ConfigInstance()</a>, and <a class="el" href="ConfigInstance_8cpp_source.html#l00150">net::config::ConfigInstance::setDisabled()</a>.</p>
 <div class="dynheader">
@@ -1447,114 +1447,120 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">  232</span>                -&gt;type_name(<span class="stringliteral">&quot;configfile&quot;</span>)</div>
 <div class="line"><span class="lineno">  233</span>                -&gt;check(!CLI::ExistingDirectory);</div>
 <div class="line"><span class="lineno">  234</span> </div>
-<div class="line"><span class="lineno">  235</span>            <a class="code hl_variable" href="#a6d6c3a6b7c77d7f63f69b6a6823cccf3">app</a>-&gt;add_option(<span class="stringliteral">&quot;-w,--write-config&quot;</span>,</div>
-<div class="line"><span class="lineno">  236</span>                            <span class="stringliteral">&quot;Write config file and exit&quot;</span>) <span class="comment">//</span></div>
-<div class="line"><span class="lineno">  237</span>                -&gt;configurable(<span class="keyword">false</span>)</div>
-<div class="line"><span class="lineno">  238</span>                -&gt;default_val(<a class="code hl_variable" href="#a68c362689104a452b762796e7a021afb">configDirectory</a> + <span class="stringliteral">&quot;/&quot;</span> + <a class="code hl_variable" href="#acb9f9a0c054681caa79421aa2f6e2e93">applicationName</a> + <span class="stringliteral">&quot;.conf&quot;</span>)</div>
-<div class="line"><span class="lineno">  239</span>                -&gt;type_name(<span class="stringliteral">&quot;[configfile]&quot;</span>)</div>
-<div class="line"><span class="lineno">  240</span>                -&gt;check(!CLI::ExistingDirectory)</div>
-<div class="line"><span class="lineno">  241</span>                -&gt;expected(0, 1);</div>
-<div class="line"><span class="lineno">  242</span> </div>
-<div class="line"><span class="lineno">  243</span>            <a class="code hl_variable" href="#a6d6c3a6b7c77d7f63f69b6a6823cccf3">app</a>-&gt;add_flag( <span class="comment">//</span></div>
-<div class="line"><span class="lineno">  244</span>                   <span class="stringliteral">&quot;-k,--kill&quot;</span>,</div>
-<div class="line"><span class="lineno">  245</span>                   <span class="stringliteral">&quot;Kill running daemon&quot;</span>) <span class="comment">//</span></div>
-<div class="line"><span class="lineno">  246</span>                -&gt;configurable(<span class="keyword">false</span>)</div>
-<div class="line"><span class="lineno">  247</span>                -&gt;disable_flag_override();</div>
-<div class="line"><span class="lineno">  248</span> </div>
-<div class="line"><span class="lineno">  249</span>            <a class="code hl_variable" href="#a6d6c3a6b7c77d7f63f69b6a6823cccf3">app</a>-&gt;add_option( <span class="comment">//</span></div>
-<div class="line"><span class="lineno">  250</span>                   <span class="stringliteral">&quot;-i,--instance-alias&quot;</span>,</div>
-<div class="line"><span class="lineno">  251</span>                   <span class="stringliteral">&quot;Make an instance also known as an alias in configuration files&quot;</span>)</div>
-<div class="line"><span class="lineno">  252</span>                -&gt;configurable(<span class="keyword">false</span>)</div>
-<div class="line"><span class="lineno">  253</span>                -&gt;type_name(<span class="stringliteral">&quot;instance=instance_alias [instance=instance_alias [...]]&quot;</span>)</div>
-<div class="line"><span class="lineno">  254</span>                -&gt;each([](<span class="keyword">const</span> std::string&amp; item) -&gt; <span class="keywordtype">void</span> {</div>
-<div class="line"><span class="lineno">  255</span>                    <span class="keyword">const</span> <span class="keyword">auto</span> it = item.find(<span class="charliteral">&#39;=&#39;</span>);</div>
-<div class="line"><span class="lineno">  256</span>                    <span class="keywordflow">if</span> (it != std::string::npos) {</div>
-<div class="line"><span class="lineno">  257</span>                        <a class="code hl_variable" href="#aa96c9b4e2274c77f4e64e8c281825c03">aliases</a>[item.substr(0, it)] = item.substr(it + 1);</div>
-<div class="line"><span class="lineno">  258</span>                    } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  259</span>                        <span class="keywordflow">throw</span> CLI::ConversionError(<span class="stringliteral">&quot;Can not convert &#39;&quot;</span> + item + <span class="stringliteral">&quot;&#39; to a &#39;instance=instance_alias&#39; pair&quot;</span>);</div>
-<div class="line"><span class="lineno">  260</span>                    }</div>
-<div class="line"><span class="lineno">  261</span>                });</div>
-<div class="line"><span class="lineno">  262</span> </div>
-<div class="line"><span class="lineno">  263</span>            <a class="code hl_function" href="#a0b5c905e8e2775a0507f377eb021c3dc">addStandardFlags</a>(<a class="code hl_variable" href="#a6d6c3a6b7c77d7f63f69b6a6823cccf3">app</a>.get());</div>
-<div class="line"><span class="lineno">  264</span> </div>
-<div class="line"><span class="lineno">  265</span>            <a class="code hl_variable" href="#a3f78a0bd8709f7321b269697983ca6bd">logLevelOpt</a> = <a class="code hl_variable" href="#a6d6c3a6b7c77d7f63f69b6a6823cccf3">app</a>-&gt;add_option( <span class="comment">//</span></div>
-<div class="line"><span class="lineno">  266</span>                                 <span class="stringliteral">&quot;-l,--log-level&quot;</span>,</div>
-<div class="line"><span class="lineno">  267</span>                                 <span class="stringliteral">&quot;Log level&quot;</span>) <span class="comment">//</span></div>
-<div class="line"><span class="lineno">  268</span>                              -&gt;default_val(4)</div>
-<div class="line"><span class="lineno">  269</span>                              -&gt;type_name(<span class="stringliteral">&quot;level&quot;</span>)</div>
-<div class="line"><span class="lineno">  270</span>                              -&gt;check(CLI::Range(0, 6))</div>
-<div class="line"><span class="lineno">  271</span>                              -&gt;group(<a class="code hl_variable" href="#a6d6c3a6b7c77d7f63f69b6a6823cccf3">app</a>-&gt;get_formatter()-&gt;get_label(<span class="stringliteral">&quot;Persistent Options&quot;</span>));</div>
-<div class="line"><span class="lineno">  272</span> </div>
-<div class="line"><span class="lineno">  273</span>            <a class="code hl_variable" href="#a885a3c5db803f103ed3efbf8e607a4f5">verboseLevelOpt</a> = <a class="code hl_variable" href="#a6d6c3a6b7c77d7f63f69b6a6823cccf3">app</a>-&gt;add_option( <span class="comment">//</span></div>
-<div class="line"><span class="lineno">  274</span>                                     <span class="stringliteral">&quot;-v,--verbose-level&quot;</span>,</div>
-<div class="line"><span class="lineno">  275</span>                                     <span class="stringliteral">&quot;Verbose level&quot;</span>) <span class="comment">//</span></div>
-<div class="line"><span class="lineno">  276</span>                                  -&gt;default_val(1)</div>
-<div class="line"><span class="lineno">  277</span>                                  -&gt;type_name(<span class="stringliteral">&quot;level&quot;</span>)</div>
-<div class="line"><span class="lineno">  278</span>                                  -&gt;check(CLI::Range(0, 10))</div>
-<div class="line"><span class="lineno">  279</span>                                  -&gt;group(<a class="code hl_variable" href="#a6d6c3a6b7c77d7f63f69b6a6823cccf3">app</a>-&gt;get_formatter()-&gt;get_label(<span class="stringliteral">&quot;Persistent Options&quot;</span>));</div>
-<div class="line"><span class="lineno">  280</span> </div>
-<div class="line"><span class="lineno">  281</span>            <a class="code hl_variable" href="#a8aa29691ff5769bc30a734fe50a46d90">quietOpt</a> = <a class="code hl_variable" href="#a6d6c3a6b7c77d7f63f69b6a6823cccf3">app</a>-&gt;add_flag( <span class="comment">//</span></div>
-<div class="line"><span class="lineno">  282</span>                              <span class="stringliteral">&quot;-q{true},!-u,--quiet{true}&quot;</span>,</div>
-<div class="line"><span class="lineno">  283</span>                              <span class="stringliteral">&quot;Quiet mode&quot;</span>) <span class="comment">//</span></div>
-<div class="line"><span class="lineno">  284</span>                           -&gt;take_last()</div>
-<div class="line"><span class="lineno">  285</span>                           -&gt;default_val(<span class="stringliteral">&quot;false&quot;</span>)</div>
-<div class="line"><span class="lineno">  286</span>                           -&gt;type_name(<span class="stringliteral">&quot;bool&quot;</span>)</div>
-<div class="line"><span class="lineno">  287</span>                           -&gt;check(CLI::IsMember({<span class="stringliteral">&quot;true&quot;</span>, <span class="stringliteral">&quot;false&quot;</span>}))</div>
-<div class="line"><span class="lineno">  288</span>                           -&gt;group(<a class="code hl_variable" href="#a6d6c3a6b7c77d7f63f69b6a6823cccf3">app</a>-&gt;get_formatter()-&gt;get_label(<span class="stringliteral">&quot;Persistent Options&quot;</span>));</div>
-<div class="line"><span class="lineno">  289</span> </div>
-<div class="line"><span class="lineno">  290</span>            <a class="code hl_variable" href="#aba2faeb0b03f445e691bae4c9f1a62c9">logFileOpt</a> = <a class="code hl_variable" href="#a6d6c3a6b7c77d7f63f69b6a6823cccf3">app</a>-&gt;add_option( <span class="comment">//</span></div>
-<div class="line"><span class="lineno">  291</span>                                <span class="stringliteral">&quot;--log-file&quot;</span>,</div>
-<div class="line"><span class="lineno">  292</span>                                <span class="stringliteral">&quot;Log file path&quot;</span>) <span class="comment">//</span></div>
-<div class="line"><span class="lineno">  293</span>                             -&gt;default_val(<a class="code hl_variable" href="#ad6436881181bbd9fe0ae1e96c0cbae82">logDirectory</a> + <span class="stringliteral">&quot;/&quot;</span> + <a class="code hl_variable" href="#acb9f9a0c054681caa79421aa2f6e2e93">applicationName</a> + <span class="stringliteral">&quot;.log&quot;</span>)</div>
-<div class="line"><span class="lineno">  294</span>                             -&gt;type_name(<span class="stringliteral">&quot;logfile&quot;</span>)</div>
-<div class="line"><span class="lineno">  295</span>                             -&gt;check(!CLI::ExistingDirectory)</div>
-<div class="line"><span class="lineno">  296</span>                             -&gt;group(<a class="code hl_variable" href="#a6d6c3a6b7c77d7f63f69b6a6823cccf3">app</a>-&gt;get_formatter()-&gt;get_label(<span class="stringliteral">&quot;Persistent Options&quot;</span>));</div>
-<div class="line"><span class="lineno">  297</span> </div>
-<div class="line"><span class="lineno">  298</span>            <a class="code hl_variable" href="#ac2a965618ccd087c53898ef2a7113388">enforceLogFileOpt</a> = <a class="code hl_variable" href="#a6d6c3a6b7c77d7f63f69b6a6823cccf3">app</a>-&gt;add_flag( <span class="comment">//</span></div>
-<div class="line"><span class="lineno">  299</span>                                       <span class="stringliteral">&quot;-e{true},!-n,--enforce-log-file{true}&quot;</span>,</div>
-<div class="line"><span class="lineno">  300</span>                                       <span class="stringliteral">&quot;Enforce writing of logs to file for foreground applications&quot;</span>) <span class="comment">//</span></div>
-<div class="line"><span class="lineno">  301</span>                                    -&gt;take_last()</div>
-<div class="line"><span class="lineno">  302</span>                                    -&gt;default_val(<span class="stringliteral">&quot;false&quot;</span>)</div>
-<div class="line"><span class="lineno">  303</span>                                    -&gt;type_name(<span class="stringliteral">&quot;bool&quot;</span>)</div>
-<div class="line"><span class="lineno">  304</span>                                    -&gt;check(CLI::IsMember({<span class="stringliteral">&quot;true&quot;</span>, <span class="stringliteral">&quot;false&quot;</span>}))</div>
-<div class="line"><span class="lineno">  305</span>                                    -&gt;group(<a class="code hl_variable" href="#a6d6c3a6b7c77d7f63f69b6a6823cccf3">app</a>-&gt;get_formatter()-&gt;get_label(<span class="stringliteral">&quot;Persistent Options&quot;</span>));</div>
-<div class="line"><span class="lineno">  306</span> </div>
-<div class="line"><span class="lineno">  307</span>            <a class="code hl_variable" href="#aebf83ee0d2bb229abf3e6632be439c43">daemonizeOpt</a> = <a class="code hl_variable" href="#a6d6c3a6b7c77d7f63f69b6a6823cccf3">app</a>-&gt;add_flag( <span class="comment">//</span></div>
-<div class="line"><span class="lineno">  308</span>                                  <span class="stringliteral">&quot;-d{true},!-f,--daemonize{true}&quot;</span>,</div>
-<div class="line"><span class="lineno">  309</span>                                  <span class="stringliteral">&quot;Start application as daemon&quot;</span>) <span class="comment">//</span></div>
-<div class="line"><span class="lineno">  310</span>                               -&gt;take_last()</div>
-<div class="line"><span class="lineno">  311</span>                               -&gt;default_val(<span class="stringliteral">&quot;false&quot;</span>)</div>
-<div class="line"><span class="lineno">  312</span>                               -&gt;type_name(<span class="stringliteral">&quot;bool&quot;</span>)</div>
-<div class="line"><span class="lineno">  313</span>                               -&gt;check(CLI::IsMember({<span class="stringliteral">&quot;true&quot;</span>, <span class="stringliteral">&quot;false&quot;</span>}))</div>
-<div class="line"><span class="lineno">  314</span>                               -&gt;group(<a class="code hl_variable" href="#a6d6c3a6b7c77d7f63f69b6a6823cccf3">app</a>-&gt;get_formatter()-&gt;get_label(<span class="stringliteral">&quot;Persistent Options&quot;</span>));</div>
-<div class="line"><span class="lineno">  315</span> </div>
-<div class="line"><span class="lineno">  316</span>            <a class="code hl_variable" href="#ae3d4522fe3d5172b72726c377418de97">userNameOpt</a> = <a class="code hl_variable" href="#a6d6c3a6b7c77d7f63f69b6a6823cccf3">app</a>-&gt;add_option( <span class="comment">//</span></div>
-<div class="line"><span class="lineno">  317</span>                                 <span class="stringliteral">&quot;--user-name&quot;</span>,</div>
-<div class="line"><span class="lineno">  318</span>                                 <span class="stringliteral">&quot;Run daemon under specific user permissions&quot;</span>) <span class="comment">//</span></div>
-<div class="line"><span class="lineno">  319</span>                              -&gt;default_val(pw-&gt;pw_name)</div>
-<div class="line"><span class="lineno">  320</span>                              -&gt;type_name(<span class="stringliteral">&quot;username&quot;</span>)</div>
-<div class="line"><span class="lineno">  321</span>                              -&gt;needs(<a class="code hl_variable" href="#aebf83ee0d2bb229abf3e6632be439c43">daemonizeOpt</a>)</div>
-<div class="line"><span class="lineno">  322</span>                              -&gt;group(<a class="code hl_variable" href="#a6d6c3a6b7c77d7f63f69b6a6823cccf3">app</a>-&gt;get_formatter()-&gt;get_label(<span class="stringliteral">&quot;Persistent Options&quot;</span>));</div>
-<div class="line"><span class="lineno">  323</span> </div>
-<div class="line"><span class="lineno">  324</span>            <a class="code hl_variable" href="#a77640f705b1c5d9130425d6382b12fde">groupNameOpt</a> = <a class="code hl_variable" href="#a6d6c3a6b7c77d7f63f69b6a6823cccf3">app</a>-&gt;add_option( <span class="comment">//</span></div>
-<div class="line"><span class="lineno">  325</span>                                  <span class="stringliteral">&quot;--group-name&quot;</span>,</div>
-<div class="line"><span class="lineno">  326</span>                                  <span class="stringliteral">&quot;Run daemon under specific group permissions&quot;</span>)</div>
-<div class="line"><span class="lineno">  327</span>                               -&gt;default_val(gr-&gt;gr_name)</div>
-<div class="line"><span class="lineno">  328</span>                               -&gt;type_name(<span class="stringliteral">&quot;groupname&quot;</span>)</div>
-<div class="line"><span class="lineno">  329</span>                               -&gt;needs(<a class="code hl_variable" href="#aebf83ee0d2bb229abf3e6632be439c43">daemonizeOpt</a>)</div>
-<div class="line"><span class="lineno">  330</span>                               -&gt;group(<a class="code hl_variable" href="#a6d6c3a6b7c77d7f63f69b6a6823cccf3">app</a>-&gt;get_formatter()-&gt;get_label(<span class="stringliteral">&quot;Persistent Options&quot;</span>));</div>
-<div class="line"><span class="lineno">  331</span> </div>
-<div class="line"><span class="lineno">  332</span>            proceed = <a class="code hl_function" href="#a0da9402c3269b43baedbf5f18e8ce67d">parse1</a>(); <span class="comment">// for stopDaemon and pre init application options</span></div>
-<div class="line"><span class="lineno">  333</span> </div>
-<div class="line"><span class="lineno">  334</span>            <a class="code hl_variable" href="#a6d6c3a6b7c77d7f63f69b6a6823cccf3">app</a>-&gt;set_version_flag(<span class="stringliteral">&quot;--version&quot;</span>, <span class="stringliteral">&quot;1.0-rc1&quot;</span>, <span class="stringliteral">&quot;Framework version&quot;</span>);</div>
-<div class="line"><span class="lineno">  335</span>            <a class="code hl_function" href="#a7eb41691a8048f9a7b91e5d4d7f6c730">addHelp</a>(<a class="code hl_variable" href="#a6d6c3a6b7c77d7f63f69b6a6823cccf3">app</a>.get());</div>
-<div class="line"><span class="lineno">  336</span>        }</div>
-<div class="line"><span class="lineno">  337</span> </div>
-<div class="line"><span class="lineno">  338</span>        <span class="keywordflow">return</span> proceed;</div>
-<div class="line"><span class="lineno">  339</span>    }</div>
+<div class="line"><span class="lineno">  235</span>            <a class="code hl_variable" href="#a6d6c3a6b7c77d7f63f69b6a6823cccf3">app</a>-&gt;add_option_function&lt;std::string&gt;(</div>
+<div class="line"><span class="lineno">  236</span>                   <span class="stringliteral">&quot;-w,--write-config&quot;</span>,</div>
+<div class="line"><span class="lineno">  237</span>                   []([[maybe_unused]] <span class="keyword">const</span> std::string&amp; configFile) {</div>
+<div class="line"><span class="lineno">  238</span>                       <span class="keywordflow">throw</span> <a class="code hl_class" href="classCLI_1_1CallForWriteConfig.html">CLI::CallForWriteConfig</a>(configFile);</div>
+<div class="line"><span class="lineno">  239</span>                   },</div>
+<div class="line"><span class="lineno">  240</span>                   <span class="stringliteral">&quot;Write config file and exit&quot;</span>)</div>
+<div class="line"><span class="lineno">  241</span>                -&gt;take_last()</div>
+<div class="line"><span class="lineno">  242</span>                -&gt;configurable(<span class="keyword">false</span>)</div>
+<div class="line"><span class="lineno">  243</span>                -&gt;default_val(<a class="code hl_variable" href="#a68c362689104a452b762796e7a021afb">configDirectory</a> + <span class="stringliteral">&quot;/&quot;</span> + <a class="code hl_variable" href="#acb9f9a0c054681caa79421aa2f6e2e93">applicationName</a> + <span class="stringliteral">&quot;.conf&quot;</span>)</div>
+<div class="line"><span class="lineno">  244</span>                -&gt;type_name(<span class="stringliteral">&quot;[configfile]&quot;</span>)</div>
+<div class="line"><span class="lineno">  245</span>                -&gt;check(!CLI::ExistingDirectory)</div>
+<div class="line"><span class="lineno">  246</span>                -&gt;expected(0, 1);</div>
+<div class="line"><span class="lineno">  247</span> </div>
+<div class="line"><span class="lineno">  248</span>            <a class="code hl_variable" href="#a6d6c3a6b7c77d7f63f69b6a6823cccf3">app</a>-&gt;add_flag( <span class="comment">//</span></div>
+<div class="line"><span class="lineno">  249</span>                   <span class="stringliteral">&quot;-k,--kill&quot;</span>,</div>
+<div class="line"><span class="lineno">  250</span>                   <span class="stringliteral">&quot;Kill running daemon&quot;</span>) <span class="comment">//</span></div>
+<div class="line"><span class="lineno">  251</span>                -&gt;configurable(<span class="keyword">false</span>)</div>
+<div class="line"><span class="lineno">  252</span>                -&gt;disable_flag_override();</div>
+<div class="line"><span class="lineno">  253</span> </div>
+<div class="line"><span class="lineno">  254</span>            <a class="code hl_variable" href="#a6d6c3a6b7c77d7f63f69b6a6823cccf3">app</a>-&gt;add_option( <span class="comment">//</span></div>
+<div class="line"><span class="lineno">  255</span>                   <span class="stringliteral">&quot;-i,--instance-alias&quot;</span>,</div>
+<div class="line"><span class="lineno">  256</span>                   <span class="stringliteral">&quot;Make an instance also known as an alias in configuration files&quot;</span>)</div>
+<div class="line"><span class="lineno">  257</span>                -&gt;configurable(<span class="keyword">false</span>)</div>
+<div class="line"><span class="lineno">  258</span>                -&gt;type_name(<span class="stringliteral">&quot;instance=instance_alias [instance=instance_alias [...]]&quot;</span>)</div>
+<div class="line"><span class="lineno">  259</span>                -&gt;each([](<span class="keyword">const</span> std::string&amp; item) -&gt; <span class="keywordtype">void</span> {</div>
+<div class="line"><span class="lineno">  260</span>                    <span class="keyword">const</span> <span class="keyword">auto</span> it = item.find(<span class="charliteral">&#39;=&#39;</span>);</div>
+<div class="line"><span class="lineno">  261</span>                    <span class="keywordflow">if</span> (it != std::string::npos) {</div>
+<div class="line"><span class="lineno">  262</span>                        <a class="code hl_variable" href="#aa96c9b4e2274c77f4e64e8c281825c03">aliases</a>[item.substr(0, it)] = item.substr(it + 1);</div>
+<div class="line"><span class="lineno">  263</span>                    } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  264</span>                        <span class="keywordflow">throw</span> CLI::ConversionError(<span class="stringliteral">&quot;Can not convert &#39;&quot;</span> + item + <span class="stringliteral">&quot;&#39; to a &#39;instance=instance_alias&#39; pair&quot;</span>);</div>
+<div class="line"><span class="lineno">  265</span>                    }</div>
+<div class="line"><span class="lineno">  266</span>                });</div>
+<div class="line"><span class="lineno">  267</span> </div>
+<div class="line"><span class="lineno">  268</span>            <a class="code hl_function" href="#a0b5c905e8e2775a0507f377eb021c3dc">addStandardFlags</a>(<a class="code hl_variable" href="#a6d6c3a6b7c77d7f63f69b6a6823cccf3">app</a>.get());</div>
+<div class="line"><span class="lineno">  269</span> </div>
+<div class="line"><span class="lineno">  270</span>            <a class="code hl_variable" href="#a3f78a0bd8709f7321b269697983ca6bd">logLevelOpt</a> = <a class="code hl_variable" href="#a6d6c3a6b7c77d7f63f69b6a6823cccf3">app</a>-&gt;add_option( <span class="comment">//</span></div>
+<div class="line"><span class="lineno">  271</span>                                 <span class="stringliteral">&quot;-l,--log-level&quot;</span>,</div>
+<div class="line"><span class="lineno">  272</span>                                 <span class="stringliteral">&quot;Log level&quot;</span>) <span class="comment">//</span></div>
+<div class="line"><span class="lineno">  273</span>                              -&gt;default_val(4)</div>
+<div class="line"><span class="lineno">  274</span>                              -&gt;type_name(<span class="stringliteral">&quot;level&quot;</span>)</div>
+<div class="line"><span class="lineno">  275</span>                              -&gt;check(CLI::Range(0, 6))</div>
+<div class="line"><span class="lineno">  276</span>                              -&gt;group(<a class="code hl_variable" href="#a6d6c3a6b7c77d7f63f69b6a6823cccf3">app</a>-&gt;get_formatter()-&gt;get_label(<span class="stringliteral">&quot;Persistent Options&quot;</span>));</div>
+<div class="line"><span class="lineno">  277</span> </div>
+<div class="line"><span class="lineno">  278</span>            <a class="code hl_variable" href="#a885a3c5db803f103ed3efbf8e607a4f5">verboseLevelOpt</a> = <a class="code hl_variable" href="#a6d6c3a6b7c77d7f63f69b6a6823cccf3">app</a>-&gt;add_option( <span class="comment">//</span></div>
+<div class="line"><span class="lineno">  279</span>                                     <span class="stringliteral">&quot;-v,--verbose-level&quot;</span>,</div>
+<div class="line"><span class="lineno">  280</span>                                     <span class="stringliteral">&quot;Verbose level&quot;</span>) <span class="comment">//</span></div>
+<div class="line"><span class="lineno">  281</span>                                  -&gt;default_val(1)</div>
+<div class="line"><span class="lineno">  282</span>                                  -&gt;type_name(<span class="stringliteral">&quot;level&quot;</span>)</div>
+<div class="line"><span class="lineno">  283</span>                                  -&gt;check(CLI::Range(0, 10))</div>
+<div class="line"><span class="lineno">  284</span>                                  -&gt;group(<a class="code hl_variable" href="#a6d6c3a6b7c77d7f63f69b6a6823cccf3">app</a>-&gt;get_formatter()-&gt;get_label(<span class="stringliteral">&quot;Persistent Options&quot;</span>));</div>
+<div class="line"><span class="lineno">  285</span> </div>
+<div class="line"><span class="lineno">  286</span>            <a class="code hl_variable" href="#a8aa29691ff5769bc30a734fe50a46d90">quietOpt</a> = <a class="code hl_variable" href="#a6d6c3a6b7c77d7f63f69b6a6823cccf3">app</a>-&gt;add_flag( <span class="comment">//</span></div>
+<div class="line"><span class="lineno">  287</span>                              <span class="stringliteral">&quot;-q{true},!-u,--quiet{true}&quot;</span>,</div>
+<div class="line"><span class="lineno">  288</span>                              <span class="stringliteral">&quot;Quiet mode&quot;</span>) <span class="comment">//</span></div>
+<div class="line"><span class="lineno">  289</span>                           -&gt;take_last()</div>
+<div class="line"><span class="lineno">  290</span>                           -&gt;default_val(<span class="stringliteral">&quot;false&quot;</span>)</div>
+<div class="line"><span class="lineno">  291</span>                           -&gt;type_name(<span class="stringliteral">&quot;bool&quot;</span>)</div>
+<div class="line"><span class="lineno">  292</span>                           -&gt;check(CLI::IsMember({<span class="stringliteral">&quot;true&quot;</span>, <span class="stringliteral">&quot;false&quot;</span>}))</div>
+<div class="line"><span class="lineno">  293</span>                           -&gt;group(<a class="code hl_variable" href="#a6d6c3a6b7c77d7f63f69b6a6823cccf3">app</a>-&gt;get_formatter()-&gt;get_label(<span class="stringliteral">&quot;Persistent Options&quot;</span>));</div>
+<div class="line"><span class="lineno">  294</span> </div>
+<div class="line"><span class="lineno">  295</span>            <a class="code hl_variable" href="#aba2faeb0b03f445e691bae4c9f1a62c9">logFileOpt</a> = <a class="code hl_variable" href="#a6d6c3a6b7c77d7f63f69b6a6823cccf3">app</a>-&gt;add_option( <span class="comment">//</span></div>
+<div class="line"><span class="lineno">  296</span>                                <span class="stringliteral">&quot;--log-file&quot;</span>,</div>
+<div class="line"><span class="lineno">  297</span>                                <span class="stringliteral">&quot;Log file path&quot;</span>) <span class="comment">//</span></div>
+<div class="line"><span class="lineno">  298</span>                             -&gt;default_val(<a class="code hl_variable" href="#ad6436881181bbd9fe0ae1e96c0cbae82">logDirectory</a> + <span class="stringliteral">&quot;/&quot;</span> + <a class="code hl_variable" href="#acb9f9a0c054681caa79421aa2f6e2e93">applicationName</a> + <span class="stringliteral">&quot;.log&quot;</span>)</div>
+<div class="line"><span class="lineno">  299</span>                             -&gt;type_name(<span class="stringliteral">&quot;logfile&quot;</span>)</div>
+<div class="line"><span class="lineno">  300</span>                             -&gt;check(!CLI::ExistingDirectory)</div>
+<div class="line"><span class="lineno">  301</span>                             -&gt;group(<a class="code hl_variable" href="#a6d6c3a6b7c77d7f63f69b6a6823cccf3">app</a>-&gt;get_formatter()-&gt;get_label(<span class="stringliteral">&quot;Persistent Options&quot;</span>));</div>
+<div class="line"><span class="lineno">  302</span> </div>
+<div class="line"><span class="lineno">  303</span>            <a class="code hl_variable" href="#ac2a965618ccd087c53898ef2a7113388">enforceLogFileOpt</a> = <a class="code hl_variable" href="#a6d6c3a6b7c77d7f63f69b6a6823cccf3">app</a>-&gt;add_flag( <span class="comment">//</span></div>
+<div class="line"><span class="lineno">  304</span>                                       <span class="stringliteral">&quot;-e{true},!-n,--enforce-log-file{true}&quot;</span>,</div>
+<div class="line"><span class="lineno">  305</span>                                       <span class="stringliteral">&quot;Enforce writing of logs to file for foreground applications&quot;</span>) <span class="comment">//</span></div>
+<div class="line"><span class="lineno">  306</span>                                    -&gt;take_last()</div>
+<div class="line"><span class="lineno">  307</span>                                    -&gt;default_val(<span class="stringliteral">&quot;false&quot;</span>)</div>
+<div class="line"><span class="lineno">  308</span>                                    -&gt;type_name(<span class="stringliteral">&quot;bool&quot;</span>)</div>
+<div class="line"><span class="lineno">  309</span>                                    -&gt;check(CLI::IsMember({<span class="stringliteral">&quot;true&quot;</span>, <span class="stringliteral">&quot;false&quot;</span>}))</div>
+<div class="line"><span class="lineno">  310</span>                                    -&gt;group(<a class="code hl_variable" href="#a6d6c3a6b7c77d7f63f69b6a6823cccf3">app</a>-&gt;get_formatter()-&gt;get_label(<span class="stringliteral">&quot;Persistent Options&quot;</span>));</div>
+<div class="line"><span class="lineno">  311</span> </div>
+<div class="line"><span class="lineno">  312</span>            <a class="code hl_variable" href="#aebf83ee0d2bb229abf3e6632be439c43">daemonizeOpt</a> = <a class="code hl_variable" href="#a6d6c3a6b7c77d7f63f69b6a6823cccf3">app</a>-&gt;add_flag( <span class="comment">//</span></div>
+<div class="line"><span class="lineno">  313</span>                                  <span class="stringliteral">&quot;-d{true},!-f,--daemonize{true}&quot;</span>,</div>
+<div class="line"><span class="lineno">  314</span>                                  <span class="stringliteral">&quot;Start application as daemon&quot;</span>) <span class="comment">//</span></div>
+<div class="line"><span class="lineno">  315</span>                               -&gt;take_last()</div>
+<div class="line"><span class="lineno">  316</span>                               -&gt;default_val(<span class="stringliteral">&quot;false&quot;</span>)</div>
+<div class="line"><span class="lineno">  317</span>                               -&gt;type_name(<span class="stringliteral">&quot;bool&quot;</span>)</div>
+<div class="line"><span class="lineno">  318</span>                               -&gt;check(CLI::IsMember({<span class="stringliteral">&quot;true&quot;</span>, <span class="stringliteral">&quot;false&quot;</span>}))</div>
+<div class="line"><span class="lineno">  319</span>                               -&gt;group(<a class="code hl_variable" href="#a6d6c3a6b7c77d7f63f69b6a6823cccf3">app</a>-&gt;get_formatter()-&gt;get_label(<span class="stringliteral">&quot;Persistent Options&quot;</span>));</div>
+<div class="line"><span class="lineno">  320</span> </div>
+<div class="line"><span class="lineno">  321</span>            <a class="code hl_variable" href="#ae3d4522fe3d5172b72726c377418de97">userNameOpt</a> = <a class="code hl_variable" href="#a6d6c3a6b7c77d7f63f69b6a6823cccf3">app</a>-&gt;add_option( <span class="comment">//</span></div>
+<div class="line"><span class="lineno">  322</span>                                 <span class="stringliteral">&quot;--user-name&quot;</span>,</div>
+<div class="line"><span class="lineno">  323</span>                                 <span class="stringliteral">&quot;Run daemon under specific user permissions&quot;</span>) <span class="comment">//</span></div>
+<div class="line"><span class="lineno">  324</span>                              -&gt;default_val(pw-&gt;pw_name)</div>
+<div class="line"><span class="lineno">  325</span>                              -&gt;type_name(<span class="stringliteral">&quot;username&quot;</span>)</div>
+<div class="line"><span class="lineno">  326</span>                              -&gt;needs(<a class="code hl_variable" href="#aebf83ee0d2bb229abf3e6632be439c43">daemonizeOpt</a>)</div>
+<div class="line"><span class="lineno">  327</span>                              -&gt;group(<a class="code hl_variable" href="#a6d6c3a6b7c77d7f63f69b6a6823cccf3">app</a>-&gt;get_formatter()-&gt;get_label(<span class="stringliteral">&quot;Persistent Options&quot;</span>));</div>
+<div class="line"><span class="lineno">  328</span> </div>
+<div class="line"><span class="lineno">  329</span>            <a class="code hl_variable" href="#a77640f705b1c5d9130425d6382b12fde">groupNameOpt</a> = <a class="code hl_variable" href="#a6d6c3a6b7c77d7f63f69b6a6823cccf3">app</a>-&gt;add_option( <span class="comment">//</span></div>
+<div class="line"><span class="lineno">  330</span>                                  <span class="stringliteral">&quot;--group-name&quot;</span>,</div>
+<div class="line"><span class="lineno">  331</span>                                  <span class="stringliteral">&quot;Run daemon under specific group permissions&quot;</span>)</div>
+<div class="line"><span class="lineno">  332</span>                               -&gt;default_val(gr-&gt;gr_name)</div>
+<div class="line"><span class="lineno">  333</span>                               -&gt;type_name(<span class="stringliteral">&quot;groupname&quot;</span>)</div>
+<div class="line"><span class="lineno">  334</span>                               -&gt;needs(<a class="code hl_variable" href="#aebf83ee0d2bb229abf3e6632be439c43">daemonizeOpt</a>)</div>
+<div class="line"><span class="lineno">  335</span>                               -&gt;group(<a class="code hl_variable" href="#a6d6c3a6b7c77d7f63f69b6a6823cccf3">app</a>-&gt;get_formatter()-&gt;get_label(<span class="stringliteral">&quot;Persistent Options&quot;</span>));</div>
+<div class="line"><span class="lineno">  336</span> </div>
+<div class="line"><span class="lineno">  337</span>            proceed = <a class="code hl_function" href="#a0da9402c3269b43baedbf5f18e8ce67d">parse1</a>(); <span class="comment">// for stopDaemon and pre init application options</span></div>
+<div class="line"><span class="lineno">  338</span> </div>
+<div class="line"><span class="lineno">  339</span>            <a class="code hl_variable" href="#a6d6c3a6b7c77d7f63f69b6a6823cccf3">app</a>-&gt;set_version_flag(<span class="stringliteral">&quot;--version&quot;</span>, <span class="stringliteral">&quot;1.0-rc1&quot;</span>, <span class="stringliteral">&quot;Framework version&quot;</span>);</div>
+<div class="line"><span class="lineno">  340</span>            <a class="code hl_function" href="#a7eb41691a8048f9a7b91e5d4d7f6c730">addHelp</a>(<a class="code hl_variable" href="#a6d6c3a6b7c77d7f63f69b6a6823cccf3">app</a>.get());</div>
+<div class="line"><span class="lineno">  341</span>        }</div>
+<div class="line"><span class="lineno">  342</span> </div>
+<div class="line"><span class="lineno">  343</span>        <span class="keywordflow">return</span> proceed;</div>
+<div class="line"><span class="lineno">  344</span>    }</div>
 <div class="ttc" id="aConfigPhysicalSocket_8cpp_html_a03943706e48069237cd57f2d35ca987e"><div class="ttname"><a href="ConfigPhysicalSocket_8cpp.html#a03943706e48069237cd57f2d35ca987e">XSTR</a></div><div class="ttdeci">#define XSTR(s)</div><div class="ttdef"><b>Definition</b> <a href="ConfigPhysicalSocket_8cpp_source.html#l00034">ConfigPhysicalSocket.cpp:34</a></div></div>
+<div class="ttc" id="aclassCLI_1_1CallForWriteConfig_html"><div class="ttname"><a href="classCLI_1_1CallForWriteConfig.html">CLI::CallForWriteConfig</a></div><div class="ttdef"><b>Definition</b> <a href="Exceptions_8h_source.html#l00074">Exceptions.h:74</a></div></div>
 <div class="ttc" id="aclassutils_1_1Config_html_a0b5c905e8e2775a0507f377eb021c3dc"><div class="ttname"><a href="#a0b5c905e8e2775a0507f377eb021c3dc">utils::Config::addStandardFlags</a></div><div class="ttdeci">static CLI::App * addStandardFlags(CLI::App *app)</div><div class="ttdef"><b>Definition</b> <a href="Config_8cpp_source.html#l00682">Config.cpp:682</a></div></div>
-<div class="ttc" id="aclassutils_1_1Config_html_a0da9402c3269b43baedbf5f18e8ce67d"><div class="ttname"><a href="#a0da9402c3269b43baedbf5f18e8ce67d">utils::Config::parse1</a></div><div class="ttdeci">static bool parse1()</div><div class="ttdef"><b>Definition</b> <a href="Config_8cpp_source.html#l00371">Config.cpp:371</a></div></div>
+<div class="ttc" id="aclassutils_1_1Config_html_a0da9402c3269b43baedbf5f18e8ce67d"><div class="ttname"><a href="#a0da9402c3269b43baedbf5f18e8ce67d">utils::Config::parse1</a></div><div class="ttdeci">static bool parse1()</div><div class="ttdef"><b>Definition</b> <a href="Config_8cpp_source.html#l00376">Config.cpp:376</a></div></div>
 <div class="ttc" id="aclassutils_1_1Config_html_a17e56f49cf46238e042a67bc1bd7d419"><div class="ttname"><a href="#a17e56f49cf46238e042a67bc1bd7d419">utils::Config::argv</a></div><div class="ttdeci">static char ** argv</div><div class="ttdef"><b>Definition</b> <a href="Config_8h_source.html#l00107">Config.h:107</a></div></div>
 <div class="ttc" id="aclassutils_1_1Config_html_a68c362689104a452b762796e7a021afb"><div class="ttname"><a href="#a68c362689104a452b762796e7a021afb">utils::Config::configDirectory</a></div><div class="ttdeci">static std::string configDirectory</div><div class="ttdef"><b>Definition</b> <a href="Config_8h_source.html#l00111">Config.h:111</a></div></div>
 <div class="ttc" id="aclassutils_1_1Config_html_a77640f705b1c5d9130425d6382b12fde"><div class="ttname"><a href="#a77640f705b1c5d9130425d6382b12fde">utils::Config::groupNameOpt</a></div><div class="ttdeci">static CLI::Option * groupNameOpt</div><div class="ttdef"><b>Definition</b> <a href="Config_8h_source.html#l00118">Config.h:118</a></div></div>
@@ -1566,7 +1572,7 @@ Here is the caller graph for this function:</div>
 <div class="ttc" id="aclassutils_1_1Config_html_ad6436881181bbd9fe0ae1e96c0cbae82"><div class="ttname"><a href="#ad6436881181bbd9fe0ae1e96c0cbae82">utils::Config::logDirectory</a></div><div class="ttdeci">static std::string logDirectory</div><div class="ttdef"><b>Definition</b> <a href="Config_8h_source.html#l00112">Config.h:112</a></div></div>
 <div class="ttc" id="aclassutils_1_1Config_html_ae3d4522fe3d5172b72726c377418de97"><div class="ttname"><a href="#ae3d4522fe3d5172b72726c377418de97">utils::Config::userNameOpt</a></div><div class="ttdeci">static CLI::Option * userNameOpt</div><div class="ttdef"><b>Definition</b> <a href="Config_8h_source.html#l00117">Config.h:117</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Config_8h_source.html#l00106">argc</a>, <a class="el" href="Config_8h_source.html#l00107">argv</a>, <a class="el" href="Config_8h_source.html#l00111">configDirectory</a>, <a class="el" href="Config_8h_source.html#l00112">logDirectory</a>, <a class="el" href="Config_8cpp_source.html#l00371">parse1()</a>, and <a class="el" href="Config_8h_source.html#l00113">pidDirectory</a>.</p>
+<p class="reference">References <a class="el" href="Config_8h_source.html#l00106">argc</a>, <a class="el" href="Config_8h_source.html#l00107">argv</a>, <a class="el" href="Config_8h_source.html#l00111">configDirectory</a>, <a class="el" href="Config_8h_source.html#l00112">logDirectory</a>, <a class="el" href="Config_8cpp_source.html#l00376">parse1()</a>, and <a class="el" href="Config_8h_source.html#l00113">pidDirectory</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="EventLoop_8cpp_source.html#l00076">core::EventLoop::init()</a>.</p>
 <div class="dynheader">
@@ -1630,42 +1636,42 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Config_8cpp_source.html#l00371">371</a> of file <a class="el" href="Config_8cpp_source.html">Config.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  371</span>                        {</div>
-<div class="line"><span class="lineno">  372</span>        <span class="keywordtype">bool</span> proceed = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  373</span> </div>
-<div class="line"><span class="lineno">  374</span>        <span class="keywordflow">try</span> {</div>
-<div class="line"><span class="lineno">  375</span>            <a class="code hl_variable" href="#a6d6c3a6b7c77d7f63f69b6a6823cccf3">app</a>-&gt;parse(<a class="code hl_variable" href="#a944f4c1bd732d504f99ae7828edb366b">argc</a>, <a class="code hl_variable" href="#a17e56f49cf46238e042a67bc1bd7d419">argv</a>);</div>
-<div class="line"><span class="lineno">  376</span>        } <span class="keywordflow">catch</span> (<span class="keyword">const</span> CLI::ParseError&amp;) {</div>
-<div class="line"><span class="lineno">  377</span>            <span class="comment">// Do not process ParseError here but on second parse pass</span></div>
-<div class="line"><span class="lineno">  378</span>        }</div>
-<div class="line"><span class="lineno">  379</span> </div>
-<div class="line"><span class="lineno">  380</span>        <span class="keywordflow">if</span> ((*<a class="code hl_variable" href="#a6d6c3a6b7c77d7f63f69b6a6823cccf3">app</a>)[<span class="stringliteral">&quot;--kill&quot;</span>]-&gt;count() &gt; 0) {</div>
-<div class="line"><span class="lineno">  381</span>            <span class="keywordflow">try</span> {</div>
-<div class="line"><span class="lineno">  382</span>                <span class="keyword">const</span> pid_t daemonPid = <a class="code hl_function" href="classutils_1_1Daemon.html#a7cbab79ec761ede555ef18235dad6061">utils::Daemon::stopDaemon</a>(<a class="code hl_variable" href="#a9eb8d3b3c99a1203b56c4c522e4bccf9">pidDirectory</a> + <span class="stringliteral">&quot;/&quot;</span> + <a class="code hl_variable" href="#acb9f9a0c054681caa79421aa2f6e2e93">applicationName</a> + <span class="stringliteral">&quot;.pid&quot;</span>);</div>
-<div class="line"><span class="lineno">  383</span>                std::cout &lt;&lt; <span class="stringliteral">&quot;Daemon terminated: Pid = &quot;</span> &lt;&lt; daemonPid &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">  384</span>            } <span class="keywordflow">catch</span> (<span class="keyword">const</span> DaemonError&amp; e) {</div>
-<div class="line"><span class="lineno">  385</span>                std::cout &lt;&lt; <span class="stringliteral">&quot;DaemonError: &quot;</span> &lt;&lt; e.what() &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">  386</span>            } <span class="keywordflow">catch</span> (<span class="keyword">const</span> DaemonFailure&amp; e) {</div>
-<div class="line"><span class="lineno">  387</span>                std::cout &lt;&lt; <span class="stringliteral">&quot;DaemonFailure: &quot;</span> &lt;&lt; e.what() &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">  388</span>            }</div>
-<div class="line"><span class="lineno">  389</span> </div>
-<div class="line"><span class="lineno">  390</span>            proceed = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  391</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  392</span>            <span class="keywordflow">if</span> ((*<a class="code hl_variable" href="#a6d6c3a6b7c77d7f63f69b6a6823cccf3">app</a>)[<span class="stringliteral">&quot;--show-config&quot;</span>]-&gt;count() == 0 &amp;&amp; (*<a class="code hl_variable" href="#a6d6c3a6b7c77d7f63f69b6a6823cccf3">app</a>)[<span class="stringliteral">&quot;--write-config&quot;</span>]-&gt;count() == 0 &amp;&amp; (*<a class="code hl_variable" href="#a6d6c3a6b7c77d7f63f69b6a6823cccf3">app</a>)[<span class="stringliteral">&quot;--command-line&quot;</span>]-&gt;count() == 0) {</div>
-<div class="line"><span class="lineno">  393</span>                <a class="code hl_variable" href="#a6d6c3a6b7c77d7f63f69b6a6823cccf3">app</a>-&gt;allow_extras(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  394</span>            }</div>
-<div class="line"><span class="lineno">  395</span> </div>
-<div class="line"><span class="lineno">  396</span>            <span class="keywordflow">if</span> (!<a class="code hl_variable" href="#a8aa29691ff5769bc30a734fe50a46d90">quietOpt</a>-&gt;as&lt;<span class="keywordtype">bool</span>&gt;()) {</div>
-<div class="line"><span class="lineno">  397</span>                <a class="code hl_function" href="classlogger_1_1Logger.html#a7d70e6711ec68f00c5c68946fd030ff9">logger::Logger::setLogLevel</a>(<a class="code hl_variable" href="#a3f78a0bd8709f7321b269697983ca6bd">logLevelOpt</a>-&gt;as&lt;<span class="keywordtype">int</span>&gt;());</div>
-<div class="line"><span class="lineno">  398</span>                <a class="code hl_function" href="classlogger_1_1Logger.html#a31d2cc6f94e95cea600c9579c981875c">logger::Logger::setVerboseLevel</a>(<a class="code hl_variable" href="#a885a3c5db803f103ed3efbf8e607a4f5">verboseLevelOpt</a>-&gt;as&lt;<span class="keywordtype">int</span>&gt;());</div>
+<p class="definition">Definition at line <a class="el" href="Config_8cpp_source.html#l00376">376</a> of file <a class="el" href="Config_8cpp_source.html">Config.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  376</span>                        {</div>
+<div class="line"><span class="lineno">  377</span>        <span class="keywordtype">bool</span> proceed = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  378</span> </div>
+<div class="line"><span class="lineno">  379</span>        <span class="keywordflow">try</span> {</div>
+<div class="line"><span class="lineno">  380</span>            <a class="code hl_variable" href="#a6d6c3a6b7c77d7f63f69b6a6823cccf3">app</a>-&gt;parse(<a class="code hl_variable" href="#a944f4c1bd732d504f99ae7828edb366b">argc</a>, <a class="code hl_variable" href="#a17e56f49cf46238e042a67bc1bd7d419">argv</a>);</div>
+<div class="line"><span class="lineno">  381</span>        } <span class="keywordflow">catch</span> (<span class="keyword">const</span> CLI::ParseError&amp;) {</div>
+<div class="line"><span class="lineno">  382</span>            <span class="comment">// Do not process ParseError here but on second parse pass</span></div>
+<div class="line"><span class="lineno">  383</span>        }</div>
+<div class="line"><span class="lineno">  384</span> </div>
+<div class="line"><span class="lineno">  385</span>        <span class="keywordflow">if</span> ((*<a class="code hl_variable" href="#a6d6c3a6b7c77d7f63f69b6a6823cccf3">app</a>)[<span class="stringliteral">&quot;--kill&quot;</span>]-&gt;count() &gt; 0) {</div>
+<div class="line"><span class="lineno">  386</span>            <span class="keywordflow">try</span> {</div>
+<div class="line"><span class="lineno">  387</span>                <span class="keyword">const</span> pid_t daemonPid = <a class="code hl_function" href="classutils_1_1Daemon.html#a7cbab79ec761ede555ef18235dad6061">utils::Daemon::stopDaemon</a>(<a class="code hl_variable" href="#a9eb8d3b3c99a1203b56c4c522e4bccf9">pidDirectory</a> + <span class="stringliteral">&quot;/&quot;</span> + <a class="code hl_variable" href="#acb9f9a0c054681caa79421aa2f6e2e93">applicationName</a> + <span class="stringliteral">&quot;.pid&quot;</span>);</div>
+<div class="line"><span class="lineno">  388</span>                std::cout &lt;&lt; <span class="stringliteral">&quot;Daemon terminated: Pid = &quot;</span> &lt;&lt; daemonPid &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  389</span>            } <span class="keywordflow">catch</span> (<span class="keyword">const</span> DaemonError&amp; e) {</div>
+<div class="line"><span class="lineno">  390</span>                std::cout &lt;&lt; <span class="stringliteral">&quot;DaemonError: &quot;</span> &lt;&lt; e.what() &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  391</span>            } <span class="keywordflow">catch</span> (<span class="keyword">const</span> DaemonFailure&amp; e) {</div>
+<div class="line"><span class="lineno">  392</span>                std::cout &lt;&lt; <span class="stringliteral">&quot;DaemonFailure: &quot;</span> &lt;&lt; e.what() &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  393</span>            }</div>
+<div class="line"><span class="lineno">  394</span> </div>
+<div class="line"><span class="lineno">  395</span>            proceed = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  396</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  397</span>            <span class="keywordflow">if</span> ((*<a class="code hl_variable" href="#a6d6c3a6b7c77d7f63f69b6a6823cccf3">app</a>)[<span class="stringliteral">&quot;--show-config&quot;</span>]-&gt;count() == 0 &amp;&amp; (*<a class="code hl_variable" href="#a6d6c3a6b7c77d7f63f69b6a6823cccf3">app</a>)[<span class="stringliteral">&quot;--write-config&quot;</span>]-&gt;count() == 0 &amp;&amp; (*<a class="code hl_variable" href="#a6d6c3a6b7c77d7f63f69b6a6823cccf3">app</a>)[<span class="stringliteral">&quot;--command-line&quot;</span>]-&gt;count() == 0) {</div>
+<div class="line"><span class="lineno">  398</span>                <a class="code hl_variable" href="#a6d6c3a6b7c77d7f63f69b6a6823cccf3">app</a>-&gt;allow_extras(<span class="keyword">false</span>);</div>
 <div class="line"><span class="lineno">  399</span>            }</div>
 <div class="line"><span class="lineno">  400</span> </div>
-<div class="line"><span class="lineno">  401</span>            <a class="code hl_function" href="classlogger_1_1Logger.html#abbe17b0b008e0db4cc58ca239f3a4f03">logger::Logger::setQuiet</a>(<a class="code hl_variable" href="#a8aa29691ff5769bc30a734fe50a46d90">quietOpt</a>-&gt;as&lt;<span class="keywordtype">bool</span>&gt;());</div>
-<div class="line"><span class="lineno">  402</span>        }</div>
-<div class="line"><span class="lineno">  403</span> </div>
-<div class="line"><span class="lineno">  404</span>        <span class="keywordflow">return</span> proceed;</div>
-<div class="line"><span class="lineno">  405</span>    }</div>
+<div class="line"><span class="lineno">  401</span>            <span class="keywordflow">if</span> (!<a class="code hl_variable" href="#a8aa29691ff5769bc30a734fe50a46d90">quietOpt</a>-&gt;as&lt;<span class="keywordtype">bool</span>&gt;()) {</div>
+<div class="line"><span class="lineno">  402</span>                <a class="code hl_function" href="classlogger_1_1Logger.html#a7d70e6711ec68f00c5c68946fd030ff9">logger::Logger::setLogLevel</a>(<a class="code hl_variable" href="#a3f78a0bd8709f7321b269697983ca6bd">logLevelOpt</a>-&gt;as&lt;<span class="keywordtype">int</span>&gt;());</div>
+<div class="line"><span class="lineno">  403</span>                <a class="code hl_function" href="classlogger_1_1Logger.html#a31d2cc6f94e95cea600c9579c981875c">logger::Logger::setVerboseLevel</a>(<a class="code hl_variable" href="#a885a3c5db803f103ed3efbf8e607a4f5">verboseLevelOpt</a>-&gt;as&lt;<span class="keywordtype">int</span>&gt;());</div>
+<div class="line"><span class="lineno">  404</span>            }</div>
+<div class="line"><span class="lineno">  405</span> </div>
+<div class="line"><span class="lineno">  406</span>            <a class="code hl_function" href="classlogger_1_1Logger.html#abbe17b0b008e0db4cc58ca239f3a4f03">logger::Logger::setQuiet</a>(<a class="code hl_variable" href="#a8aa29691ff5769bc30a734fe50a46d90">quietOpt</a>-&gt;as&lt;<span class="keywordtype">bool</span>&gt;());</div>
+<div class="line"><span class="lineno">  407</span>        }</div>
+<div class="line"><span class="lineno">  408</span> </div>
+<div class="line"><span class="lineno">  409</span>        <span class="keywordflow">return</span> proceed;</div>
+<div class="line"><span class="lineno">  410</span>    }</div>
 <div class="ttc" id="aclasslogger_1_1Logger_html_a31d2cc6f94e95cea600c9579c981875c"><div class="ttname"><a href="classlogger_1_1Logger.html#a31d2cc6f94e95cea600c9579c981875c">logger::Logger::setVerboseLevel</a></div><div class="ttdeci">static void setVerboseLevel(int level)</div><div class="ttdef"><b>Definition</b> <a href="Logger_8cpp_source.html#l00099">Logger.cpp:99</a></div></div>
 <div class="ttc" id="aclasslogger_1_1Logger_html_a7d70e6711ec68f00c5c68946fd030ff9"><div class="ttname"><a href="classlogger_1_1Logger.html#a7d70e6711ec68f00c5c68946fd030ff9">logger::Logger::setLogLevel</a></div><div class="ttdeci">static void setLogLevel(int level)</div><div class="ttdef"><b>Definition</b> <a href="Logger_8cpp_source.html#l00062">Logger.cpp:62</a></div></div>
 <div class="ttc" id="aclasslogger_1_1Logger_html_abbe17b0b008e0db4cc58ca239f3a4f03"><div class="ttname"><a href="classlogger_1_1Logger.html#abbe17b0b008e0db4cc58ca239f3a4f03">logger::Logger::setQuiet</a></div><div class="ttdeci">static void setQuiet(bool quiet=true)</div><div class="ttdef"><b>Definition</b> <a href="Logger_8cpp_source.html#l00114">Logger.cpp:114</a></div></div>
@@ -1710,18 +1716,13 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Config_8cpp_source.html#l00530">530</a> of file <a class="el" href="Config_8cpp_source.html">Config.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  530</span>                        {</div>
-<div class="line"><span class="lineno">  531</span>        <span class="keywordtype">bool</span> success = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  532</span> </div>
-<div class="line"><span class="lineno">  533</span>        <span class="keywordflow">try</span> {</div>
-<div class="line"><span class="lineno">  534</span>            <span class="keywordflow">try</span> {</div>
-<div class="line"><span class="lineno">  535</span>                <a class="code hl_variable" href="#a6d6c3a6b7c77d7f63f69b6a6823cccf3">app</a>-&gt;parse(<a class="code hl_variable" href="#a944f4c1bd732d504f99ae7828edb366b">argc</a>, <a class="code hl_variable" href="#a17e56f49cf46238e042a67bc1bd7d419">argv</a>);</div>
-<div class="line"><span class="lineno">  536</span> </div>
-<div class="line"><span class="lineno">  537</span>                <span class="keywordflow">if</span> ((*<a class="code hl_variable" href="#a6d6c3a6b7c77d7f63f69b6a6823cccf3">app</a>)[<span class="stringliteral">&quot;--write-config&quot;</span>]-&gt;count() &gt; 0) {</div>
-<div class="line"><span class="lineno">  538</span>                    <span class="keywordflow">throw</span> <a class="code hl_class" href="classCLI_1_1CallForWriteConfig.html">CLI::CallForWriteConfig</a>((*<a class="code hl_variable" href="#a6d6c3a6b7c77d7f63f69b6a6823cccf3">app</a>)[<span class="stringliteral">&quot;--write-config&quot;</span>]-&gt;as&lt;std::string&gt;());</div>
-<div class="line"><span class="lineno">  539</span>                }</div>
-<div class="line"><span class="lineno">  540</span> </div>
+<p class="definition">Definition at line <a class="el" href="Config_8cpp_source.html#l00535">535</a> of file <a class="el" href="Config_8cpp_source.html">Config.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  535</span>                        {</div>
+<div class="line"><span class="lineno">  536</span>        <span class="keywordtype">bool</span> success = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  537</span> </div>
+<div class="line"><span class="lineno">  538</span>        <span class="keywordflow">try</span> {</div>
+<div class="line"><span class="lineno">  539</span>            <span class="keywordflow">try</span> {</div>
+<div class="line"><span class="lineno">  540</span>                <a class="code hl_variable" href="#a6d6c3a6b7c77d7f63f69b6a6823cccf3">app</a>-&gt;parse(<a class="code hl_variable" href="#a944f4c1bd732d504f99ae7828edb366b">argc</a>, <a class="code hl_variable" href="#a17e56f49cf46238e042a67bc1bd7d419">argv</a>);</div>
 <div class="line"><span class="lineno">  541</span>                success = <span class="keyword">true</span>;</div>
 <div class="line"><span class="lineno">  542</span>            } <span class="keywordflow">catch</span> (<span class="keyword">const</span> DaemonError&amp; e) {</div>
 <div class="line"><span class="lineno">  543</span>                std::cout &lt;&lt; <span class="stringliteral">&quot;Daemon error: &quot;</span> &lt;&lt; e.what() &lt;&lt; <span class="stringliteral">&quot; ... exiting&quot;</span> &lt;&lt; std::endl;</div>
@@ -1800,17 +1801,16 @@ Here is the caller graph for this function:</div>
 <div class="ttc" id="aclassCLI_1_1CallForCommandline_html_a62369261eb9006cb8bdd1a3595cdc5eb"><div class="ttname"><a href="classCLI_1_1CallForCommandline.html#a62369261eb9006cb8bdd1a3595cdc5eb">CLI::CallForCommandline::getApp</a></div><div class="ttdeci">CLI::App * getApp() const</div><div class="ttdef"><b>Definition</b> <a href="Exceptions_8cpp_source.html#l00039">Exceptions.cpp:39</a></div></div>
 <div class="ttc" id="aclassCLI_1_1CallForCommandline_html_adce893b471d60e14d0fa7af2e2278680"><div class="ttname"><a href="classCLI_1_1CallForCommandline.html#adce893b471d60e14d0fa7af2e2278680">CLI::CallForCommandline::getMode</a></div><div class="ttdeci">Mode getMode() const</div><div class="ttdef"><b>Definition</b> <a href="Exceptions_8cpp_source.html#l00043">Exceptions.cpp:43</a></div></div>
 <div class="ttc" id="aclassCLI_1_1CallForShowConfig_html_a355b190c4e114e32788578b8a7090132"><div class="ttname"><a href="classCLI_1_1CallForShowConfig.html#a355b190c4e114e32788578b8a7090132">CLI::CallForShowConfig::getApp</a></div><div class="ttdeci">CLI::App * getApp() const</div><div class="ttdef"><b>Definition</b> <a href="Exceptions_8cpp_source.html#l00055">Exceptions.cpp:55</a></div></div>
-<div class="ttc" id="aclassCLI_1_1CallForWriteConfig_html"><div class="ttname"><a href="classCLI_1_1CallForWriteConfig.html">CLI::CallForWriteConfig</a></div><div class="ttdef"><b>Definition</b> <a href="Exceptions_8h_source.html#l00074">Exceptions.h:74</a></div></div>
 <div class="ttc" id="aclassCLI_1_1CallForWriteConfig_html_a0cb54fe0d9d83b597d6c5caddb04b89c"><div class="ttname"><a href="classCLI_1_1CallForWriteConfig.html#a0cb54fe0d9d83b597d6c5caddb04b89c">CLI::CallForWriteConfig::getConfigFile</a></div><div class="ttdeci">std::string getConfigFile() const</div><div class="ttdef"><b>Definition</b> <a href="Exceptions_8cpp_source.html#l00067">Exceptions.cpp:67</a></div></div>
 <div class="ttc" id="anamespaceColor_html_a20a7b04657c1d83fae5d54514d3f1622a0343bd45782960b4bfc275e16237cfc8"><div class="ttname"><a href="namespaceColor.html#a20a7b04657c1d83fae5d54514d3f1622a0343bd45782960b4bfc275e16237cfc8">Color::Code::FG_RED</a></div><div class="ttdeci">@ FG_RED</div></div>
 <div class="ttc" id="anamespaceColor_html_a20a7b04657c1d83fae5d54514d3f1622abc692cd3754240e2f8efac99386f1cb3"><div class="ttname"><a href="namespaceColor.html#a20a7b04657c1d83fae5d54514d3f1622abc692cd3754240e2f8efac99386f1cb3">Color::Code::FG_BLUE</a></div><div class="ttdeci">@ FG_BLUE</div></div>
 <div class="ttc" id="anamespaceColor_html_a20a7b04657c1d83fae5d54514d3f1622ac5e2716a4915a3f96c501cbe821f553b"><div class="ttname"><a href="namespaceColor.html#a20a7b04657c1d83fae5d54514d3f1622ac5e2716a4915a3f96c501cbe821f553b">Color::Code::FG_GREEN</a></div><div class="ttdeci">@ FG_GREEN</div></div>
 <div class="ttc" id="anamespaceColor_html_a20a7b04657c1d83fae5d54514d3f1622aec939dfa85c55fe16445f3c02bb012d8"><div class="ttname"><a href="namespaceColor.html#a20a7b04657c1d83fae5d54514d3f1622aec939dfa85c55fe16445f3c02bb012d8">Color::Code::FG_DEFAULT</a></div><div class="ttdeci">@ FG_DEFAULT</div></div>
-<div class="ttc" id="anamespaceutils_html_aac7436ed2ed454cbef6765b7e381b2f7"><div class="ttname"><a href="namespaceutils.html#aac7436ed2ed454cbef6765b7e381b2f7">utils::createCommandLineTemplate</a></div><div class="ttdeci">static void createCommandLineTemplate(std::stringstream &amp;out, CLI::App *app, CLI::CallForCommandline::Mode mode)</div><div class="ttdef"><b>Definition</b> <a href="Config_8cpp_source.html#l00495">Config.cpp:495</a></div></div>
+<div class="ttc" id="anamespaceutils_html_aac7436ed2ed454cbef6765b7e381b2f7"><div class="ttname"><a href="namespaceutils.html#aac7436ed2ed454cbef6765b7e381b2f7">utils::createCommandLineTemplate</a></div><div class="ttdeci">static void createCommandLineTemplate(std::stringstream &amp;out, CLI::App *app, CLI::CallForCommandline::Mode mode)</div><div class="ttdef"><b>Definition</b> <a href="Config_8cpp_source.html#l00500">Config.cpp:500</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="namespaceColor.html#a20a7b04657c1d83fae5d54514d3f1622abc692cd3754240e2f8efac99386f1cb3">Color::FG_BLUE</a>, <a class="el" href="namespaceColor.html#a20a7b04657c1d83fae5d54514d3f1622aec939dfa85c55fe16445f3c02bb012d8">Color::FG_DEFAULT</a>, <a class="el" href="namespaceColor.html#a20a7b04657c1d83fae5d54514d3f1622ac5e2716a4915a3f96c501cbe821f553b">Color::FG_GREEN</a>, <a class="el" href="namespaceColor.html#a20a7b04657c1d83fae5d54514d3f1622a0343bd45782960b4bfc275e16237cfc8">Color::FG_RED</a>, <a class="el" href="Exceptions_8cpp_source.html#l00039">CLI::CallForCommandline::getApp()</a>, <a class="el" href="Exceptions_8cpp_source.html#l00055">CLI::CallForShowConfig::getApp()</a>, <a class="el" href="Exceptions_8cpp_source.html#l00067">CLI::CallForWriteConfig::getConfigFile()</a>, <a class="el" href="Exceptions_8cpp_source.html#l00043">CLI::CallForCommandline::getMode()</a>, <a class="el" href="Daemon_8cpp_source.html#l00192">utils::DaemonSignaled::getPid()</a>, and <a class="el" href="Logger_8cpp_source.html#l00114">logger::Logger::setQuiet()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Config_8cpp_source.html#l00341">bootstrap()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Config_8cpp_source.html#l00346">bootstrap()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1902,7 +1902,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">  819</span>        <span class="keywordflow">if</span> (reqired) {</div>
 <div class="line"><span class="lineno">  820</span>            <a class="code hl_variable" href="#a6d6c3a6b7c77d7f63f69b6a6823cccf3">app</a>-&gt;needs(instance);</div>
 <div class="line"><span class="lineno">  821</span> </div>
-<div class="line"><span class="lineno">  822</span>            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; sub : instance-&gt;get_subcommands([](<a class="code hl_namespace" href="namespaceCLI.html">CLI</a>::App* sc) -&gt; bool {</div>
+<div class="line"><span class="lineno">  822</span>            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; sub : instance-&gt;get_subcommands([](const <a class="code hl_namespace" href="namespaceCLI.html">CLI</a>::App* sc) -&gt; bool {</div>
 <div class="line"><span class="lineno">  823</span>                     return sc-&gt;get_required();</div>
 <div class="line"><span class="lineno">  824</span>                 })) {</div>
 <div class="line"><span class="lineno">  825</span>                instance-&gt;needs(sub);</div>
@@ -1910,7 +1910,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">  827</span>        } <span class="keywordflow">else</span> {</div>
 <div class="line"><span class="lineno">  828</span>            <a class="code hl_variable" href="#a6d6c3a6b7c77d7f63f69b6a6823cccf3">app</a>-&gt;remove_needs(instance);</div>
 <div class="line"><span class="lineno">  829</span> </div>
-<div class="line"><span class="lineno">  830</span>            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; sub : instance-&gt;get_subcommands([](<a class="code hl_namespace" href="namespaceCLI.html">CLI</a>::App* sc) -&gt; bool {</div>
+<div class="line"><span class="lineno">  830</span>            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; sub : instance-&gt;get_subcommands([](const <a class="code hl_namespace" href="namespaceCLI.html">CLI</a>::App* sc) -&gt; bool {</div>
 <div class="line"><span class="lineno">  831</span>                     return sc-&gt;get_required();</div>
 <div class="line"><span class="lineno">  832</span>                 })) {</div>
 <div class="line"><span class="lineno">  833</span>                instance-&gt;remove_needs(sub);</div>
@@ -2056,7 +2056,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="Config_8h_source.html#l00109">109</a> of file <a class="el" href="Config_8h_source.html">Config.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Config_8cpp_source.html#l00371">parse1()</a>, and <a class="el" href="Config_8cpp_source.html#l00617">terminate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Config_8cpp_source.html#l00376">parse1()</a>, and <a class="el" href="Config_8cpp_source.html#l00617">terminate()</a>.</p>
 
 </div>
 </div>
@@ -2306,7 +2306,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="Config_8h_source.html#l00120">120</a> of file <a class="el" href="Config_8h_source.html">Config.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Config_8cpp_source.html#l00958">getLogLevel()</a>, and <a class="el" href="Config_8cpp_source.html#l00371">parse1()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Config_8cpp_source.html#l00958">getLogLevel()</a>, and <a class="el" href="Config_8cpp_source.html#l00376">parse1()</a>.</p>
 
 </div>
 </div>
@@ -2332,7 +2332,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="Config_8h_source.html#l00113">113</a> of file <a class="el" href="Config_8h_source.html">Config.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Config_8cpp_source.html#l00105">init()</a>, <a class="el" href="Config_8cpp_source.html#l00371">parse1()</a>, and <a class="el" href="Config_8cpp_source.html#l00617">terminate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Config_8cpp_source.html#l00105">init()</a>, <a class="el" href="Config_8cpp_source.html#l00376">parse1()</a>, and <a class="el" href="Config_8cpp_source.html#l00617">terminate()</a>.</p>
 
 </div>
 </div>
@@ -2358,7 +2358,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="Config_8h_source.html#l00122">122</a> of file <a class="el" href="Config_8h_source.html">Config.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Config_8cpp_source.html#l00371">parse1()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Config_8cpp_source.html#l00376">parse1()</a>.</p>
 
 </div>
 </div>
@@ -2432,7 +2432,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="Config_8h_source.html#l00121">121</a> of file <a class="el" href="Config_8h_source.html">Config.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Config_8cpp_source.html#l00962">getVerboseLevel()</a>, and <a class="el" href="Config_8cpp_source.html#l00371">parse1()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Config_8cpp_source.html#l00962">getVerboseLevel()</a>, and <a class="el" href="Config_8cpp_source.html#l00376">parse1()</a>.</p>
 
 </div>
 </div>
@@ -2446,7 +2446,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceutils.html">utils</a></li><li class="navelem"><a class="el" href="classutils_1_1Config.html">Config</a></li>
-    <li class="footer">Generated on Tue Dec 3 2024 20:49:50 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generated on Thu Jan 2 2025 18:50:05 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>

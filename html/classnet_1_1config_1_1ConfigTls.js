@@ -2,6 +2,7 @@ var classnet_1_1config_1_1ConfigTls =
 [
     [ "ConfigTls", "classnet_1_1config_1_1ConfigTls.html#ab42f16c4c14faadd14ecb75eb1f260bb", null ],
     [ "getCaCert", "classnet_1_1config_1_1ConfigTls.html#a555ab13f386b3fd55b98df29bc596666", null ],
+    [ "getCaCertAcceptUnknown", "classnet_1_1config_1_1ConfigTls.html#a9069e5e4d7da72d5c41786f4eddb8839", null ],
     [ "getCaCertDir", "classnet_1_1config_1_1ConfigTls.html#a4302d359cd2202f36e8f05599e680425", null ],
     [ "getCaCertUseDefaultDir", "classnet_1_1config_1_1ConfigTls.html#a92f6c1d0b24e30b9992757f7751b4fb2", null ],
     [ "getCert", "classnet_1_1config_1_1ConfigTls.html#aca525a5ff58629df24b7e46f0cf519f6", null ],
@@ -9,9 +10,11 @@ var classnet_1_1config_1_1ConfigTls =
     [ "getCertKeyPassword", "classnet_1_1config_1_1ConfigTls.html#add00c3162c2b783312b0f83a7c821e86", null ],
     [ "getCipherList", "classnet_1_1config_1_1ConfigTls.html#a8271a020b16cedcf85558e4928cd8933", null ],
     [ "getInitTimeout", "classnet_1_1config_1_1ConfigTls.html#afd899edd3cb612bef25f17f866d17524", null ],
+    [ "getNoCloseNotifyIsEOF", "classnet_1_1config_1_1ConfigTls.html#a4bb5fc46e241b1d2d66cce6d51ae6cbb", null ],
     [ "getShutdownTimeout", "classnet_1_1config_1_1ConfigTls.html#a3ccc1df2369e4076f15a500e2be8a882", null ],
     [ "getSslOptions", "classnet_1_1config_1_1ConfigTls.html#a8efda5c8d52d73fe39ee4e9b3d4f367c", null ],
     [ "setCaCert", "classnet_1_1config_1_1ConfigTls.html#a0b0796a74f4e48e499adb2bf5c23efff", null ],
+    [ "setCaCertAcceptUnknown", "classnet_1_1config_1_1ConfigTls.html#aa71ddcc5208672a7ac8895bd521583de", null ],
     [ "setCaCertDir", "classnet_1_1config_1_1ConfigTls.html#ac24fc6067e423bde2aad665ffc624e72", null ],
     [ "setCaCertUseDefaultDir", "classnet_1_1config_1_1ConfigTls.html#a55095d5373d3d091006c99bf2ae87b12", null ],
     [ "setCert", "classnet_1_1config_1_1ConfigTls.html#a4c0f3d6ca889046e33a8e969749049a8", null ],
@@ -19,8 +22,10 @@ var classnet_1_1config_1_1ConfigTls =
     [ "setCertKeyPassword", "classnet_1_1config_1_1ConfigTls.html#af3495c72ab6d355602abfa3071295723", null ],
     [ "setCipherList", "classnet_1_1config_1_1ConfigTls.html#abc23993fdc377f99157e8c4361899744", null ],
     [ "setInitTimeout", "classnet_1_1config_1_1ConfigTls.html#a639537a682ef2409de4871aa81ec2005", null ],
+    [ "setNoCloseNotifyIsEOF", "classnet_1_1config_1_1ConfigTls.html#ab8f4c471ef35733856638d5b3be2455e", null ],
     [ "setShutdownTimeout", "classnet_1_1config_1_1ConfigTls.html#ae510fc003954459a5dc7bdbbbd2886cf", null ],
     [ "setSslOptions", "classnet_1_1config_1_1ConfigTls.html#a9cd7297b21be8b72946d239e100ed811", null ],
+    [ "caCertAcceptUnknownOpt", "classnet_1_1config_1_1ConfigTls.html#a37a192af553ec75bc0cbc437f6254474", null ],
     [ "caCertDirOpt", "classnet_1_1config_1_1ConfigTls.html#a291021cc7c635a481c29cc8b2c49afda", null ],
     [ "caCertOpt", "classnet_1_1config_1_1ConfigTls.html#a42dddf2d468298c7f9b473064b758bca", null ],
     [ "caCertUseDefaultDirOpt", "classnet_1_1config_1_1ConfigTls.html#a102fd8c91f20587a4ee023b7ae899528", null ],
@@ -29,6 +34,7 @@ var classnet_1_1config_1_1ConfigTls =
     [ "certOpt", "classnet_1_1config_1_1ConfigTls.html#a2510c47dde4129bbcdec99143ffdc435", null ],
     [ "cipherListOpt", "classnet_1_1config_1_1ConfigTls.html#ad602caa31c438a2ef1018034f5e0fb42", null ],
     [ "initTimeoutOpt", "classnet_1_1config_1_1ConfigTls.html#a64f7a79b3148835eff9a8a54d5ea0e40", null ],
+    [ "noCloseNotifyIsEOFOpt", "classnet_1_1config_1_1ConfigTls.html#a8fa29daf2fd5e161ef156e3a76f86d86", null ],
     [ "shutdownTimeoutOpt", "classnet_1_1config_1_1ConfigTls.html#a2754f4c8d93ba2808f3e2d8bb8403586", null ],
     [ "sslOptionsOpt", "classnet_1_1config_1_1ConfigTls.html#a774ba125242b573f57c08cd388397c1d", null ]
 ];

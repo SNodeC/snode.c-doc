@@ -238,17 +238,19 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="server_2broker_2Session_8cpp_source.html#l00112">112</a> of file <a class="el" href="server_2broker_2Session_8cpp_source.html">Session.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  112</span>                                                   {</div>
-<div class="line"><span class="lineno">  113</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> nlohmann::json&amp; messageJson : json[<span class="stringliteral">&quot;message_queue&quot;</span>]) {</div>
-<div class="line"><span class="lineno">  114</span>            <a class="code hl_variable" href="#a582f38f0435c5e020fe2c9dfef3f4be3">messageQueue</a>.emplace_back(Message().<a class="code hl_function" href="#ac44c1d5af218e86d5335f6906fb3c8f7">fromJson</a>(messageJson));</div>
-<div class="line"><span class="lineno">  115</span>        }</div>
-<div class="line"><span class="lineno">  116</span> </div>
-<div class="line"><span class="lineno">  117</span>        <a class="code hl_function" href="classiot_1_1mqtt_1_1Session.html#af06528da9b6c2681db92be904587d1ef">iot::mqtt::Session::fromJson</a>(json);</div>
-<div class="line"><span class="lineno">  118</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="server_2broker_2Session_8cpp_source.html#l00107">107</a> of file <a class="el" href="server_2broker_2Session_8cpp_source.html">Session.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  107</span>                                                   {</div>
+<div class="line"><span class="lineno">  108</span>        std::transform(json[<span class="stringliteral">&quot;message_queue&quot;</span>].begin(),</div>
+<div class="line"><span class="lineno">  109</span>                       json[<span class="stringliteral">&quot;message_queue&quot;</span>].end(),</div>
+<div class="line"><span class="lineno">  110</span>                       std::back_inserter(<a class="code hl_variable" href="#a582f38f0435c5e020fe2c9dfef3f4be3">messageQueue</a>),</div>
+<div class="line"><span class="lineno">  111</span>                       [](<span class="keyword">const</span> nlohmann::json&amp; jsonMessage) {</div>
+<div class="line"><span class="lineno">  112</span>                           <span class="keywordflow">return</span> Message().fromJson(jsonMessage);</div>
+<div class="line"><span class="lineno">  113</span>                       });</div>
+<div class="line"><span class="lineno">  114</span> </div>
+<div class="line"><span class="lineno">  115</span>        <a class="code hl_function" href="classiot_1_1mqtt_1_1Session.html#af06528da9b6c2681db92be904587d1ef">iot::mqtt::Session::fromJson</a>(json);</div>
+<div class="line"><span class="lineno">  116</span>    }</div>
 <div class="ttc" id="aclassiot_1_1mqtt_1_1Session_html_af06528da9b6c2681db92be904587d1ef"><div class="ttname"><a href="classiot_1_1mqtt_1_1Session.html#af06528da9b6c2681db92be904587d1ef">iot::mqtt::Session::fromJson</a></div><div class="ttdeci">void fromJson(const nlohmann::json &amp;json)</div><div class="ttdef"><b>Definition</b> <a href="Session_8cpp_source.html#l00067">Session.cpp:67</a></div></div>
 <div class="ttc" id="aclassiot_1_1mqtt_1_1server_1_1broker_1_1Session_html_a582f38f0435c5e020fe2c9dfef3f4be3"><div class="ttname"><a href="#a582f38f0435c5e020fe2c9dfef3f4be3">iot::mqtt::server::broker::Session::messageQueue</a></div><div class="ttdeci">std::deque&lt; Message &gt; messageQueue</div><div class="ttdef"><b>Definition</b> <a href="server_2broker_2Session_8h_source.html#l00062">Session.h:62</a></div></div>
-<div class="ttc" id="aclassiot_1_1mqtt_1_1server_1_1broker_1_1Session_html_ac44c1d5af218e86d5335f6906fb3c8f7"><div class="ttname"><a href="#ac44c1d5af218e86d5335f6906fb3c8f7">iot::mqtt::server::broker::Session::fromJson</a></div><div class="ttdeci">void fromJson(const nlohmann::json &amp;json)</div><div class="ttdef"><b>Definition</b> <a href="server_2broker_2Session_8cpp_source.html#l00112">Session.cpp:112</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -479,17 +481,12 @@ Here is the call graph for this function:</div>
 <div class="fragment"><div class="line"><span class="lineno">   97</span>                                       {</div>
 <div class="line"><span class="lineno">   98</span>        nlohmann::json json = <a class="code hl_function" href="classiot_1_1mqtt_1_1Session.html#a1b6f67378b069d481f318cd4f612ac2f">iot::mqtt::Session::toJson</a>();</div>
 <div class="line"><span class="lineno">   99</span> </div>
-<div class="line"><span class="lineno">  100</span>        std::vector&lt;nlohmann::json&gt; messageVector;</div>
-<div class="line"><span class="lineno">  101</span>        messageVector.reserve(<a class="code hl_variable" href="#a582f38f0435c5e020fe2c9dfef3f4be3">messageQueue</a>.size());</div>
-<div class="line"><span class="lineno">  102</span> </div>
-<div class="line"><span class="lineno">  103</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> Message&amp; message : <a class="code hl_variable" href="#a582f38f0435c5e020fe2c9dfef3f4be3">messageQueue</a>) {</div>
-<div class="line"><span class="lineno">  104</span>            messageVector.emplace_back(message.toJson());</div>
-<div class="line"><span class="lineno">  105</span>        }</div>
-<div class="line"><span class="lineno">  106</span> </div>
-<div class="line"><span class="lineno">  107</span>        json[<span class="stringliteral">&quot;message_queue&quot;</span>] = messageVector;</div>
-<div class="line"><span class="lineno">  108</span> </div>
-<div class="line"><span class="lineno">  109</span>        <span class="keywordflow">return</span> json;</div>
-<div class="line"><span class="lineno">  110</span>    }</div>
+<div class="line"><span class="lineno">  100</span>        std::transform(<a class="code hl_variable" href="#a582f38f0435c5e020fe2c9dfef3f4be3">messageQueue</a>.begin(), <a class="code hl_variable" href="#a582f38f0435c5e020fe2c9dfef3f4be3">messageQueue</a>.end(), std::back_inserter(json[<span class="stringliteral">&quot;message_queue&quot;</span>]), [](<span class="keyword">const</span> Message&amp; message) {</div>
+<div class="line"><span class="lineno">  101</span>            return message.toJson();</div>
+<div class="line"><span class="lineno">  102</span>        });</div>
+<div class="line"><span class="lineno">  103</span> </div>
+<div class="line"><span class="lineno">  104</span>        <span class="keywordflow">return</span> json;</div>
+<div class="line"><span class="lineno">  105</span>    }</div>
 <div class="ttc" id="aclassiot_1_1mqtt_1_1Session_html_a1b6f67378b069d481f318cd4f612ac2f"><div class="ttname"><a href="classiot_1_1mqtt_1_1Session.html#a1b6f67378b069d481f318cd4f612ac2f">iot::mqtt::Session::toJson</a></div><div class="ttdeci">virtual nlohmann::json toJson() const</div><div class="ttdef"><b>Definition</b> <a href="Session_8cpp_source.html#l00037">Session.cpp:37</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -553,7 +550,7 @@ Here is the call graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceiot.html">iot</a></li><li class="navelem"><a class="el" href="namespaceiot_1_1mqtt.html">mqtt</a></li><li class="navelem"><a class="el" href="namespaceiot_1_1mqtt_1_1server.html">server</a></li><li class="navelem"><a class="el" href="namespaceiot_1_1mqtt_1_1server_1_1broker.html">broker</a></li><li class="navelem"><a class="el" href="classiot_1_1mqtt_1_1server_1_1broker_1_1Session.html">Session</a></li>
-    <li class="footer">Generated on Tue Dec 3 2024 20:49:49 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generated on Thu Jan 2 2025 18:50:04 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>

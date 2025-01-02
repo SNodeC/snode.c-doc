@@ -452,7 +452,7 @@ template&lt;typename SubProtocolFactoryT &gt; </div>
 <div class="fragment"><div class="line"><span class="lineno">   56</span>                                                                                         {</div>
 <div class="line"><span class="lineno">   57</span>            <a class="code hl_typedef" href="#a62cfe7d0fc445bb1762117f81034e47a">SubProtocolFactory</a>* subProtocolFactory = <span class="keyword">nullptr</span>;</div>
 <div class="line"><span class="lineno">   58</span> </div>
-<div class="line"><span class="lineno">   59</span>            <span class="keywordtype">void</span>* handle = core::DynamicLoader::dlOpen(subProtocolLibraryFile, RTLD_LAZY | RTLD_GLOBAL);</div>
+<div class="line"><span class="lineno">   59</span>            <span class="keywordtype">void</span>* handle = core::DynamicLoader::dlOpen(subProtocolLibraryFile);</div>
 <div class="line"><span class="lineno">   60</span> </div>
 <div class="line"><span class="lineno">   61</span>            <span class="keywordflow">if</span> (handle != <span class="keyword">nullptr</span>) {</div>
 <div class="line"><span class="lineno">   62</span>                <a class="code hl_typedef" href="#a62cfe7d0fc445bb1762117f81034e47a">SubProtocolFactory</a>* (*getSubProtocolFactory)() =</div>
@@ -475,11 +475,11 @@ template&lt;typename SubProtocolFactoryT &gt; </div>
 <div class="line"><span class="lineno">   79</span> </div>
 <div class="line"><span class="lineno">   80</span>            <span class="keywordflow">return</span> subProtocolFactory;</div>
 <div class="line"><span class="lineno">   81</span>        }</div>
-<div class="ttc" id="aclasscore_1_1DynamicLoader_html_a28d14f3029339351d8bb8b328a6110b0"><div class="ttname"><a href="classcore_1_1DynamicLoader.html#a28d14f3029339351d8bb8b328a6110b0">core::DynamicLoader::dlError</a></div><div class="ttdeci">static char * dlError()</div><div class="ttdef"><b>Definition</b> <a href="DynamicLoader_8cpp_source.html#l00095">DynamicLoader.cpp:95</a></div></div>
-<div class="ttc" id="aclasscore_1_1DynamicLoader_html_a42ac52cda1ec4534f1cc9e225dcb31b0"><div class="ttname"><a href="classcore_1_1DynamicLoader.html#a42ac52cda1ec4534f1cc9e225dcb31b0">core::DynamicLoader::dlClose</a></div><div class="ttdeci">static int dlClose(void *handle)</div><div class="ttdef"><b>Definition</b> <a href="DynamicLoader_8cpp_source.html#l00072">DynamicLoader.cpp:72</a></div></div>
-<div class="ttc" id="aclasscore_1_1DynamicLoader_html_a708b7adb431acbc8976968c59692625e"><div class="ttname"><a href="classcore_1_1DynamicLoader.html#a708b7adb431acbc8976968c59692625e">core::DynamicLoader::dlSym</a></div><div class="ttdeci">static void * dlSym(void *handle, const std::string &amp;symbol)</div><div class="ttdef"><b>Definition</b> <a href="DynamicLoader_8cpp_source.html#l00091">DynamicLoader.cpp:91</a></div></div>
+<div class="ttc" id="aclasscore_1_1DynamicLoader_html_a28d14f3029339351d8bb8b328a6110b0"><div class="ttname"><a href="classcore_1_1DynamicLoader.html#a28d14f3029339351d8bb8b328a6110b0">core::DynamicLoader::dlError</a></div><div class="ttdeci">static char * dlError()</div><div class="ttdef"><b>Definition</b> <a href="DynamicLoader_8cpp_source.html#l00100">DynamicLoader.cpp:100</a></div></div>
+<div class="ttc" id="aclasscore_1_1DynamicLoader_html_a42ac52cda1ec4534f1cc9e225dcb31b0"><div class="ttname"><a href="classcore_1_1DynamicLoader.html#a42ac52cda1ec4534f1cc9e225dcb31b0">core::DynamicLoader::dlClose</a></div><div class="ttdeci">static int dlClose(void *handle)</div><div class="ttdef"><b>Definition</b> <a href="DynamicLoader_8cpp_source.html#l00077">DynamicLoader.cpp:77</a></div></div>
+<div class="ttc" id="aclasscore_1_1DynamicLoader_html_a708b7adb431acbc8976968c59692625e"><div class="ttname"><a href="classcore_1_1DynamicLoader.html#a708b7adb431acbc8976968c59692625e">core::DynamicLoader::dlSym</a></div><div class="ttdeci">static void * dlSym(void *handle, const std::string &amp;symbol)</div><div class="ttdef"><b>Definition</b> <a href="DynamicLoader_8cpp_source.html#l00096">DynamicLoader.cpp:96</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="DynamicLoader_8cpp_source.html#l00072">core::DynamicLoader::dlClose()</a>, and <a class="el" href="DynamicLoader_8cpp_source.html#l00095">core::DynamicLoader::dlError()</a>.</p>
+<p class="reference">References <a class="el" href="DynamicLoader_8cpp_source.html#l00077">core::DynamicLoader::dlClose()</a>, and <a class="el" href="DynamicLoader_8cpp_source.html#l00100">core::DynamicLoader::dlError()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -649,9 +649,9 @@ template&lt;typename SubProtocolFactoryT &gt; </div>
 <div class="line"><span class="lineno">  124</span>                }</div>
 <div class="line"><span class="lineno">  125</span>            }</div>
 <div class="line"><span class="lineno">  126</span>        }</div>
-<div class="ttc" id="aclasscore_1_1DynamicLoader_html_aea517617ba189573803a8c3a4c5e9575"><div class="ttname"><a href="classcore_1_1DynamicLoader.html#aea517617ba189573803a8c3a4c5e9575">core::DynamicLoader::dlCloseDelayed</a></div><div class="ttdeci">static void dlCloseDelayed(void *handle)</div><div class="ttdef"><b>Definition</b> <a href="DynamicLoader_8cpp_source.html#l00051">DynamicLoader.cpp:51</a></div></div>
+<div class="ttc" id="aclasscore_1_1DynamicLoader_html_aea517617ba189573803a8c3a4c5e9575"><div class="ttname"><a href="classcore_1_1DynamicLoader.html#aea517617ba189573803a8c3a4c5e9575">core::DynamicLoader::dlCloseDelayed</a></div><div class="ttdeci">static void dlCloseDelayed(void *handle)</div><div class="ttdef"><b>Definition</b> <a href="DynamicLoader_8cpp_source.html#l00056">DynamicLoader.cpp:56</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="DynamicLoader_8cpp_source.html#l00051">core::DynamicLoader::dlCloseDelayed()</a>.</p>
+<p class="reference">References <a class="el" href="DynamicLoader_8cpp_source.html#l00056">core::DynamicLoader::dlCloseDelayed()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -750,7 +750,7 @@ template&lt;typename SubProtocolFactoryT &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceweb.html">web</a></li><li class="navelem"><a class="el" href="namespaceweb_1_1websocket.html">websocket</a></li><li class="navelem"><a class="el" href="classweb_1_1websocket_1_1SubProtocolFactorySelector.html">SubProtocolFactorySelector</a></li>
-    <li class="footer">Generated on Tue Dec 3 2024 20:49:50 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generated on Thu Jan 2 2025 18:50:05 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>

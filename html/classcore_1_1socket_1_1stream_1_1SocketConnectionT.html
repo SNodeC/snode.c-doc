@@ -184,6 +184,10 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:afbc4af7b9846e1d451e93203db03043c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab1ba4bef28274ee3f7e999cc5cb2b7f0" id="r_ab1ba4bef28274ee3f7e999cc5cb2b7f0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab1ba4bef28274ee3f7e999cc5cb2b7f0">doWriteShutdown</a> (const std::function&lt; void()&gt; &amp;onShutdown) override</td></tr>
 <tr class="separator:ab1ba4bef28274ee3f7e999cc5cb2b7f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a774fb5df8ec9ec4aba38bed42f4d64a3" id="r_a774fb5df8ec9ec4aba38bed42f4d64a3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a774fb5df8ec9ec4aba38bed42f4d64a3">onWriteError</a> (int errnum)</td></tr>
+<tr class="separator:a774fb5df8ec9ec4aba38bed42f4d64a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13cc6e32b9ca6896e32afc5702b71de3" id="r_a13cc6e32b9ca6896e32afc5702b71de3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a13cc6e32b9ca6896e32afc5702b71de3">onReadError</a> (int errnum)</td></tr>
+<tr class="separator:a13cc6e32b9ca6896e32afc5702b71de3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classcore_1_1socket_1_1stream_1_1SocketConnection"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_classcore_1_1socket_1_1stream_1_1SocketConnection')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html">core::socket::stream::SocketConnection</a></td></tr>
 <tr class="memitem:a35a22758086b5e277e4a1795d38bfdc7 inherit pro_methods_classcore_1_1socket_1_1stream_1_1SocketConnection" id="r_a35a22758086b5e277e4a1795d38bfdc7"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#a35a22758086b5e277e4a1795d38bfdc7">~SocketConnection</a> ()</td></tr>
 <tr class="separator:a35a22758086b5e277e4a1795d38bfdc7 inherit pro_methods_classcore_1_1socket_1_1stream_1_1SocketConnection"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -198,10 +202,6 @@ Protected Member Functions</h2></td></tr>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:a31fdfd81d737cff38cb5cb0be98aba10" id="r_a31fdfd81d737cff38cb5cb0be98aba10"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a31fdfd81d737cff38cb5cb0be98aba10">onReceivedFromPeer</a> (std::size_t available) final</td></tr>
 <tr class="separator:a31fdfd81d737cff38cb5cb0be98aba10"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a774fb5df8ec9ec4aba38bed42f4d64a3" id="r_a774fb5df8ec9ec4aba38bed42f4d64a3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a774fb5df8ec9ec4aba38bed42f4d64a3">onWriteError</a> (int errnum)</td></tr>
-<tr class="separator:a774fb5df8ec9ec4aba38bed42f4d64a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a13cc6e32b9ca6896e32afc5702b71de3" id="r_a13cc6e32b9ca6896e32afc5702b71de3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a13cc6e32b9ca6896e32afc5702b71de3">onReadError</a> (int errnum)</td></tr>
-<tr class="separator:a13cc6e32b9ca6896e32afc5702b71de3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e55d0f1cd8ca960db2e7a04223cf8f9" id="r_a8e55d0f1cd8ca960db2e7a04223cf8f9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8e55d0f1cd8ca960db2e7a04223cf8f9">onSignal</a> (int signum) final</td></tr>
 <tr class="separator:a8e55d0f1cd8ca960db2e7a04223cf8f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa8dc6a9e6bda050e5ba92d94677b686b" id="r_aa8dc6a9e6bda050e5ba92d94677b686b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa8dc6a9e6bda050e5ba92d94677b686b">readTimeout</a> () final</td></tr>
@@ -476,66 +476,71 @@ template&lt;typename <a class="el" href="#a28c5851987fc33bf8e40b8f3b827bc7b">Phy
 <div class="line"><span class="lineno">   49</span>        , <a class="code hl_typedef" href="#a861a5f72920351356bccb904429ec481">SocketReader</a>(</div>
 <div class="line"><span class="lineno">   50</span>              <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#aa7cc6419cb07a70c39647ed4af2e9dc4">instanceName</a>,</div>
 <div class="line"><span class="lineno">   51</span>              [<span class="keyword">this</span>](<span class="keywordtype">int</span> errnum) -&gt; <span class="keywordtype">void</span> {</div>
-<div class="line"><span class="lineno">   52</span>                  <span class="keyword">const</span> <a class="code hl_class" href="classutils_1_1PreserveErrno.html">utils::PreserveErrno</a> pe(errnum);</div>
-<div class="line"><span class="lineno">   53</span> </div>
-<div class="line"><span class="lineno">   54</span>                  <span class="keywordflow">if</span> (errno == 0) {</div>
-<div class="line"><span class="lineno">   55</span>                      LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; this-&gt;<a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#aa7cc6419cb07a70c39647ed4af2e9dc4">instanceName</a> &lt;&lt; <span class="stringliteral">&quot;: EOF received&quot;</span>;</div>
-<div class="line"><span class="lineno">   56</span>                  } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   57</span>                      PLOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; this-&gt;<a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#aa7cc6419cb07a70c39647ed4af2e9dc4">instanceName</a> &lt;&lt; <span class="stringliteral">&quot;: ReadError&quot;</span>;</div>
-<div class="line"><span class="lineno">   58</span>                  }</div>
-<div class="line"><span class="lineno">   59</span> </div>
-<div class="line"><span class="lineno">   60</span>                  <a class="code hl_function" href="#a13cc6e32b9ca6896e32afc5702b71de3">onReadError</a>(errnum);</div>
-<div class="line"><span class="lineno">   61</span>              },</div>
-<div class="line"><span class="lineno">   62</span>              <a class="code hl_function" href="#aa8dc6a9e6bda050e5ba92d94677b686b">readTimeout</a>,</div>
-<div class="line"><span class="lineno">   63</span>              readBlockSize,</div>
-<div class="line"><span class="lineno">   64</span>              terminateTimeout)</div>
-<div class="line"><span class="lineno">   65</span>        , <a class="code hl_typedef" href="#abf5ec9ee543dda713ad890eb58ddde3d">SocketWriter</a>(</div>
-<div class="line"><span class="lineno">   66</span>              <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#aa7cc6419cb07a70c39647ed4af2e9dc4">instanceName</a>,</div>
-<div class="line"><span class="lineno">   67</span>              [<span class="keyword">this</span>](<span class="keywordtype">int</span> errnum) -&gt; <span class="keywordtype">void</span> {</div>
-<div class="line"><span class="lineno">   68</span>                  <span class="keyword">const</span> <a class="code hl_class" href="classutils_1_1PreserveErrno.html">utils::PreserveErrno</a> pe(errnum);</div>
-<div class="line"><span class="lineno">   69</span> </div>
-<div class="line"><span class="lineno">   70</span>                  PLOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; this-&gt;<a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#aa7cc6419cb07a70c39647ed4af2e9dc4">instanceName</a> &lt;&lt; <span class="stringliteral">&quot;: OnWriteError&quot;</span>;</div>
-<div class="line"><span class="lineno">   71</span> </div>
-<div class="line"><span class="lineno">   72</span>                  <a class="code hl_function" href="#a774fb5df8ec9ec4aba38bed42f4d64a3">onWriteError</a>(errnum);</div>
-<div class="line"><span class="lineno">   73</span>              },</div>
-<div class="line"><span class="lineno">   74</span>              <a class="code hl_function" href="#afaf44c11a7beb1b0b4ca6c8ee2441eae">writeTimeout</a>,</div>
-<div class="line"><span class="lineno">   75</span>              writeBlockSize,</div>
-<div class="line"><span class="lineno">   76</span>              terminateTimeout)</div>
-<div class="line"><span class="lineno">   77</span>        , <a class="code hl_variable" href="#a9fab76462ae22ac6bad708407b76b4bd">physicalSocket</a>(std::move(<a class="code hl_variable" href="#a9fab76462ae22ac6bad708407b76b4bd">physicalSocket</a>))</div>
-<div class="line"><span class="lineno">   78</span>        , <a class="code hl_variable" href="#adf8cf3845521f39bc9a24de02cd82aa1">onDisconnect</a>(<a class="code hl_variable" href="#adf8cf3845521f39bc9a24de02cd82aa1">onDisconnect</a>)     <span class="comment">// cppcheck-suppress selfInitialization</span></div>
-<div class="line"><span class="lineno">   79</span>        , <a class="code hl_variable" href="#a01b40307f2844c0b18d8f8b92845596e">localAddress</a>(<a class="code hl_variable" href="#a01b40307f2844c0b18d8f8b92845596e">localAddress</a>)     <span class="comment">// cppcheck-suppress selfInitialization</span></div>
-<div class="line"><span class="lineno">   80</span>        , <a class="code hl_variable" href="#a04c593f8d66d2e8df44f0700f9b8c3b9">remoteAddress</a>(<a class="code hl_variable" href="#a04c593f8d66d2e8df44f0700f9b8c3b9">remoteAddress</a>) { <span class="comment">// cppcheck-suppress selfInitialization</span></div>
-<div class="line"><span class="lineno">   81</span>        <span class="keywordflow">if</span> (!<a class="code hl_function" href="classcore_1_1DescriptorEventReceiver.html#ace4fa96fa2d29ef1bcaf8fc1cf28100a">SocketReader::enable</a>(this-&gt;<a class="code hl_variable" href="#a9fab76462ae22ac6bad708407b76b4bd">physicalSocket</a>.getFd())) {</div>
-<div class="line"><span class="lineno">   82</span>            <span class="keyword">delete</span> <span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">   83</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!<a class="code hl_function" href="classcore_1_1DescriptorEventReceiver.html#ace4fa96fa2d29ef1bcaf8fc1cf28100a">SocketWriter::enable</a>(this-&gt;<a class="code hl_variable" href="#a9fab76462ae22ac6bad708407b76b4bd">physicalSocket</a>.getFd())) {</div>
-<div class="line"><span class="lineno">   84</span>            <span class="keyword">delete</span> <span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">   85</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   86</span>            <a class="code hl_function" href="classcore_1_1DescriptorEventReceiver.html#aab5e466759c83194c5bc4b41f1a33103">SocketWriter::suspend</a>();</div>
-<div class="line"><span class="lineno">   87</span>        }</div>
-<div class="line"><span class="lineno">   88</span>    }</div>
+<div class="line"><span class="lineno">   52</span>                  {</div>
+<div class="line"><span class="lineno">   53</span>                      <span class="keyword">const</span> <a class="code hl_class" href="classutils_1_1PreserveErrno.html">utils::PreserveErrno</a> pe(errnum);</div>
+<div class="line"><span class="lineno">   54</span>                      <span class="keywordflow">if</span> (errno == 0) {</div>
+<div class="line"><span class="lineno">   55</span>                          LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; this-&gt;<a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#aa7cc6419cb07a70c39647ed4af2e9dc4">instanceName</a> &lt;&lt; <span class="stringliteral">&quot; OnReadError: EOF received&quot;</span>;</div>
+<div class="line"><span class="lineno">   56</span>                      } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">   57</span>                          PLOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; this-&gt;<a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#aa7cc6419cb07a70c39647ed4af2e9dc4">instanceName</a> &lt;&lt; <span class="stringliteral">&quot; OnReadError&quot;</span>;</div>
+<div class="line"><span class="lineno">   58</span>                      }</div>
+<div class="line"><span class="lineno">   59</span>                  }</div>
+<div class="line"><span class="lineno">   60</span>                  <a class="code hl_function" href="classcore_1_1DescriptorEventReceiver.html#a4ab422ce6622a29cee38a0108ee6ccc1">SocketReader::disable</a>();</div>
+<div class="line"><span class="lineno">   61</span> </div>
+<div class="line"><span class="lineno">   62</span>                  <a class="code hl_function" href="#a13cc6e32b9ca6896e32afc5702b71de3">onReadError</a>(errnum);</div>
+<div class="line"><span class="lineno">   63</span>              },</div>
+<div class="line"><span class="lineno">   64</span>              <a class="code hl_function" href="#aa8dc6a9e6bda050e5ba92d94677b686b">readTimeout</a>,</div>
+<div class="line"><span class="lineno">   65</span>              readBlockSize,</div>
+<div class="line"><span class="lineno">   66</span>              terminateTimeout)</div>
+<div class="line"><span class="lineno">   67</span>        , <a class="code hl_typedef" href="#abf5ec9ee543dda713ad890eb58ddde3d">SocketWriter</a>(</div>
+<div class="line"><span class="lineno">   68</span>              <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#aa7cc6419cb07a70c39647ed4af2e9dc4">instanceName</a>,</div>
+<div class="line"><span class="lineno">   69</span>              [<span class="keyword">this</span>](<span class="keywordtype">int</span> errnum) -&gt; <span class="keywordtype">void</span> {</div>
+<div class="line"><span class="lineno">   70</span>                  {</div>
+<div class="line"><span class="lineno">   71</span>                      <span class="keyword">const</span> <a class="code hl_class" href="classutils_1_1PreserveErrno.html">utils::PreserveErrno</a> pe(errnum);</div>
+<div class="line"><span class="lineno">   72</span>                      PLOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; this-&gt;<a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#aa7cc6419cb07a70c39647ed4af2e9dc4">instanceName</a> &lt;&lt; <span class="stringliteral">&quot; OnWriteError&quot;</span>;</div>
+<div class="line"><span class="lineno">   73</span>                  }</div>
+<div class="line"><span class="lineno">   74</span>                  <a class="code hl_function" href="classcore_1_1DescriptorEventReceiver.html#a4ab422ce6622a29cee38a0108ee6ccc1">SocketWriter::disable</a>();</div>
+<div class="line"><span class="lineno">   75</span> </div>
+<div class="line"><span class="lineno">   76</span>                  <a class="code hl_function" href="#a774fb5df8ec9ec4aba38bed42f4d64a3">onWriteError</a>(errnum);</div>
+<div class="line"><span class="lineno">   77</span>              },</div>
+<div class="line"><span class="lineno">   78</span>              <a class="code hl_function" href="#afaf44c11a7beb1b0b4ca6c8ee2441eae">writeTimeout</a>,</div>
+<div class="line"><span class="lineno">   79</span>              writeBlockSize,</div>
+<div class="line"><span class="lineno">   80</span>              terminateTimeout)</div>
+<div class="line"><span class="lineno">   81</span>        , <a class="code hl_variable" href="#a9fab76462ae22ac6bad708407b76b4bd">physicalSocket</a>(std::move(<a class="code hl_variable" href="#a9fab76462ae22ac6bad708407b76b4bd">physicalSocket</a>))</div>
+<div class="line"><span class="lineno">   82</span>        , <a class="code hl_variable" href="#adf8cf3845521f39bc9a24de02cd82aa1">onDisconnect</a>(<a class="code hl_variable" href="#adf8cf3845521f39bc9a24de02cd82aa1">onDisconnect</a>)</div>
+<div class="line"><span class="lineno">   83</span>        , <a class="code hl_variable" href="#a01b40307f2844c0b18d8f8b92845596e">localAddress</a>(<a class="code hl_variable" href="#a01b40307f2844c0b18d8f8b92845596e">localAddress</a>)</div>
+<div class="line"><span class="lineno">   84</span>        , <a class="code hl_variable" href="#a04c593f8d66d2e8df44f0700f9b8c3b9">remoteAddress</a>(<a class="code hl_variable" href="#a04c593f8d66d2e8df44f0700f9b8c3b9">remoteAddress</a>) {</div>
+<div class="line"><span class="lineno">   85</span>        <span class="keywordflow">if</span> (!<a class="code hl_function" href="classcore_1_1DescriptorEventReceiver.html#ace4fa96fa2d29ef1bcaf8fc1cf28100a">SocketReader::enable</a>(this-&gt;<a class="code hl_variable" href="#a9fab76462ae22ac6bad708407b76b4bd">physicalSocket</a>.getFd())) {</div>
+<div class="line"><span class="lineno">   86</span>            <span class="keyword">delete</span> <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">   87</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!<a class="code hl_function" href="classcore_1_1DescriptorEventReceiver.html#ace4fa96fa2d29ef1bcaf8fc1cf28100a">SocketWriter::enable</a>(this-&gt;<a class="code hl_variable" href="#a9fab76462ae22ac6bad708407b76b4bd">physicalSocket</a>.getFd())) {</div>
+<div class="line"><span class="lineno">   88</span>            <span class="keyword">delete</span> <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">   89</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">   90</span>            <a class="code hl_function" href="classcore_1_1DescriptorEventReceiver.html#aab5e466759c83194c5bc4b41f1a33103">SocketWriter::suspend</a>();</div>
+<div class="line"><span class="lineno">   91</span>        }</div>
+<div class="line"><span class="lineno">   92</span>    }</div>
+<div class="ttc" id="aclasscore_1_1DescriptorEventReceiver_html_a4ab422ce6622a29cee38a0108ee6ccc1"><div class="ttname"><a href="classcore_1_1DescriptorEventReceiver.html#a4ab422ce6622a29cee38a0108ee6ccc1">core::DescriptorEventReceiver::disable</a></div><div class="ttdeci">void disable()</div><div class="ttdef"><b>Definition</b> <a href="DescriptorEventReceiver_8cpp_source.html#l00086">DescriptorEventReceiver.cpp:86</a></div></div>
 <div class="ttc" id="aclasscore_1_1DescriptorEventReceiver_html_aab5e466759c83194c5bc4b41f1a33103"><div class="ttname"><a href="classcore_1_1DescriptorEventReceiver.html#aab5e466759c83194c5bc4b41f1a33103">core::DescriptorEventReceiver::suspend</a></div><div class="ttdeci">void suspend()</div><div class="ttdef"><b>Definition</b> <a href="DescriptorEventReceiver_8cpp_source.html#l00104">DescriptorEventReceiver.cpp:104</a></div></div>
 <div class="ttc" id="aclasscore_1_1DescriptorEventReceiver_html_ace4fa96fa2d29ef1bcaf8fc1cf28100a"><div class="ttname"><a href="classcore_1_1DescriptorEventReceiver.html#ace4fa96fa2d29ef1bcaf8fc1cf28100a">core::DescriptorEventReceiver::enable</a></div><div class="ttdeci">bool enable(int fd)</div><div class="ttdef"><b>Definition</b> <a href="DescriptorEventReceiver_8cpp_source.html#l00066">DescriptorEventReceiver.cpp:66</a></div></div>
 <div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketConnectionT_html_a01b40307f2844c0b18d8f8b92845596e"><div class="ttname"><a href="#a01b40307f2844c0b18d8f8b92845596e">core::socket::stream::SocketConnectionT::localAddress</a></div><div class="ttdeci">SocketAddress localAddress</div><div class="ttdef"><b>Definition</b> <a href="SocketConnection_8h_source.html#l00171">SocketConnection.h:171</a></div></div>
 <div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketConnectionT_html_a04c593f8d66d2e8df44f0700f9b8c3b9"><div class="ttname"><a href="#a04c593f8d66d2e8df44f0700f9b8c3b9">core::socket::stream::SocketConnectionT::remoteAddress</a></div><div class="ttdeci">SocketAddress remoteAddress</div><div class="ttdef"><b>Definition</b> <a href="SocketConnection_8h_source.html#l00172">SocketConnection.h:172</a></div></div>
-<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketConnectionT_html_a13cc6e32b9ca6896e32afc5702b71de3"><div class="ttname"><a href="#a13cc6e32b9ca6896e32afc5702b71de3">core::socket::stream::SocketConnectionT::onReadError</a></div><div class="ttdeci">void onReadError(int errnum)</div><div class="ttdef"><b>Definition</b> <a href="SocketConnection_8hpp_source.html#l00217">SocketConnection.hpp:217</a></div></div>
-<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketConnectionT_html_a774fb5df8ec9ec4aba38bed42f4d64a3"><div class="ttname"><a href="#a774fb5df8ec9ec4aba38bed42f4d64a3">core::socket::stream::SocketConnectionT::onWriteError</a></div><div class="ttdeci">void onWriteError(int errnum)</div><div class="ttdef"><b>Definition</b> <a href="SocketConnection_8hpp_source.html#l00212">SocketConnection.hpp:212</a></div></div>
+<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketConnectionT_html_a13cc6e32b9ca6896e32afc5702b71de3"><div class="ttname"><a href="#a13cc6e32b9ca6896e32afc5702b71de3">core::socket::stream::SocketConnectionT::onReadError</a></div><div class="ttdeci">void onReadError(int errnum)</div><div class="ttdef"><b>Definition</b> <a href="SocketConnection_8hpp_source.html#l00227">SocketConnection.hpp:227</a></div></div>
+<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketConnectionT_html_a774fb5df8ec9ec4aba38bed42f4d64a3"><div class="ttname"><a href="#a774fb5df8ec9ec4aba38bed42f4d64a3">core::socket::stream::SocketConnectionT::onWriteError</a></div><div class="ttdeci">void onWriteError(int errnum)</div><div class="ttdef"><b>Definition</b> <a href="SocketConnection_8hpp_source.html#l00222">SocketConnection.hpp:222</a></div></div>
 <div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketConnectionT_html_a861a5f72920351356bccb904429ec481"><div class="ttname"><a href="#a861a5f72920351356bccb904429ec481">core::socket::stream::SocketConnectionT::SocketReader</a></div><div class="ttdeci">SocketReaderT SocketReader</div><div class="ttdef"><b>Definition</b> <a href="SocketConnection_8h_source.html#l00109">SocketConnection.h:109</a></div></div>
-<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketConnectionT_html_a9fab76462ae22ac6bad708407b76b4bd"><div class="ttname"><a href="#a9fab76462ae22ac6bad708407b76b4bd">core::socket::stream::SocketConnectionT::physicalSocket</a></div><div class="ttdeci">PhysicalSocket physicalSocket</div><div class="ttdef"><b>Definition</b> <a href="SocketConnection_8h_source.html#l00156">SocketConnection.h:156</a></div></div>
-<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketConnectionT_html_aa8dc6a9e6bda050e5ba92d94677b686b"><div class="ttname"><a href="#aa8dc6a9e6bda050e5ba92d94677b686b">core::socket::stream::SocketConnectionT::readTimeout</a></div><div class="ttdeci">void readTimeout() final</div><div class="ttdef"><b>Definition</b> <a href="SocketConnection_8hpp_source.html#l00242">SocketConnection.hpp:242</a></div></div>
+<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketConnectionT_html_a9fab76462ae22ac6bad708407b76b4bd"><div class="ttname"><a href="#a9fab76462ae22ac6bad708407b76b4bd">core::socket::stream::SocketConnectionT::physicalSocket</a></div><div class="ttdeci">PhysicalSocket physicalSocket</div><div class="ttdef"><b>Definition</b> <a href="SocketConnection_8h_source.html#l00167">SocketConnection.h:167</a></div></div>
+<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketConnectionT_html_aa8dc6a9e6bda050e5ba92d94677b686b"><div class="ttname"><a href="#aa8dc6a9e6bda050e5ba92d94677b686b">core::socket::stream::SocketConnectionT::readTimeout</a></div><div class="ttdeci">void readTimeout() final</div><div class="ttdef"><b>Definition</b> <a href="SocketConnection_8hpp_source.html#l00252">SocketConnection.hpp:252</a></div></div>
 <div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketConnectionT_html_abf5ec9ee543dda713ad890eb58ddde3d"><div class="ttname"><a href="#abf5ec9ee543dda713ad890eb58ddde3d">core::socket::stream::SocketConnectionT::SocketWriter</a></div><div class="ttdeci">SocketWriterT SocketWriter</div><div class="ttdef"><b>Definition</b> <a href="SocketConnection_8h_source.html#l00110">SocketConnection.h:110</a></div></div>
 <div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketConnectionT_html_adf8cf3845521f39bc9a24de02cd82aa1"><div class="ttname"><a href="#adf8cf3845521f39bc9a24de02cd82aa1">core::socket::stream::SocketConnectionT::onDisconnect</a></div><div class="ttdeci">std::function&lt; void()&gt; onDisconnect</div><div class="ttdef"><b>Definition</b> <a href="SocketConnection_8h_source.html#l00169">SocketConnection.h:169</a></div></div>
-<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketConnectionT_html_afaf44c11a7beb1b0b4ca6c8ee2441eae"><div class="ttname"><a href="#afaf44c11a7beb1b0b4ca6c8ee2441eae">core::socket::stream::SocketConnectionT::writeTimeout</a></div><div class="ttdeci">void writeTimeout() final</div><div class="ttdef"><b>Definition</b> <a href="SocketConnection_8hpp_source.html#l00247">SocketConnection.hpp:247</a></div></div>
+<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketConnectionT_html_afaf44c11a7beb1b0b4ca6c8ee2441eae"><div class="ttname"><a href="#afaf44c11a7beb1b0b4ca6c8ee2441eae">core::socket::stream::SocketConnectionT::writeTimeout</a></div><div class="ttdeci">void writeTimeout() final</div><div class="ttdef"><b>Definition</b> <a href="SocketConnection_8hpp_source.html#l00258">SocketConnection.hpp:258</a></div></div>
 <div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketConnection_html_a78eb0b95d0624a16127e96b1bfbf3e33"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#a78eb0b95d0624a16127e96b1bfbf3e33">core::socket::stream::SocketConnection::configuredServer</a></div><div class="ttdeci">std::string configuredServer</div><div class="ttdef"><b>Definition</b> <a href="SocketConnection_8h_source.html#l00097">SocketConnection.h:97</a></div></div>
 <div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketConnection_html_aa7cc6419cb07a70c39647ed4af2e9dc4"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#aa7cc6419cb07a70c39647ed4af2e9dc4">core::socket::stream::SocketConnection::instanceName</a></div><div class="ttdeci">std::string instanceName</div><div class="ttdef"><b>Definition</b> <a href="SocketConnection_8h_source.html#l00096">SocketConnection.h:96</a></div></div>
 <div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketConnection_html_ad315cae1094cd834ae2f975372e9642e"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#ad315cae1094cd834ae2f975372e9642e">core::socket::stream::SocketConnection::SocketConnection</a></div><div class="ttdeci">SocketConnection(const std::string &amp;instanceName, const std::string &amp;configuredServer)</div><div class="ttdef"><b>Definition</b> <a href="SocketConnection_8cpp_source.html#l00033">SocketConnection.cpp:33</a></div></div>
 <div class="ttc" id="aclassutils_1_1PreserveErrno_html"><div class="ttname"><a href="classutils_1_1PreserveErrno.html">utils::PreserveErrno</a></div><div class="ttdef"><b>Definition</b> <a href="PreserveErrno_8h_source.html#l00031">PreserveErrno.h:31</a></div></div>
 <div class="ttc" id="anamespacecore_html_a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6"><div class="ttname"><a href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">core::TickStatus::TRACE</a></div><div class="ttdeci">@ TRACE</div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="SocketConnection_8hpp_source.html#l00217">core::socket::stream::SocketConnectionT&lt; PhysicalSocketT, SocketReaderT, SocketWriterT &gt;::onReadError()</a>, and <a class="el" href="PreserveErrno_8cpp_source.html#l00028">utils::PreserveErrno::PreserveErrno()</a>.</p>
+<p class="reference">References <a class="el" href="SocketConnection_8hpp_source.html#l00227">core::socket::stream::SocketConnectionT&lt; PhysicalSocketT, SocketReaderT, SocketWriterT &gt;::onReadError()</a>, and <a class="el" href="PreserveErrno_8cpp_source.html#l00028">utils::PreserveErrno::PreserveErrno()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1socket_1_1stream_1_1SocketConnectionT_aac7ef3b8359f3ee08820991b1d8880b6_cgraph.svg" width="1186" height="131"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1socket_1_1stream_1_1SocketConnectionT_aac7ef3b8359f3ee08820991b1d8880b6_cgraph.svg" width="1224" height="155"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -565,9 +570,9 @@ template&lt;typename <a class="el" href="#a28c5851987fc33bf8e40b8f3b827bc7b">Phy
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SocketConnection_8hpp_source.html#l00091">91</a> of file <a class="el" href="SocketConnection_8hpp_source.html">SocketConnection.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   91</span>                                                                                      {</div>
-<div class="line"><span class="lineno">   92</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="SocketConnection_8hpp_source.html#l00095">95</a> of file <a class="el" href="SocketConnection_8hpp_source.html">SocketConnection.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   95</span>                                                                                      {</div>
+<div class="line"><span class="lineno">   96</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -599,23 +604,22 @@ template&lt;typename <a class="el" href="#a28c5851987fc33bf8e40b8f3b827bc7b">Phy
 
 <p>Implements <a class="el" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#aed398e81ede92d1d1cfae2597580ad2c">core::socket::stream::SocketConnection</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="SocketConnection_8hpp_source.html#l00171">171</a> of file <a class="el" href="SocketConnection_8hpp_source.html">SocketConnection.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  171</span>                                                                              {</div>
-<div class="line"><span class="lineno">  172</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="classcore_1_1DescriptorEventReceiver.html#ac5dc7e86ddad09f5bd3eeb0c74f2e7f9">SocketWriter::isEnabled</a>()) {</div>
-<div class="line"><span class="lineno">  173</span>            <a class="code hl_function" href="classcore_1_1DescriptorEventReceiver.html#a4ab422ce6622a29cee38a0108ee6ccc1">SocketWriter::disable</a>();</div>
-<div class="line"><span class="lineno">  174</span>        }</div>
-<div class="line"><span class="lineno">  175</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="classcore_1_1DescriptorEventReceiver.html#ac5dc7e86ddad09f5bd3eeb0c74f2e7f9">SocketReader::isEnabled</a>()) {</div>
-<div class="line"><span class="lineno">  176</span>            <a class="code hl_function" href="classcore_1_1DescriptorEventReceiver.html#a4ab422ce6622a29cee38a0108ee6ccc1">SocketReader::disable</a>();</div>
-<div class="line"><span class="lineno">  177</span>        }</div>
-<div class="line"><span class="lineno">  178</span>    }</div>
-<div class="ttc" id="aclasscore_1_1DescriptorEventReceiver_html_a4ab422ce6622a29cee38a0108ee6ccc1"><div class="ttname"><a href="classcore_1_1DescriptorEventReceiver.html#a4ab422ce6622a29cee38a0108ee6ccc1">core::DescriptorEventReceiver::disable</a></div><div class="ttdeci">void disable()</div><div class="ttdef"><b>Definition</b> <a href="DescriptorEventReceiver_8cpp_source.html#l00086">DescriptorEventReceiver.cpp:86</a></div></div>
+<p class="definition">Definition at line <a class="el" href="SocketConnection_8hpp_source.html#l00179">179</a> of file <a class="el" href="SocketConnection_8hpp_source.html">SocketConnection.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  179</span>                                                                              {</div>
+<div class="line"><span class="lineno">  180</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="classcore_1_1DescriptorEventReceiver.html#ac5dc7e86ddad09f5bd3eeb0c74f2e7f9">SocketWriter::isEnabled</a>()) {</div>
+<div class="line"><span class="lineno">  181</span>            <a class="code hl_function" href="classcore_1_1DescriptorEventReceiver.html#a4ab422ce6622a29cee38a0108ee6ccc1">SocketWriter::disable</a>();</div>
+<div class="line"><span class="lineno">  182</span>        }</div>
+<div class="line"><span class="lineno">  183</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="classcore_1_1DescriptorEventReceiver.html#ac5dc7e86ddad09f5bd3eeb0c74f2e7f9">SocketReader::isEnabled</a>()) {</div>
+<div class="line"><span class="lineno">  184</span>            <a class="code hl_function" href="classcore_1_1DescriptorEventReceiver.html#a4ab422ce6622a29cee38a0108ee6ccc1">SocketReader::disable</a>();</div>
+<div class="line"><span class="lineno">  185</span>        }</div>
+<div class="line"><span class="lineno">  186</span>    }</div>
 <div class="ttc" id="aclasscore_1_1DescriptorEventReceiver_html_ac5dc7e86ddad09f5bd3eeb0c74f2e7f9"><div class="ttname"><a href="classcore_1_1DescriptorEventReceiver.html#ac5dc7e86ddad09f5bd3eeb0c74f2e7f9">core::DescriptorEventReceiver::isEnabled</a></div><div class="ttdeci">bool isEnabled() const</div><div class="ttdef"><b>Definition</b> <a href="DescriptorEventReceiver_8cpp_source.html#l00100">DescriptorEventReceiver.cpp:100</a></div></div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="SocketConnection_8hpp_source.html#l00194">core::socket::stream::SocketConnectionT&lt; PhysicalSocketT, SocketReaderT, SocketWriterT &gt;::onReceivedFromPeer()</a>, <a class="el" href="SocketConnection_8hpp_source.html#l00242">core::socket::stream::SocketConnectionT&lt; PhysicalSocketT, SocketReaderT, SocketWriterT &gt;::readTimeout()</a>, and <a class="el" href="SocketConnection_8hpp_source.html#l00247">core::socket::stream::SocketConnectionT&lt; PhysicalSocketT, SocketReaderT, SocketWriterT &gt;::writeTimeout()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SocketConnection_8hpp_source.html#l00204">core::socket::stream::SocketConnectionT&lt; PhysicalSocketT, SocketReaderT, SocketWriterT &gt;::onReceivedFromPeer()</a>, <a class="el" href="SocketConnection_8hpp_source.html#l00252">core::socket::stream::SocketConnectionT&lt; PhysicalSocketT, SocketReaderT, SocketWriterT &gt;::readTimeout()</a>, <a class="el" href="SocketConnection_8hpp_source.html#l00163">core::socket::stream::SocketConnectionT&lt; PhysicalSocketT, SocketReaderT, SocketWriterT &gt;::shutdownWrite()</a>, and <a class="el" href="SocketConnection_8hpp_source.html#l00258">core::socket::stream::SocketConnectionT&lt; PhysicalSocketT, SocketReaderT, SocketWriterT &gt;::writeTimeout()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1socket_1_1stream_1_1SocketConnectionT_a237af1eae202e2239253f429f83168bf_icgraph.svg" width="415" height="223"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1socket_1_1stream_1_1SocketConnectionT_a237af1eae202e2239253f429f83168bf_icgraph.svg" width="415" height="302"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -645,20 +649,30 @@ template&lt;typename <a class="el" href="#a28c5851987fc33bf8e40b8f3b827bc7b">Phy
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SocketConnection_8hpp_source.html#l00181">181</a> of file <a class="el" href="SocketConnection_8hpp_source.html">SocketConnection.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  181</span>                                                                                                                             {</div>
-<div class="line"><span class="lineno">  182</span>        errno = 0;</div>
-<div class="line"><span class="lineno">  183</span> </div>
-<div class="line"><span class="lineno">  184</span>        LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#aa7cc6419cb07a70c39647ed4af2e9dc4">instanceName</a> &lt;&lt; <span class="stringliteral">&quot;: Do syscall shutdown (WR)&quot;</span>;</div>
-<div class="line"><span class="lineno">  185</span> </div>
-<div class="line"><span class="lineno">  186</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a9fab76462ae22ac6bad708407b76b4bd">physicalSocket</a>.shutdown(PhysicalSocket::SHUT::WR) != 0) {</div>
-<div class="line"><span class="lineno">  187</span>            PLOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#aa7cc6419cb07a70c39647ed4af2e9dc4">instanceName</a> &lt;&lt; <span class="stringliteral">&quot;: SocketWriter::doWriteShutdown&quot;</span>;</div>
-<div class="line"><span class="lineno">  188</span>        }</div>
-<div class="line"><span class="lineno">  189</span> </div>
-<div class="line"><span class="lineno">  190</span>        onShutdown();</div>
-<div class="line"><span class="lineno">  191</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="SocketConnection_8hpp_source.html#l00189">189</a> of file <a class="el" href="SocketConnection_8hpp_source.html">SocketConnection.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  189</span>                                                                                                                             {</div>
+<div class="line"><span class="lineno">  190</span>        errno = 0;</div>
+<div class="line"><span class="lineno">  191</span> </div>
+<div class="line"><span class="lineno">  192</span>        <a class="code hl_function" href="#a7cd0e612d96405a09099fac7347816c4">setTimeout</a>(<a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketWriter.html#a178b47d074ce70242f68d4f7ae374688">SocketWriter::terminateTimeout</a>);</div>
+<div class="line"><span class="lineno">  193</span> </div>
+<div class="line"><span class="lineno">  194</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a9fab76462ae22ac6bad708407b76b4bd">physicalSocket</a>.shutdown(PhysicalSocket::SHUT::WR) == 0) {</div>
+<div class="line"><span class="lineno">  195</span>            LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#aa7cc6419cb07a70c39647ed4af2e9dc4">instanceName</a> &lt;&lt; <span class="stringliteral">&quot; Shutdown (WR, &quot;</span> &lt;&lt; <a class="code hl_function" href="#ace10d73598b7e6d7a6ccf700c9ca8a54">getFd</a>() &lt;&lt; <span class="stringliteral">&quot;) success&quot;</span>;</div>
+<div class="line"><span class="lineno">  196</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  197</span>            PLOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#aa7cc6419cb07a70c39647ed4af2e9dc4">instanceName</a> &lt;&lt; <span class="stringliteral">&quot; Shutdown (WR, &quot;</span> &lt;&lt; <a class="code hl_function" href="#ace10d73598b7e6d7a6ccf700c9ca8a54">getFd</a>() &lt;&lt; <span class="stringliteral">&quot;)&quot;</span>;</div>
+<div class="line"><span class="lineno">  198</span>        }</div>
+<div class="line"><span class="lineno">  199</span> </div>
+<div class="line"><span class="lineno">  200</span>        onShutdown();</div>
+<div class="line"><span class="lineno">  201</span>    }</div>
+<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketConnectionT_html_a7cd0e612d96405a09099fac7347816c4"><div class="ttname"><a href="#a7cd0e612d96405a09099fac7347816c4">core::socket::stream::SocketConnectionT::setTimeout</a></div><div class="ttdeci">void setTimeout(const utils::Timeval &amp;timeout) final</div><div class="ttdef"><b>Definition</b> <a href="SocketConnection_8hpp_source.html#l00099">SocketConnection.hpp:99</a></div></div>
+<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketConnectionT_html_ace10d73598b7e6d7a6ccf700c9ca8a54"><div class="ttname"><a href="#ace10d73598b7e6d7a6ccf700c9ca8a54">core::socket::stream::SocketConnectionT::getFd</a></div><div class="ttdeci">int getFd() const</div><div class="ttdef"><b>Definition</b> <a href="SocketConnection_8hpp_source.html#l00105">SocketConnection.hpp:105</a></div></div>
+<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketWriter_html_a178b47d074ce70242f68d4f7ae374688"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1SocketWriter.html#a178b47d074ce70242f68d4f7ae374688">core::socket::stream::SocketWriter::terminateTimeout</a></div><div class="ttdeci">utils::Timeval terminateTimeout</div><div class="ttdef"><b>Definition</b> <a href="SocketWriter_8h_source.html#l00093">SocketWriter.h:93</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="SocketConnection_8h_source.html#l00096">core::socket::stream::SocketConnection::instanceName</a>, and <a class="el" href="SocketConnection_8h_source.html#l00156">core::socket::stream::SocketConnectionT&lt; PhysicalSocketT, SocketReaderT, SocketWriterT &gt;::physicalSocket</a>.</p>
+<p class="reference">References <a class="el" href="SocketConnection_8hpp_source.html#l00105">core::socket::stream::SocketConnectionT&lt; PhysicalSocketT, SocketReaderT, SocketWriterT &gt;::getFd()</a>, <a class="el" href="SocketConnection_8h_source.html#l00096">core::socket::stream::SocketConnection::instanceName</a>, <a class="el" href="SocketConnection_8h_source.html#l00167">core::socket::stream::SocketConnectionT&lt; PhysicalSocketT, SocketReaderT, SocketWriterT &gt;::physicalSocket</a>, and <a class="el" href="SocketConnection_8hpp_source.html#l00099">core::socket::stream::SocketConnectionT&lt; PhysicalSocketT, SocketReaderT, SocketWriterT &gt;::setTimeout()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1socket_1_1stream_1_1SocketConnectionT_ab1ba4bef28274ee3f7e999cc5cb2b7f0_cgraph.svg" width="419" height="131"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 
 </div>
 </div>
@@ -679,12 +693,19 @@ template&lt;typename <a class="el" href="#a28c5851987fc33bf8e40b8f3b827bc7b">Phy
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SocketConnection_8hpp_source.html#l00101">101</a> of file <a class="el" href="SocketConnection_8hpp_source.html">SocketConnection.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  101</span>                                                                                   {</div>
-<div class="line"><span class="lineno">  102</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#a9fab76462ae22ac6bad708407b76b4bd">physicalSocket</a>.getFd();</div>
-<div class="line"><span class="lineno">  103</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="SocketConnection_8hpp_source.html#l00105">105</a> of file <a class="el" href="SocketConnection_8hpp_source.html">SocketConnection.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  105</span>                                                                                   {</div>
+<div class="line"><span class="lineno">  106</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#a9fab76462ae22ac6bad708407b76b4bd">physicalSocket</a>.getFd();</div>
+<div class="line"><span class="lineno">  107</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="SocketConnection_8h_source.html#l00156">core::socket::stream::SocketConnectionT&lt; PhysicalSocketT, SocketReaderT, SocketWriterT &gt;::physicalSocket</a>.</p>
+<p class="reference">References <a class="el" href="SocketConnection_8h_source.html#l00167">core::socket::stream::SocketConnectionT&lt; PhysicalSocketT, SocketReaderT, SocketWriterT &gt;::physicalSocket</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="SocketConnection_8hpp_source.html#l00189">core::socket::stream::SocketConnectionT&lt; PhysicalSocketT, SocketReaderT, SocketWriterT &gt;::doWriteShutdown()</a>, <a class="el" href="SocketConnection_8hpp_source.html#l00232">core::socket::stream::SocketConnectionT&lt; PhysicalSocketT, SocketReaderT, SocketWriterT &gt;::onSignal()</a>, <a class="el" href="SocketConnection_8hpp_source.html#l00252">core::socket::stream::SocketConnectionT&lt; PhysicalSocketT, SocketReaderT, SocketWriterT &gt;::readTimeout()</a>, <a class="el" href="SocketConnection_8hpp_source.html#l00150">core::socket::stream::SocketConnectionT&lt; PhysicalSocketT, SocketReaderT, SocketWriterT &gt;::shutdownRead()</a>, <a class="el" href="SocketConnection_8hpp_source.html#l00163">core::socket::stream::SocketConnectionT&lt; PhysicalSocketT, SocketReaderT, SocketWriterT &gt;::shutdownWrite()</a>, and <a class="el" href="SocketConnection_8hpp_source.html#l00258">core::socket::stream::SocketConnectionT&lt; PhysicalSocketT, SocketReaderT, SocketWriterT &gt;::writeTimeout()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1socket_1_1stream_1_1SocketConnectionT_ace10d73598b7e6d7a6ccf700c9ca8a54_icgraph.svg" width="419" height="459"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 
 </div>
 </div>
@@ -715,10 +736,10 @@ template&lt;typename <a class="el" href="#a28c5851987fc33bf8e40b8f3b827bc7b">Phy
 
 <p>Implements <a class="el" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#a2930833c6c0df2a0febcf76d95ad4028">core::socket::stream::SocketConnection</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="SocketConnection_8hpp_source.html#l00107">107</a> of file <a class="el" href="SocketConnection_8hpp_source.html">SocketConnection.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  107</span>                                                                                         {</div>
-<div class="line"><span class="lineno">  108</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#a01b40307f2844c0b18d8f8b92845596e">localAddress</a>;</div>
-<div class="line"><span class="lineno">  109</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="SocketConnection_8hpp_source.html#l00111">111</a> of file <a class="el" href="SocketConnection_8hpp_source.html">SocketConnection.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  111</span>                                                                                         {</div>
+<div class="line"><span class="lineno">  112</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#a01b40307f2844c0b18d8f8b92845596e">localAddress</a>;</div>
+<div class="line"><span class="lineno">  113</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="SocketConnection_8h_source.html#l00171">core::socket::stream::SocketConnectionT&lt; PhysicalSocketT, SocketReaderT, SocketWriterT &gt;::localAddress</a>.</p>
 
@@ -751,10 +772,10 @@ template&lt;typename <a class="el" href="#a28c5851987fc33bf8e40b8f3b827bc7b">Phy
 
 <p>Implements <a class="el" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#a8676b9150b85fb2d2e5ef1d8daee0480">core::socket::stream::SocketConnection</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="SocketConnection_8hpp_source.html#l00113">113</a> of file <a class="el" href="SocketConnection_8hpp_source.html">SocketConnection.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  113</span>                                                                                          {</div>
-<div class="line"><span class="lineno">  114</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#a04c593f8d66d2e8df44f0700f9b8c3b9">remoteAddress</a>;</div>
-<div class="line"><span class="lineno">  115</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="SocketConnection_8hpp_source.html#l00117">117</a> of file <a class="el" href="SocketConnection_8hpp_source.html">SocketConnection.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  117</span>                                                                                          {</div>
+<div class="line"><span class="lineno">  118</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#a04c593f8d66d2e8df44f0700f9b8c3b9">remoteAddress</a>;</div>
+<div class="line"><span class="lineno">  119</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="SocketConnection_8h_source.html#l00172">core::socket::stream::SocketConnectionT&lt; PhysicalSocketT, SocketReaderT, SocketWriterT &gt;::remoteAddress</a>.</p>
 
@@ -780,25 +801,25 @@ template&lt;typename <a class="el" href="#a28c5851987fc33bf8e40b8f3b827bc7b">Phy
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SocketConnection_8hpp_source.html#l00217">217</a> of file <a class="el" href="SocketConnection_8hpp_source.html">SocketConnection.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  217</span>                                                                                              {</div>
-<div class="line"><span class="lineno">  218</span>        <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#a1c808a61977a62399c5b017a8d48c291">socketContext</a>-&gt;<a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a6c721eab494ef7c1566defe4361e6af6">onReadError</a>(errnum);</div>
-<div class="line"><span class="lineno">  219</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="SocketConnection_8hpp_source.html#l00227">227</a> of file <a class="el" href="SocketConnection_8hpp_source.html">SocketConnection.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  227</span>                                                                                              {</div>
+<div class="line"><span class="lineno">  228</span>        <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#a1c808a61977a62399c5b017a8d48c291">socketContext</a>-&gt;<a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a6c721eab494ef7c1566defe4361e6af6">onReadError</a>(errnum);</div>
+<div class="line"><span class="lineno">  229</span>    }</div>
 <div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketConnection_html_a1c808a61977a62399c5b017a8d48c291"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#a1c808a61977a62399c5b017a8d48c291">core::socket::stream::SocketConnection::socketContext</a></div><div class="ttdeci">core::socket::stream::SocketContext * socketContext</div><div class="ttdef"><b>Definition</b> <a href="SocketConnection_8h_source.html#l00093">SocketConnection.h:93</a></div></div>
-<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketContext_html_a6c721eab494ef7c1566defe4361e6af6"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a6c721eab494ef7c1566defe4361e6af6">core::socket::stream::SocketContext::onReadError</a></div><div class="ttdeci">void onReadError(int errnum) override</div><div class="ttdef"><b>Definition</b> <a href="core_2socket_2stream_2SocketContext_8cpp_source.html#l00078">SocketContext.cpp:78</a></div></div>
+<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketContext_html_a6c721eab494ef7c1566defe4361e6af6"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a6c721eab494ef7c1566defe4361e6af6">core::socket::stream::SocketContext::onReadError</a></div><div class="ttdeci">void onReadError(int errnum) override</div><div class="ttdef"><b>Definition</b> <a href="core_2socket_2stream_2SocketContext_8cpp_source.html#l00081">SocketContext.cpp:81</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="core_2socket_2stream_2SocketContext_8cpp_source.html#l00078">core::socket::stream::SocketContext::onReadError()</a>, and <a class="el" href="SocketConnection_8h_source.html#l00093">core::socket::stream::SocketConnection::socketContext</a>.</p>
+<p class="reference">References <a class="el" href="core_2socket_2stream_2SocketContext_8cpp_source.html#l00081">core::socket::stream::SocketContext::onReadError()</a>, and <a class="el" href="SocketConnection_8h_source.html#l00093">core::socket::stream::SocketConnection::socketContext</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="SocketConnection_8hpp_source.html#l00037">core::socket::stream::SocketConnectionT&lt; PhysicalSocketT, SocketReaderT, SocketWriterT &gt;::SocketConnectionT()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1socket_1_1stream_1_1SocketConnectionT_a13cc6e32b9ca6896e32afc5702b71de3_cgraph.svg" width="976" height="66"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1socket_1_1stream_1_1SocketConnectionT_a13cc6e32b9ca6896e32afc5702b71de3_cgraph.svg" width="1015" height="123"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -833,30 +854,30 @@ template&lt;typename <a class="el" href="#a28c5851987fc33bf8e40b8f3b827bc7b">Phy
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SocketConnection_8hpp_source.html#l00194">194</a> of file <a class="el" href="SocketConnection_8hpp_source.html">SocketConnection.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  194</span>                                                                                                              {</div>
-<div class="line"><span class="lineno">  195</span>        std::size_t consumed = <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#a1c808a61977a62399c5b017a8d48c291">socketContext</a>-&gt;<a class="code hl_function" href="classcore_1_1socket_1_1SocketContext.html#a34c520f17818f029395d2d2b4babc882">onReceivedFromPeer</a>();</div>
-<div class="line"><span class="lineno">  196</span> </div>
-<div class="line"><span class="lineno">  197</span>        <span class="keywordflow">if</span> (available != 0 &amp;&amp; consumed == 0) {</div>
-<div class="line"><span class="lineno">  198</span>            LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#aa7cc6419cb07a70c39647ed4af2e9dc4">instanceName</a> &lt;&lt; <span class="stringliteral">&quot;: Data available: &quot;</span> &lt;&lt; available &lt;&lt; <span class="stringliteral">&quot; but nothing read&quot;</span>;</div>
-<div class="line"><span class="lineno">  199</span> </div>
-<div class="line"><span class="lineno">  200</span>            <a class="code hl_function" href="#a237af1eae202e2239253f429f83168bf">close</a>();</div>
-<div class="line"><span class="lineno">  201</span> </div>
-<div class="line"><span class="lineno">  202</span>            <span class="keyword">delete</span> <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#a17ddc2779f02bced3e42036891f66227">newSocketContext</a>; <span class="comment">// delete of nullptr is valid since C++14!</span></div>
-<div class="line"><span class="lineno">  203</span>            <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#a17ddc2779f02bced3e42036891f66227">newSocketContext</a> = <span class="keyword">nullptr</span>;</div>
-<div class="line"><span class="lineno">  204</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#a17ddc2779f02bced3e42036891f66227">newSocketContext</a> != <span class="keyword">nullptr</span>) { <span class="comment">// Perform a pending SocketContextSwitch</span></div>
-<div class="line"><span class="lineno">  205</span>            <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#a43cb109e8979fbdb29cef18ec8281cf2">disconnectCurrentSocketContext</a>();</div>
-<div class="line"><span class="lineno">  206</span>            <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#a76fcc6939b029187a81a573e07fc1379">setSocketContext</a>(<a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#a17ddc2779f02bced3e42036891f66227">newSocketContext</a>);</div>
-<div class="line"><span class="lineno">  207</span>            <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#a17ddc2779f02bced3e42036891f66227">newSocketContext</a> = <span class="keyword">nullptr</span>;</div>
-<div class="line"><span class="lineno">  208</span>        }</div>
-<div class="line"><span class="lineno">  209</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="SocketConnection_8hpp_source.html#l00204">204</a> of file <a class="el" href="SocketConnection_8hpp_source.html">SocketConnection.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  204</span>                                                                                                              {</div>
+<div class="line"><span class="lineno">  205</span>        std::size_t consumed = <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#a1c808a61977a62399c5b017a8d48c291">socketContext</a>-&gt;<a class="code hl_function" href="classcore_1_1socket_1_1SocketContext.html#a34c520f17818f029395d2d2b4babc882">onReceivedFromPeer</a>();</div>
+<div class="line"><span class="lineno">  206</span> </div>
+<div class="line"><span class="lineno">  207</span>        <span class="keywordflow">if</span> (available != 0 &amp;&amp; consumed == 0) {</div>
+<div class="line"><span class="lineno">  208</span>            LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#aa7cc6419cb07a70c39647ed4af2e9dc4">instanceName</a> &lt;&lt; <span class="stringliteral">&quot; Data available: &quot;</span> &lt;&lt; available &lt;&lt; <span class="stringliteral">&quot; but nothing read&quot;</span>;</div>
+<div class="line"><span class="lineno">  209</span> </div>
+<div class="line"><span class="lineno">  210</span>            <a class="code hl_function" href="#a237af1eae202e2239253f429f83168bf">close</a>();</div>
+<div class="line"><span class="lineno">  211</span> </div>
+<div class="line"><span class="lineno">  212</span>            <span class="keyword">delete</span> <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#a17ddc2779f02bced3e42036891f66227">newSocketContext</a>; <span class="comment">// delete of nullptr is valid since C++14!</span></div>
+<div class="line"><span class="lineno">  213</span>            <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#a17ddc2779f02bced3e42036891f66227">newSocketContext</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">  214</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#a17ddc2779f02bced3e42036891f66227">newSocketContext</a> != <span class="keyword">nullptr</span>) { <span class="comment">// Perform a pending SocketContextSwitch</span></div>
+<div class="line"><span class="lineno">  215</span>            <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#a43cb109e8979fbdb29cef18ec8281cf2">disconnectCurrentSocketContext</a>();</div>
+<div class="line"><span class="lineno">  216</span>            <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#a76fcc6939b029187a81a573e07fc1379">setSocketContext</a>(<a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#a17ddc2779f02bced3e42036891f66227">newSocketContext</a>);</div>
+<div class="line"><span class="lineno">  217</span>            <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#a17ddc2779f02bced3e42036891f66227">newSocketContext</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">  218</span>        }</div>
+<div class="line"><span class="lineno">  219</span>    }</div>
 <div class="ttc" id="aclasscore_1_1socket_1_1SocketContext_html_a34c520f17818f029395d2d2b4babc882"><div class="ttname"><a href="classcore_1_1socket_1_1SocketContext.html#a34c520f17818f029395d2d2b4babc882">core::socket::SocketContext::onReceivedFromPeer</a></div><div class="ttdeci">virtual std::size_t onReceivedFromPeer()=0</div></div>
-<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketConnectionT_html_a237af1eae202e2239253f429f83168bf"><div class="ttname"><a href="#a237af1eae202e2239253f429f83168bf">core::socket::stream::SocketConnectionT::close</a></div><div class="ttdeci">void close() final</div><div class="ttdef"><b>Definition</b> <a href="SocketConnection_8hpp_source.html#l00171">SocketConnection.hpp:171</a></div></div>
+<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketConnectionT_html_a237af1eae202e2239253f429f83168bf"><div class="ttname"><a href="#a237af1eae202e2239253f429f83168bf">core::socket::stream::SocketConnectionT::close</a></div><div class="ttdeci">void close() final</div><div class="ttdef"><b>Definition</b> <a href="SocketConnection_8hpp_source.html#l00179">SocketConnection.hpp:179</a></div></div>
 <div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketConnection_html_a17ddc2779f02bced3e42036891f66227"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#a17ddc2779f02bced3e42036891f66227">core::socket::stream::SocketConnection::newSocketContext</a></div><div class="ttdeci">core::socket::stream::SocketContext * newSocketContext</div><div class="ttdef"><b>Definition</b> <a href="SocketConnection_8h_source.html#l00094">SocketConnection.h:94</a></div></div>
-<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketConnection_html_a43cb109e8979fbdb29cef18ec8281cf2"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#a43cb109e8979fbdb29cef18ec8281cf2">core::socket::stream::SocketConnection::disconnectCurrentSocketContext</a></div><div class="ttdeci">void disconnectCurrentSocketContext()</div><div class="ttdef"><b>Definition</b> <a href="SocketConnection_8cpp_source.html#l00085">SocketConnection.cpp:85</a></div></div>
+<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketConnection_html_a43cb109e8979fbdb29cef18ec8281cf2"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#a43cb109e8979fbdb29cef18ec8281cf2">core::socket::stream::SocketConnection::disconnectCurrentSocketContext</a></div><div class="ttdeci">void disconnectCurrentSocketContext()</div><div class="ttdef"><b>Definition</b> <a href="SocketConnection_8cpp_source.html#l00086">SocketConnection.cpp:86</a></div></div>
 <div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketConnection_html_a76fcc6939b029187a81a573e07fc1379"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#a76fcc6939b029187a81a573e07fc1379">core::socket::stream::SocketConnection::setSocketContext</a></div><div class="ttdeci">void setSocketContext(SocketContext *socketContext)</div><div class="ttdef"><b>Definition</b> <a href="SocketConnection_8cpp_source.html#l00045">SocketConnection.cpp:45</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="SocketConnection_8hpp_source.html#l00171">core::socket::stream::SocketConnectionT&lt; PhysicalSocketT, SocketReaderT, SocketWriterT &gt;::close()</a>, <a class="el" href="SocketConnection_8cpp_source.html#l00085">core::socket::stream::SocketConnection::disconnectCurrentSocketContext()</a>, <a class="el" href="SocketConnection_8h_source.html#l00096">core::socket::stream::SocketConnection::instanceName</a>, <a class="el" href="SocketConnection_8h_source.html#l00094">core::socket::stream::SocketConnection::newSocketContext</a>, <a class="el" href="classcore_1_1socket_1_1SocketContext.html#a34c520f17818f029395d2d2b4babc882">core::socket::SocketContext::onReceivedFromPeer()</a>, <a class="el" href="SocketConnection_8cpp_source.html#l00045">core::socket::stream::SocketConnection::setSocketContext()</a>, and <a class="el" href="SocketConnection_8h_source.html#l00093">core::socket::stream::SocketConnection::socketContext</a>.</p>
+<p class="reference">References <a class="el" href="SocketConnection_8hpp_source.html#l00179">core::socket::stream::SocketConnectionT&lt; PhysicalSocketT, SocketReaderT, SocketWriterT &gt;::close()</a>, <a class="el" href="SocketConnection_8cpp_source.html#l00086">core::socket::stream::SocketConnection::disconnectCurrentSocketContext()</a>, <a class="el" href="SocketConnection_8h_source.html#l00096">core::socket::stream::SocketConnection::instanceName</a>, <a class="el" href="SocketConnection_8h_source.html#l00094">core::socket::stream::SocketConnection::newSocketContext</a>, <a class="el" href="classcore_1_1socket_1_1SocketContext.html#a34c520f17818f029395d2d2b4babc882">core::socket::SocketContext::onReceivedFromPeer()</a>, <a class="el" href="SocketConnection_8cpp_source.html#l00045">core::socket::stream::SocketConnection::setSocketContext()</a>, and <a class="el" href="SocketConnection_8h_source.html#l00093">core::socket::stream::SocketConnection::socketContext</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -890,33 +911,33 @@ template&lt;typename <a class="el" href="#a28c5851987fc33bf8e40b8f3b827bc7b">Phy
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SocketConnection_8hpp_source.html#l00222">222</a> of file <a class="el" href="SocketConnection_8hpp_source.html">SocketConnection.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  222</span>                                                                                           {</div>
-<div class="line"><span class="lineno">  223</span>        <span class="keywordflow">switch</span> (signum) {</div>
-<div class="line"><span class="lineno">  224</span>            <span class="keywordflow">case</span> SIGINT:</div>
-<div class="line"><span class="lineno">  225</span>                [[fallthrough]];</div>
-<div class="line"><span class="lineno">  226</span>            <span class="keywordflow">case</span> SIGTERM:</div>
-<div class="line"><span class="lineno">  227</span>                [[fallthrough]];</div>
-<div class="line"><span class="lineno">  228</span>            <span class="keywordflow">case</span> SIGABRT:</div>
-<div class="line"><span class="lineno">  229</span>                [[fallthrough]];</div>
-<div class="line"><span class="lineno">  230</span>            <span class="keywordflow">case</span> SIGHUP:</div>
-<div class="line"><span class="lineno">  231</span>                LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#aa7cc6419cb07a70c39647ed4af2e9dc4">instanceName</a> &lt;&lt; <span class="stringliteral">&quot;: Shutting down due to signal &#39;&quot;</span> &lt;&lt; strsignal(signum) &lt;&lt; <span class="stringliteral">&quot;&#39; (SIG&quot;</span></div>
-<div class="line"><span class="lineno">  232</span>                           &lt;&lt; <a class="code hl_function" href="namespaceutils_1_1system.html#aea0a8f4d2d6d6d0fa7fcc401c5f08f1c">utils::system::sigabbrev_np</a>(signum) &lt;&lt; <span class="stringliteral">&quot; = &quot;</span> &lt;&lt; signum &lt;&lt; <span class="stringliteral">&quot;)&quot;</span>;</div>
-<div class="line"><span class="lineno">  233</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  234</span>            <span class="keywordflow">case</span> SIGALRM:</div>
-<div class="line"><span class="lineno">  235</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  236</span>        }</div>
-<div class="line"><span class="lineno">  237</span> </div>
-<div class="line"><span class="lineno">  238</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#a1c808a61977a62399c5b017a8d48c291">socketContext</a> != <span class="keyword">nullptr</span> ? <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#a1c808a61977a62399c5b017a8d48c291">socketContext</a>-&gt;<a class="code hl_function" href="classcore_1_1socket_1_1SocketContext.html#ad5a47157710544f1d90f1ebdf15fe49e">onSignal</a>(signum) : <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  239</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="SocketConnection_8hpp_source.html#l00232">232</a> of file <a class="el" href="SocketConnection_8hpp_source.html">SocketConnection.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  232</span>                                                                                           {</div>
+<div class="line"><span class="lineno">  233</span>        <span class="keywordflow">switch</span> (signum) {</div>
+<div class="line"><span class="lineno">  234</span>            <span class="keywordflow">case</span> SIGINT:</div>
+<div class="line"><span class="lineno">  235</span>                [[fallthrough]];</div>
+<div class="line"><span class="lineno">  236</span>            <span class="keywordflow">case</span> SIGTERM:</div>
+<div class="line"><span class="lineno">  237</span>                [[fallthrough]];</div>
+<div class="line"><span class="lineno">  238</span>            <span class="keywordflow">case</span> SIGABRT:</div>
+<div class="line"><span class="lineno">  239</span>                [[fallthrough]];</div>
+<div class="line"><span class="lineno">  240</span>            <span class="keywordflow">case</span> SIGHUP:</div>
+<div class="line"><span class="lineno">  241</span>                LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#aa7cc6419cb07a70c39647ed4af2e9dc4">instanceName</a> &lt;&lt; <span class="stringliteral">&quot; Shutting down due to signal &#39;&quot;</span> &lt;&lt; strsignal(signum) &lt;&lt; <span class="stringliteral">&quot;&#39; (SIG&quot;</span></div>
+<div class="line"><span class="lineno">  242</span>                           &lt;&lt; <a class="code hl_function" href="namespaceutils_1_1system.html#aea0a8f4d2d6d6d0fa7fcc401c5f08f1c">utils::system::sigabbrev_np</a>(signum) &lt;&lt; <span class="stringliteral">&quot; = &quot;</span> &lt;&lt; signum &lt;&lt; <span class="stringliteral">&quot;, &quot;</span> &lt;&lt; <a class="code hl_function" href="#ace10d73598b7e6d7a6ccf700c9ca8a54">getFd</a>() &lt;&lt; <span class="stringliteral">&quot;)&quot;</span>;</div>
+<div class="line"><span class="lineno">  243</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  244</span>            <span class="keywordflow">case</span> SIGALRM:</div>
+<div class="line"><span class="lineno">  245</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  246</span>        }</div>
+<div class="line"><span class="lineno">  247</span> </div>
+<div class="line"><span class="lineno">  248</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#a1c808a61977a62399c5b017a8d48c291">socketContext</a> != <span class="keyword">nullptr</span> ? <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#a1c808a61977a62399c5b017a8d48c291">socketContext</a>-&gt;<a class="code hl_function" href="classcore_1_1socket_1_1SocketContext.html#ad5a47157710544f1d90f1ebdf15fe49e">onSignal</a>(signum) : <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  249</span>    }</div>
 <div class="ttc" id="aclasscore_1_1socket_1_1SocketContext_html_ad5a47157710544f1d90f1ebdf15fe49e"><div class="ttname"><a href="classcore_1_1socket_1_1SocketContext.html#ad5a47157710544f1d90f1ebdf15fe49e">core::socket::SocketContext::onSignal</a></div><div class="ttdeci">virtual bool onSignal(int sig)=0</div></div>
 <div class="ttc" id="anamespaceutils_1_1system_html_aea0a8f4d2d6d6d0fa7fcc401c5f08f1c"><div class="ttname"><a href="namespaceutils_1_1system.html#aea0a8f4d2d6d6d0fa7fcc401c5f08f1c">utils::system::sigabbrev_np</a></div><div class="ttdeci">std::string sigabbrev_np(int sig)</div><div class="ttdef"><b>Definition</b> <a href="signal_8cpp_source.html#l00037">signal.cpp:37</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="SocketConnection_8h_source.html#l00096">core::socket::stream::SocketConnection::instanceName</a>, <a class="el" href="classcore_1_1socket_1_1SocketContext.html#ad5a47157710544f1d90f1ebdf15fe49e">core::socket::SocketContext::onSignal()</a>, <a class="el" href="signal_8cpp_source.html#l00037">utils::system::sigabbrev_np()</a>, and <a class="el" href="SocketConnection_8h_source.html#l00093">core::socket::stream::SocketConnection::socketContext</a>.</p>
+<p class="reference">References <a class="el" href="SocketConnection_8hpp_source.html#l00105">core::socket::stream::SocketConnectionT&lt; PhysicalSocketT, SocketReaderT, SocketWriterT &gt;::getFd()</a>, <a class="el" href="SocketConnection_8h_source.html#l00096">core::socket::stream::SocketConnection::instanceName</a>, <a class="el" href="classcore_1_1socket_1_1SocketContext.html#ad5a47157710544f1d90f1ebdf15fe49e">core::socket::SocketContext::onSignal()</a>, <a class="el" href="signal_8cpp_source.html#l00037">utils::system::sigabbrev_np()</a>, and <a class="el" href="SocketConnection_8h_source.html#l00093">core::socket::stream::SocketConnection::socketContext</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1socket_1_1stream_1_1SocketConnectionT_a8e55d0f1cd8ca960db2e7a04223cf8f9_cgraph.svg" width="423" height="102"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1socket_1_1stream_1_1SocketConnectionT_a8e55d0f1cd8ca960db2e7a04223cf8f9_cgraph.svg" width="423" height="166"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -941,22 +962,22 @@ template&lt;typename <a class="el" href="#a28c5851987fc33bf8e40b8f3b827bc7b">Phy
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SocketConnection_8hpp_source.html#l00212">212</a> of file <a class="el" href="SocketConnection_8hpp_source.html">SocketConnection.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  212</span>                                                                                               {</div>
-<div class="line"><span class="lineno">  213</span>        <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#a1c808a61977a62399c5b017a8d48c291">socketContext</a>-&gt;<a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a9ac0bc41b2d3020850c106ea84e274fb">onWriteError</a>(errnum);</div>
-<div class="line"><span class="lineno">  214</span>    }</div>
-<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketContext_html_a9ac0bc41b2d3020850c106ea84e274fb"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a9ac0bc41b2d3020850c106ea84e274fb">core::socket::stream::SocketContext::onWriteError</a></div><div class="ttdeci">void onWriteError(int errnum) override</div><div class="ttdef"><b>Definition</b> <a href="core_2socket_2stream_2SocketContext_8cpp_source.html#l00074">SocketContext.cpp:74</a></div></div>
+<p class="definition">Definition at line <a class="el" href="SocketConnection_8hpp_source.html#l00222">222</a> of file <a class="el" href="SocketConnection_8hpp_source.html">SocketConnection.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  222</span>                                                                                               {</div>
+<div class="line"><span class="lineno">  223</span>        <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#a1c808a61977a62399c5b017a8d48c291">socketContext</a>-&gt;<a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a9ac0bc41b2d3020850c106ea84e274fb">onWriteError</a>(errnum);</div>
+<div class="line"><span class="lineno">  224</span>    }</div>
+<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketContext_html_a9ac0bc41b2d3020850c106ea84e274fb"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a9ac0bc41b2d3020850c106ea84e274fb">core::socket::stream::SocketContext::onWriteError</a></div><div class="ttdeci">void onWriteError(int errnum) override</div><div class="ttdef"><b>Definition</b> <a href="core_2socket_2stream_2SocketContext_8cpp_source.html#l00076">SocketContext.cpp:76</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="core_2socket_2stream_2SocketContext_8cpp_source.html#l00074">core::socket::stream::SocketContext::onWriteError()</a>, and <a class="el" href="SocketConnection_8h_source.html#l00093">core::socket::stream::SocketConnection::socketContext</a>.</p>
+<p class="reference">References <a class="el" href="core_2socket_2stream_2SocketContext_8cpp_source.html#l00076">core::socket::stream::SocketContext::onWriteError()</a>, and <a class="el" href="SocketConnection_8h_source.html#l00093">core::socket::stream::SocketConnection::socketContext</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1socket_1_1stream_1_1SocketConnectionT_a774fb5df8ec9ec4aba38bed42f4d64a3_cgraph.svg" width="1010" height="66"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1socket_1_1stream_1_1SocketConnectionT_a774fb5df8ec9ec4aba38bed42f4d64a3_cgraph.svg" width="1051" height="115"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -992,19 +1013,19 @@ template&lt;typename <a class="el" href="#a28c5851987fc33bf8e40b8f3b827bc7b">Phy
 
 <p>Implements <a class="el" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#ad150ba5503d608d9e7a679f85aa5684f">core::socket::stream::SocketConnection</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="SocketConnection_8hpp_source.html#l00118">118</a> of file <a class="el" href="SocketConnection_8hpp_source.html">SocketConnection.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  118</span>                                                                                                                         {</div>
-<div class="line"><span class="lineno">  119</span>        std::size_t ret = 0;</div>
-<div class="line"><span class="lineno">  120</span> </div>
-<div class="line"><span class="lineno">  121</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#a17ddc2779f02bced3e42036891f66227">newSocketContext</a> == <span class="keyword">nullptr</span>) {</div>
-<div class="line"><span class="lineno">  122</span>            ret = <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketReader.html#aba1651c8804883d69866217a571e8ef9">SocketReader::readFromPeer</a>(chunk, chunkLen);</div>
-<div class="line"><span class="lineno">  123</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  124</span>            LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#aa7cc6419cb07a70c39647ed4af2e9dc4">instanceName</a> &lt;&lt; <span class="stringliteral">&quot;: ReadFromPeer: OldSocketContext != nullptr: SocketContextSwitch still in progress&quot;</span>;</div>
-<div class="line"><span class="lineno">  125</span>        }</div>
-<div class="line"><span class="lineno">  126</span> </div>
-<div class="line"><span class="lineno">  127</span>        <span class="keywordflow">return</span> ret;</div>
-<div class="line"><span class="lineno">  128</span>    }</div>
-<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketReader_html_aba1651c8804883d69866217a571e8ef9"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1SocketReader.html#aba1651c8804883d69866217a571e8ef9">core::socket::stream::SocketReader::readFromPeer</a></div><div class="ttdeci">std::size_t readFromPeer(char *chunk, std::size_t chunkLen)</div><div class="ttdef"><b>Definition</b> <a href="SocketReader_8cpp_source.html#l00093">SocketReader.cpp:93</a></div></div>
+<p class="definition">Definition at line <a class="el" href="SocketConnection_8hpp_source.html#l00122">122</a> of file <a class="el" href="SocketConnection_8hpp_source.html">SocketConnection.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  122</span>                                                                                                                         {</div>
+<div class="line"><span class="lineno">  123</span>        std::size_t ret = 0;</div>
+<div class="line"><span class="lineno">  124</span> </div>
+<div class="line"><span class="lineno">  125</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#a17ddc2779f02bced3e42036891f66227">newSocketContext</a> == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><span class="lineno">  126</span>            ret = <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketReader.html#aba1651c8804883d69866217a571e8ef9">SocketReader::readFromPeer</a>(chunk, chunkLen);</div>
+<div class="line"><span class="lineno">  127</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  128</span>            LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#aa7cc6419cb07a70c39647ed4af2e9dc4">instanceName</a> &lt;&lt; <span class="stringliteral">&quot; ReadFromPeer: OldSocketContext != nullptr: SocketContextSwitch still in progress&quot;</span>;</div>
+<div class="line"><span class="lineno">  129</span>        }</div>
+<div class="line"><span class="lineno">  130</span> </div>
+<div class="line"><span class="lineno">  131</span>        <span class="keywordflow">return</span> ret;</div>
+<div class="line"><span class="lineno">  132</span>    }</div>
+<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketReader_html_aba1651c8804883d69866217a571e8ef9"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1SocketReader.html#aba1651c8804883d69866217a571e8ef9">core::socket::stream::SocketReader::readFromPeer</a></div><div class="ttdeci">std::size_t readFromPeer(char *chunk, std::size_t chunkLen)</div><div class="ttdef"><b>Definition</b> <a href="SocketReader_8cpp_source.html#l00096">SocketReader.cpp:96</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="SocketConnection_8h_source.html#l00096">core::socket::stream::SocketConnection::instanceName</a>, and <a class="el" href="SocketConnection_8h_source.html#l00094">core::socket::stream::SocketConnection::newSocketContext</a>.</p>
 
@@ -1035,16 +1056,17 @@ template&lt;typename <a class="el" href="#a28c5851987fc33bf8e40b8f3b827bc7b">Phy
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SocketConnection_8hpp_source.html#l00242">242</a> of file <a class="el" href="SocketConnection_8hpp_source.html">SocketConnection.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  242</span>                                                                                    {</div>
-<div class="line"><span class="lineno">  243</span>        <a class="code hl_function" href="#a237af1eae202e2239253f429f83168bf">close</a>();</div>
-<div class="line"><span class="lineno">  244</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="SocketConnection_8hpp_source.html#l00252">252</a> of file <a class="el" href="SocketConnection_8hpp_source.html">SocketConnection.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  252</span>                                                                                    {</div>
+<div class="line"><span class="lineno">  253</span>        LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#aa7cc6419cb07a70c39647ed4af2e9dc4">instanceName</a> &lt;&lt; <span class="stringliteral">&quot; Read timeout (&quot;</span> &lt;&lt; <a class="code hl_function" href="#ace10d73598b7e6d7a6ccf700c9ca8a54">getFd</a>() &lt;&lt; <span class="stringliteral">&quot;)&quot;</span>;</div>
+<div class="line"><span class="lineno">  254</span>        <a class="code hl_function" href="#a237af1eae202e2239253f429f83168bf">close</a>();</div>
+<div class="line"><span class="lineno">  255</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="SocketConnection_8hpp_source.html#l00171">core::socket::stream::SocketConnectionT&lt; PhysicalSocketT, SocketReaderT, SocketWriterT &gt;::close()</a>.</p>
+<p class="reference">References <a class="el" href="SocketConnection_8hpp_source.html#l00179">core::socket::stream::SocketConnectionT&lt; PhysicalSocketT, SocketReaderT, SocketWriterT &gt;::close()</a>, <a class="el" href="SocketConnection_8hpp_source.html#l00105">core::socket::stream::SocketConnectionT&lt; PhysicalSocketT, SocketReaderT, SocketWriterT &gt;::getFd()</a>, and <a class="el" href="SocketConnection_8h_source.html#l00096">core::socket::stream::SocketConnection::instanceName</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1socket_1_1stream_1_1SocketConnectionT_aa8dc6a9e6bda050e5ba92d94677b686b_cgraph.svg" width="415" height="66"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1socket_1_1stream_1_1SocketConnectionT_aa8dc6a9e6bda050e5ba92d94677b686b_cgraph.svg" width="419" height="115"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -1080,11 +1102,11 @@ template&lt;typename <a class="el" href="#a28c5851987fc33bf8e40b8f3b827bc7b">Phy
 
 <p>Implements <a class="el" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#a0e8eedcbfe5dc63e1c1682b5beaf90da">core::socket::stream::SocketConnection</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="SocketConnection_8hpp_source.html#l00131">131</a> of file <a class="el" href="SocketConnection_8hpp_source.html">SocketConnection.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  131</span>                                                                                                                        {</div>
-<div class="line"><span class="lineno">  132</span>        <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketWriter.html#a7aafa893ba3fcc6573c39449b0db8b3e">SocketWriter::sendToPeer</a>(chunk, chunkLen);</div>
-<div class="line"><span class="lineno">  133</span>    }</div>
-<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketWriter_html_a7aafa893ba3fcc6573c39449b0db8b3e"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1SocketWriter.html#a7aafa893ba3fcc6573c39449b0db8b3e">core::socket::stream::SocketWriter::sendToPeer</a></div><div class="ttdeci">void sendToPeer(const char *chunk, std::size_t chunkLen)</div><div class="ttdef"><b>Definition</b> <a href="SocketWriter_8cpp_source.html#l00096">SocketWriter.cpp:96</a></div></div>
+<p class="definition">Definition at line <a class="el" href="SocketConnection_8hpp_source.html#l00135">135</a> of file <a class="el" href="SocketConnection_8hpp_source.html">SocketConnection.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  135</span>                                                                                                                        {</div>
+<div class="line"><span class="lineno">  136</span>        <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketWriter.html#a7aafa893ba3fcc6573c39449b0db8b3e">SocketWriter::sendToPeer</a>(chunk, chunkLen);</div>
+<div class="line"><span class="lineno">  137</span>    }</div>
+<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketWriter_html_a7aafa893ba3fcc6573c39449b0db8b3e"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1SocketWriter.html#a7aafa893ba3fcc6573c39449b0db8b3e">core::socket::stream::SocketWriter::sendToPeer</a></div><div class="ttdeci">void sendToPeer(const char *chunk, std::size_t chunkLen)</div><div class="ttdef"><b>Definition</b> <a href="SocketWriter_8cpp_source.html#l00101">SocketWriter.cpp:101</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1109,7 +1131,7 @@ template&lt;typename PhysicalSocketT , typename SocketReaderT , typename SocketW
 <div class="fragment"><div class="line"><span class="lineno">   54</span>                                                           {</div>
 <div class="line"><span class="lineno">   55</span>        <a class="code hl_function" href="#adc2b31795c854507d955fea870d7f6fb">sendToPeer</a>(data.data(), data.size());</div>
 <div class="line"><span class="lineno">   56</span>    }</div>
-<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketConnectionT_html_adc2b31795c854507d955fea870d7f6fb"><div class="ttname"><a href="#adc2b31795c854507d955fea870d7f6fb">core::socket::stream::SocketConnectionT::sendToPeer</a></div><div class="ttdeci">void sendToPeer(const char *chunk, std::size_t chunkLen) final</div><div class="ttdef"><b>Definition</b> <a href="SocketConnection_8hpp_source.html#l00131">SocketConnection.hpp:131</a></div></div>
+<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketConnectionT_html_adc2b31795c854507d955fea870d7f6fb"><div class="ttname"><a href="#adc2b31795c854507d955fea870d7f6fb">core::socket::stream::SocketConnectionT::sendToPeer</a></div><div class="ttdeci">void sendToPeer(const char *chunk, std::size_t chunkLen) final</div><div class="ttdef"><b>Definition</b> <a href="SocketConnection_8hpp_source.html#l00135">SocketConnection.hpp:135</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1140,13 +1162,20 @@ template&lt;typename <a class="el" href="#a28c5851987fc33bf8e40b8f3b827bc7b">Phy
 
 <p>Implements <a class="el" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#a37134f664c9d8d624709c9d37e0b5cfb">core::socket::stream::SocketConnection</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="SocketConnection_8hpp_source.html#l00095">95</a> of file <a class="el" href="SocketConnection_8hpp_source.html">SocketConnection.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   95</span>                                                                                                              {</div>
-<div class="line"><span class="lineno">   96</span>        <a class="code hl_function" href="classcore_1_1DescriptorEventReceiver.html#ab7891fad490ecab4a5bd98dc9b6f65b2">SocketReader::setTimeout</a>(timeout);</div>
-<div class="line"><span class="lineno">   97</span>        <a class="code hl_function" href="classcore_1_1DescriptorEventReceiver.html#ab7891fad490ecab4a5bd98dc9b6f65b2">SocketWriter::setTimeout</a>(timeout);</div>
-<div class="line"><span class="lineno">   98</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="SocketConnection_8hpp_source.html#l00099">99</a> of file <a class="el" href="SocketConnection_8hpp_source.html">SocketConnection.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   99</span>                                                                                                              {</div>
+<div class="line"><span class="lineno">  100</span>        <a class="code hl_function" href="classcore_1_1DescriptorEventReceiver.html#ab7891fad490ecab4a5bd98dc9b6f65b2">SocketReader::setTimeout</a>(timeout);</div>
+<div class="line"><span class="lineno">  101</span>        <a class="code hl_function" href="classcore_1_1DescriptorEventReceiver.html#ab7891fad490ecab4a5bd98dc9b6f65b2">SocketWriter::setTimeout</a>(timeout);</div>
+<div class="line"><span class="lineno">  102</span>    }</div>
 <div class="ttc" id="aclasscore_1_1DescriptorEventReceiver_html_ab7891fad490ecab4a5bd98dc9b6f65b2"><div class="ttname"><a href="classcore_1_1DescriptorEventReceiver.html#ab7891fad490ecab4a5bd98dc9b6f65b2">core::DescriptorEventReceiver::setTimeout</a></div><div class="ttdeci">void setTimeout(const utils::Timeval &amp;timeout)</div><div class="ttdef"><b>Definition</b> <a href="DescriptorEventReceiver_8cpp_source.html#l00135">DescriptorEventReceiver.cpp:135</a></div></div>
 </div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="SocketConnection_8hpp_source.html#l00189">core::socket::stream::SocketConnectionT&lt; PhysicalSocketT, SocketReaderT, SocketWriterT &gt;::doWriteShutdown()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1socket_1_1stream_1_1SocketConnectionT_a7cd0e612d96405a09099fac7347816c4_icgraph.svg" width="382" height="66"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
 </div>
 </div>
 <a id="a1ce511f4f4d238c1527baf009b2b1dcf" name="a1ce511f4f4d238c1527baf009b2b1dcf"></a>
@@ -1176,23 +1205,25 @@ template&lt;typename <a class="el" href="#a28c5851987fc33bf8e40b8f3b827bc7b">Phy
 
 <p>Implements <a class="el" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#a048516eda8dc42294fbcdf866977fb82">core::socket::stream::SocketConnection</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="SocketConnection_8hpp_source.html#l00146">146</a> of file <a class="el" href="SocketConnection_8hpp_source.html">SocketConnection.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  146</span>                                                                                     {</div>
-<div class="line"><span class="lineno">  147</span>        LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#aa7cc6419cb07a70c39647ed4af2e9dc4">instanceName</a> &lt;&lt; <span class="stringliteral">&quot;: Do syscall shutdown (RD)&quot;</span>;</div>
-<div class="line"><span class="lineno">  148</span> </div>
-<div class="line"><span class="lineno">  149</span>        <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketReader.html#a16b832a8c3ff29994589bbde74c51947">SocketReader::shutdownRead</a>();</div>
-<div class="line"><span class="lineno">  150</span> </div>
-<div class="line"><span class="lineno">  151</span>        <a class="code hl_variable" href="#a9fab76462ae22ac6bad708407b76b4bd">physicalSocket</a>.shutdown(PhysicalSocket::SHUT::RD);</div>
-<div class="line"><span class="lineno">  152</span>    }</div>
-<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketReader_html_a16b832a8c3ff29994589bbde74c51947"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1SocketReader.html#a16b832a8c3ff29994589bbde74c51947">core::socket::stream::SocketReader::shutdownRead</a></div><div class="ttdeci">void shutdownRead()</div><div class="ttdef"><b>Definition</b> <a href="SocketReader_8cpp_source.html#l00104">SocketReader.cpp:104</a></div></div>
+<p class="definition">Definition at line <a class="el" href="SocketConnection_8hpp_source.html#l00150">150</a> of file <a class="el" href="SocketConnection_8hpp_source.html">SocketConnection.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  150</span>                                                                                     {</div>
+<div class="line"><span class="lineno">  151</span>        LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#aa7cc6419cb07a70c39647ed4af2e9dc4">instanceName</a> &lt;&lt; <span class="stringliteral">&quot; Shutdown (RD, &quot;</span> &lt;&lt; <a class="code hl_function" href="#ace10d73598b7e6d7a6ccf700c9ca8a54">getFd</a>() &lt;&lt; <span class="stringliteral">&quot;)&quot;</span>;</div>
+<div class="line"><span class="lineno">  152</span> </div>
+<div class="line"><span class="lineno">  153</span>        <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketReader.html#a16b832a8c3ff29994589bbde74c51947">SocketReader::shutdownRead</a>();</div>
+<div class="line"><span class="lineno">  154</span> </div>
+<div class="line"><span class="lineno">  155</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a9fab76462ae22ac6bad708407b76b4bd">physicalSocket</a>.shutdown(PhysicalSocket::SHUT::RD) != 0) {</div>
+<div class="line"><span class="lineno">  156</span>            PLOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#aa7cc6419cb07a70c39647ed4af2e9dc4">instanceName</a> &lt;&lt; <span class="stringliteral">&quot; Shutdown (RD, &quot;</span> &lt;&lt; <a class="code hl_function" href="#ace10d73598b7e6d7a6ccf700c9ca8a54">getFd</a>() &lt;&lt; <span class="stringliteral">&quot;)&quot;</span>;</div>
+<div class="line"><span class="lineno">  157</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  158</span>            LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#aa7cc6419cb07a70c39647ed4af2e9dc4">instanceName</a> &lt;&lt; <span class="stringliteral">&quot; Shutdown (RD, &quot;</span> &lt;&lt; <a class="code hl_function" href="#ace10d73598b7e6d7a6ccf700c9ca8a54">getFd</a>() &lt;&lt; <span class="stringliteral">&quot;) success&quot;</span>;</div>
+<div class="line"><span class="lineno">  159</span>        }</div>
+<div class="line"><span class="lineno">  160</span>    }</div>
+<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketReader_html_a16b832a8c3ff29994589bbde74c51947"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1SocketReader.html#a16b832a8c3ff29994589bbde74c51947">core::socket::stream::SocketReader::shutdownRead</a></div><div class="ttdeci">void shutdownRead()</div><div class="ttdef"><b>Definition</b> <a href="SocketReader_8cpp_source.html#l00107">SocketReader.cpp:107</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="SocketConnection_8h_source.html#l00096">core::socket::stream::SocketConnection::instanceName</a>, and <a class="el" href="SocketConnection_8h_source.html#l00156">core::socket::stream::SocketConnectionT&lt; PhysicalSocketT, SocketReaderT, SocketWriterT &gt;::physicalSocket</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="SocketConnection_8hpp_source.html#l00155">core::socket::stream::SocketConnectionT&lt; PhysicalSocketT, SocketReaderT, SocketWriterT &gt;::shutdownWrite()</a>.</p>
+<p class="reference">References <a class="el" href="SocketConnection_8hpp_source.html#l00105">core::socket::stream::SocketConnectionT&lt; PhysicalSocketT, SocketReaderT, SocketWriterT &gt;::getFd()</a>, <a class="el" href="SocketConnection_8h_source.html#l00096">core::socket::stream::SocketConnection::instanceName</a>, and <a class="el" href="SocketConnection_8h_source.html#l00167">core::socket::stream::SocketConnectionT&lt; PhysicalSocketT, SocketReaderT, SocketWriterT &gt;::physicalSocket</a>.</p>
 <div class="dynheader">
-Here is the caller graph for this function:</div>
+Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1socket_1_1stream_1_1SocketConnectionT_a1ce511f4f4d238c1527baf009b2b1dcf_icgraph.svg" width="382" height="66"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1socket_1_1stream_1_1SocketConnectionT_a1ce511f4f4d238c1527baf009b2b1dcf_cgraph.svg" width="419" height="66"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -1224,30 +1255,29 @@ template&lt;typename <a class="el" href="#a28c5851987fc33bf8e40b8f3b827bc7b">Phy
 
 <p>Implements <a class="el" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#ab4496d58a35b0fa62a01f8aa78869522">core::socket::stream::SocketConnection</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="SocketConnection_8hpp_source.html#l00155">155</a> of file <a class="el" href="SocketConnection_8hpp_source.html">SocketConnection.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  155</span>                                                                                                     {</div>
-<div class="line"><span class="lineno">  156</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketWriter.html#a5a546b7528a04ef56eaf6a90684b3941">SocketWriter::shutdownInProgress</a>) {</div>
-<div class="line"><span class="lineno">  157</span>            LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#aa7cc6419cb07a70c39647ed4af2e9dc4">instanceName</a> &lt;&lt; <span class="stringliteral">&quot;: Initiating shutdown process&quot;</span>;</div>
-<div class="line"><span class="lineno">  158</span> </div>
-<div class="line"><span class="lineno">  159</span>            <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketWriter.html#abd61595d46548f991c15c5abf50aa1dd">SocketWriter::shutdownWrite</a>([forceClose, <span class="keyword">this</span>]() -&gt; <span class="keywordtype">void</span> {</div>
-<div class="line"><span class="lineno">  160</span>                <span class="keywordflow">if</span> (forceClose &amp;&amp; <a class="code hl_function" href="classcore_1_1DescriptorEventReceiver.html#ac5dc7e86ddad09f5bd3eeb0c74f2e7f9">SocketReader::isEnabled</a>()) {</div>
-<div class="line"><span class="lineno">  161</span>                    <a class="code hl_function" href="#a1ce511f4f4d238c1527baf009b2b1dcf">shutdownRead</a>();</div>
-<div class="line"><span class="lineno">  162</span>                }</div>
-<div class="line"><span class="lineno">  163</span>                <span class="keywordflow">if</span> (<a class="code hl_function" href="classcore_1_1DescriptorEventReceiver.html#ac5dc7e86ddad09f5bd3eeb0c74f2e7f9">SocketWriter::isEnabled</a>()) {</div>
-<div class="line"><span class="lineno">  164</span>                    <a class="code hl_function" href="classcore_1_1DescriptorEventReceiver.html#a4ab422ce6622a29cee38a0108ee6ccc1">SocketWriter::disable</a>();</div>
-<div class="line"><span class="lineno">  165</span>                }</div>
-<div class="line"><span class="lineno">  166</span>            });</div>
-<div class="line"><span class="lineno">  167</span>        }</div>
-<div class="line"><span class="lineno">  168</span>    }</div>
-<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketConnectionT_html_a1ce511f4f4d238c1527baf009b2b1dcf"><div class="ttname"><a href="#a1ce511f4f4d238c1527baf009b2b1dcf">core::socket::stream::SocketConnectionT::shutdownRead</a></div><div class="ttdeci">void shutdownRead() final</div><div class="ttdef"><b>Definition</b> <a href="SocketConnection_8hpp_source.html#l00146">SocketConnection.hpp:146</a></div></div>
+<p class="definition">Definition at line <a class="el" href="SocketConnection_8hpp_source.html#l00163">163</a> of file <a class="el" href="SocketConnection_8hpp_source.html">SocketConnection.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  163</span>                                                                                                     {</div>
+<div class="line"><span class="lineno">  164</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketWriter.html#a5a546b7528a04ef56eaf6a90684b3941">SocketWriter::shutdownInProgress</a>) {</div>
+<div class="line"><span class="lineno">  165</span>            LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#aa7cc6419cb07a70c39647ed4af2e9dc4">instanceName</a> &lt;&lt; <span class="stringliteral">&quot; Stop writing (&quot;</span> &lt;&lt; <a class="code hl_function" href="#ace10d73598b7e6d7a6ccf700c9ca8a54">getFd</a>() &lt;&lt; <span class="stringliteral">&quot;)&quot;</span>;</div>
+<div class="line"><span class="lineno">  166</span> </div>
+<div class="line"><span class="lineno">  167</span>            <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketWriter.html#abd61595d46548f991c15c5abf50aa1dd">SocketWriter::shutdownWrite</a>([forceClose, <span class="keyword">this</span>]() -&gt; <span class="keywordtype">void</span> {</div>
+<div class="line"><span class="lineno">  168</span>                <span class="keywordflow">if</span> (<a class="code hl_function" href="classcore_1_1DescriptorEventReceiver.html#ac5dc7e86ddad09f5bd3eeb0c74f2e7f9">SocketWriter::isEnabled</a>()) {</div>
+<div class="line"><span class="lineno">  169</span>                    <a class="code hl_function" href="classcore_1_1DescriptorEventReceiver.html#a4ab422ce6622a29cee38a0108ee6ccc1">SocketWriter::disable</a>();</div>
+<div class="line"><span class="lineno">  170</span>                }</div>
+<div class="line"><span class="lineno">  171</span>                <span class="keywordflow">if</span> (forceClose &amp;&amp; <a class="code hl_function" href="classcore_1_1DescriptorEventReceiver.html#ac5dc7e86ddad09f5bd3eeb0c74f2e7f9">SocketReader::isEnabled</a>()) {</div>
+<div class="line"><span class="lineno">  172</span>                    <a class="code hl_function" href="#a237af1eae202e2239253f429f83168bf">close</a>();</div>
+<div class="line"><span class="lineno">  173</span>                }</div>
+<div class="line"><span class="lineno">  174</span>            });</div>
+<div class="line"><span class="lineno">  175</span>        }</div>
+<div class="line"><span class="lineno">  176</span>    }</div>
 <div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketWriter_html_a5a546b7528a04ef56eaf6a90684b3941"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1SocketWriter.html#a5a546b7528a04ef56eaf6a90684b3941">core::socket::stream::SocketWriter::shutdownInProgress</a></div><div class="ttdeci">bool shutdownInProgress</div><div class="ttdef"><b>Definition</b> <a href="SocketWriter_8h_source.html#l00085">SocketWriter.h:85</a></div></div>
-<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketWriter_html_abd61595d46548f991c15c5abf50aa1dd"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1SocketWriter.html#abd61595d46548f991c15c5abf50aa1dd">core::socket::stream::SocketWriter::shutdownWrite</a></div><div class="ttdeci">void shutdownWrite(const std::function&lt; void()&gt; &amp;onShutdown)</div><div class="ttdef"><b>Definition</b> <a href="SocketWriter_8cpp_source.html#l00145">SocketWriter.cpp:145</a></div></div>
+<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketWriter_html_abd61595d46548f991c15c5abf50aa1dd"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1SocketWriter.html#abd61595d46548f991c15c5abf50aa1dd">core::socket::stream::SocketWriter::shutdownWrite</a></div><div class="ttdeci">void shutdownWrite(const std::function&lt; void()&gt; &amp;onShutdown)</div><div class="ttdef"><b>Definition</b> <a href="SocketWriter_8cpp_source.html#l00150">SocketWriter.cpp:150</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="SocketConnection_8h_source.html#l00096">core::socket::stream::SocketConnection::instanceName</a>, and <a class="el" href="SocketConnection_8hpp_source.html#l00146">core::socket::stream::SocketConnectionT&lt; PhysicalSocketT, SocketReaderT, SocketWriterT &gt;::shutdownRead()</a>.</p>
+<p class="reference">References <a class="el" href="SocketConnection_8hpp_source.html#l00179">core::socket::stream::SocketConnectionT&lt; PhysicalSocketT, SocketReaderT, SocketWriterT &gt;::close()</a>, <a class="el" href="SocketConnection_8hpp_source.html#l00105">core::socket::stream::SocketConnectionT&lt; PhysicalSocketT, SocketReaderT, SocketWriterT &gt;::getFd()</a>, and <a class="el" href="SocketConnection_8h_source.html#l00096">core::socket::stream::SocketConnection::instanceName</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1socket_1_1stream_1_1SocketConnectionT_acd267dc7864f0970578377d863b3d5d8_cgraph.svg" width="382" height="66"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1socket_1_1stream_1_1SocketConnectionT_acd267dc7864f0970578377d863b3d5d8_cgraph.svg" width="419" height="115"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -1279,11 +1309,11 @@ template&lt;typename <a class="el" href="#a28c5851987fc33bf8e40b8f3b827bc7b">Phy
 
 <p>Implements <a class="el" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#aa97ffc0eb464e9c1c4f22db55d2edc67">core::socket::stream::SocketConnection</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="SocketConnection_8hpp_source.html#l00141">141</a> of file <a class="el" href="SocketConnection_8hpp_source.html">SocketConnection.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  141</span>                                                                                  {</div>
-<div class="line"><span class="lineno">  142</span>        <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketWriter.html#a6f13c171dd3c5284612d61418d676337">SocketWriter::streamEof</a>();</div>
-<div class="line"><span class="lineno">  143</span>    }</div>
-<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketWriter_html_a6f13c171dd3c5284612d61418d676337"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1SocketWriter.html#a6f13c171dd3c5284612d61418d676337">core::socket::stream::SocketWriter::streamEof</a></div><div class="ttdeci">void streamEof()</div><div class="ttdef"><b>Definition</b> <a href="SocketWriter_8cpp_source.html#l00140">SocketWriter.cpp:140</a></div></div>
+<p class="definition">Definition at line <a class="el" href="SocketConnection_8hpp_source.html#l00145">145</a> of file <a class="el" href="SocketConnection_8hpp_source.html">SocketConnection.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  145</span>                                                                                  {</div>
+<div class="line"><span class="lineno">  146</span>        <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketWriter.html#a6f13c171dd3c5284612d61418d676337">SocketWriter::streamEof</a>();</div>
+<div class="line"><span class="lineno">  147</span>    }</div>
+<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketWriter_html_a6f13c171dd3c5284612d61418d676337"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1SocketWriter.html#a6f13c171dd3c5284612d61418d676337">core::socket::stream::SocketWriter::streamEof</a></div><div class="ttdeci">void streamEof()</div><div class="ttdef"><b>Definition</b> <a href="SocketWriter_8cpp_source.html#l00145">SocketWriter.cpp:145</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1314,11 +1344,11 @@ template&lt;typename <a class="el" href="#a28c5851987fc33bf8e40b8f3b827bc7b">Phy
 
 <p>Implements <a class="el" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#afd5970a79ee4dbf1d18652d2c338fe44">core::socket::stream::SocketConnection</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="SocketConnection_8hpp_source.html#l00136">136</a> of file <a class="el" href="SocketConnection_8hpp_source.html">SocketConnection.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  136</span>                                                                                                           {</div>
-<div class="line"><span class="lineno">  137</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketWriter.html#aed91fe252c55ee6c12df56808161ec57">SocketWriter::streamToPeer</a>(source);</div>
-<div class="line"><span class="lineno">  138</span>    }</div>
-<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketWriter_html_aed91fe252c55ee6c12df56808161ec57"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1SocketWriter.html#aed91fe252c55ee6c12df56808161ec57">core::socket::stream::SocketWriter::streamToPeer</a></div><div class="ttdeci">bool streamToPeer(core::pipe::Source *source)</div><div class="ttdef"><b>Definition</b> <a href="SocketWriter_8cpp_source.html#l00116">SocketWriter.cpp:116</a></div></div>
+<p class="definition">Definition at line <a class="el" href="SocketConnection_8hpp_source.html#l00140">140</a> of file <a class="el" href="SocketConnection_8hpp_source.html">SocketConnection.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  140</span>                                                                                                           {</div>
+<div class="line"><span class="lineno">  141</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketWriter.html#aed91fe252c55ee6c12df56808161ec57">SocketWriter::streamToPeer</a>(source);</div>
+<div class="line"><span class="lineno">  142</span>    }</div>
+<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketWriter_html_aed91fe252c55ee6c12df56808161ec57"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1SocketWriter.html#aed91fe252c55ee6c12df56808161ec57">core::socket::stream::SocketWriter::streamToPeer</a></div><div class="ttdeci">bool streamToPeer(core::pipe::Source *source)</div><div class="ttdef"><b>Definition</b> <a href="SocketWriter_8cpp_source.html#l00121">SocketWriter.cpp:121</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1347,15 +1377,16 @@ template&lt;typename <a class="el" href="#a28c5851987fc33bf8e40b8f3b827bc7b">Phy
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SocketConnection_8hpp_source.html#l00252">252</a> of file <a class="el" href="SocketConnection_8hpp_source.html">SocketConnection.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  252</span>                                                                                        {</div>
-<div class="line"><span class="lineno">  253</span>        <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#a43cb109e8979fbdb29cef18ec8281cf2">disconnectCurrentSocketContext</a>();</div>
-<div class="line"><span class="lineno">  254</span>        <a class="code hl_variable" href="#adf8cf3845521f39bc9a24de02cd82aa1">onDisconnect</a>();</div>
-<div class="line"><span class="lineno">  255</span> </div>
-<div class="line"><span class="lineno">  256</span>        <span class="keyword">delete</span> <span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">  257</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="SocketConnection_8hpp_source.html#l00264">264</a> of file <a class="el" href="SocketConnection_8hpp_source.html">SocketConnection.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  264</span>                                                                                        {</div>
+<div class="line"><span class="lineno">  265</span>        <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#a43cb109e8979fbdb29cef18ec8281cf2">disconnectCurrentSocketContext</a>();</div>
+<div class="line"><span class="lineno">  266</span> </div>
+<div class="line"><span class="lineno">  267</span>        <a class="code hl_variable" href="#adf8cf3845521f39bc9a24de02cd82aa1">onDisconnect</a>();</div>
+<div class="line"><span class="lineno">  268</span> </div>
+<div class="line"><span class="lineno">  269</span>        <span class="keyword">delete</span> <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">  270</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="SocketConnection_8cpp_source.html#l00085">core::socket::stream::SocketConnection::disconnectCurrentSocketContext()</a>.</p>
+<p class="reference">References <a class="el" href="SocketConnection_8cpp_source.html#l00086">core::socket::stream::SocketConnection::disconnectCurrentSocketContext()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1389,16 +1420,17 @@ template&lt;typename <a class="el" href="#a28c5851987fc33bf8e40b8f3b827bc7b">Phy
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SocketConnection_8hpp_source.html#l00247">247</a> of file <a class="el" href="SocketConnection_8hpp_source.html">SocketConnection.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  247</span>                                                                                     {</div>
-<div class="line"><span class="lineno">  248</span>        <a class="code hl_function" href="#a237af1eae202e2239253f429f83168bf">close</a>();</div>
-<div class="line"><span class="lineno">  249</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="SocketConnection_8hpp_source.html#l00258">258</a> of file <a class="el" href="SocketConnection_8hpp_source.html">SocketConnection.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  258</span>                                                                                     {</div>
+<div class="line"><span class="lineno">  259</span>        LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#aa7cc6419cb07a70c39647ed4af2e9dc4">instanceName</a> &lt;&lt; <span class="stringliteral">&quot; Write timeout (&quot;</span> &lt;&lt; <a class="code hl_function" href="#ace10d73598b7e6d7a6ccf700c9ca8a54">getFd</a>() &lt;&lt; <span class="stringliteral">&quot;)&quot;</span>;</div>
+<div class="line"><span class="lineno">  260</span>        <a class="code hl_function" href="#a237af1eae202e2239253f429f83168bf">close</a>();</div>
+<div class="line"><span class="lineno">  261</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="SocketConnection_8hpp_source.html#l00171">core::socket::stream::SocketConnectionT&lt; PhysicalSocketT, SocketReaderT, SocketWriterT &gt;::close()</a>.</p>
+<p class="reference">References <a class="el" href="SocketConnection_8hpp_source.html#l00179">core::socket::stream::SocketConnectionT&lt; PhysicalSocketT, SocketReaderT, SocketWriterT &gt;::close()</a>, <a class="el" href="SocketConnection_8hpp_source.html#l00105">core::socket::stream::SocketConnectionT&lt; PhysicalSocketT, SocketReaderT, SocketWriterT &gt;::getFd()</a>, and <a class="el" href="SocketConnection_8h_source.html#l00096">core::socket::stream::SocketConnection::instanceName</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1socket_1_1stream_1_1SocketConnectionT_afaf44c11a7beb1b0b4ca6c8ee2441eae_cgraph.svg" width="415" height="66"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcore_1_1socket_1_1stream_1_1SocketConnectionT_afaf44c11a7beb1b0b4ca6c8ee2441eae_cgraph.svg" width="419" height="115"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -1429,7 +1461,7 @@ template&lt;typename PhysicalSocketT , typename SocketReaderT , typename SocketW
 <p class="definition">Definition at line <a class="el" href="SocketConnection_8h_source.html#l00171">171</a> of file <a class="el" href="SocketConnection_8h_source.html">SocketConnection.h</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  171</span>{};</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="SocketConnection_8hpp_source.html#l00107">core::socket::stream::SocketConnectionT&lt; PhysicalSocketT, SocketReaderT, SocketWriterT &gt;::getLocalAddress()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SocketConnection_8hpp_source.html#l00111">core::socket::stream::SocketConnectionT&lt; PhysicalSocketT, SocketReaderT, SocketWriterT &gt;::getLocalAddress()</a>.</p>
 
 </div>
 </div>
@@ -1481,9 +1513,9 @@ template&lt;typename PhysicalSocketT , typename SocketReaderT , typename SocketW
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SocketConnection_8h_source.html#l00156">156</a> of file <a class="el" href="SocketConnection_8h_source.html">SocketConnection.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SocketConnection_8h_source.html#l00167">167</a> of file <a class="el" href="SocketConnection_8h_source.html">SocketConnection.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SocketConnection_8hpp_source.html#l00181">core::socket::stream::SocketConnectionT&lt; PhysicalSocketT, SocketReaderT, SocketWriterT &gt;::doWriteShutdown()</a>, <a class="el" href="SocketConnection_8hpp_source.html#l00101">core::socket::stream::SocketConnectionT&lt; PhysicalSocketT, SocketReaderT, SocketWriterT &gt;::getFd()</a>, and <a class="el" href="SocketConnection_8hpp_source.html#l00146">core::socket::stream::SocketConnectionT&lt; PhysicalSocketT, SocketReaderT, SocketWriterT &gt;::shutdownRead()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SocketConnection_8hpp_source.html#l00189">core::socket::stream::SocketConnectionT&lt; PhysicalSocketT, SocketReaderT, SocketWriterT &gt;::doWriteShutdown()</a>, <a class="el" href="SocketConnection_8hpp_source.html#l00105">core::socket::stream::SocketConnectionT&lt; PhysicalSocketT, SocketReaderT, SocketWriterT &gt;::getFd()</a>, and <a class="el" href="SocketConnection_8hpp_source.html#l00150">core::socket::stream::SocketConnectionT&lt; PhysicalSocketT, SocketReaderT, SocketWriterT &gt;::shutdownRead()</a>.</p>
 
 </div>
 </div>
@@ -1512,7 +1544,7 @@ template&lt;typename PhysicalSocketT , typename SocketReaderT , typename SocketW
 <p class="definition">Definition at line <a class="el" href="SocketConnection_8h_source.html#l00172">172</a> of file <a class="el" href="SocketConnection_8h_source.html">SocketConnection.h</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  172</span>{};</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="SocketConnection_8hpp_source.html#l00113">core::socket::stream::SocketConnectionT&lt; PhysicalSocketT, SocketReaderT, SocketWriterT &gt;::getRemoteAddress()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SocketConnection_8hpp_source.html#l00117">core::socket::stream::SocketConnectionT&lt; PhysicalSocketT, SocketReaderT, SocketWriterT &gt;::getRemoteAddress()</a>.</p>
 
 </div>
 </div>
@@ -1526,7 +1558,7 @@ template&lt;typename PhysicalSocketT , typename SocketReaderT , typename SocketW
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacecore.html">core</a></li><li class="navelem"><a class="el" href="namespacecore_1_1socket.html">socket</a></li><li class="navelem"><a class="el" href="namespacecore_1_1socket_1_1stream.html">stream</a></li><li class="navelem"><a class="el" href="classcore_1_1socket_1_1stream_1_1SocketConnectionT.html">SocketConnectionT</a></li>
-    <li class="footer">Generated on Tue Dec 3 2024 20:49:49 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generated on Thu Jan 2 2025 18:50:04 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>

@@ -2,6 +2,7 @@ var structcore_1_1socket_1_1stream_1_1tls_1_1SslConfig =
 [
     [ "SslConfig", "structcore_1_1socket_1_1stream_1_1tls_1_1SslConfig.html#ae8fdf11461fdf8f37d58d6083bdd00a5", null ],
     [ "caCert", "structcore_1_1socket_1_1stream_1_1tls_1_1SslConfig.html#ac1dc6d7205be54da78bb505c485d3c97", null ],
+    [ "caCertAcceptUnknown", "structcore_1_1socket_1_1stream_1_1tls_1_1SslConfig.html#a5c2bcac5eb93f70475e3c39b3130f4aa", null ],
     [ "caCertDir", "structcore_1_1socket_1_1stream_1_1tls_1_1SslConfig.html#a197643d64568161b1d9f9dd63f7a93f4", null ],
     [ "caCertUseDefaultDir", "structcore_1_1socket_1_1stream_1_1tls_1_1SslConfig.html#ac3cc5993112d3183b41f58862ff7f247", null ],
     [ "cert", "structcore_1_1socket_1_1stream_1_1tls_1_1SslConfig.html#a3f3401de3b2fe1a46f4e792b064dc47e", null ],
