@@ -44,7 +44,7 @@ var classweb_1_1http_1_1client_1_1Request =
     [ "setMasterRequest", "classweb_1_1http_1_1client_1_1Request.html#aa50fc628745db3c4147ca1cd31d2d565", null ],
     [ "setTrailer", "classweb_1_1http_1_1client_1_1Request.html#a7ee75f9186226290535224936bea8371", null ],
     [ "type", "classweb_1_1http_1_1client_1_1Request.html#ae7437846bdfcb4aece26f611b09b6248", null ],
-    [ "upgrade", "classweb_1_1http_1_1client_1_1Request.html#a0396d5ccfed10e0eaa7b9b37ef93e13c", null ],
+    [ "upgrade", "classweb_1_1http_1_1client_1_1Request.html#af5c824f2331e2fc195e5e6bf8e7cbde7", null ],
     [ "upgrade", "classweb_1_1http_1_1client_1_1Request.html#a5415814ff402e5fca0829e9d59450604", null ],
     [ "commands::EndCommand", "classweb_1_1http_1_1client_1_1Request.html#ac2da8447a2370c79e0213393ccb9ddf1", null ],
     [ "commands::SendFileCommand", "classweb_1_1http_1_1client_1_1Request.html#a88ba1673d16fe920b72d7d1424c60a21", null ],

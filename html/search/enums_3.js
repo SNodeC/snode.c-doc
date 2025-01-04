@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['httpcompliance_0',['HTTPCompliance',['../classweb_1_1http_1_1Parser.html#afaf85771e39341e129795529ef8c4f8f',1,'web::http::Parser']]]
+  ['enabler_0',['enabler',['../namespacedetail.html#ad86f32fac98b29b6cae34669baea3710',1,'detail']]],
+  ['exitcodes_1',['ExitCodes',['../CLI11_8hpp.html#ac74ddc700cf9fcf91d688b6d31ff9537',1,'CLI11.hpp']]]
 ];

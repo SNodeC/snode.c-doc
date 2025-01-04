@@ -1,0 +1,4 @@
+var structdetail_1_1type__count__base_3_01T_00_01typename_01std_1_1enable__if_3_9is__tuple__like_3_0f73d166e02b87e6eeaa76e87fdb70337 =
+[
+    [ "value", "structdetail_1_1type__count__base_3_01T_00_01typename_01std_1_1enable__if_3_9is__tuple__like_3_0f73d166e02b87e6eeaa76e87fdb70337.html#a97c922cbb7a824e1eec09ec0ceb26a6b", null ]
+];

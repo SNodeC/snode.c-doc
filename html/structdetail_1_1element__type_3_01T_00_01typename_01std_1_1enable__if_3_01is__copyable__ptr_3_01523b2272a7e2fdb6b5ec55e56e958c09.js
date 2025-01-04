@@ -1,0 +1,4 @@
+var structdetail_1_1element__type_3_01T_00_01typename_01std_1_1enable__if_3_01is__copyable__ptr_3_01523b2272a7e2fdb6b5ec55e56e958c09 =
+[
+    [ "type", "structdetail_1_1element__type_3_01T_00_01typename_01std_1_1enable__if_3_01is__copyable__ptr_3_01523b2272a7e2fdb6b5ec55e56e958c09.html#a3ad42c23412ee6719f102b7886efe2d7", null ]
+];

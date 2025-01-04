@@ -1,5 +1,28 @@
 var annotated_dup =
 [
+    [ "apps", "namespaceapps.html", [
+      [ "echo", "namespaceapps_1_1echo.html", [
+        [ "model", "namespaceapps_1_1echo_1_1model.html", [
+          [ "EchoClientSocketContextFactory", "classapps_1_1echo_1_1model_1_1EchoClientSocketContextFactory.html", "classapps_1_1echo_1_1model_1_1EchoClientSocketContextFactory" ],
+          [ "EchoServerSocketContextFactory", "classapps_1_1echo_1_1model_1_1EchoServerSocketContextFactory.html", "classapps_1_1echo_1_1model_1_1EchoServerSocketContextFactory" ],
+          [ "EchoSocketContext", "classapps_1_1echo_1_1model_1_1EchoSocketContext.html", "classapps_1_1echo_1_1model_1_1EchoSocketContext" ]
+        ] ]
+      ] ],
+      [ "websocket", "namespaceapps_1_1websocket.html", [
+        [ "subprotocol", "namespaceapps_1_1websocket_1_1subprotocol.html", [
+          [ "echo", "namespaceapps_1_1websocket_1_1subprotocol_1_1echo.html", [
+            [ "client", "namespaceapps_1_1websocket_1_1subprotocol_1_1echo_1_1client.html", [
+              [ "Echo", "classapps_1_1websocket_1_1subprotocol_1_1echo_1_1client_1_1Echo.html", "classapps_1_1websocket_1_1subprotocol_1_1echo_1_1client_1_1Echo" ],
+              [ "EchoFactory", "classapps_1_1websocket_1_1subprotocol_1_1echo_1_1client_1_1EchoFactory.html", "classapps_1_1websocket_1_1subprotocol_1_1echo_1_1client_1_1EchoFactory" ]
+            ] ],
+            [ "server", "namespaceapps_1_1websocket_1_1subprotocol_1_1echo_1_1server.html", [
+              [ "Echo", "classapps_1_1websocket_1_1subprotocol_1_1echo_1_1server_1_1Echo.html", "classapps_1_1websocket_1_1subprotocol_1_1echo_1_1server_1_1Echo" ],
+              [ "EchoFactory", "classapps_1_1websocket_1_1subprotocol_1_1echo_1_1server_1_1EchoFactory.html", "classapps_1_1websocket_1_1subprotocol_1_1echo_1_1server_1_1EchoFactory" ]
+            ] ]
+          ] ]
+        ] ]
+      ] ]
+    ] ],
     [ "CLI", "namespaceCLI.html", [
       [ "CallForCommandline", "classCLI_1_1CallForCommandline.html", "classCLI_1_1CallForCommandline" ],
       [ "CallForShowConfig", "classCLI_1_1CallForShowConfig.html", "classCLI_1_1CallForShowConfig" ],
@@ -127,6 +150,44 @@ var annotated_dup =
         [ "MariaDBConnection", "classdatabase_1_1mariadb_1_1MariaDBConnection.html", "classdatabase_1_1mariadb_1_1MariaDBConnection" ],
         [ "MariaDBConnectionDetails", "structdatabase_1_1mariadb_1_1MariaDBConnectionDetails.html", "structdatabase_1_1mariadb_1_1MariaDBConnectionDetails" ]
       ] ]
+    ] ],
+    [ "detail", "namespacedetail.html", [
+      [ "AppFriend", "structdetail_1_1AppFriend.html", "structdetail_1_1AppFriend" ],
+      [ "element_type", "structdetail_1_1element__type.html", "structdetail_1_1element__type" ],
+      [ "element_type< T, typename std::enable_if< is_copyable_ptr< T >::value >::type >", "structdetail_1_1element__type_3_01T_00_01typename_01std_1_1enable__if_3_01is__copyable__ptr_3_01523b2272a7e2fdb6b5ec55e56e958c09.html", "structdetail_1_1element__type_3_01T_00_01typename_01std_1_1enable__if_3_01is__copyable__ptr_3_01523b2272a7e2fdb6b5ec55e56e958c09" ],
+      [ "element_value_type", "structdetail_1_1element__value__type.html", "structdetail_1_1element__value__type" ],
+      [ "ExistingDirectoryValidator", "classdetail_1_1ExistingDirectoryValidator.html", "classdetail_1_1ExistingDirectoryValidator" ],
+      [ "ExistingFileValidator", "classdetail_1_1ExistingFileValidator.html", "classdetail_1_1ExistingFileValidator" ],
+      [ "ExistingPathValidator", "classdetail_1_1ExistingPathValidator.html", "classdetail_1_1ExistingPathValidator" ],
+      [ "has_find", "structdetail_1_1has__find.html", "structdetail_1_1has__find" ],
+      [ "IPV4Validator", "classdetail_1_1IPV4Validator.html", "classdetail_1_1IPV4Validator" ],
+      [ "is_complex", "classdetail_1_1is__complex.html", "classdetail_1_1is__complex" ],
+      [ "is_direct_constructible", "classdetail_1_1is__direct__constructible.html", "classdetail_1_1is__direct__constructible" ],
+      [ "is_istreamable", "classdetail_1_1is__istreamable.html", "classdetail_1_1is__istreamable" ],
+      [ "is_mutable_container", "structdetail_1_1is__mutable__container.html", null ],
+      [ "is_mutable_container< T, conditional_t< false, void_t< typename T::value_type, decltype(std::declval< T >().end()), decltype(std::declval< T >().clear()), decltype(std::declval< T >().insert(std::declval< decltype(std::declval< T >().end())>(), std::declval< const typename T::value_type & >()))>, void > >", "structdetail_1_1is__mutable__container_3_01T_00_01conditional__t_3_01false_00_01void__t_3_01type3cbefe3f62998090130d5dc7084b8516.html", null ],
+      [ "is_ostreamable", "classdetail_1_1is__ostreamable.html", "classdetail_1_1is__ostreamable" ],
+      [ "is_readable_container", "structdetail_1_1is__readable__container.html", null ],
+      [ "is_readable_container< T, conditional_t< false, void_t< decltype(std::declval< T >().end()), decltype(std::declval< T >().begin())>, void > >", "structdetail_1_1is__readable__container_3_01T_00_01conditional__t_3_01false_00_01void__t_3_01dec19493ce16a9a958c1a9c08fcab0b917c.html", null ],
+      [ "is_tuple_like", "classdetail_1_1is__tuple__like.html", "classdetail_1_1is__tuple__like" ],
+      [ "is_wrapper", "structdetail_1_1is__wrapper.html", null ],
+      [ "is_wrapper< T, conditional_t< false, void_t< typename T::value_type >, void > >", "structdetail_1_1is__wrapper_3_01T_00_01conditional__t_3_01false_00_01void__t_3_01typename_01T_1_3cdab8a3447131bfdab07dcebb242dc4.html", null ],
+      [ "NonexistentPathValidator", "classdetail_1_1NonexistentPathValidator.html", "classdetail_1_1NonexistentPathValidator" ],
+      [ "pair_adaptor", "structdetail_1_1pair__adaptor.html", "structdetail_1_1pair__adaptor" ],
+      [ "pair_adaptor< T, conditional_t< false, void_t< typename T::value_type::first_type, typename T::value_type::second_type >, void > >", "structdetail_1_1pair__adaptor_3_01T_00_01conditional__t_3_01false_00_01void__t_3_01typename_01T_3bf79cae463e1d5562874a40375cd28a.html", "structdetail_1_1pair__adaptor_3_01T_00_01conditional__t_3_01false_00_01void__t_3_01typename_01T_3bf79cae463e1d5562874a40375cd28a" ],
+      [ "subtype_count", "structdetail_1_1subtype__count.html", null ],
+      [ "subtype_count_min", "structdetail_1_1subtype__count__min.html", null ],
+      [ "type_count", "structdetail_1_1type__count.html", "structdetail_1_1type__count" ],
+      [ "type_count< T, typename std::enable_if< is_complex< T >::value >::type >", "structdetail_1_1type__count_3_01T_00_01typename_01std_1_1enable__if_3_01is__complex_3_01T_01_4_1_1value_01_4_1_1type_01_4.html", "structdetail_1_1type__count_3_01T_00_01typename_01std_1_1enable__if_3_01is__complex_3_01T_01_4_1_1value_01_4_1_1type_01_4" ],
+      [ "type_count< T, typename std::enable_if< is_mutable_container< T >::value >::type >", "structdetail_1_1type__count_3_01T_00_01typename_01std_1_1enable__if_3_01is__mutable__container_32743c5a586dfe46e5bf0c7c2d6a42472.html", "structdetail_1_1type__count_3_01T_00_01typename_01std_1_1enable__if_3_01is__mutable__container_32743c5a586dfe46e5bf0c7c2d6a42472" ],
+      [ "type_count< T, typename std::enable_if< is_wrapper< T >::value &&!is_complex< T >::value &&!is_tuple_like< T >::value &&!is_mutable_container< T >::value >::type >", "structdetail_1_1type__count_3_01T_00_01typename_01std_1_1enable__if_3_01is__wrapper_3_01T_01_4_15376f17be8887997560745d694dc9555.html", "structdetail_1_1type__count_3_01T_00_01typename_01std_1_1enable__if_3_01is__wrapper_3_01T_01_4_15376f17be8887997560745d694dc9555" ],
+      [ "type_count< T, typename std::enable_if<!is_wrapper< T >::value &&!is_tuple_like< T >::value &&!is_complex< T >::value &&!std::is_void< T >::value >::type >", "structdetail_1_1type__count_3_01T_00_01typename_01std_1_1enable__if_3_9is__wrapper_3_01T_01_4_1_e1a9e3e949940e1dd113e756abea301f.html", "structdetail_1_1type__count_3_01T_00_01typename_01std_1_1enable__if_3_9is__wrapper_3_01T_01_4_1_e1a9e3e949940e1dd113e756abea301f" ],
+      [ "type_count_base", "structdetail_1_1type__count__base.html", "structdetail_1_1type__count__base" ],
+      [ "type_count_base< T, typename std::enable_if< is_mutable_container< T >::value >::type >", "structdetail_1_1type__count__base_3_01T_00_01typename_01std_1_1enable__if_3_01is__mutable__conta3aeab2d0875ed473372ecc06d988d44f.html", "structdetail_1_1type__count__base_3_01T_00_01typename_01std_1_1enable__if_3_01is__mutable__conta3aeab2d0875ed473372ecc06d988d44f" ],
+      [ "type_count_base< T, typename std::enable_if< is_tuple_like< T >::value &&!is_mutable_container< T >::value >::type >", "structdetail_1_1type__count__base_3_01T_00_01typename_01std_1_1enable__if_3_01is__tuple__like_3_fb2355465138d1f65904a3ed34363060.html", "structdetail_1_1type__count__base_3_01T_00_01typename_01std_1_1enable__if_3_01is__tuple__like_3_fb2355465138d1f65904a3ed34363060" ],
+      [ "type_count_base< T, typename std::enable_if<!is_tuple_like< T >::value &&!is_mutable_container< T >::value &&!std::is_void< T >::value >::type >", "structdetail_1_1type__count__base_3_01T_00_01typename_01std_1_1enable__if_3_9is__tuple__like_3_0f73d166e02b87e6eeaa76e87fdb70337.html", "structdetail_1_1type__count__base_3_01T_00_01typename_01std_1_1enable__if_3_9is__tuple__like_3_0f73d166e02b87e6eeaa76e87fdb70337" ],
+      [ "wrapped_type", "structdetail_1_1wrapped__type.html", "structdetail_1_1wrapped__type" ],
+      [ "wrapped_type< T, def, typename std::enable_if< is_wrapper< T >::value >::type >", "structdetail_1_1wrapped__type_3_01T_00_01def_00_01typename_01std_1_1enable__if_3_01is__wrapper_386fe92118935402969e7eb52a19c29c3.html", "structdetail_1_1wrapped__type_3_01T_00_01def_00_01typename_01std_1_1enable__if_3_01is__wrapper_386fe92118935402969e7eb52a19c29c3" ]
     ] ],
     [ "express", "namespaceexpress.html", [
       [ "dispatcher", "namespaceexpress_1_1dispatcher.html", [
@@ -576,5 +637,69 @@ var annotated_dup =
         [ "Transmitter", "classweb_1_1websocket_1_1Transmitter.html", "classweb_1_1websocket_1_1Transmitter" ]
       ] ]
     ] ],
-    [ "SHA1", "classSHA1.html", "classSHA1" ]
+    [ "App", "classApp.html", "classApp" ],
+    [ "ArgumentMismatch", "classArgumentMismatch.html", "classArgumentMismatch" ],
+    [ "AsNumberWithUnit", "classAsNumberWithUnit.html", "classAsNumberWithUnit" ],
+    [ "AsSizeValue", "classAsSizeValue.html", "classAsSizeValue" ],
+    [ "BadNameString", "classBadNameString.html", "classBadNameString" ],
+    [ "Bound", "classBound.html", "classBound" ],
+    [ "CallForAllHelp", "classCallForAllHelp.html", "classCallForAllHelp" ],
+    [ "CallForHelp", "classCallForHelp.html", "classCallForHelp" ],
+    [ "CallForVersion", "classCallForVersion.html", "classCallForVersion" ],
+    [ "CheckedTransformer", "classCheckedTransformer.html", "classCheckedTransformer" ],
+    [ "Config", "classConfig.html", "classConfig" ],
+    [ "ConfigBase", "classConfigBase.html", "classConfigBase" ],
+    [ "ConfigError", "classConfigError.html", "classConfigError" ],
+    [ "ConfigINI", "classConfigINI.html", "classConfigINI" ],
+    [ "ConfigItem", "structConfigItem.html", "structConfigItem" ],
+    [ "ConstructionError", "classConstructionError.html", "classConstructionError" ],
+    [ "ConversionError", "classConversionError.html", "classConversionError" ],
+    [ "CustomValidator", "classCustomValidator.html", null ],
+    [ "Error", "classError.html", "classError" ],
+    [ "ExcludesError", "classExcludesError.html", "classExcludesError" ],
+    [ "ExtrasError", "classExtrasError.html", "classExtrasError" ],
+    [ "FileError", "classFileError.html", "classFileError" ],
+    [ "FileOnDefaultPath", "classFileOnDefaultPath.html", "classFileOnDefaultPath" ],
+    [ "Formatter", "classFormatter.html", "classFormatter" ],
+    [ "FormatterBase", "classFormatterBase.html", "classFormatterBase" ],
+    [ "FormatterLambda", "classFormatterLambda.html", "classFormatterLambda" ],
+    [ "HorribleError", "classHorribleError.html", "classHorribleError" ],
+    [ "IncorrectConstruction", "classIncorrectConstruction.html", "classIncorrectConstruction" ],
+    [ "InvalidError", "classInvalidError.html", "classInvalidError" ],
+    [ "InVector", "classInVector.html", "classInVector" ],
+    [ "is_bool", "structis__bool.html", null ],
+    [ "is_bool< bool >", "structis__bool_3_01bool_01_4.html", null ],
+    [ "is_copyable_ptr", "structis__copyable__ptr.html", "structis__copyable__ptr" ],
+    [ "is_shared_ptr", "structis__shared__ptr.html", null ],
+    [ "is_shared_ptr< const std::shared_ptr< T > >", "structis__shared__ptr_3_01const_01std_1_1shared__ptr_3_01T_01_4_01_4.html", null ],
+    [ "is_shared_ptr< std::shared_ptr< T > >", "structis__shared__ptr_3_01std_1_1shared__ptr_3_01T_01_4_01_4.html", null ],
+    [ "IsMember", "classIsMember.html", "classIsMember" ],
+    [ "IsMemberType", "structIsMemberType.html", "structIsMemberType" ],
+    [ "IsMemberType< const char * >", "structIsMemberType_3_01const_01char_01_5_01_4.html", "structIsMemberType_3_01const_01char_01_5_01_4" ],
+    [ "KeyboardReader", "classKeyboardReader.html", "classKeyboardReader" ],
+    [ "make_void", "structmake__void.html", "structmake__void" ],
+    [ "Member", "classMember.html", "classMember" ],
+    [ "Option", "classOption.html", "classOption" ],
+    [ "Option_group", "classOption__group.html", "classOption__group" ],
+    [ "OptionAlreadyAdded", "classOptionAlreadyAdded.html", "classOptionAlreadyAdded" ],
+    [ "OptionBase", "classOptionBase.html", "classOptionBase" ],
+    [ "OptionDefaults", "classOptionDefaults.html", "classOptionDefaults" ],
+    [ "OptionNotFound", "classOptionNotFound.html", "classOptionNotFound" ],
+    [ "OutVector", "classOutVector.html", "classOutVector" ],
+    [ "ParseError", "classParseError.html", "classParseError" ],
+    [ "Range", "classRange.html", "classRange" ],
+    [ "RequiredError", "classRequiredError.html", "classRequiredError" ],
+    [ "RequiresError", "classRequiresError.html", "classRequiresError" ],
+    [ "RuntimeError", "classRuntimeError.html", "classRuntimeError" ],
+    [ "SHA1", "classSHA1.html", "classSHA1" ],
+    [ "SimpleSocketProtocol", "classSimpleSocketProtocol.html", "classSimpleSocketProtocol" ],
+    [ "SimpleSocketProtocolFactory", "classSimpleSocketProtocolFactory.html", "classSimpleSocketProtocolFactory" ],
+    [ "Success", "classSuccess.html", "classSuccess" ],
+    [ "Test", "classTest.html", "classTest" ],
+    [ "TowerCalculator", "classTowerCalculator.html", "classTowerCalculator" ],
+    [ "Transformer", "classTransformer.html", "classTransformer" ],
+    [ "TypeValidator", "classTypeValidator.html", "classTypeValidator" ],
+    [ "ValidationError", "classValidationError.html", "classValidationError" ],
+    [ "Validator", "classValidator.html", "classValidator" ],
+    [ "Vector", "classVector.html", "classVector" ]
 ];

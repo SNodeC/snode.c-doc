@@ -1,22 +1,10 @@
 var searchData=
 [
-  ['fg_5fblack_0',['FG_BLACK',['../namespaceColor.html#a20a7b04657c1d83fae5d54514d3f1622a10f1284e24fad88e7ac5966b6f000496',1,'Color']]],
-  ['fg_5fblue_1',['FG_BLUE',['../namespaceColor.html#a20a7b04657c1d83fae5d54514d3f1622abc692cd3754240e2f8efac99386f1cb3',1,'Color']]],
-  ['fg_5fcyan_2',['FG_CYAN',['../namespaceColor.html#a20a7b04657c1d83fae5d54514d3f1622a933cab284b423af64a24fc8ac79df16b',1,'Color']]],
-  ['fg_5fdark_5fgray_3',['FG_DARK_GRAY',['../namespaceColor.html#a20a7b04657c1d83fae5d54514d3f1622a4dffb07f61fb3b5693c646d246666101',1,'Color']]],
-  ['fg_5fdefault_4',['FG_DEFAULT',['../namespaceColor.html#a20a7b04657c1d83fae5d54514d3f1622aec939dfa85c55fe16445f3c02bb012d8',1,'Color']]],
-  ['fg_5fgreen_5',['FG_GREEN',['../namespaceColor.html#a20a7b04657c1d83fae5d54514d3f1622ac5e2716a4915a3f96c501cbe821f553b',1,'Color']]],
-  ['fg_5flight_5fblue_6',['FG_LIGHT_BLUE',['../namespaceColor.html#a20a7b04657c1d83fae5d54514d3f1622a9dfcab60a5ea7665cc1721632ffbb227',1,'Color']]],
-  ['fg_5flight_5fcyan_7',['FG_LIGHT_CYAN',['../namespaceColor.html#a20a7b04657c1d83fae5d54514d3f1622a02cd3bf8465ed6a202da3647c9d26bf9',1,'Color']]],
-  ['fg_5flight_5fgray_8',['FG_LIGHT_GRAY',['../namespaceColor.html#a20a7b04657c1d83fae5d54514d3f1622a8bbd766c4b3754a29dfb3a52ab86eb6b',1,'Color']]],
-  ['fg_5flight_5fgreen_9',['FG_LIGHT_GREEN',['../namespaceColor.html#a20a7b04657c1d83fae5d54514d3f1622a4b008ef745c3dca8f33a8ca0b12d8582',1,'Color']]],
-  ['fg_5flight_5fmagenta_10',['FG_LIGHT_MAGENTA',['../namespaceColor.html#a20a7b04657c1d83fae5d54514d3f1622a9cd415314e334bb0bcc932979031173a',1,'Color']]],
-  ['fg_5flight_5fred_11',['FG_LIGHT_RED',['../namespaceColor.html#a20a7b04657c1d83fae5d54514d3f1622a7e6318e2639475603215a294f36fa414',1,'Color']]],
-  ['fg_5flight_5fyellow_12',['FG_LIGHT_YELLOW',['../namespaceColor.html#a20a7b04657c1d83fae5d54514d3f1622a283fb285620d8f6d9d8a10b616159897',1,'Color']]],
-  ['fg_5fmagenta_13',['FG_MAGENTA',['../namespaceColor.html#a20a7b04657c1d83fae5d54514d3f1622aefc55f771cb0ce45ce6a3c15d78e9b88',1,'Color']]],
-  ['fg_5fred_14',['FG_RED',['../namespaceColor.html#a20a7b04657c1d83fae5d54514d3f1622a0343bd45782960b4bfc275e16237cfc8',1,'Color']]],
-  ['fg_5fwhite_15',['FG_WHITE',['../namespaceColor.html#a20a7b04657c1d83fae5d54514d3f1622ac70d7b5a6ca66e8ba0f1d5f528515573',1,'Color']]],
-  ['fg_5fyellow_16',['FG_YELLOW',['../namespaceColor.html#a20a7b04657c1d83fae5d54514d3f1622acc0e43ab784d780cfa1e500b4cc8d65e',1,'Color']]],
-  ['firstline_17',['FIRSTLINE',['../classweb_1_1http_1_1Parser.html#a94ab44c0d65451be6ba3e6e389a8b7d5a75c6b2428da2036422b35ca9b1f1f8c4',1,'web::http::Parser']]],
-  ['full_18',['FULL',['../classCLI_1_1CallForCommandline.html#a772a59d089ea19572527641273cb339daba7de5bc6888294e5884b024a4c894f1',1,'CLI::CallForCommandline']]]
+  ['elength_0',['ELENGTH',['../classweb_1_1websocket_1_1Receiver.html#a3cf4e2588c5333541e445cd7aef1eb9ba796198e25f697722dc3cfcc2de6119ad',1,'web::websocket::Receiver']]],
+  ['enabled_1',['enabled',['../classApp.html#ad3b4a1a712f33018813af70c1941ce9aaa10311459433adf322f2590a4987c423',1,'App']]],
+  ['error_2',['ERROR',['../classweb_1_1http_1_1Parser.html#a94ab44c0d65451be6ba3e6e389a8b7d5abb1ca97ec761fc37101737ba0aa2e7c5',1,'web::http::Parser::ERROR'],['../classweb_1_1websocket_1_1Receiver.html#a3cf4e2588c5333541e445cd7aef1eb9babb1ca97ec761fc37101737ba0aa2e7c5',1,'web::websocket::Receiver::ERROR']]],
+  ['error_3',['error',['../CLI11_8hpp.html#a866d2d267dd96c158e9ddbe52f0e531aacb5e100e5a9a3e7f6d1fd97512215282',1,'CLI11.hpp']]],
+  ['ex_4',['EX',['../classcore_1_1EventMultiplexer.html#a922f1b8ccf15265807a9f7ebce6d5097a4bea500b1ddb49e5859afda1b8ea1934',1,'core::EventMultiplexer']]],
+  ['excludeserror_5',['ExcludesError',['../CLI11_8hpp.html#ac74ddc700cf9fcf91d688b6d31ff9537a180b6078f0a0618bbdbaeda656841923',1,'CLI11.hpp']]],
+  ['extraserror_6',['ExtrasError',['../CLI11_8hpp.html#ac74ddc700cf9fcf91d688b6d31ff9537a12e25f67fcb619ec309d229ae4b9d75e',1,'CLI11.hpp']]]
 ];

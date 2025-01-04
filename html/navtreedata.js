@@ -25,19 +25,181 @@
 var NAVTREE =
 [
   [ "SNode.C", "index.html", [
-    [ "Simple NODE in C++ (SNode.C)", "index.html", "index" ],
+    [ "GitHub", "^https://github.com/VolkerChristian/snode.c", null ],
+    [ "Simple NODE in C++ (SNode.C)", "md_README.html", [
+      [ "Table of Content", "md_README.html#table-of-content", null ],
+      [ "License", "md_README.html#license", null ],
+      [ "Copyright", "md_README.html#copyright", null ],
+      [ "Quick Starting Guide", "md_README.html#quick-starting-guide", [
+        [ "An \"Echo\" Application", "md_README.html#an-echo-application", [
+          [ "SocketServer and SocketClient Instances", "md_README.html#socketserver-and-socketclient-instances", null ],
+          [ "SocketContextFactory Classes", "md_README.html#socketcontextfactory-classes", [
+            [ "Echo-Server SocketContextFactory", "md_README.html#echo-server-socketcontextfactory", null ],
+            [ "Echo-Client SocketContextFactory", "md_README.html#echo-client-socketcontextfactory", null ]
+          ] ],
+          [ "SocketContext Classes", "md_README.html#socketcontext-classes", [
+            [ "Echo-Server SocketContext", "md_README.html#echo-server-socketcontext", null ],
+            [ "Echo-Client SocketContext", "md_README.html#echo-client-socketcontext", null ]
+          ] ],
+          [ "Main Applications for Server and Client", "md_README.html#main-applications-for-server-and-client", [
+            [ "Echo-Server Main Application", "md_README.html#echo-server-main-application", null ],
+            [ "Echo-Client Main Application", "md_README.html#echo-client-main-application", null ]
+          ] ],
+          [ "CMakeLists.txt file for Building and Installing our echoserver and echoclient", "md_README.html#cmakeliststxt-file-for-building-and-installing-our-echoserver-and-echoclient", null ]
+        ] ],
+        [ "Summary", "md_README.html#summary", null ]
+      ] ],
+      [ "Installation", "md_README.html#installation", [
+        [ "Supported Systems and Hardware", "md_README.html#supported-systems-and-hardware", null ],
+        [ "Minimum required Compiler Versions", "md_README.html#minimum-required-compiler-versions", null ],
+        [ "Requirements and Dependencies", "md_README.html#requirements-and-dependencies", [
+          [ "Tools", "md_README.html#tools", [
+            [ "Mandatory", "md_README.html#mandatory", null ],
+            [ "Optional", "md_README.html#optional", null ]
+          ] ],
+          [ "Libraries", "md_README.html#libraries", [
+            [ "Mandatory", "md_README.html#mandatory-1", null ],
+            [ "Optional", "md_README.html#optional-1", null ],
+            [ "In-Framework", "md_README.html#in-framework", null ]
+          ] ]
+        ] ],
+        [ "Installation on Debian Style Systems (x86-64, Arm)", "md_README.html#installation-on-debian-style-systems-x86-64-arm", [
+          [ "Requirements and Dependencies", "md_README.html#requirements-and-dependencies-1", null ],
+          [ "SNode.C", "md_README.html#snodec", null ]
+        ] ],
+        [ "Deploment on OpenWRT", "md_README.html#deploment-on-openwrt", [
+          [ "Choose and Download a SDK", "md_README.html#choose-and-download-a-sdk", null ],
+          [ "Patch the SDK to Integrate the SNode.C Feed", "md_README.html#patch-the-sdk-to-integrate-the-snodec-feed", null ],
+          [ "Install the SNode.C Package and its Dependencies", "md_README.html#install-the-snodec-package-and-its-dependencies", null ],
+          [ "Configure the SDK", "md_README.html#configure-the-sdk", null ],
+          [ "Cross Compile SNode.C", "md_README.html#cross-compile-snodec", null ],
+          [ "Deploy SNode.C", "md_README.html#deploy-snodec", null ]
+        ] ]
+      ] ],
+      [ "Design Decisions and Features", "md_README.html#design-decisions-and-features", null ],
+      [ "Fundamental Architecture", "md_README.html#fundamental-architecture", [
+        [ "Network Layer", "md_README.html#network-layer", null ],
+        [ "Transport Layer", "md_README.html#transport-layer", null ],
+        [ "Connection Layer", "md_README.html#connection-layer", null ],
+        [ "Application Layer", "md_README.html#application-layer", null ]
+      ] ],
+      [ "Existing SocketServer and SocketClient Classes", "md_README.html#existing-socketserver-and-socketclient-classes", [
+        [ "Common Aspects of SocketServer and SocketClient Classes", "md_README.html#common-aspects-of-socketserver-and-socketclient-classes", [
+          [ "SocketAddress", "md_README.html#socketaddress", [
+            [ "SocketAddress Constructors", "md_README.html#socketaddress-constructors", null ]
+          ] ],
+          [ "SocketConnection", "md_README.html#socketconnection", [
+            [ "Most Important common SocketConnection Methods", "md_README.html#most-important-common-socketconnection-methods", null ]
+          ] ],
+          [ "Constructors of SocketServer and SocketClient Classes", "md_README.html#constructors-of-socketserver-and-socketclient-classes", [
+            [ "All Constructors of SocketServer Classes", "md_README.html#all-constructors-of-socketserver-classes", null ],
+            [ "All Constructors of SocketClient Classes", "md_README.html#all-constructors-of-socketclient-classes", null ]
+          ] ],
+          [ "Constructor Callbacks", "md_README.html#constructor-callbacks", [
+            [ "The onConnect Callback", "md_README.html#the-onconnect-callback", null ],
+            [ "The onConnected Callback", "md_README.html#the-onconnected-callback", null ],
+            [ "The onDisconnected Callback", "md_README.html#the-ondisconnected-callback", null ],
+            [ "Attaching the Callbacks during Instance Creation", "md_README.html#attaching-the-callbacks-during-instance-creation", null ],
+            [ "Attaching the Callbacks to already existing Instances", "md_README.html#attaching-the-callbacks-to-already-existing-instances", null ]
+          ] ]
+        ] ],
+        [ "SocketServer Classes", "md_README.html#socketserver-classes", [
+          [ "SocketServer Header Files", "md_README.html#socketserver-header-files", null ],
+          [ "Listen Methods", "md_README.html#listen-methods", [
+            [ "SocketAddress Types", "md_README.html#socketaddress-types", null ],
+            [ "The core::socket::State Object", "md_README.html#the-coresocketstate-object", null ],
+            [ "Common listen() Methods", "md_README.html#common-listen-methods", null ],
+            [ "IPv4 specific listen() Methods", "md_README.html#ipv4-specific-listen-methods", null ],
+            [ "IPv6 specific listen() Methods", "md_README.html#ipv6-specific-listen-methods", null ],
+            [ "Unix Domain Socket specific listen() Methods", "md_README.html#unix-domain-socket-specific-listen-methods", null ],
+            [ "Bluetooth RFCOMM specific listen() Methods", "md_README.html#bluetooth-rfcomm-specific-listen-methods", null ],
+            [ "Bluetooth L2CAP specific listen() Methods", "md_README.html#bluetooth-l2cap-specific-listen-methods", null ]
+          ] ]
+        ] ],
+        [ "SocketClient Classes", "md_README.html#socketclient-classes", [
+          [ "SocketClient Header Files", "md_README.html#socketclient-header-files", null ],
+          [ "Connect Methods", "md_README.html#connect-methods", [
+            [ "SocketAddress Types", "md_README.html#socketaddress-types-1", null ],
+            [ "The core::socket::State Object", "md_README.html#the-coresocketstate-object-1", null ],
+            [ "Common connect() Methods", "md_README.html#common-connect-methods", null ],
+            [ "IPv4 specific connect() Methods", "md_README.html#ipv4-specific-connect-methods", null ],
+            [ "IPv6 specific connect() Methods", "md_README.html#ipv6-specific-connect-methods", null ],
+            [ "Unix Domain Socket specific connect() Methods", "md_README.html#unix-domain-socket-specific-connect-methods", null ],
+            [ "Bluetooth RFCOMM specific connect() Methods", "md_README.html#bluetooth-rfcomm-specific-connect-methods", null ],
+            [ "Bluetooth L2CAP specific connect() Methods", "md_README.html#bluetooth-l2cap-specific-connect-methods", null ]
+          ] ]
+        ] ]
+      ] ],
+      [ "Configuration", "md_README.html#configuration", [
+        [ "Three different Options for Configuration", "md_README.html#three-different-options-for-configuration", [
+          [ "Configuration using the C++ API", "md_README.html#configuration-using-the-c-api", [
+            [ "List of all Configuration Items", "md_README.html#list-of-all-configuration-items", null ]
+          ] ],
+          [ "Configuration via the Command Line", "md_README.html#configuration-via-the-command-line", [
+            [ "Application Configuration", "md_README.html#application-configuration", null ],
+            [ "Instance Configuration", "md_README.html#instance-configuration", [
+              [ "Sections", "md_README.html#sections", null ],
+              [ "Using the Parameterless listen() Methods when no Configuration File exists", "md_README.html#using-the-parameterless-listen-methods-when-no-configuration-file-exists", null ],
+              [ "Using the Parameterless connect() Methods when no Configuration File exists", "md_README.html#using-the-parameterless-connect-methods-when-no-configuration-file-exists", null ]
+            ] ],
+            [ "Anatomy of the Command Line Interface", "md_README.html#anatomy-of-the-command-line-interface", null ]
+          ] ],
+          [ "Configuration via a Configuration File", "md_README.html#configuration-via-a-configuration-file", [
+            [ "Configuration File Format", "md_README.html#configuration-file-format", null ],
+            [ "Default Name of a Configuration File", "md_README.html#default-name-of-a-configuration-file", null ],
+            [ "Default Location of Configuration Files", "md_README.html#default-location-of-configuration-files", null ]
+          ] ]
+        ] ],
+        [ "Important Configuration Sections", "md_README.html#important-configuration-sections", [
+          [ "SSL/TLS Configuration (Section tls)", "md_README.html#ssltls-configuration-section-tls", [
+            [ "SSL/TLS In-Code Configuration", "md_README.html#ssltls-in-code-configuration", null ],
+            [ "SSL/TLS Command Line Configuration", "md_README.html#ssltls-command-line-configuration", null ],
+            [ "Using SSL/TLS with Other Network Layers", "md_README.html#using-ssltls-with-other-network-layers", null ]
+          ] ],
+          [ "Socket Configuration (Section socket)", "md_README.html#socket-configuration-section-socket", [
+            [ "Common socket Options for SocketServer and SocketClient Instances", "md_README.html#common-socket-options-for-socketserver-and-socketclient-instances", null ],
+            [ "Specific socket Options for IPv4 and IPv6 SocketServer", "md_README.html#specific-socket-options-for-ipv4-and-ipv6-socketserver", null ],
+            [ "Specific socket Options for IPv6 SocketServer and SocketClient", "md_README.html#specific-socket-options-for-ipv6-socketserver-and-socketclient", null ]
+          ] ]
+        ] ]
+      ] ],
+      [ "Using More Than One Instance in an Application", "md_README.html#using-more-than-one-instance-in-an-application", null ],
+      [ "Application Leyer Protocols APIs", "md_README.html#application-leyer-protocols-apis", [
+        [ "Basic HTTP-Server and HTTP-Client API", "md_README.html#basic-http-server-and-http-client-api", null ],
+        [ "Highlevel WEB-API a'la Node.JS-Express", "md_README.html#highlevel-web-api-ala-nodejs-express", null ],
+        [ "WebSockets", "md_README.html#websockets", null ],
+        [ "Basic MQTT-Server and MQTT-Client API", "md_README.html#basic-mqtt-server-and-mqtt-client-api", null ],
+        [ "MQTT Over WebSocket", "md_README.html#mqtt-over-websocket", null ]
+      ] ],
+      [ "Database Support", "md_README.html#database-support", [
+        [ "MariaDB", "md_README.html#mariadb", null ]
+      ] ],
+      [ "Example Applications", "md_README.html#example-applications", [
+        [ "HTTP/S Web-Server for Static HTML-Pages", "md_README.html#https-web-server-for-static-html-pages", null ],
+        [ "Receive Data via HTTP-Post Request", "md_README.html#receive-data-via-http-post-request", null ],
+        [ "Extract Server and Client Information (host name, IP, port, SSL/TLS information)", "md_README.html#extract-server-and-client-information-host-name-ip-port-ssltls-information", null ],
+        [ "Using Regular Expressions in Routes", "md_README.html#using-regular-expressions-in-routes", null ]
+      ] ]
+    ] ],
+    [ "Vue 3 + TypeScript + Vite", "md_src_2apps_2oauth2_2authorization__server_2vue-frontend-oauth2-auth-server_2README.html", [
+      [ "Recommended IDE Setup", "md_src_2apps_2oauth2_2authorization__server_2vue-frontend-oauth2-auth-server_2README.html#recommended-ide-setup", null ],
+      [ "Type Support For .vue Imports in TS", "md_src_2apps_2oauth2_2authorization__server_2vue-frontend-oauth2-auth-server_2README.html#type-support-for-vue-imports-in-ts", null ]
+    ] ],
+    [ "Vue 3 + TypeScript + Vite", "md_src_2apps_2oauth2_2client__app_2vue-frontend-oauth2-client_2README.html", [
+      [ "Recommended IDE Setup", "md_src_2apps_2oauth2_2client__app_2vue-frontend-oauth2-client_2README.html#recommended-ide-setup-1", null ],
+      [ "Type Support For .vue Imports in TS", "md_src_2apps_2oauth2_2client__app_2vue-frontend-oauth2-client_2README.html#type-support-for-vue-imports-in-ts-1", null ]
+    ] ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
-        [ "All", "namespacemembers.html", null ],
-        [ "Functions", "namespacemembers_func.html", null ],
+        [ "All", "namespacemembers.html", "namespacemembers_dup" ],
+        [ "Functions", "namespacemembers_func.html", "namespacemembers_func" ],
         [ "Variables", "namespacemembers_vars.html", null ],
         [ "Typedefs", "namespacemembers_type.html", null ],
         [ "Enumerations", "namespacemembers_enum.html", null ],
         [ "Enumerator", "namespacemembers_eval.html", null ]
       ] ]
     ] ],
-    [ "Concepts", "concepts.html", "concepts" ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
@@ -46,7 +208,7 @@ var NAVTREE =
         [ "All", "functions.html", "functions_dup" ],
         [ "Functions", "functions_func.html", "functions_func" ],
         [ "Variables", "functions_vars.html", "functions_vars" ],
-        [ "Typedefs", "functions_type.html", null ],
+        [ "Typedefs", "functions_type.html", "functions_type" ],
         [ "Enumerations", "functions_enum.html", null ],
         [ "Enumerator", "functions_eval.html", null ],
         [ "Related Symbols", "functions_rela.html", null ]
@@ -55,9 +217,11 @@ var NAVTREE =
     [ "Files", "files.html", [
       [ "File List", "files.html", "files_dup" ],
       [ "File Members", "globals.html", [
-        [ "All", "globals.html", null ],
+        [ "All", "globals.html", "globals_dup" ],
         [ "Functions", "globals_func.html", null ],
         [ "Variables", "globals_vars.html", null ],
+        [ "Typedefs", "globals_type.html", null ],
+        [ "Enumerations", "globals_enum.html", null ],
         [ "Macros", "globals_defs.html", null ]
       ] ]
     ] ]
@@ -67,51 +231,57 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "AcceptEventReceiver_8cpp.html",
-"Identity_8h_source.html",
-"Router_8hpp_source.html",
-"classCLI_1_1CallForCommandline.html#adce893b471d60e14d0fa7af2e2278680",
-"classcore_1_1Event.html#aae77d3214f54e03b751bb7cfd297b430",
-"classcore_1_1TimerEventPublisher_1_1timernode__lt.html#aa71ca0bd38f645b5863f30417186eeda",
-"classcore_1_1multiplexer_1_1poll_1_1PollFdsManager.html#a73ae258228291ac051debb7b7f3305c3",
-"classcore_1_1socket_1_1SocketContext.html#a171ec3bb2190630276ff2e6cb5fd9ccf",
-"classcore_1_1socket_1_1stream_1_1SocketConnectionT.html#aa8dc6a9e6bda050e5ba92d94677b686b",
-"classcore_1_1socket_1_1stream_1_1SocketWriter.html#a80d573a28cf80bb7a13f9a5ca904ae52",
-"classcore_1_1timer_1_1IntervalTimer.html#a63650f7c339902905980381efcf94091",
-"classdatabase_1_1mariadb_1_1commands_1_1async_1_1MariaDBAutoCommitCommand.html#a04764c7fdd8bea0d1b484ba3b502d234",
-"classexpress_1_1Dispatcher.html#a89a9c2c542ff67ba024cbdf11b7a6765",
-"classexpress_1_1RootRoute.html#ab11a687e7fb067c93728698217185a79",
-"classexpress_1_1Router.html#a6358e2a36bf83c65a849a144f14bf1f2",
-"classexpress_1_1middleware_1_1VHost.html",
-"classiot_1_1mqtt_1_1MqttContext.html#ada10a6f2fcf6953ed62d93bdb5907cd1",
-"classiot_1_1mqtt_1_1client_1_1packets_1_1Pubrec.html#a702068e1621aa30b45f6490ec5474f18",
-"classiot_1_1mqtt_1_1packets_1_1Subscribe.html#a99697af380e0ca7ddd690bd8c517e8aa",
-"classiot_1_1mqtt_1_1server_1_1broker_1_1Message.html#a58497f355c94f63392bd64864eb2a5ea",
-"classiot_1_1mqtt_1_1types_1_1BinaryData.html#a1013968f344390903b9f3c30862597a9",
-"classiot_1_1mqtt__fast_1_1ControlPacket.html#a68489018481e5e672b28b242cb9c71f8",
-"classiot_1_1mqtt__fast_1_1packets_1_1Connect.html#ad9a3f8626a1062e8c8862523a0abb0e4",
-"classiot_1_1mqtt__fast_1_1types_1_1TypeBase.html#aaf0e1e84cd87947245a8ab24be6a01b7",
-"classnet_1_1config_1_1ConfigPhysicalSocket.html#ae07c8e7706bc23459235e5d5834007e3",
-"classnet_1_1config_1_1stream_1_1tls_1_1ConfigSocketClient.html#a1624d55b92784d621f02885509644e52",
-"classnet_1_1in6_1_1stream_1_1legacy_1_1config_1_1ConfigSocketClient.html#aaadc4b04658381f17e0cf9753bb78642",
-"classnet_1_1in_1_1stream_1_1tls_1_1config_1_1ConfigSocketServer.html#a61df083148b0f8c437d70aaeb275b725",
-"classnet_1_1phy_1_1stream_1_1PhysicalSocket.html",
-"classnet_1_1un_1_1phy_1_1PhysicalSocket.html",
-"classutils_1_1PreserveErrno.html#aae4bbc03e39d1989f63902dc1eb12b2c",
-"classweb_1_1http_1_1Parser.html#afaf85771e39341e129795529ef8c4f8faceac378fb6024757513159a0110ac5f1",
-"classweb_1_1http_1_1client_1_1Request.html#ab853d5bc75cf3ffaa8667e684f31f462",
-"classweb_1_1http_1_1client_1_1commands_1_1EndCommand.html#acbfc9fbd1d0789ffc0d5263850eb7a79",
-"classweb_1_1http_1_1server_1_1RequestParser.html#a114832f08bc258d3076ab80c89b95d8b",
-"classweb_1_1websocket_1_1Receiver.html#a572a3d6a32947d42e70ff548315e6541",
-"classweb_1_1websocket_1_1SubProtocolFactory.html#a45d3f3242187a7e0dc934f3c0f1a6275",
-"classweb_1_1websocket_1_1server_1_1SubProtocolFactorySelector.html#a0577a259e81162fd19ae269e79d9a206",
-"functions_func_c.html",
-"index.html#anatomy-of-the-command-line-interface",
-"legacy_2rc_2Server_8h.html",
-"mqtt_2server_2packets_2Connect_8h_source.html",
-"namespacemembers_vars.html",
-"net_2un_2SocketAddress_8cpp.html",
-"ssl__utils_8h.html#a30e53f6d342e6345afe3a14e2d848894",
-"un_2stream_2tls_2config_2ConfigSocketClient_8cpp_source.html"
+"ConfigAddressRemote_8h_source.html",
+"Logger_8h.html#a20a7b04657c1d83fae5d54514d3f1622ac70d7b5a6ca66e8ba0f1d5f528515573",
+"SocketConnection_8cpp_source.html",
+"classApp.html#a3a7043187d98d0587b3c19bd057f0208",
+"classCLI_1_1CallForWriteConfig.html",
+"classOption.html#ac35336af499c1e262d8d1bdfb3070c39",
+"classapps_1_1echo_1_1model_1_1EchoSocketContext.html#aff211343268758bb0f913638ad346d9a",
+"classcore_1_1EventLoop.html#a3125b6361565df4753affc73eb83984a",
+"classcore_1_1TimerEventReceiver.html#a52b86119e9c36bf5e736eb8db5d93cbf",
+"classcore_1_1multiplexer_1_1select_1_1DescriptorEventPublisher.html",
+"classcore_1_1socket_1_1SocketContext.html#a8d1afe2d77ed45796d57da529e5c7c51",
+"classcore_1_1socket_1_1stream_1_1SocketConnectionT.html#ac5ea3c3614aa8f5e8d9f20fbaae658c7",
+"classcore_1_1socket_1_1stream_1_1legacy_1_1SocketAcceptor.html",
+"classcore_1_1timer_1_1IntervalTimerStopable.html#a440eff104d7468a2069d4657a56baf71",
+"classdatabase_1_1mariadb_1_1commands_1_1async_1_1MariaDBAutoCommitCommand.html#ad9234d2e6bb8383c03c93b680631cf74",
+"classexpress_1_1Controller.html#a4321dde8dd3ffba0a558ab40655361a3",
+"classexpress_1_1RootRoute.html#a60d0b64d29e93ed93bfe4f7d2ae703da",
+"classexpress_1_1Router.html#a2cda8ea5c05bda23d3e9ef3f90002064",
+"classexpress_1_1middleware_1_1BasicAuthentication.html#a461f08f2de85ee8ddb1afb72db149028",
+"classiot_1_1mqtt_1_1Mqtt.html#ac724b5224b3fd33fc03485589bf726d7",
+"classiot_1_1mqtt_1_1client_1_1packets_1_1Connack.html",
+"classiot_1_1mqtt_1_1packets_1_1Pubrec.html#a51652fa56faa052cf14563e325f41eac",
+"classiot_1_1mqtt_1_1server_1_1broker_1_1Broker.html#a3553d147a922d1c324c350b11eabe36b",
+"classiot_1_1mqtt_1_1server_1_1packets_1_1Pubrec.html",
+"classiot_1_1mqtt_1_1types_1_1UInt8.html#aefd53b172bd3dc7845ab176064aac489",
+"classiot_1_1mqtt__fast_1_1packets_1_1Connect.html#a1f624c1f57711e5fa066ceeb01518352",
+"classiot_1_1mqtt__fast_1_1types_1_1Int__1.html",
+"classnet_1_1config_1_1ConfigPhysicalSocket.html#a4c40ecb1e1ccdb7395de93e7180b54b4",
+"classnet_1_1config_1_1ConfigTlsServer.html",
+"classnet_1_1in6_1_1stream_1_1SocketClient.html#a004a41e3e1af0ce3a4d2e98e11c744f2",
+"classnet_1_1in_1_1stream_1_1SocketServer.html#a06f4d2094cb923ddab692a94acc05180",
+"classnet_1_1phy_1_1PhysicalSocket.html#ab1b7a1e8f568d6f37b5712a43c126d20",
+"classnet_1_1un_1_1SocketAddress.html#a642b5904081eae12c546ad22f81022a9",
+"classutils_1_1Daemon.html#a6e5053c3e51d4ec8ccf5dea33af6e5bb",
+"classweb_1_1http_1_1Parser.html#a94ab44c0d65451be6ba3e6e389a8b7d5a75c6b2428da2036422b35ca9b1f1f8c4",
+"classweb_1_1http_1_1client_1_1Request.html#a50ba7d86e412656cc53f9ec143c19b11",
+"classweb_1_1http_1_1client_1_1SocketContextFactory.html",
+"classweb_1_1http_1_1decoder_1_1Identity.html#aea40755959c5296190b3e708fd9697b5",
+"classweb_1_1http_1_1server_1_1SocketContextUpgradeFactory.html#a348a57d1159434207c8f0b328dc7b295",
+"classweb_1_1websocket_1_1SubProtocol.html#afc5f714978cd4db140b6f54832b52cef",
+"classweb_1_1websocket_1_1server_1_1SocketContextUpgrade.html#ad42e5970216aaaca64c94536d4a8f23f",
+"dir_c3cffaf4d71f5a96172036273210621c.html",
+"http_2server_2SocketContextUpgradeFactory_8cpp_source.html",
+"l2_2stream_2legacy_2SocketClient_8cpp_source.html",
+"mqtt-fast_2packets_2Disconnect_8cpp.html",
+"multiplexer_2epoll_2EventMultiplexer_8cpp_source.html",
+"namespacedetail.html#a89f81a352d3ebced093b357a351bd445",
+"namespaceweb_1_1http.html#a40edb0fffda79adf1a8a5b95fdd6e7b2",
+"rc_2stream_2tls_2config_2ConfigSocketClient_8h_source.html",
+"structdetail_1_1element__type.html",
+"tls_2rc_2WebApp_8h_source.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -31,7 +31,7 @@ var classexpress_1_1Response =
     [ "setTrailer", "classexpress_1_1Response.html#a44d47883f87491c55b436249257f2776", null ],
     [ "status", "classexpress_1_1Response.html#a8353bb81a794fcb5d0c391cba0a76671", null ],
     [ "type", "classexpress_1_1Response.html#aa90e154503a3f1c0681855385ad2c779", null ],
-    [ "upgrade", "classexpress_1_1Response.html#a07aa573bbd3aaf43c7018c7743402093", null ],
+    [ "upgrade", "classexpress_1_1Response.html#af5935953d7ef6ec6739b5774bc586a98", null ],
     [ "vary", "classexpress_1_1Response.html#a9a2380b9c561f86f4d5b9179f12bef5f", null ],
     [ "responseBase", "classexpress_1_1Response.html#a0df3fd825a69a418e1b3b98df672727a", null ]
 ];

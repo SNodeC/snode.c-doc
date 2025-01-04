@@ -165,8 +165,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a91a4ea0dec22714b3ce9846491090ab0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a55934f3429d433fd03e1c4f3d0a90e8c" id="r_a55934f3429d433fd03e1c4f3d0a90e8c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a55934f3429d433fd03e1c4f3d0a90e8c">send</a> (const std::string &amp;chunk)</td></tr>
 <tr class="separator:a55934f3429d433fd03e1c4f3d0a90e8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a07aa573bbd3aaf43c7018c7743402093" id="r_a07aa573bbd3aaf43c7018c7743402093"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a07aa573bbd3aaf43c7018c7743402093">upgrade</a> (const std::shared_ptr&lt; <a class="el" href="classexpress_1_1Request.html">Request</a> &gt; &amp;request, const std::function&lt; void(bool)&gt; &amp;<a class="el" href="#a8353bb81a794fcb5d0c391cba0a76671">status</a>)</td></tr>
-<tr class="separator:a07aa573bbd3aaf43c7018c7743402093"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5935953d7ef6ec6739b5774bc586a98" id="r_af5935953d7ef6ec6739b5774bc586a98"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af5935953d7ef6ec6739b5774bc586a98">upgrade</a> (const std::shared_ptr&lt; <a class="el" href="classexpress_1_1Request.html">Request</a> &gt; &amp;request, const std::function&lt; void(const std::string)&gt; &amp;<a class="el" href="#a8353bb81a794fcb5d0c391cba0a76671">status</a>)</td></tr>
+<tr class="separator:af5935953d7ef6ec6739b5774bc586a98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a229eb88872cbaf3887cda0b64703796f" id="r_a229eb88872cbaf3887cda0b64703796f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a229eb88872cbaf3887cda0b64703796f">end</a> ()</td></tr>
 <tr class="separator:a229eb88872cbaf3887cda0b64703796f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a337a357254e090aa67ad5cc5bd703fcb" id="r_a337a357254e090aa67ad5cc5bd703fcb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a337a357254e090aa67ad5cc5bd703fcb">sendFile</a> (const std::string &amp;file, const std::function&lt; void(int)&gt; &amp;callback)</td></tr>
@@ -1042,8 +1042,8 @@ Here is the caller graph for this function:</div>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="a07aa573bbd3aaf43c7018c7743402093" name="a07aa573bbd3aaf43c7018c7743402093"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a07aa573bbd3aaf43c7018c7743402093">&#9670;&#160;</a></span>upgrade()</h2>
+<a id="af5935953d7ef6ec6739b5774bc586a98" name="af5935953d7ef6ec6739b5774bc586a98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5935953d7ef6ec6739b5774bc586a98">&#9670;&#160;</a></span>upgrade()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1056,13 +1056,13 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::function&lt; void(bool)&gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>status</em></span>&#160;)</td>
+          <td class="paramtype">const std::function&lt; void(const std::string)&gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>status</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="express_2Response_8cpp_source.html#l00147">147</a> of file <a class="el" href="express_2Response_8cpp_source.html">Response.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  147</span>                                                                                                       {</div>
+<div class="fragment"><div class="line"><span class="lineno">  147</span>                                                                                                                   {</div>
 <div class="line"><span class="lineno">  148</span>        <a class="code hl_variable" href="#a0df3fd825a69a418e1b3b98df672727a">responseBase</a>-&gt;upgrade(request-&gt;requestBase, <a class="code hl_function" href="#a8353bb81a794fcb5d0c391cba0a76671">status</a>);</div>
 <div class="line"><span class="lineno">  149</span>    }</div>
 </div><!-- fragment -->
@@ -1119,8 +1119,8 @@ Here is the caller graph for this function:</div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>express/<a class="el" href="express_2Response_8h_source.html">Response.h</a></li>
-<li>express/<a class="el" href="express_2Response_8cpp_source.html">Response.cpp</a></li>
+<li>src/express/<a class="el" href="express_2Response_8h_source.html">Response.h</a></li>
+<li>src/express/<a class="el" href="express_2Response_8cpp_source.html">Response.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -1128,7 +1128,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceexpress.html">express</a></li><li class="navelem"><a class="el" href="classexpress_1_1Response.html">Response</a></li>
-    <li class="footer">Generated on Thu Jan 2 2025 21:39:07 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generated on Sun Jan 5 2025 00:54:59 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>

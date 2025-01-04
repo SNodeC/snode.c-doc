@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['zero_0',['zero',['../classcore_1_1multiplexer_1_1select_1_1FdSet.html#a99e0760bf6e18d58a8bfd924e42adce5',1,'core::multiplexer::select::FdSet']]]
+  ['x86_2064_20arm_0',['Installation on Debian Style Systems (x86-64, Arm)',['../md_README.html#installation-on-debian-style-systems-x86-64-arm',1,'']]],
+  ['xstr_1',['XSTR',['../ConfigPhysicalSocket_8cpp.html#a03943706e48069237cd57f2d35ca987e',1,'XSTR:&#160;ConfigPhysicalSocket.cpp'],['../ConfigPhysicalSocketClient_8cpp.html#a03943706e48069237cd57f2d35ca987e',1,'XSTR:&#160;ConfigPhysicalSocketClient.cpp'],['../in_2config_2ConfigAddress_8cpp.html#a03943706e48069237cd57f2d35ca987e',1,'XSTR:&#160;ConfigAddress.cpp'],['../in_2stream_2config_2ConfigSocketServer_8cpp.html#a03943706e48069237cd57f2d35ca987e',1,'XSTR:&#160;ConfigSocketServer.cpp'],['../in6_2config_2ConfigAddress_8cpp.html#a03943706e48069237cd57f2d35ca987e',1,'XSTR:&#160;ConfigAddress.cpp'],['../in6_2stream_2config_2ConfigSocketServer_8cpp.html#a03943706e48069237cd57f2d35ca987e',1,'XSTR:&#160;ConfigSocketServer.cpp'],['../Config_8cpp.html#a03943706e48069237cd57f2d35ca987e',1,'XSTR:&#160;Config.cpp'],['../ConfigHTTP_8cpp.html#a03943706e48069237cd57f2d35ca987e',1,'XSTR:&#160;ConfigHTTP.cpp']]]
 ];

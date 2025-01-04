@@ -31,7 +31,7 @@ var classweb_1_1http_1_1server_1_1Response =
     [ "status", "classweb_1_1http_1_1server_1_1Response.html#a361cfafb9b3d50b671bfdc21c27467c1", null ],
     [ "stopResponse", "classweb_1_1http_1_1server_1_1Response.html#a156269d4b4557125b9d140a3196cfc84", null ],
     [ "type", "classweb_1_1http_1_1server_1_1Response.html#a8bbc21161ba718f9ee1e0ded1d443197", null ],
-    [ "upgrade", "classweb_1_1http_1_1server_1_1Response.html#a8f4c6c3aca5a951524bfa98527218dac", null ],
+    [ "upgrade", "classweb_1_1http_1_1server_1_1Response.html#a8b01d5c0ea5bd4110818b9fac4fc1546", null ],
     [ "SocketContext", "classweb_1_1http_1_1server_1_1Response.html#ab7996d16e63168521871184317240dbd", null ],
     [ "connectionState", "classweb_1_1http_1_1server_1_1Response.html#aeaa3022ce05a081af3a6745750c337c1", null ],
     [ "contentLength", "classweb_1_1http_1_1server_1_1Response.html#aa3b44867b06641f5b396b432b5f498eb", null ],

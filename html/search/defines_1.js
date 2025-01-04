@@ -1,4 +1,20 @@
 var searchData=
 [
-  ['close_5fsocket_5ftimeout_0',['CLOSE_SOCKET_TIMEOUT',['../websocket_2SocketContextUpgrade_8h.html#ab1bd08f7b8fad5d9f714271a72da9331',1,'SocketContextUpgrade.h']]]
+  ['cli11_5fdeprecated_0',['CLI11_DEPRECATED',['../CLI11_8hpp.html#ab56dd908d351a84796414f79d57696d0',1,'CLI11.hpp']]],
+  ['cli11_5fdiagnostic_5fignore_5fdeprecated_1',['CLI11_DIAGNOSTIC_IGNORE_DEPRECATED',['../CLI11_8hpp.html#a3123f908b3a1e27c45c97dae8b1c0bce',1,'CLI11.hpp']]],
+  ['cli11_5fdiagnostic_5fpop_2',['CLI11_DIAGNOSTIC_POP',['../CLI11_8hpp.html#a6f133745de2548671f0d2ebb82da2705',1,'CLI11.hpp']]],
+  ['cli11_5fdiagnostic_5fpush_3',['CLI11_DIAGNOSTIC_PUSH',['../CLI11_8hpp.html#a33ece9d4c1720374d8c899280f64b313',1,'CLI11.hpp']]],
+  ['cli11_5ferror_5fdef_4',['CLI11_ERROR_DEF',['../CLI11_8hpp.html#aa5083d44020c499995d126efcdcf5b63',1,'CLI11.hpp']]],
+  ['cli11_5ferror_5fsimple_5',['CLI11_ERROR_SIMPLE',['../CLI11_8hpp.html#a0da004ec8320e9f80f2eac076e1c4eef',1,'CLI11.hpp']]],
+  ['cli11_5fhas_5fcodecvt_6',['CLI11_HAS_CODECVT',['../CLI11_8hpp.html#ab175283b9a0ad85300110e33b0c0ffd1',1,'CLI11.hpp']]],
+  ['cli11_5finline_7',['CLI11_INLINE',['../CLI11_8hpp.html#ae98448e41749e6ca61eebe5c743a2a01',1,'CLI11.hpp']]],
+  ['cli11_5fnodiscard_8',['CLI11_NODISCARD',['../CLI11_8hpp.html#af6b299358fbdb7a4caa5da7a92ce6b23',1,'CLI11.hpp']]],
+  ['cli11_5fparse_9',['CLI11_PARSE',['../CLI11_8hpp.html#aff002944bde4d025a6f2bd2e784af37b',1,'CLI11.hpp']]],
+  ['cli11_5fuse_5fstatic_5frtti_10',['CLI11_USE_STATIC_RTTI',['../CLI11_8hpp.html#ad8c5931c1cdb73592aaca48d77ecab1a',1,'CLI11.hpp']]],
+  ['cli11_5fversion_11',['CLI11_VERSION',['../CLI11_8hpp.html#a1b8785b397aabcac7e4a07dafe066268',1,'CLI11.hpp']]],
+  ['cli11_5fversion_5fmajor_12',['CLI11_VERSION_MAJOR',['../CLI11_8hpp.html#a1a2e30d6baa07959d9603aeb27e1bdb4',1,'CLI11.hpp']]],
+  ['cli11_5fversion_5fminor_13',['CLI11_VERSION_MINOR',['../CLI11_8hpp.html#ab6f9ac59f853b1948fdbcf1188750208',1,'CLI11.hpp']]],
+  ['cli11_5fversion_5fpatch_14',['CLI11_VERSION_PATCH',['../CLI11_8hpp.html#a7e997cfe2479493bde18e8f9ad4256f5',1,'CLI11.hpp']]],
+  ['client_5finclude_15',['CLIENT_INCLUDE',['../http_2model_2clients_8h.html#a2fa3627f0286149a0e8d03a50375fb3d',1,'clients.h']]],
+  ['close_5fsocket_5ftimeout_16',['CLOSE_SOCKET_TIMEOUT',['../websocket_2SocketContextUpgrade_8h.html#ab1bd08f7b8fad5d9f714271a72da9331',1,'SocketContextUpgrade.h']]]
 ];
