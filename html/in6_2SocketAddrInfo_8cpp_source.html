@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.11.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>SNode.C: src/net/in6/SocketAddrInfo.cpp Source File</title>
+<title>SNode.C: net/in6/SocketAddrInfo.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -132,24 +132,24 @@ $(function(){initNavTree('in6_2SocketAddrInfo_8cpp_source.html',''); initResizab
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">namespace</span> net::in6 {</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
 <div class="foldopen" id="foldopen00033" data-start="{" data-end="}">
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="classnet_1_1in6_1_1SocketAddrInfo.html#ae0dd1839d29562d329786dc5ab0c718a">   33</a></span>    <a class="code hl_class" href="classnet_1_1in6_1_1SocketAddrInfo.html">SocketAddrInfo</a>::~<a class="code hl_function" href="classnet_1_1in6_1_1SocketAddrInfo.html#ae0dd1839d29562d329786dc5ab0c718a">SocketAddrInfo</a>() {</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classnet_1_1in6_1_1SocketAddrInfo.html#a4d9ed68dcc87fa3d3e42116118ab504e">addrInfo</a> != <span class="keywordtype">nullptr</span>) {</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            freeaddrinfo(<a class="code hl_variable" href="classnet_1_1in6_1_1SocketAddrInfo.html#a4d9ed68dcc87fa3d3e42116118ab504e">addrInfo</a>);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="classnet_1_1in6_1_1SocketAddrInfo.html#ae0dd1839d29562d329786dc5ab0c718a">   33</a></span>    SocketAddrInfo::~SocketAddrInfo() {</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <span class="keywordflow">if</span> (addrInfo != <span class="keywordtype">nullptr</span>) {</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            freeaddrinfo(addrInfo);</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        }</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    }</div>
 </div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
 <div class="foldopen" id="foldopen00039" data-start="{" data-end="}">
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="classnet_1_1in6_1_1SocketAddrInfo.html#a3c70309e4006416e75f77e9f1d9fb299">   39</a></span>    <span class="keywordtype">int</span> <a class="code hl_class" href="classnet_1_1in6_1_1SocketAddrInfo.html">SocketAddrInfo</a>::resolve(<span class="keyword">const</span> std::string&amp; node, <span class="keyword">const</span> std::string&amp; service, <span class="keyword">const</span> addrinfo&amp; hints) {</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classnet_1_1in6_1_1SocketAddrInfo.html#a4d9ed68dcc87fa3d3e42116118ab504e">addrInfo</a> != <span class="keywordtype">nullptr</span>) {</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            freeaddrinfo(<a class="code hl_variable" href="classnet_1_1in6_1_1SocketAddrInfo.html#a4d9ed68dcc87fa3d3e42116118ab504e">addrInfo</a>);</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            <a class="code hl_variable" href="classnet_1_1in6_1_1SocketAddrInfo.html#a4d9ed68dcc87fa3d3e42116118ab504e">addrInfo</a> = <span class="keywordtype">nullptr</span>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="classnet_1_1in6_1_1SocketAddrInfo.html#a3c70309e4006416e75f77e9f1d9fb299">   39</a></span>    <span class="keywordtype">int</span> SocketAddrInfo::resolve(<span class="keyword">const</span> std::string&amp; node, <span class="keyword">const</span> std::string&amp; service, <span class="keyword">const</span> addrinfo&amp; hints) {</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keywordflow">if</span> (addrInfo != <span class="keywordtype">nullptr</span>) {</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            freeaddrinfo(addrInfo);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            addrInfo = <span class="keywordtype">nullptr</span>;</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        }</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keywordtype">int</span> aiErrCode = 0;</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="keywordflow">if</span> ((aiErrCode = <a class="code hl_namespace" href="namespacecore.html">core</a><a class="code hl_function" href="namespacecore_1_1system.html#a86e636682d33db526f7502ab0e6ff57c">::</a><a class="code hl_namespace" href="namespacecore_1_1system.html">system</a><a class="code hl_function" href="namespacecore_1_1system.html#a86e636682d33db526f7502ab0e6ff57c">::</a><a class="code hl_function" href="namespacecore_1_1system.html#a86e636682d33db526f7502ab0e6ff57c">getaddrinfo</a><a class="code hl_function" href="namespacecore_1_1system.html#a86e636682d33db526f7502ab0e6ff57c">(</a>node.c_str()<a class="code hl_function" href="namespacecore_1_1system.html#a86e636682d33db526f7502ab0e6ff57c">,</a> service.c_str()<a class="code hl_function" href="namespacecore_1_1system.html#a86e636682d33db526f7502ab0e6ff57c">,</a> &amp;hints<a class="code hl_function" href="namespacecore_1_1system.html#a86e636682d33db526f7502ab0e6ff57c">,</a> &amp;<a class="code hl_variable" href="classnet_1_1in6_1_1SocketAddrInfo.html#a4d9ed68dcc87fa3d3e42116118ab504e">addrInfo</a><a class="code hl_function" href="namespacecore_1_1system.html#a86e636682d33db526f7502ab0e6ff57c">)</a>) == 0) {</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            <a class="code hl_variable" href="classnet_1_1in6_1_1SocketAddrInfo.html#a42e6b430b919438df6c8f1a546d6724d">currentAddrInfo</a> = <a class="code hl_variable" href="classnet_1_1in6_1_1SocketAddrInfo.html#a4d9ed68dcc87fa3d3e42116118ab504e">addrInfo</a>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="keywordflow">if</span> ((aiErrCode = core::system::getaddrinfo(node.c_str(), service.c_str(), &amp;hints, &amp;addrInfo)) == 0) {</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            currentAddrInfo = addrInfo;</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        }</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <span class="keywordflow">return</span> aiErrCode;</div>
@@ -157,17 +157,17 @@ $(function(){initNavTree('in6_2SocketAddrInfo_8cpp_source.html',''); initResizab
 </div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
 <div class="foldopen" id="foldopen00054" data-start="{" data-end="}">
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="classnet_1_1in6_1_1SocketAddrInfo.html#a7868b21b172c84a64b7c2b79c7c444a4">   54</a></span>    <span class="keywordtype">bool</span> <a class="code hl_class" href="classnet_1_1in6_1_1SocketAddrInfo.html">SocketAddrInfo</a>::<a class="code hl_function" href="classnet_1_1in6_1_1SocketAddrInfo.html#a7868b21b172c84a64b7c2b79c7c444a4">useNext</a>() {</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classnet_1_1in6_1_1SocketAddrInfo.html#a42e6b430b919438df6c8f1a546d6724d">currentAddrInfo</a> != <span class="keywordtype">nullptr</span>) {</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="classnet_1_1in6_1_1SocketAddrInfo.html#a7868b21b172c84a64b7c2b79c7c444a4">   54</a></span>    <span class="keywordtype">bool</span> SocketAddrInfo::useNext() {</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <span class="keywordflow">if</span> (currentAddrInfo != <span class="keywordtype">nullptr</span>) {</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            currentAddrInfo = currentAddrInfo-&gt;ai_next;</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        }</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classnet_1_1in6_1_1SocketAddrInfo.html#a42e6b430b919438df6c8f1a546d6724d">currentAddrInfo</a> != <span class="keywordtype">nullptr</span>;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <span class="keywordflow">return</span> currentAddrInfo != <span class="keywordtype">nullptr</span>;</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    }</div>
 </div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
 <div class="foldopen" id="foldopen00062" data-start="{" data-end="}">
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="classnet_1_1in6_1_1SocketAddrInfo.html#ad38f9c7a1eaad870507bd40e40c5e99d">   62</a></span>    sockaddr_in6 <a class="code hl_class" href="classnet_1_1in6_1_1SocketAddrInfo.html">SocketAddrInfo</a>::<a class="code hl_function" href="classnet_1_1in6_1_1SocketAddrInfo.html#ad38f9c7a1eaad870507bd40e40c5e99d">getSockAddr</a>() {</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="classnet_1_1in6_1_1SocketAddrInfo.html#ad38f9c7a1eaad870507bd40e40c5e99d">   62</a></span>    sockaddr_in6 SocketAddrInfo::getSockAddr() {</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <span class="keywordflow">return</span> currentAddrInfo != <span class="keywordtype">nullptr</span></div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>                   ? *<span class="keyword">reinterpret_cast</span>&lt;sockaddr_in6*&gt;(currentAddrInfo-&gt;ai_addr) <span class="comment">// cppcheck-suppress internalAstError</span></div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                   : sockaddr_in6{.sin6_family = AF_INET6, .sin6_port{}, .sin6_flowinfo{}, .sin6_addr{}, .sin6_scope_id{}};</div>
@@ -175,14 +175,14 @@ $(function(){initNavTree('in6_2SocketAddrInfo_8cpp_source.html',''); initResizab
 </div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
 <div class="foldopen" id="foldopen00068" data-start="{" data-end="}">
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="classnet_1_1in6_1_1SocketAddrInfo.html#a5b60719663c73118a436804d0805364c">   68</a></span>    std::string <a class="code hl_class" href="classnet_1_1in6_1_1SocketAddrInfo.html">SocketAddrInfo</a>::<a class="code hl_function" href="classnet_1_1in6_1_1SocketAddrInfo.html#a5b60719663c73118a436804d0805364c">getCanonName</a>() {</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="classnet_1_1in6_1_1SocketAddrInfo.html#a5b60719663c73118a436804d0805364c">   68</a></span>    std::string SocketAddrInfo::getCanonName() {</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <span class="keywordflow">return</span> currentAddrInfo-&gt;ai_canonname != <span class="keywordtype">nullptr</span> ? currentAddrInfo-&gt;ai_canonname : std::string{};</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    }</div>
 </div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
 <div class="foldopen" id="foldopen00072" data-start="{" data-end="}">
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="classnet_1_1in6_1_1SocketAddrInfo.html#a59d0430284d29855c835cc4d86ec2fc6">   72</a></span>    <span class="keywordtype">void</span> <a class="code hl_class" href="classnet_1_1in6_1_1SocketAddrInfo.html">SocketAddrInfo</a>::<a class="code hl_function" href="classnet_1_1in6_1_1SocketAddrInfo.html#a59d0430284d29855c835cc4d86ec2fc6">logAddressInfo</a>() {</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classnet_1_1in6_1_1SocketAddrInfo.html#a42e6b430b919438df6c8f1a546d6724d">currentAddrInfo</a> != <span class="keywordtype">nullptr</span>) {</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="classnet_1_1in6_1_1SocketAddrInfo.html#a59d0430284d29855c835cc4d86ec2fc6">   72</a></span>    <span class="keywordtype">void</span> SocketAddrInfo::logAddressInfo() {</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        <span class="keywordflow">if</span> (currentAddrInfo != <span class="keywordtype">nullptr</span>) {</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            <span class="keyword">static</span> <span class="keywordtype">char</span> hostBfr[NI_MAXHOST];</div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>            <span class="keyword">static</span> <span class="keywordtype">char</span> servBfr[NI_MAXSERV];</div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            std::memset(hostBfr, 0, NI_MAXHOST);</div>
@@ -236,24 +236,13 @@ $(function(){initNavTree('in6_2SocketAddrInfo_8cpp_source.html',''); initResizab
 </div>
 <div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>} <span class="comment">// namespace net::in6</span></div>
-<div class="ttc" id="aclassnet_1_1in6_1_1SocketAddrInfo_html"><div class="ttname"><a href="classnet_1_1in6_1_1SocketAddrInfo.html">net::in6::SocketAddrInfo</a></div><div class="ttdef"><b>Definition</b> <a href="in6_2SocketAddrInfo_8h_source.html#l00035">SocketAddrInfo.h:35</a></div></div>
-<div class="ttc" id="aclassnet_1_1in6_1_1SocketAddrInfo_html_a42e6b430b919438df6c8f1a546d6724d"><div class="ttname"><a href="classnet_1_1in6_1_1SocketAddrInfo.html#a42e6b430b919438df6c8f1a546d6724d">net::in6::SocketAddrInfo::currentAddrInfo</a></div><div class="ttdeci">struct addrinfo * currentAddrInfo</div><div class="ttdef"><b>Definition</b> <a href="in6_2SocketAddrInfo_8h_source.html#l00051">SocketAddrInfo.h:51</a></div></div>
-<div class="ttc" id="aclassnet_1_1in6_1_1SocketAddrInfo_html_a4d9ed68dcc87fa3d3e42116118ab504e"><div class="ttname"><a href="classnet_1_1in6_1_1SocketAddrInfo.html#a4d9ed68dcc87fa3d3e42116118ab504e">net::in6::SocketAddrInfo::addrInfo</a></div><div class="ttdeci">struct addrinfo * addrInfo</div><div class="ttdef"><b>Definition</b> <a href="in6_2SocketAddrInfo_8h_source.html#l00050">SocketAddrInfo.h:50</a></div></div>
-<div class="ttc" id="aclassnet_1_1in6_1_1SocketAddrInfo_html_a59d0430284d29855c835cc4d86ec2fc6"><div class="ttname"><a href="classnet_1_1in6_1_1SocketAddrInfo.html#a59d0430284d29855c835cc4d86ec2fc6">net::in6::SocketAddrInfo::logAddressInfo</a></div><div class="ttdeci">void logAddressInfo()</div><div class="ttdef"><b>Definition</b> <a href="#l00072">SocketAddrInfo.cpp:72</a></div></div>
-<div class="ttc" id="aclassnet_1_1in6_1_1SocketAddrInfo_html_a5b60719663c73118a436804d0805364c"><div class="ttname"><a href="classnet_1_1in6_1_1SocketAddrInfo.html#a5b60719663c73118a436804d0805364c">net::in6::SocketAddrInfo::getCanonName</a></div><div class="ttdeci">std::string getCanonName()</div><div class="ttdef"><b>Definition</b> <a href="#l00068">SocketAddrInfo.cpp:68</a></div></div>
-<div class="ttc" id="aclassnet_1_1in6_1_1SocketAddrInfo_html_a7868b21b172c84a64b7c2b79c7c444a4"><div class="ttname"><a href="classnet_1_1in6_1_1SocketAddrInfo.html#a7868b21b172c84a64b7c2b79c7c444a4">net::in6::SocketAddrInfo::useNext</a></div><div class="ttdeci">bool useNext()</div><div class="ttdef"><b>Definition</b> <a href="#l00054">SocketAddrInfo.cpp:54</a></div></div>
-<div class="ttc" id="aclassnet_1_1in6_1_1SocketAddrInfo_html_ad38f9c7a1eaad870507bd40e40c5e99d"><div class="ttname"><a href="classnet_1_1in6_1_1SocketAddrInfo.html#ad38f9c7a1eaad870507bd40e40c5e99d">net::in6::SocketAddrInfo::getSockAddr</a></div><div class="ttdeci">sockaddr_in6 getSockAddr()</div><div class="ttdef"><b>Definition</b> <a href="#l00062">SocketAddrInfo.cpp:62</a></div></div>
-<div class="ttc" id="aclassnet_1_1in6_1_1SocketAddrInfo_html_ae0dd1839d29562d329786dc5ab0c718a"><div class="ttname"><a href="classnet_1_1in6_1_1SocketAddrInfo.html#ae0dd1839d29562d329786dc5ab0c718a">net::in6::SocketAddrInfo::~SocketAddrInfo</a></div><div class="ttdeci">~SocketAddrInfo()</div><div class="ttdef"><b>Definition</b> <a href="#l00033">SocketAddrInfo.cpp:33</a></div></div>
-<div class="ttc" id="anamespacecore_1_1system_html"><div class="ttname"><a href="namespacecore_1_1system.html">core::system</a></div><div class="ttdef"><b>Definition</b> <a href="dlfcn_8cpp_source.html#l00028">dlfcn.cpp:28</a></div></div>
-<div class="ttc" id="anamespacecore_1_1system_html_a86e636682d33db526f7502ab0e6ff57c"><div class="ttname"><a href="namespacecore_1_1system.html#a86e636682d33db526f7502ab0e6ff57c">core::system::getaddrinfo</a></div><div class="ttdeci">int getaddrinfo(const char *node, const char *service, const struct addrinfo *hints, struct addrinfo **res)</div><div class="ttdef"><b>Definition</b> <a href="netdb_8cpp_source.html#l00030">netdb.cpp:30</a></div></div>
-<div class="ttc" id="anamespacecore_html"><div class="ttname"><a href="namespacecore.html">core</a></div><div class="ttdef"><b>Definition</b> <a href="Descriptor_8cpp_source.html#l00030">Descriptor.cpp:30</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_c72b25b75abe208498b36a3e44a3726c.html">net</a></li><li class="navelem"><a class="el" href="dir_6e641e260d38c0d3ad76aa362ed39a76.html">in6</a></li><li class="navelem"><a class="el" href="in6_2SocketAddrInfo_8cpp.html">SocketAddrInfo.cpp</a></li>
-    <li class="footer">Generated on Sun Jan 5 2025 01:16:11 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="navelem"><a class="el" href="dir_427baa8a9a5be237f298d4545d0d1ce2.html">net</a></li><li class="navelem"><a class="el" href="dir_2a582851531259f833c8b72a803f9d6e.html">in6</a></li><li class="navelem"><a class="el" href="in6_2SocketAddrInfo_8cpp.html">SocketAddrInfo.cpp</a></li>
+    <li class="footer">Generated on Sun Jan 5 2025 02:25:11 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>

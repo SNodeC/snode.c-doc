@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.11.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>SNode.C: src/iot/mqtt/packets/Suback.cpp Source File</title>
+<title>SNode.C: iot/mqtt/packets/Suback.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -127,24 +127,24 @@ $(function(){initNavTree('mqtt_2packets_2Suback_8cpp_source.html',''); initResiz
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#</span><span class="preprocessor">endif</span> <span class="comment">// DOXYGEN_SHOULD_SKIP_THIS</span></div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">namespace</span> iot::mqtt::<a class="code hl_namespace" href="namespaceiot_1_1mqtt_1_1packets.html">packets</a> {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">namespace</span> iot::mqtt::packets {</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
 <div class="foldopen" id="foldopen00031" data-start="{" data-end="}">
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="classiot_1_1mqtt_1_1packets_1_1Suback.html#a94f32b641b8dfc54ebf94596629803d8">   31</a></span>    <a class="code hl_class" href="classiot_1_1mqtt_1_1packets_1_1Suback.html">Suback</a>::<a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Suback.html#a94f32b641b8dfc54ebf94596629803d8">Suback</a>()</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        : <a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Suback.html#a94f32b641b8dfc54ebf94596629803d8">iot</a>::<a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Suback.html#a94f32b641b8dfc54ebf94596629803d8">mqtt</a>::<a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Suback.html#a94f32b641b8dfc54ebf94596629803d8">ControlPacket</a>(<a class="code hl_define" href="mqtt-fast_2packets_2Suback_8h.html#a8c5dda67f018a226499f0c44531fd5d6">MQTT_SUBACK</a>, <span class="stringliteral">&quot;SUBACK&quot;</span>) {</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="classiot_1_1mqtt_1_1packets_1_1Suback.html#a94f32b641b8dfc54ebf94596629803d8">   31</a></span>    Suback::Suback()</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        : iot::mqtt::ControlPacket(MQTT_SUBACK, <span class="stringliteral">&quot;SUBACK&quot;</span>) {</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    }</div>
 </div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
 <div class="foldopen" id="foldopen00035" data-start="{" data-end="}">
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="classiot_1_1mqtt_1_1packets_1_1Suback.html#ae38cffbf332ab03390bb810fb2f2f469">   35</a></span>    <a class="code hl_class" href="classiot_1_1mqtt_1_1packets_1_1Suback.html">Suback</a>::<a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Suback.html#ae38cffbf332ab03390bb810fb2f2f469">Suback</a>(uint16_t packetIdentifier, <span class="keyword">const</span> std::list&lt;uint8_t&gt;&amp; returnCodes)</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        : <a class="code hl_class" href="classiot_1_1mqtt_1_1packets_1_1Suback.html">Suback</a><a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Suback.html#a94f32b641b8dfc54ebf94596629803d8">(</a><a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Suback.html#a94f32b641b8dfc54ebf94596629803d8">)</a> {</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="classiot_1_1mqtt_1_1packets_1_1Suback.html#ae38cffbf332ab03390bb810fb2f2f469">   35</a></span>    Suback::Suback(uint16_t packetIdentifier, <span class="keyword">const</span> std::list&lt;uint8_t&gt;&amp; returnCodes)</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        : Suback() {</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <span class="keyword">this</span>-&gt;packetIdentifier = packetIdentifier;</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="keyword">this</span>-&gt;returnCodes = returnCodes;</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    }</div>
 </div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
 <div class="foldopen" id="foldopen00041" data-start="{" data-end="}">
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="classiot_1_1mqtt_1_1packets_1_1Suback.html#ac63ce89808399c51c92d2692b457a0d1">   41</a></span>    <a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Suback.html#ac63ce89808399c51c92d2692b457a0d1">std</a>::<a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Suback.html#ac63ce89808399c51c92d2692b457a0d1">vector</a>&lt;<span class="keywordtype">char</span>&gt; <a class="code hl_class" href="classiot_1_1mqtt_1_1packets_1_1Suback.html">Suback</a>::<a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Suback.html#ac63ce89808399c51c92d2692b457a0d1">serializeVP</a>() <span class="keyword">const</span> {</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="classiot_1_1mqtt_1_1packets_1_1Suback.html#ac63ce89808399c51c92d2692b457a0d1">   41</a></span>    std::vector&lt;<span class="keywordtype">char</span>&gt; Suback::serializeVP() <span class="keyword">const</span> {</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        std::vector&lt;<span class="keywordtype">char</span>&gt; packet(packetIdentifier.serialize());</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        packet.insert(packet.end(), returnCodes.begin(), returnCodes.end());</div>
@@ -154,33 +154,25 @@ $(function(){initNavTree('mqtt_2packets_2Suback_8cpp_source.html',''); initResiz
 </div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
 <div class="foldopen" id="foldopen00049" data-start="{" data-end="}">
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="classiot_1_1mqtt_1_1packets_1_1Suback.html#a4b210bb967888e97f375d51b564a8256">   49</a></span>    uint16_t <a class="code hl_class" href="classiot_1_1mqtt_1_1packets_1_1Suback.html">Suback</a>::<a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Suback.html#a4b210bb967888e97f375d51b564a8256">getPacketIdentifier</a>() <span class="keyword">const</span> {</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="classiot_1_1mqtt_1_1packets_1_1Suback.html#a4b210bb967888e97f375d51b564a8256">   49</a></span>    uint16_t Suback::getPacketIdentifier() <span class="keyword">const</span> {</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keywordflow">return</span> packetIdentifier;</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    }</div>
 </div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
 <div class="foldopen" id="foldopen00053" data-start="{" data-end="}">
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="classiot_1_1mqtt_1_1packets_1_1Suback.html#aeda5db3357a382a8e27124f849fe3787">   53</a></span>    <span class="keyword">const</span> <a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Suback.html#aeda5db3357a382a8e27124f849fe3787">std</a>::<a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Suback.html#aeda5db3357a382a8e27124f849fe3787">list</a>&lt;<a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Suback.html#aeda5db3357a382a8e27124f849fe3787">uint8_t</a>&gt;&amp; <a class="code hl_class" href="classiot_1_1mqtt_1_1packets_1_1Suback.html">Suback</a>::<a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Suback.html#aeda5db3357a382a8e27124f849fe3787">getReturnCodes</a>() <span class="keyword">const</span> {</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="classiot_1_1mqtt_1_1packets_1_1Suback.html#aeda5db3357a382a8e27124f849fe3787">   53</a></span>    <span class="keyword">const</span> std::list&lt;uint8_t&gt;&amp; Suback::getReturnCodes() <span class="keyword">const</span> {</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <span class="keywordflow">return</span> returnCodes;</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    }</div>
 </div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>} <span class="comment">// namespace iot::mqtt::packets</span></div>
-<div class="ttc" id="aclassiot_1_1mqtt_1_1packets_1_1Suback_html"><div class="ttname"><a href="classiot_1_1mqtt_1_1packets_1_1Suback.html">iot::mqtt::packets::Suback</a></div><div class="ttdef"><b>Definition</b> <a href="mqtt_2packets_2Suback_8h_source.html#l00036">Suback.h:36</a></div></div>
-<div class="ttc" id="aclassiot_1_1mqtt_1_1packets_1_1Suback_html_a4b210bb967888e97f375d51b564a8256"><div class="ttname"><a href="classiot_1_1mqtt_1_1packets_1_1Suback.html#a4b210bb967888e97f375d51b564a8256">iot::mqtt::packets::Suback::getPacketIdentifier</a></div><div class="ttdeci">uint16_t getPacketIdentifier() const</div><div class="ttdef"><b>Definition</b> <a href="#l00049">Suback.cpp:49</a></div></div>
-<div class="ttc" id="aclassiot_1_1mqtt_1_1packets_1_1Suback_html_a94f32b641b8dfc54ebf94596629803d8"><div class="ttname"><a href="classiot_1_1mqtt_1_1packets_1_1Suback.html#a94f32b641b8dfc54ebf94596629803d8">iot::mqtt::packets::Suback::Suback</a></div><div class="ttdeci">Suback()</div><div class="ttdef"><b>Definition</b> <a href="#l00031">Suback.cpp:31</a></div></div>
-<div class="ttc" id="aclassiot_1_1mqtt_1_1packets_1_1Suback_html_ac63ce89808399c51c92d2692b457a0d1"><div class="ttname"><a href="classiot_1_1mqtt_1_1packets_1_1Suback.html#ac63ce89808399c51c92d2692b457a0d1">iot::mqtt::packets::Suback::serializeVP</a></div><div class="ttdeci">std::vector&lt; char &gt; serializeVP() const override</div><div class="ttdef"><b>Definition</b> <a href="#l00041">Suback.cpp:41</a></div></div>
-<div class="ttc" id="aclassiot_1_1mqtt_1_1packets_1_1Suback_html_ae38cffbf332ab03390bb810fb2f2f469"><div class="ttname"><a href="classiot_1_1mqtt_1_1packets_1_1Suback.html#ae38cffbf332ab03390bb810fb2f2f469">iot::mqtt::packets::Suback::Suback</a></div><div class="ttdeci">Suback(uint16_t packetIdentifier, const std::list&lt; uint8_t &gt; &amp;returnCodes)</div><div class="ttdef"><b>Definition</b> <a href="#l00035">Suback.cpp:35</a></div></div>
-<div class="ttc" id="aclassiot_1_1mqtt_1_1packets_1_1Suback_html_aeda5db3357a382a8e27124f849fe3787"><div class="ttname"><a href="classiot_1_1mqtt_1_1packets_1_1Suback.html#aeda5db3357a382a8e27124f849fe3787">iot::mqtt::packets::Suback::getReturnCodes</a></div><div class="ttdeci">const std::list&lt; uint8_t &gt; &amp; getReturnCodes() const</div><div class="ttdef"><b>Definition</b> <a href="#l00053">Suback.cpp:53</a></div></div>
-<div class="ttc" id="amqtt-fast_2packets_2Suback_8h_html_a8c5dda67f018a226499f0c44531fd5d6"><div class="ttname"><a href="mqtt-fast_2packets_2Suback_8h.html#a8c5dda67f018a226499f0c44531fd5d6">MQTT_SUBACK</a></div><div class="ttdeci">#define MQTT_SUBACK</div><div class="ttdef"><b>Definition</b> <a href="mqtt-fast_2packets_2Suback_8h_source.html#l00036">Suback.h:36</a></div></div>
-<div class="ttc" id="anamespaceiot_1_1mqtt_1_1packets_html"><div class="ttname"><a href="namespaceiot_1_1mqtt_1_1packets.html">iot::mqtt::packets</a></div><div class="ttdef"><b>Definition</b> <a href="client_2Mqtt_8h_source.html#l00031">Mqtt.h:31</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_fe0d52f96f4f289e926976262c5570b1.html">iot</a></li><li class="navelem"><a class="el" href="dir_ff14fd3078e403b3ab452c6de4564ea6.html">mqtt</a></li><li class="navelem"><a class="el" href="dir_b024a06855583f15437ceeef15af3eb0.html">packets</a></li><li class="navelem"><a class="el" href="mqtt_2packets_2Suback_8cpp.html">Suback.cpp</a></li>
-    <li class="footer">Generated on Sun Jan 5 2025 01:15:57 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="navelem"><a class="el" href="dir_28592ecdec30ec29223e366148bdb66c.html">iot</a></li><li class="navelem"><a class="el" href="dir_9fa9cc1bc73227ba3c1e7b2368f5d654.html">mqtt</a></li><li class="navelem"><a class="el" href="dir_10488b53962af46d097f29192687f02d.html">packets</a></li><li class="navelem"><a class="el" href="mqtt_2packets_2Suback_8cpp.html">Suback.cpp</a></li>
+    <li class="footer">Generated on Sun Jan 5 2025 02:25:06 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.11.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>SNode.C: src/core/system/epoll.cpp Source File</title>
+<title>SNode.C: core/system/epoll.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -143,7 +143,7 @@ $(function(){initNavTree('epoll_8cpp_source.html',''); initResizable(true); });
 </div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
 <div class="foldopen" id="foldopen00040" data-start="{" data-end="}">
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="namespacecore_1_1system.html#a0596afbc44422b1cbf85c796d53f374b">   40</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="namespacecore_1_1system.html#a0596afbc44422b1cbf85c796d53f374b">epoll_pwait</a>(<span class="keywordtype">int</span> epfd, <span class="keyword">struct</span> epoll_event* events, <span class="keywordtype">int</span> maxevents, <span class="keywordtype">int</span> timeout, <span class="keyword">const</span> sigset_t* sigMask) {</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="namespacecore_1_1system.html#a0596afbc44422b1cbf85c796d53f374b">   40</a></span>    <span class="keywordtype">int</span> <a class="code hl_namespace" href="namespacecore_1_1system.html">epoll_pwait</a>(<span class="keywordtype">int</span> <a class="code hl_namespace" href="namespacecore_1_1system.html">epfd</a>, <span class="keyword">struct</span> epoll_event* events, <span class="keywordtype">int</span> maxevents, <span class="keywordtype">int</span> timeout, <span class="keyword">const</span> sigset_t* sigMask) {</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        errno = 0;</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="keywordflow">return</span> ::epoll_pwait(epfd, events, maxevents, timeout, sigMask);</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    }</div>
@@ -158,7 +158,6 @@ $(function(){initNavTree('epoll_8cpp_source.html',''); initResizable(true); });
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>} <span class="comment">// namespace core::system</span></div>
 <div class="ttc" id="anamespacecore_1_1system_html"><div class="ttname"><a href="namespacecore_1_1system.html">core::system</a></div><div class="ttdef"><b>Definition</b> <a href="dlfcn_8cpp_source.html#l00028">dlfcn.cpp:28</a></div></div>
-<div class="ttc" id="anamespacecore_1_1system_html_a0596afbc44422b1cbf85c796d53f374b"><div class="ttname"><a href="namespacecore_1_1system.html#a0596afbc44422b1cbf85c796d53f374b">core::system::epoll_pwait</a></div><div class="ttdeci">int epoll_pwait(int epfd, struct epoll_event *events, int maxevents, int timeout, const sigset_t *sigMask)</div><div class="ttdef"><b>Definition</b> <a href="#l00040">epoll.cpp:40</a></div></div>
 <div class="ttc" id="anamespacecore_1_1system_html_a09b439f42917e350a4c7124993e05723"><div class="ttname"><a href="namespacecore_1_1system.html#a09b439f42917e350a4c7124993e05723">core::system::epoll_create1</a></div><div class="ttdeci">int epoll_create1(int flags)</div><div class="ttdef"><b>Definition</b> <a href="#l00030">epoll.cpp:30</a></div></div>
 <div class="ttc" id="anamespacecore_1_1system_html_a6452ec3ca95af0cb07911423312187a9"><div class="ttname"><a href="namespacecore_1_1system.html#a6452ec3ca95af0cb07911423312187a9">core::system::epoll_ctl</a></div><div class="ttdeci">int epoll_ctl(int epfd, int op, int fd, epoll_event *event)</div><div class="ttdef"><b>Definition</b> <a href="#l00045">epoll.cpp:45</a></div></div>
 <div class="ttc" id="anamespacecore_1_1system_html_aca4c1cc239b442807ff249c33aa23388"><div class="ttname"><a href="namespacecore_1_1system.html#aca4c1cc239b442807ff249c33aa23388">core::system::epoll_wait</a></div><div class="ttdeci">int epoll_wait(int epfd, epoll_event *events, int maxevents, int timeout)</div><div class="ttdef"><b>Definition</b> <a href="#l00035">epoll.cpp:35</a></div></div>
@@ -168,8 +167,8 @@ $(function(){initNavTree('epoll_8cpp_source.html',''); initResizable(true); });
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_aebb8dcc11953d78e620bbef0b9e2183.html">core</a></li><li class="navelem"><a class="el" href="dir_81c0eb580ec169d40a39b9eb818bd54f.html">system</a></li><li class="navelem"><a class="el" href="epoll_8cpp.html">epoll.cpp</a></li>
-    <li class="footer">Generated on Sun Jan 5 2025 01:15:48 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="navelem"><a class="el" href="dir_4270bfced15e0e73154b13468c7c9ad9.html">core</a></li><li class="navelem"><a class="el" href="dir_ddeab0661943ca2a344224c1b2445b85.html">system</a></li><li class="navelem"><a class="el" href="epoll_8cpp.html">epoll.cpp</a></li>
+    <li class="footer">Generated on Sun Jan 5 2025 02:25:03 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>

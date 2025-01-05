@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.11.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>SNode.C: src/net/in/SocketAddrInfo.h Source File</title>
+<title>SNode.C: net/in/SocketAddrInfo.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -99,83 +99,14 @@ $(function(){initNavTree('in_2SocketAddrInfo_8h_source.html',''); initResizable(
   <div class="headertitle"><div class="title">SocketAddrInfo.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="in_2SocketAddrInfo_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
-<div class="line"><span class="lineno">    2</span><span class="comment"> * SNode.C - a slim toolkit for network communication</span></div>
-<div class="line"><span class="lineno">    3</span><span class="comment"> * Copyright (C) Volker Christian &lt;me@vchrist.at&gt;</span></div>
-<div class="line"><span class="lineno">    4</span><span class="comment"> *               2020, 2021, 2022, 2023, 2024, 2025</span></div>
-<div class="line"><span class="lineno">    5</span><span class="comment"> *</span></div>
-<div class="line"><span class="lineno">    6</span><span class="comment"> * This program is free software: you can redistribute it and/or modify</span></div>
-<div class="line"><span class="lineno">    7</span><span class="comment"> * it under the terms of the GNU Lesser General Public License as published</span></div>
-<div class="line"><span class="lineno">    8</span><span class="comment"> * by the Free Software Foundation, either version 3 of the License, or</span></div>
-<div class="line"><span class="lineno">    9</span><span class="comment"> * (at your option) any later version.</span></div>
-<div class="line"><span class="lineno">   10</span><span class="comment"> *</span></div>
-<div class="line"><span class="lineno">   11</span><span class="comment"> * This program is distributed in the hope that it will be useful,</span></div>
-<div class="line"><span class="lineno">   12</span><span class="comment"> * but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
-<div class="line"><span class="lineno">   13</span><span class="comment"> * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the</span></div>
-<div class="line"><span class="lineno">   14</span><span class="comment"> * GNU Lesser General Public License for more details.</span></div>
-<div class="line"><span class="lineno">   15</span><span class="comment"> *</span></div>
-<div class="line"><span class="lineno">   16</span><span class="comment"> * You should have received a copy of the GNU Lesser General Public License</span></div>
-<div class="line"><span class="lineno">   17</span><span class="comment"> * along with this program. If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
-<div class="line"><span class="lineno">   18</span><span class="comment"> */</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#</span><span class="preprocessor">ifndef</span> <span class="preprocessor">NET_IN_SOCKETADDRINFO_H</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#</span><span class="preprocessor">define</span> <span class="preprocessor">NET_IN_SOCKETADDRINFO_H</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">struct</span> sockaddr_in;</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#</span><span class="preprocessor">ifndef</span> <span class="preprocessor">DOXYGEN_SHOULD_SKIP_THIS</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&quot;core/system/netdb.h&quot;</span> <span class="comment">// IWYU pragma: export</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">string</span><span class="preprocessor">&gt;</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#</span><span class="preprocessor">endif</span> <span class="comment">/* DOXYGEN_SHOULD_SKIP_THIS */</span></div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keyword">namespace</span> net::in {</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="foldopen" id="foldopen00035" data-start="{" data-end="};">
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="classnet_1_1in_1_1SocketAddrInfo.html">   35</a></span>    <span class="keyword">class</span> <a class="code hl_class" href="classnet_1_1in_1_1SocketAddrInfo.html">SocketAddrInfo</a> {</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="classnet_1_1in_1_1SocketAddrInfo.html#a225b366b56985f437ff4f324237bc6bc">   37</a></span>        <a class="code hl_function" href="classnet_1_1in_1_1SocketAddrInfo.html#a225b366b56985f437ff4f324237bc6bc">SocketAddrInfo</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        ~<a class="code hl_function" href="classnet_1_1in_1_1SocketAddrInfo.html#adab7602b479d00b7511f0580b1e2e5c3">SocketAddrInfo</a>();</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keywordtype">int</span> resolve(<span class="keyword">const</span> std::string&amp; node, <span class="keyword">const</span> std::string&amp; service, <span class="keyword">const</span> addrinfo&amp; hints);</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="classnet_1_1in_1_1SocketAddrInfo.html#aa647b5c3d82ee9b727e596f75fc68e07">useNext</a>();</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        sockaddr_in <a class="code hl_function" href="classnet_1_1in_1_1SocketAddrInfo.html#a851f4b1ac1fd1f894d58f187b03043c0">getSockAddr</a>();</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        std::string <a class="code hl_function" href="classnet_1_1in_1_1SocketAddrInfo.html#a6a2c9d59398595cdb4c29272fcd946f1">getCanonName</a>();</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classnet_1_1in_1_1SocketAddrInfo.html#afe41bfacc46621e0b99789deb405fe31">logAddressInfo</a>();</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="classnet_1_1in_1_1SocketAddrInfo.html#a6df4aa71c446b823bd787a02fca1c4da">   50</a></span>        <span class="keyword">struct</span> addrinfo* <a class="code hl_variable" href="classnet_1_1in_1_1SocketAddrInfo.html#a6df4aa71c446b823bd787a02fca1c4da">addrInfo</a> = <span class="keywordtype">nullptr</span>;</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="classnet_1_1in_1_1SocketAddrInfo.html#ad35416da56e4c090666aa000a0c53766">   51</a></span>        <span class="keyword">struct</span> addrinfo* <a class="code hl_variable" href="classnet_1_1in_1_1SocketAddrInfo.html#ad35416da56e4c090666aa000a0c53766">currentAddrInfo</a> = <span class="keywordtype">nullptr</span>;</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    };</div>
-</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>} <span class="comment">// namespace net::in</span></div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="preprocessor">#</span><span class="preprocessor">endif</span> <span class="comment">// NET_IN_SOCKETADDRINFO_H</span></div>
-<div class="ttc" id="aclassnet_1_1in_1_1SocketAddrInfo_html"><div class="ttname"><a href="classnet_1_1in_1_1SocketAddrInfo.html">net::in::SocketAddrInfo</a></div><div class="ttdef"><b>Definition</b> <a href="#l00035">SocketAddrInfo.h:35</a></div></div>
-<div class="ttc" id="aclassnet_1_1in_1_1SocketAddrInfo_html_a225b366b56985f437ff4f324237bc6bc"><div class="ttname"><a href="classnet_1_1in_1_1SocketAddrInfo.html#a225b366b56985f437ff4f324237bc6bc">net::in::SocketAddrInfo::SocketAddrInfo</a></div><div class="ttdeci">SocketAddrInfo()=default</div></div>
-<div class="ttc" id="aclassnet_1_1in_1_1SocketAddrInfo_html_a6a2c9d59398595cdb4c29272fcd946f1"><div class="ttname"><a href="classnet_1_1in_1_1SocketAddrInfo.html#a6a2c9d59398595cdb4c29272fcd946f1">net::in::SocketAddrInfo::getCanonName</a></div><div class="ttdeci">std::string getCanonName()</div><div class="ttdef"><b>Definition</b> <a href="in_2SocketAddrInfo_8cpp_source.html#l00067">SocketAddrInfo.cpp:67</a></div></div>
-<div class="ttc" id="aclassnet_1_1in_1_1SocketAddrInfo_html_a6df4aa71c446b823bd787a02fca1c4da"><div class="ttname"><a href="classnet_1_1in_1_1SocketAddrInfo.html#a6df4aa71c446b823bd787a02fca1c4da">net::in::SocketAddrInfo::addrInfo</a></div><div class="ttdeci">struct addrinfo * addrInfo</div><div class="ttdef"><b>Definition</b> <a href="#l00050">SocketAddrInfo.h:50</a></div></div>
-<div class="ttc" id="aclassnet_1_1in_1_1SocketAddrInfo_html_a851f4b1ac1fd1f894d58f187b03043c0"><div class="ttname"><a href="classnet_1_1in_1_1SocketAddrInfo.html#a851f4b1ac1fd1f894d58f187b03043c0">net::in::SocketAddrInfo::getSockAddr</a></div><div class="ttdeci">sockaddr_in getSockAddr()</div><div class="ttdef"><b>Definition</b> <a href="in_2SocketAddrInfo_8cpp_source.html#l00062">SocketAddrInfo.cpp:62</a></div></div>
-<div class="ttc" id="aclassnet_1_1in_1_1SocketAddrInfo_html_aa647b5c3d82ee9b727e596f75fc68e07"><div class="ttname"><a href="classnet_1_1in_1_1SocketAddrInfo.html#aa647b5c3d82ee9b727e596f75fc68e07">net::in::SocketAddrInfo::useNext</a></div><div class="ttdeci">bool useNext()</div><div class="ttdef"><b>Definition</b> <a href="in_2SocketAddrInfo_8cpp_source.html#l00054">SocketAddrInfo.cpp:54</a></div></div>
-<div class="ttc" id="aclassnet_1_1in_1_1SocketAddrInfo_html_ad35416da56e4c090666aa000a0c53766"><div class="ttname"><a href="classnet_1_1in_1_1SocketAddrInfo.html#ad35416da56e4c090666aa000a0c53766">net::in::SocketAddrInfo::currentAddrInfo</a></div><div class="ttdeci">struct addrinfo * currentAddrInfo</div><div class="ttdef"><b>Definition</b> <a href="#l00051">SocketAddrInfo.h:51</a></div></div>
-<div class="ttc" id="aclassnet_1_1in_1_1SocketAddrInfo_html_adab7602b479d00b7511f0580b1e2e5c3"><div class="ttname"><a href="classnet_1_1in_1_1SocketAddrInfo.html#adab7602b479d00b7511f0580b1e2e5c3">net::in::SocketAddrInfo::~SocketAddrInfo</a></div><div class="ttdeci">~SocketAddrInfo()</div><div class="ttdef"><b>Definition</b> <a href="in_2SocketAddrInfo_8cpp_source.html#l00033">SocketAddrInfo.cpp:33</a></div></div>
-<div class="ttc" id="aclassnet_1_1in_1_1SocketAddrInfo_html_afe41bfacc46621e0b99789deb405fe31"><div class="ttname"><a href="classnet_1_1in_1_1SocketAddrInfo.html#afe41bfacc46621e0b99789deb405fe31">net::in::SocketAddrInfo::logAddressInfo</a></div><div class="ttdeci">void logAddressInfo()</div><div class="ttdef"><b>Definition</b> <a href="in_2SocketAddrInfo_8cpp_source.html#l00071">SocketAddrInfo.cpp:71</a></div></div>
-<div class="ttc" id="anamespacecore_1_1system_html"><div class="ttname"><a href="namespacecore_1_1system.html">core::system</a></div><div class="ttdef"><b>Definition</b> <a href="dlfcn_8cpp_source.html#l00028">dlfcn.cpp:28</a></div></div>
-<div class="ttc" id="anamespacecore_1_1system_html_a86e636682d33db526f7502ab0e6ff57c"><div class="ttname"><a href="namespacecore_1_1system.html#a86e636682d33db526f7502ab0e6ff57c">core::system::getaddrinfo</a></div><div class="ttdeci">int getaddrinfo(const char *node, const char *service, const struct addrinfo *hints, struct addrinfo **res)</div><div class="ttdef"><b>Definition</b> <a href="netdb_8cpp_source.html#l00030">netdb.cpp:30</a></div></div>
-<div class="ttc" id="anamespacecore_html"><div class="ttname"><a href="namespacecore.html">core</a></div><div class="ttdef"><b>Definition</b> <a href="Descriptor_8cpp_source.html#l00030">Descriptor.cpp:30</a></div></div>
+<a href="in_2SocketAddrInfo_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_c72b25b75abe208498b36a3e44a3726c.html">net</a></li><li class="navelem"><a class="el" href="dir_3432e7321669dbd324eff4451bb3adf3.html">in</a></li><li class="navelem"><a class="el" href="in_2SocketAddrInfo_8h.html">SocketAddrInfo.h</a></li>
-    <li class="footer">Generated on Sun Jan 5 2025 01:16:11 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="navelem"><a class="el" href="dir_427baa8a9a5be237f298d4545d0d1ce2.html">net</a></li><li class="navelem"><a class="el" href="dir_9c021aeb423398f37667ef2f0c2938bc.html">in</a></li><li class="navelem"><a class="el" href="in_2SocketAddrInfo_8h.html">SocketAddrInfo.h</a></li>
+    <li class="footer">Generated on Sun Jan 5 2025 02:25:02 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>

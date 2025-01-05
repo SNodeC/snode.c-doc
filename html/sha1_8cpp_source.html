@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.11.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>SNode.C: src/utils/sha1.cpp Source File</title>
+<title>SNode.C: utils/sha1.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -160,29 +160,29 @@ $(function(){initNavTree('sha1_8cpp_source.html',''); initResizable(true); });
 </div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
 <div class="foldopen" id="foldopen00051" data-start="{" data-end="}">
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="classSHA1.html#ad49a5108ffd6996b1133bf41224ff726">   51</a></span><a class="code hl_class" href="classSHA1.html">SHA1</a>::<a class="code hl_function" href="classSHA1.html#ad49a5108ffd6996b1133bf41224ff726">SHA1</a>() {</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <a class="code hl_function" href="classSHA1.html#ab71aaf39ed956320054861a2fbfa454f">reset</a><a class="code hl_function" href="classSHA1.html#ab71aaf39ed956320054861a2fbfa454f">(</a><a class="code hl_function" href="classSHA1.html#ab71aaf39ed956320054861a2fbfa454f">)</a>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="classSHA1.html#ad49a5108ffd6996b1133bf41224ff726">   51</a></span>SHA1::SHA1() {</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    reset();</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>}</div>
 </div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
 <div class="foldopen" id="foldopen00055" data-start="{" data-end="}">
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="classSHA1.html#aec3a46058baf8b4169389c89e3a0a2f4">   55</a></span><span class="keywordtype">void</span> <a class="code hl_class" href="classSHA1.html">SHA1</a>::<a class="code hl_function" href="classSHA1.html#aec3a46058baf8b4169389c89e3a0a2f4">update</a>(<span class="keyword">const</span> std::string&amp; s) {</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="classSHA1.html#aec3a46058baf8b4169389c89e3a0a2f4">   55</a></span><span class="keywordtype">void</span> SHA1::update(<span class="keyword">const</span> std::string&amp; s) {</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    std::istringstream is(s);</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <a class="code hl_function" href="classSHA1.html#a71d172f1d0b34c5a381ccdfce5aa6ab5">update</a><a class="code hl_function" href="classSHA1.html#a71d172f1d0b34c5a381ccdfce5aa6ab5">(</a>is<a class="code hl_function" href="classSHA1.html#a71d172f1d0b34c5a381ccdfce5aa6ab5">)</a>;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    update(is);</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>}</div>
 </div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
 <div class="foldopen" id="foldopen00060" data-start="{" data-end="}">
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="classSHA1.html#a71d172f1d0b34c5a381ccdfce5aa6ab5">   60</a></span><span class="keywordtype">void</span> <a class="code hl_class" href="classSHA1.html">SHA1</a>::<a class="code hl_function" href="classSHA1.html#a71d172f1d0b34c5a381ccdfce5aa6ab5">update</a>(std::istream&amp; is) {</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="classSHA1.html#a71d172f1d0b34c5a381ccdfce5aa6ab5">   60</a></span><span class="keywordtype">void</span> SHA1::update(std::istream&amp; is) {</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    std::string rest_of_buffer;</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <a class="code hl_function" href="classSHA1.html#a4fe2a658d9b3617694f52284b332bb5f">read</a><a class="code hl_function" href="classSHA1.html#a4fe2a658d9b3617694f52284b332bb5f">(</a>is<a class="code hl_function" href="classSHA1.html#a4fe2a658d9b3617694f52284b332bb5f">,</a> rest_of_buffer<a class="code hl_function" href="classSHA1.html#a4fe2a658d9b3617694f52284b332bb5f">,</a> <span class="keyword">static_cast</span>&lt;std::size_t&gt;(<span class="keyword">static_cast</span>&lt;<span class="keywordtype">int</span>&gt;(<a class="code hl_variable" href="classSHA1.html#a0ce14e74ef26cd99a5dc0b31a6a2d88c">BLOCK_BYTES</a>) - <span class="keyword">static_cast</span>&lt;<span class="keywordtype">int</span>&gt;(<a class="code hl_variable" href="classSHA1.html#a5333d2b7c0c568a4d8224210e65cecec">buffer</a>.size()))<a class="code hl_function" href="classSHA1.html#a4fe2a658d9b3617694f52284b332bb5f">)</a>;</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <a class="code hl_variable" href="classSHA1.html#a5333d2b7c0c568a4d8224210e65cecec">buffer</a> += rest_of_buffer;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    read(is, rest_of_buffer, <span class="keyword">static_cast</span>&lt;std::size_t&gt;(<span class="keyword">static_cast</span>&lt;<span class="keywordtype">int</span>&gt;(BLOCK_BYTES) - <span class="keyword">static_cast</span>&lt;<span class="keywordtype">int</span>&gt;(buffer.size())));</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    buffer += rest_of_buffer;</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keywordflow">while</span> (is) {</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        uint32_t block[<a class="code hl_variable" href="classSHA1.html#a387f52a338145416fe4e5b1f18cf45ac">BLOCK_INTS</a>];</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <a class="code hl_function" href="classSHA1.html#ae2b7954449c67afe467c586ecb5cdef0">buffer_to_block</a><a class="code hl_function" href="classSHA1.html#ae2b7954449c67afe467c586ecb5cdef0">(</a><a class="code hl_variable" href="classSHA1.html#a5333d2b7c0c568a4d8224210e65cecec">buffer</a><a class="code hl_function" href="classSHA1.html#ae2b7954449c67afe467c586ecb5cdef0">,</a> block<a class="code hl_function" href="classSHA1.html#ae2b7954449c67afe467c586ecb5cdef0">)</a>;</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <a class="code hl_function" href="classSHA1.html#a6e96e00e6bee105a4a1f8e5baf8a3b9c">transform</a><a class="code hl_function" href="classSHA1.html#a6e96e00e6bee105a4a1f8e5baf8a3b9c">(</a>block<a class="code hl_function" href="classSHA1.html#a6e96e00e6bee105a4a1f8e5baf8a3b9c">)</a>;</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <a class="code hl_function" href="classSHA1.html#a4fe2a658d9b3617694f52284b332bb5f">read</a><a class="code hl_function" href="classSHA1.html#a4fe2a658d9b3617694f52284b332bb5f">(</a>is<a class="code hl_function" href="classSHA1.html#a4fe2a658d9b3617694f52284b332bb5f">,</a> <a class="code hl_variable" href="classSHA1.html#a5333d2b7c0c568a4d8224210e65cecec">buffer</a><a class="code hl_function" href="classSHA1.html#a4fe2a658d9b3617694f52284b332bb5f">,</a> <a class="code hl_variable" href="classSHA1.html#a0ce14e74ef26cd99a5dc0b31a6a2d88c">BLOCK_BYTES</a><a class="code hl_function" href="classSHA1.html#a4fe2a658d9b3617694f52284b332bb5f">)</a>;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        uint32_t block[BLOCK_INTS];</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        buffer_to_block(buffer, block);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        transform(block);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        read(is, buffer, BLOCK_BYTES);</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    }</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>}</div>
 </div>
@@ -192,58 +192,58 @@ $(function(){initNavTree('sha1_8cpp_source.html',''); initResizable(true); });
 <div class="line"><span class="lineno">   75</span><span class="comment"> */</span></div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
 <div class="foldopen" id="foldopen00077" data-start="{" data-end="}">
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="classSHA1.html#a89ba0f16575431b0942cbbcfb29107db">   77</a></span>std::string <a class="code hl_class" href="classSHA1.html">SHA1</a>::<a class="code hl_function" href="classSHA1.html#a89ba0f16575431b0942cbbcfb29107db">final</a>() {</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="classSHA1.html#a89ba0f16575431b0942cbbcfb29107db">   77</a></span>std::string SHA1::final() {</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="comment">/* Total number of hashed bits */</span></div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keyword">const</span> uint64_t total_bits = (<a class="code hl_variable" href="classSHA1.html#ade3c3c425f89513f0703aa29627ef298">transforms</a> * <a class="code hl_variable" href="classSHA1.html#a0ce14e74ef26cd99a5dc0b31a6a2d88c">BLOCK_BYTES</a> + <a class="code hl_variable" href="classSHA1.html#a5333d2b7c0c568a4d8224210e65cecec">buffer</a>.size()) * 8;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keyword">const</span> uint64_t total_bits = (transforms * BLOCK_BYTES + buffer.size()) * 8;</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="comment">/* Padding */</span></div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <a class="code hl_variable" href="classSHA1.html#a5333d2b7c0c568a4d8224210e65cecec">buffer</a> += <span class="keyword">static_cast</span>&lt;std::string::value_type&gt;(0x80);</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="keyword">const</span> std::size_t orig_size = <a class="code hl_variable" href="classSHA1.html#a5333d2b7c0c568a4d8224210e65cecec">buffer</a>.size();</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="keywordflow">while</span> (<a class="code hl_variable" href="classSHA1.html#a5333d2b7c0c568a4d8224210e65cecec">buffer</a>.size() &lt; <a class="code hl_variable" href="classSHA1.html#a0ce14e74ef26cd99a5dc0b31a6a2d88c">BLOCK_BYTES</a>) {</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <a class="code hl_variable" href="classSHA1.html#a5333d2b7c0c568a4d8224210e65cecec">buffer</a> += <span class="keyword">static_cast</span>&lt;<span class="keywordtype">char</span>&gt;(0x00);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    buffer += <span class="keyword">static_cast</span>&lt;std::string::value_type&gt;(0x80);</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="keyword">const</span> std::size_t orig_size = buffer.size();</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="keywordflow">while</span> (buffer.size() &lt; BLOCK_BYTES) {</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        buffer += <span class="keyword">static_cast</span>&lt;<span class="keywordtype">char</span>&gt;(0x00);</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    }</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    uint32_t block[<a class="code hl_variable" href="classSHA1.html#a387f52a338145416fe4e5b1f18cf45ac">BLOCK_INTS</a>];</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <a class="code hl_function" href="classSHA1.html#ae2b7954449c67afe467c586ecb5cdef0">buffer_to_block</a><a class="code hl_function" href="classSHA1.html#ae2b7954449c67afe467c586ecb5cdef0">(</a><a class="code hl_variable" href="classSHA1.html#a5333d2b7c0c568a4d8224210e65cecec">buffer</a><a class="code hl_function" href="classSHA1.html#ae2b7954449c67afe467c586ecb5cdef0">,</a> block<a class="code hl_function" href="classSHA1.html#ae2b7954449c67afe467c586ecb5cdef0">)</a>;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    uint32_t block[BLOCK_INTS];</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    buffer_to_block(buffer, block);</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="keywordflow">if</span> (orig_size &gt; <a class="code hl_variable" href="classSHA1.html#a0ce14e74ef26cd99a5dc0b31a6a2d88c">BLOCK_BYTES</a> - 8) {</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        <a class="code hl_function" href="classSHA1.html#a6e96e00e6bee105a4a1f8e5baf8a3b9c">transform</a><a class="code hl_function" href="classSHA1.html#a6e96e00e6bee105a4a1f8e5baf8a3b9c">(</a>block<a class="code hl_function" href="classSHA1.html#a6e96e00e6bee105a4a1f8e5baf8a3b9c">)</a>;</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="classSHA1.html#a387f52a338145416fe4e5b1f18cf45ac">BLOCK_INTS</a> - 2; i++) {</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="keywordflow">if</span> (orig_size &gt; BLOCK_BYTES - 8) {</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        transform(block);</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; BLOCK_INTS - 2; i++) {</div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>            block[i] = 0;</div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        }</div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    }</div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="comment">/* Append total_bits, split this uint64 into two uint32 */</span></div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    block[<a class="code hl_variable" href="classSHA1.html#a387f52a338145416fe4e5b1f18cf45ac">BLOCK_INTS</a> - 1] = <span class="keyword">static_cast</span>&lt;uint32_t&gt;(total_bits &amp; 0x00000000FFFFFFFF);</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    block[<a class="code hl_variable" href="classSHA1.html#a387f52a338145416fe4e5b1f18cf45ac">BLOCK_INTS</a> - 2] = <span class="keyword">static_cast</span>&lt;uint32_t&gt;((total_bits &gt;&gt; 32) &amp; 0x00000000FFFFFFFF);</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    <a class="code hl_function" href="classSHA1.html#a6e96e00e6bee105a4a1f8e5baf8a3b9c">transform</a><a class="code hl_function" href="classSHA1.html#a6e96e00e6bee105a4a1f8e5baf8a3b9c">(</a>block<a class="code hl_function" href="classSHA1.html#a6e96e00e6bee105a4a1f8e5baf8a3b9c">)</a>;</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    block[BLOCK_INTS - 1] = <span class="keyword">static_cast</span>&lt;uint32_t&gt;(total_bits &amp; 0x00000000FFFFFFFF);</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    block[BLOCK_INTS - 2] = <span class="keyword">static_cast</span>&lt;uint32_t&gt;((total_bits &gt;&gt; 32) &amp; 0x00000000FFFFFFFF);</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    transform(block);</div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    <span class="comment">/* Hex std::string */</span></div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    std::ostringstream result;</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="classSHA1.html#a28ae46278acbbe585894c7e3946c8cde">DIGEST_INTS</a>; i++) {</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; DIGEST_INTS; i++) {</div>
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        result &lt;&lt; std::hex &lt;&lt; std::setfill(<span class="stringliteral">&#39;0&#39;</span>) &lt;&lt; std::setw(8);</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        result &lt;&lt; (<a class="code hl_variable" href="classSHA1.html#a7ec3cf1b2d85df7189ab54c2a620b390">digest</a>[i] &amp; 0xffffffff);</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        result &lt;&lt; (digest[i] &amp; 0xffffffff);</div>
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    }</div>
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <span class="comment">/* Reset for next run */</span></div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <a class="code hl_function" href="classSHA1.html#ab71aaf39ed956320054861a2fbfa454f">reset</a><a class="code hl_function" href="classSHA1.html#ab71aaf39ed956320054861a2fbfa454f">(</a><a class="code hl_function" href="classSHA1.html#ab71aaf39ed956320054861a2fbfa454f">)</a>;</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    reset();</div>
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <span class="keywordflow">return</span> result.str();</div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>}</div>
 </div>
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
 <div class="foldopen" id="foldopen00116" data-start="{" data-end="}">
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno"><a class="line" href="classSHA1.html#ab71aaf39ed956320054861a2fbfa454f">  116</a></span><span class="keywordtype">void</span> <a class="code hl_class" href="classSHA1.html">SHA1</a>::<a class="code hl_function" href="classSHA1.html#ab71aaf39ed956320054861a2fbfa454f">reset</a>() {</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno"><a class="line" href="classSHA1.html#ab71aaf39ed956320054861a2fbfa454f">  116</a></span><span class="keywordtype">void</span> SHA1::reset() {</div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    <span class="comment">/* SHA1 initialization constants */</span></div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    <a class="code hl_variable" href="classSHA1.html#a7ec3cf1b2d85df7189ab54c2a620b390">digest</a>[0] = 0x67452301;</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    <a class="code hl_variable" href="classSHA1.html#a7ec3cf1b2d85df7189ab54c2a620b390">digest</a>[1] = 0xefcdab89;</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    <a class="code hl_variable" href="classSHA1.html#a7ec3cf1b2d85df7189ab54c2a620b390">digest</a>[2] = 0x98badcfe;</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    <a class="code hl_variable" href="classSHA1.html#a7ec3cf1b2d85df7189ab54c2a620b390">digest</a>[3] = 0x10325476;</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    <a class="code hl_variable" href="classSHA1.html#a7ec3cf1b2d85df7189ab54c2a620b390">digest</a>[4] = 0xc3d2e1f0;</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    digest[0] = 0x67452301;</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    digest[1] = 0xefcdab89;</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    digest[2] = 0x98badcfe;</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    digest[3] = 0x10325476;</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    digest[4] = 0xc3d2e1f0;</div>
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
 <div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    <span class="comment">/* Reset counters */</span></div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    <a class="code hl_variable" href="classSHA1.html#ade3c3c425f89513f0703aa29627ef298">transforms</a> = 0;</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    <a class="code hl_variable" href="classSHA1.html#a5333d2b7c0c568a4d8224210e65cecec">buffer</a> = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    transforms = 0;</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    buffer = <span class="stringliteral">&quot;&quot;</span>;</div>
 <div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>}</div>
 </div>
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span> </div>
@@ -252,13 +252,13 @@ $(function(){initNavTree('sha1_8cpp_source.html',''); initResizable(true); });
 <div class="line"><span class="lineno">  131</span><span class="comment"> */</span></div>
 <div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span> </div>
 <div class="foldopen" id="foldopen00133" data-start="{" data-end="}">
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno"><a class="line" href="classSHA1.html#a6e96e00e6bee105a4a1f8e5baf8a3b9c">  133</a></span><span class="keywordtype">void</span> <a class="code hl_class" href="classSHA1.html">SHA1</a>::<a class="code hl_function" href="classSHA1.html#a6e96e00e6bee105a4a1f8e5baf8a3b9c">transform</a>(uint32_t block[<a class="code hl_variable" href="classSHA1.html#a0ce14e74ef26cd99a5dc0b31a6a2d88c">BLOCK_BYTES</a>]) {</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno"><a class="line" href="classSHA1.html#a6e96e00e6bee105a4a1f8e5baf8a3b9c">  133</a></span><span class="keywordtype">void</span> SHA1::transform(uint32_t block[BLOCK_BYTES]) {</div>
 <div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    <span class="comment">/* Copy digest[] to working vars */</span></div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    uint32_t a = <a class="code hl_variable" href="classSHA1.html#a7ec3cf1b2d85df7189ab54c2a620b390">digest</a>[0];</div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    uint32_t b = <a class="code hl_variable" href="classSHA1.html#a7ec3cf1b2d85df7189ab54c2a620b390">digest</a>[1];</div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    uint32_t c = <a class="code hl_variable" href="classSHA1.html#a7ec3cf1b2d85df7189ab54c2a620b390">digest</a>[2];</div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    uint32_t d = <a class="code hl_variable" href="classSHA1.html#a7ec3cf1b2d85df7189ab54c2a620b390">digest</a>[3];</div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    uint32_t e = <a class="code hl_variable" href="classSHA1.html#a7ec3cf1b2d85df7189ab54c2a620b390">digest</a>[4];</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    uint32_t a = digest[0];</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    uint32_t b = digest[1];</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    uint32_t c = digest[2];</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    uint32_t d = digest[3];</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    uint32_t e = digest[4];</div>
 <div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
 <div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    <span class="comment">/* 4 rounds of 20 operations each. Loop unrolled. */</span></div>
 <div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    <a class="code hl_define" href="sha1_8cpp.html#af63bf933d633af3fa8d33fd9e234fb5d">SHA1_R0</a>(a, b, c, d, e, 0)</div>
@@ -343,21 +343,21 @@ $(function(){initNavTree('sha1_8cpp_source.html',''); initResizable(true); });
 <div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>    <a class="code hl_define" href="sha1_8cpp.html#ad9c3007957cd0659e2624a48a9f05660">SHA1_R4</a>(b, c, d, e, a, 79)</div>
 <div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span> </div>
 <div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>    <span class="comment">/* Add the working vars back into digest[] */</span></div>
-<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>    <a class="code hl_variable" href="classSHA1.html#a7ec3cf1b2d85df7189ab54c2a620b390">digest</a>[0] += a;</div>
-<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>    <a class="code hl_variable" href="classSHA1.html#a7ec3cf1b2d85df7189ab54c2a620b390">digest</a>[1] += b;</div>
-<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>    <a class="code hl_variable" href="classSHA1.html#a7ec3cf1b2d85df7189ab54c2a620b390">digest</a>[2] += c;</div>
-<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>    <a class="code hl_variable" href="classSHA1.html#a7ec3cf1b2d85df7189ab54c2a620b390">digest</a>[3] += d;</div>
-<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>    <a class="code hl_variable" href="classSHA1.html#a7ec3cf1b2d85df7189ab54c2a620b390">digest</a>[4] += e;</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>    digest[0] += a;</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>    digest[1] += b;</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>    digest[2] += c;</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>    digest[3] += d;</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>    digest[4] += e;</div>
 <div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span> </div>
 <div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>    <span class="comment">/* Count the number of transformations */</span></div>
-<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>    <a class="code hl_variable" href="classSHA1.html#ade3c3c425f89513f0703aa29627ef298">transforms</a>++;</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>    transforms++;</div>
 <div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>}</div>
 </div>
 <div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span> </div>
 <div class="foldopen" id="foldopen00234" data-start="{" data-end="}">
-<div class="line"><a id="l00234" name="l00234"></a><span class="lineno"><a class="line" href="classSHA1.html#ae2b7954449c67afe467c586ecb5cdef0">  234</a></span><span class="keywordtype">void</span> <a class="code hl_class" href="classSHA1.html">SHA1</a>::<a class="code hl_function" href="classSHA1.html#ae2b7954449c67afe467c586ecb5cdef0">buffer_to_block</a>(<span class="keyword">const</span> std::string&amp; buffer, uint32_t block[<a class="code hl_variable" href="classSHA1.html#a0ce14e74ef26cd99a5dc0b31a6a2d88c">BLOCK_BYTES</a>]) {</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno"><a class="line" href="classSHA1.html#ae2b7954449c67afe467c586ecb5cdef0">  234</a></span><span class="keywordtype">void</span> SHA1::buffer_to_block(<span class="keyword">const</span> std::string&amp; buffer, uint32_t block[BLOCK_BYTES]) {</div>
 <div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>    <span class="comment">/* Convert the std::string (byte buffer) to a uint32 array (MSB) */</span></div>
-<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="classSHA1.html#a387f52a338145416fe4e5b1f18cf45ac">BLOCK_INTS</a>; i++) {</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; BLOCK_INTS; i++) {</div>
 <div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>        block[i] = <span class="keyword">static_cast</span>&lt;uint32_t&gt;((buffer[4 * i + 3] &amp; 0xff) | (buffer[4 * i + 2] &amp; 0xff) &lt;&lt; 8 | (buffer[4 * i + 1] &amp; 0xff) &lt;&lt; 16 |</div>
 <div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>                                         (buffer[4 * i + 0] &amp; 0xff) &lt;&lt; 24);</div>
 <div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>    }</div>
@@ -365,7 +365,7 @@ $(function(){initNavTree('sha1_8cpp_source.html',''); initResizable(true); });
 </div>
 <div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span> </div>
 <div class="foldopen" id="foldopen00242" data-start="{" data-end="}">
-<div class="line"><a id="l00242" name="l00242"></a><span class="lineno"><a class="line" href="classSHA1.html#a4fe2a658d9b3617694f52284b332bb5f">  242</a></span><span class="keywordtype">void</span> <a class="code hl_class" href="classSHA1.html">SHA1</a>::<a class="code hl_function" href="classSHA1.html#a4fe2a658d9b3617694f52284b332bb5f">read</a>(std::istream&amp; is, std::string&amp; s, std::size_t max) {</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno"><a class="line" href="classSHA1.html#a4fe2a658d9b3617694f52284b332bb5f">  242</a></span><span class="keywordtype">void</span> SHA1::read(std::istream&amp; is, std::string&amp; s, std::size_t max) {</div>
 <div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>    <span class="keywordtype">char</span>* sbuf = <span class="keyword">new</span> <span class="keywordtype">char</span>[max];</div>
 <div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>    is.read(sbuf, <span class="keyword">static_cast</span>&lt;std::streamsize&gt;(max));</div>
 <div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>    s.assign(sbuf, <span class="keyword">static_cast</span>&lt;<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span>&gt;(is.gcount()));</div>
@@ -393,26 +393,11 @@ $(function(){initNavTree('sha1_8cpp_source.html',''); initResizable(true); });
 <div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span> </div>
 <div class="foldopen" id="foldopen00265" data-start="{" data-end="}">
 <div class="line"><a id="l00265" name="l00265"></a><span class="lineno"><a class="line" href="sha1_8cpp.html#af880e7fd80b862bf173055ba224019bf">  265</a></span><a class="code hl_function" href="sha1_8cpp.html#af880e7fd80b862bf173055ba224019bf">std</a>::<a class="code hl_function" href="sha1_8cpp.html#af880e7fd80b862bf173055ba224019bf">vector</a>&lt;<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>&gt; <a class="code hl_function" href="sha1_8cpp.html#af880e7fd80b862bf173055ba224019bf">sha1</a>(<span class="keyword">const</span> <a class="code hl_function" href="sha1_8cpp.html#af880e7fd80b862bf173055ba224019bf">std</a>::<a class="code hl_function" href="sha1_8cpp.html#af880e7fd80b862bf173055ba224019bf">string</a>&amp; <a class="code hl_function" href="sha1_8cpp.html#af880e7fd80b862bf173055ba224019bf">string</a>) {</div>
-<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>    <a class="code hl_class" href="classSHA1.html">SHA1</a> checksum;</div>
-<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>    checksum<a class="code hl_function" href="classSHA1.html#aec3a46058baf8b4169389c89e3a0a2f4">.</a><a class="code hl_function" href="classSHA1.html#aec3a46058baf8b4169389c89e3a0a2f4">update</a><a class="code hl_function" href="classSHA1.html#aec3a46058baf8b4169389c89e3a0a2f4">(</a>string<a class="code hl_function" href="classSHA1.html#aec3a46058baf8b4169389c89e3a0a2f4">)</a>;</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>    SHA1 checksum;</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>    checksum.update(string);</div>
 <div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>    <span class="keywordflow">return</span> transform_to_binary(checksum.final());</div>
 <div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>}</div>
 </div>
-<div class="ttc" id="aclassSHA1_html"><div class="ttname"><a href="classSHA1.html">SHA1</a></div><div class="ttdef"><b>Definition</b> <a href="sha1_8h_source.html#l00033">sha1.h:33</a></div></div>
-<div class="ttc" id="aclassSHA1_html_a0ce14e74ef26cd99a5dc0b31a6a2d88c"><div class="ttname"><a href="classSHA1.html#a0ce14e74ef26cd99a5dc0b31a6a2d88c">SHA1::BLOCK_BYTES</a></div><div class="ttdeci">static const unsigned int BLOCK_BYTES</div><div class="ttdef"><b>Definition</b> <a href="sha1_8h_source.html#l00043">sha1.h:43</a></div></div>
-<div class="ttc" id="aclassSHA1_html_a28ae46278acbbe585894c7e3946c8cde"><div class="ttname"><a href="classSHA1.html#a28ae46278acbbe585894c7e3946c8cde">SHA1::DIGEST_INTS</a></div><div class="ttdeci">static const unsigned int DIGEST_INTS</div><div class="ttdef"><b>Definition</b> <a href="sha1_8h_source.html#l00041">sha1.h:41</a></div></div>
-<div class="ttc" id="aclassSHA1_html_a387f52a338145416fe4e5b1f18cf45ac"><div class="ttname"><a href="classSHA1.html#a387f52a338145416fe4e5b1f18cf45ac">SHA1::BLOCK_INTS</a></div><div class="ttdeci">static const unsigned int BLOCK_INTS</div><div class="ttdef"><b>Definition</b> <a href="sha1_8h_source.html#l00042">sha1.h:42</a></div></div>
-<div class="ttc" id="aclassSHA1_html_a4fe2a658d9b3617694f52284b332bb5f"><div class="ttname"><a href="classSHA1.html#a4fe2a658d9b3617694f52284b332bb5f">SHA1::read</a></div><div class="ttdeci">static void read(std::istream &amp;is, std::string &amp;s, std::size_t max)</div><div class="ttdef"><b>Definition</b> <a href="#l00242">sha1.cpp:242</a></div></div>
-<div class="ttc" id="aclassSHA1_html_a5333d2b7c0c568a4d8224210e65cecec"><div class="ttname"><a href="classSHA1.html#a5333d2b7c0c568a4d8224210e65cecec">SHA1::buffer</a></div><div class="ttdeci">std::string buffer</div><div class="ttdef"><b>Definition</b> <a href="sha1_8h_source.html#l00046">sha1.h:46</a></div></div>
-<div class="ttc" id="aclassSHA1_html_a6e96e00e6bee105a4a1f8e5baf8a3b9c"><div class="ttname"><a href="classSHA1.html#a6e96e00e6bee105a4a1f8e5baf8a3b9c">SHA1::transform</a></div><div class="ttdeci">void transform(uint32_t block[BLOCK_BYTES])</div><div class="ttdef"><b>Definition</b> <a href="#l00133">sha1.cpp:133</a></div></div>
-<div class="ttc" id="aclassSHA1_html_a71d172f1d0b34c5a381ccdfce5aa6ab5"><div class="ttname"><a href="classSHA1.html#a71d172f1d0b34c5a381ccdfce5aa6ab5">SHA1::update</a></div><div class="ttdeci">void update(std::istream &amp;is)</div><div class="ttdef"><b>Definition</b> <a href="#l00060">sha1.cpp:60</a></div></div>
-<div class="ttc" id="aclassSHA1_html_a7ec3cf1b2d85df7189ab54c2a620b390"><div class="ttname"><a href="classSHA1.html#a7ec3cf1b2d85df7189ab54c2a620b390">SHA1::digest</a></div><div class="ttdeci">uint32_t digest[DIGEST_INTS]</div><div class="ttdef"><b>Definition</b> <a href="sha1_8h_source.html#l00045">sha1.h:45</a></div></div>
-<div class="ttc" id="aclassSHA1_html_a89ba0f16575431b0942cbbcfb29107db"><div class="ttname"><a href="classSHA1.html#a89ba0f16575431b0942cbbcfb29107db">SHA1::final</a></div><div class="ttdeci">std::string final()</div><div class="ttdef"><b>Definition</b> <a href="#l00077">sha1.cpp:77</a></div></div>
-<div class="ttc" id="aclassSHA1_html_ab71aaf39ed956320054861a2fbfa454f"><div class="ttname"><a href="classSHA1.html#ab71aaf39ed956320054861a2fbfa454f">SHA1::reset</a></div><div class="ttdeci">void reset()</div><div class="ttdef"><b>Definition</b> <a href="#l00116">sha1.cpp:116</a></div></div>
-<div class="ttc" id="aclassSHA1_html_ad49a5108ffd6996b1133bf41224ff726"><div class="ttname"><a href="classSHA1.html#ad49a5108ffd6996b1133bf41224ff726">SHA1::SHA1</a></div><div class="ttdeci">SHA1()</div><div class="ttdef"><b>Definition</b> <a href="#l00051">sha1.cpp:51</a></div></div>
-<div class="ttc" id="aclassSHA1_html_ade3c3c425f89513f0703aa29627ef298"><div class="ttname"><a href="classSHA1.html#ade3c3c425f89513f0703aa29627ef298">SHA1::transforms</a></div><div class="ttdeci">uint64_t transforms</div><div class="ttdef"><b>Definition</b> <a href="sha1_8h_source.html#l00047">sha1.h:47</a></div></div>
-<div class="ttc" id="aclassSHA1_html_ae2b7954449c67afe467c586ecb5cdef0"><div class="ttname"><a href="classSHA1.html#ae2b7954449c67afe467c586ecb5cdef0">SHA1::buffer_to_block</a></div><div class="ttdeci">static void buffer_to_block(const std::string &amp;buffer, uint32_t block[BLOCK_BYTES])</div><div class="ttdef"><b>Definition</b> <a href="#l00234">sha1.cpp:234</a></div></div>
-<div class="ttc" id="aclassSHA1_html_aec3a46058baf8b4169389c89e3a0a2f4"><div class="ttname"><a href="classSHA1.html#aec3a46058baf8b4169389c89e3a0a2f4">SHA1::update</a></div><div class="ttdeci">void update(const std::string &amp;s)</div><div class="ttdef"><b>Definition</b> <a href="#l00055">sha1.cpp:55</a></div></div>
 <div class="ttc" id="asha1_8cpp_html_a10a5814e9b5a23d64388c0d4cb9e12f1"><div class="ttname"><a href="sha1_8cpp.html#a10a5814e9b5a23d64388c0d4cb9e12f1">SHA1_ROL</a></div><div class="ttdeci">#define SHA1_ROL(value, bits)</div><div class="ttdef"><b>Definition</b> <a href="#l00031">sha1.cpp:31</a></div></div>
 <div class="ttc" id="asha1_8cpp_html_a4191452d85bf56875a6f48d558ca1e1a"><div class="ttname"><a href="sha1_8cpp.html#a4191452d85bf56875a6f48d558ca1e1a">SHA1_R2</a></div><div class="ttdeci">#define SHA1_R2(v, w, x, y, z, i)</div><div class="ttdef"><b>Definition</b> <a href="#l00041">sha1.cpp:41</a></div></div>
 <div class="ttc" id="asha1_8cpp_html_a65540552aabb6a88a5adc7ba9a4df6f2"><div class="ttname"><a href="sha1_8cpp.html#a65540552aabb6a88a5adc7ba9a4df6f2">transform_to_binary</a></div><div class="ttdeci">static std::vector&lt; unsigned char &gt; transform_to_binary(const std::string &amp;string)</div><div class="ttdef"><b>Definition</b> <a href="#l00249">sha1.cpp:249</a></div></div>
@@ -427,8 +412,8 @@ $(function(){initNavTree('sha1_8cpp_source.html',''); initResizable(true); });
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_313caf1132e152dd9b58bea13a4052ca.html">utils</a></li><li class="navelem"><a class="el" href="sha1_8cpp.html">sha1.cpp</a></li>
-    <li class="footer">Generated on Sun Jan 5 2025 01:16:32 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="navelem"><a class="el" href="dir_cbdb8362360e11eafe2fa3bc74cf0ffd.html">utils</a></li><li class="navelem"><a class="el" href="sha1_8cpp.html">sha1.cpp</a></li>
+    <li class="footer">Generated on Sun Jan 5 2025 02:25:13 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>

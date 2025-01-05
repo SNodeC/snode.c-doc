@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.11.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>SNode.C: src/net/phy/dgram/PeerSocket.h Source File</title>
+<title>SNode.C: net/phy/dgram/PeerSocket.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -99,74 +99,15 @@ $(function(){initNavTree('PeerSocket_8h_source.html',''); initResizable(true); }
   <div class="headertitle"><div class="title">PeerSocket.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="PeerSocket_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
-<div class="line"><span class="lineno">    2</span><span class="comment"> * SNode.C - a slim toolkit for network communication</span></div>
-<div class="line"><span class="lineno">    3</span><span class="comment"> * Copyright (C) Volker Christian &lt;me@vchrist.at&gt;</span></div>
-<div class="line"><span class="lineno">    4</span><span class="comment"> *               2020, 2021, 2022, 2023, 2024, 2025</span></div>
-<div class="line"><span class="lineno">    5</span><span class="comment"> *</span></div>
-<div class="line"><span class="lineno">    6</span><span class="comment"> * This program is free software: you can redistribute it and/or modify</span></div>
-<div class="line"><span class="lineno">    7</span><span class="comment"> * it under the terms of the GNU Lesser General Public License as published</span></div>
-<div class="line"><span class="lineno">    8</span><span class="comment"> * by the Free Software Foundation, either version 3 of the License, or</span></div>
-<div class="line"><span class="lineno">    9</span><span class="comment"> * (at your option) any later version.</span></div>
-<div class="line"><span class="lineno">   10</span><span class="comment"> *</span></div>
-<div class="line"><span class="lineno">   11</span><span class="comment"> * This program is distributed in the hope that it will be useful,</span></div>
-<div class="line"><span class="lineno">   12</span><span class="comment"> * but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
-<div class="line"><span class="lineno">   13</span><span class="comment"> * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the</span></div>
-<div class="line"><span class="lineno">   14</span><span class="comment"> * GNU Lesser General Public License for more details.</span></div>
-<div class="line"><span class="lineno">   15</span><span class="comment"> *</span></div>
-<div class="line"><span class="lineno">   16</span><span class="comment"> * You should have received a copy of the GNU Lesser General Public License</span></div>
-<div class="line"><span class="lineno">   17</span><span class="comment"> * along with this program. If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
-<div class="line"><span class="lineno">   18</span><span class="comment"> */</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#</span><span class="preprocessor">ifndef</span> <span class="preprocessor">NET_PHY_DGRAM_PEERSOCKET_H</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#</span><span class="preprocessor">define</span> <span class="preprocessor">NET_PHY_DGRAM_PEERSOCKET_H</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&quot;net/phy/PhysicalSocket.h&quot;</span> <span class="comment">// IWYU pragma: export</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#</span><span class="preprocessor">ifndef</span> <span class="preprocessor">DOXYGEN_SHOULD_SKIP_THIS</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">functional</span><span class="preprocessor">&gt;</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">memory</span><span class="preprocessor">&gt;</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">string</span><span class="preprocessor">&gt;</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#</span><span class="preprocessor">endif</span> <span class="comment">/* DOXYGEN_SHOULD_SKIP_THIS */</span></div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keyword">namespace</span> net::<a class="code hl_namespace" href="namespacenet_1_1phy.html">phy</a>::<a class="code hl_namespace" href="namespacenet_1_1phy_1_1dgram.html">dgram</a> {</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> SocketAddressT&gt;</div>
-<div class="foldopen" id="foldopen00036" data-start="{" data-end="};">
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="classnet_1_1phy_1_1dgram_1_1PeerSocket.html">   36</a></span>    <span class="keyword">class</span> <a class="code hl_class" href="classnet_1_1phy_1_1dgram_1_1PeerSocket.html">PeerSocket</a> : <span class="keyword">public</span> net::<a class="code hl_namespace" href="namespacenet_1_1phy.html">phy</a>::<a class="code hl_class" href="classnet_1_1phy_1_1PhysicalSocket.html">PhysicalSocket</a>&lt;SocketAddressT&gt; {</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="classnet_1_1phy_1_1dgram_1_1PeerSocket.html#ae6e17e462ab0d2a2bcd90dd60ee884cb">   38</a></span>        <span class="keyword">using</span> Super = net::<a class="code hl_namespace" href="namespacenet_1_1phy.html">phy</a>::<a class="code hl_class" href="classnet_1_1phy_1_1PhysicalSocket.html">PhysicalSocket</a>&lt;SocketAddressT&gt;;</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <span class="keyword">using</span> Super::Super;</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="classnet_1_1phy_1_1dgram_1_1PeerSocket.html#ad5e70f6edb1de82f333bc872a463da71">   43</a></span>        <span class="keyword">using</span> SocketAddress = SocketAddressT;</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    };</div>
-</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>} <span class="comment">// namespace net::phy::dgram</span></div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="preprocessor">#</span><span class="preprocessor">endif</span> <span class="comment">// NET_PHY_DGRAM_PEERSOCKET_H</span></div>
-<div class="ttc" id="aclassnet_1_1phy_1_1PhysicalSocket_html"><div class="ttname"><a href="classnet_1_1phy_1_1PhysicalSocket.html">net::phy::PhysicalSocket</a></div><div class="ttdef"><b>Definition</b> <a href="phy_2PhysicalSocket_8h_source.html#l00038">PhysicalSocket.h:38</a></div></div>
-<div class="ttc" id="aclassnet_1_1phy_1_1dgram_1_1PeerSocket_html"><div class="ttname"><a href="classnet_1_1phy_1_1dgram_1_1PeerSocket.html">net::phy::dgram::PeerSocket</a></div><div class="ttdef"><b>Definition</b> <a href="#l00036">PeerSocket.h:36</a></div></div>
-<div class="ttc" id="aclassnet_1_1un_1_1dgram_1_1Socket_html"><div class="ttname"><a href="classnet_1_1un_1_1dgram_1_1Socket.html">net::un::dgram::Socket</a></div><div class="ttdef"><b>Definition</b> <a href="net_2un_2dgram_2Socket_8h_source.html#l00034">Socket.h:34</a></div></div>
-<div class="ttc" id="aclassnet_1_1un_1_1dgram_1_1Socket_html_a06ee2dd2b27156aa5fe8a17ecab2a3ef"><div class="ttname"><a href="classnet_1_1un_1_1dgram_1_1Socket.html#a06ee2dd2b27156aa5fe8a17ecab2a3ef">net::un::dgram::Socket::recvFd</a></div><div class="ttdeci">ssize_t recvFd(int *recvfd)</div><div class="ttdef"><b>Definition</b> <a href="Socket_8cpp_source.html#l00075">Socket.cpp:75</a></div></div>
-<div class="ttc" id="aclassnet_1_1un_1_1dgram_1_1Socket_html_a240ff2eab8ff9d072a5dfd221b892453"><div class="ttname"><a href="classnet_1_1un_1_1dgram_1_1Socket.html#a240ff2eab8ff9d072a5dfd221b892453">net::un::dgram::Socket::Socket</a></div><div class="ttdeci">Socket()</div><div class="ttdef"><b>Definition</b> <a href="Socket_8cpp_source.html#l00034">Socket.cpp:34</a></div></div>
-<div class="ttc" id="aclassnet_1_1un_1_1dgram_1_1Socket_html_a5c383fd45091fe80caf33a605aa2ed91"><div class="ttname"><a href="classnet_1_1un_1_1dgram_1_1Socket.html#a5c383fd45091fe80caf33a605aa2ed91">net::un::dgram::Socket::sendFd</a></div><div class="ttdeci">ssize_t sendFd(SocketAddress &amp;&amp;destAddress, int sendfd)</div><div class="ttdef"><b>Definition</b> <a href="Socket_8cpp_source.html#l00041">Socket.cpp:41</a></div></div>
-<div class="ttc" id="aclassnet_1_1un_1_1dgram_1_1Socket_html_ad355bbfba0941f8ab486abdf0c099fba"><div class="ttname"><a href="classnet_1_1un_1_1dgram_1_1Socket.html#ad355bbfba0941f8ab486abdf0c099fba">net::un::dgram::Socket::~Socket</a></div><div class="ttdeci">~Socket() override</div><div class="ttdef"><b>Definition</b> <a href="Socket_8cpp_source.html#l00038">Socket.cpp:38</a></div></div>
-<div class="ttc" id="aclassnet_1_1un_1_1dgram_1_1Socket_html_ae4acf7f5f7aaf40039bf6eebc1ab9798"><div class="ttname"><a href="classnet_1_1un_1_1dgram_1_1Socket.html#ae4acf7f5f7aaf40039bf6eebc1ab9798">net::un::dgram::Socket::sendFd</a></div><div class="ttdeci">ssize_t sendFd(SocketAddress &amp;destAddress, int sendfd)</div><div class="ttdef"><b>Definition</b> <a href="Socket_8cpp_source.html#l00045">Socket.cpp:45</a></div></div>
-<div class="ttc" id="anamespacenet_1_1phy_1_1dgram_html"><div class="ttname"><a href="namespacenet_1_1phy_1_1dgram.html">net::phy::dgram</a></div><div class="ttdef"><b>Definition</b> <a href="PeerSocket_8hpp_source.html#l00026">PeerSocket.hpp:26</a></div></div>
-<div class="ttc" id="anamespacenet_1_1phy_html"><div class="ttname"><a href="namespacenet_1_1phy.html">net::phy</a></div><div class="ttdef"><b>Definition</b> <a href="phy_2PhysicalSocket_8hpp_source.html#l00029">PhysicalSocket.hpp:29</a></div></div>
+<a href="PeerSocket_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
 <div class="ttc" id="anamespacenet_1_1un_1_1dgram_html"><div class="ttname"><a href="namespacenet_1_1un_1_1dgram.html">net::un::dgram</a></div><div class="ttdef"><b>Definition</b> <a href="Socket_8cpp_source.html#l00032">Socket.cpp:32</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_c72b25b75abe208498b36a3e44a3726c.html">net</a></li><li class="navelem"><a class="el" href="dir_c88044bb87351fd9d86099731605e377.html">phy</a></li><li class="navelem"><a class="el" href="dir_228cff8c16249fa9b8a8965c444948b9.html">dgram</a></li><li class="navelem"><a class="el" href="PeerSocket_8h.html">PeerSocket.h</a></li>
-    <li class="footer">Generated on Sun Jan 5 2025 01:16:30 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="navelem"><a class="el" href="dir_427baa8a9a5be237f298d4545d0d1ce2.html">net</a></li><li class="navelem"><a class="el" href="dir_7f2b9b0920a743f72773487b1d74f41b.html">phy</a></li><li class="navelem"><a class="el" href="dir_f444200029e556471cf6afbca3176820.html">dgram</a></li><li class="navelem"><a class="el" href="PeerSocket_8h.html">PeerSocket.h</a></li>
+    <li class="footer">Generated on Sun Jan 5 2025 02:25:12 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>

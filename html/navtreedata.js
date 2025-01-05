@@ -26,7 +26,6 @@ var NAVTREE =
 [
   [ "SNode.C", "index.html", [
     [ "Simple NODE in C++ (SNode.C)", "index.html", "index" ],
-    [ "GitHub", "^https://github.com/VolkerChristian/snode.c", null ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
@@ -38,6 +37,7 @@ var NAVTREE =
         [ "Enumerator", "namespacemembers_eval.html", null ]
       ] ]
     ] ],
+    [ "Concepts", "concepts.html", "concepts" ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
@@ -104,14 +104,14 @@ var NAVTREEINDEX =
 "classweb_1_1websocket_1_1Receiver.html#a4d86cfda2cf5517c53efaf52f07ca06f",
 "classweb_1_1websocket_1_1SubProtocolFactory.html#a257e4fb4f4543b774079412a821caad1",
 "classweb_1_1websocket_1_1server_1_1SubProtocolFactorySelector.html",
-"functions_func_d.html",
-"index.html#application-configuration",
-"legacy_2rc_2Server_8h.html#adc2c64611c3aa1e438da1433bc659bd7",
-"mqtt_2server_2packets_2Disconnect_8cpp.html",
-"namespacenet.html",
-"net_2un_2SocketAddress_8cpp_source.html",
-"ssl__utils_8h.html#a3a133b1b35c394931d65dfe02977c810",
-"un_2stream_2tls_2config_2ConfigSocketClient_8h.html"
+"functions_func_c.html",
+"index.html#anatomy-of-the-command-line-interface",
+"legacy_2rc_2Server_8h.html",
+"mqtt_2server_2packets_2Connect_8h_source.html",
+"namespacemembers_vars.html",
+"net_2un_2SocketAddress_8cpp.html",
+"ssl__utils_8h.html#a30e53f6d342e6345afe3a14e2d848894",
+"un_2stream_2tls_2config_2ConfigSocketClient_8cpp_source.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

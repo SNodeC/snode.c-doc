@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.11.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>SNode.C: src/core/system/select.h Source File</title>
+<title>SNode.C: core/system/select.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -137,23 +137,22 @@ $(function(){initNavTree('select_8h_source.html',''); initResizable(true); });
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="keyword">namespace</span> <a class="code hl_namespace" href="namespacecore.html">core</a>::<a class="code hl_namespace" href="namespacecore_1_1system.html">system</a> {</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="comment">// #include &lt;sys/socket.h&gt;</span></div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="namespacecore_1_1system.html#aeab6bc4edb67dd3ee9c589269dd2bf0b">select</a>(<span class="keywordtype">int</span> nfds, fd_set* readfds, fd_set* writefds, fd_set* exceptfds, <span class="keyword">struct</span> timeval* timeout);</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="namespacecore_1_1system.html#a85bd9f2c14b8c78bdabd4f149cd82264">   40</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="namespacecore_1_1system.html#a818cf81c3431eedd1beaacdcd1107712">pselect</a>(<span class="keywordtype">int</span> nfds, fd_set* readfds, fd_set* writefds, fd_set* exceptfds, <span class="keyword">const</span> timespec* timeout, <span class="keyword">const</span> sigset_t* sigMask);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keywordtype">int</span> select(<span class="keywordtype">int</span> nfds, fd_set* readfds, fd_set* writefds, fd_set* exceptfds, <span class="keyword">struct</span> timeval* timeout);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="namespacecore_1_1system.html#a85bd9f2c14b8c78bdabd4f149cd82264">   40</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="namespacecore_1_1system.html#a85bd9f2c14b8c78bdabd4f149cd82264">pselect</a>(<span class="keywordtype">int</span> nfds, fd_set* readfds, fd_set* writefds, fd_set* exceptfds, <span class="keyword">const</span> timespec* timeout, <span class="keyword">const</span> sigset_t* sigMask);</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>} <span class="comment">// namespace core::system</span></div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="preprocessor">#</span><span class="preprocessor">endif</span> <span class="comment">// NET_SYSTEM_SELECT_H</span></div>
 <div class="ttc" id="anamespacecore_1_1system_html"><div class="ttname"><a href="namespacecore_1_1system.html">core::system</a></div><div class="ttdef"><b>Definition</b> <a href="dlfcn_8cpp_source.html#l00028">dlfcn.cpp:28</a></div></div>
-<div class="ttc" id="anamespacecore_1_1system_html_a818cf81c3431eedd1beaacdcd1107712"><div class="ttname"><a href="namespacecore_1_1system.html#a818cf81c3431eedd1beaacdcd1107712">core::system::pselect</a></div><div class="ttdeci">int pselect(int nfds, fd_set *readfds, fd_set *writefds, fd_set *exceptfds, const struct timespec *timeout, const sigset_t *sigMask)</div><div class="ttdef"><b>Definition</b> <a href="select_8cpp_source.html#l00035">select.cpp:35</a></div></div>
-<div class="ttc" id="anamespacecore_1_1system_html_aeab6bc4edb67dd3ee9c589269dd2bf0b"><div class="ttname"><a href="namespacecore_1_1system.html#aeab6bc4edb67dd3ee9c589269dd2bf0b">core::system::select</a></div><div class="ttdeci">int select(int nfds, fd_set *readfds, fd_set *writefds, fd_set *exceptfds, struct timeval *timeout)</div><div class="ttdef"><b>Definition</b> <a href="select_8cpp_source.html#l00030">select.cpp:30</a></div></div>
+<div class="ttc" id="anamespacecore_1_1system_html_a85bd9f2c14b8c78bdabd4f149cd82264"><div class="ttname"><a href="namespacecore_1_1system.html#a85bd9f2c14b8c78bdabd4f149cd82264">core::system::pselect</a></div><div class="ttdeci">int pselect(int nfds, fd_set *readfds, fd_set *writefds, fd_set *exceptfds, const timespec *timeout, const sigset_t *sigMask)</div></div>
 <div class="ttc" id="anamespacecore_html"><div class="ttname"><a href="namespacecore.html">core</a></div><div class="ttdef"><b>Definition</b> <a href="Descriptor_8cpp_source.html#l00030">Descriptor.cpp:30</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_aebb8dcc11953d78e620bbef0b9e2183.html">core</a></li><li class="navelem"><a class="el" href="dir_81c0eb580ec169d40a39b9eb818bd54f.html">system</a></li><li class="navelem"><a class="el" href="select_8h.html">select.h</a></li>
-    <li class="footer">Generated on Sun Jan 5 2025 01:16:43 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="navelem"><a class="el" href="dir_4270bfced15e0e73154b13468c7c9ad9.html">core</a></li><li class="navelem"><a class="el" href="dir_ddeab0661943ca2a344224c1b2445b85.html">system</a></li><li class="navelem"><a class="el" href="select_8h.html">select.h</a></li>
+    <li class="footer">Generated on Sun Jan 5 2025 02:25:15 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>

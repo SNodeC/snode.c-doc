@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['handle_0',['handle',['../structcore_1_1DynamicLoader_1_1Library.html#a92bb294e05441925cb97c218c628b715',1,'core::DynamicLoader::Library::handle'],['../classweb_1_1websocket_1_1SubProtocolFactory.html#a6eb3fd654bfd68fd85f6ca25b0deb433',1,'web::websocket::SubProtocolFactory::handle'],['../structweb_1_1http_1_1SocketContextUpgradeFactorySelector_1_1SocketContextPlugin.html#a402ed5469d4e256dbe8f28244c201e22',1,'web::http::SocketContextUpgradeFactorySelector::SocketContextPlugin::handle']]],
+  ['handle_0',['handle',['../structcore_1_1DynamicLoader_1_1Library.html#a92bb294e05441925cb97c218c628b715',1,'core::DynamicLoader::Library::handle'],['../structweb_1_1http_1_1SocketContextUpgradeFactorySelector_1_1SocketContextPlugin.html#a402ed5469d4e256dbe8f28244c201e22',1,'web::http::SocketContextUpgradeFactorySelector::SocketContextPlugin::handle'],['../classweb_1_1websocket_1_1SubProtocolFactory.html#a6eb3fd654bfd68fd85f6ca25b0deb433',1,'web::websocket::SubProtocolFactory::handle']]],
   ['hardware_1',['Supported Systems and Hardware',['../index.html#supported-systems-and-hardware',1,'']]],
   ['hasactivesession_2',['hasActiveSession',['../classiot_1_1mqtt_1_1server_1_1broker_1_1Broker.html#a2f898faddae679bd67b0e8bc20b86d74',1,'iot::mqtt::server::broker::Broker']]],
   ['hasattribute_3',['hasAttribute',['../classutils_1_1MultibleAttributeInjector.html#a19d0d99d56ab05bde781d9a67d9835e0',1,'utils::MultibleAttributeInjector']]],

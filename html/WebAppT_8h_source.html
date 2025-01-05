@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.11.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>SNode.C: src/express/WebAppT.h Source File</title>
+<title>SNode.C: express/WebAppT.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -137,14 +137,14 @@ $(function(){initNavTree('WebAppT_8h_source.html',''); initResizable(true); });
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> ServerT&gt;</div>
 <div class="foldopen" id="foldopen00037" data-start="{" data-end="};">
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="classexpress_1_1WebAppT.html">   37</a></span>    <span class="keyword">class</span> <a class="code hl_class" href="classexpress_1_1WebAppT.html">WebAppT</a></div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        : <span class="keyword">public</span> <a class="code hl_class" href="classexpress_1_1WebApp.html">WebApp</a></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        : <span class="keyword">public</span> <a class="code hl_class" href="classexpress_1_1WebAppT.html">WebApp</a></div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        , <span class="keyword">public</span> ServerT {</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keyword">private</span>:</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="classexpress_1_1WebAppT.html#aaee690e0bb45eca830326a5bc6091362">   41</a></span>        <span class="keyword">using</span> Server = ServerT;</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="classexpress_1_1WebAppT.html#ac2a1125661962546c5e8d2b6ca4d2349">   44</a></span>        <span class="keyword">using</span> Request = <a class="code hl_namespace" href="namespaceexpress.html">express</a>::<a class="code hl_class" href="classexpress_1_1Request.html">Request</a>;</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="classexpress_1_1WebAppT.html#ab250e1d675ee1cff1f685ec7ca4ccc60">   45</a></span>        <span class="keyword">using</span> Response = <a class="code hl_namespace" href="namespaceexpress.html">express</a>::<a class="code hl_class" href="classexpress_1_1Response.html">Response</a>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="classexpress_1_1WebAppT.html#ac2a1125661962546c5e8d2b6ca4d2349">   44</a></span>        <span class="keyword">using</span> <a class="code hl_class" href="classexpress_1_1WebAppT.html">Request</a> = <a class="code hl_class" href="classexpress_1_1WebAppT.html">express</a>::<a class="code hl_class" href="classexpress_1_1WebAppT.html">Request</a>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="classexpress_1_1WebAppT.html#ab250e1d675ee1cff1f685ec7ca4ccc60">   45</a></span>        <span class="keyword">using</span> <a class="code hl_class" href="classexpress_1_1WebAppT.html">Response</a> = <a class="code hl_class" href="classexpress_1_1WebAppT.html">express</a>::<a class="code hl_class" href="classexpress_1_1WebAppT.html">Response</a>;</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="classexpress_1_1WebAppT.html#aac2a3855a73cbf3547da8e1268605f02">   47</a></span>        <span class="keyword">using</span> SocketConnection = <span class="keyword">typename</span> Server::SocketConnection;</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="classexpress_1_1WebAppT.html#ae6c8401e279b2a243f2fb0e498ef319e">   48</a></span>        <span class="keyword">using</span> SocketAddress = <span class="keyword">typename</span> Server::SocketAddress;</div>
@@ -157,17 +157,17 @@ $(function(){initNavTree('WebAppT_8h_source.html',''); initResizable(true); });
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
 <div class="foldopen" id="foldopen00054" data-start="{" data-end="}">
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="classexpress_1_1WebAppT.html#af30cbe763fcee00989c8c594049b94c7">   54</a></span>        <span class="keyword">explicit</span> <a class="code hl_function" href="classexpress_1_1WebAppT.html#af30cbe763fcee00989c8c594049b94c7">WebAppT</a>(<span class="keyword">const</span> std::string&amp; name)</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            : <a class="code hl_class" href="classexpress_1_1WebAppT.html">WebAppT</a>(name, <a class="code hl_class" href="classexpress_1_1Router.html">Router</a><a class="code hl_function" href="classexpress_1_1Router.html#ae7ad7fb1a5d240f338865485e7b04070">(</a><a class="code hl_function" href="classexpress_1_1Router.html#ae7ad7fb1a5d240f338865485e7b04070">)</a>) {</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            : <a class="code hl_class" href="classexpress_1_1WebAppT.html">WebAppT</a>(name, Router()) {</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        }</div>
 </div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
 <div class="foldopen" id="foldopen00058" data-start="{" data-end="}">
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="classexpress_1_1WebAppT.html#a4c662b444a547c8bb9ba4f959d3362ac">   58</a></span>        <a class="code hl_function" href="classexpress_1_1WebAppT.html#a4c662b444a547c8bb9ba4f959d3362ac">WebAppT</a>(<span class="keyword">const</span> std::string&amp; name, <span class="keyword">const</span> <a class="code hl_class" href="classexpress_1_1Router.html">Router</a>&amp; router)</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            : <a class="code hl_class" href="classexpress_1_1WebApp.html">WebApp</a>(router)</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="classexpress_1_1WebAppT.html#a4c662b444a547c8bb9ba4f959d3362ac">   58</a></span>        <a class="code hl_function" href="classexpress_1_1WebAppT.html#a4c662b444a547c8bb9ba4f959d3362ac">WebAppT</a>(<span class="keyword">const</span> std::string&amp; name, <span class="keyword">const</span> Router&amp; router)</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            : <a class="code hl_function" href="classexpress_1_1WebAppT.html#a4c662b444a547c8bb9ba4f959d3362ac">WebApp</a>(<a class="code hl_function" href="classexpress_1_1WebAppT.html#a4c662b444a547c8bb9ba4f959d3362ac">router</a>)</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            , Server(name,</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>                     [rootRoute = <span class="keyword">this</span>-&gt;rootRoute](<span class="keyword">const</span> std::shared_ptr&lt;web::http::<a class="code hl_namespace" href="namespaceweb.html">server</a>::<a class="code hl_class" href="classweb_1_1http_1_1server_1_1Request.html">Request</a>&gt;&amp; req,</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                                                   <span class="keyword">const</span> std::shared_ptr&lt;web::http::<a class="code hl_namespace" href="namespaceweb.html">server</a>::<a class="code hl_class" href="classweb_1_1http_1_1server_1_1Response.html">Response</a>&gt;&amp; res) -&gt; <span class="keywordtype">void</span> { <span class="comment">// onRequestReady</span></div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                         rootRoute-&gt;dispatch(<a class="code hl_class" href="classexpress_1_1Controller.html">Controller</a><a class="code hl_function" href="classexpress_1_1Controller.html#a812859b86164f6ce14a20b2abf0deaf0">(</a>req<a class="code hl_function" href="classexpress_1_1Controller.html#a812859b86164f6ce14a20b2abf0deaf0">,</a> res<a class="code hl_function" href="classexpress_1_1Controller.html#a812859b86164f6ce14a20b2abf0deaf0">)</a>);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>                     [rootRoute = <span class="keyword">this</span>-&gt;rootRoute](<span class="keyword">const</span> std::shared_ptr&lt;web::http::server::Request&gt;&amp; req,</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                                                   <span class="keyword">const</span> std::shared_ptr&lt;web::http::server::Response&gt;&amp; res) -&gt; <span class="keywordtype">void</span> { <span class="comment">// onRequestReady</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                         rootRoute-&gt;dispatch(Controller(req, res));</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>                     }) {</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        }</div>
 </div>
@@ -177,28 +177,18 @@ $(function(){initNavTree('WebAppT_8h_source.html',''); initResizable(true); });
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>} <span class="comment">// namespace express</span></div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="preprocessor">#</span><span class="preprocessor">endif</span> <span class="comment">// EXPRESS_WEBAPPT_H</span></div>
-<div class="ttc" id="aclassexpress_1_1Controller_html"><div class="ttname"><a href="classexpress_1_1Controller.html">express::Controller</a></div><div class="ttdef"><b>Definition</b> <a href="Controller_8h_source.html#l00044">Controller.h:44</a></div></div>
-<div class="ttc" id="aclassexpress_1_1Controller_html_a812859b86164f6ce14a20b2abf0deaf0"><div class="ttname"><a href="classexpress_1_1Controller.html#a812859b86164f6ce14a20b2abf0deaf0">express::Controller::Controller</a></div><div class="ttdeci">Controller(const std::shared_ptr&lt; web::http::server::Request &gt; &amp;request, const std::shared_ptr&lt; web::http::server::Response &gt; &amp;response)</div><div class="ttdef"><b>Definition</b> <a href="Controller_8cpp_source.html#l00033">Controller.cpp:33</a></div></div>
-<div class="ttc" id="aclassexpress_1_1Request_html"><div class="ttname"><a href="classexpress_1_1Request.html">express::Request</a></div><div class="ttdef"><b>Definition</b> <a href="express_2Request_8h_source.html#l00041">Request.h:41</a></div></div>
-<div class="ttc" id="aclassexpress_1_1Response_html"><div class="ttname"><a href="classexpress_1_1Response.html">express::Response</a></div><div class="ttdef"><b>Definition</b> <a href="express_2Response_8h_source.html#l00045">Response.h:45</a></div></div>
-<div class="ttc" id="aclassexpress_1_1Router_html"><div class="ttname"><a href="classexpress_1_1Router.html">express::Router</a></div><div class="ttdef"><b>Definition</b> <a href="Router_8h_source.html#l00075">Router.h:75</a></div></div>
-<div class="ttc" id="aclassexpress_1_1Router_html_ae7ad7fb1a5d240f338865485e7b04070"><div class="ttname"><a href="classexpress_1_1Router.html#ae7ad7fb1a5d240f338865485e7b04070">express::Router::Router</a></div><div class="ttdeci">Router()</div><div class="ttdef"><b>Definition</b> <a href="Router_8cpp_source.html#l00052">Router.cpp:52</a></div></div>
 <div class="ttc" id="aclassexpress_1_1WebAppT_html"><div class="ttname"><a href="classexpress_1_1WebAppT.html">express::WebAppT</a></div><div class="ttdef"><b>Definition</b> <a href="#l00037">WebAppT.h:39</a></div></div>
 <div class="ttc" id="aclassexpress_1_1WebAppT_html_a4c662b444a547c8bb9ba4f959d3362ac"><div class="ttname"><a href="classexpress_1_1WebAppT.html#a4c662b444a547c8bb9ba4f959d3362ac">express::WebAppT::WebAppT</a></div><div class="ttdeci">WebAppT(const std::string &amp;name, const Router &amp;router)</div><div class="ttdef"><b>Definition</b> <a href="#l00058">WebAppT.h:58</a></div></div>
 <div class="ttc" id="aclassexpress_1_1WebAppT_html_a79e891c9c86dc6a36629d3aca10c9bad"><div class="ttname"><a href="classexpress_1_1WebAppT.html#a79e891c9c86dc6a36629d3aca10c9bad">express::WebAppT::WebAppT</a></div><div class="ttdeci">WebAppT()</div><div class="ttdef"><b>Definition</b> <a href="#l00050">WebAppT.h:50</a></div></div>
 <div class="ttc" id="aclassexpress_1_1WebAppT_html_af30cbe763fcee00989c8c594049b94c7"><div class="ttname"><a href="classexpress_1_1WebAppT.html#af30cbe763fcee00989c8c594049b94c7">express::WebAppT::WebAppT</a></div><div class="ttdeci">WebAppT(const std::string &amp;name)</div><div class="ttdef"><b>Definition</b> <a href="#l00054">WebAppT.h:54</a></div></div>
-<div class="ttc" id="aclassexpress_1_1WebApp_html"><div class="ttname"><a href="classexpress_1_1WebApp.html">express::WebApp</a></div><div class="ttdef"><b>Definition</b> <a href="WebApp_8h_source.html#l00037">WebApp.h:37</a></div></div>
-<div class="ttc" id="aclassweb_1_1http_1_1server_1_1Request_html"><div class="ttname"><a href="classweb_1_1http_1_1server_1_1Request.html">web::http::server::Request</a></div><div class="ttdef"><b>Definition</b> <a href="web_2http_2server_2Request_8h_source.html#l00038">Request.h:38</a></div></div>
-<div class="ttc" id="aclassweb_1_1http_1_1server_1_1Response_html"><div class="ttname"><a href="classweb_1_1http_1_1server_1_1Response.html">web::http::server::Response</a></div><div class="ttdef"><b>Definition</b> <a href="web_2http_2server_2Response_8h_source.html#l00053">Response.h:53</a></div></div>
 <div class="ttc" id="anamespaceexpress_html"><div class="ttname"><a href="namespaceexpress.html">express</a></div><div class="ttdef"><b>Definition</b> <a href="Controller_8cpp_source.html#l00031">Controller.cpp:31</a></div></div>
-<div class="ttc" id="anamespaceweb_html"><div class="ttname"><a href="namespaceweb.html">web</a></div><div class="ttdef"><b>Definition</b> <a href="Controller_8h_source.html#l00023">Controller.h:23</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_1ef10629401f35c9235e4b0300a49988.html">express</a></li><li class="navelem"><a class="el" href="WebAppT_8h.html">WebAppT.h</a></li>
-    <li class="footer">Generated on Sun Jan 5 2025 01:16:46 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="navelem"><a class="el" href="dir_e2b20abddc1d75e9fa824bc5544f9c72.html">express</a></li><li class="navelem"><a class="el" href="WebAppT_8h.html">WebAppT.h</a></li>
+    <li class="footer">Generated on Sun Jan 5 2025 02:25:15 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>

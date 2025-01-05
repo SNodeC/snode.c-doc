@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.11.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>SNode.C: src/web/http/server/Request.cpp Source File</title>
+<title>SNode.C: web/http/server/Request.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -127,10 +127,10 @@ $(function(){initNavTree('web_2http_2server_2Request_8cpp_source.html',''); init
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#</span><span class="preprocessor">endif</span> <span class="comment">/* DOXYGEN_SHOULD_SKIP_THIS */</span></div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">namespace</span> web::http::<a class="code hl_namespace" href="namespaceweb.html">server</a> {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">namespace</span> web::<a class="code hl_function" href="namespaceweb_1_1http.html#afa13392af1208680e6244deae2a810a2">http</a>::server {</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
 <div class="foldopen" id="foldopen00031" data-start="{" data-end="}">
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="classweb_1_1http_1_1server_1_1Request.html#aa29d8d5a5b007453ce2b96b55e63960f">   31</a></span>    <span class="keyword">const</span> std::string&amp; <a class="code hl_class" href="classweb_1_1http_1_1server_1_1Request.html">Request</a>::get(<span class="keyword">const</span> std::string&amp; key, <span class="keywordtype">int</span> i) <span class="keyword">const</span> {</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="classweb_1_1http_1_1server_1_1Request.html#aa29d8d5a5b007453ce2b96b55e63960f">   31</a></span>    <span class="keyword">const</span> std::string&amp; Request::get(<span class="keyword">const</span> std::string&amp; key, <span class="keywordtype">int</span> i) <span class="keyword">const</span> {</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="keywordflow">if</span> (headers.find(key) != headers.end()) {</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            std::pair&lt;std::multimap&lt;std::string, std::string&gt;::const_iterator, std::multimap&lt;std::string, std::string&gt;::const_iterator&gt;</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>                range = headers.equal_range(key);</div>
@@ -148,7 +148,7 @@ $(function(){initNavTree('web_2http_2server_2Request_8cpp_source.html',''); init
 </div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
 <div class="foldopen" id="foldopen00047" data-start="{" data-end="}">
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="classweb_1_1http_1_1server_1_1Request.html#a682573954449cf969511fbcbe25f19cc">   47</a></span>    <span class="keyword">const</span> std::string&amp; <a class="code hl_class" href="classweb_1_1http_1_1server_1_1Request.html">Request</a>::cookie(<span class="keyword">const</span> std::string&amp; key) <span class="keyword">const</span> {</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="classweb_1_1http_1_1server_1_1Request.html#a682573954449cf969511fbcbe25f19cc">   47</a></span>    <span class="keyword">const</span> std::string&amp; Request::cookie(<span class="keyword">const</span> std::string&amp; key) <span class="keyword">const</span> {</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <span class="keyword">const</span> std::map&lt;std::string, std::string&gt;::const_iterator it = cookies.find(key);</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keywordflow">if</span> (it != cookies.end()) {</div>
@@ -160,7 +160,7 @@ $(function(){initNavTree('web_2http_2server_2Request_8cpp_source.html',''); init
 </div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
 <div class="foldopen" id="foldopen00057" data-start="{" data-end="}">
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="classweb_1_1http_1_1server_1_1Request.html#a2d60f919578490bf24726cc77644ac0f">   57</a></span>    <span class="keyword">const</span> std::string&amp; <a class="code hl_class" href="classweb_1_1http_1_1server_1_1Request.html">Request</a>::query(<span class="keyword">const</span> std::string&amp; key) <span class="keyword">const</span> {</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="classweb_1_1http_1_1server_1_1Request.html#a2d60f919578490bf24726cc77644ac0f">   57</a></span>    <span class="keyword">const</span> std::string&amp; Request::query(<span class="keyword">const</span> std::string&amp; key) <span class="keyword">const</span> {</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <span class="keyword">const</span> std::map&lt;std::string, std::string&gt;::const_iterator it = queries.find(key);</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <span class="keywordflow">if</span> (it != queries.end()) {</div>
@@ -172,15 +172,14 @@ $(function(){initNavTree('web_2http_2server_2Request_8cpp_source.html',''); init
 </div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>} <span class="comment">// namespace web::http::server</span></div>
-<div class="ttc" id="aclassweb_1_1http_1_1server_1_1Request_html"><div class="ttname"><a href="classweb_1_1http_1_1server_1_1Request.html">web::http::server::Request</a></div><div class="ttdef"><b>Definition</b> <a href="web_2http_2server_2Request_8h_source.html#l00038">Request.h:38</a></div></div>
-<div class="ttc" id="anamespaceweb_html"><div class="ttname"><a href="namespaceweb.html">web</a></div><div class="ttdef"><b>Definition</b> <a href="Controller_8h_source.html#l00023">Controller.h:23</a></div></div>
+<div class="ttc" id="anamespaceweb_1_1http_html_afa13392af1208680e6244deae2a810a2"><div class="ttname"><a href="namespaceweb_1_1http.html#afa13392af1208680e6244deae2a810a2">web::http::operator|</a></div><div class="ttdeci">enum Parser::HTTPCompliance operator|(const enum Parser::HTTPCompliance &amp;c1, const enum Parser::HTTPCompliance &amp;c2)</div><div class="ttdef"><b>Definition</b> <a href="Parser_8cpp_source.html#l00234">Parser.cpp:234</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_0d4dde2834ed44e47b6207c19e4aac26.html">web</a></li><li class="navelem"><a class="el" href="dir_0446caa53f55ee52695b456aa1605862.html">http</a></li><li class="navelem"><a class="el" href="dir_71410789b9f0db6572c0290cc1e01c03.html">server</a></li><li class="navelem"><a class="el" href="web_2http_2server_2Request_8cpp.html">Request.cpp</a></li>
-    <li class="footer">Generated on Sun Jan 5 2025 01:16:36 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="navelem"><a class="el" href="dir_562abdcd8625d4bf7bad2fe6fe01354c.html">web</a></li><li class="navelem"><a class="el" href="dir_890691660869da6a17298077dcca53fb.html">http</a></li><li class="navelem"><a class="el" href="dir_c3123cda3d7baceb26cb269eb745dcb2.html">server</a></li><li class="navelem"><a class="el" href="web_2http_2server_2Request_8cpp.html">Request.cpp</a></li>
+    <li class="footer">Generated on Sun Jan 5 2025 02:25:05 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>

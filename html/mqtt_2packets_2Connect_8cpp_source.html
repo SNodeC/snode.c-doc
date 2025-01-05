@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.11.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>SNode.C: src/iot/mqtt/packets/Connect.cpp Source File</title>
+<title>SNode.C: iot/mqtt/packets/Connect.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -126,16 +126,16 @@ $(function(){initNavTree('mqtt_2packets_2Connect_8cpp_source.html',''); initResi
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#</span><span class="preprocessor">endif</span> <span class="comment">// DOXYGEN_SHOULD_SKIP_THIS</span></div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keyword">namespace</span> iot::mqtt::<a class="code hl_namespace" href="namespaceiot_1_1mqtt_1_1packets.html">packets</a> {</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keyword">namespace</span> iot::mqtt::packets {</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
 <div class="foldopen" id="foldopen00030" data-start="{" data-end="}">
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="classiot_1_1mqtt_1_1packets_1_1Connect.html#acf053d26c7a20aee2a080f41845839a5">   30</a></span>    <a class="code hl_class" href="classiot_1_1mqtt_1_1packets_1_1Connect.html">Connect</a>::<a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Connect.html#acf053d26c7a20aee2a080f41845839a5">Connect</a>()</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        : <a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Connect.html#acf053d26c7a20aee2a080f41845839a5">iot</a>::<a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Connect.html#acf053d26c7a20aee2a080f41845839a5">mqtt</a>::<a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Connect.html#acf053d26c7a20aee2a080f41845839a5">ControlPacket</a>(<a class="code hl_define" href="mqtt-fast_2packets_2Connect_8h.html#a0618515498683adb4929499434a06bcf">MQTT_CONNECT</a>, <span class="stringliteral">&quot;CONNECT&quot;</span>) {</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="classiot_1_1mqtt_1_1packets_1_1Connect.html#acf053d26c7a20aee2a080f41845839a5">   30</a></span>    Connect::Connect()</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        : iot::mqtt::ControlPacket(MQTT_CONNECT, <span class="stringliteral">&quot;CONNECT&quot;</span>) {</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    }</div>
 </div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
 <div class="foldopen" id="foldopen00034" data-start="{" data-end="}">
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="classiot_1_1mqtt_1_1packets_1_1Connect.html#a4bacc225bd20f3e7116a31974d7df04e">   34</a></span>    <a class="code hl_class" href="classiot_1_1mqtt_1_1packets_1_1Connect.html">Connect</a>::<a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Connect.html#a4bacc225bd20f3e7116a31974d7df04e">Connect</a>(<span class="keyword">const</span> std::string&amp; clientId,</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="classiot_1_1mqtt_1_1packets_1_1Connect.html#a4bacc225bd20f3e7116a31974d7df04e">   34</a></span>    Connect::Connect(<span class="keyword">const</span> std::string&amp; clientId,</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>                     uint16_t keepAlive,</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>                     <span class="keywordtype">bool</span> cleanSession,</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>                     <span class="keyword">const</span> std::string&amp; willTopic,</div>
@@ -145,29 +145,29 @@ $(function(){initNavTree('mqtt_2packets_2Connect_8cpp_source.html',''); initResi
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>                     <span class="keyword">const</span> std::string&amp; username,</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>                     <span class="keyword">const</span> std::string&amp; password,</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>                     <span class="keywordtype">bool</span> loopPrevention)</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        : <a class="code hl_class" href="classiot_1_1mqtt_1_1packets_1_1Connect.html">Connect</a><a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Connect.html#acf053d26c7a20aee2a080f41845839a5">(</a><a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Connect.html#acf053d26c7a20aee2a080f41845839a5">)</a> {</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        : Connect() {</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keyword">this</span>-&gt;protocol = <span class="stringliteral">&quot;MQTT&quot;</span>;</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <span class="keyword">this</span>-&gt;level =</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            <a class="code hl_define" href="mqtt-fast_2packets_2Connect_8h.html#a7c621dd360dd439f0d6d8dc5d951a619">MQTT_VERSION_3_1_1</a> | (loopPrevention ? 0x80 : 0x00); <span class="comment">// msb 1 -&gt; do not reflect messages to origin (try_private in mosquitto)</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            MQTT_VERSION_3_1_1 | (loopPrevention ? 0x80 : 0x00); <span class="comment">// msb 1 -&gt; do not reflect messages to origin (try_private in mosquitto)</span></div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <span class="keyword">this</span>-&gt;keepAlive = keepAlive;</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <span class="keyword">this</span>-&gt;clientId = clientId;</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keyword">this</span>-&gt;willTopic = willTopic;</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <span class="keyword">this</span>-&gt;willMessage = willMessage;</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="keyword">this</span><a class="code hl_variable" href="classiot_1_1mqtt_1_1packets_1_1Connect.html#a408b1ac88aa6e7acd3267d26be3e523b">-&gt;</a><a class="code hl_variable" href="classiot_1_1mqtt_1_1packets_1_1Connect.html#a408b1ac88aa6e7acd3267d26be3e523b">willQoS</a> = willQoS;</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <span class="keyword">this</span><a class="code hl_variable" href="classiot_1_1mqtt_1_1packets_1_1Connect.html#a8c950847d8626c8bd6e156944d102c7b">-&gt;</a><a class="code hl_variable" href="classiot_1_1mqtt_1_1packets_1_1Connect.html#a8c950847d8626c8bd6e156944d102c7b">willRetain</a> = willRetain;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="keyword">this</span>-&gt;willQoS = willQoS;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <span class="keyword">this</span>-&gt;willRetain = willRetain;</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <span class="keyword">this</span>-&gt;willFlag = !willMessage.empty();</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <span class="keyword">this</span>-&gt;username = username;</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <span class="keyword">this</span>-&gt;usernameFlag = !username.empty();</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <span class="keyword">this</span>-&gt;password = password;</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <span class="keyword">this</span>-&gt;passwordFlag = !password.empty();</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <span class="keyword">this</span>-&gt;connectFlags = <span class="keyword">static_cast</span>&lt;uint8_t&gt;((!<a class="code hl_variable" href="classiot_1_1mqtt_1_1packets_1_1Connect.html#ad25022723007fb3a719cdcf53b50f3c7">usernameFlag</a> ? 0 : 0x80) | (!<a class="code hl_variable" href="classiot_1_1mqtt_1_1packets_1_1Connect.html#a0638b7f481b8e163790763e6b75cb6f4">passwordFlag</a> ? 0 : 0x40) | (!willRetain ? 0 : 0x20) |</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>                                                  ((willQoS &lt;&lt; 3) &amp; 0x18) | (!<a class="code hl_variable" href="classiot_1_1mqtt_1_1packets_1_1Connect.html#a2ff40cca7f42d11ed9350f4ef059fd30">willFlag</a> ? 0 : 0x04) | (!cleanSession ? 0 : 0x02));</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <span class="keyword">this</span>-&gt;connectFlags = <span class="keyword">static_cast</span>&lt;uint8_t&gt;((!usernameFlag ? 0 : 0x80) | (!passwordFlag ? 0 : 0x40) | (!willRetain ? 0 : 0x20) |</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>                                                  ((willQoS &lt;&lt; 3) &amp; 0x18) | (!willFlag ? 0 : 0x04) | (!cleanSession ? 0 : 0x02));</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    }</div>
 </div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
 <div class="foldopen" id="foldopen00064" data-start="{" data-end="}">
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="classiot_1_1mqtt_1_1packets_1_1Connect.html#a93608945a47489b92c4c462ece72c204">   64</a></span>    <a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Connect.html#a93608945a47489b92c4c462ece72c204">std</a>::<a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Connect.html#a93608945a47489b92c4c462ece72c204">vector</a>&lt;<span class="keywordtype">char</span>&gt; <a class="code hl_class" href="classiot_1_1mqtt_1_1packets_1_1Connect.html">Connect</a>::<a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Connect.html#a93608945a47489b92c4c462ece72c204">serializeVP</a>() <span class="keyword">const</span> {</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="classiot_1_1mqtt_1_1packets_1_1Connect.html#a93608945a47489b92c4c462ece72c204">   64</a></span>    std::vector&lt;<span class="keywordtype">char</span>&gt; Connect::serializeVP() <span class="keyword">const</span> {</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        std::vector&lt;<span class="keywordtype">char</span>&gt; packet(protocol.serialize());</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        std::vector&lt;<span class="keywordtype">char</span>&gt; tmpVector = level.serialize();</div>
@@ -182,18 +182,18 @@ $(function(){initNavTree('mqtt_2packets_2Connect_8cpp_source.html',''); initResi
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        tmpVector = clientId.serialize();</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        packet.insert(packet.end(), tmpVector.begin(), tmpVector.end());</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classiot_1_1mqtt_1_1packets_1_1Connect.html#a2ff40cca7f42d11ed9350f4ef059fd30">willFlag</a>) {</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        <span class="keywordflow">if</span> (willFlag) {</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            tmpVector = willTopic.serialize();</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>            packet.insert(packet.end(), tmpVector.begin(), tmpVector.end());</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>            tmpVector = willMessage.serialize();</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>            packet.insert(packet.end(), tmpVector.begin(), tmpVector.end());</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        }</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classiot_1_1mqtt_1_1packets_1_1Connect.html#ad25022723007fb3a719cdcf53b50f3c7">usernameFlag</a>) {</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        <span class="keywordflow">if</span> (usernameFlag) {</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>            tmpVector = username.serialize();</div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>            packet.insert(packet.end(), tmpVector.begin(), tmpVector.end());</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        }</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classiot_1_1mqtt_1_1packets_1_1Connect.html#a0638b7f481b8e163790763e6b75cb6f4">passwordFlag</a>) {</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        <span class="keywordflow">if</span> (passwordFlag) {</div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>            tmpVector = password.serialize();</div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>            packet.insert(packet.end(), tmpVector.begin(), tmpVector.end());</div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        }</div>
@@ -203,139 +203,109 @@ $(function(){initNavTree('mqtt_2packets_2Connect_8cpp_source.html',''); initResi
 </div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
 <div class="foldopen" id="foldopen00098" data-start="{" data-end="}">
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="classiot_1_1mqtt_1_1packets_1_1Connect.html#af7f30f3ac98f21b6cccf76984af2ea52">   98</a></span>    std::string <a class="code hl_class" href="classiot_1_1mqtt_1_1packets_1_1Connect.html">Connect</a>::<a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Connect.html#af7f30f3ac98f21b6cccf76984af2ea52">getProtocol</a>() <span class="keyword">const</span> {</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="classiot_1_1mqtt_1_1packets_1_1Connect.html#af7f30f3ac98f21b6cccf76984af2ea52">   98</a></span>    std::string Connect::getProtocol() <span class="keyword">const</span> {</div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        <span class="keywordflow">return</span> protocol;</div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    }</div>
 </div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
 <div class="foldopen" id="foldopen00102" data-start="{" data-end="}">
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="classiot_1_1mqtt_1_1packets_1_1Connect.html#a25374fccbb8eb32c48031a7e877e1b35">  102</a></span>    uint8_t <a class="code hl_class" href="classiot_1_1mqtt_1_1packets_1_1Connect.html">Connect</a>::<a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Connect.html#a25374fccbb8eb32c48031a7e877e1b35">getLevel</a>() <span class="keyword">const</span> {</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="classiot_1_1mqtt_1_1packets_1_1Connect.html#a25374fccbb8eb32c48031a7e877e1b35">  102</a></span>    uint8_t Connect::getLevel() <span class="keyword">const</span> {</div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        <span class="keywordflow">return</span> level;</div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    }</div>
 </div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
 <div class="foldopen" id="foldopen00106" data-start="{" data-end="}">
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="classiot_1_1mqtt_1_1packets_1_1Connect.html#a9d6fc06bb9dbd5cfb17332d6f9734736">  106</a></span>    uint8_t <a class="code hl_class" href="classiot_1_1mqtt_1_1packets_1_1Connect.html">Connect</a>::<a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Connect.html#a9d6fc06bb9dbd5cfb17332d6f9734736">getConnectFlags</a>() <span class="keyword">const</span> {</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="classiot_1_1mqtt_1_1packets_1_1Connect.html#a9d6fc06bb9dbd5cfb17332d6f9734736">  106</a></span>    uint8_t Connect::getConnectFlags() <span class="keyword">const</span> {</div>
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        <span class="keywordflow">return</span> connectFlags;</div>
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    }</div>
 </div>
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
 <div class="foldopen" id="foldopen00110" data-start="{" data-end="}">
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno"><a class="line" href="classiot_1_1mqtt_1_1packets_1_1Connect.html#a6c75251d5d6deba1bf9f50c62a67c2d8">  110</a></span>    uint16_t <a class="code hl_class" href="classiot_1_1mqtt_1_1packets_1_1Connect.html">Connect</a>::<a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Connect.html#a6c75251d5d6deba1bf9f50c62a67c2d8">getKeepAlive</a>() <span class="keyword">const</span> {</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno"><a class="line" href="classiot_1_1mqtt_1_1packets_1_1Connect.html#a6c75251d5d6deba1bf9f50c62a67c2d8">  110</a></span>    uint16_t Connect::getKeepAlive() <span class="keyword">const</span> {</div>
 <div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        <span class="keywordflow">return</span> keepAlive;</div>
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    }</div>
 </div>
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
 <div class="foldopen" id="foldopen00114" data-start="{" data-end="}">
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno"><a class="line" href="classiot_1_1mqtt_1_1packets_1_1Connect.html#a5fa5a01b5c0a62f00da08367b1619fb0">  114</a></span>    std::string <a class="code hl_class" href="classiot_1_1mqtt_1_1packets_1_1Connect.html">Connect</a>::<a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Connect.html#a5fa5a01b5c0a62f00da08367b1619fb0">getClientId</a>() <span class="keyword">const</span> {</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno"><a class="line" href="classiot_1_1mqtt_1_1packets_1_1Connect.html#a5fa5a01b5c0a62f00da08367b1619fb0">  114</a></span>    std::string Connect::getClientId() <span class="keyword">const</span> {</div>
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        <span class="keywordflow">return</span> clientId;</div>
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    }</div>
 </div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
 <div class="foldopen" id="foldopen00118" data-start="{" data-end="}">
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno"><a class="line" href="classiot_1_1mqtt_1_1packets_1_1Connect.html#a8b34cb107b66dfa8b450d12eabf0a7d5">  118</a></span>    <span class="keywordtype">bool</span> <a class="code hl_class" href="classiot_1_1mqtt_1_1packets_1_1Connect.html">Connect</a>::<a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Connect.html#a8b34cb107b66dfa8b450d12eabf0a7d5">getUsernameFlag</a>() <span class="keyword">const</span> {</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classiot_1_1mqtt_1_1packets_1_1Connect.html#ad25022723007fb3a719cdcf53b50f3c7">usernameFlag</a>;</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno"><a class="line" href="classiot_1_1mqtt_1_1packets_1_1Connect.html#a8b34cb107b66dfa8b450d12eabf0a7d5">  118</a></span>    <span class="keywordtype">bool</span> Connect::getUsernameFlag() <span class="keyword">const</span> {</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        <span class="keywordflow">return</span> usernameFlag;</div>
 <div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    }</div>
 </div>
 <div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
 <div class="foldopen" id="foldopen00122" data-start="{" data-end="}">
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno"><a class="line" href="classiot_1_1mqtt_1_1packets_1_1Connect.html#a9faf69cdc79db80b54b58b0910510da3">  122</a></span>    <span class="keywordtype">bool</span> <a class="code hl_class" href="classiot_1_1mqtt_1_1packets_1_1Connect.html">Connect</a>::<a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Connect.html#a9faf69cdc79db80b54b58b0910510da3">getPasswordFlag</a>() <span class="keyword">const</span> {</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classiot_1_1mqtt_1_1packets_1_1Connect.html#a0638b7f481b8e163790763e6b75cb6f4">passwordFlag</a>;</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno"><a class="line" href="classiot_1_1mqtt_1_1packets_1_1Connect.html#a9faf69cdc79db80b54b58b0910510da3">  122</a></span>    <span class="keywordtype">bool</span> Connect::getPasswordFlag() <span class="keyword">const</span> {</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        <span class="keywordflow">return</span> passwordFlag;</div>
 <div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    }</div>
 </div>
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
 <div class="foldopen" id="foldopen00126" data-start="{" data-end="}">
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno"><a class="line" href="classiot_1_1mqtt_1_1packets_1_1Connect.html#aefc1920949d4124aa682b874c1c81164">  126</a></span>    <span class="keywordtype">bool</span> <a class="code hl_class" href="classiot_1_1mqtt_1_1packets_1_1Connect.html">Connect</a>::<a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Connect.html#aefc1920949d4124aa682b874c1c81164">getWillRetain</a>() <span class="keyword">const</span> {</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classiot_1_1mqtt_1_1packets_1_1Connect.html#a8c950847d8626c8bd6e156944d102c7b">willRetain</a>;</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno"><a class="line" href="classiot_1_1mqtt_1_1packets_1_1Connect.html#aefc1920949d4124aa682b874c1c81164">  126</a></span>    <span class="keywordtype">bool</span> Connect::getWillRetain() <span class="keyword">const</span> {</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>        <span class="keywordflow">return</span> willRetain;</div>
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    }</div>
 </div>
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
 <div class="foldopen" id="foldopen00130" data-start="{" data-end="}">
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno"><a class="line" href="classiot_1_1mqtt_1_1packets_1_1Connect.html#a52020b9437f99ec7bec1a4c32521a8e7">  130</a></span>    uint8_t <a class="code hl_class" href="classiot_1_1mqtt_1_1packets_1_1Connect.html">Connect</a>::<a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Connect.html#a52020b9437f99ec7bec1a4c32521a8e7">getWillQoS</a>() <span class="keyword">const</span> {</div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classiot_1_1mqtt_1_1packets_1_1Connect.html#a408b1ac88aa6e7acd3267d26be3e523b">willQoS</a>;</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno"><a class="line" href="classiot_1_1mqtt_1_1packets_1_1Connect.html#a52020b9437f99ec7bec1a4c32521a8e7">  130</a></span>    uint8_t Connect::getWillQoS() <span class="keyword">const</span> {</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>        <span class="keywordflow">return</span> willQoS;</div>
 <div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    }</div>
 </div>
 <div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span> </div>
 <div class="foldopen" id="foldopen00134" data-start="{" data-end="}">
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno"><a class="line" href="classiot_1_1mqtt_1_1packets_1_1Connect.html#aebe8b7a29154aa0eb976fa49509fdbc4">  134</a></span>    <span class="keywordtype">bool</span> <a class="code hl_class" href="classiot_1_1mqtt_1_1packets_1_1Connect.html">Connect</a>::<a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Connect.html#aebe8b7a29154aa0eb976fa49509fdbc4">getWillFlag</a>() <span class="keyword">const</span> {</div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classiot_1_1mqtt_1_1packets_1_1Connect.html#a2ff40cca7f42d11ed9350f4ef059fd30">willFlag</a>;</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno"><a class="line" href="classiot_1_1mqtt_1_1packets_1_1Connect.html#aebe8b7a29154aa0eb976fa49509fdbc4">  134</a></span>    <span class="keywordtype">bool</span> Connect::getWillFlag() <span class="keyword">const</span> {</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        <span class="keywordflow">return</span> willFlag;</div>
 <div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    }</div>
 </div>
 <div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span> </div>
 <div class="foldopen" id="foldopen00138" data-start="{" data-end="}">
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno"><a class="line" href="classiot_1_1mqtt_1_1packets_1_1Connect.html#a9150e7e9eef5684b634e019923b90495">  138</a></span>    <span class="keywordtype">bool</span> <a class="code hl_class" href="classiot_1_1mqtt_1_1packets_1_1Connect.html">Connect</a>::<a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Connect.html#a9150e7e9eef5684b634e019923b90495">getCleanSession</a>() <span class="keyword">const</span> {</div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classiot_1_1mqtt_1_1packets_1_1Connect.html#a8a7e57e9373cfdb9f9421a7505357be2">cleanSession</a>;</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno"><a class="line" href="classiot_1_1mqtt_1_1packets_1_1Connect.html#a9150e7e9eef5684b634e019923b90495">  138</a></span>    <span class="keywordtype">bool</span> Connect::getCleanSession() <span class="keyword">const</span> {</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>        <span class="keywordflow">return</span> cleanSession;</div>
 <div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    }</div>
 </div>
 <div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span> </div>
 <div class="foldopen" id="foldopen00142" data-start="{" data-end="}">
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno"><a class="line" href="classiot_1_1mqtt_1_1packets_1_1Connect.html#a5e2bdae6abf09ff4d08c22973c871301">  142</a></span>    <span class="keywordtype">bool</span> <a class="code hl_class" href="classiot_1_1mqtt_1_1packets_1_1Connect.html">Connect</a>::<a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Connect.html#a5e2bdae6abf09ff4d08c22973c871301">getReflect</a>() <span class="keyword">const</span> {</div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classiot_1_1mqtt_1_1packets_1_1Connect.html#a899fe1e3506ba7b7fecf043b58ffc57a">reflect</a>;</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno"><a class="line" href="classiot_1_1mqtt_1_1packets_1_1Connect.html#a5e2bdae6abf09ff4d08c22973c871301">  142</a></span>    <span class="keywordtype">bool</span> Connect::getReflect() <span class="keyword">const</span> {</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>        <span class="keywordflow">return</span> reflect;</div>
 <div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    }</div>
 </div>
 <div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span> </div>
 <div class="foldopen" id="foldopen00146" data-start="{" data-end="}">
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno"><a class="line" href="classiot_1_1mqtt_1_1packets_1_1Connect.html#a684b4dcb82d03d788f5e516418645835">  146</a></span>    std::string <a class="code hl_class" href="classiot_1_1mqtt_1_1packets_1_1Connect.html">Connect</a>::<a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Connect.html#a684b4dcb82d03d788f5e516418645835">getWillTopic</a>() <span class="keyword">const</span> {</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno"><a class="line" href="classiot_1_1mqtt_1_1packets_1_1Connect.html#a684b4dcb82d03d788f5e516418645835">  146</a></span>    std::string Connect::getWillTopic() <span class="keyword">const</span> {</div>
 <div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>        <span class="keywordflow">return</span> willTopic;</div>
 <div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    }</div>
 </div>
 <div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span> </div>
 <div class="foldopen" id="foldopen00150" data-start="{" data-end="}">
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno"><a class="line" href="classiot_1_1mqtt_1_1packets_1_1Connect.html#ad76d9c939133b51186a8dd59e2637311">  150</a></span>    std::string <a class="code hl_class" href="classiot_1_1mqtt_1_1packets_1_1Connect.html">Connect</a>::<a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Connect.html#ad76d9c939133b51186a8dd59e2637311">getWillMessage</a>() <span class="keyword">const</span> {</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno"><a class="line" href="classiot_1_1mqtt_1_1packets_1_1Connect.html#ad76d9c939133b51186a8dd59e2637311">  150</a></span>    std::string Connect::getWillMessage() <span class="keyword">const</span> {</div>
 <div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>        <span class="keywordflow">return</span> willMessage;</div>
 <div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    }</div>
 </div>
 <div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span> </div>
 <div class="foldopen" id="foldopen00154" data-start="{" data-end="}">
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno"><a class="line" href="classiot_1_1mqtt_1_1packets_1_1Connect.html#a949599abe69e6c57ac1cad1f919712b1">  154</a></span>    std::string <a class="code hl_class" href="classiot_1_1mqtt_1_1packets_1_1Connect.html">Connect</a>::<a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Connect.html#a949599abe69e6c57ac1cad1f919712b1">getUsername</a>() <span class="keyword">const</span> {</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno"><a class="line" href="classiot_1_1mqtt_1_1packets_1_1Connect.html#a949599abe69e6c57ac1cad1f919712b1">  154</a></span>    std::string Connect::getUsername() <span class="keyword">const</span> {</div>
 <div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>        <span class="keywordflow">return</span> username;</div>
 <div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    }</div>
 </div>
 <div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span> </div>
 <div class="foldopen" id="foldopen00158" data-start="{" data-end="}">
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno"><a class="line" href="classiot_1_1mqtt_1_1packets_1_1Connect.html#aba1d390375199e6f2f29d92a93b7b9ab">  158</a></span>    std::string <a class="code hl_class" href="classiot_1_1mqtt_1_1packets_1_1Connect.html">Connect</a>::<a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Connect.html#aba1d390375199e6f2f29d92a93b7b9ab">getPassword</a>() <span class="keyword">const</span> {</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno"><a class="line" href="classiot_1_1mqtt_1_1packets_1_1Connect.html#aba1d390375199e6f2f29d92a93b7b9ab">  158</a></span>    std::string Connect::getPassword() <span class="keyword">const</span> {</div>
 <div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>        <span class="keywordflow">return</span> password;</div>
 <div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    }</div>
 </div>
 <div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span> </div>
 <div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>} <span class="comment">// namespace iot::mqtt::packets</span></div>
-<div class="ttc" id="aclassiot_1_1mqtt_1_1packets_1_1Connect_html"><div class="ttname"><a href="classiot_1_1mqtt_1_1packets_1_1Connect.html">iot::mqtt::packets::Connect</a></div><div class="ttdef"><b>Definition</b> <a href="mqtt_2packets_2Connect_8h_source.html#l00040">Connect.h:40</a></div></div>
-<div class="ttc" id="aclassiot_1_1mqtt_1_1packets_1_1Connect_html_a0638b7f481b8e163790763e6b75cb6f4"><div class="ttname"><a href="classiot_1_1mqtt_1_1packets_1_1Connect.html#a0638b7f481b8e163790763e6b75cb6f4">iot::mqtt::packets::Connect::passwordFlag</a></div><div class="ttdeci">bool passwordFlag</div><div class="ttdef"><b>Definition</b> <a href="mqtt_2packets_2Connect_8h_source.html#l00091">Connect.h:91</a></div></div>
-<div class="ttc" id="aclassiot_1_1mqtt_1_1packets_1_1Connect_html_a25374fccbb8eb32c48031a7e877e1b35"><div class="ttname"><a href="classiot_1_1mqtt_1_1packets_1_1Connect.html#a25374fccbb8eb32c48031a7e877e1b35">iot::mqtt::packets::Connect::getLevel</a></div><div class="ttdeci">uint8_t getLevel() const</div><div class="ttdef"><b>Definition</b> <a href="#l00102">Connect.cpp:102</a></div></div>
-<div class="ttc" id="aclassiot_1_1mqtt_1_1packets_1_1Connect_html_a2ff40cca7f42d11ed9350f4ef059fd30"><div class="ttname"><a href="classiot_1_1mqtt_1_1packets_1_1Connect.html#a2ff40cca7f42d11ed9350f4ef059fd30">iot::mqtt::packets::Connect::willFlag</a></div><div class="ttdeci">bool willFlag</div><div class="ttdef"><b>Definition</b> <a href="mqtt_2packets_2Connect_8h_source.html#l00094">Connect.h:94</a></div></div>
-<div class="ttc" id="aclassiot_1_1mqtt_1_1packets_1_1Connect_html_a408b1ac88aa6e7acd3267d26be3e523b"><div class="ttname"><a href="classiot_1_1mqtt_1_1packets_1_1Connect.html#a408b1ac88aa6e7acd3267d26be3e523b">iot::mqtt::packets::Connect::willQoS</a></div><div class="ttdeci">uint8_t willQoS</div><div class="ttdef"><b>Definition</b> <a href="mqtt_2packets_2Connect_8h_source.html#l00093">Connect.h:93</a></div></div>
-<div class="ttc" id="aclassiot_1_1mqtt_1_1packets_1_1Connect_html_a4bacc225bd20f3e7116a31974d7df04e"><div class="ttname"><a href="classiot_1_1mqtt_1_1packets_1_1Connect.html#a4bacc225bd20f3e7116a31974d7df04e">iot::mqtt::packets::Connect::Connect</a></div><div class="ttdeci">Connect(const std::string &amp;clientId, uint16_t keepAlive, bool cleanSession, const std::string &amp;willTopic, const std::string &amp;willMessage, uint8_t willQoS, bool willRetain, const std::string &amp;username, const std::string &amp;password, bool loopPrevention)</div><div class="ttdef"><b>Definition</b> <a href="#l00034">Connect.cpp:34</a></div></div>
-<div class="ttc" id="aclassiot_1_1mqtt_1_1packets_1_1Connect_html_a52020b9437f99ec7bec1a4c32521a8e7"><div class="ttname"><a href="classiot_1_1mqtt_1_1packets_1_1Connect.html#a52020b9437f99ec7bec1a4c32521a8e7">iot::mqtt::packets::Connect::getWillQoS</a></div><div class="ttdeci">uint8_t getWillQoS() const</div><div class="ttdef"><b>Definition</b> <a href="#l00130">Connect.cpp:130</a></div></div>
-<div class="ttc" id="aclassiot_1_1mqtt_1_1packets_1_1Connect_html_a5e2bdae6abf09ff4d08c22973c871301"><div class="ttname"><a href="classiot_1_1mqtt_1_1packets_1_1Connect.html#a5e2bdae6abf09ff4d08c22973c871301">iot::mqtt::packets::Connect::getReflect</a></div><div class="ttdeci">bool getReflect() const</div><div class="ttdef"><b>Definition</b> <a href="#l00142">Connect.cpp:142</a></div></div>
-<div class="ttc" id="aclassiot_1_1mqtt_1_1packets_1_1Connect_html_a5fa5a01b5c0a62f00da08367b1619fb0"><div class="ttname"><a href="classiot_1_1mqtt_1_1packets_1_1Connect.html#a5fa5a01b5c0a62f00da08367b1619fb0">iot::mqtt::packets::Connect::getClientId</a></div><div class="ttdeci">std::string getClientId() const</div><div class="ttdef"><b>Definition</b> <a href="#l00114">Connect.cpp:114</a></div></div>
-<div class="ttc" id="aclassiot_1_1mqtt_1_1packets_1_1Connect_html_a684b4dcb82d03d788f5e516418645835"><div class="ttname"><a href="classiot_1_1mqtt_1_1packets_1_1Connect.html#a684b4dcb82d03d788f5e516418645835">iot::mqtt::packets::Connect::getWillTopic</a></div><div class="ttdeci">std::string getWillTopic() const</div><div class="ttdef"><b>Definition</b> <a href="#l00146">Connect.cpp:146</a></div></div>
-<div class="ttc" id="aclassiot_1_1mqtt_1_1packets_1_1Connect_html_a6c75251d5d6deba1bf9f50c62a67c2d8"><div class="ttname"><a href="classiot_1_1mqtt_1_1packets_1_1Connect.html#a6c75251d5d6deba1bf9f50c62a67c2d8">iot::mqtt::packets::Connect::getKeepAlive</a></div><div class="ttdeci">uint16_t getKeepAlive() const</div><div class="ttdef"><b>Definition</b> <a href="#l00110">Connect.cpp:110</a></div></div>
-<div class="ttc" id="aclassiot_1_1mqtt_1_1packets_1_1Connect_html_a899fe1e3506ba7b7fecf043b58ffc57a"><div class="ttname"><a href="classiot_1_1mqtt_1_1packets_1_1Connect.html#a899fe1e3506ba7b7fecf043b58ffc57a">iot::mqtt::packets::Connect::reflect</a></div><div class="ttdeci">bool reflect</div><div class="ttdef"><b>Definition</b> <a href="mqtt_2packets_2Connect_8h_source.html#l00096">Connect.h:96</a></div></div>
-<div class="ttc" id="aclassiot_1_1mqtt_1_1packets_1_1Connect_html_a8a7e57e9373cfdb9f9421a7505357be2"><div class="ttname"><a href="classiot_1_1mqtt_1_1packets_1_1Connect.html#a8a7e57e9373cfdb9f9421a7505357be2">iot::mqtt::packets::Connect::cleanSession</a></div><div class="ttdeci">bool cleanSession</div><div class="ttdef"><b>Definition</b> <a href="mqtt_2packets_2Connect_8h_source.html#l00095">Connect.h:95</a></div></div>
-<div class="ttc" id="aclassiot_1_1mqtt_1_1packets_1_1Connect_html_a8b34cb107b66dfa8b450d12eabf0a7d5"><div class="ttname"><a href="classiot_1_1mqtt_1_1packets_1_1Connect.html#a8b34cb107b66dfa8b450d12eabf0a7d5">iot::mqtt::packets::Connect::getUsernameFlag</a></div><div class="ttdeci">bool getUsernameFlag() const</div><div class="ttdef"><b>Definition</b> <a href="#l00118">Connect.cpp:118</a></div></div>
-<div class="ttc" id="aclassiot_1_1mqtt_1_1packets_1_1Connect_html_a8c950847d8626c8bd6e156944d102c7b"><div class="ttname"><a href="classiot_1_1mqtt_1_1packets_1_1Connect.html#a8c950847d8626c8bd6e156944d102c7b">iot::mqtt::packets::Connect::willRetain</a></div><div class="ttdeci">bool willRetain</div><div class="ttdef"><b>Definition</b> <a href="mqtt_2packets_2Connect_8h_source.html#l00092">Connect.h:92</a></div></div>
-<div class="ttc" id="aclassiot_1_1mqtt_1_1packets_1_1Connect_html_a9150e7e9eef5684b634e019923b90495"><div class="ttname"><a href="classiot_1_1mqtt_1_1packets_1_1Connect.html#a9150e7e9eef5684b634e019923b90495">iot::mqtt::packets::Connect::getCleanSession</a></div><div class="ttdeci">bool getCleanSession() const</div><div class="ttdef"><b>Definition</b> <a href="#l00138">Connect.cpp:138</a></div></div>
-<div class="ttc" id="aclassiot_1_1mqtt_1_1packets_1_1Connect_html_a93608945a47489b92c4c462ece72c204"><div class="ttname"><a href="classiot_1_1mqtt_1_1packets_1_1Connect.html#a93608945a47489b92c4c462ece72c204">iot::mqtt::packets::Connect::serializeVP</a></div><div class="ttdeci">std::vector&lt; char &gt; serializeVP() const override</div><div class="ttdef"><b>Definition</b> <a href="#l00064">Connect.cpp:64</a></div></div>
-<div class="ttc" id="aclassiot_1_1mqtt_1_1packets_1_1Connect_html_a949599abe69e6c57ac1cad1f919712b1"><div class="ttname"><a href="classiot_1_1mqtt_1_1packets_1_1Connect.html#a949599abe69e6c57ac1cad1f919712b1">iot::mqtt::packets::Connect::getUsername</a></div><div class="ttdeci">std::string getUsername() const</div><div class="ttdef"><b>Definition</b> <a href="#l00154">Connect.cpp:154</a></div></div>
-<div class="ttc" id="aclassiot_1_1mqtt_1_1packets_1_1Connect_html_a9d6fc06bb9dbd5cfb17332d6f9734736"><div class="ttname"><a href="classiot_1_1mqtt_1_1packets_1_1Connect.html#a9d6fc06bb9dbd5cfb17332d6f9734736">iot::mqtt::packets::Connect::getConnectFlags</a></div><div class="ttdeci">uint8_t getConnectFlags() const</div><div class="ttdef"><b>Definition</b> <a href="#l00106">Connect.cpp:106</a></div></div>
-<div class="ttc" id="aclassiot_1_1mqtt_1_1packets_1_1Connect_html_a9faf69cdc79db80b54b58b0910510da3"><div class="ttname"><a href="classiot_1_1mqtt_1_1packets_1_1Connect.html#a9faf69cdc79db80b54b58b0910510da3">iot::mqtt::packets::Connect::getPasswordFlag</a></div><div class="ttdeci">bool getPasswordFlag() const</div><div class="ttdef"><b>Definition</b> <a href="#l00122">Connect.cpp:122</a></div></div>
-<div class="ttc" id="aclassiot_1_1mqtt_1_1packets_1_1Connect_html_aba1d390375199e6f2f29d92a93b7b9ab"><div class="ttname"><a href="classiot_1_1mqtt_1_1packets_1_1Connect.html#aba1d390375199e6f2f29d92a93b7b9ab">iot::mqtt::packets::Connect::getPassword</a></div><div class="ttdeci">std::string getPassword() const</div><div class="ttdef"><b>Definition</b> <a href="#l00158">Connect.cpp:158</a></div></div>
-<div class="ttc" id="aclassiot_1_1mqtt_1_1packets_1_1Connect_html_acf053d26c7a20aee2a080f41845839a5"><div class="ttname"><a href="classiot_1_1mqtt_1_1packets_1_1Connect.html#acf053d26c7a20aee2a080f41845839a5">iot::mqtt::packets::Connect::Connect</a></div><div class="ttdeci">Connect()</div><div class="ttdef"><b>Definition</b> <a href="#l00030">Connect.cpp:30</a></div></div>
-<div class="ttc" id="aclassiot_1_1mqtt_1_1packets_1_1Connect_html_ad25022723007fb3a719cdcf53b50f3c7"><div class="ttname"><a href="classiot_1_1mqtt_1_1packets_1_1Connect.html#ad25022723007fb3a719cdcf53b50f3c7">iot::mqtt::packets::Connect::usernameFlag</a></div><div class="ttdeci">bool usernameFlag</div><div class="ttdef"><b>Definition</b> <a href="mqtt_2packets_2Connect_8h_source.html#l00090">Connect.h:90</a></div></div>
-<div class="ttc" id="aclassiot_1_1mqtt_1_1packets_1_1Connect_html_ad76d9c939133b51186a8dd59e2637311"><div class="ttname"><a href="classiot_1_1mqtt_1_1packets_1_1Connect.html#ad76d9c939133b51186a8dd59e2637311">iot::mqtt::packets::Connect::getWillMessage</a></div><div class="ttdeci">std::string getWillMessage() const</div><div class="ttdef"><b>Definition</b> <a href="#l00150">Connect.cpp:150</a></div></div>
-<div class="ttc" id="aclassiot_1_1mqtt_1_1packets_1_1Connect_html_aebe8b7a29154aa0eb976fa49509fdbc4"><div class="ttname"><a href="classiot_1_1mqtt_1_1packets_1_1Connect.html#aebe8b7a29154aa0eb976fa49509fdbc4">iot::mqtt::packets::Connect::getWillFlag</a></div><div class="ttdeci">bool getWillFlag() const</div><div class="ttdef"><b>Definition</b> <a href="#l00134">Connect.cpp:134</a></div></div>
-<div class="ttc" id="aclassiot_1_1mqtt_1_1packets_1_1Connect_html_aefc1920949d4124aa682b874c1c81164"><div class="ttname"><a href="classiot_1_1mqtt_1_1packets_1_1Connect.html#aefc1920949d4124aa682b874c1c81164">iot::mqtt::packets::Connect::getWillRetain</a></div><div class="ttdeci">bool getWillRetain() const</div><div class="ttdef"><b>Definition</b> <a href="#l00126">Connect.cpp:126</a></div></div>
-<div class="ttc" id="aclassiot_1_1mqtt_1_1packets_1_1Connect_html_af7f30f3ac98f21b6cccf76984af2ea52"><div class="ttname"><a href="classiot_1_1mqtt_1_1packets_1_1Connect.html#af7f30f3ac98f21b6cccf76984af2ea52">iot::mqtt::packets::Connect::getProtocol</a></div><div class="ttdeci">std::string getProtocol() const</div><div class="ttdef"><b>Definition</b> <a href="#l00098">Connect.cpp:98</a></div></div>
-<div class="ttc" id="amqtt-fast_2packets_2Connect_8h_html_a0618515498683adb4929499434a06bcf"><div class="ttname"><a href="mqtt-fast_2packets_2Connect_8h.html#a0618515498683adb4929499434a06bcf">MQTT_CONNECT</a></div><div class="ttdeci">#define MQTT_CONNECT</div><div class="ttdef"><b>Definition</b> <a href="mqtt-fast_2packets_2Connect_8h_source.html#l00036">Connect.h:36</a></div></div>
-<div class="ttc" id="amqtt-fast_2packets_2Connect_8h_html_a7c621dd360dd439f0d6d8dc5d951a619"><div class="ttname"><a href="mqtt-fast_2packets_2Connect_8h.html#a7c621dd360dd439f0d6d8dc5d951a619">MQTT_VERSION_3_1_1</a></div><div class="ttdeci">#define MQTT_VERSION_3_1_1</div><div class="ttdef"><b>Definition</b> <a href="mqtt-fast_2packets_2Connect_8h_source.html#l00038">Connect.h:38</a></div></div>
-<div class="ttc" id="anamespaceiot_1_1mqtt_1_1packets_html"><div class="ttname"><a href="namespaceiot_1_1mqtt_1_1packets.html">iot::mqtt::packets</a></div><div class="ttdef"><b>Definition</b> <a href="client_2Mqtt_8h_source.html#l00031">Mqtt.h:31</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_fe0d52f96f4f289e926976262c5570b1.html">iot</a></li><li class="navelem"><a class="el" href="dir_ff14fd3078e403b3ab452c6de4564ea6.html">mqtt</a></li><li class="navelem"><a class="el" href="dir_b024a06855583f15437ceeef15af3eb0.html">packets</a></li><li class="navelem"><a class="el" href="mqtt_2packets_2Connect_8cpp.html">Connect.cpp</a></li>
-    <li class="footer">Generated on Sun Jan 5 2025 01:16:02 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="navelem"><a class="el" href="dir_28592ecdec30ec29223e366148bdb66c.html">iot</a></li><li class="navelem"><a class="el" href="dir_9fa9cc1bc73227ba3c1e7b2368f5d654.html">mqtt</a></li><li class="navelem"><a class="el" href="dir_10488b53962af46d097f29192687f02d.html">packets</a></li><li class="navelem"><a class="el" href="mqtt_2packets_2Connect_8cpp.html">Connect.cpp</a></li>
+    <li class="footer">Generated on Sun Jan 5 2025 02:25:09 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>
