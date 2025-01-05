@@ -1,6 +1,5 @@
 var dir_68267d1309a1af8e8297ef4c3efbcdba =
 [
-    [ "apps", "dir_53adf0b982dc8545998aae3f283a5a58.html", "dir_53adf0b982dc8545998aae3f283a5a58" ],
     [ "core", "dir_aebb8dcc11953d78e620bbef0b9e2183.html", "dir_aebb8dcc11953d78e620bbef0b9e2183" ],
     [ "database", "dir_803ee67260c130b45d29089798491ab2.html", "dir_803ee67260c130b45d29089798491ab2" ],
     [ "express", "dir_1ef10629401f35c9235e4b0300a49988.html", "dir_1ef10629401f35c9235e4b0300a49988" ],

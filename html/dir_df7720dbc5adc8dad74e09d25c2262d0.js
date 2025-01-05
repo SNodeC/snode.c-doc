@@ -1,4 +1,0 @@
-var dir_df7720dbc5adc8dad74e09d25c2262d0 =
-[
-    [ "echo", "dir_0d6596499f1c95026ec992444604926f.html", "dir_0d6596499f1c95026ec992444604926f" ]
-];

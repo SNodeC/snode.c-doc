@@ -133,7 +133,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a1c09d67ca920155d757e8237cb3bc2b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac3b21004d43f9eebb8f0323bcfc6a78c" id="r_ac3b21004d43f9eebb8f0323bcfc6a78c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a62cfe7d0fc445bb1762117f81034e47a">SubProtocolFactory</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac3b21004d43f9eebb8f0323bcfc6a78c">select</a> (const std::string &amp;subProtocolName, <a class="el" href="#aaa9000a982c5189a90dc1f14074a90bf">Role</a> role)</td></tr>
 <tr class="separator:ac3b21004d43f9eebb8f0323bcfc6a78c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a562695e0b6cbb6457d3f246cea729baf" id="r_a562695e0b6cbb6457d3f246cea729baf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a562695e0b6cbb6457d3f246cea729baf">unload</a> (<a class="el" href="#a62cfe7d0fc445bb1762117f81034e47a">SubProtocolFactory</a> *<a class="el" href="client_2echo_2EchoFactory_8cpp.html#aac49206c8f1ade8d888e519c94890c7c">subProtocolFactory</a>)</td></tr>
+<tr class="memitem:a562695e0b6cbb6457d3f246cea729baf" id="r_a562695e0b6cbb6457d3f246cea729baf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a562695e0b6cbb6457d3f246cea729baf">unload</a> (<a class="el" href="#a62cfe7d0fc445bb1762117f81034e47a">SubProtocolFactory</a> *subProtocolFactory)</td></tr>
 <tr class="separator:a562695e0b6cbb6457d3f246cea729baf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
@@ -147,7 +147,7 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a0a3d8a4b2dfbe3e82e2ebd49b110d7ed" id="r_a0a3d8a4b2dfbe3e82e2ebd49b110d7ed"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0a3d8a4b2dfbe3e82e2ebd49b110d7ed">allowDlOpen</a> ()</td></tr>
 <tr class="separator:a0a3d8a4b2dfbe3e82e2ebd49b110d7ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a215532536559c0bfd99c26d6c2285316" id="r_a215532536559c0bfd99c26d6c2285316"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="#a62cfe7d0fc445bb1762117f81034e47a">SubProtocolFactory</a> &gt; </td></tr>
-<tr class="memitem:a215532536559c0bfd99c26d6c2285316"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a215532536559c0bfd99c26d6c2285316">link</a> (const std::string &amp;subProtocolName, <a class="el" href="#a62cfe7d0fc445bb1762117f81034e47a">SubProtocolFactory</a> *(*<a class="el" href="client_2echo_2EchoFactory_8cpp.html#aac49206c8f1ade8d888e519c94890c7c">subProtocolFactory</a>)())</td></tr>
+<tr class="memitem:a215532536559c0bfd99c26d6c2285316"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a215532536559c0bfd99c26d6c2285316">link</a> (const std::string &amp;subProtocolName, <a class="el" href="#a62cfe7d0fc445bb1762117f81034e47a">SubProtocolFactory</a> *(*subProtocolFactory)())</td></tr>
 <tr class="separator:a215532536559c0bfd99c26d6c2285316"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-static-methods" name="pro-static-methods"></a>
@@ -376,11 +376,10 @@ template&lt;typename <a class="el" href="#a62cfe7d0fc445bb1762117f81034e47a">Sub
 <div class="fragment"><div class="line"><span class="lineno">  134</span>                                                                                                 {</div>
 <div class="line"><span class="lineno">  135</span>            <a class="code hl_variable" href="#a66ef83667e6b9f35090a273ca1d77404">onlyLinked</a> = <span class="keyword">true</span>;</div>
 <div class="line"><span class="lineno">  136</span>            <a class="code hl_variable" href="#ae71856f91e3f5c2baa0fcc4bceef22cb">linkedSubProtocolFactories</a>[subProtocolName] =</div>
-<div class="line"><span class="lineno">  137</span>                <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_typedef" href="#a62cfe7d0fc445bb1762117f81034e47a">SubProtocolFactorySelector::SubProtocolFactory</a>* (*) ()<span class="keyword">&gt;</span>(<a class="code hl_function" href="client_2echo_2EchoFactory_8cpp.html#aac49206c8f1ade8d888e519c94890c7c">subProtocolFactory</a>);</div>
+<div class="line"><span class="lineno">  137</span>                <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_typedef" href="#a62cfe7d0fc445bb1762117f81034e47a">SubProtocolFactorySelector::SubProtocolFactory</a>* (*) ()<span class="keyword">&gt;</span>(subProtocolFactory);</div>
 <div class="line"><span class="lineno">  138</span>        }</div>
 <div class="ttc" id="aclassweb_1_1websocket_1_1SubProtocolFactorySelector_html_a62cfe7d0fc445bb1762117f81034e47a"><div class="ttname"><a href="#a62cfe7d0fc445bb1762117f81034e47a">web::websocket::SubProtocolFactorySelector::SubProtocolFactory</a></div><div class="ttdeci">SubProtocolFactoryT SubProtocolFactory</div><div class="ttdef"><b>Definition</b> <a href="SubProtocolFactorySelector_8h_source.html#l00044">SubProtocolFactorySelector.h:44</a></div></div>
 <div class="ttc" id="aclassweb_1_1websocket_1_1SubProtocolFactorySelector_html_ae71856f91e3f5c2baa0fcc4bceef22cb"><div class="ttname"><a href="#ae71856f91e3f5c2baa0fcc4bceef22cb">web::websocket::SubProtocolFactorySelector::linkedSubProtocolFactories</a></div><div class="ttdeci">std::map&lt; std::string, SubProtocolFactory *(*)()&gt; linkedSubProtocolFactories</div><div class="ttdef"><b>Definition</b> <a href="SubProtocolFactorySelector_8h_source.html#l00142">SubProtocolFactorySelector.h:142</a></div></div>
-<div class="ttc" id="aclient_2echo_2EchoFactory_8cpp_html_aac49206c8f1ade8d888e519c94890c7c"><div class="ttname"><a href="client_2echo_2EchoFactory_8cpp.html#aac49206c8f1ade8d888e519c94890c7c">subProtocolFactory</a></div><div class="ttdeci">apps::websocket::subprotocol::echo::client::EchoFactory * subProtocolFactory()</div><div class="ttdef"><b>Definition</b> <a href="client_2echo_2EchoFactory_8cpp_source.html#l00038">EchoFactory.cpp:38</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="SubProtocolFactorySelector_8h_source.html#l00144">web::websocket::SubProtocolFactorySelector&lt; SubProtocolFactoryT &gt;::onlyLinked</a>.</p>
 
@@ -451,7 +450,7 @@ template&lt;typename SubProtocolFactoryT &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="SubProtocolFactorySelector_8h_source.html#l00054">54</a> of file <a class="el" href="SubProtocolFactorySelector_8h_source.html">SubProtocolFactorySelector.h</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   56</span>                                                                                         {</div>
-<div class="line"><span class="lineno">   57</span>            <a class="code hl_typedef" href="#a62cfe7d0fc445bb1762117f81034e47a">SubProtocolFactory</a>* <a class="code hl_function" href="client_2echo_2EchoFactory_8cpp.html#aac49206c8f1ade8d888e519c94890c7c">subProtocolFactory</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">   57</span>            <a class="code hl_typedef" href="#a62cfe7d0fc445bb1762117f81034e47a">SubProtocolFactory</a>* subProtocolFactory = <span class="keyword">nullptr</span>;</div>
 <div class="line"><span class="lineno">   58</span> </div>
 <div class="line"><span class="lineno">   59</span>            <span class="keywordtype">void</span>* handle = core::DynamicLoader::dlOpen(subProtocolLibraryFile);</div>
 <div class="line"><span class="lineno">   60</span> </div>
@@ -459,9 +458,9 @@ template&lt;typename SubProtocolFactoryT &gt; </div>
 <div class="line"><span class="lineno">   62</span>                <a class="code hl_typedef" href="#a62cfe7d0fc445bb1762117f81034e47a">SubProtocolFactory</a>* (*getSubProtocolFactory)() =</div>
 <div class="line"><span class="lineno">   63</span>                    <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_typedef" href="#a62cfe7d0fc445bb1762117f81034e47a">SubProtocolFactory</a>* (*) ()<span class="keyword">&gt;</span>(<a class="code hl_function" href="classcore_1_1DynamicLoader.html#a708b7adb431acbc8976968c59692625e">core::DynamicLoader::dlSym</a>(handle, subProtocolFactoryFunctionName));</div>
 <div class="line"><span class="lineno">   64</span>                <span class="keywordflow">if</span> (getSubProtocolFactory != <span class="keyword">nullptr</span>) {</div>
-<div class="line"><span class="lineno">   65</span>                    <a class="code hl_function" href="client_2echo_2EchoFactory_8cpp.html#aac49206c8f1ade8d888e519c94890c7c">subProtocolFactory</a> = getSubProtocolFactory();</div>
-<div class="line"><span class="lineno">   66</span>                    <span class="keywordflow">if</span> (<a class="code hl_function" href="client_2echo_2EchoFactory_8cpp.html#aac49206c8f1ade8d888e519c94890c7c">subProtocolFactory</a> != <span class="keyword">nullptr</span>) {</div>
-<div class="line"><span class="lineno">   67</span>                        <a class="code hl_function" href="client_2echo_2EchoFactory_8cpp.html#aac49206c8f1ade8d888e519c94890c7c">subProtocolFactory</a>-&gt;<a class="code hl_function" href="classweb_1_1websocket_1_1SubProtocolFactory.html#af4e0a0b2ab3dba7cc13499500d66f9a8">setHandle</a>(handle);</div>
+<div class="line"><span class="lineno">   65</span>                    subProtocolFactory = getSubProtocolFactory();</div>
+<div class="line"><span class="lineno">   66</span>                    <span class="keywordflow">if</span> (subProtocolFactory != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><span class="lineno">   67</span>                        subProtocolFactory-&gt;setHandle(handle);</div>
 <div class="line"><span class="lineno">   68</span>                        LOG(DEBUG) &lt;&lt; <span class="stringliteral">&quot;WebSocket: SubProtocolFactory created successfull: &quot;</span> &lt;&lt; subProtocolName;</div>
 <div class="line"><span class="lineno">   69</span>                    } <span class="keywordflow">else</span> {</div>
 <div class="line"><span class="lineno">   70</span>                        LOG(DEBUG) &lt;&lt; <span class="stringliteral">&quot;WebSocket: SubProtocolFactory not created: &quot;</span> &lt;&lt; subProtocolName;</div>
@@ -474,12 +473,11 @@ template&lt;typename SubProtocolFactoryT &gt; </div>
 <div class="line"><span class="lineno">   77</span>                }</div>
 <div class="line"><span class="lineno">   78</span>            }</div>
 <div class="line"><span class="lineno">   79</span> </div>
-<div class="line"><span class="lineno">   80</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="client_2echo_2EchoFactory_8cpp.html#aac49206c8f1ade8d888e519c94890c7c">subProtocolFactory</a>;</div>
+<div class="line"><span class="lineno">   80</span>            <span class="keywordflow">return</span> subProtocolFactory;</div>
 <div class="line"><span class="lineno">   81</span>        }</div>
 <div class="ttc" id="aclasscore_1_1DynamicLoader_html_a28d14f3029339351d8bb8b328a6110b0"><div class="ttname"><a href="classcore_1_1DynamicLoader.html#a28d14f3029339351d8bb8b328a6110b0">core::DynamicLoader::dlError</a></div><div class="ttdeci">static char * dlError()</div><div class="ttdef"><b>Definition</b> <a href="DynamicLoader_8cpp_source.html#l00095">DynamicLoader.cpp:95</a></div></div>
 <div class="ttc" id="aclasscore_1_1DynamicLoader_html_a42ac52cda1ec4534f1cc9e225dcb31b0"><div class="ttname"><a href="classcore_1_1DynamicLoader.html#a42ac52cda1ec4534f1cc9e225dcb31b0">core::DynamicLoader::dlClose</a></div><div class="ttdeci">static int dlClose(void *handle)</div><div class="ttdef"><b>Definition</b> <a href="DynamicLoader_8cpp_source.html#l00072">DynamicLoader.cpp:72</a></div></div>
 <div class="ttc" id="aclasscore_1_1DynamicLoader_html_a708b7adb431acbc8976968c59692625e"><div class="ttname"><a href="classcore_1_1DynamicLoader.html#a708b7adb431acbc8976968c59692625e">core::DynamicLoader::dlSym</a></div><div class="ttdeci">static void * dlSym(void *handle, const std::string &amp;symbol)</div><div class="ttdef"><b>Definition</b> <a href="DynamicLoader_8cpp_source.html#l00091">DynamicLoader.cpp:91</a></div></div>
-<div class="ttc" id="aclassweb_1_1websocket_1_1SubProtocolFactory_html_af4e0a0b2ab3dba7cc13499500d66f9a8"><div class="ttname"><a href="classweb_1_1websocket_1_1SubProtocolFactory.html#af4e0a0b2ab3dba7cc13499500d66f9a8">web::websocket::SubProtocolFactory::setHandle</a></div><div class="ttdeci">void setHandle(void *handle)</div><div class="ttdef"><b>Definition</b> <a href="SubProtocolFactory_8h_source.html#l00084">SubProtocolFactory.h:84</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="DynamicLoader_8cpp_source.html#l00072">core::DynamicLoader::dlClose()</a>, and <a class="el" href="DynamicLoader_8cpp_source.html#l00095">core::DynamicLoader::dlError()</a>.</p>
 <div class="dynheader">
@@ -544,13 +542,13 @@ template&lt;typename SubProtocolFactoryT &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="SubProtocolFactorySelector_8h_source.html#l00084">84</a> of file <a class="el" href="SubProtocolFactorySelector_8h_source.html">SubProtocolFactorySelector.h</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   84</span>                                                                     {</div>
-<div class="line"><span class="lineno">   85</span>            <a class="code hl_typedef" href="#a62cfe7d0fc445bb1762117f81034e47a">SubProtocolFactory</a>* <a class="code hl_function" href="client_2echo_2EchoFactory_8cpp.html#aac49206c8f1ade8d888e519c94890c7c">subProtocolFactory</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">   85</span>            <a class="code hl_typedef" href="#a62cfe7d0fc445bb1762117f81034e47a">SubProtocolFactory</a>* subProtocolFactory = <span class="keyword">nullptr</span>;</div>
 <div class="line"><span class="lineno">   86</span> </div>
 <div class="line"><span class="lineno">   87</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a4a2032db8796706f293a0feed5d433bf">subProtocolFactories</a>.contains(subProtocolName)) {</div>
-<div class="line"><span class="lineno">   88</span>                <a class="code hl_function" href="client_2echo_2EchoFactory_8cpp.html#aac49206c8f1ade8d888e519c94890c7c">subProtocolFactory</a> = <a class="code hl_variable" href="#a4a2032db8796706f293a0feed5d433bf">subProtocolFactories</a>[subProtocolName];</div>
+<div class="line"><span class="lineno">   88</span>                subProtocolFactory = <a class="code hl_variable" href="#a4a2032db8796706f293a0feed5d433bf">subProtocolFactories</a>[subProtocolName];</div>
 <div class="line"><span class="lineno">   89</span>            }</div>
 <div class="line"><span class="lineno">   90</span> </div>
-<div class="line"><span class="lineno">   91</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="client_2echo_2EchoFactory_8cpp.html#aac49206c8f1ade8d888e519c94890c7c">subProtocolFactory</a>;</div>
+<div class="line"><span class="lineno">   91</span>            <span class="keywordflow">return</span> subProtocolFactory;</div>
 <div class="line"><span class="lineno">   92</span>        }</div>
 <div class="ttc" id="aclassweb_1_1websocket_1_1SubProtocolFactorySelector_html_a4a2032db8796706f293a0feed5d433bf"><div class="ttname"><a href="#a4a2032db8796706f293a0feed5d433bf">web::websocket::SubProtocolFactorySelector::subProtocolFactories</a></div><div class="ttdeci">std::map&lt; std::string, SubProtocolFactory * &gt; subProtocolFactories</div><div class="ttdef"><b>Definition</b> <a href="SubProtocolFactorySelector_8h_source.html#l00141">SubProtocolFactorySelector.h:141</a></div></div>
 </div><!-- fragment -->
@@ -587,22 +585,22 @@ template&lt;typename SubProtocolFactoryT &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="SubProtocolFactorySelector_8h_source.html#l00094">94</a> of file <a class="el" href="SubProtocolFactorySelector_8h_source.html">SubProtocolFactorySelector.h</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   94</span>                                                                                                 {</div>
-<div class="line"><span class="lineno">   95</span>            <a class="code hl_typedef" href="#a62cfe7d0fc445bb1762117f81034e47a">SubProtocolFactory</a>* <a class="code hl_function" href="client_2echo_2EchoFactory_8cpp.html#aac49206c8f1ade8d888e519c94890c7c">subProtocolFactory</a> = <a class="code hl_function" href="#a1c09d67ca920155d757e8237cb3bc2b8">select</a>(subProtocolName);</div>
+<div class="line"><span class="lineno">   95</span>            <a class="code hl_typedef" href="#a62cfe7d0fc445bb1762117f81034e47a">SubProtocolFactory</a>* subProtocolFactory = <a class="code hl_function" href="#a1c09d67ca920155d757e8237cb3bc2b8">select</a>(subProtocolName);</div>
 <div class="line"><span class="lineno">   96</span> </div>
-<div class="line"><span class="lineno">   97</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="client_2echo_2EchoFactory_8cpp.html#aac49206c8f1ade8d888e519c94890c7c">subProtocolFactory</a> == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><span class="lineno">   97</span>            <span class="keywordflow">if</span> (subProtocolFactory == <span class="keyword">nullptr</span>) {</div>
 <div class="line"><span class="lineno">   98</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="#ae71856f91e3f5c2baa0fcc4bceef22cb">linkedSubProtocolFactories</a>.contains(subProtocolName)) {</div>
 <div class="line"><span class="lineno">   99</span>                    <a class="code hl_typedef" href="#a62cfe7d0fc445bb1762117f81034e47a">SubProtocolFactory</a>* (*plugin)() = <a class="code hl_variable" href="#ae71856f91e3f5c2baa0fcc4bceef22cb">linkedSubProtocolFactories</a>[subProtocolName];</div>
-<div class="line"><span class="lineno">  100</span>                    <a class="code hl_function" href="client_2echo_2EchoFactory_8cpp.html#aac49206c8f1ade8d888e519c94890c7c">subProtocolFactory</a> = plugin();</div>
+<div class="line"><span class="lineno">  100</span>                    subProtocolFactory = plugin();</div>
 <div class="line"><span class="lineno">  101</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!<a class="code hl_variable" href="#a66ef83667e6b9f35090a273ca1d77404">onlyLinked</a>) {</div>
-<div class="line"><span class="lineno">  102</span>                    <a class="code hl_function" href="client_2echo_2EchoFactory_8cpp.html#aac49206c8f1ade8d888e519c94890c7c">subProtocolFactory</a> = <a class="code hl_function" href="#ac9b112b29b013f7f5c3ba4bc6573508c">load</a>(subProtocolName);</div>
+<div class="line"><span class="lineno">  102</span>                    subProtocolFactory = <a class="code hl_function" href="#ac9b112b29b013f7f5c3ba4bc6573508c">load</a>(subProtocolName);</div>
 <div class="line"><span class="lineno">  103</span>                }</div>
 <div class="line"><span class="lineno">  104</span> </div>
-<div class="line"><span class="lineno">  105</span>                <span class="keywordflow">if</span> (<a class="code hl_function" href="client_2echo_2EchoFactory_8cpp.html#aac49206c8f1ade8d888e519c94890c7c">subProtocolFactory</a> != <span class="keyword">nullptr</span>) {</div>
-<div class="line"><span class="lineno">  106</span>                    <a class="code hl_variable" href="#a4a2032db8796706f293a0feed5d433bf">subProtocolFactories</a>.insert({subProtocolName, <a class="code hl_function" href="client_2echo_2EchoFactory_8cpp.html#aac49206c8f1ade8d888e519c94890c7c">subProtocolFactory</a>});</div>
+<div class="line"><span class="lineno">  105</span>                <span class="keywordflow">if</span> (subProtocolFactory != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><span class="lineno">  106</span>                    <a class="code hl_variable" href="#a4a2032db8796706f293a0feed5d433bf">subProtocolFactories</a>.insert({subProtocolName, subProtocolFactory});</div>
 <div class="line"><span class="lineno">  107</span>                }</div>
 <div class="line"><span class="lineno">  108</span>            }</div>
 <div class="line"><span class="lineno">  109</span> </div>
-<div class="line"><span class="lineno">  110</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="client_2echo_2EchoFactory_8cpp.html#aac49206c8f1ade8d888e519c94890c7c">subProtocolFactory</a>;</div>
+<div class="line"><span class="lineno">  110</span>            <span class="keywordflow">return</span> subProtocolFactory;</div>
 <div class="line"><span class="lineno">  111</span>        }</div>
 <div class="ttc" id="aclassweb_1_1websocket_1_1SubProtocolFactorySelector_html_a1c09d67ca920155d757e8237cb3bc2b8"><div class="ttname"><a href="#a1c09d67ca920155d757e8237cb3bc2b8">web::websocket::SubProtocolFactorySelector::select</a></div><div class="ttdeci">SubProtocolFactory * select(const std::string &amp;subProtocolName)</div><div class="ttdef"><b>Definition</b> <a href="SubProtocolFactorySelector_8h_source.html#l00084">SubProtocolFactorySelector.h:84</a></div></div>
 <div class="ttc" id="aclassweb_1_1websocket_1_1SubProtocolFactorySelector_html_ac9b112b29b013f7f5c3ba4bc6573508c"><div class="ttname"><a href="#ac9b112b29b013f7f5c3ba4bc6573508c">web::websocket::SubProtocolFactorySelector::load</a></div><div class="ttdeci">virtual SubProtocolFactory * load(const std::string &amp;subProtocolName)=0</div></div>
@@ -638,13 +636,13 @@ template&lt;typename SubProtocolFactoryT &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="SubProtocolFactorySelector_8h_source.html#l00113">113</a> of file <a class="el" href="SubProtocolFactorySelector_8h_source.html">SubProtocolFactorySelector.h</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  113</span>                                                            {</div>
-<div class="line"><span class="lineno">  114</span>            std::string name = <a class="code hl_function" href="client_2echo_2EchoFactory_8cpp.html#aac49206c8f1ade8d888e519c94890c7c">subProtocolFactory</a>-&gt;<a class="code hl_function" href="classweb_1_1websocket_1_1SubProtocolFactory.html#aa66c93a4098f0f9aca62872629c6ef9e">getName</a>();</div>
+<div class="line"><span class="lineno">  114</span>            std::string name = subProtocolFactory-&gt;getName();</div>
 <div class="line"><span class="lineno">  115</span> </div>
 <div class="line"><span class="lineno">  116</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a4a2032db8796706f293a0feed5d433bf">subProtocolFactories</a>.contains(name)) {</div>
 <div class="line"><span class="lineno">  117</span>                <a class="code hl_variable" href="#a4a2032db8796706f293a0feed5d433bf">subProtocolFactories</a>.erase(name);</div>
 <div class="line"><span class="lineno">  118</span> </div>
-<div class="line"><span class="lineno">  119</span>                <span class="keywordtype">void</span>* handle = <a class="code hl_function" href="client_2echo_2EchoFactory_8cpp.html#aac49206c8f1ade8d888e519c94890c7c">subProtocolFactory</a>-&gt;<a class="code hl_function" href="classweb_1_1websocket_1_1SubProtocolFactory.html#a45d3f3242187a7e0dc934f3c0f1a6275">getHandle</a>();</div>
-<div class="line"><span class="lineno">  120</span>                <span class="keyword">delete</span> <a class="code hl_function" href="client_2echo_2EchoFactory_8cpp.html#aac49206c8f1ade8d888e519c94890c7c">subProtocolFactory</a>;</div>
+<div class="line"><span class="lineno">  119</span>                <span class="keywordtype">void</span>* handle = subProtocolFactory-&gt;getHandle();</div>
+<div class="line"><span class="lineno">  120</span>                <span class="keyword">delete</span> subProtocolFactory;</div>
 <div class="line"><span class="lineno">  121</span> </div>
 <div class="line"><span class="lineno">  122</span>                <span class="keywordflow">if</span> (handle != <span class="keyword">nullptr</span>) {</div>
 <div class="line"><span class="lineno">  123</span>                    <a class="code hl_function" href="classcore_1_1DynamicLoader.html#aea517617ba189573803a8c3a4c5e9575">core::DynamicLoader::dlCloseDelayed</a>(handle);</div>
@@ -652,8 +650,6 @@ template&lt;typename SubProtocolFactoryT &gt; </div>
 <div class="line"><span class="lineno">  125</span>            }</div>
 <div class="line"><span class="lineno">  126</span>        }</div>
 <div class="ttc" id="aclasscore_1_1DynamicLoader_html_aea517617ba189573803a8c3a4c5e9575"><div class="ttname"><a href="classcore_1_1DynamicLoader.html#aea517617ba189573803a8c3a4c5e9575">core::DynamicLoader::dlCloseDelayed</a></div><div class="ttdeci">static void dlCloseDelayed(void *handle)</div><div class="ttdef"><b>Definition</b> <a href="DynamicLoader_8cpp_source.html#l00051">DynamicLoader.cpp:51</a></div></div>
-<div class="ttc" id="aclassweb_1_1websocket_1_1SubProtocolFactory_html_a45d3f3242187a7e0dc934f3c0f1a6275"><div class="ttname"><a href="classweb_1_1websocket_1_1SubProtocolFactory.html#a45d3f3242187a7e0dc934f3c0f1a6275">web::websocket::SubProtocolFactory::getHandle</a></div><div class="ttdeci">void * getHandle()</div><div class="ttdef"><b>Definition</b> <a href="SubProtocolFactory_8h_source.html#l00088">SubProtocolFactory.h:88</a></div></div>
-<div class="ttc" id="aclassweb_1_1websocket_1_1SubProtocolFactory_html_aa66c93a4098f0f9aca62872629c6ef9e"><div class="ttname"><a href="classweb_1_1websocket_1_1SubProtocolFactory.html#aa66c93a4098f0f9aca62872629c6ef9e">web::websocket::SubProtocolFactory::getName</a></div><div class="ttdeci">const std::string &amp; getName()</div><div class="ttdef"><b>Definition</b> <a href="SubProtocolFactory_8h_source.html#l00080">SubProtocolFactory.h:80</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="DynamicLoader_8cpp_source.html#l00051">core::DynamicLoader::dlCloseDelayed()</a>.</p>
 <div class="dynheader">
@@ -754,7 +750,7 @@ template&lt;typename SubProtocolFactoryT &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceweb.html">web</a></li><li class="navelem"><a class="el" href="namespaceweb_1_1websocket.html">websocket</a></li><li class="navelem"><a class="el" href="classweb_1_1websocket_1_1SubProtocolFactorySelector.html">SubProtocolFactorySelector</a></li>
-    <li class="footer">Generated on Sun Jan 5 2025 00:55:00 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generated on Sun Jan 5 2025 01:16:54 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>

@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['header_0',['HEADER',['../classweb_1_1http_1_1Parser.html#a94ab44c0d65451be6ba3e6e389a8b7d5a7ad4905b4543ab4a1637dd23c50e36ce',1,'web::http::Parser']]],
-  ['horribleerror_1',['HorribleError',['../CLI11_8hpp.html#ac74ddc700cf9fcf91d688b6d31ff9537aaadcc078255a085fcac00639a9519392',1,'CLI11.hpp']]],
-  ['http10_2',['HTTP10',['../classweb_1_1http_1_1client_1_1SocketContext.html#a8b77acfd23e58ee4c2f92c6706a2a19daf0124c99cd8710064c2ac7fbb73a6aae',1,'web::http::client::SocketContext::HTTP10'],['../namespaceweb_1_1http.html#a40edb0fffda79adf1a8a5b95fdd6e7b2a1658d985aca123ee47d2e16a4aff73a6',1,'web::http::HTTP10']]],
-  ['http11_3',['HTTP11',['../classweb_1_1http_1_1client_1_1SocketContext.html#a8b77acfd23e58ee4c2f92c6706a2a19da989b5e1302186eb21a726caef2fc3e66',1,'web::http::client::SocketContext']]]
+  ['identity_0',['Identity',['../namespaceweb_1_1http.html#a40edb0fffda79adf1a8a5b95fdd6e7b2ac9c5c65fb4af9cf90eb99b3b84424189',1,'web::http']]],
+  ['initialized_1',['INITIALIZED',['../namespacecore.html#a6613a3d81c1d25590b1cd31540d08815adee5f03c2c4e73657824e028494b18c0',1,'core']]],
+  ['interrupted_2',['INTERRUPTED',['../namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a658f2cadfdf09b6046246e9314f7cd43',1,'core']]]
 ];

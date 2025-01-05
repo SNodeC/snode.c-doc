@@ -4,7 +4,6 @@ var dir_313caf1132e152dd9b58bea13a4052ca =
     [ "AttributeInjector.h", "AttributeInjector_8h.html", "AttributeInjector_8h" ],
     [ "base64.cpp", "base64_8cpp.html", "base64_8cpp" ],
     [ "base64.h", "base64_8h.html", "base64_8h" ],
-    [ "CLI11.hpp", "CLI11_8hpp.html", "CLI11_8hpp" ],
     [ "Config.cpp", "Config_8cpp.html", "Config_8cpp" ],
     [ "Config.h", "Config_8h.html", "Config_8h" ],
     [ "Daemon.cpp", "Daemon_8cpp.html", null ],

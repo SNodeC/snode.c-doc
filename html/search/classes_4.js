@@ -1,25 +1,11 @@
 var searchData=
 [
-  ['echo_0',['Echo',['../classapps_1_1websocket_1_1subprotocol_1_1echo_1_1client_1_1Echo.html',1,'apps::websocket::subprotocol::echo::client::Echo'],['../classapps_1_1websocket_1_1subprotocol_1_1echo_1_1server_1_1Echo.html',1,'apps::websocket::subprotocol::echo::server::Echo']]],
-  ['echoclientsocketcontextfactory_1',['EchoClientSocketContextFactory',['../classapps_1_1echo_1_1model_1_1EchoClientSocketContextFactory.html',1,'apps::echo::model']]],
-  ['echofactory_2',['EchoFactory',['../classapps_1_1websocket_1_1subprotocol_1_1echo_1_1client_1_1EchoFactory.html',1,'apps::websocket::subprotocol::echo::client::EchoFactory'],['../classapps_1_1websocket_1_1subprotocol_1_1echo_1_1server_1_1EchoFactory.html',1,'apps::websocket::subprotocol::echo::server::EchoFactory']]],
-  ['echoserversocketcontextfactory_3',['EchoServerSocketContextFactory',['../classapps_1_1echo_1_1model_1_1EchoServerSocketContextFactory.html',1,'apps::echo::model']]],
-  ['echosocketcontext_4',['EchoSocketContext',['../classapps_1_1echo_1_1model_1_1EchoSocketContext.html',1,'apps::echo::model']]],
-  ['element_5ftype_5',['element_type',['../structdetail_1_1element__type.html',1,'detail']]],
-  ['element_5ftype_3c_20t_2c_20typename_20std_3a_3aenable_5fif_3c_20is_5fcopyable_5fptr_3c_20t_20_3e_3a_3avalue_20_3e_3a_3atype_20_3e_6',['element_type&lt; T, typename std::enable_if&lt; is_copyable_ptr&lt; T &gt;::value &gt;::type &gt;',['../structdetail_1_1element__type_3_01T_00_01typename_01std_1_1enable__if_3_01is__copyable__ptr_3_01523b2272a7e2fdb6b5ec55e56e958c09.html',1,'detail']]],
-  ['element_5fvalue_5ftype_7',['element_value_type',['../structdetail_1_1element__value__type.html',1,'detail']]],
-  ['endcommand_8',['EndCommand',['../classweb_1_1http_1_1client_1_1commands_1_1EndCommand.html',1,'web::http::client::commands']]],
-  ['epollevents_9',['EPollEvents',['../classcore_1_1multiplexer_1_1epoll_1_1DescriptorEventPublisher_1_1EPollEvents.html',1,'core::multiplexer::epoll::DescriptorEventPublisher']]],
-  ['error_10',['Error',['../classError.html',1,'']]],
-  ['event_11',['Event',['../classcore_1_1Event.html',1,'core']]],
-  ['eventloop_12',['EventLoop',['../classcore_1_1EventLoop.html',1,'core']]],
-  ['eventmultiplexer_13',['EventMultiplexer',['../classcore_1_1EventMultiplexer.html',1,'core::EventMultiplexer'],['../classcore_1_1multiplexer_1_1epoll_1_1EventMultiplexer.html',1,'core::multiplexer::epoll::EventMultiplexer'],['../classcore_1_1multiplexer_1_1poll_1_1EventMultiplexer.html',1,'core::multiplexer::poll::EventMultiplexer'],['../classcore_1_1multiplexer_1_1select_1_1EventMultiplexer.html',1,'core::multiplexer::select::EventMultiplexer']]],
-  ['eventqueue_14',['EventQueue',['../classcore_1_1EventMultiplexer_1_1EventQueue.html',1,'core::EventMultiplexer']]],
-  ['eventreceiver_15',['EventReceiver',['../classcore_1_1EventReceiver.html',1,'core']]],
-  ['exceptionalconditioneventreceiver_16',['ExceptionalConditionEventReceiver',['../classcore_1_1eventreceiver_1_1ExceptionalConditionEventReceiver.html',1,'core::eventreceiver']]],
-  ['excludeserror_17',['ExcludesError',['../classExcludesError.html',1,'']]],
-  ['existingdirectoryvalidator_18',['ExistingDirectoryValidator',['../classdetail_1_1ExistingDirectoryValidator.html',1,'detail']]],
-  ['existingfilevalidator_19',['ExistingFileValidator',['../classdetail_1_1ExistingFileValidator.html',1,'detail']]],
-  ['existingpathvalidator_20',['ExistingPathValidator',['../classdetail_1_1ExistingPathValidator.html',1,'detail']]],
-  ['extraserror_21',['ExtrasError',['../classExtrasError.html',1,'']]]
+  ['endcommand_0',['EndCommand',['../classweb_1_1http_1_1client_1_1commands_1_1EndCommand.html',1,'web::http::client::commands']]],
+  ['epollevents_1',['EPollEvents',['../classcore_1_1multiplexer_1_1epoll_1_1DescriptorEventPublisher_1_1EPollEvents.html',1,'core::multiplexer::epoll::DescriptorEventPublisher']]],
+  ['event_2',['Event',['../classcore_1_1Event.html',1,'core']]],
+  ['eventloop_3',['EventLoop',['../classcore_1_1EventLoop.html',1,'core']]],
+  ['eventmultiplexer_4',['EventMultiplexer',['../classcore_1_1EventMultiplexer.html',1,'core::EventMultiplexer'],['../classcore_1_1multiplexer_1_1epoll_1_1EventMultiplexer.html',1,'core::multiplexer::epoll::EventMultiplexer'],['../classcore_1_1multiplexer_1_1poll_1_1EventMultiplexer.html',1,'core::multiplexer::poll::EventMultiplexer'],['../classcore_1_1multiplexer_1_1select_1_1EventMultiplexer.html',1,'core::multiplexer::select::EventMultiplexer']]],
+  ['eventqueue_5',['EventQueue',['../classcore_1_1EventMultiplexer_1_1EventQueue.html',1,'core::EventMultiplexer']]],
+  ['eventreceiver_6',['EventReceiver',['../classcore_1_1EventReceiver.html',1,'core']]],
+  ['exceptionalconditioneventreceiver_7',['ExceptionalConditionEventReceiver',['../classcore_1_1eventreceiver_1_1ExceptionalConditionEventReceiver.html',1,'core::eventreceiver']]]
 ];

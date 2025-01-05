@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['details_0',['Details',['../classexpress_1_1middleware_1_1VerboseRequest.html#aae17348f5373a80d776ad8dc77eff1fd',1,'express::middleware::VerboseRequest']]],
-  ['disp_5ftype_1',['DISP_TYPE',['../classcore_1_1EventMultiplexer.html#a922f1b8ccf15265807a9f7ebce6d5097',1,'core::EventMultiplexer']]]
+  ['flags_0',['Flags',['../classexpress_1_1Controller.html#acbbd6f9ce9c84b3a72a50f0aedaa6c48',1,'express::Controller::Flags'],['../classnet_1_1phy_1_1PhysicalSocket.html#ababfe8607820fbd9c4674b538303325a',1,'net::phy::PhysicalSocket::Flags'],['../classweb_1_1http_1_1client_1_1SocketContext.html#a8b77acfd23e58ee4c2f92c6706a2a19d',1,'web::http::client::SocketContext::Flags']]]
 ];

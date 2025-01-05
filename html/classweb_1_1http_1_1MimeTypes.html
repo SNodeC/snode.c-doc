@@ -271,7 +271,7 @@ Static Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  247</span>        }</div>
 <div class="line"><span class="lineno">  248</span><span class="preprocessor">#ifdef HAS_LIBMAGIC</span></div>
 <div class="line"><span class="lineno">  249</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (magic != <span class="keyword">nullptr</span>) {</div>
-<div class="line"><span class="lineno">  250</span>            <span class="keyword">const</span> <span class="keywordtype">char</span>* magicType = magic_file(MimeTypes::magic, <a class="code hl_enumvalue" href="namespacedetail.html#ae5100bdc7b136e623dd6ff2fa45f9560a8c7dd922ad47494fc02c388e12c00eac">file</a>.c_str());</div>
+<div class="line"><span class="lineno">  250</span>            <span class="keyword">const</span> <span class="keywordtype">char</span>* magicType = magic_file(MimeTypes::magic, file.c_str());</div>
 <div class="line"><span class="lineno">  251</span>            type = magicType != <span class="keyword">nullptr</span> ? magicType : std::string();</div>
 <div class="line"><span class="lineno">  252</span>        }</div>
 <div class="line"><span class="lineno">  253</span><span class="preprocessor">#endif</span></div>
@@ -279,7 +279,6 @@ Static Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  255</span>        <span class="keywordflow">return</span> !type.empty() ? type : <span class="stringliteral">&quot;application/octet-stream&quot;</span>;</div>
 <div class="line"><span class="lineno">  256</span>    }</div>
 <div class="ttc" id="aclassweb_1_1http_1_1MimeTypes_html_a8b63cc1eaa5b7bd338d8354a336609d0"><div class="ttname"><a href="#a8b63cc1eaa5b7bd338d8354a336609d0">web::http::MimeTypes::mimeType</a></div><div class="ttdeci">static std::map&lt; std::string, std::string &gt; mimeType</div><div class="ttdef"><b>Definition</b> <a href="MimeTypes_8h_source.html#l00054">MimeTypes.h:54</a></div></div>
-<div class="ttc" id="anamespacedetail_html_ae5100bdc7b136e623dd6ff2fa45f9560a8c7dd922ad47494fc02c388e12c00eac"><div class="ttname"><a href="namespacedetail.html#ae5100bdc7b136e623dd6ff2fa45f9560a8c7dd922ad47494fc02c388e12c00eac">detail::path_type::file</a></div><div class="ttdeci">@ file</div></div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="web_2http_2client_2Request_8cpp_source.html#l00422">web::http::client::Request::executeSendFile()</a>, and <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00249">web::http::server::Response::sendFile()</a>.</p>
 <div class="dynheader">
@@ -350,7 +349,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceweb.html">web</a></li><li class="navelem"><a class="el" href="namespaceweb_1_1http.html">http</a></li><li class="navelem"><a class="el" href="classweb_1_1http_1_1MimeTypes.html">MimeTypes</a></li>
-    <li class="footer">Generated on Sun Jan 5 2025 00:54:59 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generated on Sun Jan 5 2025 01:16:54 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>

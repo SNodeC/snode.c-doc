@@ -1,6 +1,5 @@
 var namespaces_dup =
 [
-    [ "apps", "namespaceapps.html", "namespaceapps" ],
     [ "base64", "namespacebase64.html", [
       [ "base64_decode", "namespacebase64.html#a23eca466c738d7ee3e74f2279fc18541", null ],
       [ "base64_encode", "namespacebase64.html#af19189e96ecbd4de55806b9b705f7374", null ],
@@ -36,12 +35,7 @@ var namespaces_dup =
     ] ],
     [ "core", "namespacecore.html", "namespacecore" ],
     [ "database", "namespacedatabase.html", "namespacedatabase" ],
-    [ "detail", "namespacedetail.html", "namespacedetail" ],
     [ "express", "namespaceexpress.html", "namespaceexpress" ],
-    [ "FailureMessage", "namespaceFailureMessage.html", [
-      [ "help", "namespaceFailureMessage.html#aa6cf378f2da4c7dea28295a8a300f48e", null ],
-      [ "simple", "namespaceFailureMessage.html#abb5951184adc4c64e8092f37d4d83176", null ]
-    ] ],
     [ "httputils", "namespacehttputils.html", [
       [ "file_mod_http_date", "namespacehttputils.html#a4a2597267a4c6fae315ab7b85273ea61", null ],
       [ "from_hex", "namespacehttputils.html#a2162ee901d7b1ac5f0fdb0dcbbd2d350", null ],
@@ -57,20 +51,8 @@ var namespaces_dup =
       [ "url_encode", "namespacehttputils.html#a386473920285bded181a38ffac8fe833", null ]
     ] ],
     [ "iot", "namespaceiot.html", "namespaceiot" ],
-    [ "legacy", "namespacelegacy.html", [
-      [ "SocketAddress", "namespacelegacy.html#a5cf8ceb021370a11d9b670263472600e", null ],
-      [ "SocketClient", "namespacelegacy.html#af4aa1b9eb5266e7d84489d873bc340b1", null ],
-      [ "SocketConnection", "namespacelegacy.html#a1ec0795e6563c229358eb00d35a95595", null ],
-      [ "getLegacyClient", "namespacelegacy.html#af964e2e82f4d4b80cea76cf218ba671c", null ]
-    ] ],
     [ "logger", "namespacelogger.html", "namespacelogger" ],
     [ "net", "namespacenet.html", "namespacenet" ],
-    [ "tls", "namespacetls.html", [
-      [ "SocketAddress", "namespacetls.html#afcb9219f4cf94a717de2044384768d63", null ],
-      [ "SocketClient", "namespacetls.html#ade9fad2ce6bc5cf0c3e6f0580d80f464", null ],
-      [ "SocketConnection", "namespacetls.html#a2a106f24546ba8758c3245d12a162ecb", null ],
-      [ "getClient", "namespacetls.html#ac9c248ad49fa1a968e28d6e1a4e1a1c0", null ]
-    ] ],
     [ "utils", "namespaceutils.html", "namespaceutils" ],
     [ "web", "namespaceweb.html", "namespaceweb" ]
 ];

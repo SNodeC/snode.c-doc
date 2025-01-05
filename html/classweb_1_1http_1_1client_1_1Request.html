@@ -782,7 +782,7 @@ Here is the caller graph for this function:</div>
 <div class="fragment"><div class="line"><span class="lineno">  422</span>                                                                                               {</div>
 <div class="line"><span class="lineno">  423</span>        <span class="keywordtype">bool</span> atomar = <span class="keyword">true</span>;</div>
 <div class="line"><span class="lineno">  424</span> </div>
-<div class="line"><span class="lineno">  425</span>        std::string absolutFileName = <a class="code hl_enumvalue" href="namespacedetail.html#ae5100bdc7b136e623dd6ff2fa45f9560a8c7dd922ad47494fc02c388e12c00eac">file</a>;</div>
+<div class="line"><span class="lineno">  425</span>        std::string absolutFileName = file;</div>
 <div class="line"><span class="lineno">  426</span> </div>
 <div class="line"><span class="lineno">  427</span>        <span class="keywordflow">if</span> (std::filesystem::exists(absolutFileName)) {</div>
 <div class="line"><span class="lineno">  428</span>            std::error_code ec;</div>
@@ -824,7 +824,6 @@ Here is the caller graph for this function:</div>
 <div class="ttc" id="aclasscore_1_1pipe_1_1Source_html_ad1bb128733e51d68daed7217fa452b85"><div class="ttname"><a href="classcore_1_1pipe_1_1Source.html#ad1bb128733e51d68daed7217fa452b85">core::pipe::Source::pipe</a></div><div class="ttdeci">void pipe(Sink *sink, const std::function&lt; void(int)&gt; &amp;callback)</div><div class="ttdef"><b>Definition</b> <a href="Source_8cpp_source.html#l00038">Source.cpp:38</a></div></div>
 <div class="ttc" id="aclassweb_1_1http_1_1MimeTypes_html_a08aa7365e19c29f97369a3bedfcc3721"><div class="ttname"><a href="classweb_1_1http_1_1MimeTypes.html#a08aa7365e19c29f97369a3bedfcc3721">web::http::MimeTypes::contentType</a></div><div class="ttdeci">static std::string contentType(const std::string &amp;file)</div><div class="ttdef"><b>Definition</b> <a href="MimeTypes_8cpp_source.html#l00240">MimeTypes.cpp:240</a></div></div>
 <div class="ttc" id="aclassweb_1_1http_1_1client_1_1Request_html_ab675f5bc8a880f8287baeda598df759f"><div class="ttname"><a href="#ab675f5bc8a880f8287baeda598df759f">web::http::client::Request::executeSendHeader</a></div><div class="ttdeci">bool executeSendHeader()</div><div class="ttdef"><b>Definition</b> <a href="web_2http_2client_2Request_8cpp_source.html#l00489">Request.cpp:489</a></div></div>
-<div class="ttc" id="anamespacedetail_html_ae5100bdc7b136e623dd6ff2fa45f9560a8c7dd922ad47494fc02c388e12c00eac"><div class="ttname"><a href="namespacedetail.html#ae5100bdc7b136e623dd6ff2fa45f9560a8c7dd922ad47494fc02c388e12c00eac">detail::path_type::file</a></div><div class="ttdeci">@ file</div></div>
 <div class="ttc" id="anamespacehttputils_html_a4a2597267a4c6fae315ab7b85273ea61"><div class="ttname"><a href="namespacehttputils.html#a4a2597267a4c6fae315ab7b85273ea61">httputils::file_mod_http_date</a></div><div class="ttdeci">std::string file_mod_http_date(const std::string &amp;filePath)</div><div class="ttdef"><b>Definition</b> <a href="http__utils_8cpp_source.html#l00144">http_utils.cpp:144</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="web_2http_2client_2Request_8h_source.html#l00159">contentLength</a>, <a class="el" href="MimeTypes_8cpp_source.html#l00240">web::http::MimeTypes::contentType()</a>, <a class="el" href="web_2http_2client_2Request_8cpp_source.html#l00489">executeSendHeader()</a>, <a class="el" href="web_2http_2client_2Request_8h_source.html#l00145">httpMajor</a>, <a class="el" href="web_2http_2client_2Request_8h_source.html#l00146">httpMinor</a>, and <a class="el" href="web_2http_2client_2Request_8cpp_source.html#l00136">set()</a>.</p>
@@ -1281,30 +1280,29 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="web_2http_2client_2Request_8cpp_source.html#l00397">397</a> of file <a class="el" href="web_2http_2client_2Request_8cpp_source.html">Request.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  397</span>                           {</div>
-<div class="line"><span class="lineno">  398</span>        <span class="keywordtype">bool</span> <a class="code hl_enumvalue" href="CLI11_8hpp.html#a866d2d267dd96c158e9ddbe52f0e531aacb5e100e5a9a3e7f6d1fd97512215282">error</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  398</span>        <span class="keywordtype">bool</span> error = <span class="keyword">false</span>;</div>
 <div class="line"><span class="lineno">  399</span>        <span class="keywordtype">bool</span> atomar = <span class="keyword">true</span>;</div>
 <div class="line"><span class="lineno">  400</span> </div>
 <div class="line"><span class="lineno">  401</span>        <span class="keywordflow">for</span> (RequestCommand* requestCommand : <a class="code hl_variable" href="#ace40b235271be62abed4293651055dfb">requestCommands</a>) {</div>
-<div class="line"><span class="lineno">  402</span>            <span class="keywordflow">if</span> (!<a class="code hl_enumvalue" href="CLI11_8hpp.html#a866d2d267dd96c158e9ddbe52f0e531aacb5e100e5a9a3e7f6d1fd97512215282">error</a>) {</div>
+<div class="line"><span class="lineno">  402</span>            <span class="keywordflow">if</span> (!error) {</div>
 <div class="line"><span class="lineno">  403</span>                <span class="keyword">const</span> <span class="keywordtype">bool</span> atomarCommand = requestCommand-&gt;execute(<span class="keyword">this</span>);</div>
 <div class="line"><span class="lineno">  404</span>                <span class="keywordflow">if</span> (atomar) {</div>
 <div class="line"><span class="lineno">  405</span>                    atomar = atomarCommand;</div>
 <div class="line"><span class="lineno">  406</span>                }</div>
 <div class="line"><span class="lineno">  407</span> </div>
-<div class="line"><span class="lineno">  408</span>                <a class="code hl_enumvalue" href="CLI11_8hpp.html#a866d2d267dd96c158e9ddbe52f0e531aacb5e100e5a9a3e7f6d1fd97512215282">error</a> = requestCommand-&gt;getError();</div>
+<div class="line"><span class="lineno">  408</span>                error = requestCommand-&gt;getError();</div>
 <div class="line"><span class="lineno">  409</span>            }</div>
 <div class="line"><span class="lineno">  410</span> </div>
 <div class="line"><span class="lineno">  411</span>            <span class="keyword">delete</span> requestCommand;</div>
 <div class="line"><span class="lineno">  412</span>        }</div>
 <div class="line"><span class="lineno">  413</span>        <a class="code hl_variable" href="#ace40b235271be62abed4293651055dfb">requestCommands</a>.clear();</div>
 <div class="line"><span class="lineno">  414</span> </div>
-<div class="line"><span class="lineno">  415</span>        <span class="keywordflow">if</span> (atomar &amp;&amp; (!<a class="code hl_enumvalue" href="CLI11_8hpp.html#a866d2d267dd96c158e9ddbe52f0e531aacb5e100e5a9a3e7f6d1fd97512215282">error</a> || <a class="code hl_variable" href="#a1df90ac46f9d234bd441cb7b43cb244a">contentLengthSent</a> != 0)) {</div>
+<div class="line"><span class="lineno">  415</span>        <span class="keywordflow">if</span> (atomar &amp;&amp; (!error || <a class="code hl_variable" href="#a1df90ac46f9d234bd441cb7b43cb244a">contentLengthSent</a> != 0)) {</div>
 <div class="line"><span class="lineno">  416</span>            <a class="code hl_function" href="#a3c966a2515469186cbbbdaa49b0d897b">requestDelivered</a>();</div>
 <div class="line"><span class="lineno">  417</span>        }</div>
 <div class="line"><span class="lineno">  418</span> </div>
-<div class="line"><span class="lineno">  419</span>        <span class="keywordflow">return</span> !<a class="code hl_enumvalue" href="CLI11_8hpp.html#a866d2d267dd96c158e9ddbe52f0e531aacb5e100e5a9a3e7f6d1fd97512215282">error</a> || <a class="code hl_variable" href="#a1df90ac46f9d234bd441cb7b43cb244a">contentLengthSent</a> != 0;</div>
+<div class="line"><span class="lineno">  419</span>        <span class="keywordflow">return</span> !error || <a class="code hl_variable" href="#a1df90ac46f9d234bd441cb7b43cb244a">contentLengthSent</a> != 0;</div>
 <div class="line"><span class="lineno">  420</span>    }</div>
-<div class="ttc" id="aCLI11_8hpp_html_a866d2d267dd96c158e9ddbe52f0e531aacb5e100e5a9a3e7f6d1fd97512215282"><div class="ttname"><a href="CLI11_8hpp.html#a866d2d267dd96c158e9ddbe52f0e531aacb5e100e5a9a3e7f6d1fd97512215282">config_extras_mode::error</a></div><div class="ttdeci">@ error</div></div>
 <div class="ttc" id="aclassweb_1_1http_1_1client_1_1Request_html_a3c966a2515469186cbbbdaa49b0d897b"><div class="ttname"><a href="#a3c966a2515469186cbbbdaa49b0d897b">web::http::client::Request::requestDelivered</a></div><div class="ttdeci">void requestDelivered()</div><div class="ttdef"><b>Definition</b> <a href="web_2http_2client_2Request_8cpp_source.html#l00550">Request.cpp:550</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="web_2http_2client_2Request_8h_source.html#l00160">contentLengthSent</a>, and <a class="el" href="web_2http_2client_2Request_8cpp_source.html#l00550">requestDelivered()</a>.</p>
@@ -2884,7 +2882,7 @@ Here is the call graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceweb.html">web</a></li><li class="navelem"><a class="el" href="namespaceweb_1_1http.html">http</a></li><li class="navelem"><a class="el" href="namespaceweb_1_1http_1_1client.html">client</a></li><li class="navelem"><a class="el" href="classweb_1_1http_1_1client_1_1Request.html">Request</a></li>
-    <li class="footer">Generated on Sun Jan 5 2025 00:55:00 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generated on Sun Jan 5 2025 01:16:54 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>

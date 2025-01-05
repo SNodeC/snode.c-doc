@@ -275,7 +275,7 @@ Friends</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="ConfigInstance_8cpp_source.html#l00053">53</a> of file <a class="el" href="ConfigInstance_8cpp_source.html">ConfigInstance.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   54</span>        : <a class="code hl_variable" href="#afc45c33c68307d087a96e36039d832cc">instanceName</a>(<a class="code hl_variable" href="#afc45c33c68307d087a96e36039d832cc">instanceName</a>)</div>
 <div class="line"><span class="lineno">   55</span>        , <a class="code hl_variable" href="#a909cf1595a45032459773a412533cf14">role</a>(<a class="code hl_variable" href="#a909cf1595a45032459773a412533cf14">role</a>) {</div>
-<div class="line"><span class="lineno">   56</span>        <a class="code hl_variable" href="#a7a695588c7946a1eeb547db4b69e1b44">instanceSc</a> = <a class="code hl_function" href="classutils_1_1Config.html#a4dd3a8210ccdd6fb7d253f3a4704e48d">utils::Config::addInstance</a>(<a class="code hl_variable" href="#afc45c33c68307d087a96e36039d832cc">instanceName</a>,</div>
+<div class="line"><span class="lineno">   56</span>        <a class="code hl_variable" href="#a7a695588c7946a1eeb547db4b69e1b44">instanceSc</a> = <a class="code hl_function" href="classutils_1_1Config.html#ad50b63fdee9576f40e2fc2efd4ce8512">utils::Config::addInstance</a>(<a class="code hl_variable" href="#afc45c33c68307d087a96e36039d832cc">instanceName</a>,</div>
 <div class="line"><span class="lineno">   57</span>                                                std::string(<span class="stringliteral">&quot;Configuration for &quot;</span>)</div>
 <div class="line"><span class="lineno">   58</span>                                                    .append(<a class="code hl_variable" href="#a909cf1595a45032459773a412533cf14">role</a> == <a class="code hl_enumvalue" href="#a21ca5568aa45bd1bb91d2fa79687a9e2a3d27c95bfdbea691b250894d96852844">Role::SERVER</a> ? <span class="stringliteral">&quot;server&quot;</span> : <span class="stringliteral">&quot;client&quot;</span>)</div>
 <div class="line"><span class="lineno">   59</span>                                                    .append(<span class="stringliteral">&quot; instance &#39;&quot;</span>)</div>
@@ -283,14 +283,14 @@ Friends</h2></td></tr>
 <div class="line"><span class="lineno">   61</span>                                                    .append(<span class="stringliteral">&quot;&#39;&quot;</span>),</div>
 <div class="line"><span class="lineno">   62</span>                                                <span class="stringliteral">&quot;Instance&quot;</span>);</div>
 <div class="line"><span class="lineno">   63</span> </div>
-<div class="line"><span class="lineno">   64</span>        <a class="code hl_function" href="classutils_1_1Config.html#a90e8e890cf5043d0ade8df401f30df0f">utils::Config::addStandardFlags</a>(<a class="code hl_variable" href="#a7a695588c7946a1eeb547db4b69e1b44">instanceSc</a>);</div>
-<div class="line"><span class="lineno">   65</span>        <a class="code hl_function" href="classutils_1_1Config.html#a27be31e75b705278fb914b9a38241365">utils::Config::addHelp</a>(<a class="code hl_variable" href="#a7a695588c7946a1eeb547db4b69e1b44">instanceSc</a>);</div>
+<div class="line"><span class="lineno">   64</span>        <a class="code hl_function" href="classutils_1_1Config.html#a0b5c905e8e2775a0507f377eb021c3dc">utils::Config::addStandardFlags</a>(<a class="code hl_variable" href="#a7a695588c7946a1eeb547db4b69e1b44">instanceSc</a>);</div>
+<div class="line"><span class="lineno">   65</span>        <a class="code hl_function" href="classutils_1_1Config.html#a7eb41691a8048f9a7b91e5d4d7f6c730">utils::Config::addHelp</a>(<a class="code hl_variable" href="#a7a695588c7946a1eeb547db4b69e1b44">instanceSc</a>);</div>
 <div class="line"><span class="lineno">   66</span> </div>
 <div class="line"><span class="lineno">   67</span>        <a class="code hl_variable" href="#a903207c799a648bf5742f5941465ed7c">disableOpt</a> = <a class="code hl_variable" href="#a7a695588c7946a1eeb547db4b69e1b44">instanceSc</a></div>
 <div class="line"><span class="lineno">   68</span>                         -&gt;add_flag_function(</div>
 <div class="line"><span class="lineno">   69</span>                             <span class="stringliteral">&quot;--disabled{true}&quot;</span>,</div>
 <div class="line"><span class="lineno">   70</span>                             [<span class="keyword">this</span>]([[maybe_unused]] int64_t count) -&gt; <span class="keywordtype">void</span> {</div>
-<div class="line"><span class="lineno">   71</span>                                 <a class="code hl_function" href="classutils_1_1Config.html#a895744238727a62946b042a62ef99ca6">utils::Config::disabled</a>(<a class="code hl_variable" href="#a7a695588c7946a1eeb547db4b69e1b44">instanceSc</a>, <a class="code hl_variable" href="#a903207c799a648bf5742f5941465ed7c">disableOpt</a>-&gt;as&lt;<span class="keywordtype">bool</span>&gt;());</div>
+<div class="line"><span class="lineno">   71</span>                                 <a class="code hl_function" href="classutils_1_1Config.html#a4bf4f35dbdea895cd31f830b5e874265">utils::Config::disabled</a>(<a class="code hl_variable" href="#a7a695588c7946a1eeb547db4b69e1b44">instanceSc</a>, <a class="code hl_variable" href="#a903207c799a648bf5742f5941465ed7c">disableOpt</a>-&gt;as&lt;<span class="keywordtype">bool</span>&gt;());</div>
 <div class="line"><span class="lineno">   72</span>                             },</div>
 <div class="line"><span class="lineno">   73</span>                             <span class="stringliteral">&quot;Disable this instance&quot;</span>)</div>
 <div class="line"><span class="lineno">   74</span>                         -&gt;trigger_on_parse()</div>
@@ -304,18 +304,18 @@ Friends</h2></td></tr>
 <div class="ttc" id="aclassnet_1_1config_1_1ConfigInstance_html_a903207c799a648bf5742f5941465ed7c"><div class="ttname"><a href="#a903207c799a648bf5742f5941465ed7c">net::config::ConfigInstance::disableOpt</a></div><div class="ttdeci">CLI::Option * disableOpt</div><div class="ttdef"><b>Definition</b> <a href="ConfigInstance_8h_source.html#l00084">ConfigInstance.h:84</a></div></div>
 <div class="ttc" id="aclassnet_1_1config_1_1ConfigInstance_html_a909cf1595a45032459773a412533cf14"><div class="ttname"><a href="#a909cf1595a45032459773a412533cf14">net::config::ConfigInstance::role</a></div><div class="ttdeci">Role role</div><div class="ttdef"><b>Definition</b> <a href="ConfigInstance_8h_source.html#l00081">ConfigInstance.h:81</a></div></div>
 <div class="ttc" id="aclassnet_1_1config_1_1ConfigInstance_html_afc45c33c68307d087a96e36039d832cc"><div class="ttname"><a href="#afc45c33c68307d087a96e36039d832cc">net::config::ConfigInstance::instanceName</a></div><div class="ttdeci">std::string instanceName</div><div class="ttdef"><b>Definition</b> <a href="ConfigInstance_8h_source.html#l00078">ConfigInstance.h:78</a></div></div>
-<div class="ttc" id="aclassutils_1_1Config_html_a27be31e75b705278fb914b9a38241365"><div class="ttname"><a href="classutils_1_1Config.html#a27be31e75b705278fb914b9a38241365">utils::Config::addHelp</a></div><div class="ttdeci">static CLI::App * addHelp(CLI::App *app)</div><div class="ttdef"><b>Definition</b> <a href="Config_8cpp_source.html#l00747">Config.cpp:747</a></div></div>
-<div class="ttc" id="aclassutils_1_1Config_html_a4dd3a8210ccdd6fb7d253f3a4704e48d"><div class="ttname"><a href="classutils_1_1Config.html#a4dd3a8210ccdd6fb7d253f3a4704e48d">utils::Config::addInstance</a></div><div class="ttdeci">static CLI::App * addInstance(const std::string &amp;name, const std::string &amp;description, const std::string &amp;group)</div><div class="ttdef"><b>Definition</b> <a href="Config_8cpp_source.html#l00655">Config.cpp:655</a></div></div>
-<div class="ttc" id="aclassutils_1_1Config_html_a895744238727a62946b042a62ef99ca6"><div class="ttname"><a href="classutils_1_1Config.html#a895744238727a62946b042a62ef99ca6">utils::Config::disabled</a></div><div class="ttdeci">static void disabled(CLI::App *instance, bool disabled=true)</div><div class="ttdef"><b>Definition</b> <a href="Config_8cpp_source.html#l00840">Config.cpp:840</a></div></div>
-<div class="ttc" id="aclassutils_1_1Config_html_a90e8e890cf5043d0ade8df401f30df0f"><div class="ttname"><a href="classutils_1_1Config.html#a90e8e890cf5043d0ade8df401f30df0f">utils::Config::addStandardFlags</a></div><div class="ttdeci">static CLI::App * addStandardFlags(CLI::App *app)</div><div class="ttdef"><b>Definition</b> <a href="Config_8cpp_source.html#l00682">Config.cpp:682</a></div></div>
+<div class="ttc" id="aclassutils_1_1Config_html_a0b5c905e8e2775a0507f377eb021c3dc"><div class="ttname"><a href="classutils_1_1Config.html#a0b5c905e8e2775a0507f377eb021c3dc">utils::Config::addStandardFlags</a></div><div class="ttdeci">static CLI::App * addStandardFlags(CLI::App *app)</div><div class="ttdef"><b>Definition</b> <a href="Config_8cpp_source.html#l00682">Config.cpp:682</a></div></div>
+<div class="ttc" id="aclassutils_1_1Config_html_a4bf4f35dbdea895cd31f830b5e874265"><div class="ttname"><a href="classutils_1_1Config.html#a4bf4f35dbdea895cd31f830b5e874265">utils::Config::disabled</a></div><div class="ttdeci">static void disabled(CLI::App *instance, bool disabled=true)</div><div class="ttdef"><b>Definition</b> <a href="Config_8cpp_source.html#l00840">Config.cpp:840</a></div></div>
+<div class="ttc" id="aclassutils_1_1Config_html_a7eb41691a8048f9a7b91e5d4d7f6c730"><div class="ttname"><a href="classutils_1_1Config.html#a7eb41691a8048f9a7b91e5d4d7f6c730">utils::Config::addHelp</a></div><div class="ttdeci">static CLI::App * addHelp(CLI::App *app)</div><div class="ttdef"><b>Definition</b> <a href="Config_8cpp_source.html#l00747">Config.cpp:747</a></div></div>
+<div class="ttc" id="aclassutils_1_1Config_html_ad50b63fdee9576f40e2fc2efd4ce8512"><div class="ttname"><a href="classutils_1_1Config.html#ad50b63fdee9576f40e2fc2efd4ce8512">utils::Config::addInstance</a></div><div class="ttdeci">static CLI::App * addInstance(const std::string &amp;name, const std::string &amp;description, const std::string &amp;group)</div><div class="ttdef"><b>Definition</b> <a href="Config_8cpp_source.html#l00655">Config.cpp:655</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Config_8cpp_source.html#l00747">utils::Config::addHelp()</a>, <a class="el" href="Config_8cpp_source.html#l00682">utils::Config::addStandardFlags()</a>, <a class="el" href="ConfigInstance_8cpp_source.html#l00053">ConfigInstance()</a>, <a class="el" href="Config_8cpp_source.html#l00840">utils::Config::disabled()</a>, <a class="el" href="ConfigInstance_8h_source.html#l00084">disableOpt</a>, <a class="el" href="ConfigInstance_8h_source.html#l00083">instanceSc</a>, <a class="el" href="ConfigInstance_8h_source.html#l00081">role</a>, and <a class="el" href="CLI11_8hpp_source.html#l05119">Option::trigger_on_parse()</a>.</p>
+<p class="reference">References <a class="el" href="Config_8cpp_source.html#l00747">utils::Config::addHelp()</a>, <a class="el" href="Config_8cpp_source.html#l00682">utils::Config::addStandardFlags()</a>, <a class="el" href="ConfigInstance_8cpp_source.html#l00053">ConfigInstance()</a>, <a class="el" href="Config_8cpp_source.html#l00840">utils::Config::disabled()</a>, <a class="el" href="ConfigInstance_8h_source.html#l00084">disableOpt</a>, <a class="el" href="ConfigInstance_8h_source.html#l00083">instanceSc</a>, and <a class="el" href="ConfigInstance_8h_source.html#l00081">role</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="ConfigInstance_8cpp_source.html#l00053">ConfigInstance()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classnet_1_1config_1_1ConfigInstance_a7fd41c5db4865443c184508a4435f7aa_cgraph.svg" width="708" height="387"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classnet_1_1config_1_1ConfigInstance_a7fd41c5db4865443c184508a4435f7aa_cgraph.svg" width="666" height="151"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -350,15 +350,15 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="ConfigInstance_8cpp_source.html#l00082">82</a> of file <a class="el" href="ConfigInstance_8cpp_source.html">ConfigInstance.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   82</span>                                    {</div>
-<div class="line"><span class="lineno">   83</span>        <a class="code hl_function" href="classutils_1_1Config.html#a13edb691d21cd083408fbdebff91a450">utils::Config::removeInstance</a>(<a class="code hl_variable" href="#a7a695588c7946a1eeb547db4b69e1b44">instanceSc</a>);</div>
+<div class="line"><span class="lineno">   83</span>        <a class="code hl_function" href="classutils_1_1Config.html#aa75c679e1a1a09be88df94d81901d464">utils::Config::removeInstance</a>(<a class="code hl_variable" href="#a7a695588c7946a1eeb547db4b69e1b44">instanceSc</a>);</div>
 <div class="line"><span class="lineno">   84</span>    }</div>
-<div class="ttc" id="aclassutils_1_1Config_html_a13edb691d21cd083408fbdebff91a450"><div class="ttname"><a href="classutils_1_1Config.html#a13edb691d21cd083408fbdebff91a450">utils::Config::removeInstance</a></div><div class="ttdeci">static bool removeInstance(CLI::App *instance)</div><div class="ttdef"><b>Definition</b> <a href="Config_8cpp_source.html#l00870">Config.cpp:870</a></div></div>
+<div class="ttc" id="aclassutils_1_1Config_html_aa75c679e1a1a09be88df94d81901d464"><div class="ttname"><a href="classutils_1_1Config.html#aa75c679e1a1a09be88df94d81901d464">utils::Config::removeInstance</a></div><div class="ttdeci">static bool removeInstance(CLI::App *instance)</div><div class="ttdef"><b>Definition</b> <a href="Config_8cpp_source.html#l00870">Config.cpp:870</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="ConfigInstance_8h_source.html#l00083">instanceSc</a>, and <a class="el" href="Config_8cpp_source.html#l00870">utils::Config::removeInstance()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classnet_1_1config_1_1ConfigInstance_a49b02d691b760b249fdc133581f0b942_cgraph.svg" width="836" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classnet_1_1config_1_1ConfigInstance_a49b02d691b760b249fdc133581f0b942_cgraph.svg" width="679" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -456,21 +456,21 @@ Here is the call graph for this function:</div>
 <div class="line"><span class="lineno">  109</span>            -&gt;configurable(!sectionSc-&gt;get_disabled());</div>
 <div class="line"><span class="lineno">  110</span> </div>
 <div class="line"><span class="lineno">  111</span>        <span class="keywordflow">if</span> (!sectionSc-&gt;get_disabled()) {</div>
-<div class="line"><span class="lineno">  112</span>            <a class="code hl_function" href="classutils_1_1Config.html#a90e8e890cf5043d0ade8df401f30df0f">utils::Config::addStandardFlags</a>(sectionSc);</div>
-<div class="line"><span class="lineno">  113</span>            <a class="code hl_function" href="classutils_1_1Config.html#a6603086ea4f9eb8b5c85b06dcc3054f5">utils::Config::addSimpleHelp</a>(sectionSc);</div>
+<div class="line"><span class="lineno">  112</span>            <a class="code hl_function" href="classutils_1_1Config.html#a0b5c905e8e2775a0507f377eb021c3dc">utils::Config::addStandardFlags</a>(sectionSc);</div>
+<div class="line"><span class="lineno">  113</span>            <a class="code hl_function" href="classutils_1_1Config.html#a217723800249956365a5516a8f34c3cc">utils::Config::addSimpleHelp</a>(sectionSc);</div>
 <div class="line"><span class="lineno">  114</span>        }</div>
 <div class="line"><span class="lineno">  115</span> </div>
 <div class="line"><span class="lineno">  116</span>        <span class="keywordflow">return</span> sectionSc;</div>
 <div class="line"><span class="lineno">  117</span>    }</div>
-<div class="ttc" id="aclassutils_1_1Config_html_a6603086ea4f9eb8b5c85b06dcc3054f5"><div class="ttname"><a href="classutils_1_1Config.html#a6603086ea4f9eb8b5c85b06dcc3054f5">utils::Config::addSimpleHelp</a></div><div class="ttdeci">static CLI::App * addSimpleHelp(CLI::App *app)</div><div class="ttdef"><b>Definition</b> <a href="Config_8cpp_source.html#l00795">Config.cpp:795</a></div></div>
+<div class="ttc" id="aclassutils_1_1Config_html_a217723800249956365a5516a8f34c3cc"><div class="ttname"><a href="classutils_1_1Config.html#a217723800249956365a5516a8f34c3cc">utils::Config::addSimpleHelp</a></div><div class="ttdeci">static CLI::App * addSimpleHelp(CLI::App *app)</div><div class="ttdef"><b>Definition</b> <a href="Config_8cpp_source.html#l00795">Config.cpp:795</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Config_8cpp_source.html#l00795">utils::Config::addSimpleHelp()</a>, <a class="el" href="Config_8cpp_source.html#l00682">utils::Config::addStandardFlags()</a>, <a class="el" href="CLI11_8hpp_source.html#l07356">App::get_disabled()</a>, and <a class="el" href="CLI11_8hpp_source.html#l06677">App::option_defaults()</a>.</p>
+<p class="reference">References <a class="el" href="Config_8cpp_source.html#l00795">utils::Config::addSimpleHelp()</a>, and <a class="el" href="Config_8cpp_source.html#l00682">utils::Config::addStandardFlags()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="ConfigSection_8cpp_source.html#l00050">net::config::ConfigSection::ConfigSection()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classnet_1_1config_1_1ConfigInstance_ad39c0527d0d8dde04ccf0c7dcc0fe323_cgraph.svg" width="690" height="242"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classnet_1_1config_1_1ConfigInstance_ad39c0527d0d8dde04ccf0c7dcc0fe323_cgraph.svg" width="682" height="102"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -722,24 +722,24 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">  129</span>            section-&gt;required(req);</div>
 <div class="line"><span class="lineno">  130</span> </div>
 <div class="line"><span class="lineno">  131</span>            <span class="keywordflow">if</span> (!<a class="code hl_variable" href="#a903207c799a648bf5742f5941465ed7c">disableOpt</a>-&gt;as&lt;<span class="keywordtype">bool</span>&gt;()) {</div>
-<div class="line"><span class="lineno">  132</span>                <a class="code hl_function" href="classutils_1_1Config.html#ad49256ee495d646fc0fce6899a8ae16e">utils::Config::required</a>(<a class="code hl_variable" href="#a7a695588c7946a1eeb547db4b69e1b44">instanceSc</a>, <a class="code hl_variable" href="#a3c312e8ce5b01a90f60e22369393e099">requiredCount</a> &gt; 0);</div>
+<div class="line"><span class="lineno">  132</span>                <a class="code hl_function" href="classutils_1_1Config.html#ab93445a04bef08b0a60cd3c90c17482f">utils::Config::required</a>(<a class="code hl_variable" href="#a7a695588c7946a1eeb547db4b69e1b44">instanceSc</a>, <a class="code hl_variable" href="#a3c312e8ce5b01a90f60e22369393e099">requiredCount</a> &gt; 0);</div>
 <div class="line"><span class="lineno">  133</span>            }</div>
 <div class="line"><span class="lineno">  134</span>        }</div>
 <div class="line"><span class="lineno">  135</span>    }</div>
-<div class="ttc" id="aclassutils_1_1Config_html_ad49256ee495d646fc0fce6899a8ae16e"><div class="ttname"><a href="classutils_1_1Config.html#ad49256ee495d646fc0fce6899a8ae16e">utils::Config::required</a></div><div class="ttdeci">static void required(CLI::App *instance, bool reqired=true)</div><div class="ttdef"><b>Definition</b> <a href="Config_8cpp_source.html#l00818">Config.cpp:818</a></div></div>
+<div class="ttc" id="aclassutils_1_1Config_html_ab93445a04bef08b0a60cd3c90c17482f"><div class="ttname"><a href="classutils_1_1Config.html#ab93445a04bef08b0a60cd3c90c17482f">utils::Config::required</a></div><div class="ttdeci">static void required(CLI::App *instance, bool reqired=true)</div><div class="ttdef"><b>Definition</b> <a href="Config_8cpp_source.html#l00818">Config.cpp:818</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ConfigInstance_8h_source.html#l00084">disableOpt</a>, <a class="el" href="CLI11_8hpp_source.html#l07351">App::get_required()</a>, <a class="el" href="ConfigInstance_8h_source.html#l00083">instanceSc</a>, <a class="el" href="CLI11_8hpp_source.html#l07142">App::needs()</a>, <a class="el" href="CLI11_8hpp_source.html#l08381">App::remove_needs()</a>, <a class="el" href="CLI11_8hpp_source.html#l06552">App::required()</a>, <a class="el" href="Config_8cpp_source.html#l00818">utils::Config::required()</a>, and <a class="el" href="ConfigInstance_8h_source.html#l00076">requiredCount</a>.</p>
+<p class="reference">References <a class="el" href="ConfigInstance_8h_source.html#l00084">disableOpt</a>, <a class="el" href="ConfigInstance_8h_source.html#l00083">instanceSc</a>, <a class="el" href="Config_8cpp_source.html#l00818">utils::Config::required()</a>, and <a class="el" href="ConfigInstance_8h_source.html#l00076">requiredCount</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="ConfigSection_8cpp_source.html#l00060">net::config::ConfigSection::required()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classnet_1_1config_1_1ConfigInstance_afc1c3ec014ddd8cc8a08113feed00fe5_cgraph.svg" width="575" height="236"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classnet_1_1config_1_1ConfigInstance_afc1c3ec014ddd8cc8a08113feed00fe5_cgraph.svg" width="418" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classnet_1_1config_1_1ConfigInstance_afc1c3ec014ddd8cc8a08113feed00fe5_icgraph.svg" width="547" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classnet_1_1config_1_1ConfigInstance_afc1c3ec014ddd8cc8a08113feed00fe5_icgraph.svg" width="444" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -765,14 +765,14 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">  152</span>            -&gt;default_val(disabled ? <span class="stringliteral">&quot;true&quot;</span> : <span class="stringliteral">&quot;false&quot;</span>)</div>
 <div class="line"><span class="lineno">  153</span>            -&gt;clear();</div>
 <div class="line"><span class="lineno">  154</span> </div>
-<div class="line"><span class="lineno">  155</span>        <a class="code hl_function" href="classutils_1_1Config.html#a895744238727a62946b042a62ef99ca6">utils::Config::disabled</a>(<a class="code hl_variable" href="#a7a695588c7946a1eeb547db4b69e1b44">instanceSc</a>, disabled);</div>
+<div class="line"><span class="lineno">  155</span>        <a class="code hl_function" href="classutils_1_1Config.html#a4bf4f35dbdea895cd31f830b5e874265">utils::Config::disabled</a>(<a class="code hl_variable" href="#a7a695588c7946a1eeb547db4b69e1b44">instanceSc</a>, disabled);</div>
 <div class="line"><span class="lineno">  156</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="CLI11_8hpp_source.html#l05093">Option::clear()</a>, <a class="el" href="Config_8cpp_source.html#l00840">utils::Config::disabled()</a>, <a class="el" href="ConfigInstance_8h_source.html#l00084">disableOpt</a>, and <a class="el" href="ConfigInstance_8h_source.html#l00083">instanceSc</a>.</p>
+<p class="reference">References <a class="el" href="Config_8cpp_source.html#l00840">utils::Config::disabled()</a>, <a class="el" href="ConfigInstance_8h_source.html#l00084">disableOpt</a>, and <a class="el" href="ConfigInstance_8h_source.html#l00083">instanceSc</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classnet_1_1config_1_1ConfigInstance_a513b580faa06a43d0b25b14d3ba58128_cgraph.svg" width="575" height="86"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classnet_1_1config_1_1ConfigInstance_a513b580faa06a43d0b25b14d3ba58128_cgraph.svg" width="418" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -987,7 +987,7 @@ Here is the call graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacenet.html">net</a></li><li class="navelem"><a class="el" href="namespacenet_1_1config.html">config</a></li><li class="navelem"><a class="el" href="classnet_1_1config_1_1ConfigInstance.html">ConfigInstance</a></li>
-    <li class="footer">Generated on Sun Jan 5 2025 00:54:59 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generated on Sun Jan 5 2025 01:16:53 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>

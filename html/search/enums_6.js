@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['mode_0',['Mode',['../classCLI_1_1CallForCommandline.html#a772a59d089ea19572527641273cb339d',1,'CLI::CallForCommandline']]],
-  ['multioptionpolicy_1',['MultiOptionPolicy',['../CLI11_8hpp.html#a9c3a9fbd28682838eb3e5ac59ac1b5cb',1,'CLI11.hpp']]]
+  ['parserstate_0',['ParserState',['../classweb_1_1http_1_1Parser.html#a94ab44c0d65451be6ba3e6e389a8b7d5',1,'web::http::Parser::ParserState'],['../classweb_1_1websocket_1_1Receiver.html#a3cf4e2588c5333541e445cd7aef1eb9b',1,'web::websocket::Receiver::ParserState']]]
 ];

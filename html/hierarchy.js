@@ -1,22 +1,9 @@
 var hierarchy =
 [
-    [ "App", "classApp.html", [
-      [ "Option_group", "classOption__group.html", null ]
-    ] ],
-    [ "detail::AppFriend", "structdetail_1_1AppFriend.html", null ],
     [ "utils::AttributeProxy< Attribute >", "classutils_1_1AttributeProxy.html", null ],
     [ "iot::mqtt::server::broker::Broker", "classiot_1_1mqtt_1_1server_1_1broker_1_1Broker.html", null ],
     [ "web::http::decoder::Chunked::Chunk", "classweb_1_1http_1_1decoder_1_1Chunked_1_1Chunk.html", null ],
     [ "web::http::ciLess", "structweb_1_1http_1_1ciLess.html", null ],
-    [ "conditional_t", null, [
-      [ "detail::is_mutable_container< T, conditional_t< false, void_t< typename T::value_type, decltype(std::declval< T >().end()), decltype(std::declval< T >().clear()), decltype(std::declval< T >().insert(std::declval< decltype(std::declval< T >().end())>(), std::declval< const typename T::value_type & >()))>, void > >", "structdetail_1_1is__mutable__container_3_01T_00_01conditional__t_3_01false_00_01void__t_3_01type3cbefe3f62998090130d5dc7084b8516.html", null ]
-    ] ],
-    [ "Config", "classConfig.html", [
-      [ "ConfigBase", "classConfigBase.html", [
-        [ "CLI::ConfigFormatter", "classCLI_1_1ConfigFormatter.html", null ],
-        [ "ConfigINI", "classConfigINI.html", null ]
-      ] ]
-    ] ],
     [ "utils::Config", "classutils_1_1Config.html", null ],
     [ "ConfigAddressLocalT", null, [
       [ "net::config::stream::ConfigSocketClient< ConfigAddressLocalT, ConfigAddressRemoteT >", "classnet_1_1config_1_1stream_1_1ConfigSocketClient.html", null ],
@@ -37,6 +24,9 @@ var hierarchy =
       [ "net::rc::config::ConfigAddressReverse< ConfigAddressTypeT >", "classnet_1_1rc_1_1config_1_1ConfigAddressReverse.html", null ],
       [ "net::un::config::ConfigAddress< ConfigAddressTypeT >", "classnet_1_1un_1_1config_1_1ConfigAddress.html", null ],
       [ "net::un::config::ConfigAddressReverse< ConfigAddressTypeT >", "classnet_1_1un_1_1config_1_1ConfigAddressReverse.html", null ]
+    ] ],
+    [ "ConfigBase", null, [
+      [ "CLI::ConfigFormatter", "classCLI_1_1ConfigFormatter.html", null ]
     ] ],
     [ "web::http::client::ConfigHTTP", "classweb_1_1http_1_1client_1_1ConfigHTTP.html", null ],
     [ "net::config::ConfigInstance", "classnet_1_1config_1_1ConfigInstance.html", [
@@ -105,7 +95,6 @@ var hierarchy =
       [ "net::config::stream::tls::ConfigSocketClient< ConfigSocketClientBaseT >", "classnet_1_1config_1_1stream_1_1tls_1_1ConfigSocketClient.html", null ],
       [ "net::config::stream::tls::ConfigSocketServer< ConfigSocketServerBaseT >", "classnet_1_1config_1_1stream_1_1tls_1_1ConfigSocketServer.html", null ]
     ] ],
-    [ "ConfigItem", "structConfigItem.html", null ],
     [ "net::config::ConfigSection", "classnet_1_1config_1_1ConfigSection.html", [
       [ "net::config::ConfigAddressBase< net::in6::SocketAddress >", "classnet_1_1config_1_1ConfigAddressBase.html", [
         [ "net::config::ConfigAddress< net::in6::SocketAddress >", "classnet_1_1config_1_1ConfigAddress.html", [
@@ -554,9 +543,6 @@ var hierarchy =
       [ "express::dispatcher::RouterDispatcher", "classexpress_1_1dispatcher_1_1RouterDispatcher.html", null ]
     ] ],
     [ "core::DynamicLoader", "classcore_1_1DynamicLoader.html", null ],
-    [ "detail::element_type< T, Enable >", "structdetail_1_1element__type.html", null ],
-    [ "detail::element_type< T, typename std::enable_if< is_copyable_ptr< T >::value >::type >", "structdetail_1_1element__type_3_01T_00_01typename_01std_1_1enable__if_3_01is__copyable__ptr_3_01523b2272a7e2fdb6b5ec55e56e958c09.html", null ],
-    [ "detail::element_value_type< T >", "structdetail_1_1element__value__type.html", null ],
     [ "core::multiplexer::epoll::DescriptorEventPublisher::EPollEvents", "classcore_1_1multiplexer_1_1epoll_1_1DescriptorEventPublisher_1_1EPollEvents.html", null ],
     [ "core::Event", "classcore_1_1Event.html", null ],
     [ "core::EventLoop", "classcore_1_1EventLoop.html", null ],
@@ -567,7 +553,6 @@ var hierarchy =
     ] ],
     [ "core::EventMultiplexer::EventQueue", "classcore_1_1EventMultiplexer_1_1EventQueue.html", null ],
     [ "core::EventReceiver", "classcore_1_1EventReceiver.html", [
-      [ "TowerCalculator", "classTowerCalculator.html", null ],
       [ "core::DescriptorEventReceiver", "classcore_1_1DescriptorEventReceiver.html", [
         [ "core::eventreceiver::AcceptEventReceiver", "classcore_1_1eventreceiver_1_1AcceptEventReceiver.html", [
           [ "core::socket::stream::SocketAcceptor< PhysicalServerSocketT, ConfigT, core::socket::stream::legacy::SocketConnection >", "classcore_1_1socket_1_1stream_1_1SocketAcceptor.html", [
@@ -591,7 +576,6 @@ var hierarchy =
           [ "database::mariadb::MariaDBConnection", "classdatabase_1_1mariadb_1_1MariaDBConnection.html", null ]
         ] ],
         [ "core::eventreceiver::ReadEventReceiver", "classcore_1_1eventreceiver_1_1ReadEventReceiver.html", [
-          [ "KeyboardReader", "classKeyboardReader.html", null ],
           [ "core::pipe::PipeSink", "classcore_1_1pipe_1_1PipeSink.html", null ],
           [ "core::socket::stream::SocketReader", "classcore_1_1socket_1_1stream_1_1SocketReader.html", [
             [ "core::socket::stream::legacy::SocketReader", "classcore_1_1socket_1_1stream_1_1legacy_1_1SocketReader.html", null ],
@@ -621,14 +605,6 @@ var hierarchy =
       [ "database::mariadb::MariaDBCommandStartEvent", "classdatabase_1_1mariadb_1_1MariaDBCommandStartEvent.html", null ],
       [ "iot::mqtt::OnReceivedFromPeerEvent", "classiot_1_1mqtt_1_1OnReceivedFromPeerEvent.html", null ]
     ] ],
-    [ "std::false_type", null, [
-      [ "detail::is_mutable_container< T, _ >", "structdetail_1_1is__mutable__container.html", null ],
-      [ "detail::is_readable_container< T, _ >", "structdetail_1_1is__readable__container.html", null ],
-      [ "detail::is_wrapper< T, _ >", "structdetail_1_1is__wrapper.html", null ],
-      [ "detail::pair_adaptor< T, _ >", "structdetail_1_1pair__adaptor.html", null ],
-      [ "is_bool< T >", "structis__bool.html", null ],
-      [ "is_shared_ptr< T >", "structis__shared__ptr.html", null ]
-    ] ],
     [ "core::multiplexer::select::FdSet", "classcore_1_1multiplexer_1_1select_1_1FdSet.html", null ],
     [ "web::http::decoder::Fields", "classweb_1_1http_1_1decoder_1_1Fields.html", null ],
     [ "utils::fixed_string< N >", "structutils_1_1fixed__string.html", null ],
@@ -636,25 +612,11 @@ var hierarchy =
     [ "CLI::Formatter", null, [
       [ "CLI::HelpFormatter", "classCLI_1_1HelpFormatter.html", null ]
     ] ],
-    [ "FormatterBase", "classFormatterBase.html", [
-      [ "Formatter", "classFormatter.html", null ],
-      [ "FormatterLambda", "classFormatterLambda.html", null ]
-    ] ],
     [ "web::websocket::server::GroupsManager", "classweb_1_1websocket_1_1server_1_1GroupsManager.html", null ],
-    [ "detail::has_find< C, V >", "structdetail_1_1has__find.html", null ],
     [ "net::in6::SocketAddress::Hints", "structnet_1_1in6_1_1SocketAddress_1_1Hints.html", null ],
     [ "net::in::SocketAddress::Hints", "structnet_1_1in_1_1SocketAddress_1_1Hints.html", null ],
-    [ "detail::is_complex< T >", "classdetail_1_1is__complex.html", null ],
-    [ "is_copyable_ptr< T >", "structis__copyable__ptr.html", null ],
-    [ "detail::is_direct_constructible< T, C >", "classdetail_1_1is__direct__constructible.html", null ],
-    [ "detail::is_istreamable< T, S >", "classdetail_1_1is__istreamable.html", null ],
-    [ "detail::is_ostreamable< T, S >", "classdetail_1_1is__ostreamable.html", null ],
-    [ "detail::is_tuple_like< S >", "classdetail_1_1is__tuple__like.html", null ],
-    [ "IsMemberType< T >", "structIsMemberType.html", null ],
-    [ "IsMemberType< const char * >", "structIsMemberType_3_01const_01char_01_5_01_4.html", null ],
     [ "core::DynamicLoader::Library", "structcore_1_1DynamicLoader_1_1Library.html", null ],
     [ "logger::Logger", "classlogger_1_1Logger.html", null ],
-    [ "make_void< Ts >", "structmake__void.html", null ],
     [ "std::map", null, [
       [ "web::http::CiStringMap< std::string >", "classweb_1_1http_1_1CiStringMap.html", null ],
       [ "web::http::CiStringMap< web::http::CookieOptions >", "classweb_1_1http_1_1CiStringMap.html", null ],
@@ -687,7 +649,6 @@ var hierarchy =
     ] ],
     [ "database::mariadb::MariaDBConnectionDetails", "structdatabase_1_1mariadb_1_1MariaDBConnectionDetails.html", null ],
     [ "web::websocket::Receiver::MaskingKey", "unionweb_1_1websocket_1_1Receiver_1_1MaskingKey.html", null ],
-    [ "Member", "classMember.html", null ],
     [ "iot::mqtt::server::broker::Message", "classiot_1_1mqtt_1_1server_1_1broker_1_1Message.html", null ],
     [ "web::http::MimeTypes", "classweb_1_1http_1_1MimeTypes.html", null ],
     [ "express::MountPoint", "structexpress_1_1MountPoint.html", null ],
@@ -705,13 +666,6 @@ var hierarchy =
     [ "express::Next", "classexpress_1_1Next.html", null ],
     [ "core::Observer", "classcore_1_1Observer.html", [
       [ "core::DescriptorEventReceiver", "classcore_1_1DescriptorEventReceiver.html", null ]
-    ] ],
-    [ "OptionBase< CRTP >", "classOptionBase.html", null ],
-    [ "OptionBase< Option >", "classOptionBase.html", [
-      [ "Option", "classOption.html", null ]
-    ] ],
-    [ "OptionBase< OptionDefaults >", "classOptionBase.html", [
-      [ "OptionDefaults", "classOptionDefaults.html", null ]
     ] ],
     [ "web::http::Parser", "classweb_1_1http_1_1Parser.html", [
       [ "web::http::client::ResponseParser", "classweb_1_1http_1_1client_1_1ResponseParser.html", null ],
@@ -776,33 +730,6 @@ var hierarchy =
       [ "express::middleware::VerboseRequest", "classexpress_1_1middleware_1_1VerboseRequest.html", null ]
     ] ],
     [ "std::runtime_error", null, [
-      [ "Error", "classError.html", [
-        [ "ConstructionError", "classConstructionError.html", [
-          [ "BadNameString", "classBadNameString.html", null ],
-          [ "IncorrectConstruction", "classIncorrectConstruction.html", null ],
-          [ "OptionAlreadyAdded", "classOptionAlreadyAdded.html", null ]
-        ] ],
-        [ "OptionNotFound", "classOptionNotFound.html", null ],
-        [ "ParseError", "classParseError.html", [
-          [ "ArgumentMismatch", "classArgumentMismatch.html", null ],
-          [ "ConfigError", "classConfigError.html", null ],
-          [ "ConversionError", "classConversionError.html", null ],
-          [ "ExcludesError", "classExcludesError.html", null ],
-          [ "ExtrasError", "classExtrasError.html", null ],
-          [ "FileError", "classFileError.html", null ],
-          [ "HorribleError", "classHorribleError.html", null ],
-          [ "InvalidError", "classInvalidError.html", null ],
-          [ "RequiredError", "classRequiredError.html", null ],
-          [ "RequiresError", "classRequiresError.html", null ],
-          [ "RuntimeError", "classRuntimeError.html", null ],
-          [ "Success", "classSuccess.html", [
-            [ "CallForAllHelp", "classCallForAllHelp.html", null ],
-            [ "CallForHelp", "classCallForHelp.html", null ],
-            [ "CallForVersion", "classCallForVersion.html", null ]
-          ] ],
-          [ "ValidationError", "classValidationError.html", null ]
-        ] ]
-      ] ],
       [ "core::socket::SocketAddress::BadSocketAddress", "classcore_1_1socket_1_1SocketAddress_1_1BadSocketAddress.html", null ],
       [ "utils::DaemonFailure", "classutils_1_1DaemonFailure.html", [
         [ "utils::DaemonError", "classutils_1_1DaemonError.html", null ]
@@ -897,9 +824,6 @@ var hierarchy =
         [ "web::http::SocketContextUpgrade< web::http::server::Request, web::http::server::Response >", "classweb_1_1http_1_1SocketContextUpgrade.html", [
           [ "web::websocket::SocketContextUpgrade< SubProtocol, web::http::server::Request, web::http::server::Response >", "classweb_1_1websocket_1_1SocketContextUpgrade.html", null ]
         ] ],
-        [ "SimpleSocketProtocol", "classSimpleSocketProtocol.html", null ],
-        [ "SimpleSocketProtocol", "classSimpleSocketProtocol.html", null ],
-        [ "apps::echo::model::EchoSocketContext", "classapps_1_1echo_1_1model_1_1EchoSocketContext.html", null ],
         [ "iot::mqtt::SocketContext", "classiot_1_1mqtt_1_1SocketContext.html", null ],
         [ "iot::mqtt_fast::SocketContext", "classiot_1_1mqtt__fast_1_1SocketContext.html", null ],
         [ "web::http::SocketContextUpgrade< RequestT, ResponseT >", "classweb_1_1http_1_1SocketContextUpgrade.html", [
@@ -926,10 +850,6 @@ var hierarchy =
           [ "web::websocket::server::SocketContextUpgradeFactory", "classweb_1_1websocket_1_1server_1_1SocketContextUpgradeFactory.html", null ]
         ] ]
       ] ],
-      [ "SimpleSocketProtocolFactory", "classSimpleSocketProtocolFactory.html", null ],
-      [ "SimpleSocketProtocolFactory", "classSimpleSocketProtocolFactory.html", null ],
-      [ "apps::echo::model::EchoClientSocketContextFactory", "classapps_1_1echo_1_1model_1_1EchoClientSocketContextFactory.html", null ],
-      [ "apps::echo::model::EchoServerSocketContextFactory", "classapps_1_1echo_1_1model_1_1EchoServerSocketContextFactory.html", null ],
       [ "iot::mqtt::server::SharedSocketContextFactory", "classiot_1_1mqtt_1_1server_1_1SharedSocketContextFactory.html", null ],
       [ "iot::mqtt::server::SocketContextFactory", "classiot_1_1mqtt_1_1server_1_1SocketContextFactory.html", null ],
       [ "web::http::SocketContextFactory< SocketContextT, RequestT, ResponseT >", "classweb_1_1http_1_1SocketContextFactory.html", null ],
@@ -960,20 +880,12 @@ var hierarchy =
     [ "web::http::StatusCode", "classweb_1_1http_1_1StatusCode.html", null ],
     [ "web::websocket::SubProtocol< SocketContextUpgradeT >", "classweb_1_1websocket_1_1SubProtocol.html", null ],
     [ "web::websocket::SubProtocol< web::websocket::client::SocketContextUpgrade >", "classweb_1_1websocket_1_1SubProtocol.html", [
-      [ "web::websocket::client::SubProtocol", "classweb_1_1websocket_1_1client_1_1SubProtocol.html", [
-        [ "apps::websocket::subprotocol::echo::client::Echo", "classapps_1_1websocket_1_1subprotocol_1_1echo_1_1client_1_1Echo.html", null ]
-      ] ]
+      [ "web::websocket::client::SubProtocol", "classweb_1_1websocket_1_1client_1_1SubProtocol.html", null ]
     ] ],
     [ "web::websocket::SubProtocol< web::websocket::server::SocketContextUpgrade >", "classweb_1_1websocket_1_1SubProtocol.html", [
-      [ "web::websocket::server::SubProtocol", "classweb_1_1websocket_1_1server_1_1SubProtocol.html", [
-        [ "apps::websocket::subprotocol::echo::server::Echo", "classapps_1_1websocket_1_1subprotocol_1_1echo_1_1server_1_1Echo.html", null ]
-      ] ]
+      [ "web::websocket::server::SubProtocol", "classweb_1_1websocket_1_1server_1_1SubProtocol.html", null ]
     ] ],
     [ "web::websocket::SubProtocolFactory< SubProtocolT >", "classweb_1_1websocket_1_1SubProtocolFactory.html", null ],
-    [ "web::websocket::SubProtocolFactory< Echo >", "classweb_1_1websocket_1_1SubProtocolFactory.html", [
-      [ "apps::websocket::subprotocol::echo::client::EchoFactory", "classapps_1_1websocket_1_1subprotocol_1_1echo_1_1client_1_1EchoFactory.html", null ],
-      [ "apps::websocket::subprotocol::echo::server::EchoFactory", "classapps_1_1websocket_1_1subprotocol_1_1echo_1_1server_1_1EchoFactory.html", null ]
-    ] ],
     [ "web::websocket::SubProtocolFactory< web::websocket::client::SubProtocol >", "classweb_1_1websocket_1_1SubProtocolFactory.html", null ],
     [ "web::websocket::SubProtocolFactory< web::websocket::server::SubProtocol >", "classweb_1_1websocket_1_1SubProtocolFactory.html", null ],
     [ "web::websocket::SubProtocolFactorySelector< SubProtocolFactoryT >", "classweb_1_1websocket_1_1SubProtocolFactorySelector.html", null ],
@@ -984,14 +896,11 @@ var hierarchy =
       [ "web::websocket::server::SubProtocolFactorySelector", "classweb_1_1websocket_1_1server_1_1SubProtocolFactorySelector.html", null ]
     ] ],
     [ "iot::mqtt::server::broker::SubscribtionTree", "classiot_1_1mqtt_1_1server_1_1broker_1_1SubscribtionTree.html", null ],
-    [ "detail::subtype_count< T >", "structdetail_1_1subtype__count.html", null ],
-    [ "detail::subtype_count_min< T >", "structdetail_1_1subtype__count__min.html", null ],
     [ "CLI::Success", null, [
       [ "CLI::CallForCommandline", "classCLI_1_1CallForCommandline.html", null ],
       [ "CLI::CallForShowConfig", "classCLI_1_1CallForShowConfig.html", null ],
       [ "CLI::CallForWriteConfig", "classCLI_1_1CallForWriteConfig.html", null ]
     ] ],
-    [ "Test", "classTest.html", null ],
     [ "core::DescriptorEventReceiver::TIMEOUT", "structcore_1_1DescriptorEventReceiver_1_1TIMEOUT.html", null ],
     [ "core::Timer", "classcore_1_1Timer.html", [
       [ "core::timer::Timer", "classcore_1_1timer_1_1Timer.html", null ]
@@ -1006,23 +915,6 @@ var hierarchy =
     [ "web::websocket::Transmitter", "classweb_1_1websocket_1_1Transmitter.html", [
       [ "web::websocket::SubProtocolContext", "classweb_1_1websocket_1_1SubProtocolContext.html", null ]
     ] ],
-    [ "std::true_type", null, [
-      [ "detail::is_readable_container< T, conditional_t< false, void_t< decltype(std::declval< T >().end()), decltype(std::declval< T >().begin())>, void > >", "structdetail_1_1is__readable__container_3_01T_00_01conditional__t_3_01false_00_01void__t_3_01dec19493ce16a9a958c1a9c08fcab0b917c.html", null ],
-      [ "detail::is_wrapper< T, conditional_t< false, void_t< typename T::value_type >, void > >", "structdetail_1_1is__wrapper_3_01T_00_01conditional__t_3_01false_00_01void__t_3_01typename_01T_1_3cdab8a3447131bfdab07dcebb242dc4.html", null ],
-      [ "detail::pair_adaptor< T, conditional_t< false, void_t< typename T::value_type::first_type, typename T::value_type::second_type >, void > >", "structdetail_1_1pair__adaptor_3_01T_00_01conditional__t_3_01false_00_01void__t_3_01typename_01T_3bf79cae463e1d5562874a40375cd28a.html", null ],
-      [ "is_bool< bool >", "structis__bool_3_01bool_01_4.html", null ],
-      [ "is_shared_ptr< const std::shared_ptr< T > >", "structis__shared__ptr_3_01const_01std_1_1shared__ptr_3_01T_01_4_01_4.html", null ],
-      [ "is_shared_ptr< std::shared_ptr< T > >", "structis__shared__ptr_3_01std_1_1shared__ptr_3_01T_01_4_01_4.html", null ]
-    ] ],
-    [ "detail::type_count< T, Enable >", "structdetail_1_1type__count.html", null ],
-    [ "detail::type_count< T, typename std::enable_if< is_complex< T >::value >::type >", "structdetail_1_1type__count_3_01T_00_01typename_01std_1_1enable__if_3_01is__complex_3_01T_01_4_1_1value_01_4_1_1type_01_4.html", null ],
-    [ "detail::type_count< T, typename std::enable_if< is_mutable_container< T >::value >::type >", "structdetail_1_1type__count_3_01T_00_01typename_01std_1_1enable__if_3_01is__mutable__container_32743c5a586dfe46e5bf0c7c2d6a42472.html", null ],
-    [ "detail::type_count< T, typename std::enable_if< is_wrapper< T >::value &&!is_complex< T >::value &&!is_tuple_like< T >::value &&!is_mutable_container< T >::value >::type >", "structdetail_1_1type__count_3_01T_00_01typename_01std_1_1enable__if_3_01is__wrapper_3_01T_01_4_15376f17be8887997560745d694dc9555.html", null ],
-    [ "detail::type_count< T, typename std::enable_if<!is_wrapper< T >::value &&!is_tuple_like< T >::value &&!is_complex< T >::value &&!std::is_void< T >::value >::type >", "structdetail_1_1type__count_3_01T_00_01typename_01std_1_1enable__if_3_9is__wrapper_3_01T_01_4_1_e1a9e3e949940e1dd113e756abea301f.html", null ],
-    [ "detail::type_count_base< T, Enable >", "structdetail_1_1type__count__base.html", null ],
-    [ "detail::type_count_base< T, typename std::enable_if< is_mutable_container< T >::value >::type >", "structdetail_1_1type__count__base_3_01T_00_01typename_01std_1_1enable__if_3_01is__mutable__conta3aeab2d0875ed473372ecc06d988d44f.html", null ],
-    [ "detail::type_count_base< T, typename std::enable_if< is_tuple_like< T >::value &&!is_mutable_container< T >::value >::type >", "structdetail_1_1type__count__base_3_01T_00_01typename_01std_1_1enable__if_3_01is__tuple__like_3_fb2355465138d1f65904a3ed34363060.html", null ],
-    [ "detail::type_count_base< T, typename std::enable_if<!is_tuple_like< T >::value &&!is_mutable_container< T >::value &&!std::is_void< T >::value >::type >", "structdetail_1_1type__count__base_3_01T_00_01typename_01std_1_1enable__if_3_9is__tuple__like_3_0f73d166e02b87e6eeaa76e87fdb70337.html", null ],
     [ "iot::mqtt::types::TypeBase< ValueTypeT >", "classiot_1_1mqtt_1_1types_1_1TypeBase.html", null ],
     [ "iot::mqtt_fast::types::TypeBase", "classiot_1_1mqtt__fast_1_1types_1_1TypeBase.html", [
       [ "iot::mqtt_fast::types::Binary", "classiot_1_1mqtt__fast_1_1types_1_1Binary.html", null ],
@@ -1048,32 +940,6 @@ var hierarchy =
       [ "iot::mqtt::types::UInt8", "classiot_1_1mqtt_1_1types_1_1UInt8.html", null ]
     ] ],
     [ "utils::Uuid", "classutils_1_1Uuid.html", null ],
-    [ "Validator", "classValidator.html", [
-      [ "AsNumberWithUnit", "classAsNumberWithUnit.html", [
-        [ "AsSizeValue", "classAsSizeValue.html", null ]
-      ] ],
-      [ "Bound", "classBound.html", null ],
-      [ "CheckedTransformer", "classCheckedTransformer.html", null ],
-      [ "CustomValidator", "classCustomValidator.html", null ],
-      [ "FileOnDefaultPath", "classFileOnDefaultPath.html", null ],
-      [ "IsMember", "classIsMember.html", null ],
-      [ "Range", "classRange.html", null ],
-      [ "Transformer", "classTransformer.html", null ],
-      [ "TypeValidator< DesiredType >", "classTypeValidator.html", null ],
-      [ "detail::ExistingDirectoryValidator", "classdetail_1_1ExistingDirectoryValidator.html", null ],
-      [ "detail::ExistingFileValidator", "classdetail_1_1ExistingFileValidator.html", null ],
-      [ "detail::ExistingPathValidator", "classdetail_1_1ExistingPathValidator.html", null ],
-      [ "detail::IPV4Validator", "classdetail_1_1IPV4Validator.html", null ],
-      [ "detail::NonexistentPathValidator", "classdetail_1_1NonexistentPathValidator.html", null ]
-    ] ],
-    [ "Vector", "classVector.html", [
-      [ "InVector", "classInVector.html", null ],
-      [ "InVector", "classInVector.html", null ],
-      [ "OutVector", "classOutVector.html", null ],
-      [ "OutVector", "classOutVector.html", null ]
-    ] ],
-    [ "detail::wrapped_type< T, def, Enable >", "structdetail_1_1wrapped__type.html", null ],
-    [ "detail::wrapped_type< T, def, typename std::enable_if< is_wrapper< T >::value >::type >", "structdetail_1_1wrapped__type_3_01T_00_01def_00_01typename_01std_1_1enable__if_3_01is__wrapper_386fe92118935402969e7eb52a19c29c3.html", null ],
     [ "WSSubProtocolRoleT", null, [
       [ "iot::mqtt::SubProtocol< WSSubProtocolRoleT >", "classiot_1_1mqtt_1_1SubProtocol.html", null ]
     ] ]

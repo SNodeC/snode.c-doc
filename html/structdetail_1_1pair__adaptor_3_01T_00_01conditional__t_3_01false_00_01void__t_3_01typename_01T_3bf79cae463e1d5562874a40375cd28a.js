@@ -1,8 +1,0 @@
-var structdetail_1_1pair__adaptor_3_01T_00_01conditional__t_3_01false_00_01void__t_3_01typename_01T_3bf79cae463e1d5562874a40375cd28a =
-[
-    [ "first_type", "structdetail_1_1pair__adaptor_3_01T_00_01conditional__t_3_01false_00_01void__t_3_01typename_01T_3bf79cae463e1d5562874a40375cd28a.html#ab77e2172c3d4cfa5c0f4a429d00a9e8a", null ],
-    [ "second_type", "structdetail_1_1pair__adaptor_3_01T_00_01conditional__t_3_01false_00_01void__t_3_01typename_01T_3bf79cae463e1d5562874a40375cd28a.html#acb80cd29e21787852b0d1f35ddb2b309", null ],
-    [ "value_type", "structdetail_1_1pair__adaptor_3_01T_00_01conditional__t_3_01false_00_01void__t_3_01typename_01T_3bf79cae463e1d5562874a40375cd28a.html#ad89e9dd0e6852c78ab896df90606fd71", null ],
-    [ "first", "structdetail_1_1pair__adaptor_3_01T_00_01conditional__t_3_01false_00_01void__t_3_01typename_01T_3bf79cae463e1d5562874a40375cd28a.html#aee61db7b52bd88dc6664ba48d93df61e", null ],
-    [ "second", "structdetail_1_1pair__adaptor_3_01T_00_01conditional__t_3_01false_00_01void__t_3_01typename_01T_3bf79cae463e1d5562874a40375cd28a.html#ab84aa7a5dbab2b234ef6933985c6e352", null ]
-];

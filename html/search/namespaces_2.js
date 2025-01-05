@@ -1,23 +1,8 @@
 var searchData=
 [
-  ['cli_0',['CLI',['../namespaceCLI.html',1,'']]],
-  ['cli_3a_3adetail_1',['detail',['../namespaceCLI_1_1detail.html',1,'CLI']]],
-  ['cli_3a_3aenums_2',['enums',['../namespaceCLI_1_1enums.html',1,'CLI']]],
-  ['color_3',['Color',['../namespaceColor.html',1,'']]],
-  ['core_4',['core',['../namespacecore.html',1,'']]],
-  ['core_3a_3aeventreceiver_5',['eventreceiver',['../namespacecore_1_1eventreceiver.html',1,'core']]],
-  ['core_3a_3afile_6',['file',['../namespacecore_1_1file.html',1,'core']]],
-  ['core_3a_3amultiplexer_7',['multiplexer',['../namespacecore_1_1multiplexer.html',1,'core']]],
-  ['core_3a_3amultiplexer_3a_3aepoll_8',['epoll',['../namespacecore_1_1multiplexer_1_1epoll.html',1,'core::multiplexer']]],
-  ['core_3a_3amultiplexer_3a_3apoll_9',['poll',['../namespacecore_1_1multiplexer_1_1poll.html',1,'core::multiplexer']]],
-  ['core_3a_3amultiplexer_3a_3aselect_10',['select',['../namespacecore_1_1multiplexer_1_1select.html',1,'core::multiplexer']]],
-  ['core_3a_3apipe_11',['pipe',['../namespacecore_1_1pipe.html',1,'core']]],
-  ['core_3a_3asocket_12',['socket',['../namespacecore_1_1socket.html',1,'core']]],
-  ['core_3a_3asocket_3a_3astream_13',['stream',['../namespacecore_1_1socket_1_1stream.html',1,'core::socket']]],
-  ['core_3a_3asocket_3a_3astream_3a_3alegacy_14',['legacy',['../namespacecore_1_1socket_1_1stream_1_1legacy.html',1,'core::socket::stream']]],
-  ['core_3a_3asocket_3a_3astream_3a_3astream_15',['stream',['../namespacecore_1_1socket_1_1stream_1_1stream.html',1,'core::socket::stream']]],
-  ['core_3a_3asocket_3a_3astream_3a_3atls_16',['tls',['../namespacecore_1_1socket_1_1stream_1_1tls.html',1,'core::socket::stream']]],
-  ['core_3a_3assl_17',['ssl',['../namespacecore_1_1ssl.html',1,'core']]],
-  ['core_3a_3asystem_18',['system',['../namespacecore_1_1system.html',1,'core']]],
-  ['core_3a_3atimer_19',['timer',['../namespacecore_1_1timer.html',1,'core']]]
+  ['database_0',['database',['../namespacedatabase.html',1,'']]],
+  ['database_3a_3amariadb_1',['mariadb',['../namespacedatabase_1_1mariadb.html',1,'database']]],
+  ['database_3a_3amariadb_3a_3acommands_2',['commands',['../namespacedatabase_1_1mariadb_1_1commands.html',1,'database::mariadb']]],
+  ['database_3a_3amariadb_3a_3acommands_3a_3aasync_3',['async',['../namespacedatabase_1_1mariadb_1_1commands_1_1async.html',1,'database::mariadb::commands']]],
+  ['database_3a_3amariadb_3a_3acommands_3a_3async_4',['sync',['../namespacedatabase_1_1mariadb_1_1commands_1_1sync.html',1,'database::mariadb::commands']]]
 ];

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['legacy_0',['legacy',['../namespacelegacy.html',1,'']]],
-  ['logger_1',['logger',['../namespacelogger.html',1,'']]]
+  ['utils_0',['utils',['../namespaceutils.html',1,'']]],
+  ['utils_3a_3asystem_1',['system',['../namespaceutils_1_1system.html',1,'utils']]]
 ];

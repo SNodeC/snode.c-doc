@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['parserstate_0',['ParserState',['../classweb_1_1http_1_1Parser.html#a94ab44c0d65451be6ba3e6e389a8b7d5',1,'web::http::Parser::ParserState'],['../classweb_1_1websocket_1_1Receiver.html#a3cf4e2588c5333541e445cd7aef1eb9b',1,'web::websocket::Receiver::ParserState']]],
-  ['path_5ftype_1',['path_type',['../namespacedetail.html#ae5100bdc7b136e623dd6ff2fa45f9560',1,'detail']]]
+  ['shut_0',['SHUT',['../classnet_1_1phy_1_1stream_1_1PhysicalSocket.html#abc1cca417fccc52ea36dbfe55bad77fd',1,'net::phy::stream::PhysicalSocket']]],
+  ['state_1',['State',['../namespacecore.html#a6613a3d81c1d25590b1cd31540d08815',1,'core']]]
 ];

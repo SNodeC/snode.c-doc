@@ -1,11 +1,6 @@
 var searchData=
 [
-  ['next_0',['NEXT',['../classexpress_1_1Controller.html#acbbd6f9ce9c84b3a72a50f0aedaa6c48adc4bb866930db1ffbe036d7c5b8f0323',1,'express::Controller::NEXT'],['../classTowerCalculator.html#a7318f1bb8e79ba28e7a33bac4ba8a490a47559fb833ff58321570e5e877b467f6',1,'TowerCalculator::NEXT']]],
-  ['next_5froute_1',['NEXT_ROUTE',['../classexpress_1_1Controller.html#acbbd6f9ce9c84b3a72a50f0aedaa6c48a80a7d61efbcd0e82eb23e4e9c0de575c',1,'express::Controller']]],
-  ['next_5frouter_2',['NEXT_ROUTER',['../classexpress_1_1Controller.html#acbbd6f9ce9c84b3a72a50f0aedaa6c48a96db53e6bdc559125ed34f56beb7ae78',1,'express::Controller']]],
-  ['nonblock_3',['NONBLOCK',['../classnet_1_1phy_1_1PhysicalSocket.html#ababfe8607820fbd9c4674b538303325aa620dc36fc3ae8915e4a2a54abada4595',1,'net::phy::PhysicalSocket']]],
-  ['none_4',['NONE',['../classexpress_1_1Controller.html#acbbd6f9ce9c84b3a72a50f0aedaa6c48a88fca32b4b386f5fe4ce6294292f05f0',1,'express::Controller::NONE'],['../classnet_1_1phy_1_1PhysicalSocket.html#ababfe8607820fbd9c4674b538303325aa3e891d1037e082b75c7bd6945f61d3f3',1,'net::phy::PhysicalSocket::NONE'],['../classweb_1_1http_1_1client_1_1SocketContext.html#a8b77acfd23e58ee4c2f92c6706a2a19daa8f0af93110af44dcc3a450e1a660b2d',1,'web::http::client::SocketContext::NONE'],['../namespacedetail.html#a030bd2eaf73be4d81664d2ca703f7001ab50339a10e1de285ac99d4c3990b8693',1,'detail::NONE']]],
-  ['nonexistent_5',['nonexistent',['../namespacedetail.html#ae5100bdc7b136e623dd6ff2fa45f9560a357f5c155c9da6842b84ad1066996928',1,'detail']]],
-  ['noobserver_6',['NOOBSERVER',['../namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a4e7d1789953412597b5124514c61cb9b',1,'core']]],
-  ['normal_7',['Normal',['../CLI11_8hpp.html#afb034f145c2047fe7abc4431970359b1a960b44c579bc2f6818d2daaf9e4c16f0',1,'CLI11.hpp']]]
+  ['payload_0',['PAYLOAD',['../classweb_1_1websocket_1_1Receiver.html#a3cf4e2588c5333541e445cd7aef1eb9baca8fef80e43c8db749b7c9406d535b1a',1,'web::websocket::Receiver']]],
+  ['ping_1',['PING',['../classweb_1_1websocket_1_1SubProtocolContext.html#abf18d0b53484f49844a1315b9730e511a3622f7d18850c8e61a6fea6f379743d5',1,'web::websocket::SubProtocolContext']]],
+  ['pong_2',['PONG',['../classweb_1_1websocket_1_1SubProtocolContext.html#abf18d0b53484f49844a1315b9730e511a0452e3c015dc99b8e8a3bcfcf2eb3e5f',1,'web::websocket::SubProtocolContext']]]
 ];

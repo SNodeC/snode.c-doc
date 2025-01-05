@@ -374,7 +374,7 @@ Here is the call graph for this function:</div>
 <div class="line"><span class="lineno">   63</span>                    <span class="keywordflow">if</span> (this-&gt;<a class="code hl_function" href="classcore_1_1pipe_1_1Source.html#a400ff14fdb42b001f6cd9ad6de306ea3">send</a>(puffer.data(), <span class="keyword">static_cast&lt;</span>std::size_t<span class="keyword">&gt;</span>(ret)) &lt; 0) {</div>
 <div class="line"><span class="lineno">   64</span>                        <a class="code hl_variable" href="#a5860e2119f1b02f4ab3f5189f17c7e57">running</a> = <span class="keyword">false</span>;</div>
 <div class="line"><span class="lineno">   65</span> </div>
-<div class="line"><span class="lineno">   66</span>                        this-&gt;<a class="code hl_enumvalue" href="CLI11_8hpp.html#a866d2d267dd96c158e9ddbe52f0e531aacb5e100e5a9a3e7f6d1fd97512215282">error</a>(errno);</div>
+<div class="line"><span class="lineno">   66</span>                        this-&gt;<a class="code hl_function" href="classcore_1_1pipe_1_1Source.html#a179b74c2582275beb312423905f9cbd4">error</a>(errno);</div>
 <div class="line"><span class="lineno">   67</span>                    }</div>
 <div class="line"><span class="lineno">   68</span>                } <span class="keywordflow">else</span> {</div>
 <div class="line"><span class="lineno">   69</span>                    <a class="code hl_variable" href="#a5860e2119f1b02f4ab3f5189f17c7e57">running</a> = <span class="keyword">false</span>;</div>
@@ -382,7 +382,7 @@ Here is the call graph for this function:</div>
 <div class="line"><span class="lineno">   71</span>                    <span class="keywordflow">if</span> (ret == 0) {</div>
 <div class="line"><span class="lineno">   72</span>                        this-&gt;<a class="code hl_function" href="classcore_1_1pipe_1_1Source.html#a7cdfe3494b76d59780750d8af228f1d1">eof</a>();</div>
 <div class="line"><span class="lineno">   73</span>                    } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   74</span>                        this-&gt;<a class="code hl_enumvalue" href="CLI11_8hpp.html#a866d2d267dd96c158e9ddbe52f0e531aacb5e100e5a9a3e7f6d1fd97512215282">error</a>(errno);</div>
+<div class="line"><span class="lineno">   74</span>                        this-&gt;<a class="code hl_function" href="classcore_1_1pipe_1_1Source.html#a179b74c2582275beb312423905f9cbd4">error</a>(errno);</div>
 <div class="line"><span class="lineno">   75</span>                    }</div>
 <div class="line"><span class="lineno">   76</span>                }</div>
 <div class="line"><span class="lineno">   77</span> </div>
@@ -392,10 +392,10 @@ Here is the call graph for this function:</div>
 <div class="line"><span class="lineno">   81</span>            <span class="keyword">delete</span> <span class="keyword">this</span>;</div>
 <div class="line"><span class="lineno">   82</span>        }</div>
 <div class="line"><span class="lineno">   83</span>    }</div>
-<div class="ttc" id="aCLI11_8hpp_html_a866d2d267dd96c158e9ddbe52f0e531aacb5e100e5a9a3e7f6d1fd97512215282"><div class="ttname"><a href="CLI11_8hpp.html#a866d2d267dd96c158e9ddbe52f0e531aacb5e100e5a9a3e7f6d1fd97512215282">config_extras_mode::error</a></div><div class="ttdeci">@ error</div></div>
 <div class="ttc" id="aclasscore_1_1EventReceiver_html_ad353e97a9089b2769e52f8825e4878b1"><div class="ttname"><a href="classcore_1_1EventReceiver.html#ad353e97a9089b2769e52f8825e4878b1">core::EventReceiver::span</a></div><div class="ttdeci">void span()</div><div class="ttdef"><b>Definition</b> <a href="EventReceiver_8cpp_source.html#l00057">EventReceiver.cpp:57</a></div></div>
 <div class="ttc" id="aclasscore_1_1file_1_1FileReader_html_a5860e2119f1b02f4ab3f5189f17c7e57"><div class="ttname"><a href="#a5860e2119f1b02f4ab3f5189f17c7e57">core::file::FileReader::running</a></div><div class="ttdeci">bool running</div><div class="ttdef"><b>Definition</b> <a href="FileReader_8h_source.html#l00062">FileReader.h:62</a></div></div>
 <div class="ttc" id="aclasscore_1_1file_1_1FileReader_html_aeb217c305e6ce9f7d61e50d14039cc8e"><div class="ttname"><a href="#aeb217c305e6ce9f7d61e50d14039cc8e">core::file::FileReader::suspended</a></div><div class="ttdeci">bool suspended</div><div class="ttdef"><b>Definition</b> <a href="FileReader_8h_source.html#l00058">FileReader.h:58</a></div></div>
+<div class="ttc" id="aclasscore_1_1pipe_1_1Source_html_a179b74c2582275beb312423905f9cbd4"><div class="ttname"><a href="classcore_1_1pipe_1_1Source.html#a179b74c2582275beb312423905f9cbd4">core::pipe::Source::error</a></div><div class="ttdeci">void error(int errnum)</div><div class="ttdef"><b>Definition</b> <a href="Source_8cpp_source.html#l00087">Source.cpp:87</a></div></div>
 <div class="ttc" id="aclasscore_1_1pipe_1_1Source_html_a400ff14fdb42b001f6cd9ad6de306ea3"><div class="ttname"><a href="classcore_1_1pipe_1_1Source.html#a400ff14fdb42b001f6cd9ad6de306ea3">core::pipe::Source::send</a></div><div class="ttdeci">ssize_t send(const char *chunk, std::size_t chunkLen)</div><div class="ttdef"><b>Definition</b> <a href="Source_8cpp_source.html#l00068">Source.cpp:68</a></div></div>
 <div class="ttc" id="aclasscore_1_1pipe_1_1Source_html_a7cdfe3494b76d59780750d8af228f1d1"><div class="ttname"><a href="classcore_1_1pipe_1_1Source.html#a7cdfe3494b76d59780750d8af228f1d1">core::pipe::Source::eof</a></div><div class="ttdeci">void eof()</div><div class="ttdef"><b>Definition</b> <a href="Source_8cpp_source.html#l00081">Source.cpp:81</a></div></div>
 <div class="ttc" id="anamespacecore_1_1system_html_a38a2ef544196b684eb5850c42e8ee770"><div class="ttname"><a href="namespacecore_1_1system.html#a38a2ef544196b684eb5850c42e8ee770">core::system::read</a></div><div class="ttdeci">ssize_t read(int fd, void *buf, std::size_t count)</div><div class="ttdef"><b>Definition</b> <a href="unistd_8cpp_source.html#l00035">unistd.cpp:35</a></div></div>
@@ -729,7 +729,7 @@ Here is the call graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacecore.html">core</a></li><li class="navelem"><a class="el" href="namespacecore_1_1file.html">file</a></li><li class="navelem"><a class="el" href="classcore_1_1file_1_1FileReader.html">FileReader</a></li>
-    <li class="footer">Generated on Sun Jan 5 2025 00:54:59 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generated on Sun Jan 5 2025 01:16:53 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>

@@ -1,4 +1,0 @@
-var structdetail_1_1type__count_3_01T_00_01typename_01std_1_1enable__if_3_9is__wrapper_3_01T_01_4_1_e1a9e3e949940e1dd113e756abea301f =
-[
-    [ "value", "structdetail_1_1type__count_3_01T_00_01typename_01std_1_1enable__if_3_9is__wrapper_3_01T_01_4_1_e1a9e3e949940e1dd113e756abea301f.html#a22ff515c18f3a7d56faf27bf17a141a5", null ]
-];
