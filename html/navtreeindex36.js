@@ -1,7 +1,5 @@
 var NAVTREEINDEX36 =
 {
-"classweb_1_1websocket_1_1SubProtocolFactory.html#a257e4fb4f4543b774079412a821caad1":[1,0,11,1,6,5],
-"classweb_1_1websocket_1_1SubProtocolFactory.html#a257e4fb4f4543b774079412a821caad1":[3,0,8,1,6,5],
 "classweb_1_1websocket_1_1SubProtocolFactory.html#a3bef6947eb884217ead244d26ed64484":[1,0,11,1,6,8],
 "classweb_1_1websocket_1_1SubProtocolFactory.html#a3bef6947eb884217ead244d26ed64484":[3,0,8,1,6,8],
 "classweb_1_1websocket_1_1SubProtocolFactory.html#a45d3f3242187a7e0dc934f3c0f1a6275":[1,0,11,1,6,9],
@@ -249,5 +247,7 @@ var NAVTREEINDEX36 =
 "classweb_1_1websocket_1_1server_1_1SubProtocol.html#aee801141f906aec646de34c82da8c58c":[1,0,11,1,1,3,2],
 "classweb_1_1websocket_1_1server_1_1SubProtocol.html#aee801141f906aec646de34c82da8c58c":[3,0,8,1,1,3,2],
 "classweb_1_1websocket_1_1server_1_1SubProtocol.html#af4c748ceaadda9d02219424057840cc1":[1,0,11,1,1,3,5],
-"classweb_1_1websocket_1_1server_1_1SubProtocol.html#af4c748ceaadda9d02219424057840cc1":[3,0,8,1,1,3,5]
+"classweb_1_1websocket_1_1server_1_1SubProtocol.html#af4c748ceaadda9d02219424057840cc1":[3,0,8,1,1,3,5],
+"classweb_1_1websocket_1_1server_1_1SubProtocolFactorySelector.html":[1,0,11,1,1,4],
+"classweb_1_1websocket_1_1server_1_1SubProtocolFactorySelector.html":[3,0,8,1,1,4]
 };

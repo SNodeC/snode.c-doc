@@ -1,7 +1,5 @@
 var NAVTREEINDEX39 =
 {
-"index.html#anatomy-of-the-command-line-interface":[0,8,0,1,2],
-"index.html#application-configuration":[0,8,0,1,0],
 "index.html#application-layer":[0,6,3],
 "index.html#application-leyer-protocols-apis":[0,10],
 "index.html#attaching-the-callbacks-during-instance-creation":[0,7,0,3,3],
@@ -249,5 +247,7 @@ var NAVTREEINDEX39 =
 "legacy_2rc_2Client_8h.html":[4,0,7,0,2,2,0],
 "legacy_2rc_2Client_8h.html#a0f77fc1b892c8222ee57f117e2e3ceb6":[4,0,7,0,2,2,0,0],
 "legacy_2rc_2Client_8h.html#a922512981b790d44c6ec6630311a3749":[4,0,7,0,2,2,0,1],
-"legacy_2rc_2Client_8h_source.html":[4,0,7,0,2,2,0]
+"legacy_2rc_2Client_8h_source.html":[4,0,7,0,2,2,0],
+"legacy_2rc_2Server_8h.html":[4,0,7,0,2,2,1],
+"legacy_2rc_2Server_8h.html#adc2c64611c3aa1e438da1433bc659bd7":[4,0,7,0,2,2,1,1]
 };

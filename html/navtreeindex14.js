@@ -1,9 +1,5 @@
 var NAVTREEINDEX14 =
 {
-"classexpress_1_1Router.html#a632771b6bcaf5b34e6be4d5c017073ea":[1,0,5,12,15],
-"classexpress_1_1Router.html#a632771b6bcaf5b34e6be4d5c017073ea":[3,0,3,10,15],
-"classexpress_1_1Router.html#a6358e2a36bf83c65a849a144f14bf1f2":[1,0,5,12,3],
-"classexpress_1_1Router.html#a6358e2a36bf83c65a849a144f14bf1f2":[3,0,3,10,3],
 "classexpress_1_1Router.html#a690711217660b0e744f7f1cc9c8a5285":[1,0,5,12,73],
 "classexpress_1_1Router.html#a690711217660b0e744f7f1cc9c8a5285":[3,0,3,10,73],
 "classexpress_1_1Router.html#a6bba94c86c93531c57238c2e762c69a2":[1,0,5,12,43],
@@ -249,5 +245,9 @@ var NAVTREEINDEX14 =
 "classexpress_1_1middleware_1_1StaticMiddleware.html#acfe2eed37125bf7321cc39c1e867a0c2":[1,0,5,2,2,4],
 "classexpress_1_1middleware_1_1StaticMiddleware.html#acfe2eed37125bf7321cc39c1e867a0c2":[3,0,3,1,2,4],
 "classexpress_1_1middleware_1_1StaticMiddleware.html#af712793a6f6d600b813fc4a6d3fbe41d":[1,0,5,2,2,1],
-"classexpress_1_1middleware_1_1StaticMiddleware.html#af712793a6f6d600b813fc4a6d3fbe41d":[3,0,3,1,2,1]
+"classexpress_1_1middleware_1_1StaticMiddleware.html#af712793a6f6d600b813fc4a6d3fbe41d":[3,0,3,1,2,1],
+"classexpress_1_1middleware_1_1StaticMiddleware.html#afc17d03c707371cca0f8ec43480a781b":[1,0,5,2,2,2],
+"classexpress_1_1middleware_1_1StaticMiddleware.html#afc17d03c707371cca0f8ec43480a781b":[3,0,3,1,2,2],
+"classexpress_1_1middleware_1_1VHost.html":[1,0,5,2,4],
+"classexpress_1_1middleware_1_1VHost.html":[3,0,3,1,4]
 };

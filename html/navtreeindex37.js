@@ -1,7 +1,5 @@
 var NAVTREEINDEX37 =
 {
-"classweb_1_1websocket_1_1server_1_1SubProtocolFactorySelector.html":[1,0,11,1,1,4],
-"classweb_1_1websocket_1_1server_1_1SubProtocolFactorySelector.html":[3,0,8,1,1,4],
 "classweb_1_1websocket_1_1server_1_1SubProtocolFactorySelector.html#a0577a259e81162fd19ae269e79d9a206":[1,0,11,1,1,4,0],
 "classweb_1_1websocket_1_1server_1_1SubProtocolFactorySelector.html#a0577a259e81162fd19ae269e79d9a206":[3,0,8,1,1,4,0],
 "classweb_1_1websocket_1_1server_1_1SubProtocolFactorySelector.html#a1932fc27924803baeb97862e625df4b6":[1,0,11,1,1,4,6],
@@ -249,5 +247,7 @@ var NAVTREEINDEX37 =
 "functions_func.html":[3,3,1],
 "functions_func.html":[3,3,1,0],
 "functions_func_a.html":[3,3,1,1],
-"functions_func_b.html":[3,3,1,2]
+"functions_func_b.html":[3,3,1,2],
+"functions_func_c.html":[3,3,1,3],
+"functions_func_d.html":[3,3,1,4]
 };

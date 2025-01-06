@@ -342,63 +342,62 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventLoop_8cpp_source.html#l00226">226</a> of file <a class="el" href="EventLoop_8cpp_source.html">EventLoop.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  226</span>                         {</div>
-<div class="line"><span class="lineno">  227</span>        std::string <a class="code hl_function" href="namespaceutils_1_1system.html#ae9627474e3956cfc307370792ec5bcee">signal</a> = <span class="stringliteral">&quot;SIG&quot;</span> + <a class="code hl_function" href="namespaceutils_1_1system.html#aea0a8f4d2d6d6d0fa7fcc401c5f08f1c">utils::system::sigabbrev_np</a>(<a class="code hl_variable" href="#abbc45d23031f92f212cf223c2561fa81">stopsig</a>);</div>
-<div class="line"><span class="lineno">  228</span> </div>
-<div class="line"><span class="lineno">  229</span>        <span class="keywordflow">if</span> (signal == <span class="stringliteral">&quot;SIGUNKNOWN&quot;</span>) {</div>
-<div class="line"><span class="lineno">  230</span>            <a class="code hl_function" href="namespaceutils_1_1system.html#ae9627474e3956cfc307370792ec5bcee">signal</a> = std::to_string(<a class="code hl_variable" href="#abbc45d23031f92f212cf223c2561fa81">stopsig</a>);</div>
-<div class="line"><span class="lineno">  231</span>        }</div>
-<div class="line"><span class="lineno">  232</span> </div>
-<div class="line"><span class="lineno">  233</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#abbc45d23031f92f212cf223c2561fa81">stopsig</a> != 0) {</div>
-<div class="line"><span class="lineno">  234</span>            LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <span class="stringliteral">&quot;Core: Sending signal &quot;</span> &lt;&lt; <a class="code hl_function" href="namespaceutils_1_1system.html#ae9627474e3956cfc307370792ec5bcee">signal</a> &lt;&lt; <span class="stringliteral">&quot; to all DescriptorEventReceivers&quot;</span>;</div>
-<div class="line"><span class="lineno">  235</span> </div>
-<div class="line"><span class="lineno">  236</span>            <a class="code hl_function" href="#a413d227511f68c2c9939719bd2590794">EventLoop::instance</a>().<a class="code hl_variable" href="#a452aae73011bfe648dc5ba6222c9c449">eventMultiplexer</a>.<a class="code hl_function" href="classcore_1_1EventMultiplexer.html#a606a67a2c22c6d1f0c7eb0d722ee2069">signal</a>(<a class="code hl_variable" href="#abbc45d23031f92f212cf223c2561fa81">stopsig</a>);</div>
-<div class="line"><span class="lineno">  237</span>        }</div>
-<div class="line"><span class="lineno">  238</span> </div>
-<div class="line"><span class="lineno">  239</span>        <a class="code hl_variable" href="#a57083902353848e5235d48539e31c7cf">eventLoopState</a> = <a class="code hl_enumvalue" href="namespacecore.html#a6613a3d81c1d25590b1cd31540d08815af6cdb3c6710b50ec65ee07f740847e10">State::STOPPING</a>;</div>
-<div class="line"><span class="lineno">  240</span> </div>
-<div class="line"><span class="lineno">  241</span>        <a class="code hl_class" href="classutils_1_1Timeval.html">utils::Timeval</a> timeout = 2;</div>
-<div class="line"><span class="lineno">  242</span> </div>
-<div class="line"><span class="lineno">  243</span>        <a class="code hl_enumeration" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749">core::TickStatus</a> tickStatus = <a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749ad0749aaba8b833466dfcbb0428e4f89c">TickStatus::SUCCESS</a>;</div>
-<div class="line"><span class="lineno">  244</span>        <span class="keywordflow">do</span> {</div>
-<div class="line"><span class="lineno">  245</span>            <span class="keyword">auto</span> t1 = std::chrono::system_clock::now();</div>
-<div class="line"><span class="lineno">  246</span>            <span class="keyword">const</span> <a class="code hl_class" href="classutils_1_1Timeval.html">utils::Timeval</a> timeoutOp = timeout;</div>
-<div class="line"><span class="lineno">  247</span> </div>
-<div class="line"><span class="lineno">  248</span>            tickStatus = <a class="code hl_function" href="#a413d227511f68c2c9939719bd2590794">EventLoop::instance</a>().<a class="code hl_function" href="#a3ce638b4895c765df8e60a804be90339">_tick</a>(timeoutOp);</div>
-<div class="line"><span class="lineno">  249</span> </div>
-<div class="line"><span class="lineno">  250</span>            <span class="keyword">auto</span> t2 = std::chrono::system_clock::now();</div>
-<div class="line"><span class="lineno">  251</span>            <span class="keyword">const</span> std::chrono::duration&lt;double&gt; seconds = t2 - t1;</div>
-<div class="line"><span class="lineno">  252</span> </div>
-<div class="line"><span class="lineno">  253</span>            timeout -= seconds.count();</div>
-<div class="line"><span class="lineno">  254</span>        } <span class="keywordflow">while</span> (timeout &gt; 0 &amp;&amp; (tickStatus == <a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749ad0749aaba8b833466dfcbb0428e4f89c">TickStatus::SUCCESS</a> || tickStatus == <a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a658f2cadfdf09b6046246e9314f7cd43">TickStatus::INTERRUPTED</a>));</div>
-<div class="line"><span class="lineno">  255</span> </div>
-<div class="line"><span class="lineno">  256</span>        LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <span class="stringliteral">&quot;Core: Terminate all stalled DescriptorEventReceivers&quot;</span>;</div>
-<div class="line"><span class="lineno">  257</span> </div>
-<div class="line"><span class="lineno">  258</span>        <a class="code hl_function" href="#a413d227511f68c2c9939719bd2590794">EventLoop::instance</a>().<a class="code hl_variable" href="#a452aae73011bfe648dc5ba6222c9c449">eventMultiplexer</a>.<a class="code hl_function" href="classcore_1_1EventMultiplexer.html#ae8368220efce9e102a2ddddcea18bd28">terminate</a>();</div>
-<div class="line"><span class="lineno">  259</span> </div>
-<div class="line"><span class="lineno">  260</span>        LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <span class="stringliteral">&quot;Core: Close all libraries opened during runtime&quot;</span>;</div>
-<div class="line"><span class="lineno">  261</span> </div>
-<div class="line"><span class="lineno">  262</span>        <a class="code hl_function" href="classcore_1_1DynamicLoader.html#acff0a66e885a7bc718171eede89a1c9a">DynamicLoader::execDlCloseAll</a>();</div>
-<div class="line"><span class="lineno">  263</span> </div>
-<div class="line"><span class="lineno">  264</span>        LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <span class="stringliteral">&quot;Core:: Clean up the filesystem&quot;</span>;</div>
-<div class="line"><span class="lineno">  265</span> </div>
-<div class="line"><span class="lineno">  266</span>        <a class="code hl_function" href="classutils_1_1Config.html#ad88e08009a309e143a17fd63b477cdbe">utils::Config::terminate</a>();</div>
-<div class="line"><span class="lineno">  267</span> </div>
-<div class="line"><span class="lineno">  268</span>        LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <span class="stringliteral">&quot;Core:: All resources released&quot;</span>;</div>
-<div class="line"><span class="lineno">  269</span> </div>
-<div class="line"><span class="lineno">  270</span>        LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <span class="stringliteral">&quot;SNode.C: Ended ... BYE&quot;</span>;</div>
-<div class="line"><span class="lineno">  271</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="EventLoop_8cpp_source.html#l00227">227</a> of file <a class="el" href="EventLoop_8cpp_source.html">EventLoop.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  227</span>                         {</div>
+<div class="line"><span class="lineno">  228</span>        std::string <a class="code hl_function" href="namespaceutils_1_1system.html#ae9627474e3956cfc307370792ec5bcee">signal</a> = <span class="stringliteral">&quot;SIG&quot;</span> + <a class="code hl_function" href="namespaceutils_1_1system.html#aea0a8f4d2d6d6d0fa7fcc401c5f08f1c">utils::system::sigabbrev_np</a>(<a class="code hl_variable" href="#abbc45d23031f92f212cf223c2561fa81">stopsig</a>);</div>
+<div class="line"><span class="lineno">  229</span> </div>
+<div class="line"><span class="lineno">  230</span>        <span class="keywordflow">if</span> (signal == <span class="stringliteral">&quot;SIGUNKNOWN&quot;</span>) {</div>
+<div class="line"><span class="lineno">  231</span>            <a class="code hl_function" href="namespaceutils_1_1system.html#ae9627474e3956cfc307370792ec5bcee">signal</a> = std::to_string(<a class="code hl_variable" href="#abbc45d23031f92f212cf223c2561fa81">stopsig</a>);</div>
+<div class="line"><span class="lineno">  232</span>        }</div>
+<div class="line"><span class="lineno">  233</span> </div>
+<div class="line"><span class="lineno">  234</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#abbc45d23031f92f212cf223c2561fa81">stopsig</a> != 0) {</div>
+<div class="line"><span class="lineno">  235</span>            LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <span class="stringliteral">&quot;Core: Sending signal &quot;</span> &lt;&lt; <a class="code hl_function" href="namespaceutils_1_1system.html#ae9627474e3956cfc307370792ec5bcee">signal</a> &lt;&lt; <span class="stringliteral">&quot; to all DescriptorEventReceivers&quot;</span>;</div>
+<div class="line"><span class="lineno">  236</span> </div>
+<div class="line"><span class="lineno">  237</span>            <a class="code hl_function" href="#a413d227511f68c2c9939719bd2590794">EventLoop::instance</a>().<a class="code hl_variable" href="#a452aae73011bfe648dc5ba6222c9c449">eventMultiplexer</a>.<a class="code hl_function" href="classcore_1_1EventMultiplexer.html#a606a67a2c22c6d1f0c7eb0d722ee2069">signal</a>(<a class="code hl_variable" href="#abbc45d23031f92f212cf223c2561fa81">stopsig</a>);</div>
+<div class="line"><span class="lineno">  238</span>        }</div>
+<div class="line"><span class="lineno">  239</span> </div>
+<div class="line"><span class="lineno">  240</span>        <a class="code hl_variable" href="#a57083902353848e5235d48539e31c7cf">eventLoopState</a> = <a class="code hl_enumvalue" href="namespacecore.html#a6613a3d81c1d25590b1cd31540d08815af6cdb3c6710b50ec65ee07f740847e10">State::STOPPING</a>;</div>
+<div class="line"><span class="lineno">  241</span> </div>
+<div class="line"><span class="lineno">  242</span>        <a class="code hl_class" href="classutils_1_1Timeval.html">utils::Timeval</a> timeout = 2;</div>
+<div class="line"><span class="lineno">  243</span> </div>
+<div class="line"><span class="lineno">  244</span>        <a class="code hl_enumeration" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749">core::TickStatus</a> tickStatus = <a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749ad0749aaba8b833466dfcbb0428e4f89c">TickStatus::SUCCESS</a>;</div>
+<div class="line"><span class="lineno">  245</span>        <span class="keywordflow">do</span> {</div>
+<div class="line"><span class="lineno">  246</span>            <span class="keyword">auto</span> t1 = std::chrono::system_clock::now();</div>
+<div class="line"><span class="lineno">  247</span>            <span class="keyword">const</span> <a class="code hl_class" href="classutils_1_1Timeval.html">utils::Timeval</a> timeoutOp = timeout;</div>
+<div class="line"><span class="lineno">  248</span> </div>
+<div class="line"><span class="lineno">  249</span>            tickStatus = <a class="code hl_function" href="#a413d227511f68c2c9939719bd2590794">EventLoop::instance</a>().<a class="code hl_function" href="#a3ce638b4895c765df8e60a804be90339">_tick</a>(timeoutOp);</div>
+<div class="line"><span class="lineno">  250</span> </div>
+<div class="line"><span class="lineno">  251</span>            <span class="keyword">auto</span> t2 = std::chrono::system_clock::now();</div>
+<div class="line"><span class="lineno">  252</span>            <span class="keyword">const</span> std::chrono::duration&lt;double&gt; seconds = t2 - t1;</div>
+<div class="line"><span class="lineno">  253</span> </div>
+<div class="line"><span class="lineno">  254</span>            timeout -= seconds.count();</div>
+<div class="line"><span class="lineno">  255</span>        } <span class="keywordflow">while</span> (timeout &gt; 0 &amp;&amp; (tickStatus == <a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749ad0749aaba8b833466dfcbb0428e4f89c">TickStatus::SUCCESS</a>));</div>
+<div class="line"><span class="lineno">  256</span> </div>
+<div class="line"><span class="lineno">  257</span>        LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <span class="stringliteral">&quot;Core: Terminate all stalled DescriptorEventReceivers&quot;</span>;</div>
+<div class="line"><span class="lineno">  258</span> </div>
+<div class="line"><span class="lineno">  259</span>        <a class="code hl_function" href="#a413d227511f68c2c9939719bd2590794">EventLoop::instance</a>().<a class="code hl_variable" href="#a452aae73011bfe648dc5ba6222c9c449">eventMultiplexer</a>.<a class="code hl_function" href="classcore_1_1EventMultiplexer.html#ae8368220efce9e102a2ddddcea18bd28">terminate</a>();</div>
+<div class="line"><span class="lineno">  260</span> </div>
+<div class="line"><span class="lineno">  261</span>        LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <span class="stringliteral">&quot;Core: Close all libraries opened during runtime&quot;</span>;</div>
+<div class="line"><span class="lineno">  262</span> </div>
+<div class="line"><span class="lineno">  263</span>        <a class="code hl_function" href="classcore_1_1DynamicLoader.html#acff0a66e885a7bc718171eede89a1c9a">DynamicLoader::execDlCloseAll</a>();</div>
+<div class="line"><span class="lineno">  264</span> </div>
+<div class="line"><span class="lineno">  265</span>        LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <span class="stringliteral">&quot;Core:: Clean up the filesystem&quot;</span>;</div>
+<div class="line"><span class="lineno">  266</span> </div>
+<div class="line"><span class="lineno">  267</span>        <a class="code hl_function" href="classutils_1_1Config.html#ad88e08009a309e143a17fd63b477cdbe">utils::Config::terminate</a>();</div>
+<div class="line"><span class="lineno">  268</span> </div>
+<div class="line"><span class="lineno">  269</span>        LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <span class="stringliteral">&quot;Core:: All resources released&quot;</span>;</div>
+<div class="line"><span class="lineno">  270</span> </div>
+<div class="line"><span class="lineno">  271</span>        LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <span class="stringliteral">&quot;SNode.C: Ended ... BYE&quot;</span>;</div>
+<div class="line"><span class="lineno">  272</span>    }</div>
 <div class="ttc" id="aclasscore_1_1DynamicLoader_html_acff0a66e885a7bc718171eede89a1c9a"><div class="ttname"><a href="classcore_1_1DynamicLoader.html#acff0a66e885a7bc718171eede89a1c9a">core::DynamicLoader::execDlCloseAll</a></div><div class="ttdeci">static void execDlCloseAll()</div><div class="ttdef"><b>Definition</b> <a href="DynamicLoader_8cpp_source.html#l00132">DynamicLoader.cpp:132</a></div></div>
 <div class="ttc" id="aclasscore_1_1EventLoop_html_a3ce638b4895c765df8e60a804be90339"><div class="ttname"><a href="#a3ce638b4895c765df8e60a804be90339">core::EventLoop::_tick</a></div><div class="ttdeci">TickStatus _tick(const utils::Timeval &amp;timeOut)</div><div class="ttdef"><b>Definition</b> <a href="EventLoop_8cpp_source.html#l00114">EventLoop.cpp:114</a></div></div>
 <div class="ttc" id="aclasscore_1_1EventLoop_html_a413d227511f68c2c9939719bd2590794"><div class="ttname"><a href="#a413d227511f68c2c9939719bd2590794">core::EventLoop::instance</a></div><div class="ttdeci">static EventLoop &amp; instance()</div><div class="ttdef"><b>Definition</b> <a href="EventLoop_8cpp_source.html#l00057">EventLoop.cpp:57</a></div></div>
 <div class="ttc" id="aclasscore_1_1EventLoop_html_abbc45d23031f92f212cf223c2561fa81"><div class="ttname"><a href="#abbc45d23031f92f212cf223c2561fa81">core::EventLoop::stopsig</a></div><div class="ttdeci">static int stopsig</div><div class="ttdef"><b>Definition</b> <a href="EventLoop_8h_source.html#l00071">EventLoop.h:71</a></div></div>
 <div class="ttc" id="aclasscore_1_1EventMultiplexer_html_a606a67a2c22c6d1f0c7eb0d722ee2069"><div class="ttname"><a href="classcore_1_1EventMultiplexer.html#a606a67a2c22c6d1f0c7eb0d722ee2069">core::EventMultiplexer::signal</a></div><div class="ttdeci">void signal(int sigNum)</div><div class="ttdef"><b>Definition</b> <a href="EventMultiplexer_8cpp_source.html#l00088">EventMultiplexer.cpp:88</a></div></div>
 <div class="ttc" id="aclasscore_1_1EventMultiplexer_html_ae8368220efce9e102a2ddddcea18bd28"><div class="ttname"><a href="classcore_1_1EventMultiplexer.html#ae8368220efce9e102a2ddddcea18bd28">core::EventMultiplexer::terminate</a></div><div class="ttdeci">void terminate()</div><div class="ttdef"><b>Definition</b> <a href="EventMultiplexer_8cpp_source.html#l00097">EventMultiplexer.cpp:97</a></div></div>
-<div class="ttc" id="aclassutils_1_1Config_html_ad88e08009a309e143a17fd63b477cdbe"><div class="ttname"><a href="classutils_1_1Config.html#ad88e08009a309e143a17fd63b477cdbe">utils::Config::terminate</a></div><div class="ttdeci">static void terminate()</div><div class="ttdef"><b>Definition</b> <a href="Config_8cpp_source.html#l00617">Config.cpp:617</a></div></div>
+<div class="ttc" id="aclassutils_1_1Config_html_ad88e08009a309e143a17fd63b477cdbe"><div class="ttname"><a href="classutils_1_1Config.html#ad88e08009a309e143a17fd63b477cdbe">utils::Config::terminate</a></div><div class="ttdeci">static void terminate()</div><div class="ttdef"><b>Definition</b> <a href="Config_8cpp_source.html#l00619">Config.cpp:619</a></div></div>
 <div class="ttc" id="aclassutils_1_1Timeval_html"><div class="ttname"><a href="classutils_1_1Timeval.html">utils::Timeval</a></div><div class="ttdef"><b>Definition</b> <a href="Timeval_8h_source.html#l00036">Timeval.h:36</a></div></div>
 <div class="ttc" id="anamespacecore_html_a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6"><div class="ttname"><a href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">core::TickStatus::TRACE</a></div><div class="ttdeci">@ TRACE</div></div>
-<div class="ttc" id="anamespacecore_html_a47acf5c7d3fb3967a2547c74082e9749a658f2cadfdf09b6046246e9314f7cd43"><div class="ttname"><a href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a658f2cadfdf09b6046246e9314f7cd43">core::TickStatus::INTERRUPTED</a></div><div class="ttdeci">@ INTERRUPTED</div></div>
 <div class="ttc" id="anamespaceutils_1_1system_html_ae9627474e3956cfc307370792ec5bcee"><div class="ttname"><a href="namespaceutils_1_1system.html#ae9627474e3956cfc307370792ec5bcee">utils::system::signal</a></div><div class="ttdeci">sighandler_t signal(int sig, sighandler_t handler)</div><div class="ttdef"><b>Definition</b> <a href="signal_8cpp_source.html#l00032">signal.cpp:32</a></div></div>
 <div class="ttc" id="anamespaceutils_1_1system_html_aea0a8f4d2d6d6d0fa7fcc401c5f08f1c"><div class="ttname"><a href="namespaceutils_1_1system.html#aea0a8f4d2d6d6d0fa7fcc401c5f08f1c">utils::system::sigabbrev_np</a></div><div class="ttdeci">std::string sigabbrev_np(int sig)</div><div class="ttdef"><b>Definition</b> <a href="signal_8cpp_source.html#l00037">signal.cpp:37</a></div></div>
 </div><!-- fragment -->
@@ -552,7 +551,7 @@ Friends</h2></td></tr>
 <div class="line"><span class="lineno">  111</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#a57083902353848e5235d48539e31c7cf">eventLoopState</a> == <a class="code hl_enumvalue" href="namespacecore.html#a6613a3d81c1d25590b1cd31540d08815adee5f03c2c4e73657824e028494b18c0">State::INITIALIZED</a>;</div>
 <div class="line"><span class="lineno">  112</span>    }</div>
 <div class="ttc" id="aclasslogger_1_1Logger_html_a545211a93eadc019ebe4301426594a69"><div class="ttname"><a href="classlogger_1_1Logger.html#a545211a93eadc019ebe4301426594a69">logger::Logger::setCustomFormatSpec</a></div><div class="ttdeci">static void setCustomFormatSpec(const char *format, const el::FormatSpecifierValueResolver &amp;resolver)</div><div class="ttdef"><b>Definition</b> <a href="Logger_8cpp_source.html#l00056">Logger.cpp:56</a></div></div>
-<div class="ttc" id="aclassutils_1_1Config_html_a8f7a5bd81078ac7228f762345677e4f1"><div class="ttname"><a href="classutils_1_1Config.html#a8f7a5bd81078ac7228f762345677e4f1">utils::Config::init</a></div><div class="ttdeci">static bool init(int argc, char *argv[])</div><div class="ttdef"><b>Definition</b> <a href="Config_8cpp_source.html#l00105">Config.cpp:105</a></div></div>
+<div class="ttc" id="aclassutils_1_1Config_html_a8f7a5bd81078ac7228f762345677e4f1"><div class="ttname"><a href="classutils_1_1Config.html#a8f7a5bd81078ac7228f762345677e4f1">utils::Config::init</a></div><div class="ttdeci">static bool init(int argc, char *argv[])</div><div class="ttdef"><b>Definition</b> <a href="Config_8cpp_source.html#l00106">Config.cpp:106</a></div></div>
 <div class="ttc" id="anamespacecore_html_a6613a3d81c1d25590b1cd31540d08815adee5f03c2c4e73657824e028494b18c0"><div class="ttname"><a href="namespacecore.html#a6613a3d81c1d25590b1cd31540d08815adee5f03c2c4e73657824e028494b18c0">core::State::INITIALIZED</a></div><div class="ttdeci">@ INITIALIZED</div></div>
 <div class="ttc" id="anamespacecore_html_afa4820103fc04304728d100f70b0216c"><div class="ttname"><a href="namespacecore.html#afa4820103fc04304728d100f70b0216c">core::getTickCounterAsString</a></div><div class="ttdeci">static std::string getTickCounterAsString(const el::LogMessage *logMessage)</div><div class="ttdef"><b>Definition</b> <a href="EventLoop_8cpp_source.html#l00043">EventLoop.cpp:43</a></div></div>
 </div><!-- fragment -->
@@ -690,19 +689,21 @@ Friends</h2></td></tr>
 <div class="line"><span class="lineno">  209</span>        }</div>
 <div class="line"><span class="lineno">  210</span> </div>
 <div class="line"><span class="lineno">  211</span>        sigaction(SIGPIPE, &amp;oldPipeAct, <span class="keyword">nullptr</span>);</div>
-<div class="line"><span class="lineno">  212</span>        sigaction(SIGINT, &amp;oldIntAct, <span class="keyword">nullptr</span>);</div>
-<div class="line"><span class="lineno">  213</span>        sigaction(SIGTERM, &amp;oldTermAct, <span class="keyword">nullptr</span>);</div>
-<div class="line"><span class="lineno">  214</span>        sigaction(SIGALRM, &amp;oldAlarmAct, <span class="keyword">nullptr</span>);</div>
-<div class="line"><span class="lineno">  215</span>        sigaction(SIGHUP, &amp;oldHupAct, <span class="keyword">nullptr</span>);</div>
-<div class="line"><span class="lineno">  216</span> </div>
-<div class="line"><span class="lineno">  217</span>        <a class="code hl_function" href="#a3125b6361565df4753affc73eb83984a">free</a>();</div>
-<div class="line"><span class="lineno">  218</span> </div>
-<div class="line"><span class="lineno">  219</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#abbc45d23031f92f212cf223c2561fa81">stopsig</a>;</div>
-<div class="line"><span class="lineno">  220</span>    }</div>
-<div class="ttc" id="aclasscore_1_1EventLoop_html_a3125b6361565df4753affc73eb83984a"><div class="ttname"><a href="#a3125b6361565df4753affc73eb83984a">core::EventLoop::free</a></div><div class="ttdeci">static void free()</div><div class="ttdef"><b>Definition</b> <a href="EventLoop_8cpp_source.html#l00226">EventLoop.cpp:226</a></div></div>
-<div class="ttc" id="aclasscore_1_1EventLoop_html_a96a2e40259e00e7560dc8dde4d85131f"><div class="ttname"><a href="#a96a2e40259e00e7560dc8dde4d85131f">core::EventLoop::stoponsig</a></div><div class="ttdeci">static void stoponsig(int sig)</div><div class="ttdef"><b>Definition</b> <a href="EventLoop_8cpp_source.html#l00273">EventLoop.cpp:273</a></div></div>
-<div class="ttc" id="aclassutils_1_1Config_html_ac5d45b86d1281e70ddd8eaeb8ad369d1"><div class="ttname"><a href="classutils_1_1Config.html#ac5d45b86d1281e70ddd8eaeb8ad369d1">utils::Config::bootstrap</a></div><div class="ttdeci">static bool bootstrap()</div><div class="ttdef"><b>Definition</b> <a href="Config_8cpp_source.html#l00346">Config.cpp:346</a></div></div>
+<div class="line"><span class="lineno">  212</span>        sigaction(SIGTERM, &amp;oldTermAct, <span class="keyword">nullptr</span>);</div>
+<div class="line"><span class="lineno">  213</span>        sigaction(SIGALRM, &amp;oldAlarmAct, <span class="keyword">nullptr</span>);</div>
+<div class="line"><span class="lineno">  214</span>        sigaction(SIGHUP, &amp;oldHupAct, <span class="keyword">nullptr</span>);</div>
+<div class="line"><span class="lineno">  215</span> </div>
+<div class="line"><span class="lineno">  216</span>        <a class="code hl_function" href="#a3125b6361565df4753affc73eb83984a">free</a>();</div>
+<div class="line"><span class="lineno">  217</span> </div>
+<div class="line"><span class="lineno">  218</span>        sigaction(SIGINT, &amp;oldIntAct, <span class="keyword">nullptr</span>);</div>
+<div class="line"><span class="lineno">  219</span> </div>
+<div class="line"><span class="lineno">  220</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#abbc45d23031f92f212cf223c2561fa81">stopsig</a>;</div>
+<div class="line"><span class="lineno">  221</span>    }</div>
+<div class="ttc" id="aclasscore_1_1EventLoop_html_a3125b6361565df4753affc73eb83984a"><div class="ttname"><a href="#a3125b6361565df4753affc73eb83984a">core::EventLoop::free</a></div><div class="ttdeci">static void free()</div><div class="ttdef"><b>Definition</b> <a href="EventLoop_8cpp_source.html#l00227">EventLoop.cpp:227</a></div></div>
+<div class="ttc" id="aclasscore_1_1EventLoop_html_a96a2e40259e00e7560dc8dde4d85131f"><div class="ttname"><a href="#a96a2e40259e00e7560dc8dde4d85131f">core::EventLoop::stoponsig</a></div><div class="ttdeci">static void stoponsig(int sig)</div><div class="ttdef"><b>Definition</b> <a href="EventLoop_8cpp_source.html#l00274">EventLoop.cpp:274</a></div></div>
+<div class="ttc" id="aclassutils_1_1Config_html_ac5d45b86d1281e70ddd8eaeb8ad369d1"><div class="ttname"><a href="classutils_1_1Config.html#ac5d45b86d1281e70ddd8eaeb8ad369d1">utils::Config::bootstrap</a></div><div class="ttdeci">static bool bootstrap()</div><div class="ttdef"><b>Definition</b> <a href="Config_8cpp_source.html#l00348">Config.cpp:348</a></div></div>
 <div class="ttc" id="anamespacecore_html_a47acf5c7d3fb3967a2547c74082e9749a4e7d1789953412597b5124514c61cb9b"><div class="ttname"><a href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a4e7d1789953412597b5124514c61cb9b">core::TickStatus::NOOBSERVER</a></div><div class="ttdeci">@ NOOBSERVER</div></div>
+<div class="ttc" id="anamespacecore_html_a47acf5c7d3fb3967a2547c74082e9749a658f2cadfdf09b6046246e9314f7cd43"><div class="ttname"><a href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a658f2cadfdf09b6046246e9314f7cd43">core::TickStatus::INTERRUPTED</a></div><div class="ttdeci">@ INTERRUPTED</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -729,10 +730,10 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventLoop_8cpp_source.html#l00222">222</a> of file <a class="el" href="EventLoop_8cpp_source.html">EventLoop.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  222</span>                         {</div>
-<div class="line"><span class="lineno">  223</span>        <a class="code hl_variable" href="#a57083902353848e5235d48539e31c7cf">eventLoopState</a> = <a class="code hl_enumvalue" href="namespacecore.html#a6613a3d81c1d25590b1cd31540d08815af6cdb3c6710b50ec65ee07f740847e10">State::STOPPING</a>;</div>
-<div class="line"><span class="lineno">  224</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="EventLoop_8cpp_source.html#l00223">223</a> of file <a class="el" href="EventLoop_8cpp_source.html">EventLoop.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  223</span>                         {</div>
+<div class="line"><span class="lineno">  224</span>        <a class="code hl_variable" href="#a57083902353848e5235d48539e31c7cf">eventLoopState</a> = <a class="code hl_enumvalue" href="namespacecore.html#a6613a3d81c1d25590b1cd31540d08815af6cdb3c6710b50ec65ee07f740847e10">State::STOPPING</a>;</div>
+<div class="line"><span class="lineno">  225</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -759,13 +760,13 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EventLoop_8cpp_source.html#l00273">273</a> of file <a class="el" href="EventLoop_8cpp_source.html">EventLoop.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  273</span>                                     {</div>
-<div class="line"><span class="lineno">  274</span>        LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;Core: Received signal &#39;&quot;</span> &lt;&lt; strsignal(sig) &lt;&lt; <span class="stringliteral">&quot;&#39; (SIG&quot;</span> &lt;&lt; <a class="code hl_function" href="namespaceutils_1_1system.html#aea0a8f4d2d6d6d0fa7fcc401c5f08f1c">utils::system::sigabbrev_np</a>(sig) &lt;&lt; <span class="stringliteral">&quot; = &quot;</span> &lt;&lt; sig &lt;&lt; <span class="stringliteral">&quot;)&quot;</span>;</div>
-<div class="line"><span class="lineno">  275</span>        <a class="code hl_variable" href="#abbc45d23031f92f212cf223c2561fa81">stopsig</a> = sig;</div>
-<div class="line"><span class="lineno">  276</span>        <a class="code hl_function" href="#aaa96da1dffd0e1800ba0c134ad07f97e">stop</a>();</div>
-<div class="line"><span class="lineno">  277</span>    }</div>
-<div class="ttc" id="aclasscore_1_1EventLoop_html_aaa96da1dffd0e1800ba0c134ad07f97e"><div class="ttname"><a href="#aaa96da1dffd0e1800ba0c134ad07f97e">core::EventLoop::stop</a></div><div class="ttdeci">static void stop()</div><div class="ttdef"><b>Definition</b> <a href="EventLoop_8cpp_source.html#l00222">EventLoop.cpp:222</a></div></div>
+<p class="definition">Definition at line <a class="el" href="EventLoop_8cpp_source.html#l00274">274</a> of file <a class="el" href="EventLoop_8cpp_source.html">EventLoop.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  274</span>                                     {</div>
+<div class="line"><span class="lineno">  275</span>        LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;Core: Received signal &#39;&quot;</span> &lt;&lt; strsignal(sig) &lt;&lt; <span class="stringliteral">&quot;&#39; (SIG&quot;</span> &lt;&lt; <a class="code hl_function" href="namespaceutils_1_1system.html#aea0a8f4d2d6d6d0fa7fcc401c5f08f1c">utils::system::sigabbrev_np</a>(sig) &lt;&lt; <span class="stringliteral">&quot; = &quot;</span> &lt;&lt; sig &lt;&lt; <span class="stringliteral">&quot;)&quot;</span>;</div>
+<div class="line"><span class="lineno">  276</span>        <a class="code hl_variable" href="#abbc45d23031f92f212cf223c2561fa81">stopsig</a> = sig;</div>
+<div class="line"><span class="lineno">  277</span>        <a class="code hl_function" href="#aaa96da1dffd0e1800ba0c134ad07f97e">stop</a>();</div>
+<div class="line"><span class="lineno">  278</span>    }</div>
+<div class="ttc" id="aclasscore_1_1EventLoop_html_aaa96da1dffd0e1800ba0c134ad07f97e"><div class="ttname"><a href="#aaa96da1dffd0e1800ba0c134ad07f97e">core::EventLoop::stop</a></div><div class="ttdeci">static void stop()</div><div class="ttdef"><b>Definition</b> <a href="EventLoop_8cpp_source.html#l00223">EventLoop.cpp:223</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -953,7 +954,7 @@ Friends</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacecore.html">core</a></li><li class="navelem"><a class="el" href="classcore_1_1EventLoop.html">EventLoop</a></li>
-    <li class="footer">Generated on Sun Jan 5 2025 02:25:16 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generated on Tue Jan 7 2025 00:42:11 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>

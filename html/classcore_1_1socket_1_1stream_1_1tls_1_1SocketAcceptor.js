@@ -6,7 +6,6 @@ var classcore_1_1socket_1_1stream_1_1tls_1_1SocketAcceptor =
     [ "Super", "classcore_1_1socket_1_1stream_1_1tls_1_1SocketAcceptor.html#ae4b9d15a179ea2cc90eece88b6a1b15c", null ],
     [ "SocketAcceptor", "classcore_1_1socket_1_1stream_1_1tls_1_1SocketAcceptor.html#a320201a48d457a26c514a0d6f6230bec", null ],
     [ "SocketAcceptor", "classcore_1_1socket_1_1stream_1_1tls_1_1SocketAcceptor.html#a929fd4348a07181a4d4398480cdf309c", null ],
-    [ "~SocketAcceptor", "classcore_1_1socket_1_1stream_1_1tls_1_1SocketAcceptor.html#ab9b749e9c63249badfa96b5da175aa0b", null ],
     [ "init", "classcore_1_1socket_1_1stream_1_1tls_1_1SocketAcceptor.html#a6657559b8e24b24dc6a9da1e2090c837", null ],
     [ "useNextSocketAddress", "classcore_1_1socket_1_1stream_1_1tls_1_1SocketAcceptor.html#aae56eb14b4706fc6fb69b67c1dfe815b", null ],
     [ "masterSslCtx", "classcore_1_1socket_1_1stream_1_1tls_1_1SocketAcceptor.html#aae4a1eff9e37dffdc60e764845211be2", null ]

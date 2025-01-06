@@ -1,7 +1,5 @@
 var NAVTREEINDEX45 =
 {
-"un_2stream_2tls_2config_2ConfigSocketClient_8cpp_source.html":[4,0,5,6,3,2,0,0],
-"un_2stream_2tls_2config_2ConfigSocketClient_8h.html":[4,0,5,6,3,2,0,1],
 "un_2stream_2tls_2config_2ConfigSocketClient_8h_source.html":[4,0,5,6,3,2,0,1],
 "un_2stream_2tls_2config_2ConfigSocketServer_8cpp.html":[4,0,5,6,3,2,0,2],
 "un_2stream_2tls_2config_2ConfigSocketServer_8cpp_source.html":[4,0,5,6,3,2,0,2],

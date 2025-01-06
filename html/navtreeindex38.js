@@ -1,7 +1,5 @@
 var NAVTREEINDEX38 =
 {
-"functions_func_c.html":[3,3,1,3],
-"functions_func_d.html":[3,3,1,4],
 "functions_func_e.html":[3,3,1,5],
 "functions_func_f.html":[3,3,1,6],
 "functions_func_g.html":[3,3,1,7],
@@ -249,5 +247,7 @@ var NAVTREEINDEX38 =
 "index.html":[0],
 "index.html#all-constructors-of-socketclient-classes":[0,7,0,2,1],
 "index.html#all-constructors-of-socketserver-classes":[0,7,0,2,0],
-"index.html#an-echo-application":[0,3,0]
+"index.html#an-echo-application":[0,3,0],
+"index.html#anatomy-of-the-command-line-interface":[0,8,0,1,2],
+"index.html#application-configuration":[0,8,0,1,0]
 };
