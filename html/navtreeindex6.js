@@ -1,5 +1,9 @@
 var NAVTREEINDEX6 =
 {
+"classcore_1_1multiplexer_1_1poll_1_1PollFdsManager.html#a5fecc046d963886e6a59fb418a3fa932":[3,0,1,2,1,2,2],
+"classcore_1_1multiplexer_1_1poll_1_1PollFdsManager.html#a73ae258228291ac051debb7b7f3305c3":[1,0,3,2,1,2,5],
+"classcore_1_1multiplexer_1_1poll_1_1PollFdsManager.html#a73ae258228291ac051debb7b7f3305c3":[3,0,1,2,1,2,5],
+"classcore_1_1multiplexer_1_1poll_1_1PollFdsManager.html#aaa91336a34e514c7302dbf0cf522b324":[1,0,3,2,1,2,10],
 "classcore_1_1multiplexer_1_1poll_1_1PollFdsManager.html#aaa91336a34e514c7302dbf0cf522b324":[3,0,1,2,1,2,10],
 "classcore_1_1multiplexer_1_1poll_1_1PollFdsManager.html#ab132c43e91be924eda2eaee545e28dad":[1,0,3,2,1,2,4],
 "classcore_1_1multiplexer_1_1poll_1_1PollFdsManager.html#ab132c43e91be924eda2eaee545e28dad":[3,0,1,2,1,2,4],
@@ -245,9 +249,5 @@ var NAVTREEINDEX6 =
 "classcore_1_1socket_1_1SocketAddress_1_1BadSocketAddress.html#a848d8970ec5e762c20c9e8b37a60e43f":[3,0,1,4,2,0,2],
 "classcore_1_1socket_1_1SocketAddress_1_1BadSocketAddress.html#ae8589b62d781b8d1b924195dd070f2f2":[1,0,3,4,2,0,0],
 "classcore_1_1socket_1_1SocketAddress_1_1BadSocketAddress.html#ae8589b62d781b8d1b924195dd070f2f2":[3,0,1,4,2,0,0],
-"classcore_1_1socket_1_1SocketContext.html":[1,0,3,4,3],
-"classcore_1_1socket_1_1SocketContext.html":[3,0,1,4,3],
-"classcore_1_1socket_1_1SocketContext.html#a171ec3bb2190630276ff2e6cb5fd9ccf":[1,0,3,4,3,13],
-"classcore_1_1socket_1_1SocketContext.html#a171ec3bb2190630276ff2e6cb5fd9ccf":[3,0,1,4,3,13],
-"classcore_1_1socket_1_1SocketContext.html#a1965401ba1814087fec30d3305341bec":[1,0,3,4,3,5]
+"classcore_1_1socket_1_1SocketContext.html":[1,0,3,4,3]
 };

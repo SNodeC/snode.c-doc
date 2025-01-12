@@ -243,22 +243,21 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DynamicLoader_8cpp_source.html#l00103">103</a> of file <a class="el" href="DynamicLoader_8cpp_source.html">DynamicLoader.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  103</span>                                                     {</div>
-<div class="line"><span class="lineno">  104</span>        <span class="keywordtype">int</span> ret = 0;</div>
-<div class="line"><span class="lineno">  105</span>        ret = <a class="code hl_function" href="#a32f0c49018bd2dbc53de83963dd3a3d0">realExecDlClose</a>(library);</div>
+<p class="definition">Definition at line <a class="el" href="DynamicLoader_8cpp_source.html#l00097">97</a> of file <a class="el" href="DynamicLoader_8cpp_source.html">DynamicLoader.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   97</span>                                                     {</div>
+<div class="line"><span class="lineno">   98</span>        <span class="keywordtype">int</span> ret = 0;</div>
+<div class="line"><span class="lineno">   99</span>        ret = <a class="code hl_function" href="#a32f0c49018bd2dbc53de83963dd3a3d0">realExecDlClose</a>(library);</div>
+<div class="line"><span class="lineno">  100</span> </div>
+<div class="line"><span class="lineno">  101</span>        <span class="keywordflow">if</span> (ret != 0) {</div>
+<div class="line"><span class="lineno">  102</span>            LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <span class="stringliteral">&quot;  dlClose: &quot;</span> &lt;&lt; <a class="code hl_function" href="#a28d14f3029339351d8bb8b328a6110b0">DynamicLoader::dlError</a>();</div>
+<div class="line"><span class="lineno">  103</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  104</span>            LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <span class="stringliteral">&quot;  dlClose: &quot;</span> &lt;&lt; library.fileName &lt;&lt; <span class="stringliteral">&quot;: success&quot;</span>;</div>
+<div class="line"><span class="lineno">  105</span>        }</div>
 <div class="line"><span class="lineno">  106</span> </div>
-<div class="line"><span class="lineno">  107</span>        <span class="keywordflow">if</span> (ret != 0) {</div>
-<div class="line"><span class="lineno">  108</span>            LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <span class="stringliteral">&quot;DynLoader: dlClose library: &quot;</span> &lt;&lt; <a class="code hl_function" href="#a28d14f3029339351d8bb8b328a6110b0">DynamicLoader::dlError</a>();</div>
-<div class="line"><span class="lineno">  109</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  110</span>            LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <span class="stringliteral">&quot;DynLoader: dlClose library&quot;</span>;</div>
-<div class="line"><span class="lineno">  111</span>        }</div>
-<div class="line"><span class="lineno">  112</span>        LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <span class="stringliteral">&quot;           &quot;</span> &lt;&lt; library.fileName;</div>
-<div class="line"><span class="lineno">  113</span> </div>
-<div class="line"><span class="lineno">  114</span>        <span class="keywordflow">return</span> ret;</div>
-<div class="line"><span class="lineno">  115</span>    }</div>
-<div class="ttc" id="aclasscore_1_1DynamicLoader_html_a28d14f3029339351d8bb8b328a6110b0"><div class="ttname"><a href="#a28d14f3029339351d8bb8b328a6110b0">core::DynamicLoader::dlError</a></div><div class="ttdeci">static char * dlError()</div><div class="ttdef"><b>Definition</b> <a href="DynamicLoader_8cpp_source.html#l00095">DynamicLoader.cpp:95</a></div></div>
-<div class="ttc" id="aclasscore_1_1DynamicLoader_html_a32f0c49018bd2dbc53de83963dd3a3d0"><div class="ttname"><a href="#a32f0c49018bd2dbc53de83963dd3a3d0">core::DynamicLoader::realExecDlClose</a></div><div class="ttdeci">static int realExecDlClose(const Library &amp;library)</div><div class="ttdef"><b>Definition</b> <a href="DynamicLoader_8cpp_source.html#l00099">DynamicLoader.cpp:99</a></div></div>
+<div class="line"><span class="lineno">  107</span>        <span class="keywordflow">return</span> ret;</div>
+<div class="line"><span class="lineno">  108</span>    }</div>
+<div class="ttc" id="aclasscore_1_1DynamicLoader_html_a28d14f3029339351d8bb8b328a6110b0"><div class="ttname"><a href="#a28d14f3029339351d8bb8b328a6110b0">core::DynamicLoader::dlError</a></div><div class="ttdeci">static char * dlError()</div><div class="ttdef"><b>Definition</b> <a href="DynamicLoader_8cpp_source.html#l00089">DynamicLoader.cpp:89</a></div></div>
+<div class="ttc" id="aclasscore_1_1DynamicLoader_html_a32f0c49018bd2dbc53de83963dd3a3d0"><div class="ttname"><a href="#a32f0c49018bd2dbc53de83963dd3a3d0">core::DynamicLoader::realExecDlClose</a></div><div class="ttdeci">static int realExecDlClose(const Library &amp;library)</div><div class="ttdef"><b>Definition</b> <a href="DynamicLoader_8cpp_source.html#l00093">DynamicLoader.cpp:93</a></div></div>
 <div class="ttc" id="anamespacecore_html_a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6"><div class="ttname"><a href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">core::TickStatus::TRACE</a></div><div class="ttdeci">@ TRACE</div></div>
 </div><!-- fragment -->
 </div>
@@ -286,26 +285,25 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DynamicLoader_8cpp_source.html#l00072">72</a> of file <a class="el" href="DynamicLoader_8cpp_source.html">DynamicLoader.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   72</span>                                           {</div>
-<div class="line"><span class="lineno">   73</span>        <span class="keywordtype">int</span> ret = 0;</div>
-<div class="line"><span class="lineno">   74</span> </div>
-<div class="line"><span class="lineno">   75</span>        <span class="keywordflow">if</span> (handle != <span class="keyword">nullptr</span>) {</div>
-<div class="line"><span class="lineno">   76</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a686abfc426926c79f8801c98555c7a4b">dlOpenedLibraries</a>.contains(handle)) {</div>
-<div class="line"><span class="lineno">   77</span>                ret = <a class="code hl_function" href="#a42ac52cda1ec4534f1cc9e225dcb31b0">dlClose</a>(<a class="code hl_variable" href="#a686abfc426926c79f8801c98555c7a4b">dlOpenedLibraries</a>[handle]);</div>
-<div class="line"><span class="lineno">   78</span> </div>
-<div class="line"><span class="lineno">   79</span>                <a class="code hl_variable" href="#a686abfc426926c79f8801c98555c7a4b">dlOpenedLibraries</a>.erase(handle);</div>
-<div class="line"><span class="lineno">   80</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   81</span>                LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <span class="stringliteral">&quot;DynLoader: dlCloseDelayed: Not opened using dlOpen&quot;</span>;</div>
-<div class="line"><span class="lineno">   82</span>                LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <span class="stringliteral">&quot;           &quot;</span> &lt;&lt; handle;</div>
-<div class="line"><span class="lineno">   83</span>            }</div>
-<div class="line"><span class="lineno">   84</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   85</span>            LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <span class="stringliteral">&quot;DynLoader: dlClose handle: nullptr&quot;</span>;</div>
-<div class="line"><span class="lineno">   86</span>        }</div>
-<div class="line"><span class="lineno">   87</span> </div>
-<div class="line"><span class="lineno">   88</span>        <span class="keywordflow">return</span> ret;</div>
-<div class="line"><span class="lineno">   89</span>    }</div>
-<div class="ttc" id="aclasscore_1_1DynamicLoader_html_a42ac52cda1ec4534f1cc9e225dcb31b0"><div class="ttname"><a href="#a42ac52cda1ec4534f1cc9e225dcb31b0">core::DynamicLoader::dlClose</a></div><div class="ttdeci">static int dlClose(void *handle)</div><div class="ttdef"><b>Definition</b> <a href="DynamicLoader_8cpp_source.html#l00072">DynamicLoader.cpp:72</a></div></div>
+<p class="definition">Definition at line <a class="el" href="DynamicLoader_8cpp_source.html#l00067">67</a> of file <a class="el" href="DynamicLoader_8cpp_source.html">DynamicLoader.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   67</span>                                           {</div>
+<div class="line"><span class="lineno">   68</span>        <span class="keywordtype">int</span> ret = 0;</div>
+<div class="line"><span class="lineno">   69</span> </div>
+<div class="line"><span class="lineno">   70</span>        <span class="keywordflow">if</span> (handle != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><span class="lineno">   71</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a686abfc426926c79f8801c98555c7a4b">dlOpenedLibraries</a>.contains(handle)) {</div>
+<div class="line"><span class="lineno">   72</span>                ret = <a class="code hl_function" href="#a42ac52cda1ec4534f1cc9e225dcb31b0">dlClose</a>(<a class="code hl_variable" href="#a686abfc426926c79f8801c98555c7a4b">dlOpenedLibraries</a>[handle]);</div>
+<div class="line"><span class="lineno">   73</span> </div>
+<div class="line"><span class="lineno">   74</span>                <a class="code hl_variable" href="#a686abfc426926c79f8801c98555c7a4b">dlOpenedLibraries</a>.erase(handle);</div>
+<div class="line"><span class="lineno">   75</span>            } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">   76</span>                LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <span class="stringliteral">&quot;DynLoader: dlCloseDelayed: &quot;</span> &lt;&lt; handle &lt;&lt; <span class="stringliteral">&quot;: not opened using dlOpen&quot;</span>;</div>
+<div class="line"><span class="lineno">   77</span>            }</div>
+<div class="line"><span class="lineno">   78</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">   79</span>            LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <span class="stringliteral">&quot;DynLoader: dlClose handle: nullptr&quot;</span>;</div>
+<div class="line"><span class="lineno">   80</span>        }</div>
+<div class="line"><span class="lineno">   81</span> </div>
+<div class="line"><span class="lineno">   82</span>        <span class="keywordflow">return</span> ret;</div>
+<div class="line"><span class="lineno">   83</span>    }</div>
+<div class="ttc" id="aclasscore_1_1DynamicLoader_html_a42ac52cda1ec4534f1cc9e225dcb31b0"><div class="ttname"><a href="#a42ac52cda1ec4534f1cc9e225dcb31b0">core::DynamicLoader::dlClose</a></div><div class="ttdeci">static int dlClose(void *handle)</div><div class="ttdef"><b>Definition</b> <a href="DynamicLoader_8cpp_source.html#l00067">DynamicLoader.cpp:67</a></div></div>
 <div class="ttc" id="aclasscore_1_1DynamicLoader_html_a686abfc426926c79f8801c98555c7a4b"><div class="ttname"><a href="#a686abfc426926c79f8801c98555c7a4b">core::DynamicLoader::dlOpenedLibraries</a></div><div class="ttdeci">static std::map&lt; void *, Library &gt; dlOpenedLibraries</div><div class="ttdef"><b>Definition</b> <a href="DynamicLoader_8h_source.html#l00061">DynamicLoader.h:61</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -333,27 +331,24 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DynamicLoader_8cpp_source.html#l00051">51</a> of file <a class="el" href="DynamicLoader_8cpp_source.html">DynamicLoader.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   51</span>                                                   {</div>
-<div class="line"><span class="lineno">   52</span>        <span class="keywordflow">if</span> (handle != <span class="keyword">nullptr</span>) {</div>
-<div class="line"><span class="lineno">   53</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a686abfc426926c79f8801c98555c7a4b">dlOpenedLibraries</a>.contains(handle)) {</div>
-<div class="line"><span class="lineno">   54</span>                <span class="keywordflow">if</span> (std::find(<a class="code hl_variable" href="#a3d9c00c6e839bbdb31894887b8407fe4">closeHandles</a>.begin(), <a class="code hl_variable" href="#a3d9c00c6e839bbdb31894887b8407fe4">closeHandles</a>.end(), handle) == <a class="code hl_variable" href="#a3d9c00c6e839bbdb31894887b8407fe4">closeHandles</a>.end()) {</div>
-<div class="line"><span class="lineno">   55</span>                    LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <span class="stringliteral">&quot;DynLoader: dlCloseDelayed: Registered&quot;</span>;</div>
-<div class="line"><span class="lineno">   56</span>                    LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <span class="stringliteral">&quot;           &quot;</span> &lt;&lt; <a class="code hl_variable" href="#a686abfc426926c79f8801c98555c7a4b">dlOpenedLibraries</a>[handle].fileName;</div>
-<div class="line"><span class="lineno">   57</span> </div>
-<div class="line"><span class="lineno">   58</span>                    <a class="code hl_variable" href="#a3d9c00c6e839bbdb31894887b8407fe4">closeHandles</a>.push_back(handle);</div>
-<div class="line"><span class="lineno">   59</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   60</span>                    LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <span class="stringliteral">&quot;DynLoader: dlCloseDelayed: Already registered&quot;</span>;</div>
-<div class="line"><span class="lineno">   61</span>                    LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <span class="stringliteral">&quot;           &quot;</span> &lt;&lt; <a class="code hl_variable" href="#a686abfc426926c79f8801c98555c7a4b">dlOpenedLibraries</a>[handle].fileName;</div>
-<div class="line"><span class="lineno">   62</span>                }</div>
-<div class="line"><span class="lineno">   63</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   64</span>                LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <span class="stringliteral">&quot;DynLoader: dlCloseDelayed: Not opened using dlOpen&quot;</span>;</div>
-<div class="line"><span class="lineno">   65</span>                LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <span class="stringliteral">&quot;           &quot;</span> &lt;&lt; handle;</div>
-<div class="line"><span class="lineno">   66</span>            }</div>
-<div class="line"><span class="lineno">   67</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   68</span>            LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <span class="stringliteral">&quot;DynLoader: dlCloseDelayed: Handle is nullptr&quot;</span>;</div>
-<div class="line"><span class="lineno">   69</span>        }</div>
-<div class="line"><span class="lineno">   70</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="DynamicLoader_8cpp_source.html#l00049">49</a> of file <a class="el" href="DynamicLoader_8cpp_source.html">DynamicLoader.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   49</span>                                                   {</div>
+<div class="line"><span class="lineno">   50</span>        <span class="keywordflow">if</span> (handle != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><span class="lineno">   51</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a686abfc426926c79f8801c98555c7a4b">dlOpenedLibraries</a>.contains(handle)) {</div>
+<div class="line"><span class="lineno">   52</span>                <span class="keywordflow">if</span> (std::find(<a class="code hl_variable" href="#a3d9c00c6e839bbdb31894887b8407fe4">closeHandles</a>.begin(), <a class="code hl_variable" href="#a3d9c00c6e839bbdb31894887b8407fe4">closeHandles</a>.end(), handle) == <a class="code hl_variable" href="#a3d9c00c6e839bbdb31894887b8407fe4">closeHandles</a>.end()) {</div>
+<div class="line"><span class="lineno">   53</span>                    LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <span class="stringliteral">&quot;DynLoader: dlCloseDelayed: &quot;</span> &lt;&lt; <a class="code hl_variable" href="#a686abfc426926c79f8801c98555c7a4b">dlOpenedLibraries</a>[handle].fileName;</div>
+<div class="line"><span class="lineno">   54</span> </div>
+<div class="line"><span class="lineno">   55</span>                    <a class="code hl_variable" href="#a3d9c00c6e839bbdb31894887b8407fe4">closeHandles</a>.push_back(handle);</div>
+<div class="line"><span class="lineno">   56</span>                } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">   57</span>                    LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <span class="stringliteral">&quot;DynLoader: dlCloseDelayed: &quot;</span> &lt;&lt; <a class="code hl_variable" href="#a686abfc426926c79f8801c98555c7a4b">dlOpenedLibraries</a>[handle].fileName &lt;&lt; <span class="stringliteral">&quot;: already registered: &quot;</span>;</div>
+<div class="line"><span class="lineno">   58</span>                }</div>
+<div class="line"><span class="lineno">   59</span>            } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">   60</span>                LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <span class="stringliteral">&quot;DynLoader: dlCloseDelayed: &quot;</span> &lt;&lt; handle &lt;&lt; <span class="stringliteral">&quot;: not opened using dlOpen&quot;</span>;</div>
+<div class="line"><span class="lineno">   61</span>            }</div>
+<div class="line"><span class="lineno">   62</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">   63</span>            LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <span class="stringliteral">&quot;DynLoader: dlCloseDelayed: handle is nullptr&quot;</span>;</div>
+<div class="line"><span class="lineno">   64</span>        }</div>
+<div class="line"><span class="lineno">   65</span>    }</div>
 <div class="ttc" id="aclasscore_1_1DynamicLoader_html_a3d9c00c6e839bbdb31894887b8407fe4"><div class="ttname"><a href="#a3d9c00c6e839bbdb31894887b8407fe4">core::DynamicLoader::closeHandles</a></div><div class="ttdeci">static std::list&lt; void * &gt; closeHandles</div><div class="ttdef"><b>Definition</b> <a href="DynamicLoader_8h_source.html#l00062">DynamicLoader.h:62</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -381,10 +376,10 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DynamicLoader_8cpp_source.html#l00095">95</a> of file <a class="el" href="DynamicLoader_8cpp_source.html">DynamicLoader.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   95</span>                                 {</div>
-<div class="line"><span class="lineno">   96</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="namespacecore_1_1system.html#ad04dc647899e7a1c52498190f5e16f1c">core::system::dlerror</a>();</div>
-<div class="line"><span class="lineno">   97</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="DynamicLoader_8cpp_source.html#l00089">89</a> of file <a class="el" href="DynamicLoader_8cpp_source.html">DynamicLoader.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   89</span>                                 {</div>
+<div class="line"><span class="lineno">   90</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="namespacecore_1_1system.html#ad04dc647899e7a1c52498190f5e16f1c">core::system::dlerror</a>();</div>
+<div class="line"><span class="lineno">   91</span>    }</div>
 <div class="ttc" id="anamespacecore_1_1system_html_ad04dc647899e7a1c52498190f5e16f1c"><div class="ttname"><a href="namespacecore_1_1system.html#ad04dc647899e7a1c52498190f5e16f1c">core::system::dlerror</a></div><div class="ttdeci">char * dlerror()</div><div class="ttdef"><b>Definition</b> <a href="dlfcn_8cpp_source.html#l00045">dlfcn.cpp:45</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -423,15 +418,13 @@ Friends</h2></td></tr>
 <div class="line"><span class="lineno">   38</span>                <a class="code hl_variable" href="#a686abfc426926c79f8801c98555c7a4b">dlOpenedLibraries</a>[handle].fileName = libFile;</div>
 <div class="line"><span class="lineno">   39</span>                <a class="code hl_variable" href="#a686abfc426926c79f8801c98555c7a4b">dlOpenedLibraries</a>[handle].handle = handle;</div>
 <div class="line"><span class="lineno">   40</span>            }</div>
-<div class="line"><span class="lineno">   41</span>            LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <span class="stringliteral">&quot;DynLoader: dlOpen: success&quot;</span>;</div>
-<div class="line"><span class="lineno">   42</span>            LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <span class="stringliteral">&quot;           &quot;</span> &lt;&lt; libFile;</div>
-<div class="line"><span class="lineno">   43</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   44</span>            LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <span class="stringliteral">&quot;DynLoader: dlOpen: &quot;</span> &lt;&lt; <a class="code hl_function" href="#a28d14f3029339351d8bb8b328a6110b0">DynamicLoader::dlError</a>();</div>
-<div class="line"><span class="lineno">   45</span>            LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <span class="stringliteral">&quot;           &quot;</span> &lt;&lt; libFile;</div>
-<div class="line"><span class="lineno">   46</span>        }</div>
-<div class="line"><span class="lineno">   47</span> </div>
-<div class="line"><span class="lineno">   48</span>        <span class="keywordflow">return</span> handle;</div>
-<div class="line"><span class="lineno">   49</span>    }</div>
+<div class="line"><span class="lineno">   41</span>            LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <span class="stringliteral">&quot;DynLoader: dlOpen: &quot;</span> &lt;&lt; libFile &lt;&lt; <span class="stringliteral">&quot;: success&quot;</span>;</div>
+<div class="line"><span class="lineno">   42</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">   43</span>            LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <span class="stringliteral">&quot;DynLoader: dlOpen: &quot;</span> &lt;&lt; <a class="code hl_function" href="#a28d14f3029339351d8bb8b328a6110b0">DynamicLoader::dlError</a>();</div>
+<div class="line"><span class="lineno">   44</span>        }</div>
+<div class="line"><span class="lineno">   45</span> </div>
+<div class="line"><span class="lineno">   46</span>        <span class="keywordflow">return</span> handle;</div>
+<div class="line"><span class="lineno">   47</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -462,10 +455,10 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DynamicLoader_8cpp_source.html#l00091">91</a> of file <a class="el" href="DynamicLoader_8cpp_source.html">DynamicLoader.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   91</span>                                                                    {</div>
-<div class="line"><span class="lineno">   92</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="namespacecore_1_1system.html#a83d3862b9812ad39b93753bbea40238b">core::system::dlsym</a>(handle, symbol.c_str());</div>
-<div class="line"><span class="lineno">   93</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="DynamicLoader_8cpp_source.html#l00085">85</a> of file <a class="el" href="DynamicLoader_8cpp_source.html">DynamicLoader.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   85</span>                                                                    {</div>
+<div class="line"><span class="lineno">   86</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="namespacecore_1_1system.html#a83d3862b9812ad39b93753bbea40238b">core::system::dlsym</a>(handle, symbol.c_str());</div>
+<div class="line"><span class="lineno">   87</span>    }</div>
 <div class="ttc" id="anamespacecore_1_1system_html_a83d3862b9812ad39b93753bbea40238b"><div class="ttname"><a href="namespacecore_1_1system.html#a83d3862b9812ad39b93753bbea40238b">core::system::dlsym</a></div><div class="ttdeci">void * dlsym(void *handle, const char *symbol)</div><div class="ttdef"><b>Definition</b> <a href="dlfcn_8cpp_source.html#l00040">dlfcn.cpp:40</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -493,19 +486,19 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DynamicLoader_8cpp_source.html#l00132">132</a> of file <a class="el" href="DynamicLoader_8cpp_source.html">DynamicLoader.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  132</span>                                       {</div>
-<div class="line"><span class="lineno">  133</span>        LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <span class="stringliteral">&quot;DynLoader: execDlCloseAll ...&quot;</span>;</div>
+<p class="definition">Definition at line <a class="el" href="DynamicLoader_8cpp_source.html#l00125">125</a> of file <a class="el" href="DynamicLoader_8cpp_source.html">DynamicLoader.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  125</span>                                       {</div>
+<div class="line"><span class="lineno">  126</span>        LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <span class="stringliteral">&quot;DynLoader: execDlCloseAll&quot;</span>;</div>
+<div class="line"><span class="lineno">  127</span> </div>
+<div class="line"><span class="lineno">  128</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; [handle, library] : <a class="code hl_variable" href="#a686abfc426926c79f8801c98555c7a4b">dlOpenedLibraries</a>) {</div>
+<div class="line"><span class="lineno">  129</span>            <a class="code hl_function" href="#a42ac52cda1ec4534f1cc9e225dcb31b0">dlClose</a>(library);</div>
+<div class="line"><span class="lineno">  130</span>        }</div>
+<div class="line"><span class="lineno">  131</span> </div>
+<div class="line"><span class="lineno">  132</span>        <a class="code hl_variable" href="#a686abfc426926c79f8801c98555c7a4b">dlOpenedLibraries</a>.clear();</div>
+<div class="line"><span class="lineno">  133</span>        <a class="code hl_variable" href="#a3d9c00c6e839bbdb31894887b8407fe4">closeHandles</a>.clear();</div>
 <div class="line"><span class="lineno">  134</span> </div>
-<div class="line"><span class="lineno">  135</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; [handle, library] : <a class="code hl_variable" href="#a686abfc426926c79f8801c98555c7a4b">dlOpenedLibraries</a>) {</div>
-<div class="line"><span class="lineno">  136</span>            <a class="code hl_function" href="#a42ac52cda1ec4534f1cc9e225dcb31b0">dlClose</a>(library);</div>
-<div class="line"><span class="lineno">  137</span>        }</div>
-<div class="line"><span class="lineno">  138</span> </div>
-<div class="line"><span class="lineno">  139</span>        <a class="code hl_variable" href="#a686abfc426926c79f8801c98555c7a4b">dlOpenedLibraries</a>.clear();</div>
-<div class="line"><span class="lineno">  140</span>        <a class="code hl_variable" href="#a3d9c00c6e839bbdb31894887b8407fe4">closeHandles</a>.clear();</div>
-<div class="line"><span class="lineno">  141</span> </div>
-<div class="line"><span class="lineno">  142</span>        LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <span class="stringliteral">&quot;DynLoader: execDlCloseAll done&quot;</span>;</div>
-<div class="line"><span class="lineno">  143</span>    }</div>
+<div class="line"><span class="lineno">  135</span>        LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <span class="stringliteral">&quot;DynLoader: execDlCloseAll done&quot;</span>;</div>
+<div class="line"><span class="lineno">  136</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -532,21 +525,21 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DynamicLoader_8cpp_source.html#l00117">117</a> of file <a class="el" href="DynamicLoader_8cpp_source.html">DynamicLoader.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  117</span>                                           {</div>
-<div class="line"><span class="lineno">  118</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="#a3d9c00c6e839bbdb31894887b8407fe4">closeHandles</a>.empty()) {</div>
-<div class="line"><span class="lineno">  119</span>            LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <span class="stringliteral">&quot;DynLoader: execDlCloseDeleyed ...&quot;</span>;</div>
+<p class="definition">Definition at line <a class="el" href="DynamicLoader_8cpp_source.html#l00110">110</a> of file <a class="el" href="DynamicLoader_8cpp_source.html">DynamicLoader.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  110</span>                                           {</div>
+<div class="line"><span class="lineno">  111</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="#a3d9c00c6e839bbdb31894887b8407fe4">closeHandles</a>.empty()) {</div>
+<div class="line"><span class="lineno">  112</span>            LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <span class="stringliteral">&quot;DynLoader: execDlCloseDeleyed&quot;</span>;</div>
+<div class="line"><span class="lineno">  113</span> </div>
+<div class="line"><span class="lineno">  114</span>            <span class="keywordflow">for</span> (<span class="keywordtype">void</span>* handle : <a class="code hl_variable" href="#a3d9c00c6e839bbdb31894887b8407fe4">closeHandles</a>) {</div>
+<div class="line"><span class="lineno">  115</span>                <a class="code hl_function" href="#a42ac52cda1ec4534f1cc9e225dcb31b0">dlClose</a>(<a class="code hl_variable" href="#a686abfc426926c79f8801c98555c7a4b">dlOpenedLibraries</a>[handle]);</div>
+<div class="line"><span class="lineno">  116</span>                <a class="code hl_variable" href="#a686abfc426926c79f8801c98555c7a4b">dlOpenedLibraries</a>.erase(handle);</div>
+<div class="line"><span class="lineno">  117</span>            }</div>
+<div class="line"><span class="lineno">  118</span> </div>
+<div class="line"><span class="lineno">  119</span>            <a class="code hl_variable" href="#a3d9c00c6e839bbdb31894887b8407fe4">closeHandles</a>.clear();</div>
 <div class="line"><span class="lineno">  120</span> </div>
-<div class="line"><span class="lineno">  121</span>            <span class="keywordflow">for</span> (<span class="keywordtype">void</span>* handle : <a class="code hl_variable" href="#a3d9c00c6e839bbdb31894887b8407fe4">closeHandles</a>) {</div>
-<div class="line"><span class="lineno">  122</span>                <a class="code hl_function" href="#a42ac52cda1ec4534f1cc9e225dcb31b0">dlClose</a>(<a class="code hl_variable" href="#a686abfc426926c79f8801c98555c7a4b">dlOpenedLibraries</a>[handle]);</div>
-<div class="line"><span class="lineno">  123</span>                <a class="code hl_variable" href="#a686abfc426926c79f8801c98555c7a4b">dlOpenedLibraries</a>.erase(handle);</div>
-<div class="line"><span class="lineno">  124</span>            }</div>
-<div class="line"><span class="lineno">  125</span> </div>
-<div class="line"><span class="lineno">  126</span>            <a class="code hl_variable" href="#a3d9c00c6e839bbdb31894887b8407fe4">closeHandles</a>.clear();</div>
-<div class="line"><span class="lineno">  127</span> </div>
-<div class="line"><span class="lineno">  128</span>            LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <span class="stringliteral">&quot;DynLoader: execDlCloseDeleyed done&quot;</span>;</div>
-<div class="line"><span class="lineno">  129</span>        }</div>
-<div class="line"><span class="lineno">  130</span>    }</div>
+<div class="line"><span class="lineno">  121</span>            LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <span class="stringliteral">&quot;DynLoader: execDlCloseDeleyed done&quot;</span>;</div>
+<div class="line"><span class="lineno">  122</span>        }</div>
+<div class="line"><span class="lineno">  123</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -573,10 +566,10 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DynamicLoader_8cpp_source.html#l00099">99</a> of file <a class="el" href="DynamicLoader_8cpp_source.html">DynamicLoader.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   99</span>                                                             {</div>
-<div class="line"><span class="lineno">  100</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="namespacecore_1_1system.html#a4317d54914cd18248143183ea71252d3">core::system::dlclose</a>(library.handle);</div>
-<div class="line"><span class="lineno">  101</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="DynamicLoader_8cpp_source.html#l00093">93</a> of file <a class="el" href="DynamicLoader_8cpp_source.html">DynamicLoader.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   93</span>                                                             {</div>
+<div class="line"><span class="lineno">   94</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="namespacecore_1_1system.html#a4317d54914cd18248143183ea71252d3">core::system::dlclose</a>(library.handle);</div>
+<div class="line"><span class="lineno">   95</span>    }</div>
 <div class="ttc" id="anamespacecore_1_1system_html_a4317d54914cd18248143183ea71252d3"><div class="ttname"><a href="namespacecore_1_1system.html#a4317d54914cd18248143183ea71252d3">core::system::dlclose</a></div><div class="ttdeci">int dlclose(void *handle)</div><div class="ttdef"><b>Definition</b> <a href="dlfcn_8cpp_source.html#l00035">dlfcn.cpp:35</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -689,7 +682,7 @@ Friends</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacecore.html">core</a></li><li class="navelem"><a class="el" href="classcore_1_1DynamicLoader.html">DynamicLoader</a></li>
-    <li class="footer">Generated on Tue Jan 7 2025 00:42:11 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generated on Sun Jan 12 2025 21:03:49 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>

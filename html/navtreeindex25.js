@@ -1,5 +1,9 @@
 var NAVTREEINDEX25 =
 {
+"classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketServer.html#a1c88cb04442ae2b948333264e41521cf":[1,0,9,0,0,0,1,0],
+"classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketServer.html#a1c88cb04442ae2b948333264e41521cf":[3,0,6,0,0,0,1,0],
+"classnet_1_1config_1_1stream_1_1tls_1_1ConfigSocketClient.html":[1,0,9,0,0,1,0],
+"classnet_1_1config_1_1stream_1_1tls_1_1ConfigSocketClient.html":[3,0,6,0,0,1,0],
 "classnet_1_1config_1_1stream_1_1tls_1_1ConfigSocketClient.html#a1624d55b92784d621f02885509644e52":[1,0,9,0,0,1,0,2],
 "classnet_1_1config_1_1stream_1_1tls_1_1ConfigSocketClient.html#a1624d55b92784d621f02885509644e52":[3,0,6,0,0,1,0,2],
 "classnet_1_1config_1_1stream_1_1tls_1_1ConfigSocketClient.html#a8832022f660b749683e43026f541dd0b":[1,0,9,0,0,1,0,0],
@@ -245,9 +249,5 @@ var NAVTREEINDEX25 =
 "classnet_1_1in6_1_1stream_1_1config_1_1ConfigSocketServer.html#af5c73979bdeb2d8a9971a91bdc7c66ef":[1,0,9,2,2,0,1,7],
 "classnet_1_1in6_1_1stream_1_1config_1_1ConfigSocketServer.html#af5c73979bdeb2d8a9971a91bdc7c66ef":[3,0,6,2,2,0,1,7],
 "classnet_1_1in6_1_1stream_1_1config_1_1ConfigSocketServer.html#af5f15b68fdeb5cf9fa4664d4e4423e4b":[1,0,9,2,2,0,1,5],
-"classnet_1_1in6_1_1stream_1_1config_1_1ConfigSocketServer.html#af5f15b68fdeb5cf9fa4664d4e4423e4b":[3,0,6,2,2,0,1,5],
-"classnet_1_1in6_1_1stream_1_1legacy_1_1config_1_1ConfigSocketClient.html":[1,0,9,2,2,1,0,0],
-"classnet_1_1in6_1_1stream_1_1legacy_1_1config_1_1ConfigSocketClient.html":[3,0,6,2,2,1,0,0],
-"classnet_1_1in6_1_1stream_1_1legacy_1_1config_1_1ConfigSocketClient.html#a8e7e2cf35852f54e540f6203fc6b5484":[1,0,9,2,2,1,0,0,1],
-"classnet_1_1in6_1_1stream_1_1legacy_1_1config_1_1ConfigSocketClient.html#a8e7e2cf35852f54e540f6203fc6b5484":[3,0,6,2,2,1,0,0,1]
+"classnet_1_1in6_1_1stream_1_1config_1_1ConfigSocketServer.html#af5f15b68fdeb5cf9fa4664d4e4423e4b":[3,0,6,2,2,0,1,5]
 };

@@ -1,5 +1,9 @@
 var NAVTREEINDEX7 =
 {
+"classcore_1_1socket_1_1SocketContext.html":[3,0,1,4,3],
+"classcore_1_1socket_1_1SocketContext.html#a171ec3bb2190630276ff2e6cb5fd9ccf":[1,0,3,4,3,13],
+"classcore_1_1socket_1_1SocketContext.html#a171ec3bb2190630276ff2e6cb5fd9ccf":[3,0,1,4,3,13],
+"classcore_1_1socket_1_1SocketContext.html#a1965401ba1814087fec30d3305341bec":[1,0,3,4,3,5],
 "classcore_1_1socket_1_1SocketContext.html#a1965401ba1814087fec30d3305341bec":[3,0,1,4,3,5],
 "classcore_1_1socket_1_1SocketContext.html#a34c520f17818f029395d2d2b4babc882":[1,0,3,4,3,6],
 "classcore_1_1socket_1_1SocketContext.html#a34c520f17818f029395d2d2b4babc882":[3,0,1,4,3,6],
@@ -245,9 +249,5 @@ var NAVTREEINDEX7 =
 "classcore_1_1socket_1_1stream_1_1SocketConnectionT.html#a8e55d0f1cd8ca960db2e7a04223cf8f9":[3,0,1,4,0,5,15],
 "classcore_1_1socket_1_1stream_1_1SocketConnectionT.html#a9014c18c8f30f70e7ad37110731c5a57":[1,0,3,4,0,6,12],
 "classcore_1_1socket_1_1stream_1_1SocketConnectionT.html#a9014c18c8f30f70e7ad37110731c5a57":[3,0,1,4,0,5,12],
-"classcore_1_1socket_1_1stream_1_1SocketConnectionT.html#a9fab76462ae22ac6bad708407b76b4bd":[1,0,3,4,0,6,30],
-"classcore_1_1socket_1_1stream_1_1SocketConnectionT.html#a9fab76462ae22ac6bad708407b76b4bd":[3,0,1,4,0,5,30],
-"classcore_1_1socket_1_1stream_1_1SocketConnectionT.html#aa8dc6a9e6bda050e5ba92d94677b686b":[1,0,3,4,0,6,18],
-"classcore_1_1socket_1_1stream_1_1SocketConnectionT.html#aa8dc6a9e6bda050e5ba92d94677b686b":[3,0,1,4,0,5,18],
-"classcore_1_1socket_1_1stream_1_1SocketConnectionT.html#aaad0213f5445daf77b0e2f39153c9ede":[1,0,3,4,0,6,1]
+"classcore_1_1socket_1_1stream_1_1SocketConnectionT.html#a9fab76462ae22ac6bad708407b76b4bd":[1,0,3,4,0,6,30]
 };

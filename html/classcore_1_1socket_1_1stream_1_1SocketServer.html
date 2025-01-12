@@ -467,22 +467,22 @@ template&lt;typename SocketAcceptorT , typename SocketContextFactoryT , typename
 <div class="fragment"><div class="line"><span class="lineno">   74</span>            : <a class="code hl_function" href="#a278e13980655aa8a7614a23899bbf409">SocketServer</a>(</div>
 <div class="line"><span class="lineno">   75</span>                  name,</div>
 <div class="line"><span class="lineno">   76</span>                  [name](<a class="code hl_typedef" href="#abac2fce09101ae45fe6913c524e6f9e6">SocketConnection</a>* socketConnection) -&gt; <span class="keywordtype">void</span> { <span class="comment">// onConnect</span></div>
-<div class="line"><span class="lineno">   77</span>                      LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;OnConnect &quot;</span> &lt;&lt; name;</div>
+<div class="line"><span class="lineno">   77</span>                      LOG(INFO) &lt;&lt; name &lt;&lt; <span class="stringliteral">&quot;: OnConnect&quot;</span>;</div>
 <div class="line"><span class="lineno">   78</span> </div>
-<div class="line"><span class="lineno">   79</span>                      LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;\tLocal: &quot;</span> &lt;&lt; socketConnection-&gt;getLocalAddress().toString();</div>
-<div class="line"><span class="lineno">   80</span>                      LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;\tPeer:  &quot;</span> &lt;&lt; socketConnection-&gt;getRemoteAddress().toString();</div>
+<div class="line"><span class="lineno">   79</span>                      LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;  Local: &quot;</span> &lt;&lt; socketConnection-&gt;getLocalAddress().toString();</div>
+<div class="line"><span class="lineno">   80</span>                      LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;  Peer:  &quot;</span> &lt;&lt; socketConnection-&gt;getRemoteAddress().toString();</div>
 <div class="line"><span class="lineno">   81</span>                  },</div>
 <div class="line"><span class="lineno">   82</span>                  [name](<a class="code hl_typedef" href="#abac2fce09101ae45fe6913c524e6f9e6">SocketConnection</a>* socketConnection) -&gt; <span class="keywordtype">void</span> { <span class="comment">// onConnected</span></div>
-<div class="line"><span class="lineno">   83</span>                      LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;OnConnected &quot;</span> &lt;&lt; name;</div>
+<div class="line"><span class="lineno">   83</span>                      LOG(INFO) &lt;&lt; name &lt;&lt; <span class="stringliteral">&quot;: OnConnected&quot;</span>;</div>
 <div class="line"><span class="lineno">   84</span> </div>
-<div class="line"><span class="lineno">   85</span>                      LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;\tLocal: &quot;</span> &lt;&lt; socketConnection-&gt;getLocalAddress().toString();</div>
-<div class="line"><span class="lineno">   86</span>                      LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;\tPeer:  &quot;</span> &lt;&lt; socketConnection-&gt;getRemoteAddress().toString();</div>
+<div class="line"><span class="lineno">   85</span>                      LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;  Local: &quot;</span> &lt;&lt; socketConnection-&gt;getLocalAddress().toString();</div>
+<div class="line"><span class="lineno">   86</span>                      LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;  Peer:  &quot;</span> &lt;&lt; socketConnection-&gt;getRemoteAddress().toString();</div>
 <div class="line"><span class="lineno">   87</span>                  },</div>
 <div class="line"><span class="lineno">   88</span>                  [name](<a class="code hl_typedef" href="#abac2fce09101ae45fe6913c524e6f9e6">SocketConnection</a>* socketConnection) -&gt; <span class="keywordtype">void</span> { <span class="comment">// onDisconnect</span></div>
-<div class="line"><span class="lineno">   89</span>                      LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;OnDisconnect &quot;</span> &lt;&lt; name;</div>
+<div class="line"><span class="lineno">   89</span>                      LOG(INFO) &lt;&lt; name &lt;&lt; <span class="stringliteral">&quot;: OnDisconnect&quot;</span>;</div>
 <div class="line"><span class="lineno">   90</span> </div>
-<div class="line"><span class="lineno">   91</span>                      LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;\tLocal: &quot;</span> &lt;&lt; socketConnection-&gt;getLocalAddress().toString();</div>
-<div class="line"><span class="lineno">   92</span>                      LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;\tPeer:  &quot;</span> &lt;&lt; socketConnection-&gt;getRemoteAddress().toString();</div>
+<div class="line"><span class="lineno">   91</span>                      LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;  Local: &quot;</span> &lt;&lt; socketConnection-&gt;getLocalAddress().toString();</div>
+<div class="line"><span class="lineno">   92</span>                      LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;  Peer:  &quot;</span> &lt;&lt; socketConnection-&gt;getRemoteAddress().toString();</div>
 <div class="line"><span class="lineno">   93</span>                  },</div>
 <div class="line"><span class="lineno">   94</span>                  std::forward&lt;Args&gt;(args)...) {</div>
 <div class="line"><span class="lineno">   95</span>        }</div>
@@ -749,8 +749,8 @@ template&lt;typename SocketAcceptorT , typename SocketContextFactoryT , typename
 <div class="line"><span class="lineno">  145</span>                                                                                      server.getConfig().getRetryJitter()) *</div>
 <div class="line"><span class="lineno">  146</span>                                                            relativeRetryTimeout / 100.;</div>
 <div class="line"><span class="lineno">  147</span> </div>
-<div class="line"><span class="lineno">  148</span>                                    LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;Server OnStatus: &quot;</span> &lt;&lt; server.getConfig().getInstanceName();</div>
-<div class="line"><span class="lineno">  149</span>                                    LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;  retrying in &quot;</span> &lt;&lt; relativeRetryTimeout &lt;&lt; <span class="stringliteral">&quot; seconds&quot;</span>;</div>
+<div class="line"><span class="lineno">  148</span>                                    LOG(INFO) &lt;&lt; server.getConfig().getInstanceName() &lt;&lt; <span class="stringliteral">&quot;: OnStatus&quot;</span>;</div>
+<div class="line"><span class="lineno">  149</span>                                    LOG(INFO) &lt;&lt; <span class="stringliteral">&quot; retrying in &quot;</span> &lt;&lt; relativeRetryTimeout &lt;&lt; <span class="stringliteral">&quot; seconds&quot;</span>;</div>
 <div class="line"><span class="lineno">  150</span> </div>
 <div class="line"><span class="lineno">  151</span>                                    <a class="code hl_function" href="classcore_1_1timer_1_1Timer.html#a9847ce4e56baf9141cc880aa7e20c71a">core::timer::Timer::singleshotTimer</a>(</div>
 <div class="line"><span class="lineno">  152</span>                                        [server, onStatus, tries, retryTimeoutScale]() <span class="keyword">mutable</span> -&gt; <span class="keywordtype">void</span> {</div>
@@ -1113,7 +1113,7 @@ template&lt;typename SocketAcceptorT , typename SocketContextFactoryT , typename
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacecore.html">core</a></li><li class="navelem"><a class="el" href="namespacecore_1_1socket.html">socket</a></li><li class="navelem"><a class="el" href="namespacecore_1_1socket_1_1stream.html">stream</a></li><li class="navelem"><a class="el" href="classcore_1_1socket_1_1stream_1_1SocketServer.html">SocketServer</a></li>
-    <li class="footer">Generated on Tue Jan 7 2025 00:42:11 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generated on Sun Jan 12 2025 21:03:49 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>
