@@ -302,13 +302,13 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">   35</span>        <span class="keyword">const</span> std::string GUID = <span class="stringliteral">&quot;258EAFA5-E914-47DA-95CA-C5AB0DC85B11&quot;</span>;</div>
 <div class="line"><span class="lineno">   36</span> </div>
 <div class="line"><span class="lineno">   37</span>        <span class="keyword">const</span> std::string <a class="code hl_function" href="#a43968536c5e19d8c265e17d08fd91c3e">serverWebSocketKey</a>(clientWebSocketKey + GUID);</div>
-<div class="line"><span class="lineno">   38</span>        std::vector&lt;unsigned char&gt; digest = <a class="code hl_function" href="sha1_8cpp.html#af880e7fd80b862bf173055ba224019bf">sha1</a>(serverWebSocketKey);</div>
+<div class="line"><span class="lineno">   38</span>        std::vector&lt;unsigned char&gt; digest = <a class="code hl_function" href="namespaceutils.html#a4ba067c99edff8bcc98aab55a4ddc814">utils::sha1</a>(serverWebSocketKey);</div>
 <div class="line"><span class="lineno">   39</span> </div>
 <div class="line"><span class="lineno">   40</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="#af19189e96ecbd4de55806b9b705f7374">base64_encode</a>(digest.data(), digest.size());</div>
 <div class="line"><span class="lineno">   41</span>    }</div>
 <div class="ttc" id="anamespacebase64_html_a43968536c5e19d8c265e17d08fd91c3e"><div class="ttname"><a href="#a43968536c5e19d8c265e17d08fd91c3e">base64::serverWebSocketKey</a></div><div class="ttdeci">std::string serverWebSocketKey(const std::string &amp;clientWebSocketKey)</div><div class="ttdef"><b>Definition</b> <a href="base64_8cpp_source.html#l00034">base64.cpp:34</a></div></div>
 <div class="ttc" id="anamespacebase64_html_af19189e96ecbd4de55806b9b705f7374"><div class="ttname"><a href="#af19189e96ecbd4de55806b9b705f7374">base64::base64_encode</a></div><div class="ttdeci">std::string base64_encode(const unsigned char *bytes_to_encode, std::size_t length)</div><div class="ttdef"><b>Definition</b> <a href="base64_8cpp_source.html#l00047">base64.cpp:47</a></div></div>
-<div class="ttc" id="asha1_8cpp_html_af880e7fd80b862bf173055ba224019bf"><div class="ttname"><a href="sha1_8cpp.html#af880e7fd80b862bf173055ba224019bf">sha1</a></div><div class="ttdeci">std::vector&lt; unsigned char &gt; sha1(const std::string &amp;string)</div><div class="ttdef"><b>Definition</b> <a href="sha1_8cpp_source.html#l00265">sha1.cpp:265</a></div></div>
+<div class="ttc" id="anamespaceutils_html_a4ba067c99edff8bcc98aab55a4ddc814"><div class="ttname"><a href="namespaceutils.html#a4ba067c99edff8bcc98aab55a4ddc814">utils::sha1</a></div><div class="ttdeci">std::vector&lt; unsigned char &gt; sha1(const std::string &amp;string)</div><div class="ttdef"><b>Definition</b> <a href="sha1_8cpp_source.html#l00267">sha1.cpp:267</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -318,7 +318,7 @@ Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacebase64.html">base64</a></li>
-    <li class="footer">Generated on Sun Jan 12 2025 21:03:49 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generated on Mon Jan 20 2025 01:16:12 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>

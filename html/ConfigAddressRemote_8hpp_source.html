@@ -99,17 +99,46 @@ $(function(){initNavTree('ConfigAddressRemote_8hpp_source.html',''); initResizab
   <div class="headertitle"><div class="title">ConfigAddressRemote.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="ConfigAddressRemote_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
-<div class="ttc" id="aConfigPhysicalSocket_8cpp_html_a03943706e48069237cd57f2d35ca987e"><div class="ttname"><a href="ConfigPhysicalSocket_8cpp.html#a03943706e48069237cd57f2d35ca987e">XSTR</a></div><div class="ttdeci">#define XSTR(s)</div><div class="ttdef"><b>Definition</b> <a href="ConfigPhysicalSocket_8cpp_source.html#l00034">ConfigPhysicalSocket.cpp:34</a></div></div>
-<div class="ttc" id="aConfigPhysicalSocket_8cpp_html_a6388870e639eee9c0a69446876f1f8cc"><div class="ttname"><a href="ConfigPhysicalSocket_8cpp.html#a6388870e639eee9c0a69446876f1f8cc">STR</a></div><div class="ttdeci">#define STR(s)</div><div class="ttdef"><b>Definition</b> <a href="ConfigPhysicalSocket_8cpp_source.html#l00035">ConfigPhysicalSocket.cpp:35</a></div></div>
-<div class="ttc" id="anamespacenet_1_1in_html"><div class="ttname"><a href="namespacenet_1_1in.html">net::in</a></div><div class="ttdef"><b>Definition</b> <a href="in_2config_2ConfigAddress_8cpp_source.html#l00040">ConfigAddress.cpp:40</a></div></div>
+<a href="ConfigAddressRemote_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<div class="line"><span class="lineno">    2</span><span class="comment"> * SNode.C - a slim toolkit for network communication</span></div>
+<div class="line"><span class="lineno">    3</span><span class="comment"> * Copyright (C) Volker Christian &lt;me@vchrist.at&gt;</span></div>
+<div class="line"><span class="lineno">    4</span><span class="comment"> *               2020, 2021, 2022, 2023, 2024, 2025</span></div>
+<div class="line"><span class="lineno">    5</span><span class="comment"> *</span></div>
+<div class="line"><span class="lineno">    6</span><span class="comment"> * This program is free software: you can redistribute it and/or modify</span></div>
+<div class="line"><span class="lineno">    7</span><span class="comment"> * it under the terms of the GNU Lesser General Public License as published</span></div>
+<div class="line"><span class="lineno">    8</span><span class="comment"> * by the Free Software Foundation, either version 3 of the License, or</span></div>
+<div class="line"><span class="lineno">    9</span><span class="comment"> * (at your option) any later version.</span></div>
+<div class="line"><span class="lineno">   10</span><span class="comment"> *</span></div>
+<div class="line"><span class="lineno">   11</span><span class="comment"> * This program is distributed in the hope that it will be useful,</span></div>
+<div class="line"><span class="lineno">   12</span><span class="comment"> * but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
+<div class="line"><span class="lineno">   13</span><span class="comment"> * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the</span></div>
+<div class="line"><span class="lineno">   14</span><span class="comment"> * GNU Lesser General Public License for more details.</span></div>
+<div class="line"><span class="lineno">   15</span><span class="comment"> *</span></div>
+<div class="line"><span class="lineno">   16</span><span class="comment"> * You should have received a copy of the GNU Lesser General Public License</span></div>
+<div class="line"><span class="lineno">   17</span><span class="comment"> * along with this program. If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
+<div class="line"><span class="lineno">   18</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&quot;net/config/ConfigAddress.hpp&quot;</span>     <span class="comment">// IWYU pragma: export</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&quot;net/config/ConfigAddressRemote.h&quot;</span> <span class="comment">// IWYU pragma: export</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#</span><span class="preprocessor">ifndef</span> <span class="preprocessor">DOXYGEN_SHOULD_SKIP_THIS</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#</span><span class="preprocessor">endif</span> <span class="comment">// DOXYGEN_SHOULD_SKIP_THIS</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keyword">namespace</span> net::<a class="code hl_namespace" href="namespacenet_1_1config.html">config</a> {} <span class="comment">// namespace net::config</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment">// &quot;remote&quot;, &quot;Remote side of connection for instance &#39;&quot; + instance-&gt;getInstanceName() + &quot;&#39;&quot;</span></div>
+<div class="ttc" id="aConfigPhysicalSocket_8cpp_html_a03943706e48069237cd57f2d35ca987e"><div class="ttname"><a href="ConfigPhysicalSocket_8cpp.html#a03943706e48069237cd57f2d35ca987e">XSTR</a></div><div class="ttdeci">#define XSTR(s)</div><div class="ttdef"><b>Definition</b> <a href="ConfigPhysicalSocket_8cpp_source.html#l00033">ConfigPhysicalSocket.cpp:33</a></div></div>
+<div class="ttc" id="aecho_2model_2clients_8h_html_ac2e9bff2b922868f2b467492cb32839f"><div class="ttname"><a href="echo_2model_2clients_8h.html#ac2e9bff2b922868f2b467492cb32839f">STR</a></div><div class="ttdeci">#define STR(a)</div><div class="ttdef"><b>Definition</b> <a href="echo_2model_2clients_8h_source.html#l00026">clients.h:26</a></div></div>
+<div class="ttc" id="anamespacenet_1_1config_html"><div class="ttname"><a href="namespacenet_1_1config.html">net::config</a></div><div class="ttdef"><b>Definition</b> <a href="ConfigSection_8hpp_source.html#l00039">ConfigSection.hpp:39</a></div></div>
+<div class="ttc" id="anamespacenet_1_1in_1_1config_html"><div class="ttname"><a href="namespacenet_1_1in_1_1config.html">net::in::config</a></div><div class="ttdef"><b>Definition</b> <a href="in_2config_2ConfigAddress_8cpp_source.html#l00040">ConfigAddress.cpp:40</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_427baa8a9a5be237f298d4545d0d1ce2.html">net</a></li><li class="navelem"><a class="el" href="dir_87a4925d145c2dd6dc9f82c7d21b0c42.html">config</a></li><li class="navelem"><a class="el" href="ConfigAddressRemote_8hpp.html">ConfigAddressRemote.hpp</a></li>
-    <li class="footer">Generated on Sun Jan 12 2025 21:03:44 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generated on Mon Jan 20 2025 01:15:22 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>

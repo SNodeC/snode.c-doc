@@ -554,7 +554,7 @@ Echo-Server Main Application</h4>
 <div class="line"><span class="preprocessor">#include &lt;iostream&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* argv[]) {</div>
+<div class="line"><span class="keywordtype">int</span> <a class="code hl_function" href="configtest_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* argv[]) {</div>
 <div class="line">    <a class="code hl_function" href="classcore_1_1SNodeC.html#a2c8b01c5fc6ecc3036cb48a76f76f3b5">core::SNodeC::init</a>(argc, argv); <span class="comment">// Initialize the framework.</span></div>
 <div class="line">                                    <span class="comment">// Configure logging, create command line</span></div>
 <div class="line">                                    <span class="comment">// arguments for named instances.</span></div>
@@ -566,7 +566,7 @@ Echo-Server Main Application</h4>
 <div class="line">    <span class="keyword">using </span>SocketAddress = EchoServer::SocketAddress;                                    <span class="comment">// Simplify data type</span></div>
 <div class="line"> </div>
 <div class="line">    EchoServer echoServer; <span class="comment">// Create server instance and listen on all interfaces on port 8001</span></div>
-<div class="line">    echoServer.<a class="code hl_function" href="classnet_1_1in_1_1stream_1_1SocketServer.html#ab7e15343deb4840ebbdf478db3263c92">listen</a>(8001, 5, [](<span class="keyword">const</span> SocketAddress&amp; socketAddress, <span class="keyword">const</span> <a class="code hl_class" href="classcore_1_1socket_1_1State.html">core::socket::State</a>&amp; state) -&gt; <span class="keywordtype">void</span> {</div>
+<div class="line">    echoServer.listen(8001, 5, [](<span class="keyword">const</span> SocketAddress&amp; socketAddress, <span class="keyword">const</span> <a class="code hl_class" href="classcore_1_1socket_1_1State.html">core::socket::State</a>&amp; state) -&gt; <span class="keywordtype">void</span> {</div>
 <div class="line">        <span class="keywordflow">switch</span> (state) {</div>
 <div class="line">            <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a744e04217104f055ae728e8d884f25de">core::socket::State::OK</a>:</div>
 <div class="line">                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;EchoServer: connected to &#39;&quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
@@ -592,7 +592,7 @@ Echo-Server Main Application</h4>
 <div class="ttc" id="aclasscore_1_1socket_1_1State_html_a55b6abd55034b331fae4c9e085007dfa"><div class="ttname"><a href="classcore_1_1socket_1_1State.html#a55b6abd55034b331fae4c9e085007dfa">core::socket::State::what</a></div><div class="ttdeci">std::string what() const</div><div class="ttdef"><b>Definition</b> <a href="socket_2State_8cpp_source.html#l00092">State.cpp:92</a></div></div>
 <div class="ttc" id="aclasscore_1_1socket_1_1State_html_a5d0a9047c96edac9ffd9cd12574328c0"><div class="ttname"><a href="classcore_1_1socket_1_1State.html#a5d0a9047c96edac9ffd9cd12574328c0">core::socket::State::FATAL</a></div><div class="ttdeci">static constexpr int FATAL</div><div class="ttdef"><b>Definition</b> <a href="socket_2State_8h_source.html#l00036">State.h:36</a></div></div>
 <div class="ttc" id="aclasscore_1_1socket_1_1State_html_a744e04217104f055ae728e8d884f25de"><div class="ttname"><a href="classcore_1_1socket_1_1State.html#a744e04217104f055ae728e8d884f25de">core::socket::State::OK</a></div><div class="ttdeci">static constexpr int OK</div><div class="ttdef"><b>Definition</b> <a href="socket_2State_8h_source.html#l00033">State.h:33</a></div></div>
-<div class="ttc" id="aclassnet_1_1in_1_1stream_1_1SocketServer_html_ab7e15343deb4840ebbdf478db3263c92"><div class="ttname"><a href="classnet_1_1in_1_1stream_1_1SocketServer.html#ab7e15343deb4840ebbdf478db3263c92">net::in::stream::SocketServer::listen</a></div><div class="ttdeci">void listen(uint16_t port, const std::function&lt; void(const SocketAddress &amp;, core::socket::State)&gt; &amp;onStatus) const</div><div class="ttdef"><b>Definition</b> <a href="net_2in_2stream_2SocketServer_8h_source.html#l00053">SocketServer.h:53</a></div></div>
+<div class="ttc" id="aconfigtest_8cpp_html_a0ddf1224851353fc92bfbff6f499fa97"><div class="ttname"><a href="configtest_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a></div><div class="ttdeci">int main(int argc, char *argv[])</div><div class="ttdef"><b>Definition</b> <a href="configtest_8cpp_source.html#l00023">configtest.cpp:23</a></div></div>
 <div class="ttc" id="anet_2in_2stream_2legacy_2SocketServer_8h_html"><div class="ttname"><a href="net_2in_2stream_2legacy_2SocketServer_8h.html">SocketServer.h</a></div></div>
 </div><!-- fragment --><p>If we would have created a <em>named server instance</em>, a <em>special</em> <code>listen()</code> method can be used that only expects the <em>lambda</em> as argument. In that case the configuration of this instance is required to be done using the <em>command line interface</em> and/or a <em>configuration file</em>.</p>
 <h4><a class="anchor" id="echo-client-main-application"></a>
@@ -609,7 +609,7 @@ Echo-Client Main Application</h4>
 <div class="line"><span class="preprocessor">#include &lt;iostream&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* argv[]) {</div>
+<div class="line"><span class="keywordtype">int</span> <a class="code hl_function" href="configtest_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* argv[]) {</div>
 <div class="line">    <a class="code hl_function" href="classcore_1_1SNodeC.html#a2c8b01c5fc6ecc3036cb48a76f76f3b5">core::SNodeC::init</a>(argc, argv); <span class="comment">// Initialize the framework.</span></div>
 <div class="line">                                    <span class="comment">// Configure logging, create command line</span></div>
 <div class="line">                                    <span class="comment">// arguments for named instances.</span></div>
@@ -621,7 +621,7 @@ Echo-Client Main Application</h4>
 <div class="line">    <span class="keyword">using </span>SocketAddress = EchoClient::SocketAddress;                                    <span class="comment">// Simplify data type</span></div>
 <div class="line"> </div>
 <div class="line">    EchoClient echoClient; <span class="comment">// Create anonymous client instance and connect to localhost:8001</span></div>
-<div class="line">    echoClient.<a class="code hl_function" href="classnet_1_1in_1_1stream_1_1SocketClient.html#afb0a0ad82eb97fb4f6ae9eef32c8e977">connect</a>(<span class="stringliteral">&quot;localhost&quot;</span>, 8001, [](<span class="keyword">const</span> SocketAddress&amp; socketAddress, <span class="keyword">const</span> <a class="code hl_class" href="classcore_1_1socket_1_1State.html">core::socket::State</a>&amp; state) -&gt; <span class="keywordtype">void</span> {</div>
+<div class="line">    echoClient.connect(<span class="stringliteral">&quot;localhost&quot;</span>, 8001, [](<span class="keyword">const</span> SocketAddress&amp; socketAddress, <span class="keyword">const</span> <a class="code hl_class" href="classcore_1_1socket_1_1State.html">core::socket::State</a>&amp; state) -&gt; <span class="keywordtype">void</span> {</div>
 <div class="line">        <span class="keywordflow">switch</span> (state) {</div>
 <div class="line">            <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a744e04217104f055ae728e8d884f25de">core::socket::State::OK</a>:</div>
 <div class="line">                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;EchoClient: connected to &#39;&quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
@@ -640,7 +640,6 @@ Echo-Client Main Application</h4>
 <div class="line"> </div>
 <div class="line">    <span class="keywordflow">return</span> <a class="code hl_function" href="classcore_1_1SNodeC.html#ac3d0dcb6c216ae72d9bbb77fe080e461">core::SNodeC::start</a>(); <span class="comment">// Start the event loop, daemonize if requested.</span></div>
 <div class="line">}</div>
-<div class="ttc" id="aclassnet_1_1in_1_1stream_1_1SocketClient_html_afb0a0ad82eb97fb4f6ae9eef32c8e977"><div class="ttname"><a href="classnet_1_1in_1_1stream_1_1SocketClient.html#afb0a0ad82eb97fb4f6ae9eef32c8e977">net::in::stream::SocketClient::connect</a></div><div class="ttdeci">void connect(const std::string &amp;ipOrHostname, uint16_t port, const std::function&lt; void(const SocketAddress &amp;, core::socket::State)&gt; &amp;onStatus) const</div><div class="ttdef"><b>Definition</b> <a href="net_2in_2stream_2SocketClient_8h_source.html#l00053">SocketClient.h:53</a></div></div>
 <div class="ttc" id="anet_2in_2stream_2legacy_2SocketClient_8h_html"><div class="ttname"><a href="net_2in_2stream_2legacy_2SocketClient_8h.html">SocketClient.h</a></div></div>
 </div><!-- fragment --><p>If we would have created a <em>named client instance</em>, a special <code>connect()</code> method can be used that only expects the <em>lambda</em> as argument. In that case the configuration of this instance is required to be done using <em>command line arguments</em> and/or a <em>configuration file</em>.</p>
 <h3><a class="anchor" id="cmakeliststxt-file-for-building-and-installing-our-echoserver-and-echoclient"></a>
@@ -1217,11 +1216,12 @@ Attaching the Callbacks during Instance Creation</h4>
 <div class="line">                      [] (SocketConnection* socketConnection) -&gt; <span class="keywordtype">void</span> {</div>
 <div class="line">                          VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Connection to peer ready to be used&quot;</span>;</div>
 <div class="line">                      },</div>
-<div class="line">                      [] (SocketConnection* socketConnection) -&gt; <span class="keywordtype">void</span> {</div>
+<div class="line">                      [] (<a class="code hl_typedef" href="namespaceapps_1_1http_1_1legacy.html#a30976a44df49fb6d754fc5db457052ea">SocketConnection</a>* socketConnection) -&gt; <span class="keywordtype">void</span> {</div>
 <div class="line">                          VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Connection to peer closed&quot;</span>;</div>
 <div class="line">                      });</div>
 <div class="line"> </div>
-<div class="line">echoServer.<a class="code hl_function" href="classnet_1_1in_1_1stream_1_1SocketServer.html#ab7e15343deb4840ebbdf478db3263c92">listen</a>(...);</div>
+<div class="line">echoServer.listen(...);</div>
+<div class="ttc" id="anamespaceapps_1_1http_1_1legacy_html_a30976a44df49fb6d754fc5db457052ea"><div class="ttname"><a href="namespaceapps_1_1http_1_1legacy.html#a30976a44df49fb6d754fc5db457052ea">apps::http::legacy::SocketConnection</a></div><div class="ttdeci">Client::SocketConnection SocketConnection</div><div class="ttdef"><b>Definition</b> <a href="http_2model_2clients_8h_source.html#l00066">clients.h:66</a></div></div>
 </div><!-- fragment --><p>and for a concrete <code>SocketClient</code> class like</p>
 <div class="fragment"><div class="line"><span class="keyword">using </span>EchoClient = <a class="code hl_class" href="classnet_1_1in_1_1stream_1_1SocketServer.html">net::in::stream::legacy::SocketServer&lt;EchoClientContextFactory&gt;</a>;</div>
 <div class="line"><span class="keyword">using </span>SocketAddress = EchoClient::SocketAddress;</div>
@@ -1233,7 +1233,7 @@ Attaching the Callbacks during Instance Creation</h4>
 <div class="line">                      [] (SocketConnection* socketConnection) -&gt; <span class="keywordtype">void</span> {</div>
 <div class="line">                          VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Connection to peer ready to be used&quot;</span>;</div>
 <div class="line">                      },</div>
-<div class="line">                      [] (SocketConnection* socketConnection) -&gt; <span class="keywordtype">void</span> {</div>
+<div class="line">                      [] (<a class="code hl_typedef" href="namespaceapps_1_1http_1_1legacy.html#a30976a44df49fb6d754fc5db457052ea">SocketConnection</a>* socketConnection) -&gt; <span class="keywordtype">void</span> {</div>
 <div class="line">                          VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Connection to peer closed&quot;</span>;</div>
 <div class="line">                      });</div>
 <div class="line"> </div>
@@ -1253,7 +1253,7 @@ Attaching the Callbacks to already existing Instances</h4>
 <div class="line"> </div>
 <div class="line">EchoServer echoServer;</div>
 <div class="line"> </div>
-<div class="line">echoServer.<a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketServer.html#a9164c33e71e377ad4a20f21a41205282">setOnConnect</a>([] (SocketConnection* socketConnection) -&gt; <span class="keywordtype">void</span> {</div>
+<div class="line">echoServer.setOnConnect([] (SocketConnection* socketConnection) -&gt; <span class="keywordtype">void</span> {</div>
 <div class="line">    VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Connection to peer established&quot;</span>;</div>
 <div class="line">});</div>
 <div class="line"> </div>
@@ -1266,7 +1266,6 @@ Attaching the Callbacks to already existing Instances</h4>
 <div class="line">});</div>
 <div class="line"> </div>
 <div class="line">echoServer.listen(...);</div>
-<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketServer_html_a9164c33e71e377ad4a20f21a41205282"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1SocketServer.html#a9164c33e71e377ad4a20f21a41205282">core::socket::stream::SocketServer::setOnConnect</a></div><div class="ttdeci">std::function&lt; void(SocketConnection *)&gt; setOnConnect(const std::function&lt; void(SocketConnection *)&gt; &amp;onConnect)</div><div class="ttdef"><b>Definition</b> <a href="core_2socket_2stream_2SocketServer_8h_source.html#l00189">SocketServer.h:189</a></div></div>
 </div><!-- fragment --><p>and</p>
 <div class="fragment"><div class="line"><span class="keyword">using </span>EchoClient = <a class="code hl_class" href="classnet_1_1in_1_1stream_1_1SocketServer.html">net::in::stream::legacy::SocketServer&lt;EchoClientContextFactory&gt;</a>;</div>
 <div class="line"><span class="keyword">using </span>SocketAddress = EchoClient::SocketAddress;</div>
@@ -1274,7 +1273,7 @@ Attaching the Callbacks to already existing Instances</h4>
 <div class="line"> </div>
 <div class="line">EchoClient echoClient;</div>
 <div class="line"> </div>
-<div class="line">echoClient.<a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketServer.html#a9164c33e71e377ad4a20f21a41205282">setOnConnect</a>([] (SocketConnection* socketConnection) -&gt; <span class="keywordtype">void</span> {</div>
+<div class="line">echoClient.setOnConnect([] (SocketConnection* socketConnection) -&gt; <span class="keywordtype">void</span> {</div>
 <div class="line">    VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Connection to peer established&quot;</span>;</div>
 <div class="line">});</div>
 <div class="line"> </div>
@@ -2234,7 +2233,7 @@ Using More Than One Instance in an Application</h1>
 <p>SNode.C is designed to run multiple Server and Client Instances in one Application.</p>
 <p>For instance, if the echo server shall also communicate via e.g. Unix-Domain sockets and Bluetoot-RFCOMM those two server Instances need to be added but the application level protocol need not to be changed. The code can be found on github in the <b><a href="https://github.com/VolkerChristian/echo/tree/multiple-instances">multiple-instances</a></b> branch of the echo application.</p>
 <p>In that case the Main-Application would look like</p>
-<div class="fragment"><div class="line"> <span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* argv[]) {</div>
+<div class="fragment"><div class="line"> <span class="keywordtype">int</span> <a class="code hl_function" href="configtest_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* argv[]) {</div>
 <div class="line">    <a class="code hl_function" href="classcore_1_1SNodeC.html#a2c8b01c5fc6ecc3036cb48a76f76f3b5">core::SNodeC::init</a>(argc, argv);</div>
 <div class="line"> </div>
 <div class="line">    <span class="keyword">using </span>EchoServerIn = <a class="code hl_class" href="classnet_1_1in_1_1stream_1_1SocketServer.html">net::in::stream::legacy::SocketServer&lt;EchoServerContextFactory&gt;</a>;</div>
@@ -2314,11 +2313,12 @@ Using More Than One Instance in an Application</h1>
 <div class="line">    <span class="keywordflow">return</span> <a class="code hl_function" href="classcore_1_1SNodeC.html#ac3d0dcb6c216ae72d9bbb77fe080e461">core::SNodeC::start</a>(); <span class="comment">// Start the event loop, daemonize if requested.</span></div>
 <div class="line">}</div>
 <div class="ttc" id="aclasscore_1_1socket_1_1Socket_html_ac9b7df3682b2a24b5c7fce9bcff1c441"><div class="ttname"><a href="classcore_1_1socket_1_1Socket.html#ac9b7df3682b2a24b5c7fce9bcff1c441">core::socket::Socket::getConfig</a></div><div class="ttdeci">Config &amp; getConfig() const</div><div class="ttdef"><b>Definition</b> <a href="Socket_8hpp_source.html#l00038">Socket.hpp:38</a></div></div>
+<div class="ttc" id="aclassnet_1_1in_1_1stream_1_1SocketServer_html_ab7e15343deb4840ebbdf478db3263c92"><div class="ttname"><a href="classnet_1_1in_1_1stream_1_1SocketServer.html#ab7e15343deb4840ebbdf478db3263c92">net::in::stream::SocketServer::listen</a></div><div class="ttdeci">void listen(uint16_t port, const std::function&lt; void(const SocketAddress &amp;, core::socket::State)&gt; &amp;onStatus) const</div><div class="ttdef"><b>Definition</b> <a href="net_2in_2stream_2SocketServer_8h_source.html#l00053">SocketServer.h:53</a></div></div>
 <div class="ttc" id="aclassnet_1_1rc_1_1stream_1_1SocketServer_html"><div class="ttname"><a href="classnet_1_1rc_1_1stream_1_1SocketServer.html">net::rc::stream::SocketServer</a></div><div class="ttdef"><b>Definition</b> <a href="net_2rc_2stream_2SocketServer_8h_source.html#l00040">SocketServer.h:43</a></div></div>
 <div class="ttc" id="aclassnet_1_1un_1_1stream_1_1SocketServer_html"><div class="ttname"><a href="classnet_1_1un_1_1stream_1_1SocketServer.html">net::un::stream::SocketServer</a></div><div class="ttdef"><b>Definition</b> <a href="net_2un_2stream_2SocketServer_8h_source.html#l00040">SocketServer.h:43</a></div></div>
 <div class="ttc" id="aclassnet_1_1un_1_1stream_1_1SocketServer_html_a69bea4f3dcf298db01a0c70309445610"><div class="ttname"><a href="classnet_1_1un_1_1stream_1_1SocketServer.html#a69bea4f3dcf298db01a0c70309445610">net::un::stream::SocketServer::listen</a></div><div class="ttdeci">void listen(const std::string &amp;sunPath, const std::function&lt; void(const SocketAddress &amp;, core::socket::State)&gt; &amp;onStatus) const</div><div class="ttdef"><b>Definition</b> <a href="net_2un_2stream_2SocketServer_8h_source.html#l00053">SocketServer.h:53</a></div></div>
 </div><!-- fragment --><p>and the client application with an additional Unix-Domain socket instance look like</p>
-<div class="fragment"><div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* argv[]) {</div>
+<div class="fragment"><div class="line"><span class="keywordtype">int</span> <a class="code hl_function" href="configtest_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* argv[]) {</div>
 <div class="line">    <a class="code hl_function" href="classcore_1_1SNodeC.html#a2c8b01c5fc6ecc3036cb48a76f76f3b5">core::SNodeC::init</a>(argc, argv);</div>
 <div class="line"> </div>
 <div class="line">    <span class="keyword">static</span> std::string ipv4(<span class="stringliteral">&quot;IPv4 Socket&quot;</span>);</div>
@@ -2402,6 +2402,7 @@ Using More Than One Instance in an Application</h1>
 <div class="line"> </div>
 <div class="line">    <span class="keywordflow">return</span> <a class="code hl_function" href="classcore_1_1SNodeC.html#ac3d0dcb6c216ae72d9bbb77fe080e461">core::SNodeC::start</a>(); <span class="comment">// Start the event loop, daemonize if requested.</span></div>
 <div class="line">}</div>
+<div class="ttc" id="aclassnet_1_1in_1_1stream_1_1SocketClient_html_afb0a0ad82eb97fb4f6ae9eef32c8e977"><div class="ttname"><a href="classnet_1_1in_1_1stream_1_1SocketClient.html#afb0a0ad82eb97fb4f6ae9eef32c8e977">net::in::stream::SocketClient::connect</a></div><div class="ttdeci">void connect(const std::string &amp;ipOrHostname, uint16_t port, const std::function&lt; void(const SocketAddress &amp;, core::socket::State)&gt; &amp;onStatus) const</div><div class="ttdef"><b>Definition</b> <a href="net_2in_2stream_2SocketClient_8h_source.html#l00053">SocketClient.h:53</a></div></div>
 <div class="ttc" id="aclassnet_1_1rc_1_1stream_1_1SocketClient_html"><div class="ttname"><a href="classnet_1_1rc_1_1stream_1_1SocketClient.html">net::rc::stream::SocketClient</a></div><div class="ttdef"><b>Definition</b> <a href="net_2rc_2stream_2SocketClient_8h_source.html#l00040">SocketClient.h:43</a></div></div>
 <div class="ttc" id="aclassnet_1_1un_1_1stream_1_1SocketClient_html"><div class="ttname"><a href="classnet_1_1un_1_1stream_1_1SocketClient.html">net::un::stream::SocketClient</a></div><div class="ttdef"><b>Definition</b> <a href="net_2un_2stream_2SocketClient_8h_source.html#l00039">SocketClient.h:42</a></div></div>
 <div class="ttc" id="aclassnet_1_1un_1_1stream_1_1SocketClient_html_a7c407d5ff705c87791449610cf5e1895"><div class="ttname"><a href="classnet_1_1un_1_1stream_1_1SocketClient.html#a7c407d5ff705c87791449610cf5e1895">net::un::stream::SocketClient::connect</a></div><div class="ttdeci">void connect(const std::string &amp;sunPath, const std::function&lt; void(const SocketAddress &amp;, core::socket::State)&gt; &amp;onStatus) const</div><div class="ttdef"><b>Definition</b> <a href="net_2un_2stream_2SocketClient_8h_source.html#l00052">SocketClient.h:52</a></div></div>
@@ -2440,7 +2441,7 @@ HTTP/S Web-Server for Static HTML-Pages</h2>
 <div class="line"><span class="preprocessor">#include &lt;<a class="code" href="Logger_8h.html">log/Logger.h</a>&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;<a class="code" href="Config_8h.html">utils/Config.h</a>&gt;</span></div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* argv[]) {</div>
+<div class="line"><span class="keywordtype">int</span> <a class="code hl_function" href="configtest_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* argv[]) {</div>
 <div class="line">    utils::Config::add_string_option(<span class="stringliteral">&quot;--web-root&quot;</span>, <span class="stringliteral">&quot;Root directory of the web site&quot;</span>, <span class="stringliteral">&quot;[path]&quot;</span>);</div>
 <div class="line">    </div>
 <div class="line">    <a class="code hl_function" href="classexpress_1_1WebApp.html#a0a01439a0cc8dfc86ed14f1094826b7e">express::WebApp::init</a>(argc, argv);</div>
@@ -2523,7 +2524,7 @@ HTTP/S Web-Server for Static HTML-Pages</h2>
 <div class="ttc" id="aclassexpress_1_1WebApp_html_a54e6910c9466c61d0b217490b7d9bb5a"><div class="ttname"><a href="classexpress_1_1WebApp.html#a54e6910c9466c61d0b217490b7d9bb5a">express::WebApp::start</a></div><div class="ttdeci">static int start(const utils::Timeval &amp;timeOut={LONG_MAX, 0})</div><div class="ttdef"><b>Definition</b> <a href="WebApp_8cpp_source.html#l00038">WebApp.cpp:38</a></div></div>
 <div class="ttc" id="aclassexpress_1_1middleware_1_1StaticMiddleware_html"><div class="ttname"><a href="classexpress_1_1middleware_1_1StaticMiddleware.html">express::middleware::StaticMiddleware</a></div><div class="ttdef"><b>Definition</b> <a href="StaticMiddleware_8h_source.html#l00037">StaticMiddleware.h:37</a></div></div>
 <div class="ttc" id="aclassnet_1_1config_1_1ConfigSection_html"><div class="ttname"><a href="classnet_1_1config_1_1ConfigSection.html">net::config::ConfigSection</a></div><div class="ttdef"><b>Definition</b> <a href="ConfigSection_8h_source.html#l00043">ConfigSection.h:43</a></div></div>
-<div class="ttc" id="aclassnet_1_1config_1_1ConfigSection_html_afe7a0030f5ef727586a4dc6d32410ce7"><div class="ttname"><a href="classnet_1_1config_1_1ConfigSection.html#afe7a0030f5ef727586a4dc6d32410ce7">net::config::ConfigSection::required</a></div><div class="ttdeci">void required(CLI::Option *opt, bool req=true)</div><div class="ttdef"><b>Definition</b> <a href="ConfigSection_8cpp_source.html#l00060">ConfigSection.cpp:60</a></div></div>
+<div class="ttc" id="aclassnet_1_1config_1_1ConfigSection_html_afe7a0030f5ef727586a4dc6d32410ce7"><div class="ttname"><a href="classnet_1_1config_1_1ConfigSection.html#afe7a0030f5ef727586a4dc6d32410ce7">net::config::ConfigSection::required</a></div><div class="ttdeci">void required(CLI::Option *opt, bool req=true)</div><div class="ttdef"><b>Definition</b> <a href="ConfigSection_8cpp_source.html#l00057">ConfigSection.cpp:57</a></div></div>
 <div class="ttc" id="alegacy_2in_2WebApp_8h_html"><div class="ttname"><a href="legacy_2in_2WebApp_8h.html">WebApp.h</a></div></div>
 <div class="ttc" id="anamespaceexpress_1_1legacy_1_1in_html_a652aa44c8b01724b9058c4e451366fa0"><div class="ttname"><a href="namespaceexpress_1_1legacy_1_1in.html#a652aa44c8b01724b9058c4e451366fa0">express::legacy::in::WebApp</a></div><div class="ttdeci">WebAppT&lt; web::http::legacy::in::ServerBase&lt; web::http::server::Request, web::http::server::Response &gt; &gt; WebApp</div><div class="ttdef"><b>Definition</b> <a href="legacy_2in_2WebApp_8h_source.html#l00032">WebApp.h:32</a></div></div>
 <div class="ttc" id="anamespaceexpress_1_1tls_1_1in_html_ab9ca737b337479416eccea764ddf74ce"><div class="ttname"><a href="namespaceexpress_1_1tls_1_1in.html#ab9ca737b337479416eccea764ddf74ce">express::tls::in::WebApp</a></div><div class="ttdeci">WebAppT&lt; web::http::tls::in::ServerBase&lt; web::http::server::Request, web::http::server::Response &gt; &gt; WebApp</div><div class="ttdef"><b>Definition</b> <a href="tls_2in_2WebApp_8h_source.html#l00032">WebApp.h:32</a></div></div>
@@ -2535,7 +2536,7 @@ Receive Data via HTTP-Post Request</h2>
 <div class="line"><span class="preprocessor">#include &lt;<a class="code" href="tls_2in_2WebApp_8h.html">express/tls/in/WebApp.h</a>&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;<a class="code" href="Logger_8h.html">log/Logger.h</a>&gt;</span></div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* argv[]) {</div>
+<div class="line"><span class="keywordtype">int</span> <a class="code hl_function" href="configtest_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* argv[]) {</div>
 <div class="line">    <a class="code hl_function" href="classexpress_1_1WebApp.html#a0a01439a0cc8dfc86ed14f1094826b7e">express::WebApp::init</a>(argc, argv);</div>
 <div class="line"> </div>
 <div class="line">    <span class="keyword">using </span>LegacyWebApp = <a class="code hl_typedef" href="namespaceexpress_1_1legacy_1_1in.html#a652aa44c8b01724b9058c4e451366fa0">express::legacy::in::WebApp</a>;</div>
@@ -2652,7 +2653,7 @@ Using Regular Expressions in Routes</h2>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sun Jan 12 2025 21:03:50 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generated on Mon Jan 20 2025 01:16:13 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>

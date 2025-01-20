@@ -99,15 +99,101 @@ $(function(){initNavTree('server_2SubProtocolFactorySelector_8h_source.html','')
   <div class="headertitle"><div class="title">SubProtocolFactorySelector.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="server_2SubProtocolFactorySelector_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
-<div class="ttc" id="anamespaceweb_1_1websocket_1_1server_html"><div class="ttname"><a href="namespaceweb_1_1websocket_1_1server.html">web::websocket::server</a></div><div class="ttdef"><b>Definition</b> <a href="GroupsManager_8cpp_source.html#l00028">GroupsManager.cpp:28</a></div></div>
+<a href="server_2SubProtocolFactorySelector_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<div class="line"><span class="lineno">    2</span><span class="comment"> * SNode.C - a slim toolkit for network communication</span></div>
+<div class="line"><span class="lineno">    3</span><span class="comment"> * Copyright (C) Volker Christian &lt;me@vchrist.at&gt;</span></div>
+<div class="line"><span class="lineno">    4</span><span class="comment"> *               2020, 2021, 2022, 2023, 2024, 2025</span></div>
+<div class="line"><span class="lineno">    5</span><span class="comment"> *</span></div>
+<div class="line"><span class="lineno">    6</span><span class="comment"> * This program is free software: you can redistribute it and/or modify</span></div>
+<div class="line"><span class="lineno">    7</span><span class="comment"> * it under the terms of the GNU Lesser General Public License as published</span></div>
+<div class="line"><span class="lineno">    8</span><span class="comment"> * by the Free Software Foundation, either version 3 of the License, or</span></div>
+<div class="line"><span class="lineno">    9</span><span class="comment"> * (at your option) any later version.</span></div>
+<div class="line"><span class="lineno">   10</span><span class="comment"> *</span></div>
+<div class="line"><span class="lineno">   11</span><span class="comment"> * This program is distributed in the hope that it will be useful,</span></div>
+<div class="line"><span class="lineno">   12</span><span class="comment"> * but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
+<div class="line"><span class="lineno">   13</span><span class="comment"> * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the</span></div>
+<div class="line"><span class="lineno">   14</span><span class="comment"> * GNU Lesser General Public License for more details.</span></div>
+<div class="line"><span class="lineno">   15</span><span class="comment"> *</span></div>
+<div class="line"><span class="lineno">   16</span><span class="comment"> * You should have received a copy of the GNU Lesser General Public License</span></div>
+<div class="line"><span class="lineno">   17</span><span class="comment"> * along with this program. If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
+<div class="line"><span class="lineno">   18</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#</span><span class="preprocessor">ifndef</span> <span class="preprocessor">WEB_WEBSOCKET_SERVER_SUBPROTOCOLSELECTOR_H</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#</span><span class="preprocessor">define</span> <span class="preprocessor">WEB_WEBSOCKET_SERVER_SUBPROTOCOLSELECTOR_H</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&quot;web/websocket/SubProtocolFactorySelector.h&quot;</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">namespace</span> web::websocket {</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> SubProtocolT&gt;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keyword">class</span> <a class="code hl_class" href="classweb_1_1websocket_1_1SubProtocolFactory.html">SubProtocolFactory</a>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keyword">namespace</span> server {</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <span class="keyword">class</span> SubProtocol;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    } <span class="comment">// namespace server</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>} <span class="comment">// namespace web::websocket</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#</span><span class="preprocessor">ifndef</span> <span class="preprocessor">DOXYGEN_SHOULD_SKIP_THIS</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">string</span><span class="preprocessor">&gt;</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="preprocessor">#</span><span class="preprocessor">endif</span> <span class="comment">/* DOXYGEN_SHOULD_SKIP_THIS */</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="keyword">namespace</span> web::websocket::server {</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="foldopen" id="foldopen00042" data-start="{" data-end="};">
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="classweb_1_1websocket_1_1server_1_1SubProtocolFactorySelector.html">   42</a></span>    <span class="keyword">class</span> SubProtocolFactorySelector</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        : <span class="keyword">public</span> web::websocket::SubProtocolFactorySelector&lt;web::websocket::SubProtocolFactory&lt;web::websocket::server::SubProtocol&gt;&gt; {</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="classweb_1_1websocket_1_1server_1_1SubProtocolFactorySelector.html#a7bc6b13587d234c8be754ee7fb379817">   45</a></span>        SubProtocolFactorySelector(<span class="keyword">const</span> SubProtocolFactorySelector&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="classweb_1_1websocket_1_1server_1_1SubProtocolFactorySelector.html#afb192588195a6b26a60879cb3e4b8f45">   47</a></span>        SubProtocolFactorySelector&amp; operator=(<span class="keyword">const</span> SubProtocolFactorySelector&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="classweb_1_1websocket_1_1server_1_1SubProtocolFactorySelector.html#a0577a259e81162fd19ae269e79d9a206">   50</a></span>        <span class="keyword">using</span> Super = web::websocket::SubProtocolFactorySelector&lt;web::websocket::<a class="code hl_class" href="classweb_1_1websocket_1_1SubProtocolFactory.html">SubProtocolFactory</a>&lt;web::websocket::server::SubProtocol&gt;&gt;;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <span class="keyword">static</span> SubProtocolFactorySelector* instance();</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        ~SubProtocolFactorySelector() override;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <span class="keyword">static</span> <span class="keywordtype">void</span> allowDlOpen();</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> SubProtocolFactory&gt;</div>
+<div class="foldopen" id="foldopen00060" data-start="{" data-end="}">
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="classweb_1_1websocket_1_1server_1_1SubProtocolFactorySelector.html#a9dd2fcc62c697ec9b7314a77a00d9d20">   60</a></span>        <span class="keyword">static</span> <span class="keywordtype">void</span> link(<span class="keyword">const</span> std::string&amp; subProtocolName, SubProtocolFactory* (*getSubProtocolFactory)()) {</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>            SubProtocolFactorySelector::instance()-&gt;Super::link(subProtocolName, getSubProtocolFactory);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        }</div>
+</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        SubProtocolFactory* load(<span class="keyword">const</span> std::string&amp; subProtocolName) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="classweb_1_1websocket_1_1server_1_1SubProtocolFactorySelector.html#a6eb1883c8d160961fbc2fb16fd0bc5b1">   67</a></span>        SubProtocolFactorySelector() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    };</div>
+</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>} <span class="comment">// namespace web::websocket::server</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="keyword">extern</span> <span class="keyword">template</span> <span class="keyword">class</span> web::websocket::SubProtocolFactorySelector&lt;web::websocket::<a class="code hl_class" href="classweb_1_1websocket_1_1SubProtocolFactory.html">SubProtocolFactory</a>&lt;web::websocket::server::SubProtocol&gt;&gt;;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="preprocessor">#</span><span class="preprocessor">endif</span> <span class="comment">// WEB_WEBSOCKET_SERVER_SUBPROTOCOLSELECTOR_H</span></div>
+<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketClient_html"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1SocketClient.html">core::socket::stream::SocketClient</a></div><div class="ttdef"><b>Definition</b> <a href="core_2socket_2stream_2SocketClient_8h_source.html#l00048">SocketClient.h:48</a></div></div>
+<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketConnection_html"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1SocketConnection.html">core::socket::stream::SocketConnection</a></div><div class="ttdef"><b>Definition</b> <a href="SocketConnection_8h_source.html#l00053">SocketConnection.h:53</a></div></div>
+<div class="ttc" id="aclassweb_1_1http_1_1server_1_1Request_html"><div class="ttname"><a href="classweb_1_1http_1_1server_1_1Request.html">web::http::server::Request</a></div><div class="ttdef"><b>Definition</b> <a href="web_2http_2server_2Request_8h_source.html#l00038">Request.h:38</a></div></div>
+<div class="ttc" id="aclassweb_1_1http_1_1server_1_1Response_html"><div class="ttname"><a href="classweb_1_1http_1_1server_1_1Response.html">web::http::server::Response</a></div><div class="ttdef"><b>Definition</b> <a href="web_2http_2server_2Response_8h_source.html#l00051">Response.h:51</a></div></div>
+<div class="ttc" id="aclassweb_1_1websocket_1_1SocketContextUpgrade_html"><div class="ttname"><a href="classweb_1_1websocket_1_1SocketContextUpgrade.html">web::websocket::SocketContextUpgrade</a></div><div class="ttdef"><b>Definition</b> <a href="web_2websocket_2SubProtocol_8h_source.html#l00031">SubProtocol.h:31</a></div></div>
+<div class="ttc" id="aclassweb_1_1websocket_1_1SubProtocolFactory_html"><div class="ttname"><a href="classweb_1_1websocket_1_1SubProtocolFactory.html">web::websocket::SubProtocolFactory</a></div><div class="ttdef"><b>Definition</b> <a href="websocket_2SocketContextUpgrade_8h_source.html#l00037">SocketContextUpgrade.h:37</a></div></div>
+<div class="ttc" id="aclassweb_1_1websocket_1_1server_1_1SocketContextUpgrade_html"><div class="ttname"><a href="classweb_1_1websocket_1_1server_1_1SocketContextUpgrade.html">web::websocket::server::SocketContextUpgrade</a></div><div class="ttdef"><b>Definition</b> <a href="websocket_2server_2SocketContextUpgrade_8h_source.html#l00051">SocketContextUpgrade.h:52</a></div></div>
+<div class="ttc" id="aclassweb_1_1websocket_1_1server_1_1SocketContextUpgrade_html_a3abba98798812ea6bf6aef416f01d4d3"><div class="ttname"><a href="classweb_1_1websocket_1_1server_1_1SocketContextUpgrade.html#a3abba98798812ea6bf6aef416f01d4d3">web::websocket::server::SocketContextUpgrade::~SocketContextUpgrade</a></div><div class="ttdeci">~SocketContextUpgrade() override</div><div class="ttdef"><b>Definition</b> <a href="server_2SocketContextUpgrade_8cpp_source.html#l00039">SocketContextUpgrade.cpp:39</a></div></div>
+<div class="ttc" id="aclassweb_1_1websocket_1_1server_1_1SocketContextUpgrade_html_ad42e5970216aaaca64c94536d4a8f23f"><div class="ttname"><a href="classweb_1_1websocket_1_1server_1_1SocketContextUpgrade.html#ad42e5970216aaaca64c94536d4a8f23f">web::websocket::server::SocketContextUpgrade::subProtocolFactory</a></div><div class="ttdeci">web::websocket::SubProtocolFactory&lt; SubProtocol &gt; * subProtocolFactory</div><div class="ttdef"><b>Definition</b> <a href="websocket_2server_2SocketContextUpgrade_8h_source.html#l00063">SocketContextUpgrade.h:63</a></div></div>
+<div class="ttc" id="aclassweb_1_1websocket_1_1server_1_1SocketContextUpgrade_html_ae65c4bd90e582c6823e8a0378585a047"><div class="ttname"><a href="classweb_1_1websocket_1_1server_1_1SocketContextUpgrade.html#ae65c4bd90e582c6823e8a0378585a047">web::websocket::server::SocketContextUpgrade::loadSubProtocol</a></div><div class="ttdeci">std::string loadSubProtocol(const std::list&lt; std::string &gt; &amp;subProtocolNames)</div><div class="ttdef"><b>Definition</b> <a href="server_2SocketContextUpgrade_8cpp_source.html#l00047">SocketContextUpgrade.cpp:47</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_562abdcd8625d4bf7bad2fe6fe01354c.html">web</a></li><li class="navelem"><a class="el" href="dir_001861d41473c343e7c3cc7f26309d08.html">websocket</a></li><li class="navelem"><a class="el" href="dir_9292251a820e6447cf6a8c88b99dccc9.html">server</a></li><li class="navelem"><a class="el" href="server_2SubProtocolFactorySelector_8h.html">SubProtocolFactorySelector.h</a></li>
-    <li class="footer">Generated on Sun Jan 12 2025 21:03:48 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generated on Mon Jan 20 2025 01:16:01 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>

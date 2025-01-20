@@ -1,8 +1,21 @@
 var searchData=
 [
-  ['database_0',['database',['../namespacedatabase.html',1,'']]],
-  ['database_3a_3amariadb_1',['mariadb',['../namespacedatabase_1_1mariadb.html',1,'database']]],
-  ['database_3a_3amariadb_3a_3acommands_2',['commands',['../namespacedatabase_1_1mariadb_1_1commands.html',1,'database::mariadb']]],
-  ['database_3a_3amariadb_3a_3acommands_3a_3aasync_3',['async',['../namespacedatabase_1_1mariadb_1_1commands_1_1async.html',1,'database::mariadb::commands']]],
-  ['database_3a_3amariadb_3a_3acommands_3a_3async_4',['sync',['../namespacedatabase_1_1mariadb_1_1commands_1_1sync.html',1,'database::mariadb::commands']]]
+  ['cli_0',['CLI',['../namespaceCLI.html',1,'']]],
+  ['color_1',['Color',['../namespaceColor.html',1,'']]],
+  ['core_2',['core',['../namespacecore.html',1,'']]],
+  ['core_3a_3aeventreceiver_3',['eventreceiver',['../namespacecore_1_1eventreceiver.html',1,'core']]],
+  ['core_3a_3afile_4',['file',['../namespacecore_1_1file.html',1,'core']]],
+  ['core_3a_3amultiplexer_5',['multiplexer',['../namespacecore_1_1multiplexer.html',1,'core']]],
+  ['core_3a_3amultiplexer_3a_3aepoll_6',['epoll',['../namespacecore_1_1multiplexer_1_1epoll.html',1,'core::multiplexer']]],
+  ['core_3a_3amultiplexer_3a_3apoll_7',['poll',['../namespacecore_1_1multiplexer_1_1poll.html',1,'core::multiplexer']]],
+  ['core_3a_3amultiplexer_3a_3aselect_8',['select',['../namespacecore_1_1multiplexer_1_1select.html',1,'core::multiplexer']]],
+  ['core_3a_3apipe_9',['pipe',['../namespacecore_1_1pipe.html',1,'core']]],
+  ['core_3a_3asocket_10',['socket',['../namespacecore_1_1socket.html',1,'core']]],
+  ['core_3a_3asocket_3a_3astream_11',['stream',['../namespacecore_1_1socket_1_1stream.html',1,'core::socket']]],
+  ['core_3a_3asocket_3a_3astream_3a_3alegacy_12',['legacy',['../namespacecore_1_1socket_1_1stream_1_1legacy.html',1,'core::socket::stream']]],
+  ['core_3a_3asocket_3a_3astream_3a_3astream_13',['stream',['../namespacecore_1_1socket_1_1stream_1_1stream.html',1,'core::socket::stream']]],
+  ['core_3a_3asocket_3a_3astream_3a_3atls_14',['tls',['../namespacecore_1_1socket_1_1stream_1_1tls.html',1,'core::socket::stream']]],
+  ['core_3a_3assl_15',['ssl',['../namespacecore_1_1ssl.html',1,'core']]],
+  ['core_3a_3asystem_16',['system',['../namespacecore_1_1system.html',1,'core']]],
+  ['core_3a_3atimer_17',['timer',['../namespacecore_1_1timer.html',1,'core']]]
 ];

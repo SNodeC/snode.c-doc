@@ -7,6 +7,6 @@ var Config_8cpp =
     [ "createCommandLineSubcommands", "Config_8cpp.html#afc6e2169ae509cef3713b646e651c65e", null ],
     [ "createCommandLineTemplate", "Config_8cpp.html#a1a80f43b44109216f2c37fe9bdb3dc2d", null ],
     [ "createCommandLineTemplate", "Config_8cpp.html#aac7436ed2ed454cbef6765b7e381b2f7", null ],
-    [ "makeApp", "Config_8cpp.html#acf24bc1d3f8119c40b2b0e715e99c428", null ],
-    [ "makeSectionFormatter", "Config_8cpp.html#ae4dca857dbbb3a4fcaf8dd65df86d6b8", null ]
+    [ "makeApp", "Config_8cpp.html#a0cc5559932a20e3d6dd13c420183e8eb", null ],
+    [ "makeSectionFormatter", "Config_8cpp.html#a758209abdfa2ba14398d32b747dab000", null ]
 ];

@@ -286,7 +286,7 @@ template&lt;template&lt; typename <a class="el" href="classnet_1_1in_1_1SocketAd
 <div class="line"><span class="lineno">  116</span>            <a class="code hl_define" href="ConfigPhysicalSocket_8cpp.html#a03943706e48069237cd57f2d35ca987e">XSTR</a>(IPV4_NUMERIC_REVERSE),</div>
 <div class="line"><span class="lineno">  117</span>            CLI::IsMember({<span class="stringliteral">&quot;true&quot;</span>, <span class="stringliteral">&quot;false&quot;</span>}));</div>
 <div class="line"><span class="lineno">  118</span>    }</div>
-<div class="ttc" id="aConfigPhysicalSocket_8cpp_html_a03943706e48069237cd57f2d35ca987e"><div class="ttname"><a href="ConfigPhysicalSocket_8cpp.html#a03943706e48069237cd57f2d35ca987e">XSTR</a></div><div class="ttdeci">#define XSTR(s)</div><div class="ttdef"><b>Definition</b> <a href="ConfigPhysicalSocket_8cpp_source.html#l00034">ConfigPhysicalSocket.cpp:34</a></div></div>
+<div class="ttc" id="aConfigPhysicalSocket_8cpp_html_a03943706e48069237cd57f2d35ca987e"><div class="ttname"><a href="ConfigPhysicalSocket_8cpp.html#a03943706e48069237cd57f2d35ca987e">XSTR</a></div><div class="ttdeci">#define XSTR(s)</div><div class="ttdef"><b>Definition</b> <a href="ConfigPhysicalSocket_8cpp_source.html#l00033">ConfigPhysicalSocket.cpp:33</a></div></div>
 <div class="ttc" id="aclassnet_1_1in_1_1config_1_1ConfigAddress_html_a40493be9c461d64d8cf61c7a90d87517"><div class="ttname"><a href="#a40493be9c461d64d8cf61c7a90d87517">net::in::config::ConfigAddress::Super</a></div><div class="ttdeci">ConfigAddressTypeT&lt; net::in::SocketAddress &gt; Super</div><div class="ttdef"><b>Definition</b> <a href="in_2config_2ConfigAddress_8h_source.html#l00068">ConfigAddress.h:68</a></div></div>
 <div class="ttc" id="aclassnet_1_1in_1_1config_1_1ConfigAddress_html_a9bbf9311f6271ed0e8fb2cf6352d7eb1"><div class="ttname"><a href="#a9bbf9311f6271ed0e8fb2cf6352d7eb1">net::in::config::ConfigAddress::hostOpt</a></div><div class="ttdeci">CLI::Option * hostOpt</div><div class="ttdef"><b>Definition</b> <a href="in_2config_2ConfigAddress_8h_source.html#l00110">ConfigAddress.h:110</a></div></div>
 <div class="ttc" id="aclassnet_1_1in_1_1config_1_1ConfigAddress_html_acf83b5d4be54906889e54b7e06b9d5ad"><div class="ttname"><a href="#acf83b5d4be54906889e54b7e06b9d5ad">net::in::config::ConfigAddress::numericOpt</a></div><div class="ttdeci">CLI::Option * numericOpt</div><div class="ttdef"><b>Definition</b> <a href="in_2config_2ConfigAddress_8h_source.html#l00112">ConfigAddress.h:112</a></div></div>
@@ -514,19 +514,20 @@ template&lt;template&lt; typename <a class="el" href="classnet_1_1in_1_1SocketAd
 
 <p class="definition">Definition at line <a class="el" href="in_2config_2ConfigAddress_8cpp_source.html#l00139">139</a> of file <a class="el" href="in_2config_2ConfigAddress_8cpp_source.html">ConfigAddress.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  140</span>                                                                                                       {</div>
-<div class="line"><span class="lineno">  141</span>        SocketAddress socketAddress;</div>
+<div class="line"><span class="lineno">  141</span>        <a class="code hl_typedef" href="namespacetls.html#afcb9219f4cf94a717de2044384768d63">SocketAddress</a> socketAddress;</div>
 <div class="line"><span class="lineno">  142</span>        <span class="keywordflow">try</span> {</div>
-<div class="line"><span class="lineno">  143</span>            socketAddress = SocketAddress(sockAddr, sockAddrLen, <a class="code hl_variable" href="#afa9959074b2d5983c0b9c71349603126">numericReverseOpt</a>-&gt;as&lt;<span class="keywordtype">bool</span>&gt;());</div>
+<div class="line"><span class="lineno">  143</span>            socketAddress = <a class="code hl_typedef" href="namespacetls.html#afcb9219f4cf94a717de2044384768d63">SocketAddress</a>(sockAddr, sockAddrLen, <a class="code hl_variable" href="#afa9959074b2d5983c0b9c71349603126">numericReverseOpt</a>-&gt;as&lt;<span class="keywordtype">bool</span>&gt;());</div>
 <div class="line"><span class="lineno">  144</span>        } <span class="keywordflow">catch</span> ([[maybe_unused]] <span class="keyword">const</span> SocketAddress::BadSocketAddress&amp; badSocketAddress) {</div>
 <div class="line"><span class="lineno">  145</span>            <span class="keywordflow">try</span> {</div>
 <div class="line"><span class="lineno">  146</span>                socketAddress = Super::getSocketAddress(sockAddr, sockAddrLen);</div>
-<div class="line"><span class="lineno">  147</span>            } <span class="keywordflow">catch</span> ([[maybe_unused]] <span class="keyword">const</span> SocketAddress::BadSocketAddress&amp; badSocketAddress) { <span class="comment">// cppcheck-suppress shadowVariable</span></div>
+<div class="line"><span class="lineno">  147</span>            } <span class="keywordflow">catch</span> ([[maybe_unused]] <span class="keyword">const</span> SocketAddress::BadSocketAddress&amp; badSocketAddress) {</div>
 <div class="line"><span class="lineno">  148</span>                <span class="keywordflow">throw</span>;</div>
 <div class="line"><span class="lineno">  149</span>            }</div>
 <div class="line"><span class="lineno">  150</span>        }</div>
 <div class="line"><span class="lineno">  151</span> </div>
 <div class="line"><span class="lineno">  152</span>        <span class="keywordflow">return</span> socketAddress;</div>
 <div class="line"><span class="lineno">  153</span>    }</div>
+<div class="ttc" id="anamespacetls_html_afcb9219f4cf94a717de2044384768d63"><div class="ttname"><a href="namespacetls.html#afcb9219f4cf94a717de2044384768d63">tls::SocketAddress</a></div><div class="ttdeci">SocketClient::SocketAddress SocketAddress</div><div class="ttdef"><b>Definition</b> <a href="httplowlevelclient_8cpp_source.html#l00123">httplowlevelclient.cpp:123</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -557,7 +558,7 @@ template&lt;template&lt; typename <a class="el" href="classnet_1_1in_1_1SocketAd
 
 <p class="definition">Definition at line <a class="el" href="in_2config_2ConfigAddress_8cpp_source.html#l00121">121</a> of file <a class="el" href="in_2config_2ConfigAddress_8cpp_source.html">ConfigAddress.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  121</span>                                                          {</div>
-<div class="line"><span class="lineno">  122</span>        SocketAddress* socketAddress = <span class="keyword">new</span> SocketAddress(<a class="code hl_variable" href="#a9bbf9311f6271ed0e8fb2cf6352d7eb1">hostOpt</a>-&gt;as&lt;std::string&gt;(), <a class="code hl_variable" href="#acff7360356ca3b546a51871c0848a7d6">portOpt</a>-&gt;as&lt;uint16_t&gt;());</div>
+<div class="line"><span class="lineno">  122</span>        <a class="code hl_typedef" href="namespacetls.html#afcb9219f4cf94a717de2044384768d63">SocketAddress</a>* socketAddress = <span class="keyword">new</span> <a class="code hl_typedef" href="namespacetls.html#afcb9219f4cf94a717de2044384768d63">SocketAddress</a>(<a class="code hl_variable" href="#a9bbf9311f6271ed0e8fb2cf6352d7eb1">hostOpt</a>-&gt;as&lt;std::string&gt;(), <a class="code hl_variable" href="#acff7360356ca3b546a51871c0848a7d6">portOpt</a>-&gt;as&lt;uint16_t&gt;());</div>
 <div class="line"><span class="lineno">  123</span> </div>
 <div class="line"><span class="lineno">  124</span>        <span class="keywordflow">try</span> {</div>
 <div class="line"><span class="lineno">  125</span>            socketAddress-&gt;init({.aiFlags = (<a class="code hl_variable" href="#a139540a20b71293e5f6c75624a3ec1a2">aiFlags</a> &amp; ~AI_NUMERICHOST) | (<a class="code hl_variable" href="#acf83b5d4be54906889e54b7e06b9d5ad">numericOpt</a>-&gt;as&lt;<span class="keywordtype">bool</span>&gt;() ? AI_NUMERICHOST : 0),</div>
@@ -1089,7 +1090,7 @@ template&lt;template&lt; typename SocketAddressT &gt; typename ConfigAddressType
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacenet.html">net</a></li><li class="navelem"><a class="el" href="namespacenet_1_1in.html">in</a></li><li class="navelem"><a class="el" href="namespacenet_1_1in_1_1config.html">config</a></li><li class="navelem"><a class="el" href="classnet_1_1in_1_1config_1_1ConfigAddress.html">ConfigAddress</a></li>
-    <li class="footer">Generated on Sun Jan 12 2025 21:03:49 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generated on Mon Jan 20 2025 01:16:12 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>

@@ -99,18 +99,53 @@ $(function(){initNavTree('ssl_8h_source.html',''); initResizable(true); });
   <div class="headertitle"><div class="title">ssl.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="ssl_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<a href="ssl_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<div class="line"><span class="lineno">    2</span><span class="comment"> * SNode.C - a slim toolkit for network communication</span></div>
+<div class="line"><span class="lineno">    3</span><span class="comment"> * Copyright (C) Volker Christian &lt;me@vchrist.at&gt;</span></div>
+<div class="line"><span class="lineno">    4</span><span class="comment"> *               2020, 2021, 2022, 2023, 2024, 2025</span></div>
+<div class="line"><span class="lineno">    5</span><span class="comment"> *</span></div>
+<div class="line"><span class="lineno">    6</span><span class="comment"> * This program is free software: you can redistribute it and/or modify</span></div>
+<div class="line"><span class="lineno">    7</span><span class="comment"> * it under the terms of the GNU Lesser General Public License as published</span></div>
+<div class="line"><span class="lineno">    8</span><span class="comment"> * by the Free Software Foundation, either version 3 of the License, or</span></div>
+<div class="line"><span class="lineno">    9</span><span class="comment"> * (at your option) any later version.</span></div>
+<div class="line"><span class="lineno">   10</span><span class="comment"> *</span></div>
+<div class="line"><span class="lineno">   11</span><span class="comment"> * This program is distributed in the hope that it will be useful,</span></div>
+<div class="line"><span class="lineno">   12</span><span class="comment"> * but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
+<div class="line"><span class="lineno">   13</span><span class="comment"> * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the</span></div>
+<div class="line"><span class="lineno">   14</span><span class="comment"> * GNU Lesser General Public License for more details.</span></div>
+<div class="line"><span class="lineno">   15</span><span class="comment"> *</span></div>
+<div class="line"><span class="lineno">   16</span><span class="comment"> * You should have received a copy of the GNU Lesser General Public License</span></div>
+<div class="line"><span class="lineno">   17</span><span class="comment"> * along with this program. If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
+<div class="line"><span class="lineno">   18</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#</span><span class="preprocessor">ifndef</span> <span class="preprocessor">NET_SYSTEM_SSL_H</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#</span><span class="preprocessor">define</span> <span class="preprocessor">NET_SYSTEM_SSL_H</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#</span><span class="preprocessor">ifndef</span> <span class="preprocessor">DOXYGEN_SHOULD_SKIP_THIS</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">openssl</span><span class="preprocessor">/</span><span class="preprocessor">types</span><span class="preprocessor">.</span><span class="preprocessor">h</span><span class="preprocessor">&gt;</span> <span class="comment">// IWYU prag ma: keep</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#</span><span class="preprocessor">endif</span> <span class="comment">/* DOXYGEN_SHOULD_SKIP_THIS */</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">namespace</span> core::<a class="code hl_namespace" href="namespacecore_1_1ssl.html">ssl</a> {</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="comment">// #include &lt;openssl/ssl.h&gt;</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="namespacecore_1_1ssl.html#a7a7db589912354e9adb47a18b8c5433f">SSL_read</a>(SSL* ssl, <span class="keywordtype">void</span>* buf, <span class="keywordtype">int</span> num);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="namespacecore_1_1ssl.html#a352e8be6a2fa7ad8fe817dd4d642bf3d">SSL_write</a>(SSL* ssl, <span class="keyword">const</span> <span class="keywordtype">void</span>* buf, <span class="keywordtype">int</span> num);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>} <span class="comment">// namespace core::ssl</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">#</span><span class="preprocessor">endif</span> <span class="comment">// NET_SYSTEM_SSL_H</span></div>
 <div class="ttc" id="anamespacecore_1_1ssl_html"><div class="ttname"><a href="namespacecore_1_1ssl.html">core::ssl</a></div><div class="ttdef"><b>Definition</b> <a href="ssl_8cpp_source.html#l00029">ssl.cpp:29</a></div></div>
 <div class="ttc" id="anamespacecore_1_1ssl_html_a352e8be6a2fa7ad8fe817dd4d642bf3d"><div class="ttname"><a href="namespacecore_1_1ssl.html#a352e8be6a2fa7ad8fe817dd4d642bf3d">core::ssl::SSL_write</a></div><div class="ttdeci">int SSL_write(SSL *ssl, const void *buf, int num)</div><div class="ttdef"><b>Definition</b> <a href="ssl_8cpp_source.html#l00036">ssl.cpp:36</a></div></div>
 <div class="ttc" id="anamespacecore_1_1ssl_html_a7a7db589912354e9adb47a18b8c5433f"><div class="ttname"><a href="namespacecore_1_1ssl.html#a7a7db589912354e9adb47a18b8c5433f">core::ssl::SSL_read</a></div><div class="ttdeci">int SSL_read(SSL *ssl, void *buf, int num)</div><div class="ttdef"><b>Definition</b> <a href="ssl_8cpp_source.html#l00031">ssl.cpp:31</a></div></div>
-<div class="ttc" id="anamespacecore_html"><div class="ttname"><a href="namespacecore.html">core</a></div><div class="ttdef"><b>Definition</b> <a href="Descriptor_8cpp_source.html#l00030">Descriptor.cpp:30</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_4270bfced15e0e73154b13468c7c9ad9.html">core</a></li><li class="navelem"><a class="el" href="dir_55e2b5896cfedaa9128ab09eb6ffed25.html">socket</a></li><li class="navelem"><a class="el" href="dir_fda6a541e73aa8ed23b6fa172f5dc60d.html">stream</a></li><li class="navelem"><a class="el" href="dir_b54354194172df550fb2bdb507d33122.html">tls</a></li><li class="navelem"><a class="el" href="dir_ca80962894ceb090924e6b507d4746cc.html">system</a></li><li class="navelem"><a class="el" href="ssl_8h.html">ssl.h</a></li>
-    <li class="footer">Generated on Sun Jan 12 2025 21:03:36 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generated on Mon Jan 20 2025 01:14:47 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>

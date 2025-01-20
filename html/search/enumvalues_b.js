@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['next_0',['NEXT',['../classexpress_1_1Controller.html#acbbd6f9ce9c84b3a72a50f0aedaa6c48adc4bb866930db1ffbe036d7c5b8f0323',1,'express::Controller']]],
+  ['next_0',['NEXT',['../classexpress_1_1Controller.html#acbbd6f9ce9c84b3a72a50f0aedaa6c48adc4bb866930db1ffbe036d7c5b8f0323',1,'express::Controller::NEXT'],['../classapps_1_1towercalculator_1_1TowerCalculator.html#a6a47f28c1b54eb506960d94f2acf5ed4a47559fb833ff58321570e5e877b467f6',1,'apps::towercalculator::TowerCalculator::NEXT']]],
   ['next_5froute_1',['NEXT_ROUTE',['../classexpress_1_1Controller.html#acbbd6f9ce9c84b3a72a50f0aedaa6c48a80a7d61efbcd0e82eb23e4e9c0de575c',1,'express::Controller']]],
   ['next_5frouter_2',['NEXT_ROUTER',['../classexpress_1_1Controller.html#acbbd6f9ce9c84b3a72a50f0aedaa6c48a96db53e6bdc559125ed34f56beb7ae78',1,'express::Controller']]],
   ['nonblock_3',['NONBLOCK',['../classnet_1_1phy_1_1PhysicalSocket.html#ababfe8607820fbd9c4674b538303325aa620dc36fc3ae8915e4a2a54abada4595',1,'net::phy::PhysicalSocket']]],

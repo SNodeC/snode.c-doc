@@ -1,7 +1,7 @@
 var classnet_1_1config_1_1ConfigPhysicalSocket =
 [
     [ "ConfigPhysicalSocket", "classnet_1_1config_1_1ConfigPhysicalSocket.html#a81ee28df66c529d2d9aecd10dc50b0cb", null ],
-    [ "add_socket_option", "classnet_1_1config_1_1ConfigPhysicalSocket.html#a9b075a54d3f40ccf62cb7a4062d36fed", null ],
+    [ "addSocketOption", "classnet_1_1config_1_1ConfigPhysicalSocket.html#acf7fff27b12f756414dafcd63d41fbf6", null ],
     [ "addSocketOption", "classnet_1_1config_1_1ConfigPhysicalSocket.html#a73bd76272b4f178d7e6a073e01b5405e", null ],
     [ "addSocketOption", "classnet_1_1config_1_1ConfigPhysicalSocket.html#a9806eb4905419f194681051ecf177695", null ],
     [ "addSocketOption", "classnet_1_1config_1_1ConfigPhysicalSocket.html#a65f9e12cf76b2e3a6d208d7fef69ddda", null ],

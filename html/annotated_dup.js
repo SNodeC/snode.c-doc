@@ -1,5 +1,36 @@
 var annotated_dup =
 [
+    [ "apps", "namespaceapps.html", [
+      [ "echo", "namespaceapps_1_1echo.html", [
+        [ "model", "namespaceapps_1_1echo_1_1model.html", [
+          [ "EchoClientSocketContextFactory", "classapps_1_1echo_1_1model_1_1EchoClientSocketContextFactory.html", "classapps_1_1echo_1_1model_1_1EchoClientSocketContextFactory" ],
+          [ "EchoServerSocketContextFactory", "classapps_1_1echo_1_1model_1_1EchoServerSocketContextFactory.html", "classapps_1_1echo_1_1model_1_1EchoServerSocketContextFactory" ],
+          [ "EchoSocketContext", "classapps_1_1echo_1_1model_1_1EchoSocketContext.html", "classapps_1_1echo_1_1model_1_1EchoSocketContext" ]
+        ] ]
+      ] ],
+      [ "http", "namespaceapps_1_1http.html", [
+        [ "SimpleSocketProtocol", "classapps_1_1http_1_1SimpleSocketProtocol.html", "classapps_1_1http_1_1SimpleSocketProtocol" ],
+        [ "SimpleSocketProtocolFactory", "classapps_1_1http_1_1SimpleSocketProtocolFactory.html", "classapps_1_1http_1_1SimpleSocketProtocolFactory" ]
+      ] ],
+      [ "towercalculator", "namespaceapps_1_1towercalculator.html", [
+        [ "KeyboardReader", "classapps_1_1towercalculator_1_1KeyboardReader.html", "classapps_1_1towercalculator_1_1KeyboardReader" ],
+        [ "TowerCalculator", "classapps_1_1towercalculator_1_1TowerCalculator.html", "classapps_1_1towercalculator_1_1TowerCalculator" ]
+      ] ],
+      [ "websocket", "namespaceapps_1_1websocket.html", [
+        [ "subprotocol", "namespaceapps_1_1websocket_1_1subprotocol.html", [
+          [ "echo", "namespaceapps_1_1websocket_1_1subprotocol_1_1echo.html", [
+            [ "client", "namespaceapps_1_1websocket_1_1subprotocol_1_1echo_1_1client.html", [
+              [ "Echo", "classapps_1_1websocket_1_1subprotocol_1_1echo_1_1client_1_1Echo.html", "classapps_1_1websocket_1_1subprotocol_1_1echo_1_1client_1_1Echo" ],
+              [ "EchoFactory", "classapps_1_1websocket_1_1subprotocol_1_1echo_1_1client_1_1EchoFactory.html", "classapps_1_1websocket_1_1subprotocol_1_1echo_1_1client_1_1EchoFactory" ]
+            ] ],
+            [ "server", "namespaceapps_1_1websocket_1_1subprotocol_1_1echo_1_1server.html", [
+              [ "Echo", "classapps_1_1websocket_1_1subprotocol_1_1echo_1_1server_1_1Echo.html", "classapps_1_1websocket_1_1subprotocol_1_1echo_1_1server_1_1Echo" ],
+              [ "EchoFactory", "classapps_1_1websocket_1_1subprotocol_1_1echo_1_1server_1_1EchoFactory.html", "classapps_1_1websocket_1_1subprotocol_1_1echo_1_1server_1_1EchoFactory" ]
+            ] ]
+          ] ]
+        ] ]
+      ] ]
+    ] ],
     [ "CLI", "namespaceCLI.html", [
       [ "CallForCommandline", "classCLI_1_1CallForCommandline.html", "classCLI_1_1CallForCommandline" ],
       [ "CallForShowConfig", "classCLI_1_1CallForShowConfig.html", "classCLI_1_1CallForShowConfig" ],
@@ -500,6 +531,7 @@ var annotated_dup =
       [ "MultibleAttributeInjector", "classutils_1_1MultibleAttributeInjector.html", "classutils_1_1MultibleAttributeInjector" ],
       [ "PreserveErrno", "classutils_1_1PreserveErrno.html", "classutils_1_1PreserveErrno" ],
       [ "Random", "classutils_1_1Random.html", "classutils_1_1Random" ],
+      [ "SHA1", "classutils_1_1SHA1.html", "classutils_1_1SHA1" ],
       [ "SingleAttributeInjector", "classutils_1_1SingleAttributeInjector.html", "classutils_1_1SingleAttributeInjector" ],
       [ "Timeval", "classutils_1_1Timeval.html", "classutils_1_1Timeval" ],
       [ "Uuid", "classutils_1_1Uuid.html", "classutils_1_1Uuid" ]
@@ -575,6 +607,5 @@ var annotated_dup =
         [ "SubProtocolFactorySelector", "classweb_1_1websocket_1_1SubProtocolFactorySelector.html", "classweb_1_1websocket_1_1SubProtocolFactorySelector" ],
         [ "Transmitter", "classweb_1_1websocket_1_1Transmitter.html", "classweb_1_1websocket_1_1Transmitter" ]
       ] ]
-    ] ],
-    [ "SHA1", "classSHA1.html", "classSHA1" ]
+    ] ]
 ];

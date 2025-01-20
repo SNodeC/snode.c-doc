@@ -109,7 +109,7 @@ $(function(){initNavTree('classexpress_1_1Controller.html',''); initResizable(tr
 <div class="dynheader">
 Collaboration diagram for express::Controller:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classexpress_1_1Controller__coll__graph.svg" width="323" height="291"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classexpress_1_1Controller__coll__graph.svg" width="2288" height="1540"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
@@ -226,6 +226,8 @@ Private Attributes</h2></td></tr>
 <div class="ttc" id="aclassexpress_1_1Controller_html_a9049d63aa8d3eed02292270f34f68920"><div class="ttname"><a href="#a9049d63aa8d3eed02292270f34f68920">express::Controller::response</a></div><div class="ttdeci">std::shared_ptr&lt; Response &gt; response</div><div class="ttdef"><b>Definition</b> <a href="Controller_8h_source.html#l00070">Controller.h:70</a></div></div>
 <div class="ttc" id="aclassexpress_1_1Controller_html_acd3c1a937659b4eb99d42de242bd5498"><div class="ttname"><a href="#acd3c1a937659b4eb99d42de242bd5498">express::Controller::request</a></div><div class="ttdeci">std::shared_ptr&lt; Request &gt; request</div><div class="ttdef"><b>Definition</b> <a href="Controller_8h_source.html#l00069">Controller.h:69</a></div></div>
 </div><!-- fragment -->
+<p class="reference">References <a class="el" href="Controller_8h_source.html#l00077">lastTick</a>.</p>
+
 </div>
 </div>
 <a id="aa090215c5adf4e8f7d0dd9948bf1bc22" name="aa090215c5adf4e8f7d0dd9948bf1bc22"></a>
@@ -257,6 +259,20 @@ Private Attributes</h2></td></tr>
 <div class="ttc" id="aclassexpress_1_1Controller_html_a6e798412906acba32e0422e3a87caafa"><div class="ttname"><a href="#a6e798412906acba32e0422e3a87caafa">express::Controller::currentRoute</a></div><div class="ttdeci">Route * currentRoute</div><div class="ttdef"><b>Definition</b> <a href="Controller_8h_source.html#l00075">Controller.h:75</a></div></div>
 <div class="ttc" id="aclassexpress_1_1Controller_html_ade047309ea08b64817efd2dfca409e2c"><div class="ttname"><a href="#ade047309ea08b64817efd2dfca409e2c">express::Controller::lastRoute</a></div><div class="ttdeci">Route * lastRoute</div><div class="ttdef"><b>Definition</b> <a href="Controller_8h_source.html#l00074">Controller.h:74</a></div></div>
 </div><!-- fragment -->
+<p class="reference">References <a class="el" href="Controller_8cpp_source.html#l00040">Controller()</a>, <a class="el" href="Controller_8h_source.html#l00079">flags</a>, and <a class="el" href="Controller_8h_source.html#l00077">lastTick</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Controller_8cpp_source.html#l00040">Controller()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classexpress_1_1Controller_aa090215c5adf4e8f7d0dd9948bf1bc22_cgraph.svg" width="156" height="75"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classexpress_1_1Controller_aa090215c5adf4e8f7d0dd9948bf1bc22_icgraph.svg" width="156" height="75"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -296,6 +312,8 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  127</span>    }</div>
 <div class="ttc" id="aclassexpress_1_1Route_html_a8c878f3ae8be82aa01d8a73d55759771"><div class="ttname"><a href="classexpress_1_1Route.html#a8c878f3ae8be82aa01d8a73d55759771">express::Route::dispatchNext</a></div><div class="ttdeci">bool dispatchNext(Controller &amp;controller, const std::string &amp;parentMountPath)</div><div class="ttdef"><b>Definition</b> <a href="Route_8cpp_source.html#l00074">Route.cpp:74</a></div></div>
 </div><!-- fragment -->
+<p class="reference">References <a class="el" href="Controller_8h_source.html#l00079">flags</a>, <a class="el" href="Controller_8h_source.html#l00066">NEXT</a>, <a class="el" href="Controller_8h_source.html#l00066">NEXT_ROUTE</a>, and <a class="el" href="Controller_8h_source.html#l00066">NEXT_ROUTER</a>.</p>
+
 </div>
 </div>
 <a id="adc00f14eb275a0ef34ce9ffc7abfb4a6" name="adc00f14eb275a0ef34ce9ffc7abfb4a6"></a>
@@ -318,6 +336,15 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">   81</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#a2c8a785f7f6f98c96ff7d0a898ede357">flags</a>;</div>
 <div class="line"><span class="lineno">   82</span>    }</div>
 </div><!-- fragment -->
+<p class="reference">References <a class="el" href="Controller_8h_source.html#l00079">flags</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ApplicationDispatcher_8cpp_source.html#l00038">express::dispatcher::ApplicationDispatcher::dispatch()</a>, and <a class="el" href="MiddlewareDispatcher_8cpp_source.html#l00038">express::dispatcher::MiddlewareDispatcher::dispatch()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classexpress_1_1Controller_adc00f14eb275a0ef34ce9ffc7abfb4a6_icgraph.svg" width="380" height="144"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
 </div>
 </div>
 <a id="a4321dde8dd3ffba0a558ab40655361a3" name="a4321dde8dd3ffba0a558ab40655361a3"></a>
@@ -428,6 +455,8 @@ Private Attributes</h2></td></tr>
 <div class="ttc" id="aclassexpress_1_1Controller_html"><div class="ttname"><a href="classexpress_1_1Controller.html">express::Controller</a></div><div class="ttdef"><b>Definition</b> <a href="Controller_8h_source.html#l00044">Controller.h:44</a></div></div>
 <div class="ttc" id="aclassexpress_1_1RootRoute_html_a1c2da19981989c227a16b6054be19262"><div class="ttname"><a href="classexpress_1_1RootRoute.html#a1c2da19981989c227a16b6054be19262">express::RootRoute::dispatch</a></div><div class="ttdeci">void dispatch(Controller &amp;&amp;controller)</div><div class="ttdef"><b>Definition</b> <a href="RootRoute_8cpp_source.html#l00069">RootRoute.cpp:69</a></div></div>
 </div><!-- fragment -->
+<p class="reference">References <a class="el" href="Controller_8h_source.html#l00079">flags</a>, <a class="el" href="Controller_8h_source.html#l00077">lastTick</a>, <a class="el" href="Controller_8h_source.html#l00066">NEXT</a>, <a class="el" href="Controller_8h_source.html#l00066">NEXT_ROUTE</a>, and <a class="el" href="Controller_8h_source.html#l00066">NEXT_ROUTER</a>.</p>
+
 </div>
 </div>
 <a id="a2343f7ca789a4bcaa9088b0acb9de1a4" name="a2343f7ca789a4bcaa9088b0acb9de1a4"></a>
@@ -456,6 +485,8 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  107</span>        <span class="keywordflow">return</span> breakDispatching;</div>
 <div class="line"><span class="lineno">  108</span>    }</div>
 </div><!-- fragment -->
+<p class="reference">References <a class="el" href="Controller_8h_source.html#l00079">flags</a>, and <a class="el" href="Controller_8h_source.html#l00066">NEXT_ROUTER</a>.</p>
+
 </div>
 </div>
 <a id="aebb15c6b6dcac11af8c5ad9229a35b63" name="aebb15c6b6dcac11af8c5ad9229a35b63"></a>
@@ -496,6 +527,8 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">   61</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
 <div class="line"><span class="lineno">   62</span>    }</div>
 </div><!-- fragment -->
+<p class="reference">References <a class="el" href="Controller_8h_source.html#l00079">flags</a>, and <a class="el" href="Controller_8h_source.html#l00077">lastTick</a>.</p>
+
 </div>
 </div>
 <a id="aaff8f54ab62ad5ace41ab46c680c5edb" name="aaff8f54ab62ad5ace41ab46c680c5edb"></a>
@@ -589,6 +622,8 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Controller_8h_source.html#l00079">79</a> of file <a class="el" href="Controller_8h_source.html">Controller.h</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="Controller_8cpp_source.html#l00040">Controller()</a>, <a class="el" href="Controller_8cpp_source.html#l00110">dispatchNext()</a>, <a class="el" href="Controller_8cpp_source.html#l00080">getFlags()</a>, <a class="el" href="Controller_8cpp_source.html#l00084">next()</a>, <a class="el" href="Controller_8cpp_source.html#l00100">nextRouter()</a>, and <a class="el" href="Controller_8cpp_source.html#l00050">operator=()</a>.</p>
+
 </div>
 </div>
 <a id="ade047309ea08b64817efd2dfca409e2c" name="ade047309ea08b64817efd2dfca409e2c"></a>
@@ -636,6 +671,8 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Controller_8h_source.html#l00077">77</a> of file <a class="el" href="Controller_8h_source.html">Controller.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Controller_8cpp_source.html#l00040">Controller()</a>, <a class="el" href="Controller_8cpp_source.html#l00033">Controller()</a>, <a class="el" href="Controller_8cpp_source.html#l00084">next()</a>, and <a class="el" href="Controller_8cpp_source.html#l00050">operator=()</a>.</p>
 
 </div>
 </div>
@@ -721,7 +758,7 @@ Private Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceexpress.html">express</a></li><li class="navelem"><a class="el" href="classexpress_1_1Controller.html">Controller</a></li>
-    <li class="footer">Generated on Sun Jan 12 2025 21:03:49 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generated on Mon Jan 20 2025 01:16:12 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>

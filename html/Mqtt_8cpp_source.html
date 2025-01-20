@@ -163,7 +163,7 @@ $(function(){initNavTree('Mqtt_8cpp_source.html',''); initResizable(true); });
 </div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
 <div class="foldopen" id="foldopen00060" data-start="{" data-end="}">
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="classiot_1_1mqtt_1_1Mqtt.html#a5cabe1c4713cb3e7e50a67cf5151c074">   60</a></span>    <span class="keywordtype">void</span> Mqtt::setMqttContext(<a class="code hl_class" href="classiot_1_1mqtt_1_1MqttContext.html">MqttContext</a>* mqttContext) {</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="classiot_1_1mqtt_1_1Mqtt.html#a5cabe1c4713cb3e7e50a67cf5151c074">   60</a></span>    <span class="keywordtype">void</span> Mqtt::setMqttContext(MqttContext* mqttContext) {</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <span class="keyword">this</span>-&gt;mqttContext = mqttContext;</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    }</div>
 </div>
@@ -186,7 +186,7 @@ $(function(){initNavTree('Mqtt_8cpp_source.html',''); initResizable(true); });
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>                    <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>                }</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>                <span class="keywordflow">if</span> (fixedHeader.isError()) {</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>                    mqttContext<a class="code hl_function" href="classiot_1_1mqtt_1_1MqttContext.html#af44399b7e355931397763d0ef887375b">-&gt;</a><a class="code hl_function" href="classiot_1_1mqtt_1_1MqttContext.html#af44399b7e355931397763d0ef887375b">close</a><a class="code hl_function" href="classiot_1_1mqtt_1_1MqttContext.html#af44399b7e355931397763d0ef887375b">(</a><a class="code hl_function" href="classiot_1_1mqtt_1_1MqttContext.html#af44399b7e355931397763d0ef887375b">)</a>;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>                    mqttContext-&gt;close();</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>                    <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>                }</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>                printFixedHeader(fixedHeader);</div>
@@ -199,7 +199,7 @@ $(function(){initNavTree('Mqtt_8cpp_source.html',''); initResizable(true); });
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>                <span class="keywordflow">if</span> (controlPacketDeserializer == <span class="keywordtype">nullptr</span>) {</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>                    LOG(DEBUG) &lt;&lt; <span class="stringliteral">&quot;MQTT: Received packet-type is unavailable ... closing connection&quot;</span>;</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>                    mqttContext<a class="code hl_function" href="classiot_1_1mqtt_1_1MqttContext.html#ada10a6f2fcf6953ed62d93bdb5907cd1">-&gt;</a><a class="code hl_function" href="classiot_1_1mqtt_1_1MqttContext.html#ada10a6f2fcf6953ed62d93bdb5907cd1">end</a><a class="code hl_function" href="classiot_1_1mqtt_1_1MqttContext.html#ada10a6f2fcf6953ed62d93bdb5907cd1">(</a><span class="keyword">true</span><a class="code hl_function" href="classiot_1_1mqtt_1_1MqttContext.html#ada10a6f2fcf6953ed62d93bdb5907cd1">)</a>;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>                    mqttContext-&gt;end(<span class="keyword">true</span>);</div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>                    <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>                }</div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>                <span class="keywordflow">if</span> (controlPacketDeserializer-&gt;isError()) {</div>
@@ -208,7 +208,7 @@ $(function(){initNavTree('Mqtt_8cpp_source.html',''); initResizable(true); });
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>                    <span class="keyword">delete</span> controlPacketDeserializer;</div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>                    controlPacketDeserializer = <span class="keywordtype">nullptr</span>;</div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>                    mqttContext<a class="code hl_function" href="classiot_1_1mqtt_1_1MqttContext.html#ada10a6f2fcf6953ed62d93bdb5907cd1">-&gt;</a><a class="code hl_function" href="classiot_1_1mqtt_1_1MqttContext.html#ada10a6f2fcf6953ed62d93bdb5907cd1">end</a><a class="code hl_function" href="classiot_1_1mqtt_1_1MqttContext.html#ada10a6f2fcf6953ed62d93bdb5907cd1">(</a><span class="keyword">true</span><a class="code hl_function" href="classiot_1_1mqtt_1_1MqttContext.html#ada10a6f2fcf6953ed62d93bdb5907cd1">)</a>;</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>                    mqttContext-&gt;end(<span class="keyword">true</span>);</div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>                    <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>                }</div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
@@ -220,7 +220,7 @@ $(function(){initNavTree('Mqtt_8cpp_source.html',''); initResizable(true); });
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>                <span class="keywordflow">if</span> (controlPacketDeserializer-&gt;isError()) {</div>
 <div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>                    LOG(DEBUG) &lt;&lt; <span class="stringliteral">&quot;MQTT: Control packet has error ... closing connection&quot;</span>;</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>                    mqttContext<a class="code hl_function" href="classiot_1_1mqtt_1_1MqttContext.html#ada10a6f2fcf6953ed62d93bdb5907cd1">-&gt;</a><a class="code hl_function" href="classiot_1_1mqtt_1_1MqttContext.html#ada10a6f2fcf6953ed62d93bdb5907cd1">end</a><a class="code hl_function" href="classiot_1_1mqtt_1_1MqttContext.html#ada10a6f2fcf6953ed62d93bdb5907cd1">(</a><span class="keyword">true</span><a class="code hl_function" href="classiot_1_1mqtt_1_1MqttContext.html#ada10a6f2fcf6953ed62d93bdb5907cd1">)</a>;</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>                    mqttContext-&gt;end(<span class="keyword">true</span>);</div>
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>                    <span class="keyword">delete</span> controlPacketDeserializer;</div>
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>                    controlPacketDeserializer = <span class="keywordtype">nullptr</span>;</div>
@@ -250,8 +250,8 @@ $(function(){initNavTree('Mqtt_8cpp_source.html',''); initResizable(true); });
 </div>
 <div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span> </div>
 <div class="foldopen" id="foldopen00139" data-start="{" data-end="}">
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno"><a class="line" href="classiot_1_1mqtt_1_1Mqtt.html#adb34507072d9f44d955b1060ca3cf118">  139</a></span>    <a class="code hl_namespace" href="namespacecore.html">core</a>::<a class="code hl_namespace" href="namespacecore_1_1socket.html">socket</a>::<a class="code hl_class" href="classcore_1_1socket_1_1stream_1_1SocketClient.html">stream</a>::SocketConnection* Mqtt::getSocketConnection() {</div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>        <span class="keywordflow">return</span> mqttContext<a class="code hl_function" href="classiot_1_1mqtt_1_1MqttContext.html#a1a620373f681b25b2e38899374124b01">-&gt;</a><a class="code hl_function" href="classiot_1_1mqtt_1_1MqttContext.html#a1a620373f681b25b2e38899374124b01">getSocketConnection</a><a class="code hl_function" href="classiot_1_1mqtt_1_1MqttContext.html#a1a620373f681b25b2e38899374124b01">(</a><a class="code hl_function" href="classiot_1_1mqtt_1_1MqttContext.html#a1a620373f681b25b2e38899374124b01">)</a>;</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno"><a class="line" href="classiot_1_1mqtt_1_1Mqtt.html#adb34507072d9f44d955b1060ca3cf118">  139</a></span>    core::socket::stream::SocketConnection* Mqtt::getSocketConnection() {</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>        <span class="keywordflow">return</span> mqttContext-&gt;getSocketConnection();</div>
 <div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    }</div>
 </div>
 <div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span> </div>
@@ -382,11 +382,11 @@ $(function(){initNavTree('Mqtt_8cpp_source.html',''); initResizable(true); });
 <div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span> </div>
 <div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>        <span class="keywordflow">if</span> (publish.getQoS() &gt; 2) {</div>
 <div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>            LOG(DEBUG) &lt;&lt; <span class="stringliteral">&quot;MQTT:   Received invalid QoS: &quot;</span> &lt;&lt; publish.getQoS();</div>
-<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>            mqttContext<a class="code hl_function" href="classiot_1_1mqtt_1_1MqttContext.html#ada10a6f2fcf6953ed62d93bdb5907cd1">-&gt;</a><a class="code hl_function" href="classiot_1_1mqtt_1_1MqttContext.html#ada10a6f2fcf6953ed62d93bdb5907cd1">end</a><a class="code hl_function" href="classiot_1_1mqtt_1_1MqttContext.html#ada10a6f2fcf6953ed62d93bdb5907cd1">(</a><span class="keyword">true</span><a class="code hl_function" href="classiot_1_1mqtt_1_1MqttContext.html#ada10a6f2fcf6953ed62d93bdb5907cd1">)</a>;</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>            mqttContext-&gt;end(<span class="keyword">true</span>);</div>
 <div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>            deliver = <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (publish.getPacketIdentifier() == 0 &amp;&amp; publish.getQoS() &gt; 0) {</div>
 <div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>            LOG(DEBUG) &lt;&lt; <span class="stringliteral">&quot;MQTT:   Received QoS &gt; 0 but no PackageIdentifier present&quot;</span>;</div>
-<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>            mqttContext<a class="code hl_function" href="classiot_1_1mqtt_1_1MqttContext.html#ada10a6f2fcf6953ed62d93bdb5907cd1">-&gt;</a><a class="code hl_function" href="classiot_1_1mqtt_1_1MqttContext.html#ada10a6f2fcf6953ed62d93bdb5907cd1">end</a><a class="code hl_function" href="classiot_1_1mqtt_1_1MqttContext.html#ada10a6f2fcf6953ed62d93bdb5907cd1">(</a><span class="keyword">true</span><a class="code hl_function" href="classiot_1_1mqtt_1_1MqttContext.html#ada10a6f2fcf6953ed62d93bdb5907cd1">)</a>;</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>            mqttContext-&gt;end(<span class="keyword">true</span>);</div>
 <div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>            deliver = <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>        } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>            <span class="keywordflow">switch</span> (publish.getQoS()) {</div>
@@ -415,7 +415,7 @@ $(function(){initNavTree('Mqtt_8cpp_source.html',''); initResizable(true); });
 <div class="line"><a id="l00270" name="l00270"></a><span class="lineno"><a class="line" href="classiot_1_1mqtt_1_1Mqtt.html#afc4f16e682a0a049d51f182c4fbe8362">  270</a></span>    <span class="keywordtype">void</span> Mqtt::_onPuback(<span class="keyword">const</span> iot::mqtt::packets::Puback&amp; puback) {</div>
 <div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>        <span class="keywordflow">if</span> (puback.getPacketIdentifier() == 0) {</div>
 <div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>            LOG(DEBUG) &lt;&lt; <span class="stringliteral">&quot;MQTT:   PackageIdentifier missing&quot;</span>;</div>
-<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>            mqttContext<a class="code hl_function" href="classiot_1_1mqtt_1_1MqttContext.html#ada10a6f2fcf6953ed62d93bdb5907cd1">-&gt;</a><a class="code hl_function" href="classiot_1_1mqtt_1_1MqttContext.html#ada10a6f2fcf6953ed62d93bdb5907cd1">end</a><a class="code hl_function" href="classiot_1_1mqtt_1_1MqttContext.html#ada10a6f2fcf6953ed62d93bdb5907cd1">(</a><span class="keyword">true</span><a class="code hl_function" href="classiot_1_1mqtt_1_1MqttContext.html#ada10a6f2fcf6953ed62d93bdb5907cd1">)</a>;</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>            mqttContext-&gt;end(<span class="keyword">true</span>);</div>
 <div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>        } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>            LOG(DEBUG) &lt;&lt; <span class="stringliteral">&quot;MQTT:   PacketIdentifier: 0x&quot;</span> &lt;&lt; std::hex &lt;&lt; std::setfill(<span class="stringliteral">&#39;0&#39;</span>) &lt;&lt; std::setw(4) &lt;&lt; puback.getPacketIdentifier();</div>
 <div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>        }</div>
@@ -428,7 +428,7 @@ $(function(){initNavTree('Mqtt_8cpp_source.html',''); initResizable(true); });
 <div class="line"><a id="l00281" name="l00281"></a><span class="lineno"><a class="line" href="classiot_1_1mqtt_1_1Mqtt.html#a81088a10a9a9136a8ad55c2f261e56fa">  281</a></span>    <span class="keywordtype">void</span> Mqtt::_onPubrec(<span class="keyword">const</span> iot::mqtt::packets::Pubrec&amp; pubrec) {</div>
 <div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>        <span class="keywordflow">if</span> (pubrec.getPacketIdentifier() == 0) {</div>
 <div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>            LOG(DEBUG) &lt;&lt; <span class="stringliteral">&quot;MQTT:   PackageIdentifier missing&quot;</span>;</div>
-<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>            mqttContext<a class="code hl_function" href="classiot_1_1mqtt_1_1MqttContext.html#ada10a6f2fcf6953ed62d93bdb5907cd1">-&gt;</a><a class="code hl_function" href="classiot_1_1mqtt_1_1MqttContext.html#ada10a6f2fcf6953ed62d93bdb5907cd1">end</a><a class="code hl_function" href="classiot_1_1mqtt_1_1MqttContext.html#ada10a6f2fcf6953ed62d93bdb5907cd1">(</a><span class="keyword">true</span><a class="code hl_function" href="classiot_1_1mqtt_1_1MqttContext.html#ada10a6f2fcf6953ed62d93bdb5907cd1">)</a>;</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>            mqttContext-&gt;end(<span class="keyword">true</span>);</div>
 <div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>        } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>            LOG(DEBUG) &lt;&lt; <span class="stringliteral">&quot;MQTT:   PacketIdentifier: 0x&quot;</span> &lt;&lt; std::hex &lt;&lt; std::setfill(<span class="stringliteral">&#39;0&#39;</span>) &lt;&lt; std::setw(4) &lt;&lt; pubrec.getPacketIdentifier();</div>
 <div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span> </div>
@@ -446,7 +446,7 @@ $(function(){initNavTree('Mqtt_8cpp_source.html',''); initResizable(true); });
 <div class="line"><a id="l00297" name="l00297"></a><span class="lineno"><a class="line" href="classiot_1_1mqtt_1_1Mqtt.html#aaec02ffa110490128d50ed99456d239b">  297</a></span>    <span class="keywordtype">void</span> Mqtt::_onPubrel(<span class="keyword">const</span> iot::mqtt::packets::Pubrel&amp; pubrel) {</div>
 <div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>        <span class="keywordflow">if</span> (pubrel.getPacketIdentifier() == 0) {</div>
 <div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>            LOG(DEBUG) &lt;&lt; <span class="stringliteral">&quot;MQTT:   PackageIdentifier missing&quot;</span>;</div>
-<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>            mqttContext<a class="code hl_function" href="classiot_1_1mqtt_1_1MqttContext.html#ada10a6f2fcf6953ed62d93bdb5907cd1">-&gt;</a><a class="code hl_function" href="classiot_1_1mqtt_1_1MqttContext.html#ada10a6f2fcf6953ed62d93bdb5907cd1">end</a><a class="code hl_function" href="classiot_1_1mqtt_1_1MqttContext.html#ada10a6f2fcf6953ed62d93bdb5907cd1">(</a><span class="keyword">true</span><a class="code hl_function" href="classiot_1_1mqtt_1_1MqttContext.html#ada10a6f2fcf6953ed62d93bdb5907cd1">)</a>;</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>            mqttContext-&gt;end(<span class="keyword">true</span>);</div>
 <div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>        } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>            LOG(DEBUG) &lt;&lt; <span class="stringliteral">&quot;MQTT:   PacketIdentifier: 0x&quot;</span> &lt;&lt; std::hex &lt;&lt; std::setfill(<span class="stringliteral">&#39;0&#39;</span>) &lt;&lt; std::setw(4) &lt;&lt; pubrel.getPacketIdentifier();</div>
 <div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span> </div>
@@ -463,7 +463,7 @@ $(function(){initNavTree('Mqtt_8cpp_source.html',''); initResizable(true); });
 <div class="line"><a id="l00312" name="l00312"></a><span class="lineno"><a class="line" href="classiot_1_1mqtt_1_1Mqtt.html#af9d3d4076d46f8d1d78686d375ccc85d">  312</a></span>    <span class="keywordtype">void</span> Mqtt::_onPubcomp(<span class="keyword">const</span> iot::mqtt::packets::Pubcomp&amp; pubcomp) {</div>
 <div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>        <span class="keywordflow">if</span> (pubcomp.getPacketIdentifier() == 0) {</div>
 <div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>            LOG(DEBUG) &lt;&lt; <span class="stringliteral">&quot;MQTT:   PackageIdentifier missing&quot;</span>;</div>
-<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>            mqttContext<a class="code hl_function" href="classiot_1_1mqtt_1_1MqttContext.html#ada10a6f2fcf6953ed62d93bdb5907cd1">-&gt;</a><a class="code hl_function" href="classiot_1_1mqtt_1_1MqttContext.html#ada10a6f2fcf6953ed62d93bdb5907cd1">end</a><a class="code hl_function" href="classiot_1_1mqtt_1_1MqttContext.html#ada10a6f2fcf6953ed62d93bdb5907cd1">(</a><span class="keyword">true</span><a class="code hl_function" href="classiot_1_1mqtt_1_1MqttContext.html#ada10a6f2fcf6953ed62d93bdb5907cd1">)</a>;</div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>            mqttContext-&gt;end(<span class="keyword">true</span>);</div>
 <div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>        } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>            LOG(DEBUG) &lt;&lt; <span class="stringliteral">&quot;MQTT:   PacketIdentifier: 0x&quot;</span> &lt;&lt; std::hex &lt;&lt; std::setfill(<span class="stringliteral">&#39;0&#39;</span>) &lt;&lt; std::setw(4) &lt;&lt; pubcomp.getPacketIdentifier();</div>
 <div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span> </div>
@@ -527,20 +527,13 @@ $(function(){initNavTree('Mqtt_8cpp_source.html',''); initResizable(true); });
 <div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span> </div>
 <div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>} <span class="comment">// namespace iot::mqtt</span></div>
 </div>
-<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketClient_html"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1SocketClient.html">core::socket::stream::SocketClient</a></div><div class="ttdef"><b>Definition</b> <a href="core_2socket_2stream_2SocketClient_8h_source.html#l00043">SocketClient.h:43</a></div></div>
-<div class="ttc" id="aclassiot_1_1mqtt_1_1MqttContext_html"><div class="ttname"><a href="classiot_1_1mqtt_1_1MqttContext.html">iot::mqtt::MqttContext</a></div><div class="ttdef"><b>Definition</b> <a href="MqttContext_8h_source.html#l00039">MqttContext.h:39</a></div></div>
-<div class="ttc" id="aclassiot_1_1mqtt_1_1MqttContext_html_a1a620373f681b25b2e38899374124b01"><div class="ttname"><a href="classiot_1_1mqtt_1_1MqttContext.html#a1a620373f681b25b2e38899374124b01">iot::mqtt::MqttContext::getSocketConnection</a></div><div class="ttdeci">virtual core::socket::stream::SocketConnection * getSocketConnection()=0</div></div>
-<div class="ttc" id="aclassiot_1_1mqtt_1_1MqttContext_html_ada10a6f2fcf6953ed62d93bdb5907cd1"><div class="ttname"><a href="classiot_1_1mqtt_1_1MqttContext.html#ada10a6f2fcf6953ed62d93bdb5907cd1">iot::mqtt::MqttContext::end</a></div><div class="ttdeci">virtual void end(bool fatal=false)=0</div></div>
-<div class="ttc" id="aclassiot_1_1mqtt_1_1MqttContext_html_af44399b7e355931397763d0ef887375b"><div class="ttname"><a href="classiot_1_1mqtt_1_1MqttContext.html#af44399b7e355931397763d0ef887375b">iot::mqtt::MqttContext::close</a></div><div class="ttdeci">virtual void close()=0</div></div>
-<div class="ttc" id="anamespacecore_1_1socket_html"><div class="ttname"><a href="namespacecore_1_1socket.html">core::socket</a></div><div class="ttdef"><b>Definition</b> <a href="core_2socket_2SocketAddress_8cpp_source.html#l00026">SocketAddress.cpp:26</a></div></div>
-<div class="ttc" id="anamespacecore_html"><div class="ttname"><a href="namespacecore.html">core</a></div><div class="ttdef"><b>Definition</b> <a href="Descriptor_8cpp_source.html#l00030">Descriptor.cpp:30</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_28592ecdec30ec29223e366148bdb66c.html">iot</a></li><li class="navelem"><a class="el" href="dir_9fa9cc1bc73227ba3c1e7b2368f5d654.html">mqtt</a></li><li class="navelem"><a class="el" href="Mqtt_8cpp.html">Mqtt.cpp</a></li>
-    <li class="footer">Generated on Sun Jan 12 2025 21:03:42 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generated on Mon Jan 20 2025 01:15:07 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>

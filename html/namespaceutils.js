@@ -18,6 +18,7 @@ var namespaceutils =
     [ "MultibleAttributeInjector", "classutils_1_1MultibleAttributeInjector.html", "classutils_1_1MultibleAttributeInjector" ],
     [ "PreserveErrno", "classutils_1_1PreserveErrno.html", "classutils_1_1PreserveErrno" ],
     [ "Random", "classutils_1_1Random.html", "classutils_1_1Random" ],
+    [ "SHA1", "classutils_1_1SHA1.html", "classutils_1_1SHA1" ],
     [ "SingleAttributeInjector", "classutils_1_1SingleAttributeInjector.html", "classutils_1_1SingleAttributeInjector" ],
     [ "Timeval", "classutils_1_1Timeval.html", "classutils_1_1Timeval" ],
     [ "Uuid", "classutils_1_1Uuid.html", "classutils_1_1Uuid" ],
@@ -29,8 +30,10 @@ var namespaceutils =
     [ "createCommandLineTemplate", "namespaceutils.html#aac7436ed2ed454cbef6765b7e381b2f7", null ],
     [ "fixed_string", "namespaceutils.html#a087c65a976bbdbf8e3978d55cf44bcf3", null ],
     [ "hexDump", "namespaceutils.html#a3bd46aa5d1ad27cb939eda58b9ef4e67", null ],
-    [ "makeApp", "namespaceutils.html#acf24bc1d3f8119c40b2b0e715e99c428", null ],
-    [ "makeSectionFormatter", "namespaceutils.html#ae4dca857dbbb3a4fcaf8dd65df86d6b8", null ],
+    [ "makeApp", "namespaceutils.html#a0cc5559932a20e3d6dd13c420183e8eb", null ],
+    [ "makeSectionFormatter", "namespaceutils.html#a758209abdfa2ba14398d32b747dab000", null ],
     [ "operator*", "namespaceutils.html#abbf97f2fdf33120069baf3646d96229b", null ],
-    [ "operator<<", "namespaceutils.html#a94ea12976058468fed45202315c247a2", null ]
+    [ "operator<<", "namespaceutils.html#a94ea12976058468fed45202315c247a2", null ],
+    [ "sha1", "namespaceutils.html#a4ba067c99edff8bcc98aab55a4ddc814", null ],
+    [ "transform_to_binary", "namespaceutils.html#a4d92cb87a59c2c9265e21a19d0587db2", null ]
 ];

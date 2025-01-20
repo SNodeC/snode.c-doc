@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['instance_0',['Instance',['../classnet_1_1config_1_1ConfigInstance.html#af59b2ebc19a23c22770f8e93a2f9616e',1,'net::config::ConfigInstance']]]
+  ['echosocketclient_0',['EchoSocketClient',['../namespaceapps_1_1echo_1_1model_1_1legacy.html#ad3aa2c9a0d3b09231c43e48607b553ba',1,'apps::echo::model::legacy']]],
+  ['echosocketserver_1',['EchoSocketServer',['../namespaceapps_1_1echo_1_1model_1_1legacy.html#ae40ffe3523c6179004648753b60891f2',1,'apps::echo::model::legacy']]]
 ];

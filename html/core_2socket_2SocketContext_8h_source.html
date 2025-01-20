@@ -99,16 +99,96 @@ $(function(){initNavTree('core_2socket_2SocketContext_8h_source.html',''); initR
   <div class="headertitle"><div class="title">SocketContext.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="core_2socket_2SocketContext_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
-<div class="ttc" id="anamespacecore_1_1socket_html"><div class="ttname"><a href="namespacecore_1_1socket.html">core::socket</a></div><div class="ttdef"><b>Definition</b> <a href="core_2socket_2SocketAddress_8cpp_source.html#l00026">SocketAddress.cpp:26</a></div></div>
-<div class="ttc" id="anamespacecore_html"><div class="ttname"><a href="namespacecore.html">core</a></div><div class="ttdef"><b>Definition</b> <a href="Descriptor_8cpp_source.html#l00030">Descriptor.cpp:30</a></div></div>
+<a href="core_2socket_2SocketContext_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<div class="line"><span class="lineno">    2</span><span class="comment"> * SNode.C - a slim toolkit for network communication</span></div>
+<div class="line"><span class="lineno">    3</span><span class="comment"> * Copyright (C) Volker Christian &lt;me@vchrist.at&gt;</span></div>
+<div class="line"><span class="lineno">    4</span><span class="comment"> *               2020, 2021, 2022, 2023, 2024, 2025</span></div>
+<div class="line"><span class="lineno">    5</span><span class="comment"> *</span></div>
+<div class="line"><span class="lineno">    6</span><span class="comment"> * This program is free software: you can redistribute it and/or modify</span></div>
+<div class="line"><span class="lineno">    7</span><span class="comment"> * it under the terms of the GNU Lesser General Public License as published</span></div>
+<div class="line"><span class="lineno">    8</span><span class="comment"> * by the Free Software Foundation, either version 3 of the License, or</span></div>
+<div class="line"><span class="lineno">    9</span><span class="comment"> * (at your option) any later version.</span></div>
+<div class="line"><span class="lineno">   10</span><span class="comment"> *</span></div>
+<div class="line"><span class="lineno">   11</span><span class="comment"> * This program is distributed in the hope that it will be useful,</span></div>
+<div class="line"><span class="lineno">   12</span><span class="comment"> * but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
+<div class="line"><span class="lineno">   13</span><span class="comment"> * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the</span></div>
+<div class="line"><span class="lineno">   14</span><span class="comment"> * GNU Lesser General Public License for more details.</span></div>
+<div class="line"><span class="lineno">   15</span><span class="comment"> *</span></div>
+<div class="line"><span class="lineno">   16</span><span class="comment"> * You should have received a copy of the GNU Lesser General Public License</span></div>
+<div class="line"><span class="lineno">   17</span><span class="comment"> * along with this program. If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
+<div class="line"><span class="lineno">   18</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#</span><span class="preprocessor">ifndef</span> <span class="preprocessor">CORE_SOCKET_SOCKETCONTEXT_H</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#</span><span class="preprocessor">define</span> <span class="preprocessor">CORE_SOCKET_SOCKETCONTEXT_H</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">namespace</span> <a class="code hl_namespace" href="namespaceutils.html">utils</a> {</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keyword">class</span> Timeval;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>} <span class="comment">// namespace utils</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#</span><span class="preprocessor">ifndef</span> <span class="preprocessor">DOXYGEN_SHOULD_SKIP_THIS</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">cstddef</span><span class="preprocessor">&gt;</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">string</span><span class="preprocessor">&gt;</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#</span><span class="preprocessor">endif</span> <span class="comment">/* DOXYGEN_SHOULD_SKIP_THIS */</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="keyword">namespace</span> core::socket {</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="foldopen" id="foldopen00036" data-start="{" data-end="};">
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="classcore_1_1socket_1_1SocketContext.html">   36</a></span>    <span class="keyword">class</span> SocketContext {</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="classcore_1_1socket_1_1SocketContext.html#acf0a2bbf56762577ced1dddc0914bc94">   38</a></span>        SocketContext() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="classcore_1_1socket_1_1SocketContext.html#a7dc7622b77eba99817e3584810f821ae">   41</a></span>        SocketContext(<span class="keyword">const</span> SocketContext&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="classcore_1_1socket_1_1SocketContext.html#a8d1afe2d77ed45796d57da529e5c7c51">   42</a></span>        SocketContext(SocketContext&amp;&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="classcore_1_1socket_1_1SocketContext.html#acbeb853d6a71e0dcedcba06727b9e7ab">   44</a></span>        SocketContext&amp; operator=(<span class="keyword">const</span> SocketContext&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="classcore_1_1socket_1_1SocketContext.html#af8aa9bad48f47609ce372e24bff6900a">   45</a></span>        SocketContext&amp; operator=(SocketContext&amp;&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <span class="keyword">virtual</span> ~SocketContext();</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="classcore_1_1socket_1_1SocketContext.html#a4d263707531739a36a95774481bec0f0">   51</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> setTimeout(<span class="keyword">const</span> <a class="code hl_namespace" href="namespaceutils.html">utils</a>::Timeval&amp; timeout) = 0;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <span class="keywordtype">void</span> sendToPeer(<span class="keyword">const</span> std::string&amp; data) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="classcore_1_1socket_1_1SocketContext.html#ad483b080be706b99648da684b74cdcd9">   54</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> sendToPeer(<span class="keyword">const</span> <span class="keywordtype">char</span>* chunk, std::size_t chunkLen) <span class="keyword">const</span> = 0;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="classcore_1_1socket_1_1SocketContext.html#a3b9e77659efd9e86e15dbf0a65824a42">   56</a></span>        <span class="keyword">virtual</span> std::size_t readFromPeer(<span class="keywordtype">char</span>* chunk, std::size_t chunklen) <span class="keyword">const</span> = 0;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="classcore_1_1socket_1_1SocketContext.html#aeb75ce250355b44292faee5d3a96e84f">   58</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> close() = 0;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="classcore_1_1socket_1_1SocketContext.html#a34c520f17818f029395d2d2b4babc882">   61</a></span>        <span class="keyword">virtual</span> std::size_t onReceivedFromPeer() = 0;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="classcore_1_1socket_1_1SocketContext.html#ad5a47157710544f1d90f1ebdf15fe49e">   63</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> onSignal(<span class="keywordtype">int</span> sig) = 0;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="classcore_1_1socket_1_1SocketContext.html#a7ea5556d3111d203134f31035a8e11c9">   65</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onWriteError(<span class="keywordtype">int</span> errnum) = 0;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="classcore_1_1socket_1_1SocketContext.html#a1965401ba1814087fec30d3305341bec">   66</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> onReadError(<span class="keywordtype">int</span> errnum) = 0;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    };</div>
+</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>} <span class="comment">// namespace core::socket</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="preprocessor">#</span><span class="preprocessor">endif</span> <span class="comment">// CORE_SOCKET_SOCKETCONTEXT_H</span></div>
+<div class="ttc" id="aclasscore_1_1pipe_1_1Source_html"><div class="ttname"><a href="classcore_1_1pipe_1_1Source.html">core::pipe::Source</a></div><div class="ttdef"><b>Definition</b> <a href="Source_8h_source.html#l00038">Source.h:38</a></div></div>
+<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketClient_html"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1SocketClient.html">core::socket::stream::SocketClient</a></div><div class="ttdef"><b>Definition</b> <a href="core_2socket_2stream_2SocketClient_8h_source.html#l00048">SocketClient.h:48</a></div></div>
+<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketConnectionT_html"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1SocketConnectionT.html">core::socket::stream::SocketConnectionT</a></div><div class="ttdef"><b>Definition</b> <a href="SocketConnection_8h_source.html#l00101">SocketConnection.h:104</a></div></div>
+<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketConnection_html"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1SocketConnection.html">core::socket::stream::SocketConnection</a></div><div class="ttdef"><b>Definition</b> <a href="SocketConnection_8h_source.html#l00053">SocketConnection.h:53</a></div></div>
+<div class="ttc" id="aconfigtest_8cpp_html_a0ddf1224851353fc92bfbff6f499fa97"><div class="ttname"><a href="configtest_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a></div><div class="ttdeci">int main(int argc, char *argv[])</div><div class="ttdef"><b>Definition</b> <a href="configtest_8cpp_source.html#l00023">configtest.cpp:23</a></div></div>
+<div class="ttc" id="aecho_2model_2clients_8h_html_a267906fae74ea1925332de04c23e9c56"><div class="ttname"><a href="echo_2model_2clients_8h.html#a267906fae74ea1925332de04c23e9c56">QUOTE_INCLUDE</a></div><div class="ttdeci">#define QUOTE_INCLUDE(a)</div><div class="ttdef"><b>Definition</b> <a href="echo_2model_2clients_8h_source.html#l00025">clients.h:25</a></div></div>
+<div class="ttc" id="aecho_2model_2clients_8h_html_ac2e9bff2b922868f2b467492cb32839f"><div class="ttname"><a href="echo_2model_2clients_8h.html#ac2e9bff2b922868f2b467492cb32839f">STR</a></div><div class="ttdeci">#define STR(a)</div><div class="ttdef"><b>Definition</b> <a href="echo_2model_2clients_8h_source.html#l00026">clients.h:26</a></div></div>
+<div class="ttc" id="anamespaceapps_1_1echo_1_1model_1_1legacy_html_a468d9473b6bc09aa7a059c5ca919c6b8"><div class="ttname"><a href="namespaceapps_1_1echo_1_1model_1_1legacy.html#a468d9473b6bc09aa7a059c5ca919c6b8">apps::echo::model::legacy::getClient</a></div><div class="ttdeci">EchoSocketClient getClient()</div><div class="ttdef"><b>Definition</b> <a href="echo_2model_2clients_8h_source.html#l00054">clients.h:54</a></div></div>
+<div class="ttc" id="anamespaceapps_html"><div class="ttname"><a href="namespaceapps.html">apps</a></div><div class="ttdef"><b>Definition</b> <a href="echo_2model_2clients_8h_source.html#l00050">clients.h:50</a></div></div>
+<div class="ttc" id="anamespaceutils_html"><div class="ttname"><a href="namespaceutils.html">utils</a></div><div class="ttdef"><b>Definition</b> <a href="Config_8h_source.html#l00037">Config.h:37</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_4270bfced15e0e73154b13468c7c9ad9.html">core</a></li><li class="navelem"><a class="el" href="dir_55e2b5896cfedaa9128ab09eb6ffed25.html">socket</a></li><li class="navelem"><a class="el" href="core_2socket_2SocketContext_8h.html">SocketContext.h</a></li>
-    <li class="footer">Generated on Sun Jan 12 2025 21:03:35 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generated on Mon Jan 20 2025 01:14:26 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>

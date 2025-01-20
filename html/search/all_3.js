@@ -28,8 +28,8 @@ var searchData=
   ['binarydata_2eh_25',['BinaryData.h',['../BinaryData_8h.html',1,'']]],
   ['bind_26',['bind',['../classnet_1_1phy_1_1PhysicalSocket.html#a951f53a51600ef220eb40c3eda019599',1,'net::phy::PhysicalSocket::bind()'],['../classnet_1_1un_1_1phy_1_1PhysicalSocket.html#affbe2cce232a649cd095cd6ed19cc3e9',1,'net::un::phy::PhysicalSocket::bind()'],['../namespacecore_1_1system.html#a726f40f6a8ebf70f5a83bd41d3a028de',1,'core::system::bind()']]],
   ['bindaddress_27',['bindAddress',['../classnet_1_1phy_1_1PhysicalSocket.html#ab5e85381fe9b43ec4f616bad67dacea7',1,'net::phy::PhysicalSocket']]],
-  ['block_5fbytes_28',['BLOCK_BYTES',['../classSHA1.html#a0ce14e74ef26cd99a5dc0b31a6a2d88c',1,'SHA1']]],
-  ['block_5fints_29',['BLOCK_INTS',['../classSHA1.html#a387f52a338145416fe4e5b1f18cf45ac',1,'SHA1']]],
+  ['block_5fbytes_28',['BLOCK_BYTES',['../classutils_1_1SHA1.html#a24dd16f4b798dffa7e9406a78b8e94c2',1,'utils::SHA1']]],
+  ['block_5fints_29',['BLOCK_INTS',['../classutils_1_1SHA1.html#a195e51dea1af3934075964bafa345517',1,'utils::SHA1']]],
   ['blocksize_30',['blockSize',['../classcore_1_1socket_1_1stream_1_1SocketReader.html#a95deb93d5f939b6c88da35c4f52f7d6b',1,'core::socket::stream::SocketReader::blockSize'],['../classcore_1_1socket_1_1stream_1_1SocketWriter.html#a7add94231e340c46cd66eae310c09365',1,'core::socket::stream::SocketWriter::blockSize']]],
   ['bluetooth_20l2cap_20specific_20tt_20connect_20tt_20methods_31',['Bluetooth L2CAP specific &lt;tt&gt;connect()&lt;/tt&gt; Methods',['../index.html#bluetooth-l2cap-specific-connect-methods',1,'']]],
   ['bluetooth_20l2cap_20specific_20tt_20listen_20tt_20methods_32',['Bluetooth L2CAP specific &lt;tt&gt;listen()&lt;/tt&gt; Methods',['../index.html#bluetooth-l2cap-specific-listen-methods',1,'']]],
@@ -45,7 +45,7 @@ var searchData=
   ['btaddress_42',['btAddress',['../classnet_1_1l2_1_1SocketAddress.html#aaf438f6c1f739032acc3bffdb5526979',1,'net::l2::SocketAddress::btAddress'],['../classnet_1_1rc_1_1SocketAddress.html#ae261e32349e392fc0f87856b20b6fcad',1,'net::rc::SocketAddress::btAddress']]],
   ['btaddressopt_43',['btAddressOpt',['../classnet_1_1l2_1_1config_1_1ConfigAddress.html#a5bb8baadf735f4b98bb2f34d4b5695a0',1,'net::l2::config::ConfigAddress::btAddressOpt'],['../classnet_1_1rc_1_1config_1_1ConfigAddress.html#aa09aa16d9890f7de800b7e04117ca1c7',1,'net::rc::config::ConfigAddress::btAddressOpt']]],
   ['buf_44',['buf',['../structutils_1_1fixed__string.html#a1fdabe561c69358453f37ce3f13aff99',1,'utils::fixed_string']]],
-  ['buffer_45',['buffer',['../classiot_1_1mqtt__fast_1_1types_1_1Int__1.html#ad73e228a9236835ae13e867cfbef69d3',1,'iot::mqtt_fast::types::Int_1::buffer'],['../classiot_1_1mqtt_1_1SubProtocol.html#a909b20ba8cdcc96b046443ecbf26ba68',1,'iot::mqtt::SubProtocol::buffer'],['../classSHA1.html#a5333d2b7c0c568a4d8224210e65cecec',1,'SHA1::buffer']]],
-  ['buffer_5fto_5fblock_46',['buffer_to_block',['../classSHA1.html#ae2b7954449c67afe467c586ecb5cdef0',1,'SHA1']]],
+  ['buffer_45',['buffer',['../classutils_1_1SHA1.html#a405dcea50986ce0c43d11c061cd5ceb9',1,'utils::SHA1::buffer'],['../classiot_1_1mqtt__fast_1_1types_1_1Int__1.html#ad73e228a9236835ae13e867cfbef69d3',1,'iot::mqtt_fast::types::Int_1::buffer'],['../classiot_1_1mqtt_1_1SubProtocol.html#a909b20ba8cdcc96b046443ecbf26ba68',1,'iot::mqtt::SubProtocol::buffer']]],
+  ['buffer_5fto_5fblock_46',['buffer_to_block',['../classutils_1_1SHA1.html#aea82a6fa79469fdcea9f9213abbf9750',1,'utils::SHA1']]],
   ['building_20and_20installing_20our_20em_20echoserver_20em_20and_20em_20echoclient_20em_47',['CMakeLists.txt file for Building and Installing our &lt;em&gt;echoserver&lt;/em&gt; and &lt;em&gt;echoclient&lt;/em&gt;',['../index.html#cmakeliststxt-file-for-building-and-installing-our-echoserver-and-echoclient',1,'']]]
 ];
