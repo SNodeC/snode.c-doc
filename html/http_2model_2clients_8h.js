@@ -12,7 +12,7 @@ var http_2model_2clients_8h =
     [ "Response", "http_2model_2clients_8h.html#a7b1f72d29997e0314d719acd19f233e4", null ],
     [ "SocketConnection", "http_2model_2clients_8h.html#a30976a44df49fb6d754fc5db457052ea", null ],
     [ "SocketConnection", "http_2model_2clients_8h.html#a52e2f28be8bf7deffddb01c6da3b7c65", null ],
-    [ "getClient", "http_2model_2clients_8h.html#aea261c4d5541520f1e3790621a3cb3a9", null ],
-    [ "getClient", "http_2model_2clients_8h.html#ab7c0e31877a2e3bd1642a80d749a5154", null ],
+    [ "getClient", "http_2model_2clients_8h.html#ac3453539518aff605f026678b6e3a77d", null ],
+    [ "getClient", "http_2model_2clients_8h.html#a8b5e2ffb32a2be766f9b87cc9419c9eb", null ],
     [ "logResponse", "http_2model_2clients_8h.html#a938620a45c7f124ce0ed9e6cd64968ba", null ]
 ];

@@ -148,35 +148,35 @@ $(function(){initNavTree('jsonserver_8cpp_source.html',''); initResizable(true);
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    legacyApp.use(express::middleware::JsonMiddleware());</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    legacyApp.listen(8080,</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>                     [instanceName = legacyApp.getConfig().getInstanceName()](<span class="keyword">const</span> SocketAddress&amp; socketAddress,</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>                                                                              <span class="keyword">const</span> core::socket::State&amp; state) -&gt; <span class="keywordtype">void</span> {</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>                         <span class="keywordflow">switch</span> (state) {</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>                             <span class="keywordflow">case</span> core::socket::State::OK:</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>                                 VLOG(1) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot;: listening on &#39;&quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>                                 <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>                             <span class="keywordflow">case</span> core::socket::State::DISABLED:</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>                                 VLOG(1) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot;: disabled&quot;</span>;</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>                                 <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>                             <span class="keywordflow">case</span> core::socket::State::ERROR:</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>                                 LOG(ERROR) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; state.what();</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>                                 <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                             <span class="keywordflow">case</span> core::socket::State::FATAL:</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                                 LOG(FATAL) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; state.what();</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>                                 <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                         }</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                     });</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    legacyApp.listen(</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        8080,</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        [instanceName = legacyApp.getConfig().getInstanceName()](<span class="keyword">const</span> SocketAddress&amp; socketAddress, <span class="keyword">const</span> core::socket::State&amp; state) {</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            <span class="keywordflow">switch</span> (state) {</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>                <span class="keywordflow">case</span> core::socket::State::OK:</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>                    VLOG(1) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot;: listening on &#39;&quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>                <span class="keywordflow">case</span> core::socket::State::DISABLED:</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>                    VLOG(1) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot;: disabled&quot;</span>;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>                <span class="keywordflow">case</span> core::socket::State::ERROR:</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>                    LOG(ERROR) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; state.what();</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                <span class="keywordflow">case</span> core::socket::State::FATAL:</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                    LOG(FATAL) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; state.what();</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            }</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        });</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    legacyApp.post(<span class="stringliteral">&quot;/index.html&quot;</span>, [] <a class="code hl_define" href="Router_8h.html#a8b7131df91fe7a961e2cdadcedb55232">APPLICATION</a>(req, res) {</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        std::string jsonString;</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        req-&gt;getAttribute&lt;nlohmann::json&gt;(</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>            [&amp;jsonString](nlohmann::json&amp; json) -&gt; <span class="keywordtype">void</span> {</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>            [&amp;jsonString](nlohmann::json&amp; json) {</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>                jsonString = json.dump(4);</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>                VLOG(0) &lt;&lt; <span class="stringliteral">&quot;Application received body: &quot;</span> &lt;&lt; jsonString;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Application received body: &quot;</span> &lt;&lt; jsonString;</div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>            },</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            [](<span class="keyword">const</span> std::string&amp; key) -&gt; <span class="keywordtype">void</span> {</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>                VLOG(0) &lt;&lt; key &lt;&lt; <span class="stringliteral">&quot; attribute not found&quot;</span>;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            [](<span class="keyword">const</span> std::string&amp; key) {</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>                VLOG(1) &lt;&lt; key &lt;&lt; <span class="stringliteral">&quot; attribute not found&quot;</span>;</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>            });</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        res-&gt;send(jsonString);</div>
@@ -190,14 +190,14 @@ $(function(){initNavTree('jsonserver_8cpp_source.html',''); initResizable(true);
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>}</div>
 </div>
 <div class="ttc" id="aRouter_8h_html_a8b7131df91fe7a961e2cdadcedb55232"><div class="ttname"><a href="Router_8h.html#a8b7131df91fe7a961e2cdadcedb55232">APPLICATION</a></div><div class="ttdeci">#define APPLICATION(req, res)</div><div class="ttdef"><b>Definition</b> <a href="Router_8h_source.html#l00045">Router.h:45</a></div></div>
-<div class="ttc" id="aconfigtest_8cpp_html_a0ddf1224851353fc92bfbff6f499fa97"><div class="ttname"><a href="configtest_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a></div><div class="ttdeci">int main(int argc, char *argv[])</div><div class="ttdef"><b>Definition</b> <a href="configtest_8cpp_source.html#l00023">configtest.cpp:23</a></div></div>
+<div class="ttc" id="aconfigtest_8cpp_html_a0ddf1224851353fc92bfbff6f499fa97"><div class="ttname"><a href="configtest_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a></div><div class="ttdeci">int main(int argc, char *argv[])</div><div class="ttdef"><b>Definition</b> <a href="configtest_8cpp_source.html#l00026">configtest.cpp:26</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_9654b8d08f4bba4e84b362c5fd320bee.html">apps</a></li><li class="navelem"><a class="el" href="jsonserver_8cpp.html">jsonserver.cpp</a></li>
-    <li class="footer">Generated on Mon Jan 20 2025 01:14:31 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generated on Wed Feb 5 2025 21:38:56 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>

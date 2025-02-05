@@ -154,8 +154,8 @@ $(function(){initNavTree('warema-jalousien_8cpp_source.html',''); initResizable(
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="comment">//    tls::WebApp wa;</span></div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    webApp.get(<span class="stringliteral">&quot;/jalousien/:id&quot;</span>, [] <a class="code hl_define" href="Router_8h.html#a8b7131df91fe7a961e2cdadcedb55232">APPLICATION</a>(req, res) {</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        VLOG(0) &lt;&lt; <span class="stringliteral">&quot;Param: &quot;</span> &lt;&lt; req-&gt;param(<span class="stringliteral">&quot;id&quot;</span>);</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        VLOG(0) &lt;&lt; <span class="stringliteral">&quot;Qurey: &quot;</span> &lt;&lt; req-&gt;query(<span class="stringliteral">&quot;action&quot;</span>);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Param: &quot;</span> &lt;&lt; req-&gt;param(<span class="stringliteral">&quot;id&quot;</span>);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Qurey: &quot;</span> &lt;&lt; req-&gt;query(<span class="stringliteral">&quot;action&quot;</span>);</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        std::string arguments = <span class="stringliteral">&quot;aircontrol -t &quot;</span> + jalousien[req-&gt;param(<span class="stringliteral">&quot;id&quot;</span>)] + <span class="stringliteral">&quot;_&quot;</span> + actions[req-&gt;query(<span class="stringliteral">&quot;action&quot;</span>)];</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
@@ -183,7 +183,7 @@ $(function(){initNavTree('warema-jalousien_8cpp_source.html',''); initResizable(
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    webApp.listen(8080,</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>                  [instanceName = webApp.getConfig().getInstanceName()](<span class="keyword">const</span> legacy::in::WebApp::SocketAddress&amp; socketAddress,</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>                                                                        <span class="keyword">const</span> core::socket::State&amp; state) -&gt; <span class="keywordtype">void</span> {</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>                                                                        <span class="keyword">const</span> core::socket::State&amp; state) {</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>                      <span class="keywordflow">switch</span> (state) {</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>                          <span class="keywordflow">case</span> core::socket::State::OK:</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>                              VLOG(1) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot;: listening on &#39;&quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
@@ -207,14 +207,14 @@ $(function(){initNavTree('warema-jalousien_8cpp_source.html',''); initResizable(
 <div class="ttc" id="aclassexpress_1_1WebApp_html"><div class="ttname"><a href="classexpress_1_1WebApp.html">express::WebApp</a></div><div class="ttdef"><b>Definition</b> <a href="WebApp_8h_source.html#l00037">WebApp.h:37</a></div></div>
 <div class="ttc" id="aclassexpress_1_1WebApp_html_a0a01439a0cc8dfc86ed14f1094826b7e"><div class="ttname"><a href="classexpress_1_1WebApp.html#a0a01439a0cc8dfc86ed14f1094826b7e">express::WebApp::init</a></div><div class="ttdeci">static void init(int argc, char *argv[])</div><div class="ttdef"><b>Definition</b> <a href="WebApp_8cpp_source.html#l00034">WebApp.cpp:34</a></div></div>
 <div class="ttc" id="aclassexpress_1_1WebApp_html_a54e6910c9466c61d0b217490b7d9bb5a"><div class="ttname"><a href="classexpress_1_1WebApp.html#a54e6910c9466c61d0b217490b7d9bb5a">express::WebApp::start</a></div><div class="ttdeci">static int start(const utils::Timeval &amp;timeOut={LONG_MAX, 0})</div><div class="ttdef"><b>Definition</b> <a href="WebApp_8cpp_source.html#l00038">WebApp.cpp:38</a></div></div>
-<div class="ttc" id="aconfigtest_8cpp_html_a0ddf1224851353fc92bfbff6f499fa97"><div class="ttname"><a href="configtest_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a></div><div class="ttdeci">int main(int argc, char *argv[])</div><div class="ttdef"><b>Definition</b> <a href="configtest_8cpp_source.html#l00023">configtest.cpp:23</a></div></div>
+<div class="ttc" id="aconfigtest_8cpp_html_a0ddf1224851353fc92bfbff6f499fa97"><div class="ttname"><a href="configtest_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a></div><div class="ttdeci">int main(int argc, char *argv[])</div><div class="ttdef"><b>Definition</b> <a href="configtest_8cpp_source.html#l00026">configtest.cpp:26</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_9654b8d08f4bba4e84b362c5fd320bee.html">apps</a></li><li class="navelem"><a class="el" href="warema-jalousien_8cpp.html">warema-jalousien.cpp</a></li>
-    <li class="footer">Generated on Mon Jan 20 2025 01:14:36 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generated on Wed Feb 5 2025 21:39:02 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>

@@ -254,21 +254,21 @@ template&lt;template&lt; typename <a class="el" href="classnet_1_1un_1_1SocketAd
 <div class="fragment"><div class="line"><span class="lineno">   57</span>                                                        {</div>
 <div class="line"><span class="lineno">   58</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a14dc63ccddb1a032d84902bb9b733e31">lockFd</a> &gt;= 0) {</div>
 <div class="line"><span class="lineno">   59</span>            <span class="keywordflow">if</span> (std::remove(Super::getBindAddress().getSunPath().data()) == 0) {</div>
-<div class="line"><span class="lineno">   60</span>                LOG(TRACE) &lt;&lt; <span class="stringliteral">&quot;Remove sun path: &quot;</span> &lt;&lt; Super::getBindAddress().getSunPath();</div>
+<div class="line"><span class="lineno">   60</span>                LOG(DEBUG) &lt;&lt; <span class="stringliteral">&quot;Remove sun path: &quot;</span> &lt;&lt; Super::getBindAddress().getSunPath();</div>
 <div class="line"><span class="lineno">   61</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   62</span>                PLOG(TRACE) &lt;&lt; <span class="stringliteral">&quot;Remove sun path: &quot;</span> &lt;&lt; Super::getBindAddress().getSunPath();</div>
+<div class="line"><span class="lineno">   62</span>                PLOG(ERROR) &lt;&lt; <span class="stringliteral">&quot;Remove sun path: &quot;</span> &lt;&lt; Super::getBindAddress().getSunPath();</div>
 <div class="line"><span class="lineno">   63</span>            }</div>
 <div class="line"><span class="lineno">   64</span> </div>
 <div class="line"><span class="lineno">   65</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="namespacecore_1_1system.html#a953f1322a8f2399624aa90be84556474">core::system::flock</a>(<a class="code hl_variable" href="#a14dc63ccddb1a032d84902bb9b733e31">lockFd</a>, LOCK_UN) == 0) {</div>
-<div class="line"><span class="lineno">   66</span>                LOG(TRACE) &lt;&lt; <span class="stringliteral">&quot;Remove lock from file: &quot;</span> &lt;&lt; Super::getBindAddress().getSunPath().append(<span class="stringliteral">&quot;.lock&quot;</span>);</div>
+<div class="line"><span class="lineno">   66</span>                LOG(DEBUG) &lt;&lt; <span class="stringliteral">&quot;Remove lock from file: &quot;</span> &lt;&lt; Super::getBindAddress().getSunPath().append(<span class="stringliteral">&quot;.lock&quot;</span>);</div>
 <div class="line"><span class="lineno">   67</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   68</span>                PLOG(TRACE) &lt;&lt; <span class="stringliteral">&quot;Remove lock from file: &quot;</span> &lt;&lt; Super::getBindAddress().getSunPath().append(<span class="stringliteral">&quot;.lock&quot;</span>);</div>
+<div class="line"><span class="lineno">   68</span>                PLOG(ERROR) &lt;&lt; <span class="stringliteral">&quot;Remove lock from file: &quot;</span> &lt;&lt; Super::getBindAddress().getSunPath().append(<span class="stringliteral">&quot;.lock&quot;</span>);</div>
 <div class="line"><span class="lineno">   69</span>            }</div>
 <div class="line"><span class="lineno">   70</span> </div>
 <div class="line"><span class="lineno">   71</span>            <span class="keywordflow">if</span> (std::remove(Super::bindAddress.getSunPath().append(<span class="stringliteral">&quot;.lock&quot;</span>).data()) == 0) {</div>
-<div class="line"><span class="lineno">   72</span>                LOG(TRACE) &lt;&lt; <span class="stringliteral">&quot;Remove lock file: &quot;</span> &lt;&lt; Super::getBindAddress().getSunPath().append(<span class="stringliteral">&quot;.lock&quot;</span>);</div>
+<div class="line"><span class="lineno">   72</span>                LOG(DEBUG) &lt;&lt; <span class="stringliteral">&quot;Remove lock file: &quot;</span> &lt;&lt; Super::getBindAddress().getSunPath().append(<span class="stringliteral">&quot;.lock&quot;</span>);</div>
 <div class="line"><span class="lineno">   73</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   74</span>                PLOG(TRACE) &lt;&lt; <span class="stringliteral">&quot;Remove lock file: &quot;</span> &lt;&lt; Super::getBindAddress().getSunPath().append(<span class="stringliteral">&quot;.lock&quot;</span>);</div>
+<div class="line"><span class="lineno">   74</span>                PLOG(ERROR) &lt;&lt; <span class="stringliteral">&quot;Remove lock file: &quot;</span> &lt;&lt; Super::getBindAddress().getSunPath().append(<span class="stringliteral">&quot;.lock&quot;</span>);</div>
 <div class="line"><span class="lineno">   75</span>            }</div>
 <div class="line"><span class="lineno">   76</span> </div>
 <div class="line"><span class="lineno">   77</span>            <a class="code hl_function" href="namespacecore_1_1system.html#a2aa41abc7d6ba9da2e5035b74608919a">core::system::close</a>(<a class="code hl_variable" href="#a14dc63ccddb1a032d84902bb9b733e31">lockFd</a>);</div>
@@ -300,26 +300,26 @@ template&lt;template&lt; typename <a class="el" href="classnet_1_1un_1_1SocketAd
 
 <p class="definition">Definition at line <a class="el" href="un_2phy_2PhysicalSocket_8hpp_source.html#l00083">83</a> of file <a class="el" href="un_2phy_2PhysicalSocket_8hpp_source.html">PhysicalSocket.hpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   83</span>                                                                           {</div>
-<div class="line"><span class="lineno">   84</span>        <span class="keywordflow">if</span> (!bindAddress.getSunPath().empty()) {</div>
+<div class="line"><span class="lineno">   84</span>        <span class="keywordflow">if</span> (!bindAddress.getSunPath().empty() &amp;&amp; !bindAddress.getSunPath().starts_with(<span class="charliteral">&#39;\0&#39;</span>)) {</div>
 <div class="line"><span class="lineno">   85</span>            <span class="keywordflow">if</span> ((<a class="code hl_variable" href="#a14dc63ccddb1a032d84902bb9b733e31">lockFd</a> = <a class="code hl_function" href="namespacecore_1_1system.html#af932d59deb1d46aca925c487cebf0ab5">open</a>(bindAddress.getSunPath().append(<span class="stringliteral">&quot;.lock&quot;</span>).data(), O_RDONLY | O_CREAT, 0600)) &gt;= 0) {</div>
-<div class="line"><span class="lineno">   86</span>                LOG(TRACE) &lt;&lt; <span class="stringliteral">&quot;Opening lock file: &quot;</span> &lt;&lt; bindAddress.getSunPath().append(<span class="stringliteral">&quot;.lock&quot;</span>).data();</div>
+<div class="line"><span class="lineno">   86</span>                LOG(DEBUG) &lt;&lt; <span class="stringliteral">&quot;Opening lock file: &quot;</span> &lt;&lt; bindAddress.getSunPath().append(<span class="stringliteral">&quot;.lock&quot;</span>).data();</div>
 <div class="line"><span class="lineno">   87</span>                <span class="keywordflow">if</span> (<a class="code hl_function" href="namespacecore_1_1system.html#a953f1322a8f2399624aa90be84556474">core::system::flock</a>(<a class="code hl_variable" href="#a14dc63ccddb1a032d84902bb9b733e31">lockFd</a>, LOCK_EX | LOCK_NB) == 0) {</div>
-<div class="line"><span class="lineno">   88</span>                    LOG(TRACE) &lt;&lt; <span class="stringliteral">&quot;Locking lock file: &quot;</span> &lt;&lt; bindAddress.getSunPath().append(<span class="stringliteral">&quot;.lock&quot;</span>).data();</div>
+<div class="line"><span class="lineno">   88</span>                    LOG(DEBUG) &lt;&lt; <span class="stringliteral">&quot;Locking lock file: &quot;</span> &lt;&lt; bindAddress.getSunPath().append(<span class="stringliteral">&quot;.lock&quot;</span>).data();</div>
 <div class="line"><span class="lineno">   89</span>                    <span class="keywordflow">if</span> (std::filesystem::exists(bindAddress.getSunPath().data())) {</div>
 <div class="line"><span class="lineno">   90</span>                        <span class="keywordflow">if</span> (std::remove(bindAddress.getSunPath().data()) == 0) {</div>
-<div class="line"><span class="lineno">   91</span>                            LOG(TRACE) &lt;&lt; <span class="stringliteral">&quot;Removed stalled sun_path: &quot;</span> &lt;&lt; bindAddress.getSunPath().data();</div>
+<div class="line"><span class="lineno">   91</span>                            LOG(WARNING) &lt;&lt; <span class="stringliteral">&quot;Removed stalled sun_path: &quot;</span> &lt;&lt; bindAddress.getSunPath().data();</div>
 <div class="line"><span class="lineno">   92</span>                        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   93</span>                            PLOG(TRACE) &lt;&lt; <span class="stringliteral">&quot;Removed stalled sun path: &quot;</span> &lt;&lt; bindAddress.getSunPath().data();</div>
+<div class="line"><span class="lineno">   93</span>                            PLOG(ERROR) &lt;&lt; <span class="stringliteral">&quot;Removed stalled sun path: &quot;</span> &lt;&lt; bindAddress.getSunPath().data();</div>
 <div class="line"><span class="lineno">   94</span>                        }</div>
 <div class="line"><span class="lineno">   95</span>                    }</div>
 <div class="line"><span class="lineno">   96</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   97</span>                    PLOG(TRACE) &lt;&lt; <span class="stringliteral">&quot;Locking lock file &quot;</span> &lt;&lt; bindAddress.getSunPath().append(<span class="stringliteral">&quot;.lock&quot;</span>).data();</div>
+<div class="line"><span class="lineno">   97</span>                    PLOG(ERROR) &lt;&lt; <span class="stringliteral">&quot;Locking lock file &quot;</span> &lt;&lt; bindAddress.getSunPath().append(<span class="stringliteral">&quot;.lock&quot;</span>).data();</div>
 <div class="line"><span class="lineno">   98</span> </div>
 <div class="line"><span class="lineno">   99</span>                    <a class="code hl_function" href="namespacecore_1_1system.html#a2aa41abc7d6ba9da2e5035b74608919a">core::system::close</a>(<a class="code hl_variable" href="#a14dc63ccddb1a032d84902bb9b733e31">lockFd</a>);</div>
 <div class="line"><span class="lineno">  100</span>                    <a class="code hl_variable" href="#a14dc63ccddb1a032d84902bb9b733e31">lockFd</a> = -1;</div>
 <div class="line"><span class="lineno">  101</span>                }</div>
 <div class="line"><span class="lineno">  102</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  103</span>                PLOG(TRACE) &lt;&lt; <span class="stringliteral">&quot;Opening lock file: &quot;</span> &lt;&lt; bindAddress.getSunPath().append(<span class="stringliteral">&quot;.lock&quot;</span>).data();</div>
+<div class="line"><span class="lineno">  103</span>                PLOG(ERROR) &lt;&lt; <span class="stringliteral">&quot;Opening lock file: &quot;</span> &lt;&lt; bindAddress.getSunPath().append(<span class="stringliteral">&quot;.lock&quot;</span>).data();</div>
 <div class="line"><span class="lineno">  104</span>            }</div>
 <div class="line"><span class="lineno">  105</span>        }</div>
 <div class="line"><span class="lineno">  106</span> </div>
@@ -401,7 +401,7 @@ template&lt;template&lt; typename SocketAddressT &gt; typename PhysicalPeerSocke
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacenet.html">net</a></li><li class="navelem"><a class="el" href="namespacenet_1_1un.html">un</a></li><li class="navelem"><a class="el" href="namespacenet_1_1un_1_1phy.html">phy</a></li><li class="navelem"><a class="el" href="classnet_1_1un_1_1phy_1_1PhysicalSocket.html">PhysicalSocket</a></li>
-    <li class="footer">Generated on Mon Jan 20 2025 01:16:12 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generated on Wed Feb 5 2025 21:40:38 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>

@@ -107,7 +107,7 @@ $(function(){initNavTree('classiot_1_1mqtt_1_1server_1_1broker_1_1RetainTree_1_1
 <div class="dynheader">
 Collaboration diagram for iot::mqtt::server::broker::RetainTree::TopicLevel:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classiot_1_1mqtt_1_1server_1_1broker_1_1RetainTree_1_1TopicLevel__coll__graph.svg" width="3462" height="1392"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classiot_1_1mqtt_1_1server_1_1broker_1_1RetainTree_1_1TopicLevel__coll__graph.svg" width="3516" height="1392"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -173,7 +173,7 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">   73</span>    }</div>
 <div class="ttc" id="aclassiot_1_1mqtt_1_1server_1_1broker_1_1RetainTree_1_1TopicLevel_html_a2b59ee5fcf22010c33c29d0a985db3f2"><div class="ttname"><a href="#a2b59ee5fcf22010c33c29d0a985db3f2">iot::mqtt::server::broker::RetainTree::TopicLevel::broker</a></div><div class="ttdeci">iot::mqtt::server::broker::Broker * broker</div><div class="ttdef"><b>Definition</b> <a href="RetainTree_8h_source.html#l00074">RetainTree.h:74</a></div></div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="RetainTree_8cpp_source.html#l00192">clear()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="RetainTree_8cpp_source.html#l00194">clear()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -211,34 +211,35 @@ Here is the caller graph for this function:</div>
 <div class="fragment"><div class="line"><span class="lineno">  129</span>                                                                                             {</div>
 <div class="line"><span class="lineno">  130</span>        <span class="keywordflow">if</span> (topic.empty()) {</div>
 <div class="line"><span class="lineno">  131</span>            <span class="keywordflow">if</span> (!<a class="code hl_variable" href="#a35f35254c55d7e924e07a95784b8f42a">message</a>.<a class="code hl_function" href="classiot_1_1mqtt_1_1server_1_1broker_1_1Message.html#a369363facef6ec50065e6f3f2b9e975c">getTopic</a>().empty()) {</div>
-<div class="line"><span class="lineno">  132</span>                LOG(DEBUG) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker: Retained Topic found:&quot;</span>;</div>
-<div class="line"><span class="lineno">  133</span>                LOG(DEBUG) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker:   Topic: &quot;</span> &lt;&lt; <a class="code hl_variable" href="#a35f35254c55d7e924e07a95784b8f42a">message</a>.<a class="code hl_function" href="classiot_1_1mqtt_1_1server_1_1broker_1_1Message.html#a369363facef6ec50065e6f3f2b9e975c">getTopic</a>();</div>
-<div class="line"><span class="lineno">  134</span>                LOG(DEBUG) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker:   Message:\n&quot;</span> &lt;&lt; <a class="code hl_function" href="classiot_1_1mqtt_1_1Mqtt.html#a16add1744c3cf0ea4a1f266b9d3f3902">iot::mqtt::Mqtt::toHexString</a>(<a class="code hl_variable" href="#a35f35254c55d7e924e07a95784b8f42a">message</a>.<a class="code hl_function" href="classiot_1_1mqtt_1_1server_1_1broker_1_1Message.html#acd5cfc83cb92749b61307c77b7649c5e">getMessage</a>());</div>
+<div class="line"><span class="lineno">  132</span>                LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker: Retained Topic found:&quot;</span>;</div>
+<div class="line"><span class="lineno">  133</span>                LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker:   Topic: &quot;</span> &lt;&lt; <a class="code hl_variable" href="#a35f35254c55d7e924e07a95784b8f42a">message</a>.<a class="code hl_function" href="classiot_1_1mqtt_1_1server_1_1broker_1_1Message.html#a369363facef6ec50065e6f3f2b9e975c">getTopic</a>();</div>
+<div class="line"><span class="lineno">  134</span>                LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker:   Message:\n&quot;</span> &lt;&lt; <a class="code hl_function" href="classiot_1_1mqtt_1_1Mqtt.html#a16add1744c3cf0ea4a1f266b9d3f3902">iot::mqtt::Mqtt::toHexString</a>(<a class="code hl_variable" href="#a35f35254c55d7e924e07a95784b8f42a">message</a>.<a class="code hl_function" href="classiot_1_1mqtt_1_1server_1_1broker_1_1Message.html#acd5cfc83cb92749b61307c77b7649c5e">getMessage</a>());</div>
 <div class="line"><span class="lineno">  135</span>                LOG(DEBUG) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker:     QoS: &quot;</span> &lt;&lt; <span class="keyword">static_cast&lt;</span>uint16_t<span class="keyword">&gt;</span>(<a class="code hl_variable" href="#a35f35254c55d7e924e07a95784b8f42a">message</a>.<a class="code hl_function" href="classiot_1_1mqtt_1_1server_1_1broker_1_1Message.html#ad8438b8455ed9abf0ee35faf50b5c946">getQoS</a>());</div>
 <div class="line"><span class="lineno">  136</span>                LOG(DEBUG) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker:   Client:&quot;</span>;</div>
 <div class="line"><span class="lineno">  137</span>                LOG(DEBUG) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker:     QoS: &quot;</span> &lt;&lt; <span class="keyword">static_cast&lt;</span>uint16_t<span class="keyword">&gt;</span>(qoS);</div>
-<div class="line"><span class="lineno">  138</span>                LOG(DEBUG) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker:   distributing message ...&quot;</span>;</div>
-<div class="line"><span class="lineno">  139</span>                <a class="code hl_variable" href="#a2b59ee5fcf22010c33c29d0a985db3f2">broker</a>-&gt;<a class="code hl_function" href="classiot_1_1mqtt_1_1server_1_1broker_1_1Broker.html#ae776d5b70c46dd5e2b80e111119c866e">sendPublish</a>(clientId, <a class="code hl_variable" href="#a35f35254c55d7e924e07a95784b8f42a">message</a>, std::min(<a class="code hl_variable" href="#a35f35254c55d7e924e07a95784b8f42a">message</a>.<a class="code hl_function" href="classiot_1_1mqtt_1_1server_1_1broker_1_1Message.html#ad8438b8455ed9abf0ee35faf50b5c946">getQoS</a>(), qoS), <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  140</span>                LOG(DEBUG) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker:   ... completed!&quot;</span>;</div>
-<div class="line"><span class="lineno">  141</span>            }</div>
-<div class="line"><span class="lineno">  142</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  143</span>            <span class="keyword">const</span> std::string topicLevel = topic.substr(0, topic.find(<span class="charliteral">&#39;/&#39;</span>));</div>
-<div class="line"><span class="lineno">  144</span> </div>
-<div class="line"><span class="lineno">  145</span>            topic.erase(0, topicLevel.size() + 1);</div>
-<div class="line"><span class="lineno">  146</span> </div>
-<div class="line"><span class="lineno">  147</span>            <span class="keyword">auto</span> foundNode = <a class="code hl_variable" href="#a856b0b4e0a1f2f56c51b34a0c9b7a6a7">subTopicLevels</a>.find(topicLevel);</div>
-<div class="line"><span class="lineno">  148</span>            <span class="keywordflow">if</span> (foundNode != <a class="code hl_variable" href="#a856b0b4e0a1f2f56c51b34a0c9b7a6a7">subTopicLevels</a>.end()) {</div>
-<div class="line"><span class="lineno">  149</span>                foundNode-&gt;second.appear(clientId, topic, qoS);</div>
-<div class="line"><span class="lineno">  150</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (topicLevel == <span class="stringliteral">&quot;+&quot;</span>) {</div>
-<div class="line"><span class="lineno">  151</span>                <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; [notUsed, topicTree] : <a class="code hl_variable" href="#a856b0b4e0a1f2f56c51b34a0c9b7a6a7">subTopicLevels</a>) {</div>
-<div class="line"><span class="lineno">  152</span>                    topicTree.appear(clientId, topic, qoS);</div>
-<div class="line"><span class="lineno">  153</span>                }</div>
-<div class="line"><span class="lineno">  154</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (topicLevel == <span class="stringliteral">&quot;#&quot;</span>) {</div>
-<div class="line"><span class="lineno">  155</span>                <a class="code hl_function" href="#a3726affa9362593149d1b1660e85f5f3">appear</a>(clientId, qoS);</div>
-<div class="line"><span class="lineno">  156</span>            }</div>
-<div class="line"><span class="lineno">  157</span>        }</div>
-<div class="line"><span class="lineno">  158</span>    }</div>
-<div class="ttc" id="aclassiot_1_1mqtt_1_1Mqtt_html_a16add1744c3cf0ea4a1f266b9d3f3902"><div class="ttname"><a href="classiot_1_1mqtt_1_1Mqtt.html#a16add1744c3cf0ea4a1f266b9d3f3902">iot::mqtt::Mqtt::toHexString</a></div><div class="ttdeci">static std::string toHexString(const std::vector&lt; char &gt; &amp;data)</div><div class="ttdef"><b>Definition</b> <a href="Mqtt_8cpp_source.html#l00347">Mqtt.cpp:347</a></div></div>
+<div class="line"><span class="lineno">  138</span> </div>
+<div class="line"><span class="lineno">  139</span>                LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker: Distributing message ...&quot;</span>;</div>
+<div class="line"><span class="lineno">  140</span>                <a class="code hl_variable" href="#a2b59ee5fcf22010c33c29d0a985db3f2">broker</a>-&gt;<a class="code hl_function" href="classiot_1_1mqtt_1_1server_1_1broker_1_1Broker.html#ae776d5b70c46dd5e2b80e111119c866e">sendPublish</a>(clientId, <a class="code hl_variable" href="#a35f35254c55d7e924e07a95784b8f42a">message</a>, std::min(<a class="code hl_variable" href="#a35f35254c55d7e924e07a95784b8f42a">message</a>.<a class="code hl_function" href="classiot_1_1mqtt_1_1server_1_1broker_1_1Message.html#ad8438b8455ed9abf0ee35faf50b5c946">getQoS</a>(), qoS), <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  141</span>                LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker: ... distributing message completed&quot;</span>;</div>
+<div class="line"><span class="lineno">  142</span>            }</div>
+<div class="line"><span class="lineno">  143</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  144</span>            <span class="keyword">const</span> std::string topicLevel = topic.substr(0, topic.find(<span class="charliteral">&#39;/&#39;</span>));</div>
+<div class="line"><span class="lineno">  145</span> </div>
+<div class="line"><span class="lineno">  146</span>            topic.erase(0, topicLevel.size() + 1);</div>
+<div class="line"><span class="lineno">  147</span> </div>
+<div class="line"><span class="lineno">  148</span>            <span class="keyword">auto</span> foundNode = <a class="code hl_variable" href="#a856b0b4e0a1f2f56c51b34a0c9b7a6a7">subTopicLevels</a>.find(topicLevel);</div>
+<div class="line"><span class="lineno">  149</span>            <span class="keywordflow">if</span> (foundNode != <a class="code hl_variable" href="#a856b0b4e0a1f2f56c51b34a0c9b7a6a7">subTopicLevels</a>.end()) {</div>
+<div class="line"><span class="lineno">  150</span>                foundNode-&gt;second.appear(clientId, topic, qoS);</div>
+<div class="line"><span class="lineno">  151</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (topicLevel == <span class="stringliteral">&quot;+&quot;</span>) {</div>
+<div class="line"><span class="lineno">  152</span>                <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; [notUsed, topicTree] : <a class="code hl_variable" href="#a856b0b4e0a1f2f56c51b34a0c9b7a6a7">subTopicLevels</a>) {</div>
+<div class="line"><span class="lineno">  153</span>                    topicTree.appear(clientId, topic, qoS);</div>
+<div class="line"><span class="lineno">  154</span>                }</div>
+<div class="line"><span class="lineno">  155</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (topicLevel == <span class="stringliteral">&quot;#&quot;</span>) {</div>
+<div class="line"><span class="lineno">  156</span>                <a class="code hl_function" href="#a3726affa9362593149d1b1660e85f5f3">appear</a>(clientId, qoS);</div>
+<div class="line"><span class="lineno">  157</span>            }</div>
+<div class="line"><span class="lineno">  158</span>        }</div>
+<div class="line"><span class="lineno">  159</span>    }</div>
+<div class="ttc" id="aclassiot_1_1mqtt_1_1Mqtt_html_a16add1744c3cf0ea4a1f266b9d3f3902"><div class="ttname"><a href="classiot_1_1mqtt_1_1Mqtt.html#a16add1744c3cf0ea4a1f266b9d3f3902">iot::mqtt::Mqtt::toHexString</a></div><div class="ttdeci">static std::string toHexString(const std::vector&lt; char &gt; &amp;data)</div><div class="ttdef"><b>Definition</b> <a href="Mqtt_8cpp_source.html#l00367">Mqtt.cpp:367</a></div></div>
 <div class="ttc" id="aclassiot_1_1mqtt_1_1server_1_1broker_1_1Broker_html_ae776d5b70c46dd5e2b80e111119c866e"><div class="ttname"><a href="classiot_1_1mqtt_1_1server_1_1broker_1_1Broker.html#ae776d5b70c46dd5e2b80e111119c866e">iot::mqtt::server::broker::Broker::sendPublish</a></div><div class="ttdeci">void sendPublish(const std::string &amp;clientId, Message &amp;message, uint8_t qoS, bool retain)</div><div class="ttdef"><b>Definition</b> <a href="Broker_8cpp_source.html#l00204">Broker.cpp:204</a></div></div>
 <div class="ttc" id="aclassiot_1_1mqtt_1_1server_1_1broker_1_1Message_html_a369363facef6ec50065e6f3f2b9e975c"><div class="ttname"><a href="classiot_1_1mqtt_1_1server_1_1broker_1_1Message.html#a369363facef6ec50065e6f3f2b9e975c">iot::mqtt::server::broker::Message::getTopic</a></div><div class="ttdeci">const std::string &amp; getTopic() const</div><div class="ttdef"><b>Definition</b> <a href="Message_8cpp_source.html#l00044">Message.cpp:44</a></div></div>
 <div class="ttc" id="aclassiot_1_1mqtt_1_1server_1_1broker_1_1Message_html_acd5cfc83cb92749b61307c77b7649c5e"><div class="ttname"><a href="classiot_1_1mqtt_1_1server_1_1broker_1_1Message.html#acd5cfc83cb92749b61307c77b7649c5e">iot::mqtt::server::broker::Message::getMessage</a></div><div class="ttdeci">const std::string &amp; getMessage() const</div><div class="ttdef"><b>Definition</b> <a href="Message_8cpp_source.html#l00052">Message.cpp:52</a></div></div>
@@ -276,24 +277,25 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="RetainTree_8cpp_source.html#l00160">160</a> of file <a class="el" href="RetainTree_8cpp_source.html">RetainTree.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  160</span>                                                                                  {</div>
-<div class="line"><span class="lineno">  161</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="#a35f35254c55d7e924e07a95784b8f42a">message</a>.<a class="code hl_function" href="classiot_1_1mqtt_1_1server_1_1broker_1_1Message.html#a369363facef6ec50065e6f3f2b9e975c">getTopic</a>().empty()) {</div>
-<div class="line"><span class="lineno">  162</span>            LOG(DEBUG) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker: Retained Topic found:&quot;</span>;</div>
-<div class="line"><span class="lineno">  163</span>            LOG(DEBUG) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker:   Topic: &quot;</span> &lt;&lt; <a class="code hl_variable" href="#a35f35254c55d7e924e07a95784b8f42a">message</a>.<a class="code hl_function" href="classiot_1_1mqtt_1_1server_1_1broker_1_1Message.html#a369363facef6ec50065e6f3f2b9e975c">getTopic</a>();</div>
-<div class="line"><span class="lineno">  164</span>            LOG(DEBUG) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker:   Message:\n&quot;</span> &lt;&lt; <a class="code hl_function" href="classiot_1_1mqtt_1_1Mqtt.html#a16add1744c3cf0ea4a1f266b9d3f3902">iot::mqtt::Mqtt::toHexString</a>(<a class="code hl_variable" href="#a35f35254c55d7e924e07a95784b8f42a">message</a>.<a class="code hl_function" href="classiot_1_1mqtt_1_1server_1_1broker_1_1Message.html#acd5cfc83cb92749b61307c77b7649c5e">getMessage</a>());</div>
-<div class="line"><span class="lineno">  165</span>            LOG(DEBUG) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker:     QoS: &quot;</span> &lt;&lt; <span class="keyword">static_cast&lt;</span>uint16_t<span class="keyword">&gt;</span>(<a class="code hl_variable" href="#a35f35254c55d7e924e07a95784b8f42a">message</a>.<a class="code hl_function" href="classiot_1_1mqtt_1_1server_1_1broker_1_1Message.html#ad8438b8455ed9abf0ee35faf50b5c946">getQoS</a>());</div>
-<div class="line"><span class="lineno">  166</span>            LOG(DEBUG) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker:   Client:&quot;</span>;</div>
-<div class="line"><span class="lineno">  167</span>            LOG(DEBUG) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker:     QoS: &quot;</span> &lt;&lt; <span class="keyword">static_cast&lt;</span>uint16_t<span class="keyword">&gt;</span>(clientQoS);</div>
-<div class="line"><span class="lineno">  168</span>            LOG(DEBUG) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker:   distributing message ...&quot;</span>;</div>
-<div class="line"><span class="lineno">  169</span>            <a class="code hl_variable" href="#a2b59ee5fcf22010c33c29d0a985db3f2">broker</a>-&gt;<a class="code hl_function" href="classiot_1_1mqtt_1_1server_1_1broker_1_1Broker.html#ae776d5b70c46dd5e2b80e111119c866e">sendPublish</a>(clientId, <a class="code hl_variable" href="#a35f35254c55d7e924e07a95784b8f42a">message</a>, std::min(<a class="code hl_variable" href="#a35f35254c55d7e924e07a95784b8f42a">message</a>.<a class="code hl_function" href="classiot_1_1mqtt_1_1server_1_1broker_1_1Message.html#ad8438b8455ed9abf0ee35faf50b5c946">getQoS</a>(), clientQoS), <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  170</span>            LOG(DEBUG) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker:   ... completed!&quot;</span>;</div>
-<div class="line"><span class="lineno">  171</span>        }</div>
-<div class="line"><span class="lineno">  172</span> </div>
-<div class="line"><span class="lineno">  173</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; [topicLevel, topicTree] : <a class="code hl_variable" href="#a856b0b4e0a1f2f56c51b34a0c9b7a6a7">subTopicLevels</a>) {</div>
-<div class="line"><span class="lineno">  174</span>            topicTree.appear(clientId, clientQoS);</div>
-<div class="line"><span class="lineno">  175</span>        }</div>
-<div class="line"><span class="lineno">  176</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="RetainTree_8cpp_source.html#l00161">161</a> of file <a class="el" href="RetainTree_8cpp_source.html">RetainTree.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  161</span>                                                                                  {</div>
+<div class="line"><span class="lineno">  162</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="#a35f35254c55d7e924e07a95784b8f42a">message</a>.<a class="code hl_function" href="classiot_1_1mqtt_1_1server_1_1broker_1_1Message.html#a369363facef6ec50065e6f3f2b9e975c">getTopic</a>().empty()) {</div>
+<div class="line"><span class="lineno">  163</span>            LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker: Retained Topic found:&quot;</span>;</div>
+<div class="line"><span class="lineno">  164</span>            LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker:   Topic: &quot;</span> &lt;&lt; <a class="code hl_variable" href="#a35f35254c55d7e924e07a95784b8f42a">message</a>.<a class="code hl_function" href="classiot_1_1mqtt_1_1server_1_1broker_1_1Message.html#a369363facef6ec50065e6f3f2b9e975c">getTopic</a>();</div>
+<div class="line"><span class="lineno">  165</span>            LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker:   Message:\n&quot;</span> &lt;&lt; <a class="code hl_function" href="classiot_1_1mqtt_1_1Mqtt.html#a16add1744c3cf0ea4a1f266b9d3f3902">iot::mqtt::Mqtt::toHexString</a>(<a class="code hl_variable" href="#a35f35254c55d7e924e07a95784b8f42a">message</a>.<a class="code hl_function" href="classiot_1_1mqtt_1_1server_1_1broker_1_1Message.html#acd5cfc83cb92749b61307c77b7649c5e">getMessage</a>());</div>
+<div class="line"><span class="lineno">  166</span>            LOG(DEBUG) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker:     QoS: &quot;</span> &lt;&lt; <span class="keyword">static_cast&lt;</span>uint16_t<span class="keyword">&gt;</span>(<a class="code hl_variable" href="#a35f35254c55d7e924e07a95784b8f42a">message</a>.<a class="code hl_function" href="classiot_1_1mqtt_1_1server_1_1broker_1_1Message.html#ad8438b8455ed9abf0ee35faf50b5c946">getQoS</a>());</div>
+<div class="line"><span class="lineno">  167</span>            LOG(DEBUG) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker:   Client:&quot;</span>;</div>
+<div class="line"><span class="lineno">  168</span>            LOG(DEBUG) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker:     QoS: &quot;</span> &lt;&lt; <span class="keyword">static_cast&lt;</span>uint16_t<span class="keyword">&gt;</span>(clientQoS);</div>
+<div class="line"><span class="lineno">  169</span> </div>
+<div class="line"><span class="lineno">  170</span>            LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker: Distributing message ...&quot;</span>;</div>
+<div class="line"><span class="lineno">  171</span>            <a class="code hl_variable" href="#a2b59ee5fcf22010c33c29d0a985db3f2">broker</a>-&gt;<a class="code hl_function" href="classiot_1_1mqtt_1_1server_1_1broker_1_1Broker.html#ae776d5b70c46dd5e2b80e111119c866e">sendPublish</a>(clientId, <a class="code hl_variable" href="#a35f35254c55d7e924e07a95784b8f42a">message</a>, std::min(<a class="code hl_variable" href="#a35f35254c55d7e924e07a95784b8f42a">message</a>.<a class="code hl_function" href="classiot_1_1mqtt_1_1server_1_1broker_1_1Message.html#ad8438b8455ed9abf0ee35faf50b5c946">getQoS</a>(), clientQoS), <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  172</span>            LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker: ... distributing message completed&quot;</span>;</div>
+<div class="line"><span class="lineno">  173</span>        }</div>
+<div class="line"><span class="lineno">  174</span> </div>
+<div class="line"><span class="lineno">  175</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; [topicLevel, topicTree] : <a class="code hl_variable" href="#a856b0b4e0a1f2f56c51b34a0c9b7a6a7">subTopicLevels</a>) {</div>
+<div class="line"><span class="lineno">  176</span>            topicTree.appear(clientId, clientQoS);</div>
+<div class="line"><span class="lineno">  177</span>        }</div>
+<div class="line"><span class="lineno">  178</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -312,10 +314,10 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="RetainTree_8cpp_source.html#l00192">192</a> of file <a class="el" href="RetainTree_8cpp_source.html">RetainTree.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  192</span>                                     {</div>
-<div class="line"><span class="lineno">  193</span>        *<span class="keyword">this</span> = <a class="code hl_function" href="#a1b33837bec4958d7c867aafef369744b">TopicLevel</a>(<a class="code hl_variable" href="#a2b59ee5fcf22010c33c29d0a985db3f2">broker</a>);</div>
-<div class="line"><span class="lineno">  194</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="RetainTree_8cpp_source.html#l00194">194</a> of file <a class="el" href="RetainTree_8cpp_source.html">RetainTree.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  194</span>                                     {</div>
+<div class="line"><span class="lineno">  195</span>        *<span class="keyword">this</span> = <a class="code hl_function" href="#a1b33837bec4958d7c867aafef369744b">TopicLevel</a>(<a class="code hl_variable" href="#a2b59ee5fcf22010c33c29d0a985db3f2">broker</a>);</div>
+<div class="line"><span class="lineno">  196</span>    }</div>
 <div class="ttc" id="aclassiot_1_1mqtt_1_1server_1_1broker_1_1RetainTree_1_1TopicLevel_html_a1b33837bec4958d7c867aafef369744b"><div class="ttname"><a href="#a1b33837bec4958d7c867aafef369744b">iot::mqtt::server::broker::RetainTree::TopicLevel::TopicLevel</a></div><div class="ttdeci">TopicLevel(iot::mqtt::server::broker::Broker *broker)</div><div class="ttdef"><b>Definition</b> <a href="RetainTree_8cpp_source.html#l00071">RetainTree.cpp:71</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="RetainTree_8cpp_source.html#l00071">TopicLevel()</a>.</p>
@@ -464,20 +466,20 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="RetainTree_8cpp_source.html#l00178">178</a> of file <a class="el" href="RetainTree_8cpp_source.html">RetainTree.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  178</span>                                                    {</div>
-<div class="line"><span class="lineno">  179</span>        nlohmann::json json;</div>
-<div class="line"><span class="lineno">  180</span> </div>
-<div class="line"><span class="lineno">  181</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="#a35f35254c55d7e924e07a95784b8f42a">message</a>.<a class="code hl_function" href="classiot_1_1mqtt_1_1server_1_1broker_1_1Message.html#acd5cfc83cb92749b61307c77b7649c5e">getMessage</a>().empty()) {</div>
-<div class="line"><span class="lineno">  182</span>            json[<span class="stringliteral">&quot;message&quot;</span>] = <a class="code hl_variable" href="#a35f35254c55d7e924e07a95784b8f42a">message</a>.<a class="code hl_function" href="classiot_1_1mqtt_1_1server_1_1broker_1_1Message.html#a2e34fbc1bf93acbaa84979c7d9cca2a1">toJson</a>();</div>
-<div class="line"><span class="lineno">  183</span>        }</div>
-<div class="line"><span class="lineno">  184</span> </div>
-<div class="line"><span class="lineno">  185</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; [topicLevel, topicLevelValue] : <a class="code hl_variable" href="#a856b0b4e0a1f2f56c51b34a0c9b7a6a7">subTopicLevels</a>) {</div>
-<div class="line"><span class="lineno">  186</span>            json[<span class="stringliteral">&quot;topic_level&quot;</span>][topicLevel] = topicLevelValue.toJson();</div>
-<div class="line"><span class="lineno">  187</span>        }</div>
-<div class="line"><span class="lineno">  188</span> </div>
-<div class="line"><span class="lineno">  189</span>        <span class="keywordflow">return</span> json;</div>
-<div class="line"><span class="lineno">  190</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="RetainTree_8cpp_source.html#l00180">180</a> of file <a class="el" href="RetainTree_8cpp_source.html">RetainTree.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  180</span>                                                    {</div>
+<div class="line"><span class="lineno">  181</span>        nlohmann::json json;</div>
+<div class="line"><span class="lineno">  182</span> </div>
+<div class="line"><span class="lineno">  183</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="#a35f35254c55d7e924e07a95784b8f42a">message</a>.<a class="code hl_function" href="classiot_1_1mqtt_1_1server_1_1broker_1_1Message.html#acd5cfc83cb92749b61307c77b7649c5e">getMessage</a>().empty()) {</div>
+<div class="line"><span class="lineno">  184</span>            json[<span class="stringliteral">&quot;message&quot;</span>] = <a class="code hl_variable" href="#a35f35254c55d7e924e07a95784b8f42a">message</a>.<a class="code hl_function" href="classiot_1_1mqtt_1_1server_1_1broker_1_1Message.html#a2e34fbc1bf93acbaa84979c7d9cca2a1">toJson</a>();</div>
+<div class="line"><span class="lineno">  185</span>        }</div>
+<div class="line"><span class="lineno">  186</span> </div>
+<div class="line"><span class="lineno">  187</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; [topicLevel, topicLevelValue] : <a class="code hl_variable" href="#a856b0b4e0a1f2f56c51b34a0c9b7a6a7">subTopicLevels</a>) {</div>
+<div class="line"><span class="lineno">  188</span>            json[<span class="stringliteral">&quot;topic_level&quot;</span>][topicLevel] = topicLevelValue.toJson();</div>
+<div class="line"><span class="lineno">  189</span>        }</div>
+<div class="line"><span class="lineno">  190</span> </div>
+<div class="line"><span class="lineno">  191</span>        <span class="keywordflow">return</span> json;</div>
+<div class="line"><span class="lineno">  192</span>    }</div>
 <div class="ttc" id="aclassiot_1_1mqtt_1_1server_1_1broker_1_1Message_html_a2e34fbc1bf93acbaa84979c7d9cca2a1"><div class="ttname"><a href="classiot_1_1mqtt_1_1server_1_1broker_1_1Message.html#a2e34fbc1bf93acbaa84979c7d9cca2a1">iot::mqtt::server::broker::Message::toJson</a></div><div class="ttdeci">nlohmann::json toJson() const</div><div class="ttdef"><b>Definition</b> <a href="Message_8cpp_source.html#l00072">Message.cpp:72</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -565,7 +567,7 @@ Here is the call graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceiot.html">iot</a></li><li class="navelem"><a class="el" href="namespaceiot_1_1mqtt.html">mqtt</a></li><li class="navelem"><a class="el" href="namespaceiot_1_1mqtt_1_1server.html">server</a></li><li class="navelem"><a class="el" href="namespaceiot_1_1mqtt_1_1server_1_1broker.html">broker</a></li><li class="navelem"><a class="el" href="classiot_1_1mqtt_1_1server_1_1broker_1_1RetainTree.html">RetainTree</a></li><li class="navelem"><a class="el" href="classiot_1_1mqtt_1_1server_1_1broker_1_1RetainTree_1_1TopicLevel.html">TopicLevel</a></li>
-    <li class="footer">Generated on Mon Jan 20 2025 01:16:12 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generated on Wed Feb 5 2025 21:40:38 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>

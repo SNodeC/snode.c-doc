@@ -6,6 +6,6 @@ var http_2model_2servers_8h =
     [ "WebApp", "http_2model_2servers_8h.html#a11cba308cb1df1c683b8463445f4a99c", null ],
     [ "WebApp", "http_2model_2servers_8h.html#a7c9fffa839dbfc50da6026621b9f2a9a", null ],
     [ "getRouter", "http_2model_2servers_8h.html#aed80b929c5eb7ce39f27c73b5f05fa96", null ],
-    [ "getWebApp", "http_2model_2servers_8h.html#aeb291d9cc1a2986b4ef98487b3421dd2", null ],
-    [ "getWebApp", "http_2model_2servers_8h.html#a0bdd82792cda2b57b4aa96215bf997e5", null ]
+    [ "getWebApp", "http_2model_2servers_8h.html#a879e836cac93cd3e8ad525e49a6eda01", null ],
+    [ "getWebApp", "http_2model_2servers_8h.html#a756b5f1b9c0c487d43a8151baaef51ed", null ]
 ];

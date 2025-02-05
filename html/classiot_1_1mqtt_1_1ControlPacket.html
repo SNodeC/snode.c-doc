@@ -491,7 +491,7 @@ Here is the caller graph for this function:</div>
 <div class="fragment"><div class="line"><span class="lineno">  104</span>                                                   {</div>
 <div class="line"><span class="lineno">  105</span>        std::vector&lt;char&gt; variablHeaderPayload = <a class="code hl_function" href="#ab4f58bf0c1920d705af23c8d7636247f">serializeVP</a>();</div>
 <div class="line"><span class="lineno">  106</span> </div>
-<div class="line"><span class="lineno">  107</span>        <span class="keyword">const</span> <a class="code hl_class" href="classiot_1_1mqtt_1_1FixedHeader.html">iot::mqtt::FixedHeader</a> fixedHeader(<a class="code hl_variable" href="#ad8f30bf63c16e2d2321333eb2923bd4c">type</a>, <a class="code hl_variable" href="#a8c7e68464f261bbb0ff6412c58ffbab0">flags</a>, <span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>(variablHeaderPayload.size()));</div>
+<div class="line"><span class="lineno">  107</span>        <span class="keyword">const</span> FixedHeader fixedHeader(<a class="code hl_variable" href="#ad8f30bf63c16e2d2321333eb2923bd4c">type</a>, <a class="code hl_variable" href="#a8c7e68464f261bbb0ff6412c58ffbab0">flags</a>, <span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>(variablHeaderPayload.size()));</div>
 <div class="line"><span class="lineno">  108</span> </div>
 <div class="line"><span class="lineno">  109</span>        std::vector&lt;char&gt; packet = fixedHeader.serialize();</div>
 <div class="line"><span class="lineno">  110</span>        packet.insert(packet.end(), variablHeaderPayload.begin(), variablHeaderPayload.end());</div>
@@ -499,7 +499,6 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">  112</span>        <span class="keywordflow">return</span> packet;</div>
 <div class="line"><span class="lineno">  113</span>    }</div>
 <div class="ttc" id="aclassiot_1_1mqtt_1_1ControlPacket_html_ab4f58bf0c1920d705af23c8d7636247f"><div class="ttname"><a href="#ab4f58bf0c1920d705af23c8d7636247f">iot::mqtt::ControlPacket::serializeVP</a></div><div class="ttdeci">virtual std::vector&lt; char &gt; serializeVP() const =0</div></div>
-<div class="ttc" id="aclassiot_1_1mqtt_1_1FixedHeader_html"><div class="ttname"><a href="classiot_1_1mqtt_1_1FixedHeader.html">iot::mqtt::FixedHeader</a></div><div class="ttdef"><b>Definition</b> <a href="FixedHeader_8h_source.html#l00040">FixedHeader.h:40</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -617,7 +616,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceiot.html">iot</a></li><li class="navelem"><a class="el" href="namespaceiot_1_1mqtt.html">mqtt</a></li><li class="navelem"><a class="el" href="classiot_1_1mqtt_1_1ControlPacket.html">ControlPacket</a></li>
-    <li class="footer">Generated on Mon Jan 20 2025 01:16:12 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generated on Wed Feb 5 2025 21:40:38 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>

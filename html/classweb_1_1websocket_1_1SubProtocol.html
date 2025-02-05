@@ -113,7 +113,7 @@ $(function(){initNavTree('classweb_1_1websocket_1_1SubProtocol.html',''); initRe
 <div class="dynheader">
 Collaboration diagram for web::websocket::SubProtocol&lt; SocketContextUpgradeT &gt;:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classweb_1_1websocket_1_1SubProtocol__coll__graph.svg" width="1867" height="1016"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classweb_1_1websocket_1_1SubProtocol__coll__graph.svg" width="1847" height="1090"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -148,8 +148,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a9d8b3839e2c3fe2d5088d14347edfbc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a830ebdc2a0a3a1d7056376ee0ee6924c" id="r_a830ebdc2a0a3a1d7056376ee0ee6924c"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a830ebdc2a0a3a1d7056376ee0ee6924c">getName</a> ()</td></tr>
 <tr class="separator:a830ebdc2a0a3a1d7056376ee0ee6924c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1e272b400b48c5f76ee6048371d19eb9" id="r_a1e272b400b48c5f76ee6048371d19eb9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html">core::socket::stream::SocketConnection</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1e272b400b48c5f76ee6048371d19eb9">getSocketConnection</a> ()</td></tr>
-<tr class="separator:a1e272b400b48c5f76ee6048371d19eb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cf7d140e321f8f6683d654db169e738" id="r_a2cf7d140e321f8f6683d654db169e738"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html">core::socket::stream::SocketConnection</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2cf7d140e321f8f6683d654db169e738">getSocketConnection</a> () const</td></tr>
+<tr class="separator:a2cf7d140e321f8f6683d654db169e738"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -332,13 +332,13 @@ template&lt;typename <a class="el" href="#adc5e24ed30935e0c45fa6dc55d7ad01c">Soc
 <div class="line"><span class="lineno">   42</span>        , <a class="code hl_variable" href="#a7919dbb1aedb9c77815dfde8cafb6d6b">subProtocolContext</a>(<a class="code hl_variable" href="#a7919dbb1aedb9c77815dfde8cafb6d6b">subProtocolContext</a>) {</div>
 <div class="line"><span class="lineno">   43</span>        <span class="keywordflow">if</span> (pingInterval &gt; 0) {</div>
 <div class="line"><span class="lineno">   44</span>            <a class="code hl_variable" href="#afc5f714978cd4db140b6f54832b52cef">pingTimer</a> = <a class="code hl_function" href="classcore_1_1timer_1_1Timer.html#af40b96a1dac132592ede6b51ce0ec7f9">core::timer::Timer::intervalTimer</a>(</div>
-<div class="line"><span class="lineno">   45</span>                [<span class="keyword">this</span>, maxFlyingPings](<span class="keyword">const</span> std::function&lt;<span class="keywordtype">void</span>()&gt;&amp; stop) -&gt; <span class="keywordtype">void</span> {</div>
+<div class="line"><span class="lineno">   45</span>                [<span class="keyword">this</span>, maxFlyingPings](<span class="keyword">const</span> std::function&lt;<span class="keywordtype">void</span>()&gt;&amp; stop) {</div>
 <div class="line"><span class="lineno">   46</span>                    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a963d677c331d68c323ffa5e75064a1f0">flyingPings</a> &lt; maxFlyingPings) {</div>
-<div class="line"><span class="lineno">   47</span>                        LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;WebSocket: Ping sent&quot;</span>;</div>
-<div class="line"><span class="lineno">   48</span>                        <a class="code hl_function" href="#a43db1f80b0e64d8eb3951fff74719247">sendPing</a>();</div>
-<div class="line"><span class="lineno">   49</span>                        <a class="code hl_variable" href="#a963d677c331d68c323ffa5e75064a1f0">flyingPings</a>++;</div>
-<div class="line"><span class="lineno">   50</span>                    } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   51</span>                        LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;WebSocket: MaxFlyingPings exceeded - closing&quot;</span>;</div>
+<div class="line"><span class="lineno">   47</span>                        <a class="code hl_function" href="#a43db1f80b0e64d8eb3951fff74719247">sendPing</a>();</div>
+<div class="line"><span class="lineno">   48</span>                        <a class="code hl_variable" href="#a963d677c331d68c323ffa5e75064a1f0">flyingPings</a>++;</div>
+<div class="line"><span class="lineno">   49</span>                    } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">   50</span>                        LOG(WARNING) &lt;&lt; <a class="code hl_function" href="#a2cf7d140e321f8f6683d654db169e738">getSocketConnection</a>()-&gt;<a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#a5e26cd617f07295e8579ddb9c41bdd2c">getConnectionName</a>() &lt;&lt; <span class="stringliteral">&quot; WebSocket: MaxFlyingPings exceeded - closing&quot;</span>;</div>
+<div class="line"><span class="lineno">   51</span> </div>
 <div class="line"><span class="lineno">   52</span>                        <a class="code hl_function" href="#a9d8b3839e2c3fe2d5088d14347edfbc2">sendClose</a>();</div>
 <div class="line"><span class="lineno">   53</span>                        stop();</div>
 <div class="line"><span class="lineno">   54</span>                    }</div>
@@ -346,15 +346,16 @@ template&lt;typename <a class="el" href="#adc5e24ed30935e0c45fa6dc55d7ad01c">Soc
 <div class="line"><span class="lineno">   56</span>                pingInterval);</div>
 <div class="line"><span class="lineno">   57</span>        }</div>
 <div class="line"><span class="lineno">   58</span> </div>
-<div class="line"><span class="lineno">   59</span>        <a class="code hl_function" href="#a1e272b400b48c5f76ee6048371d19eb9">getSocketConnection</a>()-&gt;<a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#a37134f664c9d8d624709c9d37e0b5cfb">setTimeout</a>(0);</div>
+<div class="line"><span class="lineno">   59</span>        <a class="code hl_function" href="#a2cf7d140e321f8f6683d654db169e738">getSocketConnection</a>()-&gt;<a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#a37134f664c9d8d624709c9d37e0b5cfb">setTimeout</a>(0);</div>
 <div class="line"><span class="lineno">   60</span>    }</div>
 <div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketConnection_html_a37134f664c9d8d624709c9d37e0b5cfb"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#a37134f664c9d8d624709c9d37e0b5cfb">core::socket::stream::SocketConnection::setTimeout</a></div><div class="ttdeci">virtual void setTimeout(const utils::Timeval &amp;timeout)=0</div></div>
+<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketConnection_html_a5e26cd617f07295e8579ddb9c41bdd2c"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#a5e26cd617f07295e8579ddb9c41bdd2c">core::socket::stream::SocketConnection::getConnectionName</a></div><div class="ttdeci">const std::string &amp; getConnectionName() const</div><div class="ttdef"><b>Definition</b> <a href="SocketConnection_8cpp_source.html#l00072">SocketConnection.cpp:72</a></div></div>
 <div class="ttc" id="aclasscore_1_1timer_1_1Timer_html_af40b96a1dac132592ede6b51ce0ec7f9"><div class="ttname"><a href="classcore_1_1timer_1_1Timer.html#af40b96a1dac132592ede6b51ce0ec7f9">core::timer::Timer::intervalTimer</a></div><div class="ttdeci">static Timer intervalTimer(const std::function&lt; void(const std::function&lt; void()&gt; &amp;)&gt; &amp;dispatcher, const utils::Timeval &amp;timeout)</div><div class="ttdef"><b>Definition</b> <a href="timer_2Timer_8cpp_source.html#l00039">Timer.cpp:39</a></div></div>
-<div class="ttc" id="aclassweb_1_1websocket_1_1SubProtocol_html_a1e272b400b48c5f76ee6048371d19eb9"><div class="ttname"><a href="#a1e272b400b48c5f76ee6048371d19eb9">web::websocket::SubProtocol::getSocketConnection</a></div><div class="ttdeci">core::socket::stream::SocketConnection * getSocketConnection()</div><div class="ttdef"><b>Definition</b> <a href="web_2websocket_2SubProtocol_8hpp_source.html#l00129">SubProtocol.hpp:129</a></div></div>
+<div class="ttc" id="aclassweb_1_1websocket_1_1SubProtocol_html_a2cf7d140e321f8f6683d654db169e738"><div class="ttname"><a href="#a2cf7d140e321f8f6683d654db169e738">web::websocket::SubProtocol::getSocketConnection</a></div><div class="ttdeci">core::socket::stream::SocketConnection * getSocketConnection() const</div><div class="ttdef"><b>Definition</b> <a href="web_2websocket_2SubProtocol_8hpp_source.html#l00132">SubProtocol.hpp:132</a></div></div>
 <div class="ttc" id="aclassweb_1_1websocket_1_1SubProtocol_html_a43db1f80b0e64d8eb3951fff74719247"><div class="ttname"><a href="#a43db1f80b0e64d8eb3951fff74719247">web::websocket::SubProtocol::sendPing</a></div><div class="ttdeci">void sendPing(const char *reason=nullptr, std::size_t reasonLength=0) const</div><div class="ttdef"><b>Definition</b> <a href="web_2websocket_2SubProtocol_8hpp_source.html#l00108">SubProtocol.hpp:108</a></div></div>
 <div class="ttc" id="aclassweb_1_1websocket_1_1SubProtocol_html_a7919dbb1aedb9c77815dfde8cafb6d6b"><div class="ttname"><a href="#a7919dbb1aedb9c77815dfde8cafb6d6b">web::websocket::SubProtocol::subProtocolContext</a></div><div class="ttdeci">SubProtocolContext * subProtocolContext</div><div class="ttdef"><b>Definition</b> <a href="web_2websocket_2SubProtocol_8h_source.html#l00096">SubProtocol.h:96</a></div></div>
 <div class="ttc" id="aclassweb_1_1websocket_1_1SubProtocol_html_a963d677c331d68c323ffa5e75064a1f0"><div class="ttname"><a href="#a963d677c331d68c323ffa5e75064a1f0">web::websocket::SubProtocol::flyingPings</a></div><div class="ttdeci">int flyingPings</div><div class="ttdef"><b>Definition</b> <a href="web_2websocket_2SubProtocol_8h_source.html#l00100">SubProtocol.h:100</a></div></div>
-<div class="ttc" id="aclassweb_1_1websocket_1_1SubProtocol_html_a9d8b3839e2c3fe2d5088d14347edfbc2"><div class="ttname"><a href="#a9d8b3839e2c3fe2d5088d14347edfbc2">web::websocket::SubProtocol::sendClose</a></div><div class="ttdeci">void sendClose(uint16_t statusCode=1000, const char *reason=nullptr, std::size_t reasonLength=0)</div><div class="ttdef"><b>Definition</b> <a href="web_2websocket_2SubProtocol_8hpp_source.html#l00113">SubProtocol.hpp:113</a></div></div>
+<div class="ttc" id="aclassweb_1_1websocket_1_1SubProtocol_html_a9d8b3839e2c3fe2d5088d14347edfbc2"><div class="ttname"><a href="#a9d8b3839e2c3fe2d5088d14347edfbc2">web::websocket::SubProtocol::sendClose</a></div><div class="ttdeci">void sendClose(uint16_t statusCode=1000, const char *reason=nullptr, std::size_t reasonLength=0)</div><div class="ttdef"><b>Definition</b> <a href="web_2websocket_2SubProtocol_8hpp_source.html#l00115">SubProtocol.hpp:115</a></div></div>
 <div class="ttc" id="aclassweb_1_1websocket_1_1SubProtocol_html_aaeacbe92b928cad57ecd5038a466002d"><div class="ttname"><a href="#aaeacbe92b928cad57ecd5038a466002d">web::websocket::SubProtocol::name</a></div><div class="ttdeci">const std::string name</div><div class="ttdef"><b>Definition</b> <a href="web_2websocket_2SubProtocol_8h_source.html#l00093">SubProtocol.h:93</a></div></div>
 <div class="ttc" id="aclassweb_1_1websocket_1_1SubProtocol_html_afc5f714978cd4db140b6f54832b52cef"><div class="ttname"><a href="#afc5f714978cd4db140b6f54832b52cef">web::websocket::SubProtocol::pingTimer</a></div><div class="ttdeci">core::timer::Timer pingTimer</div><div class="ttdef"><b>Definition</b> <a href="web_2websocket_2SubProtocol_8h_source.html#l00099">SubProtocol.h:99</a></div></div>
 </div><!-- fragment -->
@@ -413,15 +414,15 @@ template&lt;typename <a class="el" href="#adc5e24ed30935e0c45fa6dc55d7ad01c">Soc
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="web_2websocket_2SubProtocol_8hpp_source.html#l00124">124</a> of file <a class="el" href="web_2websocket_2SubProtocol_8hpp_source.html">SubProtocol.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  124</span>                                                                {</div>
-<div class="line"><span class="lineno">  125</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#aaeacbe92b928cad57ecd5038a466002d">name</a>;</div>
-<div class="line"><span class="lineno">  126</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="web_2websocket_2SubProtocol_8hpp_source.html#l00127">127</a> of file <a class="el" href="web_2websocket_2SubProtocol_8hpp_source.html">SubProtocol.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  127</span>                                                                {</div>
+<div class="line"><span class="lineno">  128</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#aaeacbe92b928cad57ecd5038a466002d">name</a>;</div>
+<div class="line"><span class="lineno">  129</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="a1e272b400b48c5f76ee6048371d19eb9" name="a1e272b400b48c5f76ee6048371d19eb9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1e272b400b48c5f76ee6048371d19eb9">&#9670;&#160;</a></span>getSocketConnection()</h2>
+<a id="a2cf7d140e321f8f6683d654db169e738" name="a2cf7d140e321f8f6683d654db169e738"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cf7d140e321f8f6683d654db169e738">&#9670;&#160;</a></span>getSocketConnection()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -432,15 +433,15 @@ template&lt;typename <a class="el" href="#adc5e24ed30935e0c45fa6dc55d7ad01c">Soc
           <td class="memname"><a class="el" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html">core::socket::stream::SocketConnection</a> * <a class="el" href="classweb_1_1websocket_1_1SubProtocol.html">web::websocket::SubProtocol</a>&lt; <a class="el" href="#adc5e24ed30935e0c45fa6dc55d7ad01c">SocketContextUpgrade</a> &gt;::getSocketConnection </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="web_2websocket_2SubProtocol_8hpp_source.html#l00129">129</a> of file <a class="el" href="web_2websocket_2SubProtocol_8hpp_source.html">SubProtocol.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  129</span>                                                                                             {</div>
-<div class="line"><span class="lineno">  130</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#a7919dbb1aedb9c77815dfde8cafb6d6b">subProtocolContext</a>-&gt;<a class="code hl_function" href="classweb_1_1websocket_1_1SubProtocolContext.html#af6a9c12639bc03195ce1aaa9546f3281">getSocketConnection</a>();</div>
-<div class="line"><span class="lineno">  131</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="web_2websocket_2SubProtocol_8hpp_source.html#l00132">132</a> of file <a class="el" href="web_2websocket_2SubProtocol_8hpp_source.html">SubProtocol.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  132</span>                                                                                                   {</div>
+<div class="line"><span class="lineno">  133</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#a7919dbb1aedb9c77815dfde8cafb6d6b">subProtocolContext</a>-&gt;<a class="code hl_function" href="classweb_1_1websocket_1_1SubProtocolContext.html#af6a9c12639bc03195ce1aaa9546f3281">getSocketConnection</a>();</div>
+<div class="line"><span class="lineno">  134</span>    }</div>
 <div class="ttc" id="aclassweb_1_1websocket_1_1SubProtocolContext_html_af6a9c12639bc03195ce1aaa9546f3281"><div class="ttname"><a href="classweb_1_1websocket_1_1SubProtocolContext.html#af6a9c12639bc03195ce1aaa9546f3281">web::websocket::SubProtocolContext::getSocketConnection</a></div><div class="ttdeci">virtual core::socket::stream::SocketConnection * getSocketConnection()=0</div></div>
 </div><!-- fragment -->
 </div>
@@ -648,11 +649,12 @@ template&lt;typename <a class="el" href="#adc5e24ed30935e0c45fa6dc55d7ad01c">Soc
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="web_2websocket_2SubProtocol_8hpp_source.html#l00118">118</a> of file <a class="el" href="web_2websocket_2SubProtocol_8hpp_source.html">SubProtocol.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  118</span>                                                           {</div>
-<div class="line"><span class="lineno">  119</span>        LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;WebSocket: Pong received&quot;</span>;</div>
-<div class="line"><span class="lineno">  120</span>        <a class="code hl_variable" href="#a963d677c331d68c323ffa5e75064a1f0">flyingPings</a> = 0;</div>
-<div class="line"><span class="lineno">  121</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="web_2websocket_2SubProtocol_8hpp_source.html#l00120">120</a> of file <a class="el" href="web_2websocket_2SubProtocol_8hpp_source.html">SubProtocol.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  120</span>                                                           {</div>
+<div class="line"><span class="lineno">  121</span>        LOG(DEBUG) &lt;&lt; <a class="code hl_variable" href="#a7919dbb1aedb9c77815dfde8cafb6d6b">subProtocolContext</a>-&gt;<a class="code hl_function" href="classweb_1_1websocket_1_1SubProtocolContext.html#af6a9c12639bc03195ce1aaa9546f3281">getSocketConnection</a>()-&gt;<a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#a5e26cd617f07295e8579ddb9c41bdd2c">getConnectionName</a>() &lt;&lt; <span class="stringliteral">&quot; WebSocket: Pong received&quot;</span>;</div>
+<div class="line"><span class="lineno">  122</span> </div>
+<div class="line"><span class="lineno">  123</span>        <a class="code hl_variable" href="#a963d677c331d68c323ffa5e75064a1f0">flyingPings</a> = 0;</div>
+<div class="line"><span class="lineno">  124</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -765,10 +767,10 @@ template&lt;typename <a class="el" href="#adc5e24ed30935e0c45fa6dc55d7ad01c">Soc
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="web_2websocket_2SubProtocol_8hpp_source.html#l00113">113</a> of file <a class="el" href="web_2websocket_2SubProtocol_8hpp_source.html">SubProtocol.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  113</span>                                                                                                                     {</div>
-<div class="line"><span class="lineno">  114</span>        <a class="code hl_variable" href="#a7919dbb1aedb9c77815dfde8cafb6d6b">subProtocolContext</a>-&gt;<a class="code hl_function" href="classweb_1_1websocket_1_1SubProtocolContext.html#abfb4163bbecefa89bffd8975bc389c42">sendClose</a>(statusCode, reason, reasonLength);</div>
-<div class="line"><span class="lineno">  115</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="web_2websocket_2SubProtocol_8hpp_source.html#l00115">115</a> of file <a class="el" href="web_2websocket_2SubProtocol_8hpp_source.html">SubProtocol.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  115</span>                                                                                                                     {</div>
+<div class="line"><span class="lineno">  116</span>        <a class="code hl_variable" href="#a7919dbb1aedb9c77815dfde8cafb6d6b">subProtocolContext</a>-&gt;<a class="code hl_function" href="classweb_1_1websocket_1_1SubProtocolContext.html#abfb4163bbecefa89bffd8975bc389c42">sendClose</a>(statusCode, reason, reasonLength);</div>
+<div class="line"><span class="lineno">  117</span>    }</div>
 <div class="ttc" id="aclassweb_1_1websocket_1_1SubProtocolContext_html_abfb4163bbecefa89bffd8975bc389c42"><div class="ttname"><a href="classweb_1_1websocket_1_1SubProtocolContext.html#abfb4163bbecefa89bffd8975bc389c42">web::websocket::SubProtocolContext::sendClose</a></div><div class="ttdeci">virtual void sendClose(uint16_t statusCode=1000, const char *reason=nullptr, std::size_t reasonLength=0)=0</div></div>
 </div><!-- fragment -->
 </div>
@@ -1010,8 +1012,10 @@ template&lt;typename <a class="el" href="#adc5e24ed30935e0c45fa6dc55d7ad01c">Soc
 
 <p class="definition">Definition at line <a class="el" href="web_2websocket_2SubProtocol_8hpp_source.html#l00108">108</a> of file <a class="el" href="web_2websocket_2SubProtocol_8hpp_source.html">SubProtocol.hpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  108</span>                                                                                                     {</div>
-<div class="line"><span class="lineno">  109</span>        <a class="code hl_variable" href="#a7919dbb1aedb9c77815dfde8cafb6d6b">subProtocolContext</a>-&gt;<a class="code hl_function" href="classweb_1_1websocket_1_1SubProtocolContext.html#a0b3d87caa4afd1c2f0977da8d9cd9be1">sendPing</a>(reason, reasonLength);</div>
-<div class="line"><span class="lineno">  110</span>    }</div>
+<div class="line"><span class="lineno">  109</span>        LOG(DEBUG) &lt;&lt; <a class="code hl_function" href="#a2cf7d140e321f8f6683d654db169e738">getSocketConnection</a>()-&gt;<a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#a5e26cd617f07295e8579ddb9c41bdd2c">getConnectionName</a>() &lt;&lt; <span class="stringliteral">&quot; WebSocket: Ping sent&quot;</span>;</div>
+<div class="line"><span class="lineno">  110</span> </div>
+<div class="line"><span class="lineno">  111</span>        <a class="code hl_variable" href="#a7919dbb1aedb9c77815dfde8cafb6d6b">subProtocolContext</a>-&gt;<a class="code hl_function" href="classweb_1_1websocket_1_1SubProtocolContext.html#a0b3d87caa4afd1c2f0977da8d9cd9be1">sendPing</a>(reason, reasonLength);</div>
+<div class="line"><span class="lineno">  112</span>    }</div>
 <div class="ttc" id="aclassweb_1_1websocket_1_1SubProtocolContext_html_a0b3d87caa4afd1c2f0977da8d9cd9be1"><div class="ttname"><a href="classweb_1_1websocket_1_1SubProtocolContext.html#a0b3d87caa4afd1c2f0977da8d9cd9be1">web::websocket::SubProtocolContext::sendPing</a></div><div class="ttdeci">virtual void sendPing(const char *reason=nullptr, std::size_t reasonLength=0)=0</div></div>
 </div><!-- fragment -->
 </div>
@@ -1160,7 +1164,7 @@ template&lt;typename SocketContextUpgradeT &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceweb.html">web</a></li><li class="navelem"><a class="el" href="namespaceweb_1_1websocket.html">websocket</a></li><li class="navelem"><a class="el" href="classweb_1_1websocket_1_1SubProtocol.html">SubProtocol</a></li>
-    <li class="footer">Generated on Mon Jan 20 2025 01:16:13 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generated on Wed Feb 5 2025 21:40:38 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>

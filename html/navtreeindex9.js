@@ -1,5 +1,11 @@
 var NAVTREEINDEX9 =
 {
+"classcore_1_1socket_1_1stream_1_1SocketConnector.html#acb03092786e852e56c2886bba0787d32":[3,0,2,4,0,6,9],
+"classcore_1_1socket_1_1stream_1_1SocketConnector.html#adfc9c27364cc6402e2cf8d14e5f642ab":[1,0,4,4,0,7,4],
+"classcore_1_1socket_1_1stream_1_1SocketConnector.html#adfc9c27364cc6402e2cf8d14e5f642ab":[3,0,2,4,0,6,4],
+"classcore_1_1socket_1_1stream_1_1SocketConnector.html#aed7bb767910f9cfa4d742aef23625953":[1,0,4,4,0,7,6],
+"classcore_1_1socket_1_1stream_1_1SocketConnector.html#aed7bb767910f9cfa4d742aef23625953":[3,0,2,4,0,6,6],
+"classcore_1_1socket_1_1stream_1_1SocketContext.html":[1,0,4,4,0,8],
 "classcore_1_1socket_1_1stream_1_1SocketContext.html":[3,0,2,4,0,7],
 "classcore_1_1socket_1_1stream_1_1SocketContext.html#a02f0b93ac0ea376dabd6921c7589a8cf":[1,0,4,4,0,8,3],
 "classcore_1_1socket_1_1stream_1_1SocketContext.html#a02f0b93ac0ea376dabd6921c7589a8cf":[3,0,2,4,0,7,3],
@@ -243,11 +249,5 @@ var NAVTREEINDEX9 =
 "classcore_1_1socket_1_1stream_1_1legacy_1_1SocketReader.html":[3,0,2,4,0,0,3],
 "classcore_1_1socket_1_1stream_1_1legacy_1_1SocketReader.html#a12f85be4c1571ee8ee649ca73d5625fb":[1,0,4,4,0,0,3,1],
 "classcore_1_1socket_1_1stream_1_1legacy_1_1SocketReader.html#a12f85be4c1571ee8ee649ca73d5625fb":[3,0,2,4,0,0,3,1],
-"classcore_1_1socket_1_1stream_1_1legacy_1_1SocketReader.html#ab49564997b1849289e01f15d29ef281f":[1,0,4,4,0,0,3,0],
-"classcore_1_1socket_1_1stream_1_1legacy_1_1SocketReader.html#ab49564997b1849289e01f15d29ef281f":[3,0,2,4,0,0,3,0],
-"classcore_1_1socket_1_1stream_1_1legacy_1_1SocketWriter.html":[1,0,4,4,0,0,4],
-"classcore_1_1socket_1_1stream_1_1legacy_1_1SocketWriter.html":[3,0,2,4,0,0,4],
-"classcore_1_1socket_1_1stream_1_1legacy_1_1SocketWriter.html#a59a7ea3bd048d7ab6eafa8f0dd0148c6":[1,0,4,4,0,0,4,0],
-"classcore_1_1socket_1_1stream_1_1legacy_1_1SocketWriter.html#a59a7ea3bd048d7ab6eafa8f0dd0148c6":[3,0,2,4,0,0,4,0],
-"classcore_1_1socket_1_1stream_1_1legacy_1_1SocketWriter.html#ac25fee9cfde8bdc15ba67e646a9773c2":[1,0,4,4,0,0,4,1]
+"classcore_1_1socket_1_1stream_1_1legacy_1_1SocketReader.html#ab49564997b1849289e01f15d29ef281f":[1,0,4,4,0,0,3,0]
 };

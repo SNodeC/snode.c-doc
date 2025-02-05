@@ -175,7 +175,7 @@ $(function(){initNavTree('testbasicauthentication_8cpp_source.html',''); initRes
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        legacyApp.listen(8080,</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>                         [instanceName = legacyApp.getConfig().getInstanceName()](<span class="keyword">const</span> legacy::in6::WebApp::SocketAddress&amp; socketAddress,</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>                                                                                  <span class="keyword">const</span> core::socket::State&amp; state) -&gt; <span class="keywordtype">void</span> {</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>                                                                                  <span class="keyword">const</span> core::socket::State&amp; state) {</div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>                             <span class="keywordflow">switch</span> (state) {</div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>                                 <span class="keywordflow">case</span> core::socket::State::OK:</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>                                     VLOG(1) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot;: listening on &#39;&quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
@@ -210,7 +210,7 @@ $(function(){initNavTree('testbasicauthentication_8cpp_source.html',''); initRes
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>                res-&gt;status(404).send(<span class="stringliteral">&quot;The requested resource is not found.&quot;</span>);</div>
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>            });</div>
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>            tlsApp.listen(8088, [](<span class="keyword">const</span> legacy::in6::WebApp::SocketAddress&amp; socketAddress, <span class="keyword">const</span> core::socket::State&amp; state) -&gt; <span class="keywordtype">void</span> {</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>            tlsApp.listen(8088, [](<span class="keyword">const</span> legacy::in6::WebApp::SocketAddress&amp; socketAddress, <span class="keyword">const</span> core::socket::State&amp; state) {</div>
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>                <span class="keywordflow">switch</span> (state) {</div>
 <div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>                    <span class="keywordflow">case</span> core::socket::State::OK:</div>
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>                        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;tls: listening on &#39;&quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span></div>
@@ -238,7 +238,7 @@ $(function(){initNavTree('testbasicauthentication_8cpp_source.html',''); initRes
 <div class="ttc" id="aclassexpress_1_1WebApp_html"><div class="ttname"><a href="classexpress_1_1WebApp.html">express::WebApp</a></div><div class="ttdef"><b>Definition</b> <a href="WebApp_8h_source.html#l00037">WebApp.h:37</a></div></div>
 <div class="ttc" id="aclassexpress_1_1WebApp_html_a0a01439a0cc8dfc86ed14f1094826b7e"><div class="ttname"><a href="classexpress_1_1WebApp.html#a0a01439a0cc8dfc86ed14f1094826b7e">express::WebApp::init</a></div><div class="ttdeci">static void init(int argc, char *argv[])</div><div class="ttdef"><b>Definition</b> <a href="WebApp_8cpp_source.html#l00034">WebApp.cpp:34</a></div></div>
 <div class="ttc" id="aclassexpress_1_1WebApp_html_a54e6910c9466c61d0b217490b7d9bb5a"><div class="ttname"><a href="classexpress_1_1WebApp.html#a54e6910c9466c61d0b217490b7d9bb5a">express::WebApp::start</a></div><div class="ttdeci">static int start(const utils::Timeval &amp;timeOut={LONG_MAX, 0})</div><div class="ttdef"><b>Definition</b> <a href="WebApp_8cpp_source.html#l00038">WebApp.cpp:38</a></div></div>
-<div class="ttc" id="aconfigtest_8cpp_html_a0ddf1224851353fc92bfbff6f499fa97"><div class="ttname"><a href="configtest_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a></div><div class="ttdeci">int main(int argc, char *argv[])</div><div class="ttdef"><b>Definition</b> <a href="configtest_8cpp_source.html#l00023">configtest.cpp:23</a></div></div>
+<div class="ttc" id="aconfigtest_8cpp_html_a0ddf1224851353fc92bfbff6f499fa97"><div class="ttname"><a href="configtest_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a></div><div class="ttdeci">int main(int argc, char *argv[])</div><div class="ttdef"><b>Definition</b> <a href="configtest_8cpp_source.html#l00026">configtest.cpp:26</a></div></div>
 <div class="ttc" id="atestbasicauthentication_8cpp_html_aeb6ff6ca94f495351c99f0a372eadd33"><div class="ttname"><a href="testbasicauthentication_8cpp.html#aeb6ff6ca94f495351c99f0a372eadd33">getRouter</a></div><div class="ttdeci">Router getRouter(const std::string &amp;webRoot)</div><div class="ttdef"><b>Definition</b> <a href="#l00037">testbasicauthentication.cpp:37</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
@@ -246,7 +246,7 @@ $(function(){initNavTree('testbasicauthentication_8cpp_source.html',''); initRes
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_9654b8d08f4bba4e84b362c5fd320bee.html">apps</a></li><li class="navelem"><a class="el" href="testbasicauthentication_8cpp.html">testbasicauthentication.cpp</a></li>
-    <li class="footer">Generated on Mon Jan 20 2025 01:14:33 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generated on Wed Feb 5 2025 21:38:59 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>

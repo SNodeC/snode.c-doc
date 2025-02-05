@@ -408,12 +408,11 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">   63</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="namespacecore.html#ac748365ac1e79353b3d6218a60216bd4">core::eventLoopState</a>() != <a class="code hl_enumvalue" href="namespacecore.html#a6613a3d81c1d25590b1cd31540d08815af6cdb3c6710b50ec65ee07f740847e10">core::State::STOPPING</a>) {</div>
 <div class="line"><span class="lineno">   64</span>            <a class="code hl_variable" href="#abb43bf7e8f23116255a405b881ceef29">timerEventPublisher</a>.<a class="code hl_function" href="classcore_1_1TimerEventPublisher.html#a09059a68bed567c951c864ad95c7c421">insert</a>(<span class="keyword">this</span>);</div>
 <div class="line"><span class="lineno">   65</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   66</span>            LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <span class="stringliteral">&quot;TimerEventReceiver - Enable after signal: Not enabled&quot;</span>;</div>
+<div class="line"><span class="lineno">   66</span>            LOG(WARNING) &lt;&lt; <span class="stringliteral">&quot;TimerEventReceiver - Enable after signal: Not enabled&quot;</span>;</div>
 <div class="line"><span class="lineno">   67</span>            <span class="keyword">delete</span> <span class="keyword">this</span>;</div>
 <div class="line"><span class="lineno">   68</span>        }</div>
 <div class="line"><span class="lineno">   69</span>    }</div>
 <div class="ttc" id="aclasscore_1_1TimerEventPublisher_html_a09059a68bed567c951c864ad95c7c421"><div class="ttname"><a href="classcore_1_1TimerEventPublisher.html#a09059a68bed567c951c864ad95c7c421">core::TimerEventPublisher::insert</a></div><div class="ttdeci">void insert(TimerEventReceiver *timer)</div><div class="ttdef"><b>Definition</b> <a href="TimerEventPublisher_8cpp_source.html#l00072">TimerEventPublisher.cpp:72</a></div></div>
-<div class="ttc" id="anamespacecore_html_a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6"><div class="ttname"><a href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">core::TickStatus::TRACE</a></div><div class="ttdeci">@ TRACE</div></div>
 <div class="ttc" id="anamespacecore_html_a6613a3d81c1d25590b1cd31540d08815af6cdb3c6710b50ec65ee07f740847e10"><div class="ttname"><a href="namespacecore.html#a6613a3d81c1d25590b1cd31540d08815af6cdb3c6710b50ec65ee07f740847e10">core::State::STOPPING</a></div><div class="ttdeci">@ STOPPING</div></div>
 <div class="ttc" id="anamespacecore_html_ac748365ac1e79353b3d6218a60216bd4"><div class="ttname"><a href="namespacecore.html#ac748365ac1e79353b3d6218a60216bd4">core::eventLoopState</a></div><div class="ttdeci">State eventLoopState()</div><div class="ttdef"><b>Definition</b> <a href="State_8cpp_source.html#l00030">State.cpp:30</a></div></div>
 </div><!-- fragment -->
@@ -526,6 +525,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">   85</span>    }</div>
 <div class="ttc" id="aclasscore_1_1TimerEventReceiver_html_a33a3c3c6d9503087dfb628c8e86646d6"><div class="ttname"><a href="#a33a3c3c6d9503087dfb628c8e86646d6">core::TimerEventReceiver::dispatchEvent</a></div><div class="ttdeci">virtual void dispatchEvent()=0</div></div>
 <div class="ttc" id="aclasscore_1_1TimerEventReceiver_html_a4b84d49161a2eb2a1b513e4efb12aa11"><div class="ttname"><a href="#a4b84d49161a2eb2a1b513e4efb12aa11">core::TimerEventReceiver::getTimeoutAbsolut</a></div><div class="ttdeci">utils::Timeval getTimeoutAbsolut() const</div><div class="ttdef"><b>Definition</b> <a href="TimerEventReceiver_8cpp_source.html#l00054">TimerEventReceiver.cpp:54</a></div></div>
+<div class="ttc" id="anamespacecore_html_a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6"><div class="ttname"><a href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">core::TickStatus::TRACE</a></div><div class="ttdeci">@ TRACE</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -845,7 +845,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacecore.html">core</a></li><li class="navelem"><a class="el" href="classcore_1_1TimerEventReceiver.html">TimerEventReceiver</a></li>
-    <li class="footer">Generated on Mon Jan 20 2025 01:16:12 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generated on Wed Feb 5 2025 21:40:37 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>

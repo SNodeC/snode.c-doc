@@ -151,14 +151,14 @@ Functions</h2></td></tr>
 <div class="fragment"><div class="line"><span class="lineno">   47</span>                                                                                                        {</div>
 <div class="line"><span class="lineno">   48</span>        <a class="code hl_class" href="classweb_1_1http_1_1client_1_1ResponseParser.html">web::http::client::ResponseParser</a>* responseParser = <span class="keyword">new</span> <a class="code hl_class" href="classweb_1_1http_1_1client_1_1ResponseParser.html">web::http::client::ResponseParser</a>(</div>
 <div class="line"><span class="lineno">   49</span>            socketContext,</div>
-<div class="line"><span class="lineno">   50</span>            []() -&gt; <span class="keywordtype">void</span> {</div>
-<div class="line"><span class="lineno">   51</span>                VLOG(0) &lt;&lt; <span class="stringliteral">&quot;++   OnStarted&quot;</span>;</div>
+<div class="line"><span class="lineno">   50</span>            []() {</div>
+<div class="line"><span class="lineno">   51</span>                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;++   OnStarted&quot;</span>;</div>
 <div class="line"><span class="lineno">   52</span>            },</div>
-<div class="line"><span class="lineno">   53</span>            []([[maybe_unused]] <a class="code hl_class" href="classweb_1_1http_1_1client_1_1Response.html">web::http::client::Response</a>&amp;&amp; res) -&gt; <span class="keywordtype">void</span> {</div>
-<div class="line"><span class="lineno">   54</span>                VLOG(0) &lt;&lt; <span class="stringliteral">&quot;++   OnParsed&quot;</span>;</div>
+<div class="line"><span class="lineno">   53</span>            []([[maybe_unused]] <a class="code hl_class" href="classweb_1_1http_1_1client_1_1Response.html">web::http::client::Response</a>&amp;&amp; res) {</div>
+<div class="line"><span class="lineno">   54</span>                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;++   OnParsed&quot;</span>;</div>
 <div class="line"><span class="lineno">   55</span>            },</div>
-<div class="line"><span class="lineno">   56</span>            [](<span class="keywordtype">int</span> status, <span class="keyword">const</span> std::string&amp; reason) -&gt; <span class="keywordtype">void</span> {</div>
-<div class="line"><span class="lineno">   57</span>                VLOG(0) &lt;&lt; <span class="stringliteral">&quot;++   OnError: &quot;</span> + std::to_string(status) + <span class="stringliteral">&quot; - &quot;</span> + reason;</div>
+<div class="line"><span class="lineno">   56</span>            [](<span class="keywordtype">int</span> status, <span class="keyword">const</span> std::string&amp; reason) {</div>
+<div class="line"><span class="lineno">   57</span>                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;++   OnError: &quot;</span> + std::to_string(status) + <span class="stringliteral">&quot; - &quot;</span> + reason;</div>
 <div class="line"><span class="lineno">   58</span>            });</div>
 <div class="line"><span class="lineno">   59</span> </div>
 <div class="line"><span class="lineno">   60</span>        <span class="keywordflow">return</span> responseParser;</div>
@@ -174,7 +174,7 @@ Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceapps.html">apps</a></li><li class="navelem"><a class="el" href="namespaceapps_1_1http.html">http</a></li>
-    <li class="footer">Generated on Mon Jan 20 2025 01:16:12 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generated on Wed Feb 5 2025 21:40:37 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>

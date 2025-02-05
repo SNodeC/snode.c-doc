@@ -1,5 +1,9 @@
 var NAVTREEINDEX47 =
 {
+"web_2websocket_2client_2SubProtocol_8h.html":[4,0,8,1,0,5],
+"web_2websocket_2client_2SubProtocol_8h_source.html":[4,0,8,1,0,5],
+"web_2websocket_2server_2SubProtocol_8cpp.html":[4,0,8,1,1,6],
+"web_2websocket_2server_2SubProtocol_8cpp_source.html":[4,0,8,1,1,6],
 "web_2websocket_2server_2SubProtocol_8h.html":[4,0,8,1,1,7],
 "web_2websocket_2server_2SubProtocol_8h_source.html":[4,0,8,1,1,7],
 "websocket_2SocketContextUpgrade_8h.html":[4,0,8,1,4],

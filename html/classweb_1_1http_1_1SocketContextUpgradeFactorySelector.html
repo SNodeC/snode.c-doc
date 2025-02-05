@@ -111,7 +111,7 @@ $(function(){initNavTree('classweb_1_1http_1_1SocketContextUpgradeFactorySelecto
 <div class="dynheader">
 Collaboration diagram for web::http::SocketContextUpgradeFactorySelector&lt; SocketContextUpgradeFactoryT &gt;:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classweb_1_1http_1_1SocketContextUpgradeFactorySelector__coll__graph.svg" width="2459" height="1119"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classweb_1_1http_1_1SocketContextUpgradeFactorySelector__coll__graph.svg" width="2460" height="1134"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
@@ -485,7 +485,7 @@ template&lt;typename <a class="el" href="#abc18b9113d82388b6b5e04d5d930be40">Soc
 <div class="line"><span class="lineno">   75</span> </div>
 <div class="line"><span class="lineno">   76</span>                <span class="keywordflow">if</span> (socketContextUpgradeFactory != <span class="keyword">nullptr</span>) {</div>
 <div class="line"><span class="lineno">   77</span>                    <span class="keywordflow">if</span> (<a class="code hl_function" href="#ae19db7f28cb2e9f2c493e0616877ba6b">add</a>(socketContextUpgradeFactory, handle)) {</div>
-<div class="line"><span class="lineno">   78</span>                        LOG(DEBUG) &lt;&lt; <span class="stringliteral">&quot;HTTP: SocketContextUpgradeFactory created successfull: &quot;</span> &lt;&lt; socketContextUpgradeName;</div>
+<div class="line"><span class="lineno">   78</span>                        LOG(DEBUG) &lt;&lt; <span class="stringliteral">&quot;HTTP: SocketContextUpgradeFactory created successful: &quot;</span> &lt;&lt; socketContextUpgradeName;</div>
 <div class="line"><span class="lineno">   79</span>                    } <span class="keywordflow">else</span> {</div>
 <div class="line"><span class="lineno">   80</span>                        LOG(DEBUG) &lt;&lt; <span class="stringliteral">&quot;HTTP: UpgradeSocketContext already existing. Not using: &quot;</span> &lt;&lt; socketContextUpgradeName;</div>
 <div class="line"><span class="lineno">   81</span>                        <span class="keyword">delete</span> socketContextUpgradeFactory;</div>
@@ -493,11 +493,11 @@ template&lt;typename <a class="el" href="#abc18b9113d82388b6b5e04d5d930be40">Soc
 <div class="line"><span class="lineno">   83</span>                        <a class="code hl_function" href="classcore_1_1DynamicLoader.html#a42ac52cda1ec4534f1cc9e225dcb31b0">core::DynamicLoader::dlClose</a>(handle);</div>
 <div class="line"><span class="lineno">   84</span>                    }</div>
 <div class="line"><span class="lineno">   85</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   86</span>                    LOG(DEBUG) &lt;&lt; <span class="stringliteral">&quot;HTTP: SocketContextUpgradeFactory not created: &quot;</span> &lt;&lt; socketContextUpgradeName;</div>
+<div class="line"><span class="lineno">   86</span>                    LOG(ERROR) &lt;&lt; <span class="stringliteral">&quot;HTTP: SocketContextUpgradeFactory not created: &quot;</span> &lt;&lt; socketContextUpgradeName;</div>
 <div class="line"><span class="lineno">   87</span>                    <a class="code hl_function" href="classcore_1_1DynamicLoader.html#a42ac52cda1ec4534f1cc9e225dcb31b0">core::DynamicLoader::dlClose</a>(handle);</div>
 <div class="line"><span class="lineno">   88</span>                }</div>
 <div class="line"><span class="lineno">   89</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   90</span>                LOG(DEBUG) &lt;&lt; <span class="stringliteral">&quot;HTTP: Optaining function \&quot;&quot;</span> &lt;&lt; socketContextUpgradeFactoryFunctionName</div>
+<div class="line"><span class="lineno">   90</span>                LOG(ERROR) &lt;&lt; <span class="stringliteral">&quot;HTTP: Optaining function \&quot;&quot;</span> &lt;&lt; socketContextUpgradeFactoryFunctionName</div>
 <div class="line"><span class="lineno">   91</span>                           &lt;&lt; <span class="stringliteral">&quot;\&quot; in plugin failed: &quot;</span> &lt;&lt; <a class="code hl_function" href="classcore_1_1DynamicLoader.html#a28d14f3029339351d8bb8b328a6110b0">core::DynamicLoader::dlError</a>();</div>
 <div class="line"><span class="lineno">   92</span>                <a class="code hl_function" href="classcore_1_1DynamicLoader.html#a42ac52cda1ec4534f1cc9e225dcb31b0">core::DynamicLoader::dlClose</a>(handle);</div>
 <div class="line"><span class="lineno">   93</span>            }</div>
@@ -714,7 +714,7 @@ template&lt;typename SocketContextUpgradeFactoryT &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceweb.html">web</a></li><li class="navelem"><a class="el" href="namespaceweb_1_1http.html">http</a></li><li class="navelem"><a class="el" href="classweb_1_1http_1_1SocketContextUpgradeFactorySelector.html">SocketContextUpgradeFactorySelector</a></li>
-    <li class="footer">Generated on Mon Jan 20 2025 01:16:13 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generated on Wed Feb 5 2025 21:40:38 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>

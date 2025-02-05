@@ -115,7 +115,7 @@ Inheritance diagram for apps::echo::model::EchoSocketContext:</div>
 <div class="dynheader">
 Collaboration diagram for apps::echo::model::EchoSocketContext:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classapps_1_1echo_1_1model_1_1EchoSocketContext__coll__graph.svg" width="615" height="258"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classapps_1_1echo_1_1model_1_1EchoSocketContext__coll__graph.svg" width="615" height="272"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
@@ -296,13 +296,13 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="EchoSocketContext_8cpp_source.html#l00037">37</a> of file <a class="el" href="EchoSocketContext_8cpp_source.html">EchoSocketContext.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   37</span>                                        {</div>
-<div class="line"><span class="lineno">   38</span>        VLOG(0) &lt;&lt; <span class="stringliteral">&quot;Echo connected&quot;</span>;</div>
+<div class="line"><span class="lineno">   38</span>        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Echo connected&quot;</span>;</div>
 <div class="line"><span class="lineno">   39</span> </div>
 <div class="line"><span class="lineno">   40</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#aff211343268758bb0f913638ad346d9a">role</a> == <a class="code hl_enumvalue" href="#af2f207a1b7dd61a01a7a1dc716070edbaef10c650df47bffd6399e5e78da2a9b1">Role::CLIENT</a>) {</div>
 <div class="line"><span class="lineno">   41</span>            <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a7e80affcdada3ef5f1c52c283d65a89c">sendToPeer</a>(<span class="stringliteral">&quot;Hello peer! Nice to see you!!!&quot;</span>);</div>
 <div class="line"><span class="lineno">   42</span>        }</div>
 <div class="line"><span class="lineno">   43</span>    }</div>
-<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketContext_html_a7e80affcdada3ef5f1c52c283d65a89c"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a7e80affcdada3ef5f1c52c283d65a89c">core::socket::stream::SocketContext::sendToPeer</a></div><div class="ttdeci">void sendToPeer(const char *chunk, std::size_t chunkLen) const final</div><div class="ttdef"><b>Definition</b> <a href="core_2socket_2stream_2SocketContext_8cpp_source.html#l00044">SocketContext.cpp:44</a></div></div>
+<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketContext_html_a7e80affcdada3ef5f1c52c283d65a89c"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a7e80affcdada3ef5f1c52c283d65a89c">core::socket::stream::SocketContext::sendToPeer</a></div><div class="ttdeci">void sendToPeer(const char *chunk, std::size_t chunkLen) const final</div><div class="ttdef"><b>Definition</b> <a href="core_2socket_2stream_2SocketContext_8cpp_source.html#l00047">SocketContext.cpp:47</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -333,7 +333,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="EchoSocketContext_8cpp_source.html#l00045">45</a> of file <a class="el" href="EchoSocketContext_8cpp_source.html">EchoSocketContext.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   45</span>                                           {</div>
-<div class="line"><span class="lineno">   46</span>        VLOG(0) &lt;&lt; <span class="stringliteral">&quot;Echo disconnected&quot;</span>;</div>
+<div class="line"><span class="lineno">   46</span>        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Echo disconnected&quot;</span>;</div>
 <div class="line"><span class="lineno">   47</span>    }</div>
 </div><!-- fragment -->
 </div>
@@ -370,13 +370,13 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   56</span>        <span class="keyword">const</span> std::size_t chunklen = <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a5401a6174dbad9a6637c684a0fb952d9">readFromPeer</a>(chunk, 4096);</div>
 <div class="line"><span class="lineno">   57</span> </div>
 <div class="line"><span class="lineno">   58</span>        <span class="keywordflow">if</span> (chunklen &gt; 0) {</div>
-<div class="line"><span class="lineno">   59</span>            VLOG(0) &lt;&lt; <span class="stringliteral">&quot;Data to reflect: &quot;</span> &lt;&lt; std::string(chunk, chunklen);</div>
+<div class="line"><span class="lineno">   59</span>            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Data to reflect: &quot;</span> &lt;&lt; std::string(chunk, chunklen);</div>
 <div class="line"><span class="lineno">   60</span>            <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a7e80affcdada3ef5f1c52c283d65a89c">sendToPeer</a>(chunk, chunklen);</div>
 <div class="line"><span class="lineno">   61</span>        }</div>
 <div class="line"><span class="lineno">   62</span> </div>
 <div class="line"><span class="lineno">   63</span>        <span class="keywordflow">return</span> chunklen;</div>
 <div class="line"><span class="lineno">   64</span>    }</div>
-<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketContext_html_a5401a6174dbad9a6637c684a0fb952d9"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a5401a6174dbad9a6637c684a0fb952d9">core::socket::stream::SocketContext::readFromPeer</a></div><div class="ttdeci">std::size_t readFromPeer(char *chunk, std::size_t chunklen) const final</div><div class="ttdef"><b>Definition</b> <a href="core_2socket_2stream_2SocketContext_8cpp_source.html#l00056">SocketContext.cpp:56</a></div></div>
+<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketContext_html_a5401a6174dbad9a6637c684a0fb952d9"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a5401a6174dbad9a6637c684a0fb952d9">core::socket::stream::SocketContext::readFromPeer</a></div><div class="ttdeci">std::size_t readFromPeer(char *chunk, std::size_t chunklen) const final</div><div class="ttdef"><b>Definition</b> <a href="core_2socket_2stream_2SocketContext_8cpp_source.html#l00059">SocketContext.cpp:59</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -447,7 +447,7 @@ Additional Inherited Members</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceapps.html">apps</a></li><li class="navelem"><a class="el" href="namespaceapps_1_1echo.html">echo</a></li><li class="navelem"><a class="el" href="namespaceapps_1_1echo_1_1model.html">model</a></li><li class="navelem"><a class="el" href="classapps_1_1echo_1_1model_1_1EchoSocketContext.html">EchoSocketContext</a></li>
-    <li class="footer">Generated on Mon Jan 20 2025 01:16:12 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generated on Wed Feb 5 2025 21:40:37 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>

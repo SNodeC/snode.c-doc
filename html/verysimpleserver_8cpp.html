@@ -154,7 +154,7 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">   45</span> </div>
 <div class="line"><span class="lineno">   46</span>    legacyApp.listen(8080,</div>
 <div class="line"><span class="lineno">   47</span>                     [instanceName = legacyApp.getConfig().getInstanceName()](<span class="keyword">const</span> LegacySocketAddress&amp; socketAddress,</div>
-<div class="line"><span class="lineno">   48</span>                                                                              <span class="keyword">const</span> <a class="code hl_class" href="classcore_1_1socket_1_1State.html">core::socket::State</a>&amp; state) -&gt; <span class="keywordtype">void</span> {</div>
+<div class="line"><span class="lineno">   48</span>                                                                              <span class="keyword">const</span> <a class="code hl_class" href="classcore_1_1socket_1_1State.html">core::socket::State</a>&amp; state) {</div>
 <div class="line"><span class="lineno">   49</span>                         switch (state) {</div>
 <div class="line"><span class="lineno">   50</span>                             case core::socket::State::OK:</div>
 <div class="line"><span class="lineno">   51</span>                                 VLOG(1) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot; listening on &#39;&quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
@@ -183,24 +183,24 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">   74</span> </div>
 <div class="line"><span class="lineno">   75</span>    tlsApp.use(<a class="code hl_class" href="classexpress_1_1middleware_1_1StaticMiddleware.html">express::middleware::StaticMiddleware</a>(<a class="code hl_function" href="classutils_1_1Config.html#a57ba2c249f34b5bc663e657b9d315cca">utils::Config::getStringOptionValue</a>(<span class="stringliteral">&quot;--web-root&quot;</span>)));</div>
 <div class="line"><span class="lineno">   76</span> </div>
-<div class="line"><span class="lineno">   77</span>    tlsApp.listen(8088,</div>
-<div class="line"><span class="lineno">   78</span>                  [instanceName = legacyApp.getConfig().getInstanceName()](<span class="keyword">const</span> TLSSocketAddress&amp; socketAddress,</div>
-<div class="line"><span class="lineno">   79</span>                                                                           <span class="keyword">const</span> <a class="code hl_class" href="classcore_1_1socket_1_1State.html">core::socket::State</a>&amp; state) -&gt; <span class="keywordtype">void</span> {</div>
-<div class="line"><span class="lineno">   80</span>                      switch (state) {</div>
-<div class="line"><span class="lineno">   81</span>                          case core::socket::State::OK:</div>
-<div class="line"><span class="lineno">   82</span>                              VLOG(1) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot; listening on &#39;&quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
-<div class="line"><span class="lineno">   83</span>                              break;</div>
-<div class="line"><span class="lineno">   84</span>                          case core::socket::State::DISABLED:</div>
-<div class="line"><span class="lineno">   85</span>                              VLOG(1) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot; disabled&quot;</span>;</div>
-<div class="line"><span class="lineno">   86</span>                              break;</div>
-<div class="line"><span class="lineno">   87</span>                          case core::socket::State::ERROR:</div>
-<div class="line"><span class="lineno">   88</span>                              LOG(ERROR) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; state.what();</div>
-<div class="line"><span class="lineno">   89</span>                              break;</div>
-<div class="line"><span class="lineno">   90</span>                          case core::socket::State::FATAL:</div>
-<div class="line"><span class="lineno">   91</span>                              LOG(FATAL) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; state.what();</div>
-<div class="line"><span class="lineno">   92</span>                              break;</div>
-<div class="line"><span class="lineno">   93</span>                      }</div>
-<div class="line"><span class="lineno">   94</span>                  });</div>
+<div class="line"><span class="lineno">   77</span>    tlsApp.listen(</div>
+<div class="line"><span class="lineno">   78</span>        8088,</div>
+<div class="line"><span class="lineno">   79</span>        [instanceName = legacyApp.getConfig().getInstanceName()](<span class="keyword">const</span> TLSSocketAddress&amp; socketAddress, <span class="keyword">const</span> <a class="code hl_class" href="classcore_1_1socket_1_1State.html">core::socket::State</a>&amp; state) {</div>
+<div class="line"><span class="lineno">   80</span>            switch (state) {</div>
+<div class="line"><span class="lineno">   81</span>                case core::socket::State::OK:</div>
+<div class="line"><span class="lineno">   82</span>                    VLOG(1) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot; listening on &#39;&quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
+<div class="line"><span class="lineno">   83</span>                    break;</div>
+<div class="line"><span class="lineno">   84</span>                case core::socket::State::DISABLED:</div>
+<div class="line"><span class="lineno">   85</span>                    VLOG(1) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot; disabled&quot;</span>;</div>
+<div class="line"><span class="lineno">   86</span>                    break;</div>
+<div class="line"><span class="lineno">   87</span>                case core::socket::State::ERROR:</div>
+<div class="line"><span class="lineno">   88</span>                    LOG(ERROR) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; state.what();</div>
+<div class="line"><span class="lineno">   89</span>                    break;</div>
+<div class="line"><span class="lineno">   90</span>                case core::socket::State::FATAL:</div>
+<div class="line"><span class="lineno">   91</span>                    LOG(FATAL) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; state.what();</div>
+<div class="line"><span class="lineno">   92</span>                    break;</div>
+<div class="line"><span class="lineno">   93</span>            }</div>
+<div class="line"><span class="lineno">   94</span>        });</div>
 <div class="line"><span class="lineno">   95</span> </div>
 <div class="line"><span class="lineno">   96</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="classexpress_1_1WebApp.html#a54e6910c9466c61d0b217490b7d9bb5a">express::WebApp::start</a>();</div>
 <div class="line"><span class="lineno">   97</span>}</div>
@@ -208,8 +208,8 @@ Functions</h2></td></tr>
 <div class="ttc" id="aclassexpress_1_1WebApp_html_a0a01439a0cc8dfc86ed14f1094826b7e"><div class="ttname"><a href="classexpress_1_1WebApp.html#a0a01439a0cc8dfc86ed14f1094826b7e">express::WebApp::init</a></div><div class="ttdeci">static void init(int argc, char *argv[])</div><div class="ttdef"><b>Definition</b> <a href="WebApp_8cpp_source.html#l00034">WebApp.cpp:34</a></div></div>
 <div class="ttc" id="aclassexpress_1_1WebApp_html_a54e6910c9466c61d0b217490b7d9bb5a"><div class="ttname"><a href="classexpress_1_1WebApp.html#a54e6910c9466c61d0b217490b7d9bb5a">express::WebApp::start</a></div><div class="ttdeci">static int start(const utils::Timeval &amp;timeOut={LONG_MAX, 0})</div><div class="ttdef"><b>Definition</b> <a href="WebApp_8cpp_source.html#l00038">WebApp.cpp:38</a></div></div>
 <div class="ttc" id="aclassexpress_1_1middleware_1_1StaticMiddleware_html"><div class="ttname"><a href="classexpress_1_1middleware_1_1StaticMiddleware.html">express::middleware::StaticMiddleware</a></div><div class="ttdef"><b>Definition</b> <a href="StaticMiddleware_8h_source.html#l00037">StaticMiddleware.h:37</a></div></div>
-<div class="ttc" id="aclassutils_1_1Config_html_a2c8b8976d97321d55ed330c0f938d8d8"><div class="ttname"><a href="classutils_1_1Config.html#a2c8b8976d97321d55ed330c0f938d8d8">utils::Config::addStringOption</a></div><div class="ttdeci">static CLI::Option * addStringOption(const std::string &amp;name, const std::string &amp;description, const std::string &amp;typeName)</div><div class="ttdef"><b>Definition</b> <a href="Config_8cpp_source.html#l00859">Config.cpp:859</a></div></div>
-<div class="ttc" id="aclassutils_1_1Config_html_a57ba2c249f34b5bc663e657b9d315cca"><div class="ttname"><a href="classutils_1_1Config.html#a57ba2c249f34b5bc663e657b9d315cca">utils::Config::getStringOptionValue</a></div><div class="ttdeci">static std::string getStringOptionValue(const std::string &amp;name)</div><div class="ttdef"><b>Definition</b> <a href="Config_8cpp_source.html#l00916">Config.cpp:916</a></div></div>
+<div class="ttc" id="aclassutils_1_1Config_html_a2c8b8976d97321d55ed330c0f938d8d8"><div class="ttname"><a href="classutils_1_1Config.html#a2c8b8976d97321d55ed330c0f938d8d8">utils::Config::addStringOption</a></div><div class="ttdeci">static CLI::Option * addStringOption(const std::string &amp;name, const std::string &amp;description, const std::string &amp;typeName)</div><div class="ttdef"><b>Definition</b> <a href="Config_8cpp_source.html#l00862">Config.cpp:862</a></div></div>
+<div class="ttc" id="aclassutils_1_1Config_html_a57ba2c249f34b5bc663e657b9d315cca"><div class="ttname"><a href="classutils_1_1Config.html#a57ba2c249f34b5bc663e657b9d315cca">utils::Config::getStringOptionValue</a></div><div class="ttdeci">static std::string getStringOptionValue(const std::string &amp;name)</div><div class="ttdef"><b>Definition</b> <a href="Config_8cpp_source.html#l00919">Config.cpp:919</a></div></div>
 <div class="ttc" id="anamespaceexpress_1_1legacy_1_1in_html_a652aa44c8b01724b9058c4e451366fa0"><div class="ttname"><a href="namespaceexpress_1_1legacy_1_1in.html#a652aa44c8b01724b9058c4e451366fa0">express::legacy::in::WebApp</a></div><div class="ttdeci">WebAppT&lt; web::http::legacy::in::ServerBase&lt; web::http::server::Request, web::http::server::Response &gt; &gt; WebApp</div><div class="ttdef"><b>Definition</b> <a href="legacy_2in_2WebApp_8h_source.html#l00032">WebApp.h:32</a></div></div>
 <div class="ttc" id="anamespaceexpress_1_1tls_1_1in_html_ab9ca737b337479416eccea764ddf74ce"><div class="ttname"><a href="namespaceexpress_1_1tls_1_1in.html#ab9ca737b337479416eccea764ddf74ce">express::tls::in::WebApp</a></div><div class="ttdeci">WebAppT&lt; web::http::tls::in::ServerBase&lt; web::http::server::Request, web::http::server::Response &gt; &gt; WebApp</div><div class="ttdef"><b>Definition</b> <a href="tls_2in_2WebApp_8h_source.html#l00032">WebApp.h:32</a></div></div>
 </div><!-- fragment -->
@@ -228,7 +228,7 @@ Here is the call graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_9654b8d08f4bba4e84b362c5fd320bee.html">apps</a></li><li class="navelem"><a class="el" href="verysimpleserver_8cpp.html">verysimpleserver.cpp</a></li>
-    <li class="footer">Generated on Mon Jan 20 2025 01:16:12 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generated on Wed Feb 5 2025 21:40:37 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>

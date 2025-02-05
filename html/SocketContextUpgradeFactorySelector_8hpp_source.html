@@ -188,7 +188,7 @@ $(function(){initNavTree('SocketContextUpgradeFactorySelector_8hpp_source.html',
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>                <span class="keywordflow">if</span> (socketContextUpgradeFactory != <span class="keywordtype">nullptr</span>) {</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>                    <span class="keywordflow">if</span> (add(socketContextUpgradeFactory, handle)) {</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>                        LOG(DEBUG) &lt;&lt; <span class="stringliteral">&quot;HTTP: SocketContextUpgradeFactory created successfull: &quot;</span> &lt;&lt; socketContextUpgradeName;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>                        LOG(DEBUG) &lt;&lt; <span class="stringliteral">&quot;HTTP: SocketContextUpgradeFactory created successful: &quot;</span> &lt;&lt; socketContextUpgradeName;</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>                    } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>                        LOG(DEBUG) &lt;&lt; <span class="stringliteral">&quot;HTTP: UpgradeSocketContext already existing. Not using: &quot;</span> &lt;&lt; socketContextUpgradeName;</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>                        <span class="keyword">delete</span> socketContextUpgradeFactory;</div>
@@ -196,11 +196,11 @@ $(function(){initNavTree('SocketContextUpgradeFactorySelector_8hpp_source.html',
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>                        core::DynamicLoader::dlClose(handle);</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>                    }</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>                    LOG(DEBUG) &lt;&lt; <span class="stringliteral">&quot;HTTP: SocketContextUpgradeFactory not created: &quot;</span> &lt;&lt; socketContextUpgradeName;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>                    LOG(ERROR) &lt;&lt; <span class="stringliteral">&quot;HTTP: SocketContextUpgradeFactory not created: &quot;</span> &lt;&lt; socketContextUpgradeName;</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>                    core::DynamicLoader::dlClose(handle);</div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>                }</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>                LOG(DEBUG) &lt;&lt; <span class="stringliteral">&quot;HTTP: Optaining function \&quot;&quot;</span> &lt;&lt; socketContextUpgradeFactoryFunctionName</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>                LOG(ERROR) &lt;&lt; <span class="stringliteral">&quot;HTTP: Optaining function \&quot;&quot;</span> &lt;&lt; socketContextUpgradeFactoryFunctionName</div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>                           &lt;&lt; <span class="stringliteral">&quot;\&quot; in plugin failed: &quot;</span> &lt;&lt; core::DynamicLoader::dlError();</div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>                core::DynamicLoader::dlClose(handle);</div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>            }</div>
@@ -274,7 +274,7 @@ $(function(){initNavTree('SocketContextUpgradeFactorySelector_8hpp_source.html',
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_562abdcd8625d4bf7bad2fe6fe01354c.html">web</a></li><li class="navelem"><a class="el" href="dir_890691660869da6a17298077dcca53fb.html">http</a></li><li class="navelem"><a class="el" href="SocketContextUpgradeFactorySelector_8hpp.html">SocketContextUpgradeFactorySelector.hpp</a></li>
-    <li class="footer">Generated on Mon Jan 20 2025 01:15:59 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generated on Wed Feb 5 2025 21:40:25 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>

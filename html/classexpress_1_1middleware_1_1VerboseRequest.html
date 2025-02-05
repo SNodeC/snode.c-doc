@@ -524,8 +524,8 @@ Additional Inherited Members</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="VerboseRequest_8cpp_source.html#l00036">36</a> of file <a class="el" href="VerboseRequest_8cpp_source.html">VerboseRequest.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   36</span>                                                  {</div>
 <div class="line"><span class="lineno">   37</span>        <a class="code hl_function" href="classexpress_1_1Router.html#a9f5c02a219a67bf1fc031bdbf71b7566">use</a>([details] <a class="code hl_define" href="Router_8h.html#ac5313b926a3bc0fb106bffb31e93dc71">MIDDLEWARE</a>(req, res, next) {</div>
-<div class="line"><span class="lineno">   38</span>            LOG(TRACE) &lt;&lt; res-&gt;getSocketContext()-&gt;getSocketConnection()-&gt;getInstanceName() &lt;&lt; <span class="stringliteral">&quot; HTTP: &#39;&quot;</span> &lt;&lt; req-&gt;method &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; req-&gt;url</div>
-<div class="line"><span class="lineno">   39</span>                       &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; req-&gt;httpVersion &lt;&lt; <span class="stringliteral">&quot;&#39;\n&quot;</span></div>
+<div class="line"><span class="lineno">   38</span>            LOG(DEBUG) &lt;&lt; res-&gt;getSocketContext()-&gt;getSocketConnection()-&gt;getConnectionName()</div>
+<div class="line"><span class="lineno">   39</span>                       &lt;&lt; <span class="stringliteral">&quot; Express VerboseMiddleware: &quot;</span> &lt;&lt; req-&gt;method &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; req-&gt;url &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; req-&gt;httpVersion &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span></div>
 <div class="line"><span class="lineno">   40</span>                       &lt;&lt; <a class="code hl_function" href="namespacehttputils.html#af7ff5dae5306b760dc94a3d86366b711">httputils::toString</a>(</div>
 <div class="line"><span class="lineno">   41</span>                              req-&gt;method,</div>
 <div class="line"><span class="lineno">   42</span>                              req-&gt;url,</div>
@@ -620,7 +620,7 @@ Additional Inherited Members</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceexpress.html">express</a></li><li class="navelem"><a class="el" href="namespaceexpress_1_1middleware.html">middleware</a></li><li class="navelem"><a class="el" href="classexpress_1_1middleware_1_1VerboseRequest.html">VerboseRequest</a></li>
-    <li class="footer">Generated on Mon Jan 20 2025 01:16:12 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generated on Wed Feb 5 2025 21:40:38 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>

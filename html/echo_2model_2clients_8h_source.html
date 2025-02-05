@@ -172,11 +172,11 @@ $(function(){initNavTree('echo_2model_2clients_8h_source.html',''); initResizabl
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    EchoSocketClient getClient() {</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        EchoSocketClient client(<span class="stringliteral">&quot;echoclient&quot;</span>);</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        client.setOnConnect([&amp;client](SocketConnection* socketConnection) -&gt; <span class="keywordtype">void</span> { <span class="comment">// onConnect</span></div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>            VLOG(0) &lt;&lt; <span class="stringliteral">&quot;OnConnect &quot;</span> &lt;&lt; client.getConfig().getInstanceName();</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        client.setOnConnect([&amp;client](SocketConnection* socketConnection) { <span class="comment">// onConnect</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;OnConnect &quot;</span> &lt;&lt; client.getConfig().getInstanceName();</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>            VLOG(0) &lt;&lt; <span class="stringliteral">&quot;\tLocal: &quot;</span> &lt;&lt; socketConnection-&gt;getLocalAddress().toString();</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            VLOG(0) &lt;&lt; <span class="stringliteral">&quot;\tPeer:  &quot;</span> &lt;&lt; socketConnection-&gt;getRemoteAddress().toString();</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;\tLocal: &quot;</span> &lt;&lt; socketConnection-&gt;getLocalAddress().toString();</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;\tPeer:  &quot;</span> &lt;&lt; socketConnection-&gt;getRemoteAddress().toString();</div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            <span class="comment">/* Enable automatic hostname checks */</span></div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>            <span class="comment">// X509_VERIFY_PARAM* param = SSL_get0_param(socketConnection-&gt;getSSL());</span></div>
@@ -188,22 +188,22 @@ $(function(){initNavTree('echo_2model_2clients_8h_source.html',''); initResizabl
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>            <span class="comment">// }</span></div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        });</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        client.setOnConnected([&amp;client](SocketConnection* socketConnection) -&gt; <span class="keywordtype">void</span> { <span class="comment">// onConnected</span></div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>            VLOG(0) &lt;&lt; <span class="stringliteral">&quot;OnConnected &quot;</span> &lt;&lt; client.getConfig().getInstanceName();</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        client.setOnConnected([&amp;client](SocketConnection* socketConnection) { <span class="comment">// onConnected</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;OnConnected &quot;</span> &lt;&lt; client.getConfig().getInstanceName();</div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>            X509* server_cert = SSL_get_peer_certificate(socketConnection-&gt;getSSL());</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>            <span class="keywordflow">if</span> (server_cert != <span class="keywordtype">nullptr</span>) {</div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>                <span class="keywordtype">long</span> verifyErr = SSL_get_verify_result(socketConnection-&gt;getSSL());</div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>                VLOG(0) &lt;&lt; <span class="stringliteral">&quot;\tPeer certificate verifyErr = &quot;</span> + std::to_string(verifyErr) + <span class="stringliteral">&quot;: &quot;</span> +</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;\tPeer certificate verifyErr = &quot;</span> + std::to_string(verifyErr) + <span class="stringliteral">&quot;: &quot;</span> +</div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>                               std::string(X509_verify_cert_error_string(verifyErr));</div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>                <span class="keywordtype">char</span>* str = X509_NAME_oneline(X509_get_subject_name(server_cert), <span class="keywordtype">nullptr</span>, 0);</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>                VLOG(0) &lt;&lt; <span class="stringliteral">&quot;\t   Subject: &quot;</span> + std::string(str);</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;\t   Subject: &quot;</span> + std::string(str);</div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>                OPENSSL_free(str);</div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>                str = X509_NAME_oneline(X509_get_issuer_name(server_cert), <span class="keywordtype">nullptr</span>, 0);</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>                VLOG(0) &lt;&lt; <span class="stringliteral">&quot;\t   Issuer: &quot;</span> + std::string(str);</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;\t   Issuer: &quot;</span> + std::string(str);</div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>                OPENSSL_free(str);</div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>                <span class="comment">// We could do all sorts of certificate verification stuff here before deallocating the certificate.</span></div>
@@ -222,7 +222,7 @@ $(function(){initNavTree('echo_2model_2clients_8h_source.html',''); initResizabl
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span><span class="preprocessor">#</span><span class="preprocessor">ifdef</span> <span class="preprocessor">__GNUC_</span></div>
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span><span class="preprocessor">#</span><span class="preprocessor">pragma</span> <span class="preprocessor">GCC</span> <span class="preprocessor">diagnostic</span> <span class="preprocessor">pop</span></div>
 <div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span><span class="preprocessor">#</span><span class="preprocessor">endif</span></div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>                VLOG(0) &lt;&lt; <span class="stringliteral">&quot;\t   Subject alternative name count: &quot;</span> &lt;&lt; altNameCount;</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;\t   Subject alternative name count: &quot;</span> &lt;&lt; altNameCount;</div>
 <div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>                <span class="keywordflow">for</span> (int32_t i = 0; i &lt; altNameCount; ++i) {</div>
 <div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span><span class="preprocessor">#</span><span class="preprocessor">ifdef</span> <span class="preprocessor">__GNUC__</span></div>
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span><span class="preprocessor">#</span><span class="preprocessor">pragma</span> <span class="preprocessor">GCC</span> <span class="preprocessor">diagnostic</span> <span class="preprocessor">push</span></div>
@@ -240,14 +240,14 @@ $(function(){initNavTree('echo_2model_2clients_8h_source.html',''); initResizabl
 <div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>                        std::string subjectAltName =</div>
 <div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>                            std::string(<span class="keyword">reinterpret_cast</span>&lt;<span class="keyword">const</span> <span class="keywordtype">char</span>*&gt;(ASN1_STRING_get0_data(generalName-&gt;d.uniformResourceIdentifier)),</div>
 <div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>                                        <span class="keyword">static_cast</span>&lt;std::size_t&gt;(ASN1_STRING_length(generalName-&gt;d.uniformResourceIdentifier)));</div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>                        VLOG(0) &lt;&lt; <span class="stringliteral">&quot;\t      SAN (URI): &#39;&quot;</span> + subjectAltName;</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>                        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;\t      SAN (URI): &#39;&quot;</span> + subjectAltName;</div>
 <div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>                    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (generalName-&gt;type == GEN_DNS) {</div>
 <div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>                        std::string subjectAltName =</div>
 <div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>                            std::string(<span class="keyword">reinterpret_cast</span>&lt;<span class="keyword">const</span> <span class="keywordtype">char</span>*&gt;(ASN1_STRING_get0_data(generalName-&gt;d.dNSName)),</div>
 <div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>                                        <span class="keyword">static_cast</span>&lt;std::size_t&gt;(ASN1_STRING_length(generalName-&gt;d.dNSName)));</div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>                        VLOG(0) &lt;&lt; <span class="stringliteral">&quot;\t      SAN (DNS): &#39;&quot;</span> + subjectAltName;</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>                        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;\t      SAN (DNS): &#39;&quot;</span> + subjectAltName;</div>
 <div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>                    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>                        VLOG(0) &lt;&lt; <span class="stringliteral">&quot;\t      SAN (Type): &#39;&quot;</span> + std::to_string(generalName-&gt;type);</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>                        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;\t      SAN (Type): &#39;&quot;</span> + std::to_string(generalName-&gt;type);</div>
 <div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>                    }</div>
 <div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>                }</div>
 <div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span><span class="preprocessor">#</span><span class="preprocessor">ifdef</span> <span class="preprocessor">__GNUC__</span></div>
@@ -264,15 +264,15 @@ $(function(){initNavTree('echo_2model_2clients_8h_source.html',''); initResizabl
 <div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span><span class="preprocessor">#</span><span class="preprocessor">endif</span></div>
 <div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>                X509_free(server_cert);</div>
 <div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>                VLOG(0) &lt;&lt; <span class="stringliteral">&quot;\tPeer certificate: no certificate&quot;</span>;</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;\tPeer certificate: no certificate&quot;</span>;</div>
 <div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>            }</div>
 <div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>        });</div>
 <div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span> </div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>        client.setOnDisconnect([&amp;client](SocketConnection* socketConnection) -&gt; <span class="keywordtype">void</span> { <span class="comment">// onDisconnect</span></div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>            VLOG(0) &lt;&lt; <span class="stringliteral">&quot;OnDisconnect &quot;</span> &lt;&lt; client.getConfig().getInstanceName();</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>        client.setOnDisconnect([&amp;client](SocketConnection* socketConnection) { <span class="comment">// onDisconnect</span></div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;OnDisconnect &quot;</span> &lt;&lt; client.getConfig().getInstanceName();</div>
 <div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span> </div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>            VLOG(0) &lt;&lt; <span class="stringliteral">&quot;\tLocal: &quot;</span> &lt;&lt; socketConnection-&gt;getLocalAddress().toString();</div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>            VLOG(0) &lt;&lt; <span class="stringliteral">&quot;\tPeer:  &quot;</span> &lt;&lt; socketConnection-&gt;getRemoteAddress().toString();</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;\tLocal: &quot;</span> &lt;&lt; socketConnection-&gt;getLocalAddress().toString();</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;\tPeer:  &quot;</span> &lt;&lt; socketConnection-&gt;getRemoteAddress().toString();</div>
 <div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>        });</div>
 <div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span> </div>
 <div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>        <span class="keywordflow">return</span> client;</div>
@@ -283,7 +283,7 @@ $(function(){initNavTree('echo_2model_2clients_8h_source.html',''); initResizabl
 <div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span><span class="preprocessor">#</span><span class="preprocessor">endif</span></div>
 <div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span> </div>
 <div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span><span class="preprocessor">#</span><span class="preprocessor">endif</span> <span class="comment">// APPS_ECHO_MODEL_CLIENT_H</span></div>
-<div class="ttc" id="aconfigtest_8cpp_html_a0ddf1224851353fc92bfbff6f499fa97"><div class="ttname"><a href="configtest_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a></div><div class="ttdeci">int main(int argc, char *argv[])</div><div class="ttdef"><b>Definition</b> <a href="configtest_8cpp_source.html#l00023">configtest.cpp:23</a></div></div>
+<div class="ttc" id="aconfigtest_8cpp_html_a0ddf1224851353fc92bfbff6f499fa97"><div class="ttname"><a href="configtest_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a></div><div class="ttdeci">int main(int argc, char *argv[])</div><div class="ttdef"><b>Definition</b> <a href="configtest_8cpp_source.html#l00026">configtest.cpp:26</a></div></div>
 <div class="ttc" id="aecho_2model_2clients_8h_html_a267906fae74ea1925332de04c23e9c56"><div class="ttname"><a href="echo_2model_2clients_8h.html#a267906fae74ea1925332de04c23e9c56">QUOTE_INCLUDE</a></div><div class="ttdeci">#define QUOTE_INCLUDE(a)</div><div class="ttdef"><b>Definition</b> <a href="#l00025">clients.h:25</a></div></div>
 <div class="ttc" id="aecho_2model_2clients_8h_html_ac2e9bff2b922868f2b467492cb32839f"><div class="ttname"><a href="echo_2model_2clients_8h.html#ac2e9bff2b922868f2b467492cb32839f">STR</a></div><div class="ttdeci">#define STR(a)</div><div class="ttdef"><b>Definition</b> <a href="#l00026">clients.h:26</a></div></div>
 <div class="ttc" id="anamespaceapps_1_1echo_1_1model_1_1legacy_html_a468d9473b6bc09aa7a059c5ca919c6b8"><div class="ttname"><a href="namespaceapps_1_1echo_1_1model_1_1legacy.html#a468d9473b6bc09aa7a059c5ca919c6b8">apps::echo::model::legacy::getClient</a></div><div class="ttdeci">EchoSocketClient getClient()</div><div class="ttdef"><b>Definition</b> <a href="#l00054">clients.h:54</a></div></div>
@@ -294,7 +294,7 @@ $(function(){initNavTree('echo_2model_2clients_8h_source.html',''); initResizabl
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_9654b8d08f4bba4e84b362c5fd320bee.html">apps</a></li><li class="navelem"><a class="el" href="dir_dc8029cc338eb1f6373ec075df64a819.html">echo</a></li><li class="navelem"><a class="el" href="dir_afc172d997a41a9fcdc1d7169daefa88.html">model</a></li><li class="navelem"><a class="el" href="echo_2model_2clients_8h.html">clients.h</a></li>
-    <li class="footer">Generated on Mon Jan 20 2025 01:14:26 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generated on Wed Feb 5 2025 21:38:51 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>

@@ -109,7 +109,7 @@ $(function(){initNavTree('classiot_1_1mqtt_1_1server_1_1broker_1_1Broker.html','
 <div class="dynheader">
 Collaboration diagram for iot::mqtt::server::broker::Broker:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classiot_1_1mqtt_1_1server_1_1broker_1_1Broker__coll__graph.svg" width="3444" height="1308"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classiot_1_1mqtt_1_1server_1_1broker_1_1Broker__coll__graph.svg" width="3463" height="1308"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -214,10 +214,10 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">   56</span>                    <a class="code hl_variable" href="#a4e06e35b9d82894afce87d6686fecfef">retainTree</a>.<a class="code hl_function" href="classiot_1_1mqtt_1_1server_1_1broker_1_1RetainTree.html#a35b5514093e590d7a7e3d5889f7ab82e">fromJson</a>(sessionStoreJson[<span class="stringliteral">&quot;retain_tree&quot;</span>]);</div>
 <div class="line"><span class="lineno">   57</span>                    <a class="code hl_variable" href="#ae1dcd339fef332ce0bd8bb338349cd2d">subscribtionTree</a>.<a class="code hl_function" href="classiot_1_1mqtt_1_1server_1_1broker_1_1SubscribtionTree.html#a4dd482c22ab9bd702d11232db0953bf2">fromJson</a>(sessionStoreJson[<span class="stringliteral">&quot;subscribtion_tree&quot;</span>]);</div>
 <div class="line"><span class="lineno">   58</span> </div>
-<div class="line"><span class="lineno">   59</span>                    LOG(DEBUG) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker: Persistent session data loaded successful&quot;</span>;</div>
+<div class="line"><span class="lineno">   59</span>                    LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker: Persistent session data loaded successful&quot;</span>;</div>
 <div class="line"><span class="lineno">   60</span>                } <span class="keywordflow">catch</span> (<span class="keyword">const</span> nlohmann::json::exception&amp;) {</div>
-<div class="line"><span class="lineno">   61</span>                    LOG(DEBUG) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker: Starting with empty session: Session store &#39;&quot;</span> &lt;&lt; <a class="code hl_variable" href="#a156176254bc3221917da9ccda2bf7b5a">sessionStoreFileName</a></div>
-<div class="line"><span class="lineno">   62</span>                               &lt;&lt; <span class="stringliteral">&quot;&#39; empty or corrupted&quot;</span>;</div>
+<div class="line"><span class="lineno">   61</span>                    LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker: Starting with empty session: Session store &#39;&quot;</span> &lt;&lt; <a class="code hl_variable" href="#a156176254bc3221917da9ccda2bf7b5a">sessionStoreFileName</a></div>
+<div class="line"><span class="lineno">   62</span>                              &lt;&lt; <span class="stringliteral">&quot;&#39; empty or corrupted&quot;</span>;</div>
 <div class="line"><span class="lineno">   63</span> </div>
 <div class="line"><span class="lineno">   64</span>                    <a class="code hl_variable" href="#a5d746f27c12dcea57879da9f719fe914">sessionStore</a>.clear();</div>
 <div class="line"><span class="lineno">   65</span>                    <a class="code hl_variable" href="#a4e06e35b9d82894afce87d6686fecfef">retainTree</a>.<a class="code hl_function" href="classiot_1_1mqtt_1_1server_1_1broker_1_1RetainTree.html#aeae126c5a3f18fce67b2295acbaccfda">clear</a>();</div>
@@ -229,7 +229,7 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">   71</span> </div>
 <div class="line"><span class="lineno">   72</span>                LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker: Restoring saved session done&quot;</span>;</div>
 <div class="line"><span class="lineno">   73</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   74</span>                PLOG(INFO) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker: Could not read session store &#39;&quot;</span> &lt;&lt; <a class="code hl_variable" href="#a156176254bc3221917da9ccda2bf7b5a">sessionStoreFileName</a> &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
+<div class="line"><span class="lineno">   74</span>                PLOG(WARNING) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker: Could not read session store &#39;&quot;</span> &lt;&lt; <a class="code hl_variable" href="#a156176254bc3221917da9ccda2bf7b5a">sessionStoreFileName</a> &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
 <div class="line"><span class="lineno">   75</span>            }</div>
 <div class="line"><span class="lineno">   76</span>        } <span class="keywordflow">else</span> {</div>
 <div class="line"><span class="lineno">   77</span>            LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker: Session not reloaded: Session store filename empty&quot;</span>;</div>
@@ -242,8 +242,8 @@ Private Attributes</h2></td></tr>
 <div class="ttc" id="aclassiot_1_1mqtt_1_1server_1_1broker_1_1Broker_html_ae1dcd339fef332ce0bd8bb338349cd2d"><div class="ttname"><a href="#ae1dcd339fef332ce0bd8bb338349cd2d">iot::mqtt::server::broker::Broker::subscribtionTree</a></div><div class="ttdeci">iot::mqtt::server::broker::SubscribtionTree subscribtionTree</div><div class="ttdef"><b>Definition</b> <a href="Broker_8h_source.html#l00080">Broker.h:80</a></div></div>
 <div class="ttc" id="aclassiot_1_1mqtt_1_1server_1_1broker_1_1RetainTree_html_a35b5514093e590d7a7e3d5889f7ab82e"><div class="ttname"><a href="classiot_1_1mqtt_1_1server_1_1broker_1_1RetainTree.html#a35b5514093e590d7a7e3d5889f7ab82e">iot::mqtt::server::broker::RetainTree::fromJson</a></div><div class="ttdeci">void fromJson(const nlohmann::json &amp;json)</div><div class="ttdef"><b>Definition</b> <a href="RetainTree_8cpp_source.html#l00057">RetainTree.cpp:57</a></div></div>
 <div class="ttc" id="aclassiot_1_1mqtt_1_1server_1_1broker_1_1RetainTree_html_aeae126c5a3f18fce67b2295acbaccfda"><div class="ttname"><a href="classiot_1_1mqtt_1_1server_1_1broker_1_1RetainTree.html#aeae126c5a3f18fce67b2295acbaccfda">iot::mqtt::server::broker::RetainTree::clear</a></div><div class="ttdeci">void clear()</div><div class="ttdef"><b>Definition</b> <a href="RetainTree_8cpp_source.html#l00067">RetainTree.cpp:67</a></div></div>
-<div class="ttc" id="aclassiot_1_1mqtt_1_1server_1_1broker_1_1SubscribtionTree_html_a4dd482c22ab9bd702d11232db0953bf2"><div class="ttname"><a href="classiot_1_1mqtt_1_1server_1_1broker_1_1SubscribtionTree.html#a4dd482c22ab9bd702d11232db0953bf2">iot::mqtt::server::broker::SubscribtionTree::fromJson</a></div><div class="ttdeci">void fromJson(const nlohmann::json &amp;json)</div><div class="ttdef"><b>Definition</b> <a href="SubscribtionTree_8cpp_source.html#l00264">SubscribtionTree.cpp:264</a></div></div>
-<div class="ttc" id="aclassiot_1_1mqtt_1_1server_1_1broker_1_1SubscribtionTree_html_a9f8c96cc6ba68e842107553eb9fd410f"><div class="ttname"><a href="classiot_1_1mqtt_1_1server_1_1broker_1_1SubscribtionTree.html#a9f8c96cc6ba68e842107553eb9fd410f">iot::mqtt::server::broker::SubscribtionTree::clear</a></div><div class="ttdeci">void clear()</div><div class="ttdef"><b>Definition</b> <a href="SubscribtionTree_8cpp_source.html#l00270">SubscribtionTree.cpp:270</a></div></div>
+<div class="ttc" id="aclassiot_1_1mqtt_1_1server_1_1broker_1_1SubscribtionTree_html_a4dd482c22ab9bd702d11232db0953bf2"><div class="ttname"><a href="classiot_1_1mqtt_1_1server_1_1broker_1_1SubscribtionTree.html#a4dd482c22ab9bd702d11232db0953bf2">iot::mqtt::server::broker::SubscribtionTree::fromJson</a></div><div class="ttdeci">void fromJson(const nlohmann::json &amp;json)</div><div class="ttdef"><b>Definition</b> <a href="SubscribtionTree_8cpp_source.html#l00261">SubscribtionTree.cpp:261</a></div></div>
+<div class="ttc" id="aclassiot_1_1mqtt_1_1server_1_1broker_1_1SubscribtionTree_html_a9f8c96cc6ba68e842107553eb9fd410f"><div class="ttname"><a href="classiot_1_1mqtt_1_1server_1_1broker_1_1SubscribtionTree.html#a9f8c96cc6ba68e842107553eb9fd410f">iot::mqtt::server::broker::SubscribtionTree::clear</a></div><div class="ttdeci">void clear()</div><div class="ttdef"><b>Definition</b> <a href="SubscribtionTree_8cpp_source.html#l00267">SubscribtionTree.cpp:267</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="Broker_8cpp_source.html#l00039">Broker()</a>, and <a class="el" href="Broker_8h_source.html#l00078">maxQoS</a>.</p>
 
@@ -306,16 +306,16 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">  107</span> </div>
 <div class="line"><span class="lineno">  108</span>                sessionStoreFile.close();</div>
 <div class="line"><span class="lineno">  109</span> </div>
-<div class="line"><span class="lineno">  110</span>                LOG(DEBUG) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker: Session store written &#39;&quot;</span> &lt;&lt; <a class="code hl_variable" href="#a156176254bc3221917da9ccda2bf7b5a">sessionStoreFileName</a> &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
+<div class="line"><span class="lineno">  110</span>                LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker: Session store written &#39;&quot;</span> &lt;&lt; <a class="code hl_variable" href="#a156176254bc3221917da9ccda2bf7b5a">sessionStoreFileName</a> &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
 <div class="line"><span class="lineno">  111</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  112</span>                PLOG(DEBUG) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker: Could not write session store &#39;&quot;</span> &lt;&lt; <a class="code hl_variable" href="#a156176254bc3221917da9ccda2bf7b5a">sessionStoreFileName</a> &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
+<div class="line"><span class="lineno">  112</span>                PLOG(ERROR) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker: Could not write session store &#39;&quot;</span> &lt;&lt; <a class="code hl_variable" href="#a156176254bc3221917da9ccda2bf7b5a">sessionStoreFileName</a> &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
 <div class="line"><span class="lineno">  113</span>            }</div>
 <div class="line"><span class="lineno">  114</span>        } <span class="keywordflow">else</span> {</div>
 <div class="line"><span class="lineno">  115</span>            LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker: Session not saved: Session store filename empty&quot;</span>;</div>
 <div class="line"><span class="lineno">  116</span>        }</div>
 <div class="line"><span class="lineno">  117</span>    }</div>
 <div class="ttc" id="aclassiot_1_1mqtt_1_1server_1_1broker_1_1RetainTree_html_aae0deaaa49efc104b24a0e86b708fa72"><div class="ttname"><a href="classiot_1_1mqtt_1_1server_1_1broker_1_1RetainTree.html#aae0deaaa49efc104b24a0e86b708fa72">iot::mqtt::server::broker::RetainTree::toJson</a></div><div class="ttdeci">nlohmann::json toJson() const</div><div class="ttdef"><b>Definition</b> <a href="RetainTree_8cpp_source.html#l00063">RetainTree.cpp:63</a></div></div>
-<div class="ttc" id="aclassiot_1_1mqtt_1_1server_1_1broker_1_1SubscribtionTree_html_a02414f9f862e59977a14aec108995da2"><div class="ttname"><a href="classiot_1_1mqtt_1_1server_1_1broker_1_1SubscribtionTree.html#a02414f9f862e59977a14aec108995da2">iot::mqtt::server::broker::SubscribtionTree::toJson</a></div><div class="ttdeci">nlohmann::json toJson() const</div><div class="ttdef"><b>Definition</b> <a href="SubscribtionTree_8cpp_source.html#l00274">SubscribtionTree.cpp:274</a></div></div>
+<div class="ttc" id="aclassiot_1_1mqtt_1_1server_1_1broker_1_1SubscribtionTree_html_a02414f9f862e59977a14aec108995da2"><div class="ttname"><a href="classiot_1_1mqtt_1_1server_1_1broker_1_1SubscribtionTree.html#a02414f9f862e59977a14aec108995da2">iot::mqtt::server::broker::SubscribtionTree::toJson</a></div><div class="ttdeci">nlohmann::json toJson() const</div><div class="ttdef"><b>Definition</b> <a href="SubscribtionTree_8cpp_source.html#l00271">SubscribtionTree.cpp:271</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -620,10 +620,10 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="Broker_8cpp_source.html#l00187">187</a> of file <a class="el" href="Broker_8cpp_source.html">Broker.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  187</span>                                                         {</div>
-<div class="line"><span class="lineno">  188</span>        LOG(DEBUG) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker:   Retained: Send Publish: &quot;</span> &lt;&lt; clientId;</div>
+<div class="line"><span class="lineno">  188</span>        LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker:   Retained: Send PUBLISH: &quot;</span> &lt;&lt; clientId;</div>
 <div class="line"><span class="lineno">  189</span>        <a class="code hl_variable" href="#ae1dcd339fef332ce0bd8bb338349cd2d">subscribtionTree</a>.<a class="code hl_function" href="classiot_1_1mqtt_1_1server_1_1broker_1_1SubscribtionTree.html#a9833efdee690cd525b45b2008904ecc4">appear</a>(clientId);</div>
 <div class="line"><span class="lineno">  190</span> </div>
-<div class="line"><span class="lineno">  191</span>        LOG(DEBUG) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker:   Queued: Send Publish: &quot;</span> &lt;&lt; clientId;</div>
+<div class="line"><span class="lineno">  191</span>        LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker:   Queued: Send PUBLISH: &quot;</span> &lt;&lt; clientId;</div>
 <div class="line"><span class="lineno">  192</span>        <a class="code hl_variable" href="#a5d746f27c12dcea57879da9f719fe914">sessionStore</a>[clientId].publishQueued();</div>
 <div class="line"><span class="lineno">  193</span>    }</div>
 <div class="ttc" id="aclassiot_1_1mqtt_1_1server_1_1broker_1_1SubscribtionTree_html_a9833efdee690cd525b45b2008904ecc4"><div class="ttname"><a href="classiot_1_1mqtt_1_1server_1_1broker_1_1SubscribtionTree.html#a9833efdee690cd525b45b2008904ecc4">iot::mqtt::server::broker::SubscribtionTree::appear</a></div><div class="ttdeci">void appear(const std::string &amp;clientId)</div><div class="ttdef"><b>Definition</b> <a href="SubscribtionTree_8cpp_source.html#l00044">SubscribtionTree.cpp:44</a></div></div>
@@ -683,9 +683,10 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="Broker_8cpp_source.html#l00204">204</a> of file <a class="el" href="Broker_8cpp_source.html">Broker.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  204</span>                                                                                                  {</div>
-<div class="line"><span class="lineno">  205</span>        LOG(DEBUG) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker: Send Publish: &quot;</span> &lt;&lt; clientId;</div>
-<div class="line"><span class="lineno">  206</span>        <a class="code hl_variable" href="#a5d746f27c12dcea57879da9f719fe914">sessionStore</a>[clientId].sendPublish(message, qoS, retain);</div>
-<div class="line"><span class="lineno">  207</span>    }</div>
+<div class="line"><span class="lineno">  205</span>        LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker: Send PUBLISH: &quot;</span> &lt;&lt; clientId;</div>
+<div class="line"><span class="lineno">  206</span> </div>
+<div class="line"><span class="lineno">  207</span>        <a class="code hl_variable" href="#a5d746f27c12dcea57879da9f719fe914">sessionStore</a>[clientId].sendPublish(message, qoS, retain);</div>
+<div class="line"><span class="lineno">  208</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -917,7 +918,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceiot.html">iot</a></li><li class="navelem"><a class="el" href="namespaceiot_1_1mqtt.html">mqtt</a></li><li class="navelem"><a class="el" href="namespaceiot_1_1mqtt_1_1server.html">server</a></li><li class="navelem"><a class="el" href="namespaceiot_1_1mqtt_1_1server_1_1broker.html">broker</a></li><li class="navelem"><a class="el" href="classiot_1_1mqtt_1_1server_1_1broker_1_1Broker.html">Broker</a></li>
-    <li class="footer">Generated on Mon Jan 20 2025 01:16:12 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generated on Wed Feb 5 2025 21:40:38 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>

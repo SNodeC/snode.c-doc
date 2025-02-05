@@ -374,18 +374,18 @@ Protected Attributes</h2></td></tr>
 <div class="fragment"><div class="line"><span class="lineno">   46</span>                                                                                                                           {</div>
 <div class="line"><span class="lineno">   47</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="#a0c6b83e4f3bd2a0ce69c1df7a57e6bbe">execute_async</a>(<span class="keyword">new</span> <a class="code hl_class" href="classdatabase_1_1mariadb_1_1commands_1_1async_1_1MariaDBQueryCommand.html">database::mariadb::commands::async::MariaDBQueryCommand</a>(</div>
 <div class="line"><span class="lineno">   48</span>                                 sql,</div>
-<div class="line"><span class="lineno">   49</span>                                 []() -&gt; <span class="keywordtype">void</span> {</div>
+<div class="line"><span class="lineno">   49</span>                                 []() {</div>
 <div class="line"><span class="lineno">   50</span>                                 },</div>
 <div class="line"><span class="lineno">   51</span>                                 onError))</div>
 <div class="line"><span class="lineno">   52</span>            .<a class="code hl_function" href="classdatabase_1_1mariadb_1_1MariaDBCommandSequence.html#a6b2077fc4e636ccdae75e0648a1fae53">execute_async</a>(<span class="keyword">new</span> <a class="code hl_class" href="classdatabase_1_1mariadb_1_1commands_1_1sync_1_1MariaDBUseResultCommand.html">database::mariadb::commands::sync::MariaDBUseResultCommand</a>(</div>
-<div class="line"><span class="lineno">   53</span>                [&amp;<a class="code hl_variable" href="#a9f31bc66d5e5b49612142437e8a6a351">lastResult</a> = this-&gt;<a class="code hl_variable" href="#a9f31bc66d5e5b49612142437e8a6a351">lastResult</a>](MYSQL_RES* result) -&gt; <span class="keywordtype">void</span> {</div>
+<div class="line"><span class="lineno">   53</span>                [&amp;<a class="code hl_variable" href="#a9f31bc66d5e5b49612142437e8a6a351">lastResult</a> = this-&gt;<a class="code hl_variable" href="#a9f31bc66d5e5b49612142437e8a6a351">lastResult</a>](MYSQL_RES* result) {</div>
 <div class="line"><span class="lineno">   54</span>                    <a class="code hl_variable" href="#a9f31bc66d5e5b49612142437e8a6a351">lastResult</a> = result;</div>
 <div class="line"><span class="lineno">   55</span>                },</div>
 <div class="line"><span class="lineno">   56</span>                onError))</div>
 <div class="line"><span class="lineno">   57</span>            .<a class="code hl_function" href="classdatabase_1_1mariadb_1_1MariaDBCommandSequence.html#a6b2077fc4e636ccdae75e0648a1fae53">execute_async</a>(<span class="keyword">new</span> <a class="code hl_class" href="classdatabase_1_1mariadb_1_1commands_1_1async_1_1MariaDBFetchRowCommand.html">database::mariadb::commands::async::MariaDBFetchRowCommand</a>(<a class="code hl_variable" href="#a9f31bc66d5e5b49612142437e8a6a351">lastResult</a>, onQuery, onError))</div>
 <div class="line"><span class="lineno">   58</span>            .<a class="code hl_function" href="classdatabase_1_1mariadb_1_1MariaDBCommandSequence.html#a6b2077fc4e636ccdae75e0648a1fae53">execute_async</a>(<span class="keyword">new</span> <a class="code hl_class" href="classdatabase_1_1mariadb_1_1commands_1_1async_1_1MariaDBFreeResultCommand.html">database::mariadb::commands::async::MariaDBFreeResultCommand</a>(</div>
 <div class="line"><span class="lineno">   59</span>                <a class="code hl_variable" href="#a9f31bc66d5e5b49612142437e8a6a351">lastResult</a>,</div>
-<div class="line"><span class="lineno">   60</span>                [<span class="keyword">this</span>]() -&gt; <span class="keywordtype">void</span> {</div>
+<div class="line"><span class="lineno">   60</span>                [<span class="keyword">this</span>]() {</div>
 <div class="line"><span class="lineno">   61</span>                    <a class="code hl_variable" href="#a9f31bc66d5e5b49612142437e8a6a351">lastResult</a> = <span class="keyword">nullptr</span>;</div>
 <div class="line"><span class="lineno">   62</span>                },</div>
 <div class="line"><span class="lineno">   63</span>                onError));</div>
@@ -487,7 +487,7 @@ Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacedatabase.html">database</a></li><li class="navelem"><a class="el" href="namespacedatabase_1_1mariadb.html">mariadb</a></li><li class="navelem"><a class="el" href="classdatabase_1_1mariadb_1_1MariaDBClientASyncAPI.html">MariaDBClientASyncAPI</a></li>
-    <li class="footer">Generated on Mon Jan 20 2025 01:16:12 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generated on Wed Feb 5 2025 21:40:37 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>

@@ -404,32 +404,32 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="in6_2stream_2config_2ConfigSocketServer_8cpp_source.html#l00052">52</a> of file <a class="el" href="in6_2stream_2config_2ConfigSocketServer_8cpp_source.html">ConfigSocketServer.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   53</span>        : <a class="code hl_class" href="classnet_1_1config_1_1stream_1_1ConfigSocketServer.html">net::config::stream::ConfigSocketServer&lt;net::in6::config::ConfigAddress, net::in6::config::ConfigAddressReverse&gt;</a>(<a class="code hl_variable" href="classnet_1_1config_1_1ConfigSection.html#abb79a8f4f69c1730bf7716eea73384c4">instance</a>) {</div>
-<div class="line"><span class="lineno">   54</span>        <a class="code hl_function" href="classnet_1_1in6_1_1config_1_1ConfigAddress.html#a56eb7c6be8393d44a47d6176e98c8cc5">net::in6::config::ConfigAddress&lt;net::config::ConfigAddressLocal&gt;::setPortRequired</a>();</div>
-<div class="line"><span class="lineno">   55</span> </div>
-<div class="line"><span class="lineno">   56</span>        <a class="code hl_function" href="classnet_1_1in6_1_1config_1_1ConfigAddress.html#a48db42e69ef237af1167747938a51a94">net::in6::config::ConfigAddress&lt;net::config::ConfigAddressLocal&gt;::setAiFlags</a>(AI_PASSIVE);</div>
-<div class="line"><span class="lineno">   57</span>        <a class="code hl_function" href="classnet_1_1in6_1_1config_1_1ConfigAddress.html#a9cbb7b3d1991ab85e30f286f6d6366c6">net::in6::config::ConfigAddress&lt;net::config::ConfigAddressLocal&gt;::setAiSockType</a>(SOCK_STREAM);</div>
-<div class="line"><span class="lineno">   58</span>        <a class="code hl_function" href="classnet_1_1in6_1_1config_1_1ConfigAddress.html#ae1cec31061cce1625c6a20832f0c9dca">net::in6::config::ConfigAddress&lt;net::config::ConfigAddressLocal&gt;::setAiProtocol</a>(IPPROTO_TCP);</div>
-<div class="line"><span class="lineno">   59</span> </div>
-<div class="line"><span class="lineno">   60</span>        <a class="code hl_variable" href="#af5c73979bdeb2d8a9971a91bdc7c66ef">reusePortOpt</a> = <a class="code hl_function" href="classnet_1_1config_1_1ConfigPhysicalSocket.html#a65f9e12cf76b2e3a6d208d7fef69ddda">net::config::ConfigPhysicalSocket::addSocketOption</a>( <span class="comment">//</span></div>
-<div class="line"><span class="lineno">   61</span>            <span class="stringliteral">&quot;--reuse-port{true}&quot;</span>,</div>
-<div class="line"><span class="lineno">   62</span>            SOL_SOCKET,</div>
-<div class="line"><span class="lineno">   63</span>            SO_REUSEPORT,</div>
-<div class="line"><span class="lineno">   64</span>            <span class="stringliteral">&quot;Reuse socket address&quot;</span>,</div>
-<div class="line"><span class="lineno">   65</span>            <span class="stringliteral">&quot;bool&quot;</span>,</div>
-<div class="line"><span class="lineno">   66</span>            <a class="code hl_define" href="ConfigPhysicalSocket_8cpp.html#a03943706e48069237cd57f2d35ca987e">XSTR</a>(REUSE_PORT),</div>
-<div class="line"><span class="lineno">   67</span>            CLI::IsMember({<span class="stringliteral">&quot;true&quot;</span>, <span class="stringliteral">&quot;false&quot;</span>}));</div>
-<div class="line"><span class="lineno">   68</span> </div>
-<div class="line"><span class="lineno">   69</span>        <a class="code hl_variable" href="#ab79346daecdee305f152a6719586a940">iPv6OnlyOpt</a> = <a class="code hl_function" href="classnet_1_1config_1_1ConfigPhysicalSocket.html#a65f9e12cf76b2e3a6d208d7fef69ddda">net::config::ConfigPhysicalSocket::addSocketOption</a>( <span class="comment">//</span></div>
-<div class="line"><span class="lineno">   70</span>            <span class="stringliteral">&quot;--ipv6-only{true}&quot;</span>,</div>
-<div class="line"><span class="lineno">   71</span>            IPPROTO_IPV6,</div>
-<div class="line"><span class="lineno">   72</span>            IPV6_V6ONLY,</div>
-<div class="line"><span class="lineno">   73</span>            <span class="stringliteral">&quot;Turn of IPv6 dual stack mode&quot;</span>,</div>
-<div class="line"><span class="lineno">   74</span>            <span class="stringliteral">&quot;bool&quot;</span>,</div>
-<div class="line"><span class="lineno">   75</span>            <a class="code hl_define" href="ConfigPhysicalSocket_8cpp.html#a03943706e48069237cd57f2d35ca987e">XSTR</a>(IPV6_ONLY),</div>
-<div class="line"><span class="lineno">   76</span>            CLI::IsMember({<span class="stringliteral">&quot;true&quot;</span>, <span class="stringliteral">&quot;false&quot;</span>}));</div>
-<div class="line"><span class="lineno">   77</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="in6_2stream_2config_2ConfigSocketServer_8cpp_source.html#l00055">55</a> of file <a class="el" href="in6_2stream_2config_2ConfigSocketServer_8cpp_source.html">ConfigSocketServer.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   56</span>        : <a class="code hl_class" href="classnet_1_1config_1_1stream_1_1ConfigSocketServer.html">net::config::stream::ConfigSocketServer&lt;net::in6::config::ConfigAddress, net::in6::config::ConfigAddressReverse&gt;</a>(<a class="code hl_variable" href="classnet_1_1config_1_1ConfigSection.html#abb79a8f4f69c1730bf7716eea73384c4">instance</a>) {</div>
+<div class="line"><span class="lineno">   57</span>        <a class="code hl_function" href="classnet_1_1in6_1_1config_1_1ConfigAddress.html#a56eb7c6be8393d44a47d6176e98c8cc5">net::in6::config::ConfigAddress&lt;net::config::ConfigAddressLocal&gt;::setPortRequired</a>();</div>
+<div class="line"><span class="lineno">   58</span> </div>
+<div class="line"><span class="lineno">   59</span>        <a class="code hl_function" href="classnet_1_1in6_1_1config_1_1ConfigAddress.html#a48db42e69ef237af1167747938a51a94">net::in6::config::ConfigAddress&lt;net::config::ConfigAddressLocal&gt;::setAiFlags</a>(AI_PASSIVE);</div>
+<div class="line"><span class="lineno">   60</span>        <a class="code hl_function" href="classnet_1_1in6_1_1config_1_1ConfigAddress.html#a9cbb7b3d1991ab85e30f286f6d6366c6">net::in6::config::ConfigAddress&lt;net::config::ConfigAddressLocal&gt;::setAiSockType</a>(SOCK_STREAM);</div>
+<div class="line"><span class="lineno">   61</span>        <a class="code hl_function" href="classnet_1_1in6_1_1config_1_1ConfigAddress.html#ae1cec31061cce1625c6a20832f0c9dca">net::in6::config::ConfigAddress&lt;net::config::ConfigAddressLocal&gt;::setAiProtocol</a>(IPPROTO_TCP);</div>
+<div class="line"><span class="lineno">   62</span> </div>
+<div class="line"><span class="lineno">   63</span>        <a class="code hl_variable" href="#af5c73979bdeb2d8a9971a91bdc7c66ef">reusePortOpt</a> = <a class="code hl_function" href="classnet_1_1config_1_1ConfigPhysicalSocket.html#a65f9e12cf76b2e3a6d208d7fef69ddda">net::config::ConfigPhysicalSocket::addSocketOption</a>( <span class="comment">//</span></div>
+<div class="line"><span class="lineno">   64</span>            <span class="stringliteral">&quot;--reuse-port{true}&quot;</span>,</div>
+<div class="line"><span class="lineno">   65</span>            SOL_SOCKET,</div>
+<div class="line"><span class="lineno">   66</span>            SO_REUSEPORT,</div>
+<div class="line"><span class="lineno">   67</span>            <span class="stringliteral">&quot;Reuse socket address&quot;</span>,</div>
+<div class="line"><span class="lineno">   68</span>            <span class="stringliteral">&quot;bool&quot;</span>,</div>
+<div class="line"><span class="lineno">   69</span>            <a class="code hl_define" href="ConfigPhysicalSocket_8cpp.html#a03943706e48069237cd57f2d35ca987e">XSTR</a>(REUSE_PORT),</div>
+<div class="line"><span class="lineno">   70</span>            CLI::IsMember({<span class="stringliteral">&quot;true&quot;</span>, <span class="stringliteral">&quot;false&quot;</span>}));</div>
+<div class="line"><span class="lineno">   71</span> </div>
+<div class="line"><span class="lineno">   72</span>        <a class="code hl_variable" href="#ab79346daecdee305f152a6719586a940">iPv6OnlyOpt</a> = <a class="code hl_function" href="classnet_1_1config_1_1ConfigPhysicalSocket.html#a65f9e12cf76b2e3a6d208d7fef69ddda">net::config::ConfigPhysicalSocket::addSocketOption</a>( <span class="comment">//</span></div>
+<div class="line"><span class="lineno">   73</span>            <span class="stringliteral">&quot;--ipv6-only{true}&quot;</span>,</div>
+<div class="line"><span class="lineno">   74</span>            IPPROTO_IPV6,</div>
+<div class="line"><span class="lineno">   75</span>            IPV6_V6ONLY,</div>
+<div class="line"><span class="lineno">   76</span>            <span class="stringliteral">&quot;Turn of IPv6 dual stack mode&quot;</span>,</div>
+<div class="line"><span class="lineno">   77</span>            <span class="stringliteral">&quot;bool&quot;</span>,</div>
+<div class="line"><span class="lineno">   78</span>            <a class="code hl_define" href="ConfigPhysicalSocket_8cpp.html#a03943706e48069237cd57f2d35ca987e">XSTR</a>(IPV6_ONLY),</div>
+<div class="line"><span class="lineno">   79</span>            CLI::IsMember({<span class="stringliteral">&quot;true&quot;</span>, <span class="stringliteral">&quot;false&quot;</span>}));</div>
+<div class="line"><span class="lineno">   80</span>    }</div>
 <div class="ttc" id="aConfigPhysicalSocket_8cpp_html_a03943706e48069237cd57f2d35ca987e"><div class="ttname"><a href="ConfigPhysicalSocket_8cpp.html#a03943706e48069237cd57f2d35ca987e">XSTR</a></div><div class="ttdeci">#define XSTR(s)</div><div class="ttdef"><b>Definition</b> <a href="ConfigPhysicalSocket_8cpp_source.html#l00033">ConfigPhysicalSocket.cpp:33</a></div></div>
 <div class="ttc" id="aclassnet_1_1config_1_1ConfigPhysicalSocket_html_a65f9e12cf76b2e3a6d208d7fef69ddda"><div class="ttname"><a href="classnet_1_1config_1_1ConfigPhysicalSocket.html#a65f9e12cf76b2e3a6d208d7fef69ddda">net::config::ConfigPhysicalSocket::addSocketOption</a></div><div class="ttdeci">ConfigPhysicalSocket &amp; addSocketOption(int optLevel, int optName, int optValue)</div><div class="ttdef"><b>Definition</b> <a href="ConfigPhysicalSocket_8cpp_source.html#l00140">ConfigPhysicalSocket.cpp:140</a></div></div>
 <div class="ttc" id="aclassnet_1_1config_1_1ConfigSection_html_abb79a8f4f69c1730bf7716eea73384c4"><div class="ttname"><a href="classnet_1_1config_1_1ConfigSection.html#abb79a8f4f69c1730bf7716eea73384c4">net::config::ConfigSection::instance</a></div><div class="ttdeci">ConfigInstance * instance</div><div class="ttdef"><b>Definition</b> <a href="ConfigSection_8h_source.html#l00111">ConfigSection.h:111</a></div></div>
@@ -441,9 +441,9 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassnet_1_1in6_1_1stream_1_1config_1_1ConfigSocketServer_html_ab79346daecdee305f152a6719586a940"><div class="ttname"><a href="#ab79346daecdee305f152a6719586a940">net::in6::stream::config::ConfigSocketServer::iPv6OnlyOpt</a></div><div class="ttdeci">CLI::Option * iPv6OnlyOpt</div><div class="ttdef"><b>Definition</b> <a href="in6_2stream_2config_2ConfigSocketServer_8h_source.html#l00056">ConfigSocketServer.h:56</a></div></div>
 <div class="ttc" id="aclassnet_1_1in6_1_1stream_1_1config_1_1ConfigSocketServer_html_af5c73979bdeb2d8a9971a91bdc7c66ef"><div class="ttname"><a href="#af5c73979bdeb2d8a9971a91bdc7c66ef">net::in6::stream::config::ConfigSocketServer::reusePortOpt</a></div><div class="ttdeci">CLI::Option * reusePortOpt</div><div class="ttdef"><b>Definition</b> <a href="in6_2stream_2config_2ConfigSocketServer_8h_source.html#l00055">ConfigSocketServer.h:55</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="in6_2stream_2config_2ConfigSocketServer_8cpp_source.html#l00052">ConfigSocketServer()</a>.</p>
+<p class="reference">References <a class="el" href="in6_2stream_2config_2ConfigSocketServer_8cpp_source.html#l00055">ConfigSocketServer()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="in6_2stream_2config_2ConfigSocketServer_8cpp_source.html#l00052">ConfigSocketServer()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="in6_2stream_2config_2ConfigSocketServer_8cpp_source.html#l00055">ConfigSocketServer()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -480,9 +480,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="in6_2stream_2config_2ConfigSocketServer_8cpp_source.html#l00079">79</a> of file <a class="el" href="in6_2stream_2config_2ConfigSocketServer_8cpp_source.html">ConfigSocketServer.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   79</span>                                            {</div>
-<div class="line"><span class="lineno">   80</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="in6_2stream_2config_2ConfigSocketServer_8cpp_source.html#l00082">82</a> of file <a class="el" href="in6_2stream_2config_2ConfigSocketServer_8cpp_source.html">ConfigSocketServer.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   82</span>                                            {</div>
+<div class="line"><span class="lineno">   83</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -502,10 +502,10 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="in6_2stream_2config_2ConfigSocketServer_8cpp_source.html#l00114">114</a> of file <a class="el" href="in6_2stream_2config_2ConfigSocketServer_8cpp_source.html">ConfigSocketServer.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  114</span>                                               {</div>
-<div class="line"><span class="lineno">  115</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#ab79346daecdee305f152a6719586a940">iPv6OnlyOpt</a>-&gt;as&lt;<span class="keywordtype">bool</span>&gt;();</div>
-<div class="line"><span class="lineno">  116</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="in6_2stream_2config_2ConfigSocketServer_8cpp_source.html#l00117">117</a> of file <a class="el" href="in6_2stream_2config_2ConfigSocketServer_8cpp_source.html">ConfigSocketServer.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  117</span>                                               {</div>
+<div class="line"><span class="lineno">  118</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#ab79346daecdee305f152a6719586a940">iPv6OnlyOpt</a>-&gt;as&lt;<span class="keywordtype">bool</span>&gt;();</div>
+<div class="line"><span class="lineno">  119</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="in6_2stream_2config_2ConfigSocketServer_8h_source.html#l00056">iPv6OnlyOpt</a>.</p>
 
@@ -526,10 +526,10 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="in6_2stream_2config_2ConfigSocketServer_8cpp_source.html#l00096">96</a> of file <a class="el" href="in6_2stream_2config_2ConfigSocketServer_8cpp_source.html">ConfigSocketServer.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   96</span>                                                {</div>
-<div class="line"><span class="lineno">   97</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#af5c73979bdeb2d8a9971a91bdc7c66ef">reusePortOpt</a>-&gt;as&lt;<span class="keywordtype">bool</span>&gt;();</div>
-<div class="line"><span class="lineno">   98</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="in6_2stream_2config_2ConfigSocketServer_8cpp_source.html#l00099">99</a> of file <a class="el" href="in6_2stream_2config_2ConfigSocketServer_8cpp_source.html">ConfigSocketServer.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   99</span>                                                {</div>
+<div class="line"><span class="lineno">  100</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#af5c73979bdeb2d8a9971a91bdc7c66ef">reusePortOpt</a>-&gt;as&lt;<span class="keywordtype">bool</span>&gt;();</div>
+<div class="line"><span class="lineno">  101</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="in6_2stream_2config_2ConfigSocketServer_8h_source.html#l00055">reusePortOpt</a>.</p>
 
@@ -550,20 +550,20 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="in6_2stream_2config_2ConfigSocketServer_8cpp_source.html#l00100">100</a> of file <a class="el" href="in6_2stream_2config_2ConfigSocketServer_8cpp_source.html">ConfigSocketServer.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  100</span>                                                                     {</div>
-<div class="line"><span class="lineno">  101</span>        <span class="keywordflow">if</span> (iPv6Only) {</div>
-<div class="line"><span class="lineno">  102</span>            <a class="code hl_function" href="classnet_1_1config_1_1ConfigPhysicalSocket.html#a65f9e12cf76b2e3a6d208d7fef69ddda">addSocketOption</a>(IPPROTO_IPV6, IPV6_V6ONLY, 1);</div>
-<div class="line"><span class="lineno">  103</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  104</span>            <a class="code hl_function" href="classnet_1_1config_1_1ConfigPhysicalSocket.html#a40d599d06d6cb8c868b03fa17818ca2b">removeSocketOption</a>(IPV6_V6ONLY);</div>
-<div class="line"><span class="lineno">  105</span>        }</div>
-<div class="line"><span class="lineno">  106</span> </div>
-<div class="line"><span class="lineno">  107</span>        <a class="code hl_variable" href="#ab79346daecdee305f152a6719586a940">iPv6OnlyOpt</a> <span class="comment">//</span></div>
-<div class="line"><span class="lineno">  108</span>            -&gt;default_val(iPv6Only ? <span class="stringliteral">&quot;true&quot;</span> : <span class="stringliteral">&quot;false&quot;</span>)</div>
-<div class="line"><span class="lineno">  109</span>            -&gt;clear();</div>
-<div class="line"><span class="lineno">  110</span> </div>
-<div class="line"><span class="lineno">  111</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">  112</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="in6_2stream_2config_2ConfigSocketServer_8cpp_source.html#l00103">103</a> of file <a class="el" href="in6_2stream_2config_2ConfigSocketServer_8cpp_source.html">ConfigSocketServer.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  103</span>                                                                     {</div>
+<div class="line"><span class="lineno">  104</span>        <span class="keywordflow">if</span> (iPv6Only) {</div>
+<div class="line"><span class="lineno">  105</span>            <a class="code hl_function" href="classnet_1_1config_1_1ConfigPhysicalSocket.html#a65f9e12cf76b2e3a6d208d7fef69ddda">addSocketOption</a>(IPPROTO_IPV6, IPV6_V6ONLY, 1);</div>
+<div class="line"><span class="lineno">  106</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  107</span>            <a class="code hl_function" href="classnet_1_1config_1_1ConfigPhysicalSocket.html#a40d599d06d6cb8c868b03fa17818ca2b">removeSocketOption</a>(IPV6_V6ONLY);</div>
+<div class="line"><span class="lineno">  108</span>        }</div>
+<div class="line"><span class="lineno">  109</span> </div>
+<div class="line"><span class="lineno">  110</span>        <a class="code hl_variable" href="#ab79346daecdee305f152a6719586a940">iPv6OnlyOpt</a> <span class="comment">//</span></div>
+<div class="line"><span class="lineno">  111</span>            -&gt;default_val(iPv6Only ? <span class="stringliteral">&quot;true&quot;</span> : <span class="stringliteral">&quot;false&quot;</span>)</div>
+<div class="line"><span class="lineno">  112</span>            -&gt;clear();</div>
+<div class="line"><span class="lineno">  113</span> </div>
+<div class="line"><span class="lineno">  114</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">  115</span>    }</div>
 <div class="ttc" id="aclassnet_1_1config_1_1ConfigPhysicalSocket_html_a40d599d06d6cb8c868b03fa17818ca2b"><div class="ttname"><a href="classnet_1_1config_1_1ConfigPhysicalSocket.html#a40d599d06d6cb8c868b03fa17818ca2b">net::config::ConfigPhysicalSocket::removeSocketOption</a></div><div class="ttdeci">ConfigPhysicalSocket &amp; removeSocketOption(int optName)</div><div class="ttdef"><b>Definition</b> <a href="ConfigPhysicalSocket_8cpp_source.html#l00158">ConfigPhysicalSocket.cpp:158</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="in6_2stream_2config_2ConfigSocketServer_8h_source.html#l00056">iPv6OnlyOpt</a>.</p>
@@ -585,20 +585,20 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="in6_2stream_2config_2ConfigSocketServer_8cpp_source.html#l00082">82</a> of file <a class="el" href="in6_2stream_2config_2ConfigSocketServer_8cpp_source.html">ConfigSocketServer.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   82</span>                                                                       {</div>
-<div class="line"><span class="lineno">   83</span>        <span class="keywordflow">if</span> (reusePort) {</div>
-<div class="line"><span class="lineno">   84</span>            <a class="code hl_function" href="classnet_1_1config_1_1ConfigPhysicalSocket.html#a65f9e12cf76b2e3a6d208d7fef69ddda">addSocketOption</a>(SOL_SOCKET, SO_REUSEPORT, 1);</div>
-<div class="line"><span class="lineno">   85</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   86</span>            <a class="code hl_function" href="classnet_1_1config_1_1ConfigPhysicalSocket.html#a40d599d06d6cb8c868b03fa17818ca2b">removeSocketOption</a>(SO_REUSEPORT);</div>
-<div class="line"><span class="lineno">   87</span>        }</div>
-<div class="line"><span class="lineno">   88</span> </div>
-<div class="line"><span class="lineno">   89</span>        <a class="code hl_variable" href="#af5c73979bdeb2d8a9971a91bdc7c66ef">reusePortOpt</a> <span class="comment">//</span></div>
-<div class="line"><span class="lineno">   90</span>            -&gt;default_val(reusePort ? <span class="stringliteral">&quot;true&quot;</span> : <span class="stringliteral">&quot;false&quot;</span>)</div>
-<div class="line"><span class="lineno">   91</span>            -&gt;clear();</div>
-<div class="line"><span class="lineno">   92</span> </div>
-<div class="line"><span class="lineno">   93</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">   94</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="in6_2stream_2config_2ConfigSocketServer_8cpp_source.html#l00085">85</a> of file <a class="el" href="in6_2stream_2config_2ConfigSocketServer_8cpp_source.html">ConfigSocketServer.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   85</span>                                                                       {</div>
+<div class="line"><span class="lineno">   86</span>        <span class="keywordflow">if</span> (reusePort) {</div>
+<div class="line"><span class="lineno">   87</span>            <a class="code hl_function" href="classnet_1_1config_1_1ConfigPhysicalSocket.html#a65f9e12cf76b2e3a6d208d7fef69ddda">addSocketOption</a>(SOL_SOCKET, SO_REUSEPORT, 1);</div>
+<div class="line"><span class="lineno">   88</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">   89</span>            <a class="code hl_function" href="classnet_1_1config_1_1ConfigPhysicalSocket.html#a40d599d06d6cb8c868b03fa17818ca2b">removeSocketOption</a>(SO_REUSEPORT);</div>
+<div class="line"><span class="lineno">   90</span>        }</div>
+<div class="line"><span class="lineno">   91</span> </div>
+<div class="line"><span class="lineno">   92</span>        <a class="code hl_variable" href="#af5c73979bdeb2d8a9971a91bdc7c66ef">reusePortOpt</a> <span class="comment">//</span></div>
+<div class="line"><span class="lineno">   93</span>            -&gt;default_val(reusePort ? <span class="stringliteral">&quot;true&quot;</span> : <span class="stringliteral">&quot;false&quot;</span>)</div>
+<div class="line"><span class="lineno">   94</span>            -&gt;clear();</div>
+<div class="line"><span class="lineno">   95</span> </div>
+<div class="line"><span class="lineno">   96</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">   97</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="in6_2stream_2config_2ConfigSocketServer_8h_source.html#l00055">reusePortOpt</a>.</p>
 
@@ -627,7 +627,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="in6_2stream_2config_2ConfigSocketServer_8h_source.html#l00056">56</a> of file <a class="el" href="in6_2stream_2config_2ConfigSocketServer_8h_source.html">ConfigSocketServer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="in6_2stream_2config_2ConfigSocketServer_8cpp_source.html#l00114">getIPv6Only()</a>, and <a class="el" href="in6_2stream_2config_2ConfigSocketServer_8cpp_source.html#l00100">setIPv6Only()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="in6_2stream_2config_2ConfigSocketServer_8cpp_source.html#l00117">getIPv6Only()</a>, and <a class="el" href="in6_2stream_2config_2ConfigSocketServer_8cpp_source.html#l00103">setIPv6Only()</a>.</p>
 
 </div>
 </div>
@@ -653,7 +653,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="in6_2stream_2config_2ConfigSocketServer_8h_source.html#l00055">55</a> of file <a class="el" href="in6_2stream_2config_2ConfigSocketServer_8h_source.html">ConfigSocketServer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="in6_2stream_2config_2ConfigSocketServer_8cpp_source.html#l00096">getReusePort()</a>, and <a class="el" href="in6_2stream_2config_2ConfigSocketServer_8cpp_source.html#l00082">setReusePort()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="in6_2stream_2config_2ConfigSocketServer_8cpp_source.html#l00099">getReusePort()</a>, and <a class="el" href="in6_2stream_2config_2ConfigSocketServer_8cpp_source.html#l00085">setReusePort()</a>.</p>
 
 </div>
 </div>
@@ -667,7 +667,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacenet.html">net</a></li><li class="navelem"><a class="el" href="namespacenet_1_1in6.html">in6</a></li><li class="navelem"><a class="el" href="namespacenet_1_1in6_1_1stream.html">stream</a></li><li class="navelem"><a class="el" href="namespacenet_1_1in6_1_1stream_1_1config.html">config</a></li><li class="navelem"><a class="el" href="classnet_1_1in6_1_1stream_1_1config_1_1ConfigSocketServer.html">ConfigSocketServer</a></li>
-    <li class="footer">Generated on Mon Jan 20 2025 01:16:12 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generated on Wed Feb 5 2025 21:40:38 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>

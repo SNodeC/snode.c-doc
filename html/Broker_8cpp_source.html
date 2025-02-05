@@ -159,10 +159,10 @@ $(function(){initNavTree('Broker_8cpp_source.html',''); initResizable(true); });
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>                    retainTree.fromJson(sessionStoreJson[<span class="stringliteral">&quot;retain_tree&quot;</span>]);</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>                    subscribtionTree.fromJson(sessionStoreJson[<span class="stringliteral">&quot;subscribtion_tree&quot;</span>]);</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>                    LOG(DEBUG) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker: Persistent session data loaded successful&quot;</span>;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>                    LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker: Persistent session data loaded successful&quot;</span>;</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>                } <span class="keywordflow">catch</span> (<span class="keyword">const</span> nlohmann::json::exception&amp;) {</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>                    LOG(DEBUG) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker: Starting with empty session: Session store &#39;&quot;</span> &lt;&lt; sessionStoreFileName</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                               &lt;&lt; <span class="stringliteral">&quot;&#39; empty or corrupted&quot;</span>;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>                    LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker: Starting with empty session: Session store &#39;&quot;</span> &lt;&lt; sessionStoreFileName</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                              &lt;&lt; <span class="stringliteral">&quot;&#39; empty or corrupted&quot;</span>;</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>                    sessionStore.clear();</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                    retainTree.clear();</div>
@@ -174,7 +174,7 @@ $(function(){initNavTree('Broker_8cpp_source.html',''); initResizable(true); });
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>                LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker: Restoring saved session done&quot;</span>;</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>                PLOG(INFO) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker: Could not read session store &#39;&quot;</span> &lt;&lt; sessionStoreFileName &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>                PLOG(WARNING) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker: Could not read session store &#39;&quot;</span> &lt;&lt; sessionStoreFileName &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>            }</div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>            LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker: Session not reloaded: Session store filename empty&quot;</span>;</div>
@@ -212,9 +212,9 @@ $(function(){initNavTree('Broker_8cpp_source.html',''); initResizable(true); });
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>                sessionStoreFile.close();</div>
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>                LOG(DEBUG) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker: Session store written &#39;&quot;</span> &lt;&lt; sessionStoreFileName &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>                LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker: Session store written &#39;&quot;</span> &lt;&lt; sessionStoreFileName &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
 <div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>                PLOG(DEBUG) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker: Could not write session store &#39;&quot;</span> &lt;&lt; sessionStoreFileName &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>                PLOG(ERROR) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker: Could not write session store &#39;&quot;</span> &lt;&lt; sessionStoreFileName &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>            }</div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>            LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker: Session not saved: Session store filename empty&quot;</span>;</div>
@@ -316,10 +316,10 @@ $(function(){initNavTree('Broker_8cpp_source.html',''); initResizable(true); });
 <div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span> </div>
 <div class="foldopen" id="foldopen00187" data-start="{" data-end="}">
 <div class="line"><a id="l00187" name="l00187"></a><span class="lineno"><a class="line" href="classiot_1_1mqtt_1_1server_1_1broker_1_1Broker.html#a05a7b6757746c36f6a9cd38c0f6a9638">  187</a></span>    <span class="keywordtype">void</span> <a class="code hl_class" href="classiot_1_1mqtt_1_1server_1_1broker_1_1Broker.html">Broker</a>::<a class="code hl_function" href="classiot_1_1mqtt_1_1server_1_1broker_1_1Broker.html#a05a7b6757746c36f6a9cd38c0f6a9638">restartSession</a>(<span class="keyword">const</span> std::string&amp; clientId) {</div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>        LOG(DEBUG) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker:   Retained: Send Publish: &quot;</span> &lt;&lt; clientId;</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>        LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker:   Retained: Send PUBLISH: &quot;</span> &lt;&lt; clientId;</div>
 <div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>        subscribtionTree.appear(clientId);</div>
 <div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span> </div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>        LOG(DEBUG) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker:   Queued: Send Publish: &quot;</span> &lt;&lt; clientId;</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>        LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker:   Queued: Send PUBLISH: &quot;</span> &lt;&lt; clientId;</div>
 <div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>        sessionStore[clientId].publishQueued();</div>
 <div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>    }</div>
 </div>
@@ -339,12 +339,13 @@ $(function(){initNavTree('Broker_8cpp_source.html',''); initResizable(true); });
 <div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span> </div>
 <div class="foldopen" id="foldopen00204" data-start="{" data-end="}">
 <div class="line"><a id="l00204" name="l00204"></a><span class="lineno"><a class="line" href="classiot_1_1mqtt_1_1server_1_1broker_1_1Broker.html#ae776d5b70c46dd5e2b80e111119c866e">  204</a></span>    <span class="keywordtype">void</span> <a class="code hl_class" href="classiot_1_1mqtt_1_1server_1_1broker_1_1Broker.html">Broker</a>::<a class="code hl_function" href="classiot_1_1mqtt_1_1server_1_1broker_1_1Broker.html#ae776d5b70c46dd5e2b80e111119c866e">sendPublish</a>(<span class="keyword">const</span> std::string&amp; clientId, <a class="code hl_class" href="classiot_1_1mqtt_1_1server_1_1broker_1_1Message.html">Message</a>&amp; message, uint8_t qoS, <span class="keywordtype">bool</span> retain) {</div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>        LOG(DEBUG) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker: Send Publish: &quot;</span> &lt;&lt; clientId;</div>
-<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>        sessionStore[clientId].sendPublish(message, qoS, retain);</div>
-<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>    }</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>        LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker: Send PUBLISH: &quot;</span> &lt;&lt; clientId;</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span> </div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>        sessionStore[clientId].sendPublish(message, qoS, retain);</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>    }</div>
 </div>
-<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span> </div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>} <span class="comment">// namespace iot::mqtt::server::broker</span></div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span> </div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>} <span class="comment">// namespace iot::mqtt::server::broker</span></div>
 </div>
 <div class="ttc" id="aBroker_8h_html_a0e73eb6e384705b7a0e61de58100c7b4"><div class="ttname"><a href="Broker_8h.html#a0e73eb6e384705b7a0e61de58100c7b4">SUBSCRIBTION_FAILURE</a></div><div class="ttdeci">#define SUBSCRIBTION_FAILURE</div><div class="ttdef"><b>Definition</b> <a href="Broker_8h_source.html#l00043">Broker.h:43</a></div></div>
 <div class="ttc" id="aBroker_8h_html_ac339495d5c43ebae8f4dc9175b6aa31d"><div class="ttname"><a href="Broker_8h.html#ac339495d5c43ebae8f4dc9175b6aa31d">SUBSCRIBTION_SUCCESS</a></div><div class="ttdeci">#define SUBSCRIBTION_SUCCESS</div><div class="ttdef"><b>Definition</b> <a href="Broker_8h_source.html#l00042">Broker.h:42</a></div></div>
@@ -378,7 +379,7 @@ $(function(){initNavTree('Broker_8cpp_source.html',''); initResizable(true); });
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_28592ecdec30ec29223e366148bdb66c.html">iot</a></li><li class="navelem"><a class="el" href="dir_9fa9cc1bc73227ba3c1e7b2368f5d654.html">mqtt</a></li><li class="navelem"><a class="el" href="dir_5d430ec0119a24aa36955188ab39bab2.html">server</a></li><li class="navelem"><a class="el" href="dir_06b8ccfedbbbd7ad066795cbb46e4a47.html">broker</a></li><li class="navelem"><a class="el" href="Broker_8cpp.html">Broker.cpp</a></li>
-    <li class="footer">Generated on Mon Jan 20 2025 01:15:04 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generated on Wed Feb 5 2025 21:39:29 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>

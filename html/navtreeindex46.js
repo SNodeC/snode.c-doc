@@ -1,5 +1,9 @@
 var NAVTREEINDEX46 =
 {
+"structutils_1_1fixed__string.html#a145f69091f8d14932214504793c4befa":[1,0,13,7,2],
+"structutils_1_1fixed__string.html#a145f69091f8d14932214504793c4befa":[3,0,8,6,2],
+"structutils_1_1fixed__string.html#a1fdabe561c69358453f37ce3f13aff99":[1,0,13,7,3],
+"structutils_1_1fixed__string.html#a1fdabe561c69358453f37ce3f13aff99":[3,0,8,6,3],
 "structutils_1_1fixed__string.html#aaea02fb0122f7a988923f195244b12f4":[1,0,13,7,0],
 "structutils_1_1fixed__string.html#aaea02fb0122f7a988923f195244b12f4":[3,0,8,6,0],
 "structutils_1_1fixed__string.html#ad592c7c1fd159d161eb025db9040acde":[1,0,13,7,1],
@@ -245,9 +249,5 @@ var NAVTREEINDEX46 =
 "web_2websocket_2SubProtocol_8hpp.html":[4,0,8,1,7],
 "web_2websocket_2SubProtocol_8hpp_source.html":[4,0,8,1,7],
 "web_2websocket_2client_2SubProtocol_8cpp.html":[4,0,8,1,0,4],
-"web_2websocket_2client_2SubProtocol_8cpp_source.html":[4,0,8,1,0,4],
-"web_2websocket_2client_2SubProtocol_8h.html":[4,0,8,1,0,5],
-"web_2websocket_2client_2SubProtocol_8h_source.html":[4,0,8,1,0,5],
-"web_2websocket_2server_2SubProtocol_8cpp.html":[4,0,8,1,1,6],
-"web_2websocket_2server_2SubProtocol_8cpp_source.html":[4,0,8,1,1,6]
+"web_2websocket_2client_2SubProtocol_8cpp_source.html":[4,0,8,1,0,4]
 };

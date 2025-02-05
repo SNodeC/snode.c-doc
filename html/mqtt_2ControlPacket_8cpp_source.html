@@ -214,7 +214,7 @@ $(function(){initNavTree('mqtt_2ControlPacket_8cpp_source.html',''); initResizab
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="classiot_1_1mqtt_1_1ControlPacket.html#a05bfc24d7ae7380ef9b2fcb64ce37526">  104</a></span>    <a class="code hl_function" href="classiot_1_1mqtt_1_1ControlPacket.html#a05bfc24d7ae7380ef9b2fcb64ce37526">std</a>::<a class="code hl_function" href="classiot_1_1mqtt_1_1ControlPacket.html#a05bfc24d7ae7380ef9b2fcb64ce37526">vector</a>&lt;<span class="keywordtype">char</span>&gt; <a class="code hl_class" href="classiot_1_1mqtt_1_1ControlPacket.html">ControlPacket</a>::<a class="code hl_function" href="classiot_1_1mqtt_1_1ControlPacket.html#a05bfc24d7ae7380ef9b2fcb64ce37526">serialize</a>() <span class="keyword">const</span> {</div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        std::vector&lt;<span class="keywordtype">char</span>&gt; variablHeaderPayload = serializeVP();</div>
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        <span class="keyword">const</span> iot::mqtt::<a class="code hl_class" href="classiot_1_1mqtt_1_1FixedHeader.html">FixedHeader</a> fixedHeader(type, flags, <span class="keyword">static_cast</span>&lt;uint32_t&gt;(variablHeaderPayload.size()));</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        <span class="keyword">const</span> <a class="code hl_class" href="classiot_1_1mqtt_1_1FixedHeader.html">FixedHeader</a> fixedHeader(type, flags, <span class="keyword">static_cast</span>&lt;uint32_t&gt;(variablHeaderPayload.size()));</div>
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        std::vector&lt;<span class="keywordtype">char</span>&gt; packet = fixedHeader.serialize();</div>
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        packet.insert(packet.end(), variablHeaderPayload.begin(), variablHeaderPayload.end());</div>
@@ -280,7 +280,7 @@ $(function(){initNavTree('mqtt_2ControlPacket_8cpp_source.html',''); initResizab
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_28592ecdec30ec29223e366148bdb66c.html">iot</a></li><li class="navelem"><a class="el" href="dir_9fa9cc1bc73227ba3c1e7b2368f5d654.html">mqtt</a></li><li class="navelem"><a class="el" href="mqtt_2ControlPacket_8cpp.html">ControlPacket.cpp</a></li>
-    <li class="footer">Generated on Mon Jan 20 2025 01:15:03 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generated on Wed Feb 5 2025 21:39:28 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>

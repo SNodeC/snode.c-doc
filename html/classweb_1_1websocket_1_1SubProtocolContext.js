@@ -8,7 +8,7 @@ var classweb_1_1websocket_1_1SubProtocolContext =
       [ "PING", "classweb_1_1websocket_1_1SubProtocolContext.html#abf18d0b53484f49844a1315b9730e511a3622f7d18850c8e61a6fea6f379743d5", null ],
       [ "PONG", "classweb_1_1websocket_1_1SubProtocolContext.html#abf18d0b53484f49844a1315b9730e511a0452e3c015dc99b8e8a3bcfcf2eb3e5f", null ]
     ] ],
-    [ "SubProtocolContext", "classweb_1_1websocket_1_1SubProtocolContext.html#a3487c2806467880c46a8cc0f76f51417", null ],
+    [ "SubProtocolContext", "classweb_1_1websocket_1_1SubProtocolContext.html#a8ad226dfc0cad967514f60be46d3475d", null ],
     [ "SubProtocolContext", "classweb_1_1websocket_1_1SubProtocolContext.html#afa259aa4d51e9f7732a21f76ebb447ab", null ],
     [ "~SubProtocolContext", "classweb_1_1websocket_1_1SubProtocolContext.html#a3ee4aa62dee405be2a12bdacb6baa162", null ],
     [ "getSocketConnection", "classweb_1_1websocket_1_1SubProtocolContext.html#af6a9c12639bc03195ce1aaa9546f3281", null ],

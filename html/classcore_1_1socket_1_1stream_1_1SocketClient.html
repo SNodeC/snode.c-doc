@@ -458,29 +458,29 @@ template&lt;typename SocketConnectorT , typename SocketContextFactoryT , typenam
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="core_2socket_2stream_2SocketClient_8h_source.html#l00078">78</a> of file <a class="el" href="core_2socket_2stream_2SocketClient_8h_source.html">SocketClient.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   79</span>            : <a class="code hl_function" href="#a00dc7ed846ccc72eb094734a96f5f4af">SocketClient</a>(</div>
-<div class="line"><span class="lineno">   80</span>                  name,</div>
-<div class="line"><span class="lineno">   81</span>                  [name](<a class="code hl_typedef" href="#a90422a2b7373dcc8d8703b20ab2bd936">SocketConnection</a>* socketConnection) -&gt; <span class="keywordtype">void</span> { <span class="comment">// onConnect</span></div>
-<div class="line"><span class="lineno">   82</span>                      LOG(INFO) &lt;&lt; name &lt;&lt; <span class="stringliteral">&quot;: OnConnect&quot;</span>;</div>
-<div class="line"><span class="lineno">   83</span> </div>
-<div class="line"><span class="lineno">   84</span>                      LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;  Local: &quot;</span> &lt;&lt; socketConnection-&gt;getLocalAddress().toString();</div>
-<div class="line"><span class="lineno">   85</span>                      LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;  Peer: &quot;</span> &lt;&lt; socketConnection-&gt;getRemoteAddress().toString();</div>
-<div class="line"><span class="lineno">   86</span>                  },</div>
-<div class="line"><span class="lineno">   87</span>                  [name](<a class="code hl_typedef" href="#a90422a2b7373dcc8d8703b20ab2bd936">SocketConnection</a>* socketConnection) -&gt; <span class="keywordtype">void</span> { <span class="comment">// onConnected</span></div>
-<div class="line"><span class="lineno">   88</span>                      LOG(INFO) &lt;&lt; name &lt;&lt; <span class="stringliteral">&quot;: OnConnected &quot;</span>;</div>
-<div class="line"><span class="lineno">   89</span> </div>
-<div class="line"><span class="lineno">   90</span>                      LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;  Local: &quot;</span> &lt;&lt; socketConnection-&gt;getLocalAddress().toString();</div>
-<div class="line"><span class="lineno">   91</span>                      LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;  Peer:  &quot;</span> &lt;&lt; socketConnection-&gt;getRemoteAddress().toString();</div>
-<div class="line"><span class="lineno">   92</span>                  },</div>
-<div class="line"><span class="lineno">   93</span>                  [name](<a class="code hl_typedef" href="#a90422a2b7373dcc8d8703b20ab2bd936">SocketConnection</a>* socketConnection) -&gt; <span class="keywordtype">void</span> { <span class="comment">// onDisconnect</span></div>
-<div class="line"><span class="lineno">   94</span>                      LOG(INFO) &lt;&lt; name &lt;&lt; <span class="stringliteral">&quot;: OnDisconnect &quot;</span>;</div>
-<div class="line"><span class="lineno">   95</span> </div>
-<div class="line"><span class="lineno">   96</span>                      LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;  Local: &quot;</span> &lt;&lt; socketConnection-&gt;getLocalAddress().toString();</div>
-<div class="line"><span class="lineno">   97</span>                      LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;  Peer:  &quot;</span> &lt;&lt; socketConnection-&gt;getRemoteAddress().toString();</div>
-<div class="line"><span class="lineno">   98</span>                  },</div>
-<div class="line"><span class="lineno">   99</span>                  std::forward&lt;Args&gt;(args)...) {</div>
-<div class="line"><span class="lineno">  100</span>        }</div>
+<p class="definition">Definition at line <a class="el" href="core_2socket_2stream_2SocketClient_8h_source.html#l00079">79</a> of file <a class="el" href="core_2socket_2stream_2SocketClient_8h_source.html">SocketClient.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   80</span>            : <a class="code hl_function" href="#a00dc7ed846ccc72eb094734a96f5f4af">SocketClient</a>(</div>
+<div class="line"><span class="lineno">   81</span>                  name,</div>
+<div class="line"><span class="lineno">   82</span>                  [name](<a class="code hl_typedef" href="#a90422a2b7373dcc8d8703b20ab2bd936">SocketConnection</a>* socketConnection) { <span class="comment">// onConnect</span></div>
+<div class="line"><span class="lineno">   83</span>                      VLOG(2) &lt;&lt; name &lt;&lt; <span class="stringliteral">&quot;: OnConnect&quot;</span>;</div>
+<div class="line"><span class="lineno">   84</span> </div>
+<div class="line"><span class="lineno">   85</span>                      VLOG(2) &lt;&lt; <span class="stringliteral">&quot;  Local: &quot;</span> &lt;&lt; socketConnection-&gt;getLocalAddress().toString();</div>
+<div class="line"><span class="lineno">   86</span>                      VLOG(2) &lt;&lt; <span class="stringliteral">&quot;   Peer: &quot;</span> &lt;&lt; socketConnection-&gt;getRemoteAddress().toString();</div>
+<div class="line"><span class="lineno">   87</span>                  },</div>
+<div class="line"><span class="lineno">   88</span>                  [name](<a class="code hl_typedef" href="#a90422a2b7373dcc8d8703b20ab2bd936">SocketConnection</a>* socketConnection) { <span class="comment">// onConnected</span></div>
+<div class="line"><span class="lineno">   89</span>                      VLOG(2) &lt;&lt; name &lt;&lt; <span class="stringliteral">&quot;: OnConnected &quot;</span>;</div>
+<div class="line"><span class="lineno">   90</span> </div>
+<div class="line"><span class="lineno">   91</span>                      VLOG(2) &lt;&lt; <span class="stringliteral">&quot;  Local: &quot;</span> &lt;&lt; socketConnection-&gt;getLocalAddress().toString();</div>
+<div class="line"><span class="lineno">   92</span>                      VLOG(2) &lt;&lt; <span class="stringliteral">&quot;   Peer: &quot;</span> &lt;&lt; socketConnection-&gt;getRemoteAddress().toString();</div>
+<div class="line"><span class="lineno">   93</span>                  },</div>
+<div class="line"><span class="lineno">   94</span>                  [name](<a class="code hl_typedef" href="#a90422a2b7373dcc8d8703b20ab2bd936">SocketConnection</a>* socketConnection) { <span class="comment">// onDisconnect</span></div>
+<div class="line"><span class="lineno">   95</span>                      VLOG(2) &lt;&lt; name &lt;&lt; <span class="stringliteral">&quot;: OnDisconnect &quot;</span>;</div>
+<div class="line"><span class="lineno">   96</span> </div>
+<div class="line"><span class="lineno">   97</span>                      VLOG(2) &lt;&lt; <span class="stringliteral">&quot;  Local: &quot;</span> &lt;&lt; socketConnection-&gt;getLocalAddress().toString();</div>
+<div class="line"><span class="lineno">   98</span>                      VLOG(2) &lt;&lt; <span class="stringliteral">&quot;   Peer: &quot;</span> &lt;&lt; socketConnection-&gt;getRemoteAddress().toString();</div>
+<div class="line"><span class="lineno">   99</span>                  },</div>
+<div class="line"><span class="lineno">  100</span>                  std::forward&lt;Args&gt;(args)...) {</div>
+<div class="line"><span class="lineno">  101</span>        }</div>
 <div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketClient_html_a90422a2b7373dcc8d8703b20ab2bd936"><div class="ttname"><a href="#a90422a2b7373dcc8d8703b20ab2bd936">core::socket::stream::SocketClient::SocketConnection</a></div><div class="ttdeci">typename SocketConnector::SocketConnection SocketConnection</div><div class="ttdef"><b>Definition</b> <a href="core_2socket_2stream_2SocketClient_8h_source.html#l00056">SocketClient.h:56</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -510,9 +510,9 @@ template&lt;typename SocketConnectorT , typename SocketContextFactoryT , typenam
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="core_2socket_2stream_2SocketClient_8h_source.html#l00102">102</a> of file <a class="el" href="core_2socket_2stream_2SocketClient_8h_source.html">SocketClient.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  103</span>            : <a class="code hl_function" href="#a00dc7ed846ccc72eb094734a96f5f4af">SocketClient</a>(<span class="stringliteral">&quot;&quot;</span>, std::forward&lt;Args&gt;(args)...) {</div>
-<div class="line"><span class="lineno">  104</span>        }</div>
+<p class="definition">Definition at line <a class="el" href="core_2socket_2stream_2SocketClient_8h_source.html#l00103">103</a> of file <a class="el" href="core_2socket_2stream_2SocketClient_8h_source.html">SocketClient.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  104</span>            : <a class="code hl_function" href="#a00dc7ed846ccc72eb094734a96f5f4af">SocketClient</a>(<span class="stringliteral">&quot;&quot;</span>, std::forward&lt;Args&gt;(args)...) {</div>
+<div class="line"><span class="lineno">  105</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -629,7 +629,7 @@ template&lt;typename SocketConnectorT , typename SocketContextFactoryT , typenam
 <div class="fragment"><div class="line"><span class="lineno">  183</span>                                                                                                     {</div>
 <div class="line"><span class="lineno">  184</span>            <a class="code hl_function" href="#aedafd316be0720f11079ff1d5ea6a083">realConnect</a>(onStatus, 0, 1);</div>
 <div class="line"><span class="lineno">  185</span>        }</div>
-<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketClient_html_aedafd316be0720f11079ff1d5ea6a083"><div class="ttname"><a href="#aedafd316be0720f11079ff1d5ea6a083">core::socket::stream::SocketClient::realConnect</a></div><div class="ttdeci">void realConnect(const std::function&lt; void(const SocketAddress &amp;, core::socket::State)&gt; &amp;onStatus, unsigned int tries, double retryTimeoutScale) const</div><div class="ttdef"><b>Definition</b> <a href="core_2socket_2stream_2SocketClient_8h_source.html#l00107">SocketClient.h:107</a></div></div>
+<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketClient_html_aedafd316be0720f11079ff1d5ea6a083"><div class="ttname"><a href="#aedafd316be0720f11079ff1d5ea6a083">core::socket::stream::SocketClient::realConnect</a></div><div class="ttdeci">void realConnect(const std::function&lt; void(const SocketAddress &amp;, core::socket::State)&gt; &amp;onStatus, unsigned int tries, double retryTimeoutScale) const</div><div class="ttdef"><b>Definition</b> <a href="core_2socket_2stream_2SocketClient_8h_source.html#l00108">SocketClient.h:108</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -699,34 +699,33 @@ template&lt;typename SocketConnectorT , typename SocketContextFactoryT , typenam
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="core_2socket_2stream_2SocketClient_8h_source.html#l00107">107</a> of file <a class="el" href="core_2socket_2stream_2SocketClient_8h_source.html">SocketClient.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  109</span>                                                         {</div>
-<div class="line"><span class="lineno">  110</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="classcore_1_1SNodeC.html#a89f702217b0329573f527bda0021fd51">core::SNodeC::state</a>() == <a class="code hl_enumvalue" href="namespacecore.html#a6613a3d81c1d25590b1cd31540d08815a43491564ebcfd38568918efbd6e840fd">core::State::RUNNING</a> || <a class="code hl_function" href="classcore_1_1SNodeC.html#a89f702217b0329573f527bda0021fd51">core::SNodeC::state</a>() == <a class="code hl_enumvalue" href="namespacecore.html#a6613a3d81c1d25590b1cd31540d08815adee5f03c2c4e73657824e028494b18c0">core::State::INITIALIZED</a>) {</div>
-<div class="line"><span class="lineno">  111</span>                <span class="keyword">new</span> <a class="code hl_typedef" href="#ab297998169e1d32ed23b43c7c2289d02">SocketConnector</a>(</div>
-<div class="line"><span class="lineno">  112</span>                    <a class="code hl_variable" href="#a0b243041b7214c0a6b325ed7b257d9f6">socketContextFactory</a>,</div>
-<div class="line"><span class="lineno">  113</span>                    <a class="code hl_variable" href="#a710c0f399d01662c9cc3265c2e4affba">onConnect</a>,</div>
-<div class="line"><span class="lineno">  114</span>                    <a class="code hl_variable" href="#ac671fbf3b4ec942265ea6e14bad51c31">onConnected</a>,</div>
-<div class="line"><span class="lineno">  115</span>                    [client = *<span class="keyword">this</span>, onStatus](<a class="code hl_typedef" href="#a90422a2b7373dcc8d8703b20ab2bd936">SocketConnection</a>* socketConnection) -&gt; <span class="keywordtype">void</span> {</div>
-<div class="line"><span class="lineno">  116</span>                        client.onDisconnect(socketConnection);</div>
-<div class="line"><span class="lineno">  117</span> </div>
-<div class="line"><span class="lineno">  118</span>                        <span class="keywordflow">if</span> (client.getConfig().getReconnect() &amp;&amp; <a class="code hl_function" href="namespacecore.html#ac748365ac1e79353b3d6218a60216bd4">core::eventLoopState</a>() == <a class="code hl_enumvalue" href="namespacecore.html#a6613a3d81c1d25590b1cd31540d08815a43491564ebcfd38568918efbd6e840fd">core::State::RUNNING</a>) {</div>
-<div class="line"><span class="lineno">  119</span>                            double relativeReconnectTimeout = client.getConfig().getReconnectTime();</div>
-<div class="line"><span class="lineno">  120</span> </div>
-<div class="line"><span class="lineno">  121</span>                            LOG(INFO) &lt;&lt; client.getConfig().getInstanceName() &lt;&lt; <span class="stringliteral">&quot;: OnStatus&quot;</span>;</div>
-<div class="line"><span class="lineno">  122</span>                            LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;  reconnecting in &quot;</span> &lt;&lt; relativeReconnectTimeout &lt;&lt; <span class="stringliteral">&quot; seconds&quot;</span>;</div>
-<div class="line"><span class="lineno">  123</span> </div>
-<div class="line"><span class="lineno">  124</span>                            core::timer::Timer::singleshotTimer(</div>
-<div class="line"><span class="lineno">  125</span>                                [client, onStatus]() -&gt; void {</div>
-<div class="line"><span class="lineno">  126</span>                                    client.getConfig().Local::renew();</div>
-<div class="line"><span class="lineno">  127</span>                                    client.getConfig().Remote::renew();</div>
-<div class="line"><span class="lineno">  128</span> </div>
-<div class="line"><span class="lineno">  129</span>                                    client.realConnect(onStatus, 0, 1);</div>
-<div class="line"><span class="lineno">  130</span>                                },</div>
-<div class="line"><span class="lineno">  131</span>                                relativeReconnectTimeout);</div>
-<div class="line"><span class="lineno">  132</span>                        }</div>
-<div class="line"><span class="lineno">  133</span>                    },</div>
-<div class="line"><span class="lineno">  134</span>                    [client = *<span class="keyword">this</span>, onStatus, tries, retryTimeoutScale](<span class="keyword">const</span> <a class="code hl_typedef" href="#a777e7cf9a1c2f695565638fa6e8180dc">SocketAddress</a>&amp; socketAddress,</div>
-<div class="line"><span class="lineno">  135</span>                                                                         <a class="code hl_class" href="classcore_1_1socket_1_1State.html">core::socket::State</a> state) -&gt; <span class="keywordtype">void</span> {</div>
+<p class="definition">Definition at line <a class="el" href="core_2socket_2stream_2SocketClient_8h_source.html#l00108">108</a> of file <a class="el" href="core_2socket_2stream_2SocketClient_8h_source.html">SocketClient.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  110</span>                                                         {</div>
+<div class="line"><span class="lineno">  111</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="classcore_1_1SNodeC.html#a89f702217b0329573f527bda0021fd51">core::SNodeC::state</a>() == <a class="code hl_enumvalue" href="namespacecore.html#a6613a3d81c1d25590b1cd31540d08815a43491564ebcfd38568918efbd6e840fd">core::State::RUNNING</a> || <a class="code hl_function" href="classcore_1_1SNodeC.html#a89f702217b0329573f527bda0021fd51">core::SNodeC::state</a>() == <a class="code hl_enumvalue" href="namespacecore.html#a6613a3d81c1d25590b1cd31540d08815adee5f03c2c4e73657824e028494b18c0">core::State::INITIALIZED</a>) {</div>
+<div class="line"><span class="lineno">  112</span>                <span class="keyword">new</span> <a class="code hl_typedef" href="#ab297998169e1d32ed23b43c7c2289d02">SocketConnector</a>(</div>
+<div class="line"><span class="lineno">  113</span>                    <a class="code hl_variable" href="#a0b243041b7214c0a6b325ed7b257d9f6">socketContextFactory</a>,</div>
+<div class="line"><span class="lineno">  114</span>                    <a class="code hl_variable" href="#a710c0f399d01662c9cc3265c2e4affba">onConnect</a>,</div>
+<div class="line"><span class="lineno">  115</span>                    <a class="code hl_variable" href="#ac671fbf3b4ec942265ea6e14bad51c31">onConnected</a>,</div>
+<div class="line"><span class="lineno">  116</span>                    [client = *<span class="keyword">this</span>, onStatus](<a class="code hl_typedef" href="#a90422a2b7373dcc8d8703b20ab2bd936">SocketConnection</a>* socketConnection) {</div>
+<div class="line"><span class="lineno">  117</span>                        client.onDisconnect(socketConnection);</div>
+<div class="line"><span class="lineno">  118</span> </div>
+<div class="line"><span class="lineno">  119</span>                        <span class="keywordflow">if</span> (client.getConfig().getReconnect() &amp;&amp; <a class="code hl_function" href="namespacecore.html#ac748365ac1e79353b3d6218a60216bd4">core::eventLoopState</a>() == <a class="code hl_enumvalue" href="namespacecore.html#a6613a3d81c1d25590b1cd31540d08815a43491564ebcfd38568918efbd6e840fd">core::State::RUNNING</a>) {</div>
+<div class="line"><span class="lineno">  120</span>                            double relativeReconnectTimeout = client.getConfig().getReconnectTime();</div>
+<div class="line"><span class="lineno">  121</span> </div>
+<div class="line"><span class="lineno">  122</span>                            LOG(INFO) &lt;&lt; client.getConfig().getInstanceName() &lt;&lt; <span class="stringliteral">&quot;: OnStatus&quot;</span>;</div>
+<div class="line"><span class="lineno">  123</span>                            LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;  reconnecting in &quot;</span> &lt;&lt; relativeReconnectTimeout &lt;&lt; <span class="stringliteral">&quot; seconds&quot;</span>;</div>
+<div class="line"><span class="lineno">  124</span> </div>
+<div class="line"><span class="lineno">  125</span>                            core::timer::Timer::singleshotTimer(</div>
+<div class="line"><span class="lineno">  126</span>                                [client, onStatus]() {</div>
+<div class="line"><span class="lineno">  127</span>                                    client.getConfig().Local::renew();</div>
+<div class="line"><span class="lineno">  128</span>                                    client.getConfig().Remote::renew();</div>
+<div class="line"><span class="lineno">  129</span> </div>
+<div class="line"><span class="lineno">  130</span>                                    client.realConnect(onStatus, 0, 1);</div>
+<div class="line"><span class="lineno">  131</span>                                },</div>
+<div class="line"><span class="lineno">  132</span>                                relativeReconnectTimeout);</div>
+<div class="line"><span class="lineno">  133</span>                        }</div>
+<div class="line"><span class="lineno">  134</span>                    },</div>
+<div class="line"><span class="lineno">  135</span>                    [client = *<span class="keyword">this</span>, onStatus, tries, retryTimeoutScale](<span class="keyword">const</span> <a class="code hl_typedef" href="#a777e7cf9a1c2f695565638fa6e8180dc">SocketAddress</a>&amp; socketAddress, <a class="code hl_class" href="classcore_1_1socket_1_1State.html">core::socket::State</a> state) {</div>
 <div class="line"><span class="lineno">  136</span>                        <span class="keywordtype">bool</span> retry = (state &amp; <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#ac09e438024c6bcd3b65fca7874fe0c03">core::socket::State::NO_RETRY</a>) == 0 &amp;&amp;</div>
 <div class="line"><span class="lineno">  137</span>                                     (client.getConfig().getRetryTries() == 0 || tries &lt; client.getConfig().getRetryTries());</div>
 <div class="line"><span class="lineno">  138</span>                        state &amp;= <a class="code hl_namespace" href="namespacecore.html">~core</a><a class="code hl_variable" href="classcore_1_1socket_1_1State.html#ac09e438024c6bcd3b65fca7874fe0c03">::socket::State::NO_RETRY</a>;</div>
@@ -760,7 +759,7 @@ template&lt;typename SocketConnectorT , typename SocketContextFactoryT , typenam
 <div class="line"><span class="lineno">  166</span>                            LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;  retrying in &quot;</span> &lt;&lt; relativeRetryTimeout &lt;&lt; <span class="stringliteral">&quot; seconds&quot;</span>;</div>
 <div class="line"><span class="lineno">  167</span> </div>
 <div class="line"><span class="lineno">  168</span>                            <a class="code hl_function" href="classcore_1_1timer_1_1Timer.html#a9847ce4e56baf9141cc880aa7e20c71a">core::timer::Timer::singleshotTimer</a>(</div>
-<div class="line"><span class="lineno">  169</span>                                [client, onStatus, tries, retryTimeoutScale]() <span class="keyword">mutable</span> -&gt; <span class="keywordtype">void</span> {</div>
+<div class="line"><span class="lineno">  169</span>                                [client, onStatus, tries, retryTimeoutScale]() <span class="keyword">mutable</span> {</div>
 <div class="line"><span class="lineno">  170</span>                                    client.getConfig().Local::renew();</div>
 <div class="line"><span class="lineno">  171</span>                                    client.getConfig().Remote::renew();</div>
 <div class="line"><span class="lineno">  172</span> </div>
@@ -1013,7 +1012,7 @@ template&lt;typename SocketConnectorT , typename SocketContextFactoryT , typenam
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacecore.html">core</a></li><li class="navelem"><a class="el" href="namespacecore_1_1socket.html">socket</a></li><li class="navelem"><a class="el" href="namespacecore_1_1socket_1_1stream.html">stream</a></li><li class="navelem"><a class="el" href="classcore_1_1socket_1_1stream_1_1SocketClient.html">SocketClient</a></li>
-    <li class="footer">Generated on Mon Jan 20 2025 01:16:12 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generated on Wed Feb 5 2025 21:40:37 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>

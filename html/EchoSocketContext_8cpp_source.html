@@ -139,7 +139,7 @@ $(function(){initNavTree('EchoSocketContext_8cpp_source.html',''); initResizable
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
 <div class="foldopen" id="foldopen00037" data-start="{" data-end="}">
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="classapps_1_1echo_1_1model_1_1EchoSocketContext.html#a53c2ab68fab284ed5b0dd8e013934c27">   37</a></span>    <span class="keywordtype">void</span> EchoSocketContext::onConnected() {</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        VLOG(0) &lt;&lt; <span class="stringliteral">&quot;Echo connected&quot;</span>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Echo connected&quot;</span>;</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keywordflow">if</span> (role == Role::CLIENT) {</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            sendToPeer(<span class="stringliteral">&quot;Hello peer! Nice to see you!!!&quot;</span>);</div>
@@ -149,7 +149,7 @@ $(function(){initNavTree('EchoSocketContext_8cpp_source.html',''); initResizable
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
 <div class="foldopen" id="foldopen00045" data-start="{" data-end="}">
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="classapps_1_1echo_1_1model_1_1EchoSocketContext.html#abaca2caf16ae6eb7b1bc0abaf887ca11">   45</a></span>    <span class="keywordtype">void</span> EchoSocketContext::onDisconnected() {</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        VLOG(0) &lt;&lt; <span class="stringliteral">&quot;Echo disconnected&quot;</span>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Echo disconnected&quot;</span>;</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    }</div>
 </div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
@@ -166,7 +166,7 @@ $(function(){initNavTree('EchoSocketContext_8cpp_source.html',''); initResizable
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <span class="keyword">const</span> std::size_t chunklen = readFromPeer(chunk, 4096);</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <span class="keywordflow">if</span> (chunklen &gt; 0) {</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            VLOG(0) &lt;&lt; <span class="stringliteral">&quot;Data to reflect: &quot;</span> &lt;&lt; std::string(chunk, chunklen);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Data to reflect: &quot;</span> &lt;&lt; std::string(chunk, chunklen);</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            sendToPeer(chunk, chunklen);</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        }</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
@@ -193,7 +193,7 @@ $(function(){initNavTree('EchoSocketContext_8cpp_source.html',''); initResizable
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_9654b8d08f4bba4e84b362c5fd320bee.html">apps</a></li><li class="navelem"><a class="el" href="dir_dc8029cc338eb1f6373ec075df64a819.html">echo</a></li><li class="navelem"><a class="el" href="dir_afc172d997a41a9fcdc1d7169daefa88.html">model</a></li><li class="navelem"><a class="el" href="EchoSocketContext_8cpp.html">EchoSocketContext.cpp</a></li>
-    <li class="footer">Generated on Mon Jan 20 2025 01:14:27 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generated on Wed Feb 5 2025 21:38:53 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>

@@ -1,7 +1,5 @@
 var NAVTREEINDEX38 =
 {
-"client_2echo_2EchoFactory_8h.html":[4,0,0,5,0,0,0,3],
-"client_2echo_2EchoFactory_8h.html#a468c4d48b884e7210d9e6a787d11a03e":[4,0,0,5,0,0,0,3,1],
 "client_2echo_2EchoFactory_8h_source.html":[4,0,0,5,0,0,0,3],
 "client_2echo_2Echo_8cpp.html":[4,0,0,5,0,0,0,0],
 "client_2echo_2Echo_8cpp.html#a9dce5e7b51948376ae9857cea35529ce":[4,0,0,5,0,0,0,0,0],
@@ -249,5 +247,7 @@ var NAVTREEINDEX38 =
 "files.html":[4,0],
 "functions.html":[3,3,0],
 "functions.html":[3,3,0,0],
-"functions_a.html":[3,3,0,1]
+"functions_a.html":[3,3,0,1],
+"functions_b.html":[3,3,0,2],
+"functions_c.html":[3,3,0,3]
 };

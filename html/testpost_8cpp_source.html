@@ -186,7 +186,7 @@ $(function(){initNavTree('testpost_8cpp_source.html',''); initResizable(true); }
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>                  <span class="stringliteral">&quot;&lt;/html&gt;\n&quot;</span>);</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    });</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    legacyApp.listen(8080, [](<span class="keyword">const</span> LegacySocketAddress&amp; socketAddress, <span class="keyword">const</span> core::socket::State&amp; state) -&gt; <span class="keywordtype">void</span> {</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    legacyApp.listen(8080, [](<span class="keyword">const</span> LegacySocketAddress&amp; socketAddress, <span class="keyword">const</span> core::socket::State&amp; state) {</div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        <span class="keywordflow">switch</span> (state) {</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>            <span class="keywordflow">case</span> core::socket::State::OK:</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;legacyApp: listening on &#39;&quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
@@ -216,7 +216,7 @@ $(function(){initNavTree('testpost_8cpp_source.html',''); initResizable(true); }
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    tlsApp.use(legacyApp);</div>
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    tlsApp.listen(<span class="stringliteral">&quot;localhost&quot;</span>, 8088, [](<span class="keyword">const</span> TLSSocketAddress&amp; socketAddress, <span class="keyword">const</span> core::socket::State&amp; state) -&gt; <span class="keywordtype">void</span> {</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    tlsApp.listen(<span class="stringliteral">&quot;localhost&quot;</span>, 8088, [](<span class="keyword">const</span> TLSSocketAddress&amp; socketAddress, <span class="keyword">const</span> core::socket::State&amp; state) {</div>
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        <span class="keywordflow">switch</span> (state) {</div>
 <div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>            <span class="keywordflow">case</span> core::socket::State::OK:</div>
 <div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;tlsApp: listening on &#39;&quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
@@ -240,14 +240,14 @@ $(function(){initNavTree('testpost_8cpp_source.html',''); initResizable(true); }
 <div class="ttc" id="aclassexpress_1_1WebApp_html"><div class="ttname"><a href="classexpress_1_1WebApp.html">express::WebApp</a></div><div class="ttdef"><b>Definition</b> <a href="WebApp_8h_source.html#l00037">WebApp.h:37</a></div></div>
 <div class="ttc" id="aclassexpress_1_1WebApp_html_a0a01439a0cc8dfc86ed14f1094826b7e"><div class="ttname"><a href="classexpress_1_1WebApp.html#a0a01439a0cc8dfc86ed14f1094826b7e">express::WebApp::init</a></div><div class="ttdeci">static void init(int argc, char *argv[])</div><div class="ttdef"><b>Definition</b> <a href="WebApp_8cpp_source.html#l00034">WebApp.cpp:34</a></div></div>
 <div class="ttc" id="aclassexpress_1_1WebApp_html_a54e6910c9466c61d0b217490b7d9bb5a"><div class="ttname"><a href="classexpress_1_1WebApp.html#a54e6910c9466c61d0b217490b7d9bb5a">express::WebApp::start</a></div><div class="ttdeci">static int start(const utils::Timeval &amp;timeOut={LONG_MAX, 0})</div><div class="ttdef"><b>Definition</b> <a href="WebApp_8cpp_source.html#l00038">WebApp.cpp:38</a></div></div>
-<div class="ttc" id="aconfigtest_8cpp_html_a0ddf1224851353fc92bfbff6f499fa97"><div class="ttname"><a href="configtest_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a></div><div class="ttdeci">int main(int argc, char *argv[])</div><div class="ttdef"><b>Definition</b> <a href="configtest_8cpp_source.html#l00023">configtest.cpp:23</a></div></div>
+<div class="ttc" id="aconfigtest_8cpp_html_a0ddf1224851353fc92bfbff6f499fa97"><div class="ttname"><a href="configtest_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a></div><div class="ttdeci">int main(int argc, char *argv[])</div><div class="ttdef"><b>Definition</b> <a href="configtest_8cpp_source.html#l00026">configtest.cpp:26</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_9654b8d08f4bba4e84b362c5fd320bee.html">apps</a></li><li class="navelem"><a class="el" href="testpost_8cpp.html">testpost.cpp</a></li>
-    <li class="footer">Generated on Mon Jan 20 2025 01:14:34 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generated on Wed Feb 5 2025 21:38:59 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>

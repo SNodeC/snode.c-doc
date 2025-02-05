@@ -164,8 +164,12 @@ Functions</h2></td></tr>
 <tr class="separator:a1a80f43b44109216f2c37fe9bdb3dc2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a758209abdfa2ba14398d32b747dab000" id="r_a758209abdfa2ba14398d32b747dab000"><td class="memItemLeft" align="right" valign="top">static const std::shared_ptr&lt; <a class="el" href="classCLI_1_1HelpFormatter.html">CLI::HelpFormatter</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a758209abdfa2ba14398d32b747dab000">makeSectionFormatter</a> ()</td></tr>
 <tr class="separator:a758209abdfa2ba14398d32b747dab000"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3bd46aa5d1ad27cb939eda58b9ef4e67" id="r_a3bd46aa5d1ad27cb939eda58b9ef4e67"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3bd46aa5d1ad27cb939eda58b9ef4e67">hexDump</a> (const std::vector&lt; char &gt; &amp;bytes, int prefixLength)</td></tr>
-<tr class="separator:a3bd46aa5d1ad27cb939eda58b9ef4e67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8af90943f5b6e2c985db811abae8730" id="r_ad8af90943f5b6e2c985db811abae8730"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad8af90943f5b6e2c985db811abae8730">hexDump</a> (const std::vector&lt; char &gt; &amp;bytes, int prefixLength, bool prefixAtFirstLine)</td></tr>
+<tr class="separator:ad8af90943f5b6e2c985db811abae8730"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98a99c135c12b440426e6ea77ea2bf28" id="r_a98a99c135c12b440426e6ea77ea2bf28"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a98a99c135c12b440426e6ea77ea2bf28">hexDump</a> (const std::string &amp;string, int prefixLength, bool prefixAtFirstLine)</td></tr>
+<tr class="separator:a98a99c135c12b440426e6ea77ea2bf28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e89a82ecd447626404d378a3ca8d38b" id="r_a5e89a82ecd447626404d378a3ca8d38b"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5e89a82ecd447626404d378a3ca8d38b">hexDump</a> (const char *bytes, uint64_t length, int prefixLength, bool prefixAtFirstLine)</td></tr>
+<tr class="separator:a5e89a82ecd447626404d378a3ca8d38b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4d92cb87a59c2c9265e21a19d0587db2" id="r_a4d92cb87a59c2c9265e21a19d0587db2"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; unsigned char &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4d92cb87a59c2c9265e21a19d0587db2">transform_to_binary</a> (const std::string &amp;string)</td></tr>
 <tr class="separator:a4d92cb87a59c2c9265e21a19d0587db2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a94ea12976058468fed45202315c247a2" id="r_a94ea12976058468fed45202315c247a2"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a94ea12976058468fed45202315c247a2">operator&lt;&lt;</a> (std::ostream &amp;ostream, const <a class="el" href="classutils_1_1Timeval.html">utils::Timeval</a> &amp;timeVal)</td></tr>
@@ -204,20 +208,20 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Config_8cpp_source.html#l00464">464</a> of file <a class="el" href="Config_8cpp_source.html">Config.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  464</span>                                                                                           {</div>
-<div class="line"><span class="lineno">  465</span>        std::stringstream out;</div>
-<div class="line"><span class="lineno">  466</span> </div>
-<div class="line"><span class="lineno">  467</span>        <a class="code hl_function" href="#ac8959e45881eac2ddd8177a68c40c588">createCommandLineOptions</a>(out, app, mode);</div>
-<div class="line"><span class="lineno">  468</span> </div>
-<div class="line"><span class="lineno">  469</span>        std::string optionString = out.str();</div>
-<div class="line"><span class="lineno">  470</span>        <span class="keywordflow">if</span> (optionString.back() == <span class="charliteral">&#39; &#39;</span>) {</div>
-<div class="line"><span class="lineno">  471</span>            optionString.pop_back();</div>
-<div class="line"><span class="lineno">  472</span>        }</div>
-<div class="line"><span class="lineno">  473</span> </div>
-<div class="line"><span class="lineno">  474</span>        <span class="keywordflow">return</span> optionString;</div>
-<div class="line"><span class="lineno">  475</span>    }</div>
-<div class="ttc" id="anamespaceutils_html_ac8959e45881eac2ddd8177a68c40c588"><div class="ttname"><a href="#ac8959e45881eac2ddd8177a68c40c588">utils::createCommandLineOptions</a></div><div class="ttdeci">static void createCommandLineOptions(std::stringstream &amp;out, CLI::App *app, CLI::CallForCommandline::Mode mode)</div><div class="ttdef"><b>Definition</b> <a href="Config_8cpp_source.html#l00406">Config.cpp:406</a></div></div>
+<p class="definition">Definition at line <a class="el" href="Config_8cpp_source.html#l00467">467</a> of file <a class="el" href="Config_8cpp_source.html">Config.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  467</span>                                                                                           {</div>
+<div class="line"><span class="lineno">  468</span>        std::stringstream out;</div>
+<div class="line"><span class="lineno">  469</span> </div>
+<div class="line"><span class="lineno">  470</span>        <a class="code hl_function" href="#ac8959e45881eac2ddd8177a68c40c588">createCommandLineOptions</a>(out, app, mode);</div>
+<div class="line"><span class="lineno">  471</span> </div>
+<div class="line"><span class="lineno">  472</span>        std::string optionString = out.str();</div>
+<div class="line"><span class="lineno">  473</span>        <span class="keywordflow">if</span> (optionString.back() == <span class="charliteral">&#39; &#39;</span>) {</div>
+<div class="line"><span class="lineno">  474</span>            optionString.pop_back();</div>
+<div class="line"><span class="lineno">  475</span>        }</div>
+<div class="line"><span class="lineno">  476</span> </div>
+<div class="line"><span class="lineno">  477</span>        <span class="keywordflow">return</span> optionString;</div>
+<div class="line"><span class="lineno">  478</span>    }</div>
+<div class="ttc" id="anamespaceutils_html_ac8959e45881eac2ddd8177a68c40c588"><div class="ttname"><a href="#ac8959e45881eac2ddd8177a68c40c588">utils::createCommandLineOptions</a></div><div class="ttdeci">static void createCommandLineOptions(std::stringstream &amp;out, CLI::App *app, CLI::CallForCommandline::Mode mode)</div><div class="ttdef"><b>Definition</b> <a href="Config_8cpp_source.html#l00409">Config.cpp:409</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -253,64 +257,64 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Config_8cpp_source.html#l00406">406</a> of file <a class="el" href="Config_8cpp_source.html">Config.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  406</span>                                                                                                            {</div>
-<div class="line"><span class="lineno">  407</span>        CLI::Option* disabledOpt = app-&gt;get_option_no_throw(<span class="stringliteral">&quot;--disabled&quot;</span>);</div>
-<div class="line"><span class="lineno">  408</span>        <span class="keyword">const</span> <span class="keywordtype">bool</span> disabled = disabledOpt != <span class="keyword">nullptr</span> ? disabledOpt-&gt;as&lt;<span class="keywordtype">bool</span>&gt;() : false;</div>
-<div class="line"><span class="lineno">  409</span>        <span class="keywordflow">if</span> (!disabled || mode == <a class="code hl_enumvalue" href="classCLI_1_1CallForCommandline.html#a772a59d089ea19572527641273cb339da5b39c8b553c821e7cddc6da64b5bd2ee">CLI::CallForCommandline::Mode::DEFAULT</a>) {</div>
-<div class="line"><span class="lineno">  410</span>            <span class="keywordflow">for</span> (<span class="keyword">const</span> CLI::Option* option : app-&gt;get_options()) {</div>
-<div class="line"><span class="lineno">  411</span>                <span class="keywordflow">if</span> (option-&gt;get_configurable()) {</div>
-<div class="line"><span class="lineno">  412</span>                    std::string value;</div>
-<div class="line"><span class="lineno">  413</span> </div>
-<div class="line"><span class="lineno">  414</span>                    <span class="keywordflow">switch</span> (mode) {</div>
-<div class="line"><span class="lineno">  415</span>                        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="classCLI_1_1CallForCommandline.html#a772a59d089ea19572527641273cb339da94e94133f4bdc1794c6b647b8ea134d0">CLI::CallForCommandline::Mode::STANDARD</a>:</div>
-<div class="line"><span class="lineno">  416</span>                            <span class="keywordflow">if</span> (option-&gt;count() &gt; 0) {</div>
-<div class="line"><span class="lineno">  417</span>                                value = option-&gt;as&lt;std::string&gt;();</div>
-<div class="line"><span class="lineno">  418</span>                            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (option-&gt;get_required()) {</div>
-<div class="line"><span class="lineno">  419</span>                                value = <span class="stringliteral">&quot;&lt;REQUIRED&gt;&quot;</span>;</div>
-<div class="line"><span class="lineno">  420</span>                            }</div>
-<div class="line"><span class="lineno">  421</span>                            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  422</span>                        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="classCLI_1_1CallForCommandline.html#a772a59d089ea19572527641273cb339daebdf9721be38d1fc1cd6db8c737d1be0">CLI::CallForCommandline::Mode::REQUIRED</a>:</div>
-<div class="line"><span class="lineno">  423</span>                            <span class="keywordflow">if</span> (option-&gt;get_required()) {</div>
-<div class="line"><span class="lineno">  424</span>                                <span class="keywordflow">if</span> (option-&gt;count() &gt; 0) {</div>
-<div class="line"><span class="lineno">  425</span>                                    value = option-&gt;as&lt;std::string&gt;();</div>
-<div class="line"><span class="lineno">  426</span>                                } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  427</span>                                    value = <span class="stringliteral">&quot;&lt;REQUIRED&gt;&quot;</span>;</div>
-<div class="line"><span class="lineno">  428</span>                                }</div>
-<div class="line"><span class="lineno">  429</span>                            }</div>
-<div class="line"><span class="lineno">  430</span>                            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  431</span>                        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="classCLI_1_1CallForCommandline.html#a772a59d089ea19572527641273cb339daba7de5bc6888294e5884b024a4c894f1">CLI::CallForCommandline::Mode::FULL</a>:</div>
-<div class="line"><span class="lineno">  432</span>                            <span class="keywordflow">if</span> (option-&gt;count() &gt; 0) {</div>
-<div class="line"><span class="lineno">  433</span>                                value = option-&gt;as&lt;std::string&gt;();</div>
-<div class="line"><span class="lineno">  434</span>                            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!option-&gt;get_default_str().empty()) {</div>
-<div class="line"><span class="lineno">  435</span>                                value = option-&gt;get_default_str();</div>
-<div class="line"><span class="lineno">  436</span>                            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!option-&gt;get_required()) {</div>
-<div class="line"><span class="lineno">  437</span>                                value = <span class="stringliteral">&quot;\&quot;\&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">  438</span>                            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  439</span>                                value = <span class="stringliteral">&quot;&lt;REQUIRED&gt;&quot;</span>;</div>
-<div class="line"><span class="lineno">  440</span>                            }</div>
-<div class="line"><span class="lineno">  441</span>                            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  442</span>                        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="classCLI_1_1CallForCommandline.html#a772a59d089ea19572527641273cb339da5b39c8b553c821e7cddc6da64b5bd2ee">CLI::CallForCommandline::Mode::DEFAULT</a>: {</div>
-<div class="line"><span class="lineno">  443</span>                            <span class="keywordflow">if</span> (!option-&gt;get_default_str().empty()) {</div>
-<div class="line"><span class="lineno">  444</span>                                value = option-&gt;get_default_str();</div>
-<div class="line"><span class="lineno">  445</span>                            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!option-&gt;get_required()) {</div>
-<div class="line"><span class="lineno">  446</span>                                value = <span class="stringliteral">&quot;\&quot;\&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">  447</span>                            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  448</span>                                value = <span class="stringliteral">&quot;&lt;REQUIRED&gt;&quot;</span>;</div>
-<div class="line"><span class="lineno">  449</span>                            }</div>
-<div class="line"><span class="lineno">  450</span>                            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  451</span>                        }</div>
-<div class="line"><span class="lineno">  452</span>                    }</div>
-<div class="line"><span class="lineno">  453</span> </div>
-<div class="line"><span class="lineno">  454</span>                    <span class="keywordflow">if</span> (!value.empty()) {</div>
-<div class="line"><span class="lineno">  455</span>                        out &lt;&lt; <span class="stringliteral">&quot;--&quot;</span> &lt;&lt; option-&gt;get_single_name() &lt;&lt; ((option-&gt;get_items_expected_max() == 0) ? <span class="stringliteral">&quot;=&quot;</span> : <span class="stringliteral">&quot; &quot;</span>) &lt;&lt; value &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
-<div class="line"><span class="lineno">  456</span>                    }</div>
-<div class="line"><span class="lineno">  457</span>                }</div>
-<div class="line"><span class="lineno">  458</span>            }</div>
-<div class="line"><span class="lineno">  459</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (disabledOpt-&gt;get_default_str() == <span class="stringliteral">&quot;false&quot;</span>) {</div>
-<div class="line"><span class="lineno">  460</span>            out &lt;&lt; <span class="stringliteral">&quot;--disabled=true &quot;</span>;</div>
-<div class="line"><span class="lineno">  461</span>        }</div>
-<div class="line"><span class="lineno">  462</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Config_8cpp_source.html#l00409">409</a> of file <a class="el" href="Config_8cpp_source.html">Config.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  409</span>                                                                                                            {</div>
+<div class="line"><span class="lineno">  410</span>        CLI::Option* disabledOpt = app-&gt;get_option_no_throw(<span class="stringliteral">&quot;--disabled&quot;</span>);</div>
+<div class="line"><span class="lineno">  411</span>        <span class="keyword">const</span> <span class="keywordtype">bool</span> disabled = disabledOpt != <span class="keyword">nullptr</span> ? disabledOpt-&gt;as&lt;<span class="keywordtype">bool</span>&gt;() : false;</div>
+<div class="line"><span class="lineno">  412</span>        <span class="keywordflow">if</span> (!disabled || mode == <a class="code hl_enumvalue" href="classCLI_1_1CallForCommandline.html#a772a59d089ea19572527641273cb339da5b39c8b553c821e7cddc6da64b5bd2ee">CLI::CallForCommandline::Mode::DEFAULT</a>) {</div>
+<div class="line"><span class="lineno">  413</span>            <span class="keywordflow">for</span> (<span class="keyword">const</span> CLI::Option* option : app-&gt;get_options()) {</div>
+<div class="line"><span class="lineno">  414</span>                <span class="keywordflow">if</span> (option-&gt;get_configurable()) {</div>
+<div class="line"><span class="lineno">  415</span>                    std::string value;</div>
+<div class="line"><span class="lineno">  416</span> </div>
+<div class="line"><span class="lineno">  417</span>                    <span class="keywordflow">switch</span> (mode) {</div>
+<div class="line"><span class="lineno">  418</span>                        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="classCLI_1_1CallForCommandline.html#a772a59d089ea19572527641273cb339da94e94133f4bdc1794c6b647b8ea134d0">CLI::CallForCommandline::Mode::STANDARD</a>:</div>
+<div class="line"><span class="lineno">  419</span>                            <span class="keywordflow">if</span> (option-&gt;count() &gt; 0) {</div>
+<div class="line"><span class="lineno">  420</span>                                value = option-&gt;as&lt;std::string&gt;();</div>
+<div class="line"><span class="lineno">  421</span>                            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (option-&gt;get_required()) {</div>
+<div class="line"><span class="lineno">  422</span>                                value = <span class="stringliteral">&quot;&lt;REQUIRED&gt;&quot;</span>;</div>
+<div class="line"><span class="lineno">  423</span>                            }</div>
+<div class="line"><span class="lineno">  424</span>                            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  425</span>                        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="classCLI_1_1CallForCommandline.html#a772a59d089ea19572527641273cb339daebdf9721be38d1fc1cd6db8c737d1be0">CLI::CallForCommandline::Mode::REQUIRED</a>:</div>
+<div class="line"><span class="lineno">  426</span>                            <span class="keywordflow">if</span> (option-&gt;get_required()) {</div>
+<div class="line"><span class="lineno">  427</span>                                <span class="keywordflow">if</span> (option-&gt;count() &gt; 0) {</div>
+<div class="line"><span class="lineno">  428</span>                                    value = option-&gt;as&lt;std::string&gt;();</div>
+<div class="line"><span class="lineno">  429</span>                                } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  430</span>                                    value = <span class="stringliteral">&quot;&lt;REQUIRED&gt;&quot;</span>;</div>
+<div class="line"><span class="lineno">  431</span>                                }</div>
+<div class="line"><span class="lineno">  432</span>                            }</div>
+<div class="line"><span class="lineno">  433</span>                            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  434</span>                        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="classCLI_1_1CallForCommandline.html#a772a59d089ea19572527641273cb339daba7de5bc6888294e5884b024a4c894f1">CLI::CallForCommandline::Mode::FULL</a>:</div>
+<div class="line"><span class="lineno">  435</span>                            <span class="keywordflow">if</span> (option-&gt;count() &gt; 0) {</div>
+<div class="line"><span class="lineno">  436</span>                                value = option-&gt;as&lt;std::string&gt;();</div>
+<div class="line"><span class="lineno">  437</span>                            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!option-&gt;get_default_str().empty()) {</div>
+<div class="line"><span class="lineno">  438</span>                                value = option-&gt;get_default_str();</div>
+<div class="line"><span class="lineno">  439</span>                            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!option-&gt;get_required()) {</div>
+<div class="line"><span class="lineno">  440</span>                                value = <span class="stringliteral">&quot;\&quot;\&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">  441</span>                            } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  442</span>                                value = <span class="stringliteral">&quot;&lt;REQUIRED&gt;&quot;</span>;</div>
+<div class="line"><span class="lineno">  443</span>                            }</div>
+<div class="line"><span class="lineno">  444</span>                            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  445</span>                        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="classCLI_1_1CallForCommandline.html#a772a59d089ea19572527641273cb339da5b39c8b553c821e7cddc6da64b5bd2ee">CLI::CallForCommandline::Mode::DEFAULT</a>: {</div>
+<div class="line"><span class="lineno">  446</span>                            <span class="keywordflow">if</span> (!option-&gt;get_default_str().empty()) {</div>
+<div class="line"><span class="lineno">  447</span>                                value = option-&gt;get_default_str();</div>
+<div class="line"><span class="lineno">  448</span>                            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!option-&gt;get_required()) {</div>
+<div class="line"><span class="lineno">  449</span>                                value = <span class="stringliteral">&quot;\&quot;\&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">  450</span>                            } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  451</span>                                value = <span class="stringliteral">&quot;&lt;REQUIRED&gt;&quot;</span>;</div>
+<div class="line"><span class="lineno">  452</span>                            }</div>
+<div class="line"><span class="lineno">  453</span>                            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  454</span>                        }</div>
+<div class="line"><span class="lineno">  455</span>                    }</div>
+<div class="line"><span class="lineno">  456</span> </div>
+<div class="line"><span class="lineno">  457</span>                    <span class="keywordflow">if</span> (!value.empty()) {</div>
+<div class="line"><span class="lineno">  458</span>                        out &lt;&lt; <span class="stringliteral">&quot;--&quot;</span> &lt;&lt; option-&gt;get_single_name() &lt;&lt; ((option-&gt;get_items_expected_max() == 0) ? <span class="stringliteral">&quot;=&quot;</span> : <span class="stringliteral">&quot; &quot;</span>) &lt;&lt; value &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line"><span class="lineno">  459</span>                    }</div>
+<div class="line"><span class="lineno">  460</span>                }</div>
+<div class="line"><span class="lineno">  461</span>            }</div>
+<div class="line"><span class="lineno">  462</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (disabledOpt-&gt;get_default_str() == <span class="stringliteral">&quot;false&quot;</span>) {</div>
+<div class="line"><span class="lineno">  463</span>            out &lt;&lt; <span class="stringliteral">&quot;--disabled=true &quot;</span>;</div>
+<div class="line"><span class="lineno">  464</span>        }</div>
+<div class="line"><span class="lineno">  465</span>    }</div>
 <div class="ttc" id="aclassCLI_1_1CallForCommandline_html_a772a59d089ea19572527641273cb339da5b39c8b553c821e7cddc6da64b5bd2ee"><div class="ttname"><a href="classCLI_1_1CallForCommandline.html#a772a59d089ea19572527641273cb339da5b39c8b553c821e7cddc6da64b5bd2ee">CLI::CallForCommandline::Mode::DEFAULT</a></div><div class="ttdeci">@ DEFAULT</div></div>
 <div class="ttc" id="aclassCLI_1_1CallForCommandline_html_a772a59d089ea19572527641273cb339da94e94133f4bdc1794c6b647b8ea134d0"><div class="ttname"><a href="classCLI_1_1CallForCommandline.html#a772a59d089ea19572527641273cb339da94e94133f4bdc1794c6b647b8ea134d0">CLI::CallForCommandline::Mode::STANDARD</a></div><div class="ttdeci">@ STANDARD</div></div>
 <div class="ttc" id="aclassCLI_1_1CallForCommandline_html_a772a59d089ea19572527641273cb339daba7de5bc6888294e5884b024a4c894f1"><div class="ttname"><a href="classCLI_1_1CallForCommandline.html#a772a59d089ea19572527641273cb339daba7de5bc6888294e5884b024a4c894f1">CLI::CallForCommandline::Mode::FULL</a></div><div class="ttdeci">@ FULL</div></div>
@@ -347,21 +351,21 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Config_8cpp_source.html#l00479">479</a> of file <a class="el" href="Config_8cpp_source.html">Config.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  479</span>                                                                                               {</div>
-<div class="line"><span class="lineno">  480</span>        std::stringstream out;</div>
-<div class="line"><span class="lineno">  481</span> </div>
-<div class="line"><span class="lineno">  482</span>        CLI::Option* disabledOpt = app-&gt;get_option_no_throw(<span class="stringliteral">&quot;--disabled&quot;</span>);</div>
-<div class="line"><span class="lineno">  483</span>        <span class="keywordflow">if</span> (disabledOpt == <span class="keyword">nullptr</span> || !disabledOpt-&gt;as&lt;<span class="keywordtype">bool</span>&gt;() || mode == <a class="code hl_enumvalue" href="classCLI_1_1CallForCommandline.html#a772a59d089ea19572527641273cb339da5b39c8b553c821e7cddc6da64b5bd2ee">CLI::CallForCommandline::Mode::DEFAULT</a>) {</div>
-<div class="line"><span class="lineno">  484</span>            <span class="keywordflow">for</span> (CLI::App* subcommand : app-&gt;get_subcommands({})) {</div>
-<div class="line"><span class="lineno">  485</span>                <span class="keywordflow">if</span> (!subcommand-&gt;get_name().empty()) {</div>
-<div class="line"><span class="lineno">  486</span>                    createCommandLineTemplate(out, subcommand, mode);</div>
-<div class="line"><span class="lineno">  487</span>                }</div>
-<div class="line"><span class="lineno">  488</span>            }</div>
-<div class="line"><span class="lineno">  489</span>        }</div>
-<div class="line"><span class="lineno">  490</span> </div>
-<div class="line"><span class="lineno">  491</span>        <span class="keywordflow">return</span> out.str();</div>
-<div class="line"><span class="lineno">  492</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Config_8cpp_source.html#l00482">482</a> of file <a class="el" href="Config_8cpp_source.html">Config.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  482</span>                                                                                               {</div>
+<div class="line"><span class="lineno">  483</span>        std::stringstream out;</div>
+<div class="line"><span class="lineno">  484</span> </div>
+<div class="line"><span class="lineno">  485</span>        CLI::Option* disabledOpt = app-&gt;get_option_no_throw(<span class="stringliteral">&quot;--disabled&quot;</span>);</div>
+<div class="line"><span class="lineno">  486</span>        <span class="keywordflow">if</span> (disabledOpt == <span class="keyword">nullptr</span> || !disabledOpt-&gt;as&lt;<span class="keywordtype">bool</span>&gt;() || mode == <a class="code hl_enumvalue" href="classCLI_1_1CallForCommandline.html#a772a59d089ea19572527641273cb339da5b39c8b553c821e7cddc6da64b5bd2ee">CLI::CallForCommandline::Mode::DEFAULT</a>) {</div>
+<div class="line"><span class="lineno">  487</span>            <span class="keywordflow">for</span> (CLI::App* subcommand : app-&gt;get_subcommands({})) {</div>
+<div class="line"><span class="lineno">  488</span>                <span class="keywordflow">if</span> (!subcommand-&gt;get_name().empty()) {</div>
+<div class="line"><span class="lineno">  489</span>                    createCommandLineTemplate(out, subcommand, mode);</div>
+<div class="line"><span class="lineno">  490</span>                }</div>
+<div class="line"><span class="lineno">  491</span>            }</div>
+<div class="line"><span class="lineno">  492</span>        }</div>
+<div class="line"><span class="lineno">  493</span> </div>
+<div class="line"><span class="lineno">  494</span>        <span class="keywordflow">return</span> out.str();</div>
+<div class="line"><span class="lineno">  495</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="classCLI_1_1CallForCommandline.html#a772a59d089ea19572527641273cb339da5b39c8b553c821e7cddc6da64b5bd2ee">CLI::CallForCommandline::DEFAULT</a>.</p>
 
@@ -394,27 +398,27 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Config_8cpp_source.html#l00509">509</a> of file <a class="el" href="Config_8cpp_source.html">Config.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  509</span>                                                                                            {</div>
-<div class="line"><span class="lineno">  510</span>        std::stringstream out;</div>
-<div class="line"><span class="lineno">  511</span> </div>
-<div class="line"><span class="lineno">  512</span>        <a class="code hl_function" href="#aac7436ed2ed454cbef6765b7e381b2f7">createCommandLineTemplate</a>(out, app, mode);</div>
-<div class="line"><span class="lineno">  513</span> </div>
-<div class="line"><span class="lineno">  514</span>        std::string outString = out.str();</div>
-<div class="line"><span class="lineno">  515</span>        <span class="keywordflow">while</span> (app-&gt;get_parent() != <span class="keyword">nullptr</span>) {</div>
-<div class="line"><span class="lineno">  516</span>            app = app-&gt;get_parent();</div>
-<div class="line"><span class="lineno">  517</span>            std::string parentOptions = <a class="code hl_function" href="#ac8959e45881eac2ddd8177a68c40c588">createCommandLineOptions</a>(app, mode);</div>
-<div class="line"><span class="lineno">  518</span>            outString =</div>
-<div class="line"><span class="lineno">  519</span>                std::string(app-&gt;get_name()).append(<span class="stringliteral">&quot; &quot;</span>).append(!parentOptions.empty() ? parentOptions.append(<span class="stringliteral">&quot; &quot;</span>) : <span class="stringliteral">&quot;&quot;</span>).append(outString);</div>
-<div class="line"><span class="lineno">  520</span>        }</div>
-<div class="line"><span class="lineno">  521</span> </div>
-<div class="line"><span class="lineno">  522</span>        <span class="keywordflow">if</span> (outString.empty()) {</div>
-<div class="line"><span class="lineno">  523</span>            outString = Config::getApplicationName();</div>
-<div class="line"><span class="lineno">  524</span>        }</div>
-<div class="line"><span class="lineno">  525</span> </div>
-<div class="line"><span class="lineno">  526</span>        <span class="keywordflow">return</span> outString;</div>
-<div class="line"><span class="lineno">  527</span>    }</div>
-<div class="ttc" id="anamespaceutils_html_aac7436ed2ed454cbef6765b7e381b2f7"><div class="ttname"><a href="#aac7436ed2ed454cbef6765b7e381b2f7">utils::createCommandLineTemplate</a></div><div class="ttdeci">static void createCommandLineTemplate(std::stringstream &amp;out, CLI::App *app, CLI::CallForCommandline::Mode mode)</div><div class="ttdef"><b>Definition</b> <a href="Config_8cpp_source.html#l00494">Config.cpp:494</a></div></div>
+<p class="definition">Definition at line <a class="el" href="Config_8cpp_source.html#l00512">512</a> of file <a class="el" href="Config_8cpp_source.html">Config.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  512</span>                                                                                            {</div>
+<div class="line"><span class="lineno">  513</span>        std::stringstream out;</div>
+<div class="line"><span class="lineno">  514</span> </div>
+<div class="line"><span class="lineno">  515</span>        <a class="code hl_function" href="#aac7436ed2ed454cbef6765b7e381b2f7">createCommandLineTemplate</a>(out, app, mode);</div>
+<div class="line"><span class="lineno">  516</span> </div>
+<div class="line"><span class="lineno">  517</span>        std::string outString = out.str();</div>
+<div class="line"><span class="lineno">  518</span>        <span class="keywordflow">while</span> (app-&gt;get_parent() != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><span class="lineno">  519</span>            app = app-&gt;get_parent();</div>
+<div class="line"><span class="lineno">  520</span>            std::string parentOptions = <a class="code hl_function" href="#ac8959e45881eac2ddd8177a68c40c588">createCommandLineOptions</a>(app, mode);</div>
+<div class="line"><span class="lineno">  521</span>            outString =</div>
+<div class="line"><span class="lineno">  522</span>                std::string(app-&gt;get_name()).append(<span class="stringliteral">&quot; &quot;</span>).append(!parentOptions.empty() ? parentOptions.append(<span class="stringliteral">&quot; &quot;</span>) : <span class="stringliteral">&quot;&quot;</span>).append(outString);</div>
+<div class="line"><span class="lineno">  523</span>        }</div>
+<div class="line"><span class="lineno">  524</span> </div>
+<div class="line"><span class="lineno">  525</span>        <span class="keywordflow">if</span> (outString.empty()) {</div>
+<div class="line"><span class="lineno">  526</span>            outString = Config::getApplicationName();</div>
+<div class="line"><span class="lineno">  527</span>        }</div>
+<div class="line"><span class="lineno">  528</span> </div>
+<div class="line"><span class="lineno">  529</span>        <span class="keywordflow">return</span> outString;</div>
+<div class="line"><span class="lineno">  530</span>    }</div>
+<div class="ttc" id="anamespaceutils_html_aac7436ed2ed454cbef6765b7e381b2f7"><div class="ttname"><a href="#aac7436ed2ed454cbef6765b7e381b2f7">utils::createCommandLineTemplate</a></div><div class="ttdeci">static void createCommandLineTemplate(std::stringstream &amp;out, CLI::App *app, CLI::CallForCommandline::Mode mode)</div><div class="ttdef"><b>Definition</b> <a href="Config_8cpp_source.html#l00497">Config.cpp:497</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -450,21 +454,21 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Config_8cpp_source.html#l00494">494</a> of file <a class="el" href="Config_8cpp_source.html">Config.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  494</span>                                                                                                             {</div>
-<div class="line"><span class="lineno">  495</span>        std::string outString;</div>
-<div class="line"><span class="lineno">  496</span> </div>
-<div class="line"><span class="lineno">  497</span>        outString = <a class="code hl_function" href="#ac8959e45881eac2ddd8177a68c40c588">createCommandLineOptions</a>(app, mode);</div>
-<div class="line"><span class="lineno">  498</span>        <span class="keywordflow">if</span> (!outString.empty()) {</div>
-<div class="line"><span class="lineno">  499</span>            outString += <span class="stringliteral">&quot; &quot;</span>;</div>
-<div class="line"><span class="lineno">  500</span>        }</div>
-<div class="line"><span class="lineno">  501</span> </div>
-<div class="line"><span class="lineno">  502</span>        outString += createCommandLineSubcommands(app, mode);</div>
-<div class="line"><span class="lineno">  503</span> </div>
-<div class="line"><span class="lineno">  504</span>        <span class="keywordflow">if</span> (!outString.empty()) {</div>
-<div class="line"><span class="lineno">  505</span>            out &lt;&lt; app-&gt;get_name() &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; outString;</div>
-<div class="line"><span class="lineno">  506</span>        }</div>
-<div class="line"><span class="lineno">  507</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Config_8cpp_source.html#l00497">497</a> of file <a class="el" href="Config_8cpp_source.html">Config.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  497</span>                                                                                                             {</div>
+<div class="line"><span class="lineno">  498</span>        std::string outString;</div>
+<div class="line"><span class="lineno">  499</span> </div>
+<div class="line"><span class="lineno">  500</span>        outString = <a class="code hl_function" href="#ac8959e45881eac2ddd8177a68c40c588">createCommandLineOptions</a>(app, mode);</div>
+<div class="line"><span class="lineno">  501</span>        <span class="keywordflow">if</span> (!outString.empty()) {</div>
+<div class="line"><span class="lineno">  502</span>            outString += <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line"><span class="lineno">  503</span>        }</div>
+<div class="line"><span class="lineno">  504</span> </div>
+<div class="line"><span class="lineno">  505</span>        outString += createCommandLineSubcommands(app, mode);</div>
+<div class="line"><span class="lineno">  506</span> </div>
+<div class="line"><span class="lineno">  507</span>        <span class="keywordflow">if</span> (!outString.empty()) {</div>
+<div class="line"><span class="lineno">  508</span>            out &lt;&lt; app-&gt;get_name() &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; outString;</div>
+<div class="line"><span class="lineno">  509</span>        }</div>
+<div class="line"><span class="lineno">  510</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -487,8 +491,134 @@ template&lt;unsigned N&gt; </div>
 
 </div>
 </div>
-<a id="a3bd46aa5d1ad27cb939eda58b9ef4e67" name="a3bd46aa5d1ad27cb939eda58b9ef4e67"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3bd46aa5d1ad27cb939eda58b9ef4e67">&#9670;&#160;</a></span>hexDump()</h2>
+<a id="a5e89a82ecd447626404d378a3ca8d38b" name="a5e89a82ecd447626404d378a3ca8d38b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e89a82ecd447626404d378a3ca8d38b">&#9670;&#160;</a></span>hexDump() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string utils::hexDump </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>bytes</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t</td>          <td class="paramname"><span class="paramname"><em>length</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>prefixLength</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>prefixAtFirstLine</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="hexdump_8cpp_source.html#l00044">44</a> of file <a class="el" href="hexdump_8cpp_source.html">hexdump.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   44</span>                                                                                                    {</div>
+<div class="line"><span class="lineno">   45</span>        std::stringstream hexStream;</div>
+<div class="line"><span class="lineno">   46</span> </div>
+<div class="line"><span class="lineno">   47</span>        <span class="keywordflow">if</span> (length &gt; 0) {</div>
+<div class="line"><span class="lineno">   48</span>            uint8_t buff[17];</div>
+<div class="line"><span class="lineno">   49</span>            <span class="keywordtype">size_t</span> i = 0;</div>
+<div class="line"><span class="lineno">   50</span> </div>
+<div class="line"><span class="lineno">   51</span>            hexStream &lt;&lt; std::hex;</div>
+<div class="line"><span class="lineno">   52</span> </div>
+<div class="line"><span class="lineno">   53</span>            <span class="keywordtype">int</span> currentPrefixLength = prefixAtFirstLine ? prefixLength : 0;</div>
+<div class="line"><span class="lineno">   54</span> </div>
+<div class="line"><span class="lineno">   55</span>            <span class="comment">// Process every byte in the data.</span></div>
+<div class="line"><span class="lineno">   56</span>            <span class="keywordflow">for</span> (i = 0; i &lt; length; i++) {</div>
+<div class="line"><span class="lineno">   57</span>                <span class="comment">// Multiple of 16 means new line (with line offset).</span></div>
+<div class="line"><span class="lineno">   58</span> </div>
+<div class="line"><span class="lineno">   59</span>                <span class="keywordflow">if</span> ((i % 16) == 0) {</div>
+<div class="line"><span class="lineno">   60</span>                    <span class="comment">// Just don&#39;t print ASCII for the zeroth line.</span></div>
+<div class="line"><span class="lineno">   61</span>                    <span class="keywordflow">if</span> (i != 0) {</div>
+<div class="line"><span class="lineno">   62</span>                        hexStream &lt;&lt; <span class="stringliteral">&quot;  &quot;</span> &lt;&lt; buff &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">   63</span>                    }</div>
+<div class="line"><span class="lineno">   64</span> </div>
+<div class="line"><span class="lineno">   65</span>                    <span class="comment">// Output the offset.</span></div>
+<div class="line"><span class="lineno">   66</span>                    hexStream &lt;&lt; <a class="code hl_enumvalue" href="namespaceColor.html#a20a7b04657c1d83fae5d54514d3f1622abc692cd3754240e2f8efac99386f1cb3">Color::Code::FG_BLUE</a>;</div>
+<div class="line"><span class="lineno">   67</span>                    hexStream &lt;&lt; std::setw(currentPrefixLength) &lt;&lt; std::setfill(<span class="charliteral">&#39; &#39;</span>) &lt;&lt; <span class="stringliteral">&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   68</span>                              &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; std::setw(8) &lt;&lt; std::setfill(<span class="charliteral">&#39;0&#39;</span>) &lt;&lt; <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">int</span><span class="keyword">&gt;</span>(i);</div>
+<div class="line"><span class="lineno">   69</span>                    hexStream &lt;&lt; <a class="code hl_enumvalue" href="namespaceColor.html#a20a7b04657c1d83fae5d54514d3f1622aec939dfa85c55fe16445f3c02bb012d8">Color::Code::FG_DEFAULT</a> &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line"><span class="lineno">   70</span>                }</div>
+<div class="line"><span class="lineno">   71</span> </div>
+<div class="line"><span class="lineno">   72</span>                <span class="comment">// Now the hex code for the specific character.</span></div>
+<div class="line"><span class="lineno">   73</span>                hexStream &lt;&lt; <a class="code hl_enumvalue" href="namespaceColor.html#a20a7b04657c1d83fae5d54514d3f1622ac5e2716a4915a3f96c501cbe821f553b">Color::Code::FG_GREEN</a>;</div>
+<div class="line"><span class="lineno">   74</span>                hexStream &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; std::setw(2) &lt;&lt; std::setfill(<span class="charliteral">&#39;0&#39;</span>) &lt;&lt; <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">int</span><span class="keyword">&gt;</span>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span><span class="keyword">&gt;</span>(bytes[i]));</div>
+<div class="line"><span class="lineno">   75</span>                hexStream &lt;&lt; <a class="code hl_enumvalue" href="namespaceColor.html#a20a7b04657c1d83fae5d54514d3f1622aec939dfa85c55fe16445f3c02bb012d8">Color::Code::FG_DEFAULT</a>;</div>
+<div class="line"><span class="lineno">   76</span> </div>
+<div class="line"><span class="lineno">   77</span>                <span class="comment">// And store a printable ASCII character for later.</span></div>
+<div class="line"><span class="lineno">   78</span>                <span class="keywordflow">if</span> ((bytes[i] &lt; 0x20) || (bytes[i] &gt; 0x7e)) {</div>
+<div class="line"><span class="lineno">   79</span>                    buff[i % 16] = <span class="charliteral">&#39;.&#39;</span>;</div>
+<div class="line"><span class="lineno">   80</span>                } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">   81</span>                    buff[i % 16] = <span class="keyword">static_cast&lt;</span>uint8_t<span class="keyword">&gt;</span>(bytes[i]);</div>
+<div class="line"><span class="lineno">   82</span>                }</div>
+<div class="line"><span class="lineno">   83</span>                buff[(i % 16) + 1] = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><span class="lineno">   84</span> </div>
+<div class="line"><span class="lineno">   85</span>                currentPrefixLength = prefixLength;</div>
+<div class="line"><span class="lineno">   86</span>            }</div>
+<div class="line"><span class="lineno">   87</span> </div>
+<div class="line"><span class="lineno">   88</span>            hexStream &lt;&lt; std::dec;</div>
+<div class="line"><span class="lineno">   89</span> </div>
+<div class="line"><span class="lineno">   90</span>            <span class="comment">// Pad out last line if not exactly 16 characters.</span></div>
+<div class="line"><span class="lineno">   91</span>            <span class="keywordflow">while</span> ((i % 16) != 0) {</div>
+<div class="line"><span class="lineno">   92</span>                hexStream &lt;&lt; <span class="stringliteral">&quot;   &quot;</span>;</div>
+<div class="line"><span class="lineno">   93</span>                i++;</div>
+<div class="line"><span class="lineno">   94</span>            }</div>
+<div class="line"><span class="lineno">   95</span> </div>
+<div class="line"><span class="lineno">   96</span>            <span class="comment">// And print the final ASCII bit.</span></div>
+<div class="line"><span class="lineno">   97</span>            hexStream &lt;&lt; <span class="stringliteral">&quot;  &quot;</span> &lt;&lt; buff;</div>
+<div class="line"><span class="lineno">   98</span>        }</div>
+<div class="line"><span class="lineno">   99</span> </div>
+<div class="line"><span class="lineno">  100</span>        <span class="keywordflow">return</span> hexStream.str();</div>
+<div class="line"><span class="lineno">  101</span>    }</div>
+<div class="ttc" id="anamespaceColor_html_a20a7b04657c1d83fae5d54514d3f1622abc692cd3754240e2f8efac99386f1cb3"><div class="ttname"><a href="namespaceColor.html#a20a7b04657c1d83fae5d54514d3f1622abc692cd3754240e2f8efac99386f1cb3">Color::Code::FG_BLUE</a></div><div class="ttdeci">@ FG_BLUE</div></div>
+<div class="ttc" id="anamespaceColor_html_a20a7b04657c1d83fae5d54514d3f1622ac5e2716a4915a3f96c501cbe821f553b"><div class="ttname"><a href="namespaceColor.html#a20a7b04657c1d83fae5d54514d3f1622ac5e2716a4915a3f96c501cbe821f553b">Color::Code::FG_GREEN</a></div><div class="ttdeci">@ FG_GREEN</div></div>
+<div class="ttc" id="anamespaceColor_html_a20a7b04657c1d83fae5d54514d3f1622aec939dfa85c55fe16445f3c02bb012d8"><div class="ttname"><a href="namespaceColor.html#a20a7b04657c1d83fae5d54514d3f1622aec939dfa85c55fe16445f3c02bb012d8">Color::Code::FG_DEFAULT</a></div><div class="ttdeci">@ FG_DEFAULT</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a98a99c135c12b440426e6ea77ea2bf28" name="a98a99c135c12b440426e6ea77ea2bf28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98a99c135c12b440426e6ea77ea2bf28">&#9670;&#160;</a></span>hexDump() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string utils::hexDump </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>string</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>prefixLength</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>prefixAtFirstLine</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="hexdump_8cpp_source.html#l00040">40</a> of file <a class="el" href="hexdump_8cpp_source.html">hexdump.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   40</span>                                                                                         {</div>
+<div class="line"><span class="lineno">   41</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="#ad8af90943f5b6e2c985db811abae8730">hexDump</a>(<span class="keywordtype">string</span>.data(), <span class="keywordtype">string</span>.length(), prefixLength, prefixAtFirstLine);</div>
+<div class="line"><span class="lineno">   42</span>    }</div>
+<div class="ttc" id="anamespaceutils_html_ad8af90943f5b6e2c985db811abae8730"><div class="ttname"><a href="#ad8af90943f5b6e2c985db811abae8730">utils::hexDump</a></div><div class="ttdeci">std::string hexDump(const std::vector&lt; char &gt; &amp;bytes, int prefixLength, bool prefixAtFirstLine)</div><div class="ttdef"><b>Definition</b> <a href="hexdump_8cpp_source.html#l00036">hexdump.cpp:36</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ad8af90943f5b6e2c985db811abae8730" name="ad8af90943f5b6e2c985db811abae8730"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8af90943f5b6e2c985db811abae8730">&#9670;&#160;</a></span>hexDump() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -501,72 +631,20 @@ template&lt;unsigned N&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>prefixLength</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>prefixLength</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>prefixAtFirstLine</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="hexdump_8cpp_source.html#l00036">36</a> of file <a class="el" href="hexdump_8cpp_source.html">hexdump.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   36</span>                                                                      {</div>
-<div class="line"><span class="lineno">   37</span>        std::stringstream hexStream;</div>
-<div class="line"><span class="lineno">   38</span> </div>
-<div class="line"><span class="lineno">   39</span>        <span class="keywordflow">if</span> (!bytes.empty()) {</div>
-<div class="line"><span class="lineno">   40</span>            uint8_t buff[17];</div>
-<div class="line"><span class="lineno">   41</span>            <span class="keywordtype">size_t</span> i = 0;</div>
-<div class="line"><span class="lineno">   42</span> </div>
-<div class="line"><span class="lineno">   43</span>            hexStream &lt;&lt; std::hex;</div>
-<div class="line"><span class="lineno">   44</span> </div>
-<div class="line"><span class="lineno">   45</span>            <span class="keywordtype">int</span> currentPrefixLength = 0;</div>
-<div class="line"><span class="lineno">   46</span> </div>
-<div class="line"><span class="lineno">   47</span>            <span class="comment">// Process every byte in the data.</span></div>
-<div class="line"><span class="lineno">   48</span>            <span class="keywordflow">for</span> (i = 0; i &lt; bytes.size(); i++) {</div>
-<div class="line"><span class="lineno">   49</span>                <span class="comment">// Multiple of 16 means new line (with line offset).</span></div>
-<div class="line"><span class="lineno">   50</span> </div>
-<div class="line"><span class="lineno">   51</span>                <span class="keywordflow">if</span> ((i % 16) == 0) {</div>
-<div class="line"><span class="lineno">   52</span>                    <span class="comment">// Just don&#39;t print ASCII for the zeroth line.</span></div>
-<div class="line"><span class="lineno">   53</span>                    <span class="keywordflow">if</span> (i != 0) {</div>
-<div class="line"><span class="lineno">   54</span>                        hexStream &lt;&lt; <span class="stringliteral">&quot;  &quot;</span> &lt;&lt; buff &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">   55</span>                    }</div>
-<div class="line"><span class="lineno">   56</span> </div>
-<div class="line"><span class="lineno">   57</span>                    <span class="comment">// Output the offset.</span></div>
-<div class="line"><span class="lineno">   58</span>                    hexStream &lt;&lt; <a class="code hl_enumvalue" href="namespaceColor.html#a20a7b04657c1d83fae5d54514d3f1622abc692cd3754240e2f8efac99386f1cb3">Color::Code::FG_BLUE</a>;</div>
-<div class="line"><span class="lineno">   59</span>                    hexStream &lt;&lt; std::setw(currentPrefixLength) &lt;&lt; std::setfill(<span class="charliteral">&#39; &#39;</span>) &lt;&lt; <span class="stringliteral">&quot;&quot;</span></div>
-<div class="line"><span class="lineno">   60</span>                              &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; std::setw(8) &lt;&lt; std::setfill(<span class="charliteral">&#39;0&#39;</span>) &lt;&lt; <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">int</span><span class="keyword">&gt;</span>(i);</div>
-<div class="line"><span class="lineno">   61</span>                    hexStream &lt;&lt; <a class="code hl_enumvalue" href="namespaceColor.html#a20a7b04657c1d83fae5d54514d3f1622aec939dfa85c55fe16445f3c02bb012d8">Color::Code::FG_DEFAULT</a> &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
-<div class="line"><span class="lineno">   62</span>                    currentPrefixLength = prefixLength;</div>
-<div class="line"><span class="lineno">   63</span>                }</div>
-<div class="line"><span class="lineno">   64</span> </div>
-<div class="line"><span class="lineno">   65</span>                <span class="comment">// Now the hex code for the specific character.</span></div>
-<div class="line"><span class="lineno">   66</span>                hexStream &lt;&lt; <a class="code hl_enumvalue" href="namespaceColor.html#a20a7b04657c1d83fae5d54514d3f1622ac5e2716a4915a3f96c501cbe821f553b">Color::Code::FG_GREEN</a>;</div>
-<div class="line"><span class="lineno">   67</span>                hexStream &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; std::setw(2) &lt;&lt; std::setfill(<span class="charliteral">&#39;0&#39;</span>) &lt;&lt; <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">int</span><span class="keyword">&gt;</span>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span><span class="keyword">&gt;</span>(bytes[i]));</div>
-<div class="line"><span class="lineno">   68</span>                hexStream &lt;&lt; <a class="code hl_enumvalue" href="namespaceColor.html#a20a7b04657c1d83fae5d54514d3f1622aec939dfa85c55fe16445f3c02bb012d8">Color::Code::FG_DEFAULT</a>;</div>
-<div class="line"><span class="lineno">   69</span> </div>
-<div class="line"><span class="lineno">   70</span>                <span class="comment">// And store a printable ASCII character for later.</span></div>
-<div class="line"><span class="lineno">   71</span>                <span class="keywordflow">if</span> ((bytes[i] &lt; 0x20) || (bytes[i] &gt; 0x7e)) {</div>
-<div class="line"><span class="lineno">   72</span>                    buff[i % 16] = <span class="charliteral">&#39;.&#39;</span>;</div>
-<div class="line"><span class="lineno">   73</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   74</span>                    buff[i % 16] = <span class="keyword">static_cast&lt;</span>uint8_t<span class="keyword">&gt;</span>(bytes[i]);</div>
-<div class="line"><span class="lineno">   75</span>                }</div>
-<div class="line"><span class="lineno">   76</span>                buff[(i % 16) + 1] = <span class="charliteral">&#39;\0&#39;</span>;</div>
-<div class="line"><span class="lineno">   77</span>            }</div>
-<div class="line"><span class="lineno">   78</span> </div>
-<div class="line"><span class="lineno">   79</span>            hexStream &lt;&lt; std::dec;</div>
-<div class="line"><span class="lineno">   80</span> </div>
-<div class="line"><span class="lineno">   81</span>            <span class="comment">// Pad out last line if not exactly 16 characters.</span></div>
-<div class="line"><span class="lineno">   82</span>            <span class="keywordflow">while</span> ((i % 16) != 0) {</div>
-<div class="line"><span class="lineno">   83</span>                hexStream &lt;&lt; <span class="stringliteral">&quot;   &quot;</span>;</div>
-<div class="line"><span class="lineno">   84</span>                i++;</div>
-<div class="line"><span class="lineno">   85</span>            }</div>
-<div class="line"><span class="lineno">   86</span> </div>
-<div class="line"><span class="lineno">   87</span>            <span class="comment">// And print the final ASCII bit.</span></div>
-<div class="line"><span class="lineno">   88</span>            hexStream &lt;&lt; <span class="stringliteral">&quot;  &quot;</span> &lt;&lt; buff;</div>
-<div class="line"><span class="lineno">   89</span>        }</div>
-<div class="line"><span class="lineno">   90</span> </div>
-<div class="line"><span class="lineno">   91</span>        <span class="keywordflow">return</span> hexStream.str();</div>
-<div class="line"><span class="lineno">   92</span>    }</div>
-<div class="ttc" id="anamespaceColor_html_a20a7b04657c1d83fae5d54514d3f1622abc692cd3754240e2f8efac99386f1cb3"><div class="ttname"><a href="namespaceColor.html#a20a7b04657c1d83fae5d54514d3f1622abc692cd3754240e2f8efac99386f1cb3">Color::Code::FG_BLUE</a></div><div class="ttdeci">@ FG_BLUE</div></div>
-<div class="ttc" id="anamespaceColor_html_a20a7b04657c1d83fae5d54514d3f1622ac5e2716a4915a3f96c501cbe821f553b"><div class="ttname"><a href="namespaceColor.html#a20a7b04657c1d83fae5d54514d3f1622ac5e2716a4915a3f96c501cbe821f553b">Color::Code::FG_GREEN</a></div><div class="ttdeci">@ FG_GREEN</div></div>
-<div class="ttc" id="anamespaceColor_html_a20a7b04657c1d83fae5d54514d3f1622aec939dfa85c55fe16445f3c02bb012d8"><div class="ttname"><a href="namespaceColor.html#a20a7b04657c1d83fae5d54514d3f1622aec939dfa85c55fe16445f3c02bb012d8">Color::Code::FG_DEFAULT</a></div><div class="ttdeci">@ FG_DEFAULT</div></div>
+<div class="fragment"><div class="line"><span class="lineno">   36</span>                                                                                              {</div>
+<div class="line"><span class="lineno">   37</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="#ad8af90943f5b6e2c985db811abae8730">hexDump</a>(bytes.data(), bytes.size(), prefixLength, prefixAtFirstLine);</div>
+<div class="line"><span class="lineno">   38</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -593,39 +671,39 @@ template&lt;unsigned N&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Config_8cpp_source.html#l00068">68</a> of file <a class="el" href="Config_8cpp_source.html">Config.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   68</span>                                                 { <span class="comment">// NO_LINT</span></div>
-<div class="line"><span class="lineno">   69</span>        <span class="keyword">const</span> std::shared_ptr&lt;CLI::App&gt; app = std::make_shared&lt;CLI::App&gt;();</div>
-<div class="line"><span class="lineno">   70</span> </div>
-<div class="line"><span class="lineno">   71</span>        app-&gt;configurable(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">   72</span>        app-&gt;allow_extras();</div>
-<div class="line"><span class="lineno">   73</span>        app-&gt;allow_config_extras();</div>
-<div class="line"><span class="lineno">   74</span> </div>
-<div class="line"><span class="lineno">   75</span>        <span class="keyword">const</span> std::shared_ptr&lt;CLI::HelpFormatter&gt; helpFormatter = std::make_shared&lt;CLI::HelpFormatter&gt;();</div>
-<div class="line"><span class="lineno">   76</span> </div>
-<div class="line"><span class="lineno">   77</span>        helpFormatter-&gt;label(<span class="stringliteral">&quot;SUBCOMMAND&quot;</span>, <span class="stringliteral">&quot;INSTANCE&quot;</span>);</div>
-<div class="line"><span class="lineno">   78</span>        helpFormatter-&gt;label(<span class="stringliteral">&quot;SUBCOMMANDS&quot;</span>, <span class="stringliteral">&quot;INSTANCES&quot;</span>);</div>
-<div class="line"><span class="lineno">   79</span>        helpFormatter-&gt;label(<span class="stringliteral">&quot;PERSISTENT&quot;</span>, <span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><span class="lineno">   80</span>        helpFormatter-&gt;label(<span class="stringliteral">&quot;Persistent Options&quot;</span>, <span class="stringliteral">&quot;Options (persistent)&quot;</span>);</div>
-<div class="line"><span class="lineno">   81</span>        helpFormatter-&gt;label(<span class="stringliteral">&quot;Nonpersistent Options&quot;</span>, <span class="stringliteral">&quot;Options (nonpersistent)&quot;</span>);</div>
-<div class="line"><span class="lineno">   82</span>        helpFormatter-&gt;label(<span class="stringliteral">&quot;Usage&quot;</span>, <span class="stringliteral">&quot;\nUsage&quot;</span>);</div>
-<div class="line"><span class="lineno">   83</span>        helpFormatter-&gt;label(<span class="stringliteral">&quot;bool:{true,false}&quot;</span>, <span class="stringliteral">&quot;{true,false}&quot;</span>);</div>
-<div class="line"><span class="lineno">   84</span>        helpFormatter-&gt;label(<span class="stringliteral">&quot;:{standard,required,full,default}&quot;</span>, <span class="stringliteral">&quot;{standard,required,full,default}&quot;</span>);</div>
-<div class="line"><span class="lineno">   85</span>        helpFormatter-&gt;label(<span class="stringliteral">&quot;:{standard,expanded}&quot;</span>, <span class="stringliteral">&quot;{standard,expanded}&quot;</span>);</div>
-<div class="line"><span class="lineno">   86</span>        helpFormatter-&gt;column_width(7);</div>
-<div class="line"><span class="lineno">   87</span> </div>
-<div class="line"><span class="lineno">   88</span>        app-&gt;formatter(helpFormatter);</div>
-<div class="line"><span class="lineno">   89</span> </div>
-<div class="line"><span class="lineno">   90</span>        app-&gt;config_formatter(std::make_shared&lt;CLI::ConfigFormatter&gt;());</div>
-<div class="line"><span class="lineno">   91</span>        app-&gt;get_config_formatter_base()-&gt;arrayDelimiter(<span class="charliteral">&#39; &#39;</span>);</div>
+<p class="definition">Definition at line <a class="el" href="Config_8cpp_source.html#l00071">71</a> of file <a class="el" href="Config_8cpp_source.html">Config.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   71</span>                                                 { <span class="comment">// NO_LINT</span></div>
+<div class="line"><span class="lineno">   72</span>        <span class="keyword">const</span> std::shared_ptr&lt;CLI::App&gt; app = std::make_shared&lt;CLI::App&gt;();</div>
+<div class="line"><span class="lineno">   73</span> </div>
+<div class="line"><span class="lineno">   74</span>        app-&gt;configurable(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   75</span>        app-&gt;allow_extras();</div>
+<div class="line"><span class="lineno">   76</span>        app-&gt;allow_config_extras();</div>
+<div class="line"><span class="lineno">   77</span> </div>
+<div class="line"><span class="lineno">   78</span>        <span class="keyword">const</span> std::shared_ptr&lt;CLI::HelpFormatter&gt; helpFormatter = std::make_shared&lt;CLI::HelpFormatter&gt;();</div>
+<div class="line"><span class="lineno">   79</span> </div>
+<div class="line"><span class="lineno">   80</span>        helpFormatter-&gt;label(<span class="stringliteral">&quot;SUBCOMMAND&quot;</span>, <span class="stringliteral">&quot;INSTANCE&quot;</span>);</div>
+<div class="line"><span class="lineno">   81</span>        helpFormatter-&gt;label(<span class="stringliteral">&quot;SUBCOMMANDS&quot;</span>, <span class="stringliteral">&quot;INSTANCES&quot;</span>);</div>
+<div class="line"><span class="lineno">   82</span>        helpFormatter-&gt;label(<span class="stringliteral">&quot;PERSISTENT&quot;</span>, <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">   83</span>        helpFormatter-&gt;label(<span class="stringliteral">&quot;Persistent Options&quot;</span>, <span class="stringliteral">&quot;Options (persistent)&quot;</span>);</div>
+<div class="line"><span class="lineno">   84</span>        helpFormatter-&gt;label(<span class="stringliteral">&quot;Nonpersistent Options&quot;</span>, <span class="stringliteral">&quot;Options (nonpersistent)&quot;</span>);</div>
+<div class="line"><span class="lineno">   85</span>        helpFormatter-&gt;label(<span class="stringliteral">&quot;Usage&quot;</span>, <span class="stringliteral">&quot;\nUsage&quot;</span>);</div>
+<div class="line"><span class="lineno">   86</span>        helpFormatter-&gt;label(<span class="stringliteral">&quot;bool:{true,false}&quot;</span>, <span class="stringliteral">&quot;{true,false}&quot;</span>);</div>
+<div class="line"><span class="lineno">   87</span>        helpFormatter-&gt;label(<span class="stringliteral">&quot;:{standard,required,full,default}&quot;</span>, <span class="stringliteral">&quot;{standard,required,full,default}&quot;</span>);</div>
+<div class="line"><span class="lineno">   88</span>        helpFormatter-&gt;label(<span class="stringliteral">&quot;:{standard,expanded}&quot;</span>, <span class="stringliteral">&quot;{standard,expanded}&quot;</span>);</div>
+<div class="line"><span class="lineno">   89</span>        helpFormatter-&gt;column_width(7);</div>
+<div class="line"><span class="lineno">   90</span> </div>
+<div class="line"><span class="lineno">   91</span>        app-&gt;formatter(helpFormatter);</div>
 <div class="line"><span class="lineno">   92</span> </div>
-<div class="line"><span class="lineno">   93</span>        app-&gt;option_defaults()-&gt;take_last();</div>
-<div class="line"><span class="lineno">   94</span>        app-&gt;option_defaults()-&gt;group(app-&gt;get_formatter()-&gt;get_label(<span class="stringliteral">&quot;Nonpersistent Options&quot;</span>));</div>
+<div class="line"><span class="lineno">   93</span>        app-&gt;config_formatter(std::make_shared&lt;CLI::ConfigFormatter&gt;());</div>
+<div class="line"><span class="lineno">   94</span>        app-&gt;get_config_formatter_base()-&gt;arrayDelimiter(<span class="charliteral">&#39; &#39;</span>);</div>
 <div class="line"><span class="lineno">   95</span> </div>
-<div class="line"><span class="lineno">   96</span>        <a class="code hl_function" href="classlogger_1_1Logger.html#abab0f18929e134d658ea323245f6cab8">logger::Logger::init</a>();</div>
-<div class="line"><span class="lineno">   97</span> </div>
-<div class="line"><span class="lineno">   98</span>        <span class="keywordflow">return</span> app;</div>
-<div class="line"><span class="lineno">   99</span>    }</div>
+<div class="line"><span class="lineno">   96</span>        app-&gt;option_defaults()-&gt;take_last();</div>
+<div class="line"><span class="lineno">   97</span>        app-&gt;option_defaults()-&gt;group(app-&gt;get_formatter()-&gt;get_label(<span class="stringliteral">&quot;Nonpersistent Options&quot;</span>));</div>
+<div class="line"><span class="lineno">   98</span> </div>
+<div class="line"><span class="lineno">   99</span>        <a class="code hl_function" href="classlogger_1_1Logger.html#abab0f18929e134d658ea323245f6cab8">logger::Logger::init</a>();</div>
+<div class="line"><span class="lineno">  100</span> </div>
+<div class="line"><span class="lineno">  101</span>        <span class="keywordflow">return</span> app;</div>
+<div class="line"><span class="lineno">  102</span>    }</div>
 <div class="ttc" id="aclasslogger_1_1Logger_html_abab0f18929e134d658ea323245f6cab8"><div class="ttname"><a href="classlogger_1_1Logger.html#abab0f18929e134d658ea323245f6cab8">logger::Logger::init</a></div><div class="ttdeci">static void init()</div><div class="ttdef"><b>Definition</b> <a href="Logger_8cpp_source.html#l00032">Logger.cpp:32</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="Logger_8cpp_source.html#l00032">logger::Logger::init()</a>.</p>
@@ -660,23 +738,23 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Config_8cpp_source.html#l00630">630</a> of file <a class="el" href="Config_8cpp_source.html">Config.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  630</span>                                                                        {</div>
-<div class="line"><span class="lineno">  631</span>        <span class="keyword">const</span> std::shared_ptr&lt;CLI::HelpFormatter&gt; sectionFormatter = std::make_shared&lt;CLI::HelpFormatter&gt;();</div>
-<div class="line"><span class="lineno">  632</span> </div>
-<div class="line"><span class="lineno">  633</span>        sectionFormatter-&gt;label(<span class="stringliteral">&quot;SUBCOMMAND&quot;</span>, <span class="stringliteral">&quot;SECTION&quot;</span>);</div>
-<div class="line"><span class="lineno">  634</span>        sectionFormatter-&gt;label(<span class="stringliteral">&quot;SUBCOMMANDS&quot;</span>, <span class="stringliteral">&quot;SECTIONS&quot;</span>);</div>
-<div class="line"><span class="lineno">  635</span>        sectionFormatter-&gt;label(<span class="stringliteral">&quot;PERSISTENT&quot;</span>, <span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><span class="lineno">  636</span>        sectionFormatter-&gt;label(<span class="stringliteral">&quot;Persistent Options&quot;</span>, <span class="stringliteral">&quot;Options (persistent)&quot;</span>);</div>
-<div class="line"><span class="lineno">  637</span>        sectionFormatter-&gt;label(<span class="stringliteral">&quot;Nonpersistent Options&quot;</span>, <span class="stringliteral">&quot;Options (nonpersistent)&quot;</span>);</div>
-<div class="line"><span class="lineno">  638</span>        sectionFormatter-&gt;label(<span class="stringliteral">&quot;Usage&quot;</span>, <span class="stringliteral">&quot;\nUsage&quot;</span>);</div>
-<div class="line"><span class="lineno">  639</span>        sectionFormatter-&gt;label(<span class="stringliteral">&quot;bool:{true,false}&quot;</span>, <span class="stringliteral">&quot;{true,false}&quot;</span>);</div>
-<div class="line"><span class="lineno">  640</span>        sectionFormatter-&gt;label(<span class="stringliteral">&quot;:{standard,required,full,default}&quot;</span>, <span class="stringliteral">&quot;{standard,required,full,default}&quot;</span>);</div>
-<div class="line"><span class="lineno">  641</span>        sectionFormatter-&gt;label(<span class="stringliteral">&quot;:{standard,expanded}&quot;</span>, <span class="stringliteral">&quot;{standard,expanded}&quot;</span>);</div>
-<div class="line"><span class="lineno">  642</span>        sectionFormatter-&gt;column_width(7);</div>
-<div class="line"><span class="lineno">  643</span> </div>
-<div class="line"><span class="lineno">  644</span>        <span class="keywordflow">return</span> sectionFormatter;</div>
-<div class="line"><span class="lineno">  645</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Config_8cpp_source.html#l00633">633</a> of file <a class="el" href="Config_8cpp_source.html">Config.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  633</span>                                                                        {</div>
+<div class="line"><span class="lineno">  634</span>        <span class="keyword">const</span> std::shared_ptr&lt;CLI::HelpFormatter&gt; sectionFormatter = std::make_shared&lt;CLI::HelpFormatter&gt;();</div>
+<div class="line"><span class="lineno">  635</span> </div>
+<div class="line"><span class="lineno">  636</span>        sectionFormatter-&gt;label(<span class="stringliteral">&quot;SUBCOMMAND&quot;</span>, <span class="stringliteral">&quot;SECTION&quot;</span>);</div>
+<div class="line"><span class="lineno">  637</span>        sectionFormatter-&gt;label(<span class="stringliteral">&quot;SUBCOMMANDS&quot;</span>, <span class="stringliteral">&quot;SECTIONS&quot;</span>);</div>
+<div class="line"><span class="lineno">  638</span>        sectionFormatter-&gt;label(<span class="stringliteral">&quot;PERSISTENT&quot;</span>, <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">  639</span>        sectionFormatter-&gt;label(<span class="stringliteral">&quot;Persistent Options&quot;</span>, <span class="stringliteral">&quot;Options (persistent)&quot;</span>);</div>
+<div class="line"><span class="lineno">  640</span>        sectionFormatter-&gt;label(<span class="stringliteral">&quot;Nonpersistent Options&quot;</span>, <span class="stringliteral">&quot;Options (nonpersistent)&quot;</span>);</div>
+<div class="line"><span class="lineno">  641</span>        sectionFormatter-&gt;label(<span class="stringliteral">&quot;Usage&quot;</span>, <span class="stringliteral">&quot;\nUsage&quot;</span>);</div>
+<div class="line"><span class="lineno">  642</span>        sectionFormatter-&gt;label(<span class="stringliteral">&quot;bool:{true,false}&quot;</span>, <span class="stringliteral">&quot;{true,false}&quot;</span>);</div>
+<div class="line"><span class="lineno">  643</span>        sectionFormatter-&gt;label(<span class="stringliteral">&quot;:{standard,required,full,default}&quot;</span>, <span class="stringliteral">&quot;{standard,required,full,default}&quot;</span>);</div>
+<div class="line"><span class="lineno">  644</span>        sectionFormatter-&gt;label(<span class="stringliteral">&quot;:{standard,expanded}&quot;</span>, <span class="stringliteral">&quot;{standard,expanded}&quot;</span>);</div>
+<div class="line"><span class="lineno">  645</span>        sectionFormatter-&gt;column_width(7);</div>
+<div class="line"><span class="lineno">  646</span> </div>
+<div class="line"><span class="lineno">  647</span>        <span class="keywordflow">return</span> sectionFormatter;</div>
+<div class="line"><span class="lineno">  648</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -817,7 +895,7 @@ Here is the call graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceutils.html">utils</a></li>
-    <li class="footer">Generated on Mon Jan 20 2025 01:16:12 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generated on Wed Feb 5 2025 21:40:38 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>

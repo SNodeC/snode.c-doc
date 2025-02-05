@@ -140,7 +140,7 @@ $(function(){initNavTree('httpclientclientcert_8cpp_source.html',''); initResiza
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    client.connect([instanceName = client.getConfig().getInstanceName()](</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>                       <span class="keyword">const</span> SocketAddress&amp; socketAddress,</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>                       <span class="keyword">const</span> core::socket::State&amp; state) -&gt; <span class="keywordtype">void</span> { <span class="comment">// example.com:81 simulate connnect timeout</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>                       <span class="keyword">const</span> core::socket::State&amp; state) { <span class="comment">// example.com:81 simulate connnect timeout</span></div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="keywordflow">switch</span> (state) {</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            <span class="keywordflow">case</span> core::socket::State::OK:</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>                VLOG(1) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot;: connected to &#39;&quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
@@ -163,47 +163,47 @@ $(function(){initNavTree('httpclientclientcert_8cpp_source.html',''); initResiza
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="comment">/*</span></div>
 <div class="line"><span class="lineno">   61</span><span class="comment">#if (NET_TYPE == IN) // in</span></div>
 <div class="line"><span class="lineno">   62</span><span class="comment">#if (STREAM_TYPE == LEGACY)</span></div>
-<div class="line"><span class="lineno">   63</span><span class="comment">    client.connect(&quot;localhost&quot;, 8080, [](int errnum) -&gt; void {</span></div>
+<div class="line"><span class="lineno">   63</span><span class="comment">    client.connect(&quot;localhost&quot;, 8080, [](int errnum) {</span></div>
 <div class="line"><span class="lineno">   64</span><span class="comment">#elif (STREAM_TYPE == TLS)</span></div>
-<div class="line"><span class="lineno">   65</span><span class="comment">    client.connect(&quot;localhost&quot;, 8088, [](int errnum) -&gt; void {</span></div>
+<div class="line"><span class="lineno">   65</span><span class="comment">    client.connect(&quot;localhost&quot;, 8088, [](int errnum) {</span></div>
 <div class="line"><span class="lineno">   66</span><span class="comment">#endif</span></div>
 <div class="line"><span class="lineno">   67</span><span class="comment">#elif (NET_TYPE == IN6) // in6</span></div>
 <div class="line"><span class="lineno">   68</span><span class="comment">#if (STREAM_TYPE == LEGACY)</span></div>
-<div class="line"><span class="lineno">   69</span><span class="comment">    client.connect(&quot;localhost&quot;, 8080, [](int errnum) -&gt; void {</span></div>
+<div class="line"><span class="lineno">   69</span><span class="comment">    client.connect(&quot;localhost&quot;, 8080, [](int errnum) {</span></div>
 <div class="line"><span class="lineno">   70</span><span class="comment">#elif (STREAM_TYPE == TLS)</span></div>
-<div class="line"><span class="lineno">   71</span><span class="comment">    client.connect(&quot;localhost&quot;, 8088, [](int errnum) -&gt; void {</span></div>
+<div class="line"><span class="lineno">   71</span><span class="comment">    client.connect(&quot;localhost&quot;, 8088, [](int errnum) {</span></div>
 <div class="line"><span class="lineno">   72</span><span class="comment">#endif</span></div>
 <div class="line"><span class="lineno">   73</span><span class="comment">#elif (NET_TYPE == L2) // l2</span></div>
 <div class="line"><span class="lineno">   74</span><span class="comment">    // ATLAS: 10:3D:1C:AC:BA:9C</span></div>
 <div class="line"><span class="lineno">   75</span><span class="comment">    // TITAN: A4:B1:C1:2C:82:37</span></div>
 <div class="line"><span class="lineno">   76</span><span class="comment">    // USB: 44:01:BB:A3:63:32</span></div>
 <div class="line"><span class="lineno">   77</span><span class="comment"></span> </div>
-<div class="line"><span class="lineno">   78</span><span class="comment">    // client.connect(&quot;A4:B1:C1:2C:82:37&quot;, 0x1023, &quot;44:01:BB:A3:63:32&quot;, [](int errnum) -&gt; void {</span></div>
-<div class="line"><span class="lineno">   79</span><span class="comment">    client.connect(&quot;10:3D:1C:AC:BA:9C&quot;, 0x1023, &quot;44:01:BB:A3:63:32&quot;, [](int errnum) -&gt; void {</span></div>
+<div class="line"><span class="lineno">   78</span><span class="comment">    // client.connect(&quot;A4:B1:C1:2C:82:37&quot;, 0x1023, &quot;44:01:BB:A3:63:32&quot;, [](int errnum) {</span></div>
+<div class="line"><span class="lineno">   79</span><span class="comment">    client.connect(&quot;10:3D:1C:AC:BA:9C&quot;, 0x1023, &quot;44:01:BB:A3:63:32&quot;, [](int errnum) {</span></div>
 <div class="line"><span class="lineno">   80</span><span class="comment">#elif (NET_TYPE == RC) // rf</span></div>
-<div class="line"><span class="lineno">   81</span><span class="comment">    // client.connect(&quot;A4:B1:C1:2C:82:37&quot;, 1, &quot;44:01:BB:A3:63:32&quot;, [](int errnum) -&gt; void {</span></div>
-<div class="line"><span class="lineno">   82</span><span class="comment">    client.connect(&quot;10:3D:1C:AC:BA:9C&quot;, 1, &quot;44:01:BB:A3:63:32&quot;, [](int errnum) -&gt; void {</span></div>
+<div class="line"><span class="lineno">   81</span><span class="comment">    // client.connect(&quot;A4:B1:C1:2C:82:37&quot;, 1, &quot;44:01:BB:A3:63:32&quot;, [](int errnum) {</span></div>
+<div class="line"><span class="lineno">   82</span><span class="comment">    client.connect(&quot;10:3D:1C:AC:BA:9C&quot;, 1, &quot;44:01:BB:A3:63:32&quot;, [](int errnum) {</span></div>
 <div class="line"><span class="lineno">   83</span><span class="comment">#elif (NET_TYPE == UN) // un</span></div>
-<div class="line"><span class="lineno">   84</span><span class="comment">    client.connect(&quot;/tmp/testme&quot;, [](int errnum) -&gt; void {</span></div>
+<div class="line"><span class="lineno">   84</span><span class="comment">    client.connect(&quot;/tmp/testme&quot;, [](int errnum) {</span></div>
 <div class="line"><span class="lineno">   85</span><span class="comment">#endif</span></div>
 <div class="line"><span class="lineno">   86</span><span class="comment">        if (errnum != 0) {</span></div>
 <div class="line"><span class="lineno">   87</span><span class="comment">            PLOG(ERROR) &lt;&lt; &quot;OnError: &quot; &lt;&lt; errnum;</span></div>
 <div class="line"><span class="lineno">   88</span><span class="comment">        } else {</span></div>
-<div class="line"><span class="lineno">   89</span><span class="comment">            VLOG(0) &lt;&lt; &quot;snode.c connected&quot;;</span></div>
+<div class="line"><span class="lineno">   89</span><span class="comment">            VLOG(1) &lt;&lt; &quot;snode.c connected&quot;;</span></div>
 <div class="line"><span class="lineno">   90</span><span class="comment">        }</span></div>
 <div class="line"><span class="lineno">   91</span><span class="comment"></span> </div>
 <div class="line"><span class="lineno">   92</span><span class="comment">#ifdef NET_TYPE</span></div>
 <div class="line"><span class="lineno">   93</span><span class="comment">    });</span></div>
 <div class="line"><span class="lineno">   94</span><span class="comment">#endif</span></div>
 <div class="line"><span class="lineno">   95</span><span class="comment">*/</span></div>
-<div class="ttc" id="aconfigtest_8cpp_html_a0ddf1224851353fc92bfbff6f499fa97"><div class="ttname"><a href="configtest_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a></div><div class="ttdeci">int main(int argc, char *argv[])</div><div class="ttdef"><b>Definition</b> <a href="configtest_8cpp_source.html#l00023">configtest.cpp:23</a></div></div>
+<div class="ttc" id="aconfigtest_8cpp_html_a0ddf1224851353fc92bfbff6f499fa97"><div class="ttname"><a href="configtest_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a></div><div class="ttdeci">int main(int argc, char *argv[])</div><div class="ttdef"><b>Definition</b> <a href="configtest_8cpp_source.html#l00026">configtest.cpp:26</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_9654b8d08f4bba4e84b362c5fd320bee.html">apps</a></li><li class="navelem"><a class="el" href="dir_9741969ad79fc4087a97a0753cba2960.html">http</a></li><li class="navelem"><a class="el" href="httpclientclientcert_8cpp.html">httpclientclientcert.cpp</a></li>
-    <li class="footer">Generated on Mon Jan 20 2025 01:14:28 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generated on Wed Feb 5 2025 21:38:54 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>

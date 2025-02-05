@@ -10,7 +10,7 @@ var classweb_1_1websocket_1_1Receiver =
       [ "PAYLOAD", "classweb_1_1websocket_1_1Receiver.html#a3cf4e2588c5333541e445cd7aef1eb9baca8fef80e43c8db749b7c9406d535b1a", null ],
       [ "ERROR", "classweb_1_1websocket_1_1Receiver.html#a3cf4e2588c5333541e445cd7aef1eb9babb1ca97ec761fc37101737ba0aa2e7c5", null ]
     ] ],
-    [ "Receiver", "classweb_1_1websocket_1_1Receiver.html#a7e5f2d5ec1769a0c8ed4b2ffd6d9c7d2", null ],
+    [ "Receiver", "classweb_1_1websocket_1_1Receiver.html#a89998966bc77bd5f2ae7e63f8a1d5574", null ],
     [ "Receiver", "classweb_1_1websocket_1_1Receiver.html#a97c46555f6b1b929c44018b6f4a28621", null ],
     [ "~Receiver", "classweb_1_1websocket_1_1Receiver.html#aa11f6fa95a4bdcbca4d333d99342490e", null ],
     [ "onMessageData", "classweb_1_1websocket_1_1Receiver.html#a81e8511ced9df841caffe5374be68a63", null ],
@@ -19,7 +19,7 @@ var classweb_1_1websocket_1_1Receiver =
     [ "onMessageStart", "classweb_1_1websocket_1_1Receiver.html#a26c04f0b5c7667cf1d26c8bc8ee1e500", null ],
     [ "operator=", "classweb_1_1websocket_1_1Receiver.html#a65e29f8198f85865b9ad42da0da758a5", null ],
     [ "readELength", "classweb_1_1websocket_1_1Receiver.html#a67172021447182a7867efc354f2a14a9", null ],
-    [ "readFrameData", "classweb_1_1websocket_1_1Receiver.html#afc3a8c14b7a666b0eaf9254680260fad", null ],
+    [ "readFrameData", "classweb_1_1websocket_1_1Receiver.html#a7ec21c8a50601402490f698552ed2245", null ],
     [ "readLength", "classweb_1_1websocket_1_1Receiver.html#a4d86cfda2cf5517c53efaf52f07ca06f", null ],
     [ "readMaskingKey", "classweb_1_1websocket_1_1Receiver.html#a572a3d6a32947d42e70ff548315e6541", null ],
     [ "readOpcode", "classweb_1_1websocket_1_1Receiver.html#a9b56f0b3540487930009c8146f29a7da", null ],
@@ -42,5 +42,6 @@ var classweb_1_1websocket_1_1Receiver =
     [ "parserState", "classweb_1_1websocket_1_1Receiver.html#a85339f1c45bc22a3b463ba09d5a8f60f", null ],
     [ "payloadChunk", "classweb_1_1websocket_1_1Receiver.html#a74ce4d4acd41588108c211743e587465", null ],
     [ "payLoadNumBytes", "classweb_1_1websocket_1_1Receiver.html#af35b01abdb17550cd430cd66745363fe", null ],
-    [ "payLoadNumBytesLeft", "classweb_1_1websocket_1_1Receiver.html#af02eba03070948648f309034371f0f1e", null ]
+    [ "payLoadNumBytesLeft", "classweb_1_1websocket_1_1Receiver.html#af02eba03070948648f309034371f0f1e", null ],
+    [ "socketConnection", "classweb_1_1websocket_1_1Receiver.html#a912879367cd681291a84c62ae996a0d5", null ]
 ];

@@ -1,5 +1,11 @@
 var NAVTREEINDEX11 =
 {
+"classdatabase_1_1mariadb_1_1MariaDBClient.html#a9814dc5e1d47ff18e9650870c8819cd3":[3,0,3,0,1,7],
+"classdatabase_1_1mariadb_1_1MariaDBClient.html#a997b152377f26c0853d37591919b9e22":[1,0,5,0,1,6],
+"classdatabase_1_1mariadb_1_1MariaDBClient.html#a997b152377f26c0853d37591919b9e22":[3,0,3,0,1,6],
+"classdatabase_1_1mariadb_1_1MariaDBClient.html#a99f4e50559e24773e1975da1729ba351":[1,0,5,0,1,2],
+"classdatabase_1_1mariadb_1_1MariaDBClient.html#a99f4e50559e24773e1975da1729ba351":[3,0,3,0,1,2],
+"classdatabase_1_1mariadb_1_1MariaDBClientASyncAPI.html":[1,0,5,0,2],
 "classdatabase_1_1mariadb_1_1MariaDBClientASyncAPI.html":[3,0,3,0,2],
 "classdatabase_1_1mariadb_1_1MariaDBClientASyncAPI.html#a0649defbb4bdeac725049e875e764fa3":[1,0,5,0,2,1],
 "classdatabase_1_1mariadb_1_1MariaDBClientASyncAPI.html#a0649defbb4bdeac725049e875e764fa3":[3,0,3,0,2,1],
@@ -243,11 +249,5 @@ var NAVTREEINDEX11 =
 "classdatabase_1_1mariadb_1_1commands_1_1async_1_1MariaDBExecCommand.html#ad67dad6ab3b3e95a9e0b8c4609d024b8":[3,0,3,0,0,0,3,1],
 "classdatabase_1_1mariadb_1_1commands_1_1async_1_1MariaDBExecCommand.html#aeca8beb6e09700d2025b570a5b47ca8d":[1,0,5,0,0,0,3,6],
 "classdatabase_1_1mariadb_1_1commands_1_1async_1_1MariaDBExecCommand.html#aeca8beb6e09700d2025b570a5b47ca8d":[3,0,3,0,0,0,3,6],
-"classdatabase_1_1mariadb_1_1commands_1_1async_1_1MariaDBExecCommand.html#af118dfc533b2674a8ce9119ecd8c7eaa":[1,0,5,0,0,0,3,2],
-"classdatabase_1_1mariadb_1_1commands_1_1async_1_1MariaDBExecCommand.html#af118dfc533b2674a8ce9119ecd8c7eaa":[3,0,3,0,0,0,3,2],
-"classdatabase_1_1mariadb_1_1commands_1_1async_1_1MariaDBExecCommand.html#af192e2ab7e6b06ba016a707388cc1980":[1,0,5,0,0,0,3,7],
-"classdatabase_1_1mariadb_1_1commands_1_1async_1_1MariaDBExecCommand.html#af192e2ab7e6b06ba016a707388cc1980":[3,0,3,0,0,0,3,7],
-"classdatabase_1_1mariadb_1_1commands_1_1async_1_1MariaDBExecCommand.html#af4686932686c77981564f06f36441f44":[1,0,5,0,0,0,3,8],
-"classdatabase_1_1mariadb_1_1commands_1_1async_1_1MariaDBExecCommand.html#af4686932686c77981564f06f36441f44":[3,0,3,0,0,0,3,8],
-"classdatabase_1_1mariadb_1_1commands_1_1async_1_1MariaDBFetchRowCommand.html":[1,0,5,0,0,0,4]
+"classdatabase_1_1mariadb_1_1commands_1_1async_1_1MariaDBExecCommand.html#af118dfc533b2674a8ce9119ecd8c7eaa":[1,0,5,0,0,0,3,2]
 };

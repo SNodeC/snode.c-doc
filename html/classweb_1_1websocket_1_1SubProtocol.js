@@ -6,7 +6,7 @@ var classweb_1_1websocket_1_1SubProtocol =
     [ "SubProtocol", "classweb_1_1websocket_1_1SubProtocol.html#a325492e158e2c9646819ffa80634db1f", null ],
     [ "~SubProtocol", "classweb_1_1websocket_1_1SubProtocol.html#a53bc1758cf94ab72f7177754833408ba", null ],
     [ "getName", "classweb_1_1websocket_1_1SubProtocol.html#a830ebdc2a0a3a1d7056376ee0ee6924c", null ],
-    [ "getSocketConnection", "classweb_1_1websocket_1_1SubProtocol.html#a1e272b400b48c5f76ee6048371d19eb9", null ],
+    [ "getSocketConnection", "classweb_1_1websocket_1_1SubProtocol.html#a2cf7d140e321f8f6683d654db169e738", null ],
     [ "onConnected", "classweb_1_1websocket_1_1SubProtocol.html#ab94b233f93b45647eb5312840f374f6d", null ],
     [ "onDisconnected", "classweb_1_1websocket_1_1SubProtocol.html#a4535792a01b7851ea3fb29ce3e311bc9", null ],
     [ "onMessageData", "classweb_1_1websocket_1_1SubProtocol.html#ab39f7d53ff8f272a1b7b8723240320e4", null ],

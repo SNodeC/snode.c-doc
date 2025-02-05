@@ -1,11 +1,13 @@
 var classcore_1_1socket_1_1stream_1_1SocketConnection =
 [
-    [ "SocketConnection", "classcore_1_1socket_1_1stream_1_1SocketConnection.html#ad315cae1094cd834ae2f975372e9642e", null ],
+    [ "SocketConnection", "classcore_1_1socket_1_1stream_1_1SocketConnection.html#ad641ef2987d4908f4d738e243a273079", null ],
     [ "~SocketConnection", "classcore_1_1socket_1_1stream_1_1SocketConnection.html#a35a22758086b5e277e4a1795d38bfdc7", null ],
     [ "close", "classcore_1_1socket_1_1stream_1_1SocketConnection.html#aed398e81ede92d1d1cfae2597580ad2c", null ],
-    [ "connectSocketContext", "classcore_1_1socket_1_1stream_1_1SocketConnection.html#a18df2c991be75ab139ff39ff40b928b2", null ],
+    [ "connectSocketContext", "classcore_1_1socket_1_1stream_1_1SocketConnection.html#a1df847be084f2edb0f5b0df97f9cf145", null ],
     [ "disconnectCurrentSocketContext", "classcore_1_1socket_1_1stream_1_1SocketConnection.html#a43cb109e8979fbdb29cef18ec8281cf2", null ],
     [ "getConfiguredServer", "classcore_1_1socket_1_1stream_1_1SocketConnection.html#a06d9ab2643cb4ce95681e6cb3a1029cf", null ],
+    [ "getConnectionName", "classcore_1_1socket_1_1stream_1_1SocketConnection.html#a5e26cd617f07295e8579ddb9c41bdd2c", null ],
+    [ "getFd", "classcore_1_1socket_1_1stream_1_1SocketConnection.html#a8a928ac8f0b64ca57315d00f9487098c", null ],
     [ "getInstanceName", "classcore_1_1socket_1_1stream_1_1SocketConnection.html#aff2eb3e752c798455541e85054bf91de", null ],
     [ "getLocalAddress", "classcore_1_1socket_1_1stream_1_1SocketConnection.html#a2930833c6c0df2a0febcf76d95ad4028", null ],
     [ "getRemoteAddress", "classcore_1_1socket_1_1stream_1_1SocketConnection.html#a8676b9150b85fb2d2e5ef1d8daee0480", null ],
@@ -22,6 +24,7 @@ var classcore_1_1socket_1_1stream_1_1SocketConnection =
     [ "streamToPeer", "classcore_1_1socket_1_1stream_1_1SocketConnection.html#afd5970a79ee4dbf1d18652d2c338fe44", null ],
     [ "switchSocketContext", "classcore_1_1socket_1_1stream_1_1SocketConnection.html#a1f0ce3db26b4f317837b294418b3ee33", null ],
     [ "configuredServer", "classcore_1_1socket_1_1stream_1_1SocketConnection.html#a78eb0b95d0624a16127e96b1bfbf3e33", null ],
+    [ "connectionName", "classcore_1_1socket_1_1stream_1_1SocketConnection.html#a004417b3407f8f904b9f9e065c072525", null ],
     [ "instanceName", "classcore_1_1socket_1_1stream_1_1SocketConnection.html#aa7cc6419cb07a70c39647ed4af2e9dc4", null ],
     [ "newSocketContext", "classcore_1_1socket_1_1stream_1_1SocketConnection.html#a17ddc2779f02bced3e42036891f66227", null ],
     [ "socketContext", "classcore_1_1socket_1_1stream_1_1SocketConnection.html#a1c808a61977a62399c5b017a8d48c291", null ]

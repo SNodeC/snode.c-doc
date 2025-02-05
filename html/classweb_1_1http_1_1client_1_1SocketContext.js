@@ -11,6 +11,7 @@ var classweb_1_1http_1_1client_1_1SocketContext =
       [ "CLOSE", "classweb_1_1http_1_1client_1_1SocketContext.html#a8b77acfd23e58ee4c2f92c6706a2a19da2c455b887c1406aedb69d3d907429bff", null ]
     ] ],
     [ "SocketContext", "classweb_1_1http_1_1client_1_1SocketContext.html#a0754188f54b00c9c0bd27c4e8719fe1e", null ],
+    [ "~SocketContext", "classweb_1_1http_1_1client_1_1SocketContext.html#a9aadcbd91fb83d8723bf55a628632b9a", null ],
     [ "deliverResponse", "classweb_1_1http_1_1client_1_1SocketContext.html#a6f79ecb4ce289ad0f871779111fd2431", null ],
     [ "deliverResponseParseError", "classweb_1_1http_1_1client_1_1SocketContext.html#a3a75cd5183a6b7673d8ffdaeddb5a9e6", null ],
     [ "initiateRequest", "classweb_1_1http_1_1client_1_1SocketContext.html#aa6b3829d5dcb382f4adf544cad8a56aa", null ],

@@ -144,25 +144,25 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">   35</span>    <span class="keyword">using </span><a class="code hl_typedef" href="namespacetls.html#afcb9219f4cf94a717de2044384768d63">SocketAddress</a> = SocketClient::SocketAddress;</div>
 <div class="line"><span class="lineno">   36</span>    <span class="keyword">const</span> <a class="code hl_typedef" href="namespacetls.html#a7213d52536dfd43348a3c7d2a6f08f0c">SocketClient</a> client = apps::echo::model::STREAM::getClient();</div>
 <div class="line"><span class="lineno">   37</span> </div>
-<div class="line"><span class="lineno">   38</span>    client.connect([instanceName = client.getConfig().getInstanceName()](<span class="keyword">const</span> SocketAddress&amp; socketAddress,</div>
-<div class="line"><span class="lineno">   39</span>                                                                         <span class="keyword">const</span> <a class="code hl_class" href="classcore_1_1socket_1_1State.html">core::socket::State</a>&amp; state) -&gt; <span class="keywordtype">void</span> {</div>
-<div class="line"><span class="lineno">   40</span>        switch (state) {</div>
-<div class="line"><span class="lineno">   41</span>            case core::socket::State::OK:</div>
-<div class="line"><span class="lineno">   42</span>                VLOG(1) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot;: connected to &#39;&quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
-<div class="line"><span class="lineno">   43</span>                break;</div>
-<div class="line"><span class="lineno">   44</span>            case core::socket::State::DISABLED:</div>
-<div class="line"><span class="lineno">   45</span>                VLOG(1) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot;: disabled&quot;</span>;</div>
-<div class="line"><span class="lineno">   46</span>                break;</div>
-<div class="line"><span class="lineno">   47</span>            case core::socket::State::ERROR:</div>
-<div class="line"><span class="lineno">   48</span>                LOG(ERROR) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; state.what();</div>
-<div class="line"><span class="lineno">   49</span>                break;</div>
-<div class="line"><span class="lineno">   50</span>            case core::socket::State::FATAL:</div>
-<div class="line"><span class="lineno">   51</span>                LOG(FATAL) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; state.what();</div>
-<div class="line"><span class="lineno">   52</span>                break;</div>
-<div class="line"><span class="lineno">   53</span>        }</div>
-<div class="line"><span class="lineno">   54</span>    });</div>
+<div class="line"><span class="lineno">   38</span>    client.connect(</div>
+<div class="line"><span class="lineno">   39</span>        [instanceName = client.getConfig().getInstanceName()](<span class="keyword">const</span> SocketAddress&amp; socketAddress, <span class="keyword">const</span> <a class="code hl_class" href="classcore_1_1socket_1_1State.html">core::socket::State</a>&amp; state) {</div>
+<div class="line"><span class="lineno">   40</span>            switch (state) {</div>
+<div class="line"><span class="lineno">   41</span>                case core::socket::State::OK:</div>
+<div class="line"><span class="lineno">   42</span>                    VLOG(1) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot;: connected to &#39;&quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
+<div class="line"><span class="lineno">   43</span>                    break;</div>
+<div class="line"><span class="lineno">   44</span>                case core::socket::State::DISABLED:</div>
+<div class="line"><span class="lineno">   45</span>                    VLOG(1) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot;: disabled&quot;</span>;</div>
+<div class="line"><span class="lineno">   46</span>                    break;</div>
+<div class="line"><span class="lineno">   47</span>                case core::socket::State::ERROR:</div>
+<div class="line"><span class="lineno">   48</span>                    LOG(ERROR) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; state.what();</div>
+<div class="line"><span class="lineno">   49</span>                    break;</div>
+<div class="line"><span class="lineno">   50</span>                case core::socket::State::FATAL:</div>
+<div class="line"><span class="lineno">   51</span>                    LOG(FATAL) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; state.what();</div>
+<div class="line"><span class="lineno">   52</span>                    break;</div>
+<div class="line"><span class="lineno">   53</span>            }</div>
+<div class="line"><span class="lineno">   54</span>        });</div>
 <div class="line"><span class="lineno">   55</span>    <span class="comment">/*</span></div>
-<div class="line"><span class="lineno">   56</span><span class="comment">        client.connect([](const SocketAddress&amp; socketAddress, const core::socket::State&amp; state) -&gt; void {</span></div>
+<div class="line"><span class="lineno">   56</span><span class="comment">        client.connect([](const SocketAddress&amp; socketAddress, const core::socket::State&amp; state) {</span></div>
 <div class="line"><span class="lineno">   57</span><span class="comment">            switch (state) {</span></div>
 <div class="line"><span class="lineno">   58</span><span class="comment">                case core::socket::State::OK:</span></div>
 <div class="line"><span class="lineno">   59</span><span class="comment">                    VLOG(1) &lt;&lt; &quot;echoclient: connected to &#39;&quot; &lt;&lt; socketAddress.toString() &lt;&lt; &quot;&#39;&quot; &lt;&lt; &quot;&#39;&quot;;</span></div>
@@ -195,7 +195,7 @@ Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_9654b8d08f4bba4e84b362c5fd320bee.html">apps</a></li><li class="navelem"><a class="el" href="dir_dc8029cc338eb1f6373ec075df64a819.html">echo</a></li><li class="navelem"><a class="el" href="echo_2echoclient_8cpp.html">echoclient.cpp</a></li>
-    <li class="footer">Generated on Mon Jan 20 2025 01:16:12 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generated on Wed Feb 5 2025 21:40:37 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>
