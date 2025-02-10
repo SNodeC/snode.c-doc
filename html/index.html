@@ -829,15 +829,12 @@ Choose and Download a SDK</h3>
 Patch the SDK to Integrate the SNode.C Feed</h3>
 <p>Second step is to patch the default OpenWRT package feeds to add the SNode.C feed by executing</p>
 <div class="fragment"><div class="line">cd &lt;SDK_DIR&gt;</div>
-<div class="line">echo &quot;src-git snodec https://github.com/SNodeC/owrt-packages.git;vopenwrt-23.05&quot; &gt;&gt; feeds.conf.default</div>
-</div><!-- fragment --><p>In case you want to try the latest developments of SNode.C run</p>
-<div class="fragment"><div class="line">echo &quot;src-git snodec https://github.com/SNodeC/owrt-packages.git;vopenwrt-23.05-HEAD&quot; &gt;&gt; feeds.conf.default</div>
-</div><!-- fragment --><p>instead.</p>
-<h3><a class="anchor" id="install-the-snodec-package-and-its-dependencies"></a>
+<div class="line">echo &quot;src-git snodec https://github.com/SNodeC/OpenWRT&quot; &gt;&gt; feeds.conf.default</div>
+</div><!-- fragment --><h3><a class="anchor" id="install-the-snodec-package-and-its-dependencies"></a>
 Install the SNode.C Package and its Dependencies</h3>
 <p>In the third step, all source packages required to compile SNode.C are installed.</p>
 <div class="fragment"><div class="line">cd &lt;SDK_DIR&gt;</div>
-<div class="line">./scripts/feeds update base snodec # Only the feeds base and snodec are necessary</div>
+<div class="line">./scripts/feeds update base packages snodec # Only the feeds base, packages and snodec are necessary</div>
 <div class="line">./scripts/feeds install snode.c</div>
 </div><!-- fragment --><h3><a class="anchor" id="configure-the-sdk"></a>
 Configure the SDK</h3>
@@ -2653,7 +2650,7 @@ Using Regular Expressions in Routes</h2>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Wed Feb 5 2025 21:40:38 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generated on Mon Feb 10 2025 20:22:18 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>
