@@ -283,15 +283,17 @@ $(function(){initNavTree('net_2in6_2SocketAddress_8cpp_source.html',''); initRes
 <div class="line"><a id="l00157" name="l00157"></a><span class="lineno"><a class="line" href="classnet_1_1in6_1_1SocketAddress.html#aa7c4106520ca1bd9144f473fbe05ebc2">  157</a></span>    <span class="keywordtype">bool</span> SocketAddress::<a class="code hl_function" href="classnet_1_1in6_1_1SocketAddress.html#aa7c4106520ca1bd9144f473fbe05ebc2">useNext</a>() {</div>
 <div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>        <span class="keyword">const</span> <span class="keywordtype">bool</span> useNext = socketAddrInfo-&gt;useNext();</div>
 <div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span> </div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>        sockAddr = socketAddrInfo-&gt;getSockAddr();</div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span> </div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>        <span class="keywordflow">return</span> useNext;</div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>    }</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>        <span class="keywordflow">if</span> (useNext) {</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>            sockAddr = socketAddrInfo-&gt;getSockAddr();</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>        }</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span> </div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>        <span class="keywordflow">return</span> useNext;</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    }</div>
 </div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span> </div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>} <span class="comment">// namespace net::in6</span></div>
 <div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span> </div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span><span class="keyword">template</span> <span class="keyword">class</span> net::SocketAddress&lt;sockaddr_in6&gt;;</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>} <span class="comment">// namespace net::in6</span></div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span> </div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span><span class="keyword">template</span> <span class="keyword">class</span> net::SocketAddress&lt;sockaddr_in6&gt;;</div>
 <div class="ttc" id="aclassnet_1_1in6_1_1SocketAddress_html_a0f84284a49b0dd3128bfad1720013a13"><div class="ttname"><a href="classnet_1_1in6_1_1SocketAddress.html#a0f84284a49b0dd3128bfad1720013a13">net::in6::SocketAddress::SocketAddress</a></div><div class="ttdeci">SocketAddress(uint16_t port)</div><div class="ttdef"><b>Definition</b> <a href="#l00045">SocketAddress.cpp:45</a></div></div>
 <div class="ttc" id="aclassnet_1_1in6_1_1SocketAddress_html_a167ab679f27e2318a61325e820cc114b"><div class="ttname"><a href="classnet_1_1in6_1_1SocketAddress.html#a167ab679f27e2318a61325e820cc114b">net::in6::SocketAddress::setHost</a></div><div class="ttdeci">SocketAddress &amp; setHost(const std::string &amp;ipOrHostname)</div><div class="ttdef"><b>Definition</b> <a href="#l00128">SocketAddress.cpp:128</a></div></div>
 <div class="ttc" id="aclassnet_1_1in6_1_1SocketAddress_html_a2b57393f20fe8a9bebf17e0338250d54"><div class="ttname"><a href="classnet_1_1in6_1_1SocketAddress.html#a2b57393f20fe8a9bebf17e0338250d54">net::in6::SocketAddress::setPort</a></div><div class="ttdeci">SocketAddress &amp; setPort(uint16_t port)</div><div class="ttdef"><b>Definition</b> <a href="#l00138">SocketAddress.cpp:138</a></div></div>
@@ -313,7 +315,7 @@ $(function(){initNavTree('net_2in6_2SocketAddress_8cpp_source.html',''); initRes
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_427baa8a9a5be237f298d4545d0d1ce2.html">net</a></li><li class="navelem"><a class="el" href="dir_2a582851531259f833c8b72a803f9d6e.html">in6</a></li><li class="navelem"><a class="el" href="net_2in6_2SocketAddress_8cpp.html">SocketAddress.cpp</a></li>
-    <li class="footer">Generated on Sat Feb 15 2025 15:59:05 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generated on Mon Feb 17 2025 12:35:25 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>

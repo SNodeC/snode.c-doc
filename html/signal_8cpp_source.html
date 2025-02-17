@@ -128,18 +128,17 @@ $(function(){initNavTree('signal_8cpp_source.html',''); initResizable(true); });
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#</span><span class="preprocessor">endif</span> <span class="comment">/* DOXYGEN_SHOULD_SKIP_THIS */</span></div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="foldopen" id="foldopen00030" data-start="{" data-end="}">
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="namespaceutils_1_1system.html">   30</a></span><span class="keyword">namespace</span> utils::<a class="code hl_namespace" href="namespaceutils_1_1system.html">system</a> {</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">namespace</span> utils::system {</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
 <div class="foldopen" id="foldopen00032" data-start="{" data-end="}">
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="namespaceutils_1_1system.html#ae9627474e3956cfc307370792ec5bcee">   32</a></span>    <a class="code hl_function" href="namespaceutils_1_1system.html#ae9627474e3956cfc307370792ec5bcee">sighandler_t</a> <a class="code hl_function" href="namespaceutils_1_1system.html#ae9627474e3956cfc307370792ec5bcee">signal</a>(<span class="keywordtype">int</span> <a class="code hl_function" href="namespaceutils_1_1system.html#ae9627474e3956cfc307370792ec5bcee">sig</a>, <a class="code hl_function" href="namespaceutils_1_1system.html#ae9627474e3956cfc307370792ec5bcee">sighandler_t</a> <a class="code hl_function" href="namespaceutils_1_1system.html#ae9627474e3956cfc307370792ec5bcee">handler</a>) {</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="namespaceutils_1_1system.html#ae9627474e3956cfc307370792ec5bcee">   32</a></span>    sighandler_t signal(<span class="keywordtype">int</span> sig, sighandler_t handler) {</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        errno = 0;</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <span class="keywordflow">return</span> std::signal(sig, handler);</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    }</div>
 </div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
 <div class="foldopen" id="foldopen00037" data-start="{" data-end="}">
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="namespaceutils_1_1system.html#aea0a8f4d2d6d6d0fa7fcc401c5f08f1c">   37</a></span>    std::string <a class="code hl_function" href="namespaceutils_1_1system.html#aea0a8f4d2d6d6d0fa7fcc401c5f08f1c">sigabbrev_np</a>(<span class="keywordtype">int</span> sig) {</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="namespaceutils_1_1system.html#aea0a8f4d2d6d6d0fa7fcc401c5f08f1c">   37</a></span>    std::string sigabbrev_np(<span class="keywordtype">int</span> sig) {</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="keyword">static</span> std::map&lt;<span class="keywordtype">int</span>, std::string&gt; sigMap = {</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            {SIGABRT, <span class="stringliteral">&quot;ABRT&quot;</span>}, {SIGALRM, <span class="stringliteral">&quot;ALRM&quot;</span>},     {SIGBUS, <span class="stringliteral">&quot;BUS&quot;</span>},   {SIGCHLD, <span class="stringliteral">&quot;CHLD&quot;</span>}, {SIGCONT, <span class="stringliteral">&quot;CONT&quot;</span>},  {SIGFPE, <span class="stringliteral">&quot;FPE&quot;</span>},</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            {SIGHUP, <span class="stringliteral">&quot;HUP&quot;</span>},   {SIGILL, <span class="stringliteral">&quot;ILL&quot;</span>},       {SIGINT, <span class="stringliteral">&quot;INT&quot;</span>},   {SIGKILL, <span class="stringliteral">&quot;KILL&quot;</span>}, {SIGPIPE, <span class="stringliteral">&quot;PIPE&quot;</span>},  {SIGPOLL, <span class="stringliteral">&quot;POLL&quot;</span>},</div>
@@ -152,17 +151,13 @@ $(function(){initNavTree('signal_8cpp_source.html',''); initResizable(true); });
 </div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>} <span class="comment">// namespace utils::system</span></div>
-</div>
-<div class="ttc" id="anamespaceutils_1_1system_html"><div class="ttname"><a href="namespaceutils_1_1system.html">utils::system</a></div><div class="ttdef"><b>Definition</b> <a href="#l00030">signal.cpp:30</a></div></div>
-<div class="ttc" id="anamespaceutils_1_1system_html_ae9627474e3956cfc307370792ec5bcee"><div class="ttname"><a href="namespaceutils_1_1system.html#ae9627474e3956cfc307370792ec5bcee">utils::system::signal</a></div><div class="ttdeci">sighandler_t signal(int sig, sighandler_t handler)</div><div class="ttdef"><b>Definition</b> <a href="#l00032">signal.cpp:32</a></div></div>
-<div class="ttc" id="anamespaceutils_1_1system_html_aea0a8f4d2d6d6d0fa7fcc401c5f08f1c"><div class="ttname"><a href="namespaceutils_1_1system.html#aea0a8f4d2d6d6d0fa7fcc401c5f08f1c">utils::system::sigabbrev_np</a></div><div class="ttdeci">std::string sigabbrev_np(int sig)</div><div class="ttdef"><b>Definition</b> <a href="#l00037">signal.cpp:37</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_cbdb8362360e11eafe2fa3bc74cf0ffd.html">utils</a></li><li class="navelem"><a class="el" href="dir_3c9ab163ad0c753469f2eeab0cb39946.html">system</a></li><li class="navelem"><a class="el" href="signal_8cpp.html">signal.cpp</a></li>
-    <li class="footer">Generated on Sat Feb 15 2025 15:59:27 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generated on Mon Feb 17 2025 12:35:47 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>

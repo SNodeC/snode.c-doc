@@ -238,7 +238,7 @@ $(function(){initNavTree('tls_2SocketAcceptor_8hpp_source.html',''); initResizab
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno"><a class="line" href="classcore_1_1socket_1_1stream_1_1tls_1_1SocketAcceptor.html#a3c9a519fa59d27638a2717db44c886ea">  128</a></span>    <span class="keywordtype">int</span> <a class="code hl_class" href="classcore_1_1socket_1_1stream_1_1tls_1_1SocketAcceptor.html">SocketAcceptor</a>&lt;PhysicalSocketServer, Config&gt;::<a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1tls_1_1SocketAcceptor.html#a3c9a519fa59d27638a2717db44c886ea">clientHelloCallback</a>(SSL* ssl, <span class="keywordtype">int</span>* al, [[<a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1tls_1_1SocketAcceptor.html#a3c9a519fa59d27638a2717db44c886ea">maybe_unused</a>]] <span class="keywordtype">void</span>* arg) {</div>
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>        <span class="keywordtype">int</span> ret = SSL_CLIENT_HELLO_SUCCESS;</div>
 <div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>        std::string connectionName = *<span class="keyword">static_cast</span>&lt;std::string*&gt;(SSL_get_ex_data(ssl, 0));</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>        <span class="keyword">const</span> std::string connectionName = *<span class="keyword">static_cast</span>&lt;std::string*&gt;(SSL_get_ex_data(ssl, 0));</div>
 <div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        Config* config = <span class="keyword">static_cast</span>&lt;Config*&gt;(SSL_get_ex_data(ssl, 1));</div>
 <div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span> </div>
 <div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>        std::string serverNameIndication = core::socket::stream::tls::ssl_get_servername_from_client_hello(ssl);</div>
@@ -287,7 +287,7 @@ $(function(){initNavTree('tls_2SocketAcceptor_8hpp_source.html',''); initResizab
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_4270bfced15e0e73154b13468c7c9ad9.html">core</a></li><li class="navelem"><a class="el" href="dir_55e2b5896cfedaa9128ab09eb6ffed25.html">socket</a></li><li class="navelem"><a class="el" href="dir_fda6a541e73aa8ed23b6fa172f5dc60d.html">stream</a></li><li class="navelem"><a class="el" href="dir_b54354194172df550fb2bdb507d33122.html">tls</a></li><li class="navelem"><a class="el" href="tls_2SocketAcceptor_8hpp.html">SocketAcceptor.hpp</a></li>
-    <li class="footer">Generated on Sat Feb 15 2025 15:59:21 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generated on Mon Feb 17 2025 12:35:40 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>

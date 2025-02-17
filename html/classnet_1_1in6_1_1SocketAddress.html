@@ -705,10 +705,12 @@ Here is the caller graph for this function:</div>
 <div class="fragment"><div class="line"><span class="lineno">  157</span>                                {</div>
 <div class="line"><span class="lineno">  158</span>        <span class="keyword">const</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="#aa7c4106520ca1bd9144f473fbe05ebc2">useNext</a> = <a class="code hl_variable" href="#ab349c6bd78378f3a214ed6c20c44b1f4">socketAddrInfo</a>-&gt;useNext();</div>
 <div class="line"><span class="lineno">  159</span> </div>
-<div class="line"><span class="lineno">  160</span>        <a class="code hl_variable" href="classnet_1_1SocketAddress.html#a4012f9aeeeb9e80e919ecc5d88f0aa9a">sockAddr</a> = <a class="code hl_variable" href="#ab349c6bd78378f3a214ed6c20c44b1f4">socketAddrInfo</a>-&gt;getSockAddr();</div>
-<div class="line"><span class="lineno">  161</span> </div>
-<div class="line"><span class="lineno">  162</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="#aa7c4106520ca1bd9144f473fbe05ebc2">useNext</a>;</div>
-<div class="line"><span class="lineno">  163</span>    }</div>
+<div class="line"><span class="lineno">  160</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="#aa7c4106520ca1bd9144f473fbe05ebc2">useNext</a>) {</div>
+<div class="line"><span class="lineno">  161</span>            <a class="code hl_variable" href="classnet_1_1SocketAddress.html#a4012f9aeeeb9e80e919ecc5d88f0aa9a">sockAddr</a> = <a class="code hl_variable" href="#ab349c6bd78378f3a214ed6c20c44b1f4">socketAddrInfo</a>-&gt;getSockAddr();</div>
+<div class="line"><span class="lineno">  162</span>        }</div>
+<div class="line"><span class="lineno">  163</span> </div>
+<div class="line"><span class="lineno">  164</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="#aa7c4106520ca1bd9144f473fbe05ebc2">useNext</a>;</div>
+<div class="line"><span class="lineno">  165</span>    }</div>
 <div class="ttc" id="aclassnet_1_1in6_1_1SocketAddress_html_aa7c4106520ca1bd9144f473fbe05ebc2"><div class="ttname"><a href="#aa7c4106520ca1bd9144f473fbe05ebc2">net::in6::SocketAddress::useNext</a></div><div class="ttdeci">bool useNext() override</div><div class="ttdef"><b>Definition</b> <a href="net_2in6_2SocketAddress_8cpp_source.html#l00157">SocketAddress.cpp:157</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -822,7 +824,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacenet.html">net</a></li><li class="navelem"><a class="el" href="namespacenet_1_1in6.html">in6</a></li><li class="navelem"><a class="el" href="classnet_1_1in6_1_1SocketAddress.html">SocketAddress</a></li>
-    <li class="footer">Generated on Sat Feb 15 2025 15:59:50 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generated on Mon Feb 17 2025 12:36:08 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>

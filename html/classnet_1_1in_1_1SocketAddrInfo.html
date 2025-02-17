@@ -206,10 +206,10 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="in_2SocketAddrInfo_8cpp_source.html#l00067">67</a> of file <a class="el" href="in_2SocketAddrInfo_8cpp_source.html">SocketAddrInfo.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   67</span>                                           {</div>
-<div class="line"><span class="lineno">   68</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#ad35416da56e4c090666aa000a0c53766">currentAddrInfo</a>-&gt;ai_canonname != <span class="keyword">nullptr</span> ? <a class="code hl_variable" href="#ad35416da56e4c090666aa000a0c53766">currentAddrInfo</a>-&gt;ai_canonname : std::string{};</div>
-<div class="line"><span class="lineno">   69</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="in_2SocketAddrInfo_8cpp_source.html#l00075">75</a> of file <a class="el" href="in_2SocketAddrInfo_8cpp_source.html">SocketAddrInfo.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   75</span>                                           {</div>
+<div class="line"><span class="lineno">   76</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#ad35416da56e4c090666aa000a0c53766">currentAddrInfo</a>-&gt;ai_canonname != <span class="keyword">nullptr</span> ? <a class="code hl_variable" href="#ad35416da56e4c090666aa000a0c53766">currentAddrInfo</a>-&gt;ai_canonname : std::string{};</div>
+<div class="line"><span class="lineno">   77</span>    }</div>
 <div class="ttc" id="aclassnet_1_1in_1_1SocketAddrInfo_html_ad35416da56e4c090666aa000a0c53766"><div class="ttname"><a href="#ad35416da56e4c090666aa000a0c53766">net::in::SocketAddrInfo::currentAddrInfo</a></div><div class="ttdeci">struct addrinfo * currentAddrInfo</div><div class="ttdef"><b>Definition</b> <a href="in_2SocketAddrInfo_8h_source.html#l00051">SocketAddrInfo.h:51</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -229,11 +229,11 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="in_2SocketAddrInfo_8cpp_source.html#l00062">62</a> of file <a class="el" href="in_2SocketAddrInfo_8cpp_source.html">SocketAddrInfo.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   62</span>                                            {</div>
-<div class="line"><span class="lineno">   63</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#ad35416da56e4c090666aa000a0c53766">currentAddrInfo</a> != <span class="keyword">nullptr</span> ? *<span class="keyword">reinterpret_cast&lt;</span>sockaddr_in*<span class="keyword">&gt;</span>(<a class="code hl_variable" href="#ad35416da56e4c090666aa000a0c53766">currentAddrInfo</a>-&gt;ai_addr) <span class="comment">// cppcheck-suppress internalAstError</span></div>
-<div class="line"><span class="lineno">   64</span>                                          : sockaddr_in{.sin_family = AF_INET, .sin_port{}, .sin_addr{}, .sin_zero{}};</div>
-<div class="line"><span class="lineno">   65</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="in_2SocketAddrInfo_8cpp_source.html#l00070">70</a> of file <a class="el" href="in_2SocketAddrInfo_8cpp_source.html">SocketAddrInfo.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   70</span>                                            {</div>
+<div class="line"><span class="lineno">   71</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#ad35416da56e4c090666aa000a0c53766">currentAddrInfo</a> != <span class="keyword">nullptr</span> ? *<span class="keyword">reinterpret_cast&lt;</span>sockaddr_in*<span class="keyword">&gt;</span>(<a class="code hl_variable" href="#ad35416da56e4c090666aa000a0c53766">currentAddrInfo</a>-&gt;ai_addr) <span class="comment">// cppcheck-suppress internalAstError</span></div>
+<div class="line"><span class="lineno">   72</span>                                          : sockaddr_in{.sin_family = AF_INET, .sin_port{}, .sin_addr{}, .sin_zero{}};</div>
+<div class="line"><span class="lineno">   73</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -252,59 +252,59 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="in_2SocketAddrInfo_8cpp_source.html#l00071">71</a> of file <a class="el" href="in_2SocketAddrInfo_8cpp_source.html">SocketAddrInfo.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   71</span>                                        {</div>
-<div class="line"><span class="lineno">   72</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#ad35416da56e4c090666aa000a0c53766">currentAddrInfo</a> != <span class="keyword">nullptr</span>) {</div>
-<div class="line"><span class="lineno">   73</span>            <span class="keyword">static</span> <span class="keywordtype">char</span> hostBfr[NI_MAXHOST];</div>
-<div class="line"><span class="lineno">   74</span>            <span class="keyword">static</span> <span class="keywordtype">char</span> servBfr[NI_MAXSERV];</div>
-<div class="line"><span class="lineno">   75</span>            std::memset(hostBfr, 0, NI_MAXHOST);</div>
-<div class="line"><span class="lineno">   76</span>            std::memset(servBfr, 0, NI_MAXSERV);</div>
-<div class="line"><span class="lineno">   77</span> </div>
-<div class="line"><span class="lineno">   78</span>            <a class="code hl_function" href="namespacecore_1_1system.html#a4e256dfd12c78c20f9ff550a14a43bef">getnameinfo</a>(<a class="code hl_variable" href="#ad35416da56e4c090666aa000a0c53766">currentAddrInfo</a>-&gt;ai_addr,</div>
-<div class="line"><span class="lineno">   79</span>                        <a class="code hl_variable" href="#ad35416da56e4c090666aa000a0c53766">currentAddrInfo</a>-&gt;ai_addrlen,</div>
-<div class="line"><span class="lineno">   80</span>                        hostBfr,</div>
-<div class="line"><span class="lineno">   81</span>                        <span class="keyword">sizeof</span>(hostBfr),</div>
-<div class="line"><span class="lineno">   82</span>                        servBfr,</div>
-<div class="line"><span class="lineno">   83</span>                        <span class="keyword">sizeof</span>(servBfr),</div>
-<div class="line"><span class="lineno">   84</span>                        NI_NUMERICHOST | NI_NUMERICSERV);</div>
+<p class="definition">Definition at line <a class="el" href="in_2SocketAddrInfo_8cpp_source.html#l00079">79</a> of file <a class="el" href="in_2SocketAddrInfo_8cpp_source.html">SocketAddrInfo.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   79</span>                                        {</div>
+<div class="line"><span class="lineno">   80</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#ad35416da56e4c090666aa000a0c53766">currentAddrInfo</a> != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><span class="lineno">   81</span>            <span class="keyword">static</span> <span class="keywordtype">char</span> hostBfr[NI_MAXHOST];</div>
+<div class="line"><span class="lineno">   82</span>            <span class="keyword">static</span> <span class="keywordtype">char</span> servBfr[NI_MAXSERV];</div>
+<div class="line"><span class="lineno">   83</span>            std::memset(hostBfr, 0, NI_MAXHOST);</div>
+<div class="line"><span class="lineno">   84</span>            std::memset(servBfr, 0, NI_MAXSERV);</div>
 <div class="line"><span class="lineno">   85</span> </div>
-<div class="line"><span class="lineno">   86</span>            <span class="keyword">struct </span>sockaddr_in* aiAddr = <span class="keyword">reinterpret_cast&lt;</span>sockaddr_in*<span class="keyword">&gt;</span>(<a class="code hl_variable" href="#ad35416da56e4c090666aa000a0c53766">currentAddrInfo</a>-&gt;ai_addr);</div>
-<div class="line"><span class="lineno">   87</span> </div>
-<div class="line"><span class="lineno">   88</span>            <span class="keyword">const</span> std::string format = <span class="stringliteral">&quot;AddressInfo:\n&quot;</span></div>
-<div class="line"><span class="lineno">   89</span>                                       <span class="stringliteral">&quot;   ai_next      = %v\n&quot;</span></div>
-<div class="line"><span class="lineno">   90</span>                                       <span class="stringliteral">&quot;   ai_flags     = %v\n&quot;</span></div>
-<div class="line"><span class="lineno">   91</span>                                       <span class="stringliteral">&quot;   ai_family    = %v (PF_INET = %v, PF_INET6 = %v)\n&quot;</span></div>
-<div class="line"><span class="lineno">   92</span>                                       <span class="stringliteral">&quot;   ai_socktype  = %v (SOCK_STREAM = %v, SOCK_DGRAM = %v)\n&quot;</span></div>
-<div class="line"><span class="lineno">   93</span>                                       <span class="stringliteral">&quot;   ai_protocol  = %v (IPPROTO_TCP = %v, IPPROTO_UDP = %v)\n&quot;</span></div>
-<div class="line"><span class="lineno">   94</span>                                       <span class="stringliteral">&quot;   ai_addrlen   = %v (sockaddr_in = %v, &quot;</span></div>
-<div class="line"><span class="lineno">   95</span>                                       <span class="stringliteral">&quot;sockaddr_in6 = %v)\n&quot;</span></div>
-<div class="line"><span class="lineno">   96</span>                                       <span class="stringliteral">&quot;   ai_addr      = sin_family:   %v (AF_INET = %v, &quot;</span></div>
-<div class="line"><span class="lineno">   97</span>                                       <span class="stringliteral">&quot;AF_INET6 = %v)\n&quot;</span></div>
-<div class="line"><span class="lineno">   98</span>                                       <span class="stringliteral">&quot;                  sin_addr:     %v\n&quot;</span></div>
-<div class="line"><span class="lineno">   99</span>                                       <span class="stringliteral">&quot;                  sin_port:     %v&quot;</span>;</div>
-<div class="line"><span class="lineno">  100</span> </div>
-<div class="line"><span class="lineno">  101</span>            el::Loggers::getLogger(<span class="stringliteral">&quot;default&quot;</span>)-&gt;trace(format.c_str(),</div>
-<div class="line"><span class="lineno">  102</span>                                                     <a class="code hl_variable" href="#ad35416da56e4c090666aa000a0c53766">currentAddrInfo</a>-&gt;ai_next,</div>
-<div class="line"><span class="lineno">  103</span>                                                     <a class="code hl_variable" href="#ad35416da56e4c090666aa000a0c53766">currentAddrInfo</a>-&gt;ai_flags,</div>
-<div class="line"><span class="lineno">  104</span>                                                     <a class="code hl_variable" href="#ad35416da56e4c090666aa000a0c53766">currentAddrInfo</a>-&gt;ai_family,</div>
-<div class="line"><span class="lineno">  105</span>                                                     PF_INET,</div>
-<div class="line"><span class="lineno">  106</span>                                                     PF_INET6,</div>
-<div class="line"><span class="lineno">  107</span>                                                     <a class="code hl_variable" href="#ad35416da56e4c090666aa000a0c53766">currentAddrInfo</a>-&gt;ai_socktype,</div>
-<div class="line"><span class="lineno">  108</span>                                                     SOCK_STREAM,</div>
-<div class="line"><span class="lineno">  109</span>                                                     SOCK_DGRAM,</div>
-<div class="line"><span class="lineno">  110</span>                                                     <a class="code hl_variable" href="#ad35416da56e4c090666aa000a0c53766">currentAddrInfo</a>-&gt;ai_protocol,</div>
-<div class="line"><span class="lineno">  111</span>                                                     IPPROTO_TCP,</div>
-<div class="line"><span class="lineno">  112</span>                                                     IPPROTO_UDP,</div>
-<div class="line"><span class="lineno">  113</span>                                                     <a class="code hl_variable" href="#ad35416da56e4c090666aa000a0c53766">currentAddrInfo</a>-&gt;ai_addrlen,</div>
-<div class="line"><span class="lineno">  114</span>                                                     <span class="keyword">sizeof</span>(<span class="keyword">struct</span> sockaddr_in),</div>
-<div class="line"><span class="lineno">  115</span>                                                     <span class="keyword">sizeof</span>(<span class="keyword">struct</span> sockaddr_in6),</div>
-<div class="line"><span class="lineno">  116</span>                                                     aiAddr-&gt;sin_family,</div>
-<div class="line"><span class="lineno">  117</span>                                                     AF_INET,</div>
-<div class="line"><span class="lineno">  118</span>                                                     AF_INET6,</div>
-<div class="line"><span class="lineno">  119</span>                                                     hostBfr,</div>
-<div class="line"><span class="lineno">  120</span>                                                     servBfr);</div>
-<div class="line"><span class="lineno">  121</span>        }</div>
-<div class="line"><span class="lineno">  122</span>    }</div>
+<div class="line"><span class="lineno">   86</span>            <a class="code hl_function" href="namespacecore_1_1system.html#a4e256dfd12c78c20f9ff550a14a43bef">getnameinfo</a>(<a class="code hl_variable" href="#ad35416da56e4c090666aa000a0c53766">currentAddrInfo</a>-&gt;ai_addr,</div>
+<div class="line"><span class="lineno">   87</span>                        <a class="code hl_variable" href="#ad35416da56e4c090666aa000a0c53766">currentAddrInfo</a>-&gt;ai_addrlen,</div>
+<div class="line"><span class="lineno">   88</span>                        hostBfr,</div>
+<div class="line"><span class="lineno">   89</span>                        <span class="keyword">sizeof</span>(hostBfr),</div>
+<div class="line"><span class="lineno">   90</span>                        servBfr,</div>
+<div class="line"><span class="lineno">   91</span>                        <span class="keyword">sizeof</span>(servBfr),</div>
+<div class="line"><span class="lineno">   92</span>                        NI_NUMERICHOST | NI_NUMERICSERV);</div>
+<div class="line"><span class="lineno">   93</span> </div>
+<div class="line"><span class="lineno">   94</span>            <span class="keyword">struct </span>sockaddr_in* aiAddr = <span class="keyword">reinterpret_cast&lt;</span>sockaddr_in*<span class="keyword">&gt;</span>(<a class="code hl_variable" href="#ad35416da56e4c090666aa000a0c53766">currentAddrInfo</a>-&gt;ai_addr);</div>
+<div class="line"><span class="lineno">   95</span> </div>
+<div class="line"><span class="lineno">   96</span>            <span class="keyword">const</span> std::string format = <span class="stringliteral">&quot;AddressInfo:\n&quot;</span></div>
+<div class="line"><span class="lineno">   97</span>                                       <span class="stringliteral">&quot;   ai_next      = %v\n&quot;</span></div>
+<div class="line"><span class="lineno">   98</span>                                       <span class="stringliteral">&quot;   ai_flags     = %v\n&quot;</span></div>
+<div class="line"><span class="lineno">   99</span>                                       <span class="stringliteral">&quot;   ai_family    = %v (PF_INET = %v, PF_INET6 = %v)\n&quot;</span></div>
+<div class="line"><span class="lineno">  100</span>                                       <span class="stringliteral">&quot;   ai_socktype  = %v (SOCK_STREAM = %v, SOCK_DGRAM = %v)\n&quot;</span></div>
+<div class="line"><span class="lineno">  101</span>                                       <span class="stringliteral">&quot;   ai_protocol  = %v (IPPROTO_TCP = %v, IPPROTO_UDP = %v)\n&quot;</span></div>
+<div class="line"><span class="lineno">  102</span>                                       <span class="stringliteral">&quot;   ai_addrlen   = %v (sockaddr_in = %v, &quot;</span></div>
+<div class="line"><span class="lineno">  103</span>                                       <span class="stringliteral">&quot;sockaddr_in6 = %v)\n&quot;</span></div>
+<div class="line"><span class="lineno">  104</span>                                       <span class="stringliteral">&quot;   ai_addr      = sin_family:   %v (AF_INET = %v, &quot;</span></div>
+<div class="line"><span class="lineno">  105</span>                                       <span class="stringliteral">&quot;AF_INET6 = %v)\n&quot;</span></div>
+<div class="line"><span class="lineno">  106</span>                                       <span class="stringliteral">&quot;                  sin_addr:     %v\n&quot;</span></div>
+<div class="line"><span class="lineno">  107</span>                                       <span class="stringliteral">&quot;                  sin_port:     %v&quot;</span>;</div>
+<div class="line"><span class="lineno">  108</span> </div>
+<div class="line"><span class="lineno">  109</span>            el::Loggers::getLogger(<span class="stringliteral">&quot;default&quot;</span>)-&gt;trace(format.c_str(),</div>
+<div class="line"><span class="lineno">  110</span>                                                     <a class="code hl_variable" href="#ad35416da56e4c090666aa000a0c53766">currentAddrInfo</a>-&gt;ai_next,</div>
+<div class="line"><span class="lineno">  111</span>                                                     <a class="code hl_variable" href="#ad35416da56e4c090666aa000a0c53766">currentAddrInfo</a>-&gt;ai_flags,</div>
+<div class="line"><span class="lineno">  112</span>                                                     <a class="code hl_variable" href="#ad35416da56e4c090666aa000a0c53766">currentAddrInfo</a>-&gt;ai_family,</div>
+<div class="line"><span class="lineno">  113</span>                                                     PF_INET,</div>
+<div class="line"><span class="lineno">  114</span>                                                     PF_INET6,</div>
+<div class="line"><span class="lineno">  115</span>                                                     <a class="code hl_variable" href="#ad35416da56e4c090666aa000a0c53766">currentAddrInfo</a>-&gt;ai_socktype,</div>
+<div class="line"><span class="lineno">  116</span>                                                     SOCK_STREAM,</div>
+<div class="line"><span class="lineno">  117</span>                                                     SOCK_DGRAM,</div>
+<div class="line"><span class="lineno">  118</span>                                                     <a class="code hl_variable" href="#ad35416da56e4c090666aa000a0c53766">currentAddrInfo</a>-&gt;ai_protocol,</div>
+<div class="line"><span class="lineno">  119</span>                                                     IPPROTO_TCP,</div>
+<div class="line"><span class="lineno">  120</span>                                                     IPPROTO_UDP,</div>
+<div class="line"><span class="lineno">  121</span>                                                     <a class="code hl_variable" href="#ad35416da56e4c090666aa000a0c53766">currentAddrInfo</a>-&gt;ai_addrlen,</div>
+<div class="line"><span class="lineno">  122</span>                                                     <span class="keyword">sizeof</span>(<span class="keyword">struct</span> sockaddr_in),</div>
+<div class="line"><span class="lineno">  123</span>                                                     <span class="keyword">sizeof</span>(<span class="keyword">struct</span> sockaddr_in6),</div>
+<div class="line"><span class="lineno">  124</span>                                                     aiAddr-&gt;sin_family,</div>
+<div class="line"><span class="lineno">  125</span>                                                     AF_INET,</div>
+<div class="line"><span class="lineno">  126</span>                                                     AF_INET6,</div>
+<div class="line"><span class="lineno">  127</span>                                                     hostBfr,</div>
+<div class="line"><span class="lineno">  128</span>                                                     servBfr);</div>
+<div class="line"><span class="lineno">  129</span>        }</div>
+<div class="line"><span class="lineno">  130</span>    }</div>
 <div class="ttc" id="anamespacecore_1_1system_html_a4e256dfd12c78c20f9ff550a14a43bef"><div class="ttname"><a href="namespacecore_1_1system.html#a4e256dfd12c78c20f9ff550a14a43bef">core::system::getnameinfo</a></div><div class="ttdeci">int getnameinfo(const sockaddr *addr, socklen_t addrlen, char *host, socklen_t hostlen, char *serv, socklen_t servlen, int flags)</div><div class="ttdef"><b>Definition</b> <a href="netdb_8cpp_source.html#l00040">netdb.cpp:40</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -369,12 +369,20 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="in_2SocketAddrInfo_8cpp_source.html#l00054">54</a> of file <a class="el" href="in_2SocketAddrInfo_8cpp_source.html">SocketAddrInfo.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   54</span>                                 {</div>
-<div class="line"><span class="lineno">   55</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#ad35416da56e4c090666aa000a0c53766">currentAddrInfo</a> != <span class="keyword">nullptr</span>) {</div>
-<div class="line"><span class="lineno">   56</span>            <a class="code hl_variable" href="#ad35416da56e4c090666aa000a0c53766">currentAddrInfo</a> = <a class="code hl_variable" href="#ad35416da56e4c090666aa000a0c53766">currentAddrInfo</a>-&gt;ai_next;</div>
-<div class="line"><span class="lineno">   57</span>        }</div>
-<div class="line"><span class="lineno">   58</span> </div>
-<div class="line"><span class="lineno">   59</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#ad35416da56e4c090666aa000a0c53766">currentAddrInfo</a> != <span class="keyword">nullptr</span>;</div>
-<div class="line"><span class="lineno">   60</span>    }</div>
+<div class="line"><span class="lineno">   55</span>        <span class="comment">// Lookup for a AddrInfo holding a ai_next AddrInfo which differ from the current one.</span></div>
+<div class="line"><span class="lineno">   56</span>        <span class="comment">// Especially localhost on IPv4 can lead to more than one entries representing the same SockAddr.</span></div>
+<div class="line"><span class="lineno">   57</span>        <span class="comment">// Thus, do not use this further SockAddr.</span></div>
+<div class="line"><span class="lineno">   58</span>        <span class="keywordflow">while</span> (<a class="code hl_variable" href="#ad35416da56e4c090666aa000a0c53766">currentAddrInfo</a> != <span class="keyword">nullptr</span> &amp;&amp; <a class="code hl_variable" href="#ad35416da56e4c090666aa000a0c53766">currentAddrInfo</a>-&gt;ai_next != <span class="keyword">nullptr</span> &amp;&amp;</div>
+<div class="line"><span class="lineno">   59</span>               std::memcmp(<a class="code hl_variable" href="#ad35416da56e4c090666aa000a0c53766">currentAddrInfo</a>-&gt;ai_addr, <a class="code hl_variable" href="#ad35416da56e4c090666aa000a0c53766">currentAddrInfo</a>-&gt;ai_next-&gt;ai_addr, <span class="keyword">sizeof</span>(sockaddr_in)) == 0) {</div>
+<div class="line"><span class="lineno">   60</span>            <a class="code hl_variable" href="#ad35416da56e4c090666aa000a0c53766">currentAddrInfo</a> = <a class="code hl_variable" href="#ad35416da56e4c090666aa000a0c53766">currentAddrInfo</a>-&gt;ai_next;</div>
+<div class="line"><span class="lineno">   61</span>        }</div>
+<div class="line"><span class="lineno">   62</span> </div>
+<div class="line"><span class="lineno">   63</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#ad35416da56e4c090666aa000a0c53766">currentAddrInfo</a> != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><span class="lineno">   64</span>            <a class="code hl_variable" href="#ad35416da56e4c090666aa000a0c53766">currentAddrInfo</a> = <a class="code hl_variable" href="#ad35416da56e4c090666aa000a0c53766">currentAddrInfo</a>-&gt;ai_next;</div>
+<div class="line"><span class="lineno">   65</span>        }</div>
+<div class="line"><span class="lineno">   66</span> </div>
+<div class="line"><span class="lineno">   67</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#ad35416da56e4c090666aa000a0c53766">currentAddrInfo</a> != <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">   68</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -437,7 +445,7 @@ Private Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacenet.html">net</a></li><li class="navelem"><a class="el" href="namespacenet_1_1in.html">in</a></li><li class="navelem"><a class="el" href="classnet_1_1in_1_1SocketAddrInfo.html">SocketAddrInfo</a></li>
-    <li class="footer">Generated on Sat Feb 15 2025 15:59:50 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generated on Mon Feb 17 2025 12:36:08 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>
