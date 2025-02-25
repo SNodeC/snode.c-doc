@@ -19,6 +19,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="extra-style.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -139,32 +140,70 @@ $(function(){initNavTree('RouterDispatcher_8cpp_source.html',''); initResizable(
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    }</div>
 </div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keywordtype">bool</span></div>
-<div class="foldopen" id="foldopen00040" data-start="{" data-end="}">
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="classexpress_1_1dispatcher_1_1RouterDispatcher.html#a6df955e698d465aa9375a851ed6bc283">   40</a></span>    <a class="code hl_class" href="classexpress_1_1dispatcher_1_1RouterDispatcher.html">RouterDispatcher</a>::<a class="code hl_function" href="classexpress_1_1dispatcher_1_1RouterDispatcher.html#a6df955e698d465aa9375a851ed6bc283">dispatch</a>(express::<a class="code hl_class" href="classexpress_1_1Controller.html">Controller</a>&amp; controller, <span class="keyword">const</span> std::string&amp; parentMountPath, <span class="keyword">const</span> express::MountPoint&amp; mountPoint) {</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <span class="keywordtype">bool</span> dispatched = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="keyword">const</span> std::string absoluteMountPath = path_concat(parentMountPath, mountPoint.relativeMountPath);</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keywordflow">if</span> ((controller.getRequest()-&gt;path.rfind(absoluteMountPath, 0) == 0 &amp;&amp;</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>             (mountPoint.method == <span class="stringliteral">&quot;use&quot;</span> || controller.getRequest()-&gt;method == mountPoint.method || mountPoint.method == <span class="stringliteral">&quot;all&quot;</span>))) {</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            <span class="keywordflow">for</span> (Route&amp; route : routes) {</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>                dispatched = route.dispatch(controller, absoluteMountPath);</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>                <span class="keywordflow">if</span> (dispatched || controller.nextRouter()) {</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>                }</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            }</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        }</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <span class="keywordflow">return</span> dispatched;</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    }</div>
+<div class="foldopen" id="foldopen00039" data-start="{" data-end="}">
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="classexpress_1_1dispatcher_1_1RouterDispatcher.html#a73809ff44d663f957f402d11e58a99d4">   39</a></span>    <span class="keywordtype">void</span> <a class="code hl_class" href="classexpress_1_1dispatcher_1_1RouterDispatcher.html">RouterDispatcher</a>::<a class="code hl_function" href="classexpress_1_1dispatcher_1_1RouterDispatcher.html#a73809ff44d663f957f402d11e58a99d4">setStrictRouting</a>(<span class="keywordtype">bool</span> strictRouting) {</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keyword">this</span><a class="code hl_variable" href="classexpress_1_1dispatcher_1_1RouterDispatcher.html#a36fcf30ad20d4413f166da6a4961caad">-&gt;</a><a class="code hl_variable" href="classexpress_1_1dispatcher_1_1RouterDispatcher.html#a36fcf30ad20d4413f166da6a4961caad">strictRouting</a> = strictRouting;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    }</div>
 </div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>} <span class="comment">// namespace express::dispatcher</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keywordtype">bool</span></div>
+<div class="foldopen" id="foldopen00044" data-start="{" data-end="}">
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="classexpress_1_1dispatcher_1_1RouterDispatcher.html#a6df955e698d465aa9375a851ed6bc283">   44</a></span>    <a class="code hl_class" href="classexpress_1_1dispatcher_1_1RouterDispatcher.html">RouterDispatcher</a>::dispatch(express::<a class="code hl_class" href="classexpress_1_1Controller.html">Controller</a>&amp; controller, <span class="keyword">const</span> std::string&amp; parentMountPath, <span class="keyword">const</span> express::MountPoint&amp; mountPoint) {</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keywordtype">bool</span> dispatched = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="keyword">const</span> std::string absoluteMountPath = path_concat(parentMountPath, mountPoint.relativeMountPath);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <span class="keyword">const</span> std::string requestMethod = controller.getRequest()-&gt;method;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keyword">const</span> std::string requestUrl = controller.getRequest()-&gt;url;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <span class="keyword">const</span> std::string requestPath = controller.getRequest()-&gt;path;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <span class="comment">// clang-format off</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <span class="keyword">const</span> <span class="keywordtype">bool</span> requestMatched =</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            (</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>                (</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>                    (</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>                        requestUrl.starts_with(absoluteMountPath)</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>                    ) || (</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>                        (</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>                            !strictRouting</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                        ) &amp;&amp; (</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                            requestPath.starts_with(absoluteMountPath)</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>                        )</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                    )</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                ) &amp;&amp; (</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>                    (</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                        mountPoint.method == controller.getRequest()-&gt;method</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>                    ) || (</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>                        mountPoint.method == <span class="stringliteral">&quot;all&quot;</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>                    ) || (</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>                        mountPoint.method == <span class="stringliteral">&quot;use&quot;</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>                    )</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>                )</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>            );</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        <span class="comment">// clang-format on</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        <span class="keywordflow">if</span> (requestMatched) {</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>            controller<a class="code hl_function" href="classexpress_1_1Controller.html#a8671d443b8cade25f69557233bd35c43">.</a><a class="code hl_function" href="classexpress_1_1Controller.html#a8671d443b8cade25f69557233bd35c43">setStrictRouting</a><a class="code hl_function" href="classexpress_1_1Controller.html#a8671d443b8cade25f69557233bd35c43">(</a><a class="code hl_variable" href="classexpress_1_1dispatcher_1_1RouterDispatcher.html#a36fcf30ad20d4413f166da6a4961caad">strictRouting</a><a class="code hl_function" href="classexpress_1_1Controller.html#a8671d443b8cade25f69557233bd35c43">)</a>;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>            <span class="keywordflow">for</span> (Route&amp; route : routes) {</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>                dispatched = route.dispatch(controller, absoluteMountPath);</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>                <span class="keywordflow">if</span> (dispatched || controller.nextRouter()) {</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>                }</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>            }</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        }</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        <span class="keywordflow">return</span> dispatched;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    }</div>
+</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>} <span class="comment">// namespace express::dispatcher</span></div>
 <div class="ttc" id="aclassexpress_1_1Controller_html"><div class="ttname"><a href="classexpress_1_1Controller.html">express::Controller</a></div><div class="ttdef"><b>Definition</b> <a href="Controller_8h_source.html#l00044">Controller.h:44</a></div></div>
+<div class="ttc" id="aclassexpress_1_1Controller_html_a8671d443b8cade25f69557233bd35c43"><div class="ttname"><a href="classexpress_1_1Controller.html#a8671d443b8cade25f69557233bd35c43">express::Controller::setStrictRouting</a></div><div class="ttdeci">void setStrictRouting(bool strictRouting)</div><div class="ttdef"><b>Definition</b> <a href="Controller_8cpp_source.html#l00129">Controller.cpp:129</a></div></div>
 <div class="ttc" id="aclassexpress_1_1dispatcher_1_1RouterDispatcher_html"><div class="ttname"><a href="classexpress_1_1dispatcher_1_1RouterDispatcher.html">express::dispatcher::RouterDispatcher</a></div><div class="ttdef"><b>Definition</b> <a href="RouterDispatcher_8h_source.html#l00038">RouterDispatcher.h:38</a></div></div>
-<div class="ttc" id="aclassexpress_1_1dispatcher_1_1RouterDispatcher_html_a6df955e698d465aa9375a851ed6bc283"><div class="ttname"><a href="classexpress_1_1dispatcher_1_1RouterDispatcher.html#a6df955e698d465aa9375a851ed6bc283">express::dispatcher::RouterDispatcher::dispatch</a></div><div class="ttdeci">bool dispatch(express::Controller &amp;controller, const std::string &amp;parentMountPath, const express::MountPoint &amp;mountPoint) override</div><div class="ttdef"><b>Definition</b> <a href="#l00040">RouterDispatcher.cpp:40</a></div></div>
+<div class="ttc" id="aclassexpress_1_1dispatcher_1_1RouterDispatcher_html_a36fcf30ad20d4413f166da6a4961caad"><div class="ttname"><a href="classexpress_1_1dispatcher_1_1RouterDispatcher.html#a36fcf30ad20d4413f166da6a4961caad">express::dispatcher::RouterDispatcher::strictRouting</a></div><div class="ttdeci">bool strictRouting</div><div class="ttdef"><b>Definition</b> <a href="RouterDispatcher_8h_source.html#l00049">RouterDispatcher.h:49</a></div></div>
+<div class="ttc" id="aclassexpress_1_1dispatcher_1_1RouterDispatcher_html_a73809ff44d663f957f402d11e58a99d4"><div class="ttname"><a href="classexpress_1_1dispatcher_1_1RouterDispatcher.html#a73809ff44d663f957f402d11e58a99d4">express::dispatcher::RouterDispatcher::setStrictRouting</a></div><div class="ttdeci">void setStrictRouting(bool strictRouting)</div><div class="ttdef"><b>Definition</b> <a href="#l00039">RouterDispatcher.cpp:39</a></div></div>
 <div class="ttc" id="aclassexpress_1_1dispatcher_1_1RouterDispatcher_html_aa416acf1a3a58563f42099e2d4a94716"><div class="ttname"><a href="classexpress_1_1dispatcher_1_1RouterDispatcher.html#aa416acf1a3a58563f42099e2d4a94716">express::dispatcher::RouterDispatcher::getRoutes</a></div><div class="ttdeci">std::list&lt; express::Route &gt; &amp; getRoutes()</div><div class="ttdef"><b>Definition</b> <a href="#l00035">RouterDispatcher.cpp:35</a></div></div>
 <div class="ttc" id="anamespaceexpress_1_1dispatcher_html"><div class="ttname"><a href="namespaceexpress_1_1dispatcher.html">express::dispatcher</a></div><div class="ttdef"><b>Definition</b> <a href="RootRoute_8h_source.html#l00032">RootRoute.h:32</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
@@ -173,7 +212,7 @@ $(function(){initNavTree('RouterDispatcher_8cpp_source.html',''); initResizable(
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_e2b20abddc1d75e9fa824bc5544f9c72.html">express</a></li><li class="navelem"><a class="el" href="dir_3c595372decbab6f0dc2e4f19bdc9b7a.html">dispatcher</a></li><li class="navelem"><a class="el" href="RouterDispatcher_8cpp.html">RouterDispatcher.cpp</a></li>
-    <li class="footer">Generated on Mon Feb 17 2025 12:34:52 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generated on Tue Feb 25 2025 14:01:53 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>

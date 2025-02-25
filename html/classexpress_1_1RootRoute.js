@@ -59,6 +59,7 @@ var classexpress_1_1RootRoute =
     [ "put", "classexpress_1_1RootRoute.html#aaee0bd57d0bd2cb815dbfb817e927208", null ],
     [ "put", "classexpress_1_1RootRoute.html#ad33de9e0dca782f9fc3c90838ce3e911", null ],
     [ "routes", "classexpress_1_1RootRoute.html#a7b10d9fbf7f98e46a2ee84e0d4bb9c63", null ],
+    [ "setStrictRouting", "classexpress_1_1RootRoute.html#a84b10a606fb4675fd1272d592eba5fc5", null ],
     [ "trace", "classexpress_1_1RootRoute.html#a7f258c229d91b8a0de00b6361c1f3443", null ],
     [ "trace", "classexpress_1_1RootRoute.html#a7ff4edf9d9d1df16f0996e4ed8bec532", null ],
     [ "trace", "classexpress_1_1RootRoute.html#afec6ad8555e90ab5815f617edeb0aa59", null ],
@@ -72,7 +73,6 @@ var classexpress_1_1RootRoute =
     [ "use", "classexpress_1_1RootRoute.html#a8d6ffa5cb89e410e8c0b88c9e9fa69f9", null ],
     [ "use", "classexpress_1_1RootRoute.html#aff6e3345b6282f31b9e2e70fb30f1634", null ],
     [ "Controller", "classexpress_1_1RootRoute.html#ac3456fd331a58b288082abca310c7a99", null ],
-    [ "Route", "classexpress_1_1RootRoute.html#a82eb8d8152124f42f8bad8770270f4fc", null ],
-    [ "WebAppT", "classexpress_1_1RootRoute.html#a2d177edff622e707b0cfb6e9ee1d6629", null ],
-    [ "strict", "classexpress_1_1RootRoute.html#aceb4a0f0b2f4d0b0a535bf0c323f1200", null ]
+    [ "Router", "classexpress_1_1RootRoute.html#ad1fd3424328f664cd049fe429e0e3dc6", null ],
+    [ "WebAppT", "classexpress_1_1RootRoute.html#a2d177edff622e707b0cfb6e9ee1d6629", null ]
 ];

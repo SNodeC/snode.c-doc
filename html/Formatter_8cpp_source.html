@@ -19,6 +19,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="extra-style.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -178,7 +179,7 @@ $(function(){initNavTree('Formatter_8cpp_source.html',''); initResizable(true); 
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>                    <span class="keywordflow">if</span> (default_also) {</div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>                        <span class="keyword">static_assert</span>(std::string::npos + <span class="keyword">static_cast</span>&lt;std::string::size_type&gt;(1) == 0,</div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>                                      <span class="stringliteral">&quot;std::string::npos + static_cast&lt;std::string::size_type&gt;(1) != 0&quot;</span>);</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>                        <span class="keywordflow">if</span> (!value.empty() &amp;&amp; opt-&gt;get_default_str() == value) {</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>                        <span class="keywordflow">if</span> (!value.empty() &amp;&amp; detail::convert_arg_for_ini(opt-&gt;get_default_str(), stringQuote, characterQuote) == value) {</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>                            value.clear();</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>                        }</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>                        <span class="keywordflow">if</span> (!opt-&gt;get_default_str().empty()) {</div>
@@ -521,14 +522,14 @@ $(function(){initNavTree('Formatter_8cpp_source.html',''); initResizable(true); 
 <div class="ttc" id="aclassCLI_1_1HelpFormatter_html_aaf22560ef491ef51ef6e831b9e253196"><div class="ttname"><a href="classCLI_1_1HelpFormatter.html#aaf22560ef491ef51ef6e831b9e253196">CLI::HelpFormatter::make_subcommands</a></div><div class="ttdeci">std::string make_subcommands(const App *app, AppFormatMode mode) const override</div><div class="ttdef"><b>Definition</b> <a href="#l00250">Formatter.cpp:250</a></div></div>
 <div class="ttc" id="aclassCLI_1_1HelpFormatter_html_ab477a392fff54c1c1e64cd17311c709b"><div class="ttname"><a href="classCLI_1_1HelpFormatter.html#ab477a392fff54c1c1e64cd17311c709b">CLI::HelpFormatter::make_expanded</a></div><div class="ttdeci">std::string make_expanded(const App *sub) const override</div><div class="ttdef"><b>Definition</b> <a href="#l00318">Formatter.cpp:318</a></div></div>
 <div class="ttc" id="aclassCLI_1_1HelpFormatter_html_adf2478d991e6f8e8d5135f42ef15ebb9"><div class="ttname"><a href="classCLI_1_1HelpFormatter.html#adf2478d991e6f8e8d5135f42ef15ebb9">CLI::HelpFormatter::make_group</a></div><div class="ttdeci">std::string make_group(std::string group, bool is_positional, std::vector&lt; const Option * &gt; opts) const override</div><div class="ttdef"><b>Definition</b> <a href="#l00152">Formatter.cpp:152</a></div></div>
-<div class="ttc" id="anamespaceCLI_html"><div class="ttname"><a href="namespaceCLI.html">CLI</a></div><div class="ttdef"><b>Definition</b> <a href="Formatter_8h_source.html#l00046">Formatter.h:46</a></div></div>
+<div class="ttc" id="anamespaceCLI_html"><div class="ttname"><a href="namespaceCLI.html">CLI</a></div><div class="ttdef"><b>Definition</b> <a href="Exceptions_8h_source.html#l00046">Exceptions.h:46</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_cbdb8362360e11eafe2fa3bc74cf0ffd.html">utils</a></li><li class="navelem"><a class="el" href="Formatter_8cpp.html">Formatter.cpp</a></li>
-    <li class="footer">Generated on Mon Feb 17 2025 12:35:46 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generated on Tue Feb 25 2025 14:02:47 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>

@@ -19,6 +19,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="extra-style.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -185,92 +186,145 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">   54</span>        legacyApp.<a class="code hl_function" href="classexpress_1_1Route.html#a5a7bd1d3aeb4c57c5e4665d1f0e9d052">use</a>(vh1);</div>
 <div class="line"><span class="lineno">   55</span> </div>
 <div class="line"><span class="lineno">   56</span>        <span class="keyword">const</span> <a class="code hl_class" href="classexpress_1_1Router.html">Router</a>&amp; vh2 = <a class="code hl_function" href="namespaceexpress_1_1middleware.html#aafc55af11280a46aa664c858db1088e9">middleware::VHost</a>(<span class="stringliteral">&quot;atlas.home.vchrist.at:8080&quot;</span>);</div>
-<div class="line"><span class="lineno">   57</span>        vh2.<a class="code hl_function" href="classexpress_1_1Router.html#aa6c295b187e6cb8a7bc74a18de61e841">get</a>(<span class="stringliteral">&quot;/&quot;</span>, [] <a class="code hl_define" href="Router_8h.html#a8b7131df91fe7a961e2cdadcedb55232">APPLICATION</a>(req, res) {</div>
-<div class="line"><span class="lineno">   58</span>            res-&gt;send(<span class="stringliteral">&quot;Hello! I am VHOST atlas.home.vchrist.at.&quot;</span>);</div>
-<div class="line"><span class="lineno">   59</span>        });</div>
-<div class="line"><span class="lineno">   60</span>        legacyApp.<a class="code hl_function" href="classexpress_1_1Route.html#a5a7bd1d3aeb4c57c5e4665d1f0e9d052">use</a>(vh2);</div>
-<div class="line"><span class="lineno">   61</span> </div>
-<div class="line"><span class="lineno">   62</span>        <span class="keyword">const</span> <a class="code hl_class" href="classexpress_1_1Router.html">Router</a>&amp; vh3 = <a class="code hl_function" href="namespaceexpress_1_1middleware.html#aafc55af11280a46aa664c858db1088e9">middleware::VHost</a>(<span class="stringliteral">&quot;ceres.home.vchrist.at:8080&quot;</span>);</div>
-<div class="line"><span class="lineno">   63</span>        vh3.<a class="code hl_function" href="classexpress_1_1Router.html#aa6c295b187e6cb8a7bc74a18de61e841">get</a>(<span class="stringliteral">&quot;/&quot;</span>, [] <a class="code hl_define" href="Router_8h.html#a8b7131df91fe7a961e2cdadcedb55232">APPLICATION</a>(req, res) {</div>
-<div class="line"><span class="lineno">   64</span>            res-&gt;send(<span class="stringliteral">&quot;Hello! I am VHOST ceres.home.vchrist.at.&quot;</span>);</div>
-<div class="line"><span class="lineno">   65</span>        });</div>
-<div class="line"><span class="lineno">   66</span>        legacyApp.<a class="code hl_function" href="classexpress_1_1Route.html#a5a7bd1d3aeb4c57c5e4665d1f0e9d052">use</a>(vh3);</div>
-<div class="line"><span class="lineno">   67</span> </div>
-<div class="line"><span class="lineno">   68</span>        legacyApp.<a class="code hl_function" href="classexpress_1_1Route.html#a5a7bd1d3aeb4c57c5e4665d1f0e9d052">use</a>([] <a class="code hl_define" href="Router_8h.html#a8b7131df91fe7a961e2cdadcedb55232">APPLICATION</a>(req, res) {</div>
-<div class="line"><span class="lineno">   69</span>            res-&gt;status(404).<a class="code hl_function" href="namespacecore_1_1system.html#afc000fbe5ae2216ddf84c0f24eb8aa33">send</a>(<span class="stringliteral">&quot;The requested resource is not found.&quot;</span>);</div>
-<div class="line"><span class="lineno">   70</span>        });</div>
+<div class="line"><span class="lineno">   57</span>        vh2.<a class="code hl_function" href="classexpress_1_1Router.html#aa6c295b187e6cb8a7bc74a18de61e841">get</a>(<span class="stringliteral">&quot;/&quot;</span>,</div>
+<div class="line"><span class="lineno">   58</span>                [] <a class="code hl_define" href="Router_8h.html#ac5313b926a3bc0fb106bffb31e93dc71">MIDDLEWARE</a>(req, res, next) {</div>
+<div class="line"><span class="lineno">   59</span>                    <span class="keywordflow">if</span> (req-&gt;query(<span class="stringliteral">&quot;how&quot;</span>).empty()) {</div>
+<div class="line"><span class="lineno">   60</span>                        next();</div>
+<div class="line"><span class="lineno">   61</span>                    } <span class="keywordflow">else</span> if (req-&gt;query(<span class="stringliteral">&quot;how&quot;</span>) == <span class="stringliteral">&quot;route&quot;</span>) {</div>
+<div class="line"><span class="lineno">   62</span>                        next(<span class="stringliteral">&quot;route&quot;</span>);</div>
+<div class="line"><span class="lineno">   63</span>                    } <span class="keywordflow">else</span> if (req-&gt;query(<span class="stringliteral">&quot;how&quot;</span>) == <span class="stringliteral">&quot;router&quot;</span>) {</div>
+<div class="line"><span class="lineno">   64</span>                        next(<span class="stringliteral">&quot;router&quot;</span>);</div>
+<div class="line"><span class="lineno">   65</span>                    }</div>
+<div class="line"><span class="lineno">   66</span>                })</div>
+<div class="line"><span class="lineno">   67</span>            .get([] <a class="code hl_define" href="Router_8h.html#a8b7131df91fe7a961e2cdadcedb55232">APPLICATION</a>(req, res) {</div>
+<div class="line"><span class="lineno">   68</span>                res-&gt;send(<span class="stringliteral">&quot;Hello! I am VHOST atlas.home.vchrist.at.&quot;</span>);</div>
+<div class="line"><span class="lineno">   69</span>            });</div>
+<div class="line"><span class="lineno">   70</span>        legacyApp.<a class="code hl_function" href="classexpress_1_1Route.html#a5a7bd1d3aeb4c57c5e4665d1f0e9d052">use</a>(vh2);</div>
 <div class="line"><span class="lineno">   71</span> </div>
-<div class="line"><span class="lineno">   72</span>        legacyApp.listen(8080,</div>
-<div class="line"><span class="lineno">   73</span>                         [instanceName = legacyApp.getConfig().getInstanceName()](<span class="keyword">const</span> <a class="code hl_typedef" href="classexpress_1_1WebAppT.html#ae6c8401e279b2a243f2fb0e498ef319e">legacy::in6::WebApp::SocketAddress</a>&amp; socketAddress,</div>
-<div class="line"><span class="lineno">   74</span>                                                                                  <span class="keyword">const</span> <a class="code hl_class" href="classcore_1_1socket_1_1State.html">core::socket::State</a>&amp; state) {</div>
-<div class="line"><span class="lineno">   75</span>                             switch (state) {</div>
-<div class="line"><span class="lineno">   76</span>                                 case core::socket::State::OK:</div>
-<div class="line"><span class="lineno">   77</span>                                     VLOG(1) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot; listening on &#39;&quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
-<div class="line"><span class="lineno">   78</span>                                     break;</div>
-<div class="line"><span class="lineno">   79</span>                                 case core::socket::State::DISABLED:</div>
-<div class="line"><span class="lineno">   80</span>                                     VLOG(1) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot; disabled&quot;</span>;</div>
-<div class="line"><span class="lineno">   81</span>                                     break;</div>
-<div class="line"><span class="lineno">   82</span>                                 case core::socket::State::ERROR:</div>
-<div class="line"><span class="lineno">   83</span>                                     LOG(ERROR) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; state.what();</div>
-<div class="line"><span class="lineno">   84</span>                                     break;</div>
-<div class="line"><span class="lineno">   85</span>                                 case core::socket::State::FATAL:</div>
-<div class="line"><span class="lineno">   86</span>                                     LOG(FATAL) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; state.what();</div>
-<div class="line"><span class="lineno">   87</span>                                     break;</div>
-<div class="line"><span class="lineno">   88</span>                             }</div>
-<div class="line"><span class="lineno">   89</span>                         });</div>
-<div class="line"><span class="lineno">   90</span>    }</div>
-<div class="line"><span class="lineno">   91</span> </div>
-<div class="line"><span class="lineno">   92</span>    {</div>
-<div class="line"><span class="lineno">   93</span>        <span class="keyword">const</span> <a class="code hl_class" href="classexpress_1_1WebAppT.html">express::tls::in6::WebApp</a> tlsApp(<span class="stringliteral">&quot;tls&quot;</span>);</div>
-<div class="line"><span class="lineno">   94</span> </div>
-<div class="line"><span class="lineno">   95</span>        <span class="keyword">const</span> <a class="code hl_class" href="classexpress_1_1Router.html">Router</a>&amp; vh1 = <a class="code hl_function" href="namespaceexpress_1_1middleware.html#aafc55af11280a46aa664c858db1088e9">middleware::VHost</a>(<span class="stringliteral">&quot;localhost:8088&quot;</span>);</div>
-<div class="line"><span class="lineno">   96</span>        vh1.<a class="code hl_function" href="classexpress_1_1Router.html#a9f5c02a219a67bf1fc031bdbf71b7566">use</a>(<a class="code hl_function" href="http_2model_2servers_8h.html#aed80b929c5eb7ce39f27c73b5f05fa96">getRouter</a>(<a class="code hl_function" href="classutils_1_1Config.html#a57ba2c249f34b5bc663e657b9d315cca">utils::Config::getStringOptionValue</a>(<span class="stringliteral">&quot;--web-root&quot;</span>)));</div>
-<div class="line"><span class="lineno">   97</span>        tlsApp.<a class="code hl_function" href="classexpress_1_1Route.html#a5a7bd1d3aeb4c57c5e4665d1f0e9d052">use</a>(vh1);</div>
-<div class="line"><span class="lineno">   98</span> </div>
-<div class="line"><span class="lineno">   99</span>        <span class="keyword">const</span> <a class="code hl_class" href="classexpress_1_1Router.html">Router</a>&amp; vh2 = <a class="code hl_function" href="namespaceexpress_1_1middleware.html#aafc55af11280a46aa664c858db1088e9">middleware::VHost</a>(<span class="stringliteral">&quot;atlas.home.vchrist.at:8088&quot;</span>);</div>
-<div class="line"><span class="lineno">  100</span>        vh2.<a class="code hl_function" href="classexpress_1_1Router.html#aa6c295b187e6cb8a7bc74a18de61e841">get</a>(<span class="stringliteral">&quot;/&quot;</span>, [] <a class="code hl_define" href="Router_8h.html#a8b7131df91fe7a961e2cdadcedb55232">APPLICATION</a>(req, res) {</div>
-<div class="line"><span class="lineno">  101</span>            res-&gt;send(<span class="stringliteral">&quot;Hello! I am VHOST atlas.home.vchrist.at.&quot;</span>);</div>
-<div class="line"><span class="lineno">  102</span>        });</div>
-<div class="line"><span class="lineno">  103</span>        tlsApp.<a class="code hl_function" href="classexpress_1_1Route.html#a5a7bd1d3aeb4c57c5e4665d1f0e9d052">use</a>(vh2);</div>
-<div class="line"><span class="lineno">  104</span> </div>
-<div class="line"><span class="lineno">  105</span>        <span class="keyword">const</span> <a class="code hl_class" href="classexpress_1_1Router.html">Router</a>&amp; vh3 = <a class="code hl_function" href="namespaceexpress_1_1middleware.html#aafc55af11280a46aa664c858db1088e9">middleware::VHost</a>(<span class="stringliteral">&quot;ceres.home.vchrist.at:8080&quot;</span>);</div>
-<div class="line"><span class="lineno">  106</span>        vh3.<a class="code hl_function" href="classexpress_1_1Router.html#aa6c295b187e6cb8a7bc74a18de61e841">get</a>(<span class="stringliteral">&quot;/&quot;</span>, [] <a class="code hl_define" href="Router_8h.html#a8b7131df91fe7a961e2cdadcedb55232">APPLICATION</a>(req, res) {</div>
-<div class="line"><span class="lineno">  107</span>            res-&gt;send(<span class="stringliteral">&quot;Hello! I am VHOST ceres.home.vchrist.at.&quot;</span>);</div>
-<div class="line"><span class="lineno">  108</span>        });</div>
-<div class="line"><span class="lineno">  109</span>        tlsApp.<a class="code hl_function" href="classexpress_1_1Route.html#a5a7bd1d3aeb4c57c5e4665d1f0e9d052">use</a>(vh3);</div>
-<div class="line"><span class="lineno">  110</span> </div>
-<div class="line"><span class="lineno">  111</span>        tlsApp.<a class="code hl_function" href="classexpress_1_1Route.html#a5a7bd1d3aeb4c57c5e4665d1f0e9d052">use</a>([] <a class="code hl_define" href="Router_8h.html#a8b7131df91fe7a961e2cdadcedb55232">APPLICATION</a>(req, res) {</div>
-<div class="line"><span class="lineno">  112</span>            res-&gt;status(404).<a class="code hl_function" href="namespacecore_1_1system.html#afc000fbe5ae2216ddf84c0f24eb8aa33">send</a>(<span class="stringliteral">&quot;The requested resource is not found.&quot;</span>);</div>
-<div class="line"><span class="lineno">  113</span>        });</div>
-<div class="line"><span class="lineno">  114</span> </div>
-<div class="line"><span class="lineno">  115</span>        tlsApp.listen(8088,</div>
-<div class="line"><span class="lineno">  116</span>                      [instanceName = tlsApp.getConfig().getInstanceName()](<span class="keyword">const</span> <a class="code hl_typedef" href="classexpress_1_1WebAppT.html#ae6c8401e279b2a243f2fb0e498ef319e">legacy::in6::WebApp::SocketAddress</a>&amp; socketAddress,</div>
-<div class="line"><span class="lineno">  117</span>                                                                            <span class="keyword">const</span> <a class="code hl_class" href="classcore_1_1socket_1_1State.html">core::socket::State</a>&amp; state) {</div>
-<div class="line"><span class="lineno">  118</span>                          switch (state) {</div>
-<div class="line"><span class="lineno">  119</span>                              case core::socket::State::OK:</div>
-<div class="line"><span class="lineno">  120</span>                                  VLOG(1) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot; listening on &#39;&quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
-<div class="line"><span class="lineno">  121</span>                                  break;</div>
-<div class="line"><span class="lineno">  122</span>                              case core::socket::State::DISABLED:</div>
-<div class="line"><span class="lineno">  123</span>                                  VLOG(1) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot; disabled&quot;</span>;</div>
-<div class="line"><span class="lineno">  124</span>                                  break;</div>
-<div class="line"><span class="lineno">  125</span>                              case core::socket::State::ERROR:</div>
-<div class="line"><span class="lineno">  126</span>                                  LOG(ERROR) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; state.what();</div>
-<div class="line"><span class="lineno">  127</span>                                  break;</div>
-<div class="line"><span class="lineno">  128</span>                              case core::socket::State::FATAL:</div>
-<div class="line"><span class="lineno">  129</span>                                  LOG(FATAL) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; state.what();</div>
-<div class="line"><span class="lineno">  130</span>                                  break;</div>
-<div class="line"><span class="lineno">  131</span>                          }</div>
-<div class="line"><span class="lineno">  132</span>                      });</div>
-<div class="line"><span class="lineno">  133</span> </div>
-<div class="line"><span class="lineno">  134</span>        tlsApp.getConfig().setCert(<span class="stringliteral">&quot;/home/voc/projects/snodec/snode.c/certs/wildcard.home.vchrist.at_-_snode.c_-_server.pem&quot;</span>);</div>
-<div class="line"><span class="lineno">  135</span>        tlsApp.getConfig().setCertKey(</div>
-<div class="line"><span class="lineno">  136</span>            <span class="stringliteral">&quot;/home/voc/projects/snodec/snode.c/certs/Volker_Christian_-_Web_-_snode.c_-_server.key.encrypted.pem&quot;</span>);</div>
-<div class="line"><span class="lineno">  137</span>        tlsApp.getConfig().setCertKeyPassword(<span class="stringliteral">&quot;snode.c&quot;</span>);</div>
-<div class="line"><span class="lineno">  138</span>    }</div>
-<div class="line"><span class="lineno">  139</span> </div>
-<div class="line"><span class="lineno">  140</span>    <a class="code hl_function" href="classexpress_1_1WebApp.html#a54e6910c9466c61d0b217490b7d9bb5a">WebApp::start</a>();</div>
-<div class="line"><span class="lineno">  141</span>}</div>
+<div class="line"><span class="lineno">   72</span>        <span class="keyword">const</span> <a class="code hl_class" href="classexpress_1_1Router.html">Router</a>&amp; vh3 = <a class="code hl_function" href="namespaceexpress_1_1middleware.html#aafc55af11280a46aa664c858db1088e9">middleware::VHost</a>(<span class="stringliteral">&quot;ceres.home.vchrist.at:8080&quot;</span>);</div>
+<div class="line"><span class="lineno">   73</span>        vh3.<a class="code hl_function" href="classexpress_1_1Router.html#aa6c295b187e6cb8a7bc74a18de61e841">get</a>(<span class="stringliteral">&quot;/&quot;</span>,</div>
+<div class="line"><span class="lineno">   74</span>                [] <a class="code hl_define" href="Router_8h.html#ac5313b926a3bc0fb106bffb31e93dc71">MIDDLEWARE</a>(req, res, next) {</div>
+<div class="line"><span class="lineno">   75</span>                    <span class="keywordflow">if</span> (req-&gt;query(<span class="stringliteral">&quot;how&quot;</span>).empty()) {</div>
+<div class="line"><span class="lineno">   76</span>                        next();</div>
+<div class="line"><span class="lineno">   77</span>                    } <span class="keywordflow">else</span> if (req-&gt;query(<span class="stringliteral">&quot;how&quot;</span>) == <span class="stringliteral">&quot;route&quot;</span>) {</div>
+<div class="line"><span class="lineno">   78</span>                        next(<span class="stringliteral">&quot;route&quot;</span>);</div>
+<div class="line"><span class="lineno">   79</span>                    } <span class="keywordflow">else</span> if (req-&gt;query(<span class="stringliteral">&quot;how&quot;</span>) == <span class="stringliteral">&quot;router&quot;</span>) {</div>
+<div class="line"><span class="lineno">   80</span>                        next(<span class="stringliteral">&quot;router&quot;</span>);</div>
+<div class="line"><span class="lineno">   81</span>                    }</div>
+<div class="line"><span class="lineno">   82</span>                })</div>
+<div class="line"><span class="lineno">   83</span>            .get([] <a class="code hl_define" href="Router_8h.html#a8b7131df91fe7a961e2cdadcedb55232">APPLICATION</a>(req, res) {</div>
+<div class="line"><span class="lineno">   84</span>                res-&gt;send(<span class="stringliteral">&quot;Hello! I am VHOST ceres.home.vchrist.at.&quot;</span>);</div>
+<div class="line"><span class="lineno">   85</span>            });</div>
+<div class="line"><span class="lineno">   86</span>        vh3.<a class="code hl_function" href="classexpress_1_1Router.html#aa6c295b187e6cb8a7bc74a18de61e841">get</a>(<span class="stringliteral">&quot;/&quot;</span>, [] <a class="code hl_define" href="Router_8h.html#a8b7131df91fe7a961e2cdadcedb55232">APPLICATION</a>(req, res) {</div>
+<div class="line"><span class="lineno">   87</span>            res-&gt;send(<span class="stringliteral">&quot;Hello, next route on ceres.home.vchrist.at&quot;</span>);</div>
+<div class="line"><span class="lineno">   88</span>        });</div>
+<div class="line"><span class="lineno">   89</span>        vh3.<a class="code hl_function" href="classexpress_1_1Router.html#aa6c295b187e6cb8a7bc74a18de61e841">get</a>(<span class="stringliteral">&quot;/test&quot;</span>, [] <a class="code hl_define" href="Router_8h.html#a8b7131df91fe7a961e2cdadcedb55232">APPLICATION</a>(req, res) {</div>
+<div class="line"><span class="lineno">   90</span>            res-&gt;send(<span class="stringliteral">&quot;Test Route on VHOST ceres.home.vchrist.at.&quot;</span>);</div>
+<div class="line"><span class="lineno">   91</span>        });</div>
+<div class="line"><span class="lineno">   92</span>        legacyApp.<a class="code hl_function" href="classexpress_1_1Route.html#a5a7bd1d3aeb4c57c5e4665d1f0e9d052">use</a>(vh3);</div>
+<div class="line"><span class="lineno">   93</span> </div>
+<div class="line"><span class="lineno">   94</span>        legacyApp.<a class="code hl_function" href="classexpress_1_1Route.html#a5a7bd1d3aeb4c57c5e4665d1f0e9d052">use</a>([] <a class="code hl_define" href="Router_8h.html#a8b7131df91fe7a961e2cdadcedb55232">APPLICATION</a>(req, res) {</div>
+<div class="line"><span class="lineno">   95</span>            res-&gt;status(404).<a class="code hl_function" href="namespacecore_1_1system.html#afc000fbe5ae2216ddf84c0f24eb8aa33">send</a>(<span class="stringliteral">&quot;The requested resource is not found.&quot;</span>);</div>
+<div class="line"><span class="lineno">   96</span>        });</div>
+<div class="line"><span class="lineno">   97</span> </div>
+<div class="line"><span class="lineno">   98</span>        legacyApp.listen(8080,</div>
+<div class="line"><span class="lineno">   99</span>                         [instanceName = legacyApp.getConfig().getInstanceName()](<span class="keyword">const</span> <a class="code hl_typedef" href="classexpress_1_1WebAppT.html#ae6c8401e279b2a243f2fb0e498ef319e">legacy::in6::WebApp::SocketAddress</a>&amp; socketAddress,</div>
+<div class="line"><span class="lineno">  100</span>                                                                                  <span class="keyword">const</span> <a class="code hl_class" href="classcore_1_1socket_1_1State.html">core::socket::State</a>&amp; state) {</div>
+<div class="line"><span class="lineno">  101</span>                             switch (state) {</div>
+<div class="line"><span class="lineno">  102</span>                                 case core::socket::State::OK:</div>
+<div class="line"><span class="lineno">  103</span>                                     VLOG(1) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot; listening on &#39;&quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
+<div class="line"><span class="lineno">  104</span>                                     break;</div>
+<div class="line"><span class="lineno">  105</span>                                 case core::socket::State::DISABLED:</div>
+<div class="line"><span class="lineno">  106</span>                                     VLOG(1) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot; disabled&quot;</span>;</div>
+<div class="line"><span class="lineno">  107</span>                                     break;</div>
+<div class="line"><span class="lineno">  108</span>                                 case core::socket::State::ERROR:</div>
+<div class="line"><span class="lineno">  109</span>                                     LOG(ERROR) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; state.what();</div>
+<div class="line"><span class="lineno">  110</span>                                     break;</div>
+<div class="line"><span class="lineno">  111</span>                                 case core::socket::State::FATAL:</div>
+<div class="line"><span class="lineno">  112</span>                                     LOG(FATAL) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; state.what();</div>
+<div class="line"><span class="lineno">  113</span>                                     break;</div>
+<div class="line"><span class="lineno">  114</span>                             }</div>
+<div class="line"><span class="lineno">  115</span>                         });</div>
+<div class="line"><span class="lineno">  116</span>    }</div>
+<div class="line"><span class="lineno">  117</span> </div>
+<div class="line"><span class="lineno">  118</span>    {</div>
+<div class="line"><span class="lineno">  119</span>        <span class="keyword">const</span> <a class="code hl_class" href="classexpress_1_1WebAppT.html">express::tls::in6::WebApp</a> tlsApp(<span class="stringliteral">&quot;tls&quot;</span>);</div>
+<div class="line"><span class="lineno">  120</span> </div>
+<div class="line"><span class="lineno">  121</span>        <span class="keyword">const</span> <a class="code hl_class" href="classexpress_1_1Router.html">Router</a>&amp; vh1 = <a class="code hl_function" href="namespaceexpress_1_1middleware.html#aafc55af11280a46aa664c858db1088e9">middleware::VHost</a>(<span class="stringliteral">&quot;localhost:8088&quot;</span>);</div>
+<div class="line"><span class="lineno">  122</span>        vh1.<a class="code hl_function" href="classexpress_1_1Router.html#a9f5c02a219a67bf1fc031bdbf71b7566">use</a>(<a class="code hl_class" href="classexpress_1_1middleware_1_1StaticMiddleware.html">middleware::StaticMiddleware</a>(<a class="code hl_function" href="classutils_1_1Config.html#a57ba2c249f34b5bc663e657b9d315cca">utils::Config::getStringOptionValue</a>(<span class="stringliteral">&quot;--web-root&quot;</span>)));</div>
+<div class="line"><span class="lineno">  123</span>        tlsApp.<a class="code hl_function" href="classexpress_1_1Route.html#a5a7bd1d3aeb4c57c5e4665d1f0e9d052">use</a>(vh1);</div>
+<div class="line"><span class="lineno">  124</span> </div>
+<div class="line"><span class="lineno">  125</span>        <span class="keyword">const</span> <a class="code hl_class" href="classexpress_1_1Router.html">Router</a>&amp; vh2 = <a class="code hl_function" href="namespaceexpress_1_1middleware.html#aafc55af11280a46aa664c858db1088e9">middleware::VHost</a>(<span class="stringliteral">&quot;atlas.home.vchrist.at:8088&quot;</span>);</div>
+<div class="line"><span class="lineno">  126</span>        vh2.<a class="code hl_function" href="classexpress_1_1Router.html#aa6c295b187e6cb8a7bc74a18de61e841">get</a>(<span class="stringliteral">&quot;/&quot;</span>,</div>
+<div class="line"><span class="lineno">  127</span>                [] <a class="code hl_define" href="Router_8h.html#ac5313b926a3bc0fb106bffb31e93dc71">MIDDLEWARE</a>(req, res, next) {</div>
+<div class="line"><span class="lineno">  128</span>                    <span class="keywordflow">if</span> (req-&gt;query(<span class="stringliteral">&quot;how&quot;</span>).empty()) {</div>
+<div class="line"><span class="lineno">  129</span>                        next();</div>
+<div class="line"><span class="lineno">  130</span>                    } <span class="keywordflow">else</span> if (req-&gt;query(<span class="stringliteral">&quot;how&quot;</span>) == <span class="stringliteral">&quot;route&quot;</span>) {</div>
+<div class="line"><span class="lineno">  131</span>                        next(<span class="stringliteral">&quot;route&quot;</span>);</div>
+<div class="line"><span class="lineno">  132</span>                    } <span class="keywordflow">else</span> if (req-&gt;query(<span class="stringliteral">&quot;how&quot;</span>) == <span class="stringliteral">&quot;router&quot;</span>) {</div>
+<div class="line"><span class="lineno">  133</span>                        next(<span class="stringliteral">&quot;router&quot;</span>);</div>
+<div class="line"><span class="lineno">  134</span>                    }</div>
+<div class="line"><span class="lineno">  135</span>                })</div>
+<div class="line"><span class="lineno">  136</span>            .get([] <a class="code hl_define" href="Router_8h.html#a8b7131df91fe7a961e2cdadcedb55232">APPLICATION</a>(req, res) {</div>
+<div class="line"><span class="lineno">  137</span>                res-&gt;send(<span class="stringliteral">&quot;Hello! I am VHOST atlas.home.vchrist.at.&quot;</span>);</div>
+<div class="line"><span class="lineno">  138</span>            });</div>
+<div class="line"><span class="lineno">  139</span>        tlsApp.<a class="code hl_function" href="classexpress_1_1Route.html#a5a7bd1d3aeb4c57c5e4665d1f0e9d052">use</a>(vh2);</div>
+<div class="line"><span class="lineno">  140</span> </div>
+<div class="line"><span class="lineno">  141</span>        <span class="keyword">const</span> <a class="code hl_class" href="classexpress_1_1Router.html">Router</a>&amp; vh3 = <a class="code hl_function" href="namespaceexpress_1_1middleware.html#aafc55af11280a46aa664c858db1088e9">middleware::VHost</a>(<span class="stringliteral">&quot;ceres.home.vchrist.at:8088&quot;</span>);</div>
+<div class="line"><span class="lineno">  142</span>        vh3.<a class="code hl_function" href="classexpress_1_1Router.html#aa6c295b187e6cb8a7bc74a18de61e841">get</a>(<span class="stringliteral">&quot;/&quot;</span>,</div>
+<div class="line"><span class="lineno">  143</span>                [] <a class="code hl_define" href="Router_8h.html#ac5313b926a3bc0fb106bffb31e93dc71">MIDDLEWARE</a>(req, res, next) {</div>
+<div class="line"><span class="lineno">  144</span>                    <span class="keywordflow">if</span> (req-&gt;query(<span class="stringliteral">&quot;how&quot;</span>).empty()) {</div>
+<div class="line"><span class="lineno">  145</span>                        next();</div>
+<div class="line"><span class="lineno">  146</span>                    } <span class="keywordflow">else</span> if (req-&gt;query(<span class="stringliteral">&quot;how&quot;</span>) == <span class="stringliteral">&quot;route&quot;</span>) {</div>
+<div class="line"><span class="lineno">  147</span>                        next(<span class="stringliteral">&quot;route&quot;</span>);</div>
+<div class="line"><span class="lineno">  148</span>                    } <span class="keywordflow">else</span> if (req-&gt;query(<span class="stringliteral">&quot;how&quot;</span>) == <span class="stringliteral">&quot;router&quot;</span>) {</div>
+<div class="line"><span class="lineno">  149</span>                        next(<span class="stringliteral">&quot;router&quot;</span>);</div>
+<div class="line"><span class="lineno">  150</span>                    }</div>
+<div class="line"><span class="lineno">  151</span>                })</div>
+<div class="line"><span class="lineno">  152</span>            .get([] <a class="code hl_define" href="Router_8h.html#a8b7131df91fe7a961e2cdadcedb55232">APPLICATION</a>(req, res) {</div>
+<div class="line"><span class="lineno">  153</span>                res-&gt;send(<span class="stringliteral">&quot;Hello! I am VHOST ceres.home.vchrist.at.&quot;</span>);</div>
+<div class="line"><span class="lineno">  154</span>            });</div>
+<div class="line"><span class="lineno">  155</span>        vh3.<a class="code hl_function" href="classexpress_1_1Router.html#aa6c295b187e6cb8a7bc74a18de61e841">get</a>(<span class="stringliteral">&quot;/&quot;</span>, [] <a class="code hl_define" href="Router_8h.html#a8b7131df91fe7a961e2cdadcedb55232">APPLICATION</a>(req, res) {</div>
+<div class="line"><span class="lineno">  156</span>            res-&gt;send(<span class="stringliteral">&quot;Hello, next route on ceres.home.vchrist.at&quot;</span>);</div>
+<div class="line"><span class="lineno">  157</span>        });</div>
+<div class="line"><span class="lineno">  158</span>        vh3.<a class="code hl_function" href="classexpress_1_1Router.html#aa6c295b187e6cb8a7bc74a18de61e841">get</a>(<span class="stringliteral">&quot;/test&quot;</span>, [] <a class="code hl_define" href="Router_8h.html#a8b7131df91fe7a961e2cdadcedb55232">APPLICATION</a>(req, res) {</div>
+<div class="line"><span class="lineno">  159</span>            res-&gt;send(<span class="stringliteral">&quot;Test Route on VHOST ceres.home.vchrist.at.&quot;</span>);</div>
+<div class="line"><span class="lineno">  160</span>        });</div>
+<div class="line"><span class="lineno">  161</span>        tlsApp.<a class="code hl_function" href="classexpress_1_1Route.html#a5a7bd1d3aeb4c57c5e4665d1f0e9d052">use</a>(vh3);</div>
+<div class="line"><span class="lineno">  162</span> </div>
+<div class="line"><span class="lineno">  163</span>        tlsApp.<a class="code hl_function" href="classexpress_1_1Route.html#a5a7bd1d3aeb4c57c5e4665d1f0e9d052">use</a>([] <a class="code hl_define" href="Router_8h.html#a8b7131df91fe7a961e2cdadcedb55232">APPLICATION</a>(req, res) {</div>
+<div class="line"><span class="lineno">  164</span>            res-&gt;status(404).<a class="code hl_function" href="namespacecore_1_1system.html#afc000fbe5ae2216ddf84c0f24eb8aa33">send</a>(<span class="stringliteral">&quot;The requested resource is not found.&quot;</span>);</div>
+<div class="line"><span class="lineno">  165</span>        });</div>
+<div class="line"><span class="lineno">  166</span> </div>
+<div class="line"><span class="lineno">  167</span>        tlsApp.listen(8088,</div>
+<div class="line"><span class="lineno">  168</span>                      [instanceName = tlsApp.getConfig().getInstanceName()](<span class="keyword">const</span> <a class="code hl_typedef" href="classexpress_1_1WebAppT.html#ae6c8401e279b2a243f2fb0e498ef319e">legacy::in6::WebApp::SocketAddress</a>&amp; socketAddress,</div>
+<div class="line"><span class="lineno">  169</span>                                                                            <span class="keyword">const</span> <a class="code hl_class" href="classcore_1_1socket_1_1State.html">core::socket::State</a>&amp; state) {</div>
+<div class="line"><span class="lineno">  170</span>                          switch (state) {</div>
+<div class="line"><span class="lineno">  171</span>                              case core::socket::State::OK:</div>
+<div class="line"><span class="lineno">  172</span>                                  VLOG(1) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot; listening on &#39;&quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
+<div class="line"><span class="lineno">  173</span>                                  break;</div>
+<div class="line"><span class="lineno">  174</span>                              case core::socket::State::DISABLED:</div>
+<div class="line"><span class="lineno">  175</span>                                  VLOG(1) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot; disabled&quot;</span>;</div>
+<div class="line"><span class="lineno">  176</span>                                  break;</div>
+<div class="line"><span class="lineno">  177</span>                              case core::socket::State::ERROR:</div>
+<div class="line"><span class="lineno">  178</span>                                  LOG(ERROR) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; state.what();</div>
+<div class="line"><span class="lineno">  179</span>                                  break;</div>
+<div class="line"><span class="lineno">  180</span>                              case core::socket::State::FATAL:</div>
+<div class="line"><span class="lineno">  181</span>                                  LOG(FATAL) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; state.what();</div>
+<div class="line"><span class="lineno">  182</span>                                  break;</div>
+<div class="line"><span class="lineno">  183</span>                          }</div>
+<div class="line"><span class="lineno">  184</span>                      });</div>
+<div class="line"><span class="lineno">  185</span> </div>
+<div class="line"><span class="lineno">  186</span>        tlsApp.getConfig().setCert(<span class="stringliteral">&quot;/home/voc/projects/snodec/snode.c/certs/wildcard.home.vchrist.at_-_snode.c_-_server.pem&quot;</span>);</div>
+<div class="line"><span class="lineno">  187</span>        tlsApp.getConfig().setCertKey(</div>
+<div class="line"><span class="lineno">  188</span>            <span class="stringliteral">&quot;/home/voc/projects/snodec/snode.c/certs/Volker_Christian_-_Web_-_snode.c_-_server.key.encrypted.pem&quot;</span>);</div>
+<div class="line"><span class="lineno">  189</span>        tlsApp.getConfig().setCertKeyPassword(<span class="stringliteral">&quot;snode.c&quot;</span>);</div>
+<div class="line"><span class="lineno">  190</span>    }</div>
+<div class="line"><span class="lineno">  191</span> </div>
+<div class="line"><span class="lineno">  192</span>    <a class="code hl_function" href="classexpress_1_1WebApp.html#a54e6910c9466c61d0b217490b7d9bb5a">WebApp::start</a>();</div>
+<div class="line"><span class="lineno">  193</span>}</div>
 <div class="ttc" id="aRouter_8h_html_a8b7131df91fe7a961e2cdadcedb55232"><div class="ttname"><a href="Router_8h.html#a8b7131df91fe7a961e2cdadcedb55232">APPLICATION</a></div><div class="ttdeci">#define APPLICATION(req, res)</div><div class="ttdef"><b>Definition</b> <a href="Router_8h_source.html#l00045">Router.h:45</a></div></div>
+<div class="ttc" id="aRouter_8h_html_ac5313b926a3bc0fb106bffb31e93dc71"><div class="ttname"><a href="Router_8h.html#ac5313b926a3bc0fb106bffb31e93dc71">MIDDLEWARE</a></div><div class="ttdeci">#define MIDDLEWARE(req, res, next)</div><div class="ttdef"><b>Definition</b> <a href="Router_8h_source.html#l00040">Router.h:40</a></div></div>
 <div class="ttc" id="aclasscore_1_1socket_1_1State_html"><div class="ttname"><a href="classcore_1_1socket_1_1State.html">core::socket::State</a></div><div class="ttdef"><b>Definition</b> <a href="socket_2State_8h_source.html#l00031">State.h:31</a></div></div>
 <div class="ttc" id="aclassexpress_1_1Route_html_a5a7bd1d3aeb4c57c5e4665d1f0e9d052"><div class="ttname"><a href="classexpress_1_1Route.html#a5a7bd1d3aeb4c57c5e4665d1f0e9d052">express::Route::use</a></div><div class="ttdeci">Route &amp; use(const std::function&lt; void(const std::shared_ptr&lt; Request &gt; &amp;, const std::shared_ptr&lt; Response &gt; &amp;)&gt; &amp;lambda) const</div><div class="ttdef"><b>Definition</b> <a href="Route_8cpp_source.html#l00078">Route.cpp:78</a></div></div>
 <div class="ttc" id="aclassexpress_1_1Router_html_aa6c295b187e6cb8a7bc74a18de61e841"><div class="ttname"><a href="classexpress_1_1Router.html#aa6c295b187e6cb8a7bc74a18de61e841">express::Router::get</a></div><div class="ttdeci">Route &amp; get(const Router &amp;router) const</div><div class="ttdef"><b>Definition</b> <a href="Router_8cpp_source.html#l00062">Router.cpp:62</a></div></div>
@@ -280,7 +334,6 @@ Functions</h2></td></tr>
 <div class="ttc" id="aclassexpress_1_1WebApp_html_a54e6910c9466c61d0b217490b7d9bb5a"><div class="ttname"><a href="classexpress_1_1WebApp.html#a54e6910c9466c61d0b217490b7d9bb5a">express::WebApp::start</a></div><div class="ttdeci">static int start(const utils::Timeval &amp;timeOut={LONG_MAX, 0})</div><div class="ttdef"><b>Definition</b> <a href="WebApp_8cpp_source.html#l00038">WebApp.cpp:38</a></div></div>
 <div class="ttc" id="aclassutils_1_1Config_html_a2c8b8976d97321d55ed330c0f938d8d8"><div class="ttname"><a href="classutils_1_1Config.html#a2c8b8976d97321d55ed330c0f938d8d8">utils::Config::addStringOption</a></div><div class="ttdeci">static CLI::Option * addStringOption(const std::string &amp;name, const std::string &amp;description, const std::string &amp;typeName)</div><div class="ttdef"><b>Definition</b> <a href="Config_8cpp_source.html#l00862">Config.cpp:862</a></div></div>
 <div class="ttc" id="aclassutils_1_1Config_html_a57ba2c249f34b5bc663e657b9d315cca"><div class="ttname"><a href="classutils_1_1Config.html#a57ba2c249f34b5bc663e657b9d315cca">utils::Config::getStringOptionValue</a></div><div class="ttdeci">static std::string getStringOptionValue(const std::string &amp;name)</div><div class="ttdef"><b>Definition</b> <a href="Config_8cpp_source.html#l00919">Config.cpp:919</a></div></div>
-<div class="ttc" id="ahttp_2model_2servers_8h_html_aed80b929c5eb7ce39f27c73b5f05fa96"><div class="ttname"><a href="http_2model_2servers_8h.html#aed80b929c5eb7ce39f27c73b5f05fa96">getRouter</a></div><div class="ttdeci">static express::Router getRouter()</div><div class="ttdef"><b>Definition</b> <a href="http_2model_2servers_8h_source.html#l00046">servers.h:46</a></div></div>
 <div class="ttc" id="anamespacecore_1_1system_html_afc000fbe5ae2216ddf84c0f24eb8aa33"><div class="ttname"><a href="namespacecore_1_1system.html#afc000fbe5ae2216ddf84c0f24eb8aa33">core::system::send</a></div><div class="ttdeci">ssize_t send(int sockfd, const void *buf, std::size_t len, int flags)</div><div class="ttdef"><b>Definition</b> <a href="socket_8cpp_source.html#l00074">socket.cpp:74</a></div></div>
 <div class="ttc" id="anamespaceexpress_1_1middleware_html_aafc55af11280a46aa664c858db1088e9"><div class="ttname"><a href="namespaceexpress_1_1middleware.html#aafc55af11280a46aa664c858db1088e9">express::middleware::VHost</a></div><div class="ttdeci">class VHost &amp; VHost(const std::string &amp;host)</div><div class="ttdef"><b>Definition</b> <a href="VHost_8cpp_source.html#l00051">VHost.cpp:51</a></div></div>
 </div><!-- fragment -->
@@ -299,7 +352,7 @@ Here is the call graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_9654b8d08f4bba4e84b362c5fd320bee.html">apps</a></li><li class="navelem"><a class="el" href="vhostserver_8cpp.html">vhostserver.cpp</a></li>
-    <li class="footer">Generated on Mon Feb 17 2025 12:36:08 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generated on Tue Feb 25 2025 14:03:09 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>

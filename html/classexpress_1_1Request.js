@@ -14,6 +14,7 @@ var classexpress_1_1Request =
     [ "Response", "classexpress_1_1Request.html#a0bb0e5a2fcd99881ef189293e209db7f", null ],
     [ "body", "classexpress_1_1Request.html#a3f28237a8dce594b7895a804b15609da", null ],
     [ "cookies", "classexpress_1_1Request.html#a207af439022b80505faecaa88e4021a7", null ],
+    [ "file", "classexpress_1_1Request.html#af0561d7764068b8daf8b455057ee4fb7", null ],
     [ "headers", "classexpress_1_1Request.html#aaf78369f3b84244e5f0c8327c2febadb", null ],
     [ "httpMajor", "classexpress_1_1Request.html#a679275a6e897ee716bed9a96c11571b3", null ],
     [ "httpMinor", "classexpress_1_1Request.html#a39f166ecc21e90bec1d2f163c7e8319c", null ],

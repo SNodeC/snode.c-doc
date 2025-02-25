@@ -1,5 +1,15 @@
 var NAVTREEINDEX17 =
 {
+"classiot_1_1mqtt_1_1SocketContext.html#a6314a50fd9c58204e2833262214ce8ad":[1,0,8,0,11,1],
+"classiot_1_1mqtt_1_1SocketContext.html#a6314a50fd9c58204e2833262214ce8ad":[3,0,5,0,11,1],
+"classiot_1_1mqtt_1_1SocketContext.html#a72c1274f2f094a97f5710b7696271614":[1,0,8,0,11,8],
+"classiot_1_1mqtt_1_1SocketContext.html#a72c1274f2f094a97f5710b7696271614":[3,0,5,0,11,8],
+"classiot_1_1mqtt_1_1SocketContext.html#a89b11ecf7ddbc27e2693205847c05636":[1,0,8,0,11,4],
+"classiot_1_1mqtt_1_1SocketContext.html#a89b11ecf7ddbc27e2693205847c05636":[3,0,5,0,11,4],
+"classiot_1_1mqtt_1_1SocketContext.html#abe51bbeb3343dce73845ac2a0c47112d":[1,0,8,0,11,3],
+"classiot_1_1mqtt_1_1SocketContext.html#abe51bbeb3343dce73845ac2a0c47112d":[3,0,5,0,11,3],
+"classiot_1_1mqtt_1_1SocketContext.html#ad63d9385473ba0841de03dc9af0c467e":[1,0,8,0,11,6],
+"classiot_1_1mqtt_1_1SocketContext.html#ad63d9385473ba0841de03dc9af0c467e":[3,0,5,0,11,6],
 "classiot_1_1mqtt_1_1SubProtocol.html":[1,0,8,0,12],
 "classiot_1_1mqtt_1_1SubProtocol.html":[3,0,5,0,12],
 "classiot_1_1mqtt_1_1SubProtocol.html#a0dbc9da88938607df28f3af7a105d583":[1,0,8,0,12,10],
@@ -239,15 +249,5 @@ var NAVTREEINDEX17 =
 "classiot_1_1mqtt_1_1packets_1_1Connect.html#a1d58bdd70f8545e2ff161ca4284672d9":[1,0,8,0,1,1,32],
 "classiot_1_1mqtt_1_1packets_1_1Connect.html#a1d58bdd70f8545e2ff161ca4284672d9":[3,0,5,0,1,1,32],
 "classiot_1_1mqtt_1_1packets_1_1Connect.html#a25374fccbb8eb32c48031a7e877e1b35":[1,0,8,0,1,1,6],
-"classiot_1_1mqtt_1_1packets_1_1Connect.html#a25374fccbb8eb32c48031a7e877e1b35":[3,0,5,0,1,1,6],
-"classiot_1_1mqtt_1_1packets_1_1Connect.html#a2ff40cca7f42d11ed9350f4ef059fd30":[1,0,8,0,1,1,31],
-"classiot_1_1mqtt_1_1packets_1_1Connect.html#a2ff40cca7f42d11ed9350f4ef059fd30":[3,0,5,0,1,1,31],
-"classiot_1_1mqtt_1_1packets_1_1Connect.html#a3eaa2a5b80cd43ddbde7355474e85de4":[1,0,8,0,1,1,26],
-"classiot_1_1mqtt_1_1packets_1_1Connect.html#a3eaa2a5b80cd43ddbde7355474e85de4":[3,0,5,0,1,1,26],
-"classiot_1_1mqtt_1_1packets_1_1Connect.html#a408b1ac88aa6e7acd3267d26be3e523b":[1,0,8,0,1,1,33],
-"classiot_1_1mqtt_1_1packets_1_1Connect.html#a408b1ac88aa6e7acd3267d26be3e523b":[3,0,5,0,1,1,33],
-"classiot_1_1mqtt_1_1packets_1_1Connect.html#a4bacc225bd20f3e7116a31974d7df04e":[1,0,8,0,1,1,1],
-"classiot_1_1mqtt_1_1packets_1_1Connect.html#a4bacc225bd20f3e7116a31974d7df04e":[3,0,5,0,1,1,1],
-"classiot_1_1mqtt_1_1packets_1_1Connect.html#a52020b9437f99ec7bec1a4c32521a8e7":[1,0,8,0,1,1,15],
-"classiot_1_1mqtt_1_1packets_1_1Connect.html#a52020b9437f99ec7bec1a4c32521a8e7":[3,0,5,0,1,1,15]
+"classiot_1_1mqtt_1_1packets_1_1Connect.html#a25374fccbb8eb32c48031a7e877e1b35":[3,0,5,0,1,1,6]
 };

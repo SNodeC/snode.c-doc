@@ -1,5 +1,15 @@
 var NAVTREEINDEX40 =
 {
+"in6_2stream_2tls_2config_2ConfigSocketClient_8h.html":[4,0,6,2,2,2,0,1],
+"in6_2stream_2tls_2config_2ConfigSocketClient_8h_source.html":[4,0,6,2,2,2,0,1],
+"in6_2stream_2tls_2config_2ConfigSocketServer_8cpp.html":[4,0,6,2,2,2,0,2],
+"in6_2stream_2tls_2config_2ConfigSocketServer_8cpp_source.html":[4,0,6,2,2,2,0,2],
+"in6_2stream_2tls_2config_2ConfigSocketServer_8h.html":[4,0,6,2,2,2,0,3],
+"in6_2stream_2tls_2config_2ConfigSocketServer_8h_source.html":[4,0,6,2,2,2,0,3],
+"in_2SocketAddrInfo_8cpp.html":[4,0,6,1,5],
+"in_2SocketAddrInfo_8cpp_source.html":[4,0,6,1,5],
+"in_2SocketAddrInfo_8h.html":[4,0,6,1,6],
+"in_2SocketAddrInfo_8h_source.html":[4,0,6,1,6],
 "in_2config_2ConfigAddress_8cpp.html":[4,0,6,1,0,0],
 "in_2config_2ConfigAddress_8cpp.html#a03943706e48069237cd57f2d35ca987e":[4,0,6,1,0,0,1],
 "in_2config_2ConfigAddress_8cpp.html#a6388870e639eee9c0a69446876f1f8cc":[4,0,6,1,0,0,0],
@@ -239,15 +249,5 @@ var NAVTREEINDEX40 =
 "l2_2phy_2stream_2PhysicalSocket_8h_source.html":[4,0,6,3,1,0,1],
 "l2_2phy_2stream_2PhysicalSocket_8hpp.html":[4,0,6,3,1,0,2],
 "l2_2phy_2stream_2PhysicalSocket_8hpp_source.html":[4,0,6,3,1,0,2],
-"l2_2stream_2config_2ConfigSocketClient_8cpp.html":[4,0,6,3,2,0,0],
-"l2_2stream_2config_2ConfigSocketClient_8cpp_source.html":[4,0,6,3,2,0,0],
-"l2_2stream_2config_2ConfigSocketClient_8h.html":[4,0,6,3,2,0,1],
-"l2_2stream_2config_2ConfigSocketClient_8h_source.html":[4,0,6,3,2,0,1],
-"l2_2stream_2config_2ConfigSocketServer_8cpp.html":[4,0,6,3,2,0,2],
-"l2_2stream_2config_2ConfigSocketServer_8cpp_source.html":[4,0,6,3,2,0,2],
-"l2_2stream_2config_2ConfigSocketServer_8h.html":[4,0,6,3,2,0,3],
-"l2_2stream_2config_2ConfigSocketServer_8h_source.html":[4,0,6,3,2,0,3],
-"l2_2stream_2legacy_2SocketClient_8cpp.html":[4,0,6,3,2,1,1],
-"l2_2stream_2legacy_2SocketClient_8cpp_source.html":[4,0,6,3,2,1,1],
-"l2_2stream_2legacy_2SocketServer_8cpp.html":[4,0,6,3,2,1,3]
+"l2_2stream_2config_2ConfigSocketClient_8cpp.html":[4,0,6,3,2,0,0]
 };

@@ -19,6 +19,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="extra-style.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -123,8 +124,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ae7ad7fb1a5d240f338865485e7b04070"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8faf5086993260d6b916f020bd5e45cc" id="r_a8faf5086993260d6b916f020bd5e45cc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8faf5086993260d6b916f020bd5e45cc">Router</a> (const <a class="el" href="classexpress_1_1Router.html">Router</a> &amp;)=default</td></tr>
 <tr class="separator:a8faf5086993260d6b916f020bd5e45cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac6add8bb80bf43b624c188b6ed0fcf6c" id="r_ac6add8bb80bf43b624c188b6ed0fcf6c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac6add8bb80bf43b624c188b6ed0fcf6c">laxRouting</a> (bool strict=false)</td></tr>
-<tr class="separator:ac6add8bb80bf43b624c188b6ed0fcf6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ee871bfdd00848ccf6bb8cb7bb18a10" id="r_a1ee871bfdd00848ccf6bb8cb7bb18a10"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1ee871bfdd00848ccf6bb8cb7bb18a10">strictRouting</a> (bool strictRouting=true) const</td></tr>
+<tr class="separator:a1ee871bfdd00848ccf6bb8cb7bb18a10"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9f5c02a219a67bf1fc031bdbf71b7566" id="r_a9f5c02a219a67bf1fc031bdbf71b7566"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classexpress_1_1Route.html">Route</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9f5c02a219a67bf1fc031bdbf71b7566">use</a> (const <a class="el" href="classexpress_1_1Router.html">Router</a> &amp;<a class="el" href="testregex_8cpp.html#ab024e3c77aeb1487da4b33877cdfc1fb">router</a>) const</td></tr>
 <tr class="separator:a9f5c02a219a67bf1fc031bdbf71b7566"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2a95d86ffc04b703565c54fc58ee4a9a" id="r_a2a95d86ffc04b703565c54fc58ee4a9a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classexpress_1_1Route.html">Route</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2a95d86ffc04b703565c54fc58ee4a9a">use</a> (const std::string &amp;relativeMountPath, const <a class="el" href="classexpress_1_1Router.html">Router</a> &amp;<a class="el" href="testregex_8cpp.html#ab024e3c77aeb1487da4b33877cdfc1fb">router</a>) const</td></tr>
@@ -491,7 +492,8 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Router_8cpp_source.html#l00061">61</a> of file <a class="el" href="Router_8cpp_source.html">Router.cpp</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   62</span>{</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a6358e2a36bf83c65a849a144f14bf1f2" name="a6358e2a36bf83c65a849a144f14bf1f2"></a>
@@ -1655,28 +1657,6 @@ template&lt;typename... Lambdas&gt; </div>
 
 </div>
 </div>
-<a id="ac6add8bb80bf43b624c188b6ed0fcf6c" name="ac6add8bb80bf43b624c188b6ed0fcf6c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac6add8bb80bf43b624c188b6ed0fcf6c">&#9670;&#160;</a></span>laxRouting()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void express::Router::laxRouting </td>
-          <td>(</td>
-          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>strict</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="Router_8cpp_source.html#l00056">56</a> of file <a class="el" href="Router_8cpp_source.html">Router.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   56</span>                                       {</div>
-<div class="line"><span class="lineno">   57</span>        <a class="code hl_variable" href="#ae2ad80097847df22eb39043912f02f60">rootRoute</a>-&gt;strict = strict;</div>
-<div class="line"><span class="lineno">   58</span>    }</div>
-</div><!-- fragment -->
-</div>
-</div>
 <a id="a53489bf51a50fb256082f476bb5843cc" name="a53489bf51a50fb256082f476bb5843cc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a53489bf51a50fb256082f476bb5843cc">&#9670;&#160;</a></span>options() <span class="overload">[1/10]</span></h2>
 
@@ -2621,6 +2601,29 @@ template&lt;typename... Lambdas&gt; </div>
 
 </div>
 </div>
+<a id="a1ee871bfdd00848ccf6bb8cb7bb18a10" name="a1ee871bfdd00848ccf6bb8cb7bb18a10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ee871bfdd00848ccf6bb8cb7bb18a10">&#9670;&#160;</a></span>strictRouting()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void express::Router::strictRouting </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>strictRouting</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="Router_8cpp_source.html#l00056">56</a> of file <a class="el" href="Router_8cpp_source.html">Router.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   56</span>                                                       {</div>
+<div class="line"><span class="lineno">   57</span>        <a class="code hl_variable" href="#ae2ad80097847df22eb39043912f02f60">rootRoute</a>-&gt;setStrictRouting(<a class="code hl_function" href="#a1ee871bfdd00848ccf6bb8cb7bb18a10">strictRouting</a>);</div>
+<div class="line"><span class="lineno">   58</span>    }</div>
+<div class="ttc" id="aclassexpress_1_1Router_html_a1ee871bfdd00848ccf6bb8cb7bb18a10"><div class="ttname"><a href="#a1ee871bfdd00848ccf6bb8cb7bb18a10">express::Router::strictRouting</a></div><div class="ttdeci">void strictRouting(bool strictRouting=true) const</div><div class="ttdef"><b>Definition</b> <a href="Router_8cpp_source.html#l00056">Router.cpp:56</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
 <a id="ab71927c6d9ec2203b7884b795c370f6e" name="ab71927c6d9ec2203b7884b795c370f6e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab71927c6d9ec2203b7884b795c370f6e">&#9670;&#160;</a></span>trace() <span class="overload">[1/10]</span></h2>
 
@@ -3178,7 +3181,7 @@ template&lt;typename... Lambdas&gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceexpress.html">express</a></li><li class="navelem"><a class="el" href="classexpress_1_1Router.html">Router</a></li>
-    <li class="footer">Generated on Mon Feb 17 2025 12:36:08 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generated on Tue Feb 25 2025 14:03:10 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>
