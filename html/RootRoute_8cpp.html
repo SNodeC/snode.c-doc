@@ -112,7 +112,7 @@ $(function(){initNavTree('RootRoute_8cpp.html',''); initResizable(true); });
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for RootRoute.cpp:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="RootRoute_8cpp__incl.svg" width="1203" height="271"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="RootRoute_8cpp__incl.svg" width="100%" height="503"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 </div>
 <p><a href="RootRoute_8cpp_source.html">Go to the source code of this file.</a></p>
@@ -169,30 +169,30 @@ Macros</h2></td></tr>
 <div class="line">        <span class="keywordflow">return</span> routes().emplace_back(HTTP_METHOD, <span class="stringliteral">&quot;/&quot;</span>, std::make_shared&lt;dispatcher::ApplicationDispatcher&gt;(lambda));                       \</div>
 <div class="line">    }</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="RootRoute_8cpp_source.html#l00035">35</a> of file <a class="el" href="RootRoute_8cpp_source.html">RootRoute.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   35</span><span class="preprocessor">#define DEFINE_ROOTROUTE_REQUESTMETHOD(METHOD, HTTP_METHOD)                                                                                \</span></div>
-<div class="line"><span class="lineno">   36</span><span class="preprocessor">    Route&amp; RootRoute::METHOD(const RootRoute&amp; rootRoute) const {                                                                           \</span></div>
-<div class="line"><span class="lineno">   37</span><span class="preprocessor">        return routes().emplace_back(HTTP_METHOD, &quot;/&quot;, rootRoute.getDispatcher());                                                         \</span></div>
-<div class="line"><span class="lineno">   38</span><span class="preprocessor">    }                                                                                                                                      \</span></div>
-<div class="line"><span class="lineno">   39</span><span class="preprocessor">    Route&amp; RootRoute::METHOD(const std::string&amp; relativeMountPath, const RootRoute&amp; rootRoute) const {                                     \</span></div>
-<div class="line"><span class="lineno">   40</span><span class="preprocessor">        return routes().emplace_back(HTTP_METHOD, relativeMountPath, rootRoute.getDispatcher());                                           \</span></div>
-<div class="line"><span class="lineno">   41</span><span class="preprocessor">    }                                                                                                                                      \</span></div>
-<div class="line"><span class="lineno">   42</span><span class="preprocessor">    Route&amp; RootRoute::METHOD(const std::string&amp; relativeMountPath,                                                                         \</span></div>
-<div class="line"><span class="lineno">   43</span><span class="preprocessor">                             const std::function&lt;void(const std::shared_ptr&lt;Request&gt;&amp;, const std::shared_ptr&lt;Response&gt;&amp;, Next&amp;)&gt;&amp; lambda)  \</span></div>
-<div class="line"><span class="lineno">   44</span><span class="preprocessor">        const {                                                                                                                            \</span></div>
-<div class="line"><span class="lineno">   45</span><span class="preprocessor">        return routes().emplace_back(HTTP_METHOD, relativeMountPath, std::make_shared&lt;dispatcher::MiddlewareDispatcher&gt;(lambda));          \</span></div>
-<div class="line"><span class="lineno">   46</span><span class="preprocessor">    }                                                                                                                                      \</span></div>
-<div class="line"><span class="lineno">   47</span><span class="preprocessor">    Route&amp; RootRoute::METHOD(const std::function&lt;void(const std::shared_ptr&lt;Request&gt;&amp;, const std::shared_ptr&lt;Response&gt;&amp;, Next&amp;)&gt;&amp; lambda)  \</span></div>
-<div class="line"><span class="lineno">   48</span><span class="preprocessor">        const {                                                                                                                            \</span></div>
-<div class="line"><span class="lineno">   49</span><span class="preprocessor">        return routes().emplace_back(HTTP_METHOD, &quot;/&quot;, std::make_shared&lt;dispatcher::MiddlewareDispatcher&gt;(lambda));                        \</span></div>
-<div class="line"><span class="lineno">   50</span><span class="preprocessor">    }                                                                                                                                      \</span></div>
-<div class="line"><span class="lineno">   51</span><span class="preprocessor">    Route&amp; RootRoute::METHOD(const std::string&amp; relativeMountPath,                                                                         \</span></div>
-<div class="line"><span class="lineno">   52</span><span class="preprocessor">                             const std::function&lt;void(const std::shared_ptr&lt;Request&gt;&amp;, const std::shared_ptr&lt;Response&gt;&amp;)&gt;&amp; lambda) const { \</span></div>
-<div class="line"><span class="lineno">   53</span><span class="preprocessor">        return routes().emplace_back(HTTP_METHOD, relativeMountPath, std::make_shared&lt;dispatcher::ApplicationDispatcher&gt;(lambda));         \</span></div>
-<div class="line"><span class="lineno">   54</span><span class="preprocessor">    }                                                                                                                                      \</span></div>
-<div class="line"><span class="lineno">   55</span><span class="preprocessor">    Route&amp; RootRoute::METHOD(const std::function&lt;void(const std::shared_ptr&lt;Request&gt;&amp;, const std::shared_ptr&lt;Response&gt;&amp;)&gt;&amp; lambda) const { \</span></div>
-<div class="line"><span class="lineno">   56</span><span class="preprocessor">        return routes().emplace_back(HTTP_METHOD, &quot;/&quot;, std::make_shared&lt;dispatcher::ApplicationDispatcher&gt;(lambda));                       \</span></div>
-<div class="line"><span class="lineno">   57</span><span class="preprocessor">    }</span></div>
+<p class="definition">Definition at line <a class="el" href="RootRoute_8cpp_source.html#l00057">57</a> of file <a class="el" href="RootRoute_8cpp_source.html">RootRoute.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   57</span><span class="preprocessor">#define DEFINE_ROOTROUTE_REQUESTMETHOD(METHOD, HTTP_METHOD)                                                                                \</span></div>
+<div class="line"><span class="lineno">   58</span><span class="preprocessor">    Route&amp; RootRoute::METHOD(const RootRoute&amp; rootRoute) const {                                                                           \</span></div>
+<div class="line"><span class="lineno">   59</span><span class="preprocessor">        return routes().emplace_back(HTTP_METHOD, &quot;/&quot;, rootRoute.getDispatcher());                                                         \</span></div>
+<div class="line"><span class="lineno">   60</span><span class="preprocessor">    }                                                                                                                                      \</span></div>
+<div class="line"><span class="lineno">   61</span><span class="preprocessor">    Route&amp; RootRoute::METHOD(const std::string&amp; relativeMountPath, const RootRoute&amp; rootRoute) const {                                     \</span></div>
+<div class="line"><span class="lineno">   62</span><span class="preprocessor">        return routes().emplace_back(HTTP_METHOD, relativeMountPath, rootRoute.getDispatcher());                                           \</span></div>
+<div class="line"><span class="lineno">   63</span><span class="preprocessor">    }                                                                                                                                      \</span></div>
+<div class="line"><span class="lineno">   64</span><span class="preprocessor">    Route&amp; RootRoute::METHOD(const std::string&amp; relativeMountPath,                                                                         \</span></div>
+<div class="line"><span class="lineno">   65</span><span class="preprocessor">                             const std::function&lt;void(const std::shared_ptr&lt;Request&gt;&amp;, const std::shared_ptr&lt;Response&gt;&amp;, Next&amp;)&gt;&amp; lambda)  \</span></div>
+<div class="line"><span class="lineno">   66</span><span class="preprocessor">        const {                                                                                                                            \</span></div>
+<div class="line"><span class="lineno">   67</span><span class="preprocessor">        return routes().emplace_back(HTTP_METHOD, relativeMountPath, std::make_shared&lt;dispatcher::MiddlewareDispatcher&gt;(lambda));          \</span></div>
+<div class="line"><span class="lineno">   68</span><span class="preprocessor">    }                                                                                                                                      \</span></div>
+<div class="line"><span class="lineno">   69</span><span class="preprocessor">    Route&amp; RootRoute::METHOD(const std::function&lt;void(const std::shared_ptr&lt;Request&gt;&amp;, const std::shared_ptr&lt;Response&gt;&amp;, Next&amp;)&gt;&amp; lambda)  \</span></div>
+<div class="line"><span class="lineno">   70</span><span class="preprocessor">        const {                                                                                                                            \</span></div>
+<div class="line"><span class="lineno">   71</span><span class="preprocessor">        return routes().emplace_back(HTTP_METHOD, &quot;/&quot;, std::make_shared&lt;dispatcher::MiddlewareDispatcher&gt;(lambda));                        \</span></div>
+<div class="line"><span class="lineno">   72</span><span class="preprocessor">    }                                                                                                                                      \</span></div>
+<div class="line"><span class="lineno">   73</span><span class="preprocessor">    Route&amp; RootRoute::METHOD(const std::string&amp; relativeMountPath,                                                                         \</span></div>
+<div class="line"><span class="lineno">   74</span><span class="preprocessor">                             const std::function&lt;void(const std::shared_ptr&lt;Request&gt;&amp;, const std::shared_ptr&lt;Response&gt;&amp;)&gt;&amp; lambda) const { \</span></div>
+<div class="line"><span class="lineno">   75</span><span class="preprocessor">        return routes().emplace_back(HTTP_METHOD, relativeMountPath, std::make_shared&lt;dispatcher::ApplicationDispatcher&gt;(lambda));         \</span></div>
+<div class="line"><span class="lineno">   76</span><span class="preprocessor">    }                                                                                                                                      \</span></div>
+<div class="line"><span class="lineno">   77</span><span class="preprocessor">    Route&amp; RootRoute::METHOD(const std::function&lt;void(const std::shared_ptr&lt;Request&gt;&amp;, const std::shared_ptr&lt;Response&gt;&amp;)&gt;&amp; lambda) const { \</span></div>
+<div class="line"><span class="lineno">   78</span><span class="preprocessor">        return routes().emplace_back(HTTP_METHOD, &quot;/&quot;, std::make_shared&lt;dispatcher::ApplicationDispatcher&gt;(lambda));                       \</span></div>
+<div class="line"><span class="lineno">   79</span><span class="preprocessor">    }</span></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -202,7 +202,7 @@ Macros</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_e2b20abddc1d75e9fa824bc5544f9c72.html">express</a></li><li class="navelem"><a class="el" href="RootRoute_8cpp.html">RootRoute.cpp</a></li>
-    <li class="footer">Generated on Tue Feb 25 2025 14:03:09 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generated on Sun Mar 9 2025 01:34:38 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>

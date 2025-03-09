@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['xstr_0',['XSTR',['../ConfigPhysicalSocket_8cpp.html#a03943706e48069237cd57f2d35ca987e',1,'XSTR:&#160;ConfigPhysicalSocket.cpp'],['../ConfigPhysicalSocketClient_8cpp.html#a03943706e48069237cd57f2d35ca987e',1,'XSTR:&#160;ConfigPhysicalSocketClient.cpp'],['../in_2config_2ConfigAddress_8cpp.html#a03943706e48069237cd57f2d35ca987e',1,'XSTR:&#160;ConfigAddress.cpp'],['../in_2stream_2config_2ConfigSocketServer_8cpp.html#a03943706e48069237cd57f2d35ca987e',1,'XSTR:&#160;ConfigSocketServer.cpp'],['../in6_2config_2ConfigAddress_8cpp.html#a03943706e48069237cd57f2d35ca987e',1,'XSTR:&#160;ConfigAddress.cpp'],['../in6_2stream_2config_2ConfigSocketServer_8cpp.html#a03943706e48069237cd57f2d35ca987e',1,'XSTR:&#160;ConfigSocketServer.cpp'],['../Config_8cpp.html#a03943706e48069237cd57f2d35ca987e',1,'XSTR:&#160;Config.cpp'],['../ConfigHTTP_8cpp.html#a03943706e48069237cd57f2d35ca987e',1,'XSTR:&#160;ConfigHTTP.cpp']]]
+  ['web_5fhttp_5fsocketcontextupgradefactoryselector_5fh_0',['WEB_HTTP_SOCKETCONTEXTUPGRADEFACTORYSELECTOR_H',['../SocketContextUpgradeFactorySelector_8h.html#abf795d60145f975ec9b472489f562fb5',1,'SocketContextUpgradeFactorySelector.h']]],
+  ['webapp_5finclude_1',['WEBAPP_INCLUDE',['../http_2model_2servers_8h.html#aa655c65c2ba6bcccc57590a9a986d3d9',1,'servers.h']]]
 ];

@@ -101,7 +101,7 @@ $(function(){initNavTree('ConfigConnection_8cpp_source.html',''); initResizable(
 </div><!--header-->
 <div class="contents">
 <a href="ConfigConnection_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
-<div class="line"><span class="lineno">    2</span><span class="comment"> * SNode.C - a slim toolkit for network communication</span></div>
+<div class="line"><span class="lineno">    2</span><span class="comment"> * SNode.C - A Slim Toolkit for Network Communication</span></div>
 <div class="line"><span class="lineno">    3</span><span class="comment"> * Copyright (C) Volker Christian &lt;me@vchrist.at&gt;</span></div>
 <div class="line"><span class="lineno">    4</span><span class="comment"> *               2020, 2021, 2022, 2023, 2024, 2025</span></div>
 <div class="line"><span class="lineno">    5</span><span class="comment"> *</span></div>
@@ -119,145 +119,167 @@ $(function(){initNavTree('ConfigConnection_8cpp_source.html',''); initResizable(
 <div class="line"><span class="lineno">   17</span><span class="comment"> * along with this program. If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
 <div class="line"><span class="lineno">   18</span><span class="comment"> */</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&quot;net/config/ConfigConnection.h&quot;</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&quot;net/config/ConfigSection.hpp&quot;</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#</span><span class="preprocessor">ifndef</span> <span class="preprocessor">DOXYGEN_SHOULD_SKIP_THIS</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#</span><span class="preprocessor">endif</span> <span class="comment">/* DOXYGEN_SHOULD_SKIP_THIS */</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keyword">namespace</span> net::<a class="code hl_namespace" href="namespacenet_1_1config.html">config</a> {</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="foldopen" id="foldopen00030" data-start="{" data-end="}">
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="classnet_1_1config_1_1ConfigConnection.html#a1d8baec82a32959898beefa712a2a3d6">   30</a></span>    <a class="code hl_namespace" href="namespacenet_1_1config.html">ConfigConnection</a>::<a class="code hl_namespace" href="namespacenet_1_1config.html">ConfigConnection</a>(<a class="code hl_namespace" href="namespacenet_1_1config.html">ConfigInstance</a>* <a class="code hl_namespace" href="namespacenet_1_1config.html">instance</a>)</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        : <a class="code hl_namespace" href="namespacenet_1_1config.html">net</a>::<a class="code hl_namespace" href="namespacenet_1_1config.html">config</a>::<a class="code hl_namespace" href="namespacenet_1_1config.html">ConfigSection</a>(<a class="code hl_namespace" href="namespacenet_1_1config.html">instance</a>, <span class="stringliteral">&quot;connection&quot;</span>, <span class="stringliteral">&quot;Configuration of established connections&quot;</span>) {</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <a class="code hl_namespace" href="namespacenet_1_1config.html">readTimeoutOpt</a> = <a class="code hl_namespace" href="namespacenet_1_1config.html">addOption</a>( <span class="comment">//</span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            <span class="stringliteral">&quot;--read-timeout&quot;</span>,</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            <span class="stringliteral">&quot;Read timeout in seconds&quot;</span>,</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            <span class="stringliteral">&quot;timeout&quot;</span>,</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>            <a class="code hl_namespace" href="namespacenet_1_1config.html">READ_TIMEOUT</a>,</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>            <a class="code hl_namespace" href="namespacenet_1_1config.html">CLI</a>::<a class="code hl_namespace" href="namespacenet_1_1config.html">PositiveNumber</a>);</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <a class="code hl_namespace" href="namespacenet_1_1config.html">writeTimeoutOpt</a> = <a class="code hl_namespace" href="namespacenet_1_1config.html">addOption</a>( <span class="comment">//</span></div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            <span class="stringliteral">&quot;--write-timeout&quot;</span>,</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            <span class="stringliteral">&quot;Write timeout in seconds&quot;</span>,</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            <span class="stringliteral">&quot;timeout&quot;</span>,</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            <a class="code hl_namespace" href="namespacenet_1_1config.html">WRITE_TIMEOUT</a>,</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            <a class="code hl_namespace" href="namespacenet_1_1config.html">CLI</a>::<a class="code hl_namespace" href="namespacenet_1_1config.html">PositiveNumber</a>);</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">/*</span></div>
+<div class="line"><span class="lineno">   21</span><span class="comment"> * MIT License</span></div>
+<div class="line"><span class="lineno">   22</span><span class="comment"> *</span></div>
+<div class="line"><span class="lineno">   23</span><span class="comment"> * Permission is hereby granted, free of charge, to any person obtaining a copy</span></div>
+<div class="line"><span class="lineno">   24</span><span class="comment"> * of this software and associated documentation files (the &quot;Software&quot;), to deal</span></div>
+<div class="line"><span class="lineno">   25</span><span class="comment"> * in the Software without restriction, including without limitation the rights</span></div>
+<div class="line"><span class="lineno">   26</span><span class="comment"> * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell</span></div>
+<div class="line"><span class="lineno">   27</span><span class="comment"> * copies of the Software, and to permit persons to whom the Software is</span></div>
+<div class="line"><span class="lineno">   28</span><span class="comment"> * furnished to do so, subject to the following conditions:</span></div>
+<div class="line"><span class="lineno">   29</span><span class="comment"> *</span></div>
+<div class="line"><span class="lineno">   30</span><span class="comment"> * The above copyright notice and this permission notice shall be included in</span></div>
+<div class="line"><span class="lineno">   31</span><span class="comment"> * all copies or substantial portions of the Software.</span></div>
+<div class="line"><span class="lineno">   32</span><span class="comment"> *</span></div>
+<div class="line"><span class="lineno">   33</span><span class="comment"> * THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR</span></div>
+<div class="line"><span class="lineno">   34</span><span class="comment"> * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,</span></div>
+<div class="line"><span class="lineno">   35</span><span class="comment"> * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE</span></div>
+<div class="line"><span class="lineno">   36</span><span class="comment"> * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER</span></div>
+<div class="line"><span class="lineno">   37</span><span class="comment"> * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,</span></div>
+<div class="line"><span class="lineno">   38</span><span class="comment"> * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN</span></div>
+<div class="line"><span class="lineno">   39</span><span class="comment"> * THE SOFTWARE.</span></div>
+<div class="line"><span class="lineno">   40</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&quot;net/config/ConfigConnection.h&quot;</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&quot;net/config/ConfigSection.hpp&quot;</span></div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <a class="code hl_namespace" href="namespacenet_1_1config.html">readBlockSizeOpt</a> = <a class="code hl_namespace" href="namespacenet_1_1config.html">addOption</a>( <span class="comment">//</span></div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            <span class="stringliteral">&quot;--read-block-size&quot;</span>,</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            <span class="stringliteral">&quot;Read block size&quot;</span>,</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            <span class="stringliteral">&quot;size&quot;</span>,</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            <a class="code hl_namespace" href="namespacenet_1_1config.html">READ_BLOCKSIZE</a>,</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            <a class="code hl_namespace" href="namespacenet_1_1config.html">CLI</a>::<a class="code hl_namespace" href="namespacenet_1_1config.html">PositiveNumber</a>);</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <a class="code hl_namespace" href="namespacenet_1_1config.html">writeBlockSizeOpt</a> = <a class="code hl_namespace" href="namespacenet_1_1config.html">addOption</a>( <span class="comment">//</span></div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            <span class="stringliteral">&quot;--write-block-size&quot;</span>,</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            <span class="stringliteral">&quot;Write block size&quot;</span>,</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            <span class="stringliteral">&quot;size&quot;</span>,</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            <a class="code hl_namespace" href="namespacenet_1_1config.html">WRITE_BLOCKSIZE</a>,</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            <a class="code hl_namespace" href="namespacenet_1_1config.html">CLI</a>::<a class="code hl_namespace" href="namespacenet_1_1config.html">PositiveNumber</a>);</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <a class="code hl_namespace" href="namespacenet_1_1config.html">terminateTimeoutOpt</a> = <a class="code hl_namespace" href="namespacenet_1_1config.html">addOption</a>( <span class="comment">//</span></div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>            <span class="stringliteral">&quot;--terminate-timeout&quot;</span>,</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            <span class="stringliteral">&quot;Terminate timeout&quot;</span>,</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            <span class="stringliteral">&quot;timeout&quot;</span>,</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            <a class="code hl_namespace" href="namespacenet_1_1config.html">TERMINATE_TIMEOUT</a>,</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            <a class="code hl_namespace" href="namespacenet_1_1config.html">CLI</a>::<a class="code hl_namespace" href="namespacenet_1_1config.html">PositiveNumber</a>);</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    }</div>
-</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="preprocessor">#</span><span class="preprocessor">ifndef</span> <span class="preprocessor">DOXYGEN_SHOULD_SKIP_THIS</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="preprocessor">#</span><span class="preprocessor">endif</span> <span class="comment">/* DOXYGEN_SHOULD_SKIP_THIS */</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="keyword">namespace</span> net::<a class="code hl_namespace" href="namespacenet_1_1config.html">config</a> {</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="foldopen" id="foldopen00052" data-start="{" data-end="}">
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="classnet_1_1config_1_1ConfigConnection.html#a1d8baec82a32959898beefa712a2a3d6">   52</a></span>    <a class="code hl_namespace" href="namespacenet_1_1config.html">ConfigConnection</a>::<a class="code hl_namespace" href="namespacenet_1_1config.html">ConfigConnection</a>(<a class="code hl_namespace" href="namespacenet_1_1config.html">ConfigInstance</a>* <a class="code hl_namespace" href="namespacenet_1_1config.html">instance</a>)</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        : <a class="code hl_namespace" href="namespacenet_1_1config.html">net</a>::<a class="code hl_namespace" href="namespacenet_1_1config.html">config</a>::<a class="code hl_namespace" href="namespacenet_1_1config.html">ConfigSection</a>(<a class="code hl_namespace" href="namespacenet_1_1config.html">instance</a>, <span class="stringliteral">&quot;connection&quot;</span>, <span class="stringliteral">&quot;Configuration of established connections&quot;</span>) {</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <a class="code hl_namespace" href="namespacenet_1_1config.html">readTimeoutOpt</a> = <a class="code hl_namespace" href="namespacenet_1_1config.html">addOption</a>( <span class="comment">//</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            <span class="stringliteral">&quot;--read-timeout&quot;</span>,</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            <span class="stringliteral">&quot;Read timeout in seconds&quot;</span>,</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            <span class="stringliteral">&quot;timeout&quot;</span>,</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            <a class="code hl_namespace" href="namespacenet_1_1config.html">READ_TIMEOUT</a>,</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            <a class="code hl_namespace" href="namespacenet_1_1config.html">CLI</a>::<a class="code hl_namespace" href="namespacenet_1_1config.html">PositiveNumber</a>);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <a class="code hl_namespace" href="namespacenet_1_1config.html">writeTimeoutOpt</a> = <a class="code hl_namespace" href="namespacenet_1_1config.html">addOption</a>( <span class="comment">//</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            <span class="stringliteral">&quot;--write-timeout&quot;</span>,</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            <span class="stringliteral">&quot;Write timeout in seconds&quot;</span>,</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            <span class="stringliteral">&quot;timeout&quot;</span>,</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            <a class="code hl_namespace" href="namespacenet_1_1config.html">WRITE_TIMEOUT</a>,</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>            <a class="code hl_namespace" href="namespacenet_1_1config.html">CLI</a>::<a class="code hl_namespace" href="namespacenet_1_1config.html">PositiveNumber</a>);</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
-<div class="foldopen" id="foldopen00068" data-start="{" data-end="}">
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="classnet_1_1config_1_1ConfigConnection.html#afc4a2b632ef8a2e9be5aa0e5b11db29f">   68</a></span>    <a class="code hl_namespace" href="namespacenet_1_1config.html">utils</a>::<a class="code hl_namespace" href="namespacenet_1_1config.html">Timeval</a> <a class="code hl_namespace" href="namespacenet_1_1config.html">ConfigConnection</a>::<a class="code hl_namespace" href="namespacenet_1_1config.html">getReadTimeout</a>() <span class="keyword">const</span> {</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <span class="keywordflow">return</span> <a class="code hl_namespace" href="namespacenet_1_1config.html">readTimeoutOpt</a>-&gt;<a class="code hl_namespace" href="namespacenet_1_1config.html">as</a>&lt;<a class="code hl_namespace" href="namespacenet_1_1config.html">utils</a>::<a class="code hl_namespace" href="namespacenet_1_1config.html">Timeval</a>&gt;();</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    }</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <a class="code hl_namespace" href="namespacenet_1_1config.html">readBlockSizeOpt</a> = <a class="code hl_namespace" href="namespacenet_1_1config.html">addOption</a>( <span class="comment">//</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            <span class="stringliteral">&quot;--read-block-size&quot;</span>,</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>            <span class="stringliteral">&quot;Read block size&quot;</span>,</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>            <span class="stringliteral">&quot;size&quot;</span>,</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>            <a class="code hl_namespace" href="namespacenet_1_1config.html">READ_BLOCKSIZE</a>,</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>            <a class="code hl_namespace" href="namespacenet_1_1config.html">CLI</a>::<a class="code hl_namespace" href="namespacenet_1_1config.html">PositiveNumber</a>);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <a class="code hl_namespace" href="namespacenet_1_1config.html">writeBlockSizeOpt</a> = <a class="code hl_namespace" href="namespacenet_1_1config.html">addOption</a>( <span class="comment">//</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            <span class="stringliteral">&quot;--write-block-size&quot;</span>,</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>            <span class="stringliteral">&quot;Write block size&quot;</span>,</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>            <span class="stringliteral">&quot;size&quot;</span>,</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>            <a class="code hl_namespace" href="namespacenet_1_1config.html">WRITE_BLOCKSIZE</a>,</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            <a class="code hl_namespace" href="namespacenet_1_1config.html">CLI</a>::<a class="code hl_namespace" href="namespacenet_1_1config.html">PositiveNumber</a>);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        <a class="code hl_namespace" href="namespacenet_1_1config.html">terminateTimeoutOpt</a> = <a class="code hl_namespace" href="namespacenet_1_1config.html">addOption</a>( <span class="comment">//</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>            <span class="stringliteral">&quot;--terminate-timeout&quot;</span>,</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>            <span class="stringliteral">&quot;Terminate timeout&quot;</span>,</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>            <span class="stringliteral">&quot;timeout&quot;</span>,</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>            <a class="code hl_namespace" href="namespacenet_1_1config.html">TERMINATE_TIMEOUT</a>,</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>            <a class="code hl_namespace" href="namespacenet_1_1config.html">CLI</a>::<a class="code hl_namespace" href="namespacenet_1_1config.html">PositiveNumber</a>);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    }</div>
 </div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
-<div class="foldopen" id="foldopen00072" data-start="{" data-end="}">
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="classnet_1_1config_1_1ConfigConnection.html#ae5872266643177d638b1e3b493b8c768">   72</a></span>    <a class="code hl_namespace" href="namespacenet_1_1config.html">ConfigConnection</a>&amp; <a class="code hl_namespace" href="namespacenet_1_1config.html">ConfigConnection</a>::<a class="code hl_namespace" href="namespacenet_1_1config.html">setReadTimeout</a>(<span class="keyword">const</span> <a class="code hl_namespace" href="namespacenet_1_1config.html">utils</a>::<a class="code hl_namespace" href="namespacenet_1_1config.html">Timeval</a>&amp; <a class="code hl_namespace" href="namespacenet_1_1config.html">newReadTimeoutSet</a>) {</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        <a class="code hl_namespace" href="namespacenet_1_1config.html">readTimeoutOpt</a> <span class="comment">//</span></div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            -&gt;<a class="code hl_namespace" href="namespacenet_1_1config.html">default_val</a>(<a class="code hl_namespace" href="namespacenet_1_1config.html">newReadTimeoutSet</a>)</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>            -&gt;<a class="code hl_namespace" href="namespacenet_1_1config.html">clear</a>();</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    }</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="foldopen" id="foldopen00090" data-start="{" data-end="}">
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="classnet_1_1config_1_1ConfigConnection.html#afc4a2b632ef8a2e9be5aa0e5b11db29f">   90</a></span>    <a class="code hl_namespace" href="namespacenet_1_1config.html">utils</a>::<a class="code hl_namespace" href="namespacenet_1_1config.html">Timeval</a> <a class="code hl_namespace" href="namespacenet_1_1config.html">ConfigConnection</a>::<a class="code hl_namespace" href="namespacenet_1_1config.html">getReadTimeout</a>() <span class="keyword">const</span> {</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        <span class="keywordflow">return</span> <a class="code hl_namespace" href="namespacenet_1_1config.html">readTimeoutOpt</a>-&gt;<a class="code hl_namespace" href="namespacenet_1_1config.html">as</a>&lt;<a class="code hl_namespace" href="namespacenet_1_1config.html">utils</a>::<a class="code hl_namespace" href="namespacenet_1_1config.html">Timeval</a>&gt;();</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    }</div>
 </div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
-<div class="foldopen" id="foldopen00080" data-start="{" data-end="}">
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="classnet_1_1config_1_1ConfigConnection.html#a82b49f40454def07b1870dc608719289">   80</a></span>    <a class="code hl_namespace" href="namespacenet_1_1config.html">utils</a>::<a class="code hl_namespace" href="namespacenet_1_1config.html">Timeval</a> <a class="code hl_namespace" href="namespacenet_1_1config.html">ConfigConnection</a>::<a class="code hl_namespace" href="namespacenet_1_1config.html">getWriteTimeout</a>() <span class="keyword">const</span> {</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        <span class="keywordflow">return</span> <a class="code hl_namespace" href="namespacenet_1_1config.html">writeTimeoutOpt</a>-&gt;<a class="code hl_namespace" href="namespacenet_1_1config.html">as</a>&lt;<a class="code hl_namespace" href="namespacenet_1_1config.html">utils</a>::<a class="code hl_namespace" href="namespacenet_1_1config.html">Timeval</a>&gt;();</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    }</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="foldopen" id="foldopen00094" data-start="{" data-end="}">
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno"><a class="line" href="classnet_1_1config_1_1ConfigConnection.html#ae5872266643177d638b1e3b493b8c768">   94</a></span>    <a class="code hl_namespace" href="namespacenet_1_1config.html">ConfigConnection</a>&amp; <a class="code hl_namespace" href="namespacenet_1_1config.html">ConfigConnection</a>::<a class="code hl_namespace" href="namespacenet_1_1config.html">setReadTimeout</a>(<span class="keyword">const</span> <a class="code hl_namespace" href="namespacenet_1_1config.html">utils</a>::<a class="code hl_namespace" href="namespacenet_1_1config.html">Timeval</a>&amp; <a class="code hl_namespace" href="namespacenet_1_1config.html">newReadTimeoutSet</a>) {</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        <a class="code hl_namespace" href="namespacenet_1_1config.html">readTimeoutOpt</a> <span class="comment">//</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>            -&gt;<a class="code hl_namespace" href="namespacenet_1_1config.html">default_val</a>(<a class="code hl_namespace" href="namespacenet_1_1config.html">newReadTimeoutSet</a>)</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>            -&gt;<a class="code hl_namespace" href="namespacenet_1_1config.html">clear</a>();</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    }</div>
 </div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
-<div class="foldopen" id="foldopen00084" data-start="{" data-end="}">
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="classnet_1_1config_1_1ConfigConnection.html#a1c21804392807f388b2d4318c5d8622f">   84</a></span>    <a class="code hl_namespace" href="namespacenet_1_1config.html">ConfigConnection</a>&amp; <a class="code hl_namespace" href="namespacenet_1_1config.html">ConfigConnection</a>::<a class="code hl_namespace" href="namespacenet_1_1config.html">setWriteTimeout</a>(<span class="keyword">const</span> <a class="code hl_namespace" href="namespacenet_1_1config.html">utils</a>::<a class="code hl_namespace" href="namespacenet_1_1config.html">Timeval</a>&amp; <a class="code hl_namespace" href="namespacenet_1_1config.html">newWriteTimeoutSet</a>) {</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <a class="code hl_namespace" href="namespacenet_1_1config.html">writeTimeoutOpt</a> <span class="comment">//</span></div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>            -&gt;<a class="code hl_namespace" href="namespacenet_1_1config.html">default_val</a>(<a class="code hl_namespace" href="namespacenet_1_1config.html">newWriteTimeoutSet</a>)</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>            -&gt;<a class="code hl_namespace" href="namespacenet_1_1config.html">clear</a>();</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    }</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="foldopen" id="foldopen00102" data-start="{" data-end="}">
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="classnet_1_1config_1_1ConfigConnection.html#a82b49f40454def07b1870dc608719289">  102</a></span>    <a class="code hl_namespace" href="namespacenet_1_1config.html">utils</a>::<a class="code hl_namespace" href="namespacenet_1_1config.html">Timeval</a> <a class="code hl_namespace" href="namespacenet_1_1config.html">ConfigConnection</a>::<a class="code hl_namespace" href="namespacenet_1_1config.html">getWriteTimeout</a>() <span class="keyword">const</span> {</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        <span class="keywordflow">return</span> <a class="code hl_namespace" href="namespacenet_1_1config.html">writeTimeoutOpt</a>-&gt;<a class="code hl_namespace" href="namespacenet_1_1config.html">as</a>&lt;<a class="code hl_namespace" href="namespacenet_1_1config.html">utils</a>::<a class="code hl_namespace" href="namespacenet_1_1config.html">Timeval</a>&gt;();</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    }</div>
 </div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
-<div class="foldopen" id="foldopen00092" data-start="{" data-end="}">
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno"><a class="line" href="classnet_1_1config_1_1ConfigConnection.html#afa717bd0952a08a2586f3ff858e5f208">   92</a></span>    <a class="code hl_namespace" href="namespacenet_1_1config.html">std</a>::<a class="code hl_namespace" href="namespacenet_1_1config.html">size_t</a> <a class="code hl_namespace" href="namespacenet_1_1config.html">ConfigConnection</a>::<a class="code hl_namespace" href="namespacenet_1_1config.html">getReadBlockSize</a>() <span class="keyword">const</span> {</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        <span class="keywordflow">return</span> <a class="code hl_namespace" href="namespacenet_1_1config.html">readBlockSizeOpt</a>-&gt;<a class="code hl_namespace" href="namespacenet_1_1config.html">as</a>&lt;<a class="code hl_namespace" href="namespacenet_1_1config.html">std</a>::<a class="code hl_namespace" href="namespacenet_1_1config.html">size_t</a>&gt;();</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    }</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="foldopen" id="foldopen00106" data-start="{" data-end="}">
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="classnet_1_1config_1_1ConfigConnection.html#a1c21804392807f388b2d4318c5d8622f">  106</a></span>    <a class="code hl_namespace" href="namespacenet_1_1config.html">ConfigConnection</a>&amp; <a class="code hl_namespace" href="namespacenet_1_1config.html">ConfigConnection</a>::<a class="code hl_namespace" href="namespacenet_1_1config.html">setWriteTimeout</a>(<span class="keyword">const</span> <a class="code hl_namespace" href="namespacenet_1_1config.html">utils</a>::<a class="code hl_namespace" href="namespacenet_1_1config.html">Timeval</a>&amp; <a class="code hl_namespace" href="namespacenet_1_1config.html">newWriteTimeoutSet</a>) {</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        <a class="code hl_namespace" href="namespacenet_1_1config.html">writeTimeoutOpt</a> <span class="comment">//</span></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>            -&gt;<a class="code hl_namespace" href="namespacenet_1_1config.html">default_val</a>(<a class="code hl_namespace" href="namespacenet_1_1config.html">newWriteTimeoutSet</a>)</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>            -&gt;<a class="code hl_namespace" href="namespacenet_1_1config.html">clear</a>();</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    }</div>
 </div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
-<div class="foldopen" id="foldopen00096" data-start="{" data-end="}">
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="classnet_1_1config_1_1ConfigConnection.html#aaa95c891ac734e337b20e6aad75b918d">   96</a></span>    <a class="code hl_namespace" href="namespacenet_1_1config.html">ConfigConnection</a>&amp; <a class="code hl_namespace" href="namespacenet_1_1config.html">ConfigConnection</a>::<a class="code hl_namespace" href="namespacenet_1_1config.html">setReadBlockSize</a>(<a class="code hl_namespace" href="namespacenet_1_1config.html">std</a>::<a class="code hl_namespace" href="namespacenet_1_1config.html">size_t</a> <a class="code hl_namespace" href="namespacenet_1_1config.html">newReadBlockSize</a>) {</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        <a class="code hl_namespace" href="namespacenet_1_1config.html">readBlockSizeOpt</a> <span class="comment">//</span></div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>            -&gt;<a class="code hl_namespace" href="namespacenet_1_1config.html">default_val</a>(<a class="code hl_namespace" href="namespacenet_1_1config.html">newReadBlockSize</a>)</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>            -&gt;<a class="code hl_namespace" href="namespacenet_1_1config.html">clear</a>();</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    }</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
+<div class="foldopen" id="foldopen00114" data-start="{" data-end="}">
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno"><a class="line" href="classnet_1_1config_1_1ConfigConnection.html#afa717bd0952a08a2586f3ff858e5f208">  114</a></span>    <a class="code hl_namespace" href="namespacenet_1_1config.html">std</a>::<a class="code hl_namespace" href="namespacenet_1_1config.html">size_t</a> <a class="code hl_namespace" href="namespacenet_1_1config.html">ConfigConnection</a>::<a class="code hl_namespace" href="namespacenet_1_1config.html">getReadBlockSize</a>() <span class="keyword">const</span> {</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        <span class="keywordflow">return</span> <a class="code hl_namespace" href="namespacenet_1_1config.html">readBlockSizeOpt</a>-&gt;<a class="code hl_namespace" href="namespacenet_1_1config.html">as</a>&lt;<a class="code hl_namespace" href="namespacenet_1_1config.html">std</a>::<a class="code hl_namespace" href="namespacenet_1_1config.html">size_t</a>&gt;();</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    }</div>
 </div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
-<div class="foldopen" id="foldopen00104" data-start="{" data-end="}">
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="classnet_1_1config_1_1ConfigConnection.html#a0d5ef0c1174efeacd3f37b1372d5a1a7">  104</a></span>    <a class="code hl_namespace" href="namespacenet_1_1config.html">std</a>::<a class="code hl_namespace" href="namespacenet_1_1config.html">size_t</a> <a class="code hl_namespace" href="namespacenet_1_1config.html">ConfigConnection</a>::<a class="code hl_namespace" href="namespacenet_1_1config.html">getWriteBlockSize</a>() <span class="keyword">const</span> {</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        <span class="keywordflow">return</span> <a class="code hl_namespace" href="namespacenet_1_1config.html">writeBlockSizeOpt</a>-&gt;<a class="code hl_namespace" href="namespacenet_1_1config.html">as</a>&lt;<a class="code hl_namespace" href="namespacenet_1_1config.html">std</a>::<a class="code hl_namespace" href="namespacenet_1_1config.html">size_t</a>&gt;();</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    }</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
+<div class="foldopen" id="foldopen00118" data-start="{" data-end="}">
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno"><a class="line" href="classnet_1_1config_1_1ConfigConnection.html#aaa95c891ac734e337b20e6aad75b918d">  118</a></span>    <a class="code hl_namespace" href="namespacenet_1_1config.html">ConfigConnection</a>&amp; <a class="code hl_namespace" href="namespacenet_1_1config.html">ConfigConnection</a>::<a class="code hl_namespace" href="namespacenet_1_1config.html">setReadBlockSize</a>(<a class="code hl_namespace" href="namespacenet_1_1config.html">std</a>::<a class="code hl_namespace" href="namespacenet_1_1config.html">size_t</a> <a class="code hl_namespace" href="namespacenet_1_1config.html">newReadBlockSize</a>) {</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        <a class="code hl_namespace" href="namespacenet_1_1config.html">readBlockSizeOpt</a> <span class="comment">//</span></div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>            -&gt;<a class="code hl_namespace" href="namespacenet_1_1config.html">default_val</a>(<a class="code hl_namespace" href="namespacenet_1_1config.html">newReadBlockSize</a>)</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>            -&gt;<a class="code hl_namespace" href="namespacenet_1_1config.html">clear</a>();</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span> </div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    }</div>
 </div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
-<div class="foldopen" id="foldopen00108" data-start="{" data-end="}">
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno"><a class="line" href="classnet_1_1config_1_1ConfigConnection.html#a0ae627618e9d6ab1f1c961264b23d7c8">  108</a></span>    <a class="code hl_namespace" href="namespacenet_1_1config.html">ConfigConnection</a>&amp; <a class="code hl_namespace" href="namespacenet_1_1config.html">ConfigConnection</a>::<a class="code hl_namespace" href="namespacenet_1_1config.html">setWriteBlockSize</a>(<a class="code hl_namespace" href="namespacenet_1_1config.html">std</a>::<a class="code hl_namespace" href="namespacenet_1_1config.html">size_t</a> <a class="code hl_namespace" href="namespacenet_1_1config.html">newWriteBlockSize</a>) {</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        <a class="code hl_namespace" href="namespacenet_1_1config.html">writeBlockSizeOpt</a> <span class="comment">//</span></div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>            -&gt;<a class="code hl_namespace" href="namespacenet_1_1config.html">default_val</a>(<a class="code hl_namespace" href="namespacenet_1_1config.html">newWriteBlockSize</a>)</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>            -&gt;<a class="code hl_namespace" href="namespacenet_1_1config.html">clear</a>();</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    }</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
+<div class="foldopen" id="foldopen00126" data-start="{" data-end="}">
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno"><a class="line" href="classnet_1_1config_1_1ConfigConnection.html#a0d5ef0c1174efeacd3f37b1372d5a1a7">  126</a></span>    <a class="code hl_namespace" href="namespacenet_1_1config.html">std</a>::<a class="code hl_namespace" href="namespacenet_1_1config.html">size_t</a> <a class="code hl_namespace" href="namespacenet_1_1config.html">ConfigConnection</a>::<a class="code hl_namespace" href="namespacenet_1_1config.html">getWriteBlockSize</a>() <span class="keyword">const</span> {</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>        <span class="keywordflow">return</span> <a class="code hl_namespace" href="namespacenet_1_1config.html">writeBlockSizeOpt</a>-&gt;<a class="code hl_namespace" href="namespacenet_1_1config.html">as</a>&lt;<a class="code hl_namespace" href="namespacenet_1_1config.html">std</a>::<a class="code hl_namespace" href="namespacenet_1_1config.html">size_t</a>&gt;();</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    }</div>
 </div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
-<div class="foldopen" id="foldopen00116" data-start="{" data-end="}">
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno"><a class="line" href="classnet_1_1config_1_1ConfigConnection.html#ae8a7ef942ed3ffa0dbde1b5b56597cac">  116</a></span>    <a class="code hl_namespace" href="namespacenet_1_1config.html">utils</a>::<a class="code hl_namespace" href="namespacenet_1_1config.html">Timeval</a> <a class="code hl_namespace" href="namespacenet_1_1config.html">ConfigConnection</a>::<a class="code hl_namespace" href="namespacenet_1_1config.html">getTerminateTimeout</a>() <span class="keyword">const</span> {</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        <span class="keywordflow">return</span> <a class="code hl_namespace" href="namespacenet_1_1config.html">terminateTimeoutOpt</a>-&gt;<a class="code hl_namespace" href="namespacenet_1_1config.html">as</a>&lt;<a class="code hl_namespace" href="namespacenet_1_1config.html">utils</a>::<a class="code hl_namespace" href="namespacenet_1_1config.html">Timeval</a>&gt;();</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    }</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
+<div class="foldopen" id="foldopen00130" data-start="{" data-end="}">
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno"><a class="line" href="classnet_1_1config_1_1ConfigConnection.html#a0ae627618e9d6ab1f1c961264b23d7c8">  130</a></span>    <a class="code hl_namespace" href="namespacenet_1_1config.html">ConfigConnection</a>&amp; <a class="code hl_namespace" href="namespacenet_1_1config.html">ConfigConnection</a>::<a class="code hl_namespace" href="namespacenet_1_1config.html">setWriteBlockSize</a>(<a class="code hl_namespace" href="namespacenet_1_1config.html">std</a>::<a class="code hl_namespace" href="namespacenet_1_1config.html">size_t</a> <a class="code hl_namespace" href="namespacenet_1_1config.html">newWriteBlockSize</a>) {</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>        <a class="code hl_namespace" href="namespacenet_1_1config.html">writeBlockSizeOpt</a> <span class="comment">//</span></div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>            -&gt;<a class="code hl_namespace" href="namespacenet_1_1config.html">default_val</a>(<a class="code hl_namespace" href="namespacenet_1_1config.html">newWriteBlockSize</a>)</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>            -&gt;<a class="code hl_namespace" href="namespacenet_1_1config.html">clear</a>();</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span> </div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    }</div>
 </div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
-<div class="foldopen" id="foldopen00120" data-start="{" data-end="}">
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno"><a class="line" href="classnet_1_1config_1_1ConfigConnection.html#a8cc492dd5e0972b829124b6462264018">  120</a></span>    <a class="code hl_namespace" href="namespacenet_1_1config.html">ConfigConnection</a>&amp; <a class="code hl_namespace" href="namespacenet_1_1config.html">ConfigConnection</a>::<a class="code hl_namespace" href="namespacenet_1_1config.html">setTerminateTimeout</a>(<span class="keyword">const</span> <a class="code hl_namespace" href="namespacenet_1_1config.html">utils</a>::<a class="code hl_namespace" href="namespacenet_1_1config.html">Timeval</a>&amp; <a class="code hl_namespace" href="namespacenet_1_1config.html">newTerminateTimeout</a>) {</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>        <a class="code hl_namespace" href="namespacenet_1_1config.html">terminateTimeoutOpt</a> <span class="comment">//</span></div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>            -&gt;<a class="code hl_namespace" href="namespacenet_1_1config.html">default_val</a>(<a class="code hl_namespace" href="namespacenet_1_1config.html">newTerminateTimeout</a>)</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>            -&gt;<a class="code hl_namespace" href="namespacenet_1_1config.html">clear</a>();</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    }</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span> </div>
+<div class="foldopen" id="foldopen00138" data-start="{" data-end="}">
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno"><a class="line" href="classnet_1_1config_1_1ConfigConnection.html#ae8a7ef942ed3ffa0dbde1b5b56597cac">  138</a></span>    <a class="code hl_namespace" href="namespacenet_1_1config.html">utils</a>::<a class="code hl_namespace" href="namespacenet_1_1config.html">Timeval</a> <a class="code hl_namespace" href="namespacenet_1_1config.html">ConfigConnection</a>::<a class="code hl_namespace" href="namespacenet_1_1config.html">getTerminateTimeout</a>() <span class="keyword">const</span> {</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>        <span class="keywordflow">return</span> <a class="code hl_namespace" href="namespacenet_1_1config.html">terminateTimeoutOpt</a>-&gt;<a class="code hl_namespace" href="namespacenet_1_1config.html">as</a>&lt;<a class="code hl_namespace" href="namespacenet_1_1config.html">utils</a>::<a class="code hl_namespace" href="namespacenet_1_1config.html">Timeval</a>&gt;();</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    }</div>
 </div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>} <span class="comment">// namespace net::config</span></div>
-<div class="ttc" id="anamespacenet_1_1config_html"><div class="ttname"><a href="namespacenet_1_1config.html">net::config</a></div><div class="ttdef"><b>Definition</b> <a href="ConfigSection_8hpp_source.html#l00043">ConfigSection.hpp:43</a></div></div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span> </div>
+<div class="foldopen" id="foldopen00142" data-start="{" data-end="}">
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno"><a class="line" href="classnet_1_1config_1_1ConfigConnection.html#a8cc492dd5e0972b829124b6462264018">  142</a></span>    <a class="code hl_namespace" href="namespacenet_1_1config.html">ConfigConnection</a>&amp; <a class="code hl_namespace" href="namespacenet_1_1config.html">ConfigConnection</a>::<a class="code hl_namespace" href="namespacenet_1_1config.html">setTerminateTimeout</a>(<span class="keyword">const</span> <a class="code hl_namespace" href="namespacenet_1_1config.html">utils</a>::<a class="code hl_namespace" href="namespacenet_1_1config.html">Timeval</a>&amp; <a class="code hl_namespace" href="namespacenet_1_1config.html">newTerminateTimeout</a>) {</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>        <a class="code hl_namespace" href="namespacenet_1_1config.html">terminateTimeoutOpt</a> <span class="comment">//</span></div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>            -&gt;<a class="code hl_namespace" href="namespacenet_1_1config.html">default_val</a>(<a class="code hl_namespace" href="namespacenet_1_1config.html">newTerminateTimeout</a>)</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>            -&gt;<a class="code hl_namespace" href="namespacenet_1_1config.html">clear</a>();</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span> </div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    }</div>
+</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span> </div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>} <span class="comment">// namespace net::config</span></div>
+<div class="ttc" id="anamespacenet_1_1config_html"><div class="ttname"><a href="namespacenet_1_1config.html">net::config</a></div><div class="ttdef"><b>Definition</b> <a href="ConfigSection_8hpp_source.html#l00065">ConfigSection.hpp:65</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_427baa8a9a5be237f298d4545d0d1ce2.html">net</a></li><li class="navelem"><a class="el" href="dir_87a4925d145c2dd6dc9f82c7d21b0c42.html">config</a></li><li class="navelem"><a class="el" href="ConfigConnection_8cpp.html">ConfigConnection.cpp</a></li>
-    <li class="footer">Generated on Tue Feb 25 2025 14:02:14 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generated on Sun Mar 9 2025 01:33:40 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>

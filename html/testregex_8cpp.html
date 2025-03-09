@@ -108,7 +108,7 @@ $(function(){initNavTree('testregex_8cpp.html',''); initResizable(true); });
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for testregex.cpp:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="testregex_8cpp__incl.svg" width="3994" height="887"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="testregex_8cpp__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 </div>
 <p><a href="testregex_8cpp_source.html">Go to the source code of this file.</a></p>
@@ -140,198 +140,198 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="testregex_8cpp_source.html#l00217">217</a> of file <a class="el" href="testregex_8cpp_source.html">testregex.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  217</span>                                 {</div>
-<div class="line"><span class="lineno">  218</span>    <a class="code hl_function" href="classexpress_1_1WebApp.html#a0a01439a0cc8dfc86ed14f1094826b7e">WebApp::init</a>(argc, argv);</div>
-<div class="line"><span class="lineno">  219</span> </div>
-<div class="line"><span class="lineno">  220</span>    <span class="keyword">const</span> <a class="code hl_struct" href="structdatabase_1_1mariadb_1_1MariaDBConnectionDetails.html">database::mariadb::MariaDBConnectionDetails</a> details = {</div>
-<div class="line"><span class="lineno">  221</span>        .<a class="code hl_variable" href="structdatabase_1_1mariadb_1_1MariaDBConnectionDetails.html#a13f008b21ad1be16b56b19df467924ac">hostname</a> = <span class="stringliteral">&quot;localhost&quot;</span>,</div>
-<div class="line"><span class="lineno">  222</span>        .username = <span class="stringliteral">&quot;snodec&quot;</span>,</div>
-<div class="line"><span class="lineno">  223</span>        .password = <span class="stringliteral">&quot;pentium5&quot;</span>,</div>
-<div class="line"><span class="lineno">  224</span>        .database = <span class="stringliteral">&quot;snodec&quot;</span>,</div>
-<div class="line"><span class="lineno">  225</span>        .port = 3306,</div>
-<div class="line"><span class="lineno">  226</span>        .socket = <span class="stringliteral">&quot;/run/mysqld/mysqld.sock&quot;</span>,</div>
-<div class="line"><span class="lineno">  227</span>        .flags = 0,</div>
-<div class="line"><span class="lineno">  228</span>    };</div>
-<div class="line"><span class="lineno">  229</span> </div>
-<div class="line"><span class="lineno">  230</span>    <span class="comment">// CREATE USER &#39;snodec&#39;@localhost IDENTIFIED BY &#39;pentium5&#39;</span></div>
-<div class="line"><span class="lineno">  231</span>    <span class="comment">// GRANT ALL PRIVILEGES ON *.* TO &#39;snodec&#39;@localhost</span></div>
-<div class="line"><span class="lineno">  232</span>    <span class="comment">// GRANT ALL PRIVILEGES ON &#39;snodec&#39;.&#39;snodec&#39; TO &#39;snodec&#39;@localhost</span></div>
-<div class="line"><span class="lineno">  233</span>    <span class="comment">// CREATE DATABASE &#39;snodec&#39;;</span></div>
-<div class="line"><span class="lineno">  234</span>    <span class="comment">// CREATE TABLE &#39;snodec&#39; (&#39;username&#39; text NOT NULL, &#39;password&#39; text NOT NULL ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4</span></div>
-<div class="line"><span class="lineno">  235</span> </div>
-<div class="line"><span class="lineno">  236</span>    <a class="code hl_class" href="classdatabase_1_1mariadb_1_1MariaDBClient.html">database::mariadb::MariaDBClient</a> db(details);</div>
-<div class="line"><span class="lineno">  237</span> </div>
-<div class="line"><span class="lineno">  238</span>    {</div>
-<div class="line"><span class="lineno">  239</span>        <a class="code hl_class" href="classexpress_1_1WebAppT.html">legacy::in::WebApp</a> legacyApp(<span class="stringliteral">&quot;legacy-testregex&quot;</span>);</div>
-<div class="line"><span class="lineno">  240</span> </div>
-<div class="line"><span class="lineno">  241</span>        legacyApp.use(<a class="code hl_function" href="#ab024e3c77aeb1487da4b33877cdfc1fb">router</a>(db));</div>
-<div class="line"><span class="lineno">  242</span> </div>
-<div class="line"><span class="lineno">  243</span>        legacyApp.listen(8080, [](<span class="keyword">const</span> <a class="code hl_typedef" href="classexpress_1_1WebAppT.html#ae6c8401e279b2a243f2fb0e498ef319e">legacy::in::WebApp::SocketAddress</a>&amp; socketAddress, <span class="keyword">const</span> <a class="code hl_class" href="classcore_1_1socket_1_1State.html">core::socket::State</a>&amp; state) {</div>
-<div class="line"><span class="lineno">  244</span>            <span class="keywordflow">switch</span> (state) {</div>
-<div class="line"><span class="lineno">  245</span>                <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a744e04217104f055ae728e8d884f25de">core::socket::State::OK</a>:</div>
-<div class="line"><span class="lineno">  246</span>                    VLOG(1) &lt;&lt; <span class="stringliteral">&quot;legacy-testregex: listening on &#39;&quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
-<div class="line"><span class="lineno">  247</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  248</span>                <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a26b8a9154524cfbba2729255cb184331">core::socket::State::DISABLED</a>:</div>
-<div class="line"><span class="lineno">  249</span>                    VLOG(1) &lt;&lt; <span class="stringliteral">&quot;legacy-testregex: disabled&quot;</span>;</div>
-<div class="line"><span class="lineno">  250</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  251</span>                <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a3dcc747a68a4c163fcf1c57d9852cab3">core::socket::State::ERROR</a>:</div>
-<div class="line"><span class="lineno">  252</span>                    VLOG(1) &lt;&lt; <span class="stringliteral">&quot;legacy-testregex: error occurred&quot;</span>;</div>
-<div class="line"><span class="lineno">  253</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  254</span>                <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a5d0a9047c96edac9ffd9cd12574328c0">core::socket::State::FATAL</a>:</div>
-<div class="line"><span class="lineno">  255</span>                    VLOG(1) &lt;&lt; <span class="stringliteral">&quot;legacy-testregex: fatal error occurred&quot;</span>;</div>
-<div class="line"><span class="lineno">  256</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  257</span>            }</div>
-<div class="line"><span class="lineno">  258</span>        });</div>
+<p class="definition">Definition at line <a class="el" href="testregex_8cpp_source.html#l00239">239</a> of file <a class="el" href="testregex_8cpp_source.html">testregex.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  239</span>                                 {</div>
+<div class="line"><span class="lineno">  240</span>    <a class="code hl_function" href="classexpress_1_1WebApp.html#a0a01439a0cc8dfc86ed14f1094826b7e">WebApp::init</a>(argc, argv);</div>
+<div class="line"><span class="lineno">  241</span> </div>
+<div class="line"><span class="lineno">  242</span>    <span class="keyword">const</span> <a class="code hl_struct" href="structdatabase_1_1mariadb_1_1MariaDBConnectionDetails.html">database::mariadb::MariaDBConnectionDetails</a> details = {</div>
+<div class="line"><span class="lineno">  243</span>        .<a class="code hl_variable" href="structdatabase_1_1mariadb_1_1MariaDBConnectionDetails.html#a13f008b21ad1be16b56b19df467924ac">hostname</a> = <span class="stringliteral">&quot;localhost&quot;</span>,</div>
+<div class="line"><span class="lineno">  244</span>        .username = <span class="stringliteral">&quot;snodec&quot;</span>,</div>
+<div class="line"><span class="lineno">  245</span>        .password = <span class="stringliteral">&quot;pentium5&quot;</span>,</div>
+<div class="line"><span class="lineno">  246</span>        .database = <span class="stringliteral">&quot;snodec&quot;</span>,</div>
+<div class="line"><span class="lineno">  247</span>        .port = 3306,</div>
+<div class="line"><span class="lineno">  248</span>        .socket = <span class="stringliteral">&quot;/run/mysqld/mysqld.sock&quot;</span>,</div>
+<div class="line"><span class="lineno">  249</span>        .flags = 0,</div>
+<div class="line"><span class="lineno">  250</span>    };</div>
+<div class="line"><span class="lineno">  251</span> </div>
+<div class="line"><span class="lineno">  252</span>    <span class="comment">// CREATE USER &#39;snodec&#39;@localhost IDENTIFIED BY &#39;pentium5&#39;</span></div>
+<div class="line"><span class="lineno">  253</span>    <span class="comment">// GRANT ALL PRIVILEGES ON *.* TO &#39;snodec&#39;@localhost</span></div>
+<div class="line"><span class="lineno">  254</span>    <span class="comment">// GRANT ALL PRIVILEGES ON &#39;snodec&#39;.&#39;snodec&#39; TO &#39;snodec&#39;@localhost</span></div>
+<div class="line"><span class="lineno">  255</span>    <span class="comment">// CREATE DATABASE &#39;snodec&#39;;</span></div>
+<div class="line"><span class="lineno">  256</span>    <span class="comment">// CREATE TABLE &#39;snodec&#39; (&#39;username&#39; text NOT NULL, &#39;password&#39; text NOT NULL ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4</span></div>
+<div class="line"><span class="lineno">  257</span> </div>
+<div class="line"><span class="lineno">  258</span>    <a class="code hl_class" href="classdatabase_1_1mariadb_1_1MariaDBClient.html">database::mariadb::MariaDBClient</a> db(details);</div>
 <div class="line"><span class="lineno">  259</span> </div>
-<div class="line"><span class="lineno">  260</span>        legacyApp.setOnConnect([](<a class="code hl_typedef" href="classexpress_1_1WebAppT.html#aac2a3855a73cbf3547da8e1268605f02">legacy::in::WebApp::SocketConnection</a>* socketConnection) {</div>
-<div class="line"><span class="lineno">  261</span>            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;OnConnect:&quot;</span>;</div>
+<div class="line"><span class="lineno">  260</span>    {</div>
+<div class="line"><span class="lineno">  261</span>        <a class="code hl_class" href="classexpress_1_1WebAppT.html">legacy::in::WebApp</a> legacyApp(<span class="stringliteral">&quot;legacy-testregex&quot;</span>);</div>
 <div class="line"><span class="lineno">  262</span> </div>
-<div class="line"><span class="lineno">  263</span>            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;\tServer: &quot;</span> + socketConnection-&gt;getRemoteAddress().toString();</div>
-<div class="line"><span class="lineno">  264</span>            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;\tClient: &quot;</span> + socketConnection-&gt;getLocalAddress().toString();</div>
-<div class="line"><span class="lineno">  265</span>        });</div>
-<div class="line"><span class="lineno">  266</span> </div>
-<div class="line"><span class="lineno">  267</span>        legacyApp.setOnDisconnect([](<a class="code hl_typedef" href="classexpress_1_1WebAppT.html#aac2a3855a73cbf3547da8e1268605f02">legacy::in::WebApp::SocketConnection</a>* socketConnection) {</div>
-<div class="line"><span class="lineno">  268</span>            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;OnDisconnect:&quot;</span>;</div>
-<div class="line"><span class="lineno">  269</span> </div>
-<div class="line"><span class="lineno">  270</span>            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;\tServer: &quot;</span> + socketConnection-&gt;getRemoteAddress().toString();</div>
-<div class="line"><span class="lineno">  271</span>            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;\tClient: &quot;</span> + socketConnection-&gt;getLocalAddress().toString();</div>
-<div class="line"><span class="lineno">  272</span>        });</div>
-<div class="line"><span class="lineno">  273</span> </div>
-<div class="line"><span class="lineno">  274</span>        <a class="code hl_class" href="classexpress_1_1WebAppT.html">tls::in::WebApp</a> tlsApp(<span class="stringliteral">&quot;tls-testregex&quot;</span>);</div>
-<div class="line"><span class="lineno">  275</span> </div>
-<div class="line"><span class="lineno">  276</span>        tlsApp.use(legacyApp);</div>
-<div class="line"><span class="lineno">  277</span> </div>
-<div class="line"><span class="lineno">  278</span>        tlsApp.listen(8088, [](<span class="keyword">const</span> <a class="code hl_typedef" href="classexpress_1_1WebAppT.html#ae6c8401e279b2a243f2fb0e498ef319e">tls::in::WebApp::SocketAddress</a>&amp; socketAddress, <span class="keyword">const</span> <a class="code hl_class" href="classcore_1_1socket_1_1State.html">core::socket::State</a>&amp; state) {</div>
-<div class="line"><span class="lineno">  279</span>            <span class="keywordflow">switch</span> (state) {</div>
-<div class="line"><span class="lineno">  280</span>                <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a744e04217104f055ae728e8d884f25de">core::socket::State::OK</a>:</div>
-<div class="line"><span class="lineno">  281</span>                    VLOG(1) &lt;&lt; <span class="stringliteral">&quot;tls-testregex: listening on &#39;&quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
-<div class="line"><span class="lineno">  282</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  283</span>                <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a26b8a9154524cfbba2729255cb184331">core::socket::State::DISABLED</a>:</div>
-<div class="line"><span class="lineno">  284</span>                    VLOG(1) &lt;&lt; <span class="stringliteral">&quot;tls-testregex: disabled&quot;</span>;</div>
-<div class="line"><span class="lineno">  285</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  286</span>                <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a3dcc747a68a4c163fcf1c57d9852cab3">core::socket::State::ERROR</a>:</div>
-<div class="line"><span class="lineno">  287</span>                    VLOG(1) &lt;&lt; <span class="stringliteral">&quot;tls-testregex: error occurred&quot;</span>;</div>
-<div class="line"><span class="lineno">  288</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  289</span>                <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a5d0a9047c96edac9ffd9cd12574328c0">core::socket::State::FATAL</a>:</div>
-<div class="line"><span class="lineno">  290</span>                    VLOG(1) &lt;&lt; <span class="stringliteral">&quot;tls-testregex: fatal error occurred&quot;</span>;</div>
-<div class="line"><span class="lineno">  291</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  292</span>            }</div>
-<div class="line"><span class="lineno">  293</span>        });</div>
-<div class="line"><span class="lineno">  294</span> </div>
-<div class="line"><span class="lineno">  295</span>        tlsApp.setOnConnect([](<a class="code hl_typedef" href="classexpress_1_1WebAppT.html#aac2a3855a73cbf3547da8e1268605f02">tls::in::WebApp::SocketConnection</a>* socketConnection) {</div>
-<div class="line"><span class="lineno">  296</span>            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;OnConnect:&quot;</span>;</div>
+<div class="line"><span class="lineno">  263</span>        legacyApp.use(<a class="code hl_function" href="#ab024e3c77aeb1487da4b33877cdfc1fb">router</a>(db));</div>
+<div class="line"><span class="lineno">  264</span> </div>
+<div class="line"><span class="lineno">  265</span>        legacyApp.listen(8080, [](<span class="keyword">const</span> <a class="code hl_typedef" href="classexpress_1_1WebAppT.html#ae6c8401e279b2a243f2fb0e498ef319e">legacy::in::WebApp::SocketAddress</a>&amp; socketAddress, <span class="keyword">const</span> <a class="code hl_class" href="classcore_1_1socket_1_1State.html">core::socket::State</a>&amp; state) {</div>
+<div class="line"><span class="lineno">  266</span>            <span class="keywordflow">switch</span> (state) {</div>
+<div class="line"><span class="lineno">  267</span>                <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a744e04217104f055ae728e8d884f25de">core::socket::State::OK</a>:</div>
+<div class="line"><span class="lineno">  268</span>                    VLOG(1) &lt;&lt; <span class="stringliteral">&quot;legacy-testregex: listening on &#39;&quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
+<div class="line"><span class="lineno">  269</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  270</span>                <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a26b8a9154524cfbba2729255cb184331">core::socket::State::DISABLED</a>:</div>
+<div class="line"><span class="lineno">  271</span>                    VLOG(1) &lt;&lt; <span class="stringliteral">&quot;legacy-testregex: disabled&quot;</span>;</div>
+<div class="line"><span class="lineno">  272</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  273</span>                <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a3dcc747a68a4c163fcf1c57d9852cab3">core::socket::State::ERROR</a>:</div>
+<div class="line"><span class="lineno">  274</span>                    VLOG(1) &lt;&lt; <span class="stringliteral">&quot;legacy-testregex: error occurred&quot;</span>;</div>
+<div class="line"><span class="lineno">  275</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  276</span>                <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a5d0a9047c96edac9ffd9cd12574328c0">core::socket::State::FATAL</a>:</div>
+<div class="line"><span class="lineno">  277</span>                    VLOG(1) &lt;&lt; <span class="stringliteral">&quot;legacy-testregex: fatal error occurred&quot;</span>;</div>
+<div class="line"><span class="lineno">  278</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  279</span>            }</div>
+<div class="line"><span class="lineno">  280</span>        });</div>
+<div class="line"><span class="lineno">  281</span> </div>
+<div class="line"><span class="lineno">  282</span>        legacyApp.setOnConnect([](<a class="code hl_typedef" href="classexpress_1_1WebAppT.html#aac2a3855a73cbf3547da8e1268605f02">legacy::in::WebApp::SocketConnection</a>* socketConnection) {</div>
+<div class="line"><span class="lineno">  283</span>            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;OnConnect:&quot;</span>;</div>
+<div class="line"><span class="lineno">  284</span> </div>
+<div class="line"><span class="lineno">  285</span>            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;\tServer: &quot;</span> + socketConnection-&gt;getRemoteAddress().toString();</div>
+<div class="line"><span class="lineno">  286</span>            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;\tClient: &quot;</span> + socketConnection-&gt;getLocalAddress().toString();</div>
+<div class="line"><span class="lineno">  287</span>        });</div>
+<div class="line"><span class="lineno">  288</span> </div>
+<div class="line"><span class="lineno">  289</span>        legacyApp.setOnDisconnect([](<a class="code hl_typedef" href="classexpress_1_1WebAppT.html#aac2a3855a73cbf3547da8e1268605f02">legacy::in::WebApp::SocketConnection</a>* socketConnection) {</div>
+<div class="line"><span class="lineno">  290</span>            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;OnDisconnect:&quot;</span>;</div>
+<div class="line"><span class="lineno">  291</span> </div>
+<div class="line"><span class="lineno">  292</span>            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;\tServer: &quot;</span> + socketConnection-&gt;getRemoteAddress().toString();</div>
+<div class="line"><span class="lineno">  293</span>            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;\tClient: &quot;</span> + socketConnection-&gt;getLocalAddress().toString();</div>
+<div class="line"><span class="lineno">  294</span>        });</div>
+<div class="line"><span class="lineno">  295</span> </div>
+<div class="line"><span class="lineno">  296</span>        <a class="code hl_class" href="classexpress_1_1WebAppT.html">tls::in::WebApp</a> tlsApp(<span class="stringliteral">&quot;tls-testregex&quot;</span>);</div>
 <div class="line"><span class="lineno">  297</span> </div>
-<div class="line"><span class="lineno">  298</span>            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;\tServer: &quot;</span> + socketConnection-&gt;getRemoteAddress().toString();</div>
-<div class="line"><span class="lineno">  299</span>            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;\tClient: &quot;</span> + socketConnection-&gt;getLocalAddress().toString();</div>
-<div class="line"><span class="lineno">  300</span>        });</div>
-<div class="line"><span class="lineno">  301</span> </div>
-<div class="line"><span class="lineno">  302</span>        tlsApp.setOnConnected([](<a class="code hl_typedef" href="classexpress_1_1WebAppT.html#aac2a3855a73cbf3547da8e1268605f02">tls::in::WebApp::SocketConnection</a>* socketConnection) {</div>
-<div class="line"><span class="lineno">  303</span>            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;OnConnected:&quot;</span>;</div>
-<div class="line"><span class="lineno">  304</span> </div>
-<div class="line"><span class="lineno">  305</span>            X509* client_cert = SSL_get_peer_certificate(socketConnection-&gt;getSSL());</div>
-<div class="line"><span class="lineno">  306</span> </div>
-<div class="line"><span class="lineno">  307</span>            <span class="keywordflow">if</span> (client_cert != <span class="keyword">nullptr</span>) {</div>
-<div class="line"><span class="lineno">  308</span>                <span class="keyword">const</span> <span class="keywordtype">long</span> verifyErr = SSL_get_verify_result(socketConnection-&gt;getSSL());</div>
-<div class="line"><span class="lineno">  309</span> </div>
-<div class="line"><span class="lineno">  310</span>                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;\tClient certificate: &quot;</span> + std::string(X509_verify_cert_error_string(verifyErr));</div>
-<div class="line"><span class="lineno">  311</span> </div>
-<div class="line"><span class="lineno">  312</span>                <span class="keywordtype">char</span>* str = X509_NAME_oneline(X509_get_subject_name(client_cert), <span class="keyword">nullptr</span>, 0);</div>
-<div class="line"><span class="lineno">  313</span>                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;\t   Subject: &quot;</span> + std::string(str);</div>
-<div class="line"><span class="lineno">  314</span>                OPENSSL_free(str);</div>
-<div class="line"><span class="lineno">  315</span> </div>
-<div class="line"><span class="lineno">  316</span>                str = X509_NAME_oneline(X509_get_issuer_name(client_cert), <span class="keyword">nullptr</span>, 0);</div>
-<div class="line"><span class="lineno">  317</span>                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;\t   Issuer: &quot;</span> + std::string(str);</div>
-<div class="line"><span class="lineno">  318</span>                OPENSSL_free(str);</div>
+<div class="line"><span class="lineno">  298</span>        tlsApp.use(legacyApp);</div>
+<div class="line"><span class="lineno">  299</span> </div>
+<div class="line"><span class="lineno">  300</span>        tlsApp.listen(8088, [](<span class="keyword">const</span> <a class="code hl_typedef" href="classexpress_1_1WebAppT.html#ae6c8401e279b2a243f2fb0e498ef319e">tls::in::WebApp::SocketAddress</a>&amp; socketAddress, <span class="keyword">const</span> <a class="code hl_class" href="classcore_1_1socket_1_1State.html">core::socket::State</a>&amp; state) {</div>
+<div class="line"><span class="lineno">  301</span>            <span class="keywordflow">switch</span> (state) {</div>
+<div class="line"><span class="lineno">  302</span>                <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a744e04217104f055ae728e8d884f25de">core::socket::State::OK</a>:</div>
+<div class="line"><span class="lineno">  303</span>                    VLOG(1) &lt;&lt; <span class="stringliteral">&quot;tls-testregex: listening on &#39;&quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
+<div class="line"><span class="lineno">  304</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  305</span>                <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a26b8a9154524cfbba2729255cb184331">core::socket::State::DISABLED</a>:</div>
+<div class="line"><span class="lineno">  306</span>                    VLOG(1) &lt;&lt; <span class="stringliteral">&quot;tls-testregex: disabled&quot;</span>;</div>
+<div class="line"><span class="lineno">  307</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  308</span>                <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a3dcc747a68a4c163fcf1c57d9852cab3">core::socket::State::ERROR</a>:</div>
+<div class="line"><span class="lineno">  309</span>                    VLOG(1) &lt;&lt; <span class="stringliteral">&quot;tls-testregex: error occurred&quot;</span>;</div>
+<div class="line"><span class="lineno">  310</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  311</span>                <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a5d0a9047c96edac9ffd9cd12574328c0">core::socket::State::FATAL</a>:</div>
+<div class="line"><span class="lineno">  312</span>                    VLOG(1) &lt;&lt; <span class="stringliteral">&quot;tls-testregex: fatal error occurred&quot;</span>;</div>
+<div class="line"><span class="lineno">  313</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  314</span>            }</div>
+<div class="line"><span class="lineno">  315</span>        });</div>
+<div class="line"><span class="lineno">  316</span> </div>
+<div class="line"><span class="lineno">  317</span>        tlsApp.setOnConnect([](<a class="code hl_typedef" href="classexpress_1_1WebAppT.html#aac2a3855a73cbf3547da8e1268605f02">tls::in::WebApp::SocketConnection</a>* socketConnection) {</div>
+<div class="line"><span class="lineno">  318</span>            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;OnConnect:&quot;</span>;</div>
 <div class="line"><span class="lineno">  319</span> </div>
-<div class="line"><span class="lineno">  320</span>                <span class="comment">// We could do all sorts of certificate verification stuff here before deallocating the certificate.</span></div>
-<div class="line"><span class="lineno">  321</span> </div>
-<div class="line"><span class="lineno">  322</span>                GENERAL_NAMES* subjectAltNames =</div>
-<div class="line"><span class="lineno">  323</span>                    <span class="keyword">static_cast&lt;</span>GENERAL_NAMES*<span class="keyword">&gt;</span>(X509_get_ext_d2i(client_cert, NID_subject_alt_name, <span class="keyword">nullptr</span>, <span class="keyword">nullptr</span>));</div>
-<div class="line"><span class="lineno">  324</span><span class="preprocessor">#ifdef __GNUC__</span></div>
-<div class="line"><span class="lineno">  325</span><span class="preprocessor">#pragma GCC diagnostic push</span></div>
-<div class="line"><span class="lineno">  326</span><span class="preprocessor">#ifdef __has_warning</span></div>
-<div class="line"><span class="lineno">  327</span><span class="preprocessor">#if __has_warning(&quot;-Wused-but-marked-unused&quot;)</span></div>
-<div class="line"><span class="lineno">  328</span><span class="preprocessor">#pragma GCC diagnostic ignored &quot;-Wused-but-marked-unused&quot;</span></div>
-<div class="line"><span class="lineno">  329</span><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="lineno">  330</span><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="lineno">  331</span><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="lineno">  332</span>                <span class="keyword">const</span> int32_t altNameCount = sk_GENERAL_NAME_num(subjectAltNames);</div>
-<div class="line"><span class="lineno">  333</span><span class="preprocessor">#ifdef __GNUC_</span></div>
-<div class="line"><span class="lineno">  334</span><span class="preprocessor">#pragma GCC diagnostic pop</span></div>
-<div class="line"><span class="lineno">  335</span><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="lineno">  336</span>                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;\t   Subject alternative name count: &quot;</span> &lt;&lt; altNameCount;</div>
-<div class="line"><span class="lineno">  337</span>                <span class="keywordflow">for</span> (int32_t i = 0; i &lt; altNameCount; ++i) {</div>
-<div class="line"><span class="lineno">  338</span><span class="preprocessor">#ifdef __GNUC__</span></div>
-<div class="line"><span class="lineno">  339</span><span class="preprocessor">#pragma GCC diagnostic push</span></div>
-<div class="line"><span class="lineno">  340</span><span class="preprocessor">#ifdef __has_warning</span></div>
-<div class="line"><span class="lineno">  341</span><span class="preprocessor">#if __has_warning(&quot;-Wused-but-marked-unused&quot;)</span></div>
-<div class="line"><span class="lineno">  342</span><span class="preprocessor">#pragma GCC diagnostic ignored &quot;-Wused-but-marked-unused&quot;</span></div>
-<div class="line"><span class="lineno">  343</span><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="lineno">  344</span><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="lineno">  345</span><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="lineno">  346</span>                    GENERAL_NAME* generalName = sk_GENERAL_NAME_value(subjectAltNames, i);</div>
-<div class="line"><span class="lineno">  347</span><span class="preprocessor">#ifdef __GNUC_</span></div>
-<div class="line"><span class="lineno">  348</span><span class="preprocessor">#pragma GCC diagnostic pop</span></div>
-<div class="line"><span class="lineno">  349</span><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="lineno">  350</span>                    <span class="keywordflow">if</span> (generalName-&gt;type == GEN_URI) {</div>
-<div class="line"><span class="lineno">  351</span>                        <span class="keyword">const</span> std::string subjectAltName =</div>
-<div class="line"><span class="lineno">  352</span>                            std::string(<span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(ASN1_STRING_get0_data(generalName-&gt;d.uniformResourceIdentifier)),</div>
-<div class="line"><span class="lineno">  353</span>                                        <span class="keyword">static_cast&lt;</span>std::size_t<span class="keyword">&gt;</span>(ASN1_STRING_length(generalName-&gt;d.uniformResourceIdentifier)));</div>
-<div class="line"><span class="lineno">  354</span>                        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;\t      SAN (URI): &#39;&quot;</span> + subjectAltName;</div>
-<div class="line"><span class="lineno">  355</span>                    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (generalName-&gt;type == GEN_DNS) {</div>
-<div class="line"><span class="lineno">  356</span>                        <span class="keyword">const</span> std::string subjectAltName =</div>
-<div class="line"><span class="lineno">  357</span>                            std::string(<span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(ASN1_STRING_get0_data(generalName-&gt;d.dNSName)),</div>
-<div class="line"><span class="lineno">  358</span>                                        <span class="keyword">static_cast&lt;</span>std::size_t<span class="keyword">&gt;</span>(ASN1_STRING_length(generalName-&gt;d.dNSName)));</div>
-<div class="line"><span class="lineno">  359</span>                        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;\t      SAN (DNS): &#39;&quot;</span> + subjectAltName;</div>
-<div class="line"><span class="lineno">  360</span>                    } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  361</span>                        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;\t      SAN (Type): &#39;&quot;</span> + std::to_string(generalName-&gt;type);</div>
-<div class="line"><span class="lineno">  362</span>                    }</div>
-<div class="line"><span class="lineno">  363</span>                }</div>
-<div class="line"><span class="lineno">  364</span><span class="preprocessor">#ifdef __GNUC__</span></div>
-<div class="line"><span class="lineno">  365</span><span class="preprocessor">#pragma GCC diagnostic push</span></div>
-<div class="line"><span class="lineno">  366</span><span class="preprocessor">#ifdef __has_warning</span></div>
-<div class="line"><span class="lineno">  367</span><span class="preprocessor">#if __has_warning(&quot;-Wused-but-marked-unused&quot;)</span></div>
-<div class="line"><span class="lineno">  368</span><span class="preprocessor">#pragma GCC diagnostic ignored &quot;-Wused-but-marked-unused&quot;</span></div>
-<div class="line"><span class="lineno">  369</span><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="lineno">  370</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  320</span>            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;\tServer: &quot;</span> + socketConnection-&gt;getRemoteAddress().toString();</div>
+<div class="line"><span class="lineno">  321</span>            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;\tClient: &quot;</span> + socketConnection-&gt;getLocalAddress().toString();</div>
+<div class="line"><span class="lineno">  322</span>        });</div>
+<div class="line"><span class="lineno">  323</span> </div>
+<div class="line"><span class="lineno">  324</span>        tlsApp.setOnConnected([](<a class="code hl_typedef" href="classexpress_1_1WebAppT.html#aac2a3855a73cbf3547da8e1268605f02">tls::in::WebApp::SocketConnection</a>* socketConnection) {</div>
+<div class="line"><span class="lineno">  325</span>            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;OnConnected:&quot;</span>;</div>
+<div class="line"><span class="lineno">  326</span> </div>
+<div class="line"><span class="lineno">  327</span>            X509* client_cert = SSL_get_peer_certificate(socketConnection-&gt;getSSL());</div>
+<div class="line"><span class="lineno">  328</span> </div>
+<div class="line"><span class="lineno">  329</span>            <span class="keywordflow">if</span> (client_cert != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><span class="lineno">  330</span>                <span class="keyword">const</span> <span class="keywordtype">long</span> verifyErr = SSL_get_verify_result(socketConnection-&gt;getSSL());</div>
+<div class="line"><span class="lineno">  331</span> </div>
+<div class="line"><span class="lineno">  332</span>                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;\tClient certificate: &quot;</span> + std::string(X509_verify_cert_error_string(verifyErr));</div>
+<div class="line"><span class="lineno">  333</span> </div>
+<div class="line"><span class="lineno">  334</span>                <span class="keywordtype">char</span>* str = X509_NAME_oneline(X509_get_subject_name(client_cert), <span class="keyword">nullptr</span>, 0);</div>
+<div class="line"><span class="lineno">  335</span>                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;\t   Subject: &quot;</span> + std::string(str);</div>
+<div class="line"><span class="lineno">  336</span>                OPENSSL_free(str);</div>
+<div class="line"><span class="lineno">  337</span> </div>
+<div class="line"><span class="lineno">  338</span>                str = X509_NAME_oneline(X509_get_issuer_name(client_cert), <span class="keyword">nullptr</span>, 0);</div>
+<div class="line"><span class="lineno">  339</span>                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;\t   Issuer: &quot;</span> + std::string(str);</div>
+<div class="line"><span class="lineno">  340</span>                OPENSSL_free(str);</div>
+<div class="line"><span class="lineno">  341</span> </div>
+<div class="line"><span class="lineno">  342</span>                <span class="comment">// We could do all sorts of certificate verification stuff here before deallocating the certificate.</span></div>
+<div class="line"><span class="lineno">  343</span> </div>
+<div class="line"><span class="lineno">  344</span>                GENERAL_NAMES* subjectAltNames =</div>
+<div class="line"><span class="lineno">  345</span>                    <span class="keyword">static_cast&lt;</span>GENERAL_NAMES*<span class="keyword">&gt;</span>(X509_get_ext_d2i(client_cert, NID_subject_alt_name, <span class="keyword">nullptr</span>, <span class="keyword">nullptr</span>));</div>
+<div class="line"><span class="lineno">  346</span><span class="preprocessor">#ifdef __GNUC__</span></div>
+<div class="line"><span class="lineno">  347</span><span class="preprocessor">#pragma GCC diagnostic push</span></div>
+<div class="line"><span class="lineno">  348</span><span class="preprocessor">#ifdef __has_warning</span></div>
+<div class="line"><span class="lineno">  349</span><span class="preprocessor">#if __has_warning(&quot;-Wused-but-marked-unused&quot;)</span></div>
+<div class="line"><span class="lineno">  350</span><span class="preprocessor">#pragma GCC diagnostic ignored &quot;-Wused-but-marked-unused&quot;</span></div>
+<div class="line"><span class="lineno">  351</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  352</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  353</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  354</span>                <span class="keyword">const</span> int32_t altNameCount = sk_GENERAL_NAME_num(subjectAltNames);</div>
+<div class="line"><span class="lineno">  355</span><span class="preprocessor">#ifdef __GNUC_</span></div>
+<div class="line"><span class="lineno">  356</span><span class="preprocessor">#pragma GCC diagnostic pop</span></div>
+<div class="line"><span class="lineno">  357</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  358</span>                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;\t   Subject alternative name count: &quot;</span> &lt;&lt; altNameCount;</div>
+<div class="line"><span class="lineno">  359</span>                <span class="keywordflow">for</span> (int32_t i = 0; i &lt; altNameCount; ++i) {</div>
+<div class="line"><span class="lineno">  360</span><span class="preprocessor">#ifdef __GNUC__</span></div>
+<div class="line"><span class="lineno">  361</span><span class="preprocessor">#pragma GCC diagnostic push</span></div>
+<div class="line"><span class="lineno">  362</span><span class="preprocessor">#ifdef __has_warning</span></div>
+<div class="line"><span class="lineno">  363</span><span class="preprocessor">#if __has_warning(&quot;-Wused-but-marked-unused&quot;)</span></div>
+<div class="line"><span class="lineno">  364</span><span class="preprocessor">#pragma GCC diagnostic ignored &quot;-Wused-but-marked-unused&quot;</span></div>
+<div class="line"><span class="lineno">  365</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  366</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  367</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  368</span>                    GENERAL_NAME* generalName = sk_GENERAL_NAME_value(subjectAltNames, i);</div>
+<div class="line"><span class="lineno">  369</span><span class="preprocessor">#ifdef __GNUC_</span></div>
+<div class="line"><span class="lineno">  370</span><span class="preprocessor">#pragma GCC diagnostic pop</span></div>
 <div class="line"><span class="lineno">  371</span><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="lineno">  372</span>                sk_GENERAL_NAME_pop_free(subjectAltNames, GENERAL_NAME_free);</div>
-<div class="line"><span class="lineno">  373</span><span class="preprocessor">#ifdef __GNUC_</span></div>
-<div class="line"><span class="lineno">  374</span><span class="preprocessor">#pragma GCC diagnostic pop</span></div>
-<div class="line"><span class="lineno">  375</span><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="lineno">  376</span>                X509_free(client_cert);</div>
-<div class="line"><span class="lineno">  377</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  378</span>                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;\tClient certificate: no certificate&quot;</span>;</div>
-<div class="line"><span class="lineno">  379</span>            }</div>
-<div class="line"><span class="lineno">  380</span>        });</div>
-<div class="line"><span class="lineno">  381</span> </div>
-<div class="line"><span class="lineno">  382</span>        tlsApp.setOnDisconnect([](<a class="code hl_typedef" href="classexpress_1_1WebAppT.html#aac2a3855a73cbf3547da8e1268605f02">tls::in::WebApp::SocketConnection</a>* socketConnection) {</div>
-<div class="line"><span class="lineno">  383</span>            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;OnDisconnect:&quot;</span>;</div>
-<div class="line"><span class="lineno">  384</span> </div>
-<div class="line"><span class="lineno">  385</span>            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;\tServer: &quot;</span> + socketConnection-&gt;getRemoteAddress().toString();</div>
-<div class="line"><span class="lineno">  386</span>            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;\tClient: &quot;</span> + socketConnection-&gt;getLocalAddress().toString();</div>
-<div class="line"><span class="lineno">  387</span>        });</div>
-<div class="line"><span class="lineno">  388</span>    }</div>
-<div class="line"><span class="lineno">  389</span> </div>
-<div class="line"><span class="lineno">  390</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="classexpress_1_1WebApp.html#a54e6910c9466c61d0b217490b7d9bb5a">WebApp::start</a>();</div>
-<div class="line"><span class="lineno">  391</span>}</div>
-<div class="ttc" id="aclasscore_1_1socket_1_1State_html"><div class="ttname"><a href="classcore_1_1socket_1_1State.html">core::socket::State</a></div><div class="ttdef"><b>Definition</b> <a href="socket_2State_8h_source.html#l00031">State.h:31</a></div></div>
-<div class="ttc" id="aclasscore_1_1socket_1_1State_html_a26b8a9154524cfbba2729255cb184331"><div class="ttname"><a href="classcore_1_1socket_1_1State.html#a26b8a9154524cfbba2729255cb184331">core::socket::State::DISABLED</a></div><div class="ttdeci">static constexpr int DISABLED</div><div class="ttdef"><b>Definition</b> <a href="socket_2State_8h_source.html#l00034">State.h:34</a></div></div>
-<div class="ttc" id="aclasscore_1_1socket_1_1State_html_a3dcc747a68a4c163fcf1c57d9852cab3"><div class="ttname"><a href="classcore_1_1socket_1_1State.html#a3dcc747a68a4c163fcf1c57d9852cab3">core::socket::State::ERROR</a></div><div class="ttdeci">static constexpr int ERROR</div><div class="ttdef"><b>Definition</b> <a href="socket_2State_8h_source.html#l00035">State.h:35</a></div></div>
-<div class="ttc" id="aclasscore_1_1socket_1_1State_html_a5d0a9047c96edac9ffd9cd12574328c0"><div class="ttname"><a href="classcore_1_1socket_1_1State.html#a5d0a9047c96edac9ffd9cd12574328c0">core::socket::State::FATAL</a></div><div class="ttdeci">static constexpr int FATAL</div><div class="ttdef"><b>Definition</b> <a href="socket_2State_8h_source.html#l00036">State.h:36</a></div></div>
-<div class="ttc" id="aclasscore_1_1socket_1_1State_html_a744e04217104f055ae728e8d884f25de"><div class="ttname"><a href="classcore_1_1socket_1_1State.html#a744e04217104f055ae728e8d884f25de">core::socket::State::OK</a></div><div class="ttdeci">static constexpr int OK</div><div class="ttdef"><b>Definition</b> <a href="socket_2State_8h_source.html#l00033">State.h:33</a></div></div>
-<div class="ttc" id="aclassdatabase_1_1mariadb_1_1MariaDBClient_html"><div class="ttname"><a href="classdatabase_1_1mariadb_1_1MariaDBClient.html">database::mariadb::MariaDBClient</a></div><div class="ttdef"><b>Definition</b> <a href="MariaDBClient_8h_source.html#l00061">MariaDBClient.h:63</a></div></div>
-<div class="ttc" id="aclassexpress_1_1WebAppT_html"><div class="ttname"><a href="classexpress_1_1WebAppT.html">express::WebAppT</a></div><div class="ttdef"><b>Definition</b> <a href="WebAppT_8h_source.html#l00037">WebAppT.h:39</a></div></div>
-<div class="ttc" id="aclassexpress_1_1WebAppT_html_aac2a3855a73cbf3547da8e1268605f02"><div class="ttname"><a href="classexpress_1_1WebAppT.html#aac2a3855a73cbf3547da8e1268605f02">express::WebAppT::SocketConnection</a></div><div class="ttdeci">typename Server::SocketConnection SocketConnection</div><div class="ttdef"><b>Definition</b> <a href="WebAppT_8h_source.html#l00047">WebAppT.h:47</a></div></div>
-<div class="ttc" id="aclassexpress_1_1WebAppT_html_ae6c8401e279b2a243f2fb0e498ef319e"><div class="ttname"><a href="classexpress_1_1WebAppT.html#ae6c8401e279b2a243f2fb0e498ef319e">express::WebAppT::SocketAddress</a></div><div class="ttdeci">typename Server::SocketAddress SocketAddress</div><div class="ttdef"><b>Definition</b> <a href="WebAppT_8h_source.html#l00048">WebAppT.h:48</a></div></div>
-<div class="ttc" id="aclassexpress_1_1WebApp_html_a0a01439a0cc8dfc86ed14f1094826b7e"><div class="ttname"><a href="classexpress_1_1WebApp.html#a0a01439a0cc8dfc86ed14f1094826b7e">express::WebApp::init</a></div><div class="ttdeci">static void init(int argc, char *argv[])</div><div class="ttdef"><b>Definition</b> <a href="WebApp_8cpp_source.html#l00034">WebApp.cpp:34</a></div></div>
-<div class="ttc" id="aclassexpress_1_1WebApp_html_a54e6910c9466c61d0b217490b7d9bb5a"><div class="ttname"><a href="classexpress_1_1WebApp.html#a54e6910c9466c61d0b217490b7d9bb5a">express::WebApp::start</a></div><div class="ttdeci">static int start(const utils::Timeval &amp;timeOut={LONG_MAX, 0})</div><div class="ttdef"><b>Definition</b> <a href="WebApp_8cpp_source.html#l00038">WebApp.cpp:38</a></div></div>
-<div class="ttc" id="astructdatabase_1_1mariadb_1_1MariaDBConnectionDetails_html"><div class="ttname"><a href="structdatabase_1_1mariadb_1_1MariaDBConnectionDetails.html">database::mariadb::MariaDBConnectionDetails</a></div><div class="ttdef"><b>Definition</b> <a href="MariaDBConnectionDetails_8h_source.html#l00032">MariaDBConnectionDetails.h:32</a></div></div>
-<div class="ttc" id="astructdatabase_1_1mariadb_1_1MariaDBConnectionDetails_html_a13f008b21ad1be16b56b19df467924ac"><div class="ttname"><a href="structdatabase_1_1mariadb_1_1MariaDBConnectionDetails.html#a13f008b21ad1be16b56b19df467924ac">database::mariadb::MariaDBConnectionDetails::hostname</a></div><div class="ttdeci">std::string hostname</div><div class="ttdef"><b>Definition</b> <a href="MariaDBConnectionDetails_8h_source.html#l00033">MariaDBConnectionDetails.h:33</a></div></div>
-<div class="ttc" id="atestregex_8cpp_html_ab024e3c77aeb1487da4b33877cdfc1fb"><div class="ttname"><a href="#ab024e3c77aeb1487da4b33877cdfc1fb">router</a></div><div class="ttdeci">Router router(database::mariadb::MariaDBClient &amp;db)</div><div class="ttdef"><b>Definition</b> <a href="testregex_8cpp_source.html#l00046">testregex.cpp:46</a></div></div>
+<div class="line"><span class="lineno">  372</span>                    <span class="keywordflow">if</span> (generalName-&gt;type == GEN_URI) {</div>
+<div class="line"><span class="lineno">  373</span>                        <span class="keyword">const</span> std::string subjectAltName =</div>
+<div class="line"><span class="lineno">  374</span>                            std::string(<span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(ASN1_STRING_get0_data(generalName-&gt;d.uniformResourceIdentifier)),</div>
+<div class="line"><span class="lineno">  375</span>                                        <span class="keyword">static_cast&lt;</span>std::size_t<span class="keyword">&gt;</span>(ASN1_STRING_length(generalName-&gt;d.uniformResourceIdentifier)));</div>
+<div class="line"><span class="lineno">  376</span>                        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;\t      SAN (URI): &#39;&quot;</span> + subjectAltName;</div>
+<div class="line"><span class="lineno">  377</span>                    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (generalName-&gt;type == GEN_DNS) {</div>
+<div class="line"><span class="lineno">  378</span>                        <span class="keyword">const</span> std::string subjectAltName =</div>
+<div class="line"><span class="lineno">  379</span>                            std::string(<span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(ASN1_STRING_get0_data(generalName-&gt;d.dNSName)),</div>
+<div class="line"><span class="lineno">  380</span>                                        <span class="keyword">static_cast&lt;</span>std::size_t<span class="keyword">&gt;</span>(ASN1_STRING_length(generalName-&gt;d.dNSName)));</div>
+<div class="line"><span class="lineno">  381</span>                        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;\t      SAN (DNS): &#39;&quot;</span> + subjectAltName;</div>
+<div class="line"><span class="lineno">  382</span>                    } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  383</span>                        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;\t      SAN (Type): &#39;&quot;</span> + std::to_string(generalName-&gt;type);</div>
+<div class="line"><span class="lineno">  384</span>                    }</div>
+<div class="line"><span class="lineno">  385</span>                }</div>
+<div class="line"><span class="lineno">  386</span><span class="preprocessor">#ifdef __GNUC__</span></div>
+<div class="line"><span class="lineno">  387</span><span class="preprocessor">#pragma GCC diagnostic push</span></div>
+<div class="line"><span class="lineno">  388</span><span class="preprocessor">#ifdef __has_warning</span></div>
+<div class="line"><span class="lineno">  389</span><span class="preprocessor">#if __has_warning(&quot;-Wused-but-marked-unused&quot;)</span></div>
+<div class="line"><span class="lineno">  390</span><span class="preprocessor">#pragma GCC diagnostic ignored &quot;-Wused-but-marked-unused&quot;</span></div>
+<div class="line"><span class="lineno">  391</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  392</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  393</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  394</span>                sk_GENERAL_NAME_pop_free(subjectAltNames, GENERAL_NAME_free);</div>
+<div class="line"><span class="lineno">  395</span><span class="preprocessor">#ifdef __GNUC_</span></div>
+<div class="line"><span class="lineno">  396</span><span class="preprocessor">#pragma GCC diagnostic pop</span></div>
+<div class="line"><span class="lineno">  397</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  398</span>                X509_free(client_cert);</div>
+<div class="line"><span class="lineno">  399</span>            } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  400</span>                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;\tClient certificate: no certificate&quot;</span>;</div>
+<div class="line"><span class="lineno">  401</span>            }</div>
+<div class="line"><span class="lineno">  402</span>        });</div>
+<div class="line"><span class="lineno">  403</span> </div>
+<div class="line"><span class="lineno">  404</span>        tlsApp.setOnDisconnect([](<a class="code hl_typedef" href="classexpress_1_1WebAppT.html#aac2a3855a73cbf3547da8e1268605f02">tls::in::WebApp::SocketConnection</a>* socketConnection) {</div>
+<div class="line"><span class="lineno">  405</span>            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;OnDisconnect:&quot;</span>;</div>
+<div class="line"><span class="lineno">  406</span> </div>
+<div class="line"><span class="lineno">  407</span>            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;\tServer: &quot;</span> + socketConnection-&gt;getRemoteAddress().toString();</div>
+<div class="line"><span class="lineno">  408</span>            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;\tClient: &quot;</span> + socketConnection-&gt;getLocalAddress().toString();</div>
+<div class="line"><span class="lineno">  409</span>        });</div>
+<div class="line"><span class="lineno">  410</span>    }</div>
+<div class="line"><span class="lineno">  411</span> </div>
+<div class="line"><span class="lineno">  412</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="classexpress_1_1WebApp.html#a54e6910c9466c61d0b217490b7d9bb5a">WebApp::start</a>();</div>
+<div class="line"><span class="lineno">  413</span>}</div>
+<div class="ttc" id="aclasscore_1_1socket_1_1State_html"><div class="ttname"><a href="classcore_1_1socket_1_1State.html">core::socket::State</a></div><div class="ttdef"><b>Definition</b> <a href="socket_2State_8h_source.html#l00053">State.h:53</a></div></div>
+<div class="ttc" id="aclasscore_1_1socket_1_1State_html_a26b8a9154524cfbba2729255cb184331"><div class="ttname"><a href="classcore_1_1socket_1_1State.html#a26b8a9154524cfbba2729255cb184331">core::socket::State::DISABLED</a></div><div class="ttdeci">static constexpr int DISABLED</div><div class="ttdef"><b>Definition</b> <a href="socket_2State_8h_source.html#l00056">State.h:56</a></div></div>
+<div class="ttc" id="aclasscore_1_1socket_1_1State_html_a3dcc747a68a4c163fcf1c57d9852cab3"><div class="ttname"><a href="classcore_1_1socket_1_1State.html#a3dcc747a68a4c163fcf1c57d9852cab3">core::socket::State::ERROR</a></div><div class="ttdeci">static constexpr int ERROR</div><div class="ttdef"><b>Definition</b> <a href="socket_2State_8h_source.html#l00057">State.h:57</a></div></div>
+<div class="ttc" id="aclasscore_1_1socket_1_1State_html_a5d0a9047c96edac9ffd9cd12574328c0"><div class="ttname"><a href="classcore_1_1socket_1_1State.html#a5d0a9047c96edac9ffd9cd12574328c0">core::socket::State::FATAL</a></div><div class="ttdeci">static constexpr int FATAL</div><div class="ttdef"><b>Definition</b> <a href="socket_2State_8h_source.html#l00058">State.h:58</a></div></div>
+<div class="ttc" id="aclasscore_1_1socket_1_1State_html_a744e04217104f055ae728e8d884f25de"><div class="ttname"><a href="classcore_1_1socket_1_1State.html#a744e04217104f055ae728e8d884f25de">core::socket::State::OK</a></div><div class="ttdeci">static constexpr int OK</div><div class="ttdef"><b>Definition</b> <a href="socket_2State_8h_source.html#l00055">State.h:55</a></div></div>
+<div class="ttc" id="aclassdatabase_1_1mariadb_1_1MariaDBClient_html"><div class="ttname"><a href="classdatabase_1_1mariadb_1_1MariaDBClient.html">database::mariadb::MariaDBClient</a></div><div class="ttdef"><b>Definition</b> <a href="MariaDBClient_8h_source.html#l00083">MariaDBClient.h:85</a></div></div>
+<div class="ttc" id="aclassexpress_1_1WebAppT_html"><div class="ttname"><a href="classexpress_1_1WebAppT.html">express::WebAppT</a></div><div class="ttdef"><b>Definition</b> <a href="WebAppT_8h_source.html#l00059">WebAppT.h:61</a></div></div>
+<div class="ttc" id="aclassexpress_1_1WebAppT_html_aac2a3855a73cbf3547da8e1268605f02"><div class="ttname"><a href="classexpress_1_1WebAppT.html#aac2a3855a73cbf3547da8e1268605f02">express::WebAppT::SocketConnection</a></div><div class="ttdeci">typename Server::SocketConnection SocketConnection</div><div class="ttdef"><b>Definition</b> <a href="WebAppT_8h_source.html#l00069">WebAppT.h:69</a></div></div>
+<div class="ttc" id="aclassexpress_1_1WebAppT_html_ae6c8401e279b2a243f2fb0e498ef319e"><div class="ttname"><a href="classexpress_1_1WebAppT.html#ae6c8401e279b2a243f2fb0e498ef319e">express::WebAppT::SocketAddress</a></div><div class="ttdeci">typename Server::SocketAddress SocketAddress</div><div class="ttdef"><b>Definition</b> <a href="WebAppT_8h_source.html#l00070">WebAppT.h:70</a></div></div>
+<div class="ttc" id="aclassexpress_1_1WebApp_html_a0a01439a0cc8dfc86ed14f1094826b7e"><div class="ttname"><a href="classexpress_1_1WebApp.html#a0a01439a0cc8dfc86ed14f1094826b7e">express::WebApp::init</a></div><div class="ttdeci">static void init(int argc, char *argv[])</div><div class="ttdef"><b>Definition</b> <a href="WebApp_8cpp_source.html#l00056">WebApp.cpp:56</a></div></div>
+<div class="ttc" id="aclassexpress_1_1WebApp_html_a54e6910c9466c61d0b217490b7d9bb5a"><div class="ttname"><a href="classexpress_1_1WebApp.html#a54e6910c9466c61d0b217490b7d9bb5a">express::WebApp::start</a></div><div class="ttdeci">static int start(const utils::Timeval &amp;timeOut={LONG_MAX, 0})</div><div class="ttdef"><b>Definition</b> <a href="WebApp_8cpp_source.html#l00060">WebApp.cpp:60</a></div></div>
+<div class="ttc" id="astructdatabase_1_1mariadb_1_1MariaDBConnectionDetails_html"><div class="ttname"><a href="structdatabase_1_1mariadb_1_1MariaDBConnectionDetails.html">database::mariadb::MariaDBConnectionDetails</a></div><div class="ttdef"><b>Definition</b> <a href="MariaDBConnectionDetails_8h_source.html#l00054">MariaDBConnectionDetails.h:54</a></div></div>
+<div class="ttc" id="astructdatabase_1_1mariadb_1_1MariaDBConnectionDetails_html_a13f008b21ad1be16b56b19df467924ac"><div class="ttname"><a href="structdatabase_1_1mariadb_1_1MariaDBConnectionDetails.html#a13f008b21ad1be16b56b19df467924ac">database::mariadb::MariaDBConnectionDetails::hostname</a></div><div class="ttdeci">std::string hostname</div><div class="ttdef"><b>Definition</b> <a href="MariaDBConnectionDetails_8h_source.html#l00055">MariaDBConnectionDetails.h:55</a></div></div>
+<div class="ttc" id="atestregex_8cpp_html_ab024e3c77aeb1487da4b33877cdfc1fb"><div class="ttname"><a href="#ab024e3c77aeb1487da4b33877cdfc1fb">router</a></div><div class="ttdeci">Router router(database::mariadb::MariaDBClient &amp;db)</div><div class="ttdef"><b>Definition</b> <a href="testregex_8cpp_source.html#l00068">testregex.cpp:68</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="MariaDBConnectionDetails_8h_source.html#l00036">database::mariadb::MariaDBConnectionDetails::database</a>, <a class="el" href="MariaDBConnectionDetails_8h_source.html#l00039">database::mariadb::MariaDBConnectionDetails::flags</a>, <a class="el" href="MariaDBConnectionDetails_8h_source.html#l00033">database::mariadb::MariaDBConnectionDetails::hostname</a>, <a class="el" href="WebApp_8cpp_source.html#l00034">express::WebApp::init()</a>, <a class="el" href="MariaDBClient_8cpp_source.html#l00034">database::mariadb::MariaDBClient::MariaDBClient()</a>, <a class="el" href="MariaDBConnectionDetails_8h_source.html#l00035">database::mariadb::MariaDBConnectionDetails::password</a>, <a class="el" href="MariaDBConnectionDetails_8h_source.html#l00037">database::mariadb::MariaDBConnectionDetails::port</a>, <a class="el" href="MariaDBConnectionDetails_8h_source.html#l00038">database::mariadb::MariaDBConnectionDetails::socket</a>, <a class="el" href="WebApp_8cpp_source.html#l00038">express::WebApp::start()</a>, and <a class="el" href="MariaDBConnectionDetails_8h_source.html#l00034">database::mariadb::MariaDBConnectionDetails::username</a>.</p>
+<p class="reference">References <a class="el" href="MariaDBConnectionDetails_8h_source.html#l00058">database::mariadb::MariaDBConnectionDetails::database</a>, <a class="el" href="MariaDBConnectionDetails_8h_source.html#l00061">database::mariadb::MariaDBConnectionDetails::flags</a>, <a class="el" href="MariaDBConnectionDetails_8h_source.html#l00055">database::mariadb::MariaDBConnectionDetails::hostname</a>, <a class="el" href="WebApp_8cpp_source.html#l00056">express::WebApp::init()</a>, <a class="el" href="MariaDBClient_8cpp_source.html#l00056">database::mariadb::MariaDBClient::MariaDBClient()</a>, <a class="el" href="MariaDBConnectionDetails_8h_source.html#l00057">database::mariadb::MariaDBConnectionDetails::password</a>, <a class="el" href="MariaDBConnectionDetails_8h_source.html#l00059">database::mariadb::MariaDBConnectionDetails::port</a>, <a class="el" href="MariaDBConnectionDetails_8h_source.html#l00060">database::mariadb::MariaDBConnectionDetails::socket</a>, <a class="el" href="WebApp_8cpp_source.html#l00060">express::WebApp::start()</a>, and <a class="el" href="MariaDBConnectionDetails_8h_source.html#l00056">database::mariadb::MariaDBConnectionDetails::username</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -355,184 +355,184 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="testregex_8cpp_source.html#l00046">46</a> of file <a class="el" href="testregex_8cpp_source.html">testregex.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   46</span>                                                {</div>
-<div class="line"><span class="lineno">   47</span>    <span class="keyword">const</span> <a class="code hl_class" href="classexpress_1_1Router.html">Router</a> <a class="code hl_function" href="#ab024e3c77aeb1487da4b33877cdfc1fb">router</a>;</div>
-<div class="line"><span class="lineno">   48</span> </div>
-<div class="line"><span class="lineno">   49</span>    <a class="code hl_function" href="#ab024e3c77aeb1487da4b33877cdfc1fb">router</a>.<a class="code hl_function" href="classexpress_1_1Router.html#aa6c295b187e6cb8a7bc74a18de61e841">get</a>(<span class="stringliteral">&quot;/test/:variable(\\d)/:uri&quot;</span>, [] <a class="code hl_define" href="Router_8h.html#a8b7131df91fe7a961e2cdadcedb55232">APPLICATION</a>(req, res) { <span class="comment">// http://localhost:8080/test/1/urlstring</span></div>
-<div class="line"><span class="lineno">   50</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;TEST&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">   51</span>    });</div>
-<div class="line"><span class="lineno">   52</span>    <a class="code hl_function" href="#ab024e3c77aeb1487da4b33877cdfc1fb">router</a></div>
-<div class="line"><span class="lineno">   53</span>        .<a class="code hl_function" href="classexpress_1_1Router.html#aa6c295b187e6cb8a7bc74a18de61e841">get</a>(</div>
-<div class="line"><span class="lineno">   54</span>            <span class="stringliteral">&quot;/query/:userId&quot;</span>,</div>
-<div class="line"><span class="lineno">   55</span>            [] <a class="code hl_define" href="Router_8h.html#ac5313b926a3bc0fb106bffb31e93dc71">MIDDLEWARE</a>(req, res, next) {</div>
-<div class="line"><span class="lineno">   56</span>                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Move on to the next route to query database&quot;</span>;</div>
-<div class="line"><span class="lineno">   57</span>                next();</div>
-<div class="line"><span class="lineno">   58</span>            },</div>
-<div class="line"><span class="lineno">   59</span>            [&amp;db] <a class="code hl_define" href="Router_8h.html#ac5313b926a3bc0fb106bffb31e93dc71">MIDDLEWARE</a>(req, res, next) { <span class="comment">// http://localhost:8080/query/123</span></div>
-<div class="line"><span class="lineno">   60</span>                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;UserId: &quot;</span> &lt;&lt; req-&gt;params[<span class="stringliteral">&quot;userId&quot;</span>];</div>
-<div class="line"><span class="lineno">   61</span>                std::string userId = req-&gt;params[<span class="stringliteral">&quot;userId&quot;</span>];</div>
-<div class="line"><span class="lineno">   62</span> </div>
-<div class="line"><span class="lineno">   63</span>                req-&gt;setAttribute&lt;std::string, <span class="stringliteral">&quot;html-table&quot;</span>&gt;(std::string());</div>
-<div class="line"><span class="lineno">   64</span> </div>
-<div class="line"><span class="lineno">   65</span>                req-&gt;getAttribute&lt;std::string, <span class="stringliteral">&quot;html-table&quot;</span>&gt;([&amp;userId](std::string&amp; table) {</div>
-<div class="line"><span class="lineno">   66</span>                    table = <span class="stringliteral">&quot;&lt;html&gt;\n&quot;</span></div>
-<div class="line"><span class="lineno">   67</span>                            <span class="stringliteral">&quot;  &lt;head&gt;\n&quot;</span></div>
-<div class="line"><span class="lineno">   68</span>                            <span class="stringliteral">&quot;    &lt;title&gt;&quot;</span></div>
-<div class="line"><span class="lineno">   69</span>                            <span class="stringliteral">&quot;Response from snode.c for &quot;</span> +</div>
-<div class="line"><span class="lineno">   70</span>                            userId +</div>
-<div class="line"><span class="lineno">   71</span>                            <span class="stringliteral">&quot;\n&quot;</span></div>
-<div class="line"><span class="lineno">   72</span>                            <span class="stringliteral">&quot;    &lt;/title&gt;\n&quot;</span></div>
-<div class="line"><span class="lineno">   73</span>                            <span class="stringliteral">&quot;  &lt;/head&gt;\n&quot;</span></div>
-<div class="line"><span class="lineno">   74</span>                            <span class="stringliteral">&quot;  &lt;body&gt;\n&quot;</span></div>
-<div class="line"><span class="lineno">   75</span>                            <span class="stringliteral">&quot;    &lt;h1&gt;Return for &quot;</span> +</div>
-<div class="line"><span class="lineno">   76</span>                            userId +</div>
-<div class="line"><span class="lineno">   77</span>                            <span class="stringliteral">&quot;\n&quot;</span></div>
-<div class="line"><span class="lineno">   78</span>                            <span class="stringliteral">&quot;    &lt;/h1&gt;\n&quot;</span></div>
-<div class="line"><span class="lineno">   79</span>                            <span class="stringliteral">&quot;  &lt;body&gt;\n&quot;</span></div>
-<div class="line"><span class="lineno">   80</span>                            <span class="stringliteral">&quot;    &lt;table border = \&quot;1\&quot;&gt;\n&quot;</span>;</div>
-<div class="line"><span class="lineno">   81</span>                });</div>
-<div class="line"><span class="lineno">   82</span> </div>
-<div class="line"><span class="lineno">   83</span>                <span class="keywordtype">int</span> i = 0;</div>
-<div class="line"><span class="lineno">   84</span>                db.<a class="code hl_function" href="classdatabase_1_1mariadb_1_1MariaDBClientASyncAPI.html#afeb3104403ea3ad19694b6ef7da49553">query</a>(</div>
-<div class="line"><span class="lineno">   85</span>                    <span class="stringliteral">&quot;SELECT * FROM snodec where username = &#39;&quot;</span> + userId + <span class="stringliteral">&quot;&#39;&quot;</span>,</div>
-<div class="line"><span class="lineno">   86</span>                    [next, req, i](<span class="keyword">const</span> MYSQL_ROW row) <span class="keyword">mutable</span> {</div>
-<div class="line"><span class="lineno">   87</span>                        <span class="keywordflow">if</span> (row != <span class="keyword">nullptr</span>) {</div>
-<div class="line"><span class="lineno">   88</span>                            i++;</div>
-<div class="line"><span class="lineno">   89</span>                            req-&gt;getAttribute&lt;std::string, <span class="stringliteral">&quot;html-table&quot;</span>&gt;([row, &amp;i](std::string&amp; table) {</div>
-<div class="line"><span class="lineno">   90</span>                                table.append(<span class="stringliteral">&quot;      &lt;tr&gt;\n&quot;</span></div>
-<div class="line"><span class="lineno">   91</span>                                             <span class="stringliteral">&quot;        &lt;td&gt;\n&quot;</span> +</div>
-<div class="line"><span class="lineno">   92</span>                                             std::to_string(i) +</div>
-<div class="line"><span class="lineno">   93</span>                                             <span class="stringliteral">&quot;\n&quot;</span></div>
-<div class="line"><span class="lineno">   94</span>                                             <span class="stringliteral">&quot;        &lt;/td&gt;\n&quot;</span></div>
-<div class="line"><span class="lineno">   95</span>                                             <span class="stringliteral">&quot;        &lt;td&gt;\n&quot;</span> +</div>
-<div class="line"><span class="lineno">   96</span>                                             std::string(row[0]) +</div>
-<div class="line"><span class="lineno">   97</span>                                             <span class="stringliteral">&quot;\n&quot;</span></div>
-<div class="line"><span class="lineno">   98</span>                                             <span class="stringliteral">&quot;        &lt;/td&gt;\n&quot;</span></div>
-<div class="line"><span class="lineno">   99</span>                                             <span class="stringliteral">&quot;        &lt;td&gt;\n&quot;</span> +</div>
-<div class="line"><span class="lineno">  100</span>                                             row[1] +</div>
-<div class="line"><span class="lineno">  101</span>                                             <span class="stringliteral">&quot;\n&quot;</span></div>
-<div class="line"><span class="lineno">  102</span>                                             <span class="stringliteral">&quot;        &lt;/td&gt;\n&quot;</span></div>
-<div class="line"><span class="lineno">  103</span>                                             <span class="stringliteral">&quot;      &lt;/tr&gt;\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  104</span>                            });</div>
-<div class="line"><span class="lineno">  105</span>                        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  106</span>                            req-&gt;getAttribute&lt;std::string, <span class="stringliteral">&quot;html-table&quot;</span>&gt;([](std::string&amp; table) {</div>
-<div class="line"><span class="lineno">  107</span>                                table.append(std::string(<span class="stringliteral">&quot;    &lt;/table&gt;\n&quot;</span></div>
-<div class="line"><span class="lineno">  108</span>                                                         <span class="stringliteral">&quot;  &lt;/body&gt;\n&quot;</span></div>
-<div class="line"><span class="lineno">  109</span>                                                         <span class="stringliteral">&quot;&lt;/html&gt;\n&quot;</span>));</div>
-<div class="line"><span class="lineno">  110</span>                            });</div>
-<div class="line"><span class="lineno">  111</span>                            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Move on to the next route to send result&quot;</span>;</div>
-<div class="line"><span class="lineno">  112</span>                            next();</div>
-<div class="line"><span class="lineno">  113</span>                        }</div>
-<div class="line"><span class="lineno">  114</span>                    },</div>
-<div class="line"><span class="lineno">  115</span>                    [res, userId](<span class="keyword">const</span> std::string&amp; errorString, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> errorNumber) {</div>
-<div class="line"><span class="lineno">  116</span>                        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Error: &quot;</span> &lt;&lt; errorString &lt;&lt; <span class="stringliteral">&quot; : &quot;</span> &lt;&lt; errorNumber;</div>
-<div class="line"><span class="lineno">  117</span>                        res-&gt;status(404).send(userId + <span class="stringliteral">&quot;: &quot;</span> + errorString + <span class="stringliteral">&quot; - &quot;</span> + std::to_string(errorNumber));</div>
-<div class="line"><span class="lineno">  118</span>                    });</div>
-<div class="line"><span class="lineno">  119</span>            },</div>
-<div class="line"><span class="lineno">  120</span>            [] <a class="code hl_define" href="Router_8h.html#ac5313b926a3bc0fb106bffb31e93dc71">MIDDLEWARE</a>(req, res, next) {</div>
-<div class="line"><span class="lineno">  121</span>                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;And again 1: Move on to the next route to send result&quot;</span>;</div>
-<div class="line"><span class="lineno">  122</span>                next();</div>
-<div class="line"><span class="lineno">  123</span>            },</div>
-<div class="line"><span class="lineno">  124</span>            [] <a class="code hl_define" href="Router_8h.html#ac5313b926a3bc0fb106bffb31e93dc71">MIDDLEWARE</a>(req, res, next) {</div>
-<div class="line"><span class="lineno">  125</span>                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;And again 2: Move on to the next route to send result&quot;</span>;</div>
-<div class="line"><span class="lineno">  126</span>                next();</div>
-<div class="line"><span class="lineno">  127</span>            })</div>
-<div class="line"><span class="lineno">  128</span>        .get([] <a class="code hl_define" href="Router_8h.html#ac5313b926a3bc0fb106bffb31e93dc71">MIDDLEWARE</a>(req, res, next) {</div>
-<div class="line"><span class="lineno">  129</span>            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;And again 3: Move on to the next route to send result&quot;</span>;</div>
-<div class="line"><span class="lineno">  130</span>            next();</div>
-<div class="line"><span class="lineno">  131</span>        })</div>
-<div class="line"><span class="lineno">  132</span>        .get([] <a class="code hl_define" href="Router_8h.html#a8b7131df91fe7a961e2cdadcedb55232">APPLICATION</a>(req, res) {</div>
-<div class="line"><span class="lineno">  133</span>            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;SendResult&quot;</span>;</div>
-<div class="line"><span class="lineno">  134</span> </div>
-<div class="line"><span class="lineno">  135</span>            req-&gt;getAttribute&lt;std::string, <span class="stringliteral">&quot;html-table&quot;</span>&gt;(</div>
-<div class="line"><span class="lineno">  136</span>                [res](std::string&amp; table) {</div>
-<div class="line"><span class="lineno">  137</span>                    res-&gt;send(table);</div>
-<div class="line"><span class="lineno">  138</span>                },</div>
-<div class="line"><span class="lineno">  139</span>                [res](<span class="keyword">const</span> std::string&amp;) {</div>
-<div class="line"><span class="lineno">  140</span>                    res-&gt;end();</div>
-<div class="line"><span class="lineno">  141</span>                });</div>
-<div class="line"><span class="lineno">  142</span>        });</div>
-<div class="line"><span class="lineno">  143</span>    <a class="code hl_function" href="#ab024e3c77aeb1487da4b33877cdfc1fb">router</a>.<a class="code hl_function" href="classexpress_1_1Router.html#aa6c295b187e6cb8a7bc74a18de61e841">get</a>(<span class="stringliteral">&quot;/account/:userId(\\d*)/:userName&quot;</span>, [&amp;db] <a class="code hl_define" href="Router_8h.html#a8b7131df91fe7a961e2cdadcedb55232">APPLICATION</a>(req, res) { <span class="comment">// http://localhost:8080/account/123/perfectNDSgroup</span></div>
-<div class="line"><span class="lineno">  144</span>        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Show account of&quot;</span>;</div>
-<div class="line"><span class="lineno">  145</span>        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;UserId: &quot;</span> &lt;&lt; req-&gt;params[<span class="stringliteral">&quot;userId&quot;</span>];</div>
-<div class="line"><span class="lineno">  146</span>        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;UserName: &quot;</span> &lt;&lt; req-&gt;params[<span class="stringliteral">&quot;userName&quot;</span>];</div>
-<div class="line"><span class="lineno">  147</span> </div>
-<div class="line"><span class="lineno">  148</span>        <span class="keyword">const</span> std::string response = <span class="stringliteral">&quot;&lt;html&gt;&quot;</span></div>
-<div class="line"><span class="lineno">  149</span>                                     <span class="stringliteral">&quot;  &lt;head&gt;&quot;</span></div>
-<div class="line"><span class="lineno">  150</span>                                     <span class="stringliteral">&quot;    &lt;title&gt;Response from snode.c&lt;/title&gt;&quot;</span></div>
-<div class="line"><span class="lineno">  151</span>                                     <span class="stringliteral">&quot;  &lt;/head&gt;&quot;</span></div>
-<div class="line"><span class="lineno">  152</span>                                     <span class="stringliteral">&quot;  &lt;body&gt;&quot;</span></div>
-<div class="line"><span class="lineno">  153</span>                                     <span class="stringliteral">&quot;    &lt;h1&gt;Regex return&lt;/h1&gt;&quot;</span></div>
-<div class="line"><span class="lineno">  154</span>                                     <span class="stringliteral">&quot;    &lt;ul&gt;&quot;</span></div>
-<div class="line"><span class="lineno">  155</span>                                     <span class="stringliteral">&quot;      &lt;li&gt;UserId: &quot;</span> +</div>
-<div class="line"><span class="lineno">  156</span>                                     req-&gt;params[<span class="stringliteral">&quot;userId&quot;</span>] +</div>
-<div class="line"><span class="lineno">  157</span>                                     <span class="stringliteral">&quot;      &lt;/li&gt;&quot;</span></div>
-<div class="line"><span class="lineno">  158</span>                                     <span class="stringliteral">&quot;      &lt;li&gt;UserName: &quot;</span> +</div>
-<div class="line"><span class="lineno">  159</span>                                     req-&gt;params[<span class="stringliteral">&quot;userName&quot;</span>] +</div>
-<div class="line"><span class="lineno">  160</span>                                     <span class="stringliteral">&quot;      &lt;/li&gt;&quot;</span></div>
-<div class="line"><span class="lineno">  161</span>                                     <span class="stringliteral">&quot;    &lt;/ul&gt;&quot;</span></div>
-<div class="line"><span class="lineno">  162</span>                                     <span class="stringliteral">&quot;  &lt;/body&gt;&quot;</span></div>
-<div class="line"><span class="lineno">  163</span>                                     <span class="stringliteral">&quot;&lt;/html&gt;&quot;</span>;</div>
-<div class="line"><span class="lineno">  164</span> </div>
-<div class="line"><span class="lineno">  165</span>        <span class="keyword">const</span> std::string userId = req-&gt;params[<span class="stringliteral">&quot;userId&quot;</span>];</div>
-<div class="line"><span class="lineno">  166</span>        <span class="keyword">const</span> std::string userName = req-&gt;params[<span class="stringliteral">&quot;userName&quot;</span>];</div>
-<div class="line"><span class="lineno">  167</span> </div>
-<div class="line"><span class="lineno">  168</span>        db.<a class="code hl_function" href="classdatabase_1_1mariadb_1_1MariaDBClientASyncAPI.html#ae48fdd9303c37937eb76d78030ef2964">exec</a>(</div>
-<div class="line"><span class="lineno">  169</span>            <span class="stringliteral">&quot;INSERT INTO `snodec`(`username`, `password`) VALUES (&#39;&quot;</span> + userId + <span class="stringliteral">&quot;&#39;,&#39;&quot;</span> + userName + <span class="stringliteral">&quot;&#39;)&quot;</span>,</div>
-<div class="line"><span class="lineno">  170</span>            [userId, userName]() {</div>
-<div class="line"><span class="lineno">  171</span>                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Inserted: -&gt; &quot;</span> &lt;&lt; userId &lt;&lt; <span class="stringliteral">&quot; - &quot;</span> &lt;&lt; userName;</div>
-<div class="line"><span class="lineno">  172</span>            },</div>
-<div class="line"><span class="lineno">  173</span>            [](<span class="keyword">const</span> std::string&amp; errorString, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> errorNumber) {</div>
-<div class="line"><span class="lineno">  174</span>                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Error: &quot;</span> &lt;&lt; errorString &lt;&lt; <span class="stringliteral">&quot; : &quot;</span> &lt;&lt; errorNumber;</div>
-<div class="line"><span class="lineno">  175</span>            });</div>
-<div class="line"><span class="lineno">  176</span> </div>
-<div class="line"><span class="lineno">  177</span>        res-&gt;send(response);</div>
-<div class="line"><span class="lineno">  178</span>    });</div>
-<div class="line"><span class="lineno">  179</span>    <a class="code hl_function" href="#ab024e3c77aeb1487da4b33877cdfc1fb">router</a>.<a class="code hl_function" href="classexpress_1_1Router.html#aa6c295b187e6cb8a7bc74a18de61e841">get</a>(<span class="stringliteral">&quot;/asdf/:testRegex1(d\\d{3}e)/jklö/:testRegex2&quot;</span>, [] <a class="code hl_define" href="Router_8h.html#a8b7131df91fe7a961e2cdadcedb55232">APPLICATION</a>(req, res) { <span class="comment">// http://localhost:8080/asdf/d123e/jklö/hallo</span></div>
-<div class="line"><span class="lineno">  180</span>        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Testing Regex&quot;</span>;</div>
-<div class="line"><span class="lineno">  181</span>        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Regex1: &quot;</span> &lt;&lt; req-&gt;params[<span class="stringliteral">&quot;testRegex1&quot;</span>];</div>
-<div class="line"><span class="lineno">  182</span>        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Regex2: &quot;</span> &lt;&lt; req-&gt;params[<span class="stringliteral">&quot;testRegex2&quot;</span>];</div>
-<div class="line"><span class="lineno">  183</span> </div>
-<div class="line"><span class="lineno">  184</span>        <span class="keyword">const</span> std::string response = <span class="stringliteral">&quot;&lt;html&gt;&quot;</span></div>
-<div class="line"><span class="lineno">  185</span>                                     <span class="stringliteral">&quot;  &lt;head&gt;&quot;</span></div>
-<div class="line"><span class="lineno">  186</span>                                     <span class="stringliteral">&quot;    &lt;title&gt;Response from snode.c&lt;/title&gt;&quot;</span></div>
-<div class="line"><span class="lineno">  187</span>                                     <span class="stringliteral">&quot;  &lt;/head&gt;&quot;</span></div>
-<div class="line"><span class="lineno">  188</span>                                     <span class="stringliteral">&quot;  &lt;body&gt;&quot;</span></div>
-<div class="line"><span class="lineno">  189</span>                                     <span class="stringliteral">&quot;    &lt;h1&gt;Regex return&lt;/h1&gt;&quot;</span></div>
-<div class="line"><span class="lineno">  190</span>                                     <span class="stringliteral">&quot;    &lt;ul&gt;&quot;</span></div>
-<div class="line"><span class="lineno">  191</span>                                     <span class="stringliteral">&quot;      &lt;li&gt;Regex 1: &quot;</span> +</div>
-<div class="line"><span class="lineno">  192</span>                                     req-&gt;params[<span class="stringliteral">&quot;testRegex1&quot;</span>] +</div>
-<div class="line"><span class="lineno">  193</span>                                     <span class="stringliteral">&quot;      &lt;/li&gt;&quot;</span></div>
-<div class="line"><span class="lineno">  194</span>                                     <span class="stringliteral">&quot;      &lt;li&gt;Regex 2: &quot;</span> +</div>
-<div class="line"><span class="lineno">  195</span>                                     req-&gt;params[<span class="stringliteral">&quot;testRegex2&quot;</span>] +</div>
-<div class="line"><span class="lineno">  196</span>                                     <span class="stringliteral">&quot;      &lt;/li&gt;&quot;</span></div>
-<div class="line"><span class="lineno">  197</span>                                     <span class="stringliteral">&quot;    &lt;/ul&gt;&quot;</span></div>
-<div class="line"><span class="lineno">  198</span>                                     <span class="stringliteral">&quot;  &lt;/body&gt;&quot;</span></div>
-<div class="line"><span class="lineno">  199</span>                                     <span class="stringliteral">&quot;&lt;/html&gt;&quot;</span>;</div>
-<div class="line"><span class="lineno">  200</span> </div>
-<div class="line"><span class="lineno">  201</span>        res-&gt;send(response);</div>
-<div class="line"><span class="lineno">  202</span>    });</div>
-<div class="line"><span class="lineno">  203</span>    <a class="code hl_function" href="#ab024e3c77aeb1487da4b33877cdfc1fb">router</a>.<a class="code hl_function" href="classexpress_1_1Router.html#aa6c295b187e6cb8a7bc74a18de61e841">get</a>(<span class="stringliteral">&quot;/search/:search&quot;</span>, [] <a class="code hl_define" href="Router_8h.html#a8b7131df91fe7a961e2cdadcedb55232">APPLICATION</a>(req, res) { <span class="comment">// http://localhost:8080/search/buxtehude123</span></div>
-<div class="line"><span class="lineno">  204</span>        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Show Search of&quot;</span>;</div>
-<div class="line"><span class="lineno">  205</span>        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Search: &quot;</span> &lt;&lt; req-&gt;params[<span class="stringliteral">&quot;search&quot;</span>];</div>
-<div class="line"><span class="lineno">  206</span>        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Queries: &quot;</span> &lt;&lt; req-&gt;query(<span class="stringliteral">&quot;test&quot;</span>);</div>
-<div class="line"><span class="lineno">  207</span> </div>
-<div class="line"><span class="lineno">  208</span>        res-&gt;send(req-&gt;params[<span class="stringliteral">&quot;search&quot;</span>]);</div>
-<div class="line"><span class="lineno">  209</span>    });</div>
-<div class="line"><span class="lineno">  210</span>    <a class="code hl_function" href="#ab024e3c77aeb1487da4b33877cdfc1fb">router</a>.<a class="code hl_function" href="classexpress_1_1Router.html#a9f5c02a219a67bf1fc031bdbf71b7566">use</a>([] <a class="code hl_define" href="Router_8h.html#a8b7131df91fe7a961e2cdadcedb55232">APPLICATION</a>(req, res) {</div>
-<div class="line"><span class="lineno">  211</span>        res-&gt;status(404).send(<span class="stringliteral">&quot;Not found: &quot;</span> + req-&gt;url);</div>
-<div class="line"><span class="lineno">  212</span>    });</div>
-<div class="line"><span class="lineno">  213</span> </div>
-<div class="line"><span class="lineno">  214</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="#ab024e3c77aeb1487da4b33877cdfc1fb">router</a>;</div>
-<div class="line"><span class="lineno">  215</span>}</div>
-<div class="ttc" id="aRouter_8h_html_a8b7131df91fe7a961e2cdadcedb55232"><div class="ttname"><a href="Router_8h.html#a8b7131df91fe7a961e2cdadcedb55232">APPLICATION</a></div><div class="ttdeci">#define APPLICATION(req, res)</div><div class="ttdef"><b>Definition</b> <a href="Router_8h_source.html#l00045">Router.h:45</a></div></div>
-<div class="ttc" id="aRouter_8h_html_ac5313b926a3bc0fb106bffb31e93dc71"><div class="ttname"><a href="Router_8h.html#ac5313b926a3bc0fb106bffb31e93dc71">MIDDLEWARE</a></div><div class="ttdeci">#define MIDDLEWARE(req, res, next)</div><div class="ttdef"><b>Definition</b> <a href="Router_8h_source.html#l00040">Router.h:40</a></div></div>
-<div class="ttc" id="aclassdatabase_1_1mariadb_1_1MariaDBClientASyncAPI_html_ae48fdd9303c37937eb76d78030ef2964"><div class="ttname"><a href="classdatabase_1_1mariadb_1_1MariaDBClientASyncAPI.html#ae48fdd9303c37937eb76d78030ef2964">database::mariadb::MariaDBClientASyncAPI::exec</a></div><div class="ttdeci">MariaDBCommandSequence &amp; exec(const std::string &amp;sql, const std::function&lt; void(void)&gt; &amp;onExec, const std::function&lt; void(const std::string &amp;, unsigned int)&gt; &amp;onError)</div><div class="ttdef"><b>Definition</b> <a href="MariaDBClientASyncAPI_8cpp_source.html#l00066">MariaDBClientASyncAPI.cpp:66</a></div></div>
-<div class="ttc" id="aclassdatabase_1_1mariadb_1_1MariaDBClientASyncAPI_html_afeb3104403ea3ad19694b6ef7da49553"><div class="ttname"><a href="classdatabase_1_1mariadb_1_1MariaDBClientASyncAPI.html#afeb3104403ea3ad19694b6ef7da49553">database::mariadb::MariaDBClientASyncAPI::query</a></div><div class="ttdeci">MariaDBCommandSequence &amp; query(const std::string &amp;sql, const std::function&lt; void(const MYSQL_ROW)&gt; &amp;onQuery, const std::function&lt; void(const std::string &amp;, unsigned int)&gt; &amp;onError)</div><div class="ttdef"><b>Definition</b> <a href="MariaDBClientASyncAPI_8cpp_source.html#l00044">MariaDBClientASyncAPI.cpp:44</a></div></div>
-<div class="ttc" id="aclassexpress_1_1Router_html"><div class="ttname"><a href="classexpress_1_1Router.html">express::Router</a></div><div class="ttdef"><b>Definition</b> <a href="Router_8h_source.html#l00075">Router.h:75</a></div></div>
-<div class="ttc" id="aclassexpress_1_1Router_html_a9f5c02a219a67bf1fc031bdbf71b7566"><div class="ttname"><a href="classexpress_1_1Router.html#a9f5c02a219a67bf1fc031bdbf71b7566">express::Router::use</a></div><div class="ttdeci">Route &amp; use(const Router &amp;router) const</div><div class="ttdef"><b>Definition</b> <a href="Router_8cpp_source.html#l00060">Router.cpp:60</a></div></div>
-<div class="ttc" id="aclassexpress_1_1Router_html_aa6c295b187e6cb8a7bc74a18de61e841"><div class="ttname"><a href="classexpress_1_1Router.html#aa6c295b187e6cb8a7bc74a18de61e841">express::Router::get</a></div><div class="ttdeci">Route &amp; get(const Router &amp;router) const</div><div class="ttdef"><b>Definition</b> <a href="Router_8cpp_source.html#l00062">Router.cpp:62</a></div></div>
+<p class="definition">Definition at line <a class="el" href="testregex_8cpp_source.html#l00068">68</a> of file <a class="el" href="testregex_8cpp_source.html">testregex.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   68</span>                                                {</div>
+<div class="line"><span class="lineno">   69</span>    <span class="keyword">const</span> <a class="code hl_class" href="classexpress_1_1Router.html">Router</a> <a class="code hl_function" href="#ab024e3c77aeb1487da4b33877cdfc1fb">router</a>;</div>
+<div class="line"><span class="lineno">   70</span> </div>
+<div class="line"><span class="lineno">   71</span>    <a class="code hl_function" href="#ab024e3c77aeb1487da4b33877cdfc1fb">router</a>.<a class="code hl_function" href="classexpress_1_1Router.html#aa6c295b187e6cb8a7bc74a18de61e841">get</a>(<span class="stringliteral">&quot;/test/:variable(\\d)/:uri&quot;</span>, [] <a class="code hl_define" href="Router_8h.html#a8b7131df91fe7a961e2cdadcedb55232">APPLICATION</a>(req, res) { <span class="comment">// http://localhost:8080/test/1/urlstring</span></div>
+<div class="line"><span class="lineno">   72</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;TEST&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">   73</span>    });</div>
+<div class="line"><span class="lineno">   74</span>    <a class="code hl_function" href="#ab024e3c77aeb1487da4b33877cdfc1fb">router</a></div>
+<div class="line"><span class="lineno">   75</span>        .<a class="code hl_function" href="classexpress_1_1Router.html#aa6c295b187e6cb8a7bc74a18de61e841">get</a>(</div>
+<div class="line"><span class="lineno">   76</span>            <span class="stringliteral">&quot;/query/:userId&quot;</span>,</div>
+<div class="line"><span class="lineno">   77</span>            [] <a class="code hl_define" href="Router_8h.html#ac5313b926a3bc0fb106bffb31e93dc71">MIDDLEWARE</a>(req, res, next) {</div>
+<div class="line"><span class="lineno">   78</span>                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Move on to the next route to query database&quot;</span>;</div>
+<div class="line"><span class="lineno">   79</span>                next();</div>
+<div class="line"><span class="lineno">   80</span>            },</div>
+<div class="line"><span class="lineno">   81</span>            [&amp;db] <a class="code hl_define" href="Router_8h.html#ac5313b926a3bc0fb106bffb31e93dc71">MIDDLEWARE</a>(req, res, next) { <span class="comment">// http://localhost:8080/query/123</span></div>
+<div class="line"><span class="lineno">   82</span>                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;UserId: &quot;</span> &lt;&lt; req-&gt;params[<span class="stringliteral">&quot;userId&quot;</span>];</div>
+<div class="line"><span class="lineno">   83</span>                std::string userId = req-&gt;params[<span class="stringliteral">&quot;userId&quot;</span>];</div>
+<div class="line"><span class="lineno">   84</span> </div>
+<div class="line"><span class="lineno">   85</span>                req-&gt;setAttribute&lt;std::string, <span class="stringliteral">&quot;html-table&quot;</span>&gt;(std::string());</div>
+<div class="line"><span class="lineno">   86</span> </div>
+<div class="line"><span class="lineno">   87</span>                req-&gt;getAttribute&lt;std::string, <span class="stringliteral">&quot;html-table&quot;</span>&gt;([&amp;userId](std::string&amp; table) {</div>
+<div class="line"><span class="lineno">   88</span>                    table = <span class="stringliteral">&quot;&lt;html&gt;\n&quot;</span></div>
+<div class="line"><span class="lineno">   89</span>                            <span class="stringliteral">&quot;  &lt;head&gt;\n&quot;</span></div>
+<div class="line"><span class="lineno">   90</span>                            <span class="stringliteral">&quot;    &lt;title&gt;&quot;</span></div>
+<div class="line"><span class="lineno">   91</span>                            <span class="stringliteral">&quot;Response from snode.c for &quot;</span> +</div>
+<div class="line"><span class="lineno">   92</span>                            userId +</div>
+<div class="line"><span class="lineno">   93</span>                            <span class="stringliteral">&quot;\n&quot;</span></div>
+<div class="line"><span class="lineno">   94</span>                            <span class="stringliteral">&quot;    &lt;/title&gt;\n&quot;</span></div>
+<div class="line"><span class="lineno">   95</span>                            <span class="stringliteral">&quot;  &lt;/head&gt;\n&quot;</span></div>
+<div class="line"><span class="lineno">   96</span>                            <span class="stringliteral">&quot;  &lt;body&gt;\n&quot;</span></div>
+<div class="line"><span class="lineno">   97</span>                            <span class="stringliteral">&quot;    &lt;h1&gt;Return for &quot;</span> +</div>
+<div class="line"><span class="lineno">   98</span>                            userId +</div>
+<div class="line"><span class="lineno">   99</span>                            <span class="stringliteral">&quot;\n&quot;</span></div>
+<div class="line"><span class="lineno">  100</span>                            <span class="stringliteral">&quot;    &lt;/h1&gt;\n&quot;</span></div>
+<div class="line"><span class="lineno">  101</span>                            <span class="stringliteral">&quot;  &lt;body&gt;\n&quot;</span></div>
+<div class="line"><span class="lineno">  102</span>                            <span class="stringliteral">&quot;    &lt;table border = \&quot;1\&quot;&gt;\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  103</span>                });</div>
+<div class="line"><span class="lineno">  104</span> </div>
+<div class="line"><span class="lineno">  105</span>                <span class="keywordtype">int</span> i = 0;</div>
+<div class="line"><span class="lineno">  106</span>                db.<a class="code hl_function" href="classdatabase_1_1mariadb_1_1MariaDBClientASyncAPI.html#afeb3104403ea3ad19694b6ef7da49553">query</a>(</div>
+<div class="line"><span class="lineno">  107</span>                    <span class="stringliteral">&quot;SELECT * FROM snodec where username = &#39;&quot;</span> + userId + <span class="stringliteral">&quot;&#39;&quot;</span>,</div>
+<div class="line"><span class="lineno">  108</span>                    [next, req, i](<span class="keyword">const</span> MYSQL_ROW row) <span class="keyword">mutable</span> {</div>
+<div class="line"><span class="lineno">  109</span>                        <span class="keywordflow">if</span> (row != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><span class="lineno">  110</span>                            i++;</div>
+<div class="line"><span class="lineno">  111</span>                            req-&gt;getAttribute&lt;std::string, <span class="stringliteral">&quot;html-table&quot;</span>&gt;([row, &amp;i](std::string&amp; table) {</div>
+<div class="line"><span class="lineno">  112</span>                                table.append(<span class="stringliteral">&quot;      &lt;tr&gt;\n&quot;</span></div>
+<div class="line"><span class="lineno">  113</span>                                             <span class="stringliteral">&quot;        &lt;td&gt;\n&quot;</span> +</div>
+<div class="line"><span class="lineno">  114</span>                                             std::to_string(i) +</div>
+<div class="line"><span class="lineno">  115</span>                                             <span class="stringliteral">&quot;\n&quot;</span></div>
+<div class="line"><span class="lineno">  116</span>                                             <span class="stringliteral">&quot;        &lt;/td&gt;\n&quot;</span></div>
+<div class="line"><span class="lineno">  117</span>                                             <span class="stringliteral">&quot;        &lt;td&gt;\n&quot;</span> +</div>
+<div class="line"><span class="lineno">  118</span>                                             std::string(row[0]) +</div>
+<div class="line"><span class="lineno">  119</span>                                             <span class="stringliteral">&quot;\n&quot;</span></div>
+<div class="line"><span class="lineno">  120</span>                                             <span class="stringliteral">&quot;        &lt;/td&gt;\n&quot;</span></div>
+<div class="line"><span class="lineno">  121</span>                                             <span class="stringliteral">&quot;        &lt;td&gt;\n&quot;</span> +</div>
+<div class="line"><span class="lineno">  122</span>                                             row[1] +</div>
+<div class="line"><span class="lineno">  123</span>                                             <span class="stringliteral">&quot;\n&quot;</span></div>
+<div class="line"><span class="lineno">  124</span>                                             <span class="stringliteral">&quot;        &lt;/td&gt;\n&quot;</span></div>
+<div class="line"><span class="lineno">  125</span>                                             <span class="stringliteral">&quot;      &lt;/tr&gt;\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  126</span>                            });</div>
+<div class="line"><span class="lineno">  127</span>                        } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  128</span>                            req-&gt;getAttribute&lt;std::string, <span class="stringliteral">&quot;html-table&quot;</span>&gt;([](std::string&amp; table) {</div>
+<div class="line"><span class="lineno">  129</span>                                table.append(std::string(<span class="stringliteral">&quot;    &lt;/table&gt;\n&quot;</span></div>
+<div class="line"><span class="lineno">  130</span>                                                         <span class="stringliteral">&quot;  &lt;/body&gt;\n&quot;</span></div>
+<div class="line"><span class="lineno">  131</span>                                                         <span class="stringliteral">&quot;&lt;/html&gt;\n&quot;</span>));</div>
+<div class="line"><span class="lineno">  132</span>                            });</div>
+<div class="line"><span class="lineno">  133</span>                            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Move on to the next route to send result&quot;</span>;</div>
+<div class="line"><span class="lineno">  134</span>                            next();</div>
+<div class="line"><span class="lineno">  135</span>                        }</div>
+<div class="line"><span class="lineno">  136</span>                    },</div>
+<div class="line"><span class="lineno">  137</span>                    [res, userId](<span class="keyword">const</span> std::string&amp; errorString, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> errorNumber) {</div>
+<div class="line"><span class="lineno">  138</span>                        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Error: &quot;</span> &lt;&lt; errorString &lt;&lt; <span class="stringliteral">&quot; : &quot;</span> &lt;&lt; errorNumber;</div>
+<div class="line"><span class="lineno">  139</span>                        res-&gt;status(404).send(userId + <span class="stringliteral">&quot;: &quot;</span> + errorString + <span class="stringliteral">&quot; - &quot;</span> + std::to_string(errorNumber));</div>
+<div class="line"><span class="lineno">  140</span>                    });</div>
+<div class="line"><span class="lineno">  141</span>            },</div>
+<div class="line"><span class="lineno">  142</span>            [] <a class="code hl_define" href="Router_8h.html#ac5313b926a3bc0fb106bffb31e93dc71">MIDDLEWARE</a>(req, res, next) {</div>
+<div class="line"><span class="lineno">  143</span>                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;And again 1: Move on to the next route to send result&quot;</span>;</div>
+<div class="line"><span class="lineno">  144</span>                next();</div>
+<div class="line"><span class="lineno">  145</span>            },</div>
+<div class="line"><span class="lineno">  146</span>            [] <a class="code hl_define" href="Router_8h.html#ac5313b926a3bc0fb106bffb31e93dc71">MIDDLEWARE</a>(req, res, next) {</div>
+<div class="line"><span class="lineno">  147</span>                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;And again 2: Move on to the next route to send result&quot;</span>;</div>
+<div class="line"><span class="lineno">  148</span>                next();</div>
+<div class="line"><span class="lineno">  149</span>            })</div>
+<div class="line"><span class="lineno">  150</span>        .get([] <a class="code hl_define" href="Router_8h.html#ac5313b926a3bc0fb106bffb31e93dc71">MIDDLEWARE</a>(req, res, next) {</div>
+<div class="line"><span class="lineno">  151</span>            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;And again 3: Move on to the next route to send result&quot;</span>;</div>
+<div class="line"><span class="lineno">  152</span>            next();</div>
+<div class="line"><span class="lineno">  153</span>        })</div>
+<div class="line"><span class="lineno">  154</span>        .get([] <a class="code hl_define" href="Router_8h.html#a8b7131df91fe7a961e2cdadcedb55232">APPLICATION</a>(req, res) {</div>
+<div class="line"><span class="lineno">  155</span>            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;SendResult&quot;</span>;</div>
+<div class="line"><span class="lineno">  156</span> </div>
+<div class="line"><span class="lineno">  157</span>            req-&gt;getAttribute&lt;std::string, <span class="stringliteral">&quot;html-table&quot;</span>&gt;(</div>
+<div class="line"><span class="lineno">  158</span>                [res](std::string&amp; table) {</div>
+<div class="line"><span class="lineno">  159</span>                    res-&gt;send(table);</div>
+<div class="line"><span class="lineno">  160</span>                },</div>
+<div class="line"><span class="lineno">  161</span>                [res](<span class="keyword">const</span> std::string&amp;) {</div>
+<div class="line"><span class="lineno">  162</span>                    res-&gt;end();</div>
+<div class="line"><span class="lineno">  163</span>                });</div>
+<div class="line"><span class="lineno">  164</span>        });</div>
+<div class="line"><span class="lineno">  165</span>    <a class="code hl_function" href="#ab024e3c77aeb1487da4b33877cdfc1fb">router</a>.<a class="code hl_function" href="classexpress_1_1Router.html#aa6c295b187e6cb8a7bc74a18de61e841">get</a>(<span class="stringliteral">&quot;/account/:userId(\\d*)/:userName&quot;</span>, [&amp;db] <a class="code hl_define" href="Router_8h.html#a8b7131df91fe7a961e2cdadcedb55232">APPLICATION</a>(req, res) { <span class="comment">// http://localhost:8080/account/123/perfectNDSgroup</span></div>
+<div class="line"><span class="lineno">  166</span>        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Show account of&quot;</span>;</div>
+<div class="line"><span class="lineno">  167</span>        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;UserId: &quot;</span> &lt;&lt; req-&gt;params[<span class="stringliteral">&quot;userId&quot;</span>];</div>
+<div class="line"><span class="lineno">  168</span>        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;UserName: &quot;</span> &lt;&lt; req-&gt;params[<span class="stringliteral">&quot;userName&quot;</span>];</div>
+<div class="line"><span class="lineno">  169</span> </div>
+<div class="line"><span class="lineno">  170</span>        <span class="keyword">const</span> std::string response = <span class="stringliteral">&quot;&lt;html&gt;&quot;</span></div>
+<div class="line"><span class="lineno">  171</span>                                     <span class="stringliteral">&quot;  &lt;head&gt;&quot;</span></div>
+<div class="line"><span class="lineno">  172</span>                                     <span class="stringliteral">&quot;    &lt;title&gt;Response from snode.c&lt;/title&gt;&quot;</span></div>
+<div class="line"><span class="lineno">  173</span>                                     <span class="stringliteral">&quot;  &lt;/head&gt;&quot;</span></div>
+<div class="line"><span class="lineno">  174</span>                                     <span class="stringliteral">&quot;  &lt;body&gt;&quot;</span></div>
+<div class="line"><span class="lineno">  175</span>                                     <span class="stringliteral">&quot;    &lt;h1&gt;Regex return&lt;/h1&gt;&quot;</span></div>
+<div class="line"><span class="lineno">  176</span>                                     <span class="stringliteral">&quot;    &lt;ul&gt;&quot;</span></div>
+<div class="line"><span class="lineno">  177</span>                                     <span class="stringliteral">&quot;      &lt;li&gt;UserId: &quot;</span> +</div>
+<div class="line"><span class="lineno">  178</span>                                     req-&gt;params[<span class="stringliteral">&quot;userId&quot;</span>] +</div>
+<div class="line"><span class="lineno">  179</span>                                     <span class="stringliteral">&quot;      &lt;/li&gt;&quot;</span></div>
+<div class="line"><span class="lineno">  180</span>                                     <span class="stringliteral">&quot;      &lt;li&gt;UserName: &quot;</span> +</div>
+<div class="line"><span class="lineno">  181</span>                                     req-&gt;params[<span class="stringliteral">&quot;userName&quot;</span>] +</div>
+<div class="line"><span class="lineno">  182</span>                                     <span class="stringliteral">&quot;      &lt;/li&gt;&quot;</span></div>
+<div class="line"><span class="lineno">  183</span>                                     <span class="stringliteral">&quot;    &lt;/ul&gt;&quot;</span></div>
+<div class="line"><span class="lineno">  184</span>                                     <span class="stringliteral">&quot;  &lt;/body&gt;&quot;</span></div>
+<div class="line"><span class="lineno">  185</span>                                     <span class="stringliteral">&quot;&lt;/html&gt;&quot;</span>;</div>
+<div class="line"><span class="lineno">  186</span> </div>
+<div class="line"><span class="lineno">  187</span>        <span class="keyword">const</span> std::string userId = req-&gt;params[<span class="stringliteral">&quot;userId&quot;</span>];</div>
+<div class="line"><span class="lineno">  188</span>        <span class="keyword">const</span> std::string userName = req-&gt;params[<span class="stringliteral">&quot;userName&quot;</span>];</div>
+<div class="line"><span class="lineno">  189</span> </div>
+<div class="line"><span class="lineno">  190</span>        db.<a class="code hl_function" href="classdatabase_1_1mariadb_1_1MariaDBClientASyncAPI.html#ae48fdd9303c37937eb76d78030ef2964">exec</a>(</div>
+<div class="line"><span class="lineno">  191</span>            <span class="stringliteral">&quot;INSERT INTO `snodec`(`username`, `password`) VALUES (&#39;&quot;</span> + userId + <span class="stringliteral">&quot;&#39;,&#39;&quot;</span> + userName + <span class="stringliteral">&quot;&#39;)&quot;</span>,</div>
+<div class="line"><span class="lineno">  192</span>            [userId, userName]() {</div>
+<div class="line"><span class="lineno">  193</span>                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Inserted: -&gt; &quot;</span> &lt;&lt; userId &lt;&lt; <span class="stringliteral">&quot; - &quot;</span> &lt;&lt; userName;</div>
+<div class="line"><span class="lineno">  194</span>            },</div>
+<div class="line"><span class="lineno">  195</span>            [](<span class="keyword">const</span> std::string&amp; errorString, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> errorNumber) {</div>
+<div class="line"><span class="lineno">  196</span>                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Error: &quot;</span> &lt;&lt; errorString &lt;&lt; <span class="stringliteral">&quot; : &quot;</span> &lt;&lt; errorNumber;</div>
+<div class="line"><span class="lineno">  197</span>            });</div>
+<div class="line"><span class="lineno">  198</span> </div>
+<div class="line"><span class="lineno">  199</span>        res-&gt;send(response);</div>
+<div class="line"><span class="lineno">  200</span>    });</div>
+<div class="line"><span class="lineno">  201</span>    <a class="code hl_function" href="#ab024e3c77aeb1487da4b33877cdfc1fb">router</a>.<a class="code hl_function" href="classexpress_1_1Router.html#aa6c295b187e6cb8a7bc74a18de61e841">get</a>(<span class="stringliteral">&quot;/asdf/:testRegex1(d\\d{3}e)/jklö/:testRegex2&quot;</span>, [] <a class="code hl_define" href="Router_8h.html#a8b7131df91fe7a961e2cdadcedb55232">APPLICATION</a>(req, res) { <span class="comment">// http://localhost:8080/asdf/d123e/jklö/hallo</span></div>
+<div class="line"><span class="lineno">  202</span>        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Testing Regex&quot;</span>;</div>
+<div class="line"><span class="lineno">  203</span>        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Regex1: &quot;</span> &lt;&lt; req-&gt;params[<span class="stringliteral">&quot;testRegex1&quot;</span>];</div>
+<div class="line"><span class="lineno">  204</span>        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Regex2: &quot;</span> &lt;&lt; req-&gt;params[<span class="stringliteral">&quot;testRegex2&quot;</span>];</div>
+<div class="line"><span class="lineno">  205</span> </div>
+<div class="line"><span class="lineno">  206</span>        <span class="keyword">const</span> std::string response = <span class="stringliteral">&quot;&lt;html&gt;&quot;</span></div>
+<div class="line"><span class="lineno">  207</span>                                     <span class="stringliteral">&quot;  &lt;head&gt;&quot;</span></div>
+<div class="line"><span class="lineno">  208</span>                                     <span class="stringliteral">&quot;    &lt;title&gt;Response from snode.c&lt;/title&gt;&quot;</span></div>
+<div class="line"><span class="lineno">  209</span>                                     <span class="stringliteral">&quot;  &lt;/head&gt;&quot;</span></div>
+<div class="line"><span class="lineno">  210</span>                                     <span class="stringliteral">&quot;  &lt;body&gt;&quot;</span></div>
+<div class="line"><span class="lineno">  211</span>                                     <span class="stringliteral">&quot;    &lt;h1&gt;Regex return&lt;/h1&gt;&quot;</span></div>
+<div class="line"><span class="lineno">  212</span>                                     <span class="stringliteral">&quot;    &lt;ul&gt;&quot;</span></div>
+<div class="line"><span class="lineno">  213</span>                                     <span class="stringliteral">&quot;      &lt;li&gt;Regex 1: &quot;</span> +</div>
+<div class="line"><span class="lineno">  214</span>                                     req-&gt;params[<span class="stringliteral">&quot;testRegex1&quot;</span>] +</div>
+<div class="line"><span class="lineno">  215</span>                                     <span class="stringliteral">&quot;      &lt;/li&gt;&quot;</span></div>
+<div class="line"><span class="lineno">  216</span>                                     <span class="stringliteral">&quot;      &lt;li&gt;Regex 2: &quot;</span> +</div>
+<div class="line"><span class="lineno">  217</span>                                     req-&gt;params[<span class="stringliteral">&quot;testRegex2&quot;</span>] +</div>
+<div class="line"><span class="lineno">  218</span>                                     <span class="stringliteral">&quot;      &lt;/li&gt;&quot;</span></div>
+<div class="line"><span class="lineno">  219</span>                                     <span class="stringliteral">&quot;    &lt;/ul&gt;&quot;</span></div>
+<div class="line"><span class="lineno">  220</span>                                     <span class="stringliteral">&quot;  &lt;/body&gt;&quot;</span></div>
+<div class="line"><span class="lineno">  221</span>                                     <span class="stringliteral">&quot;&lt;/html&gt;&quot;</span>;</div>
+<div class="line"><span class="lineno">  222</span> </div>
+<div class="line"><span class="lineno">  223</span>        res-&gt;send(response);</div>
+<div class="line"><span class="lineno">  224</span>    });</div>
+<div class="line"><span class="lineno">  225</span>    <a class="code hl_function" href="#ab024e3c77aeb1487da4b33877cdfc1fb">router</a>.<a class="code hl_function" href="classexpress_1_1Router.html#aa6c295b187e6cb8a7bc74a18de61e841">get</a>(<span class="stringliteral">&quot;/search/:search&quot;</span>, [] <a class="code hl_define" href="Router_8h.html#a8b7131df91fe7a961e2cdadcedb55232">APPLICATION</a>(req, res) { <span class="comment">// http://localhost:8080/search/buxtehude123</span></div>
+<div class="line"><span class="lineno">  226</span>        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Show Search of&quot;</span>;</div>
+<div class="line"><span class="lineno">  227</span>        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Search: &quot;</span> &lt;&lt; req-&gt;params[<span class="stringliteral">&quot;search&quot;</span>];</div>
+<div class="line"><span class="lineno">  228</span>        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Queries: &quot;</span> &lt;&lt; req-&gt;query(<span class="stringliteral">&quot;test&quot;</span>);</div>
+<div class="line"><span class="lineno">  229</span> </div>
+<div class="line"><span class="lineno">  230</span>        res-&gt;send(req-&gt;params[<span class="stringliteral">&quot;search&quot;</span>]);</div>
+<div class="line"><span class="lineno">  231</span>    });</div>
+<div class="line"><span class="lineno">  232</span>    <a class="code hl_function" href="#ab024e3c77aeb1487da4b33877cdfc1fb">router</a>.<a class="code hl_function" href="classexpress_1_1Router.html#a9f5c02a219a67bf1fc031bdbf71b7566">use</a>([] <a class="code hl_define" href="Router_8h.html#a8b7131df91fe7a961e2cdadcedb55232">APPLICATION</a>(req, res) {</div>
+<div class="line"><span class="lineno">  233</span>        res-&gt;status(404).send(<span class="stringliteral">&quot;Not found: &quot;</span> + req-&gt;url);</div>
+<div class="line"><span class="lineno">  234</span>    });</div>
+<div class="line"><span class="lineno">  235</span> </div>
+<div class="line"><span class="lineno">  236</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="#ab024e3c77aeb1487da4b33877cdfc1fb">router</a>;</div>
+<div class="line"><span class="lineno">  237</span>}</div>
+<div class="ttc" id="aRouter_8h_html_a8b7131df91fe7a961e2cdadcedb55232"><div class="ttname"><a href="Router_8h.html#a8b7131df91fe7a961e2cdadcedb55232">APPLICATION</a></div><div class="ttdeci">#define APPLICATION(req, res)</div><div class="ttdef"><b>Definition</b> <a href="Router_8h_source.html#l00067">Router.h:67</a></div></div>
+<div class="ttc" id="aRouter_8h_html_ac5313b926a3bc0fb106bffb31e93dc71"><div class="ttname"><a href="Router_8h.html#ac5313b926a3bc0fb106bffb31e93dc71">MIDDLEWARE</a></div><div class="ttdeci">#define MIDDLEWARE(req, res, next)</div><div class="ttdef"><b>Definition</b> <a href="Router_8h_source.html#l00062">Router.h:62</a></div></div>
+<div class="ttc" id="aclassdatabase_1_1mariadb_1_1MariaDBClientASyncAPI_html_ae48fdd9303c37937eb76d78030ef2964"><div class="ttname"><a href="classdatabase_1_1mariadb_1_1MariaDBClientASyncAPI.html#ae48fdd9303c37937eb76d78030ef2964">database::mariadb::MariaDBClientASyncAPI::exec</a></div><div class="ttdeci">MariaDBCommandSequence &amp; exec(const std::string &amp;sql, const std::function&lt; void(void)&gt; &amp;onExec, const std::function&lt; void(const std::string &amp;, unsigned int)&gt; &amp;onError)</div><div class="ttdef"><b>Definition</b> <a href="MariaDBClientASyncAPI_8cpp_source.html#l00088">MariaDBClientASyncAPI.cpp:88</a></div></div>
+<div class="ttc" id="aclassdatabase_1_1mariadb_1_1MariaDBClientASyncAPI_html_afeb3104403ea3ad19694b6ef7da49553"><div class="ttname"><a href="classdatabase_1_1mariadb_1_1MariaDBClientASyncAPI.html#afeb3104403ea3ad19694b6ef7da49553">database::mariadb::MariaDBClientASyncAPI::query</a></div><div class="ttdeci">MariaDBCommandSequence &amp; query(const std::string &amp;sql, const std::function&lt; void(const MYSQL_ROW)&gt; &amp;onQuery, const std::function&lt; void(const std::string &amp;, unsigned int)&gt; &amp;onError)</div><div class="ttdef"><b>Definition</b> <a href="MariaDBClientASyncAPI_8cpp_source.html#l00066">MariaDBClientASyncAPI.cpp:66</a></div></div>
+<div class="ttc" id="aclassexpress_1_1Router_html"><div class="ttname"><a href="classexpress_1_1Router.html">express::Router</a></div><div class="ttdef"><b>Definition</b> <a href="Router_8h_source.html#l00097">Router.h:97</a></div></div>
+<div class="ttc" id="aclassexpress_1_1Router_html_a9f5c02a219a67bf1fc031bdbf71b7566"><div class="ttname"><a href="classexpress_1_1Router.html#a9f5c02a219a67bf1fc031bdbf71b7566">express::Router::use</a></div><div class="ttdeci">Route &amp; use(const Router &amp;router) const</div><div class="ttdef"><b>Definition</b> <a href="Router_8cpp_source.html#l00082">Router.cpp:82</a></div></div>
+<div class="ttc" id="aclassexpress_1_1Router_html_aa6c295b187e6cb8a7bc74a18de61e841"><div class="ttname"><a href="classexpress_1_1Router.html#aa6c295b187e6cb8a7bc74a18de61e841">express::Router::get</a></div><div class="ttdeci">Route &amp; get(const Router &amp;router) const</div><div class="ttdef"><b>Definition</b> <a href="Router_8cpp_source.html#l00084">Router.cpp:84</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -542,7 +542,7 @@ Here is the call graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_9654b8d08f4bba4e84b362c5fd320bee.html">apps</a></li><li class="navelem"><a class="el" href="testregex_8cpp.html">testregex.cpp</a></li>
-    <li class="footer">Generated on Tue Feb 25 2025 14:03:09 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generated on Sun Mar 9 2025 01:34:38 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>

@@ -705,6 +705,7 @@ var hierarchy =
     [ "core::multiplexer::poll::PollFdsManager", "classcore_1_1multiplexer_1_1poll_1_1PollFdsManager.html", null ],
     [ "utils::PreserveErrno", "classutils_1_1PreserveErrno.html", null ],
     [ "utils::Random", "classutils_1_1Random.html", null ],
+    [ "core::multiplexer::poll::PollFdsManager::VarSizeTypeAllocator< T, S >::rebind< U >", "structcore_1_1multiplexer_1_1poll_1_1PollFdsManager_1_1VarSizeTypeAllocator_1_1rebind.html", null ],
     [ "web::websocket::Receiver", "classweb_1_1websocket_1_1Receiver.html", [
       [ "web::websocket::SubProtocolContext", "classweb_1_1websocket_1_1SubProtocolContext.html", [
         [ "web::websocket::SocketContextUpgrade< SubProtocol, web::http::client::Request, web::http::client::Response >", "classweb_1_1websocket_1_1SocketContextUpgrade.html", [
@@ -959,6 +960,7 @@ var hierarchy =
       [ "iot::mqtt::types::UInt8", "classiot_1_1mqtt_1_1types_1_1UInt8.html", null ]
     ] ],
     [ "utils::Uuid", "classutils_1_1Uuid.html", null ],
+    [ "core::multiplexer::poll::PollFdsManager::VarSizeTypeAllocator< T, S >", "classcore_1_1multiplexer_1_1poll_1_1PollFdsManager_1_1VarSizeTypeAllocator.html", null ],
     [ "WSSubProtocolRoleT", null, [
       [ "iot::mqtt::SubProtocol< WSSubProtocolRoleT >", "classiot_1_1mqtt_1_1SubProtocol.html", null ]
     ] ]

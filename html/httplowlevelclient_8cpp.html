@@ -114,7 +114,7 @@ $(function(){initNavTree('httplowlevelclient_8cpp.html',''); initResizable(true)
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for httplowlevelclient.cpp:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="httplowlevelclient_8cpp__incl.svg" width="3428" height="726"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="httplowlevelclient_8cpp__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 </div>
 <p><a href="httplowlevelclient_8cpp_source.html">Go to the source code of this file.</a></p>
@@ -183,72 +183,72 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="httplowlevelclient_8cpp_source.html#l00317">317</a> of file <a class="el" href="httplowlevelclient_8cpp_source.html">httplowlevelclient.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  317</span>                                 {</div>
-<div class="line"><span class="lineno">  318</span>    <a class="code hl_function" href="classcore_1_1SNodeC.html#a2c8b01c5fc6ecc3036cb48a76f76f3b5">core::SNodeC::init</a>(argc, argv);</div>
-<div class="line"><span class="lineno">  319</span> </div>
-<div class="line"><span class="lineno">  320</span>    {</div>
-<div class="line"><span class="lineno">  321</span>        <span class="keyword">const</span> <a class="code hl_typedef" href="namespacelegacy.html#a5cf8ceb021370a11d9b670263472600e">legacy::SocketAddress</a> legacyRemoteAddress(<span class="stringliteral">&quot;localhost&quot;</span>, 8080);</div>
-<div class="line"><span class="lineno">  322</span> </div>
-<div class="line"><span class="lineno">  323</span>        <span class="keyword">const</span> <a class="code hl_class" href="classnet_1_1in_1_1stream_1_1SocketClient.html">legacy::SocketClient</a> legacyClient = <a class="code hl_function" href="namespacelegacy.html#af964e2e82f4d4b80cea76cf218ba671c">legacy::getLegacyClient</a>();</div>
-<div class="line"><span class="lineno">  324</span> </div>
-<div class="line"><span class="lineno">  325</span>        legacyClient.<a class="code hl_function" href="classnet_1_1in_1_1stream_1_1SocketClient.html#afb0a0ad82eb97fb4f6ae9eef32c8e977">connect</a>(legacyRemoteAddress,</div>
-<div class="line"><span class="lineno">  326</span>                             [instanceName = legacyClient.<a class="code hl_function" href="classcore_1_1socket_1_1Socket.html#ac9b7df3682b2a24b5c7fce9bcff1c441">getConfig</a>().getInstanceName()](</div>
-<div class="line"><span class="lineno">  327</span>                                 <span class="keyword">const</span> <a class="code hl_typedef" href="namespacetls.html#afcb9219f4cf94a717de2044384768d63">tls::SocketAddress</a>&amp; socketAddress,</div>
-<div class="line"><span class="lineno">  328</span>                                 <span class="keyword">const</span> <a class="code hl_class" href="classcore_1_1socket_1_1State.html">core::socket::State</a>&amp; state) { <span class="comment">// example.com:81 simulate connnect timeout</span></div>
-<div class="line"><span class="lineno">  329</span>                                 switch (state) {</div>
-<div class="line"><span class="lineno">  330</span>                                     case core::socket::State::OK:</div>
-<div class="line"><span class="lineno">  331</span>                                         VLOG(1) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot;: connected to &#39;&quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
-<div class="line"><span class="lineno">  332</span>                                         break;</div>
-<div class="line"><span class="lineno">  333</span>                                     case core::socket::State::DISABLED:</div>
-<div class="line"><span class="lineno">  334</span>                                         VLOG(1) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot;: disabled&quot;</span>;</div>
-<div class="line"><span class="lineno">  335</span>                                         break;</div>
-<div class="line"><span class="lineno">  336</span>                                     case core::socket::State::ERROR:</div>
-<div class="line"><span class="lineno">  337</span>                                         LOG(ERROR) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; state.what();</div>
-<div class="line"><span class="lineno">  338</span>                                         break;</div>
-<div class="line"><span class="lineno">  339</span>                                     case core::socket::State::FATAL:</div>
-<div class="line"><span class="lineno">  340</span>                                         LOG(FATAL) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; state.what();</div>
-<div class="line"><span class="lineno">  341</span>                                         break;</div>
-<div class="line"><span class="lineno">  342</span>                                 }</div>
-<div class="line"><span class="lineno">  343</span>                             });</div>
+<p class="definition">Definition at line <a class="el" href="httplowlevelclient_8cpp_source.html#l00339">339</a> of file <a class="el" href="httplowlevelclient_8cpp_source.html">httplowlevelclient.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  339</span>                                 {</div>
+<div class="line"><span class="lineno">  340</span>    <a class="code hl_function" href="classcore_1_1SNodeC.html#a2c8b01c5fc6ecc3036cb48a76f76f3b5">core::SNodeC::init</a>(argc, argv);</div>
+<div class="line"><span class="lineno">  341</span> </div>
+<div class="line"><span class="lineno">  342</span>    {</div>
+<div class="line"><span class="lineno">  343</span>        <span class="keyword">const</span> <a class="code hl_typedef" href="namespacelegacy.html#a5cf8ceb021370a11d9b670263472600e">legacy::SocketAddress</a> legacyRemoteAddress(<span class="stringliteral">&quot;localhost&quot;</span>, 8080);</div>
 <div class="line"><span class="lineno">  344</span> </div>
-<div class="line"><span class="lineno">  345</span>        <span class="keyword">const</span> <a class="code hl_typedef" href="namespacetls.html#afcb9219f4cf94a717de2044384768d63">tls::SocketAddress</a> tlsRemoteAddress = <a class="code hl_typedef" href="namespacetls.html#afcb9219f4cf94a717de2044384768d63">tls::SocketAddress</a>(<span class="stringliteral">&quot;localhost&quot;</span>, 8088);</div>
+<div class="line"><span class="lineno">  345</span>        <span class="keyword">const</span> <a class="code hl_class" href="classnet_1_1in_1_1stream_1_1SocketClient.html">legacy::SocketClient</a> legacyClient = <a class="code hl_function" href="namespacelegacy.html#af964e2e82f4d4b80cea76cf218ba671c">legacy::getLegacyClient</a>();</div>
 <div class="line"><span class="lineno">  346</span> </div>
-<div class="line"><span class="lineno">  347</span>        <span class="keyword">const</span> <a class="code hl_class" href="classnet_1_1in_1_1stream_1_1SocketClient.html">tls::SocketClient</a> tlsClient = <a class="code hl_function" href="namespacetls.html#ac9c248ad49fa1a968e28d6e1a4e1a1c0">tls::getClient</a>();</div>
-<div class="line"><span class="lineno">  348</span> </div>
-<div class="line"><span class="lineno">  349</span>        tlsClient.<a class="code hl_function" href="classnet_1_1in_1_1stream_1_1SocketClient.html#afb0a0ad82eb97fb4f6ae9eef32c8e977">connect</a>(tlsRemoteAddress,</div>
-<div class="line"><span class="lineno">  350</span>                          [instanceName = tlsClient.<a class="code hl_function" href="classcore_1_1socket_1_1Socket.html#ac9b7df3682b2a24b5c7fce9bcff1c441">getConfig</a>().getInstanceName()](</div>
-<div class="line"><span class="lineno">  351</span>                              <span class="keyword">const</span> <a class="code hl_typedef" href="namespacetls.html#afcb9219f4cf94a717de2044384768d63">tls::SocketAddress</a>&amp; socketAddress,</div>
-<div class="line"><span class="lineno">  352</span>                              <span class="keyword">const</span> <a class="code hl_class" href="classcore_1_1socket_1_1State.html">core::socket::State</a>&amp; state) { <span class="comment">// example.com:81 simulate connnect timeout</span></div>
-<div class="line"><span class="lineno">  353</span>                              switch (state) {</div>
-<div class="line"><span class="lineno">  354</span>                                  case core::socket::State::OK:</div>
-<div class="line"><span class="lineno">  355</span>                                      VLOG(1) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot;: connected to &#39;&quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
-<div class="line"><span class="lineno">  356</span>                                      break;</div>
-<div class="line"><span class="lineno">  357</span>                                  case core::socket::State::DISABLED:</div>
-<div class="line"><span class="lineno">  358</span>                                      VLOG(1) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot;: disabled&quot;</span>;</div>
-<div class="line"><span class="lineno">  359</span>                                      break;</div>
-<div class="line"><span class="lineno">  360</span>                                  case core::socket::State::ERROR:</div>
-<div class="line"><span class="lineno">  361</span>                                      LOG(ERROR) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; state.what();</div>
-<div class="line"><span class="lineno">  362</span>                                      break;</div>
-<div class="line"><span class="lineno">  363</span>                                  case core::socket::State::FATAL:</div>
-<div class="line"><span class="lineno">  364</span>                                      LOG(FATAL) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; state.what();</div>
-<div class="line"><span class="lineno">  365</span>                                      break;</div>
-<div class="line"><span class="lineno">  366</span>                              }</div>
-<div class="line"><span class="lineno">  367</span>                          });</div>
-<div class="line"><span class="lineno">  368</span>    }</div>
-<div class="line"><span class="lineno">  369</span> </div>
-<div class="line"><span class="lineno">  370</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="classcore_1_1SNodeC.html#ac3d0dcb6c216ae72d9bbb77fe080e461">core::SNodeC::start</a>();</div>
-<div class="line"><span class="lineno">  371</span>}</div>
-<div class="ttc" id="aclasscore_1_1SNodeC_html_a2c8b01c5fc6ecc3036cb48a76f76f3b5"><div class="ttname"><a href="classcore_1_1SNodeC.html#a2c8b01c5fc6ecc3036cb48a76f76f3b5">core::SNodeC::init</a></div><div class="ttdeci">static void init(int argc, char *argv[])</div><div class="ttdef"><b>Definition</b> <a href="SNodeC_8cpp_source.html#l00032">SNodeC.cpp:32</a></div></div>
-<div class="ttc" id="aclasscore_1_1SNodeC_html_ac3d0dcb6c216ae72d9bbb77fe080e461"><div class="ttname"><a href="classcore_1_1SNodeC.html#ac3d0dcb6c216ae72d9bbb77fe080e461">core::SNodeC::start</a></div><div class="ttdeci">static int start(const utils::Timeval &amp;timeOut={LONG_MAX, 0})</div><div class="ttdef"><b>Definition</b> <a href="SNodeC_8cpp_source.html#l00038">SNodeC.cpp:38</a></div></div>
-<div class="ttc" id="aclasscore_1_1socket_1_1Socket_html_ac9b7df3682b2a24b5c7fce9bcff1c441"><div class="ttname"><a href="classcore_1_1socket_1_1Socket.html#ac9b7df3682b2a24b5c7fce9bcff1c441">core::socket::Socket::getConfig</a></div><div class="ttdeci">Config &amp; getConfig() const</div><div class="ttdef"><b>Definition</b> <a href="Socket_8hpp_source.html#l00038">Socket.hpp:38</a></div></div>
-<div class="ttc" id="aclasscore_1_1socket_1_1State_html"><div class="ttname"><a href="classcore_1_1socket_1_1State.html">core::socket::State</a></div><div class="ttdef"><b>Definition</b> <a href="socket_2State_8h_source.html#l00031">State.h:31</a></div></div>
-<div class="ttc" id="aclassnet_1_1in_1_1stream_1_1SocketClient_html"><div class="ttname"><a href="classnet_1_1in_1_1stream_1_1SocketClient.html">net::in::stream::SocketClient</a></div><div class="ttdef"><b>Definition</b> <a href="net_2in_2stream_2SocketClient_8h_source.html#l00040">SocketClient.h:43</a></div></div>
-<div class="ttc" id="aclassnet_1_1in_1_1stream_1_1SocketClient_html_afb0a0ad82eb97fb4f6ae9eef32c8e977"><div class="ttname"><a href="classnet_1_1in_1_1stream_1_1SocketClient.html#afb0a0ad82eb97fb4f6ae9eef32c8e977">net::in::stream::SocketClient::connect</a></div><div class="ttdeci">void connect(const std::string &amp;ipOrHostname, uint16_t port, const std::function&lt; void(const SocketAddress &amp;, core::socket::State)&gt; &amp;onStatus) const</div><div class="ttdef"><b>Definition</b> <a href="net_2in_2stream_2SocketClient_8h_source.html#l00053">SocketClient.h:53</a></div></div>
-<div class="ttc" id="anamespacelegacy_html_a5cf8ceb021370a11d9b670263472600e"><div class="ttname"><a href="namespacelegacy.html#a5cf8ceb021370a11d9b670263472600e">legacy::SocketAddress</a></div><div class="ttdeci">SocketClient::SocketAddress SocketAddress</div><div class="ttdef"><b>Definition</b> <a href="httplowlevelclient_8cpp_source.html#l00261">httplowlevelclient.cpp:261</a></div></div>
-<div class="ttc" id="anamespacelegacy_html_af964e2e82f4d4b80cea76cf218ba671c"><div class="ttname"><a href="namespacelegacy.html#af964e2e82f4d4b80cea76cf218ba671c">legacy::getLegacyClient</a></div><div class="ttdeci">SocketClient getLegacyClient()</div><div class="ttdef"><b>Definition</b> <a href="httplowlevelclient_8cpp_source.html#l00264">httplowlevelclient.cpp:264</a></div></div>
-<div class="ttc" id="anamespacetls_html_ac9c248ad49fa1a968e28d6e1a4e1a1c0"><div class="ttname"><a href="namespacetls.html#ac9c248ad49fa1a968e28d6e1a4e1a1c0">tls::getClient</a></div><div class="ttdeci">SocketClient getClient()</div><div class="ttdef"><b>Definition</b> <a href="httplowlevelclient_8cpp_source.html#l00126">httplowlevelclient.cpp:126</a></div></div>
-<div class="ttc" id="anamespacetls_html_afcb9219f4cf94a717de2044384768d63"><div class="ttname"><a href="namespacetls.html#afcb9219f4cf94a717de2044384768d63">tls::SocketAddress</a></div><div class="ttdeci">SocketClient::SocketAddress SocketAddress</div><div class="ttdef"><b>Definition</b> <a href="httplowlevelclient_8cpp_source.html#l00123">httplowlevelclient.cpp:123</a></div></div>
+<div class="line"><span class="lineno">  347</span>        legacyClient.<a class="code hl_function" href="classnet_1_1in_1_1stream_1_1SocketClient.html#afb0a0ad82eb97fb4f6ae9eef32c8e977">connect</a>(legacyRemoteAddress,</div>
+<div class="line"><span class="lineno">  348</span>                             [instanceName = legacyClient.<a class="code hl_function" href="classcore_1_1socket_1_1Socket.html#ac9b7df3682b2a24b5c7fce9bcff1c441">getConfig</a>().getInstanceName()](</div>
+<div class="line"><span class="lineno">  349</span>                                 <span class="keyword">const</span> <a class="code hl_typedef" href="namespacetls.html#afcb9219f4cf94a717de2044384768d63">tls::SocketAddress</a>&amp; socketAddress,</div>
+<div class="line"><span class="lineno">  350</span>                                 <span class="keyword">const</span> <a class="code hl_class" href="classcore_1_1socket_1_1State.html">core::socket::State</a>&amp; state) { <span class="comment">// example.com:81 simulate connnect timeout</span></div>
+<div class="line"><span class="lineno">  351</span>                                 switch (state) {</div>
+<div class="line"><span class="lineno">  352</span>                                     case core::socket::State::OK:</div>
+<div class="line"><span class="lineno">  353</span>                                         VLOG(1) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot;: connected to &#39;&quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
+<div class="line"><span class="lineno">  354</span>                                         break;</div>
+<div class="line"><span class="lineno">  355</span>                                     case core::socket::State::DISABLED:</div>
+<div class="line"><span class="lineno">  356</span>                                         VLOG(1) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot;: disabled&quot;</span>;</div>
+<div class="line"><span class="lineno">  357</span>                                         break;</div>
+<div class="line"><span class="lineno">  358</span>                                     case core::socket::State::ERROR:</div>
+<div class="line"><span class="lineno">  359</span>                                         LOG(ERROR) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; state.what();</div>
+<div class="line"><span class="lineno">  360</span>                                         break;</div>
+<div class="line"><span class="lineno">  361</span>                                     case core::socket::State::FATAL:</div>
+<div class="line"><span class="lineno">  362</span>                                         LOG(FATAL) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; state.what();</div>
+<div class="line"><span class="lineno">  363</span>                                         break;</div>
+<div class="line"><span class="lineno">  364</span>                                 }</div>
+<div class="line"><span class="lineno">  365</span>                             });</div>
+<div class="line"><span class="lineno">  366</span> </div>
+<div class="line"><span class="lineno">  367</span>        <span class="keyword">const</span> <a class="code hl_typedef" href="namespacetls.html#afcb9219f4cf94a717de2044384768d63">tls::SocketAddress</a> tlsRemoteAddress = <a class="code hl_typedef" href="namespacetls.html#afcb9219f4cf94a717de2044384768d63">tls::SocketAddress</a>(<span class="stringliteral">&quot;localhost&quot;</span>, 8088);</div>
+<div class="line"><span class="lineno">  368</span> </div>
+<div class="line"><span class="lineno">  369</span>        <span class="keyword">const</span> <a class="code hl_class" href="classnet_1_1in_1_1stream_1_1SocketClient.html">tls::SocketClient</a> tlsClient = <a class="code hl_function" href="namespacetls.html#ac9c248ad49fa1a968e28d6e1a4e1a1c0">tls::getClient</a>();</div>
+<div class="line"><span class="lineno">  370</span> </div>
+<div class="line"><span class="lineno">  371</span>        tlsClient.<a class="code hl_function" href="classnet_1_1in_1_1stream_1_1SocketClient.html#afb0a0ad82eb97fb4f6ae9eef32c8e977">connect</a>(tlsRemoteAddress,</div>
+<div class="line"><span class="lineno">  372</span>                          [instanceName = tlsClient.<a class="code hl_function" href="classcore_1_1socket_1_1Socket.html#ac9b7df3682b2a24b5c7fce9bcff1c441">getConfig</a>().getInstanceName()](</div>
+<div class="line"><span class="lineno">  373</span>                              <span class="keyword">const</span> <a class="code hl_typedef" href="namespacetls.html#afcb9219f4cf94a717de2044384768d63">tls::SocketAddress</a>&amp; socketAddress,</div>
+<div class="line"><span class="lineno">  374</span>                              <span class="keyword">const</span> <a class="code hl_class" href="classcore_1_1socket_1_1State.html">core::socket::State</a>&amp; state) { <span class="comment">// example.com:81 simulate connnect timeout</span></div>
+<div class="line"><span class="lineno">  375</span>                              switch (state) {</div>
+<div class="line"><span class="lineno">  376</span>                                  case core::socket::State::OK:</div>
+<div class="line"><span class="lineno">  377</span>                                      VLOG(1) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot;: connected to &#39;&quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
+<div class="line"><span class="lineno">  378</span>                                      break;</div>
+<div class="line"><span class="lineno">  379</span>                                  case core::socket::State::DISABLED:</div>
+<div class="line"><span class="lineno">  380</span>                                      VLOG(1) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot;: disabled&quot;</span>;</div>
+<div class="line"><span class="lineno">  381</span>                                      break;</div>
+<div class="line"><span class="lineno">  382</span>                                  case core::socket::State::ERROR:</div>
+<div class="line"><span class="lineno">  383</span>                                      LOG(ERROR) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; state.what();</div>
+<div class="line"><span class="lineno">  384</span>                                      break;</div>
+<div class="line"><span class="lineno">  385</span>                                  case core::socket::State::FATAL:</div>
+<div class="line"><span class="lineno">  386</span>                                      LOG(FATAL) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; state.what();</div>
+<div class="line"><span class="lineno">  387</span>                                      break;</div>
+<div class="line"><span class="lineno">  388</span>                              }</div>
+<div class="line"><span class="lineno">  389</span>                          });</div>
+<div class="line"><span class="lineno">  390</span>    }</div>
+<div class="line"><span class="lineno">  391</span> </div>
+<div class="line"><span class="lineno">  392</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="classcore_1_1SNodeC.html#ac3d0dcb6c216ae72d9bbb77fe080e461">core::SNodeC::start</a>();</div>
+<div class="line"><span class="lineno">  393</span>}</div>
+<div class="ttc" id="aclasscore_1_1SNodeC_html_a2c8b01c5fc6ecc3036cb48a76f76f3b5"><div class="ttname"><a href="classcore_1_1SNodeC.html#a2c8b01c5fc6ecc3036cb48a76f76f3b5">core::SNodeC::init</a></div><div class="ttdeci">static void init(int argc, char *argv[])</div><div class="ttdef"><b>Definition</b> <a href="SNodeC_8cpp_source.html#l00054">SNodeC.cpp:54</a></div></div>
+<div class="ttc" id="aclasscore_1_1SNodeC_html_ac3d0dcb6c216ae72d9bbb77fe080e461"><div class="ttname"><a href="classcore_1_1SNodeC.html#ac3d0dcb6c216ae72d9bbb77fe080e461">core::SNodeC::start</a></div><div class="ttdeci">static int start(const utils::Timeval &amp;timeOut={LONG_MAX, 0})</div><div class="ttdef"><b>Definition</b> <a href="SNodeC_8cpp_source.html#l00060">SNodeC.cpp:60</a></div></div>
+<div class="ttc" id="aclasscore_1_1socket_1_1Socket_html_ac9b7df3682b2a24b5c7fce9bcff1c441"><div class="ttname"><a href="classcore_1_1socket_1_1Socket.html#ac9b7df3682b2a24b5c7fce9bcff1c441">core::socket::Socket::getConfig</a></div><div class="ttdeci">Config &amp; getConfig() const</div><div class="ttdef"><b>Definition</b> <a href="Socket_8hpp_source.html#l00060">Socket.hpp:60</a></div></div>
+<div class="ttc" id="aclasscore_1_1socket_1_1State_html"><div class="ttname"><a href="classcore_1_1socket_1_1State.html">core::socket::State</a></div><div class="ttdef"><b>Definition</b> <a href="socket_2State_8h_source.html#l00053">State.h:53</a></div></div>
+<div class="ttc" id="aclassnet_1_1in_1_1stream_1_1SocketClient_html"><div class="ttname"><a href="classnet_1_1in_1_1stream_1_1SocketClient.html">net::in::stream::SocketClient</a></div><div class="ttdef"><b>Definition</b> <a href="net_2in_2stream_2SocketClient_8h_source.html#l00062">SocketClient.h:65</a></div></div>
+<div class="ttc" id="aclassnet_1_1in_1_1stream_1_1SocketClient_html_afb0a0ad82eb97fb4f6ae9eef32c8e977"><div class="ttname"><a href="classnet_1_1in_1_1stream_1_1SocketClient.html#afb0a0ad82eb97fb4f6ae9eef32c8e977">net::in::stream::SocketClient::connect</a></div><div class="ttdeci">void connect(const std::string &amp;ipOrHostname, uint16_t port, const std::function&lt; void(const SocketAddress &amp;, core::socket::State)&gt; &amp;onStatus) const</div><div class="ttdef"><b>Definition</b> <a href="net_2in_2stream_2SocketClient_8h_source.html#l00075">SocketClient.h:75</a></div></div>
+<div class="ttc" id="anamespacelegacy_html_a5cf8ceb021370a11d9b670263472600e"><div class="ttname"><a href="namespacelegacy.html#a5cf8ceb021370a11d9b670263472600e">legacy::SocketAddress</a></div><div class="ttdeci">SocketClient::SocketAddress SocketAddress</div><div class="ttdef"><b>Definition</b> <a href="httplowlevelclient_8cpp_source.html#l00283">httplowlevelclient.cpp:283</a></div></div>
+<div class="ttc" id="anamespacelegacy_html_af964e2e82f4d4b80cea76cf218ba671c"><div class="ttname"><a href="namespacelegacy.html#af964e2e82f4d4b80cea76cf218ba671c">legacy::getLegacyClient</a></div><div class="ttdeci">SocketClient getLegacyClient()</div><div class="ttdef"><b>Definition</b> <a href="httplowlevelclient_8cpp_source.html#l00286">httplowlevelclient.cpp:286</a></div></div>
+<div class="ttc" id="anamespacetls_html_ac9c248ad49fa1a968e28d6e1a4e1a1c0"><div class="ttname"><a href="namespacetls.html#ac9c248ad49fa1a968e28d6e1a4e1a1c0">tls::getClient</a></div><div class="ttdeci">SocketClient getClient()</div><div class="ttdef"><b>Definition</b> <a href="httplowlevelclient_8cpp_source.html#l00148">httplowlevelclient.cpp:148</a></div></div>
+<div class="ttc" id="anamespacetls_html_afcb9219f4cf94a717de2044384768d63"><div class="ttname"><a href="namespacetls.html#afcb9219f4cf94a717de2044384768d63">tls::SocketAddress</a></div><div class="ttdeci">SocketClient::SocketAddress SocketAddress</div><div class="ttdef"><b>Definition</b> <a href="httplowlevelclient_8cpp_source.html#l00145">httplowlevelclient.cpp:145</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -258,7 +258,7 @@ Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_9654b8d08f4bba4e84b362c5fd320bee.html">apps</a></li><li class="navelem"><a class="el" href="dir_9741969ad79fc4087a97a0753cba2960.html">http</a></li><li class="navelem"><a class="el" href="httplowlevelclient_8cpp.html">httplowlevelclient.cpp</a></li>
-    <li class="footer">Generated on Tue Feb 25 2025 14:03:09 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generated on Sun Mar 9 2025 01:34:38 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>

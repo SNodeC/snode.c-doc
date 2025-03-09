@@ -110,7 +110,7 @@ $(function(){initNavTree('classiot_1_1mqtt_1_1ControlPacket.html',''); initResiz
 <div class="dynheader">
 Inheritance diagram for iot::mqtt::ControlPacket:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classiot_1_1mqtt_1_1ControlPacket__inherit__graph.svg" width="2864" height="212"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classiot_1_1mqtt_1_1ControlPacket__inherit__graph.svg" width="100%" height="459"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 <div class="dynheader">
 Collaboration diagram for iot::mqtt::ControlPacket:</div>
@@ -157,7 +157,7 @@ Private Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="mqtt_2ControlPacket_8h_source.html#l00069">69</a> of file <a class="el" href="mqtt_2ControlPacket_8h_source.html">ControlPacket.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mqtt_2ControlPacket_8h_source.html#l00091">91</a> of file <a class="el" href="mqtt_2ControlPacket_8h_source.html">ControlPacket.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ae14191916323940c9bacc11d7f517c5a" name="ae14191916323940c9bacc11d7f517c5a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae14191916323940c9bacc11d7f517c5a">&#9670;&#160;</a></span>ControlPacket() <span class="overload">[1/3]</span></h2>
@@ -178,88 +178,88 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mqtt_2ControlPacket_8cpp_source.html#l00048">48</a> of file <a class="el" href="mqtt_2ControlPacket_8cpp_source.html">ControlPacket.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   49</span>        : <a class="code hl_variable" href="#a081c745b59b0976dd603712f1b351a40">name</a>(<a class="code hl_variable" href="#a081c745b59b0976dd603712f1b351a40">name</a>)</div>
-<div class="line"><span class="lineno">   50</span>        , <a class="code hl_variable" href="#ad8f30bf63c16e2d2321333eb2923bd4c">type</a>(<a class="code hl_variable" href="#ad8f30bf63c16e2d2321333eb2923bd4c">type</a>) {</div>
-<div class="line"><span class="lineno">   51</span>        <span class="keywordflow">switch</span> (<a class="code hl_variable" href="#ad8f30bf63c16e2d2321333eb2923bd4c">type</a>) {</div>
-<div class="line"><span class="lineno">   52</span>            <span class="keywordflow">case</span> <a class="code hl_define" href="mqtt-fast_2packets_2Connect_8h.html#a0618515498683adb4929499434a06bcf">MQTT_CONNECT</a>:</div>
-<div class="line"><span class="lineno">   53</span>                <a class="code hl_variable" href="#a8c7e68464f261bbb0ff6412c58ffbab0">flags</a> = <a class="code hl_define" href="mqtt_2ControlPacket_8h.html#a0452b62160d8b8fac45d26fdc8f11a9e">MQTT_CONNECT_FLAGS</a>;</div>
-<div class="line"><span class="lineno">   54</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   55</span>            <span class="keywordflow">case</span> <a class="code hl_define" href="mqtt-fast_2packets_2Connack_8h.html#a09b0564b21f03d3d86bac8b5a09a4999">MQTT_CONNACK</a>:</div>
-<div class="line"><span class="lineno">   56</span>                <a class="code hl_variable" href="#a8c7e68464f261bbb0ff6412c58ffbab0">flags</a> = <a class="code hl_define" href="mqtt_2ControlPacket_8h.html#aaf2ec91d1362c2df62200b2de129be35">MQTT_CONNACK_FLAGS</a>;</div>
-<div class="line"><span class="lineno">   57</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   58</span>            <span class="keywordflow">case</span> <a class="code hl_define" href="mqtt-fast_2packets_2Publish_8h.html#a3dc6a4b0dc54027175ff59c5c41ecd1d">MQTT_PUBLISH</a>:</div>
-<div class="line"><span class="lineno">   59</span>                <span class="comment">// no flags for MQTT_PUBLISH_FLAGS</span></div>
-<div class="line"><span class="lineno">   60</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   61</span>            <span class="keywordflow">case</span> <a class="code hl_define" href="mqtt-fast_2packets_2Puback_8h.html#aae1d8c0d399f44b713ca57a3c1fab4d1">MQTT_PUBACK</a>:</div>
-<div class="line"><span class="lineno">   62</span>                <a class="code hl_variable" href="#a8c7e68464f261bbb0ff6412c58ffbab0">flags</a> = <a class="code hl_define" href="mqtt_2ControlPacket_8h.html#a9623dd161d14f4755b3b210835ac1b9e">MQTT_PUBACK_FLAGS</a>;</div>
-<div class="line"><span class="lineno">   63</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   64</span>            <span class="keywordflow">case</span> <a class="code hl_define" href="mqtt-fast_2packets_2Pubrec_8h.html#ada9449d30967db2a4c8f1c9a8321b4af">MQTT_PUBREC</a>:</div>
-<div class="line"><span class="lineno">   65</span>                <a class="code hl_variable" href="#a8c7e68464f261bbb0ff6412c58ffbab0">flags</a> = <a class="code hl_define" href="mqtt_2ControlPacket_8h.html#ae4d2d397d45bc17b13ee492d42d3a8cb">MQTT_PUBREC_FLAGS</a>;</div>
-<div class="line"><span class="lineno">   66</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   67</span>            <span class="keywordflow">case</span> <a class="code hl_define" href="mqtt-fast_2packets_2Pubrel_8h.html#a8f672c2b5f68e723d8862f06a3d7eea9">MQTT_PUBREL</a>:</div>
-<div class="line"><span class="lineno">   68</span>                <a class="code hl_variable" href="#a8c7e68464f261bbb0ff6412c58ffbab0">flags</a> = <a class="code hl_define" href="mqtt_2ControlPacket_8h.html#a2728dcf486df3febc3b4c5ec9ffda324">MQTT_PUBREL_FLAGS</a>;</div>
-<div class="line"><span class="lineno">   69</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   70</span>            <span class="keywordflow">case</span> <a class="code hl_define" href="mqtt-fast_2packets_2Pubcomp_8h.html#a0cd00365f23dfec0884163d77f64ac67">MQTT_PUBCOMP</a>:</div>
-<div class="line"><span class="lineno">   71</span>                <a class="code hl_variable" href="#a8c7e68464f261bbb0ff6412c58ffbab0">flags</a> = <a class="code hl_define" href="mqtt_2ControlPacket_8h.html#a618542f4960bbe53c2632fc1b8ab5ff3">MQTT_PUBCOMP_FLAGS</a>;</div>
-<div class="line"><span class="lineno">   72</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   73</span>            <span class="keywordflow">case</span> <a class="code hl_define" href="mqtt-fast_2packets_2Subscribe_8h.html#a177f987722aa2d30b323d74be95d42be">MQTT_SUBSCRIBE</a>:</div>
-<div class="line"><span class="lineno">   74</span>                <a class="code hl_variable" href="#a8c7e68464f261bbb0ff6412c58ffbab0">flags</a> = <a class="code hl_define" href="mqtt_2ControlPacket_8h.html#a6a5ab9bd08251214ae311893c9a77e3f">MQTT_SUBSCRIBE_FLAGS</a>;</div>
-<div class="line"><span class="lineno">   75</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   76</span>            <span class="keywordflow">case</span> <a class="code hl_define" href="mqtt-fast_2packets_2Suback_8h.html#a8c5dda67f018a226499f0c44531fd5d6">MQTT_SUBACK</a>:</div>
-<div class="line"><span class="lineno">   77</span>                <a class="code hl_variable" href="#a8c7e68464f261bbb0ff6412c58ffbab0">flags</a> = <a class="code hl_define" href="mqtt_2ControlPacket_8h.html#a7328013dbc586dc070fb553d94b7a4e0">MQTT_SUBACK_FLAGS</a>;</div>
-<div class="line"><span class="lineno">   78</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   79</span>            <span class="keywordflow">case</span> <a class="code hl_define" href="mqtt-fast_2packets_2Unsubscribe_8h.html#afd5875c39ef308270a5c7bf22a05c247">MQTT_UNSUBSCRIBE</a>:</div>
-<div class="line"><span class="lineno">   80</span>                <a class="code hl_variable" href="#a8c7e68464f261bbb0ff6412c58ffbab0">flags</a> = <a class="code hl_define" href="mqtt_2ControlPacket_8h.html#aa4c3185025b6bc71734b90a9fda3eeac">MQTT_UNSUBSCRIBE_FLAGS</a>;</div>
-<div class="line"><span class="lineno">   81</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   82</span>            <span class="keywordflow">case</span> <a class="code hl_define" href="mqtt-fast_2packets_2Unsuback_8h.html#a3005381a33134aecab624da1435eb5df">MQTT_UNSUBACK</a>:</div>
-<div class="line"><span class="lineno">   83</span>                <a class="code hl_variable" href="#a8c7e68464f261bbb0ff6412c58ffbab0">flags</a> = <a class="code hl_define" href="mqtt_2ControlPacket_8h.html#aeac3dabf0e36e0abc5f60c66250e94eb">MQTT_UNSUBACK_FLAGS</a>;</div>
-<div class="line"><span class="lineno">   84</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   85</span>            <span class="keywordflow">case</span> <a class="code hl_define" href="mqtt-fast_2packets_2Pingreq_8h.html#abcc9ade96e183d8e303f1c9ad28a371d">MQTT_PINGREQ</a>:</div>
-<div class="line"><span class="lineno">   86</span>                <a class="code hl_variable" href="#a8c7e68464f261bbb0ff6412c58ffbab0">flags</a> = <a class="code hl_define" href="mqtt_2ControlPacket_8h.html#acf9f0dfd468f8edc77e6f902fa20609c">MQTT_PINGREQ_FLAGS</a>;</div>
-<div class="line"><span class="lineno">   87</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   88</span>            <span class="keywordflow">case</span> <a class="code hl_define" href="mqtt-fast_2packets_2Pingresp_8h.html#a3b53f25873b4c008f115245e53cbe98b">MQTT_PINGRESP</a>:</div>
-<div class="line"><span class="lineno">   89</span>                <a class="code hl_variable" href="#a8c7e68464f261bbb0ff6412c58ffbab0">flags</a> = <a class="code hl_define" href="mqtt_2ControlPacket_8h.html#af3c6123d8778eaa34a767f14017e2c68">MQTT_PINGRESP_FLAGS</a>;</div>
-<div class="line"><span class="lineno">   90</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   91</span>            <span class="keywordflow">case</span> <a class="code hl_define" href="mqtt-fast_2packets_2Disconnect_8h.html#a0faec7936032775259e05275a76386a6">MQTT_DISCONNECT</a>:</div>
-<div class="line"><span class="lineno">   92</span>                <a class="code hl_variable" href="#a8c7e68464f261bbb0ff6412c58ffbab0">flags</a> = <a class="code hl_define" href="mqtt_2ControlPacket_8h.html#a8959dffc1268faf26fbce16dc7dd6c38">MQTT_DISCONNECT_FLAGS</a>;</div>
-<div class="line"><span class="lineno">   93</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   94</span>        }</div>
-<div class="line"><span class="lineno">   95</span>    }</div>
-<div class="ttc" id="aclassiot_1_1mqtt_1_1ControlPacket_html_a081c745b59b0976dd603712f1b351a40"><div class="ttname"><a href="#a081c745b59b0976dd603712f1b351a40">iot::mqtt::ControlPacket::name</a></div><div class="ttdeci">std::string name</div><div class="ttdef"><b>Definition</b> <a href="mqtt_2ControlPacket_8h_source.html#l00088">ControlPacket.h:88</a></div></div>
-<div class="ttc" id="aclassiot_1_1mqtt_1_1ControlPacket_html_a8c7e68464f261bbb0ff6412c58ffbab0"><div class="ttname"><a href="#a8c7e68464f261bbb0ff6412c58ffbab0">iot::mqtt::ControlPacket::flags</a></div><div class="ttdeci">uint8_t flags</div><div class="ttdef"><b>Definition</b> <a href="mqtt_2ControlPacket_8h_source.html#l00092">ControlPacket.h:92</a></div></div>
-<div class="ttc" id="aclassiot_1_1mqtt_1_1ControlPacket_html_ad8f30bf63c16e2d2321333eb2923bd4c"><div class="ttname"><a href="#ad8f30bf63c16e2d2321333eb2923bd4c">iot::mqtt::ControlPacket::type</a></div><div class="ttdeci">uint8_t type</div><div class="ttdef"><b>Definition</b> <a href="mqtt_2ControlPacket_8h_source.html#l00089">ControlPacket.h:89</a></div></div>
-<div class="ttc" id="amqtt-fast_2packets_2Connack_8h_html_a09b0564b21f03d3d86bac8b5a09a4999"><div class="ttname"><a href="mqtt-fast_2packets_2Connack_8h.html#a09b0564b21f03d3d86bac8b5a09a4999">MQTT_CONNACK</a></div><div class="ttdeci">#define MQTT_CONNACK</div><div class="ttdef"><b>Definition</b> <a href="mqtt-fast_2packets_2Connack_8h_source.html#l00035">Connack.h:35</a></div></div>
-<div class="ttc" id="amqtt-fast_2packets_2Connect_8h_html_a0618515498683adb4929499434a06bcf"><div class="ttname"><a href="mqtt-fast_2packets_2Connect_8h.html#a0618515498683adb4929499434a06bcf">MQTT_CONNECT</a></div><div class="ttdeci">#define MQTT_CONNECT</div><div class="ttdef"><b>Definition</b> <a href="mqtt-fast_2packets_2Connect_8h_source.html#l00036">Connect.h:36</a></div></div>
-<div class="ttc" id="amqtt-fast_2packets_2Disconnect_8h_html_a0faec7936032775259e05275a76386a6"><div class="ttname"><a href="mqtt-fast_2packets_2Disconnect_8h.html#a0faec7936032775259e05275a76386a6">MQTT_DISCONNECT</a></div><div class="ttdeci">#define MQTT_DISCONNECT</div><div class="ttdef"><b>Definition</b> <a href="mqtt-fast_2packets_2Disconnect_8h_source.html#l00033">Disconnect.h:33</a></div></div>
-<div class="ttc" id="amqtt-fast_2packets_2Pingreq_8h_html_abcc9ade96e183d8e303f1c9ad28a371d"><div class="ttname"><a href="mqtt-fast_2packets_2Pingreq_8h.html#abcc9ade96e183d8e303f1c9ad28a371d">MQTT_PINGREQ</a></div><div class="ttdeci">#define MQTT_PINGREQ</div><div class="ttdef"><b>Definition</b> <a href="mqtt-fast_2packets_2Pingreq_8h_source.html#l00033">Pingreq.h:33</a></div></div>
-<div class="ttc" id="amqtt-fast_2packets_2Pingresp_8h_html_a3b53f25873b4c008f115245e53cbe98b"><div class="ttname"><a href="mqtt-fast_2packets_2Pingresp_8h.html#a3b53f25873b4c008f115245e53cbe98b">MQTT_PINGRESP</a></div><div class="ttdeci">#define MQTT_PINGRESP</div><div class="ttdef"><b>Definition</b> <a href="mqtt-fast_2packets_2Pingresp_8h_source.html#l00033">Pingresp.h:33</a></div></div>
-<div class="ttc" id="amqtt-fast_2packets_2Puback_8h_html_aae1d8c0d399f44b713ca57a3c1fab4d1"><div class="ttname"><a href="mqtt-fast_2packets_2Puback_8h.html#aae1d8c0d399f44b713ca57a3c1fab4d1">MQTT_PUBACK</a></div><div class="ttdeci">#define MQTT_PUBACK</div><div class="ttdef"><b>Definition</b> <a href="mqtt-fast_2packets_2Puback_8h_source.html#l00035">Puback.h:35</a></div></div>
-<div class="ttc" id="amqtt-fast_2packets_2Pubcomp_8h_html_a0cd00365f23dfec0884163d77f64ac67"><div class="ttname"><a href="mqtt-fast_2packets_2Pubcomp_8h.html#a0cd00365f23dfec0884163d77f64ac67">MQTT_PUBCOMP</a></div><div class="ttdeci">#define MQTT_PUBCOMP</div><div class="ttdef"><b>Definition</b> <a href="mqtt-fast_2packets_2Pubcomp_8h_source.html#l00035">Pubcomp.h:35</a></div></div>
-<div class="ttc" id="amqtt-fast_2packets_2Publish_8h_html_a3dc6a4b0dc54027175ff59c5c41ecd1d"><div class="ttname"><a href="mqtt-fast_2packets_2Publish_8h.html#a3dc6a4b0dc54027175ff59c5c41ecd1d">MQTT_PUBLISH</a></div><div class="ttdeci">#define MQTT_PUBLISH</div><div class="ttdef"><b>Definition</b> <a href="mqtt-fast_2packets_2Publish_8h_source.html#l00036">Publish.h:36</a></div></div>
-<div class="ttc" id="amqtt-fast_2packets_2Pubrec_8h_html_ada9449d30967db2a4c8f1c9a8321b4af"><div class="ttname"><a href="mqtt-fast_2packets_2Pubrec_8h.html#ada9449d30967db2a4c8f1c9a8321b4af">MQTT_PUBREC</a></div><div class="ttdeci">#define MQTT_PUBREC</div><div class="ttdef"><b>Definition</b> <a href="mqtt-fast_2packets_2Pubrec_8h_source.html#l00035">Pubrec.h:35</a></div></div>
-<div class="ttc" id="amqtt-fast_2packets_2Pubrel_8h_html_a8f672c2b5f68e723d8862f06a3d7eea9"><div class="ttname"><a href="mqtt-fast_2packets_2Pubrel_8h.html#a8f672c2b5f68e723d8862f06a3d7eea9">MQTT_PUBREL</a></div><div class="ttdeci">#define MQTT_PUBREL</div><div class="ttdef"><b>Definition</b> <a href="mqtt-fast_2packets_2Pubrel_8h_source.html#l00035">Pubrel.h:35</a></div></div>
-<div class="ttc" id="amqtt-fast_2packets_2Suback_8h_html_a8c5dda67f018a226499f0c44531fd5d6"><div class="ttname"><a href="mqtt-fast_2packets_2Suback_8h.html#a8c5dda67f018a226499f0c44531fd5d6">MQTT_SUBACK</a></div><div class="ttdeci">#define MQTT_SUBACK</div><div class="ttdef"><b>Definition</b> <a href="mqtt-fast_2packets_2Suback_8h_source.html#l00036">Suback.h:36</a></div></div>
-<div class="ttc" id="amqtt-fast_2packets_2Subscribe_8h_html_a177f987722aa2d30b323d74be95d42be"><div class="ttname"><a href="mqtt-fast_2packets_2Subscribe_8h.html#a177f987722aa2d30b323d74be95d42be">MQTT_SUBSCRIBE</a></div><div class="ttdeci">#define MQTT_SUBSCRIBE</div><div class="ttdef"><b>Definition</b> <a href="mqtt-fast_2packets_2Subscribe_8h_source.html#l00037">Subscribe.h:37</a></div></div>
-<div class="ttc" id="amqtt-fast_2packets_2Unsuback_8h_html_a3005381a33134aecab624da1435eb5df"><div class="ttname"><a href="mqtt-fast_2packets_2Unsuback_8h.html#a3005381a33134aecab624da1435eb5df">MQTT_UNSUBACK</a></div><div class="ttdeci">#define MQTT_UNSUBACK</div><div class="ttdef"><b>Definition</b> <a href="mqtt-fast_2packets_2Unsuback_8h_source.html#l00035">Unsuback.h:35</a></div></div>
-<div class="ttc" id="amqtt-fast_2packets_2Unsubscribe_8h_html_afd5875c39ef308270a5c7bf22a05c247"><div class="ttname"><a href="mqtt-fast_2packets_2Unsubscribe_8h.html#afd5875c39ef308270a5c7bf22a05c247">MQTT_UNSUBSCRIBE</a></div><div class="ttdeci">#define MQTT_UNSUBSCRIBE</div><div class="ttdef"><b>Definition</b> <a href="mqtt-fast_2packets_2Unsubscribe_8h_source.html#l00037">Unsubscribe.h:37</a></div></div>
-<div class="ttc" id="amqtt_2ControlPacket_8h_html_a0452b62160d8b8fac45d26fdc8f11a9e"><div class="ttname"><a href="mqtt_2ControlPacket_8h.html#a0452b62160d8b8fac45d26fdc8f11a9e">MQTT_CONNECT_FLAGS</a></div><div class="ttdeci">#define MQTT_CONNECT_FLAGS</div><div class="ttdef"><b>Definition</b> <a href="mqtt_2ControlPacket_8h_source.html#l00049">ControlPacket.h:49</a></div></div>
-<div class="ttc" id="amqtt_2ControlPacket_8h_html_a2728dcf486df3febc3b4c5ec9ffda324"><div class="ttname"><a href="mqtt_2ControlPacket_8h.html#a2728dcf486df3febc3b4c5ec9ffda324">MQTT_PUBREL_FLAGS</a></div><div class="ttdeci">#define MQTT_PUBREL_FLAGS</div><div class="ttdef"><b>Definition</b> <a href="mqtt_2ControlPacket_8h_source.html#l00054">ControlPacket.h:54</a></div></div>
-<div class="ttc" id="amqtt_2ControlPacket_8h_html_a618542f4960bbe53c2632fc1b8ab5ff3"><div class="ttname"><a href="mqtt_2ControlPacket_8h.html#a618542f4960bbe53c2632fc1b8ab5ff3">MQTT_PUBCOMP_FLAGS</a></div><div class="ttdeci">#define MQTT_PUBCOMP_FLAGS</div><div class="ttdef"><b>Definition</b> <a href="mqtt_2ControlPacket_8h_source.html#l00055">ControlPacket.h:55</a></div></div>
-<div class="ttc" id="amqtt_2ControlPacket_8h_html_a6a5ab9bd08251214ae311893c9a77e3f"><div class="ttname"><a href="mqtt_2ControlPacket_8h.html#a6a5ab9bd08251214ae311893c9a77e3f">MQTT_SUBSCRIBE_FLAGS</a></div><div class="ttdeci">#define MQTT_SUBSCRIBE_FLAGS</div><div class="ttdef"><b>Definition</b> <a href="mqtt_2ControlPacket_8h_source.html#l00056">ControlPacket.h:56</a></div></div>
-<div class="ttc" id="amqtt_2ControlPacket_8h_html_a7328013dbc586dc070fb553d94b7a4e0"><div class="ttname"><a href="mqtt_2ControlPacket_8h.html#a7328013dbc586dc070fb553d94b7a4e0">MQTT_SUBACK_FLAGS</a></div><div class="ttdeci">#define MQTT_SUBACK_FLAGS</div><div class="ttdef"><b>Definition</b> <a href="mqtt_2ControlPacket_8h_source.html#l00057">ControlPacket.h:57</a></div></div>
-<div class="ttc" id="amqtt_2ControlPacket_8h_html_a8959dffc1268faf26fbce16dc7dd6c38"><div class="ttname"><a href="mqtt_2ControlPacket_8h.html#a8959dffc1268faf26fbce16dc7dd6c38">MQTT_DISCONNECT_FLAGS</a></div><div class="ttdeci">#define MQTT_DISCONNECT_FLAGS</div><div class="ttdef"><b>Definition</b> <a href="mqtt_2ControlPacket_8h_source.html#l00062">ControlPacket.h:62</a></div></div>
-<div class="ttc" id="amqtt_2ControlPacket_8h_html_a9623dd161d14f4755b3b210835ac1b9e"><div class="ttname"><a href="mqtt_2ControlPacket_8h.html#a9623dd161d14f4755b3b210835ac1b9e">MQTT_PUBACK_FLAGS</a></div><div class="ttdeci">#define MQTT_PUBACK_FLAGS</div><div class="ttdef"><b>Definition</b> <a href="mqtt_2ControlPacket_8h_source.html#l00052">ControlPacket.h:52</a></div></div>
-<div class="ttc" id="amqtt_2ControlPacket_8h_html_aa4c3185025b6bc71734b90a9fda3eeac"><div class="ttname"><a href="mqtt_2ControlPacket_8h.html#aa4c3185025b6bc71734b90a9fda3eeac">MQTT_UNSUBSCRIBE_FLAGS</a></div><div class="ttdeci">#define MQTT_UNSUBSCRIBE_FLAGS</div><div class="ttdef"><b>Definition</b> <a href="mqtt_2ControlPacket_8h_source.html#l00058">ControlPacket.h:58</a></div></div>
-<div class="ttc" id="amqtt_2ControlPacket_8h_html_aaf2ec91d1362c2df62200b2de129be35"><div class="ttname"><a href="mqtt_2ControlPacket_8h.html#aaf2ec91d1362c2df62200b2de129be35">MQTT_CONNACK_FLAGS</a></div><div class="ttdeci">#define MQTT_CONNACK_FLAGS</div><div class="ttdef"><b>Definition</b> <a href="mqtt_2ControlPacket_8h_source.html#l00050">ControlPacket.h:50</a></div></div>
-<div class="ttc" id="amqtt_2ControlPacket_8h_html_acf9f0dfd468f8edc77e6f902fa20609c"><div class="ttname"><a href="mqtt_2ControlPacket_8h.html#acf9f0dfd468f8edc77e6f902fa20609c">MQTT_PINGREQ_FLAGS</a></div><div class="ttdeci">#define MQTT_PINGREQ_FLAGS</div><div class="ttdef"><b>Definition</b> <a href="mqtt_2ControlPacket_8h_source.html#l00060">ControlPacket.h:60</a></div></div>
-<div class="ttc" id="amqtt_2ControlPacket_8h_html_ae4d2d397d45bc17b13ee492d42d3a8cb"><div class="ttname"><a href="mqtt_2ControlPacket_8h.html#ae4d2d397d45bc17b13ee492d42d3a8cb">MQTT_PUBREC_FLAGS</a></div><div class="ttdeci">#define MQTT_PUBREC_FLAGS</div><div class="ttdef"><b>Definition</b> <a href="mqtt_2ControlPacket_8h_source.html#l00053">ControlPacket.h:53</a></div></div>
-<div class="ttc" id="amqtt_2ControlPacket_8h_html_aeac3dabf0e36e0abc5f60c66250e94eb"><div class="ttname"><a href="mqtt_2ControlPacket_8h.html#aeac3dabf0e36e0abc5f60c66250e94eb">MQTT_UNSUBACK_FLAGS</a></div><div class="ttdeci">#define MQTT_UNSUBACK_FLAGS</div><div class="ttdef"><b>Definition</b> <a href="mqtt_2ControlPacket_8h_source.html#l00059">ControlPacket.h:59</a></div></div>
-<div class="ttc" id="amqtt_2ControlPacket_8h_html_af3c6123d8778eaa34a767f14017e2c68"><div class="ttname"><a href="mqtt_2ControlPacket_8h.html#af3c6123d8778eaa34a767f14017e2c68">MQTT_PINGRESP_FLAGS</a></div><div class="ttdeci">#define MQTT_PINGRESP_FLAGS</div><div class="ttdef"><b>Definition</b> <a href="mqtt_2ControlPacket_8h_source.html#l00061">ControlPacket.h:61</a></div></div>
+<p class="definition">Definition at line <a class="el" href="mqtt_2ControlPacket_8cpp_source.html#l00070">70</a> of file <a class="el" href="mqtt_2ControlPacket_8cpp_source.html">ControlPacket.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   71</span>        : <a class="code hl_variable" href="#a081c745b59b0976dd603712f1b351a40">name</a>(<a class="code hl_variable" href="#a081c745b59b0976dd603712f1b351a40">name</a>)</div>
+<div class="line"><span class="lineno">   72</span>        , <a class="code hl_variable" href="#ad8f30bf63c16e2d2321333eb2923bd4c">type</a>(<a class="code hl_variable" href="#ad8f30bf63c16e2d2321333eb2923bd4c">type</a>) {</div>
+<div class="line"><span class="lineno">   73</span>        <span class="keywordflow">switch</span> (<a class="code hl_variable" href="#ad8f30bf63c16e2d2321333eb2923bd4c">type</a>) {</div>
+<div class="line"><span class="lineno">   74</span>            <span class="keywordflow">case</span> <a class="code hl_define" href="mqtt-fast_2packets_2Connect_8h.html#a0618515498683adb4929499434a06bcf">MQTT_CONNECT</a>:</div>
+<div class="line"><span class="lineno">   75</span>                <a class="code hl_variable" href="#a8c7e68464f261bbb0ff6412c58ffbab0">flags</a> = <a class="code hl_define" href="mqtt_2ControlPacket_8h.html#a0452b62160d8b8fac45d26fdc8f11a9e">MQTT_CONNECT_FLAGS</a>;</div>
+<div class="line"><span class="lineno">   76</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   77</span>            <span class="keywordflow">case</span> <a class="code hl_define" href="mqtt-fast_2packets_2Connack_8h.html#a09b0564b21f03d3d86bac8b5a09a4999">MQTT_CONNACK</a>:</div>
+<div class="line"><span class="lineno">   78</span>                <a class="code hl_variable" href="#a8c7e68464f261bbb0ff6412c58ffbab0">flags</a> = <a class="code hl_define" href="mqtt_2ControlPacket_8h.html#aaf2ec91d1362c2df62200b2de129be35">MQTT_CONNACK_FLAGS</a>;</div>
+<div class="line"><span class="lineno">   79</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   80</span>            <span class="keywordflow">case</span> <a class="code hl_define" href="mqtt-fast_2packets_2Publish_8h.html#a3dc6a4b0dc54027175ff59c5c41ecd1d">MQTT_PUBLISH</a>:</div>
+<div class="line"><span class="lineno">   81</span>                <span class="comment">// no flags for MQTT_PUBLISH_FLAGS</span></div>
+<div class="line"><span class="lineno">   82</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   83</span>            <span class="keywordflow">case</span> <a class="code hl_define" href="mqtt-fast_2packets_2Puback_8h.html#aae1d8c0d399f44b713ca57a3c1fab4d1">MQTT_PUBACK</a>:</div>
+<div class="line"><span class="lineno">   84</span>                <a class="code hl_variable" href="#a8c7e68464f261bbb0ff6412c58ffbab0">flags</a> = <a class="code hl_define" href="mqtt_2ControlPacket_8h.html#a9623dd161d14f4755b3b210835ac1b9e">MQTT_PUBACK_FLAGS</a>;</div>
+<div class="line"><span class="lineno">   85</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   86</span>            <span class="keywordflow">case</span> <a class="code hl_define" href="mqtt-fast_2packets_2Pubrec_8h.html#ada9449d30967db2a4c8f1c9a8321b4af">MQTT_PUBREC</a>:</div>
+<div class="line"><span class="lineno">   87</span>                <a class="code hl_variable" href="#a8c7e68464f261bbb0ff6412c58ffbab0">flags</a> = <a class="code hl_define" href="mqtt_2ControlPacket_8h.html#ae4d2d397d45bc17b13ee492d42d3a8cb">MQTT_PUBREC_FLAGS</a>;</div>
+<div class="line"><span class="lineno">   88</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   89</span>            <span class="keywordflow">case</span> <a class="code hl_define" href="mqtt-fast_2packets_2Pubrel_8h.html#a8f672c2b5f68e723d8862f06a3d7eea9">MQTT_PUBREL</a>:</div>
+<div class="line"><span class="lineno">   90</span>                <a class="code hl_variable" href="#a8c7e68464f261bbb0ff6412c58ffbab0">flags</a> = <a class="code hl_define" href="mqtt_2ControlPacket_8h.html#a2728dcf486df3febc3b4c5ec9ffda324">MQTT_PUBREL_FLAGS</a>;</div>
+<div class="line"><span class="lineno">   91</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   92</span>            <span class="keywordflow">case</span> <a class="code hl_define" href="mqtt-fast_2packets_2Pubcomp_8h.html#a0cd00365f23dfec0884163d77f64ac67">MQTT_PUBCOMP</a>:</div>
+<div class="line"><span class="lineno">   93</span>                <a class="code hl_variable" href="#a8c7e68464f261bbb0ff6412c58ffbab0">flags</a> = <a class="code hl_define" href="mqtt_2ControlPacket_8h.html#a618542f4960bbe53c2632fc1b8ab5ff3">MQTT_PUBCOMP_FLAGS</a>;</div>
+<div class="line"><span class="lineno">   94</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   95</span>            <span class="keywordflow">case</span> <a class="code hl_define" href="mqtt-fast_2packets_2Subscribe_8h.html#a177f987722aa2d30b323d74be95d42be">MQTT_SUBSCRIBE</a>:</div>
+<div class="line"><span class="lineno">   96</span>                <a class="code hl_variable" href="#a8c7e68464f261bbb0ff6412c58ffbab0">flags</a> = <a class="code hl_define" href="mqtt_2ControlPacket_8h.html#a6a5ab9bd08251214ae311893c9a77e3f">MQTT_SUBSCRIBE_FLAGS</a>;</div>
+<div class="line"><span class="lineno">   97</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   98</span>            <span class="keywordflow">case</span> <a class="code hl_define" href="mqtt-fast_2packets_2Suback_8h.html#a8c5dda67f018a226499f0c44531fd5d6">MQTT_SUBACK</a>:</div>
+<div class="line"><span class="lineno">   99</span>                <a class="code hl_variable" href="#a8c7e68464f261bbb0ff6412c58ffbab0">flags</a> = <a class="code hl_define" href="mqtt_2ControlPacket_8h.html#a7328013dbc586dc070fb553d94b7a4e0">MQTT_SUBACK_FLAGS</a>;</div>
+<div class="line"><span class="lineno">  100</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  101</span>            <span class="keywordflow">case</span> <a class="code hl_define" href="mqtt-fast_2packets_2Unsubscribe_8h.html#afd5875c39ef308270a5c7bf22a05c247">MQTT_UNSUBSCRIBE</a>:</div>
+<div class="line"><span class="lineno">  102</span>                <a class="code hl_variable" href="#a8c7e68464f261bbb0ff6412c58ffbab0">flags</a> = <a class="code hl_define" href="mqtt_2ControlPacket_8h.html#aa4c3185025b6bc71734b90a9fda3eeac">MQTT_UNSUBSCRIBE_FLAGS</a>;</div>
+<div class="line"><span class="lineno">  103</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  104</span>            <span class="keywordflow">case</span> <a class="code hl_define" href="mqtt-fast_2packets_2Unsuback_8h.html#a3005381a33134aecab624da1435eb5df">MQTT_UNSUBACK</a>:</div>
+<div class="line"><span class="lineno">  105</span>                <a class="code hl_variable" href="#a8c7e68464f261bbb0ff6412c58ffbab0">flags</a> = <a class="code hl_define" href="mqtt_2ControlPacket_8h.html#aeac3dabf0e36e0abc5f60c66250e94eb">MQTT_UNSUBACK_FLAGS</a>;</div>
+<div class="line"><span class="lineno">  106</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  107</span>            <span class="keywordflow">case</span> <a class="code hl_define" href="mqtt-fast_2packets_2Pingreq_8h.html#abcc9ade96e183d8e303f1c9ad28a371d">MQTT_PINGREQ</a>:</div>
+<div class="line"><span class="lineno">  108</span>                <a class="code hl_variable" href="#a8c7e68464f261bbb0ff6412c58ffbab0">flags</a> = <a class="code hl_define" href="mqtt_2ControlPacket_8h.html#acf9f0dfd468f8edc77e6f902fa20609c">MQTT_PINGREQ_FLAGS</a>;</div>
+<div class="line"><span class="lineno">  109</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  110</span>            <span class="keywordflow">case</span> <a class="code hl_define" href="mqtt-fast_2packets_2Pingresp_8h.html#a3b53f25873b4c008f115245e53cbe98b">MQTT_PINGRESP</a>:</div>
+<div class="line"><span class="lineno">  111</span>                <a class="code hl_variable" href="#a8c7e68464f261bbb0ff6412c58ffbab0">flags</a> = <a class="code hl_define" href="mqtt_2ControlPacket_8h.html#af3c6123d8778eaa34a767f14017e2c68">MQTT_PINGRESP_FLAGS</a>;</div>
+<div class="line"><span class="lineno">  112</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  113</span>            <span class="keywordflow">case</span> <a class="code hl_define" href="mqtt-fast_2packets_2Disconnect_8h.html#a0faec7936032775259e05275a76386a6">MQTT_DISCONNECT</a>:</div>
+<div class="line"><span class="lineno">  114</span>                <a class="code hl_variable" href="#a8c7e68464f261bbb0ff6412c58ffbab0">flags</a> = <a class="code hl_define" href="mqtt_2ControlPacket_8h.html#a8959dffc1268faf26fbce16dc7dd6c38">MQTT_DISCONNECT_FLAGS</a>;</div>
+<div class="line"><span class="lineno">  115</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  116</span>        }</div>
+<div class="line"><span class="lineno">  117</span>    }</div>
+<div class="ttc" id="aclassiot_1_1mqtt_1_1ControlPacket_html_a081c745b59b0976dd603712f1b351a40"><div class="ttname"><a href="#a081c745b59b0976dd603712f1b351a40">iot::mqtt::ControlPacket::name</a></div><div class="ttdeci">std::string name</div><div class="ttdef"><b>Definition</b> <a href="mqtt_2ControlPacket_8h_source.html#l00110">ControlPacket.h:110</a></div></div>
+<div class="ttc" id="aclassiot_1_1mqtt_1_1ControlPacket_html_a8c7e68464f261bbb0ff6412c58ffbab0"><div class="ttname"><a href="#a8c7e68464f261bbb0ff6412c58ffbab0">iot::mqtt::ControlPacket::flags</a></div><div class="ttdeci">uint8_t flags</div><div class="ttdef"><b>Definition</b> <a href="mqtt_2ControlPacket_8h_source.html#l00114">ControlPacket.h:114</a></div></div>
+<div class="ttc" id="aclassiot_1_1mqtt_1_1ControlPacket_html_ad8f30bf63c16e2d2321333eb2923bd4c"><div class="ttname"><a href="#ad8f30bf63c16e2d2321333eb2923bd4c">iot::mqtt::ControlPacket::type</a></div><div class="ttdeci">uint8_t type</div><div class="ttdef"><b>Definition</b> <a href="mqtt_2ControlPacket_8h_source.html#l00111">ControlPacket.h:111</a></div></div>
+<div class="ttc" id="amqtt-fast_2packets_2Connack_8h_html_a09b0564b21f03d3d86bac8b5a09a4999"><div class="ttname"><a href="mqtt-fast_2packets_2Connack_8h.html#a09b0564b21f03d3d86bac8b5a09a4999">MQTT_CONNACK</a></div><div class="ttdeci">#define MQTT_CONNACK</div><div class="ttdef"><b>Definition</b> <a href="mqtt-fast_2packets_2Connack_8h_source.html#l00057">Connack.h:57</a></div></div>
+<div class="ttc" id="amqtt-fast_2packets_2Connect_8h_html_a0618515498683adb4929499434a06bcf"><div class="ttname"><a href="mqtt-fast_2packets_2Connect_8h.html#a0618515498683adb4929499434a06bcf">MQTT_CONNECT</a></div><div class="ttdeci">#define MQTT_CONNECT</div><div class="ttdef"><b>Definition</b> <a href="mqtt-fast_2packets_2Connect_8h_source.html#l00058">Connect.h:58</a></div></div>
+<div class="ttc" id="amqtt-fast_2packets_2Disconnect_8h_html_a0faec7936032775259e05275a76386a6"><div class="ttname"><a href="mqtt-fast_2packets_2Disconnect_8h.html#a0faec7936032775259e05275a76386a6">MQTT_DISCONNECT</a></div><div class="ttdeci">#define MQTT_DISCONNECT</div><div class="ttdef"><b>Definition</b> <a href="mqtt-fast_2packets_2Disconnect_8h_source.html#l00055">Disconnect.h:55</a></div></div>
+<div class="ttc" id="amqtt-fast_2packets_2Pingreq_8h_html_abcc9ade96e183d8e303f1c9ad28a371d"><div class="ttname"><a href="mqtt-fast_2packets_2Pingreq_8h.html#abcc9ade96e183d8e303f1c9ad28a371d">MQTT_PINGREQ</a></div><div class="ttdeci">#define MQTT_PINGREQ</div><div class="ttdef"><b>Definition</b> <a href="mqtt-fast_2packets_2Pingreq_8h_source.html#l00055">Pingreq.h:55</a></div></div>
+<div class="ttc" id="amqtt-fast_2packets_2Pingresp_8h_html_a3b53f25873b4c008f115245e53cbe98b"><div class="ttname"><a href="mqtt-fast_2packets_2Pingresp_8h.html#a3b53f25873b4c008f115245e53cbe98b">MQTT_PINGRESP</a></div><div class="ttdeci">#define MQTT_PINGRESP</div><div class="ttdef"><b>Definition</b> <a href="mqtt-fast_2packets_2Pingresp_8h_source.html#l00055">Pingresp.h:55</a></div></div>
+<div class="ttc" id="amqtt-fast_2packets_2Puback_8h_html_aae1d8c0d399f44b713ca57a3c1fab4d1"><div class="ttname"><a href="mqtt-fast_2packets_2Puback_8h.html#aae1d8c0d399f44b713ca57a3c1fab4d1">MQTT_PUBACK</a></div><div class="ttdeci">#define MQTT_PUBACK</div><div class="ttdef"><b>Definition</b> <a href="mqtt-fast_2packets_2Puback_8h_source.html#l00057">Puback.h:57</a></div></div>
+<div class="ttc" id="amqtt-fast_2packets_2Pubcomp_8h_html_a0cd00365f23dfec0884163d77f64ac67"><div class="ttname"><a href="mqtt-fast_2packets_2Pubcomp_8h.html#a0cd00365f23dfec0884163d77f64ac67">MQTT_PUBCOMP</a></div><div class="ttdeci">#define MQTT_PUBCOMP</div><div class="ttdef"><b>Definition</b> <a href="mqtt-fast_2packets_2Pubcomp_8h_source.html#l00057">Pubcomp.h:57</a></div></div>
+<div class="ttc" id="amqtt-fast_2packets_2Publish_8h_html_a3dc6a4b0dc54027175ff59c5c41ecd1d"><div class="ttname"><a href="mqtt-fast_2packets_2Publish_8h.html#a3dc6a4b0dc54027175ff59c5c41ecd1d">MQTT_PUBLISH</a></div><div class="ttdeci">#define MQTT_PUBLISH</div><div class="ttdef"><b>Definition</b> <a href="mqtt-fast_2packets_2Publish_8h_source.html#l00058">Publish.h:58</a></div></div>
+<div class="ttc" id="amqtt-fast_2packets_2Pubrec_8h_html_ada9449d30967db2a4c8f1c9a8321b4af"><div class="ttname"><a href="mqtt-fast_2packets_2Pubrec_8h.html#ada9449d30967db2a4c8f1c9a8321b4af">MQTT_PUBREC</a></div><div class="ttdeci">#define MQTT_PUBREC</div><div class="ttdef"><b>Definition</b> <a href="mqtt-fast_2packets_2Pubrec_8h_source.html#l00057">Pubrec.h:57</a></div></div>
+<div class="ttc" id="amqtt-fast_2packets_2Pubrel_8h_html_a8f672c2b5f68e723d8862f06a3d7eea9"><div class="ttname"><a href="mqtt-fast_2packets_2Pubrel_8h.html#a8f672c2b5f68e723d8862f06a3d7eea9">MQTT_PUBREL</a></div><div class="ttdeci">#define MQTT_PUBREL</div><div class="ttdef"><b>Definition</b> <a href="mqtt-fast_2packets_2Pubrel_8h_source.html#l00057">Pubrel.h:57</a></div></div>
+<div class="ttc" id="amqtt-fast_2packets_2Suback_8h_html_a8c5dda67f018a226499f0c44531fd5d6"><div class="ttname"><a href="mqtt-fast_2packets_2Suback_8h.html#a8c5dda67f018a226499f0c44531fd5d6">MQTT_SUBACK</a></div><div class="ttdeci">#define MQTT_SUBACK</div><div class="ttdef"><b>Definition</b> <a href="mqtt-fast_2packets_2Suback_8h_source.html#l00058">Suback.h:58</a></div></div>
+<div class="ttc" id="amqtt-fast_2packets_2Subscribe_8h_html_a177f987722aa2d30b323d74be95d42be"><div class="ttname"><a href="mqtt-fast_2packets_2Subscribe_8h.html#a177f987722aa2d30b323d74be95d42be">MQTT_SUBSCRIBE</a></div><div class="ttdeci">#define MQTT_SUBSCRIBE</div><div class="ttdef"><b>Definition</b> <a href="mqtt-fast_2packets_2Subscribe_8h_source.html#l00059">Subscribe.h:59</a></div></div>
+<div class="ttc" id="amqtt-fast_2packets_2Unsuback_8h_html_a3005381a33134aecab624da1435eb5df"><div class="ttname"><a href="mqtt-fast_2packets_2Unsuback_8h.html#a3005381a33134aecab624da1435eb5df">MQTT_UNSUBACK</a></div><div class="ttdeci">#define MQTT_UNSUBACK</div><div class="ttdef"><b>Definition</b> <a href="mqtt-fast_2packets_2Unsuback_8h_source.html#l00057">Unsuback.h:57</a></div></div>
+<div class="ttc" id="amqtt-fast_2packets_2Unsubscribe_8h_html_afd5875c39ef308270a5c7bf22a05c247"><div class="ttname"><a href="mqtt-fast_2packets_2Unsubscribe_8h.html#afd5875c39ef308270a5c7bf22a05c247">MQTT_UNSUBSCRIBE</a></div><div class="ttdeci">#define MQTT_UNSUBSCRIBE</div><div class="ttdef"><b>Definition</b> <a href="mqtt-fast_2packets_2Unsubscribe_8h_source.html#l00059">Unsubscribe.h:59</a></div></div>
+<div class="ttc" id="amqtt_2ControlPacket_8h_html_a0452b62160d8b8fac45d26fdc8f11a9e"><div class="ttname"><a href="mqtt_2ControlPacket_8h.html#a0452b62160d8b8fac45d26fdc8f11a9e">MQTT_CONNECT_FLAGS</a></div><div class="ttdeci">#define MQTT_CONNECT_FLAGS</div><div class="ttdef"><b>Definition</b> <a href="mqtt_2ControlPacket_8h_source.html#l00071">ControlPacket.h:71</a></div></div>
+<div class="ttc" id="amqtt_2ControlPacket_8h_html_a2728dcf486df3febc3b4c5ec9ffda324"><div class="ttname"><a href="mqtt_2ControlPacket_8h.html#a2728dcf486df3febc3b4c5ec9ffda324">MQTT_PUBREL_FLAGS</a></div><div class="ttdeci">#define MQTT_PUBREL_FLAGS</div><div class="ttdef"><b>Definition</b> <a href="mqtt_2ControlPacket_8h_source.html#l00076">ControlPacket.h:76</a></div></div>
+<div class="ttc" id="amqtt_2ControlPacket_8h_html_a618542f4960bbe53c2632fc1b8ab5ff3"><div class="ttname"><a href="mqtt_2ControlPacket_8h.html#a618542f4960bbe53c2632fc1b8ab5ff3">MQTT_PUBCOMP_FLAGS</a></div><div class="ttdeci">#define MQTT_PUBCOMP_FLAGS</div><div class="ttdef"><b>Definition</b> <a href="mqtt_2ControlPacket_8h_source.html#l00077">ControlPacket.h:77</a></div></div>
+<div class="ttc" id="amqtt_2ControlPacket_8h_html_a6a5ab9bd08251214ae311893c9a77e3f"><div class="ttname"><a href="mqtt_2ControlPacket_8h.html#a6a5ab9bd08251214ae311893c9a77e3f">MQTT_SUBSCRIBE_FLAGS</a></div><div class="ttdeci">#define MQTT_SUBSCRIBE_FLAGS</div><div class="ttdef"><b>Definition</b> <a href="mqtt_2ControlPacket_8h_source.html#l00078">ControlPacket.h:78</a></div></div>
+<div class="ttc" id="amqtt_2ControlPacket_8h_html_a7328013dbc586dc070fb553d94b7a4e0"><div class="ttname"><a href="mqtt_2ControlPacket_8h.html#a7328013dbc586dc070fb553d94b7a4e0">MQTT_SUBACK_FLAGS</a></div><div class="ttdeci">#define MQTT_SUBACK_FLAGS</div><div class="ttdef"><b>Definition</b> <a href="mqtt_2ControlPacket_8h_source.html#l00079">ControlPacket.h:79</a></div></div>
+<div class="ttc" id="amqtt_2ControlPacket_8h_html_a8959dffc1268faf26fbce16dc7dd6c38"><div class="ttname"><a href="mqtt_2ControlPacket_8h.html#a8959dffc1268faf26fbce16dc7dd6c38">MQTT_DISCONNECT_FLAGS</a></div><div class="ttdeci">#define MQTT_DISCONNECT_FLAGS</div><div class="ttdef"><b>Definition</b> <a href="mqtt_2ControlPacket_8h_source.html#l00084">ControlPacket.h:84</a></div></div>
+<div class="ttc" id="amqtt_2ControlPacket_8h_html_a9623dd161d14f4755b3b210835ac1b9e"><div class="ttname"><a href="mqtt_2ControlPacket_8h.html#a9623dd161d14f4755b3b210835ac1b9e">MQTT_PUBACK_FLAGS</a></div><div class="ttdeci">#define MQTT_PUBACK_FLAGS</div><div class="ttdef"><b>Definition</b> <a href="mqtt_2ControlPacket_8h_source.html#l00074">ControlPacket.h:74</a></div></div>
+<div class="ttc" id="amqtt_2ControlPacket_8h_html_aa4c3185025b6bc71734b90a9fda3eeac"><div class="ttname"><a href="mqtt_2ControlPacket_8h.html#aa4c3185025b6bc71734b90a9fda3eeac">MQTT_UNSUBSCRIBE_FLAGS</a></div><div class="ttdeci">#define MQTT_UNSUBSCRIBE_FLAGS</div><div class="ttdef"><b>Definition</b> <a href="mqtt_2ControlPacket_8h_source.html#l00080">ControlPacket.h:80</a></div></div>
+<div class="ttc" id="amqtt_2ControlPacket_8h_html_aaf2ec91d1362c2df62200b2de129be35"><div class="ttname"><a href="mqtt_2ControlPacket_8h.html#aaf2ec91d1362c2df62200b2de129be35">MQTT_CONNACK_FLAGS</a></div><div class="ttdeci">#define MQTT_CONNACK_FLAGS</div><div class="ttdef"><b>Definition</b> <a href="mqtt_2ControlPacket_8h_source.html#l00072">ControlPacket.h:72</a></div></div>
+<div class="ttc" id="amqtt_2ControlPacket_8h_html_acf9f0dfd468f8edc77e6f902fa20609c"><div class="ttname"><a href="mqtt_2ControlPacket_8h.html#acf9f0dfd468f8edc77e6f902fa20609c">MQTT_PINGREQ_FLAGS</a></div><div class="ttdeci">#define MQTT_PINGREQ_FLAGS</div><div class="ttdef"><b>Definition</b> <a href="mqtt_2ControlPacket_8h_source.html#l00082">ControlPacket.h:82</a></div></div>
+<div class="ttc" id="amqtt_2ControlPacket_8h_html_ae4d2d397d45bc17b13ee492d42d3a8cb"><div class="ttname"><a href="mqtt_2ControlPacket_8h.html#ae4d2d397d45bc17b13ee492d42d3a8cb">MQTT_PUBREC_FLAGS</a></div><div class="ttdeci">#define MQTT_PUBREC_FLAGS</div><div class="ttdef"><b>Definition</b> <a href="mqtt_2ControlPacket_8h_source.html#l00075">ControlPacket.h:75</a></div></div>
+<div class="ttc" id="amqtt_2ControlPacket_8h_html_aeac3dabf0e36e0abc5f60c66250e94eb"><div class="ttname"><a href="mqtt_2ControlPacket_8h.html#aeac3dabf0e36e0abc5f60c66250e94eb">MQTT_UNSUBACK_FLAGS</a></div><div class="ttdeci">#define MQTT_UNSUBACK_FLAGS</div><div class="ttdef"><b>Definition</b> <a href="mqtt_2ControlPacket_8h_source.html#l00081">ControlPacket.h:81</a></div></div>
+<div class="ttc" id="amqtt_2ControlPacket_8h_html_af3c6123d8778eaa34a767f14017e2c68"><div class="ttname"><a href="mqtt_2ControlPacket_8h.html#af3c6123d8778eaa34a767f14017e2c68">MQTT_PINGRESP_FLAGS</a></div><div class="ttdeci">#define MQTT_PINGRESP_FLAGS</div><div class="ttdef"><b>Definition</b> <a href="mqtt_2ControlPacket_8h_source.html#l00083">ControlPacket.h:83</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="mqtt_2ControlPacket_8cpp_source.html#l00048">ControlPacket()</a>, <a class="el" href="mqtt_2ControlPacket_8h_source.html#l00092">flags</a>, and <a class="el" href="mqtt_2ControlPacket_8h_source.html#l00089">type</a>.</p>
+<p class="reference">References <a class="el" href="mqtt_2ControlPacket_8cpp_source.html#l00070">ControlPacket()</a>, <a class="el" href="mqtt_2ControlPacket_8h_source.html#l00114">flags</a>, and <a class="el" href="mqtt_2ControlPacket_8h_source.html#l00111">type</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mqtt_2ControlPacket_8cpp_source.html#l00048">ControlPacket()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mqtt_2ControlPacket_8cpp_source.html#l00070">ControlPacket()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -346,9 +346,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mqtt_2ControlPacket_8cpp_source.html#l00097">97</a> of file <a class="el" href="mqtt_2ControlPacket_8cpp_source.html">ControlPacket.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   97</span>                                  {</div>
-<div class="line"><span class="lineno">   98</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="mqtt_2ControlPacket_8cpp_source.html#l00119">119</a> of file <a class="el" href="mqtt_2ControlPacket_8cpp_source.html">ControlPacket.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  119</span>                                  {</div>
+<div class="line"><span class="lineno">  120</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -368,12 +368,12 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mqtt_2ControlPacket_8cpp_source.html#l00119">119</a> of file <a class="el" href="mqtt_2ControlPacket_8cpp_source.html">ControlPacket.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  119</span>                                          {</div>
-<div class="line"><span class="lineno">  120</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#a8c7e68464f261bbb0ff6412c58ffbab0">flags</a>;</div>
-<div class="line"><span class="lineno">  121</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="mqtt_2ControlPacket_8cpp_source.html#l00141">141</a> of file <a class="el" href="mqtt_2ControlPacket_8cpp_source.html">ControlPacket.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  141</span>                                          {</div>
+<div class="line"><span class="lineno">  142</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#a8c7e68464f261bbb0ff6412c58ffbab0">flags</a>;</div>
+<div class="line"><span class="lineno">  143</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="mqtt_2ControlPacket_8h_source.html#l00092">flags</a>.</p>
+<p class="reference">References <a class="el" href="mqtt_2ControlPacket_8h_source.html#l00114">flags</a>.</p>
 
 </div>
 </div>
@@ -392,10 +392,10 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mqtt_2ControlPacket_8cpp_source.html#l00100">100</a> of file <a class="el" href="mqtt_2ControlPacket_8cpp_source.html">ControlPacket.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  100</span>                                                  {</div>
-<div class="line"><span class="lineno">  101</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#a081c745b59b0976dd603712f1b351a40">name</a>;</div>
-<div class="line"><span class="lineno">  102</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="mqtt_2ControlPacket_8cpp_source.html#l00122">122</a> of file <a class="el" href="mqtt_2ControlPacket_8cpp_source.html">ControlPacket.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  122</span>                                                  {</div>
+<div class="line"><span class="lineno">  123</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#a081c745b59b0976dd603712f1b351a40">name</a>;</div>
+<div class="line"><span class="lineno">  124</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -414,12 +414,12 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mqtt_2ControlPacket_8cpp_source.html#l00115">115</a> of file <a class="el" href="mqtt_2ControlPacket_8cpp_source.html">ControlPacket.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  115</span>                                         {</div>
-<div class="line"><span class="lineno">  116</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#ad8f30bf63c16e2d2321333eb2923bd4c">type</a>;</div>
-<div class="line"><span class="lineno">  117</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="mqtt_2ControlPacket_8cpp_source.html#l00137">137</a> of file <a class="el" href="mqtt_2ControlPacket_8cpp_source.html">ControlPacket.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  137</span>                                         {</div>
+<div class="line"><span class="lineno">  138</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#ad8f30bf63c16e2d2321333eb2923bd4c">type</a>;</div>
+<div class="line"><span class="lineno">  139</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="mqtt_2ControlPacket_8h_source.html#l00089">type</a>.</p>
+<p class="reference">References <a class="el" href="mqtt_2ControlPacket_8h_source.html#l00111">type</a>.</p>
 
 </div>
 </div>
@@ -488,17 +488,17 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mqtt_2ControlPacket_8cpp_source.html#l00104">104</a> of file <a class="el" href="mqtt_2ControlPacket_8cpp_source.html">ControlPacket.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  104</span>                                                   {</div>
-<div class="line"><span class="lineno">  105</span>        std::vector&lt;char&gt; variablHeaderPayload = <a class="code hl_function" href="#ab4f58bf0c1920d705af23c8d7636247f">serializeVP</a>();</div>
-<div class="line"><span class="lineno">  106</span> </div>
-<div class="line"><span class="lineno">  107</span>        <span class="keyword">const</span> FixedHeader fixedHeader(<a class="code hl_variable" href="#ad8f30bf63c16e2d2321333eb2923bd4c">type</a>, <a class="code hl_variable" href="#a8c7e68464f261bbb0ff6412c58ffbab0">flags</a>, <span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>(variablHeaderPayload.size()));</div>
-<div class="line"><span class="lineno">  108</span> </div>
-<div class="line"><span class="lineno">  109</span>        std::vector&lt;char&gt; packet = fixedHeader.serialize();</div>
-<div class="line"><span class="lineno">  110</span>        packet.insert(packet.end(), variablHeaderPayload.begin(), variablHeaderPayload.end());</div>
-<div class="line"><span class="lineno">  111</span> </div>
-<div class="line"><span class="lineno">  112</span>        <span class="keywordflow">return</span> packet;</div>
-<div class="line"><span class="lineno">  113</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="mqtt_2ControlPacket_8cpp_source.html#l00126">126</a> of file <a class="el" href="mqtt_2ControlPacket_8cpp_source.html">ControlPacket.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  126</span>                                                   {</div>
+<div class="line"><span class="lineno">  127</span>        std::vector&lt;char&gt; variablHeaderPayload = <a class="code hl_function" href="#ab4f58bf0c1920d705af23c8d7636247f">serializeVP</a>();</div>
+<div class="line"><span class="lineno">  128</span> </div>
+<div class="line"><span class="lineno">  129</span>        <span class="keyword">const</span> FixedHeader fixedHeader(<a class="code hl_variable" href="#ad8f30bf63c16e2d2321333eb2923bd4c">type</a>, <a class="code hl_variable" href="#a8c7e68464f261bbb0ff6412c58ffbab0">flags</a>, <span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>(variablHeaderPayload.size()));</div>
+<div class="line"><span class="lineno">  130</span> </div>
+<div class="line"><span class="lineno">  131</span>        std::vector&lt;char&gt; packet = fixedHeader.serialize();</div>
+<div class="line"><span class="lineno">  132</span>        packet.insert(packet.end(), variablHeaderPayload.begin(), variablHeaderPayload.end());</div>
+<div class="line"><span class="lineno">  133</span> </div>
+<div class="line"><span class="lineno">  134</span>        <span class="keywordflow">return</span> packet;</div>
+<div class="line"><span class="lineno">  135</span>    }</div>
 <div class="ttc" id="aclassiot_1_1mqtt_1_1ControlPacket_html_ab4f58bf0c1920d705af23c8d7636247f"><div class="ttname"><a href="#ab4f58bf0c1920d705af23c8d7636247f">iot::mqtt::ControlPacket::serializeVP</a></div><div class="ttdeci">virtual std::vector&lt; char &gt; serializeVP() const =0</div></div>
 </div><!-- fragment -->
 </div>
@@ -551,9 +551,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mqtt_2ControlPacket_8h_source.html#l00092">92</a> of file <a class="el" href="mqtt_2ControlPacket_8h_source.html">ControlPacket.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mqtt_2ControlPacket_8h_source.html#l00114">114</a> of file <a class="el" href="mqtt_2ControlPacket_8h_source.html">ControlPacket.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mqtt_2ControlPacket_8cpp_source.html#l00048">ControlPacket()</a>, <a class="el" href="mqtt_2ControlPacket_8cpp_source.html#l00119">getFlags()</a>, and <a class="el" href="mqtt_2packets_2Publish_8cpp_source.html#l00034">iot::mqtt::packets::Publish::Publish()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mqtt_2ControlPacket_8cpp_source.html#l00070">ControlPacket()</a>, <a class="el" href="mqtt_2ControlPacket_8cpp_source.html#l00141">getFlags()</a>, and <a class="el" href="mqtt_2packets_2Publish_8cpp_source.html#l00056">iot::mqtt::packets::Publish::Publish()</a>.</p>
 
 </div>
 </div>
@@ -577,7 +577,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mqtt_2ControlPacket_8h_source.html#l00088">88</a> of file <a class="el" href="mqtt_2ControlPacket_8h_source.html">ControlPacket.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mqtt_2ControlPacket_8h_source.html#l00110">110</a> of file <a class="el" href="mqtt_2ControlPacket_8h_source.html">ControlPacket.h</a>.</p>
 
 </div>
 </div>
@@ -601,9 +601,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mqtt_2ControlPacket_8h_source.html#l00089">89</a> of file <a class="el" href="mqtt_2ControlPacket_8h_source.html">ControlPacket.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mqtt_2ControlPacket_8h_source.html#l00111">111</a> of file <a class="el" href="mqtt_2ControlPacket_8h_source.html">ControlPacket.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mqtt_2ControlPacket_8cpp_source.html#l00048">ControlPacket()</a>, and <a class="el" href="mqtt_2ControlPacket_8cpp_source.html#l00115">getType()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mqtt_2ControlPacket_8cpp_source.html#l00070">ControlPacket()</a>, and <a class="el" href="mqtt_2ControlPacket_8cpp_source.html#l00137">getType()</a>.</p>
 
 </div>
 </div>
@@ -617,7 +617,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceiot.html">iot</a></li><li class="navelem"><a class="el" href="namespaceiot_1_1mqtt.html">mqtt</a></li><li class="navelem"><a class="el" href="classiot_1_1mqtt_1_1ControlPacket.html">ControlPacket</a></li>
-    <li class="footer">Generated on Tue Feb 25 2025 14:03:10 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generated on Sun Mar 9 2025 01:34:39 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>

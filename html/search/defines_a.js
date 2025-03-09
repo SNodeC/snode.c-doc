@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['web_5fhttp_5fsocketcontextupgradefactoryselector_5fh_0',['WEB_HTTP_SOCKETCONTEXTUPGRADEFACTORYSELECTOR_H',['../SocketContextUpgradeFactorySelector_8h.html#abf795d60145f975ec9b472489f562fb5',1,'SocketContextUpgradeFactorySelector.h']]],
-  ['webapp_5finclude_1',['WEBAPP_INCLUDE',['../http_2model_2servers_8h.html#aa655c65c2ba6bcccc57590a9a986d3d9',1,'servers.h']]]
+  ['to_5fhex_5fstr_0',['to_hex_str',['../web_2http_2client_2Request_8cpp.html#a3885521091d42b2f92ce233bf94a4960',1,'to_hex_str:&#160;Request.cpp'],['../web_2http_2server_2Response_8cpp.html#a3885521091d42b2f92ce233bf94a4960',1,'to_hex_str:&#160;Response.cpp']]]
 ];

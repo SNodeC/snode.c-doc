@@ -147,7 +147,7 @@ Private Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="AttributeInjector_8h_source.html#l00124">124</a> of file <a class="el" href="AttributeInjector_8h_source.html">AttributeInjector.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AttributeInjector_8h_source.html#l00146">146</a> of file <a class="el" href="AttributeInjector_8h_source.html">AttributeInjector.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a99ad26a4a2d9e7f35caf12996299760e" name="a99ad26a4a2d9e7f35caf12996299760e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a99ad26a4a2d9e7f35caf12996299760e">&#9670;&#160;</a></span>delAttribute()</h2>
@@ -174,13 +174,13 @@ template&lt;InjectableAttribute Attribute, <a class="el" href="structutils_1_1fi
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AttributeInjector_8h_source.html#l00153">153</a> of file <a class="el" href="AttributeInjector_8h_source.html">AttributeInjector.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  153</span>                                                                  {</div>
-<div class="line"><span class="lineno">  154</span>            <span class="keywordtype">bool</span> deleted = <a class="code hl_variable" href="#abbd17a17039df8a8eeb865a3967bba0d">attributes</a>.erase(<span class="keyword">typeid</span>(Attribute).name() + std::string(key) + subKey) &gt; 0;</div>
-<div class="line"><span class="lineno">  155</span> </div>
-<div class="line"><span class="lineno">  156</span>            <span class="keywordflow">return</span> deleted;</div>
-<div class="line"><span class="lineno">  157</span>        }</div>
-<div class="ttc" id="aclassutils_1_1MultibleAttributeInjector_html_abbd17a17039df8a8eeb865a3967bba0d"><div class="ttname"><a href="#abbd17a17039df8a8eeb865a3967bba0d">utils::MultibleAttributeInjector::attributes</a></div><div class="ttdeci">std::map&lt; std::string, std::shared_ptr&lt; void &gt; &gt; attributes</div><div class="ttdef"><b>Definition</b> <a href="AttributeInjector_8h_source.html#l00201">AttributeInjector.h:201</a></div></div>
+<p class="definition">Definition at line <a class="el" href="AttributeInjector_8h_source.html#l00175">175</a> of file <a class="el" href="AttributeInjector_8h_source.html">AttributeInjector.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  175</span>                                                                  {</div>
+<div class="line"><span class="lineno">  176</span>            <span class="keywordtype">bool</span> deleted = <a class="code hl_variable" href="#abbd17a17039df8a8eeb865a3967bba0d">attributes</a>.erase(<span class="keyword">typeid</span>(Attribute).name() + std::string(key) + subKey) &gt; 0;</div>
+<div class="line"><span class="lineno">  177</span> </div>
+<div class="line"><span class="lineno">  178</span>            <span class="keywordflow">return</span> deleted;</div>
+<div class="line"><span class="lineno">  179</span>        }</div>
+<div class="ttc" id="aclassutils_1_1MultibleAttributeInjector_html_abbd17a17039df8a8eeb865a3967bba0d"><div class="ttname"><a href="#abbd17a17039df8a8eeb865a3967bba0d">utils::MultibleAttributeInjector::attributes</a></div><div class="ttdeci">std::map&lt; std::string, std::shared_ptr&lt; void &gt; &gt; attributes</div><div class="ttdef"><b>Definition</b> <a href="AttributeInjector_8h_source.html#l00223">AttributeInjector.h:223</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -218,17 +218,17 @@ template&lt;InjectableAttribute Attribute, <a class="el" href="structutils_1_1fi
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AttributeInjector_8h_source.html#l00183">183</a> of file <a class="el" href="AttributeInjector_8h_source.html">AttributeInjector.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  185</span>                                                              {</div>
-<div class="line"><span class="lineno">  186</span>            std::map&lt;std::string, std::shared_ptr&lt;void&gt;&gt;::const_iterator it =</div>
-<div class="line"><span class="lineno">  187</span>                <a class="code hl_variable" href="#abbd17a17039df8a8eeb865a3967bba0d">attributes</a>.find(<span class="keyword">typeid</span>(Attribute).name() + std::string(key) + subKey);</div>
-<div class="line"><span class="lineno">  188</span> </div>
-<div class="line"><span class="lineno">  189</span>            <span class="keywordflow">if</span> (it != <a class="code hl_variable" href="#abbd17a17039df8a8eeb865a3967bba0d">attributes</a>.end()) {</div>
-<div class="line"><span class="lineno">  190</span>                onFound(**std::static_pointer_cast&lt;AttributeProxy&lt;Attribute&gt;&gt;(it-&gt;second));</div>
-<div class="line"><span class="lineno">  191</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  192</span>                onNotFound(std::string(<span class="keyword">typeid</span>(Attribute).name()) + std::string(key) + subKey);</div>
-<div class="line"><span class="lineno">  193</span>            }</div>
-<div class="line"><span class="lineno">  194</span>        }</div>
+<p class="definition">Definition at line <a class="el" href="AttributeInjector_8h_source.html#l00205">205</a> of file <a class="el" href="AttributeInjector_8h_source.html">AttributeInjector.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  207</span>                                                              {</div>
+<div class="line"><span class="lineno">  208</span>            std::map&lt;std::string, std::shared_ptr&lt;void&gt;&gt;::const_iterator it =</div>
+<div class="line"><span class="lineno">  209</span>                <a class="code hl_variable" href="#abbd17a17039df8a8eeb865a3967bba0d">attributes</a>.find(<span class="keyword">typeid</span>(Attribute).name() + std::string(key) + subKey);</div>
+<div class="line"><span class="lineno">  210</span> </div>
+<div class="line"><span class="lineno">  211</span>            <span class="keywordflow">if</span> (it != <a class="code hl_variable" href="#abbd17a17039df8a8eeb865a3967bba0d">attributes</a>.end()) {</div>
+<div class="line"><span class="lineno">  212</span>                onFound(**std::static_pointer_cast&lt;AttributeProxy&lt;Attribute&gt;&gt;(it-&gt;second));</div>
+<div class="line"><span class="lineno">  213</span>            } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  214</span>                onNotFound(std::string(<span class="keyword">typeid</span>(Attribute).name()) + std::string(key) + subKey);</div>
+<div class="line"><span class="lineno">  215</span>            }</div>
+<div class="line"><span class="lineno">  216</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -261,21 +261,21 @@ template&lt;InjectableAttribute Attribute, <a class="el" href="structutils_1_1fi
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AttributeInjector_8h_source.html#l00167">167</a> of file <a class="el" href="AttributeInjector_8h_source.html">AttributeInjector.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  167</span>                                                                                                            {</div>
-<div class="line"><span class="lineno">  168</span>            <span class="keywordtype">bool</span> found = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  169</span> </div>
-<div class="line"><span class="lineno">  170</span>            std::map&lt;std::string, std::shared_ptr&lt;void&gt;&gt;::const_iterator it =</div>
-<div class="line"><span class="lineno">  171</span>                <a class="code hl_variable" href="#abbd17a17039df8a8eeb865a3967bba0d">attributes</a>.find(<span class="keyword">typeid</span>(Attribute).name() + std::string(key) + subKey);</div>
-<div class="line"><span class="lineno">  172</span> </div>
-<div class="line"><span class="lineno">  173</span>            <span class="keywordflow">if</span> (it != <a class="code hl_variable" href="#abbd17a17039df8a8eeb865a3967bba0d">attributes</a>.end()) {</div>
-<div class="line"><span class="lineno">  174</span>                found = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  175</span> </div>
-<div class="line"><span class="lineno">  176</span>                onFound(**std::static_pointer_cast&lt;AttributeProxy&lt;Attribute&gt;&gt;(it-&gt;second));</div>
-<div class="line"><span class="lineno">  177</span>            }</div>
-<div class="line"><span class="lineno">  178</span> </div>
-<div class="line"><span class="lineno">  179</span>            <span class="keywordflow">return</span> found;</div>
-<div class="line"><span class="lineno">  180</span>        }</div>
+<p class="definition">Definition at line <a class="el" href="AttributeInjector_8h_source.html#l00189">189</a> of file <a class="el" href="AttributeInjector_8h_source.html">AttributeInjector.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  189</span>                                                                                                            {</div>
+<div class="line"><span class="lineno">  190</span>            <span class="keywordtype">bool</span> found = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  191</span> </div>
+<div class="line"><span class="lineno">  192</span>            std::map&lt;std::string, std::shared_ptr&lt;void&gt;&gt;::const_iterator it =</div>
+<div class="line"><span class="lineno">  193</span>                <a class="code hl_variable" href="#abbd17a17039df8a8eeb865a3967bba0d">attributes</a>.find(<span class="keyword">typeid</span>(Attribute).name() + std::string(key) + subKey);</div>
+<div class="line"><span class="lineno">  194</span> </div>
+<div class="line"><span class="lineno">  195</span>            <span class="keywordflow">if</span> (it != <a class="code hl_variable" href="#abbd17a17039df8a8eeb865a3967bba0d">attributes</a>.end()) {</div>
+<div class="line"><span class="lineno">  196</span>                found = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  197</span> </div>
+<div class="line"><span class="lineno">  198</span>                onFound(**std::static_pointer_cast&lt;AttributeProxy&lt;Attribute&gt;&gt;(it-&gt;second));</div>
+<div class="line"><span class="lineno">  199</span>            }</div>
+<div class="line"><span class="lineno">  200</span> </div>
+<div class="line"><span class="lineno">  201</span>            <span class="keywordflow">return</span> found;</div>
+<div class="line"><span class="lineno">  202</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -304,12 +304,12 @@ template&lt;InjectableAttribute Attribute, <a class="el" href="structutils_1_1fi
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AttributeInjector_8h_source.html#l00160">160</a> of file <a class="el" href="AttributeInjector_8h_source.html">AttributeInjector.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  160</span>                                                                        {</div>
-<div class="line"><span class="lineno">  161</span>            <span class="keywordtype">bool</span> found = <a class="code hl_variable" href="#abbd17a17039df8a8eeb865a3967bba0d">attributes</a>.find(<span class="keyword">typeid</span>(Attribute).name() + std::string(key) + subKey) != <a class="code hl_variable" href="#abbd17a17039df8a8eeb865a3967bba0d">attributes</a>.end();</div>
-<div class="line"><span class="lineno">  162</span> </div>
-<div class="line"><span class="lineno">  163</span>            <span class="keywordflow">return</span> found;</div>
-<div class="line"><span class="lineno">  164</span>        }</div>
+<p class="definition">Definition at line <a class="el" href="AttributeInjector_8h_source.html#l00182">182</a> of file <a class="el" href="AttributeInjector_8h_source.html">AttributeInjector.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  182</span>                                                                        {</div>
+<div class="line"><span class="lineno">  183</span>            <span class="keywordtype">bool</span> found = <a class="code hl_variable" href="#abbd17a17039df8a8eeb865a3967bba0d">attributes</a>.find(<span class="keyword">typeid</span>(Attribute).name() + std::string(key) + subKey) != <a class="code hl_variable" href="#abbd17a17039df8a8eeb865a3967bba0d">attributes</a>.end();</div>
+<div class="line"><span class="lineno">  184</span> </div>
+<div class="line"><span class="lineno">  185</span>            <span class="keywordflow">return</span> found;</div>
+<div class="line"><span class="lineno">  186</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -336,10 +336,10 @@ template&lt;InjectableAttribute Attribute, <a class="el" href="structutils_1_1fi
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AttributeInjector_8h_source.html#l00196">196</a> of file <a class="el" href="AttributeInjector_8h_source.html">AttributeInjector.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  196</span>                     {</div>
-<div class="line"><span class="lineno">  197</span>            <a class="code hl_variable" href="#abbd17a17039df8a8eeb865a3967bba0d">attributes</a>.clear();</div>
-<div class="line"><span class="lineno">  198</span>        }</div>
+<p class="definition">Definition at line <a class="el" href="AttributeInjector_8h_source.html#l00218">218</a> of file <a class="el" href="AttributeInjector_8h_source.html">AttributeInjector.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  218</span>                     {</div>
+<div class="line"><span class="lineno">  219</span>            <a class="code hl_variable" href="#abbd17a17039df8a8eeb865a3967bba0d">attributes</a>.clear();</div>
+<div class="line"><span class="lineno">  220</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -377,18 +377,18 @@ template&lt;InjectableAttribute Attribute, <a class="el" href="structutils_1_1fi
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AttributeInjector_8h_source.html#l00140">140</a> of file <a class="el" href="AttributeInjector_8h_source.html">AttributeInjector.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  140</span>                                                                                                                       {</div>
-<div class="line"><span class="lineno">  141</span>            <span class="keywordtype">bool</span> inserted = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  142</span> </div>
-<div class="line"><span class="lineno">  143</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="#abbd17a17039df8a8eeb865a3967bba0d">attributes</a>.find(<span class="keyword">typeid</span>(Attribute).name() + std::string(key) + subKey) == <a class="code hl_variable" href="#abbd17a17039df8a8eeb865a3967bba0d">attributes</a>.end() || overwrite) {</div>
-<div class="line"><span class="lineno">  144</span>                <a class="code hl_variable" href="#abbd17a17039df8a8eeb865a3967bba0d">attributes</a>[<span class="keyword">typeid</span>(Attribute).name() + std::string(key) + subKey] =</div>
-<div class="line"><span class="lineno">  145</span>                    std::shared_ptr&lt;void&gt;(<span class="keyword">new</span> AttributeProxy&lt;Attribute&gt;(attribute));</div>
-<div class="line"><span class="lineno">  146</span>                inserted = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  147</span>            }</div>
-<div class="line"><span class="lineno">  148</span> </div>
-<div class="line"><span class="lineno">  149</span>            <span class="keywordflow">return</span> inserted;</div>
-<div class="line"><span class="lineno">  150</span>        }</div>
+<p class="definition">Definition at line <a class="el" href="AttributeInjector_8h_source.html#l00162">162</a> of file <a class="el" href="AttributeInjector_8h_source.html">AttributeInjector.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  162</span>                                                                                                                       {</div>
+<div class="line"><span class="lineno">  163</span>            <span class="keywordtype">bool</span> inserted = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  164</span> </div>
+<div class="line"><span class="lineno">  165</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="#abbd17a17039df8a8eeb865a3967bba0d">attributes</a>.find(<span class="keyword">typeid</span>(Attribute).name() + std::string(key) + subKey) == <a class="code hl_variable" href="#abbd17a17039df8a8eeb865a3967bba0d">attributes</a>.end() || overwrite) {</div>
+<div class="line"><span class="lineno">  166</span>                <a class="code hl_variable" href="#abbd17a17039df8a8eeb865a3967bba0d">attributes</a>[<span class="keyword">typeid</span>(Attribute).name() + std::string(key) + subKey] =</div>
+<div class="line"><span class="lineno">  167</span>                    std::shared_ptr&lt;void&gt;(<span class="keyword">new</span> AttributeProxy&lt;Attribute&gt;(attribute));</div>
+<div class="line"><span class="lineno">  168</span>                inserted = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  169</span>            }</div>
+<div class="line"><span class="lineno">  170</span> </div>
+<div class="line"><span class="lineno">  171</span>            <span class="keywordflow">return</span> inserted;</div>
+<div class="line"><span class="lineno">  172</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -426,18 +426,18 @@ template&lt;InjectableAttribute Attribute, <a class="el" href="structutils_1_1fi
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AttributeInjector_8h_source.html#l00127">127</a> of file <a class="el" href="AttributeInjector_8h_source.html">AttributeInjector.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  127</span>                                                                                                                      {</div>
-<div class="line"><span class="lineno">  128</span>            <span class="keywordtype">bool</span> inserted = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  129</span> </div>
-<div class="line"><span class="lineno">  130</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="#abbd17a17039df8a8eeb865a3967bba0d">attributes</a>.find(<span class="keyword">typeid</span>(Attribute).name() + std::string(key) + subKey) == <a class="code hl_variable" href="#abbd17a17039df8a8eeb865a3967bba0d">attributes</a>.end() || overwrite) {</div>
-<div class="line"><span class="lineno">  131</span>                <a class="code hl_variable" href="#abbd17a17039df8a8eeb865a3967bba0d">attributes</a>[<span class="keyword">typeid</span>(Attribute).name() + std::string(key) + subKey] =</div>
-<div class="line"><span class="lineno">  132</span>                    std::shared_ptr&lt;void&gt;(<span class="keyword">new</span> AttributeProxy&lt;Attribute&gt;(attribute));</div>
-<div class="line"><span class="lineno">  133</span>                inserted = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  134</span>            }</div>
-<div class="line"><span class="lineno">  135</span> </div>
-<div class="line"><span class="lineno">  136</span>            <span class="keywordflow">return</span> inserted;</div>
-<div class="line"><span class="lineno">  137</span>        }</div>
+<p class="definition">Definition at line <a class="el" href="AttributeInjector_8h_source.html#l00149">149</a> of file <a class="el" href="AttributeInjector_8h_source.html">AttributeInjector.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  149</span>                                                                                                                      {</div>
+<div class="line"><span class="lineno">  150</span>            <span class="keywordtype">bool</span> inserted = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  151</span> </div>
+<div class="line"><span class="lineno">  152</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="#abbd17a17039df8a8eeb865a3967bba0d">attributes</a>.find(<span class="keyword">typeid</span>(Attribute).name() + std::string(key) + subKey) == <a class="code hl_variable" href="#abbd17a17039df8a8eeb865a3967bba0d">attributes</a>.end() || overwrite) {</div>
+<div class="line"><span class="lineno">  153</span>                <a class="code hl_variable" href="#abbd17a17039df8a8eeb865a3967bba0d">attributes</a>[<span class="keyword">typeid</span>(Attribute).name() + std::string(key) + subKey] =</div>
+<div class="line"><span class="lineno">  154</span>                    std::shared_ptr&lt;void&gt;(<span class="keyword">new</span> AttributeProxy&lt;Attribute&gt;(attribute));</div>
+<div class="line"><span class="lineno">  155</span>                inserted = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  156</span>            }</div>
+<div class="line"><span class="lineno">  157</span> </div>
+<div class="line"><span class="lineno">  158</span>            <span class="keywordflow">return</span> inserted;</div>
+<div class="line"><span class="lineno">  159</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -462,7 +462,7 @@ template&lt;InjectableAttribute Attribute, <a class="el" href="structutils_1_1fi
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AttributeInjector_8h_source.html#l00201">201</a> of file <a class="el" href="AttributeInjector_8h_source.html">AttributeInjector.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AttributeInjector_8h_source.html#l00223">223</a> of file <a class="el" href="AttributeInjector_8h_source.html">AttributeInjector.h</a>.</p>
 
 </div>
 </div>
@@ -475,7 +475,7 @@ template&lt;InjectableAttribute Attribute, <a class="el" href="structutils_1_1fi
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceutils.html">utils</a></li><li class="navelem"><a class="el" href="classutils_1_1MultibleAttributeInjector.html">MultibleAttributeInjector</a></li>
-    <li class="footer">Generated on Tue Feb 25 2025 14:03:10 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generated on Sun Mar 9 2025 01:34:39 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>

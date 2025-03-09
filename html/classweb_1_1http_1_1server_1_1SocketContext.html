@@ -116,7 +116,7 @@ Inheritance diagram for web::http::server::SocketContext:</div>
 <div class="dynheader">
 Collaboration diagram for web::http::server::SocketContext:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classweb_1_1http_1_1server_1_1SocketContext__coll__graph.svg" width="1862" height="950"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classweb_1_1http_1_1server_1_1SocketContext__coll__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -218,7 +218,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="web_2http_2server_2SocketContext_8h_source.html#l00045">45</a> of file <a class="el" href="web_2http_2server_2SocketContext_8h_source.html">SocketContext.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="web_2http_2server_2SocketContext_8h_source.html#l00067">67</a> of file <a class="el" href="web_2http_2server_2SocketContext_8h_source.html">SocketContext.h</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="ae1fa9e141d1602731840570772c792a9" name="ae1fa9e141d1602731840570772c792a9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae1fa9e141d1602731840570772c792a9">&#9670;&#160;</a></span>Request</h2>
@@ -240,7 +240,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="web_2http_2server_2SocketContext_8h_source.html#l00049">49</a> of file <a class="el" href="web_2http_2server_2SocketContext_8h_source.html">SocketContext.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="web_2http_2server_2SocketContext_8h_source.html#l00071">71</a> of file <a class="el" href="web_2http_2server_2SocketContext_8h_source.html">SocketContext.h</a>.</p>
 
 </div>
 </div>
@@ -264,7 +264,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="web_2http_2server_2SocketContext_8h_source.html#l00050">50</a> of file <a class="el" href="web_2http_2server_2SocketContext_8h_source.html">SocketContext.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="web_2http_2server_2SocketContext_8h_source.html#l00072">72</a> of file <a class="el" href="web_2http_2server_2SocketContext_8h_source.html">SocketContext.h</a>.</p>
 
 </div>
 </div>
@@ -288,7 +288,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="web_2http_2server_2SocketContext_8h_source.html#l00047">47</a> of file <a class="el" href="web_2http_2server_2SocketContext_8h_source.html">SocketContext.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="web_2http_2server_2SocketContext_8h_source.html#l00069">69</a> of file <a class="el" href="web_2http_2server_2SocketContext_8h_source.html">SocketContext.h</a>.</p>
 
 </div>
 </div>
@@ -312,47 +312,47 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00037">37</a> of file <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html">SocketContext.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   40</span>        : <a class="code hl_typedef" href="#a7409b2d92610851a95f2d11e8356009e">Super</a>(<a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketContext.html#aa1eeb9f67270ffa53d9416c88d08c7fb">socketConnection</a>)</div>
-<div class="line"><span class="lineno">   41</span>        , <a class="code hl_variable" href="#ac2e57456f05d3fdeaa2b5940a1495466">onRequestReady</a>(<a class="code hl_variable" href="#ac2e57456f05d3fdeaa2b5940a1495466">onRequestReady</a>)</div>
-<div class="line"><span class="lineno">   42</span>        , <a class="code hl_variable" href="#a6f19c485ddf2b2ddc1805006a7d423e6">masterResponse</a>(std::make_shared&lt;Response&gt;(<span class="keyword">this</span>))</div>
-<div class="line"><span class="lineno">   43</span>        , <a class="code hl_variable" href="#ab1b443170605afb9a8dbb5fb39af0c12">parser</a>(</div>
-<div class="line"><span class="lineno">   44</span>              <span class="keyword">this</span>,</div>
-<div class="line"><span class="lineno">   45</span>              [<span class="keyword">this</span>]() {</div>
-<div class="line"><span class="lineno">   46</span>                  LOG(INFO) &lt;&lt; <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a02f0b93ac0ea376dabd6921c7589a8cf">getSocketConnection</a>()-&gt;<a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#a5e26cd617f07295e8579ddb9c41bdd2c">getConnectionName</a>() &lt;&lt; <span class="stringliteral">&quot; HTTP Request started&quot;</span>;</div>
-<div class="line"><span class="lineno">   47</span>              },</div>
-<div class="line"><span class="lineno">   48</span>              [<span class="keyword">this</span>](<a class="code hl_class" href="classweb_1_1http_1_1server_1_1Request.html">web::http::server::Request</a>&amp;&amp; request) {</div>
-<div class="line"><span class="lineno">   49</span>                  LOG(INFO) &lt;&lt; <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a02f0b93ac0ea376dabd6921c7589a8cf">getSocketConnection</a>()-&gt;<a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#a5e26cd617f07295e8579ddb9c41bdd2c">getConnectionName</a>() &lt;&lt; <span class="stringliteral">&quot; HTTP Request parsed: &quot;</span> &lt;&lt; request.method &lt;&lt; <span class="stringliteral">&quot; &quot;</span></div>
-<div class="line"><span class="lineno">   50</span>                            &lt;&lt; request.url &lt;&lt; <span class="stringliteral">&quot; HTTP/&quot;</span> &lt;&lt; request.httpMajor &lt;&lt; <span class="stringliteral">&quot;.&quot;</span> &lt;&lt; request.httpMinor;</div>
-<div class="line"><span class="lineno">   51</span> </div>
-<div class="line"><span class="lineno">   52</span>                  <a class="code hl_variable" href="#af5aaead93ddb3699c9664b5244a4b7b8">pendingRequests</a>.emplace_back(std::make_shared&lt;Request&gt;(std::move(request)));</div>
-<div class="line"><span class="lineno">   53</span> </div>
-<div class="line"><span class="lineno">   54</span>                  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#af5aaead93ddb3699c9664b5244a4b7b8">pendingRequests</a>.size() == 1) {</div>
-<div class="line"><span class="lineno">   55</span>                      <a class="code hl_function" href="#a8ac84bb72b3b67b2a4ebb0f429459b27">deliverRequest</a>();</div>
-<div class="line"><span class="lineno">   56</span>                  }</div>
-<div class="line"><span class="lineno">   57</span>              },</div>
-<div class="line"><span class="lineno">   58</span>              [<span class="keyword">this</span>](<span class="keywordtype">int</span> status, <span class="keyword">const</span> std::string&amp; reason) {</div>
-<div class="line"><span class="lineno">   59</span>                  LOG(ERROR) &lt;&lt; <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a02f0b93ac0ea376dabd6921c7589a8cf">getSocketConnection</a>()-&gt;<a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#a5e26cd617f07295e8579ddb9c41bdd2c">getConnectionName</a>() &lt;&lt; <span class="stringliteral">&quot; HTTP Request parse error: &quot;</span> &lt;&lt; reason &lt;&lt; <span class="stringliteral">&quot; (&quot;</span> &lt;&lt; status</div>
-<div class="line"><span class="lineno">   60</span>                             &lt;&lt; <span class="stringliteral">&quot;) &quot;</span>;</div>
-<div class="line"><span class="lineno">   61</span> </div>
-<div class="line"><span class="lineno">   62</span>                  <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a853d83e3e3cd8dfcce992ab688c0f63e">shutdownWrite</a>(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   63</span>              }) {</div>
-<div class="line"><span class="lineno">   64</span>    }</div>
-<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketConnection_html_a5e26cd617f07295e8579ddb9c41bdd2c"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#a5e26cd617f07295e8579ddb9c41bdd2c">core::socket::stream::SocketConnection::getConnectionName</a></div><div class="ttdeci">const std::string &amp; getConnectionName() const</div><div class="ttdef"><b>Definition</b> <a href="SocketConnection_8cpp_source.html#l00072">SocketConnection.cpp:72</a></div></div>
-<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketContext_html_a02f0b93ac0ea376dabd6921c7589a8cf"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a02f0b93ac0ea376dabd6921c7589a8cf">core::socket::stream::SocketContext::getSocketConnection</a></div><div class="ttdeci">SocketConnection * getSocketConnection() const</div><div class="ttdef"><b>Definition</b> <a href="core_2socket_2stream_2SocketContext_8cpp_source.html#l00043">SocketContext.cpp:43</a></div></div>
-<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketContext_html_a853d83e3e3cd8dfcce992ab688c0f63e"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a853d83e3e3cd8dfcce992ab688c0f63e">core::socket::stream::SocketContext::shutdownWrite</a></div><div class="ttdeci">void shutdownWrite(bool forceClose=false)</div><div class="ttdef"><b>Definition</b> <a href="core_2socket_2stream_2SocketContext_8cpp_source.html#l00075">SocketContext.cpp:75</a></div></div>
-<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketContext_html_aa1eeb9f67270ffa53d9416c88d08c7fb"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1SocketContext.html#aa1eeb9f67270ffa53d9416c88d08c7fb">core::socket::stream::SocketContext::socketConnection</a></div><div class="ttdeci">core::socket::stream::SocketConnection * socketConnection</div><div class="ttdef"><b>Definition</b> <a href="core_2socket_2stream_2SocketContext_8h_source.html#l00074">SocketContext.h:74</a></div></div>
-<div class="ttc" id="aclassweb_1_1http_1_1server_1_1Request_html"><div class="ttname"><a href="classweb_1_1http_1_1server_1_1Request.html">web::http::server::Request</a></div><div class="ttdef"><b>Definition</b> <a href="web_2http_2server_2Request_8h_source.html#l00038">Request.h:38</a></div></div>
-<div class="ttc" id="aclassweb_1_1http_1_1server_1_1SocketContext_html_a6f19c485ddf2b2ddc1805006a7d423e6"><div class="ttname"><a href="#a6f19c485ddf2b2ddc1805006a7d423e6">web::http::server::SocketContext::masterResponse</a></div><div class="ttdeci">std::shared_ptr&lt; Response &gt; masterResponse</div><div class="ttdef"><b>Definition</b> <a href="web_2http_2server_2SocketContext_8h_source.html#l00071">SocketContext.h:71</a></div></div>
-<div class="ttc" id="aclassweb_1_1http_1_1server_1_1SocketContext_html_a7409b2d92610851a95f2d11e8356009e"><div class="ttname"><a href="#a7409b2d92610851a95f2d11e8356009e">web::http::server::SocketContext::Super</a></div><div class="ttdeci">core::socket::stream::SocketContext Super</div><div class="ttdef"><b>Definition</b> <a href="web_2http_2server_2SocketContext_8h_source.html#l00047">SocketContext.h:47</a></div></div>
-<div class="ttc" id="aclassweb_1_1http_1_1server_1_1SocketContext_html_a8ac84bb72b3b67b2a4ebb0f429459b27"><div class="ttname"><a href="#a8ac84bb72b3b67b2a4ebb0f429459b27">web::http::server::SocketContext::deliverRequest</a></div><div class="ttdeci">void deliverRequest()</div><div class="ttdef"><b>Definition</b> <a href="web_2http_2server_2SocketContext_8cpp_source.html#l00066">SocketContext.cpp:66</a></div></div>
-<div class="ttc" id="aclassweb_1_1http_1_1server_1_1SocketContext_html_ab1b443170605afb9a8dbb5fb39af0c12"><div class="ttname"><a href="#ab1b443170605afb9a8dbb5fb39af0c12">web::http::server::SocketContext::parser</a></div><div class="ttdeci">RequestParser parser</div><div class="ttdef"><b>Definition</b> <a href="web_2http_2server_2SocketContext_8h_source.html#l00073">SocketContext.h:73</a></div></div>
-<div class="ttc" id="aclassweb_1_1http_1_1server_1_1SocketContext_html_ac2e57456f05d3fdeaa2b5940a1495466"><div class="ttname"><a href="#ac2e57456f05d3fdeaa2b5940a1495466">web::http::server::SocketContext::onRequestReady</a></div><div class="ttdeci">std::function&lt; void(const std::shared_ptr&lt; Request &gt; &amp;, const std::shared_ptr&lt; Response &gt; &amp;)&gt; onRequestReady</div><div class="ttdef"><b>Definition</b> <a href="web_2http_2server_2SocketContext_8h_source.html#l00062">SocketContext.h:62</a></div></div>
-<div class="ttc" id="aclassweb_1_1http_1_1server_1_1SocketContext_html_af5aaead93ddb3699c9664b5244a4b7b8"><div class="ttname"><a href="#af5aaead93ddb3699c9664b5244a4b7b8">web::http::server::SocketContext::pendingRequests</a></div><div class="ttdeci">std::list&lt; std::shared_ptr&lt; Request &gt; &gt; pendingRequests</div><div class="ttdef"><b>Definition</b> <a href="web_2http_2server_2SocketContext_8h_source.html#l00070">SocketContext.h:70</a></div></div>
+<p class="definition">Definition at line <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00059">59</a> of file <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html">SocketContext.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   62</span>        : <a class="code hl_typedef" href="#a7409b2d92610851a95f2d11e8356009e">Super</a>(<a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketContext.html#aa1eeb9f67270ffa53d9416c88d08c7fb">socketConnection</a>)</div>
+<div class="line"><span class="lineno">   63</span>        , <a class="code hl_variable" href="#ac2e57456f05d3fdeaa2b5940a1495466">onRequestReady</a>(<a class="code hl_variable" href="#ac2e57456f05d3fdeaa2b5940a1495466">onRequestReady</a>)</div>
+<div class="line"><span class="lineno">   64</span>        , <a class="code hl_variable" href="#a6f19c485ddf2b2ddc1805006a7d423e6">masterResponse</a>(std::make_shared&lt;Response&gt;(<span class="keyword">this</span>))</div>
+<div class="line"><span class="lineno">   65</span>        , <a class="code hl_variable" href="#ab1b443170605afb9a8dbb5fb39af0c12">parser</a>(</div>
+<div class="line"><span class="lineno">   66</span>              <span class="keyword">this</span>,</div>
+<div class="line"><span class="lineno">   67</span>              [<span class="keyword">this</span>]() {</div>
+<div class="line"><span class="lineno">   68</span>                  LOG(INFO) &lt;&lt; <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a02f0b93ac0ea376dabd6921c7589a8cf">getSocketConnection</a>()-&gt;<a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#a5e26cd617f07295e8579ddb9c41bdd2c">getConnectionName</a>() &lt;&lt; <span class="stringliteral">&quot; HTTP Request started&quot;</span>;</div>
+<div class="line"><span class="lineno">   69</span>              },</div>
+<div class="line"><span class="lineno">   70</span>              [<span class="keyword">this</span>](<a class="code hl_class" href="classweb_1_1http_1_1server_1_1Request.html">web::http::server::Request</a>&amp;&amp; request) {</div>
+<div class="line"><span class="lineno">   71</span>                  LOG(INFO) &lt;&lt; <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a02f0b93ac0ea376dabd6921c7589a8cf">getSocketConnection</a>()-&gt;<a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#a5e26cd617f07295e8579ddb9c41bdd2c">getConnectionName</a>() &lt;&lt; <span class="stringliteral">&quot; HTTP Request parsed: &quot;</span> &lt;&lt; request.method &lt;&lt; <span class="stringliteral">&quot; &quot;</span></div>
+<div class="line"><span class="lineno">   72</span>                            &lt;&lt; request.url &lt;&lt; <span class="stringliteral">&quot; HTTP/&quot;</span> &lt;&lt; request.httpMajor &lt;&lt; <span class="stringliteral">&quot;.&quot;</span> &lt;&lt; request.httpMinor;</div>
+<div class="line"><span class="lineno">   73</span> </div>
+<div class="line"><span class="lineno">   74</span>                  <a class="code hl_variable" href="#af5aaead93ddb3699c9664b5244a4b7b8">pendingRequests</a>.emplace_back(std::make_shared&lt;Request&gt;(std::move(request)));</div>
+<div class="line"><span class="lineno">   75</span> </div>
+<div class="line"><span class="lineno">   76</span>                  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#af5aaead93ddb3699c9664b5244a4b7b8">pendingRequests</a>.size() == 1) {</div>
+<div class="line"><span class="lineno">   77</span>                      <a class="code hl_function" href="#a8ac84bb72b3b67b2a4ebb0f429459b27">deliverRequest</a>();</div>
+<div class="line"><span class="lineno">   78</span>                  }</div>
+<div class="line"><span class="lineno">   79</span>              },</div>
+<div class="line"><span class="lineno">   80</span>              [<span class="keyword">this</span>](<span class="keywordtype">int</span> status, <span class="keyword">const</span> std::string&amp; reason) {</div>
+<div class="line"><span class="lineno">   81</span>                  LOG(ERROR) &lt;&lt; <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a02f0b93ac0ea376dabd6921c7589a8cf">getSocketConnection</a>()-&gt;<a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#a5e26cd617f07295e8579ddb9c41bdd2c">getConnectionName</a>() &lt;&lt; <span class="stringliteral">&quot; HTTP Request parse error: &quot;</span> &lt;&lt; reason &lt;&lt; <span class="stringliteral">&quot; (&quot;</span> &lt;&lt; status</div>
+<div class="line"><span class="lineno">   82</span>                             &lt;&lt; <span class="stringliteral">&quot;) &quot;</span>;</div>
+<div class="line"><span class="lineno">   83</span> </div>
+<div class="line"><span class="lineno">   84</span>                  <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a853d83e3e3cd8dfcce992ab688c0f63e">shutdownWrite</a>(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   85</span>              }) {</div>
+<div class="line"><span class="lineno">   86</span>    }</div>
+<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketConnection_html_a5e26cd617f07295e8579ddb9c41bdd2c"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#a5e26cd617f07295e8579ddb9c41bdd2c">core::socket::stream::SocketConnection::getConnectionName</a></div><div class="ttdeci">const std::string &amp; getConnectionName() const</div><div class="ttdef"><b>Definition</b> <a href="SocketConnection_8cpp_source.html#l00094">SocketConnection.cpp:94</a></div></div>
+<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketContext_html_a02f0b93ac0ea376dabd6921c7589a8cf"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a02f0b93ac0ea376dabd6921c7589a8cf">core::socket::stream::SocketContext::getSocketConnection</a></div><div class="ttdeci">SocketConnection * getSocketConnection() const</div><div class="ttdef"><b>Definition</b> <a href="core_2socket_2stream_2SocketContext_8cpp_source.html#l00065">SocketContext.cpp:65</a></div></div>
+<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketContext_html_a853d83e3e3cd8dfcce992ab688c0f63e"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a853d83e3e3cd8dfcce992ab688c0f63e">core::socket::stream::SocketContext::shutdownWrite</a></div><div class="ttdeci">void shutdownWrite(bool forceClose=false)</div><div class="ttdef"><b>Definition</b> <a href="core_2socket_2stream_2SocketContext_8cpp_source.html#l00097">SocketContext.cpp:97</a></div></div>
+<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketContext_html_aa1eeb9f67270ffa53d9416c88d08c7fb"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1SocketContext.html#aa1eeb9f67270ffa53d9416c88d08c7fb">core::socket::stream::SocketContext::socketConnection</a></div><div class="ttdeci">core::socket::stream::SocketConnection * socketConnection</div><div class="ttdef"><b>Definition</b> <a href="core_2socket_2stream_2SocketContext_8h_source.html#l00096">SocketContext.h:96</a></div></div>
+<div class="ttc" id="aclassweb_1_1http_1_1server_1_1Request_html"><div class="ttname"><a href="classweb_1_1http_1_1server_1_1Request.html">web::http::server::Request</a></div><div class="ttdef"><b>Definition</b> <a href="web_2http_2server_2Request_8h_source.html#l00060">Request.h:60</a></div></div>
+<div class="ttc" id="aclassweb_1_1http_1_1server_1_1SocketContext_html_a6f19c485ddf2b2ddc1805006a7d423e6"><div class="ttname"><a href="#a6f19c485ddf2b2ddc1805006a7d423e6">web::http::server::SocketContext::masterResponse</a></div><div class="ttdeci">std::shared_ptr&lt; Response &gt; masterResponse</div><div class="ttdef"><b>Definition</b> <a href="web_2http_2server_2SocketContext_8h_source.html#l00093">SocketContext.h:93</a></div></div>
+<div class="ttc" id="aclassweb_1_1http_1_1server_1_1SocketContext_html_a7409b2d92610851a95f2d11e8356009e"><div class="ttname"><a href="#a7409b2d92610851a95f2d11e8356009e">web::http::server::SocketContext::Super</a></div><div class="ttdeci">core::socket::stream::SocketContext Super</div><div class="ttdef"><b>Definition</b> <a href="web_2http_2server_2SocketContext_8h_source.html#l00069">SocketContext.h:69</a></div></div>
+<div class="ttc" id="aclassweb_1_1http_1_1server_1_1SocketContext_html_a8ac84bb72b3b67b2a4ebb0f429459b27"><div class="ttname"><a href="#a8ac84bb72b3b67b2a4ebb0f429459b27">web::http::server::SocketContext::deliverRequest</a></div><div class="ttdeci">void deliverRequest()</div><div class="ttdef"><b>Definition</b> <a href="web_2http_2server_2SocketContext_8cpp_source.html#l00088">SocketContext.cpp:88</a></div></div>
+<div class="ttc" id="aclassweb_1_1http_1_1server_1_1SocketContext_html_ab1b443170605afb9a8dbb5fb39af0c12"><div class="ttname"><a href="#ab1b443170605afb9a8dbb5fb39af0c12">web::http::server::SocketContext::parser</a></div><div class="ttdeci">RequestParser parser</div><div class="ttdef"><b>Definition</b> <a href="web_2http_2server_2SocketContext_8h_source.html#l00095">SocketContext.h:95</a></div></div>
+<div class="ttc" id="aclassweb_1_1http_1_1server_1_1SocketContext_html_ac2e57456f05d3fdeaa2b5940a1495466"><div class="ttname"><a href="#ac2e57456f05d3fdeaa2b5940a1495466">web::http::server::SocketContext::onRequestReady</a></div><div class="ttdeci">std::function&lt; void(const std::shared_ptr&lt; Request &gt; &amp;, const std::shared_ptr&lt; Response &gt; &amp;)&gt; onRequestReady</div><div class="ttdef"><b>Definition</b> <a href="web_2http_2server_2SocketContext_8h_source.html#l00084">SocketContext.h:84</a></div></div>
+<div class="ttc" id="aclassweb_1_1http_1_1server_1_1SocketContext_html_af5aaead93ddb3699c9664b5244a4b7b8"><div class="ttname"><a href="#af5aaead93ddb3699c9664b5244a4b7b8">web::http::server::SocketContext::pendingRequests</a></div><div class="ttdeci">std::list&lt; std::shared_ptr&lt; Request &gt; &gt; pendingRequests</div><div class="ttdef"><b>Definition</b> <a href="web_2http_2server_2SocketContext_8h_source.html#l00092">SocketContext.h:92</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00037">SocketContext()</a>.</p>
+<p class="reference">References <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00059">SocketContext()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00037">SocketContext()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00059">SocketContext()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -390,34 +390,34 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00066">66</a> of file <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html">SocketContext.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   66</span>                                       {</div>
-<div class="line"><span class="lineno">   67</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="#af5aaead93ddb3699c9664b5244a4b7b8">pendingRequests</a>.empty()) {</div>
-<div class="line"><span class="lineno">   68</span>            <span class="keyword">const</span> std::shared_ptr&lt;Request&gt;&amp; pendingRequest = <a class="code hl_variable" href="#af5aaead93ddb3699c9664b5244a4b7b8">pendingRequests</a>.front();</div>
-<div class="line"><span class="lineno">   69</span> </div>
-<div class="line"><span class="lineno">   70</span>            LOG(INFO) &lt;&lt; <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a02f0b93ac0ea376dabd6921c7589a8cf">getSocketConnection</a>()-&gt;<a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#a5e26cd617f07295e8579ddb9c41bdd2c">getConnectionName</a>() &lt;&lt; <span class="stringliteral">&quot; HTTP Request ready: &quot;</span> &lt;&lt; pendingRequest-&gt;method &lt;&lt; <span class="stringliteral">&quot; &quot;</span></div>
-<div class="line"><span class="lineno">   71</span>                      &lt;&lt; pendingRequest-&gt;url &lt;&lt; <span class="stringliteral">&quot; HTTP/&quot;</span> &lt;&lt; pendingRequest-&gt;httpMajor &lt;&lt; <span class="stringliteral">&quot;.&quot;</span> &lt;&lt; pendingRequest-&gt;httpMinor;</div>
-<div class="line"><span class="lineno">   72</span> </div>
-<div class="line"><span class="lineno">   73</span>            <a class="code hl_variable" href="#a6f19c485ddf2b2ddc1805006a7d423e6">masterResponse</a>-&gt;init();</div>
-<div class="line"><span class="lineno">   74</span>            <a class="code hl_variable" href="#a6f19c485ddf2b2ddc1805006a7d423e6">masterResponse</a>-&gt;httpMajor = pendingRequest-&gt;httpMajor;</div>
-<div class="line"><span class="lineno">   75</span>            <a class="code hl_variable" href="#a6f19c485ddf2b2ddc1805006a7d423e6">masterResponse</a>-&gt;httpMinor = pendingRequest-&gt;httpMinor;</div>
-<div class="line"><span class="lineno">   76</span> </div>
-<div class="line"><span class="lineno">   77</span>            <span class="keyword">const</span> std::string connection = pendingRequest-&gt;get(<span class="stringliteral">&quot;Connection&quot;</span>);</div>
-<div class="line"><span class="lineno">   78</span>            <span class="keywordflow">if</span> (!connection.empty()) {</div>
-<div class="line"><span class="lineno">   79</span>                <a class="code hl_variable" href="#a6f19c485ddf2b2ddc1805006a7d423e6">masterResponse</a>-&gt;set(<span class="stringliteral">&quot;Connection&quot;</span>, connection);</div>
-<div class="line"><span class="lineno">   80</span>            }</div>
-<div class="line"><span class="lineno">   81</span> </div>
-<div class="line"><span class="lineno">   82</span>            <a class="code hl_variable" href="#ac2e57456f05d3fdeaa2b5940a1495466">onRequestReady</a>(pendingRequest, <a class="code hl_variable" href="#a6f19c485ddf2b2ddc1805006a7d423e6">masterResponse</a>);</div>
-<div class="line"><span class="lineno">   83</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   84</span>            LOG(INFO) &lt;&lt; <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a02f0b93ac0ea376dabd6921c7589a8cf">getSocketConnection</a>()-&gt;<a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#a5e26cd617f07295e8579ddb9c41bdd2c">getConnectionName</a>() &lt;&lt; <span class="stringliteral">&quot; HTTP Request: No more pending&quot;</span>;</div>
-<div class="line"><span class="lineno">   85</span>        }</div>
-<div class="line"><span class="lineno">   86</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00088">88</a> of file <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html">SocketContext.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   88</span>                                       {</div>
+<div class="line"><span class="lineno">   89</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="#af5aaead93ddb3699c9664b5244a4b7b8">pendingRequests</a>.empty()) {</div>
+<div class="line"><span class="lineno">   90</span>            <span class="keyword">const</span> std::shared_ptr&lt;Request&gt;&amp; pendingRequest = <a class="code hl_variable" href="#af5aaead93ddb3699c9664b5244a4b7b8">pendingRequests</a>.front();</div>
+<div class="line"><span class="lineno">   91</span> </div>
+<div class="line"><span class="lineno">   92</span>            LOG(INFO) &lt;&lt; <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a02f0b93ac0ea376dabd6921c7589a8cf">getSocketConnection</a>()-&gt;<a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#a5e26cd617f07295e8579ddb9c41bdd2c">getConnectionName</a>() &lt;&lt; <span class="stringliteral">&quot; HTTP Request ready: &quot;</span> &lt;&lt; pendingRequest-&gt;method &lt;&lt; <span class="stringliteral">&quot; &quot;</span></div>
+<div class="line"><span class="lineno">   93</span>                      &lt;&lt; pendingRequest-&gt;url &lt;&lt; <span class="stringliteral">&quot; HTTP/&quot;</span> &lt;&lt; pendingRequest-&gt;httpMajor &lt;&lt; <span class="stringliteral">&quot;.&quot;</span> &lt;&lt; pendingRequest-&gt;httpMinor;</div>
+<div class="line"><span class="lineno">   94</span> </div>
+<div class="line"><span class="lineno">   95</span>            <a class="code hl_variable" href="#a6f19c485ddf2b2ddc1805006a7d423e6">masterResponse</a>-&gt;init();</div>
+<div class="line"><span class="lineno">   96</span>            <a class="code hl_variable" href="#a6f19c485ddf2b2ddc1805006a7d423e6">masterResponse</a>-&gt;httpMajor = pendingRequest-&gt;httpMajor;</div>
+<div class="line"><span class="lineno">   97</span>            <a class="code hl_variable" href="#a6f19c485ddf2b2ddc1805006a7d423e6">masterResponse</a>-&gt;httpMinor = pendingRequest-&gt;httpMinor;</div>
+<div class="line"><span class="lineno">   98</span> </div>
+<div class="line"><span class="lineno">   99</span>            <span class="keyword">const</span> std::string connection = pendingRequest-&gt;get(<span class="stringliteral">&quot;Connection&quot;</span>);</div>
+<div class="line"><span class="lineno">  100</span>            <span class="keywordflow">if</span> (!connection.empty()) {</div>
+<div class="line"><span class="lineno">  101</span>                <a class="code hl_variable" href="#a6f19c485ddf2b2ddc1805006a7d423e6">masterResponse</a>-&gt;set(<span class="stringliteral">&quot;Connection&quot;</span>, connection);</div>
+<div class="line"><span class="lineno">  102</span>            }</div>
+<div class="line"><span class="lineno">  103</span> </div>
+<div class="line"><span class="lineno">  104</span>            <a class="code hl_variable" href="#ac2e57456f05d3fdeaa2b5940a1495466">onRequestReady</a>(pendingRequest, <a class="code hl_variable" href="#a6f19c485ddf2b2ddc1805006a7d423e6">masterResponse</a>);</div>
+<div class="line"><span class="lineno">  105</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  106</span>            LOG(INFO) &lt;&lt; <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a02f0b93ac0ea376dabd6921c7589a8cf">getSocketConnection</a>()-&gt;<a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#a5e26cd617f07295e8579ddb9c41bdd2c">getConnectionName</a>() &lt;&lt; <span class="stringliteral">&quot; HTTP Request: No more pending&quot;</span>;</div>
+<div class="line"><span class="lineno">  107</span>        }</div>
+<div class="line"><span class="lineno">  108</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00115">requestCompleted()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00137">requestCompleted()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classweb_1_1http_1_1server_1_1SocketContext_a8ac84bb72b3b67b2a4ebb0f429459b27_icgraph.svg" width="828" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classweb_1_1http_1_1server_1_1SocketContext_a8ac84bb72b3b67b2a4ebb0f429459b27_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -447,12 +447,12 @@ Here is the caller graph for this function:</div>
 
 <p>Implements <a class="el" href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a716a54b882173251b584439499ca0446">core::socket::stream::SocketContext</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00137">137</a> of file <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html">SocketContext.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  137</span>                                    {</div>
-<div class="line"><span class="lineno">  138</span>        LOG(INFO) &lt;&lt; <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a02f0b93ac0ea376dabd6921c7589a8cf">getSocketConnection</a>()-&gt;<a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#a5e26cd617f07295e8579ddb9c41bdd2c">getConnectionName</a>() &lt;&lt; <span class="stringliteral">&quot; HTTP: Connected&quot;</span>;</div>
-<div class="line"><span class="lineno">  139</span> </div>
-<div class="line"><span class="lineno">  140</span>        <a class="code hl_variable" href="#a6f19c485ddf2b2ddc1805006a7d423e6">masterResponse</a>-&gt;init();</div>
-<div class="line"><span class="lineno">  141</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00159">159</a> of file <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html">SocketContext.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  159</span>                                    {</div>
+<div class="line"><span class="lineno">  160</span>        LOG(INFO) &lt;&lt; <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a02f0b93ac0ea376dabd6921c7589a8cf">getSocketConnection</a>()-&gt;<a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#a5e26cd617f07295e8579ddb9c41bdd2c">getConnectionName</a>() &lt;&lt; <span class="stringliteral">&quot; HTTP: Connected&quot;</span>;</div>
+<div class="line"><span class="lineno">  161</span> </div>
+<div class="line"><span class="lineno">  162</span>        <a class="code hl_variable" href="#a6f19c485ddf2b2ddc1805006a7d423e6">masterResponse</a>-&gt;init();</div>
+<div class="line"><span class="lineno">  163</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -481,14 +481,14 @@ Here is the caller graph for this function:</div>
 
 <p>Implements <a class="el" href="classcore_1_1socket_1_1stream_1_1SocketContext.html#ab9c932c5c1b706ffb84d97634514d20e">core::socket::stream::SocketContext</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00153">153</a> of file <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html">SocketContext.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  153</span>                                       {</div>
-<div class="line"><span class="lineno">  154</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a6f19c485ddf2b2ddc1805006a7d423e6">masterResponse</a> != <span class="keyword">nullptr</span>) {</div>
-<div class="line"><span class="lineno">  155</span>            <a class="code hl_variable" href="#a6f19c485ddf2b2ddc1805006a7d423e6">masterResponse</a>-&gt;stopResponse();</div>
-<div class="line"><span class="lineno">  156</span>        }</div>
-<div class="line"><span class="lineno">  157</span> </div>
-<div class="line"><span class="lineno">  158</span>        LOG(INFO) &lt;&lt; <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a02f0b93ac0ea376dabd6921c7589a8cf">getSocketConnection</a>()-&gt;<a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#a5e26cd617f07295e8579ddb9c41bdd2c">getConnectionName</a>() &lt;&lt; <span class="stringliteral">&quot; HTTP: Disconnected&quot;</span>;</div>
-<div class="line"><span class="lineno">  159</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00175">175</a> of file <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html">SocketContext.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  175</span>                                       {</div>
+<div class="line"><span class="lineno">  176</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a6f19c485ddf2b2ddc1805006a7d423e6">masterResponse</a> != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><span class="lineno">  177</span>            <a class="code hl_variable" href="#a6f19c485ddf2b2ddc1805006a7d423e6">masterResponse</a>-&gt;stopResponse();</div>
+<div class="line"><span class="lineno">  178</span>        }</div>
+<div class="line"><span class="lineno">  179</span> </div>
+<div class="line"><span class="lineno">  180</span>        LOG(INFO) &lt;&lt; <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a02f0b93ac0ea376dabd6921c7589a8cf">getSocketConnection</a>()-&gt;<a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#a5e26cd617f07295e8579ddb9c41bdd2c">getConnectionName</a>() &lt;&lt; <span class="stringliteral">&quot; HTTP: Disconnected&quot;</span>;</div>
+<div class="line"><span class="lineno">  181</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -517,20 +517,20 @@ Here is the caller graph for this function:</div>
 
 <p>Implements <a class="el" href="classcore_1_1socket_1_1SocketContext.html#a34c520f17818f029395d2d2b4babc882">core::socket::SocketContext</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00143">143</a> of file <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html">SocketContext.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  143</span>                                                {</div>
-<div class="line"><span class="lineno">  144</span>        std::size_t consumed = 0;</div>
-<div class="line"><span class="lineno">  145</span> </div>
-<div class="line"><span class="lineno">  146</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="#a6768395fc2c81378d92462cd98e2c19d">httpClose</a>) {</div>
-<div class="line"><span class="lineno">  147</span>            consumed = <a class="code hl_variable" href="#ab1b443170605afb9a8dbb5fb39af0c12">parser</a>.<a class="code hl_function" href="classweb_1_1http_1_1Parser.html#a1291dd16e6eba36cd6f35448dba4b3d5">parse</a>();</div>
-<div class="line"><span class="lineno">  148</span>        }</div>
-<div class="line"><span class="lineno">  149</span> </div>
-<div class="line"><span class="lineno">  150</span>        <span class="keywordflow">return</span> consumed;</div>
-<div class="line"><span class="lineno">  151</span>    }</div>
-<div class="ttc" id="aclassweb_1_1http_1_1Parser_html_a1291dd16e6eba36cd6f35448dba4b3d5"><div class="ttname"><a href="classweb_1_1http_1_1Parser.html#a1291dd16e6eba36cd6f35448dba4b3d5">web::http::Parser::parse</a></div><div class="ttdeci">std::size_t parse()</div><div class="ttdef"><b>Definition</b> <a href="Parser_8cpp_source.html#l00070">Parser.cpp:70</a></div></div>
-<div class="ttc" id="aclassweb_1_1http_1_1server_1_1SocketContext_html_a6768395fc2c81378d92462cd98e2c19d"><div class="ttname"><a href="#a6768395fc2c81378d92462cd98e2c19d">web::http::server::SocketContext::httpClose</a></div><div class="ttdeci">bool httpClose</div><div class="ttdef"><b>Definition</b> <a href="web_2http_2server_2SocketContext_8h_source.html#l00075">SocketContext.h:75</a></div></div>
+<p class="definition">Definition at line <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00165">165</a> of file <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html">SocketContext.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  165</span>                                                {</div>
+<div class="line"><span class="lineno">  166</span>        std::size_t consumed = 0;</div>
+<div class="line"><span class="lineno">  167</span> </div>
+<div class="line"><span class="lineno">  168</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="#a6768395fc2c81378d92462cd98e2c19d">httpClose</a>) {</div>
+<div class="line"><span class="lineno">  169</span>            consumed = <a class="code hl_variable" href="#ab1b443170605afb9a8dbb5fb39af0c12">parser</a>.<a class="code hl_function" href="classweb_1_1http_1_1Parser.html#a1291dd16e6eba36cd6f35448dba4b3d5">parse</a>();</div>
+<div class="line"><span class="lineno">  170</span>        }</div>
+<div class="line"><span class="lineno">  171</span> </div>
+<div class="line"><span class="lineno">  172</span>        <span class="keywordflow">return</span> consumed;</div>
+<div class="line"><span class="lineno">  173</span>    }</div>
+<div class="ttc" id="aclassweb_1_1http_1_1Parser_html_a1291dd16e6eba36cd6f35448dba4b3d5"><div class="ttname"><a href="classweb_1_1http_1_1Parser.html#a1291dd16e6eba36cd6f35448dba4b3d5">web::http::Parser::parse</a></div><div class="ttdeci">std::size_t parse()</div><div class="ttdef"><b>Definition</b> <a href="Parser_8cpp_source.html#l00092">Parser.cpp:92</a></div></div>
+<div class="ttc" id="aclassweb_1_1http_1_1server_1_1SocketContext_html_a6768395fc2c81378d92462cd98e2c19d"><div class="ttname"><a href="#a6768395fc2c81378d92462cd98e2c19d">web::http::server::SocketContext::httpClose</a></div><div class="ttdeci">bool httpClose</div><div class="ttdef"><b>Definition</b> <a href="web_2http_2server_2SocketContext_8h_source.html#l00097">SocketContext.h:97</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="web_2http_2server_2SocketContext_8h_source.html#l00075">httpClose</a>.</p>
+<p class="reference">References <a class="el" href="web_2http_2server_2SocketContext_8h_source.html#l00097">httpClose</a>.</p>
 
 </div>
 </div>
@@ -559,12 +559,12 @@ Here is the caller graph for this function:</div>
 
 <p>Implements <a class="el" href="classcore_1_1socket_1_1SocketContext.html#ad5a47157710544f1d90f1ebdf15fe49e">core::socket::SocketContext</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00161">161</a> of file <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html">SocketContext.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  161</span>                                           {</div>
-<div class="line"><span class="lineno">  162</span>        LOG(INFO) &lt;&lt; <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a02f0b93ac0ea376dabd6921c7589a8cf">getSocketConnection</a>()-&gt;<a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#a5e26cd617f07295e8579ddb9c41bdd2c">getConnectionName</a>() &lt;&lt; <span class="stringliteral">&quot; HTTP: Received signal &quot;</span> &lt;&lt; signum;</div>
-<div class="line"><span class="lineno">  163</span> </div>
-<div class="line"><span class="lineno">  164</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  165</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00183">183</a> of file <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html">SocketContext.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  183</span>                                           {</div>
+<div class="line"><span class="lineno">  184</span>        LOG(INFO) &lt;&lt; <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a02f0b93ac0ea376dabd6921c7589a8cf">getSocketConnection</a>()-&gt;<a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#a5e26cd617f07295e8579ddb9c41bdd2c">getConnectionName</a>() &lt;&lt; <span class="stringliteral">&quot; HTTP: Received signal &quot;</span> &lt;&lt; signum;</div>
+<div class="line"><span class="lineno">  185</span> </div>
+<div class="line"><span class="lineno">  186</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  187</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -593,10 +593,10 @@ Here is the caller graph for this function:</div>
 
 <p>Reimplemented from <a class="el" href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a9ac0bc41b2d3020850c106ea84e274fb">core::socket::stream::SocketContext</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00167">167</a> of file <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html">SocketContext.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  167</span>                                                                {</div>
-<div class="line"><span class="lineno">  168</span>        <span class="comment">// Do nothing in case of an write error</span></div>
-<div class="line"><span class="lineno">  169</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00189">189</a> of file <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html">SocketContext.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  189</span>                                                                {</div>
+<div class="line"><span class="lineno">  190</span>        <span class="comment">// Do nothing in case of an write error</span></div>
+<div class="line"><span class="lineno">  191</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -623,33 +623,33 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00115">115</a> of file <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html">SocketContext.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  115</span>                                         {</div>
-<div class="line"><span class="lineno">  116</span>        <span class="keyword">const</span> std::shared_ptr&lt;Request&gt;&amp; pendingRequest = <a class="code hl_variable" href="#af5aaead93ddb3699c9664b5244a4b7b8">pendingRequests</a>.front();</div>
-<div class="line"><span class="lineno">  117</span> </div>
-<div class="line"><span class="lineno">  118</span>        LOG(INFO) &lt;&lt; <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a02f0b93ac0ea376dabd6921c7589a8cf">getSocketConnection</a>()-&gt;<a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#a5e26cd617f07295e8579ddb9c41bdd2c">getConnectionName</a>() &lt;&lt; <span class="stringliteral">&quot; HTTP Request completed: &quot;</span> &lt;&lt; pendingRequest-&gt;method &lt;&lt; <span class="stringliteral">&quot; &quot;</span></div>
-<div class="line"><span class="lineno">  119</span>                  &lt;&lt; pendingRequest-&gt;url &lt;&lt; <span class="stringliteral">&quot; HTTP/&quot;</span> &lt;&lt; pendingRequest-&gt;httpMajor &lt;&lt; <span class="stringliteral">&quot;.&quot;</span> &lt;&lt; pendingRequest-&gt;httpMinor;</div>
-<div class="line"><span class="lineno">  120</span> </div>
-<div class="line"><span class="lineno">  121</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a6768395fc2c81378d92462cd98e2c19d">httpClose</a>) {</div>
-<div class="line"><span class="lineno">  122</span>            LOG(INFO) &lt;&lt; <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a02f0b93ac0ea376dabd6921c7589a8cf">getSocketConnection</a>()-&gt;<a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#a5e26cd617f07295e8579ddb9c41bdd2c">getConnectionName</a>() &lt;&lt; <span class="stringliteral">&quot; HTTP: Connection = Close&quot;</span>;</div>
-<div class="line"><span class="lineno">  123</span> </div>
-<div class="line"><span class="lineno">  124</span>            <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a853d83e3e3cd8dfcce992ab688c0f63e">shutdownWrite</a>();</div>
-<div class="line"><span class="lineno">  125</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  126</span>            LOG(DEBUG) &lt;&lt; <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a02f0b93ac0ea376dabd6921c7589a8cf">getSocketConnection</a>()-&gt;<a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#a5e26cd617f07295e8579ddb9c41bdd2c">getConnectionName</a>() &lt;&lt; <span class="stringliteral">&quot; HTTP: Connection = Keep-Alive&quot;</span>;</div>
-<div class="line"><span class="lineno">  127</span> </div>
-<div class="line"><span class="lineno">  128</span>            <a class="code hl_function" href="classcore_1_1EventReceiver.html#a2e8d915eca53e827be4f493a63ae058d">core::EventReceiver::atNextTick</a>([<span class="keyword">this</span>, response = <span class="keyword">static_cast&lt;</span>std::weak_ptr&lt;Response&gt;<span class="keyword">&gt;</span>(this-&gt;<a class="code hl_variable" href="#a6f19c485ddf2b2ddc1805006a7d423e6">masterResponse</a>)]() {</div>
-<div class="line"><span class="lineno">  129</span>                <span class="keywordflow">if</span> (!response.expired()) {</div>
-<div class="line"><span class="lineno">  130</span>                    pendingRequests.pop_front();</div>
-<div class="line"><span class="lineno">  131</span>                    deliverRequest();</div>
-<div class="line"><span class="lineno">  132</span>                }</div>
-<div class="line"><span class="lineno">  133</span>            });</div>
-<div class="line"><span class="lineno">  134</span>        }</div>
-<div class="line"><span class="lineno">  135</span>    }</div>
-<div class="ttc" id="aclasscore_1_1EventReceiver_html_a2e8d915eca53e827be4f493a63ae058d"><div class="ttname"><a href="classcore_1_1EventReceiver.html#a2e8d915eca53e827be4f493a63ae058d">core::EventReceiver::atNextTick</a></div><div class="ttdeci">static void atNextTick(const std::function&lt; void(void)&gt; &amp;callBack)</div><div class="ttdef"><b>Definition</b> <a href="EventReceiver_8cpp_source.html#l00028">EventReceiver.cpp:28</a></div></div>
+<p class="definition">Definition at line <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00137">137</a> of file <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html">SocketContext.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  137</span>                                         {</div>
+<div class="line"><span class="lineno">  138</span>        <span class="keyword">const</span> std::shared_ptr&lt;Request&gt;&amp; pendingRequest = <a class="code hl_variable" href="#af5aaead93ddb3699c9664b5244a4b7b8">pendingRequests</a>.front();</div>
+<div class="line"><span class="lineno">  139</span> </div>
+<div class="line"><span class="lineno">  140</span>        LOG(INFO) &lt;&lt; <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a02f0b93ac0ea376dabd6921c7589a8cf">getSocketConnection</a>()-&gt;<a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#a5e26cd617f07295e8579ddb9c41bdd2c">getConnectionName</a>() &lt;&lt; <span class="stringliteral">&quot; HTTP Request completed: &quot;</span> &lt;&lt; pendingRequest-&gt;method &lt;&lt; <span class="stringliteral">&quot; &quot;</span></div>
+<div class="line"><span class="lineno">  141</span>                  &lt;&lt; pendingRequest-&gt;url &lt;&lt; <span class="stringliteral">&quot; HTTP/&quot;</span> &lt;&lt; pendingRequest-&gt;httpMajor &lt;&lt; <span class="stringliteral">&quot;.&quot;</span> &lt;&lt; pendingRequest-&gt;httpMinor;</div>
+<div class="line"><span class="lineno">  142</span> </div>
+<div class="line"><span class="lineno">  143</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a6768395fc2c81378d92462cd98e2c19d">httpClose</a>) {</div>
+<div class="line"><span class="lineno">  144</span>            LOG(INFO) &lt;&lt; <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a02f0b93ac0ea376dabd6921c7589a8cf">getSocketConnection</a>()-&gt;<a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#a5e26cd617f07295e8579ddb9c41bdd2c">getConnectionName</a>() &lt;&lt; <span class="stringliteral">&quot; HTTP: Connection = Close&quot;</span>;</div>
+<div class="line"><span class="lineno">  145</span> </div>
+<div class="line"><span class="lineno">  146</span>            <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a853d83e3e3cd8dfcce992ab688c0f63e">shutdownWrite</a>();</div>
+<div class="line"><span class="lineno">  147</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  148</span>            LOG(DEBUG) &lt;&lt; <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a02f0b93ac0ea376dabd6921c7589a8cf">getSocketConnection</a>()-&gt;<a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#a5e26cd617f07295e8579ddb9c41bdd2c">getConnectionName</a>() &lt;&lt; <span class="stringliteral">&quot; HTTP: Connection = Keep-Alive&quot;</span>;</div>
+<div class="line"><span class="lineno">  149</span> </div>
+<div class="line"><span class="lineno">  150</span>            <a class="code hl_function" href="classcore_1_1EventReceiver.html#a2e8d915eca53e827be4f493a63ae058d">core::EventReceiver::atNextTick</a>([<span class="keyword">this</span>, response = <span class="keyword">static_cast&lt;</span>std::weak_ptr&lt;Response&gt;<span class="keyword">&gt;</span>(this-&gt;<a class="code hl_variable" href="#a6f19c485ddf2b2ddc1805006a7d423e6">masterResponse</a>)]() {</div>
+<div class="line"><span class="lineno">  151</span>                <span class="keywordflow">if</span> (!response.expired()) {</div>
+<div class="line"><span class="lineno">  152</span>                    pendingRequests.pop_front();</div>
+<div class="line"><span class="lineno">  153</span>                    deliverRequest();</div>
+<div class="line"><span class="lineno">  154</span>                }</div>
+<div class="line"><span class="lineno">  155</span>            });</div>
+<div class="line"><span class="lineno">  156</span>        }</div>
+<div class="line"><span class="lineno">  157</span>    }</div>
+<div class="ttc" id="aclasscore_1_1EventReceiver_html_a2e8d915eca53e827be4f493a63ae058d"><div class="ttname"><a href="classcore_1_1EventReceiver.html#a2e8d915eca53e827be4f493a63ae058d">core::EventReceiver::atNextTick</a></div><div class="ttdeci">static void atNextTick(const std::function&lt; void(void)&gt; &amp;callBack)</div><div class="ttdef"><b>Definition</b> <a href="EventReceiver_8cpp_source.html#l00050">EventReceiver.cpp:50</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00066">deliverRequest()</a>, and <a class="el" href="web_2http_2server_2SocketContext_8h_source.html#l00075">httpClose</a>.</p>
+<p class="reference">References <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00088">deliverRequest()</a>, and <a class="el" href="web_2http_2server_2SocketContext_8h_source.html#l00097">httpClose</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00095">responseCompleted()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00117">responseCompleted()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -686,35 +686,35 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00095">95</a> of file <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html">SocketContext.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   95</span>                                                      {</div>
-<div class="line"><span class="lineno">   96</span>        <span class="keywordflow">if</span> (success) {</div>
-<div class="line"><span class="lineno">   97</span>            <span class="keyword">const</span> std::shared_ptr&lt;Request&gt;&amp; pendingRequest = <a class="code hl_variable" href="#af5aaead93ddb3699c9664b5244a4b7b8">pendingRequests</a>.front();</div>
-<div class="line"><span class="lineno">   98</span> </div>
-<div class="line"><span class="lineno">   99</span>            LOG(INFO) &lt;&lt; <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a02f0b93ac0ea376dabd6921c7589a8cf">getSocketConnection</a>()-&gt;<a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#a5e26cd617f07295e8579ddb9c41bdd2c">getConnectionName</a>() &lt;&lt; <span class="stringliteral">&quot; HTTP Response completed: &quot;</span> &lt;&lt; pendingRequest-&gt;method &lt;&lt; <span class="stringliteral">&quot; &quot;</span></div>
-<div class="line"><span class="lineno">  100</span>                      &lt;&lt; pendingRequest-&gt;url &lt;&lt; <span class="stringliteral">&quot; HTTP/&quot;</span> &lt;&lt; pendingRequest-&gt;httpMajor &lt;&lt; <span class="stringliteral">&quot;.&quot;</span> &lt;&lt; pendingRequest-&gt;httpMinor;</div>
-<div class="line"><span class="lineno">  101</span> </div>
-<div class="line"><span class="lineno">  102</span>            <a class="code hl_variable" href="#a6768395fc2c81378d92462cd98e2c19d">httpClose</a> = <a class="code hl_variable" href="#a6f19c485ddf2b2ddc1805006a7d423e6">masterResponse</a>-&gt;connectionState == <a class="code hl_enumvalue" href="namespaceweb_1_1http.html#ac27fdcf348c7472940ecd0e34342dca1a31333582a62633255ac3791bd7f5af0b">ConnectionState::Close</a> ||</div>
-<div class="line"><span class="lineno">  103</span>                        (<a class="code hl_variable" href="#a6f19c485ddf2b2ddc1805006a7d423e6">masterResponse</a>-&gt;connectionState == <a class="code hl_enumvalue" href="namespaceweb_1_1http.html#ac27fdcf348c7472940ecd0e34342dca1a2e49d6b06cbe1718b81c65c7eee76807">ConnectionState::Default</a> &amp;&amp;</div>
-<div class="line"><span class="lineno">  104</span>                         ((<a class="code hl_variable" href="#a6f19c485ddf2b2ddc1805006a7d423e6">masterResponse</a>-&gt;httpMajor == 0 &amp;&amp; <a class="code hl_variable" href="#a6f19c485ddf2b2ddc1805006a7d423e6">masterResponse</a>-&gt;httpMinor == 9) ||</div>
-<div class="line"><span class="lineno">  105</span>                          (<a class="code hl_variable" href="#a6f19c485ddf2b2ddc1805006a7d423e6">masterResponse</a>-&gt;httpMajor == 1 &amp;&amp; <a class="code hl_variable" href="#a6f19c485ddf2b2ddc1805006a7d423e6">masterResponse</a>-&gt;httpMinor == 0)));</div>
-<div class="line"><span class="lineno">  106</span> </div>
-<div class="line"><span class="lineno">  107</span>            <a class="code hl_function" href="#aa91d12601bb4b7ccf9381d64286c4a0c">requestCompleted</a>();</div>
-<div class="line"><span class="lineno">  108</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  109</span>            LOG(WARNING) &lt;&lt; <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a02f0b93ac0ea376dabd6921c7589a8cf">getSocketConnection</a>()-&gt;<a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#a5e26cd617f07295e8579ddb9c41bdd2c">getConnectionName</a>() &lt;&lt; <span class="stringliteral">&quot; HTTP Response wrong content length&quot;</span>;</div>
-<div class="line"><span class="lineno">  110</span> </div>
-<div class="line"><span class="lineno">  111</span>            <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a853d83e3e3cd8dfcce992ab688c0f63e">shutdownWrite</a>(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  112</span>        }</div>
-<div class="line"><span class="lineno">  113</span>    }</div>
-<div class="ttc" id="aclassweb_1_1http_1_1server_1_1SocketContext_html_aa91d12601bb4b7ccf9381d64286c4a0c"><div class="ttname"><a href="#aa91d12601bb4b7ccf9381d64286c4a0c">web::http::server::SocketContext::requestCompleted</a></div><div class="ttdeci">void requestCompleted()</div><div class="ttdef"><b>Definition</b> <a href="web_2http_2server_2SocketContext_8cpp_source.html#l00115">SocketContext.cpp:115</a></div></div>
-<div class="ttc" id="anamespaceweb_1_1http_html_ac27fdcf348c7472940ecd0e34342dca1a2e49d6b06cbe1718b81c65c7eee76807"><div class="ttname"><a href="namespaceweb_1_1http.html#ac27fdcf348c7472940ecd0e34342dca1a2e49d6b06cbe1718b81c65c7eee76807">web::http::Default</a></div><div class="ttdeci">@ Default</div><div class="ttdef"><b>Definition</b> <a href="ConnectionState_8h_source.html#l00029">ConnectionState.h:29</a></div></div>
-<div class="ttc" id="anamespaceweb_1_1http_html_ac27fdcf348c7472940ecd0e34342dca1a31333582a62633255ac3791bd7f5af0b"><div class="ttname"><a href="namespaceweb_1_1http.html#ac27fdcf348c7472940ecd0e34342dca1a31333582a62633255ac3791bd7f5af0b">web::http::Close</a></div><div class="ttdeci">@ Close</div><div class="ttdef"><b>Definition</b> <a href="ConnectionState_8h_source.html#l00029">ConnectionState.h:29</a></div></div>
+<p class="definition">Definition at line <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00117">117</a> of file <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html">SocketContext.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  117</span>                                                      {</div>
+<div class="line"><span class="lineno">  118</span>        <span class="keywordflow">if</span> (success) {</div>
+<div class="line"><span class="lineno">  119</span>            <span class="keyword">const</span> std::shared_ptr&lt;Request&gt;&amp; pendingRequest = <a class="code hl_variable" href="#af5aaead93ddb3699c9664b5244a4b7b8">pendingRequests</a>.front();</div>
+<div class="line"><span class="lineno">  120</span> </div>
+<div class="line"><span class="lineno">  121</span>            LOG(INFO) &lt;&lt; <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a02f0b93ac0ea376dabd6921c7589a8cf">getSocketConnection</a>()-&gt;<a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#a5e26cd617f07295e8579ddb9c41bdd2c">getConnectionName</a>() &lt;&lt; <span class="stringliteral">&quot; HTTP Response completed: &quot;</span> &lt;&lt; pendingRequest-&gt;method &lt;&lt; <span class="stringliteral">&quot; &quot;</span></div>
+<div class="line"><span class="lineno">  122</span>                      &lt;&lt; pendingRequest-&gt;url &lt;&lt; <span class="stringliteral">&quot; HTTP/&quot;</span> &lt;&lt; pendingRequest-&gt;httpMajor &lt;&lt; <span class="stringliteral">&quot;.&quot;</span> &lt;&lt; pendingRequest-&gt;httpMinor;</div>
+<div class="line"><span class="lineno">  123</span> </div>
+<div class="line"><span class="lineno">  124</span>            <a class="code hl_variable" href="#a6768395fc2c81378d92462cd98e2c19d">httpClose</a> = <a class="code hl_variable" href="#a6f19c485ddf2b2ddc1805006a7d423e6">masterResponse</a>-&gt;connectionState == <a class="code hl_enumvalue" href="namespaceweb_1_1http.html#ac27fdcf348c7472940ecd0e34342dca1a31333582a62633255ac3791bd7f5af0b">ConnectionState::Close</a> ||</div>
+<div class="line"><span class="lineno">  125</span>                        (<a class="code hl_variable" href="#a6f19c485ddf2b2ddc1805006a7d423e6">masterResponse</a>-&gt;connectionState == <a class="code hl_enumvalue" href="namespaceweb_1_1http.html#ac27fdcf348c7472940ecd0e34342dca1a2e49d6b06cbe1718b81c65c7eee76807">ConnectionState::Default</a> &amp;&amp;</div>
+<div class="line"><span class="lineno">  126</span>                         ((<a class="code hl_variable" href="#a6f19c485ddf2b2ddc1805006a7d423e6">masterResponse</a>-&gt;httpMajor == 0 &amp;&amp; <a class="code hl_variable" href="#a6f19c485ddf2b2ddc1805006a7d423e6">masterResponse</a>-&gt;httpMinor == 9) ||</div>
+<div class="line"><span class="lineno">  127</span>                          (<a class="code hl_variable" href="#a6f19c485ddf2b2ddc1805006a7d423e6">masterResponse</a>-&gt;httpMajor == 1 &amp;&amp; <a class="code hl_variable" href="#a6f19c485ddf2b2ddc1805006a7d423e6">masterResponse</a>-&gt;httpMinor == 0)));</div>
+<div class="line"><span class="lineno">  128</span> </div>
+<div class="line"><span class="lineno">  129</span>            <a class="code hl_function" href="#aa91d12601bb4b7ccf9381d64286c4a0c">requestCompleted</a>();</div>
+<div class="line"><span class="lineno">  130</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  131</span>            LOG(WARNING) &lt;&lt; <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a02f0b93ac0ea376dabd6921c7589a8cf">getSocketConnection</a>()-&gt;<a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#a5e26cd617f07295e8579ddb9c41bdd2c">getConnectionName</a>() &lt;&lt; <span class="stringliteral">&quot; HTTP Response wrong content length&quot;</span>;</div>
+<div class="line"><span class="lineno">  132</span> </div>
+<div class="line"><span class="lineno">  133</span>            <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a853d83e3e3cd8dfcce992ab688c0f63e">shutdownWrite</a>(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  134</span>        }</div>
+<div class="line"><span class="lineno">  135</span>    }</div>
+<div class="ttc" id="aclassweb_1_1http_1_1server_1_1SocketContext_html_aa91d12601bb4b7ccf9381d64286c4a0c"><div class="ttname"><a href="#aa91d12601bb4b7ccf9381d64286c4a0c">web::http::server::SocketContext::requestCompleted</a></div><div class="ttdeci">void requestCompleted()</div><div class="ttdef"><b>Definition</b> <a href="web_2http_2server_2SocketContext_8cpp_source.html#l00137">SocketContext.cpp:137</a></div></div>
+<div class="ttc" id="anamespaceweb_1_1http_html_ac27fdcf348c7472940ecd0e34342dca1a2e49d6b06cbe1718b81c65c7eee76807"><div class="ttname"><a href="namespaceweb_1_1http.html#ac27fdcf348c7472940ecd0e34342dca1a2e49d6b06cbe1718b81c65c7eee76807">web::http::Default</a></div><div class="ttdeci">@ Default</div><div class="ttdef"><b>Definition</b> <a href="ConnectionState_8h_source.html#l00051">ConnectionState.h:51</a></div></div>
+<div class="ttc" id="anamespaceweb_1_1http_html_ac27fdcf348c7472940ecd0e34342dca1a31333582a62633255ac3791bd7f5af0b"><div class="ttname"><a href="namespaceweb_1_1http.html#ac27fdcf348c7472940ecd0e34342dca1a31333582a62633255ac3791bd7f5af0b">web::http::Close</a></div><div class="ttdeci">@ Close</div><div class="ttdef"><b>Definition</b> <a href="ConnectionState_8h_source.html#l00051">ConnectionState.h:51</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00115">requestCompleted()</a>.</p>
+<p class="reference">References <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00137">requestCompleted()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classweb_1_1http_1_1server_1_1SocketContext_a445fce1f4b75291dbc566f79f8795765_cgraph.svg" width="828" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classweb_1_1http_1_1server_1_1SocketContext_a445fce1f4b75291dbc566f79f8795765_cgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -742,13 +742,13 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00088">88</a> of file <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html">SocketContext.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   88</span>                                        {</div>
-<div class="line"><span class="lineno">   89</span>        <span class="keyword">const</span> std::shared_ptr&lt;Request&gt;&amp; pendingRequest = <a class="code hl_variable" href="#af5aaead93ddb3699c9664b5244a4b7b8">pendingRequests</a>.front();</div>
-<div class="line"><span class="lineno">   90</span> </div>
-<div class="line"><span class="lineno">   91</span>        LOG(INFO) &lt;&lt; <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a02f0b93ac0ea376dabd6921c7589a8cf">getSocketConnection</a>()-&gt;<a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#a5e26cd617f07295e8579ddb9c41bdd2c">getConnectionName</a>() &lt;&lt; <span class="stringliteral">&quot; HTTP Response started: &quot;</span> &lt;&lt; pendingRequest-&gt;method &lt;&lt; <span class="stringliteral">&quot; &quot;</span></div>
-<div class="line"><span class="lineno">   92</span>                  &lt;&lt; pendingRequest-&gt;url &lt;&lt; <span class="stringliteral">&quot; HTTP/&quot;</span> &lt;&lt; pendingRequest-&gt;httpMajor &lt;&lt; <span class="stringliteral">&quot;.&quot;</span> &lt;&lt; pendingRequest-&gt;httpMinor;</div>
-<div class="line"><span class="lineno">   93</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00110">110</a> of file <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html">SocketContext.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  110</span>                                        {</div>
+<div class="line"><span class="lineno">  111</span>        <span class="keyword">const</span> std::shared_ptr&lt;Request&gt;&amp; pendingRequest = <a class="code hl_variable" href="#af5aaead93ddb3699c9664b5244a4b7b8">pendingRequests</a>.front();</div>
+<div class="line"><span class="lineno">  112</span> </div>
+<div class="line"><span class="lineno">  113</span>        LOG(INFO) &lt;&lt; <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a02f0b93ac0ea376dabd6921c7589a8cf">getSocketConnection</a>()-&gt;<a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#a5e26cd617f07295e8579ddb9c41bdd2c">getConnectionName</a>() &lt;&lt; <span class="stringliteral">&quot; HTTP Response started: &quot;</span> &lt;&lt; pendingRequest-&gt;method &lt;&lt; <span class="stringliteral">&quot; &quot;</span></div>
+<div class="line"><span class="lineno">  114</span>                  &lt;&lt; pendingRequest-&gt;url &lt;&lt; <span class="stringliteral">&quot; HTTP/&quot;</span> &lt;&lt; pendingRequest-&gt;httpMajor &lt;&lt; <span class="stringliteral">&quot;.&quot;</span> &lt;&lt; pendingRequest-&gt;httpMinor;</div>
+<div class="line"><span class="lineno">  115</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -773,9 +773,9 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="web_2http_2server_2SocketContext_8h_source.html#l00075">75</a> of file <a class="el" href="web_2http_2server_2SocketContext_8h_source.html">SocketContext.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="web_2http_2server_2SocketContext_8h_source.html#l00097">97</a> of file <a class="el" href="web_2http_2server_2SocketContext_8h_source.html">SocketContext.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00143">onReceivedFromPeer()</a>, and <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00115">requestCompleted()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00165">onReceivedFromPeer()</a>, and <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00137">requestCompleted()</a>.</p>
 
 </div>
 </div>
@@ -799,7 +799,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="web_2http_2server_2SocketContext_8h_source.html#l00071">71</a> of file <a class="el" href="web_2http_2server_2SocketContext_8h_source.html">SocketContext.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="web_2http_2server_2SocketContext_8h_source.html#l00093">93</a> of file <a class="el" href="web_2http_2server_2SocketContext_8h_source.html">SocketContext.h</a>.</p>
 
 </div>
 </div>
@@ -823,7 +823,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="web_2http_2server_2SocketContext_8h_source.html#l00062">62</a> of file <a class="el" href="web_2http_2server_2SocketContext_8h_source.html">SocketContext.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="web_2http_2server_2SocketContext_8h_source.html#l00084">84</a> of file <a class="el" href="web_2http_2server_2SocketContext_8h_source.html">SocketContext.h</a>.</p>
 
 </div>
 </div>
@@ -847,7 +847,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="web_2http_2server_2SocketContext_8h_source.html#l00073">73</a> of file <a class="el" href="web_2http_2server_2SocketContext_8h_source.html">SocketContext.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="web_2http_2server_2SocketContext_8h_source.html#l00095">95</a> of file <a class="el" href="web_2http_2server_2SocketContext_8h_source.html">SocketContext.h</a>.</p>
 
 </div>
 </div>
@@ -871,7 +871,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="web_2http_2server_2SocketContext_8h_source.html#l00070">70</a> of file <a class="el" href="web_2http_2server_2SocketContext_8h_source.html">SocketContext.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="web_2http_2server_2SocketContext_8h_source.html#l00092">92</a> of file <a class="el" href="web_2http_2server_2SocketContext_8h_source.html">SocketContext.h</a>.</p>
 
 </div>
 </div>
@@ -895,7 +895,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="web_2http_2server_2SocketContext_8h_source.html#l00077">77</a> of file <a class="el" href="web_2http_2server_2SocketContext_8h_source.html">SocketContext.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="web_2http_2server_2SocketContext_8h_source.html#l00099">99</a> of file <a class="el" href="web_2http_2server_2SocketContext_8h_source.html">SocketContext.h</a>.</p>
 
 </div>
 </div>
@@ -909,7 +909,7 @@ Here is the call graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceweb.html">web</a></li><li class="navelem"><a class="el" href="namespaceweb_1_1http.html">http</a></li><li class="navelem"><a class="el" href="namespaceweb_1_1http_1_1server.html">server</a></li><li class="navelem"><a class="el" href="classweb_1_1http_1_1server_1_1SocketContext.html">SocketContext</a></li>
-    <li class="footer">Generated on Tue Feb 25 2025 14:03:10 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generated on Sun Mar 9 2025 01:34:40 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>

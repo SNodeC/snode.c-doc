@@ -103,5 +103,6 @@ var searchData=
   ['_7euint32_100',['~UInt32',['../classiot_1_1mqtt_1_1types_1_1UInt32.html#a499c91e3e15eb4ead6d22bffa00d8b56',1,'iot::mqtt::types::UInt32']]],
   ['_7euint8_101',['~UInt8',['../classiot_1_1mqtt_1_1types_1_1UInt8.html#aaa2aacafa12022fdcdd3e609d6c3455c',1,'iot::mqtt::types::UInt8']]],
   ['_7euintv_102',['~UIntV',['../classiot_1_1mqtt_1_1types_1_1UIntV.html#a5aad95134a1cced6826d64fd7a8b02ea',1,'iot::mqtt::types::UIntV']]],
-  ['_7eupgradecommand_103',['~UpgradeCommand',['../classweb_1_1http_1_1client_1_1commands_1_1UpgradeCommand.html#a8238a69aa0e446410d3ceca95354b5d3',1,'web::http::client::commands::UpgradeCommand']]]
+  ['_7eupgradecommand_103',['~UpgradeCommand',['../classweb_1_1http_1_1client_1_1commands_1_1UpgradeCommand.html#a8238a69aa0e446410d3ceca95354b5d3',1,'web::http::client::commands::UpgradeCommand']]],
+  ['_7evarsizetypeallocator_104',['~VarSizeTypeAllocator',['../classcore_1_1multiplexer_1_1poll_1_1PollFdsManager_1_1VarSizeTypeAllocator.html#a301555ab048d1421c544ba97a1dabfb6',1,'core::multiplexer::poll::PollFdsManager::VarSizeTypeAllocator']]]
 ];

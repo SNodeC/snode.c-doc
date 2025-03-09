@@ -101,7 +101,7 @@ $(function(){initNavTree('core_2socket_2SocketAddress_8cpp_source.html',''); ini
 </div><!--header-->
 <div class="contents">
 <a href="core_2socket_2SocketAddress_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
-<div class="line"><span class="lineno">    2</span><span class="comment"> * SNode.C - a slim toolkit for network communication</span></div>
+<div class="line"><span class="lineno">    2</span><span class="comment"> * SNode.C - A Slim Toolkit for Network Communication</span></div>
 <div class="line"><span class="lineno">    3</span><span class="comment"> * Copyright (C) Volker Christian &lt;me@vchrist.at&gt;</span></div>
 <div class="line"><span class="lineno">    4</span><span class="comment"> *               2020, 2021, 2022, 2023, 2024, 2025</span></div>
 <div class="line"><span class="lineno">    5</span><span class="comment"> *</span></div>
@@ -119,68 +119,90 @@ $(function(){initNavTree('core_2socket_2SocketAddress_8cpp_source.html',''); ini
 <div class="line"><span class="lineno">   17</span><span class="comment"> * along with this program. If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
 <div class="line"><span class="lineno">   18</span><span class="comment"> */</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#</span><span class="preprocessor">include</span> <a class="code" href="core_2socket_2SocketAddress_8h.html">&quot;SocketAddress.h&quot;</a></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#</span><span class="preprocessor">ifndef</span> <span class="preprocessor">DOXYGEN_SHOULD_SKIP_THIS</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#</span><span class="preprocessor">endif</span> <span class="comment">// DOXYGEN_SHOULD_SKIP_THIS</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keyword">namespace</span> core::socket {</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="foldopen" id="foldopen00028" data-start="{" data-end="}">
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="classcore_1_1socket_1_1SocketAddress.html#a50a2b0b45921710ff62246a7c6cc7069">   28</a></span>    <a class="code hl_class" href="classcore_1_1socket_1_1SocketAddress.html">SocketAddress</a>::~<a class="code hl_function" href="classcore_1_1socket_1_1SocketAddress.html#a50a2b0b45921710ff62246a7c6cc7069">SocketAddress</a>() {</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    }</div>
-</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="foldopen" id="foldopen00031" data-start="{" data-end="}">
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="classcore_1_1socket_1_1SocketAddress.html#a1acfe0f6837444ceffe70010e0f00911">   31</a></span>    <span class="keywordtype">bool</span> <a class="code hl_class" href="classcore_1_1socket_1_1SocketAddress.html">SocketAddress</a>::<a class="code hl_function" href="classcore_1_1socket_1_1SocketAddress.html#a1acfe0f6837444ceffe70010e0f00911">useNext</a>() {</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    }</div>
-</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="foldopen" id="foldopen00035" data-start="{" data-end="}">
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="classcore_1_1socket_1_1SocketAddress_1_1BadSocketAddress.html#a6dea696ec1a613dcf0bfd2ce3325a9f1">   35</a></span>    <a class="code hl_class" href="classcore_1_1socket_1_1SocketAddress.html">SocketAddress</a>::<a class="code hl_class" href="classcore_1_1socket_1_1SocketAddress_1_1BadSocketAddress.html">BadSocketAddress</a>::<a class="code hl_function" href="classcore_1_1socket_1_1SocketAddress_1_1BadSocketAddress.html#a6dea696ec1a613dcf0bfd2ce3325a9f1">BadSocketAddress</a>(<span class="keyword">const</span> <a class="code hl_class" href="classcore_1_1socket_1_1State.html">State</a>&amp; state, <span class="keyword">const</span> std::string&amp; errorMessage, <span class="keywordtype">int</span> errnum)</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        : runtime_error(errorMessage)</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        , <a class="code hl_function" href="classcore_1_1socket_1_1SocketAddress_1_1BadSocketAddress.html#a6dea696ec1a613dcf0bfd2ce3325a9f1">state</a>(<a class="code hl_function" href="classcore_1_1socket_1_1SocketAddress_1_1BadSocketAddress.html#a6dea696ec1a613dcf0bfd2ce3325a9f1">state</a>)</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        , <a class="code hl_variable" href="classcore_1_1socket_1_1SocketAddress_1_1BadSocketAddress.html#a0348c9778c34a59b4392e1ff5795f0e9">errnum</a>(errnum) {</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    }</div>
-</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
-<div class="foldopen" id="foldopen00041" data-start="{" data-end="}">
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="classcore_1_1socket_1_1SocketAddress_1_1BadSocketAddress.html#a848d8970ec5e762c20c9e8b37a60e43f">   41</a></span>    <a class="code hl_class" href="classcore_1_1socket_1_1SocketAddress.html">SocketAddress</a>::<a class="code hl_class" href="classcore_1_1socket_1_1SocketAddress_1_1BadSocketAddress.html">BadSocketAddress</a>::~<a class="code hl_function" href="classcore_1_1socket_1_1SocketAddress_1_1BadSocketAddress.html#a848d8970ec5e762c20c9e8b37a60e43f">BadSocketAddress</a>() {</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    }</div>
-</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">/*</span></div>
+<div class="line"><span class="lineno">   21</span><span class="comment"> * MIT License</span></div>
+<div class="line"><span class="lineno">   22</span><span class="comment"> *</span></div>
+<div class="line"><span class="lineno">   23</span><span class="comment"> * Permission is hereby granted, free of charge, to any person obtaining a copy</span></div>
+<div class="line"><span class="lineno">   24</span><span class="comment"> * of this software and associated documentation files (the &quot;Software&quot;), to deal</span></div>
+<div class="line"><span class="lineno">   25</span><span class="comment"> * in the Software without restriction, including without limitation the rights</span></div>
+<div class="line"><span class="lineno">   26</span><span class="comment"> * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell</span></div>
+<div class="line"><span class="lineno">   27</span><span class="comment"> * copies of the Software, and to permit persons to whom the Software is</span></div>
+<div class="line"><span class="lineno">   28</span><span class="comment"> * furnished to do so, subject to the following conditions:</span></div>
+<div class="line"><span class="lineno">   29</span><span class="comment"> *</span></div>
+<div class="line"><span class="lineno">   30</span><span class="comment"> * The above copyright notice and this permission notice shall be included in</span></div>
+<div class="line"><span class="lineno">   31</span><span class="comment"> * all copies or substantial portions of the Software.</span></div>
+<div class="line"><span class="lineno">   32</span><span class="comment"> *</span></div>
+<div class="line"><span class="lineno">   33</span><span class="comment"> * THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR</span></div>
+<div class="line"><span class="lineno">   34</span><span class="comment"> * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,</span></div>
+<div class="line"><span class="lineno">   35</span><span class="comment"> * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE</span></div>
+<div class="line"><span class="lineno">   36</span><span class="comment"> * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER</span></div>
+<div class="line"><span class="lineno">   37</span><span class="comment"> * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,</span></div>
+<div class="line"><span class="lineno">   38</span><span class="comment"> * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN</span></div>
+<div class="line"><span class="lineno">   39</span><span class="comment"> * THE SOFTWARE.</span></div>
+<div class="line"><span class="lineno">   40</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="preprocessor">#</span><span class="preprocessor">include</span> <a class="code" href="core_2socket_2SocketAddress_8h.html">&quot;SocketAddress.h&quot;</a></div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="foldopen" id="foldopen00044" data-start="{" data-end="}">
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="classcore_1_1socket_1_1SocketAddress_1_1BadSocketAddress.html#a02952de723a8b446b2a3d712383fa4da">   44</a></span>    <a class="code hl_class" href="classcore_1_1socket_1_1State.html">State</a> <a class="code hl_class" href="classcore_1_1socket_1_1SocketAddress.html">SocketAddress</a>::<a class="code hl_class" href="classcore_1_1socket_1_1SocketAddress_1_1BadSocketAddress.html">BadSocketAddress</a>::<a class="code hl_function" href="classcore_1_1socket_1_1SocketAddress_1_1BadSocketAddress.html#a02952de723a8b446b2a3d712383fa4da">getState</a>() <span class="keyword">const</span> {</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keywordflow">return</span> state;</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    }</div>
-</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="preprocessor">#</span><span class="preprocessor">ifndef</span> <span class="preprocessor">DOXYGEN_SHOULD_SKIP_THIS</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="preprocessor">#</span><span class="preprocessor">endif</span> <span class="comment">// DOXYGEN_SHOULD_SKIP_THIS</span></div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="foldopen" id="foldopen00048" data-start="{" data-end="}">
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="classcore_1_1socket_1_1SocketAddress_1_1BadSocketAddress.html#a6459d13269ccc0aa5f4328ab219adfb6">   48</a></span>    <span class="keywordtype">int</span> <a class="code hl_class" href="classcore_1_1socket_1_1SocketAddress.html">SocketAddress</a>::<a class="code hl_class" href="classcore_1_1socket_1_1SocketAddress_1_1BadSocketAddress.html">BadSocketAddress</a>::<a class="code hl_function" href="classcore_1_1socket_1_1SocketAddress_1_1BadSocketAddress.html#a6459d13269ccc0aa5f4328ab219adfb6">getErrnum</a>() <span class="keyword">const</span> {</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classcore_1_1socket_1_1SocketAddress_1_1BadSocketAddress.html#a0348c9778c34a59b4392e1ff5795f0e9">errnum</a>;</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    }</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="keyword">namespace</span> core::socket {</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="foldopen" id="foldopen00050" data-start="{" data-end="}">
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="classcore_1_1socket_1_1SocketAddress.html#a50a2b0b45921710ff62246a7c6cc7069">   50</a></span>    <a class="code hl_class" href="classcore_1_1socket_1_1SocketAddress.html">SocketAddress</a>::~<a class="code hl_function" href="classcore_1_1socket_1_1SocketAddress.html#a50a2b0b45921710ff62246a7c6cc7069">SocketAddress</a>() {</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    }</div>
 </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>} <span class="comment">// namespace core::socket</span></div>
-<div class="ttc" id="aclasscore_1_1socket_1_1SocketAddress_1_1BadSocketAddress_html"><div class="ttname"><a href="classcore_1_1socket_1_1SocketAddress_1_1BadSocketAddress.html">core::socket::SocketAddress::BadSocketAddress</a></div><div class="ttdef"><b>Definition</b> <a href="core_2socket_2SocketAddress_8h_source.html#l00036">SocketAddress.h:36</a></div></div>
-<div class="ttc" id="aclasscore_1_1socket_1_1SocketAddress_1_1BadSocketAddress_html_a02952de723a8b446b2a3d712383fa4da"><div class="ttname"><a href="classcore_1_1socket_1_1SocketAddress_1_1BadSocketAddress.html#a02952de723a8b446b2a3d712383fa4da">core::socket::SocketAddress::BadSocketAddress::getState</a></div><div class="ttdeci">State getState() const</div><div class="ttdef"><b>Definition</b> <a href="#l00044">SocketAddress.cpp:44</a></div></div>
-<div class="ttc" id="aclasscore_1_1socket_1_1SocketAddress_1_1BadSocketAddress_html_a0348c9778c34a59b4392e1ff5795f0e9"><div class="ttname"><a href="classcore_1_1socket_1_1SocketAddress_1_1BadSocketAddress.html#a0348c9778c34a59b4392e1ff5795f0e9">core::socket::SocketAddress::BadSocketAddress::errnum</a></div><div class="ttdeci">int errnum</div><div class="ttdef"><b>Definition</b> <a href="core_2socket_2SocketAddress_8h_source.html#l00048">SocketAddress.h:48</a></div></div>
-<div class="ttc" id="aclasscore_1_1socket_1_1SocketAddress_1_1BadSocketAddress_html_a6459d13269ccc0aa5f4328ab219adfb6"><div class="ttname"><a href="classcore_1_1socket_1_1SocketAddress_1_1BadSocketAddress.html#a6459d13269ccc0aa5f4328ab219adfb6">core::socket::SocketAddress::BadSocketAddress::getErrnum</a></div><div class="ttdeci">int getErrnum() const</div><div class="ttdef"><b>Definition</b> <a href="#l00048">SocketAddress.cpp:48</a></div></div>
-<div class="ttc" id="aclasscore_1_1socket_1_1SocketAddress_1_1BadSocketAddress_html_a6dea696ec1a613dcf0bfd2ce3325a9f1"><div class="ttname"><a href="classcore_1_1socket_1_1SocketAddress_1_1BadSocketAddress.html#a6dea696ec1a613dcf0bfd2ce3325a9f1">core::socket::SocketAddress::BadSocketAddress::BadSocketAddress</a></div><div class="ttdeci">BadSocketAddress(const State &amp;state, const std::string &amp;errorMessage, int errnum)</div><div class="ttdef"><b>Definition</b> <a href="#l00035">SocketAddress.cpp:35</a></div></div>
-<div class="ttc" id="aclasscore_1_1socket_1_1SocketAddress_1_1BadSocketAddress_html_a848d8970ec5e762c20c9e8b37a60e43f"><div class="ttname"><a href="classcore_1_1socket_1_1SocketAddress_1_1BadSocketAddress.html#a848d8970ec5e762c20c9e8b37a60e43f">core::socket::SocketAddress::BadSocketAddress::~BadSocketAddress</a></div><div class="ttdeci">~BadSocketAddress() override</div><div class="ttdef"><b>Definition</b> <a href="#l00041">SocketAddress.cpp:41</a></div></div>
-<div class="ttc" id="aclasscore_1_1socket_1_1SocketAddress_html"><div class="ttname"><a href="classcore_1_1socket_1_1SocketAddress.html">core::socket::SocketAddress</a></div><div class="ttdef"><b>Definition</b> <a href="core_2socket_2SocketAddress_8h_source.html#l00034">SocketAddress.h:34</a></div></div>
-<div class="ttc" id="aclasscore_1_1socket_1_1SocketAddress_html_a1acfe0f6837444ceffe70010e0f00911"><div class="ttname"><a href="classcore_1_1socket_1_1SocketAddress.html#a1acfe0f6837444ceffe70010e0f00911">core::socket::SocketAddress::useNext</a></div><div class="ttdeci">virtual bool useNext()</div><div class="ttdef"><b>Definition</b> <a href="#l00031">SocketAddress.cpp:31</a></div></div>
-<div class="ttc" id="aclasscore_1_1socket_1_1SocketAddress_html_a50a2b0b45921710ff62246a7c6cc7069"><div class="ttname"><a href="classcore_1_1socket_1_1SocketAddress.html#a50a2b0b45921710ff62246a7c6cc7069">core::socket::SocketAddress::~SocketAddress</a></div><div class="ttdeci">virtual ~SocketAddress()</div><div class="ttdef"><b>Definition</b> <a href="#l00028">SocketAddress.cpp:28</a></div></div>
-<div class="ttc" id="aclasscore_1_1socket_1_1State_html"><div class="ttname"><a href="classcore_1_1socket_1_1State.html">core::socket::State</a></div><div class="ttdef"><b>Definition</b> <a href="socket_2State_8h_source.html#l00031">State.h:31</a></div></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="foldopen" id="foldopen00053" data-start="{" data-end="}">
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="classcore_1_1socket_1_1SocketAddress.html#a1acfe0f6837444ceffe70010e0f00911">   53</a></span>    <span class="keywordtype">bool</span> <a class="code hl_class" href="classcore_1_1socket_1_1SocketAddress.html">SocketAddress</a>::<a class="code hl_function" href="classcore_1_1socket_1_1SocketAddress.html#a1acfe0f6837444ceffe70010e0f00911">useNext</a>() {</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    }</div>
+</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="foldopen" id="foldopen00057" data-start="{" data-end="}">
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="classcore_1_1socket_1_1SocketAddress_1_1BadSocketAddress.html#a6dea696ec1a613dcf0bfd2ce3325a9f1">   57</a></span>    <a class="code hl_class" href="classcore_1_1socket_1_1SocketAddress.html">SocketAddress</a>::<a class="code hl_class" href="classcore_1_1socket_1_1SocketAddress_1_1BadSocketAddress.html">BadSocketAddress</a>::<a class="code hl_function" href="classcore_1_1socket_1_1SocketAddress_1_1BadSocketAddress.html#a6dea696ec1a613dcf0bfd2ce3325a9f1">BadSocketAddress</a>(<span class="keyword">const</span> <a class="code hl_class" href="classcore_1_1socket_1_1State.html">State</a>&amp; state, <span class="keyword">const</span> std::string&amp; errorMessage, <span class="keywordtype">int</span> errnum)</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        : runtime_error(errorMessage)</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        , <a class="code hl_function" href="classcore_1_1socket_1_1SocketAddress_1_1BadSocketAddress.html#a6dea696ec1a613dcf0bfd2ce3325a9f1">state</a>(<a class="code hl_function" href="classcore_1_1socket_1_1SocketAddress_1_1BadSocketAddress.html#a6dea696ec1a613dcf0bfd2ce3325a9f1">state</a>)</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        , <a class="code hl_variable" href="classcore_1_1socket_1_1SocketAddress_1_1BadSocketAddress.html#a0348c9778c34a59b4392e1ff5795f0e9">errnum</a>(errnum) {</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    }</div>
+</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="foldopen" id="foldopen00063" data-start="{" data-end="}">
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="classcore_1_1socket_1_1SocketAddress_1_1BadSocketAddress.html#a848d8970ec5e762c20c9e8b37a60e43f">   63</a></span>    <a class="code hl_class" href="classcore_1_1socket_1_1SocketAddress.html">SocketAddress</a>::<a class="code hl_class" href="classcore_1_1socket_1_1SocketAddress_1_1BadSocketAddress.html">BadSocketAddress</a>::~<a class="code hl_function" href="classcore_1_1socket_1_1SocketAddress_1_1BadSocketAddress.html#a848d8970ec5e762c20c9e8b37a60e43f">BadSocketAddress</a>() {</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    }</div>
+</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="foldopen" id="foldopen00066" data-start="{" data-end="}">
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="classcore_1_1socket_1_1SocketAddress_1_1BadSocketAddress.html#a02952de723a8b446b2a3d712383fa4da">   66</a></span>    <a class="code hl_class" href="classcore_1_1socket_1_1State.html">State</a> <a class="code hl_class" href="classcore_1_1socket_1_1SocketAddress.html">SocketAddress</a>::<a class="code hl_class" href="classcore_1_1socket_1_1SocketAddress_1_1BadSocketAddress.html">BadSocketAddress</a>::<a class="code hl_function" href="classcore_1_1socket_1_1SocketAddress_1_1BadSocketAddress.html#a02952de723a8b446b2a3d712383fa4da">getState</a>() <span class="keyword">const</span> {</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <span class="keywordflow">return</span> state;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    }</div>
+</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="foldopen" id="foldopen00070" data-start="{" data-end="}">
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="classcore_1_1socket_1_1SocketAddress_1_1BadSocketAddress.html#a6459d13269ccc0aa5f4328ab219adfb6">   70</a></span>    <span class="keywordtype">int</span> <a class="code hl_class" href="classcore_1_1socket_1_1SocketAddress.html">SocketAddress</a>::<a class="code hl_class" href="classcore_1_1socket_1_1SocketAddress_1_1BadSocketAddress.html">BadSocketAddress</a>::<a class="code hl_function" href="classcore_1_1socket_1_1SocketAddress_1_1BadSocketAddress.html#a6459d13269ccc0aa5f4328ab219adfb6">getErrnum</a>() <span class="keyword">const</span> {</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classcore_1_1socket_1_1SocketAddress_1_1BadSocketAddress.html#a0348c9778c34a59b4392e1ff5795f0e9">errnum</a>;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    }</div>
+</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>} <span class="comment">// namespace core::socket</span></div>
+<div class="ttc" id="aclasscore_1_1socket_1_1SocketAddress_1_1BadSocketAddress_html"><div class="ttname"><a href="classcore_1_1socket_1_1SocketAddress_1_1BadSocketAddress.html">core::socket::SocketAddress::BadSocketAddress</a></div><div class="ttdef"><b>Definition</b> <a href="core_2socket_2SocketAddress_8h_source.html#l00058">SocketAddress.h:58</a></div></div>
+<div class="ttc" id="aclasscore_1_1socket_1_1SocketAddress_1_1BadSocketAddress_html_a02952de723a8b446b2a3d712383fa4da"><div class="ttname"><a href="classcore_1_1socket_1_1SocketAddress_1_1BadSocketAddress.html#a02952de723a8b446b2a3d712383fa4da">core::socket::SocketAddress::BadSocketAddress::getState</a></div><div class="ttdeci">State getState() const</div><div class="ttdef"><b>Definition</b> <a href="#l00066">SocketAddress.cpp:66</a></div></div>
+<div class="ttc" id="aclasscore_1_1socket_1_1SocketAddress_1_1BadSocketAddress_html_a0348c9778c34a59b4392e1ff5795f0e9"><div class="ttname"><a href="classcore_1_1socket_1_1SocketAddress_1_1BadSocketAddress.html#a0348c9778c34a59b4392e1ff5795f0e9">core::socket::SocketAddress::BadSocketAddress::errnum</a></div><div class="ttdeci">int errnum</div><div class="ttdef"><b>Definition</b> <a href="core_2socket_2SocketAddress_8h_source.html#l00070">SocketAddress.h:70</a></div></div>
+<div class="ttc" id="aclasscore_1_1socket_1_1SocketAddress_1_1BadSocketAddress_html_a6459d13269ccc0aa5f4328ab219adfb6"><div class="ttname"><a href="classcore_1_1socket_1_1SocketAddress_1_1BadSocketAddress.html#a6459d13269ccc0aa5f4328ab219adfb6">core::socket::SocketAddress::BadSocketAddress::getErrnum</a></div><div class="ttdeci">int getErrnum() const</div><div class="ttdef"><b>Definition</b> <a href="#l00070">SocketAddress.cpp:70</a></div></div>
+<div class="ttc" id="aclasscore_1_1socket_1_1SocketAddress_1_1BadSocketAddress_html_a6dea696ec1a613dcf0bfd2ce3325a9f1"><div class="ttname"><a href="classcore_1_1socket_1_1SocketAddress_1_1BadSocketAddress.html#a6dea696ec1a613dcf0bfd2ce3325a9f1">core::socket::SocketAddress::BadSocketAddress::BadSocketAddress</a></div><div class="ttdeci">BadSocketAddress(const State &amp;state, const std::string &amp;errorMessage, int errnum)</div><div class="ttdef"><b>Definition</b> <a href="#l00057">SocketAddress.cpp:57</a></div></div>
+<div class="ttc" id="aclasscore_1_1socket_1_1SocketAddress_1_1BadSocketAddress_html_a848d8970ec5e762c20c9e8b37a60e43f"><div class="ttname"><a href="classcore_1_1socket_1_1SocketAddress_1_1BadSocketAddress.html#a848d8970ec5e762c20c9e8b37a60e43f">core::socket::SocketAddress::BadSocketAddress::~BadSocketAddress</a></div><div class="ttdeci">~BadSocketAddress() override</div><div class="ttdef"><b>Definition</b> <a href="#l00063">SocketAddress.cpp:63</a></div></div>
+<div class="ttc" id="aclasscore_1_1socket_1_1SocketAddress_html"><div class="ttname"><a href="classcore_1_1socket_1_1SocketAddress.html">core::socket::SocketAddress</a></div><div class="ttdef"><b>Definition</b> <a href="core_2socket_2SocketAddress_8h_source.html#l00056">SocketAddress.h:56</a></div></div>
+<div class="ttc" id="aclasscore_1_1socket_1_1SocketAddress_html_a1acfe0f6837444ceffe70010e0f00911"><div class="ttname"><a href="classcore_1_1socket_1_1SocketAddress.html#a1acfe0f6837444ceffe70010e0f00911">core::socket::SocketAddress::useNext</a></div><div class="ttdeci">virtual bool useNext()</div><div class="ttdef"><b>Definition</b> <a href="#l00053">SocketAddress.cpp:53</a></div></div>
+<div class="ttc" id="aclasscore_1_1socket_1_1SocketAddress_html_a50a2b0b45921710ff62246a7c6cc7069"><div class="ttname"><a href="classcore_1_1socket_1_1SocketAddress.html#a50a2b0b45921710ff62246a7c6cc7069">core::socket::SocketAddress::~SocketAddress</a></div><div class="ttdeci">virtual ~SocketAddress()</div><div class="ttdef"><b>Definition</b> <a href="#l00050">SocketAddress.cpp:50</a></div></div>
+<div class="ttc" id="aclasscore_1_1socket_1_1State_html"><div class="ttname"><a href="classcore_1_1socket_1_1State.html">core::socket::State</a></div><div class="ttdef"><b>Definition</b> <a href="socket_2State_8h_source.html#l00053">State.h:53</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_4270bfced15e0e73154b13468c7c9ad9.html">core</a></li><li class="navelem"><a class="el" href="dir_55e2b5896cfedaa9128ab09eb6ffed25.html">socket</a></li><li class="navelem"><a class="el" href="core_2socket_2SocketAddress_8cpp.html">SocketAddress.cpp</a></li>
-    <li class="footer">Generated on Tue Feb 25 2025 14:02:26 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generated on Sun Mar 9 2025 01:33:53 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>

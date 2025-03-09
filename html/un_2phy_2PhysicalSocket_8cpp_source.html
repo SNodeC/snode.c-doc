@@ -101,7 +101,7 @@ $(function(){initNavTree('un_2phy_2PhysicalSocket_8cpp_source.html',''); initRes
 </div><!--header-->
 <div class="contents">
 <a href="un_2phy_2PhysicalSocket_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
-<div class="line"><span class="lineno">    2</span><span class="comment"> * SNode.C - a slim toolkit for network communication</span></div>
+<div class="line"><span class="lineno">    2</span><span class="comment"> * SNode.C - A Slim Toolkit for Network Communication</span></div>
 <div class="line"><span class="lineno">    3</span><span class="comment"> * Copyright (C) Volker Christian &lt;me@vchrist.at&gt;</span></div>
 <div class="line"><span class="lineno">    4</span><span class="comment"> *               2020, 2021, 2022, 2023, 2024, 2025</span></div>
 <div class="line"><span class="lineno">    5</span><span class="comment"> *</span></div>
@@ -119,25 +119,47 @@ $(function(){initNavTree('un_2phy_2PhysicalSocket_8cpp_source.html',''); initRes
 <div class="line"><span class="lineno">   17</span><span class="comment"> * along with this program. If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
 <div class="line"><span class="lineno">   18</span><span class="comment"> */</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">// clang-format off</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&quot;net/un/SocketAddress.h&quot;</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&quot;net/phy/PhysicalSocket.hpp&quot;</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">// clang-format on</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#</span><span class="preprocessor">ifndef</span> <span class="preprocessor">DOXYGEN_SHOULD_SKIP_THIS</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#</span><span class="preprocessor">endif</span> <span class="comment">// DOXYGEN_SHOULD_SKIP_THIS</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">namespace</span> net::un::phy {} <span class="comment">// namespace net::un::phy</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">template</span> <span class="keyword">class</span> net::phy::PhysicalSocket&lt;net::un::SocketAddress&gt;;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">/*</span></div>
+<div class="line"><span class="lineno">   21</span><span class="comment"> * MIT License</span></div>
+<div class="line"><span class="lineno">   22</span><span class="comment"> *</span></div>
+<div class="line"><span class="lineno">   23</span><span class="comment"> * Permission is hereby granted, free of charge, to any person obtaining a copy</span></div>
+<div class="line"><span class="lineno">   24</span><span class="comment"> * of this software and associated documentation files (the &quot;Software&quot;), to deal</span></div>
+<div class="line"><span class="lineno">   25</span><span class="comment"> * in the Software without restriction, including without limitation the rights</span></div>
+<div class="line"><span class="lineno">   26</span><span class="comment"> * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell</span></div>
+<div class="line"><span class="lineno">   27</span><span class="comment"> * copies of the Software, and to permit persons to whom the Software is</span></div>
+<div class="line"><span class="lineno">   28</span><span class="comment"> * furnished to do so, subject to the following conditions:</span></div>
+<div class="line"><span class="lineno">   29</span><span class="comment"> *</span></div>
+<div class="line"><span class="lineno">   30</span><span class="comment"> * The above copyright notice and this permission notice shall be included in</span></div>
+<div class="line"><span class="lineno">   31</span><span class="comment"> * all copies or substantial portions of the Software.</span></div>
+<div class="line"><span class="lineno">   32</span><span class="comment"> *</span></div>
+<div class="line"><span class="lineno">   33</span><span class="comment"> * THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR</span></div>
+<div class="line"><span class="lineno">   34</span><span class="comment"> * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,</span></div>
+<div class="line"><span class="lineno">   35</span><span class="comment"> * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE</span></div>
+<div class="line"><span class="lineno">   36</span><span class="comment"> * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER</span></div>
+<div class="line"><span class="lineno">   37</span><span class="comment"> * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,</span></div>
+<div class="line"><span class="lineno">   38</span><span class="comment"> * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN</span></div>
+<div class="line"><span class="lineno">   39</span><span class="comment"> * THE SOFTWARE.</span></div>
+<div class="line"><span class="lineno">   40</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="comment">// clang-format off</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&quot;net/un/SocketAddress.h&quot;</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&quot;net/phy/PhysicalSocket.hpp&quot;</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="comment">// clang-format on</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="preprocessor">#</span><span class="preprocessor">ifndef</span> <span class="preprocessor">DOXYGEN_SHOULD_SKIP_THIS</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="preprocessor">#</span><span class="preprocessor">endif</span> <span class="comment">// DOXYGEN_SHOULD_SKIP_THIS</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="keyword">namespace</span> net::un::phy {} <span class="comment">// namespace net::un::phy</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="keyword">template</span> <span class="keyword">class</span> net::phy::PhysicalSocket&lt;net::un::SocketAddress&gt;;</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_427baa8a9a5be237f298d4545d0d1ce2.html">net</a></li><li class="navelem"><a class="el" href="dir_1c2f98b08b44216ac8991236d4d70eb9.html">un</a></li><li class="navelem"><a class="el" href="dir_32e64c3faba4eb691ef9429b00c60ef6.html">phy</a></li><li class="navelem"><a class="el" href="un_2phy_2PhysicalSocket_8cpp.html">PhysicalSocket.cpp</a></li>
-    <li class="footer">Generated on Tue Feb 25 2025 14:02:23 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generated on Sun Mar 9 2025 01:33:50 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>

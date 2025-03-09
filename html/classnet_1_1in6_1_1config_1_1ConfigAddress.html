@@ -200,7 +200,7 @@ Private Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;template&lt; typename SocketAddressT &gt; typename ConfigAddressTypeT&gt;<br />
 class net::in6::config::ConfigAddress&lt; ConfigAddressTypeT &gt;</div>
-<p class="definition">Definition at line <a class="el" href="in6_2config_2ConfigAddress_8h_source.html#l00068">68</a> of file <a class="el" href="in6_2config_2ConfigAddress_8h_source.html">ConfigAddress.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="in6_2config_2ConfigAddress_8h_source.html#l00090">90</a> of file <a class="el" href="in6_2config_2ConfigAddress_8h_source.html">ConfigAddress.h</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a97828a1376d801ba0843b7dd26f4dd9e" name="a97828a1376d801ba0843b7dd26f4dd9e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a97828a1376d801ba0843b7dd26f4dd9e">&#9670;&#160;</a></span>Super</h2>
@@ -224,7 +224,7 @@ template&lt;template&lt; typename SocketAddressT &gt; typename ConfigAddressType
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="in6_2config_2ConfigAddress_8h_source.html#l00070">70</a> of file <a class="el" href="in6_2config_2ConfigAddress_8h_source.html">ConfigAddress.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="in6_2config_2ConfigAddress_8h_source.html#l00092">92</a> of file <a class="el" href="in6_2config_2ConfigAddress_8h_source.html">ConfigAddress.h</a>.</p>
 
 </div>
 </div>
@@ -263,46 +263,46 @@ template&lt;template&lt; typename <a class="el" href="classnet_1_1in6_1_1SocketA
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="in6_2config_2ConfigAddress_8cpp_source.html#l00087">87</a> of file <a class="el" href="in6_2config_2ConfigAddress_8cpp_source.html">ConfigAddress.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   90</span>        : <a class="code hl_typedef" href="#a97828a1376d801ba0843b7dd26f4dd9e">Super</a>(instance, addressOptionName, addressOptionDescription) {</div>
-<div class="line"><span class="lineno">   91</span>        <a class="code hl_variable" href="#a019b7c2a8a7017c536337447310aec4c">hostOpt</a> = Super::addOption( <span class="comment">//</span></div>
-<div class="line"><span class="lineno">   92</span>            <span class="stringliteral">&quot;--host&quot;</span>,</div>
-<div class="line"><span class="lineno">   93</span>            <span class="stringliteral">&quot;Host name or IPv6 address&quot;</span>,</div>
-<div class="line"><span class="lineno">   94</span>            <span class="stringliteral">&quot;hostname|IPv6&quot;</span>,</div>
-<div class="line"><span class="lineno">   95</span>            <span class="stringliteral">&quot;::&quot;</span>,</div>
-<div class="line"><span class="lineno">   96</span>            CLI::TypeValidator&lt;std::string&gt;());</div>
-<div class="line"><span class="lineno">   97</span>        <a class="code hl_variable" href="#a9d7104548437e8da9099f93405814243">portOpt</a> = Super::addOption( <span class="comment">//</span></div>
-<div class="line"><span class="lineno">   98</span>            <span class="stringliteral">&quot;--port&quot;</span>,</div>
-<div class="line"><span class="lineno">   99</span>            <span class="stringliteral">&quot;Port number&quot;</span>,</div>
-<div class="line"><span class="lineno">  100</span>            <span class="stringliteral">&quot;port&quot;</span>,</div>
-<div class="line"><span class="lineno">  101</span>            0,</div>
-<div class="line"><span class="lineno">  102</span>            CLI::Range(std::numeric_limits&lt;uint16_t&gt;::min(), std::numeric_limits&lt;uint16_t&gt;::max()));</div>
-<div class="line"><span class="lineno">  103</span>        <a class="code hl_variable" href="#a9e52c52850dd235d7142424985c3a09a">numericOpt</a> = Super::addFlag( <span class="comment">//</span></div>
-<div class="line"><span class="lineno">  104</span>            <span class="stringliteral">&quot;--numeric&quot;</span>,</div>
-<div class="line"><span class="lineno">  105</span>            <span class="stringliteral">&quot;Suppress host name lookup&quot;</span>,</div>
-<div class="line"><span class="lineno">  106</span>            <span class="stringliteral">&quot;bool&quot;</span>,</div>
-<div class="line"><span class="lineno">  107</span>            <a class="code hl_define" href="ConfigPhysicalSocket_8cpp.html#a03943706e48069237cd57f2d35ca987e">XSTR</a>(IPV6_NUMERIC),</div>
-<div class="line"><span class="lineno">  108</span>            CLI::IsMember({<span class="stringliteral">&quot;true&quot;</span>, <span class="stringliteral">&quot;false&quot;</span>}));</div>
-<div class="line"><span class="lineno">  109</span>        <a class="code hl_variable" href="#a4b11694d43e69cbaf7799613db3561f4">numericReverseOpt</a> = Super::addFlag( <span class="comment">//</span></div>
-<div class="line"><span class="lineno">  110</span>            <span class="stringliteral">&quot;--numeric-reverse&quot;</span>,</div>
-<div class="line"><span class="lineno">  111</span>            <span class="stringliteral">&quot;Suppress reverse host name lookup&quot;</span>,</div>
-<div class="line"><span class="lineno">  112</span>            <span class="stringliteral">&quot;bool&quot;</span>,</div>
-<div class="line"><span class="lineno">  113</span>            <a class="code hl_define" href="ConfigPhysicalSocket_8cpp.html#a03943706e48069237cd57f2d35ca987e">XSTR</a>(IPV6_NUMERIC_REVERSE),</div>
-<div class="line"><span class="lineno">  114</span>            CLI::IsMember({<span class="stringliteral">&quot;true&quot;</span>, <span class="stringliteral">&quot;false&quot;</span>}));</div>
-<div class="line"><span class="lineno">  115</span>        <a class="code hl_variable" href="#aeb121339062e651d7741874f221a935b">ipv4MappedOpt</a> = Super::addFlag( <span class="comment">//</span></div>
-<div class="line"><span class="lineno">  116</span>            <span class="stringliteral">&quot;--ipv4-mapped&quot;</span>,</div>
-<div class="line"><span class="lineno">  117</span>            <span class="stringliteral">&quot;Resolve IPv4-mapped IPv6 addresses also&quot;</span>,</div>
-<div class="line"><span class="lineno">  118</span>            <span class="stringliteral">&quot;bool&quot;</span>,</div>
-<div class="line"><span class="lineno">  119</span>            <a class="code hl_define" href="ConfigPhysicalSocket_8cpp.html#a03943706e48069237cd57f2d35ca987e">XSTR</a>(IPV4_MAPPED),</div>
-<div class="line"><span class="lineno">  120</span>            CLI::IsMember({<span class="stringliteral">&quot;true&quot;</span>, <span class="stringliteral">&quot;false&quot;</span>}));</div>
-<div class="line"><span class="lineno">  121</span>    }</div>
-<div class="ttc" id="aConfigPhysicalSocket_8cpp_html_a03943706e48069237cd57f2d35ca987e"><div class="ttname"><a href="ConfigPhysicalSocket_8cpp.html#a03943706e48069237cd57f2d35ca987e">XSTR</a></div><div class="ttdeci">#define XSTR(s)</div><div class="ttdef"><b>Definition</b> <a href="ConfigPhysicalSocket_8cpp_source.html#l00033">ConfigPhysicalSocket.cpp:33</a></div></div>
-<div class="ttc" id="aclassnet_1_1in6_1_1config_1_1ConfigAddress_html_a019b7c2a8a7017c536337447310aec4c"><div class="ttname"><a href="#a019b7c2a8a7017c536337447310aec4c">net::in6::config::ConfigAddress::hostOpt</a></div><div class="ttdeci">CLI::Option * hostOpt</div><div class="ttdef"><b>Definition</b> <a href="in6_2config_2ConfigAddress_8h_source.html#l00115">ConfigAddress.h:115</a></div></div>
-<div class="ttc" id="aclassnet_1_1in6_1_1config_1_1ConfigAddress_html_a4b11694d43e69cbaf7799613db3561f4"><div class="ttname"><a href="#a4b11694d43e69cbaf7799613db3561f4">net::in6::config::ConfigAddress::numericReverseOpt</a></div><div class="ttdeci">CLI::Option * numericReverseOpt</div><div class="ttdef"><b>Definition</b> <a href="in6_2config_2ConfigAddress_8h_source.html#l00118">ConfigAddress.h:118</a></div></div>
-<div class="ttc" id="aclassnet_1_1in6_1_1config_1_1ConfigAddress_html_a97828a1376d801ba0843b7dd26f4dd9e"><div class="ttname"><a href="#a97828a1376d801ba0843b7dd26f4dd9e">net::in6::config::ConfigAddress::Super</a></div><div class="ttdeci">ConfigAddressTypeT&lt; SocketAddress &gt; Super</div><div class="ttdef"><b>Definition</b> <a href="in6_2config_2ConfigAddress_8h_source.html#l00070">ConfigAddress.h:70</a></div></div>
-<div class="ttc" id="aclassnet_1_1in6_1_1config_1_1ConfigAddress_html_a9d7104548437e8da9099f93405814243"><div class="ttname"><a href="#a9d7104548437e8da9099f93405814243">net::in6::config::ConfigAddress::portOpt</a></div><div class="ttdeci">CLI::Option * portOpt</div><div class="ttdef"><b>Definition</b> <a href="in6_2config_2ConfigAddress_8h_source.html#l00116">ConfigAddress.h:116</a></div></div>
-<div class="ttc" id="aclassnet_1_1in6_1_1config_1_1ConfigAddress_html_a9e52c52850dd235d7142424985c3a09a"><div class="ttname"><a href="#a9e52c52850dd235d7142424985c3a09a">net::in6::config::ConfigAddress::numericOpt</a></div><div class="ttdeci">CLI::Option * numericOpt</div><div class="ttdef"><b>Definition</b> <a href="in6_2config_2ConfigAddress_8h_source.html#l00117">ConfigAddress.h:117</a></div></div>
-<div class="ttc" id="aclassnet_1_1in6_1_1config_1_1ConfigAddress_html_aeb121339062e651d7741874f221a935b"><div class="ttname"><a href="#aeb121339062e651d7741874f221a935b">net::in6::config::ConfigAddress::ipv4MappedOpt</a></div><div class="ttdeci">CLI::Option * ipv4MappedOpt</div><div class="ttdef"><b>Definition</b> <a href="in6_2config_2ConfigAddress_8h_source.html#l00119">ConfigAddress.h:119</a></div></div>
+<p class="definition">Definition at line <a class="el" href="in6_2config_2ConfigAddress_8cpp_source.html#l00109">109</a> of file <a class="el" href="in6_2config_2ConfigAddress_8cpp_source.html">ConfigAddress.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  112</span>        : <a class="code hl_typedef" href="#a97828a1376d801ba0843b7dd26f4dd9e">Super</a>(instance, addressOptionName, addressOptionDescription) {</div>
+<div class="line"><span class="lineno">  113</span>        <a class="code hl_variable" href="#a019b7c2a8a7017c536337447310aec4c">hostOpt</a> = Super::addOption( <span class="comment">//</span></div>
+<div class="line"><span class="lineno">  114</span>            <span class="stringliteral">&quot;--host&quot;</span>,</div>
+<div class="line"><span class="lineno">  115</span>            <span class="stringliteral">&quot;Host name or IPv6 address&quot;</span>,</div>
+<div class="line"><span class="lineno">  116</span>            <span class="stringliteral">&quot;hostname|IPv6&quot;</span>,</div>
+<div class="line"><span class="lineno">  117</span>            <span class="stringliteral">&quot;::&quot;</span>,</div>
+<div class="line"><span class="lineno">  118</span>            CLI::TypeValidator&lt;std::string&gt;());</div>
+<div class="line"><span class="lineno">  119</span>        <a class="code hl_variable" href="#a9d7104548437e8da9099f93405814243">portOpt</a> = Super::addOption( <span class="comment">//</span></div>
+<div class="line"><span class="lineno">  120</span>            <span class="stringliteral">&quot;--port&quot;</span>,</div>
+<div class="line"><span class="lineno">  121</span>            <span class="stringliteral">&quot;Port number&quot;</span>,</div>
+<div class="line"><span class="lineno">  122</span>            <span class="stringliteral">&quot;port&quot;</span>,</div>
+<div class="line"><span class="lineno">  123</span>            0,</div>
+<div class="line"><span class="lineno">  124</span>            CLI::Range(std::numeric_limits&lt;uint16_t&gt;::min(), std::numeric_limits&lt;uint16_t&gt;::max()));</div>
+<div class="line"><span class="lineno">  125</span>        <a class="code hl_variable" href="#a9e52c52850dd235d7142424985c3a09a">numericOpt</a> = Super::addFlag( <span class="comment">//</span></div>
+<div class="line"><span class="lineno">  126</span>            <span class="stringliteral">&quot;--numeric&quot;</span>,</div>
+<div class="line"><span class="lineno">  127</span>            <span class="stringliteral">&quot;Suppress host name lookup&quot;</span>,</div>
+<div class="line"><span class="lineno">  128</span>            <span class="stringliteral">&quot;bool&quot;</span>,</div>
+<div class="line"><span class="lineno">  129</span>            <a class="code hl_define" href="ConfigPhysicalSocket_8cpp.html#a03943706e48069237cd57f2d35ca987e">XSTR</a>(IPV6_NUMERIC),</div>
+<div class="line"><span class="lineno">  130</span>            CLI::IsMember({<span class="stringliteral">&quot;true&quot;</span>, <span class="stringliteral">&quot;false&quot;</span>}));</div>
+<div class="line"><span class="lineno">  131</span>        <a class="code hl_variable" href="#a4b11694d43e69cbaf7799613db3561f4">numericReverseOpt</a> = Super::addFlag( <span class="comment">//</span></div>
+<div class="line"><span class="lineno">  132</span>            <span class="stringliteral">&quot;--numeric-reverse&quot;</span>,</div>
+<div class="line"><span class="lineno">  133</span>            <span class="stringliteral">&quot;Suppress reverse host name lookup&quot;</span>,</div>
+<div class="line"><span class="lineno">  134</span>            <span class="stringliteral">&quot;bool&quot;</span>,</div>
+<div class="line"><span class="lineno">  135</span>            <a class="code hl_define" href="ConfigPhysicalSocket_8cpp.html#a03943706e48069237cd57f2d35ca987e">XSTR</a>(IPV6_NUMERIC_REVERSE),</div>
+<div class="line"><span class="lineno">  136</span>            CLI::IsMember({<span class="stringliteral">&quot;true&quot;</span>, <span class="stringliteral">&quot;false&quot;</span>}));</div>
+<div class="line"><span class="lineno">  137</span>        <a class="code hl_variable" href="#aeb121339062e651d7741874f221a935b">ipv4MappedOpt</a> = Super::addFlag( <span class="comment">//</span></div>
+<div class="line"><span class="lineno">  138</span>            <span class="stringliteral">&quot;--ipv4-mapped&quot;</span>,</div>
+<div class="line"><span class="lineno">  139</span>            <span class="stringliteral">&quot;Resolve IPv4-mapped IPv6 addresses also&quot;</span>,</div>
+<div class="line"><span class="lineno">  140</span>            <span class="stringliteral">&quot;bool&quot;</span>,</div>
+<div class="line"><span class="lineno">  141</span>            <a class="code hl_define" href="ConfigPhysicalSocket_8cpp.html#a03943706e48069237cd57f2d35ca987e">XSTR</a>(IPV4_MAPPED),</div>
+<div class="line"><span class="lineno">  142</span>            CLI::IsMember({<span class="stringliteral">&quot;true&quot;</span>, <span class="stringliteral">&quot;false&quot;</span>}));</div>
+<div class="line"><span class="lineno">  143</span>    }</div>
+<div class="ttc" id="aConfigPhysicalSocket_8cpp_html_a03943706e48069237cd57f2d35ca987e"><div class="ttname"><a href="ConfigPhysicalSocket_8cpp.html#a03943706e48069237cd57f2d35ca987e">XSTR</a></div><div class="ttdeci">#define XSTR(s)</div><div class="ttdef"><b>Definition</b> <a href="ConfigPhysicalSocket_8cpp_source.html#l00055">ConfigPhysicalSocket.cpp:55</a></div></div>
+<div class="ttc" id="aclassnet_1_1in6_1_1config_1_1ConfigAddress_html_a019b7c2a8a7017c536337447310aec4c"><div class="ttname"><a href="#a019b7c2a8a7017c536337447310aec4c">net::in6::config::ConfigAddress::hostOpt</a></div><div class="ttdeci">CLI::Option * hostOpt</div><div class="ttdef"><b>Definition</b> <a href="in6_2config_2ConfigAddress_8h_source.html#l00137">ConfigAddress.h:137</a></div></div>
+<div class="ttc" id="aclassnet_1_1in6_1_1config_1_1ConfigAddress_html_a4b11694d43e69cbaf7799613db3561f4"><div class="ttname"><a href="#a4b11694d43e69cbaf7799613db3561f4">net::in6::config::ConfigAddress::numericReverseOpt</a></div><div class="ttdeci">CLI::Option * numericReverseOpt</div><div class="ttdef"><b>Definition</b> <a href="in6_2config_2ConfigAddress_8h_source.html#l00140">ConfigAddress.h:140</a></div></div>
+<div class="ttc" id="aclassnet_1_1in6_1_1config_1_1ConfigAddress_html_a97828a1376d801ba0843b7dd26f4dd9e"><div class="ttname"><a href="#a97828a1376d801ba0843b7dd26f4dd9e">net::in6::config::ConfigAddress::Super</a></div><div class="ttdeci">ConfigAddressTypeT&lt; SocketAddress &gt; Super</div><div class="ttdef"><b>Definition</b> <a href="in6_2config_2ConfigAddress_8h_source.html#l00092">ConfigAddress.h:92</a></div></div>
+<div class="ttc" id="aclassnet_1_1in6_1_1config_1_1ConfigAddress_html_a9d7104548437e8da9099f93405814243"><div class="ttname"><a href="#a9d7104548437e8da9099f93405814243">net::in6::config::ConfigAddress::portOpt</a></div><div class="ttdeci">CLI::Option * portOpt</div><div class="ttdef"><b>Definition</b> <a href="in6_2config_2ConfigAddress_8h_source.html#l00138">ConfigAddress.h:138</a></div></div>
+<div class="ttc" id="aclassnet_1_1in6_1_1config_1_1ConfigAddress_html_a9e52c52850dd235d7142424985c3a09a"><div class="ttname"><a href="#a9e52c52850dd235d7142424985c3a09a">net::in6::config::ConfigAddress::numericOpt</a></div><div class="ttdeci">CLI::Option * numericOpt</div><div class="ttdef"><b>Definition</b> <a href="in6_2config_2ConfigAddress_8h_source.html#l00139">ConfigAddress.h:139</a></div></div>
+<div class="ttc" id="aclassnet_1_1in6_1_1config_1_1ConfigAddress_html_aeb121339062e651d7741874f221a935b"><div class="ttname"><a href="#aeb121339062e651d7741874f221a935b">net::in6::config::ConfigAddress::ipv4MappedOpt</a></div><div class="ttdeci">CLI::Option * ipv4MappedOpt</div><div class="ttdef"><b>Definition</b> <a href="in6_2config_2ConfigAddress_8h_source.html#l00141">ConfigAddress.h:141</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -332,11 +332,11 @@ template&lt;template&lt; typename <a class="el" href="classnet_1_1in6_1_1SocketA
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="in6_2config_2ConfigAddress_8cpp_source.html#l00249">249</a> of file <a class="el" href="in6_2config_2ConfigAddress_8cpp_source.html">ConfigAddress.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  249</span>                                                           {</div>
-<div class="line"><span class="lineno">  250</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#aa8d7971a330dba27a1073974da2bc4ef">aiFlags</a>;</div>
-<div class="line"><span class="lineno">  251</span>    }</div>
-<div class="ttc" id="aclassnet_1_1in6_1_1config_1_1ConfigAddress_html_aa8d7971a330dba27a1073974da2bc4ef"><div class="ttname"><a href="#aa8d7971a330dba27a1073974da2bc4ef">net::in6::config::ConfigAddress::aiFlags</a></div><div class="ttdeci">int aiFlags</div><div class="ttdef"><b>Definition</b> <a href="in6_2config_2ConfigAddress_8h_source.html#l00121">ConfigAddress.h:121</a></div></div>
+<p class="definition">Definition at line <a class="el" href="in6_2config_2ConfigAddress_8cpp_source.html#l00271">271</a> of file <a class="el" href="in6_2config_2ConfigAddress_8cpp_source.html">ConfigAddress.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  271</span>                                                           {</div>
+<div class="line"><span class="lineno">  272</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#aa8d7971a330dba27a1073974da2bc4ef">aiFlags</a>;</div>
+<div class="line"><span class="lineno">  273</span>    }</div>
+<div class="ttc" id="aclassnet_1_1in6_1_1config_1_1ConfigAddress_html_aa8d7971a330dba27a1073974da2bc4ef"><div class="ttname"><a href="#aa8d7971a330dba27a1073974da2bc4ef">net::in6::config::ConfigAddress::aiFlags</a></div><div class="ttdeci">int aiFlags</div><div class="ttdef"><b>Definition</b> <a href="in6_2config_2ConfigAddress_8h_source.html#l00143">ConfigAddress.h:143</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -365,11 +365,11 @@ template&lt;template&lt; typename <a class="el" href="classnet_1_1in6_1_1SocketA
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="in6_2config_2ConfigAddress_8cpp_source.html#l00273">273</a> of file <a class="el" href="in6_2config_2ConfigAddress_8cpp_source.html">ConfigAddress.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  273</span>                                                              {</div>
-<div class="line"><span class="lineno">  274</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#a25f31eb1f1329998cae5b0a467c83c6b">aiProtocol</a>;</div>
-<div class="line"><span class="lineno">  275</span>    }</div>
-<div class="ttc" id="aclassnet_1_1in6_1_1config_1_1ConfigAddress_html_a25f31eb1f1329998cae5b0a467c83c6b"><div class="ttname"><a href="#a25f31eb1f1329998cae5b0a467c83c6b">net::in6::config::ConfigAddress::aiProtocol</a></div><div class="ttdeci">int aiProtocol</div><div class="ttdef"><b>Definition</b> <a href="in6_2config_2ConfigAddress_8h_source.html#l00123">ConfigAddress.h:123</a></div></div>
+<p class="definition">Definition at line <a class="el" href="in6_2config_2ConfigAddress_8cpp_source.html#l00295">295</a> of file <a class="el" href="in6_2config_2ConfigAddress_8cpp_source.html">ConfigAddress.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  295</span>                                                              {</div>
+<div class="line"><span class="lineno">  296</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#a25f31eb1f1329998cae5b0a467c83c6b">aiProtocol</a>;</div>
+<div class="line"><span class="lineno">  297</span>    }</div>
+<div class="ttc" id="aclassnet_1_1in6_1_1config_1_1ConfigAddress_html_a25f31eb1f1329998cae5b0a467c83c6b"><div class="ttname"><a href="#a25f31eb1f1329998cae5b0a467c83c6b">net::in6::config::ConfigAddress::aiProtocol</a></div><div class="ttdeci">int aiProtocol</div><div class="ttdef"><b>Definition</b> <a href="in6_2config_2ConfigAddress_8h_source.html#l00145">ConfigAddress.h:145</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -398,11 +398,11 @@ template&lt;template&lt; typename <a class="el" href="classnet_1_1in6_1_1SocketA
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="in6_2config_2ConfigAddress_8cpp_source.html#l00261">261</a> of file <a class="el" href="in6_2config_2ConfigAddress_8cpp_source.html">ConfigAddress.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  261</span>                                                              {</div>
-<div class="line"><span class="lineno">  262</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#ad46b145285b00e2a9c3a120b23648081">aiSockType</a>;</div>
-<div class="line"><span class="lineno">  263</span>    }</div>
-<div class="ttc" id="aclassnet_1_1in6_1_1config_1_1ConfigAddress_html_ad46b145285b00e2a9c3a120b23648081"><div class="ttname"><a href="#ad46b145285b00e2a9c3a120b23648081">net::in6::config::ConfigAddress::aiSockType</a></div><div class="ttdeci">int aiSockType</div><div class="ttdef"><b>Definition</b> <a href="in6_2config_2ConfigAddress_8h_source.html#l00122">ConfigAddress.h:122</a></div></div>
+<p class="definition">Definition at line <a class="el" href="in6_2config_2ConfigAddress_8cpp_source.html#l00283">283</a> of file <a class="el" href="in6_2config_2ConfigAddress_8cpp_source.html">ConfigAddress.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  283</span>                                                              {</div>
+<div class="line"><span class="lineno">  284</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#ad46b145285b00e2a9c3a120b23648081">aiSockType</a>;</div>
+<div class="line"><span class="lineno">  285</span>    }</div>
+<div class="ttc" id="aclassnet_1_1in6_1_1config_1_1ConfigAddress_html_ad46b145285b00e2a9c3a120b23648081"><div class="ttname"><a href="#ad46b145285b00e2a9c3a120b23648081">net::in6::config::ConfigAddress::aiSockType</a></div><div class="ttdeci">int aiSockType</div><div class="ttdef"><b>Definition</b> <a href="in6_2config_2ConfigAddress_8h_source.html#l00144">ConfigAddress.h:144</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -423,10 +423,10 @@ template&lt;template&lt; typename <a class="el" href="classnet_1_1in6_1_1SocketA
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="in6_2config_2ConfigAddress_8cpp_source.html#l00179">179</a> of file <a class="el" href="in6_2config_2ConfigAddress_8cpp_source.html">ConfigAddress.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  179</span>                                                              {</div>
-<div class="line"><span class="lineno">  180</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#a019b7c2a8a7017c536337447310aec4c">hostOpt</a>-&gt;as&lt;std::string&gt;();</div>
-<div class="line"><span class="lineno">  181</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="in6_2config_2ConfigAddress_8cpp_source.html#l00201">201</a> of file <a class="el" href="in6_2config_2ConfigAddress_8cpp_source.html">ConfigAddress.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  201</span>                                                              {</div>
+<div class="line"><span class="lineno">  202</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#a019b7c2a8a7017c536337447310aec4c">hostOpt</a>-&gt;as&lt;std::string&gt;();</div>
+<div class="line"><span class="lineno">  203</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -455,10 +455,10 @@ template&lt;template&lt; typename <a class="el" href="classnet_1_1in6_1_1SocketA
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="in6_2config_2ConfigAddress_8cpp_source.html#l00237">237</a> of file <a class="el" href="in6_2config_2ConfigAddress_8cpp_source.html">ConfigAddress.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  237</span>                                                               {</div>
-<div class="line"><span class="lineno">  238</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#aeb121339062e651d7741874f221a935b">ipv4MappedOpt</a>-&gt;as&lt;<span class="keywordtype">bool</span>&gt;();</div>
-<div class="line"><span class="lineno">  239</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="in6_2config_2ConfigAddress_8cpp_source.html#l00259">259</a> of file <a class="el" href="in6_2config_2ConfigAddress_8cpp_source.html">ConfigAddress.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  259</span>                                                               {</div>
+<div class="line"><span class="lineno">  260</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#aeb121339062e651d7741874f221a935b">ipv4MappedOpt</a>-&gt;as&lt;<span class="keywordtype">bool</span>&gt;();</div>
+<div class="line"><span class="lineno">  261</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -479,10 +479,10 @@ template&lt;template&lt; typename <a class="el" href="classnet_1_1in6_1_1SocketA
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="in6_2config_2ConfigAddress_8cpp_source.html#l00212">212</a> of file <a class="el" href="in6_2config_2ConfigAddress_8cpp_source.html">ConfigAddress.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  212</span>                                                            {</div>
-<div class="line"><span class="lineno">  213</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#a9e52c52850dd235d7142424985c3a09a">numericOpt</a>-&gt;as&lt;<span class="keywordtype">bool</span>&gt;();</div>
-<div class="line"><span class="lineno">  214</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="in6_2config_2ConfigAddress_8cpp_source.html#l00234">234</a> of file <a class="el" href="in6_2config_2ConfigAddress_8cpp_source.html">ConfigAddress.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  234</span>                                                            {</div>
+<div class="line"><span class="lineno">  235</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#a9e52c52850dd235d7142424985c3a09a">numericOpt</a>-&gt;as&lt;<span class="keywordtype">bool</span>&gt;();</div>
+<div class="line"><span class="lineno">  236</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -522,10 +522,10 @@ template&lt;template&lt; typename <a class="el" href="classnet_1_1in6_1_1SocketA
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="in6_2config_2ConfigAddress_8cpp_source.html#l00196">196</a> of file <a class="el" href="in6_2config_2ConfigAddress_8cpp_source.html">ConfigAddress.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  196</span>                                                             {</div>
-<div class="line"><span class="lineno">  197</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#a9d7104548437e8da9099f93405814243">portOpt</a>-&gt;as&lt;uint16_t&gt;();</div>
-<div class="line"><span class="lineno">  198</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="in6_2config_2ConfigAddress_8cpp_source.html#l00218">218</a> of file <a class="el" href="in6_2config_2ConfigAddress_8cpp_source.html">ConfigAddress.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  218</span>                                                             {</div>
+<div class="line"><span class="lineno">  219</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#a9d7104548437e8da9099f93405814243">portOpt</a>-&gt;as&lt;uint16_t&gt;();</div>
+<div class="line"><span class="lineno">  220</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -550,22 +550,22 @@ template&lt;template&lt; typename <a class="el" href="classnet_1_1in6_1_1SocketA
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="in6_2config_2ConfigAddress_8cpp_source.html#l00142">142</a> of file <a class="el" href="in6_2config_2ConfigAddress_8cpp_source.html">ConfigAddress.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  143</span>                                                                                                       {</div>
-<div class="line"><span class="lineno">  144</span>        <a class="code hl_typedef" href="namespacetls.html#afcb9219f4cf94a717de2044384768d63">SocketAddress</a> socketAddress;</div>
-<div class="line"><span class="lineno">  145</span>        <span class="keywordflow">try</span> {</div>
-<div class="line"><span class="lineno">  146</span>            socketAddress = <a class="code hl_typedef" href="namespacetls.html#afcb9219f4cf94a717de2044384768d63">SocketAddress</a>(sockAddr, sockAddrLen, <a class="code hl_variable" href="#a4b11694d43e69cbaf7799613db3561f4">numericReverseOpt</a>-&gt;as&lt;<span class="keywordtype">bool</span>&gt;());</div>
-<div class="line"><span class="lineno">  147</span>        } <span class="keywordflow">catch</span> ([[maybe_unused]] <span class="keyword">const</span> SocketAddress::BadSocketAddress&amp; badSocketAddress) {</div>
-<div class="line"><span class="lineno">  148</span>            <span class="keywordflow">try</span> {</div>
-<div class="line"><span class="lineno">  149</span>                socketAddress = Super::getSocketAddress(sockAddr, sockAddrLen);</div>
-<div class="line"><span class="lineno">  150</span>            } <span class="keywordflow">catch</span> ([[maybe_unused]] <span class="keyword">const</span> SocketAddress::BadSocketAddress&amp; badSocketAddress) { <span class="comment">// cppcheck-suppress shadowVariable</span></div>
-<div class="line"><span class="lineno">  151</span>                <span class="keywordflow">throw</span>;</div>
-<div class="line"><span class="lineno">  152</span>            }</div>
-<div class="line"><span class="lineno">  153</span>        }</div>
-<div class="line"><span class="lineno">  154</span> </div>
-<div class="line"><span class="lineno">  155</span>        <span class="keywordflow">return</span> socketAddress;</div>
-<div class="line"><span class="lineno">  156</span>    }</div>
-<div class="ttc" id="anamespacetls_html_afcb9219f4cf94a717de2044384768d63"><div class="ttname"><a href="namespacetls.html#afcb9219f4cf94a717de2044384768d63">tls::SocketAddress</a></div><div class="ttdeci">SocketClient::SocketAddress SocketAddress</div><div class="ttdef"><b>Definition</b> <a href="httplowlevelclient_8cpp_source.html#l00123">httplowlevelclient.cpp:123</a></div></div>
+<p class="definition">Definition at line <a class="el" href="in6_2config_2ConfigAddress_8cpp_source.html#l00164">164</a> of file <a class="el" href="in6_2config_2ConfigAddress_8cpp_source.html">ConfigAddress.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  165</span>                                                                                                       {</div>
+<div class="line"><span class="lineno">  166</span>        <a class="code hl_typedef" href="namespacetls.html#afcb9219f4cf94a717de2044384768d63">SocketAddress</a> socketAddress;</div>
+<div class="line"><span class="lineno">  167</span>        <span class="keywordflow">try</span> {</div>
+<div class="line"><span class="lineno">  168</span>            socketAddress = <a class="code hl_typedef" href="namespacetls.html#afcb9219f4cf94a717de2044384768d63">SocketAddress</a>(sockAddr, sockAddrLen, <a class="code hl_variable" href="#a4b11694d43e69cbaf7799613db3561f4">numericReverseOpt</a>-&gt;as&lt;<span class="keywordtype">bool</span>&gt;());</div>
+<div class="line"><span class="lineno">  169</span>        } <span class="keywordflow">catch</span> ([[maybe_unused]] <span class="keyword">const</span> SocketAddress::BadSocketAddress&amp; badSocketAddress) {</div>
+<div class="line"><span class="lineno">  170</span>            <span class="keywordflow">try</span> {</div>
+<div class="line"><span class="lineno">  171</span>                socketAddress = Super::getSocketAddress(sockAddr, sockAddrLen);</div>
+<div class="line"><span class="lineno">  172</span>            } <span class="keywordflow">catch</span> ([[maybe_unused]] <span class="keyword">const</span> SocketAddress::BadSocketAddress&amp; badSocketAddress) {</div>
+<div class="line"><span class="lineno">  173</span>                <span class="keywordflow">throw</span>;</div>
+<div class="line"><span class="lineno">  174</span>            }</div>
+<div class="line"><span class="lineno">  175</span>        }</div>
+<div class="line"><span class="lineno">  176</span> </div>
+<div class="line"><span class="lineno">  177</span>        <span class="keywordflow">return</span> socketAddress;</div>
+<div class="line"><span class="lineno">  178</span>    }</div>
+<div class="ttc" id="anamespacetls_html_afcb9219f4cf94a717de2044384768d63"><div class="ttname"><a href="namespacetls.html#afcb9219f4cf94a717de2044384768d63">tls::SocketAddress</a></div><div class="ttdeci">SocketClient::SocketAddress SocketAddress</div><div class="ttdef"><b>Definition</b> <a href="httplowlevelclient_8cpp_source.html#l00145">httplowlevelclient.cpp:145</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -594,24 +594,24 @@ template&lt;template&lt; typename <a class="el" href="classnet_1_1in6_1_1SocketA
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="in6_2config_2ConfigAddress_8cpp_source.html#l00124">124</a> of file <a class="el" href="in6_2config_2ConfigAddress_8cpp_source.html">ConfigAddress.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  124</span>                                                          {</div>
-<div class="line"><span class="lineno">  125</span>        <a class="code hl_typedef" href="namespacetls.html#afcb9219f4cf94a717de2044384768d63">SocketAddress</a>* socketAddress = <span class="keyword">new</span> <a class="code hl_typedef" href="namespacetls.html#afcb9219f4cf94a717de2044384768d63">SocketAddress</a>(<a class="code hl_variable" href="#a019b7c2a8a7017c536337447310aec4c">hostOpt</a>-&gt;as&lt;std::string&gt;(), <a class="code hl_variable" href="#a9d7104548437e8da9099f93405814243">portOpt</a>-&gt;as&lt;uint16_t&gt;());</div>
-<div class="line"><span class="lineno">  126</span> </div>
-<div class="line"><span class="lineno">  127</span>        <span class="keywordflow">try</span> {</div>
-<div class="line"><span class="lineno">  128</span>            socketAddress-&gt;init({.aiFlags = (<a class="code hl_variable" href="#aa8d7971a330dba27a1073974da2bc4ef">aiFlags</a> &amp; ~AI_NUMERICHOST) | (<a class="code hl_variable" href="#a9e52c52850dd235d7142424985c3a09a">numericOpt</a>-&gt;as&lt;<span class="keywordtype">bool</span>&gt;() ? AI_NUMERICHOST : 0),</div>
-<div class="line"><span class="lineno">  129</span>                                 .<a class="code hl_variable" href="#ad46b145285b00e2a9c3a120b23648081">aiSockType</a> = <a class="code hl_variable" href="#ad46b145285b00e2a9c3a120b23648081">aiSockType</a>,</div>
-<div class="line"><span class="lineno">  130</span>                                 .<a class="code hl_variable" href="#a25f31eb1f1329998cae5b0a467c83c6b">aiProtocol</a> = <a class="code hl_variable" href="#a25f31eb1f1329998cae5b0a467c83c6b">aiProtocol</a>});</div>
-<div class="line"><span class="lineno">  131</span>        } <span class="keywordflow">catch</span> (<span class="keyword">const</span> <a class="code hl_class" href="classcore_1_1socket_1_1SocketAddress_1_1BadSocketAddress.html">core::socket::SocketAddress::BadSocketAddress</a>&amp;) {</div>
-<div class="line"><span class="lineno">  132</span>            <span class="keyword">delete</span> socketAddress;</div>
-<div class="line"><span class="lineno">  133</span>            socketAddress = <span class="keyword">nullptr</span>;</div>
-<div class="line"><span class="lineno">  134</span> </div>
-<div class="line"><span class="lineno">  135</span>            <span class="keywordflow">throw</span>;</div>
-<div class="line"><span class="lineno">  136</span>        }</div>
-<div class="line"><span class="lineno">  137</span> </div>
-<div class="line"><span class="lineno">  138</span>        <span class="keywordflow">return</span> socketAddress;</div>
-<div class="line"><span class="lineno">  139</span>    }</div>
-<div class="ttc" id="aclasscore_1_1socket_1_1SocketAddress_1_1BadSocketAddress_html"><div class="ttname"><a href="classcore_1_1socket_1_1SocketAddress_1_1BadSocketAddress.html">core::socket::SocketAddress::BadSocketAddress</a></div><div class="ttdef"><b>Definition</b> <a href="core_2socket_2SocketAddress_8h_source.html#l00036">SocketAddress.h:36</a></div></div>
+<p class="definition">Definition at line <a class="el" href="in6_2config_2ConfigAddress_8cpp_source.html#l00146">146</a> of file <a class="el" href="in6_2config_2ConfigAddress_8cpp_source.html">ConfigAddress.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  146</span>                                                          {</div>
+<div class="line"><span class="lineno">  147</span>        <a class="code hl_typedef" href="namespacetls.html#afcb9219f4cf94a717de2044384768d63">SocketAddress</a>* socketAddress = <span class="keyword">new</span> <a class="code hl_typedef" href="namespacetls.html#afcb9219f4cf94a717de2044384768d63">SocketAddress</a>(<a class="code hl_variable" href="#a019b7c2a8a7017c536337447310aec4c">hostOpt</a>-&gt;as&lt;std::string&gt;(), <a class="code hl_variable" href="#a9d7104548437e8da9099f93405814243">portOpt</a>-&gt;as&lt;uint16_t&gt;());</div>
+<div class="line"><span class="lineno">  148</span> </div>
+<div class="line"><span class="lineno">  149</span>        <span class="keywordflow">try</span> {</div>
+<div class="line"><span class="lineno">  150</span>            socketAddress-&gt;init({.aiFlags = (<a class="code hl_variable" href="#aa8d7971a330dba27a1073974da2bc4ef">aiFlags</a> &amp; ~AI_NUMERICHOST) | (<a class="code hl_variable" href="#a9e52c52850dd235d7142424985c3a09a">numericOpt</a>-&gt;as&lt;<span class="keywordtype">bool</span>&gt;() ? AI_NUMERICHOST : 0),</div>
+<div class="line"><span class="lineno">  151</span>                                 .<a class="code hl_variable" href="#ad46b145285b00e2a9c3a120b23648081">aiSockType</a> = <a class="code hl_variable" href="#ad46b145285b00e2a9c3a120b23648081">aiSockType</a>,</div>
+<div class="line"><span class="lineno">  152</span>                                 .<a class="code hl_variable" href="#a25f31eb1f1329998cae5b0a467c83c6b">aiProtocol</a> = <a class="code hl_variable" href="#a25f31eb1f1329998cae5b0a467c83c6b">aiProtocol</a>});</div>
+<div class="line"><span class="lineno">  153</span>        } <span class="keywordflow">catch</span> (<span class="keyword">const</span> <a class="code hl_class" href="classcore_1_1socket_1_1SocketAddress_1_1BadSocketAddress.html">core::socket::SocketAddress::BadSocketAddress</a>&amp;) {</div>
+<div class="line"><span class="lineno">  154</span>            <span class="keyword">delete</span> socketAddress;</div>
+<div class="line"><span class="lineno">  155</span>            socketAddress = <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">  156</span> </div>
+<div class="line"><span class="lineno">  157</span>            <span class="keywordflow">throw</span>;</div>
+<div class="line"><span class="lineno">  158</span>        }</div>
+<div class="line"><span class="lineno">  159</span> </div>
+<div class="line"><span class="lineno">  160</span>        <span class="keywordflow">return</span> socketAddress;</div>
+<div class="line"><span class="lineno">  161</span>    }</div>
+<div class="ttc" id="aclasscore_1_1socket_1_1SocketAddress_1_1BadSocketAddress_html"><div class="ttname"><a href="classcore_1_1socket_1_1SocketAddress_1_1BadSocketAddress.html">core::socket::SocketAddress::BadSocketAddress</a></div><div class="ttdef"><b>Definition</b> <a href="core_2socket_2SocketAddress_8h_source.html#l00058">SocketAddress.h:58</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -640,12 +640,12 @@ template&lt;template&lt; typename <a class="el" href="classnet_1_1in6_1_1SocketA
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="in6_2config_2ConfigAddress_8cpp_source.html#l00242">242</a> of file <a class="el" href="in6_2config_2ConfigAddress_8cpp_source.html">ConfigAddress.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  242</span>                                                                                              {</div>
-<div class="line"><span class="lineno">  243</span>        this-&gt;<a class="code hl_variable" href="#aa8d7971a330dba27a1073974da2bc4ef">aiFlags</a> = <a class="code hl_variable" href="#aa8d7971a330dba27a1073974da2bc4ef">aiFlags</a>;</div>
-<div class="line"><span class="lineno">  244</span> </div>
-<div class="line"><span class="lineno">  245</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">  246</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="in6_2config_2ConfigAddress_8cpp_source.html#l00264">264</a> of file <a class="el" href="in6_2config_2ConfigAddress_8cpp_source.html">ConfigAddress.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  264</span>                                                                                              {</div>
+<div class="line"><span class="lineno">  265</span>        this-&gt;<a class="code hl_variable" href="#aa8d7971a330dba27a1073974da2bc4ef">aiFlags</a> = <a class="code hl_variable" href="#aa8d7971a330dba27a1073974da2bc4ef">aiFlags</a>;</div>
+<div class="line"><span class="lineno">  266</span> </div>
+<div class="line"><span class="lineno">  267</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">  268</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -674,12 +674,12 @@ template&lt;template&lt; typename <a class="el" href="classnet_1_1in6_1_1SocketA
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="in6_2config_2ConfigAddress_8cpp_source.html#l00266">266</a> of file <a class="el" href="in6_2config_2ConfigAddress_8cpp_source.html">ConfigAddress.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  266</span>                                                                                                    {</div>
-<div class="line"><span class="lineno">  267</span>        this-&gt;<a class="code hl_variable" href="#a25f31eb1f1329998cae5b0a467c83c6b">aiProtocol</a> = <a class="code hl_variable" href="#a25f31eb1f1329998cae5b0a467c83c6b">aiProtocol</a>;</div>
-<div class="line"><span class="lineno">  268</span> </div>
-<div class="line"><span class="lineno">  269</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">  270</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="in6_2config_2ConfigAddress_8cpp_source.html#l00288">288</a> of file <a class="el" href="in6_2config_2ConfigAddress_8cpp_source.html">ConfigAddress.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  288</span>                                                                                                    {</div>
+<div class="line"><span class="lineno">  289</span>        this-&gt;<a class="code hl_variable" href="#a25f31eb1f1329998cae5b0a467c83c6b">aiProtocol</a> = <a class="code hl_variable" href="#a25f31eb1f1329998cae5b0a467c83c6b">aiProtocol</a>;</div>
+<div class="line"><span class="lineno">  290</span> </div>
+<div class="line"><span class="lineno">  291</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">  292</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -708,12 +708,12 @@ template&lt;template&lt; typename <a class="el" href="classnet_1_1in6_1_1SocketA
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="in6_2config_2ConfigAddress_8cpp_source.html#l00254">254</a> of file <a class="el" href="in6_2config_2ConfigAddress_8cpp_source.html">ConfigAddress.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  254</span>                                                                                                    {</div>
-<div class="line"><span class="lineno">  255</span>        this-&gt;<a class="code hl_variable" href="#ad46b145285b00e2a9c3a120b23648081">aiSockType</a> = <a class="code hl_variable" href="#ad46b145285b00e2a9c3a120b23648081">aiSockType</a>;</div>
-<div class="line"><span class="lineno">  256</span> </div>
-<div class="line"><span class="lineno">  257</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">  258</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="in6_2config_2ConfigAddress_8cpp_source.html#l00276">276</a> of file <a class="el" href="in6_2config_2ConfigAddress_8cpp_source.html">ConfigAddress.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  276</span>                                                                                                    {</div>
+<div class="line"><span class="lineno">  277</span>        this-&gt;<a class="code hl_variable" href="#ad46b145285b00e2a9c3a120b23648081">aiSockType</a> = <a class="code hl_variable" href="#ad46b145285b00e2a9c3a120b23648081">aiSockType</a>;</div>
+<div class="line"><span class="lineno">  278</span> </div>
+<div class="line"><span class="lineno">  279</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">  280</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -734,18 +734,18 @@ template&lt;template&lt; typename <a class="el" href="classnet_1_1in6_1_1SocketA
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="in6_2config_2ConfigAddress_8cpp_source.html#l00167">167</a> of file <a class="el" href="in6_2config_2ConfigAddress_8cpp_source.html">ConfigAddress.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  167</span>                                                                                                             {</div>
-<div class="line"><span class="lineno">  168</span>        <span class="keyword">const</span> <a class="code hl_class" href="classutils_1_1PreserveErrno.html">utils::PreserveErrno</a> preserveErrno;</div>
-<div class="line"><span class="lineno">  169</span> </div>
-<div class="line"><span class="lineno">  170</span>        <a class="code hl_variable" href="#a019b7c2a8a7017c536337447310aec4c">hostOpt</a> <span class="comment">//</span></div>
-<div class="line"><span class="lineno">  171</span>            -&gt;default_val(ipOrHostname)</div>
-<div class="line"><span class="lineno">  172</span>            -&gt;clear();</div>
-<div class="line"><span class="lineno">  173</span>        Super::required(<a class="code hl_variable" href="#a019b7c2a8a7017c536337447310aec4c">hostOpt</a>, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  174</span> </div>
-<div class="line"><span class="lineno">  175</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">  176</span>    }</div>
-<div class="ttc" id="aclassutils_1_1PreserveErrno_html"><div class="ttname"><a href="classutils_1_1PreserveErrno.html">utils::PreserveErrno</a></div><div class="ttdef"><b>Definition</b> <a href="PreserveErrno_8h_source.html#l00031">PreserveErrno.h:31</a></div></div>
+<p class="definition">Definition at line <a class="el" href="in6_2config_2ConfigAddress_8cpp_source.html#l00189">189</a> of file <a class="el" href="in6_2config_2ConfigAddress_8cpp_source.html">ConfigAddress.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  189</span>                                                                                                             {</div>
+<div class="line"><span class="lineno">  190</span>        <span class="keyword">const</span> <a class="code hl_class" href="classutils_1_1PreserveErrno.html">utils::PreserveErrno</a> preserveErrno;</div>
+<div class="line"><span class="lineno">  191</span> </div>
+<div class="line"><span class="lineno">  192</span>        <a class="code hl_variable" href="#a019b7c2a8a7017c536337447310aec4c">hostOpt</a> <span class="comment">//</span></div>
+<div class="line"><span class="lineno">  193</span>            -&gt;default_val(ipOrHostname)</div>
+<div class="line"><span class="lineno">  194</span>            -&gt;clear();</div>
+<div class="line"><span class="lineno">  195</span>        Super::required(<a class="code hl_variable" href="#a019b7c2a8a7017c536337447310aec4c">hostOpt</a>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  196</span> </div>
+<div class="line"><span class="lineno">  197</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">  198</span>    }</div>
+<div class="ttc" id="aclassutils_1_1PreserveErrno_html"><div class="ttname"><a href="classutils_1_1PreserveErrno.html">utils::PreserveErrno</a></div><div class="ttdef"><b>Definition</b> <a href="PreserveErrno_8h_source.html#l00053">PreserveErrno.h:53</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -774,12 +774,12 @@ template&lt;template&lt; typename <a class="el" href="classnet_1_1in6_1_1SocketA
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="in6_2config_2ConfigAddress_8cpp_source.html#l00278">278</a> of file <a class="el" href="in6_2config_2ConfigAddress_8cpp_source.html">ConfigAddress.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  278</span>                                                                                                     {</div>
-<div class="line"><span class="lineno">  279</span>        Super::required(<a class="code hl_variable" href="#a019b7c2a8a7017c536337447310aec4c">hostOpt</a>, required);</div>
-<div class="line"><span class="lineno">  280</span> </div>
-<div class="line"><span class="lineno">  281</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">  282</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="in6_2config_2ConfigAddress_8cpp_source.html#l00300">300</a> of file <a class="el" href="in6_2config_2ConfigAddress_8cpp_source.html">ConfigAddress.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  300</span>                                                                                                     {</div>
+<div class="line"><span class="lineno">  301</span>        Super::required(<a class="code hl_variable" href="#a019b7c2a8a7017c536337447310aec4c">hostOpt</a>, required);</div>
+<div class="line"><span class="lineno">  302</span> </div>
+<div class="line"><span class="lineno">  303</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">  304</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -808,16 +808,16 @@ template&lt;template&lt; typename <a class="el" href="classnet_1_1in6_1_1SocketA
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="in6_2config_2ConfigAddress_8cpp_source.html#l00226">226</a> of file <a class="el" href="in6_2config_2ConfigAddress_8cpp_source.html">ConfigAddress.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  226</span>                                                                                                     {</div>
-<div class="line"><span class="lineno">  227</span>        <span class="keyword">const</span> <a class="code hl_class" href="classutils_1_1PreserveErrno.html">utils::PreserveErrno</a> preserveErrno;</div>
-<div class="line"><span class="lineno">  228</span> </div>
-<div class="line"><span class="lineno">  229</span>        <a class="code hl_variable" href="#aeb121339062e651d7741874f221a935b">ipv4MappedOpt</a> <span class="comment">//</span></div>
-<div class="line"><span class="lineno">  230</span>            -&gt;default_val(ipv4Mapped)</div>
-<div class="line"><span class="lineno">  231</span>            -&gt;clear();</div>
-<div class="line"><span class="lineno">  232</span> </div>
-<div class="line"><span class="lineno">  233</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">  234</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="in6_2config_2ConfigAddress_8cpp_source.html#l00248">248</a> of file <a class="el" href="in6_2config_2ConfigAddress_8cpp_source.html">ConfigAddress.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  248</span>                                                                                                     {</div>
+<div class="line"><span class="lineno">  249</span>        <span class="keyword">const</span> <a class="code hl_class" href="classutils_1_1PreserveErrno.html">utils::PreserveErrno</a> preserveErrno;</div>
+<div class="line"><span class="lineno">  250</span> </div>
+<div class="line"><span class="lineno">  251</span>        <a class="code hl_variable" href="#aeb121339062e651d7741874f221a935b">ipv4MappedOpt</a> <span class="comment">//</span></div>
+<div class="line"><span class="lineno">  252</span>            -&gt;default_val(ipv4Mapped)</div>
+<div class="line"><span class="lineno">  253</span>            -&gt;clear();</div>
+<div class="line"><span class="lineno">  254</span> </div>
+<div class="line"><span class="lineno">  255</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">  256</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -838,16 +838,16 @@ template&lt;template&lt; typename <a class="el" href="classnet_1_1in6_1_1SocketA
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="in6_2config_2ConfigAddress_8cpp_source.html#l00201">201</a> of file <a class="el" href="in6_2config_2ConfigAddress_8cpp_source.html">ConfigAddress.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  201</span>                                                                                               {</div>
-<div class="line"><span class="lineno">  202</span>        <span class="keyword">const</span> <a class="code hl_class" href="classutils_1_1PreserveErrno.html">utils::PreserveErrno</a> preserveErrno;</div>
-<div class="line"><span class="lineno">  203</span> </div>
-<div class="line"><span class="lineno">  204</span>        <a class="code hl_variable" href="#a9e52c52850dd235d7142424985c3a09a">numericOpt</a> <span class="comment">//</span></div>
-<div class="line"><span class="lineno">  205</span>            -&gt;default_str(numeric ? <span class="stringliteral">&quot;true&quot;</span> : <span class="stringliteral">&quot;false&quot;</span>)</div>
-<div class="line"><span class="lineno">  206</span>            -&gt;clear();</div>
-<div class="line"><span class="lineno">  207</span> </div>
-<div class="line"><span class="lineno">  208</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">  209</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="in6_2config_2ConfigAddress_8cpp_source.html#l00223">223</a> of file <a class="el" href="in6_2config_2ConfigAddress_8cpp_source.html">ConfigAddress.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  223</span>                                                                                               {</div>
+<div class="line"><span class="lineno">  224</span>        <span class="keyword">const</span> <a class="code hl_class" href="classutils_1_1PreserveErrno.html">utils::PreserveErrno</a> preserveErrno;</div>
+<div class="line"><span class="lineno">  225</span> </div>
+<div class="line"><span class="lineno">  226</span>        <a class="code hl_variable" href="#a9e52c52850dd235d7142424985c3a09a">numericOpt</a> <span class="comment">//</span></div>
+<div class="line"><span class="lineno">  227</span>            -&gt;default_str(numeric ? <span class="stringliteral">&quot;true&quot;</span> : <span class="stringliteral">&quot;false&quot;</span>)</div>
+<div class="line"><span class="lineno">  228</span>            -&gt;clear();</div>
+<div class="line"><span class="lineno">  229</span> </div>
+<div class="line"><span class="lineno">  230</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">  231</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -868,14 +868,14 @@ template&lt;template&lt; typename <a class="el" href="classnet_1_1in6_1_1SocketA
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="in6_2config_2ConfigAddress_8cpp_source.html#l00217">217</a> of file <a class="el" href="in6_2config_2ConfigAddress_8cpp_source.html">ConfigAddress.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  217</span>                                                                                                      {</div>
-<div class="line"><span class="lineno">  218</span>        <a class="code hl_variable" href="#a4b11694d43e69cbaf7799613db3561f4">numericReverseOpt</a> <span class="comment">//</span></div>
-<div class="line"><span class="lineno">  219</span>            -&gt;default_str(numeric ? <span class="stringliteral">&quot;true&quot;</span> : <span class="stringliteral">&quot;false&quot;</span>)</div>
-<div class="line"><span class="lineno">  220</span>            -&gt;clear();</div>
-<div class="line"><span class="lineno">  221</span> </div>
-<div class="line"><span class="lineno">  222</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">  223</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="in6_2config_2ConfigAddress_8cpp_source.html#l00239">239</a> of file <a class="el" href="in6_2config_2ConfigAddress_8cpp_source.html">ConfigAddress.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  239</span>                                                                                                      {</div>
+<div class="line"><span class="lineno">  240</span>        <a class="code hl_variable" href="#a4b11694d43e69cbaf7799613db3561f4">numericReverseOpt</a> <span class="comment">//</span></div>
+<div class="line"><span class="lineno">  241</span>            -&gt;default_str(numeric ? <span class="stringliteral">&quot;true&quot;</span> : <span class="stringliteral">&quot;false&quot;</span>)</div>
+<div class="line"><span class="lineno">  242</span>            -&gt;clear();</div>
+<div class="line"><span class="lineno">  243</span> </div>
+<div class="line"><span class="lineno">  244</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">  245</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -896,17 +896,17 @@ template&lt;template&lt; typename <a class="el" href="classnet_1_1in6_1_1SocketA
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="in6_2config_2ConfigAddress_8cpp_source.html#l00184">184</a> of file <a class="el" href="in6_2config_2ConfigAddress_8cpp_source.html">ConfigAddress.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  184</span>                                                                                             {</div>
-<div class="line"><span class="lineno">  185</span>        <span class="keyword">const</span> <a class="code hl_class" href="classutils_1_1PreserveErrno.html">utils::PreserveErrno</a> preserveErrno;</div>
-<div class="line"><span class="lineno">  186</span> </div>
-<div class="line"><span class="lineno">  187</span>        <a class="code hl_variable" href="#a9d7104548437e8da9099f93405814243">portOpt</a> <span class="comment">//</span></div>
-<div class="line"><span class="lineno">  188</span>            -&gt;default_val(port)</div>
-<div class="line"><span class="lineno">  189</span>            -&gt;clear();</div>
-<div class="line"><span class="lineno">  190</span>        Super::required(<a class="code hl_variable" href="#a9d7104548437e8da9099f93405814243">portOpt</a>, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  191</span> </div>
-<div class="line"><span class="lineno">  192</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">  193</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="in6_2config_2ConfigAddress_8cpp_source.html#l00206">206</a> of file <a class="el" href="in6_2config_2ConfigAddress_8cpp_source.html">ConfigAddress.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  206</span>                                                                                             {</div>
+<div class="line"><span class="lineno">  207</span>        <span class="keyword">const</span> <a class="code hl_class" href="classutils_1_1PreserveErrno.html">utils::PreserveErrno</a> preserveErrno;</div>
+<div class="line"><span class="lineno">  208</span> </div>
+<div class="line"><span class="lineno">  209</span>        <a class="code hl_variable" href="#a9d7104548437e8da9099f93405814243">portOpt</a> <span class="comment">//</span></div>
+<div class="line"><span class="lineno">  210</span>            -&gt;default_val(port)</div>
+<div class="line"><span class="lineno">  211</span>            -&gt;clear();</div>
+<div class="line"><span class="lineno">  212</span>        Super::required(<a class="code hl_variable" href="#a9d7104548437e8da9099f93405814243">portOpt</a>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  213</span> </div>
+<div class="line"><span class="lineno">  214</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">  215</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -935,12 +935,12 @@ template&lt;template&lt; typename <a class="el" href="classnet_1_1in6_1_1SocketA
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="in6_2config_2ConfigAddress_8cpp_source.html#l00285">285</a> of file <a class="el" href="in6_2config_2ConfigAddress_8cpp_source.html">ConfigAddress.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  285</span>                                                                                                     {</div>
-<div class="line"><span class="lineno">  286</span>        Super::required(<a class="code hl_variable" href="#a9d7104548437e8da9099f93405814243">portOpt</a>, required);</div>
-<div class="line"><span class="lineno">  287</span> </div>
-<div class="line"><span class="lineno">  288</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">  289</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="in6_2config_2ConfigAddress_8cpp_source.html#l00307">307</a> of file <a class="el" href="in6_2config_2ConfigAddress_8cpp_source.html">ConfigAddress.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  307</span>                                                                                                     {</div>
+<div class="line"><span class="lineno">  308</span>        Super::required(<a class="code hl_variable" href="#a9d7104548437e8da9099f93405814243">portOpt</a>, required);</div>
+<div class="line"><span class="lineno">  309</span> </div>
+<div class="line"><span class="lineno">  310</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">  311</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -961,15 +961,15 @@ template&lt;template&lt; typename <a class="el" href="classnet_1_1in6_1_1SocketA
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="in6_2config_2ConfigAddress_8cpp_source.html#l00159">159</a> of file <a class="el" href="in6_2config_2ConfigAddress_8cpp_source.html">ConfigAddress.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  159</span>                                                                                                                           {</div>
-<div class="line"><span class="lineno">  160</span>        <a class="code hl_function" href="#a9695bf7c6f4e80fc13900f9a6b962859">setHost</a>(socketAddress.getHost());</div>
-<div class="line"><span class="lineno">  161</span>        <a class="code hl_function" href="#a7ed372b4ad55957e265864cf9ab3c87c">setPort</a>(socketAddress.getPort());</div>
-<div class="line"><span class="lineno">  162</span> </div>
-<div class="line"><span class="lineno">  163</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">  164</span>    }</div>
-<div class="ttc" id="aclassnet_1_1in6_1_1config_1_1ConfigAddress_html_a7ed372b4ad55957e265864cf9ab3c87c"><div class="ttname"><a href="#a7ed372b4ad55957e265864cf9ab3c87c">net::in6::config::ConfigAddress::setPort</a></div><div class="ttdeci">ConfigAddress &amp; setPort(uint16_t port)</div><div class="ttdef"><b>Definition</b> <a href="in6_2config_2ConfigAddress_8cpp_source.html#l00184">ConfigAddress.cpp:184</a></div></div>
-<div class="ttc" id="aclassnet_1_1in6_1_1config_1_1ConfigAddress_html_a9695bf7c6f4e80fc13900f9a6b962859"><div class="ttname"><a href="#a9695bf7c6f4e80fc13900f9a6b962859">net::in6::config::ConfigAddress::setHost</a></div><div class="ttdeci">ConfigAddress &amp; setHost(const std::string &amp;ipOrHostname)</div><div class="ttdef"><b>Definition</b> <a href="in6_2config_2ConfigAddress_8cpp_source.html#l00167">ConfigAddress.cpp:167</a></div></div>
+<p class="definition">Definition at line <a class="el" href="in6_2config_2ConfigAddress_8cpp_source.html#l00181">181</a> of file <a class="el" href="in6_2config_2ConfigAddress_8cpp_source.html">ConfigAddress.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  181</span>                                                                                                                           {</div>
+<div class="line"><span class="lineno">  182</span>        <a class="code hl_function" href="#a9695bf7c6f4e80fc13900f9a6b962859">setHost</a>(socketAddress.getHost());</div>
+<div class="line"><span class="lineno">  183</span>        <a class="code hl_function" href="#a7ed372b4ad55957e265864cf9ab3c87c">setPort</a>(socketAddress.getPort());</div>
+<div class="line"><span class="lineno">  184</span> </div>
+<div class="line"><span class="lineno">  185</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">  186</span>    }</div>
+<div class="ttc" id="aclassnet_1_1in6_1_1config_1_1ConfigAddress_html_a7ed372b4ad55957e265864cf9ab3c87c"><div class="ttname"><a href="#a7ed372b4ad55957e265864cf9ab3c87c">net::in6::config::ConfigAddress::setPort</a></div><div class="ttdeci">ConfigAddress &amp; setPort(uint16_t port)</div><div class="ttdef"><b>Definition</b> <a href="in6_2config_2ConfigAddress_8cpp_source.html#l00206">ConfigAddress.cpp:206</a></div></div>
+<div class="ttc" id="aclassnet_1_1in6_1_1config_1_1ConfigAddress_html_a9695bf7c6f4e80fc13900f9a6b962859"><div class="ttname"><a href="#a9695bf7c6f4e80fc13900f9a6b962859">net::in6::config::ConfigAddress::setHost</a></div><div class="ttdeci">ConfigAddress &amp; setHost(const std::string &amp;ipOrHostname)</div><div class="ttdef"><b>Definition</b> <a href="in6_2config_2ConfigAddress_8cpp_source.html#l00189">ConfigAddress.cpp:189</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -996,7 +996,7 @@ template&lt;template&lt; typename SocketAddressT &gt; typename ConfigAddressType
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="in6_2config_2ConfigAddress_8h_source.html#l00121">121</a> of file <a class="el" href="in6_2config_2ConfigAddress_8h_source.html">ConfigAddress.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="in6_2config_2ConfigAddress_8h_source.html#l00143">143</a> of file <a class="el" href="in6_2config_2ConfigAddress_8h_source.html">ConfigAddress.h</a>.</p>
 
 </div>
 </div>
@@ -1022,7 +1022,7 @@ template&lt;template&lt; typename SocketAddressT &gt; typename ConfigAddressType
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="in6_2config_2ConfigAddress_8h_source.html#l00123">123</a> of file <a class="el" href="in6_2config_2ConfigAddress_8h_source.html">ConfigAddress.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="in6_2config_2ConfigAddress_8h_source.html#l00145">145</a> of file <a class="el" href="in6_2config_2ConfigAddress_8h_source.html">ConfigAddress.h</a>.</p>
 
 </div>
 </div>
@@ -1048,7 +1048,7 @@ template&lt;template&lt; typename SocketAddressT &gt; typename ConfigAddressType
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="in6_2config_2ConfigAddress_8h_source.html#l00122">122</a> of file <a class="el" href="in6_2config_2ConfigAddress_8h_source.html">ConfigAddress.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="in6_2config_2ConfigAddress_8h_source.html#l00144">144</a> of file <a class="el" href="in6_2config_2ConfigAddress_8h_source.html">ConfigAddress.h</a>.</p>
 
 </div>
 </div>
@@ -1074,7 +1074,7 @@ template&lt;template&lt; typename SocketAddressT &gt; typename ConfigAddressType
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="in6_2config_2ConfigAddress_8h_source.html#l00115">115</a> of file <a class="el" href="in6_2config_2ConfigAddress_8h_source.html">ConfigAddress.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="in6_2config_2ConfigAddress_8h_source.html#l00137">137</a> of file <a class="el" href="in6_2config_2ConfigAddress_8h_source.html">ConfigAddress.h</a>.</p>
 
 </div>
 </div>
@@ -1100,7 +1100,7 @@ template&lt;template&lt; typename SocketAddressT &gt; typename ConfigAddressType
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="in6_2config_2ConfigAddress_8h_source.html#l00119">119</a> of file <a class="el" href="in6_2config_2ConfigAddress_8h_source.html">ConfigAddress.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="in6_2config_2ConfigAddress_8h_source.html#l00141">141</a> of file <a class="el" href="in6_2config_2ConfigAddress_8h_source.html">ConfigAddress.h</a>.</p>
 
 </div>
 </div>
@@ -1126,7 +1126,7 @@ template&lt;template&lt; typename SocketAddressT &gt; typename ConfigAddressType
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="in6_2config_2ConfigAddress_8h_source.html#l00117">117</a> of file <a class="el" href="in6_2config_2ConfigAddress_8h_source.html">ConfigAddress.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="in6_2config_2ConfigAddress_8h_source.html#l00139">139</a> of file <a class="el" href="in6_2config_2ConfigAddress_8h_source.html">ConfigAddress.h</a>.</p>
 
 </div>
 </div>
@@ -1152,7 +1152,7 @@ template&lt;template&lt; typename SocketAddressT &gt; typename ConfigAddressType
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="in6_2config_2ConfigAddress_8h_source.html#l00118">118</a> of file <a class="el" href="in6_2config_2ConfigAddress_8h_source.html">ConfigAddress.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="in6_2config_2ConfigAddress_8h_source.html#l00140">140</a> of file <a class="el" href="in6_2config_2ConfigAddress_8h_source.html">ConfigAddress.h</a>.</p>
 
 </div>
 </div>
@@ -1178,7 +1178,7 @@ template&lt;template&lt; typename SocketAddressT &gt; typename ConfigAddressType
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="in6_2config_2ConfigAddress_8h_source.html#l00116">116</a> of file <a class="el" href="in6_2config_2ConfigAddress_8h_source.html">ConfigAddress.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="in6_2config_2ConfigAddress_8h_source.html#l00138">138</a> of file <a class="el" href="in6_2config_2ConfigAddress_8h_source.html">ConfigAddress.h</a>.</p>
 
 </div>
 </div>
@@ -1192,7 +1192,7 @@ template&lt;template&lt; typename SocketAddressT &gt; typename ConfigAddressType
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacenet.html">net</a></li><li class="navelem"><a class="el" href="namespacenet_1_1in6.html">in6</a></li><li class="navelem"><a class="el" href="namespacenet_1_1in6_1_1config.html">config</a></li><li class="navelem"><a class="el" href="classnet_1_1in6_1_1config_1_1ConfigAddress.html">ConfigAddress</a></li>
-    <li class="footer">Generated on Tue Feb 25 2025 14:03:10 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generated on Sun Mar 9 2025 01:34:39 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>

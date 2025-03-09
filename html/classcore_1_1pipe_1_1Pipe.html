@@ -128,7 +128,7 @@ Private Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="Pipe_8h_source.html#l00036">36</a> of file <a class="el" href="Pipe_8h_source.html">Pipe.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Pipe_8h_source.html#l00058">58</a> of file <a class="el" href="Pipe_8h_source.html">Pipe.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="adfe88a74ec93485712768aa50267132d" name="adfe88a74ec93485712768aa50267132d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adfe88a74ec93485712768aa50267132d">&#9670;&#160;</a></span>Pipe() <span class="overload">[1/2]</span></h2>
@@ -174,20 +174,20 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Pipe_8cpp_source.html#l00035">35</a> of file <a class="el" href="Pipe_8cpp_source.html">Pipe.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   35</span>                                                                                                                {</div>
-<div class="line"><span class="lineno">   36</span>        <span class="keyword">const</span> <span class="keywordtype">int</span> ret = <a class="code hl_function" href="namespacecore_1_1system.html#aed100e752a00ffbde81be386936053ca">core::system::pipe2</a>(<a class="code hl_variable" href="#a4b4e7907b6b27d1a46db90ef00935ab8">pipeFd</a>, O_NONBLOCK);</div>
-<div class="line"><span class="lineno">   37</span> </div>
-<div class="line"><span class="lineno">   38</span>        <span class="keywordflow">if</span> (ret == 0) {</div>
-<div class="line"><span class="lineno">   39</span>            onSuccess(*(<span class="keyword">new</span> PipeSource(<a class="code hl_variable" href="#a4b4e7907b6b27d1a46db90ef00935ab8">pipeFd</a>[1])), *(<span class="keyword">new</span> PipeSink(<a class="code hl_variable" href="#a4b4e7907b6b27d1a46db90ef00935ab8">pipeFd</a>[0])));</div>
-<div class="line"><span class="lineno">   40</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   41</span>            onError(errno);</div>
-<div class="line"><span class="lineno">   42</span>        }</div>
-<div class="line"><span class="lineno">   43</span>    }</div>
-<div class="ttc" id="aclasscore_1_1pipe_1_1Pipe_html_a4b4e7907b6b27d1a46db90ef00935ab8"><div class="ttname"><a href="#a4b4e7907b6b27d1a46db90ef00935ab8">core::pipe::Pipe::pipeFd</a></div><div class="ttdeci">int pipeFd[2]</div><div class="ttdef"><b>Definition</b> <a href="Pipe_8h_source.html#l00045">Pipe.h:45</a></div></div>
-<div class="ttc" id="anamespacecore_1_1system_html_aed100e752a00ffbde81be386936053ca"><div class="ttname"><a href="namespacecore_1_1system.html#aed100e752a00ffbde81be386936053ca">core::system::pipe2</a></div><div class="ttdeci">int pipe2(int pipefd[2], int flags)</div><div class="ttdef"><b>Definition</b> <a href="unistd_8cpp_source.html#l00050">unistd.cpp:50</a></div></div>
+<p class="definition">Definition at line <a class="el" href="Pipe_8cpp_source.html#l00057">57</a> of file <a class="el" href="Pipe_8cpp_source.html">Pipe.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   57</span>                                                                                                                {</div>
+<div class="line"><span class="lineno">   58</span>        <span class="keyword">const</span> <span class="keywordtype">int</span> ret = <a class="code hl_function" href="namespacecore_1_1system.html#aed100e752a00ffbde81be386936053ca">core::system::pipe2</a>(<a class="code hl_variable" href="#a4b4e7907b6b27d1a46db90ef00935ab8">pipeFd</a>, O_NONBLOCK);</div>
+<div class="line"><span class="lineno">   59</span> </div>
+<div class="line"><span class="lineno">   60</span>        <span class="keywordflow">if</span> (ret == 0) {</div>
+<div class="line"><span class="lineno">   61</span>            onSuccess(*(<span class="keyword">new</span> PipeSource(<a class="code hl_variable" href="#a4b4e7907b6b27d1a46db90ef00935ab8">pipeFd</a>[1])), *(<span class="keyword">new</span> PipeSink(<a class="code hl_variable" href="#a4b4e7907b6b27d1a46db90ef00935ab8">pipeFd</a>[0])));</div>
+<div class="line"><span class="lineno">   62</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">   63</span>            onError(errno);</div>
+<div class="line"><span class="lineno">   64</span>        }</div>
+<div class="line"><span class="lineno">   65</span>    }</div>
+<div class="ttc" id="aclasscore_1_1pipe_1_1Pipe_html_a4b4e7907b6b27d1a46db90ef00935ab8"><div class="ttname"><a href="#a4b4e7907b6b27d1a46db90ef00935ab8">core::pipe::Pipe::pipeFd</a></div><div class="ttdeci">int pipeFd[2]</div><div class="ttdef"><b>Definition</b> <a href="Pipe_8h_source.html#l00067">Pipe.h:67</a></div></div>
+<div class="ttc" id="anamespacecore_1_1system_html_aed100e752a00ffbde81be386936053ca"><div class="ttname"><a href="namespacecore_1_1system.html#aed100e752a00ffbde81be386936053ca">core::system::pipe2</a></div><div class="ttdeci">int pipe2(int pipefd[2], int flags)</div><div class="ttdef"><b>Definition</b> <a href="unistd_8cpp_source.html#l00072">unistd.cpp:72</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="unistd_8cpp_source.html#l00050">core::system::pipe2()</a>, <a class="el" href="Pipe_8h_source.html#l00045">pipeFd</a>, <a class="el" href="PipeSink_8cpp_source.html#l00038">core::pipe::PipeSink::PipeSink()</a>, and <a class="el" href="PipeSource_8cpp_source.html#l00038">core::pipe::PipeSource::PipeSource()</a>.</p>
+<p class="reference">References <a class="el" href="unistd_8cpp_source.html#l00072">core::system::pipe2()</a>, <a class="el" href="Pipe_8h_source.html#l00067">pipeFd</a>, <a class="el" href="PipeSink_8cpp_source.html#l00060">core::pipe::PipeSink::PipeSink()</a>, and <a class="el" href="PipeSource_8cpp_source.html#l00060">core::pipe::PipeSource::PipeSource()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -243,10 +243,10 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Pipe_8h_source.html#l00045">45</a> of file <a class="el" href="Pipe_8h_source.html">Pipe.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   45</span>{};</div>
+<p class="definition">Definition at line <a class="el" href="Pipe_8h_source.html#l00067">67</a> of file <a class="el" href="Pipe_8h_source.html">Pipe.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   67</span>{};</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="Pipe_8cpp_source.html#l00035">Pipe()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Pipe_8cpp_source.html#l00057">Pipe()</a>.</p>
 
 </div>
 </div>
@@ -260,7 +260,7 @@ Here is the call graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacecore.html">core</a></li><li class="navelem"><a class="el" href="namespacecore_1_1pipe.html">pipe</a></li><li class="navelem"><a class="el" href="classcore_1_1pipe_1_1Pipe.html">Pipe</a></li>
-    <li class="footer">Generated on Tue Feb 25 2025 14:03:10 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generated on Sun Mar 9 2025 01:34:39 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>

@@ -115,7 +115,7 @@ Inheritance diagram for web::http::server::RequestParser:</div>
 <div class="dynheader">
 Collaboration diagram for web::http::server::RequestParser:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classweb_1_1http_1_1server_1_1RequestParser__coll__graph.svg" width="1546" height="584"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classweb_1_1http_1_1server_1_1RequestParser__coll__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -225,7 +225,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="RequestParser_8h_source.html#l00040">40</a> of file <a class="el" href="RequestParser_8h_source.html">RequestParser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="RequestParser_8h_source.html#l00062">62</a> of file <a class="el" href="RequestParser_8h_source.html">RequestParser.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="af68badfc413566bc4583dd982c0e7acd" name="af68badfc413566bc4583dd982c0e7acd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af68badfc413566bc4583dd982c0e7acd">&#9670;&#160;</a></span>RequestParser() <span class="overload">[1/2]</span></h2>
@@ -256,21 +256,21 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="RequestParser_8cpp_source.html#l00034">34</a> of file <a class="el" href="RequestParser_8cpp_source.html">RequestParser.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   38</span>        : <a class="code hl_function" href="classweb_1_1http_1_1Parser.html#a3dc56190c19a9bed38b3934c289f19e8">Parser</a>(<a class="code hl_variable" href="classweb_1_1http_1_1Parser.html#a887a9c8ada29f7aab21ec4f84c3a89be">socketContext</a>)</div>
-<div class="line"><span class="lineno">   39</span>        , <a class="code hl_variable" href="#ae69699928e15fc3ca0b018f5ae029479">onRequestStart</a>(<a class="code hl_variable" href="#ae69699928e15fc3ca0b018f5ae029479">onRequestStart</a>)</div>
-<div class="line"><span class="lineno">   40</span>        , <a class="code hl_variable" href="#a9cc28e01b5256c564f9ecd3dbc69e8a1">onRequestParsed</a>(<a class="code hl_variable" href="#a9cc28e01b5256c564f9ecd3dbc69e8a1">onRequestParsed</a>)</div>
-<div class="line"><span class="lineno">   41</span>        , <a class="code hl_variable" href="#a9c15322b1eea34a508ff99544ea31ea3">onRequestParseError</a>(<a class="code hl_variable" href="#a9c15322b1eea34a508ff99544ea31ea3">onRequestParseError</a>) {</div>
-<div class="line"><span class="lineno">   42</span>    }</div>
-<div class="ttc" id="aclassweb_1_1http_1_1Parser_html_a3dc56190c19a9bed38b3934c289f19e8"><div class="ttname"><a href="classweb_1_1http_1_1Parser.html#a3dc56190c19a9bed38b3934c289f19e8">web::http::Parser::Parser</a></div><div class="ttdeci">Parser(core::socket::stream::SocketContext *socketContext, const enum HTTPCompliance &amp;compliance=HTTPCompliance::RFC2616|HTTPCompliance::RFC7230)</div><div class="ttdef"><b>Definition</b> <a href="Parser_8cpp_source.html#l00041">Parser.cpp:41</a></div></div>
-<div class="ttc" id="aclassweb_1_1http_1_1Parser_html_a887a9c8ada29f7aab21ec4f84c3a89be"><div class="ttname"><a href="classweb_1_1http_1_1Parser.html#a887a9c8ada29f7aab21ec4f84c3a89be">web::http::Parser::socketContext</a></div><div class="ttdeci">core::socket::stream::SocketContext * socketContext</div><div class="ttdef"><b>Definition</b> <a href="Parser_8h_source.html#l00105">Parser.h:105</a></div></div>
-<div class="ttc" id="aclassweb_1_1http_1_1server_1_1RequestParser_html_a9c15322b1eea34a508ff99544ea31ea3"><div class="ttname"><a href="#a9c15322b1eea34a508ff99544ea31ea3">web::http::server::RequestParser::onRequestParseError</a></div><div class="ttdeci">std::function&lt; void(int, const std::string &amp;)&gt; onRequestParseError</div><div class="ttdef"><b>Definition</b> <a href="RequestParser_8h_source.html#l00073">RequestParser.h:73</a></div></div>
-<div class="ttc" id="aclassweb_1_1http_1_1server_1_1RequestParser_html_a9cc28e01b5256c564f9ecd3dbc69e8a1"><div class="ttname"><a href="#a9cc28e01b5256c564f9ecd3dbc69e8a1">web::http::server::RequestParser::onRequestParsed</a></div><div class="ttdeci">std::function&lt; void(Request &amp;&amp;)&gt; onRequestParsed</div><div class="ttdef"><b>Definition</b> <a href="RequestParser_8h_source.html#l00072">RequestParser.h:72</a></div></div>
-<div class="ttc" id="aclassweb_1_1http_1_1server_1_1RequestParser_html_ae69699928e15fc3ca0b018f5ae029479"><div class="ttname"><a href="#ae69699928e15fc3ca0b018f5ae029479">web::http::server::RequestParser::onRequestStart</a></div><div class="ttdeci">std::function&lt; void()&gt; onRequestStart</div><div class="ttdef"><b>Definition</b> <a href="RequestParser_8h_source.html#l00071">RequestParser.h:71</a></div></div>
+<p class="definition">Definition at line <a class="el" href="RequestParser_8cpp_source.html#l00056">56</a> of file <a class="el" href="RequestParser_8cpp_source.html">RequestParser.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   60</span>        : <a class="code hl_function" href="classweb_1_1http_1_1Parser.html#a3dc56190c19a9bed38b3934c289f19e8">Parser</a>(<a class="code hl_variable" href="classweb_1_1http_1_1Parser.html#a887a9c8ada29f7aab21ec4f84c3a89be">socketContext</a>)</div>
+<div class="line"><span class="lineno">   61</span>        , <a class="code hl_variable" href="#ae69699928e15fc3ca0b018f5ae029479">onRequestStart</a>(<a class="code hl_variable" href="#ae69699928e15fc3ca0b018f5ae029479">onRequestStart</a>)</div>
+<div class="line"><span class="lineno">   62</span>        , <a class="code hl_variable" href="#a9cc28e01b5256c564f9ecd3dbc69e8a1">onRequestParsed</a>(<a class="code hl_variable" href="#a9cc28e01b5256c564f9ecd3dbc69e8a1">onRequestParsed</a>)</div>
+<div class="line"><span class="lineno">   63</span>        , <a class="code hl_variable" href="#a9c15322b1eea34a508ff99544ea31ea3">onRequestParseError</a>(<a class="code hl_variable" href="#a9c15322b1eea34a508ff99544ea31ea3">onRequestParseError</a>) {</div>
+<div class="line"><span class="lineno">   64</span>    }</div>
+<div class="ttc" id="aclassweb_1_1http_1_1Parser_html_a3dc56190c19a9bed38b3934c289f19e8"><div class="ttname"><a href="classweb_1_1http_1_1Parser.html#a3dc56190c19a9bed38b3934c289f19e8">web::http::Parser::Parser</a></div><div class="ttdeci">Parser(core::socket::stream::SocketContext *socketContext, const enum HTTPCompliance &amp;compliance=HTTPCompliance::RFC2616|HTTPCompliance::RFC7230)</div><div class="ttdef"><b>Definition</b> <a href="Parser_8cpp_source.html#l00063">Parser.cpp:63</a></div></div>
+<div class="ttc" id="aclassweb_1_1http_1_1Parser_html_a887a9c8ada29f7aab21ec4f84c3a89be"><div class="ttname"><a href="classweb_1_1http_1_1Parser.html#a887a9c8ada29f7aab21ec4f84c3a89be">web::http::Parser::socketContext</a></div><div class="ttdeci">core::socket::stream::SocketContext * socketContext</div><div class="ttdef"><b>Definition</b> <a href="Parser_8h_source.html#l00127">Parser.h:127</a></div></div>
+<div class="ttc" id="aclassweb_1_1http_1_1server_1_1RequestParser_html_a9c15322b1eea34a508ff99544ea31ea3"><div class="ttname"><a href="#a9c15322b1eea34a508ff99544ea31ea3">web::http::server::RequestParser::onRequestParseError</a></div><div class="ttdeci">std::function&lt; void(int, const std::string &amp;)&gt; onRequestParseError</div><div class="ttdef"><b>Definition</b> <a href="RequestParser_8h_source.html#l00095">RequestParser.h:95</a></div></div>
+<div class="ttc" id="aclassweb_1_1http_1_1server_1_1RequestParser_html_a9cc28e01b5256c564f9ecd3dbc69e8a1"><div class="ttname"><a href="#a9cc28e01b5256c564f9ecd3dbc69e8a1">web::http::server::RequestParser::onRequestParsed</a></div><div class="ttdeci">std::function&lt; void(Request &amp;&amp;)&gt; onRequestParsed</div><div class="ttdef"><b>Definition</b> <a href="RequestParser_8h_source.html#l00094">RequestParser.h:94</a></div></div>
+<div class="ttc" id="aclassweb_1_1http_1_1server_1_1RequestParser_html_ae69699928e15fc3ca0b018f5ae029479"><div class="ttname"><a href="#ae69699928e15fc3ca0b018f5ae029479">web::http::server::RequestParser::onRequestStart</a></div><div class="ttdeci">std::function&lt; void()&gt; onRequestStart</div><div class="ttdef"><b>Definition</b> <a href="RequestParser_8h_source.html#l00093">RequestParser.h:93</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="RequestParser_8cpp_source.html#l00034">RequestParser()</a>.</p>
+<p class="reference">References <a class="el" href="RequestParser_8cpp_source.html#l00056">RequestParser()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="RequestParser_8cpp_source.html#l00034">RequestParser()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="RequestParser_8cpp_source.html#l00056">RequestParser()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -335,72 +335,72 @@ Here is the caller graph for this function:</div>
 
 <p>Reimplemented from <a class="el" href="classweb_1_1http_1_1Parser.html#acc6afc67cabc5f61002830e31a36868c">web::http::Parser</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="RequestParser_8cpp_source.html#l00089">89</a> of file <a class="el" href="RequestParser_8cpp_source.html">RequestParser.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   89</span>                                      {</div>
-<div class="line"><span class="lineno">   90</span>        <a class="code hl_function" href="classweb_1_1http_1_1Parser.html#acc6afc67cabc5f61002830e31a36868c">Parser::analyzeHeader</a>();</div>
-<div class="line"><span class="lineno">   91</span> </div>
-<div class="line"><span class="lineno">   92</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classweb_1_1http_1_1Parser.html#a8e289893cd9e036f831ee2abfb0fd352">headers</a>.contains(<span class="stringliteral">&quot;Connection&quot;</span>)) {</div>
-<div class="line"><span class="lineno">   93</span>            <span class="keyword">const</span> std::string&amp; connection = <a class="code hl_variable" href="classweb_1_1http_1_1Parser.html#a8e289893cd9e036f831ee2abfb0fd352">headers</a>[<span class="stringliteral">&quot;Connection&quot;</span>];</div>
-<div class="line"><span class="lineno">   94</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="namespaceweb_1_1http.html#a1f64d7d534ae76729c7bae5e5264e5d4">web::http::ciContains</a>(connection, <span class="stringliteral">&quot;keep-alive&quot;</span>)) {</div>
-<div class="line"><span class="lineno">   95</span>                <a class="code hl_variable" href="#ae424ab06e9a31369aef752a739a4b98e">request</a>.<a class="code hl_variable" href="classweb_1_1http_1_1server_1_1Request.html#ac849bb8e86fe6b1ffb210d7df7c9ce12">connectionState</a> = <a class="code hl_enumvalue" href="namespaceweb_1_1http.html#ac27fdcf348c7472940ecd0e34342dca1a19331c4aeb7eb71943963ec94adb057e">ConnectionState::Keep</a>;</div>
-<div class="line"><span class="lineno">   96</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_function" href="namespaceweb_1_1http.html#a1f64d7d534ae76729c7bae5e5264e5d4">web::http::ciContains</a>(connection, <span class="stringliteral">&quot;close&quot;</span>)) {</div>
-<div class="line"><span class="lineno">   97</span>                <a class="code hl_variable" href="#ae424ab06e9a31369aef752a739a4b98e">request</a>.<a class="code hl_variable" href="classweb_1_1http_1_1server_1_1Request.html#ac849bb8e86fe6b1ffb210d7df7c9ce12">connectionState</a> = <a class="code hl_enumvalue" href="namespaceweb_1_1http.html#ac27fdcf348c7472940ecd0e34342dca1a31333582a62633255ac3791bd7f5af0b">ConnectionState::Close</a>;</div>
-<div class="line"><span class="lineno">   98</span>            }</div>
-<div class="line"><span class="lineno">   99</span>        }</div>
-<div class="line"><span class="lineno">  100</span> </div>
-<div class="line"><span class="lineno">  101</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classweb_1_1http_1_1Parser.html#a8e289893cd9e036f831ee2abfb0fd352">headers</a>.contains(<span class="stringliteral">&quot;Cookie&quot;</span>)) {</div>
-<div class="line"><span class="lineno">  102</span>            std::string&amp; cookiesLine = <a class="code hl_variable" href="classweb_1_1http_1_1Parser.html#a8e289893cd9e036f831ee2abfb0fd352">headers</a>[<span class="stringliteral">&quot;Cookie&quot;</span>];</div>
-<div class="line"><span class="lineno">  103</span> </div>
-<div class="line"><span class="lineno">  104</span>            <span class="keywordflow">while</span> (!cookiesLine.empty()) {</div>
-<div class="line"><span class="lineno">  105</span>                std::string cookieLine;</div>
-<div class="line"><span class="lineno">  106</span>                std::tie(cookieLine, cookiesLine) = <a class="code hl_function" href="namespacehttputils.html#a9e46abe5c20380871f3884c9176a424d">httputils::str_split</a>(cookiesLine, <span class="charliteral">&#39;,&#39;</span>);</div>
-<div class="line"><span class="lineno">  107</span> </div>
-<div class="line"><span class="lineno">  108</span>                <span class="keywordflow">while</span> (!cookieLine.empty()) {</div>
-<div class="line"><span class="lineno">  109</span>                    std::string cookie;</div>
-<div class="line"><span class="lineno">  110</span>                    std::tie(cookie, cookieLine) = <a class="code hl_function" href="namespacehttputils.html#a9e46abe5c20380871f3884c9176a424d">httputils::str_split</a>(cookieLine, <span class="charliteral">&#39;;&#39;</span>);</div>
-<div class="line"><span class="lineno">  111</span> </div>
-<div class="line"><span class="lineno">  112</span>                    std::string cookieName;</div>
-<div class="line"><span class="lineno">  113</span>                    std::string cookieValue;</div>
-<div class="line"><span class="lineno">  114</span>                    std::tie(cookieName, cookieValue) = <a class="code hl_function" href="namespacehttputils.html#a9e46abe5c20380871f3884c9176a424d">httputils::str_split</a>(cookie, <span class="charliteral">&#39;=&#39;</span>);</div>
-<div class="line"><span class="lineno">  115</span> </div>
-<div class="line"><span class="lineno">  116</span>                    <a class="code hl_function" href="namespacehttputils.html#aaa1e55d83548ea4ebf224d695f73c874">httputils::str_trimm</a>(cookieName);</div>
-<div class="line"><span class="lineno">  117</span>                    <a class="code hl_function" href="namespacehttputils.html#aaa1e55d83548ea4ebf224d695f73c874">httputils::str_trimm</a>(cookieValue);</div>
-<div class="line"><span class="lineno">  118</span> </div>
-<div class="line"><span class="lineno">  119</span>                    <a class="code hl_variable" href="#ae424ab06e9a31369aef752a739a4b98e">request</a>.<a class="code hl_variable" href="classweb_1_1http_1_1server_1_1Request.html#a259053314b9940cfebf482ca0eb05ece">cookies</a>.emplace(cookieName, cookieValue);</div>
-<div class="line"><span class="lineno">  120</span>                }</div>
-<div class="line"><span class="lineno">  121</span>            }</div>
+<p class="definition">Definition at line <a class="el" href="RequestParser_8cpp_source.html#l00111">111</a> of file <a class="el" href="RequestParser_8cpp_source.html">RequestParser.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  111</span>                                      {</div>
+<div class="line"><span class="lineno">  112</span>        <a class="code hl_function" href="classweb_1_1http_1_1Parser.html#acc6afc67cabc5f61002830e31a36868c">Parser::analyzeHeader</a>();</div>
+<div class="line"><span class="lineno">  113</span> </div>
+<div class="line"><span class="lineno">  114</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classweb_1_1http_1_1Parser.html#a8e289893cd9e036f831ee2abfb0fd352">headers</a>.contains(<span class="stringliteral">&quot;Connection&quot;</span>)) {</div>
+<div class="line"><span class="lineno">  115</span>            <span class="keyword">const</span> std::string&amp; connection = <a class="code hl_variable" href="classweb_1_1http_1_1Parser.html#a8e289893cd9e036f831ee2abfb0fd352">headers</a>[<span class="stringliteral">&quot;Connection&quot;</span>];</div>
+<div class="line"><span class="lineno">  116</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="namespaceweb_1_1http.html#a1f64d7d534ae76729c7bae5e5264e5d4">web::http::ciContains</a>(connection, <span class="stringliteral">&quot;keep-alive&quot;</span>)) {</div>
+<div class="line"><span class="lineno">  117</span>                <a class="code hl_variable" href="#ae424ab06e9a31369aef752a739a4b98e">request</a>.<a class="code hl_variable" href="classweb_1_1http_1_1server_1_1Request.html#ac849bb8e86fe6b1ffb210d7df7c9ce12">connectionState</a> = <a class="code hl_enumvalue" href="namespaceweb_1_1http.html#ac27fdcf348c7472940ecd0e34342dca1a19331c4aeb7eb71943963ec94adb057e">ConnectionState::Keep</a>;</div>
+<div class="line"><span class="lineno">  118</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_function" href="namespaceweb_1_1http.html#a1f64d7d534ae76729c7bae5e5264e5d4">web::http::ciContains</a>(connection, <span class="stringliteral">&quot;close&quot;</span>)) {</div>
+<div class="line"><span class="lineno">  119</span>                <a class="code hl_variable" href="#ae424ab06e9a31369aef752a739a4b98e">request</a>.<a class="code hl_variable" href="classweb_1_1http_1_1server_1_1Request.html#ac849bb8e86fe6b1ffb210d7df7c9ce12">connectionState</a> = <a class="code hl_enumvalue" href="namespaceweb_1_1http.html#ac27fdcf348c7472940ecd0e34342dca1a31333582a62633255ac3791bd7f5af0b">ConnectionState::Close</a>;</div>
+<div class="line"><span class="lineno">  120</span>            }</div>
+<div class="line"><span class="lineno">  121</span>        }</div>
 <div class="line"><span class="lineno">  122</span> </div>
-<div class="line"><span class="lineno">  123</span>            <a class="code hl_variable" href="classweb_1_1http_1_1Parser.html#a8e289893cd9e036f831ee2abfb0fd352">headers</a>.erase(<span class="stringliteral">&quot;Cookie&quot;</span>);</div>
-<div class="line"><span class="lineno">  124</span>        }</div>
+<div class="line"><span class="lineno">  123</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classweb_1_1http_1_1Parser.html#a8e289893cd9e036f831ee2abfb0fd352">headers</a>.contains(<span class="stringliteral">&quot;Cookie&quot;</span>)) {</div>
+<div class="line"><span class="lineno">  124</span>            std::string&amp; cookiesLine = <a class="code hl_variable" href="classweb_1_1http_1_1Parser.html#a8e289893cd9e036f831ee2abfb0fd352">headers</a>[<span class="stringliteral">&quot;Cookie&quot;</span>];</div>
 <div class="line"><span class="lineno">  125</span> </div>
-<div class="line"><span class="lineno">  126</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classweb_1_1http_1_1Parser.html#ab72951d7ab35e53826eb15d30f53dbdd">transferEncoding</a> != <a class="code hl_enumvalue" href="namespaceweb_1_1http.html#a40edb0fffda79adf1a8a5b95fdd6e7b2a7920ba6b75e24916e97632ed0bafec4f">TransferEncoding::Chunked</a> &amp;&amp; <a class="code hl_variable" href="classweb_1_1http_1_1Parser.html#a6f4bc9c330019ecb706fb343bec00f22">contentLength</a> == 0) {</div>
-<div class="line"><span class="lineno">  127</span>            <a class="code hl_function" href="#a114832f08bc258d3076ab80c89b95d8b">parsingFinished</a>();</div>
-<div class="line"><span class="lineno">  128</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  129</span>            <a class="code hl_variable" href="classweb_1_1http_1_1Parser.html#a0b7851cba5453de9dd3bb8969f9c2184">parserState</a> = <a class="code hl_enumvalue" href="classweb_1_1http_1_1Parser.html#a94ab44c0d65451be6ba3e6e389a8b7d5a786329b34bbe53ab40a54a19cd597f2d">Parser::ParserState::BODY</a>;</div>
-<div class="line"><span class="lineno">  130</span>        }</div>
-<div class="line"><span class="lineno">  131</span>    }</div>
-<div class="ttc" id="aclassweb_1_1http_1_1Parser_html_a0b7851cba5453de9dd3bb8969f9c2184"><div class="ttname"><a href="classweb_1_1http_1_1Parser.html#a0b7851cba5453de9dd3bb8969f9c2184">web::http::Parser::parserState</a></div><div class="ttdeci">ParserState parserState</div><div class="ttdef"><b>Definition</b> <a href="Parser_8h_source.html#l00078">Parser.h:78</a></div></div>
-<div class="ttc" id="aclassweb_1_1http_1_1Parser_html_a6f4bc9c330019ecb706fb343bec00f22"><div class="ttname"><a href="classweb_1_1http_1_1Parser.html#a6f4bc9c330019ecb706fb343bec00f22">web::http::Parser::contentLength</a></div><div class="ttdeci">std::size_t contentLength</div><div class="ttdef"><b>Definition</b> <a href="Parser_8h_source.html#l00121">Parser.h:121</a></div></div>
-<div class="ttc" id="aclassweb_1_1http_1_1Parser_html_a8e289893cd9e036f831ee2abfb0fd352"><div class="ttname"><a href="classweb_1_1http_1_1Parser.html#a8e289893cd9e036f831ee2abfb0fd352">web::http::Parser::headers</a></div><div class="ttdeci">CiStringMap&lt; std::string &gt; headers</div><div class="ttdef"><b>Definition</b> <a href="Parser_8h_source.html#l00097">Parser.h:97</a></div></div>
+<div class="line"><span class="lineno">  126</span>            <span class="keywordflow">while</span> (!cookiesLine.empty()) {</div>
+<div class="line"><span class="lineno">  127</span>                std::string cookieLine;</div>
+<div class="line"><span class="lineno">  128</span>                std::tie(cookieLine, cookiesLine) = <a class="code hl_function" href="namespacehttputils.html#a9e46abe5c20380871f3884c9176a424d">httputils::str_split</a>(cookiesLine, <span class="charliteral">&#39;,&#39;</span>);</div>
+<div class="line"><span class="lineno">  129</span> </div>
+<div class="line"><span class="lineno">  130</span>                <span class="keywordflow">while</span> (!cookieLine.empty()) {</div>
+<div class="line"><span class="lineno">  131</span>                    std::string cookie;</div>
+<div class="line"><span class="lineno">  132</span>                    std::tie(cookie, cookieLine) = <a class="code hl_function" href="namespacehttputils.html#a9e46abe5c20380871f3884c9176a424d">httputils::str_split</a>(cookieLine, <span class="charliteral">&#39;;&#39;</span>);</div>
+<div class="line"><span class="lineno">  133</span> </div>
+<div class="line"><span class="lineno">  134</span>                    std::string cookieName;</div>
+<div class="line"><span class="lineno">  135</span>                    std::string cookieValue;</div>
+<div class="line"><span class="lineno">  136</span>                    std::tie(cookieName, cookieValue) = <a class="code hl_function" href="namespacehttputils.html#a9e46abe5c20380871f3884c9176a424d">httputils::str_split</a>(cookie, <span class="charliteral">&#39;=&#39;</span>);</div>
+<div class="line"><span class="lineno">  137</span> </div>
+<div class="line"><span class="lineno">  138</span>                    <a class="code hl_function" href="namespacehttputils.html#aaa1e55d83548ea4ebf224d695f73c874">httputils::str_trimm</a>(cookieName);</div>
+<div class="line"><span class="lineno">  139</span>                    <a class="code hl_function" href="namespacehttputils.html#aaa1e55d83548ea4ebf224d695f73c874">httputils::str_trimm</a>(cookieValue);</div>
+<div class="line"><span class="lineno">  140</span> </div>
+<div class="line"><span class="lineno">  141</span>                    <a class="code hl_variable" href="#ae424ab06e9a31369aef752a739a4b98e">request</a>.<a class="code hl_variable" href="classweb_1_1http_1_1server_1_1Request.html#a259053314b9940cfebf482ca0eb05ece">cookies</a>.emplace(cookieName, cookieValue);</div>
+<div class="line"><span class="lineno">  142</span>                }</div>
+<div class="line"><span class="lineno">  143</span>            }</div>
+<div class="line"><span class="lineno">  144</span> </div>
+<div class="line"><span class="lineno">  145</span>            <a class="code hl_variable" href="classweb_1_1http_1_1Parser.html#a8e289893cd9e036f831ee2abfb0fd352">headers</a>.erase(<span class="stringliteral">&quot;Cookie&quot;</span>);</div>
+<div class="line"><span class="lineno">  146</span>        }</div>
+<div class="line"><span class="lineno">  147</span> </div>
+<div class="line"><span class="lineno">  148</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classweb_1_1http_1_1Parser.html#ab72951d7ab35e53826eb15d30f53dbdd">transferEncoding</a> != <a class="code hl_enumvalue" href="namespaceweb_1_1http.html#a40edb0fffda79adf1a8a5b95fdd6e7b2a7920ba6b75e24916e97632ed0bafec4f">TransferEncoding::Chunked</a> &amp;&amp; <a class="code hl_variable" href="classweb_1_1http_1_1Parser.html#a6f4bc9c330019ecb706fb343bec00f22">contentLength</a> == 0) {</div>
+<div class="line"><span class="lineno">  149</span>            <a class="code hl_function" href="#a114832f08bc258d3076ab80c89b95d8b">parsingFinished</a>();</div>
+<div class="line"><span class="lineno">  150</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  151</span>            <a class="code hl_variable" href="classweb_1_1http_1_1Parser.html#a0b7851cba5453de9dd3bb8969f9c2184">parserState</a> = <a class="code hl_enumvalue" href="classweb_1_1http_1_1Parser.html#a94ab44c0d65451be6ba3e6e389a8b7d5a786329b34bbe53ab40a54a19cd597f2d">Parser::ParserState::BODY</a>;</div>
+<div class="line"><span class="lineno">  152</span>        }</div>
+<div class="line"><span class="lineno">  153</span>    }</div>
+<div class="ttc" id="aclassweb_1_1http_1_1Parser_html_a0b7851cba5453de9dd3bb8969f9c2184"><div class="ttname"><a href="classweb_1_1http_1_1Parser.html#a0b7851cba5453de9dd3bb8969f9c2184">web::http::Parser::parserState</a></div><div class="ttdeci">ParserState parserState</div><div class="ttdef"><b>Definition</b> <a href="Parser_8h_source.html#l00100">Parser.h:100</a></div></div>
+<div class="ttc" id="aclassweb_1_1http_1_1Parser_html_a6f4bc9c330019ecb706fb343bec00f22"><div class="ttname"><a href="classweb_1_1http_1_1Parser.html#a6f4bc9c330019ecb706fb343bec00f22">web::http::Parser::contentLength</a></div><div class="ttdeci">std::size_t contentLength</div><div class="ttdef"><b>Definition</b> <a href="Parser_8h_source.html#l00143">Parser.h:143</a></div></div>
+<div class="ttc" id="aclassweb_1_1http_1_1Parser_html_a8e289893cd9e036f831ee2abfb0fd352"><div class="ttname"><a href="classweb_1_1http_1_1Parser.html#a8e289893cd9e036f831ee2abfb0fd352">web::http::Parser::headers</a></div><div class="ttdeci">CiStringMap&lt; std::string &gt; headers</div><div class="ttdef"><b>Definition</b> <a href="Parser_8h_source.html#l00119">Parser.h:119</a></div></div>
 <div class="ttc" id="aclassweb_1_1http_1_1Parser_html_a94ab44c0d65451be6ba3e6e389a8b7d5a786329b34bbe53ab40a54a19cd597f2d"><div class="ttname"><a href="classweb_1_1http_1_1Parser.html#a94ab44c0d65451be6ba3e6e389a8b7d5a786329b34bbe53ab40a54a19cd597f2d">web::http::Parser::ParserState::BODY</a></div><div class="ttdeci">@ BODY</div></div>
-<div class="ttc" id="aclassweb_1_1http_1_1Parser_html_ab72951d7ab35e53826eb15d30f53dbdd"><div class="ttname"><a href="classweb_1_1http_1_1Parser.html#ab72951d7ab35e53826eb15d30f53dbdd">web::http::Parser::transferEncoding</a></div><div class="ttdeci">TransferEncoding transferEncoding</div><div class="ttdef"><b>Definition</b> <a href="Parser_8h_source.html#l00080">Parser.h:80</a></div></div>
-<div class="ttc" id="aclassweb_1_1http_1_1Parser_html_acc6afc67cabc5f61002830e31a36868c"><div class="ttname"><a href="classweb_1_1http_1_1Parser.html#acc6afc67cabc5f61002830e31a36868c">web::http::Parser::analyzeHeader</a></div><div class="ttdeci">virtual void analyzeHeader()</div><div class="ttdef"><b>Definition</b> <a href="Parser_8cpp_source.html#l00138">Parser.cpp:138</a></div></div>
-<div class="ttc" id="aclassweb_1_1http_1_1server_1_1RequestParser_html_a114832f08bc258d3076ab80c89b95d8b"><div class="ttname"><a href="#a114832f08bc258d3076ab80c89b95d8b">web::http::server::RequestParser::parsingFinished</a></div><div class="ttdeci">void parsingFinished() override</div><div class="ttdef"><b>Definition</b> <a href="RequestParser_8cpp_source.html#l00133">RequestParser.cpp:133</a></div></div>
-<div class="ttc" id="aclassweb_1_1http_1_1server_1_1RequestParser_html_ae424ab06e9a31369aef752a739a4b98e"><div class="ttname"><a href="#ae424ab06e9a31369aef752a739a4b98e">web::http::server::RequestParser::request</a></div><div class="ttdeci">Request request</div><div class="ttdef"><b>Definition</b> <a href="RequestParser_8h_source.html#l00068">RequestParser.h:68</a></div></div>
-<div class="ttc" id="aclassweb_1_1http_1_1server_1_1Request_html_a259053314b9940cfebf482ca0eb05ece"><div class="ttname"><a href="classweb_1_1http_1_1server_1_1Request.html#a259053314b9940cfebf482ca0eb05ece">web::http::server::Request::cookies</a></div><div class="ttdeci">CiStringMap&lt; std::string &gt; cookies</div><div class="ttdef"><b>Definition</b> <a href="web_2http_2server_2Request_8h_source.html#l00065">Request.h:65</a></div></div>
-<div class="ttc" id="aclassweb_1_1http_1_1server_1_1Request_html_ac849bb8e86fe6b1ffb210d7df7c9ce12"><div class="ttname"><a href="classweb_1_1http_1_1server_1_1Request.html#ac849bb8e86fe6b1ffb210d7df7c9ce12">web::http::server::Request::connectionState</a></div><div class="ttdeci">ConnectionState connectionState</div><div class="ttdef"><b>Definition</b> <a href="web_2http_2server_2Request_8h_source.html#l00053">Request.h:53</a></div></div>
-<div class="ttc" id="anamespacehttputils_html_a9e46abe5c20380871f3884c9176a424d"><div class="ttname"><a href="namespacehttputils.html#a9e46abe5c20380871f3884c9176a424d">httputils::str_split</a></div><div class="ttdeci">std::pair&lt; std::string, std::string &gt; str_split(const std::string &amp;base, char c_middle)</div><div class="ttdef"><b>Definition</b> <a href="http__utils_8cpp_source.html#l00090">http_utils.cpp:90</a></div></div>
-<div class="ttc" id="anamespacehttputils_html_aaa1e55d83548ea4ebf224d695f73c874"><div class="ttname"><a href="namespacehttputils.html#aaa1e55d83548ea4ebf224d695f73c874">httputils::str_trimm</a></div><div class="ttdeci">std::string &amp; str_trimm(std::string &amp;text)</div><div class="ttdef"><b>Definition</b> <a href="http__utils_8cpp_source.html#l00083">http_utils.cpp:83</a></div></div>
-<div class="ttc" id="anamespaceweb_1_1http_html_a1f64d7d534ae76729c7bae5e5264e5d4"><div class="ttname"><a href="namespaceweb_1_1http.html#a1f64d7d534ae76729c7bae5e5264e5d4">web::http::ciContains</a></div><div class="ttdeci">bool ciContains(const std::string &amp;str1, const std::string &amp;str2)</div><div class="ttdef"><b>Definition</b> <a href="CiStringMap_8cpp_source.html#l00031">CiStringMap.cpp:31</a></div></div>
+<div class="ttc" id="aclassweb_1_1http_1_1Parser_html_ab72951d7ab35e53826eb15d30f53dbdd"><div class="ttname"><a href="classweb_1_1http_1_1Parser.html#ab72951d7ab35e53826eb15d30f53dbdd">web::http::Parser::transferEncoding</a></div><div class="ttdeci">TransferEncoding transferEncoding</div><div class="ttdef"><b>Definition</b> <a href="Parser_8h_source.html#l00102">Parser.h:102</a></div></div>
+<div class="ttc" id="aclassweb_1_1http_1_1Parser_html_acc6afc67cabc5f61002830e31a36868c"><div class="ttname"><a href="classweb_1_1http_1_1Parser.html#acc6afc67cabc5f61002830e31a36868c">web::http::Parser::analyzeHeader</a></div><div class="ttdeci">virtual void analyzeHeader()</div><div class="ttdef"><b>Definition</b> <a href="Parser_8cpp_source.html#l00160">Parser.cpp:160</a></div></div>
+<div class="ttc" id="aclassweb_1_1http_1_1server_1_1RequestParser_html_a114832f08bc258d3076ab80c89b95d8b"><div class="ttname"><a href="#a114832f08bc258d3076ab80c89b95d8b">web::http::server::RequestParser::parsingFinished</a></div><div class="ttdeci">void parsingFinished() override</div><div class="ttdef"><b>Definition</b> <a href="RequestParser_8cpp_source.html#l00155">RequestParser.cpp:155</a></div></div>
+<div class="ttc" id="aclassweb_1_1http_1_1server_1_1RequestParser_html_ae424ab06e9a31369aef752a739a4b98e"><div class="ttname"><a href="#ae424ab06e9a31369aef752a739a4b98e">web::http::server::RequestParser::request</a></div><div class="ttdeci">Request request</div><div class="ttdef"><b>Definition</b> <a href="RequestParser_8h_source.html#l00090">RequestParser.h:90</a></div></div>
+<div class="ttc" id="aclassweb_1_1http_1_1server_1_1Request_html_a259053314b9940cfebf482ca0eb05ece"><div class="ttname"><a href="classweb_1_1http_1_1server_1_1Request.html#a259053314b9940cfebf482ca0eb05ece">web::http::server::Request::cookies</a></div><div class="ttdeci">CiStringMap&lt; std::string &gt; cookies</div><div class="ttdef"><b>Definition</b> <a href="web_2http_2server_2Request_8h_source.html#l00087">Request.h:87</a></div></div>
+<div class="ttc" id="aclassweb_1_1http_1_1server_1_1Request_html_ac849bb8e86fe6b1ffb210d7df7c9ce12"><div class="ttname"><a href="classweb_1_1http_1_1server_1_1Request.html#ac849bb8e86fe6b1ffb210d7df7c9ce12">web::http::server::Request::connectionState</a></div><div class="ttdeci">ConnectionState connectionState</div><div class="ttdef"><b>Definition</b> <a href="web_2http_2server_2Request_8h_source.html#l00075">Request.h:75</a></div></div>
+<div class="ttc" id="anamespacehttputils_html_a9e46abe5c20380871f3884c9176a424d"><div class="ttname"><a href="namespacehttputils.html#a9e46abe5c20380871f3884c9176a424d">httputils::str_split</a></div><div class="ttdeci">std::pair&lt; std::string, std::string &gt; str_split(const std::string &amp;base, char c_middle)</div><div class="ttdef"><b>Definition</b> <a href="http__utils_8cpp_source.html#l00112">http_utils.cpp:112</a></div></div>
+<div class="ttc" id="anamespacehttputils_html_aaa1e55d83548ea4ebf224d695f73c874"><div class="ttname"><a href="namespacehttputils.html#aaa1e55d83548ea4ebf224d695f73c874">httputils::str_trimm</a></div><div class="ttdeci">std::string &amp; str_trimm(std::string &amp;text)</div><div class="ttdef"><b>Definition</b> <a href="http__utils_8cpp_source.html#l00105">http_utils.cpp:105</a></div></div>
+<div class="ttc" id="anamespaceweb_1_1http_html_a1f64d7d534ae76729c7bae5e5264e5d4"><div class="ttname"><a href="namespaceweb_1_1http.html#a1f64d7d534ae76729c7bae5e5264e5d4">web::http::ciContains</a></div><div class="ttdeci">bool ciContains(const std::string &amp;str1, const std::string &amp;str2)</div><div class="ttdef"><b>Definition</b> <a href="CiStringMap_8cpp_source.html#l00053">CiStringMap.cpp:53</a></div></div>
 <div class="ttc" id="anamespaceweb_1_1http_html_a40edb0fffda79adf1a8a5b95fdd6e7b2a7920ba6b75e24916e97632ed0bafec4f"><div class="ttname"><a href="namespaceweb_1_1http.html#a40edb0fffda79adf1a8a5b95fdd6e7b2a7920ba6b75e24916e97632ed0bafec4f">web::http::TransferEncoding::Chunked</a></div><div class="ttdeci">@ Chunked</div></div>
-<div class="ttc" id="anamespaceweb_1_1http_html_ac27fdcf348c7472940ecd0e34342dca1a19331c4aeb7eb71943963ec94adb057e"><div class="ttname"><a href="namespaceweb_1_1http.html#ac27fdcf348c7472940ecd0e34342dca1a19331c4aeb7eb71943963ec94adb057e">web::http::Keep</a></div><div class="ttdeci">@ Keep</div><div class="ttdef"><b>Definition</b> <a href="ConnectionState_8h_source.html#l00029">ConnectionState.h:29</a></div></div>
-<div class="ttc" id="anamespaceweb_1_1http_html_ac27fdcf348c7472940ecd0e34342dca1a31333582a62633255ac3791bd7f5af0b"><div class="ttname"><a href="namespaceweb_1_1http.html#ac27fdcf348c7472940ecd0e34342dca1a31333582a62633255ac3791bd7f5af0b">web::http::Close</a></div><div class="ttdeci">@ Close</div><div class="ttdef"><b>Definition</b> <a href="ConnectionState_8h_source.html#l00029">ConnectionState.h:29</a></div></div>
+<div class="ttc" id="anamespaceweb_1_1http_html_ac27fdcf348c7472940ecd0e34342dca1a19331c4aeb7eb71943963ec94adb057e"><div class="ttname"><a href="namespaceweb_1_1http.html#ac27fdcf348c7472940ecd0e34342dca1a19331c4aeb7eb71943963ec94adb057e">web::http::Keep</a></div><div class="ttdeci">@ Keep</div><div class="ttdef"><b>Definition</b> <a href="ConnectionState_8h_source.html#l00051">ConnectionState.h:51</a></div></div>
+<div class="ttc" id="anamespaceweb_1_1http_html_ac27fdcf348c7472940ecd0e34342dca1a31333582a62633255ac3791bd7f5af0b"><div class="ttname"><a href="namespaceweb_1_1http.html#ac27fdcf348c7472940ecd0e34342dca1a31333582a62633255ac3791bd7f5af0b">web::http::Close</a></div><div class="ttdeci">@ Close</div><div class="ttdef"><b>Definition</b> <a href="ConnectionState_8h_source.html#l00051">ConnectionState.h:51</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Parser_8cpp_source.html#l00138">web::http::Parser::analyzeHeader()</a>, <a class="el" href="classweb_1_1http_1_1Parser.html#a94ab44c0d65451be6ba3e6e389a8b7d5a786329b34bbe53ab40a54a19cd597f2d">web::http::Parser::BODY</a>, <a class="el" href="Parser_8h_source.html#l00078">web::http::Parser::parserState</a>, and <a class="el" href="RequestParser_8cpp_source.html#l00133">parsingFinished()</a>.</p>
+<p class="reference">References <a class="el" href="Parser_8cpp_source.html#l00160">web::http::Parser::analyzeHeader()</a>, <a class="el" href="classweb_1_1http_1_1Parser.html#a94ab44c0d65451be6ba3e6e389a8b7d5a786329b34bbe53ab40a54a19cd597f2d">web::http::Parser::BODY</a>, <a class="el" href="Parser_8h_source.html#l00100">web::http::Parser::parserState</a>, and <a class="el" href="RequestParser_8cpp_source.html#l00155">parsingFinished()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classweb_1_1http_1_1server_1_1RequestParser_acbf9d9b0c9868f3b7cfd98b4fa4b5851_cgraph.svg" width="695" height="115"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classweb_1_1http_1_1server_1_1RequestParser_acbf9d9b0c9868f3b7cfd98b4fa4b5851_cgraph.svg" width="100%" height="386"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -430,10 +430,10 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="classweb_1_1http_1_1Parser.html#ab270fbb3109ec119665d0aafadcd2d8d">web::http::Parser</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="RequestParser_8cpp_source.html#l00048">48</a> of file <a class="el" href="RequestParser_8cpp_source.html">RequestParser.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   48</span>                              {</div>
-<div class="line"><span class="lineno">   49</span>        <a class="code hl_variable" href="#ae69699928e15fc3ca0b018f5ae029479">onRequestStart</a>();</div>
-<div class="line"><span class="lineno">   50</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="RequestParser_8cpp_source.html#l00070">70</a> of file <a class="el" href="RequestParser_8cpp_source.html">RequestParser.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   70</span>                              {</div>
+<div class="line"><span class="lineno">   71</span>        <a class="code hl_variable" href="#ae69699928e15fc3ca0b018f5ae029479">onRequestStart</a>();</div>
+<div class="line"><span class="lineno">   72</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -460,11 +460,11 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="RequestParser_8cpp_source.html#l00044">44</a> of file <a class="el" href="RequestParser_8cpp_source.html">RequestParser.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   44</span>                                                                     {</div>
-<div class="line"><span class="lineno">   45</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#aa832ea93246b42a2de1aa37bc010aa28">supportedMethods</a>.contains(method);</div>
-<div class="line"><span class="lineno">   46</span>    }</div>
-<div class="ttc" id="aclassweb_1_1http_1_1server_1_1RequestParser_html_aa832ea93246b42a2de1aa37bc010aa28"><div class="ttname"><a href="#aa832ea93246b42a2de1aa37bc010aa28">web::http::server::RequestParser::supportedMethods</a></div><div class="ttdeci">std::set&lt; std::string &gt; supportedMethods</div><div class="ttdef"><b>Definition</b> <a href="RequestParser_8h_source.html#l00052">RequestParser.h:52</a></div></div>
+<p class="definition">Definition at line <a class="el" href="RequestParser_8cpp_source.html#l00066">66</a> of file <a class="el" href="RequestParser_8cpp_source.html">RequestParser.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   66</span>                                                                     {</div>
+<div class="line"><span class="lineno">   67</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#aa832ea93246b42a2de1aa37bc010aa28">supportedMethods</a>.contains(method);</div>
+<div class="line"><span class="lineno">   68</span>    }</div>
+<div class="ttc" id="aclassweb_1_1http_1_1server_1_1RequestParser_html_aa832ea93246b42a2de1aa37bc010aa28"><div class="ttname"><a href="#aa832ea93246b42a2de1aa37bc010aa28">web::http::server::RequestParser::supportedMethods</a></div><div class="ttdeci">std::set&lt; std::string &gt; supportedMethods</div><div class="ttdef"><b>Definition</b> <a href="RequestParser_8h_source.html#l00074">RequestParser.h:74</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -522,18 +522,18 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="classweb_1_1http_1_1Parser.html#a177b77b847f50f969491f250fe4c2f3b">web::http::Parser</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="RequestParser_8cpp_source.html#l00146">146</a> of file <a class="el" href="RequestParser_8cpp_source.html">RequestParser.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  146</span>                                                                    {</div>
-<div class="line"><span class="lineno">  147</span>        <a class="code hl_variable" href="#a9c15322b1eea34a508ff99544ea31ea3">onRequestParseError</a>(code, reason);</div>
-<div class="line"><span class="lineno">  148</span> </div>
-<div class="line"><span class="lineno">  149</span>        <a class="code hl_function" href="classweb_1_1http_1_1Parser.html#a833eceec5f259e1ffc2096c1fbc1cb6f">reset</a>();</div>
-<div class="line"><span class="lineno">  150</span> </div>
-<div class="line"><span class="lineno">  151</span>        <a class="code hl_variable" href="classweb_1_1http_1_1Parser.html#a0b7851cba5453de9dd3bb8969f9c2184">parserState</a> = <a class="code hl_enumvalue" href="classweb_1_1http_1_1Parser.html#a94ab44c0d65451be6ba3e6e389a8b7d5abb1ca97ec761fc37101737ba0aa2e7c5">ParserState::ERROR</a>;</div>
-<div class="line"><span class="lineno">  152</span>    }</div>
-<div class="ttc" id="aclassweb_1_1http_1_1Parser_html_a833eceec5f259e1ffc2096c1fbc1cb6f"><div class="ttname"><a href="classweb_1_1http_1_1Parser.html#a833eceec5f259e1ffc2096c1fbc1cb6f">web::http::Parser::reset</a></div><div class="ttdeci">void reset()</div><div class="ttdef"><b>Definition</b> <a href="Parser_8cpp_source.html#l00052">Parser.cpp:52</a></div></div>
+<p class="definition">Definition at line <a class="el" href="RequestParser_8cpp_source.html#l00168">168</a> of file <a class="el" href="RequestParser_8cpp_source.html">RequestParser.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  168</span>                                                                    {</div>
+<div class="line"><span class="lineno">  169</span>        <a class="code hl_variable" href="#a9c15322b1eea34a508ff99544ea31ea3">onRequestParseError</a>(code, reason);</div>
+<div class="line"><span class="lineno">  170</span> </div>
+<div class="line"><span class="lineno">  171</span>        <a class="code hl_function" href="classweb_1_1http_1_1Parser.html#a833eceec5f259e1ffc2096c1fbc1cb6f">reset</a>();</div>
+<div class="line"><span class="lineno">  172</span> </div>
+<div class="line"><span class="lineno">  173</span>        <a class="code hl_variable" href="classweb_1_1http_1_1Parser.html#a0b7851cba5453de9dd3bb8969f9c2184">parserState</a> = <a class="code hl_enumvalue" href="classweb_1_1http_1_1Parser.html#a94ab44c0d65451be6ba3e6e389a8b7d5abb1ca97ec761fc37101737ba0aa2e7c5">ParserState::ERROR</a>;</div>
+<div class="line"><span class="lineno">  174</span>    }</div>
+<div class="ttc" id="aclassweb_1_1http_1_1Parser_html_a833eceec5f259e1ffc2096c1fbc1cb6f"><div class="ttname"><a href="classweb_1_1http_1_1Parser.html#a833eceec5f259e1ffc2096c1fbc1cb6f">web::http::Parser::reset</a></div><div class="ttdeci">void reset()</div><div class="ttdef"><b>Definition</b> <a href="Parser_8cpp_source.html#l00074">Parser.cpp:74</a></div></div>
 <div class="ttc" id="aclassweb_1_1http_1_1Parser_html_a94ab44c0d65451be6ba3e6e389a8b7d5abb1ca97ec761fc37101737ba0aa2e7c5"><div class="ttname"><a href="classweb_1_1http_1_1Parser.html#a94ab44c0d65451be6ba3e6e389a8b7d5abb1ca97ec761fc37101737ba0aa2e7c5">web::http::Parser::ParserState::ERROR</a></div><div class="ttdeci">@ ERROR</div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="classweb_1_1http_1_1Parser.html#a94ab44c0d65451be6ba3e6e389a8b7d5abb1ca97ec761fc37101737ba0aa2e7c5">web::http::Parser::ERROR</a>, <a class="el" href="Parser_8h_source.html#l00078">web::http::Parser::parserState</a>, and <a class="el" href="Parser_8cpp_source.html#l00052">web::http::Parser::reset()</a>.</p>
+<p class="reference">References <a class="el" href="classweb_1_1http_1_1Parser.html#a94ab44c0d65451be6ba3e6e389a8b7d5abb1ca97ec761fc37101737ba0aa2e7c5">web::http::Parser::ERROR</a>, <a class="el" href="Parser_8h_source.html#l00100">web::http::Parser::parserState</a>, and <a class="el" href="Parser_8cpp_source.html#l00074">web::http::Parser::reset()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -567,56 +567,56 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="classweb_1_1http_1_1Parser.html#a6f57a5785048d6a8d8dabd6c48befe92">web::http::Parser</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="RequestParser_8cpp_source.html#l00052">52</a> of file <a class="el" href="RequestParser_8cpp_source.html">RequestParser.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   52</span>                                                            {</div>
-<div class="line"><span class="lineno">   53</span>        <a class="code hl_variable" href="classweb_1_1http_1_1Parser.html#a0b7851cba5453de9dd3bb8969f9c2184">parserState</a> = <a class="code hl_enumvalue" href="classweb_1_1http_1_1Parser.html#a94ab44c0d65451be6ba3e6e389a8b7d5a7ad4905b4543ab4a1637dd23c50e36ce">Parser::ParserState::HEADER</a>;</div>
-<div class="line"><span class="lineno">   54</span> </div>
-<div class="line"><span class="lineno">   55</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classweb_1_1http_1_1Parser.html#af961ee96cda4105c5422fe4cbfa38b0d">line</a>.empty()) {</div>
-<div class="line"><span class="lineno">   56</span>            std::string remaining;</div>
-<div class="line"><span class="lineno">   57</span> </div>
-<div class="line"><span class="lineno">   58</span>            std::tie(<a class="code hl_variable" href="#ae424ab06e9a31369aef752a739a4b98e">request</a>.<a class="code hl_variable" href="classweb_1_1http_1_1server_1_1Request.html#a7bbff0c0900a11bab6fbb98b95d74a01">method</a>, remaining) = <a class="code hl_function" href="namespacehttputils.html#a9e46abe5c20380871f3884c9176a424d">httputils::str_split</a>(<a class="code hl_variable" href="classweb_1_1http_1_1Parser.html#af961ee96cda4105c5422fe4cbfa38b0d">line</a>, <span class="charliteral">&#39; &#39;</span>);</div>
-<div class="line"><span class="lineno">   59</span>            std::tie(<a class="code hl_variable" href="#ae424ab06e9a31369aef752a739a4b98e">request</a>.<a class="code hl_variable" href="classweb_1_1http_1_1server_1_1Request.html#a2c2ef2815be183f1130e9a4fd43f9851">url</a>, <a class="code hl_variable" href="#ae424ab06e9a31369aef752a739a4b98e">request</a>.<a class="code hl_variable" href="classweb_1_1http_1_1server_1_1Request.html#a8094ae39445aef4b1bb729e47297537e">httpVersion</a>) = <a class="code hl_function" href="namespacehttputils.html#a9e46abe5c20380871f3884c9176a424d">httputils::str_split</a>(remaining, <span class="charliteral">&#39; &#39;</span>);</div>
-<div class="line"><span class="lineno">   60</span> </div>
-<div class="line"><span class="lineno">   61</span>            std::string queriesLine;</div>
-<div class="line"><span class="lineno">   62</span>            std::tie(std::ignore, queriesLine) = <a class="code hl_function" href="namespacehttputils.html#a9e46abe5c20380871f3884c9176a424d">httputils::str_split</a>(<a class="code hl_variable" href="#ae424ab06e9a31369aef752a739a4b98e">request</a>.<a class="code hl_variable" href="classweb_1_1http_1_1server_1_1Request.html#a2c2ef2815be183f1130e9a4fd43f9851">url</a>, <span class="charliteral">&#39;?&#39;</span>);</div>
-<div class="line"><span class="lineno">   63</span> </div>
-<div class="line"><span class="lineno">   64</span>            <span class="keywordflow">if</span> (!<a class="code hl_function" href="#ab470f101e514af211a5380f40b49eb86">methodSupported</a>(<a class="code hl_variable" href="#ae424ab06e9a31369aef752a739a4b98e">request</a>.<a class="code hl_variable" href="classweb_1_1http_1_1server_1_1Request.html#a7bbff0c0900a11bab6fbb98b95d74a01">method</a>)) {</div>
-<div class="line"><span class="lineno">   65</span>                <a class="code hl_function" href="#a8b0b9cd8cbace4e2d0299232a6a84f98">parseError</a>(400, <span class="stringliteral">&quot;Bad request method: &quot;</span> + <a class="code hl_variable" href="#ae424ab06e9a31369aef752a739a4b98e">request</a>.<a class="code hl_variable" href="classweb_1_1http_1_1server_1_1Request.html#a7bbff0c0900a11bab6fbb98b95d74a01">method</a>);</div>
-<div class="line"><span class="lineno">   66</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="#ae424ab06e9a31369aef752a739a4b98e">request</a>.<a class="code hl_variable" href="classweb_1_1http_1_1server_1_1Request.html#a2c2ef2815be183f1130e9a4fd43f9851">url</a>.empty() || <a class="code hl_variable" href="#ae424ab06e9a31369aef752a739a4b98e">request</a>.<a class="code hl_variable" href="classweb_1_1http_1_1server_1_1Request.html#a2c2ef2815be183f1130e9a4fd43f9851">url</a>.front() != <span class="charliteral">&#39;/&#39;</span>) {</div>
-<div class="line"><span class="lineno">   67</span>                <a class="code hl_function" href="#a8b0b9cd8cbace4e2d0299232a6a84f98">parseError</a>(400, <span class="stringliteral">&quot;Malformed request&quot;</span>);</div>
-<div class="line"><span class="lineno">   68</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   69</span>                std::smatch httpVersionMatch;</div>
-<div class="line"><span class="lineno">   70</span>                <span class="keywordflow">if</span> (!std::regex_match(<a class="code hl_variable" href="#ae424ab06e9a31369aef752a739a4b98e">request</a>.<a class="code hl_variable" href="classweb_1_1http_1_1server_1_1Request.html#a8094ae39445aef4b1bb729e47297537e">httpVersion</a>, httpVersionMatch, <a class="code hl_variable" href="classweb_1_1http_1_1Parser.html#a4e2c4dc8666af3b74b0476b35c1c4d03">httpVersionRegex</a>)) {</div>
-<div class="line"><span class="lineno">   71</span>                    <a class="code hl_function" href="#a8b0b9cd8cbace4e2d0299232a6a84f98">parseError</a>(400, <span class="stringliteral">&quot;Wrong protocol-version: &quot;</span> + <a class="code hl_variable" href="#ae424ab06e9a31369aef752a739a4b98e">request</a>.<a class="code hl_variable" href="classweb_1_1http_1_1server_1_1Request.html#a8094ae39445aef4b1bb729e47297537e">httpVersion</a>);</div>
-<div class="line"><span class="lineno">   72</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   73</span>                    <a class="code hl_variable" href="classweb_1_1http_1_1Parser.html#a5f798669b1499a78ccf0cd6267a56ece">httpMajor</a> = std::stoi(httpVersionMatch.str(1));</div>
-<div class="line"><span class="lineno">   74</span>                    <a class="code hl_variable" href="classweb_1_1http_1_1Parser.html#a8e81fa6248bcc037558c796ec76e80d2">httpMinor</a> = std::stoi(httpVersionMatch.str(2));</div>
-<div class="line"><span class="lineno">   75</span> </div>
-<div class="line"><span class="lineno">   76</span>                    <span class="keywordflow">while</span> (!queriesLine.empty()) {</div>
-<div class="line"><span class="lineno">   77</span>                        std::string query;</div>
-<div class="line"><span class="lineno">   78</span> </div>
-<div class="line"><span class="lineno">   79</span>                        std::tie(query, queriesLine) = <a class="code hl_function" href="namespacehttputils.html#a9e46abe5c20380871f3884c9176a424d">httputils::str_split</a>(queriesLine, <span class="charliteral">&#39;&amp;&#39;</span>);</div>
-<div class="line"><span class="lineno">   80</span>                        <a class="code hl_variable" href="#ae424ab06e9a31369aef752a739a4b98e">request</a>.<a class="code hl_variable" href="classweb_1_1http_1_1server_1_1Request.html#a7b988d44be49587aa0432fcd33630ae4">queries</a>.insert(<a class="code hl_function" href="namespacehttputils.html#a9e46abe5c20380871f3884c9176a424d">httputils::str_split</a>(query, <span class="charliteral">&#39;=&#39;</span>));</div>
-<div class="line"><span class="lineno">   81</span>                    }</div>
-<div class="line"><span class="lineno">   82</span>                }</div>
-<div class="line"><span class="lineno">   83</span>            }</div>
-<div class="line"><span class="lineno">   84</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   85</span>            <a class="code hl_function" href="#a8b0b9cd8cbace4e2d0299232a6a84f98">parseError</a>(400, <span class="stringliteral">&quot;Request-line empty&quot;</span>);</div>
-<div class="line"><span class="lineno">   86</span>        }</div>
-<div class="line"><span class="lineno">   87</span>    }</div>
-<div class="ttc" id="aclassweb_1_1http_1_1Parser_html_a4e2c4dc8666af3b74b0476b35c1c4d03"><div class="ttname"><a href="classweb_1_1http_1_1Parser.html#a4e2c4dc8666af3b74b0476b35c1c4d03">web::http::Parser::httpVersionRegex</a></div><div class="ttdeci">static const std::regex httpVersionRegex</div><div class="ttdef"><b>Definition</b> <a href="Parser_8h_source.html#l00082">Parser.h:82</a></div></div>
-<div class="ttc" id="aclassweb_1_1http_1_1Parser_html_a5f798669b1499a78ccf0cd6267a56ece"><div class="ttname"><a href="classweb_1_1http_1_1Parser.html#a5f798669b1499a78ccf0cd6267a56ece">web::http::Parser::httpMajor</a></div><div class="ttdeci">int httpMajor</div><div class="ttdef"><b>Definition</b> <a href="Parser_8h_source.html#l00100">Parser.h:100</a></div></div>
-<div class="ttc" id="aclassweb_1_1http_1_1Parser_html_a8e81fa6248bcc037558c796ec76e80d2"><div class="ttname"><a href="classweb_1_1http_1_1Parser.html#a8e81fa6248bcc037558c796ec76e80d2">web::http::Parser::httpMinor</a></div><div class="ttdeci">int httpMinor</div><div class="ttdef"><b>Definition</b> <a href="Parser_8h_source.html#l00101">Parser.h:101</a></div></div>
+<p class="definition">Definition at line <a class="el" href="RequestParser_8cpp_source.html#l00074">74</a> of file <a class="el" href="RequestParser_8cpp_source.html">RequestParser.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   74</span>                                                            {</div>
+<div class="line"><span class="lineno">   75</span>        <a class="code hl_variable" href="classweb_1_1http_1_1Parser.html#a0b7851cba5453de9dd3bb8969f9c2184">parserState</a> = <a class="code hl_enumvalue" href="classweb_1_1http_1_1Parser.html#a94ab44c0d65451be6ba3e6e389a8b7d5a7ad4905b4543ab4a1637dd23c50e36ce">Parser::ParserState::HEADER</a>;</div>
+<div class="line"><span class="lineno">   76</span> </div>
+<div class="line"><span class="lineno">   77</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classweb_1_1http_1_1Parser.html#af961ee96cda4105c5422fe4cbfa38b0d">line</a>.empty()) {</div>
+<div class="line"><span class="lineno">   78</span>            std::string remaining;</div>
+<div class="line"><span class="lineno">   79</span> </div>
+<div class="line"><span class="lineno">   80</span>            std::tie(<a class="code hl_variable" href="#ae424ab06e9a31369aef752a739a4b98e">request</a>.<a class="code hl_variable" href="classweb_1_1http_1_1server_1_1Request.html#a7bbff0c0900a11bab6fbb98b95d74a01">method</a>, remaining) = <a class="code hl_function" href="namespacehttputils.html#a9e46abe5c20380871f3884c9176a424d">httputils::str_split</a>(<a class="code hl_variable" href="classweb_1_1http_1_1Parser.html#af961ee96cda4105c5422fe4cbfa38b0d">line</a>, <span class="charliteral">&#39; &#39;</span>);</div>
+<div class="line"><span class="lineno">   81</span>            std::tie(<a class="code hl_variable" href="#ae424ab06e9a31369aef752a739a4b98e">request</a>.<a class="code hl_variable" href="classweb_1_1http_1_1server_1_1Request.html#a2c2ef2815be183f1130e9a4fd43f9851">url</a>, <a class="code hl_variable" href="#ae424ab06e9a31369aef752a739a4b98e">request</a>.<a class="code hl_variable" href="classweb_1_1http_1_1server_1_1Request.html#a8094ae39445aef4b1bb729e47297537e">httpVersion</a>) = <a class="code hl_function" href="namespacehttputils.html#a9e46abe5c20380871f3884c9176a424d">httputils::str_split</a>(remaining, <span class="charliteral">&#39; &#39;</span>);</div>
+<div class="line"><span class="lineno">   82</span> </div>
+<div class="line"><span class="lineno">   83</span>            std::string queriesLine;</div>
+<div class="line"><span class="lineno">   84</span>            std::tie(std::ignore, queriesLine) = <a class="code hl_function" href="namespacehttputils.html#a9e46abe5c20380871f3884c9176a424d">httputils::str_split</a>(<a class="code hl_variable" href="#ae424ab06e9a31369aef752a739a4b98e">request</a>.<a class="code hl_variable" href="classweb_1_1http_1_1server_1_1Request.html#a2c2ef2815be183f1130e9a4fd43f9851">url</a>, <span class="charliteral">&#39;?&#39;</span>);</div>
+<div class="line"><span class="lineno">   85</span> </div>
+<div class="line"><span class="lineno">   86</span>            <span class="keywordflow">if</span> (!<a class="code hl_function" href="#ab470f101e514af211a5380f40b49eb86">methodSupported</a>(<a class="code hl_variable" href="#ae424ab06e9a31369aef752a739a4b98e">request</a>.<a class="code hl_variable" href="classweb_1_1http_1_1server_1_1Request.html#a7bbff0c0900a11bab6fbb98b95d74a01">method</a>)) {</div>
+<div class="line"><span class="lineno">   87</span>                <a class="code hl_function" href="#a8b0b9cd8cbace4e2d0299232a6a84f98">parseError</a>(400, <span class="stringliteral">&quot;Bad request method: &quot;</span> + <a class="code hl_variable" href="#ae424ab06e9a31369aef752a739a4b98e">request</a>.<a class="code hl_variable" href="classweb_1_1http_1_1server_1_1Request.html#a7bbff0c0900a11bab6fbb98b95d74a01">method</a>);</div>
+<div class="line"><span class="lineno">   88</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="#ae424ab06e9a31369aef752a739a4b98e">request</a>.<a class="code hl_variable" href="classweb_1_1http_1_1server_1_1Request.html#a2c2ef2815be183f1130e9a4fd43f9851">url</a>.empty() || <a class="code hl_variable" href="#ae424ab06e9a31369aef752a739a4b98e">request</a>.<a class="code hl_variable" href="classweb_1_1http_1_1server_1_1Request.html#a2c2ef2815be183f1130e9a4fd43f9851">url</a>.front() != <span class="charliteral">&#39;/&#39;</span>) {</div>
+<div class="line"><span class="lineno">   89</span>                <a class="code hl_function" href="#a8b0b9cd8cbace4e2d0299232a6a84f98">parseError</a>(400, <span class="stringliteral">&quot;Malformed request&quot;</span>);</div>
+<div class="line"><span class="lineno">   90</span>            } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">   91</span>                std::smatch httpVersionMatch;</div>
+<div class="line"><span class="lineno">   92</span>                <span class="keywordflow">if</span> (!std::regex_match(<a class="code hl_variable" href="#ae424ab06e9a31369aef752a739a4b98e">request</a>.<a class="code hl_variable" href="classweb_1_1http_1_1server_1_1Request.html#a8094ae39445aef4b1bb729e47297537e">httpVersion</a>, httpVersionMatch, <a class="code hl_variable" href="classweb_1_1http_1_1Parser.html#a4e2c4dc8666af3b74b0476b35c1c4d03">httpVersionRegex</a>)) {</div>
+<div class="line"><span class="lineno">   93</span>                    <a class="code hl_function" href="#a8b0b9cd8cbace4e2d0299232a6a84f98">parseError</a>(400, <span class="stringliteral">&quot;Wrong protocol-version: &quot;</span> + <a class="code hl_variable" href="#ae424ab06e9a31369aef752a739a4b98e">request</a>.<a class="code hl_variable" href="classweb_1_1http_1_1server_1_1Request.html#a8094ae39445aef4b1bb729e47297537e">httpVersion</a>);</div>
+<div class="line"><span class="lineno">   94</span>                } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">   95</span>                    <a class="code hl_variable" href="classweb_1_1http_1_1Parser.html#a5f798669b1499a78ccf0cd6267a56ece">httpMajor</a> = std::stoi(httpVersionMatch.str(1));</div>
+<div class="line"><span class="lineno">   96</span>                    <a class="code hl_variable" href="classweb_1_1http_1_1Parser.html#a8e81fa6248bcc037558c796ec76e80d2">httpMinor</a> = std::stoi(httpVersionMatch.str(2));</div>
+<div class="line"><span class="lineno">   97</span> </div>
+<div class="line"><span class="lineno">   98</span>                    <span class="keywordflow">while</span> (!queriesLine.empty()) {</div>
+<div class="line"><span class="lineno">   99</span>                        std::string query;</div>
+<div class="line"><span class="lineno">  100</span> </div>
+<div class="line"><span class="lineno">  101</span>                        std::tie(query, queriesLine) = <a class="code hl_function" href="namespacehttputils.html#a9e46abe5c20380871f3884c9176a424d">httputils::str_split</a>(queriesLine, <span class="charliteral">&#39;&amp;&#39;</span>);</div>
+<div class="line"><span class="lineno">  102</span>                        <a class="code hl_variable" href="#ae424ab06e9a31369aef752a739a4b98e">request</a>.<a class="code hl_variable" href="classweb_1_1http_1_1server_1_1Request.html#a7b988d44be49587aa0432fcd33630ae4">queries</a>.insert(<a class="code hl_function" href="namespacehttputils.html#a9e46abe5c20380871f3884c9176a424d">httputils::str_split</a>(query, <span class="charliteral">&#39;=&#39;</span>));</div>
+<div class="line"><span class="lineno">  103</span>                    }</div>
+<div class="line"><span class="lineno">  104</span>                }</div>
+<div class="line"><span class="lineno">  105</span>            }</div>
+<div class="line"><span class="lineno">  106</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  107</span>            <a class="code hl_function" href="#a8b0b9cd8cbace4e2d0299232a6a84f98">parseError</a>(400, <span class="stringliteral">&quot;Request-line empty&quot;</span>);</div>
+<div class="line"><span class="lineno">  108</span>        }</div>
+<div class="line"><span class="lineno">  109</span>    }</div>
+<div class="ttc" id="aclassweb_1_1http_1_1Parser_html_a4e2c4dc8666af3b74b0476b35c1c4d03"><div class="ttname"><a href="classweb_1_1http_1_1Parser.html#a4e2c4dc8666af3b74b0476b35c1c4d03">web::http::Parser::httpVersionRegex</a></div><div class="ttdeci">static const std::regex httpVersionRegex</div><div class="ttdef"><b>Definition</b> <a href="Parser_8h_source.html#l00104">Parser.h:104</a></div></div>
+<div class="ttc" id="aclassweb_1_1http_1_1Parser_html_a5f798669b1499a78ccf0cd6267a56ece"><div class="ttname"><a href="classweb_1_1http_1_1Parser.html#a5f798669b1499a78ccf0cd6267a56ece">web::http::Parser::httpMajor</a></div><div class="ttdeci">int httpMajor</div><div class="ttdef"><b>Definition</b> <a href="Parser_8h_source.html#l00122">Parser.h:122</a></div></div>
+<div class="ttc" id="aclassweb_1_1http_1_1Parser_html_a8e81fa6248bcc037558c796ec76e80d2"><div class="ttname"><a href="classweb_1_1http_1_1Parser.html#a8e81fa6248bcc037558c796ec76e80d2">web::http::Parser::httpMinor</a></div><div class="ttdeci">int httpMinor</div><div class="ttdef"><b>Definition</b> <a href="Parser_8h_source.html#l00123">Parser.h:123</a></div></div>
 <div class="ttc" id="aclassweb_1_1http_1_1Parser_html_a94ab44c0d65451be6ba3e6e389a8b7d5a7ad4905b4543ab4a1637dd23c50e36ce"><div class="ttname"><a href="classweb_1_1http_1_1Parser.html#a94ab44c0d65451be6ba3e6e389a8b7d5a7ad4905b4543ab4a1637dd23c50e36ce">web::http::Parser::ParserState::HEADER</a></div><div class="ttdeci">@ HEADER</div></div>
-<div class="ttc" id="aclassweb_1_1http_1_1Parser_html_af961ee96cda4105c5422fe4cbfa38b0d"><div class="ttname"><a href="classweb_1_1http_1_1Parser.html#af961ee96cda4105c5422fe4cbfa38b0d">web::http::Parser::line</a></div><div class="ttdeci">std::string line</div><div class="ttdef"><b>Definition</b> <a href="Parser_8h_source.html#l00120">Parser.h:120</a></div></div>
-<div class="ttc" id="aclassweb_1_1http_1_1server_1_1RequestParser_html_a8b0b9cd8cbace4e2d0299232a6a84f98"><div class="ttname"><a href="#a8b0b9cd8cbace4e2d0299232a6a84f98">web::http::server::RequestParser::parseError</a></div><div class="ttdeci">void parseError(int code, const std::string &amp;reason) override</div><div class="ttdef"><b>Definition</b> <a href="RequestParser_8cpp_source.html#l00146">RequestParser.cpp:146</a></div></div>
-<div class="ttc" id="aclassweb_1_1http_1_1server_1_1RequestParser_html_ab470f101e514af211a5380f40b49eb86"><div class="ttname"><a href="#ab470f101e514af211a5380f40b49eb86">web::http::server::RequestParser::methodSupported</a></div><div class="ttdeci">virtual bool methodSupported(const std::string &amp;method) const</div><div class="ttdef"><b>Definition</b> <a href="RequestParser_8cpp_source.html#l00044">RequestParser.cpp:44</a></div></div>
-<div class="ttc" id="aclassweb_1_1http_1_1server_1_1Request_html_a2c2ef2815be183f1130e9a4fd43f9851"><div class="ttname"><a href="classweb_1_1http_1_1server_1_1Request.html#a2c2ef2815be183f1130e9a4fd43f9851">web::http::server::Request::url</a></div><div class="ttdeci">std::string url</div><div class="ttdef"><b>Definition</b> <a href="web_2http_2server_2Request_8h_source.html#l00058">Request.h:58</a></div></div>
-<div class="ttc" id="aclassweb_1_1http_1_1server_1_1Request_html_a7b988d44be49587aa0432fcd33630ae4"><div class="ttname"><a href="classweb_1_1http_1_1server_1_1Request.html#a7b988d44be49587aa0432fcd33630ae4">web::http::server::Request::queries</a></div><div class="ttdeci">CiStringMap&lt; std::string &gt; queries</div><div class="ttdef"><b>Definition</b> <a href="web_2http_2server_2Request_8h_source.html#l00063">Request.h:63</a></div></div>
-<div class="ttc" id="aclassweb_1_1http_1_1server_1_1Request_html_a7bbff0c0900a11bab6fbb98b95d74a01"><div class="ttname"><a href="classweb_1_1http_1_1server_1_1Request.html#a7bbff0c0900a11bab6fbb98b95d74a01">web::http::server::Request::method</a></div><div class="ttdeci">std::string method</div><div class="ttdef"><b>Definition</b> <a href="web_2http_2server_2Request_8h_source.html#l00057">Request.h:57</a></div></div>
-<div class="ttc" id="aclassweb_1_1http_1_1server_1_1Request_html_a8094ae39445aef4b1bb729e47297537e"><div class="ttname"><a href="classweb_1_1http_1_1server_1_1Request.html#a8094ae39445aef4b1bb729e47297537e">web::http::server::Request::httpVersion</a></div><div class="ttdeci">std::string httpVersion</div><div class="ttdef"><b>Definition</b> <a href="web_2http_2server_2Request_8h_source.html#l00059">Request.h:59</a></div></div>
+<div class="ttc" id="aclassweb_1_1http_1_1Parser_html_af961ee96cda4105c5422fe4cbfa38b0d"><div class="ttname"><a href="classweb_1_1http_1_1Parser.html#af961ee96cda4105c5422fe4cbfa38b0d">web::http::Parser::line</a></div><div class="ttdeci">std::string line</div><div class="ttdef"><b>Definition</b> <a href="Parser_8h_source.html#l00142">Parser.h:142</a></div></div>
+<div class="ttc" id="aclassweb_1_1http_1_1server_1_1RequestParser_html_a8b0b9cd8cbace4e2d0299232a6a84f98"><div class="ttname"><a href="#a8b0b9cd8cbace4e2d0299232a6a84f98">web::http::server::RequestParser::parseError</a></div><div class="ttdeci">void parseError(int code, const std::string &amp;reason) override</div><div class="ttdef"><b>Definition</b> <a href="RequestParser_8cpp_source.html#l00168">RequestParser.cpp:168</a></div></div>
+<div class="ttc" id="aclassweb_1_1http_1_1server_1_1RequestParser_html_ab470f101e514af211a5380f40b49eb86"><div class="ttname"><a href="#ab470f101e514af211a5380f40b49eb86">web::http::server::RequestParser::methodSupported</a></div><div class="ttdeci">virtual bool methodSupported(const std::string &amp;method) const</div><div class="ttdef"><b>Definition</b> <a href="RequestParser_8cpp_source.html#l00066">RequestParser.cpp:66</a></div></div>
+<div class="ttc" id="aclassweb_1_1http_1_1server_1_1Request_html_a2c2ef2815be183f1130e9a4fd43f9851"><div class="ttname"><a href="classweb_1_1http_1_1server_1_1Request.html#a2c2ef2815be183f1130e9a4fd43f9851">web::http::server::Request::url</a></div><div class="ttdeci">std::string url</div><div class="ttdef"><b>Definition</b> <a href="web_2http_2server_2Request_8h_source.html#l00080">Request.h:80</a></div></div>
+<div class="ttc" id="aclassweb_1_1http_1_1server_1_1Request_html_a7b988d44be49587aa0432fcd33630ae4"><div class="ttname"><a href="classweb_1_1http_1_1server_1_1Request.html#a7b988d44be49587aa0432fcd33630ae4">web::http::server::Request::queries</a></div><div class="ttdeci">CiStringMap&lt; std::string &gt; queries</div><div class="ttdef"><b>Definition</b> <a href="web_2http_2server_2Request_8h_source.html#l00085">Request.h:85</a></div></div>
+<div class="ttc" id="aclassweb_1_1http_1_1server_1_1Request_html_a7bbff0c0900a11bab6fbb98b95d74a01"><div class="ttname"><a href="classweb_1_1http_1_1server_1_1Request.html#a7bbff0c0900a11bab6fbb98b95d74a01">web::http::server::Request::method</a></div><div class="ttdeci">std::string method</div><div class="ttdef"><b>Definition</b> <a href="web_2http_2server_2Request_8h_source.html#l00079">Request.h:79</a></div></div>
+<div class="ttc" id="aclassweb_1_1http_1_1server_1_1Request_html_a8094ae39445aef4b1bb729e47297537e"><div class="ttname"><a href="classweb_1_1http_1_1server_1_1Request.html#a8094ae39445aef4b1bb729e47297537e">web::http::server::Request::httpVersion</a></div><div class="ttdeci">std::string httpVersion</div><div class="ttdef"><b>Definition</b> <a href="web_2http_2server_2Request_8h_source.html#l00081">Request.h:81</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="classweb_1_1http_1_1Parser.html#a94ab44c0d65451be6ba3e6e389a8b7d5a7ad4905b4543ab4a1637dd23c50e36ce">web::http::Parser::HEADER</a>, and <a class="el" href="Parser_8h_source.html#l00078">web::http::Parser::parserState</a>.</p>
+<p class="reference">References <a class="el" href="classweb_1_1http_1_1Parser.html#a94ab44c0d65451be6ba3e6e389a8b7d5a7ad4905b4543ab4a1637dd23c50e36ce">web::http::Parser::HEADER</a>, and <a class="el" href="Parser_8h_source.html#l00100">web::http::Parser::parserState</a>.</p>
 
 </div>
 </div>
@@ -645,29 +645,29 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="classweb_1_1http_1_1Parser.html#aa8a765b7241b85a1aee06c402f464f19">web::http::Parser</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="RequestParser_8cpp_source.html#l00133">133</a> of file <a class="el" href="RequestParser_8cpp_source.html">RequestParser.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  133</span>                                        {</div>
-<div class="line"><span class="lineno">  134</span>        <a class="code hl_variable" href="#ae424ab06e9a31369aef752a739a4b98e">request</a>.<a class="code hl_variable" href="classweb_1_1http_1_1server_1_1Request.html#a9830d0fa4e479713dbdb438aeed897db">httpMajor</a> = <a class="code hl_variable" href="classweb_1_1http_1_1Parser.html#a5f798669b1499a78ccf0cd6267a56ece">httpMajor</a>;</div>
-<div class="line"><span class="lineno">  135</span>        <a class="code hl_variable" href="#ae424ab06e9a31369aef752a739a4b98e">request</a>.<a class="code hl_variable" href="classweb_1_1http_1_1server_1_1Request.html#a1ca6289401e639e7ef23a3ad426e64af">httpMinor</a> = <a class="code hl_variable" href="classweb_1_1http_1_1Parser.html#a8e81fa6248bcc037558c796ec76e80d2">httpMinor</a>;</div>
-<div class="line"><span class="lineno">  136</span>        <a class="code hl_variable" href="#ae424ab06e9a31369aef752a739a4b98e">request</a>.<a class="code hl_variable" href="classweb_1_1http_1_1server_1_1Request.html#a2eac2c7b4507306b72806976574f18f2">headers</a> = std::move(<a class="code hl_variable" href="classweb_1_1http_1_1Parser.html#a8e289893cd9e036f831ee2abfb0fd352">Parser::headers</a>);</div>
-<div class="line"><span class="lineno">  137</span>        <a class="code hl_variable" href="#ae424ab06e9a31369aef752a739a4b98e">request</a>.<a class="code hl_variable" href="classweb_1_1http_1_1server_1_1Request.html#a0dda9cdb94135b33f4c9ae4819d8966a">body</a> = std::move(<a class="code hl_variable" href="classweb_1_1http_1_1Parser.html#abf3ea21bf8dbb5e1d8e93d5db760e6fa">content</a>);</div>
-<div class="line"><span class="lineno">  138</span> </div>
-<div class="line"><span class="lineno">  139</span>        <a class="code hl_variable" href="#a9cc28e01b5256c564f9ecd3dbc69e8a1">onRequestParsed</a>(std::move(<a class="code hl_variable" href="#ae424ab06e9a31369aef752a739a4b98e">request</a>));</div>
-<div class="line"><span class="lineno">  140</span> </div>
-<div class="line"><span class="lineno">  141</span>        <a class="code hl_function" href="classweb_1_1http_1_1Parser.html#a833eceec5f259e1ffc2096c1fbc1cb6f">reset</a>();</div>
-<div class="line"><span class="lineno">  142</span> </div>
-<div class="line"><span class="lineno">  143</span>        <a class="code hl_variable" href="classweb_1_1http_1_1Parser.html#a0b7851cba5453de9dd3bb8969f9c2184">parserState</a> = <a class="code hl_enumvalue" href="classweb_1_1http_1_1Parser.html#a94ab44c0d65451be6ba3e6e389a8b7d5a19aad9f2fe3ce0023298ab83f7e75775">ParserState::BEGIN</a>;</div>
-<div class="line"><span class="lineno">  144</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="RequestParser_8cpp_source.html#l00155">155</a> of file <a class="el" href="RequestParser_8cpp_source.html">RequestParser.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  155</span>                                        {</div>
+<div class="line"><span class="lineno">  156</span>        <a class="code hl_variable" href="#ae424ab06e9a31369aef752a739a4b98e">request</a>.<a class="code hl_variable" href="classweb_1_1http_1_1server_1_1Request.html#a9830d0fa4e479713dbdb438aeed897db">httpMajor</a> = <a class="code hl_variable" href="classweb_1_1http_1_1Parser.html#a5f798669b1499a78ccf0cd6267a56ece">httpMajor</a>;</div>
+<div class="line"><span class="lineno">  157</span>        <a class="code hl_variable" href="#ae424ab06e9a31369aef752a739a4b98e">request</a>.<a class="code hl_variable" href="classweb_1_1http_1_1server_1_1Request.html#a1ca6289401e639e7ef23a3ad426e64af">httpMinor</a> = <a class="code hl_variable" href="classweb_1_1http_1_1Parser.html#a8e81fa6248bcc037558c796ec76e80d2">httpMinor</a>;</div>
+<div class="line"><span class="lineno">  158</span>        <a class="code hl_variable" href="#ae424ab06e9a31369aef752a739a4b98e">request</a>.<a class="code hl_variable" href="classweb_1_1http_1_1server_1_1Request.html#a2eac2c7b4507306b72806976574f18f2">headers</a> = std::move(<a class="code hl_variable" href="classweb_1_1http_1_1Parser.html#a8e289893cd9e036f831ee2abfb0fd352">Parser::headers</a>);</div>
+<div class="line"><span class="lineno">  159</span>        <a class="code hl_variable" href="#ae424ab06e9a31369aef752a739a4b98e">request</a>.<a class="code hl_variable" href="classweb_1_1http_1_1server_1_1Request.html#a0dda9cdb94135b33f4c9ae4819d8966a">body</a> = std::move(<a class="code hl_variable" href="classweb_1_1http_1_1Parser.html#abf3ea21bf8dbb5e1d8e93d5db760e6fa">content</a>);</div>
+<div class="line"><span class="lineno">  160</span> </div>
+<div class="line"><span class="lineno">  161</span>        <a class="code hl_variable" href="#a9cc28e01b5256c564f9ecd3dbc69e8a1">onRequestParsed</a>(std::move(<a class="code hl_variable" href="#ae424ab06e9a31369aef752a739a4b98e">request</a>));</div>
+<div class="line"><span class="lineno">  162</span> </div>
+<div class="line"><span class="lineno">  163</span>        <a class="code hl_function" href="classweb_1_1http_1_1Parser.html#a833eceec5f259e1ffc2096c1fbc1cb6f">reset</a>();</div>
+<div class="line"><span class="lineno">  164</span> </div>
+<div class="line"><span class="lineno">  165</span>        <a class="code hl_variable" href="classweb_1_1http_1_1Parser.html#a0b7851cba5453de9dd3bb8969f9c2184">parserState</a> = <a class="code hl_enumvalue" href="classweb_1_1http_1_1Parser.html#a94ab44c0d65451be6ba3e6e389a8b7d5a19aad9f2fe3ce0023298ab83f7e75775">ParserState::BEGIN</a>;</div>
+<div class="line"><span class="lineno">  166</span>    }</div>
 <div class="ttc" id="aclassweb_1_1http_1_1Parser_html_a94ab44c0d65451be6ba3e6e389a8b7d5a19aad9f2fe3ce0023298ab83f7e75775"><div class="ttname"><a href="classweb_1_1http_1_1Parser.html#a94ab44c0d65451be6ba3e6e389a8b7d5a19aad9f2fe3ce0023298ab83f7e75775">web::http::Parser::ParserState::BEGIN</a></div><div class="ttdeci">@ BEGIN</div></div>
-<div class="ttc" id="aclassweb_1_1http_1_1Parser_html_abf3ea21bf8dbb5e1d8e93d5db760e6fa"><div class="ttname"><a href="classweb_1_1http_1_1Parser.html#abf3ea21bf8dbb5e1d8e93d5db760e6fa">web::http::Parser::content</a></div><div class="ttdeci">std::vector&lt; char &gt; content</div><div class="ttdef"><b>Definition</b> <a href="Parser_8h_source.html#l00098">Parser.h:98</a></div></div>
-<div class="ttc" id="aclassweb_1_1http_1_1server_1_1Request_html_a0dda9cdb94135b33f4c9ae4819d8966a"><div class="ttname"><a href="classweb_1_1http_1_1server_1_1Request.html#a0dda9cdb94135b33f4c9ae4819d8966a">web::http::server::Request::body</a></div><div class="ttdeci">std::vector&lt; char &gt; body</div><div class="ttdef"><b>Definition</b> <a href="web_2http_2server_2Request_8h_source.html#l00066">Request.h:66</a></div></div>
-<div class="ttc" id="aclassweb_1_1http_1_1server_1_1Request_html_a1ca6289401e639e7ef23a3ad426e64af"><div class="ttname"><a href="classweb_1_1http_1_1server_1_1Request.html#a1ca6289401e639e7ef23a3ad426e64af">web::http::server::Request::httpMinor</a></div><div class="ttdeci">int httpMinor</div><div class="ttdef"><b>Definition</b> <a href="web_2http_2server_2Request_8h_source.html#l00061">Request.h:61</a></div></div>
-<div class="ttc" id="aclassweb_1_1http_1_1server_1_1Request_html_a2eac2c7b4507306b72806976574f18f2"><div class="ttname"><a href="classweb_1_1http_1_1server_1_1Request.html#a2eac2c7b4507306b72806976574f18f2">web::http::server::Request::headers</a></div><div class="ttdeci">CiStringMap&lt; std::string &gt; headers</div><div class="ttdef"><b>Definition</b> <a href="web_2http_2server_2Request_8h_source.html#l00064">Request.h:64</a></div></div>
-<div class="ttc" id="aclassweb_1_1http_1_1server_1_1Request_html_a9830d0fa4e479713dbdb438aeed897db"><div class="ttname"><a href="classweb_1_1http_1_1server_1_1Request.html#a9830d0fa4e479713dbdb438aeed897db">web::http::server::Request::httpMajor</a></div><div class="ttdeci">int httpMajor</div><div class="ttdef"><b>Definition</b> <a href="web_2http_2server_2Request_8h_source.html#l00060">Request.h:60</a></div></div>
+<div class="ttc" id="aclassweb_1_1http_1_1Parser_html_abf3ea21bf8dbb5e1d8e93d5db760e6fa"><div class="ttname"><a href="classweb_1_1http_1_1Parser.html#abf3ea21bf8dbb5e1d8e93d5db760e6fa">web::http::Parser::content</a></div><div class="ttdeci">std::vector&lt; char &gt; content</div><div class="ttdef"><b>Definition</b> <a href="Parser_8h_source.html#l00120">Parser.h:120</a></div></div>
+<div class="ttc" id="aclassweb_1_1http_1_1server_1_1Request_html_a0dda9cdb94135b33f4c9ae4819d8966a"><div class="ttname"><a href="classweb_1_1http_1_1server_1_1Request.html#a0dda9cdb94135b33f4c9ae4819d8966a">web::http::server::Request::body</a></div><div class="ttdeci">std::vector&lt; char &gt; body</div><div class="ttdef"><b>Definition</b> <a href="web_2http_2server_2Request_8h_source.html#l00088">Request.h:88</a></div></div>
+<div class="ttc" id="aclassweb_1_1http_1_1server_1_1Request_html_a1ca6289401e639e7ef23a3ad426e64af"><div class="ttname"><a href="classweb_1_1http_1_1server_1_1Request.html#a1ca6289401e639e7ef23a3ad426e64af">web::http::server::Request::httpMinor</a></div><div class="ttdeci">int httpMinor</div><div class="ttdef"><b>Definition</b> <a href="web_2http_2server_2Request_8h_source.html#l00083">Request.h:83</a></div></div>
+<div class="ttc" id="aclassweb_1_1http_1_1server_1_1Request_html_a2eac2c7b4507306b72806976574f18f2"><div class="ttname"><a href="classweb_1_1http_1_1server_1_1Request.html#a2eac2c7b4507306b72806976574f18f2">web::http::server::Request::headers</a></div><div class="ttdeci">CiStringMap&lt; std::string &gt; headers</div><div class="ttdef"><b>Definition</b> <a href="web_2http_2server_2Request_8h_source.html#l00086">Request.h:86</a></div></div>
+<div class="ttc" id="aclassweb_1_1http_1_1server_1_1Request_html_a9830d0fa4e479713dbdb438aeed897db"><div class="ttname"><a href="classweb_1_1http_1_1server_1_1Request.html#a9830d0fa4e479713dbdb438aeed897db">web::http::server::Request::httpMajor</a></div><div class="ttdeci">int httpMajor</div><div class="ttdef"><b>Definition</b> <a href="web_2http_2server_2Request_8h_source.html#l00082">Request.h:82</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="classweb_1_1http_1_1Parser.html#a94ab44c0d65451be6ba3e6e389a8b7d5a19aad9f2fe3ce0023298ab83f7e75775">web::http::Parser::BEGIN</a>, <a class="el" href="Parser_8h_source.html#l00078">web::http::Parser::parserState</a>, and <a class="el" href="Parser_8cpp_source.html#l00052">web::http::Parser::reset()</a>.</p>
+<p class="reference">References <a class="el" href="classweb_1_1http_1_1Parser.html#a94ab44c0d65451be6ba3e6e389a8b7d5a19aad9f2fe3ce0023298ab83f7e75775">web::http::Parser::BEGIN</a>, <a class="el" href="Parser_8h_source.html#l00100">web::http::Parser::parserState</a>, and <a class="el" href="Parser_8cpp_source.html#l00074">web::http::Parser::reset()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="RequestParser_8cpp_source.html#l00089">analyzeHeader()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="RequestParser_8cpp_source.html#l00111">analyzeHeader()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -702,7 +702,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="RequestParser_8h_source.html#l00072">72</a> of file <a class="el" href="RequestParser_8h_source.html">RequestParser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="RequestParser_8h_source.html#l00094">94</a> of file <a class="el" href="RequestParser_8h_source.html">RequestParser.h</a>.</p>
 
 </div>
 </div>
@@ -726,7 +726,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="RequestParser_8h_source.html#l00073">73</a> of file <a class="el" href="RequestParser_8h_source.html">RequestParser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="RequestParser_8h_source.html#l00095">95</a> of file <a class="el" href="RequestParser_8h_source.html">RequestParser.h</a>.</p>
 
 </div>
 </div>
@@ -750,7 +750,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="RequestParser_8h_source.html#l00071">71</a> of file <a class="el" href="RequestParser_8h_source.html">RequestParser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="RequestParser_8h_source.html#l00093">93</a> of file <a class="el" href="RequestParser_8h_source.html">RequestParser.h</a>.</p>
 
 </div>
 </div>
@@ -774,7 +774,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="RequestParser_8h_source.html#l00068">68</a> of file <a class="el" href="RequestParser_8h_source.html">RequestParser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="RequestParser_8h_source.html#l00090">90</a> of file <a class="el" href="RequestParser_8h_source.html">RequestParser.h</a>.</p>
 
 </div>
 </div>
@@ -798,8 +798,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="RequestParser_8h_source.html#l00052">52</a> of file <a class="el" href="RequestParser_8h_source.html">RequestParser.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   52</span>{<span class="stringliteral">&quot;GET&quot;</span>, <span class="stringliteral">&quot;PUT&quot;</span>, <span class="stringliteral">&quot;POST&quot;</span>, <span class="stringliteral">&quot;DELETE&quot;</span>, <span class="stringliteral">&quot;CONNECT&quot;</span>, <span class="stringliteral">&quot;OPTIONS&quot;</span>, <span class="stringliteral">&quot;TRACE&quot;</span>, <span class="stringliteral">&quot;PATCH&quot;</span>, <span class="stringliteral">&quot;HEAD&quot;</span>};</div>
+<p class="definition">Definition at line <a class="el" href="RequestParser_8h_source.html#l00074">74</a> of file <a class="el" href="RequestParser_8h_source.html">RequestParser.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   74</span>{<span class="stringliteral">&quot;GET&quot;</span>, <span class="stringliteral">&quot;PUT&quot;</span>, <span class="stringliteral">&quot;POST&quot;</span>, <span class="stringliteral">&quot;DELETE&quot;</span>, <span class="stringliteral">&quot;CONNECT&quot;</span>, <span class="stringliteral">&quot;OPTIONS&quot;</span>, <span class="stringliteral">&quot;TRACE&quot;</span>, <span class="stringliteral">&quot;PATCH&quot;</span>, <span class="stringliteral">&quot;HEAD&quot;</span>};</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -813,7 +813,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceweb.html">web</a></li><li class="navelem"><a class="el" href="namespaceweb_1_1http.html">http</a></li><li class="navelem"><a class="el" href="namespaceweb_1_1http_1_1server.html">server</a></li><li class="navelem"><a class="el" href="classweb_1_1http_1_1server_1_1RequestParser.html">RequestParser</a></li>
-    <li class="footer">Generated on Tue Feb 25 2025 14:03:10 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generated on Sun Mar 9 2025 01:34:40 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>

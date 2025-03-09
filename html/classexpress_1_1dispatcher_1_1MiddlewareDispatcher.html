@@ -146,7 +146,7 @@ Private Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="MiddlewareDispatcher_8h_source.html#l00041">41</a> of file <a class="el" href="MiddlewareDispatcher_8h_source.html">MiddlewareDispatcher.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="MiddlewareDispatcher_8h_source.html#l00063">63</a> of file <a class="el" href="MiddlewareDispatcher_8h_source.html">MiddlewareDispatcher.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a61cb49b72ad2dcf27a5a32c60f494458" name="a61cb49b72ad2dcf27a5a32c60f494458"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a61cb49b72ad2dcf27a5a32c60f494458">&#9670;&#160;</a></span>MiddlewareDispatcher()</h2>
@@ -171,14 +171,14 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="MiddlewareDispatcher_8cpp_source.html#l00033">33</a> of file <a class="el" href="MiddlewareDispatcher_8cpp_source.html">MiddlewareDispatcher.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   35</span>        : <a class="code hl_variable" href="#a9e89701702532cecbfcec04493e36532">lambda</a>(<a class="code hl_variable" href="#a9e89701702532cecbfcec04493e36532">lambda</a>) {</div>
-<div class="line"><span class="lineno">   36</span>    }</div>
-<div class="ttc" id="aclassexpress_1_1dispatcher_1_1MiddlewareDispatcher_html_a9e89701702532cecbfcec04493e36532"><div class="ttname"><a href="#a9e89701702532cecbfcec04493e36532">express::dispatcher::MiddlewareDispatcher::lambda</a></div><div class="ttdeci">const std::function&lt; void(const std::shared_ptr&lt; Request &gt; &amp;, const std::shared_ptr&lt; Response &gt; &amp;, express::Next &amp;)&gt; lambda</div><div class="ttdef"><b>Definition</b> <a href="MiddlewareDispatcher_8h_source.html#l00049">MiddlewareDispatcher.h:49</a></div></div>
+<p class="definition">Definition at line <a class="el" href="MiddlewareDispatcher_8cpp_source.html#l00055">55</a> of file <a class="el" href="MiddlewareDispatcher_8cpp_source.html">MiddlewareDispatcher.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   57</span>        : <a class="code hl_variable" href="#a9e89701702532cecbfcec04493e36532">lambda</a>(<a class="code hl_variable" href="#a9e89701702532cecbfcec04493e36532">lambda</a>) {</div>
+<div class="line"><span class="lineno">   58</span>    }</div>
+<div class="ttc" id="aclassexpress_1_1dispatcher_1_1MiddlewareDispatcher_html_a9e89701702532cecbfcec04493e36532"><div class="ttname"><a href="#a9e89701702532cecbfcec04493e36532">express::dispatcher::MiddlewareDispatcher::lambda</a></div><div class="ttdeci">const std::function&lt; void(const std::shared_ptr&lt; Request &gt; &amp;, const std::shared_ptr&lt; Response &gt; &amp;, express::Next &amp;)&gt; lambda</div><div class="ttdef"><b>Definition</b> <a href="MiddlewareDispatcher_8h_source.html#l00071">MiddlewareDispatcher.h:71</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="MiddlewareDispatcher_8cpp_source.html#l00033">MiddlewareDispatcher()</a>.</p>
+<p class="reference">References <a class="el" href="MiddlewareDispatcher_8cpp_source.html#l00055">MiddlewareDispatcher()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="MiddlewareDispatcher_8cpp_source.html#l00033">MiddlewareDispatcher()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="MiddlewareDispatcher_8cpp_source.html#l00055">MiddlewareDispatcher()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -227,87 +227,87 @@ Here is the caller graph for this function:</div>
 
 <p>Implements <a class="el" href="classexpress_1_1Dispatcher.html#a85f78f8231206e037904233940b7b5a7">express::Dispatcher</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="MiddlewareDispatcher_8cpp_source.html#l00038">38</a> of file <a class="el" href="MiddlewareDispatcher_8cpp_source.html">MiddlewareDispatcher.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   38</span>                                                                                                                                     {</div>
-<div class="line"><span class="lineno">   39</span>        <span class="keywordtype">bool</span> requestMatched = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   40</span> </div>
-<div class="line"><span class="lineno">   41</span>        <span class="keywordflow">if</span> ((controller.<a class="code hl_function" href="classexpress_1_1Controller.html#adc00f14eb275a0ef34ce9ffc7abfb4a6">getFlags</a>() &amp; <a class="code hl_enumvalue" href="classexpress_1_1Controller.html#acbbd6f9ce9c84b3a72a50f0aedaa6c48adc4bb866930db1ffbe036d7c5b8f0323">Controller::NEXT</a>) == 0) {</div>
-<div class="line"><span class="lineno">   42</span>            <span class="keyword">const</span> std::string absoluteMountPath = <a class="code hl_function" href="namespaceexpress_1_1dispatcher.html#a900edbc7ebfa729b5e1f585a7e0232b4">path_concat</a>(parentMountPath, mountPoint.<a class="code hl_variable" href="structexpress_1_1MountPoint.html#aed029c8a9eaefcf7878ce5c9d882dd1a">relativeMountPath</a>);</div>
-<div class="line"><span class="lineno">   43</span> </div>
-<div class="line"><span class="lineno">   44</span>            <span class="keyword">const</span> std::string requestMethod = controller.<a class="code hl_function" href="classexpress_1_1Controller.html#a4321dde8dd3ffba0a558ab40655361a3">getRequest</a>()-&gt;method;</div>
-<div class="line"><span class="lineno">   45</span>            <span class="keyword">const</span> std::string requestUrl = controller.<a class="code hl_function" href="classexpress_1_1Controller.html#a4321dde8dd3ffba0a558ab40655361a3">getRequest</a>()-&gt;url;</div>
-<div class="line"><span class="lineno">   46</span>            <span class="keyword">const</span> std::string requestPath = controller.<a class="code hl_function" href="classexpress_1_1Controller.html#a4321dde8dd3ffba0a558ab40655361a3">getRequest</a>()-&gt;path;</div>
-<div class="line"><span class="lineno">   47</span> </div>
-<div class="line"><span class="lineno">   48</span>            <span class="comment">// clang-format off</span></div>
-<div class="line"><span class="lineno">   49</span>            requestMatched =</div>
-<div class="line"><span class="lineno">   50</span>                (</div>
-<div class="line"><span class="lineno">   51</span>                    (</div>
-<div class="line"><span class="lineno">   52</span>                        (</div>
-<div class="line"><span class="lineno">   53</span>                            mountPoint.<a class="code hl_variable" href="structexpress_1_1MountPoint.html#a64fa59fe038bcec5de363f363b82c4ac">method</a> == requestMethod</div>
-<div class="line"><span class="lineno">   54</span>                        ) || (</div>
-<div class="line"><span class="lineno">   55</span>                            mountPoint.<a class="code hl_variable" href="structexpress_1_1MountPoint.html#a64fa59fe038bcec5de363f363b82c4ac">method</a> == <span class="stringliteral">&quot;all&quot;</span></div>
-<div class="line"><span class="lineno">   56</span>                        )</div>
-<div class="line"><span class="lineno">   57</span>                    ) &amp;&amp; (</div>
-<div class="line"><span class="lineno">   58</span>                        (</div>
-<div class="line"><span class="lineno">   59</span>                            absoluteMountPath == requestUrl</div>
-<div class="line"><span class="lineno">   60</span>                        ) || (</div>
-<div class="line"><span class="lineno">   61</span>                            (</div>
-<div class="line"><span class="lineno">   62</span>                                !controller.<a class="code hl_function" href="classexpress_1_1Controller.html#a830cb9ca5febfce72e872e775e9677be">getStrictRouting</a>()</div>
-<div class="line"><span class="lineno">   63</span>                            ) &amp;&amp; (</div>
-<div class="line"><span class="lineno">   64</span>                                absoluteMountPath == requestPath</div>
-<div class="line"><span class="lineno">   65</span>                            )</div>
-<div class="line"><span class="lineno">   66</span>                        ) || (</div>
-<div class="line"><span class="lineno">   67</span>                            <a class="code hl_function" href="namespaceexpress_1_1dispatcher.html#a2b6de0cc8c5234f7908f51b740b4eb91">checkForUrlMatch</a>(absoluteMountPath, requestUrl)</div>
-<div class="line"><span class="lineno">   68</span>                        )</div>
-<div class="line"><span class="lineno">   69</span>                    )</div>
-<div class="line"><span class="lineno">   70</span>                ) || (</div>
-<div class="line"><span class="lineno">   71</span>                    (</div>
-<div class="line"><span class="lineno">   72</span>                        mountPoint.<a class="code hl_variable" href="structexpress_1_1MountPoint.html#a64fa59fe038bcec5de363f363b82c4ac">method</a> == <span class="stringliteral">&quot;use&quot;</span></div>
-<div class="line"><span class="lineno">   73</span>                    ) &amp;&amp; (</div>
+<p class="definition">Definition at line <a class="el" href="MiddlewareDispatcher_8cpp_source.html#l00060">60</a> of file <a class="el" href="MiddlewareDispatcher_8cpp_source.html">MiddlewareDispatcher.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   60</span>                                                                                                                                     {</div>
+<div class="line"><span class="lineno">   61</span>        <span class="keywordtype">bool</span> requestMatched = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   62</span> </div>
+<div class="line"><span class="lineno">   63</span>        <span class="keywordflow">if</span> ((controller.<a class="code hl_function" href="classexpress_1_1Controller.html#adc00f14eb275a0ef34ce9ffc7abfb4a6">getFlags</a>() &amp; <a class="code hl_enumvalue" href="classexpress_1_1Controller.html#acbbd6f9ce9c84b3a72a50f0aedaa6c48adc4bb866930db1ffbe036d7c5b8f0323">Controller::NEXT</a>) == 0) {</div>
+<div class="line"><span class="lineno">   64</span>            <span class="keyword">const</span> std::string absoluteMountPath = <a class="code hl_function" href="namespaceexpress_1_1dispatcher.html#a900edbc7ebfa729b5e1f585a7e0232b4">path_concat</a>(parentMountPath, mountPoint.<a class="code hl_variable" href="structexpress_1_1MountPoint.html#aed029c8a9eaefcf7878ce5c9d882dd1a">relativeMountPath</a>);</div>
+<div class="line"><span class="lineno">   65</span> </div>
+<div class="line"><span class="lineno">   66</span>            <span class="keyword">const</span> std::string requestMethod = controller.<a class="code hl_function" href="classexpress_1_1Controller.html#a4321dde8dd3ffba0a558ab40655361a3">getRequest</a>()-&gt;method;</div>
+<div class="line"><span class="lineno">   67</span>            <span class="keyword">const</span> std::string requestUrl = controller.<a class="code hl_function" href="classexpress_1_1Controller.html#a4321dde8dd3ffba0a558ab40655361a3">getRequest</a>()-&gt;url;</div>
+<div class="line"><span class="lineno">   68</span>            <span class="keyword">const</span> std::string requestPath = controller.<a class="code hl_function" href="classexpress_1_1Controller.html#a4321dde8dd3ffba0a558ab40655361a3">getRequest</a>()-&gt;path;</div>
+<div class="line"><span class="lineno">   69</span> </div>
+<div class="line"><span class="lineno">   70</span>            <span class="comment">// clang-format off</span></div>
+<div class="line"><span class="lineno">   71</span>            requestMatched =</div>
+<div class="line"><span class="lineno">   72</span>                (</div>
+<div class="line"><span class="lineno">   73</span>                    (</div>
 <div class="line"><span class="lineno">   74</span>                        (</div>
-<div class="line"><span class="lineno">   75</span>                            requestUrl.starts_with(absoluteMountPath)</div>
+<div class="line"><span class="lineno">   75</span>                            mountPoint.<a class="code hl_variable" href="structexpress_1_1MountPoint.html#a64fa59fe038bcec5de363f363b82c4ac">method</a> == requestMethod</div>
 <div class="line"><span class="lineno">   76</span>                        ) || (</div>
-<div class="line"><span class="lineno">   77</span>                            (</div>
-<div class="line"><span class="lineno">   78</span>                                !controller.<a class="code hl_function" href="classexpress_1_1Controller.html#a830cb9ca5febfce72e872e775e9677be">getStrictRouting</a>()</div>
-<div class="line"><span class="lineno">   79</span>                            ) &amp;&amp; (</div>
-<div class="line"><span class="lineno">   80</span>                                requestPath.starts_with(absoluteMountPath)</div>
-<div class="line"><span class="lineno">   81</span>                            )</div>
-<div class="line"><span class="lineno">   82</span>                        )</div>
-<div class="line"><span class="lineno">   83</span>                    )</div>
-<div class="line"><span class="lineno">   84</span>                );</div>
-<div class="line"><span class="lineno">   85</span>            <span class="comment">// clang-format on</span></div>
-<div class="line"><span class="lineno">   86</span> </div>
-<div class="line"><span class="lineno">   87</span>            <span class="keywordflow">if</span> (requestMatched) {</div>
-<div class="line"><span class="lineno">   88</span>                <span class="keywordflow">if</span> (<a class="code hl_function" href="namespaceexpress_1_1dispatcher.html#a8a7580a939d02f430b311ebe2285c651">hasResult</a>(absoluteMountPath)) {</div>
-<div class="line"><span class="lineno">   89</span>                    <a class="code hl_function" href="namespaceexpress_1_1dispatcher.html#a2fe5a89e778177cd139c6283ab7937d8">setParams</a>(absoluteMountPath, *controller.<a class="code hl_function" href="classexpress_1_1Controller.html#a4321dde8dd3ffba0a558ab40655361a3">getRequest</a>());</div>
-<div class="line"><span class="lineno">   90</span>                }</div>
-<div class="line"><span class="lineno">   91</span> </div>
-<div class="line"><span class="lineno">   92</span>                Next next(controller);</div>
-<div class="line"><span class="lineno">   93</span>                <a class="code hl_variable" href="#a9e89701702532cecbfcec04493e36532">lambda</a>(controller.<a class="code hl_function" href="classexpress_1_1Controller.html#a4321dde8dd3ffba0a558ab40655361a3">getRequest</a>(), controller.<a class="code hl_function" href="classexpress_1_1Controller.html#afb9da7b3e5d2be0186b006d91881d771">getResponse</a>(), next);</div>
-<div class="line"><span class="lineno">   94</span> </div>
-<div class="line"><span class="lineno">   95</span>                <span class="comment">// If next() was called synchronously continue current route-tree traversal</span></div>
-<div class="line"><span class="lineno">   96</span>                <span class="keywordflow">if</span> ((next.controller.getFlags() &amp; <a class="code hl_enumvalue" href="classexpress_1_1Controller.html#acbbd6f9ce9c84b3a72a50f0aedaa6c48adc4bb866930db1ffbe036d7c5b8f0323">express::Controller::NEXT</a>) != 0) {</div>
-<div class="line"><span class="lineno">   97</span>                    requestMatched = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   98</span>                    controller = next.controller;</div>
-<div class="line"><span class="lineno">   99</span>                }</div>
-<div class="line"><span class="lineno">  100</span>            }</div>
-<div class="line"><span class="lineno">  101</span>        }</div>
-<div class="line"><span class="lineno">  102</span> </div>
-<div class="line"><span class="lineno">  103</span>        <span class="keywordflow">return</span> requestMatched;</div>
-<div class="line"><span class="lineno">  104</span>    }</div>
-<div class="ttc" id="aclassexpress_1_1Controller_html_a4321dde8dd3ffba0a558ab40655361a3"><div class="ttname"><a href="classexpress_1_1Controller.html#a4321dde8dd3ffba0a558ab40655361a3">express::Controller::getRequest</a></div><div class="ttdeci">const std::shared_ptr&lt; Request &gt; &amp; getRequest()</div><div class="ttdef"><b>Definition</b> <a href="Controller_8cpp_source.html#l00072">Controller.cpp:72</a></div></div>
-<div class="ttc" id="aclassexpress_1_1Controller_html_a830cb9ca5febfce72e872e775e9677be"><div class="ttname"><a href="classexpress_1_1Controller.html#a830cb9ca5febfce72e872e775e9677be">express::Controller::getStrictRouting</a></div><div class="ttdeci">bool getStrictRouting() const</div><div class="ttdef"><b>Definition</b> <a href="Controller_8cpp_source.html#l00133">Controller.cpp:133</a></div></div>
-<div class="ttc" id="aclassexpress_1_1Controller_html_acbbd6f9ce9c84b3a72a50f0aedaa6c48adc4bb866930db1ffbe036d7c5b8f0323"><div class="ttname"><a href="classexpress_1_1Controller.html#acbbd6f9ce9c84b3a72a50f0aedaa6c48adc4bb866930db1ffbe036d7c5b8f0323">express::Controller::NEXT</a></div><div class="ttdeci">@ NEXT</div><div class="ttdef"><b>Definition</b> <a href="Controller_8h_source.html#l00068">Controller.h:68</a></div></div>
-<div class="ttc" id="aclassexpress_1_1Controller_html_adc00f14eb275a0ef34ce9ffc7abfb4a6"><div class="ttname"><a href="classexpress_1_1Controller.html#adc00f14eb275a0ef34ce9ffc7abfb4a6">express::Controller::getFlags</a></div><div class="ttdeci">int getFlags() const</div><div class="ttdef"><b>Definition</b> <a href="Controller_8cpp_source.html#l00080">Controller.cpp:80</a></div></div>
-<div class="ttc" id="aclassexpress_1_1Controller_html_afb9da7b3e5d2be0186b006d91881d771"><div class="ttname"><a href="classexpress_1_1Controller.html#afb9da7b3e5d2be0186b006d91881d771">express::Controller::getResponse</a></div><div class="ttdeci">const std::shared_ptr&lt; Response &gt; &amp; getResponse()</div><div class="ttdef"><b>Definition</b> <a href="Controller_8cpp_source.html#l00076">Controller.cpp:76</a></div></div>
-<div class="ttc" id="anamespaceexpress_1_1dispatcher_html_a2b6de0cc8c5234f7908f51b740b4eb91"><div class="ttname"><a href="namespaceexpress_1_1dispatcher.html#a2b6de0cc8c5234f7908f51b740b4eb91">express::dispatcher::checkForUrlMatch</a></div><div class="ttdeci">bool checkForUrlMatch(const std::string &amp;cpath, const std::string &amp;reqpath)</div><div class="ttdef"><b>Definition</b> <a href="regex__utils_8cpp_source.html#l00146">regex_utils.cpp:146</a></div></div>
-<div class="ttc" id="anamespaceexpress_1_1dispatcher_html_a2fe5a89e778177cd139c6283ab7937d8"><div class="ttname"><a href="namespaceexpress_1_1dispatcher.html#a2fe5a89e778177cd139c6283ab7937d8">express::dispatcher::setParams</a></div><div class="ttdeci">void setParams(const std::string &amp;cpath, express::Request &amp;req)</div><div class="ttdef"><b>Definition</b> <a href="regex__utils_8cpp_source.html#l00101">regex_utils.cpp:101</a></div></div>
-<div class="ttc" id="anamespaceexpress_1_1dispatcher_html_a8a7580a939d02f430b311ebe2285c651"><div class="ttname"><a href="namespaceexpress_1_1dispatcher.html#a8a7580a939d02f430b311ebe2285c651">express::dispatcher::hasResult</a></div><div class="ttdeci">bool hasResult(const std::string &amp;cpath)</div><div class="ttdef"><b>Definition</b> <a href="regex__utils_8cpp_source.html#l00072">regex_utils.cpp:72</a></div></div>
-<div class="ttc" id="anamespaceexpress_1_1dispatcher_html_a900edbc7ebfa729b5e1f585a7e0232b4"><div class="ttname"><a href="namespaceexpress_1_1dispatcher.html#a900edbc7ebfa729b5e1f585a7e0232b4">express::dispatcher::path_concat</a></div><div class="ttdeci">std::string path_concat(const std::vector&lt; std::string &gt; &amp;stringvec)</div><div class="ttdef"><b>Definition</b> <a href="regex__utils_8cpp_source.html#l00034">regex_utils.cpp:34</a></div></div>
-<div class="ttc" id="astructexpress_1_1MountPoint_html_a64fa59fe038bcec5de363f363b82c4ac"><div class="ttname"><a href="structexpress_1_1MountPoint.html#a64fa59fe038bcec5de363f363b82c4ac">express::MountPoint::method</a></div><div class="ttdeci">std::string method</div><div class="ttdef"><b>Definition</b> <a href="MountPoint_8h_source.html#l00034">MountPoint.h:34</a></div></div>
-<div class="ttc" id="astructexpress_1_1MountPoint_html_aed029c8a9eaefcf7878ce5c9d882dd1a"><div class="ttname"><a href="structexpress_1_1MountPoint.html#aed029c8a9eaefcf7878ce5c9d882dd1a">express::MountPoint::relativeMountPath</a></div><div class="ttdeci">std::string relativeMountPath</div><div class="ttdef"><b>Definition</b> <a href="MountPoint_8h_source.html#l00035">MountPoint.h:35</a></div></div>
+<div class="line"><span class="lineno">   77</span>                            mountPoint.<a class="code hl_variable" href="structexpress_1_1MountPoint.html#a64fa59fe038bcec5de363f363b82c4ac">method</a> == <span class="stringliteral">&quot;all&quot;</span></div>
+<div class="line"><span class="lineno">   78</span>                        )</div>
+<div class="line"><span class="lineno">   79</span>                    ) &amp;&amp; (</div>
+<div class="line"><span class="lineno">   80</span>                        (</div>
+<div class="line"><span class="lineno">   81</span>                            absoluteMountPath == requestUrl</div>
+<div class="line"><span class="lineno">   82</span>                        ) || (</div>
+<div class="line"><span class="lineno">   83</span>                            (</div>
+<div class="line"><span class="lineno">   84</span>                                !controller.<a class="code hl_function" href="classexpress_1_1Controller.html#a830cb9ca5febfce72e872e775e9677be">getStrictRouting</a>()</div>
+<div class="line"><span class="lineno">   85</span>                            ) &amp;&amp; (</div>
+<div class="line"><span class="lineno">   86</span>                                absoluteMountPath == requestPath</div>
+<div class="line"><span class="lineno">   87</span>                            )</div>
+<div class="line"><span class="lineno">   88</span>                        ) || (</div>
+<div class="line"><span class="lineno">   89</span>                            <a class="code hl_function" href="namespaceexpress_1_1dispatcher.html#a2b6de0cc8c5234f7908f51b740b4eb91">checkForUrlMatch</a>(absoluteMountPath, requestUrl)</div>
+<div class="line"><span class="lineno">   90</span>                        )</div>
+<div class="line"><span class="lineno">   91</span>                    )</div>
+<div class="line"><span class="lineno">   92</span>                ) || (</div>
+<div class="line"><span class="lineno">   93</span>                    (</div>
+<div class="line"><span class="lineno">   94</span>                        mountPoint.<a class="code hl_variable" href="structexpress_1_1MountPoint.html#a64fa59fe038bcec5de363f363b82c4ac">method</a> == <span class="stringliteral">&quot;use&quot;</span></div>
+<div class="line"><span class="lineno">   95</span>                    ) &amp;&amp; (</div>
+<div class="line"><span class="lineno">   96</span>                        (</div>
+<div class="line"><span class="lineno">   97</span>                            requestUrl.starts_with(absoluteMountPath)</div>
+<div class="line"><span class="lineno">   98</span>                        ) || (</div>
+<div class="line"><span class="lineno">   99</span>                            (</div>
+<div class="line"><span class="lineno">  100</span>                                !controller.<a class="code hl_function" href="classexpress_1_1Controller.html#a830cb9ca5febfce72e872e775e9677be">getStrictRouting</a>()</div>
+<div class="line"><span class="lineno">  101</span>                            ) &amp;&amp; (</div>
+<div class="line"><span class="lineno">  102</span>                                requestPath.starts_with(absoluteMountPath)</div>
+<div class="line"><span class="lineno">  103</span>                            )</div>
+<div class="line"><span class="lineno">  104</span>                        )</div>
+<div class="line"><span class="lineno">  105</span>                    )</div>
+<div class="line"><span class="lineno">  106</span>                );</div>
+<div class="line"><span class="lineno">  107</span>            <span class="comment">// clang-format on</span></div>
+<div class="line"><span class="lineno">  108</span> </div>
+<div class="line"><span class="lineno">  109</span>            <span class="keywordflow">if</span> (requestMatched) {</div>
+<div class="line"><span class="lineno">  110</span>                <span class="keywordflow">if</span> (<a class="code hl_function" href="namespaceexpress_1_1dispatcher.html#a8a7580a939d02f430b311ebe2285c651">hasResult</a>(absoluteMountPath)) {</div>
+<div class="line"><span class="lineno">  111</span>                    <a class="code hl_function" href="namespaceexpress_1_1dispatcher.html#a2fe5a89e778177cd139c6283ab7937d8">setParams</a>(absoluteMountPath, *controller.<a class="code hl_function" href="classexpress_1_1Controller.html#a4321dde8dd3ffba0a558ab40655361a3">getRequest</a>());</div>
+<div class="line"><span class="lineno">  112</span>                }</div>
+<div class="line"><span class="lineno">  113</span> </div>
+<div class="line"><span class="lineno">  114</span>                Next next(controller);</div>
+<div class="line"><span class="lineno">  115</span>                <a class="code hl_variable" href="#a9e89701702532cecbfcec04493e36532">lambda</a>(controller.<a class="code hl_function" href="classexpress_1_1Controller.html#a4321dde8dd3ffba0a558ab40655361a3">getRequest</a>(), controller.<a class="code hl_function" href="classexpress_1_1Controller.html#afb9da7b3e5d2be0186b006d91881d771">getResponse</a>(), next);</div>
+<div class="line"><span class="lineno">  116</span> </div>
+<div class="line"><span class="lineno">  117</span>                <span class="comment">// If next() was called synchronously continue current route-tree traversal</span></div>
+<div class="line"><span class="lineno">  118</span>                <span class="keywordflow">if</span> ((next.controller.getFlags() &amp; <a class="code hl_enumvalue" href="classexpress_1_1Controller.html#acbbd6f9ce9c84b3a72a50f0aedaa6c48adc4bb866930db1ffbe036d7c5b8f0323">express::Controller::NEXT</a>) != 0) {</div>
+<div class="line"><span class="lineno">  119</span>                    requestMatched = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  120</span>                    controller = next.controller;</div>
+<div class="line"><span class="lineno">  121</span>                }</div>
+<div class="line"><span class="lineno">  122</span>            }</div>
+<div class="line"><span class="lineno">  123</span>        }</div>
+<div class="line"><span class="lineno">  124</span> </div>
+<div class="line"><span class="lineno">  125</span>        <span class="keywordflow">return</span> requestMatched;</div>
+<div class="line"><span class="lineno">  126</span>    }</div>
+<div class="ttc" id="aclassexpress_1_1Controller_html_a4321dde8dd3ffba0a558ab40655361a3"><div class="ttname"><a href="classexpress_1_1Controller.html#a4321dde8dd3ffba0a558ab40655361a3">express::Controller::getRequest</a></div><div class="ttdeci">const std::shared_ptr&lt; Request &gt; &amp; getRequest()</div><div class="ttdef"><b>Definition</b> <a href="Controller_8cpp_source.html#l00094">Controller.cpp:94</a></div></div>
+<div class="ttc" id="aclassexpress_1_1Controller_html_a830cb9ca5febfce72e872e775e9677be"><div class="ttname"><a href="classexpress_1_1Controller.html#a830cb9ca5febfce72e872e775e9677be">express::Controller::getStrictRouting</a></div><div class="ttdeci">bool getStrictRouting() const</div><div class="ttdef"><b>Definition</b> <a href="Controller_8cpp_source.html#l00155">Controller.cpp:155</a></div></div>
+<div class="ttc" id="aclassexpress_1_1Controller_html_acbbd6f9ce9c84b3a72a50f0aedaa6c48adc4bb866930db1ffbe036d7c5b8f0323"><div class="ttname"><a href="classexpress_1_1Controller.html#acbbd6f9ce9c84b3a72a50f0aedaa6c48adc4bb866930db1ffbe036d7c5b8f0323">express::Controller::NEXT</a></div><div class="ttdeci">@ NEXT</div><div class="ttdef"><b>Definition</b> <a href="Controller_8h_source.html#l00090">Controller.h:90</a></div></div>
+<div class="ttc" id="aclassexpress_1_1Controller_html_adc00f14eb275a0ef34ce9ffc7abfb4a6"><div class="ttname"><a href="classexpress_1_1Controller.html#adc00f14eb275a0ef34ce9ffc7abfb4a6">express::Controller::getFlags</a></div><div class="ttdeci">int getFlags() const</div><div class="ttdef"><b>Definition</b> <a href="Controller_8cpp_source.html#l00102">Controller.cpp:102</a></div></div>
+<div class="ttc" id="aclassexpress_1_1Controller_html_afb9da7b3e5d2be0186b006d91881d771"><div class="ttname"><a href="classexpress_1_1Controller.html#afb9da7b3e5d2be0186b006d91881d771">express::Controller::getResponse</a></div><div class="ttdeci">const std::shared_ptr&lt; Response &gt; &amp; getResponse()</div><div class="ttdef"><b>Definition</b> <a href="Controller_8cpp_source.html#l00098">Controller.cpp:98</a></div></div>
+<div class="ttc" id="anamespaceexpress_1_1dispatcher_html_a2b6de0cc8c5234f7908f51b740b4eb91"><div class="ttname"><a href="namespaceexpress_1_1dispatcher.html#a2b6de0cc8c5234f7908f51b740b4eb91">express::dispatcher::checkForUrlMatch</a></div><div class="ttdeci">bool checkForUrlMatch(const std::string &amp;cpath, const std::string &amp;reqpath)</div><div class="ttdef"><b>Definition</b> <a href="regex__utils_8cpp_source.html#l00168">regex_utils.cpp:168</a></div></div>
+<div class="ttc" id="anamespaceexpress_1_1dispatcher_html_a2fe5a89e778177cd139c6283ab7937d8"><div class="ttname"><a href="namespaceexpress_1_1dispatcher.html#a2fe5a89e778177cd139c6283ab7937d8">express::dispatcher::setParams</a></div><div class="ttdeci">void setParams(const std::string &amp;cpath, express::Request &amp;req)</div><div class="ttdef"><b>Definition</b> <a href="regex__utils_8cpp_source.html#l00123">regex_utils.cpp:123</a></div></div>
+<div class="ttc" id="anamespaceexpress_1_1dispatcher_html_a8a7580a939d02f430b311ebe2285c651"><div class="ttname"><a href="namespaceexpress_1_1dispatcher.html#a8a7580a939d02f430b311ebe2285c651">express::dispatcher::hasResult</a></div><div class="ttdeci">bool hasResult(const std::string &amp;cpath)</div><div class="ttdef"><b>Definition</b> <a href="regex__utils_8cpp_source.html#l00094">regex_utils.cpp:94</a></div></div>
+<div class="ttc" id="anamespaceexpress_1_1dispatcher_html_a900edbc7ebfa729b5e1f585a7e0232b4"><div class="ttname"><a href="namespaceexpress_1_1dispatcher.html#a900edbc7ebfa729b5e1f585a7e0232b4">express::dispatcher::path_concat</a></div><div class="ttdeci">std::string path_concat(const std::vector&lt; std::string &gt; &amp;stringvec)</div><div class="ttdef"><b>Definition</b> <a href="regex__utils_8cpp_source.html#l00056">regex_utils.cpp:56</a></div></div>
+<div class="ttc" id="astructexpress_1_1MountPoint_html_a64fa59fe038bcec5de363f363b82c4ac"><div class="ttname"><a href="structexpress_1_1MountPoint.html#a64fa59fe038bcec5de363f363b82c4ac">express::MountPoint::method</a></div><div class="ttdeci">std::string method</div><div class="ttdef"><b>Definition</b> <a href="MountPoint_8h_source.html#l00056">MountPoint.h:56</a></div></div>
+<div class="ttc" id="astructexpress_1_1MountPoint_html_aed029c8a9eaefcf7878ce5c9d882dd1a"><div class="ttname"><a href="structexpress_1_1MountPoint.html#aed029c8a9eaefcf7878ce5c9d882dd1a">express::MountPoint::relativeMountPath</a></div><div class="ttdeci">std::string relativeMountPath</div><div class="ttdef"><b>Definition</b> <a href="MountPoint_8h_source.html#l00057">MountPoint.h:57</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Controller_8cpp_source.html#l00080">express::Controller::getFlags()</a>, <a class="el" href="Controller_8h_source.html#l00068">express::Controller::NEXT</a>, and <a class="el" href="Next_8cpp_source.html#l00030">express::Next::Next()</a>.</p>
+<p class="reference">References <a class="el" href="Controller_8cpp_source.html#l00102">express::Controller::getFlags()</a>, <a class="el" href="Controller_8h_source.html#l00090">express::Controller::NEXT</a>, and <a class="el" href="Next_8cpp_source.html#l00052">express::Next::Next()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -337,7 +337,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="MiddlewareDispatcher_8h_source.html#l00049">49</a> of file <a class="el" href="MiddlewareDispatcher_8h_source.html">MiddlewareDispatcher.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="MiddlewareDispatcher_8h_source.html#l00071">71</a> of file <a class="el" href="MiddlewareDispatcher_8h_source.html">MiddlewareDispatcher.h</a>.</p>
 
 </div>
 </div>
@@ -351,7 +351,7 @@ Here is the call graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceexpress.html">express</a></li><li class="navelem"><a class="el" href="namespaceexpress_1_1dispatcher.html">dispatcher</a></li><li class="navelem"><a class="el" href="classexpress_1_1dispatcher_1_1MiddlewareDispatcher.html">MiddlewareDispatcher</a></li>
-    <li class="footer">Generated on Tue Feb 25 2025 14:03:10 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generated on Sun Mar 9 2025 01:34:39 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>

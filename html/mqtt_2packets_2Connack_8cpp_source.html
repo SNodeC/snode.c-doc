@@ -101,7 +101,7 @@ $(function(){initNavTree('mqtt_2packets_2Connack_8cpp_source.html',''); initResi
 </div><!--header-->
 <div class="contents">
 <a href="mqtt_2packets_2Connack_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
-<div class="line"><span class="lineno">    2</span><span class="comment"> * SNode.C - a slim toolkit for network communication</span></div>
+<div class="line"><span class="lineno">    2</span><span class="comment"> * SNode.C - A Slim Toolkit for Network Communication</span></div>
 <div class="line"><span class="lineno">    3</span><span class="comment"> * Copyright (C) Volker Christian &lt;me@vchrist.at&gt;</span></div>
 <div class="line"><span class="lineno">    4</span><span class="comment"> *               2020, 2021, 2022, 2023, 2024, 2025</span></div>
 <div class="line"><span class="lineno">    5</span><span class="comment"> *</span></div>
@@ -119,77 +119,99 @@ $(function(){initNavTree('mqtt_2packets_2Connack_8cpp_source.html',''); initResi
 <div class="line"><span class="lineno">   17</span><span class="comment"> * along with this program. If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
 <div class="line"><span class="lineno">   18</span><span class="comment"> */</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&quot;iot/mqtt/packets/Connack.h&quot;</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#</span><span class="preprocessor">ifndef</span> <span class="preprocessor">DOXYGEN_SHOULD_SKIP_THIS</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">string</span><span class="preprocessor">&gt;</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">vector</span><span class="preprocessor">&gt;</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#</span><span class="preprocessor">endif</span> <span class="comment">// DOXYGEN_SHOULD_SKIP_THIS</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">namespace</span> iot::mqtt::packets {</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="foldopen" id="foldopen00031" data-start="{" data-end="}">
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="classiot_1_1mqtt_1_1packets_1_1Connack.html#ad626273338f316356bae311362801b6e">   31</a></span>    <a class="code hl_class" href="classiot_1_1mqtt_1_1packets_1_1Connack.html">Connack</a>::<a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Connack.html#ad626273338f316356bae311362801b6e">Connack</a>()</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        : <a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Connack.html#ad626273338f316356bae311362801b6e">iot</a>::<a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Connack.html#ad626273338f316356bae311362801b6e">mqtt</a>::<a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Connack.html#ad626273338f316356bae311362801b6e">ControlPacket</a>(<a class="code hl_define" href="mqtt-fast_2packets_2Connack_8h.html#a09b0564b21f03d3d86bac8b5a09a4999">MQTT_CONNACK</a>, <span class="stringliteral">&quot;CONNACK&quot;</span>) {</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    }</div>
-</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="foldopen" id="foldopen00035" data-start="{" data-end="}">
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="classiot_1_1mqtt_1_1packets_1_1Connack.html#a5fee5b78f6e794c6f89fe60c76052850">   35</a></span>    <a class="code hl_class" href="classiot_1_1mqtt_1_1packets_1_1Connack.html">Connack</a>::<a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Connack.html#a5fee5b78f6e794c6f89fe60c76052850">Connack</a>(uint8_t returncode, uint8_t acknowledgeFlags)</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        : <a class="code hl_class" href="classiot_1_1mqtt_1_1packets_1_1Connack.html">Connack</a><a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Connack.html#ad626273338f316356bae311362801b6e">(</a><a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Connack.html#ad626273338f316356bae311362801b6e">)</a> {</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <span class="keyword">this</span>-&gt;returnCode = returncode;</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="keyword">this</span>-&gt;acknowledgeFlags = acknowledgeFlags;</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    }</div>
-</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
-<div class="foldopen" id="foldopen00041" data-start="{" data-end="}">
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="classiot_1_1mqtt_1_1packets_1_1Connack.html#a06f6c7bfe4a6bc964be98aa2a2623440">   41</a></span>    <a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Connack.html#a06f6c7bfe4a6bc964be98aa2a2623440">std</a>::<a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Connack.html#a06f6c7bfe4a6bc964be98aa2a2623440">vector</a>&lt;<span class="keywordtype">char</span>&gt; <a class="code hl_class" href="classiot_1_1mqtt_1_1packets_1_1Connack.html">Connack</a>::<a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Connack.html#a06f6c7bfe4a6bc964be98aa2a2623440">serializeVP</a>() <span class="keyword">const</span> {</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        std::vector&lt;<span class="keywordtype">char</span>&gt; packet(acknowledgeFlags.serialize());</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">/*</span></div>
+<div class="line"><span class="lineno">   21</span><span class="comment"> * MIT License</span></div>
+<div class="line"><span class="lineno">   22</span><span class="comment"> *</span></div>
+<div class="line"><span class="lineno">   23</span><span class="comment"> * Permission is hereby granted, free of charge, to any person obtaining a copy</span></div>
+<div class="line"><span class="lineno">   24</span><span class="comment"> * of this software and associated documentation files (the &quot;Software&quot;), to deal</span></div>
+<div class="line"><span class="lineno">   25</span><span class="comment"> * in the Software without restriction, including without limitation the rights</span></div>
+<div class="line"><span class="lineno">   26</span><span class="comment"> * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell</span></div>
+<div class="line"><span class="lineno">   27</span><span class="comment"> * copies of the Software, and to permit persons to whom the Software is</span></div>
+<div class="line"><span class="lineno">   28</span><span class="comment"> * furnished to do so, subject to the following conditions:</span></div>
+<div class="line"><span class="lineno">   29</span><span class="comment"> *</span></div>
+<div class="line"><span class="lineno">   30</span><span class="comment"> * The above copyright notice and this permission notice shall be included in</span></div>
+<div class="line"><span class="lineno">   31</span><span class="comment"> * all copies or substantial portions of the Software.</span></div>
+<div class="line"><span class="lineno">   32</span><span class="comment"> *</span></div>
+<div class="line"><span class="lineno">   33</span><span class="comment"> * THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR</span></div>
+<div class="line"><span class="lineno">   34</span><span class="comment"> * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,</span></div>
+<div class="line"><span class="lineno">   35</span><span class="comment"> * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE</span></div>
+<div class="line"><span class="lineno">   36</span><span class="comment"> * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER</span></div>
+<div class="line"><span class="lineno">   37</span><span class="comment"> * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,</span></div>
+<div class="line"><span class="lineno">   38</span><span class="comment"> * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN</span></div>
+<div class="line"><span class="lineno">   39</span><span class="comment"> * THE SOFTWARE.</span></div>
+<div class="line"><span class="lineno">   40</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&quot;iot/mqtt/packets/Connack.h&quot;</span></div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        std::vector&lt;<span class="keywordtype">char</span>&gt; tmpVector = returnCode.serialize();</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        packet.insert(packet.end(), tmpVector.begin(), tmpVector.end());</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="keywordflow">return</span> packet;</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    }</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="preprocessor">#</span><span class="preprocessor">ifndef</span> <span class="preprocessor">DOXYGEN_SHOULD_SKIP_THIS</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">string</span><span class="preprocessor">&gt;</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">vector</span><span class="preprocessor">&gt;</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="preprocessor">#</span><span class="preprocessor">endif</span> <span class="comment">// DOXYGEN_SHOULD_SKIP_THIS</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="keyword">namespace</span> iot::mqtt::packets {</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="foldopen" id="foldopen00053" data-start="{" data-end="}">
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="classiot_1_1mqtt_1_1packets_1_1Connack.html#ad626273338f316356bae311362801b6e">   53</a></span>    <a class="code hl_class" href="classiot_1_1mqtt_1_1packets_1_1Connack.html">Connack</a>::<a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Connack.html#ad626273338f316356bae311362801b6e">Connack</a>()</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        : <a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Connack.html#ad626273338f316356bae311362801b6e">iot</a>::<a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Connack.html#ad626273338f316356bae311362801b6e">mqtt</a>::<a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Connack.html#ad626273338f316356bae311362801b6e">ControlPacket</a>(<a class="code hl_define" href="mqtt-fast_2packets_2Connack_8h.html#a09b0564b21f03d3d86bac8b5a09a4999">MQTT_CONNACK</a>, <span class="stringliteral">&quot;CONNACK&quot;</span>) {</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    }</div>
 </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
-<div class="foldopen" id="foldopen00050" data-start="{" data-end="}">
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="classiot_1_1mqtt_1_1packets_1_1Connack.html#a9d5a9abd54366d63606e6aef01a97db2">   50</a></span>    uint8_t <a class="code hl_class" href="classiot_1_1mqtt_1_1packets_1_1Connack.html">Connack</a>::<a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Connack.html#a9d5a9abd54366d63606e6aef01a97db2">getAcknowledgeFlags</a>() <span class="keyword">const</span> {</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <span class="keywordflow">return</span> acknowledgeFlags;</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    }</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="foldopen" id="foldopen00057" data-start="{" data-end="}">
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="classiot_1_1mqtt_1_1packets_1_1Connack.html#a5fee5b78f6e794c6f89fe60c76052850">   57</a></span>    <a class="code hl_class" href="classiot_1_1mqtt_1_1packets_1_1Connack.html">Connack</a>::<a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Connack.html#a5fee5b78f6e794c6f89fe60c76052850">Connack</a>(uint8_t returncode, uint8_t acknowledgeFlags)</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        : <a class="code hl_class" href="classiot_1_1mqtt_1_1packets_1_1Connack.html">Connack</a><a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Connack.html#ad626273338f316356bae311362801b6e">(</a><a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Connack.html#ad626273338f316356bae311362801b6e">)</a> {</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <span class="keyword">this</span>-&gt;returnCode = returncode;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <span class="keyword">this</span>-&gt;acknowledgeFlags = acknowledgeFlags;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    }</div>
 </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="foldopen" id="foldopen00054" data-start="{" data-end="}">
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="classiot_1_1mqtt_1_1packets_1_1Connack.html#a06bb934f481d45386d9e9e73e33b68e5">   54</a></span>    uint8_t <a class="code hl_class" href="classiot_1_1mqtt_1_1packets_1_1Connack.html">Connack</a>::<a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Connack.html#a06bb934f481d45386d9e9e73e33b68e5">getReturnCode</a>() <span class="keyword">const</span> {</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <span class="keywordflow">return</span> returnCode;</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    }</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="foldopen" id="foldopen00063" data-start="{" data-end="}">
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="classiot_1_1mqtt_1_1packets_1_1Connack.html#a06f6c7bfe4a6bc964be98aa2a2623440">   63</a></span>    <a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Connack.html#a06f6c7bfe4a6bc964be98aa2a2623440">std</a>::<a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Connack.html#a06f6c7bfe4a6bc964be98aa2a2623440">vector</a>&lt;<span class="keywordtype">char</span>&gt; <a class="code hl_class" href="classiot_1_1mqtt_1_1packets_1_1Connack.html">Connack</a>::<a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Connack.html#a06f6c7bfe4a6bc964be98aa2a2623440">serializeVP</a>() <span class="keyword">const</span> {</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        std::vector&lt;<span class="keywordtype">char</span>&gt; packet(acknowledgeFlags.serialize());</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        std::vector&lt;<span class="keywordtype">char</span>&gt; tmpVector = returnCode.serialize();</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        packet.insert(packet.end(), tmpVector.begin(), tmpVector.end());</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <span class="keywordflow">return</span> packet;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    }</div>
 </div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
-<div class="foldopen" id="foldopen00058" data-start="{" data-end="}">
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="classiot_1_1mqtt_1_1packets_1_1Connack.html#a7ba5c498454af80e8fbd82ebb3d34629">   58</a></span>    <span class="keywordtype">bool</span> <a class="code hl_class" href="classiot_1_1mqtt_1_1packets_1_1Connack.html">Connack</a>::<a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Connack.html#a7ba5c498454af80e8fbd82ebb3d34629">getSessionPresent</a>() <span class="keyword">const</span> {</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classiot_1_1mqtt_1_1packets_1_1Connack.html#a6fc1d39b695378e5abd95e24ed46ecfd">sessionPresent</a>;</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    }</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="foldopen" id="foldopen00072" data-start="{" data-end="}">
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="classiot_1_1mqtt_1_1packets_1_1Connack.html#a9d5a9abd54366d63606e6aef01a97db2">   72</a></span>    uint8_t <a class="code hl_class" href="classiot_1_1mqtt_1_1packets_1_1Connack.html">Connack</a>::<a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Connack.html#a9d5a9abd54366d63606e6aef01a97db2">getAcknowledgeFlags</a>() <span class="keyword">const</span> {</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        <span class="keywordflow">return</span> acknowledgeFlags;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    }</div>
 </div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>} <span class="comment">// namespace iot::mqtt::packets</span></div>
-<div class="ttc" id="aclassiot_1_1mqtt_1_1packets_1_1Connack_html"><div class="ttname"><a href="classiot_1_1mqtt_1_1packets_1_1Connack.html">iot::mqtt::packets::Connack</a></div><div class="ttdef"><b>Definition</b> <a href="mqtt_2packets_2Connack_8h_source.html#l00044">Connack.h:44</a></div></div>
-<div class="ttc" id="aclassiot_1_1mqtt_1_1packets_1_1Connack_html_a06bb934f481d45386d9e9e73e33b68e5"><div class="ttname"><a href="classiot_1_1mqtt_1_1packets_1_1Connack.html#a06bb934f481d45386d9e9e73e33b68e5">iot::mqtt::packets::Connack::getReturnCode</a></div><div class="ttdeci">uint8_t getReturnCode() const</div><div class="ttdef"><b>Definition</b> <a href="#l00054">Connack.cpp:54</a></div></div>
-<div class="ttc" id="aclassiot_1_1mqtt_1_1packets_1_1Connack_html_a06f6c7bfe4a6bc964be98aa2a2623440"><div class="ttname"><a href="classiot_1_1mqtt_1_1packets_1_1Connack.html#a06f6c7bfe4a6bc964be98aa2a2623440">iot::mqtt::packets::Connack::serializeVP</a></div><div class="ttdeci">std::vector&lt; char &gt; serializeVP() const override</div><div class="ttdef"><b>Definition</b> <a href="#l00041">Connack.cpp:41</a></div></div>
-<div class="ttc" id="aclassiot_1_1mqtt_1_1packets_1_1Connack_html_a5fee5b78f6e794c6f89fe60c76052850"><div class="ttname"><a href="classiot_1_1mqtt_1_1packets_1_1Connack.html#a5fee5b78f6e794c6f89fe60c76052850">iot::mqtt::packets::Connack::Connack</a></div><div class="ttdeci">Connack(uint8_t returncode, uint8_t acknowledgeFlags)</div><div class="ttdef"><b>Definition</b> <a href="#l00035">Connack.cpp:35</a></div></div>
-<div class="ttc" id="aclassiot_1_1mqtt_1_1packets_1_1Connack_html_a6fc1d39b695378e5abd95e24ed46ecfd"><div class="ttname"><a href="classiot_1_1mqtt_1_1packets_1_1Connack.html#a6fc1d39b695378e5abd95e24ed46ecfd">iot::mqtt::packets::Connack::sessionPresent</a></div><div class="ttdeci">bool sessionPresent</div><div class="ttdef"><b>Definition</b> <a href="mqtt_2packets_2Connack_8h_source.html#l00062">Connack.h:62</a></div></div>
-<div class="ttc" id="aclassiot_1_1mqtt_1_1packets_1_1Connack_html_a7ba5c498454af80e8fbd82ebb3d34629"><div class="ttname"><a href="classiot_1_1mqtt_1_1packets_1_1Connack.html#a7ba5c498454af80e8fbd82ebb3d34629">iot::mqtt::packets::Connack::getSessionPresent</a></div><div class="ttdeci">bool getSessionPresent() const</div><div class="ttdef"><b>Definition</b> <a href="#l00058">Connack.cpp:58</a></div></div>
-<div class="ttc" id="aclassiot_1_1mqtt_1_1packets_1_1Connack_html_a9d5a9abd54366d63606e6aef01a97db2"><div class="ttname"><a href="classiot_1_1mqtt_1_1packets_1_1Connack.html#a9d5a9abd54366d63606e6aef01a97db2">iot::mqtt::packets::Connack::getAcknowledgeFlags</a></div><div class="ttdeci">uint8_t getAcknowledgeFlags() const</div><div class="ttdef"><b>Definition</b> <a href="#l00050">Connack.cpp:50</a></div></div>
-<div class="ttc" id="aclassiot_1_1mqtt_1_1packets_1_1Connack_html_ad626273338f316356bae311362801b6e"><div class="ttname"><a href="classiot_1_1mqtt_1_1packets_1_1Connack.html#ad626273338f316356bae311362801b6e">iot::mqtt::packets::Connack::Connack</a></div><div class="ttdeci">Connack()</div><div class="ttdef"><b>Definition</b> <a href="#l00031">Connack.cpp:31</a></div></div>
-<div class="ttc" id="amqtt-fast_2packets_2Connack_8h_html_a09b0564b21f03d3d86bac8b5a09a4999"><div class="ttname"><a href="mqtt-fast_2packets_2Connack_8h.html#a09b0564b21f03d3d86bac8b5a09a4999">MQTT_CONNACK</a></div><div class="ttdeci">#define MQTT_CONNACK</div><div class="ttdef"><b>Definition</b> <a href="mqtt-fast_2packets_2Connack_8h_source.html#l00035">Connack.h:35</a></div></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="foldopen" id="foldopen00076" data-start="{" data-end="}">
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="classiot_1_1mqtt_1_1packets_1_1Connack.html#a06bb934f481d45386d9e9e73e33b68e5">   76</a></span>    uint8_t <a class="code hl_class" href="classiot_1_1mqtt_1_1packets_1_1Connack.html">Connack</a>::<a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Connack.html#a06bb934f481d45386d9e9e73e33b68e5">getReturnCode</a>() <span class="keyword">const</span> {</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        <span class="keywordflow">return</span> returnCode;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    }</div>
+</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="foldopen" id="foldopen00080" data-start="{" data-end="}">
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="classiot_1_1mqtt_1_1packets_1_1Connack.html#a7ba5c498454af80e8fbd82ebb3d34629">   80</a></span>    <span class="keywordtype">bool</span> <a class="code hl_class" href="classiot_1_1mqtt_1_1packets_1_1Connack.html">Connack</a>::<a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Connack.html#a7ba5c498454af80e8fbd82ebb3d34629">getSessionPresent</a>() <span class="keyword">const</span> {</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classiot_1_1mqtt_1_1packets_1_1Connack.html#a6fc1d39b695378e5abd95e24ed46ecfd">sessionPresent</a>;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    }</div>
+</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>} <span class="comment">// namespace iot::mqtt::packets</span></div>
+<div class="ttc" id="aclassiot_1_1mqtt_1_1packets_1_1Connack_html"><div class="ttname"><a href="classiot_1_1mqtt_1_1packets_1_1Connack.html">iot::mqtt::packets::Connack</a></div><div class="ttdef"><b>Definition</b> <a href="mqtt_2packets_2Connack_8h_source.html#l00066">Connack.h:66</a></div></div>
+<div class="ttc" id="aclassiot_1_1mqtt_1_1packets_1_1Connack_html_a06bb934f481d45386d9e9e73e33b68e5"><div class="ttname"><a href="classiot_1_1mqtt_1_1packets_1_1Connack.html#a06bb934f481d45386d9e9e73e33b68e5">iot::mqtt::packets::Connack::getReturnCode</a></div><div class="ttdeci">uint8_t getReturnCode() const</div><div class="ttdef"><b>Definition</b> <a href="#l00076">Connack.cpp:76</a></div></div>
+<div class="ttc" id="aclassiot_1_1mqtt_1_1packets_1_1Connack_html_a06f6c7bfe4a6bc964be98aa2a2623440"><div class="ttname"><a href="classiot_1_1mqtt_1_1packets_1_1Connack.html#a06f6c7bfe4a6bc964be98aa2a2623440">iot::mqtt::packets::Connack::serializeVP</a></div><div class="ttdeci">std::vector&lt; char &gt; serializeVP() const override</div><div class="ttdef"><b>Definition</b> <a href="#l00063">Connack.cpp:63</a></div></div>
+<div class="ttc" id="aclassiot_1_1mqtt_1_1packets_1_1Connack_html_a5fee5b78f6e794c6f89fe60c76052850"><div class="ttname"><a href="classiot_1_1mqtt_1_1packets_1_1Connack.html#a5fee5b78f6e794c6f89fe60c76052850">iot::mqtt::packets::Connack::Connack</a></div><div class="ttdeci">Connack(uint8_t returncode, uint8_t acknowledgeFlags)</div><div class="ttdef"><b>Definition</b> <a href="#l00057">Connack.cpp:57</a></div></div>
+<div class="ttc" id="aclassiot_1_1mqtt_1_1packets_1_1Connack_html_a6fc1d39b695378e5abd95e24ed46ecfd"><div class="ttname"><a href="classiot_1_1mqtt_1_1packets_1_1Connack.html#a6fc1d39b695378e5abd95e24ed46ecfd">iot::mqtt::packets::Connack::sessionPresent</a></div><div class="ttdeci">bool sessionPresent</div><div class="ttdef"><b>Definition</b> <a href="mqtt_2packets_2Connack_8h_source.html#l00084">Connack.h:84</a></div></div>
+<div class="ttc" id="aclassiot_1_1mqtt_1_1packets_1_1Connack_html_a7ba5c498454af80e8fbd82ebb3d34629"><div class="ttname"><a href="classiot_1_1mqtt_1_1packets_1_1Connack.html#a7ba5c498454af80e8fbd82ebb3d34629">iot::mqtt::packets::Connack::getSessionPresent</a></div><div class="ttdeci">bool getSessionPresent() const</div><div class="ttdef"><b>Definition</b> <a href="#l00080">Connack.cpp:80</a></div></div>
+<div class="ttc" id="aclassiot_1_1mqtt_1_1packets_1_1Connack_html_a9d5a9abd54366d63606e6aef01a97db2"><div class="ttname"><a href="classiot_1_1mqtt_1_1packets_1_1Connack.html#a9d5a9abd54366d63606e6aef01a97db2">iot::mqtt::packets::Connack::getAcknowledgeFlags</a></div><div class="ttdeci">uint8_t getAcknowledgeFlags() const</div><div class="ttdef"><b>Definition</b> <a href="#l00072">Connack.cpp:72</a></div></div>
+<div class="ttc" id="aclassiot_1_1mqtt_1_1packets_1_1Connack_html_ad626273338f316356bae311362801b6e"><div class="ttname"><a href="classiot_1_1mqtt_1_1packets_1_1Connack.html#ad626273338f316356bae311362801b6e">iot::mqtt::packets::Connack::Connack</a></div><div class="ttdeci">Connack()</div><div class="ttdef"><b>Definition</b> <a href="#l00053">Connack.cpp:53</a></div></div>
+<div class="ttc" id="amqtt-fast_2packets_2Connack_8h_html_a09b0564b21f03d3d86bac8b5a09a4999"><div class="ttname"><a href="mqtt-fast_2packets_2Connack_8h.html#a09b0564b21f03d3d86bac8b5a09a4999">MQTT_CONNACK</a></div><div class="ttdeci">#define MQTT_CONNACK</div><div class="ttdef"><b>Definition</b> <a href="mqtt-fast_2packets_2Connack_8h_source.html#l00057">Connack.h:57</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_28592ecdec30ec29223e366148bdb66c.html">iot</a></li><li class="navelem"><a class="el" href="dir_9fa9cc1bc73227ba3c1e7b2368f5d654.html">mqtt</a></li><li class="navelem"><a class="el" href="dir_10488b53962af46d097f29192687f02d.html">packets</a></li><li class="navelem"><a class="el" href="mqtt_2packets_2Connack_8cpp.html">Connack.cpp</a></li>
-    <li class="footer">Generated on Tue Feb 25 2025 14:01:58 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generated on Sun Mar 9 2025 01:33:24 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>

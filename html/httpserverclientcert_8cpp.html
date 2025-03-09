@@ -108,7 +108,7 @@ $(function(){initNavTree('httpserverclientcert_8cpp.html',''); initResizable(tru
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for httpserverclientcert.cpp:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="httpserverclientcert_8cpp__incl.svg" width="1168" height="506"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="httpserverclientcert_8cpp__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 </div>
 <p><a href="httpserverclientcert_8cpp_source.html">Go to the source code of this file.</a></p>
@@ -138,58 +138,58 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="httpserverclientcert_8cpp_source.html#l00032">32</a> of file <a class="el" href="httpserverclientcert_8cpp_source.html">httpserverclientcert.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   32</span>                                 {</div>
-<div class="line"><span class="lineno">   33</span>    <span class="keyword">using </span><a class="code hl_class" href="classexpress_1_1WebApp.html">WebApp</a> = apps::http::STREAM::WebApp;</div>
-<div class="line"><span class="lineno">   34</span>    <span class="keyword">using </span><a class="code hl_typedef" href="namespacetls.html#afcb9219f4cf94a717de2044384768d63">SocketAddress</a> = WebApp::SocketAddress;</div>
-<div class="line"><span class="lineno">   35</span> </div>
-<div class="line"><span class="lineno">   36</span>    <span class="keyword">const</span> <a class="code hl_class" href="classexpress_1_1WebApp.html">WebApp</a> webApp(apps::http::STREAM::getWebApp(<span class="stringliteral">&quot;httpserver&quot;</span>));</div>
-<div class="line"><span class="lineno">   37</span> </div>
-<div class="line"><span class="lineno">   38</span>    <a class="code hl_class" href="classnet_1_1config_1_1ConfigSection.html">net::config::ConfigSection</a> configWeb = <a class="code hl_class" href="classnet_1_1config_1_1ConfigSection.html">net::config::ConfigSection</a>(&amp;webApp.getConfig(), <span class="stringliteral">&quot;www&quot;</span>, <span class="stringliteral">&quot;Web behavior of httpserver&quot;</span>);</div>
-<div class="line"><span class="lineno">   39</span>    CLI::Option* htmlRoot = configWeb.<a class="code hl_function" href="classnet_1_1config_1_1ConfigSection.html#a3bd28fd716c3c4e085cba02844aadb1e">addOption</a>(<span class="stringliteral">&quot;--html-root&quot;</span>, <span class="stringliteral">&quot;HTML root directory&quot;</span>, <span class="stringliteral">&quot;path&quot;</span>, <span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><span class="lineno">   40</span>    configWeb.<a class="code hl_function" href="classnet_1_1config_1_1ConfigSection.html#afe7a0030f5ef727586a4dc6d32410ce7">required</a>(htmlRoot);</div>
-<div class="line"><span class="lineno">   41</span>    <a class="code hl_function" href="classexpress_1_1WebApp.html#a0a01439a0cc8dfc86ed14f1094826b7e">WebApp::init</a>(argc, argv);</div>
-<div class="line"><span class="lineno">   42</span> </div>
-<div class="line"><span class="lineno">   43</span>    webApp.use(<a class="code hl_class" href="classexpress_1_1middleware_1_1StaticMiddleware.html">express::middleware::StaticMiddleware</a>(htmlRoot-&gt;as&lt;std::string&gt;()));</div>
-<div class="line"><span class="lineno">   44</span> </div>
-<div class="line"><span class="lineno">   45</span><span class="preprocessor">#if (STREAM_TYPE == TLS)</span></div>
-<div class="line"><span class="lineno">   46</span>    <span class="comment">//    std::map&lt;std::string, std::map&lt;std::string, std::any&gt;&gt; sniCerts = {</span></div>
-<div class="line"><span class="lineno">   47</span>    <span class="comment">//        {&quot;snodec.home.vchrist.at&quot;, {{&quot;Cert&quot;, certChainFile}, {&quot;CertKey&quot;, keyFile}, {&quot;Password&quot;, password}, {&quot;CaFile&quot;,</span></div>
-<div class="line"><span class="lineno">   48</span>    <span class="comment">//        caFile}}},</span></div>
-<div class="line"><span class="lineno">   49</span>    <span class="comment">//        {&quot;www.vchrist.at&quot;, {{&quot;Cert&quot;, certChainFile}, {&quot;CertKey&quot;, keyFile}, {&quot;Password&quot;, password}, {&quot;CaFile&quot;, caFile}}}};</span></div>
-<div class="line"><span class="lineno">   50</span> </div>
-<div class="line"><span class="lineno">   51</span>    <span class="comment">//    webApp.addSniCerts(sniCerts);</span></div>
-<div class="line"><span class="lineno">   52</span>    <span class="comment">//    webApp.forceSni();</span></div>
-<div class="line"><span class="lineno">   53</span><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="lineno">   54</span>    webApp.listen(</div>
-<div class="line"><span class="lineno">   55</span>        [instanceName = webApp.getConfig().getInstanceName()](<span class="keyword">const</span> SocketAddress&amp; socketAddress, <span class="keyword">const</span> <a class="code hl_class" href="classcore_1_1socket_1_1State.html">core::socket::State</a>&amp; state) {</div>
-<div class="line"><span class="lineno">   56</span>            switch (state) {</div>
-<div class="line"><span class="lineno">   57</span>                case core::socket::State::OK:</div>
-<div class="line"><span class="lineno">   58</span>                    VLOG(1) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot;: listening on &#39;&quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
-<div class="line"><span class="lineno">   59</span>                    break;</div>
-<div class="line"><span class="lineno">   60</span>                case core::socket::State::DISABLED:</div>
-<div class="line"><span class="lineno">   61</span>                    VLOG(1) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot;: disabled&quot;</span>;</div>
-<div class="line"><span class="lineno">   62</span>                    break;</div>
-<div class="line"><span class="lineno">   63</span>                case core::socket::State::ERROR:</div>
-<div class="line"><span class="lineno">   64</span>                    LOG(ERROR) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; state.what();</div>
-<div class="line"><span class="lineno">   65</span>                    break;</div>
-<div class="line"><span class="lineno">   66</span>                case core::socket::State::FATAL:</div>
-<div class="line"><span class="lineno">   67</span>                    LOG(FATAL) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; state.what();</div>
-<div class="line"><span class="lineno">   68</span>                    break;</div>
-<div class="line"><span class="lineno">   69</span>            }</div>
-<div class="line"><span class="lineno">   70</span>        });</div>
-<div class="line"><span class="lineno">   71</span> </div>
-<div class="line"><span class="lineno">   72</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="classexpress_1_1WebApp.html#a54e6910c9466c61d0b217490b7d9bb5a">WebApp::start</a>();</div>
-<div class="line"><span class="lineno">   73</span>}</div>
-<div class="ttc" id="aclasscore_1_1socket_1_1State_html"><div class="ttname"><a href="classcore_1_1socket_1_1State.html">core::socket::State</a></div><div class="ttdef"><b>Definition</b> <a href="socket_2State_8h_source.html#l00031">State.h:31</a></div></div>
-<div class="ttc" id="aclassexpress_1_1WebApp_html"><div class="ttname"><a href="classexpress_1_1WebApp.html">express::WebApp</a></div><div class="ttdef"><b>Definition</b> <a href="WebApp_8h_source.html#l00037">WebApp.h:37</a></div></div>
-<div class="ttc" id="aclassexpress_1_1WebApp_html_a0a01439a0cc8dfc86ed14f1094826b7e"><div class="ttname"><a href="classexpress_1_1WebApp.html#a0a01439a0cc8dfc86ed14f1094826b7e">express::WebApp::init</a></div><div class="ttdeci">static void init(int argc, char *argv[])</div><div class="ttdef"><b>Definition</b> <a href="WebApp_8cpp_source.html#l00034">WebApp.cpp:34</a></div></div>
-<div class="ttc" id="aclassexpress_1_1WebApp_html_a54e6910c9466c61d0b217490b7d9bb5a"><div class="ttname"><a href="classexpress_1_1WebApp.html#a54e6910c9466c61d0b217490b7d9bb5a">express::WebApp::start</a></div><div class="ttdeci">static int start(const utils::Timeval &amp;timeOut={LONG_MAX, 0})</div><div class="ttdef"><b>Definition</b> <a href="WebApp_8cpp_source.html#l00038">WebApp.cpp:38</a></div></div>
-<div class="ttc" id="aclassexpress_1_1middleware_1_1StaticMiddleware_html"><div class="ttname"><a href="classexpress_1_1middleware_1_1StaticMiddleware.html">express::middleware::StaticMiddleware</a></div><div class="ttdef"><b>Definition</b> <a href="StaticMiddleware_8h_source.html#l00037">StaticMiddleware.h:37</a></div></div>
-<div class="ttc" id="aclassnet_1_1config_1_1ConfigSection_html"><div class="ttname"><a href="classnet_1_1config_1_1ConfigSection.html">net::config::ConfigSection</a></div><div class="ttdef"><b>Definition</b> <a href="ConfigSection_8h_source.html#l00043">ConfigSection.h:43</a></div></div>
-<div class="ttc" id="aclassnet_1_1config_1_1ConfigSection_html_a3bd28fd716c3c4e085cba02844aadb1e"><div class="ttname"><a href="classnet_1_1config_1_1ConfigSection.html#a3bd28fd716c3c4e085cba02844aadb1e">net::config::ConfigSection::addOption</a></div><div class="ttdeci">CLI::Option * addOption(const std::string &amp;name, const std::string &amp;description)</div><div class="ttdef"><b>Definition</b> <a href="ConfigSection_8cpp_source.html#l00081">ConfigSection.cpp:81</a></div></div>
-<div class="ttc" id="aclassnet_1_1config_1_1ConfigSection_html_afe7a0030f5ef727586a4dc6d32410ce7"><div class="ttname"><a href="classnet_1_1config_1_1ConfigSection.html#afe7a0030f5ef727586a4dc6d32410ce7">net::config::ConfigSection::required</a></div><div class="ttdeci">void required(CLI::Option *opt, bool req=true)</div><div class="ttdef"><b>Definition</b> <a href="ConfigSection_8cpp_source.html#l00060">ConfigSection.cpp:60</a></div></div>
-<div class="ttc" id="anamespacetls_html_afcb9219f4cf94a717de2044384768d63"><div class="ttname"><a href="namespacetls.html#afcb9219f4cf94a717de2044384768d63">tls::SocketAddress</a></div><div class="ttdeci">SocketClient::SocketAddress SocketAddress</div><div class="ttdef"><b>Definition</b> <a href="httplowlevelclient_8cpp_source.html#l00123">httplowlevelclient.cpp:123</a></div></div>
+<p class="definition">Definition at line <a class="el" href="httpserverclientcert_8cpp_source.html#l00054">54</a> of file <a class="el" href="httpserverclientcert_8cpp_source.html">httpserverclientcert.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   54</span>                                 {</div>
+<div class="line"><span class="lineno">   55</span>    <span class="keyword">using </span><a class="code hl_class" href="classexpress_1_1WebApp.html">WebApp</a> = apps::http::STREAM::WebApp;</div>
+<div class="line"><span class="lineno">   56</span>    <span class="keyword">using </span><a class="code hl_typedef" href="namespacetls.html#afcb9219f4cf94a717de2044384768d63">SocketAddress</a> = WebApp::SocketAddress;</div>
+<div class="line"><span class="lineno">   57</span> </div>
+<div class="line"><span class="lineno">   58</span>    <span class="keyword">const</span> <a class="code hl_class" href="classexpress_1_1WebApp.html">WebApp</a> webApp(apps::http::STREAM::getWebApp(<span class="stringliteral">&quot;httpserver&quot;</span>));</div>
+<div class="line"><span class="lineno">   59</span> </div>
+<div class="line"><span class="lineno">   60</span>    <a class="code hl_class" href="classnet_1_1config_1_1ConfigSection.html">net::config::ConfigSection</a> configWeb = <a class="code hl_class" href="classnet_1_1config_1_1ConfigSection.html">net::config::ConfigSection</a>(&amp;webApp.getConfig(), <span class="stringliteral">&quot;www&quot;</span>, <span class="stringliteral">&quot;Web behavior of httpserver&quot;</span>);</div>
+<div class="line"><span class="lineno">   61</span>    CLI::Option* htmlRoot = configWeb.<a class="code hl_function" href="classnet_1_1config_1_1ConfigSection.html#a3bd28fd716c3c4e085cba02844aadb1e">addOption</a>(<span class="stringliteral">&quot;--html-root&quot;</span>, <span class="stringliteral">&quot;HTML root directory&quot;</span>, <span class="stringliteral">&quot;path&quot;</span>, <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">   62</span>    configWeb.<a class="code hl_function" href="classnet_1_1config_1_1ConfigSection.html#afe7a0030f5ef727586a4dc6d32410ce7">required</a>(htmlRoot);</div>
+<div class="line"><span class="lineno">   63</span>    <a class="code hl_function" href="classexpress_1_1WebApp.html#a0a01439a0cc8dfc86ed14f1094826b7e">WebApp::init</a>(argc, argv);</div>
+<div class="line"><span class="lineno">   64</span> </div>
+<div class="line"><span class="lineno">   65</span>    webApp.use(<a class="code hl_class" href="classexpress_1_1middleware_1_1StaticMiddleware.html">express::middleware::StaticMiddleware</a>(htmlRoot-&gt;as&lt;std::string&gt;()));</div>
+<div class="line"><span class="lineno">   66</span> </div>
+<div class="line"><span class="lineno">   67</span><span class="preprocessor">#if (STREAM_TYPE == TLS)</span></div>
+<div class="line"><span class="lineno">   68</span>    <span class="comment">//    std::map&lt;std::string, std::map&lt;std::string, std::any&gt;&gt; sniCerts = {</span></div>
+<div class="line"><span class="lineno">   69</span>    <span class="comment">//        {&quot;snodec.home.vchrist.at&quot;, {{&quot;Cert&quot;, certChainFile}, {&quot;CertKey&quot;, keyFile}, {&quot;Password&quot;, password}, {&quot;CaFile&quot;,</span></div>
+<div class="line"><span class="lineno">   70</span>    <span class="comment">//        caFile}}},</span></div>
+<div class="line"><span class="lineno">   71</span>    <span class="comment">//        {&quot;www.vchrist.at&quot;, {{&quot;Cert&quot;, certChainFile}, {&quot;CertKey&quot;, keyFile}, {&quot;Password&quot;, password}, {&quot;CaFile&quot;, caFile}}}};</span></div>
+<div class="line"><span class="lineno">   72</span> </div>
+<div class="line"><span class="lineno">   73</span>    <span class="comment">//    webApp.addSniCerts(sniCerts);</span></div>
+<div class="line"><span class="lineno">   74</span>    <span class="comment">//    webApp.forceSni();</span></div>
+<div class="line"><span class="lineno">   75</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">   76</span>    webApp.listen(</div>
+<div class="line"><span class="lineno">   77</span>        [instanceName = webApp.getConfig().getInstanceName()](<span class="keyword">const</span> SocketAddress&amp; socketAddress, <span class="keyword">const</span> <a class="code hl_class" href="classcore_1_1socket_1_1State.html">core::socket::State</a>&amp; state) {</div>
+<div class="line"><span class="lineno">   78</span>            switch (state) {</div>
+<div class="line"><span class="lineno">   79</span>                case core::socket::State::OK:</div>
+<div class="line"><span class="lineno">   80</span>                    VLOG(1) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot;: listening on &#39;&quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
+<div class="line"><span class="lineno">   81</span>                    break;</div>
+<div class="line"><span class="lineno">   82</span>                case core::socket::State::DISABLED:</div>
+<div class="line"><span class="lineno">   83</span>                    VLOG(1) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot;: disabled&quot;</span>;</div>
+<div class="line"><span class="lineno">   84</span>                    break;</div>
+<div class="line"><span class="lineno">   85</span>                case core::socket::State::ERROR:</div>
+<div class="line"><span class="lineno">   86</span>                    LOG(ERROR) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; state.what();</div>
+<div class="line"><span class="lineno">   87</span>                    break;</div>
+<div class="line"><span class="lineno">   88</span>                case core::socket::State::FATAL:</div>
+<div class="line"><span class="lineno">   89</span>                    LOG(FATAL) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; state.what();</div>
+<div class="line"><span class="lineno">   90</span>                    break;</div>
+<div class="line"><span class="lineno">   91</span>            }</div>
+<div class="line"><span class="lineno">   92</span>        });</div>
+<div class="line"><span class="lineno">   93</span> </div>
+<div class="line"><span class="lineno">   94</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="classexpress_1_1WebApp.html#a54e6910c9466c61d0b217490b7d9bb5a">WebApp::start</a>();</div>
+<div class="line"><span class="lineno">   95</span>}</div>
+<div class="ttc" id="aclasscore_1_1socket_1_1State_html"><div class="ttname"><a href="classcore_1_1socket_1_1State.html">core::socket::State</a></div><div class="ttdef"><b>Definition</b> <a href="socket_2State_8h_source.html#l00053">State.h:53</a></div></div>
+<div class="ttc" id="aclassexpress_1_1WebApp_html"><div class="ttname"><a href="classexpress_1_1WebApp.html">express::WebApp</a></div><div class="ttdef"><b>Definition</b> <a href="WebApp_8h_source.html#l00059">WebApp.h:59</a></div></div>
+<div class="ttc" id="aclassexpress_1_1WebApp_html_a0a01439a0cc8dfc86ed14f1094826b7e"><div class="ttname"><a href="classexpress_1_1WebApp.html#a0a01439a0cc8dfc86ed14f1094826b7e">express::WebApp::init</a></div><div class="ttdeci">static void init(int argc, char *argv[])</div><div class="ttdef"><b>Definition</b> <a href="WebApp_8cpp_source.html#l00056">WebApp.cpp:56</a></div></div>
+<div class="ttc" id="aclassexpress_1_1WebApp_html_a54e6910c9466c61d0b217490b7d9bb5a"><div class="ttname"><a href="classexpress_1_1WebApp.html#a54e6910c9466c61d0b217490b7d9bb5a">express::WebApp::start</a></div><div class="ttdeci">static int start(const utils::Timeval &amp;timeOut={LONG_MAX, 0})</div><div class="ttdef"><b>Definition</b> <a href="WebApp_8cpp_source.html#l00060">WebApp.cpp:60</a></div></div>
+<div class="ttc" id="aclassexpress_1_1middleware_1_1StaticMiddleware_html"><div class="ttname"><a href="classexpress_1_1middleware_1_1StaticMiddleware.html">express::middleware::StaticMiddleware</a></div><div class="ttdef"><b>Definition</b> <a href="StaticMiddleware_8h_source.html#l00059">StaticMiddleware.h:59</a></div></div>
+<div class="ttc" id="aclassnet_1_1config_1_1ConfigSection_html"><div class="ttname"><a href="classnet_1_1config_1_1ConfigSection.html">net::config::ConfigSection</a></div><div class="ttdef"><b>Definition</b> <a href="ConfigSection_8h_source.html#l00065">ConfigSection.h:65</a></div></div>
+<div class="ttc" id="aclassnet_1_1config_1_1ConfigSection_html_a3bd28fd716c3c4e085cba02844aadb1e"><div class="ttname"><a href="classnet_1_1config_1_1ConfigSection.html#a3bd28fd716c3c4e085cba02844aadb1e">net::config::ConfigSection::addOption</a></div><div class="ttdeci">CLI::Option * addOption(const std::string &amp;name, const std::string &amp;description)</div><div class="ttdef"><b>Definition</b> <a href="ConfigSection_8cpp_source.html#l00103">ConfigSection.cpp:103</a></div></div>
+<div class="ttc" id="aclassnet_1_1config_1_1ConfigSection_html_afe7a0030f5ef727586a4dc6d32410ce7"><div class="ttname"><a href="classnet_1_1config_1_1ConfigSection.html#afe7a0030f5ef727586a4dc6d32410ce7">net::config::ConfigSection::required</a></div><div class="ttdeci">void required(CLI::Option *opt, bool req=true)</div><div class="ttdef"><b>Definition</b> <a href="ConfigSection_8cpp_source.html#l00082">ConfigSection.cpp:82</a></div></div>
+<div class="ttc" id="anamespacetls_html_afcb9219f4cf94a717de2044384768d63"><div class="ttname"><a href="namespacetls.html#afcb9219f4cf94a717de2044384768d63">tls::SocketAddress</a></div><div class="ttdeci">SocketClient::SocketAddress SocketAddress</div><div class="ttdef"><b>Definition</b> <a href="httplowlevelclient_8cpp_source.html#l00145">httplowlevelclient.cpp:145</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -199,7 +199,7 @@ Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_9654b8d08f4bba4e84b362c5fd320bee.html">apps</a></li><li class="navelem"><a class="el" href="dir_9741969ad79fc4087a97a0753cba2960.html">http</a></li><li class="navelem"><a class="el" href="httpserverclientcert_8cpp.html">httpserverclientcert.cpp</a></li>
-    <li class="footer">Generated on Tue Feb 25 2025 14:03:09 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generated on Sun Mar 9 2025 01:34:38 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>

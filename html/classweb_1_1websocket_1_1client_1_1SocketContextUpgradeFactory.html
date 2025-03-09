@@ -115,7 +115,7 @@ Inheritance diagram for web::websocket::client::SocketContextUpgradeFactory:</di
 <div class="dynheader">
 Collaboration diagram for web::websocket::client::SocketContextUpgradeFactory:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classweb_1_1websocket_1_1client_1_1SocketContextUpgradeFactory__coll__graph.svg" width="2351" height="799"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classweb_1_1websocket_1_1client_1_1SocketContextUpgradeFactory__coll__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -185,7 +185,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="websocket_2client_2SocketContextUpgradeFactory_8h_source.html#l00033">33</a> of file <a class="el" href="websocket_2client_2SocketContextUpgradeFactory_8h_source.html">SocketContextUpgradeFactory.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="websocket_2client_2SocketContextUpgradeFactory_8h_source.html#l00055">55</a> of file <a class="el" href="websocket_2client_2SocketContextUpgradeFactory_8h_source.html">SocketContextUpgradeFactory.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aad961a8ed643a0f85acce79962d4cfb3" name="aad961a8ed643a0f85acce79962d4cfb3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aad961a8ed643a0f85acce79962d4cfb3">&#9670;&#160;</a></span>SocketContextUpgradeFactory()</h2>
@@ -247,32 +247,32 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classweb_1_1http_1_1SocketContextUpgradeFactory.html#ae48495963c1603b4afc9193f5bfad862">web::http::SocketContextUpgradeFactory&lt; web::http::client::Request, web::http::client::Response &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="websocket_2client_2SocketContextUpgradeFactory_8cpp_source.html#l00049">49</a> of file <a class="el" href="websocket_2client_2SocketContextUpgradeFactory_8cpp_source.html">SocketContextUpgradeFactory.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   51</span>                                                                         {</div>
-<div class="line"><span class="lineno">   52</span>        SocketContextUpgrade* socketContext = <span class="keyword">nullptr</span>;</div>
-<div class="line"><span class="lineno">   53</span> </div>
-<div class="line"><span class="lineno">   54</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classweb_1_1http_1_1SocketContextUpgradeFactory.html#a47a5b6d2ccfad6bcc6882108ddee6b57">response</a>-&gt;<a class="code hl_function" href="classweb_1_1http_1_1client_1_1Response.html#ae1e0c3462aad7f40e717f93f6944150a">get</a>(<span class="stringliteral">&quot;sec-websocket-accept&quot;</span>) == <a class="code hl_function" href="namespacebase64.html#a43968536c5e19d8c265e17d08fd91c3e">base64::serverWebSocketKey</a>(<a class="code hl_variable" href="classweb_1_1http_1_1SocketContextUpgradeFactory.html#a49afbcd1387bc71ce80b052882472a71">request</a>-&gt;<a class="code hl_function" href="classweb_1_1http_1_1client_1_1Request.html#a434d520c37e7f4fa0fed73c7b69e4f1b">header</a>(<span class="stringliteral">&quot;Sec-WebSocket-Key&quot;</span>))) {</div>
-<div class="line"><span class="lineno">   55</span>            <span class="keyword">const</span> std::string subProtocolName = <a class="code hl_variable" href="classweb_1_1http_1_1SocketContextUpgradeFactory.html#a47a5b6d2ccfad6bcc6882108ddee6b57">response</a>-&gt;<a class="code hl_function" href="classweb_1_1http_1_1client_1_1Response.html#ae1e0c3462aad7f40e717f93f6944150a">get</a>(<span class="stringliteral">&quot;sec-websocket-protocol&quot;</span>);</div>
-<div class="line"><span class="lineno">   56</span> </div>
-<div class="line"><span class="lineno">   57</span>            socketContext = <span class="keyword">new</span> SocketContextUpgrade(socketConnection, <span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">   58</span>            <span class="keyword">const</span> std::string selectedSubProtocolName = socketContext-&gt;loadSubProtocol(subProtocolName);</div>
-<div class="line"><span class="lineno">   59</span> </div>
-<div class="line"><span class="lineno">   60</span>            <span class="keywordflow">if</span> (selectedSubProtocolName.empty()) {</div>
-<div class="line"><span class="lineno">   61</span>                <span class="keyword">delete</span> socketContext;</div>
-<div class="line"><span class="lineno">   62</span>                socketContext = <span class="keyword">nullptr</span>;</div>
-<div class="line"><span class="lineno">   63</span>            }</div>
-<div class="line"><span class="lineno">   64</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   65</span>            <a class="code hl_function" href="classweb_1_1http_1_1client_1_1SocketContextUpgradeFactory.html#a254e57fe75d644633ca8ab5667e04f60">checkRefCount</a>();</div>
-<div class="line"><span class="lineno">   66</span>        }</div>
-<div class="line"><span class="lineno">   67</span> </div>
-<div class="line"><span class="lineno">   68</span>        <span class="keywordflow">return</span> socketContext;</div>
-<div class="line"><span class="lineno">   69</span>    }</div>
-<div class="ttc" id="aclassweb_1_1http_1_1SocketContextUpgradeFactory_html_a47a5b6d2ccfad6bcc6882108ddee6b57"><div class="ttname"><a href="classweb_1_1http_1_1SocketContextUpgradeFactory.html#a47a5b6d2ccfad6bcc6882108ddee6b57">web::http::SocketContextUpgradeFactory&lt; web::http::client::Request, web::http::client::Response &gt;::response</a></div><div class="ttdeci">Response * response</div><div class="ttdef"><b>Definition</b> <a href="http_2SocketContextUpgradeFactory_8h_source.html#l00074">SocketContextUpgradeFactory.h:74</a></div></div>
-<div class="ttc" id="aclassweb_1_1http_1_1SocketContextUpgradeFactory_html_a49afbcd1387bc71ce80b052882472a71"><div class="ttname"><a href="classweb_1_1http_1_1SocketContextUpgradeFactory.html#a49afbcd1387bc71ce80b052882472a71">web::http::SocketContextUpgradeFactory&lt; web::http::client::Request, web::http::client::Response &gt;::request</a></div><div class="ttdeci">Request * request</div><div class="ttdef"><b>Definition</b> <a href="http_2SocketContextUpgradeFactory_8h_source.html#l00073">SocketContextUpgradeFactory.h:73</a></div></div>
-<div class="ttc" id="aclassweb_1_1http_1_1client_1_1Request_html_a434d520c37e7f4fa0fed73c7b69e4f1b"><div class="ttname"><a href="classweb_1_1http_1_1client_1_1Request.html#a434d520c37e7f4fa0fed73c7b69e4f1b">web::http::client::Request::header</a></div><div class="ttdeci">std::string header(const std::string &amp;field)</div><div class="ttdef"><b>Definition</b> <a href="web_2http_2client_2Request_8cpp_source.html#l00616">Request.cpp:616</a></div></div>
-<div class="ttc" id="aclassweb_1_1http_1_1client_1_1Response_html_ae1e0c3462aad7f40e717f93f6944150a"><div class="ttname"><a href="classweb_1_1http_1_1client_1_1Response.html#ae1e0c3462aad7f40e717f93f6944150a">web::http::client::Response::get</a></div><div class="ttdeci">const std::string &amp; get(const std::string &amp;key, int i=0) const</div><div class="ttdef"><b>Definition</b> <a href="web_2http_2client_2Response_8cpp_source.html#l00031">Response.cpp:31</a></div></div>
-<div class="ttc" id="aclassweb_1_1http_1_1client_1_1SocketContextUpgradeFactory_html_a254e57fe75d644633ca8ab5667e04f60"><div class="ttname"><a href="classweb_1_1http_1_1client_1_1SocketContextUpgradeFactory.html#a254e57fe75d644633ca8ab5667e04f60">web::http::client::SocketContextUpgradeFactory::checkRefCount</a></div><div class="ttdeci">void checkRefCount() final</div><div class="ttdef"><b>Definition</b> <a href="http_2client_2SocketContextUpgradeFactory_8cpp_source.html#l00034">SocketContextUpgradeFactory.cpp:34</a></div></div>
-<div class="ttc" id="anamespacebase64_html_a43968536c5e19d8c265e17d08fd91c3e"><div class="ttname"><a href="namespacebase64.html#a43968536c5e19d8c265e17d08fd91c3e">base64::serverWebSocketKey</a></div><div class="ttdeci">std::string serverWebSocketKey(const std::string &amp;clientWebSocketKey)</div><div class="ttdef"><b>Definition</b> <a href="base64_8cpp_source.html#l00034">base64.cpp:34</a></div></div>
+<p class="definition">Definition at line <a class="el" href="websocket_2client_2SocketContextUpgradeFactory_8cpp_source.html#l00099">99</a> of file <a class="el" href="websocket_2client_2SocketContextUpgradeFactory_8cpp_source.html">SocketContextUpgradeFactory.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  101</span>                                                                         {</div>
+<div class="line"><span class="lineno">  102</span>        SocketContextUpgrade* socketContext = <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">  103</span> </div>
+<div class="line"><span class="lineno">  104</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classweb_1_1http_1_1SocketContextUpgradeFactory.html#a47a5b6d2ccfad6bcc6882108ddee6b57">response</a>-&gt;<a class="code hl_function" href="classweb_1_1http_1_1client_1_1Response.html#ae1e0c3462aad7f40e717f93f6944150a">get</a>(<span class="stringliteral">&quot;sec-websocket-accept&quot;</span>) == <a class="code hl_function" href="namespacebase64.html#a43968536c5e19d8c265e17d08fd91c3e">base64::serverWebSocketKey</a>(<a class="code hl_variable" href="classweb_1_1http_1_1SocketContextUpgradeFactory.html#a49afbcd1387bc71ce80b052882472a71">request</a>-&gt;<a class="code hl_function" href="classweb_1_1http_1_1client_1_1Request.html#a434d520c37e7f4fa0fed73c7b69e4f1b">header</a>(<span class="stringliteral">&quot;Sec-WebSocket-Key&quot;</span>))) {</div>
+<div class="line"><span class="lineno">  105</span>            <span class="keyword">const</span> std::string subProtocolName = <a class="code hl_variable" href="classweb_1_1http_1_1SocketContextUpgradeFactory.html#a47a5b6d2ccfad6bcc6882108ddee6b57">response</a>-&gt;<a class="code hl_function" href="classweb_1_1http_1_1client_1_1Response.html#ae1e0c3462aad7f40e717f93f6944150a">get</a>(<span class="stringliteral">&quot;sec-websocket-protocol&quot;</span>);</div>
+<div class="line"><span class="lineno">  106</span> </div>
+<div class="line"><span class="lineno">  107</span>            socketContext = <span class="keyword">new</span> SocketContextUpgrade(socketConnection, <span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  108</span>            <span class="keyword">const</span> std::string selectedSubProtocolName = socketContext-&gt;loadSubProtocol(subProtocolName);</div>
+<div class="line"><span class="lineno">  109</span> </div>
+<div class="line"><span class="lineno">  110</span>            <span class="keywordflow">if</span> (selectedSubProtocolName.empty()) {</div>
+<div class="line"><span class="lineno">  111</span>                <span class="keyword">delete</span> socketContext;</div>
+<div class="line"><span class="lineno">  112</span>                socketContext = <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">  113</span>            }</div>
+<div class="line"><span class="lineno">  114</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  115</span>            <a class="code hl_function" href="classweb_1_1http_1_1client_1_1SocketContextUpgradeFactory.html#a254e57fe75d644633ca8ab5667e04f60">checkRefCount</a>();</div>
+<div class="line"><span class="lineno">  116</span>        }</div>
+<div class="line"><span class="lineno">  117</span> </div>
+<div class="line"><span class="lineno">  118</span>        <span class="keywordflow">return</span> socketContext;</div>
+<div class="line"><span class="lineno">  119</span>    }</div>
+<div class="ttc" id="aclassweb_1_1http_1_1SocketContextUpgradeFactory_html_a47a5b6d2ccfad6bcc6882108ddee6b57"><div class="ttname"><a href="classweb_1_1http_1_1SocketContextUpgradeFactory.html#a47a5b6d2ccfad6bcc6882108ddee6b57">web::http::SocketContextUpgradeFactory&lt; web::http::client::Request, web::http::client::Response &gt;::response</a></div><div class="ttdeci">Response * response</div><div class="ttdef"><b>Definition</b> <a href="http_2SocketContextUpgradeFactory_8h_source.html#l00096">SocketContextUpgradeFactory.h:96</a></div></div>
+<div class="ttc" id="aclassweb_1_1http_1_1SocketContextUpgradeFactory_html_a49afbcd1387bc71ce80b052882472a71"><div class="ttname"><a href="classweb_1_1http_1_1SocketContextUpgradeFactory.html#a49afbcd1387bc71ce80b052882472a71">web::http::SocketContextUpgradeFactory&lt; web::http::client::Request, web::http::client::Response &gt;::request</a></div><div class="ttdeci">Request * request</div><div class="ttdef"><b>Definition</b> <a href="http_2SocketContextUpgradeFactory_8h_source.html#l00095">SocketContextUpgradeFactory.h:95</a></div></div>
+<div class="ttc" id="aclassweb_1_1http_1_1client_1_1Request_html_a434d520c37e7f4fa0fed73c7b69e4f1b"><div class="ttname"><a href="classweb_1_1http_1_1client_1_1Request.html#a434d520c37e7f4fa0fed73c7b69e4f1b">web::http::client::Request::header</a></div><div class="ttdeci">std::string header(const std::string &amp;field)</div><div class="ttdef"><b>Definition</b> <a href="web_2http_2client_2Request_8cpp_source.html#l00638">Request.cpp:638</a></div></div>
+<div class="ttc" id="aclassweb_1_1http_1_1client_1_1Response_html_ae1e0c3462aad7f40e717f93f6944150a"><div class="ttname"><a href="classweb_1_1http_1_1client_1_1Response.html#ae1e0c3462aad7f40e717f93f6944150a">web::http::client::Response::get</a></div><div class="ttdeci">const std::string &amp; get(const std::string &amp;key, int i=0) const</div><div class="ttdef"><b>Definition</b> <a href="web_2http_2client_2Response_8cpp_source.html#l00053">Response.cpp:53</a></div></div>
+<div class="ttc" id="aclassweb_1_1http_1_1client_1_1SocketContextUpgradeFactory_html_a254e57fe75d644633ca8ab5667e04f60"><div class="ttname"><a href="classweb_1_1http_1_1client_1_1SocketContextUpgradeFactory.html#a254e57fe75d644633ca8ab5667e04f60">web::http::client::SocketContextUpgradeFactory::checkRefCount</a></div><div class="ttdeci">void checkRefCount() final</div><div class="ttdef"><b>Definition</b> <a href="http_2client_2SocketContextUpgradeFactory_8cpp_source.html#l00056">SocketContextUpgradeFactory.cpp:56</a></div></div>
+<div class="ttc" id="anamespacebase64_html_a43968536c5e19d8c265e17d08fd91c3e"><div class="ttname"><a href="namespacebase64.html#a43968536c5e19d8c265e17d08fd91c3e">base64::serverWebSocketKey</a></div><div class="ttdeci">std::string serverWebSocketKey(const std::string &amp;clientWebSocketKey)</div><div class="ttdef"><b>Definition</b> <a href="base64_8cpp_source.html#l00056">base64.cpp:56</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -299,17 +299,17 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="websocket_2client_2SocketContextUpgradeFactory_8cpp_source.html#l00071">71</a> of file <a class="el" href="websocket_2client_2SocketContextUpgradeFactory_8cpp_source.html">SocketContextUpgradeFactory.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   71</span>                                           {</div>
-<div class="line"><span class="lineno">   72</span>        <span class="keyword">static</span> <span class="keywordtype">bool</span> linked = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   73</span> </div>
-<div class="line"><span class="lineno">   74</span>        <span class="keywordflow">if</span> (!linked) {</div>
-<div class="line"><span class="lineno">   75</span>            <a class="code hl_function" href="classweb_1_1http_1_1client_1_1SocketContextUpgradeFactory.html#aba8c1dcb3d67268eb0f9a0d2d4766e32">web::http::client::SocketContextUpgradeFactory::link</a>(<span class="stringliteral">&quot;websocket&quot;</span>, <a class="code hl_function" href="namespaceweb_1_1websocket_1_1client.html#a93e24df7002274bbed2f1be962dd98d4">websocketClientSocketContextUpgradeFactory</a>);</div>
-<div class="line"><span class="lineno">   76</span>            linked = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   77</span>        }</div>
-<div class="line"><span class="lineno">   78</span>    }</div>
-<div class="ttc" id="aclassweb_1_1http_1_1client_1_1SocketContextUpgradeFactory_html_aba8c1dcb3d67268eb0f9a0d2d4766e32"><div class="ttname"><a href="classweb_1_1http_1_1client_1_1SocketContextUpgradeFactory.html#aba8c1dcb3d67268eb0f9a0d2d4766e32">web::http::client::SocketContextUpgradeFactory::link</a></div><div class="ttdeci">static void link(const std::string &amp;upgradeContextName, SocketContextUpgradeFactory *(*linkedPlugin)())</div><div class="ttdef"><b>Definition</b> <a href="http_2client_2SocketContextUpgradeFactory_8cpp_source.html#l00040">SocketContextUpgradeFactory.cpp:40</a></div></div>
-<div class="ttc" id="anamespaceweb_1_1websocket_1_1client_html_a93e24df7002274bbed2f1be962dd98d4"><div class="ttname"><a href="namespaceweb_1_1websocket_1_1client.html#a93e24df7002274bbed2f1be962dd98d4">web::websocket::client::websocketClientSocketContextUpgradeFactory</a></div><div class="ttdeci">web::http::client::SocketContextUpgradeFactory * websocketClientSocketContextUpgradeFactory()</div><div class="ttdef"><b>Definition</b> <a href="websocket_2client_2SocketContextUpgradeFactory_8cpp_source.html#l00080">SocketContextUpgradeFactory.cpp:80</a></div></div>
+<p class="definition">Definition at line <a class="el" href="websocket_2client_2SocketContextUpgradeFactory_8cpp_source.html#l00121">121</a> of file <a class="el" href="websocket_2client_2SocketContextUpgradeFactory_8cpp_source.html">SocketContextUpgradeFactory.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  121</span>                                           {</div>
+<div class="line"><span class="lineno">  122</span>        <span class="keyword">static</span> <span class="keywordtype">bool</span> linked = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  123</span> </div>
+<div class="line"><span class="lineno">  124</span>        <span class="keywordflow">if</span> (!linked) {</div>
+<div class="line"><span class="lineno">  125</span>            <a class="code hl_function" href="classweb_1_1http_1_1client_1_1SocketContextUpgradeFactory.html#aba8c1dcb3d67268eb0f9a0d2d4766e32">web::http::client::SocketContextUpgradeFactory::link</a>(<span class="stringliteral">&quot;websocket&quot;</span>, <a class="code hl_function" href="namespaceweb_1_1websocket_1_1client.html#a93e24df7002274bbed2f1be962dd98d4">websocketClientSocketContextUpgradeFactory</a>);</div>
+<div class="line"><span class="lineno">  126</span>            linked = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  127</span>        }</div>
+<div class="line"><span class="lineno">  128</span>    }</div>
+<div class="ttc" id="aclassweb_1_1http_1_1client_1_1SocketContextUpgradeFactory_html_aba8c1dcb3d67268eb0f9a0d2d4766e32"><div class="ttname"><a href="classweb_1_1http_1_1client_1_1SocketContextUpgradeFactory.html#aba8c1dcb3d67268eb0f9a0d2d4766e32">web::http::client::SocketContextUpgradeFactory::link</a></div><div class="ttdeci">static void link(const std::string &amp;upgradeContextName, SocketContextUpgradeFactory *(*linkedPlugin)())</div><div class="ttdef"><b>Definition</b> <a href="http_2client_2SocketContextUpgradeFactory_8cpp_source.html#l00062">SocketContextUpgradeFactory.cpp:62</a></div></div>
+<div class="ttc" id="anamespaceweb_1_1websocket_1_1client_html_a93e24df7002274bbed2f1be962dd98d4"><div class="ttname"><a href="namespaceweb_1_1websocket_1_1client.html#a93e24df7002274bbed2f1be962dd98d4">web::websocket::client::websocketClientSocketContextUpgradeFactory</a></div><div class="ttdeci">web::http::client::SocketContextUpgradeFactory * websocketClientSocketContextUpgradeFactory()</div><div class="ttdef"><b>Definition</b> <a href="websocket_2client_2SocketContextUpgradeFactory_8cpp_source.html#l00130">SocketContextUpgradeFactory.cpp:130</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -338,10 +338,10 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classweb_1_1http_1_1SocketContextUpgradeFactory.html#afae3ffca7956a1db027b587fe0c218f7">web::http::SocketContextUpgradeFactory&lt; web::http::client::Request, web::http::client::Response &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="websocket_2client_2SocketContextUpgradeFactory_8cpp_source.html#l00044">44</a> of file <a class="el" href="websocket_2client_2SocketContextUpgradeFactory_8cpp_source.html">SocketContextUpgradeFactory.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   44</span>                                                {</div>
-<div class="line"><span class="lineno">   45</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;websocket&quot;</span>;</div>
-<div class="line"><span class="lineno">   46</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="websocket_2client_2SocketContextUpgradeFactory_8cpp_source.html#l00094">94</a> of file <a class="el" href="websocket_2client_2SocketContextUpgradeFactory_8cpp_source.html">SocketContextUpgradeFactory.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   94</span>                                                {</div>
+<div class="line"><span class="lineno">   95</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;websocket&quot;</span>;</div>
+<div class="line"><span class="lineno">   96</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -370,16 +370,17 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classweb_1_1http_1_1client_1_1SocketContextUpgradeFactory.html#a54d5a02915673a747309fce295e225cd">web::http::client::SocketContextUpgradeFactory</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="websocket_2client_2SocketContextUpgradeFactory_8cpp_source.html#l00036">36</a> of file <a class="el" href="websocket_2client_2SocketContextUpgradeFactory_8cpp_source.html">SocketContextUpgradeFactory.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   36</span>                                                                        {</div>
-<div class="line"><span class="lineno">   37</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> ebytes[16];</div>
-<div class="line"><span class="lineno">   38</span>        getentropy(ebytes, 16);</div>
-<div class="line"><span class="lineno">   39</span> </div>
-<div class="line"><span class="lineno">   40</span>        <a class="code hl_variable" href="classweb_1_1http_1_1SocketContextUpgradeFactory.html#a49afbcd1387bc71ce80b052882472a71">request</a>.<a class="code hl_function" href="classweb_1_1http_1_1client_1_1Request.html#a01d3d0cff8ce735636cceb6e0aaecf97">set</a>(<span class="stringliteral">&quot;Sec-WebSocket-Key&quot;</span>, <a class="code hl_function" href="namespacebase64.html#af19189e96ecbd4de55806b9b705f7374">base64::base64_encode</a>(ebytes, 16));</div>
-<div class="line"><span class="lineno">   41</span>        <a class="code hl_variable" href="classweb_1_1http_1_1SocketContextUpgradeFactory.html#a49afbcd1387bc71ce80b052882472a71">request</a>.<a class="code hl_function" href="classweb_1_1http_1_1client_1_1Request.html#a01d3d0cff8ce735636cceb6e0aaecf97">set</a>(<span class="stringliteral">&quot;Sec-WebSocket-Version&quot;</span>, <span class="stringliteral">&quot;13&quot;</span>);</div>
-<div class="line"><span class="lineno">   42</span>    }</div>
-<div class="ttc" id="aclassweb_1_1http_1_1client_1_1Request_html_a01d3d0cff8ce735636cceb6e0aaecf97"><div class="ttname"><a href="classweb_1_1http_1_1client_1_1Request.html#a01d3d0cff8ce735636cceb6e0aaecf97">web::http::client::Request::set</a></div><div class="ttdeci">Request &amp; set(const std::string &amp;field, const std::string &amp;value, bool overwrite=true)</div><div class="ttdef"><b>Definition</b> <a href="web_2http_2client_2Request_8cpp_source.html#l00137">Request.cpp:137</a></div></div>
-<div class="ttc" id="anamespacebase64_html_af19189e96ecbd4de55806b9b705f7374"><div class="ttname"><a href="namespacebase64.html#af19189e96ecbd4de55806b9b705f7374">base64::base64_encode</a></div><div class="ttdeci">std::string base64_encode(const unsigned char *bytes_to_encode, std::size_t length)</div><div class="ttdef"><b>Definition</b> <a href="base64_8cpp_source.html#l00047">base64.cpp:47</a></div></div>
+<p class="definition">Definition at line <a class="el" href="websocket_2client_2SocketContextUpgradeFactory_8cpp_source.html#l00086">86</a> of file <a class="el" href="websocket_2client_2SocketContextUpgradeFactory_8cpp_source.html">SocketContextUpgradeFactory.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   86</span>                                                                        {</div>
+<div class="line"><span class="lineno">   87</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> ebytes[16];</div>
+<div class="line"><span class="lineno">   88</span>        <a class="code hl_function" href="namespaceweb_1_1websocket_1_1client.html#a47856c240c06400eb71b32652274b201">getentropy</a>(ebytes, 16);</div>
+<div class="line"><span class="lineno">   89</span> </div>
+<div class="line"><span class="lineno">   90</span>        <a class="code hl_variable" href="classweb_1_1http_1_1SocketContextUpgradeFactory.html#a49afbcd1387bc71ce80b052882472a71">request</a>.<a class="code hl_function" href="classweb_1_1http_1_1client_1_1Request.html#a01d3d0cff8ce735636cceb6e0aaecf97">set</a>(<span class="stringliteral">&quot;Sec-WebSocket-Key&quot;</span>, <a class="code hl_function" href="namespacebase64.html#af19189e96ecbd4de55806b9b705f7374">base64::base64_encode</a>(ebytes, 16));</div>
+<div class="line"><span class="lineno">   91</span>        <a class="code hl_variable" href="classweb_1_1http_1_1SocketContextUpgradeFactory.html#a49afbcd1387bc71ce80b052882472a71">request</a>.<a class="code hl_function" href="classweb_1_1http_1_1client_1_1Request.html#a01d3d0cff8ce735636cceb6e0aaecf97">set</a>(<span class="stringliteral">&quot;Sec-WebSocket-Version&quot;</span>, <span class="stringliteral">&quot;13&quot;</span>);</div>
+<div class="line"><span class="lineno">   92</span>    }</div>
+<div class="ttc" id="aclassweb_1_1http_1_1client_1_1Request_html_a01d3d0cff8ce735636cceb6e0aaecf97"><div class="ttname"><a href="classweb_1_1http_1_1client_1_1Request.html#a01d3d0cff8ce735636cceb6e0aaecf97">web::http::client::Request::set</a></div><div class="ttdeci">Request &amp; set(const std::string &amp;field, const std::string &amp;value, bool overwrite=true)</div><div class="ttdef"><b>Definition</b> <a href="web_2http_2client_2Request_8cpp_source.html#l00159">Request.cpp:159</a></div></div>
+<div class="ttc" id="anamespacebase64_html_af19189e96ecbd4de55806b9b705f7374"><div class="ttname"><a href="namespacebase64.html#af19189e96ecbd4de55806b9b705f7374">base64::base64_encode</a></div><div class="ttdeci">std::string base64_encode(const unsigned char *bytes_to_encode, std::size_t length)</div><div class="ttdef"><b>Definition</b> <a href="base64_8cpp_source.html#l00069">base64.cpp:69</a></div></div>
+<div class="ttc" id="anamespaceweb_1_1websocket_1_1client_html_a47856c240c06400eb71b32652274b201"><div class="ttname"><a href="namespaceweb_1_1websocket_1_1client.html#a47856c240c06400eb71b32652274b201">web::websocket::client::getentropy</a></div><div class="ttdeci">int getentropy(void *buf, size_t buflen)</div><div class="ttdef"><b>Definition</b> <a href="websocket_2client_2SocketContextUpgradeFactory_8cpp_source.html#l00070">SocketContextUpgradeFactory.cpp:70</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -393,7 +394,7 @@ Additional Inherited Members</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceweb.html">web</a></li><li class="navelem"><a class="el" href="namespaceweb_1_1websocket.html">websocket</a></li><li class="navelem"><a class="el" href="namespaceweb_1_1websocket_1_1client.html">client</a></li><li class="navelem"><a class="el" href="classweb_1_1websocket_1_1client_1_1SocketContextUpgradeFactory.html">SocketContextUpgradeFactory</a></li>
-    <li class="footer">Generated on Tue Feb 25 2025 14:03:10 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generated on Sun Mar 9 2025 01:34:40 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>
