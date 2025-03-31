@@ -1,13 +1,14 @@
 var classiot_1_1mqtt_1_1server_1_1broker_1_1Broker =
 [
-    [ "Broker", "classiot_1_1mqtt_1_1server_1_1broker_1_1Broker.html#aef38cf38a015b72bf9781fff9e680ba4", null ],
+    [ "Broker", "classiot_1_1mqtt_1_1server_1_1broker_1_1Broker.html#a7303dbd9eddbfe66c2ff2f827441d2ba", null ],
     [ "~Broker", "classiot_1_1mqtt_1_1server_1_1broker_1_1Broker.html#ad25be1d5f2fbac5dda14dc5813c8904c", null ],
     [ "appear", "classiot_1_1mqtt_1_1server_1_1broker_1_1Broker.html#a808b519175381ec92e3f8ae9e2618f1f", null ],
     [ "deleteSession", "classiot_1_1mqtt_1_1server_1_1broker_1_1Broker.html#acfa5de195869652f70b632c5f1114543", null ],
+    [ "getSubscriptions", "classiot_1_1mqtt_1_1server_1_1broker_1_1Broker.html#a5f6350a21d778609152f2fe6516ff7f5", null ],
     [ "hasActiveSession", "classiot_1_1mqtt_1_1server_1_1broker_1_1Broker.html#a2f898faddae679bd67b0e8bc20b86d74", null ],
     [ "hasRetainedSession", "classiot_1_1mqtt_1_1server_1_1broker_1_1Broker.html#ae184a687d5c585004feabe28fb7461c6", null ],
     [ "hasSession", "classiot_1_1mqtt_1_1server_1_1broker_1_1Broker.html#a7adc3607c5da7096fd38778d22da7e9c", null ],
-    [ "instance", "classiot_1_1mqtt_1_1server_1_1broker_1_1Broker.html#a3553d147a922d1c324c350b11eabe36b", null ],
+    [ "instance", "classiot_1_1mqtt_1_1server_1_1broker_1_1Broker.html#a885a00bc77861c582897098ef7ef556f", null ],
     [ "isActiveSession", "classiot_1_1mqtt_1_1server_1_1broker_1_1Broker.html#a3d5b3db3104fd91a2449769d24186205", null ],
     [ "newSession", "classiot_1_1mqtt_1_1server_1_1broker_1_1Broker.html#ae279f1495ecadb45957043e461840a1b", null ],
     [ "publish", "classiot_1_1mqtt_1_1server_1_1broker_1_1Broker.html#a5a70d29895fbdb8cf6422ad98fd6ebed", null ],

@@ -99,6 +99,7 @@ $(function(){initNavTree('classiot_1_1mqtt_1_1server_1_1broker_1_1SubscribtionTr
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classiot_1_1mqtt_1_1server_1_1broker_1_1SubscribtionTree_1_1TopicLevel-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">iot::mqtt::server::broker::SubscribtionTree::TopicLevel Class Reference</div></div>
@@ -124,6 +125,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ab0f9b58d48a57662b8022b743bc2c8a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acbe9ed5326fa905c2f164b5a6388fad8" id="r_acbe9ed5326fa905c2f164b5a6388fad8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acbe9ed5326fa905c2f164b5a6388fad8">unsubscribe</a> (const std::string &amp;clientId)</td></tr>
 <tr class="separator:acbe9ed5326fa905c2f164b5a6388fad8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade481a0ea97da0ba949fd007b8c4c445" id="r_ade481a0ea97da0ba949fd007b8c4c445"><td class="memItemLeft" align="right" valign="top">std::list&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ade481a0ea97da0ba949fd007b8c4c445">getSubscriptions</a> (const std::string &amp;clientId) const</td></tr>
+<tr class="separator:ade481a0ea97da0ba949fd007b8c4c445"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4d9067806fd5f967b69db751346ad694" id="r_a4d9067806fd5f967b69db751346ad694"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classiot_1_1mqtt_1_1server_1_1broker_1_1SubscribtionTree_1_1TopicLevel.html">TopicLevel</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4d9067806fd5f967b69db751346ad694">fromJson</a> (const nlohmann::json &amp;json)</td></tr>
 <tr class="separator:a4d9067806fd5f967b69db751346ad694"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a24a111ba7244f5b31fede66908abfa93" id="r_a24a111ba7244f5b31fede66908abfa93"><td class="memItemLeft" align="right" valign="top">nlohmann::json&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a24a111ba7244f5b31fede66908abfa93">toJson</a> () const</td></tr>
@@ -131,20 +134,25 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a58137fe71456e9249cfc8ed9c3394e4b" id="r_a58137fe71456e9249cfc8ed9c3394e4b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a58137fe71456e9249cfc8ed9c3394e4b">clear</a> ()</td></tr>
 <tr class="separator:a58137fe71456e9249cfc8ed9c3394e4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:ae46fd0225f5f93147d900ee510a76006" id="r_ae46fd0225f5f93147d900ee510a76006"><td class="memItemLeft" align="right" valign="top">std::list&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae46fd0225f5f93147d900ee510a76006">getSubscriptions</a> (const std::string &amp;absoluteTopicLevel, const std::string &amp;clientId) const</td></tr>
+<tr class="separator:ae46fd0225f5f93147d900ee510a76006"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
+<tr class="memitem:acc1a53e26f396dedad733f4e5addfb0f" id="r_acc1a53e26f396dedad733f4e5addfb0f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classiot_1_1mqtt_1_1server_1_1broker_1_1Broker.html">iot::mqtt::server::broker::Broker</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acc1a53e26f396dedad733f4e5addfb0f">broker</a></td></tr>
+<tr class="separator:acc1a53e26f396dedad733f4e5addfb0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a601ffce5ea7471613f93f6689b0cbab0" id="r_a601ffce5ea7471613f93f6689b0cbab0"><td class="memItemLeft" align="right" valign="top">std::map&lt; std::string, uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a601ffce5ea7471613f93f6689b0cbab0">clientIds</a></td></tr>
 <tr class="separator:a601ffce5ea7471613f93f6689b0cbab0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0e506bd4213d06a2e65462b09c499d8d" id="r_a0e506bd4213d06a2e65462b09c499d8d"><td class="memItemLeft" align="right" valign="top">std::map&lt; std::string, <a class="el" href="classiot_1_1mqtt_1_1server_1_1broker_1_1SubscribtionTree_1_1TopicLevel.html">TopicLevel</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0e506bd4213d06a2e65462b09c499d8d">topicLevels</a></td></tr>
 <tr class="separator:a0e506bd4213d06a2e65462b09c499d8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acc1a53e26f396dedad733f4e5addfb0f" id="r_acc1a53e26f396dedad733f4e5addfb0f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classiot_1_1mqtt_1_1server_1_1broker_1_1Broker.html">iot::mqtt::server::broker::Broker</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acc1a53e26f396dedad733f4e5addfb0f">broker</a></td></tr>
-<tr class="separator:acc1a53e26f396dedad733f4e5addfb0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4dc213812c9859612409cdced33db721" id="r_a4dc213812c9859612409cdced33db721"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4dc213812c9859612409cdced33db721">topicLevel</a></td></tr>
 <tr class="separator:a4dc213812c9859612409cdced33db721"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="SubscribtionTree_8h_source.html#l00080">80</a> of file <a class="el" href="SubscribtionTree_8h_source.html">SubscribtionTree.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SubscribtionTree_8h_source.html#l00083">83</a> of file <a class="el" href="SubscribtionTree_8h_source.html">SubscribtionTree.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a9cd966c939bb6545f11e42fe10a27db5" name="a9cd966c939bb6545f11e42fe10a27db5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9cd966c939bb6545f11e42fe10a27db5">&#9670;&#160;</a></span>TopicLevel()</h2>
@@ -173,12 +181,12 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SubscribtionTree_8cpp_source.html#l00107">107</a> of file <a class="el" href="SubscribtionTree_8cpp_source.html">SubscribtionTree.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  108</span>        : <a class="code hl_variable" href="#acc1a53e26f396dedad733f4e5addfb0f">broker</a>(<a class="code hl_variable" href="#acc1a53e26f396dedad733f4e5addfb0f">broker</a>)</div>
-<div class="line"><span class="lineno">  109</span>        , <a class="code hl_variable" href="#a4dc213812c9859612409cdced33db721">topicLevel</a>(<a class="code hl_variable" href="#a4dc213812c9859612409cdced33db721">topicLevel</a>) {</div>
-<div class="line"><span class="lineno">  110</span>    }</div>
-<div class="ttc" id="aclassiot_1_1mqtt_1_1server_1_1broker_1_1SubscribtionTree_1_1TopicLevel_html_a4dc213812c9859612409cdced33db721"><div class="ttname"><a href="#a4dc213812c9859612409cdced33db721">iot::mqtt::server::broker::SubscribtionTree::TopicLevel::topicLevel</a></div><div class="ttdeci">std::string topicLevel</div><div class="ttdef"><b>Definition</b> <a href="SubscribtionTree_8h_source.html#l00104">SubscribtionTree.h:104</a></div></div>
-<div class="ttc" id="aclassiot_1_1mqtt_1_1server_1_1broker_1_1SubscribtionTree_1_1TopicLevel_html_acc1a53e26f396dedad733f4e5addfb0f"><div class="ttname"><a href="#acc1a53e26f396dedad733f4e5addfb0f">iot::mqtt::server::broker::SubscribtionTree::TopicLevel::broker</a></div><div class="ttdeci">iot::mqtt::server::broker::Broker * broker</div><div class="ttdef"><b>Definition</b> <a href="SubscribtionTree_8h_source.html#l00103">SubscribtionTree.h:103</a></div></div>
+<p class="definition">Definition at line <a class="el" href="SubscribtionTree_8cpp_source.html#l00127">127</a> of file <a class="el" href="SubscribtionTree_8cpp_source.html">SubscribtionTree.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  128</span>        : <a class="code hl_variable" href="#acc1a53e26f396dedad733f4e5addfb0f">broker</a>(<a class="code hl_variable" href="#acc1a53e26f396dedad733f4e5addfb0f">broker</a>)</div>
+<div class="line"><span class="lineno">  129</span>        , <a class="code hl_variable" href="#a4dc213812c9859612409cdced33db721">topicLevel</a>(<a class="code hl_variable" href="#a4dc213812c9859612409cdced33db721">topicLevel</a>) {</div>
+<div class="line"><span class="lineno">  130</span>    }</div>
+<div class="ttc" id="aclassiot_1_1mqtt_1_1server_1_1broker_1_1SubscribtionTree_1_1TopicLevel_html_a4dc213812c9859612409cdced33db721"><div class="ttname"><a href="#a4dc213812c9859612409cdced33db721">iot::mqtt::server::broker::SubscribtionTree::TopicLevel::topicLevel</a></div><div class="ttdeci">std::string topicLevel</div><div class="ttdef"><b>Definition</b> <a href="SubscribtionTree_8h_source.html#l00111">SubscribtionTree.h:111</a></div></div>
+<div class="ttc" id="aclassiot_1_1mqtt_1_1server_1_1broker_1_1SubscribtionTree_1_1TopicLevel_html_acc1a53e26f396dedad733f4e5addfb0f"><div class="ttname"><a href="#acc1a53e26f396dedad733f4e5addfb0f">iot::mqtt::server::broker::SubscribtionTree::TopicLevel::broker</a></div><div class="ttdeci">iot::mqtt::server::broker::Broker * broker</div><div class="ttdef"><b>Definition</b> <a href="SubscribtionTree_8h_source.html#l00106">SubscribtionTree.h:106</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -202,19 +210,19 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SubscribtionTree_8cpp_source.html#l00112">112</a> of file <a class="el" href="SubscribtionTree_8cpp_source.html">SubscribtionTree.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  112</span>                                                                                             {</div>
-<div class="line"><span class="lineno">  113</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a601ffce5ea7471613f93f6689b0cbab0">clientIds</a>.contains(clientId)) {</div>
-<div class="line"><span class="lineno">  114</span>            <a class="code hl_variable" href="#acc1a53e26f396dedad733f4e5addfb0f">broker</a>-&gt;<a class="code hl_function" href="classiot_1_1mqtt_1_1server_1_1broker_1_1Broker.html#a808b519175381ec92e3f8ae9e2618f1f">appear</a>(clientId, topic, <a class="code hl_variable" href="#a601ffce5ea7471613f93f6689b0cbab0">clientIds</a>[clientId]);</div>
-<div class="line"><span class="lineno">  115</span>        }</div>
-<div class="line"><span class="lineno">  116</span> </div>
-<div class="line"><span class="lineno">  117</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; [<a class="code hl_variable" href="#a4dc213812c9859612409cdced33db721">topicLevel</a>, subscribtion] : <a class="code hl_variable" href="#a0e506bd4213d06a2e65462b09c499d8d">topicLevels</a>) {</div>
-<div class="line"><span class="lineno">  118</span>            subscribtion.appear(clientId, std::string(topic).append(topic.empty() ? <span class="stringliteral">&quot;&quot;</span> : <span class="stringliteral">&quot;/&quot;</span>).append(<a class="code hl_variable" href="#a4dc213812c9859612409cdced33db721">topicLevel</a>));</div>
-<div class="line"><span class="lineno">  119</span>        }</div>
-<div class="line"><span class="lineno">  120</span>    }</div>
-<div class="ttc" id="aclassiot_1_1mqtt_1_1server_1_1broker_1_1Broker_html_a808b519175381ec92e3f8ae9e2618f1f"><div class="ttname"><a href="classiot_1_1mqtt_1_1server_1_1broker_1_1Broker.html#a808b519175381ec92e3f8ae9e2618f1f">iot::mqtt::server::broker::Broker::appear</a></div><div class="ttdeci">void appear(const std::string &amp;clientId, const std::string &amp;topic, uint8_t qoS)</div><div class="ttdef"><b>Definition</b> <a href="Broker_8cpp_source.html#l00147">Broker.cpp:147</a></div></div>
-<div class="ttc" id="aclassiot_1_1mqtt_1_1server_1_1broker_1_1SubscribtionTree_1_1TopicLevel_html_a0e506bd4213d06a2e65462b09c499d8d"><div class="ttname"><a href="#a0e506bd4213d06a2e65462b09c499d8d">iot::mqtt::server::broker::SubscribtionTree::TopicLevel::topicLevels</a></div><div class="ttdeci">std::map&lt; std::string, TopicLevel &gt; topicLevels</div><div class="ttdef"><b>Definition</b> <a href="SubscribtionTree_8h_source.html#l00101">SubscribtionTree.h:101</a></div></div>
-<div class="ttc" id="aclassiot_1_1mqtt_1_1server_1_1broker_1_1SubscribtionTree_1_1TopicLevel_html_a601ffce5ea7471613f93f6689b0cbab0"><div class="ttname"><a href="#a601ffce5ea7471613f93f6689b0cbab0">iot::mqtt::server::broker::SubscribtionTree::TopicLevel::clientIds</a></div><div class="ttdeci">std::map&lt; std::string, uint8_t &gt; clientIds</div><div class="ttdef"><b>Definition</b> <a href="SubscribtionTree_8h_source.html#l00099">SubscribtionTree.h:99</a></div></div>
+<p class="definition">Definition at line <a class="el" href="SubscribtionTree_8cpp_source.html#l00132">132</a> of file <a class="el" href="SubscribtionTree_8cpp_source.html">SubscribtionTree.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  132</span>                                                                                             {</div>
+<div class="line"><span class="lineno">  133</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a601ffce5ea7471613f93f6689b0cbab0">clientIds</a>.contains(clientId)) {</div>
+<div class="line"><span class="lineno">  134</span>            <a class="code hl_variable" href="#acc1a53e26f396dedad733f4e5addfb0f">broker</a>-&gt;<a class="code hl_function" href="classiot_1_1mqtt_1_1server_1_1broker_1_1Broker.html#a808b519175381ec92e3f8ae9e2618f1f">appear</a>(clientId, topic, <a class="code hl_variable" href="#a601ffce5ea7471613f93f6689b0cbab0">clientIds</a>[clientId]);</div>
+<div class="line"><span class="lineno">  135</span>        }</div>
+<div class="line"><span class="lineno">  136</span> </div>
+<div class="line"><span class="lineno">  137</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; [<a class="code hl_variable" href="#a4dc213812c9859612409cdced33db721">topicLevel</a>, subscribtion] : <a class="code hl_variable" href="#a0e506bd4213d06a2e65462b09c499d8d">topicLevels</a>) {</div>
+<div class="line"><span class="lineno">  138</span>            subscribtion.appear(clientId, std::string(topic).append(topic.empty() ? <span class="stringliteral">&quot;&quot;</span> : <span class="stringliteral">&quot;/&quot;</span>).append(<a class="code hl_variable" href="#a4dc213812c9859612409cdced33db721">topicLevel</a>));</div>
+<div class="line"><span class="lineno">  139</span>        }</div>
+<div class="line"><span class="lineno">  140</span>    }</div>
+<div class="ttc" id="aclassiot_1_1mqtt_1_1server_1_1broker_1_1Broker_html_a808b519175381ec92e3f8ae9e2618f1f"><div class="ttname"><a href="classiot_1_1mqtt_1_1server_1_1broker_1_1Broker.html#a808b519175381ec92e3f8ae9e2618f1f">iot::mqtt::server::broker::Broker::appear</a></div><div class="ttdeci">void appear(const std::string &amp;clientId, const std::string &amp;topic, uint8_t qoS)</div><div class="ttdef"><b>Definition</b> <a href="Broker_8cpp_source.html#l00146">Broker.cpp:146</a></div></div>
+<div class="ttc" id="aclassiot_1_1mqtt_1_1server_1_1broker_1_1SubscribtionTree_1_1TopicLevel_html_a0e506bd4213d06a2e65462b09c499d8d"><div class="ttname"><a href="#a0e506bd4213d06a2e65462b09c499d8d">iot::mqtt::server::broker::SubscribtionTree::TopicLevel::topicLevels</a></div><div class="ttdeci">std::map&lt; std::string, TopicLevel &gt; topicLevels</div><div class="ttdef"><b>Definition</b> <a href="SubscribtionTree_8h_source.html#l00109">SubscribtionTree.h:109</a></div></div>
+<div class="ttc" id="aclassiot_1_1mqtt_1_1server_1_1broker_1_1SubscribtionTree_1_1TopicLevel_html_a601ffce5ea7471613f93f6689b0cbab0"><div class="ttname"><a href="#a601ffce5ea7471613f93f6689b0cbab0">iot::mqtt::server::broker::SubscribtionTree::TopicLevel::clientIds</a></div><div class="ttdeci">std::map&lt; std::string, uint8_t &gt; clientIds</div><div class="ttdef"><b>Definition</b> <a href="SubscribtionTree_8h_source.html#l00108">SubscribtionTree.h:108</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -233,11 +241,11 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SubscribtionTree_8cpp_source.html#l00279">279</a> of file <a class="el" href="SubscribtionTree_8cpp_source.html">SubscribtionTree.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  279</span>                                           {</div>
-<div class="line"><span class="lineno">  280</span>        *<span class="keyword">this</span> = <a class="code hl_function" href="#a9cd966c939bb6545f11e42fe10a27db5">TopicLevel</a>(<a class="code hl_variable" href="#acc1a53e26f396dedad733f4e5addfb0f">broker</a>, <span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><span class="lineno">  281</span>    }</div>
-<div class="ttc" id="aclassiot_1_1mqtt_1_1server_1_1broker_1_1SubscribtionTree_1_1TopicLevel_html_a9cd966c939bb6545f11e42fe10a27db5"><div class="ttname"><a href="#a9cd966c939bb6545f11e42fe10a27db5">iot::mqtt::server::broker::SubscribtionTree::TopicLevel::TopicLevel</a></div><div class="ttdeci">TopicLevel(iot::mqtt::server::broker::Broker *broker, const std::string &amp;topicLevel)</div><div class="ttdef"><b>Definition</b> <a href="SubscribtionTree_8cpp_source.html#l00107">SubscribtionTree.cpp:107</a></div></div>
+<p class="definition">Definition at line <a class="el" href="SubscribtionTree_8cpp_source.html#l00320">320</a> of file <a class="el" href="SubscribtionTree_8cpp_source.html">SubscribtionTree.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  320</span>                                           {</div>
+<div class="line"><span class="lineno">  321</span>        *<span class="keyword">this</span> = <a class="code hl_function" href="#a9cd966c939bb6545f11e42fe10a27db5">TopicLevel</a>(<a class="code hl_variable" href="#acc1a53e26f396dedad733f4e5addfb0f">broker</a>, <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">  322</span>    }</div>
+<div class="ttc" id="aclassiot_1_1mqtt_1_1server_1_1broker_1_1SubscribtionTree_1_1TopicLevel_html_a9cd966c939bb6545f11e42fe10a27db5"><div class="ttname"><a href="#a9cd966c939bb6545f11e42fe10a27db5">iot::mqtt::server::broker::SubscribtionTree::TopicLevel::TopicLevel</a></div><div class="ttdeci">TopicLevel(iot::mqtt::server::broker::Broker *broker, const std::string &amp;topicLevel)</div><div class="ttdef"><b>Definition</b> <a href="SubscribtionTree_8cpp_source.html#l00127">SubscribtionTree.cpp:127</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -256,25 +264,94 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SubscribtionTree_8cpp_source.html#l00260">260</a> of file <a class="el" href="SubscribtionTree_8cpp_source.html">SubscribtionTree.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  260</span>                                                                                             {</div>
-<div class="line"><span class="lineno">  261</span>        <a class="code hl_variable" href="#a601ffce5ea7471613f93f6689b0cbab0">clientIds</a>.clear();</div>
-<div class="line"><span class="lineno">  262</span>        <a class="code hl_variable" href="#a0e506bd4213d06a2e65462b09c499d8d">topicLevels</a>.clear();</div>
-<div class="line"><span class="lineno">  263</span> </div>
-<div class="line"><span class="lineno">  264</span>        <span class="keywordflow">if</span> (json.contains(<span class="stringliteral">&quot;qos_map&quot;</span>)) {</div>
-<div class="line"><span class="lineno">  265</span>            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; subscriber : json[<span class="stringliteral">&quot;qos_map&quot;</span>].items()) {</div>
-<div class="line"><span class="lineno">  266</span>                <a class="code hl_variable" href="#a601ffce5ea7471613f93f6689b0cbab0">clientIds</a>.emplace(subscriber.key(), subscriber.value());</div>
-<div class="line"><span class="lineno">  267</span>            }</div>
-<div class="line"><span class="lineno">  268</span>        }</div>
-<div class="line"><span class="lineno">  269</span> </div>
-<div class="line"><span class="lineno">  270</span>        <span class="keywordflow">if</span> (json.contains(<span class="stringliteral">&quot;topic_filter&quot;</span>)) {</div>
-<div class="line"><span class="lineno">  271</span>            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; topicLevelItem : json[<span class="stringliteral">&quot;topic_filter&quot;</span>].items()) {</div>
-<div class="line"><span class="lineno">  272</span>                <a class="code hl_variable" href="#a0e506bd4213d06a2e65462b09c499d8d">topicLevels</a>.emplace(topicLevelItem.key(), <a class="code hl_function" href="#a9cd966c939bb6545f11e42fe10a27db5">TopicLevel</a>(<a class="code hl_variable" href="#acc1a53e26f396dedad733f4e5addfb0f">broker</a>, topicLevelItem.key()).fromJson(topicLevelItem.value()));</div>
-<div class="line"><span class="lineno">  273</span>            }</div>
-<div class="line"><span class="lineno">  274</span>        }</div>
-<div class="line"><span class="lineno">  275</span> </div>
-<div class="line"><span class="lineno">  276</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">  277</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="SubscribtionTree_8cpp_source.html#l00301">301</a> of file <a class="el" href="SubscribtionTree_8cpp_source.html">SubscribtionTree.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  301</span>                                                                                             {</div>
+<div class="line"><span class="lineno">  302</span>        <a class="code hl_variable" href="#a601ffce5ea7471613f93f6689b0cbab0">clientIds</a>.clear();</div>
+<div class="line"><span class="lineno">  303</span>        <a class="code hl_variable" href="#a0e506bd4213d06a2e65462b09c499d8d">topicLevels</a>.clear();</div>
+<div class="line"><span class="lineno">  304</span> </div>
+<div class="line"><span class="lineno">  305</span>        <span class="keywordflow">if</span> (json.contains(<span class="stringliteral">&quot;qos_map&quot;</span>)) {</div>
+<div class="line"><span class="lineno">  306</span>            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; subscriber : json[<span class="stringliteral">&quot;qos_map&quot;</span>].items()) {</div>
+<div class="line"><span class="lineno">  307</span>                <a class="code hl_variable" href="#a601ffce5ea7471613f93f6689b0cbab0">clientIds</a>.emplace(subscriber.key(), subscriber.value());</div>
+<div class="line"><span class="lineno">  308</span>            }</div>
+<div class="line"><span class="lineno">  309</span>        }</div>
+<div class="line"><span class="lineno">  310</span> </div>
+<div class="line"><span class="lineno">  311</span>        <span class="keywordflow">if</span> (json.contains(<span class="stringliteral">&quot;topic_filter&quot;</span>)) {</div>
+<div class="line"><span class="lineno">  312</span>            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; topicLevelItem : json[<span class="stringliteral">&quot;topic_filter&quot;</span>].items()) {</div>
+<div class="line"><span class="lineno">  313</span>                <a class="code hl_variable" href="#a0e506bd4213d06a2e65462b09c499d8d">topicLevels</a>.emplace(topicLevelItem.key(), <a class="code hl_function" href="#a9cd966c939bb6545f11e42fe10a27db5">TopicLevel</a>(<a class="code hl_variable" href="#acc1a53e26f396dedad733f4e5addfb0f">broker</a>, topicLevelItem.key()).fromJson(topicLevelItem.value()));</div>
+<div class="line"><span class="lineno">  314</span>            }</div>
+<div class="line"><span class="lineno">  315</span>        }</div>
+<div class="line"><span class="lineno">  316</span> </div>
+<div class="line"><span class="lineno">  317</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">  318</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ae46fd0225f5f93147d900ee510a76006" name="ae46fd0225f5f93147d900ee510a76006"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae46fd0225f5f93147d900ee510a76006">&#9670;&#160;</a></span>getSubscriptions() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::list&lt; std::string &gt; iot::mqtt::server::broker::SubscribtionTree::TopicLevel::getSubscriptions </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>absoluteTopicLevel</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>clientId</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="SubscribtionTree_8cpp_source.html#l00284">284</a> of file <a class="el" href="SubscribtionTree_8cpp_source.html">SubscribtionTree.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  285</span>                                                                                                           {</div>
+<div class="line"><span class="lineno">  286</span>        std::list&lt;std::string&gt; topicLevelList;</div>
+<div class="line"><span class="lineno">  287</span> </div>
+<div class="line"><span class="lineno">  288</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; [topicLevelName, nextTopicLevel] : <a class="code hl_variable" href="#a0e506bd4213d06a2e65462b09c499d8d">topicLevels</a>) {</div>
+<div class="line"><span class="lineno">  289</span>            <span class="keyword">const</span> std::string currentAbsoluteTopicLevel = absoluteTopicLevel + topicLevelName;</div>
+<div class="line"><span class="lineno">  290</span> </div>
+<div class="line"><span class="lineno">  291</span>            <span class="keywordflow">if</span> (nextTopicLevel.clientIds.contains(clientId)) {</div>
+<div class="line"><span class="lineno">  292</span>                topicLevelList.push_back(currentAbsoluteTopicLevel);</div>
+<div class="line"><span class="lineno">  293</span>            }</div>
+<div class="line"><span class="lineno">  294</span> </div>
+<div class="line"><span class="lineno">  295</span>            topicLevelList.splice(topicLevelList.end(), nextTopicLevel.getSubscriptions(currentAbsoluteTopicLevel + <span class="stringliteral">&quot;/&quot;</span>, clientId));</div>
+<div class="line"><span class="lineno">  296</span>        }</div>
+<div class="line"><span class="lineno">  297</span> </div>
+<div class="line"><span class="lineno">  298</span>        <span class="keywordflow">return</span> topicLevelList;</div>
+<div class="line"><span class="lineno">  299</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ade481a0ea97da0ba949fd007b8c4c445" name="ade481a0ea97da0ba949fd007b8c4c445"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade481a0ea97da0ba949fd007b8c4c445">&#9670;&#160;</a></span>getSubscriptions() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::list&lt; std::string &gt; iot::mqtt::server::broker::SubscribtionTree::TopicLevel::getSubscriptions </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>clientId</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="SubscribtionTree_8cpp_source.html#l00280">280</a> of file <a class="el" href="SubscribtionTree_8cpp_source.html">SubscribtionTree.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  280</span>                                                                                                   {</div>
+<div class="line"><span class="lineno">  281</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="#ade481a0ea97da0ba949fd007b8c4c445">getSubscriptions</a>(<span class="stringliteral">&quot;&quot;</span>, clientId);</div>
+<div class="line"><span class="lineno">  282</span>    }</div>
+<div class="ttc" id="aclassiot_1_1mqtt_1_1server_1_1broker_1_1SubscribtionTree_1_1TopicLevel_html_ade481a0ea97da0ba949fd007b8c4c445"><div class="ttname"><a href="#ade481a0ea97da0ba949fd007b8c4c445">iot::mqtt::server::broker::SubscribtionTree::TopicLevel::getSubscriptions</a></div><div class="ttdeci">std::list&lt; std::string &gt; getSubscriptions(const std::string &amp;clientId) const</div><div class="ttdef"><b>Definition</b> <a href="SubscribtionTree_8cpp_source.html#l00280">SubscribtionTree.cpp:280</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -297,62 +374,62 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SubscribtionTree_8cpp_source.html#l00147">147</a> of file <a class="el" href="SubscribtionTree_8cpp_source.html">SubscribtionTree.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  147</span>                                                                              {</div>
-<div class="line"><span class="lineno">  148</span>        <span class="keywordflow">if</span> (topic.empty()) {</div>
-<div class="line"><span class="lineno">  149</span>            LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker: Found match:&quot;</span>;</div>
-<div class="line"><span class="lineno">  150</span>            LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker:   Topic: &#39;&quot;</span> &lt;&lt; message.getTopic() &lt;&lt; <span class="stringliteral">&quot;&#39;;&quot;</span>;</div>
-<div class="line"><span class="lineno">  151</span>            LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker:   Message:\n&quot;</span> &lt;&lt; <a class="code hl_function" href="classiot_1_1mqtt_1_1Mqtt.html#a16add1744c3cf0ea4a1f266b9d3f3902">iot::mqtt::Mqtt::toHexString</a>(message.getMessage());</div>
-<div class="line"><span class="lineno">  152</span> </div>
-<div class="line"><span class="lineno">  153</span>            LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker: Distribute PUBLISH for match ...&quot;</span>;</div>
-<div class="line"><span class="lineno">  154</span>            <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; [clientId, clientQoS] : <a class="code hl_variable" href="#a601ffce5ea7471613f93f6689b0cbab0">clientIds</a>) {</div>
-<div class="line"><span class="lineno">  155</span>                <a class="code hl_variable" href="#acc1a53e26f396dedad733f4e5addfb0f">broker</a>-&gt;<a class="code hl_function" href="classiot_1_1mqtt_1_1server_1_1broker_1_1Broker.html#ae776d5b70c46dd5e2b80e111119c866e">sendPublish</a>(clientId, message, clientQoS, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  156</span>            }</div>
-<div class="line"><span class="lineno">  157</span>            LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker: ... distributing PUBLISH for match completed&quot;</span>;</div>
-<div class="line"><span class="lineno">  158</span> </div>
-<div class="line"><span class="lineno">  159</span>            <span class="keyword">const</span> <span class="keyword">auto</span> nextHashLevel = <a class="code hl_variable" href="#a0e506bd4213d06a2e65462b09c499d8d">topicLevels</a>.find(<span class="stringliteral">&quot;#&quot;</span>);</div>
-<div class="line"><span class="lineno">  160</span>            <span class="keywordflow">if</span> (nextHashLevel != <a class="code hl_variable" href="#a0e506bd4213d06a2e65462b09c499d8d">topicLevels</a>.end()) {</div>
-<div class="line"><span class="lineno">  161</span>                LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker: Found parent match:&quot;</span>;</div>
-<div class="line"><span class="lineno">  162</span>                LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker:   Topic: &#39;&quot;</span> &lt;&lt; message.getTopic() &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
-<div class="line"><span class="lineno">  163</span>                LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker:   Message:\n&quot;</span> &lt;&lt; <a class="code hl_function" href="classiot_1_1mqtt_1_1Mqtt.html#a16add1744c3cf0ea4a1f266b9d3f3902">iot::mqtt::Mqtt::toHexString</a>(message.getMessage());</div>
-<div class="line"><span class="lineno">  164</span> </div>
-<div class="line"><span class="lineno">  165</span>                LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker: Distribute PUBLISH for match ...&quot;</span>;</div>
-<div class="line"><span class="lineno">  166</span>                <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; [clientId, clientQoS] : nextHashLevel-&gt;second.<a class="code hl_variable" href="#a601ffce5ea7471613f93f6689b0cbab0">clientIds</a>) {</div>
-<div class="line"><span class="lineno">  167</span>                    <a class="code hl_variable" href="#acc1a53e26f396dedad733f4e5addfb0f">broker</a>-&gt;<a class="code hl_function" href="classiot_1_1mqtt_1_1server_1_1broker_1_1Broker.html#ae776d5b70c46dd5e2b80e111119c866e">sendPublish</a>(clientId, message, clientQoS, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  168</span>                }</div>
-<div class="line"><span class="lineno">  169</span>                LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker: ... distributing PUBLISH for match completed&quot;</span>;</div>
-<div class="line"><span class="lineno">  170</span>            }</div>
-<div class="line"><span class="lineno">  171</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  172</span>            <span class="keyword">const</span> std::string <a class="code hl_variable" href="#a4dc213812c9859612409cdced33db721">topicLevel</a> = topic.substr(0, topic.find(<span class="charliteral">&#39;/&#39;</span>));</div>
-<div class="line"><span class="lineno">  173</span> </div>
-<div class="line"><span class="lineno">  174</span>            topic.erase(0, <a class="code hl_variable" href="#a4dc213812c9859612409cdced33db721">topicLevel</a>.size() + 1);</div>
-<div class="line"><span class="lineno">  175</span> </div>
-<div class="line"><span class="lineno">  176</span>            <span class="keyword">auto</span> foundNode = <a class="code hl_variable" href="#a0e506bd4213d06a2e65462b09c499d8d">topicLevels</a>.find(<a class="code hl_variable" href="#a4dc213812c9859612409cdced33db721">topicLevel</a>);</div>
-<div class="line"><span class="lineno">  177</span>            <span class="keywordflow">if</span> (foundNode != <a class="code hl_variable" href="#a0e506bd4213d06a2e65462b09c499d8d">topicLevels</a>.end()) {</div>
-<div class="line"><span class="lineno">  178</span>                foundNode-&gt;second.publish(message, topic);</div>
-<div class="line"><span class="lineno">  179</span>            }</div>
-<div class="line"><span class="lineno">  180</span> </div>
-<div class="line"><span class="lineno">  181</span>            foundNode = <a class="code hl_variable" href="#a0e506bd4213d06a2e65462b09c499d8d">topicLevels</a>.find(<span class="stringliteral">&quot;+&quot;</span>);</div>
-<div class="line"><span class="lineno">  182</span>            <span class="keywordflow">if</span> (foundNode != <a class="code hl_variable" href="#a0e506bd4213d06a2e65462b09c499d8d">topicLevels</a>.end()) {</div>
-<div class="line"><span class="lineno">  183</span>                foundNode-&gt;second.publish(message, topic);</div>
-<div class="line"><span class="lineno">  184</span>            }</div>
-<div class="line"><span class="lineno">  185</span> </div>
-<div class="line"><span class="lineno">  186</span>            foundNode = <a class="code hl_variable" href="#a0e506bd4213d06a2e65462b09c499d8d">topicLevels</a>.find(<span class="stringliteral">&quot;#&quot;</span>);</div>
-<div class="line"><span class="lineno">  187</span>            <span class="keywordflow">if</span> (foundNode != <a class="code hl_variable" href="#a0e506bd4213d06a2e65462b09c499d8d">topicLevels</a>.end()) {</div>
-<div class="line"><span class="lineno">  188</span>                LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker: Found match:&quot;</span>;</div>
-<div class="line"><span class="lineno">  189</span>                LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker:   Topic: &#39;&quot;</span> &lt;&lt; message.getTopic() &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
-<div class="line"><span class="lineno">  190</span>                LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker:   Message:\n&quot;</span> &lt;&lt; <a class="code hl_function" href="classiot_1_1mqtt_1_1Mqtt.html#a16add1744c3cf0ea4a1f266b9d3f3902">iot::mqtt::Mqtt::toHexString</a>(message.getMessage());</div>
-<div class="line"><span class="lineno">  191</span> </div>
-<div class="line"><span class="lineno">  192</span>                LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker: Distribute PUBLISH for match &#39;&quot;</span> &lt;&lt; message.getTopic() &lt;&lt; <span class="stringliteral">&quot;&#39; ...&quot;</span>;</div>
-<div class="line"><span class="lineno">  193</span>                <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; [clientId, clientQoS] : foundNode-&gt;second.<a class="code hl_variable" href="#a601ffce5ea7471613f93f6689b0cbab0">clientIds</a>) {</div>
-<div class="line"><span class="lineno">  194</span>                    <a class="code hl_variable" href="#acc1a53e26f396dedad733f4e5addfb0f">broker</a>-&gt;<a class="code hl_function" href="classiot_1_1mqtt_1_1server_1_1broker_1_1Broker.html#ae776d5b70c46dd5e2b80e111119c866e">sendPublish</a>(clientId, message, clientQoS, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  195</span>                }</div>
-<div class="line"><span class="lineno">  196</span>                LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker: ... distributing PUBLISH for match completed&quot;</span>;</div>
-<div class="line"><span class="lineno">  197</span>            }</div>
-<div class="line"><span class="lineno">  198</span>        }</div>
-<div class="line"><span class="lineno">  199</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="SubscribtionTree_8cpp_source.html#l00167">167</a> of file <a class="el" href="SubscribtionTree_8cpp_source.html">SubscribtionTree.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  167</span>                                                                              {</div>
+<div class="line"><span class="lineno">  168</span>        <span class="keywordflow">if</span> (topic.empty()) {</div>
+<div class="line"><span class="lineno">  169</span>            LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker: Found match:&quot;</span>;</div>
+<div class="line"><span class="lineno">  170</span>            LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker:   Topic: &#39;&quot;</span> &lt;&lt; message.getTopic() &lt;&lt; <span class="stringliteral">&quot;&#39;;&quot;</span>;</div>
+<div class="line"><span class="lineno">  171</span>            LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker:   Message:\n&quot;</span> &lt;&lt; <a class="code hl_function" href="classiot_1_1mqtt_1_1Mqtt.html#a16add1744c3cf0ea4a1f266b9d3f3902">iot::mqtt::Mqtt::toHexString</a>(message.getMessage());</div>
+<div class="line"><span class="lineno">  172</span> </div>
+<div class="line"><span class="lineno">  173</span>            LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker: Distribute PUBLISH for match ...&quot;</span>;</div>
+<div class="line"><span class="lineno">  174</span>            <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; [clientId, clientQoS] : <a class="code hl_variable" href="#a601ffce5ea7471613f93f6689b0cbab0">clientIds</a>) {</div>
+<div class="line"><span class="lineno">  175</span>                <a class="code hl_variable" href="#acc1a53e26f396dedad733f4e5addfb0f">broker</a>-&gt;<a class="code hl_function" href="classiot_1_1mqtt_1_1server_1_1broker_1_1Broker.html#ae776d5b70c46dd5e2b80e111119c866e">sendPublish</a>(clientId, message, clientQoS, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  176</span>            }</div>
+<div class="line"><span class="lineno">  177</span>            LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker: ... distributing PUBLISH for match completed&quot;</span>;</div>
+<div class="line"><span class="lineno">  178</span> </div>
+<div class="line"><span class="lineno">  179</span>            <span class="keyword">const</span> <span class="keyword">auto</span> nextHashLevel = <a class="code hl_variable" href="#a0e506bd4213d06a2e65462b09c499d8d">topicLevels</a>.find(<span class="stringliteral">&quot;#&quot;</span>);</div>
+<div class="line"><span class="lineno">  180</span>            <span class="keywordflow">if</span> (nextHashLevel != <a class="code hl_variable" href="#a0e506bd4213d06a2e65462b09c499d8d">topicLevels</a>.end()) {</div>
+<div class="line"><span class="lineno">  181</span>                LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker: Found parent match:&quot;</span>;</div>
+<div class="line"><span class="lineno">  182</span>                LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker:   Topic: &#39;&quot;</span> &lt;&lt; message.getTopic() &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
+<div class="line"><span class="lineno">  183</span>                LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker:   Message:\n&quot;</span> &lt;&lt; <a class="code hl_function" href="classiot_1_1mqtt_1_1Mqtt.html#a16add1744c3cf0ea4a1f266b9d3f3902">iot::mqtt::Mqtt::toHexString</a>(message.getMessage());</div>
+<div class="line"><span class="lineno">  184</span> </div>
+<div class="line"><span class="lineno">  185</span>                LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker: Distribute PUBLISH for match ...&quot;</span>;</div>
+<div class="line"><span class="lineno">  186</span>                <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; [clientId, clientQoS] : nextHashLevel-&gt;second.<a class="code hl_variable" href="#a601ffce5ea7471613f93f6689b0cbab0">clientIds</a>) {</div>
+<div class="line"><span class="lineno">  187</span>                    <a class="code hl_variable" href="#acc1a53e26f396dedad733f4e5addfb0f">broker</a>-&gt;<a class="code hl_function" href="classiot_1_1mqtt_1_1server_1_1broker_1_1Broker.html#ae776d5b70c46dd5e2b80e111119c866e">sendPublish</a>(clientId, message, clientQoS, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  188</span>                }</div>
+<div class="line"><span class="lineno">  189</span>                LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker: ... distributing PUBLISH for match completed&quot;</span>;</div>
+<div class="line"><span class="lineno">  190</span>            }</div>
+<div class="line"><span class="lineno">  191</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  192</span>            <span class="keyword">const</span> std::string <a class="code hl_variable" href="#a4dc213812c9859612409cdced33db721">topicLevel</a> = topic.substr(0, topic.find(<span class="charliteral">&#39;/&#39;</span>));</div>
+<div class="line"><span class="lineno">  193</span> </div>
+<div class="line"><span class="lineno">  194</span>            topic.erase(0, <a class="code hl_variable" href="#a4dc213812c9859612409cdced33db721">topicLevel</a>.size() + 1);</div>
+<div class="line"><span class="lineno">  195</span> </div>
+<div class="line"><span class="lineno">  196</span>            <span class="keyword">auto</span> foundNode = <a class="code hl_variable" href="#a0e506bd4213d06a2e65462b09c499d8d">topicLevels</a>.find(<a class="code hl_variable" href="#a4dc213812c9859612409cdced33db721">topicLevel</a>);</div>
+<div class="line"><span class="lineno">  197</span>            <span class="keywordflow">if</span> (foundNode != <a class="code hl_variable" href="#a0e506bd4213d06a2e65462b09c499d8d">topicLevels</a>.end()) {</div>
+<div class="line"><span class="lineno">  198</span>                foundNode-&gt;second.publish(message, topic);</div>
+<div class="line"><span class="lineno">  199</span>            }</div>
+<div class="line"><span class="lineno">  200</span> </div>
+<div class="line"><span class="lineno">  201</span>            foundNode = <a class="code hl_variable" href="#a0e506bd4213d06a2e65462b09c499d8d">topicLevels</a>.find(<span class="stringliteral">&quot;+&quot;</span>);</div>
+<div class="line"><span class="lineno">  202</span>            <span class="keywordflow">if</span> (foundNode != <a class="code hl_variable" href="#a0e506bd4213d06a2e65462b09c499d8d">topicLevels</a>.end()) {</div>
+<div class="line"><span class="lineno">  203</span>                foundNode-&gt;second.publish(message, topic);</div>
+<div class="line"><span class="lineno">  204</span>            }</div>
+<div class="line"><span class="lineno">  205</span> </div>
+<div class="line"><span class="lineno">  206</span>            foundNode = <a class="code hl_variable" href="#a0e506bd4213d06a2e65462b09c499d8d">topicLevels</a>.find(<span class="stringliteral">&quot;#&quot;</span>);</div>
+<div class="line"><span class="lineno">  207</span>            <span class="keywordflow">if</span> (foundNode != <a class="code hl_variable" href="#a0e506bd4213d06a2e65462b09c499d8d">topicLevels</a>.end()) {</div>
+<div class="line"><span class="lineno">  208</span>                LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker: Found match:&quot;</span>;</div>
+<div class="line"><span class="lineno">  209</span>                LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker:   Topic: &#39;&quot;</span> &lt;&lt; message.getTopic() &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
+<div class="line"><span class="lineno">  210</span>                LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker:   Message:\n&quot;</span> &lt;&lt; <a class="code hl_function" href="classiot_1_1mqtt_1_1Mqtt.html#a16add1744c3cf0ea4a1f266b9d3f3902">iot::mqtt::Mqtt::toHexString</a>(message.getMessage());</div>
+<div class="line"><span class="lineno">  211</span> </div>
+<div class="line"><span class="lineno">  212</span>                LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker: Distribute PUBLISH for match &#39;&quot;</span> &lt;&lt; message.getTopic() &lt;&lt; <span class="stringliteral">&quot;&#39; ...&quot;</span>;</div>
+<div class="line"><span class="lineno">  213</span>                <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; [clientId, clientQoS] : foundNode-&gt;second.<a class="code hl_variable" href="#a601ffce5ea7471613f93f6689b0cbab0">clientIds</a>) {</div>
+<div class="line"><span class="lineno">  214</span>                    <a class="code hl_variable" href="#acc1a53e26f396dedad733f4e5addfb0f">broker</a>-&gt;<a class="code hl_function" href="classiot_1_1mqtt_1_1server_1_1broker_1_1Broker.html#ae776d5b70c46dd5e2b80e111119c866e">sendPublish</a>(clientId, message, clientQoS, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  215</span>                }</div>
+<div class="line"><span class="lineno">  216</span>                LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker: ... distributing PUBLISH for match completed&quot;</span>;</div>
+<div class="line"><span class="lineno">  217</span>            }</div>
+<div class="line"><span class="lineno">  218</span>        }</div>
+<div class="line"><span class="lineno">  219</span>    }</div>
 <div class="ttc" id="aclassiot_1_1mqtt_1_1Mqtt_html_a16add1744c3cf0ea4a1f266b9d3f3902"><div class="ttname"><a href="classiot_1_1mqtt_1_1Mqtt.html#a16add1744c3cf0ea4a1f266b9d3f3902">iot::mqtt::Mqtt::toHexString</a></div><div class="ttdeci">static std::string toHexString(const std::vector&lt; char &gt; &amp;data)</div><div class="ttdef"><b>Definition</b> <a href="Mqtt_8cpp_source.html#l00389">Mqtt.cpp:389</a></div></div>
-<div class="ttc" id="aclassiot_1_1mqtt_1_1server_1_1broker_1_1Broker_html_ae776d5b70c46dd5e2b80e111119c866e"><div class="ttname"><a href="classiot_1_1mqtt_1_1server_1_1broker_1_1Broker.html#ae776d5b70c46dd5e2b80e111119c866e">iot::mqtt::server::broker::Broker::sendPublish</a></div><div class="ttdeci">void sendPublish(const std::string &amp;clientId, Message &amp;message, uint8_t qoS, bool retain)</div><div class="ttdef"><b>Definition</b> <a href="Broker_8cpp_source.html#l00226">Broker.cpp:226</a></div></div>
+<div class="ttc" id="aclassiot_1_1mqtt_1_1server_1_1broker_1_1Broker_html_ae776d5b70c46dd5e2b80e111119c866e"><div class="ttname"><a href="classiot_1_1mqtt_1_1server_1_1broker_1_1Broker.html#ae776d5b70c46dd5e2b80e111119c866e">iot::mqtt::server::broker::Broker::sendPublish</a></div><div class="ttdeci">void sendPublish(const std::string &amp;clientId, Message &amp;message, uint8_t qoS, bool retain)</div><div class="ttdef"><b>Definition</b> <a href="Broker_8cpp_source.html#l00229">Broker.cpp:229</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -380,31 +457,31 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SubscribtionTree_8cpp_source.html#l00122">122</a> of file <a class="el" href="SubscribtionTree_8cpp_source.html">SubscribtionTree.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  122</span>                                                                                                      {</div>
-<div class="line"><span class="lineno">  123</span>        <span class="keywordflow">if</span> (topic.empty()) {</div>
-<div class="line"><span class="lineno">  124</span>            LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker: Subscribe&quot;</span>;</div>
-<div class="line"><span class="lineno">  125</span>            LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker:   ClientId: &quot;</span> &lt;&lt; clientId;</div>
-<div class="line"><span class="lineno">  126</span> </div>
-<div class="line"><span class="lineno">  127</span>            <a class="code hl_variable" href="#a601ffce5ea7471613f93f6689b0cbab0">clientIds</a>[clientId] = qoS;</div>
-<div class="line"><span class="lineno">  128</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  129</span>            <span class="keyword">const</span> std::string <a class="code hl_variable" href="#a4dc213812c9859612409cdced33db721">topicLevel</a> = topic.substr(0, topic.find(<span class="charliteral">&#39;/&#39;</span>));</div>
-<div class="line"><span class="lineno">  130</span> </div>
-<div class="line"><span class="lineno">  131</span>            topic.erase(0, <a class="code hl_variable" href="#a4dc213812c9859612409cdced33db721">topicLevel</a>.size() + 1);</div>
-<div class="line"><span class="lineno">  132</span> </div>
-<div class="line"><span class="lineno">  133</span>            <span class="keyword">const</span> <span class="keyword">auto</span>&amp; [it, inserted] = <a class="code hl_variable" href="#a0e506bd4213d06a2e65462b09c499d8d">topicLevels</a>.insert({<a class="code hl_variable" href="#a4dc213812c9859612409cdced33db721">topicLevel</a>, SubscribtionTree::TopicLevel(<a class="code hl_variable" href="#acc1a53e26f396dedad733f4e5addfb0f">broker</a>, <a class="code hl_variable" href="#a4dc213812c9859612409cdced33db721">topicLevel</a>)});</div>
-<div class="line"><span class="lineno">  134</span> </div>
-<div class="line"><span class="lineno">  135</span>            <span class="keywordflow">if</span> (!it-&gt;second.subscribe(clientId, qoS, topic)) {</div>
-<div class="line"><span class="lineno">  136</span>                LOG(DEBUG) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker:   Erase topic: &quot;</span> &lt;&lt; <a class="code hl_variable" href="#a4dc213812c9859612409cdced33db721">topicLevel</a> &lt;&lt; <span class="stringliteral">&quot; /&quot;</span> &lt;&lt; topic;</div>
-<div class="line"><span class="lineno">  137</span> </div>
-<div class="line"><span class="lineno">  138</span>                <a class="code hl_variable" href="#a0e506bd4213d06a2e65462b09c499d8d">topicLevels</a>.erase(it);</div>
-<div class="line"><span class="lineno">  139</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  140</span>                LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker:   Topic: &quot;</span> &lt;&lt; <a class="code hl_variable" href="#a4dc213812c9859612409cdced33db721">topicLevel</a> &lt;&lt; <span class="stringliteral">&quot; /&quot;</span> &lt;&lt; topic;</div>
-<div class="line"><span class="lineno">  141</span>            }</div>
-<div class="line"><span class="lineno">  142</span>        }</div>
-<div class="line"><span class="lineno">  143</span> </div>
-<div class="line"><span class="lineno">  144</span>        <span class="keywordflow">return</span> !<a class="code hl_variable" href="#a0e506bd4213d06a2e65462b09c499d8d">topicLevels</a>.empty() || !<a class="code hl_variable" href="#a601ffce5ea7471613f93f6689b0cbab0">clientIds</a>.empty();</div>
-<div class="line"><span class="lineno">  145</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="SubscribtionTree_8cpp_source.html#l00142">142</a> of file <a class="el" href="SubscribtionTree_8cpp_source.html">SubscribtionTree.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  142</span>                                                                                                      {</div>
+<div class="line"><span class="lineno">  143</span>        <span class="keywordflow">if</span> (topic.empty()) {</div>
+<div class="line"><span class="lineno">  144</span>            LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker: Subscribe&quot;</span>;</div>
+<div class="line"><span class="lineno">  145</span>            LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker:   ClientId: &quot;</span> &lt;&lt; clientId;</div>
+<div class="line"><span class="lineno">  146</span> </div>
+<div class="line"><span class="lineno">  147</span>            <a class="code hl_variable" href="#a601ffce5ea7471613f93f6689b0cbab0">clientIds</a>[clientId] = qoS;</div>
+<div class="line"><span class="lineno">  148</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  149</span>            <span class="keyword">const</span> std::string <a class="code hl_variable" href="#a4dc213812c9859612409cdced33db721">topicLevel</a> = topic.substr(0, topic.find(<span class="charliteral">&#39;/&#39;</span>));</div>
+<div class="line"><span class="lineno">  150</span> </div>
+<div class="line"><span class="lineno">  151</span>            topic.erase(0, <a class="code hl_variable" href="#a4dc213812c9859612409cdced33db721">topicLevel</a>.size() + 1);</div>
+<div class="line"><span class="lineno">  152</span> </div>
+<div class="line"><span class="lineno">  153</span>            <span class="keyword">const</span> <span class="keyword">auto</span>&amp; [it, inserted] = <a class="code hl_variable" href="#a0e506bd4213d06a2e65462b09c499d8d">topicLevels</a>.insert({<a class="code hl_variable" href="#a4dc213812c9859612409cdced33db721">topicLevel</a>, SubscribtionTree::TopicLevel(<a class="code hl_variable" href="#acc1a53e26f396dedad733f4e5addfb0f">broker</a>, <a class="code hl_variable" href="#a4dc213812c9859612409cdced33db721">topicLevel</a>)});</div>
+<div class="line"><span class="lineno">  154</span> </div>
+<div class="line"><span class="lineno">  155</span>            <span class="keywordflow">if</span> (!it-&gt;second.subscribe(clientId, qoS, topic)) {</div>
+<div class="line"><span class="lineno">  156</span>                LOG(DEBUG) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker:   Erase topic: &quot;</span> &lt;&lt; <a class="code hl_variable" href="#a4dc213812c9859612409cdced33db721">topicLevel</a> &lt;&lt; <span class="stringliteral">&quot; /&quot;</span> &lt;&lt; topic;</div>
+<div class="line"><span class="lineno">  157</span> </div>
+<div class="line"><span class="lineno">  158</span>                <a class="code hl_variable" href="#a0e506bd4213d06a2e65462b09c499d8d">topicLevels</a>.erase(it);</div>
+<div class="line"><span class="lineno">  159</span>            } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  160</span>                LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker:   Topic: &quot;</span> &lt;&lt; <a class="code hl_variable" href="#a4dc213812c9859612409cdced33db721">topicLevel</a> &lt;&lt; <span class="stringliteral">&quot; /&quot;</span> &lt;&lt; topic;</div>
+<div class="line"><span class="lineno">  161</span>            }</div>
+<div class="line"><span class="lineno">  162</span>        }</div>
+<div class="line"><span class="lineno">  163</span> </div>
+<div class="line"><span class="lineno">  164</span>        <span class="keywordflow">return</span> !<a class="code hl_variable" href="#a0e506bd4213d06a2e65462b09c499d8d">topicLevels</a>.empty() || !<a class="code hl_variable" href="#a601ffce5ea7471613f93f6689b0cbab0">clientIds</a>.empty();</div>
+<div class="line"><span class="lineno">  165</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -423,20 +500,20 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SubscribtionTree_8cpp_source.html#l00246">246</a> of file <a class="el" href="SubscribtionTree_8cpp_source.html">SubscribtionTree.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  246</span>                                                          {</div>
-<div class="line"><span class="lineno">  247</span>        nlohmann::json json;</div>
-<div class="line"><span class="lineno">  248</span> </div>
-<div class="line"><span class="lineno">  249</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; [topicLevelName, <a class="code hl_variable" href="#a4dc213812c9859612409cdced33db721">topicLevel</a>] : <a class="code hl_variable" href="#a0e506bd4213d06a2e65462b09c499d8d">topicLevels</a>) {</div>
-<div class="line"><span class="lineno">  250</span>            json[<span class="stringliteral">&quot;topic_filter&quot;</span>][topicLevelName] = <a class="code hl_variable" href="#a4dc213812c9859612409cdced33db721">topicLevel</a>.toJson();</div>
-<div class="line"><span class="lineno">  251</span>        }</div>
-<div class="line"><span class="lineno">  252</span> </div>
-<div class="line"><span class="lineno">  253</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; [subscriber, qoS] : <a class="code hl_variable" href="#a601ffce5ea7471613f93f6689b0cbab0">clientIds</a>) {</div>
-<div class="line"><span class="lineno">  254</span>            json[<span class="stringliteral">&quot;qos_map&quot;</span>][subscriber] = qoS;</div>
-<div class="line"><span class="lineno">  255</span>        }</div>
-<div class="line"><span class="lineno">  256</span> </div>
-<div class="line"><span class="lineno">  257</span>        <span class="keywordflow">return</span> json;</div>
-<div class="line"><span class="lineno">  258</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="SubscribtionTree_8cpp_source.html#l00266">266</a> of file <a class="el" href="SubscribtionTree_8cpp_source.html">SubscribtionTree.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  266</span>                                                          {</div>
+<div class="line"><span class="lineno">  267</span>        nlohmann::json json;</div>
+<div class="line"><span class="lineno">  268</span> </div>
+<div class="line"><span class="lineno">  269</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; [topicLevelName, <a class="code hl_variable" href="#a4dc213812c9859612409cdced33db721">topicLevel</a>] : <a class="code hl_variable" href="#a0e506bd4213d06a2e65462b09c499d8d">topicLevels</a>) {</div>
+<div class="line"><span class="lineno">  270</span>            json[<span class="stringliteral">&quot;topic_filter&quot;</span>][topicLevelName] = <a class="code hl_variable" href="#a4dc213812c9859612409cdced33db721">topicLevel</a>.toJson();</div>
+<div class="line"><span class="lineno">  271</span>        }</div>
+<div class="line"><span class="lineno">  272</span> </div>
+<div class="line"><span class="lineno">  273</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; [subscriber, qoS] : <a class="code hl_variable" href="#a601ffce5ea7471613f93f6689b0cbab0">clientIds</a>) {</div>
+<div class="line"><span class="lineno">  274</span>            json[<span class="stringliteral">&quot;qos_map&quot;</span>][subscriber] = qoS;</div>
+<div class="line"><span class="lineno">  275</span>        }</div>
+<div class="line"><span class="lineno">  276</span> </div>
+<div class="line"><span class="lineno">  277</span>        <span class="keywordflow">return</span> json;</div>
+<div class="line"><span class="lineno">  278</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -455,26 +532,26 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SubscribtionTree_8cpp_source.html#l00226">226</a> of file <a class="el" href="SubscribtionTree_8cpp_source.html">SubscribtionTree.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  226</span>                                                                          {</div>
-<div class="line"><span class="lineno">  227</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a601ffce5ea7471613f93f6689b0cbab0">clientIds</a>.erase(clientId) != 0) {</div>
-<div class="line"><span class="lineno">  228</span>            LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker: Unsubscribe&quot;</span>;</div>
-<div class="line"><span class="lineno">  229</span>            LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker:   ClientId: &quot;</span> &lt;&lt; clientId;</div>
-<div class="line"><span class="lineno">  230</span>            LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker:   Topic: &quot;</span> &lt;&lt; <a class="code hl_variable" href="#a4dc213812c9859612409cdced33db721">topicLevel</a>;</div>
-<div class="line"><span class="lineno">  231</span>        }</div>
-<div class="line"><span class="lineno">  232</span> </div>
-<div class="line"><span class="lineno">  233</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> it = <a class="code hl_variable" href="#a0e506bd4213d06a2e65462b09c499d8d">topicLevels</a>.begin(); it != <a class="code hl_variable" href="#a0e506bd4213d06a2e65462b09c499d8d">topicLevels</a>.end();) {</div>
-<div class="line"><span class="lineno">  234</span>            <span class="keywordflow">if</span> (it-&gt;second.unsubscribe(clientId)) {</div>
-<div class="line"><span class="lineno">  235</span>                LOG(DEBUG) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker:   Erase Topic: &quot;</span> &lt;&lt; it-&gt;first;</div>
-<div class="line"><span class="lineno">  236</span> </div>
-<div class="line"><span class="lineno">  237</span>                it = <a class="code hl_variable" href="#a0e506bd4213d06a2e65462b09c499d8d">topicLevels</a>.erase(it);</div>
-<div class="line"><span class="lineno">  238</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  239</span>                ++it;</div>
-<div class="line"><span class="lineno">  240</span>            }</div>
-<div class="line"><span class="lineno">  241</span>        }</div>
-<div class="line"><span class="lineno">  242</span> </div>
-<div class="line"><span class="lineno">  243</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#a601ffce5ea7471613f93f6689b0cbab0">clientIds</a>.empty() &amp;&amp; <a class="code hl_variable" href="#a0e506bd4213d06a2e65462b09c499d8d">topicLevels</a>.empty();</div>
-<div class="line"><span class="lineno">  244</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="SubscribtionTree_8cpp_source.html#l00246">246</a> of file <a class="el" href="SubscribtionTree_8cpp_source.html">SubscribtionTree.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  246</span>                                                                          {</div>
+<div class="line"><span class="lineno">  247</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a601ffce5ea7471613f93f6689b0cbab0">clientIds</a>.erase(clientId) != 0) {</div>
+<div class="line"><span class="lineno">  248</span>            LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker: Unsubscribe&quot;</span>;</div>
+<div class="line"><span class="lineno">  249</span>            LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker:   ClientId: &quot;</span> &lt;&lt; clientId;</div>
+<div class="line"><span class="lineno">  250</span>            LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker:   Topic: &quot;</span> &lt;&lt; <a class="code hl_variable" href="#a4dc213812c9859612409cdced33db721">topicLevel</a>;</div>
+<div class="line"><span class="lineno">  251</span>        }</div>
+<div class="line"><span class="lineno">  252</span> </div>
+<div class="line"><span class="lineno">  253</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> it = <a class="code hl_variable" href="#a0e506bd4213d06a2e65462b09c499d8d">topicLevels</a>.begin(); it != <a class="code hl_variable" href="#a0e506bd4213d06a2e65462b09c499d8d">topicLevels</a>.end();) {</div>
+<div class="line"><span class="lineno">  254</span>            <span class="keywordflow">if</span> (it-&gt;second.unsubscribe(clientId)) {</div>
+<div class="line"><span class="lineno">  255</span>                LOG(DEBUG) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker:   Erase Topic: &quot;</span> &lt;&lt; it-&gt;first;</div>
+<div class="line"><span class="lineno">  256</span> </div>
+<div class="line"><span class="lineno">  257</span>                it = <a class="code hl_variable" href="#a0e506bd4213d06a2e65462b09c499d8d">topicLevels</a>.erase(it);</div>
+<div class="line"><span class="lineno">  258</span>            } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  259</span>                ++it;</div>
+<div class="line"><span class="lineno">  260</span>            }</div>
+<div class="line"><span class="lineno">  261</span>        }</div>
+<div class="line"><span class="lineno">  262</span> </div>
+<div class="line"><span class="lineno">  263</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#a601ffce5ea7471613f93f6689b0cbab0">clientIds</a>.empty() &amp;&amp; <a class="code hl_variable" href="#a0e506bd4213d06a2e65462b09c499d8d">topicLevels</a>.empty();</div>
+<div class="line"><span class="lineno">  264</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -497,31 +574,31 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SubscribtionTree_8cpp_source.html#l00201">201</a> of file <a class="el" href="SubscribtionTree_8cpp_source.html">SubscribtionTree.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  201</span>                                                                                           {</div>
-<div class="line"><span class="lineno">  202</span>        <span class="keywordflow">if</span> (topic.empty()) {</div>
-<div class="line"><span class="lineno">  203</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a601ffce5ea7471613f93f6689b0cbab0">clientIds</a>.erase(clientId) != 0) {</div>
-<div class="line"><span class="lineno">  204</span>                LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker: Unsubscribe&quot;</span>;</div>
-<div class="line"><span class="lineno">  205</span>                LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker:   ClientId: &quot;</span> &lt;&lt; clientId;</div>
-<div class="line"><span class="lineno">  206</span>                LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker:   Topic: &quot;</span> &lt;&lt; <a class="code hl_variable" href="#a4dc213812c9859612409cdced33db721">topicLevel</a>;</div>
-<div class="line"><span class="lineno">  207</span>            }</div>
-<div class="line"><span class="lineno">  208</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  209</span>            <span class="keyword">const</span> std::string <a class="code hl_variable" href="#a4dc213812c9859612409cdced33db721">topicLevel</a> = topic.substr(0, topic.find(<span class="charliteral">&#39;/&#39;</span>));</div>
-<div class="line"><span class="lineno">  210</span> </div>
-<div class="line"><span class="lineno">  211</span>            <span class="keyword">auto</span>&amp;&amp; it = <a class="code hl_variable" href="#a0e506bd4213d06a2e65462b09c499d8d">topicLevels</a>.find(<a class="code hl_variable" href="#a4dc213812c9859612409cdced33db721">topicLevel</a>);</div>
-<div class="line"><span class="lineno">  212</span>            <span class="keywordflow">if</span> (it != <a class="code hl_variable" href="#a0e506bd4213d06a2e65462b09c499d8d">topicLevels</a>.end()) {</div>
-<div class="line"><span class="lineno">  213</span>                topic.erase(0, <a class="code hl_variable" href="#a4dc213812c9859612409cdced33db721">topicLevel</a>.size() + 1);</div>
-<div class="line"><span class="lineno">  214</span> </div>
-<div class="line"><span class="lineno">  215</span>                <span class="keywordflow">if</span> (it-&gt;second.unsubscribe(clientId, topic)) {</div>
-<div class="line"><span class="lineno">  216</span>                    LOG(DEBUG) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker:   Erase Topic: &quot;</span> &lt;&lt; it-&gt;first;</div>
-<div class="line"><span class="lineno">  217</span> </div>
-<div class="line"><span class="lineno">  218</span>                    <a class="code hl_variable" href="#a0e506bd4213d06a2e65462b09c499d8d">topicLevels</a>.erase(it);</div>
-<div class="line"><span class="lineno">  219</span>                }</div>
-<div class="line"><span class="lineno">  220</span>            }</div>
-<div class="line"><span class="lineno">  221</span>        }</div>
-<div class="line"><span class="lineno">  222</span> </div>
-<div class="line"><span class="lineno">  223</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#a601ffce5ea7471613f93f6689b0cbab0">clientIds</a>.empty() &amp;&amp; <a class="code hl_variable" href="#a0e506bd4213d06a2e65462b09c499d8d">topicLevels</a>.empty();</div>
-<div class="line"><span class="lineno">  224</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="SubscribtionTree_8cpp_source.html#l00221">221</a> of file <a class="el" href="SubscribtionTree_8cpp_source.html">SubscribtionTree.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  221</span>                                                                                           {</div>
+<div class="line"><span class="lineno">  222</span>        <span class="keywordflow">if</span> (topic.empty()) {</div>
+<div class="line"><span class="lineno">  223</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a601ffce5ea7471613f93f6689b0cbab0">clientIds</a>.erase(clientId) != 0) {</div>
+<div class="line"><span class="lineno">  224</span>                LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker: Unsubscribe&quot;</span>;</div>
+<div class="line"><span class="lineno">  225</span>                LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker:   ClientId: &quot;</span> &lt;&lt; clientId;</div>
+<div class="line"><span class="lineno">  226</span>                LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker:   Topic: &quot;</span> &lt;&lt; <a class="code hl_variable" href="#a4dc213812c9859612409cdced33db721">topicLevel</a>;</div>
+<div class="line"><span class="lineno">  227</span>            }</div>
+<div class="line"><span class="lineno">  228</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  229</span>            <span class="keyword">const</span> std::string <a class="code hl_variable" href="#a4dc213812c9859612409cdced33db721">topicLevel</a> = topic.substr(0, topic.find(<span class="charliteral">&#39;/&#39;</span>));</div>
+<div class="line"><span class="lineno">  230</span> </div>
+<div class="line"><span class="lineno">  231</span>            <span class="keyword">auto</span>&amp;&amp; it = <a class="code hl_variable" href="#a0e506bd4213d06a2e65462b09c499d8d">topicLevels</a>.find(<a class="code hl_variable" href="#a4dc213812c9859612409cdced33db721">topicLevel</a>);</div>
+<div class="line"><span class="lineno">  232</span>            <span class="keywordflow">if</span> (it != <a class="code hl_variable" href="#a0e506bd4213d06a2e65462b09c499d8d">topicLevels</a>.end()) {</div>
+<div class="line"><span class="lineno">  233</span>                topic.erase(0, <a class="code hl_variable" href="#a4dc213812c9859612409cdced33db721">topicLevel</a>.size() + 1);</div>
+<div class="line"><span class="lineno">  234</span> </div>
+<div class="line"><span class="lineno">  235</span>                <span class="keywordflow">if</span> (it-&gt;second.unsubscribe(clientId, topic)) {</div>
+<div class="line"><span class="lineno">  236</span>                    LOG(DEBUG) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker:   Erase Topic: &quot;</span> &lt;&lt; it-&gt;first;</div>
+<div class="line"><span class="lineno">  237</span> </div>
+<div class="line"><span class="lineno">  238</span>                    <a class="code hl_variable" href="#a0e506bd4213d06a2e65462b09c499d8d">topicLevels</a>.erase(it);</div>
+<div class="line"><span class="lineno">  239</span>                }</div>
+<div class="line"><span class="lineno">  240</span>            }</div>
+<div class="line"><span class="lineno">  241</span>        }</div>
+<div class="line"><span class="lineno">  242</span> </div>
+<div class="line"><span class="lineno">  243</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#a601ffce5ea7471613f93f6689b0cbab0">clientIds</a>.empty() &amp;&amp; <a class="code hl_variable" href="#a0e506bd4213d06a2e65462b09c499d8d">topicLevels</a>.empty();</div>
+<div class="line"><span class="lineno">  244</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -546,7 +623,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SubscribtionTree_8h_source.html#l00103">103</a> of file <a class="el" href="SubscribtionTree_8h_source.html">SubscribtionTree.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SubscribtionTree_8h_source.html#l00106">106</a> of file <a class="el" href="SubscribtionTree_8h_source.html">SubscribtionTree.h</a>.</p>
 
 </div>
 </div>
@@ -570,7 +647,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SubscribtionTree_8h_source.html#l00099">99</a> of file <a class="el" href="SubscribtionTree_8h_source.html">SubscribtionTree.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SubscribtionTree_8h_source.html#l00108">108</a> of file <a class="el" href="SubscribtionTree_8h_source.html">SubscribtionTree.h</a>.</p>
 
 </div>
 </div>
@@ -594,7 +671,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SubscribtionTree_8h_source.html#l00104">104</a> of file <a class="el" href="SubscribtionTree_8h_source.html">SubscribtionTree.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SubscribtionTree_8h_source.html#l00111">111</a> of file <a class="el" href="SubscribtionTree_8h_source.html">SubscribtionTree.h</a>.</p>
 
 </div>
 </div>
@@ -618,7 +695,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SubscribtionTree_8h_source.html#l00101">101</a> of file <a class="el" href="SubscribtionTree_8h_source.html">SubscribtionTree.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SubscribtionTree_8h_source.html#l00109">109</a> of file <a class="el" href="SubscribtionTree_8h_source.html">SubscribtionTree.h</a>.</p>
 
 </div>
 </div>
@@ -632,7 +709,7 @@ Private Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceiot.html">iot</a></li><li class="navelem"><a class="el" href="namespaceiot_1_1mqtt.html">mqtt</a></li><li class="navelem"><a class="el" href="namespaceiot_1_1mqtt_1_1server.html">server</a></li><li class="navelem"><a class="el" href="namespaceiot_1_1mqtt_1_1server_1_1broker.html">broker</a></li><li class="navelem"><a class="el" href="classiot_1_1mqtt_1_1server_1_1broker_1_1SubscribtionTree.html">SubscribtionTree</a></li><li class="navelem"><a class="el" href="classiot_1_1mqtt_1_1server_1_1broker_1_1SubscribtionTree_1_1TopicLevel.html">TopicLevel</a></li>
-    <li class="footer">Generated on Sun Mar 9 2025 01:34:39 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generated on Mon Mar 31 2025 11:57:04 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>

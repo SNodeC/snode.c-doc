@@ -162,16 +162,16 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">   70</span>        }</div>
 <div class="line"><span class="lineno">   71</span> </div>
 <div class="line"><span class="lineno">   72</span>        <span class="keyword">const</span> <a class="code hl_class" href="classweb_1_1http_1_1client_1_1Client.html">web::http::legacy::in::Client</a> legacyClient(</div>
-<div class="line"><span class="lineno">   73</span>            [](<a class="code hl_typedef" href="classweb_1_1http_1_1client_1_1Client.html#a320d376b21c2928d8e859ec2ab150a48">web::http::legacy::in::Client::SocketConnection</a>* socketConnection) {</div>
+<div class="line"><span class="lineno">   73</span>            [](<a class="code hl_typedef" href="classweb_1_1http_1_1client_1_1Client.html#ae820316d54f1ddde4ee142d5ab68ae00">web::http::legacy::in::Client::SocketConnection</a>* socketConnection) {</div>
 <div class="line"><span class="lineno">   74</span>                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;OnConnect&quot;</span>;</div>
 <div class="line"><span class="lineno">   75</span> </div>
 <div class="line"><span class="lineno">   76</span>                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;\tServer: &quot;</span> + socketConnection-&gt;getRemoteAddress().toString();</div>
 <div class="line"><span class="lineno">   77</span>                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;\tClient: &quot;</span> + socketConnection-&gt;getLocalAddress().toString();</div>
 <div class="line"><span class="lineno">   78</span>            },</div>
-<div class="line"><span class="lineno">   79</span>            []([[maybe_unused]] <a class="code hl_typedef" href="classweb_1_1http_1_1client_1_1Client.html#a320d376b21c2928d8e859ec2ab150a48">web::http::legacy::in::Client::SocketConnection</a>* socketConnection) {</div>
+<div class="line"><span class="lineno">   79</span>            []([[maybe_unused]] <a class="code hl_typedef" href="classweb_1_1http_1_1client_1_1Client.html#ae820316d54f1ddde4ee142d5ab68ae00">web::http::legacy::in::Client::SocketConnection</a>* socketConnection) {</div>
 <div class="line"><span class="lineno">   80</span>                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;OnConnected&quot;</span>;</div>
 <div class="line"><span class="lineno">   81</span>            },</div>
-<div class="line"><span class="lineno">   82</span>            [](<a class="code hl_typedef" href="classweb_1_1http_1_1client_1_1Client.html#a320d376b21c2928d8e859ec2ab150a48">web::http::legacy::in::Client::SocketConnection</a>* socketConnection) {</div>
+<div class="line"><span class="lineno">   82</span>            [](<a class="code hl_typedef" href="classweb_1_1http_1_1client_1_1Client.html#ae820316d54f1ddde4ee142d5ab68ae00">web::http::legacy::in::Client::SocketConnection</a>* socketConnection) {</div>
 <div class="line"><span class="lineno">   83</span>                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;OnDisconnect&quot;</span>;</div>
 <div class="line"><span class="lineno">   84</span> </div>
 <div class="line"><span class="lineno">   85</span>                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;\tServer: &quot;</span> + socketConnection-&gt;getRemoteAddress().toString();</div>
@@ -204,7 +204,7 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">  112</span>            });</div>
 <div class="line"><span class="lineno">  113</span> </div>
 <div class="line"><span class="lineno">  114</span>        legacyClient.connect(</div>
-<div class="line"><span class="lineno">  115</span>            <span class="stringliteral">&quot;localhost&quot;</span>, 8082, [](<span class="keyword">const</span> <a class="code hl_typedef" href="classweb_1_1http_1_1client_1_1Client.html#a9d4688d352cbaa102d877193e5cead9d">web::http::legacy::in::Client::SocketAddress</a>&amp; socketAddress, <span class="keyword">const</span> <a class="code hl_class" href="classcore_1_1socket_1_1State.html">core::socket::State</a>&amp; state) {</div>
+<div class="line"><span class="lineno">  115</span>            <span class="stringliteral">&quot;localhost&quot;</span>, 8082, [](<span class="keyword">const</span> <a class="code hl_typedef" href="classweb_1_1http_1_1client_1_1Client.html#a5abeedbd948472689e670ccb4d899180">web::http::legacy::in::Client::SocketAddress</a>&amp; socketAddress, <span class="keyword">const</span> <a class="code hl_class" href="classcore_1_1socket_1_1State.html">core::socket::State</a>&amp; state) {</div>
 <div class="line"><span class="lineno">  116</span>                <span class="keywordflow">switch</span> (state) {</div>
 <div class="line"><span class="lineno">  117</span>                    <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a744e04217104f055ae728e8d884f25de">core::socket::State::OK</a>:</div>
 <div class="line"><span class="lineno">  118</span>                        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;OAuth2ResourceServer: connected to &#39;&quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
@@ -252,8 +252,8 @@ Functions</h2></td></tr>
 <div class="ttc" id="aclassexpress_1_1WebApp_html_a54e6910c9466c61d0b217490b7d9bb5a"><div class="ttname"><a href="classexpress_1_1WebApp.html#a54e6910c9466c61d0b217490b7d9bb5a">express::WebApp::start</a></div><div class="ttdeci">static int start(const utils::Timeval &amp;timeOut={LONG_MAX, 0})</div><div class="ttdef"><b>Definition</b> <a href="WebApp_8cpp_source.html#l00060">WebApp.cpp:60</a></div></div>
 <div class="ttc" id="aclassexpress_1_1middleware_1_1JsonMiddleware_html"><div class="ttname"><a href="classexpress_1_1middleware_1_1JsonMiddleware.html">express::middleware::JsonMiddleware</a></div><div class="ttdef"><b>Definition</b> <a href="JsonMiddleware_8h_source.html#l00053">JsonMiddleware.h:53</a></div></div>
 <div class="ttc" id="aclassweb_1_1http_1_1client_1_1Client_html"><div class="ttname"><a href="classweb_1_1http_1_1client_1_1Client.html">web::http::client::Client</a></div><div class="ttdef"><b>Definition</b> <a href="client_2Client_8h_source.html#l00057">Client.h:61</a></div></div>
-<div class="ttc" id="aclassweb_1_1http_1_1client_1_1Client_html_a320d376b21c2928d8e859ec2ab150a48"><div class="ttname"><a href="classweb_1_1http_1_1client_1_1Client.html#a320d376b21c2928d8e859ec2ab150a48">web::http::client::Client::SocketConnection</a></div><div class="ttdeci">typename Super::SocketConnection SocketConnection</div><div class="ttdef"><b>Definition</b> <a href="client_2Client_8h_source.html#l00073">Client.h:73</a></div></div>
-<div class="ttc" id="aclassweb_1_1http_1_1client_1_1Client_html_a9d4688d352cbaa102d877193e5cead9d"><div class="ttname"><a href="classweb_1_1http_1_1client_1_1Client.html#a9d4688d352cbaa102d877193e5cead9d">web::http::client::Client::SocketAddress</a></div><div class="ttdeci">typename Super::SocketAddress SocketAddress</div><div class="ttdef"><b>Definition</b> <a href="client_2Client_8h_source.html#l00074">Client.h:74</a></div></div>
+<div class="ttc" id="aclassweb_1_1http_1_1client_1_1Client_html_a5abeedbd948472689e670ccb4d899180"><div class="ttname"><a href="classweb_1_1http_1_1client_1_1Client.html#a5abeedbd948472689e670ccb4d899180">web::http::client::Client::SocketAddress</a></div><div class="ttdeci">typename Super::SocketAddress SocketAddress</div><div class="ttdef"><b>Definition</b> <a href="client_2Client_8h_source.html#l00074">Client.h:74</a></div></div>
+<div class="ttc" id="aclassweb_1_1http_1_1client_1_1Client_html_ae820316d54f1ddde4ee142d5ab68ae00"><div class="ttname"><a href="classweb_1_1http_1_1client_1_1Client.html#ae820316d54f1ddde4ee142d5ab68ae00">web::http::client::Client::SocketConnection</a></div><div class="ttdeci">typename Super::SocketConnection SocketConnection</div><div class="ttdef"><b>Definition</b> <a href="client_2Client_8h_source.html#l00073">Client.h:73</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="WebApp_8cpp_source.html#l00056">express::WebApp::init()</a>, and <a class="el" href="WebApp_8cpp_source.html#l00060">express::WebApp::start()</a>.</p>
 <div class="dynheader">
@@ -270,7 +270,7 @@ Here is the call graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_9654b8d08f4bba4e84b362c5fd320bee.html">apps</a></li><li class="navelem"><a class="el" href="dir_f0c47b07b9ea05f6a7a6131667da911b.html">oauth2</a></li><li class="navelem"><a class="el" href="dir_282bbe5b29b80379a2ca80fa98d85a02.html">resource_server</a></li><li class="navelem"><a class="el" href="ResourceServer_8cpp.html">ResourceServer.cpp</a></li>
-    <li class="footer">Generated on Sun Mar 9 2025 01:34:38 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generated on Mon Mar 31 2025 11:57:03 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>

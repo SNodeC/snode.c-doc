@@ -144,8 +144,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a6f424d68d8d9a08bcb8a1a95d7dbe3a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab1b7a1e8f568d6f37b5712a43c126d20" id="r_ab1b7a1e8f568d6f37b5712a43c126d20"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab1b7a1e8f568d6f37b5712a43c126d20">PhysicalSocket</a> (int <a class="el" href="classcore_1_1Descriptor.html#a359e01790fa87afb5e1b75df7904bc2d">fd</a>, const <a class="el" href="#a44a497ad25f506b17d85deebfac03d4d">SocketAddress</a> &amp;<a class="el" href="#ab5e85381fe9b43ec4f616bad67dacea7">bindAddress</a>)</td></tr>
 <tr class="separator:ab1b7a1e8f568d6f37b5712a43c126d20"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a948bb5d21240135578ebae8803468826" id="r_a948bb5d21240135578ebae8803468826"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a948bb5d21240135578ebae8803468826">open</a> (const std::map&lt; int, const <a class="el" href="classnet_1_1phy_1_1PhysicalSocketOption.html">PhysicalSocketOption</a> &gt; &amp;socketOptions, <a class="el" href="#ababfe8607820fbd9c4674b538303325a">Flags</a> flags)</td></tr>
-<tr class="separator:a948bb5d21240135578ebae8803468826"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a323485ba26ea1fd620f927e0543c4bb9" id="r_a323485ba26ea1fd620f927e0543c4bb9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a323485ba26ea1fd620f927e0543c4bb9">open</a> (const std::map&lt; int, std::map&lt; int, const <a class="el" href="classnet_1_1phy_1_1PhysicalSocketOption.html">PhysicalSocketOption</a> &gt; &gt; &amp;socketOptionsMapMap, <a class="el" href="#ababfe8607820fbd9c4674b538303325a">Flags</a> flags)</td></tr>
+<tr class="separator:a323485ba26ea1fd620f927e0543c4bb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a951f53a51600ef220eb40c3eda019599" id="r_a951f53a51600ef220eb40c3eda019599"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a951f53a51600ef220eb40c3eda019599">bind</a> (<a class="el" href="#a44a497ad25f506b17d85deebfac03d4d">SocketAddress</a> &amp;<a class="el" href="#ab5e85381fe9b43ec4f616bad67dacea7">bindAddress</a>)</td></tr>
 <tr class="separator:a951f53a51600ef220eb40c3eda019599"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9d1ec881540521006057825db9ab554f" id="r_a9d1ec881540521006057825db9ab554f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9d1ec881540521006057825db9ab554f">isValid</a> () const</td></tr>
@@ -528,9 +528,9 @@ template&lt;typename <a class="el" href="#a44a497ad25f506b17d85deebfac03d4d">Soc
 <div class="ttc" id="aclasscore_1_1Descriptor_html_a359e01790fa87afb5e1b75df7904bc2d"><div class="ttname"><a href="classcore_1_1Descriptor.html#a359e01790fa87afb5e1b75df7904bc2d">core::Descriptor::fd</a></div><div class="ttdeci">int fd</div><div class="ttdef"><b>Definition</b> <a href="Descriptor_8h_source.html#l00070">Descriptor.h:70</a></div></div>
 <div class="ttc" id="aclassnet_1_1SocketAddress_html_a49e99c0b17c0289615fb7cd14f046535"><div class="ttname"><a href="classnet_1_1SocketAddress.html#a49e99c0b17c0289615fb7cd14f046535">net::SocketAddress::SockLen</a></div><div class="ttdeci">socklen_t SockLen</div><div class="ttdef"><b>Definition</b> <a href="net_2SocketAddress_8h_source.html#l00060">SocketAddress.h:60</a></div></div>
 <div class="ttc" id="aclassnet_1_1phy_1_1PhysicalSocket_html_ab5e85381fe9b43ec4f616bad67dacea7"><div class="ttname"><a href="#ab5e85381fe9b43ec4f616bad67dacea7">net::phy::PhysicalSocket::bindAddress</a></div><div class="ttdeci">SocketAddress bindAddress</div><div class="ttdef"><b>Definition</b> <a href="phy_2PhysicalSocket_8h_source.html#l00104">PhysicalSocket.h:104</a></div></div>
-<div class="ttc" id="aclassnet_1_1phy_1_1PhysicalSocket_html_ac2004c287a3042ce3ec871c36753ed38"><div class="ttname"><a href="#ac2004c287a3042ce3ec871c36753ed38">net::phy::PhysicalSocket::getSockopt</a></div><div class="ttdeci">int getSockopt(int level, int optname, void *optval, typename SocketAddress::SockLen *optlen) const</div><div class="ttdef"><b>Definition</b> <a href="phy_2PhysicalSocket_8hpp_source.html#l00128">PhysicalSocket.hpp:128</a></div></div>
+<div class="ttc" id="aclassnet_1_1phy_1_1PhysicalSocket_html_ac2004c287a3042ce3ec871c36753ed38"><div class="ttname"><a href="#ac2004c287a3042ce3ec871c36753ed38">net::phy::PhysicalSocket::getSockopt</a></div><div class="ttdeci">int getSockopt(int level, int optname, void *optval, typename SocketAddress::SockLen *optlen) const</div><div class="ttdef"><b>Definition</b> <a href="phy_2PhysicalSocket_8hpp_source.html#l00135">PhysicalSocket.hpp:135</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="phy_2PhysicalSocket_8h_source.html#l00104">net::phy::PhysicalSocket&lt; SocketAddressT &gt;::bindAddress</a>, <a class="el" href="phy_2PhysicalSocket_8h_source.html#l00106">net::phy::PhysicalSocket&lt; SocketAddressT &gt;::domain</a>, <a class="el" href="phy_2PhysicalSocket_8hpp_source.html#l00128">net::phy::PhysicalSocket&lt; SocketAddressT &gt;::getSockopt()</a>, and <a class="el" href="phy_2PhysicalSocket_8h_source.html#l00107">net::phy::PhysicalSocket&lt; SocketAddressT &gt;::type</a>.</p>
+<p class="reference">References <a class="el" href="phy_2PhysicalSocket_8h_source.html#l00104">net::phy::PhysicalSocket&lt; SocketAddressT &gt;::bindAddress</a>, <a class="el" href="phy_2PhysicalSocket_8h_source.html#l00106">net::phy::PhysicalSocket&lt; SocketAddressT &gt;::domain</a>, <a class="el" href="phy_2PhysicalSocket_8hpp_source.html#l00135">net::phy::PhysicalSocket&lt; SocketAddressT &gt;::getSockopt()</a>, and <a class="el" href="phy_2PhysicalSocket_8h_source.html#l00107">net::phy::PhysicalSocket&lt; SocketAddressT &gt;::type</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -557,16 +557,16 @@ template&lt;typename <a class="el" href="#a44a497ad25f506b17d85deebfac03d4d">Soc
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="phy_2PhysicalSocket_8hpp_source.html#l00100">100</a> of file <a class="el" href="phy_2PhysicalSocket_8hpp_source.html">PhysicalSocket.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  100</span>                                                                      {</div>
-<div class="line"><span class="lineno">  101</span>        <span class="keywordtype">int</span> ret = <a class="code hl_function" href="namespacecore_1_1system.html#a726f40f6a8ebf70f5a83bd41d3a028de">core::system::bind</a>(<a class="code hl_function" href="classcore_1_1Descriptor.html#af1ac9826d5c5f44bb357c845932ea5e4">core::Descriptor::getFd</a>(), &amp;<a class="code hl_variable" href="#ab5e85381fe9b43ec4f616bad67dacea7">bindAddress</a>.getSockAddr(), <a class="code hl_variable" href="#ab5e85381fe9b43ec4f616bad67dacea7">bindAddress</a>.getSockAddrLen());</div>
-<div class="line"><span class="lineno">  102</span> </div>
-<div class="line"><span class="lineno">  103</span>        <span class="keywordflow">if</span> (ret == 0) {</div>
-<div class="line"><span class="lineno">  104</span>            this-&gt;<a class="code hl_variable" href="#ab5e85381fe9b43ec4f616bad67dacea7">bindAddress</a> = <a class="code hl_variable" href="#ab5e85381fe9b43ec4f616bad67dacea7">bindAddress</a>;</div>
-<div class="line"><span class="lineno">  105</span>        }</div>
-<div class="line"><span class="lineno">  106</span> </div>
-<div class="line"><span class="lineno">  107</span>        <span class="keywordflow">return</span> ret;</div>
-<div class="line"><span class="lineno">  108</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="phy_2PhysicalSocket_8hpp_source.html#l00107">107</a> of file <a class="el" href="phy_2PhysicalSocket_8hpp_source.html">PhysicalSocket.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  107</span>                                                                      {</div>
+<div class="line"><span class="lineno">  108</span>        <span class="keywordtype">int</span> ret = <a class="code hl_function" href="namespacecore_1_1system.html#a726f40f6a8ebf70f5a83bd41d3a028de">core::system::bind</a>(<a class="code hl_function" href="classcore_1_1Descriptor.html#af1ac9826d5c5f44bb357c845932ea5e4">core::Descriptor::getFd</a>(), &amp;<a class="code hl_variable" href="#ab5e85381fe9b43ec4f616bad67dacea7">bindAddress</a>.getSockAddr(), <a class="code hl_variable" href="#ab5e85381fe9b43ec4f616bad67dacea7">bindAddress</a>.getSockAddrLen());</div>
+<div class="line"><span class="lineno">  109</span> </div>
+<div class="line"><span class="lineno">  110</span>        <span class="keywordflow">if</span> (ret == 0) {</div>
+<div class="line"><span class="lineno">  111</span>            this-&gt;<a class="code hl_variable" href="#ab5e85381fe9b43ec4f616bad67dacea7">bindAddress</a> = <a class="code hl_variable" href="#ab5e85381fe9b43ec4f616bad67dacea7">bindAddress</a>;</div>
+<div class="line"><span class="lineno">  112</span>        }</div>
+<div class="line"><span class="lineno">  113</span> </div>
+<div class="line"><span class="lineno">  114</span>        <span class="keywordflow">return</span> ret;</div>
+<div class="line"><span class="lineno">  115</span>    }</div>
 <div class="ttc" id="aclasscore_1_1Descriptor_html_af1ac9826d5c5f44bb357c845932ea5e4"><div class="ttname"><a href="classcore_1_1Descriptor.html#af1ac9826d5c5f44bb357c845932ea5e4">core::Descriptor::getFd</a></div><div class="ttdeci">int getFd() const</div><div class="ttdef"><b>Definition</b> <a href="Descriptor_8cpp_source.html#l00081">Descriptor.cpp:81</a></div></div>
 <div class="ttc" id="anamespacecore_1_1system_html_a726f40f6a8ebf70f5a83bd41d3a028de"><div class="ttname"><a href="namespacecore_1_1system.html#a726f40f6a8ebf70f5a83bd41d3a028de">core::system::bind</a></div><div class="ttdeci">int bind(int sockfd, const sockaddr *addr, socklen_t addrlen)</div><div class="ttdef"><b>Definition</b> <a href="socket_8cpp_source.html#l00057">socket.cpp:57</a></div></div>
 </div><!-- fragment -->
@@ -589,10 +589,10 @@ template&lt;typename <a class="el" href="#a44a497ad25f506b17d85deebfac03d4d">Soc
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="phy_2PhysicalSocket_8hpp_source.html#l00145">145</a> of file <a class="el" href="phy_2PhysicalSocket_8hpp_source.html">PhysicalSocket.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  145</span>                                                                      {</div>
-<div class="line"><span class="lineno">  146</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#ab5e85381fe9b43ec4f616bad67dacea7">bindAddress</a>;</div>
-<div class="line"><span class="lineno">  147</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="phy_2PhysicalSocket_8hpp_source.html#l00152">152</a> of file <a class="el" href="phy_2PhysicalSocket_8hpp_source.html">PhysicalSocket.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  152</span>                                                                      {</div>
+<div class="line"><span class="lineno">  153</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#ab5e85381fe9b43ec4f616bad67dacea7">bindAddress</a>;</div>
+<div class="line"><span class="lineno">  154</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="phy_2PhysicalSocket_8h_source.html#l00104">net::phy::PhysicalSocket&lt; SocketAddressT &gt;::bindAddress</a>.</p>
 
@@ -619,10 +619,10 @@ template&lt;typename <a class="el" href="#a44a497ad25f506b17d85deebfac03d4d">Soc
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="phy_2PhysicalSocket_8hpp_source.html#l00139">139</a> of file <a class="el" href="phy_2PhysicalSocket_8hpp_source.html">PhysicalSocket.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  140</span>                                                                                                     {</div>
-<div class="line"><span class="lineno">  141</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="namespacecore_1_1system.html#a6c12f08bc8a1d08ee4585204eb0745b1">core::system::getpeername</a>(<a class="code hl_function" href="classcore_1_1Descriptor.html#af1ac9826d5c5f44bb357c845932ea5e4">core::Descriptor::getFd</a>(), <span class="keyword">reinterpret_cast&lt;</span>sockaddr*<span class="keyword">&gt;</span>(&amp;remoteSockAddr), &amp;remoteSockAddrLen);</div>
-<div class="line"><span class="lineno">  142</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="phy_2PhysicalSocket_8hpp_source.html#l00146">146</a> of file <a class="el" href="phy_2PhysicalSocket_8hpp_source.html">PhysicalSocket.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  147</span>                                                                                                     {</div>
+<div class="line"><span class="lineno">  148</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="namespacecore_1_1system.html#a6c12f08bc8a1d08ee4585204eb0745b1">core::system::getpeername</a>(<a class="code hl_function" href="classcore_1_1Descriptor.html#af1ac9826d5c5f44bb357c845932ea5e4">core::Descriptor::getFd</a>(), <span class="keyword">reinterpret_cast&lt;</span>sockaddr*<span class="keyword">&gt;</span>(&amp;remoteSockAddr), &amp;remoteSockAddrLen);</div>
+<div class="line"><span class="lineno">  149</span>    }</div>
 <div class="ttc" id="anamespacecore_1_1system_html_a6c12f08bc8a1d08ee4585204eb0745b1"><div class="ttname"><a href="namespacecore_1_1system.html#a6c12f08bc8a1d08ee4585204eb0745b1">core::system::getpeername</a></div><div class="ttdeci">int getpeername(int sockfd, sockaddr *addr, socklen_t *addrlen)</div><div class="ttdef"><b>Definition</b> <a href="socket_8cpp_source.html#l00086">socket.cpp:86</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -644,13 +644,13 @@ template&lt;typename <a class="el" href="#a44a497ad25f506b17d85deebfac03d4d">Soc
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="phy_2PhysicalSocket_8hpp_source.html#l00116">116</a> of file <a class="el" href="phy_2PhysicalSocket_8hpp_source.html">PhysicalSocket.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  116</span>                                                                     {</div>
-<div class="line"><span class="lineno">  117</span>        <span class="keyword">typename</span> <a class="code hl_typedef" href="classnet_1_1SocketAddress.html#a49e99c0b17c0289615fb7cd14f046535">SocketAddress::SockLen</a> cErrnoLen = <span class="keyword">sizeof</span>(cErrno);</div>
-<div class="line"><span class="lineno">  118</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="#ac2004c287a3042ce3ec871c36753ed38">getSockopt</a>(SOL_SOCKET, SO_ERROR, &amp;cErrno, &amp;cErrnoLen);</div>
-<div class="line"><span class="lineno">  119</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="phy_2PhysicalSocket_8hpp_source.html#l00123">123</a> of file <a class="el" href="phy_2PhysicalSocket_8hpp_source.html">PhysicalSocket.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  123</span>                                                                     {</div>
+<div class="line"><span class="lineno">  124</span>        <span class="keyword">typename</span> <a class="code hl_typedef" href="classnet_1_1SocketAddress.html#a49e99c0b17c0289615fb7cd14f046535">SocketAddress::SockLen</a> cErrnoLen = <span class="keyword">sizeof</span>(cErrno);</div>
+<div class="line"><span class="lineno">  125</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="#ac2004c287a3042ce3ec871c36753ed38">getSockopt</a>(SOL_SOCKET, SO_ERROR, &amp;cErrno, &amp;cErrnoLen);</div>
+<div class="line"><span class="lineno">  126</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="phy_2PhysicalSocket_8hpp_source.html#l00128">net::phy::PhysicalSocket&lt; SocketAddressT &gt;::getSockopt()</a>.</p>
+<p class="reference">References <a class="el" href="phy_2PhysicalSocket_8hpp_source.html#l00135">net::phy::PhysicalSocket&lt; SocketAddressT &gt;::getSockopt()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -680,10 +680,10 @@ template&lt;typename <a class="el" href="#a44a497ad25f506b17d85deebfac03d4d">Soc
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="phy_2PhysicalSocket_8hpp_source.html#l00133">133</a> of file <a class="el" href="phy_2PhysicalSocket_8hpp_source.html">PhysicalSocket.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  134</span>                                                                                                    {</div>
-<div class="line"><span class="lineno">  135</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="namespacecore_1_1system.html#a09b7b5fd5a49db5b0abee54dfda17ba1">core::system::getsockname</a>(<a class="code hl_function" href="classcore_1_1Descriptor.html#af1ac9826d5c5f44bb357c845932ea5e4">core::Descriptor::getFd</a>(), <span class="keyword">reinterpret_cast&lt;</span>sockaddr*<span class="keyword">&gt;</span>(&amp;localSockAddr), &amp;localSockAddrLen);</div>
-<div class="line"><span class="lineno">  136</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="phy_2PhysicalSocket_8hpp_source.html#l00140">140</a> of file <a class="el" href="phy_2PhysicalSocket_8hpp_source.html">PhysicalSocket.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  141</span>                                                                                                    {</div>
+<div class="line"><span class="lineno">  142</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="namespacecore_1_1system.html#a09b7b5fd5a49db5b0abee54dfda17ba1">core::system::getsockname</a>(<a class="code hl_function" href="classcore_1_1Descriptor.html#af1ac9826d5c5f44bb357c845932ea5e4">core::Descriptor::getFd</a>(), <span class="keyword">reinterpret_cast&lt;</span>sockaddr*<span class="keyword">&gt;</span>(&amp;localSockAddr), &amp;localSockAddrLen);</div>
+<div class="line"><span class="lineno">  143</span>    }</div>
 <div class="ttc" id="anamespacecore_1_1system_html_a09b7b5fd5a49db5b0abee54dfda17ba1"><div class="ttname"><a href="namespacecore_1_1system.html#a09b7b5fd5a49db5b0abee54dfda17ba1">core::system::getsockname</a></div><div class="ttdeci">int getsockname(int sockfd, sockaddr *addr, socklen_t *addrlen)</div><div class="ttdef"><b>Definition</b> <a href="socket_8cpp_source.html#l00081">socket.cpp:81</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -727,13 +727,13 @@ template&lt;typename <a class="el" href="#a44a497ad25f506b17d85deebfac03d4d">Soc
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="phy_2PhysicalSocket_8hpp_source.html#l00128">128</a> of file <a class="el" href="phy_2PhysicalSocket_8hpp_source.html">PhysicalSocket.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  128</span>                                                                                                                                   {</div>
-<div class="line"><span class="lineno">  129</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="namespacecore_1_1system.html#a5658d0ea06a95cb8f07412b13f393ecb">core::system::getsockopt</a>(<a class="code hl_function" href="classcore_1_1Descriptor.html#af1ac9826d5c5f44bb357c845932ea5e4">PhysicalSocket::getFd</a>(), level, optname, optval, optlen);</div>
-<div class="line"><span class="lineno">  130</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="phy_2PhysicalSocket_8hpp_source.html#l00135">135</a> of file <a class="el" href="phy_2PhysicalSocket_8hpp_source.html">PhysicalSocket.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  135</span>                                                                                                                                   {</div>
+<div class="line"><span class="lineno">  136</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="namespacecore_1_1system.html#a5658d0ea06a95cb8f07412b13f393ecb">core::system::getsockopt</a>(<a class="code hl_function" href="classcore_1_1Descriptor.html#af1ac9826d5c5f44bb357c845932ea5e4">PhysicalSocket::getFd</a>(), level, optname, optval, optlen);</div>
+<div class="line"><span class="lineno">  137</span>    }</div>
 <div class="ttc" id="anamespacecore_1_1system_html_a5658d0ea06a95cb8f07412b13f393ecb"><div class="ttname"><a href="namespacecore_1_1system.html#a5658d0ea06a95cb8f07412b13f393ecb">core::system::getsockopt</a></div><div class="ttdeci">int getsockopt(int sockfd, int level, int optname, void *optval, socklen_t *optlen)</div><div class="ttdef"><b>Definition</b> <a href="socket_8cpp_source.html#l00101">socket.cpp:101</a></div></div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="phy_2PhysicalSocket_8hpp_source.html#l00116">net::phy::PhysicalSocket&lt; SocketAddressT &gt;::getSockError()</a>, and <a class="el" href="phy_2PhysicalSocket_8hpp_source.html#l00062">net::phy::PhysicalSocket&lt; SocketAddressT &gt;::PhysicalSocket()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="phy_2PhysicalSocket_8hpp_source.html#l00123">net::phy::PhysicalSocket&lt; SocketAddressT &gt;::getSockError()</a>, and <a class="el" href="phy_2PhysicalSocket_8hpp_source.html#l00062">net::phy::PhysicalSocket&lt; SocketAddressT &gt;::PhysicalSocket()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -759,15 +759,15 @@ template&lt;typename <a class="el" href="#a44a497ad25f506b17d85deebfac03d4d">Soc
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="phy_2PhysicalSocket_8hpp_source.html#l00111">111</a> of file <a class="el" href="phy_2PhysicalSocket_8hpp_source.html">PhysicalSocket.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  111</span>                                                      {</div>
-<div class="line"><span class="lineno">  112</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classcore_1_1Descriptor.html#af1ac9826d5c5f44bb357c845932ea5e4">core::Descriptor::getFd</a>() &gt;= 0;</div>
-<div class="line"><span class="lineno">  113</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="phy_2PhysicalSocket_8hpp_source.html#l00118">118</a> of file <a class="el" href="phy_2PhysicalSocket_8hpp_source.html">PhysicalSocket.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  118</span>                                                      {</div>
+<div class="line"><span class="lineno">  119</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classcore_1_1Descriptor.html#af1ac9826d5c5f44bb357c845932ea5e4">core::Descriptor::getFd</a>() &gt;= 0;</div>
+<div class="line"><span class="lineno">  120</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="a948bb5d21240135578ebae8803468826" name="a948bb5d21240135578ebae8803468826"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a948bb5d21240135578ebae8803468826">&#9670;&#160;</a></span>open()</h2>
+<a id="a323485ba26ea1fd620f927e0543c4bb9" name="a323485ba26ea1fd620f927e0543c4bb9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a323485ba26ea1fd620f927e0543c4bb9">&#9670;&#160;</a></span>open()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -777,7 +777,7 @@ template&lt;typename <a class="el" href="#a44a497ad25f506b17d85deebfac03d4d">Soc
         <tr>
           <td class="memname">int <a class="el" href="classnet_1_1phy_1_1PhysicalSocket.html">net::phy::PhysicalSocket</a>&lt; <a class="el" href="#a44a497ad25f506b17d85deebfac03d4d">SocketAddress</a> &gt;::open </td>
           <td>(</td>
-          <td class="paramtype">const std::map&lt; int, const <a class="el" href="classnet_1_1phy_1_1PhysicalSocketOption.html">PhysicalSocketOption</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>socketOptions</em></span>, </td>
+          <td class="paramtype">const std::map&lt; int, std::map&lt; int, const <a class="el" href="classnet_1_1phy_1_1PhysicalSocketOption.html">PhysicalSocketOption</a> &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>socketOptionsMapMap</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -788,26 +788,32 @@ template&lt;typename <a class="el" href="#a44a497ad25f506b17d85deebfac03d4d">Soc
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="phy_2PhysicalSocket_8hpp_source.html#l00080">80</a> of file <a class="el" href="phy_2PhysicalSocket_8hpp_source.html">PhysicalSocket.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   80</span>                                                                                                                           {</div>
-<div class="line"><span class="lineno">   81</span>        <span class="keywordtype">int</span> ret = <a class="code hl_function" href="classcore_1_1Descriptor.html#a8fe1949770bfe286c33accc631904f41">Super::operator=</a>(<a class="code hl_function" href="namespacecore_1_1system.html#a5ffaddeca7b0ee1c5ee33addd15e02db">core::system::socket</a>(<a class="code hl_variable" href="#ad83aee8bbfd88bd20051580704984c8b">domain</a>, <a class="code hl_variable" href="#a0a30bce8ff1d0f8b52752d30b78ab3a6">type</a> | flags, <a class="code hl_variable" href="#a4f6a1f883919f4f393a437b372739c3d">protocol</a>)).<a class="code hl_function" href="classcore_1_1Descriptor.html#af1ac9826d5c5f44bb357c845932ea5e4">getFd</a>();</div>
-<div class="line"><span class="lineno">   82</span> </div>
-<div class="line"><span class="lineno">   83</span>        <span class="keywordflow">if</span> (ret &gt;= 0) {</div>
-<div class="line"><span class="lineno">   84</span>            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; [optName, socketOption] : socketOptions) {</div>
-<div class="line"><span class="lineno">   85</span>                <span class="keywordtype">int</span> setSockoptRet =</div>
-<div class="line"><span class="lineno">   86</span>                    <a class="code hl_function" href="#a4e39bc4c74c77ac29296905949a0091a">setSockopt</a>(socketOption.getOptLevel(), socketOption.getOptName(), socketOption.getOptValue(), socketOption.getOptLen());</div>
-<div class="line"><span class="lineno">   87</span> </div>
-<div class="line"><span class="lineno">   88</span>                ret = (ret &gt;= 0 &amp;&amp; setSockoptRet &lt; 0) ? setSockoptRet : ret;</div>
+<div class="fragment"><div class="line"><span class="lineno">   81</span>                                                         {</div>
+<div class="line"><span class="lineno">   82</span>        <span class="keywordtype">int</span> ret = <a class="code hl_function" href="classcore_1_1Descriptor.html#a8fe1949770bfe286c33accc631904f41">Super::operator=</a>(<a class="code hl_function" href="namespacecore_1_1system.html#a5ffaddeca7b0ee1c5ee33addd15e02db">core::system::socket</a>(<a class="code hl_variable" href="#ad83aee8bbfd88bd20051580704984c8b">domain</a>, <a class="code hl_variable" href="#a0a30bce8ff1d0f8b52752d30b78ab3a6">type</a> | flags, <a class="code hl_variable" href="#a4f6a1f883919f4f393a437b372739c3d">protocol</a>)).<a class="code hl_function" href="classcore_1_1Descriptor.html#af1ac9826d5c5f44bb357c845932ea5e4">getFd</a>();</div>
+<div class="line"><span class="lineno">   83</span> </div>
+<div class="line"><span class="lineno">   84</span>        <span class="keywordflow">if</span> (ret &gt;= 0) {</div>
+<div class="line"><span class="lineno">   85</span>            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; [optLevel, socketOptionsMap] : socketOptionsMapMap) {</div>
+<div class="line"><span class="lineno">   86</span>                <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; [optName, socketOption] : socketOptionsMap) {</div>
+<div class="line"><span class="lineno">   87</span>                    <span class="keywordtype">int</span> setSockoptRet = <a class="code hl_function" href="#a4e39bc4c74c77ac29296905949a0091a">setSockopt</a>(</div>
+<div class="line"><span class="lineno">   88</span>                        socketOption.getOptLevel(), socketOption.getOptName(), socketOption.getOptValue(), socketOption.getOptLen());</div>
 <div class="line"><span class="lineno">   89</span> </div>
-<div class="line"><span class="lineno">   90</span>                <span class="keywordflow">if</span> (ret &lt; 0) {</div>
-<div class="line"><span class="lineno">   91</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   92</span>                }</div>
-<div class="line"><span class="lineno">   93</span>            }</div>
-<div class="line"><span class="lineno">   94</span>        }</div>
-<div class="line"><span class="lineno">   95</span> </div>
-<div class="line"><span class="lineno">   96</span>        <span class="keywordflow">return</span> ret;</div>
-<div class="line"><span class="lineno">   97</span>    }</div>
+<div class="line"><span class="lineno">   90</span>                    ret = (ret &gt;= 0 &amp;&amp; setSockoptRet &lt; 0) ? setSockoptRet : ret;</div>
+<div class="line"><span class="lineno">   91</span> </div>
+<div class="line"><span class="lineno">   92</span>                    <span class="keywordflow">if</span> (ret &lt; 0) {</div>
+<div class="line"><span class="lineno">   93</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   94</span>                    }</div>
+<div class="line"><span class="lineno">   95</span>                }</div>
+<div class="line"><span class="lineno">   96</span> </div>
+<div class="line"><span class="lineno">   97</span>                <span class="keywordflow">if</span> (ret &lt; 0) {</div>
+<div class="line"><span class="lineno">   98</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   99</span>                }</div>
+<div class="line"><span class="lineno">  100</span>            }</div>
+<div class="line"><span class="lineno">  101</span>        }</div>
+<div class="line"><span class="lineno">  102</span> </div>
+<div class="line"><span class="lineno">  103</span>        <span class="keywordflow">return</span> ret;</div>
+<div class="line"><span class="lineno">  104</span>    }</div>
 <div class="ttc" id="aclasscore_1_1Descriptor_html_a8fe1949770bfe286c33accc631904f41"><div class="ttname"><a href="classcore_1_1Descriptor.html#a8fe1949770bfe286c33accc631904f41">core::Descriptor::operator=</a></div><div class="ttdeci">Descriptor &amp; operator=(int fd)</div><div class="ttdef"><b>Definition</b> <a href="Descriptor_8cpp_source.html#l00068">Descriptor.cpp:68</a></div></div>
-<div class="ttc" id="aclassnet_1_1phy_1_1PhysicalSocket_html_a4e39bc4c74c77ac29296905949a0091a"><div class="ttname"><a href="#a4e39bc4c74c77ac29296905949a0091a">net::phy::PhysicalSocket::setSockopt</a></div><div class="ttdeci">int setSockopt(int level, int optname, const void *optval, typename SocketAddress::SockLen optlen) const</div><div class="ttdef"><b>Definition</b> <a href="phy_2PhysicalSocket_8hpp_source.html#l00123">PhysicalSocket.hpp:123</a></div></div>
+<div class="ttc" id="aclassnet_1_1phy_1_1PhysicalSocket_html_a4e39bc4c74c77ac29296905949a0091a"><div class="ttname"><a href="#a4e39bc4c74c77ac29296905949a0091a">net::phy::PhysicalSocket::setSockopt</a></div><div class="ttdeci">int setSockopt(int level, int optname, const void *optval, typename SocketAddress::SockLen optlen) const</div><div class="ttdef"><b>Definition</b> <a href="phy_2PhysicalSocket_8hpp_source.html#l00130">PhysicalSocket.hpp:130</a></div></div>
 <div class="ttc" id="anamespacecore_1_1system_html_a5ffaddeca7b0ee1c5ee33addd15e02db"><div class="ttname"><a href="namespacecore_1_1system.html#a5ffaddeca7b0ee1c5ee33addd15e02db">core::system::socket</a></div><div class="ttdeci">int socket(int domain, int type, int protocol)</div><div class="ttdef"><b>Definition</b> <a href="socket_8cpp_source.html#l00052">socket.cpp:52</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -932,10 +938,10 @@ template&lt;typename <a class="el" href="#a44a497ad25f506b17d85deebfac03d4d">Soc
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="phy_2PhysicalSocket_8hpp_source.html#l00123">123</a> of file <a class="el" href="phy_2PhysicalSocket_8hpp_source.html">PhysicalSocket.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  123</span>                                                                                                                                    {</div>
-<div class="line"><span class="lineno">  124</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="namespacecore_1_1system.html#a69ae50ef904b60224906b7ba04ca8261">core::system::setsockopt</a>(<a class="code hl_function" href="classcore_1_1Descriptor.html#af1ac9826d5c5f44bb357c845932ea5e4">PhysicalSocket::getFd</a>(), level, optname, optval, optlen);</div>
-<div class="line"><span class="lineno">  125</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="phy_2PhysicalSocket_8hpp_source.html#l00130">130</a> of file <a class="el" href="phy_2PhysicalSocket_8hpp_source.html">PhysicalSocket.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  130</span>                                                                                                                                    {</div>
+<div class="line"><span class="lineno">  131</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="namespacecore_1_1system.html#a69ae50ef904b60224906b7ba04ca8261">core::system::setsockopt</a>(<a class="code hl_function" href="classcore_1_1Descriptor.html#af1ac9826d5c5f44bb357c845932ea5e4">PhysicalSocket::getFd</a>(), level, optname, optval, optlen);</div>
+<div class="line"><span class="lineno">  132</span>    }</div>
 <div class="ttc" id="anamespacecore_1_1system_html_a69ae50ef904b60224906b7ba04ca8261"><div class="ttname"><a href="namespacecore_1_1system.html#a69ae50ef904b60224906b7ba04ca8261">core::system::setsockopt</a></div><div class="ttdeci">int setsockopt(int sockfd, int level, int optname, const void *optval, socklen_t optlen)</div><div class="ttdef"><b>Definition</b> <a href="socket_8cpp_source.html#l00106">socket.cpp:106</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -965,7 +971,7 @@ template&lt;typename SocketAddressT &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="phy_2PhysicalSocket_8h_source.html#l00104">104</a> of file <a class="el" href="phy_2PhysicalSocket_8h_source.html">PhysicalSocket.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="phy_2PhysicalSocket_8hpp_source.html#l00145">net::phy::PhysicalSocket&lt; SocketAddressT &gt;::getBindAddress()</a>, and <a class="el" href="phy_2PhysicalSocket_8hpp_source.html#l00062">net::phy::PhysicalSocket&lt; SocketAddressT &gt;::PhysicalSocket()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="phy_2PhysicalSocket_8hpp_source.html#l00152">net::phy::PhysicalSocket&lt; SocketAddressT &gt;::getBindAddress()</a>, and <a class="el" href="phy_2PhysicalSocket_8hpp_source.html#l00062">net::phy::PhysicalSocket&lt; SocketAddressT &gt;::PhysicalSocket()</a>.</p>
 
 </div>
 </div>
@@ -1063,7 +1069,7 @@ template&lt;typename SocketAddressT &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacenet.html">net</a></li><li class="navelem"><a class="el" href="namespacenet_1_1phy.html">phy</a></li><li class="navelem"><a class="el" href="classnet_1_1phy_1_1PhysicalSocket.html">PhysicalSocket</a></li>
-    <li class="footer">Generated on Sun Mar 9 2025 01:34:39 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generated on Mon Mar 31 2025 11:57:04 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>

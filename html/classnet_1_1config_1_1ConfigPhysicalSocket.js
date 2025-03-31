@@ -12,9 +12,8 @@ var classnet_1_1config_1_1ConfigPhysicalSocket =
     [ "getRetryOnFatal", "classnet_1_1config_1_1ConfigPhysicalSocket.html#a867d61e2dbecbf99b03d676d723bcc2c", null ],
     [ "getRetryTimeout", "classnet_1_1config_1_1ConfigPhysicalSocket.html#a4c40ecb1e1ccdb7395de93e7180b54b4", null ],
     [ "getRetryTries", "classnet_1_1config_1_1ConfigPhysicalSocket.html#a5521012a5c8c8e19de064cc8c2839dc6", null ],
-    [ "getReuseAddress", "classnet_1_1config_1_1ConfigPhysicalSocket.html#aaceb07f2ccb33e764fa42e788fda92a9", null ],
-    [ "getSocketOptions", "classnet_1_1config_1_1ConfigPhysicalSocket.html#a966819ee3afeca364ea950fd82085178", null ],
-    [ "removeSocketOption", "classnet_1_1config_1_1ConfigPhysicalSocket.html#a40d599d06d6cb8c868b03fa17818ca2b", null ],
+    [ "getSocketOptions", "classnet_1_1config_1_1ConfigPhysicalSocket.html#ab6d832a72bb4fcfe09be93adfb0cc124", null ],
+    [ "removeSocketOption", "classnet_1_1config_1_1ConfigPhysicalSocket.html#a8a64e58f2183e35a5afd513933907f59", null ],
     [ "setRetry", "classnet_1_1config_1_1ConfigPhysicalSocket.html#ab44215f8f61872a20db835287af1dc12", null ],
     [ "setRetryBase", "classnet_1_1config_1_1ConfigPhysicalSocket.html#acb3e8e170f68af3200a9132b65f07e60", null ],
     [ "setRetryJitter", "classnet_1_1config_1_1ConfigPhysicalSocket.html#a577cf40fd3e7fd9df2f714d55f8ba77f", null ],
@@ -22,7 +21,6 @@ var classnet_1_1config_1_1ConfigPhysicalSocket =
     [ "setRetryOnFatal", "classnet_1_1config_1_1ConfigPhysicalSocket.html#a95d7abf5f753a76ba1b2b8d10c954266", null ],
     [ "setRetryTimeout", "classnet_1_1config_1_1ConfigPhysicalSocket.html#a39e6f00c6097262bce2248e606227355", null ],
     [ "setRetryTries", "classnet_1_1config_1_1ConfigPhysicalSocket.html#af2ca23e2ca78a7022001b9bc7094d7cc", null ],
-    [ "setReuseAddress", "classnet_1_1config_1_1ConfigPhysicalSocket.html#ae33b72f3b36525d356e836c66d6e5456", null ],
     [ "retryBaseOpt", "classnet_1_1config_1_1ConfigPhysicalSocket.html#a7a353b8758c7799862061c971b913037", null ],
     [ "retryJitterOpt", "classnet_1_1config_1_1ConfigPhysicalSocket.html#a5b1502f931c111a292ae3f6f663a0b68", null ],
     [ "retryLimitOpt", "classnet_1_1config_1_1ConfigPhysicalSocket.html#ae07c8e7706bc23459235e5d5834007e3", null ],
@@ -30,6 +28,5 @@ var classnet_1_1config_1_1ConfigPhysicalSocket =
     [ "retryOpt", "classnet_1_1config_1_1ConfigPhysicalSocket.html#adf927e1acf3114a9f683b70f1f41e1c9", null ],
     [ "retryTimeoutOpt", "classnet_1_1config_1_1ConfigPhysicalSocket.html#adf277aec58ff6e5a744004916ee12dfa", null ],
     [ "retryTriesOpt", "classnet_1_1config_1_1ConfigPhysicalSocket.html#a91d3a345eddceb373bc7daa3872de9bd", null ],
-    [ "reuseAddressOpt", "classnet_1_1config_1_1ConfigPhysicalSocket.html#abd21ce5b69aa88bec9dabbb97bea35ed", null ],
-    [ "socketOptionsMap", "classnet_1_1config_1_1ConfigPhysicalSocket.html#a13b2c5b84582b4d0c5c309c740444c7f", null ]
+    [ "socketOptionsMapMap", "classnet_1_1config_1_1ConfigPhysicalSocket.html#aa5bbdb1e7143ddefbdafdec88ca122b1", null ]
 ];

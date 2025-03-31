@@ -9,6 +9,6 @@ var searchData=
   ['binarydata_6',['BinaryData',['../classiot_1_1mqtt_1_1types_1_1BinaryData.html#a5c1c5663783c41fa40b3bef78dde67c6',1,'iot::mqtt::types::BinaryData::BinaryData()'],['../classiot_1_1mqtt_1_1types_1_1BinaryData.html#a0888c594bb76e93365d5bfdd3e1a3b1a',1,'iot::mqtt::types::BinaryData::BinaryData(const BinaryData &amp;)=default'],['../classiot_1_1mqtt_1_1types_1_1BinaryData.html#ad555905131650827cf099915ffe6c7ed',1,'iot::mqtt::types::BinaryData::BinaryData(BinaryData &amp;&amp;) noexcept=default']]],
   ['bind_7',['bind',['../classnet_1_1phy_1_1PhysicalSocket.html#a951f53a51600ef220eb40c3eda019599',1,'net::phy::PhysicalSocket::bind()'],['../classnet_1_1un_1_1phy_1_1PhysicalSocket.html#affbe2cce232a649cd095cd6ed19cc3e9',1,'net::un::phy::PhysicalSocket::bind()'],['../namespacecore_1_1system.html#a726f40f6a8ebf70f5a83bd41d3a028de',1,'core::system::bind()']]],
   ['bootstrap_8',['bootstrap',['../classutils_1_1Config.html#ac5d45b86d1281e70ddd8eaeb8ad369d1',1,'utils::Config']]],
-  ['broker_9',['Broker',['../classiot_1_1mqtt_1_1server_1_1broker_1_1Broker.html#aef38cf38a015b72bf9781fff9e680ba4',1,'iot::mqtt::server::broker::Broker']]],
+  ['broker_9',['Broker',['../classiot_1_1mqtt_1_1server_1_1broker_1_1Broker.html#a7303dbd9eddbfe66c2ff2f827441d2ba',1,'iot::mqtt::server::broker::Broker']]],
   ['buffer_5fto_5fblock_10',['buffer_to_block',['../classutils_1_1SHA1.html#aea82a6fa79469fdcea9f9213abbf9750',1,'utils::SHA1']]]
 ];

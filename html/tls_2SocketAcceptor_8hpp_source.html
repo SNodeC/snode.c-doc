@@ -234,7 +234,7 @@ $(function(){initNavTree('tls_2SocketAcceptor_8hpp_source.html',''); initResizab
 <div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> PhysicalSocketServer, <span class="keyword">typename</span> Config&gt;</div>
 <div class="foldopen" id="foldopen00127" data-start="{" data-end="}">
 <div class="line"><a id="l00127" name="l00127"></a><span class="lineno"><a class="line" href="classcore_1_1socket_1_1stream_1_1tls_1_1SocketAcceptor.html#a6657559b8e24b24dc6a9da1e2090c837">  127</a></span>    <span class="keywordtype">void</span> <a class="code hl_class" href="classcore_1_1socket_1_1stream_1_1tls_1_1SocketAcceptor.html">SocketAcceptor</a>&lt;PhysicalSocketServer, Config&gt;::<a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1tls_1_1SocketAcceptor.html#a6657559b8e24b24dc6a9da1e2090c837">init</a>() {</div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>        <span class="keywordflow">if</span> (!config-&gt;getDisabled()) {</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>        <span class="keywordflow">if</span> (core::eventLoopState() == core::State::RUNNING &amp;&amp; !config-&gt;getDisabled()) {</div>
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>            LOG(TRACE) &lt;&lt; config-&gt;getInstanceName() &lt;&lt; <span class="stringliteral">&quot; SSL/TLS: SSL_CTX creating ...&quot;</span>;</div>
 <div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>            SSL_CTX* sslCtx = config-&gt;getSslCtx();</div>
 <div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
@@ -310,7 +310,7 @@ $(function(){initNavTree('tls_2SocketAcceptor_8hpp_source.html',''); initResizab
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_4270bfced15e0e73154b13468c7c9ad9.html">core</a></li><li class="navelem"><a class="el" href="dir_55e2b5896cfedaa9128ab09eb6ffed25.html">socket</a></li><li class="navelem"><a class="el" href="dir_fda6a541e73aa8ed23b6fa172f5dc60d.html">stream</a></li><li class="navelem"><a class="el" href="dir_b54354194172df550fb2bdb507d33122.html">tls</a></li><li class="navelem"><a class="el" href="tls_2SocketAcceptor_8hpp.html">SocketAcceptor.hpp</a></li>
-    <li class="footer">Generated on Sun Mar 9 2025 01:34:09 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generated on Mon Mar 31 2025 11:56:32 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>

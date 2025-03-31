@@ -812,7 +812,7 @@ var hierarchy =
     [ "net::in6::SocketAddrInfo", "classnet_1_1in6_1_1SocketAddrInfo.html", null ],
     [ "net::in::SocketAddrInfo", "classnet_1_1in_1_1SocketAddrInfo.html", null ],
     [ "SocketClientT", null, [
-      [ "web::http::client::Client< SocketClientT, RequestT, ResponseT >", "classweb_1_1http_1_1client_1_1Client.html", null ]
+      [ "web::http::client::Client< SocketClientT >", "classweb_1_1http_1_1client_1_1Client.html", null ]
     ] ],
     [ "core::socket::stream::SocketConnection", "classcore_1_1socket_1_1stream_1_1SocketConnection.html", [
       [ "core::socket::stream::SocketConnectionT< PhysicalSocketT, SocketReaderT, SocketWriterT >", "classcore_1_1socket_1_1stream_1_1SocketConnectionT.html", null ]
@@ -842,11 +842,11 @@ var hierarchy =
       ] ]
     ] ],
     [ "core::socket::stream::SocketContextFactory", "classcore_1_1socket_1_1stream_1_1SocketContextFactory.html", [
-      [ "web::http::SocketContextFactory< web::http::client::SocketContext, RequestT, ResponseT >", "classweb_1_1http_1_1SocketContextFactory.html", [
-        [ "web::http::client::SocketContextFactory< RequestT, ResponseT >", "classweb_1_1http_1_1client_1_1SocketContextFactory.html", null ]
+      [ "web::http::SocketContextFactory< web::http::client::SocketContext >", "classweb_1_1http_1_1SocketContextFactory.html", [
+        [ "web::http::client::SocketContextFactory", "classweb_1_1http_1_1client_1_1SocketContextFactory.html", null ]
       ] ],
-      [ "web::http::SocketContextFactory< web::http::server::SocketContext, RequestT, ResponseT >", "classweb_1_1http_1_1SocketContextFactory.html", [
-        [ "web::http::server::SocketContextFactory< RequestT, ResponseT >", "classweb_1_1http_1_1server_1_1SocketContextFactory.html", null ]
+      [ "web::http::SocketContextFactory< web::http::server::SocketContext >", "classweb_1_1http_1_1SocketContextFactory.html", [
+        [ "web::http::server::SocketContextFactory", "classweb_1_1http_1_1server_1_1SocketContextFactory.html", null ]
       ] ],
       [ "web::http::SocketContextUpgradeFactory< web::http::client::Request, web::http::client::Response >", "classweb_1_1http_1_1SocketContextUpgradeFactory.html", [
         [ "web::http::client::SocketContextUpgradeFactory", "classweb_1_1http_1_1client_1_1SocketContextUpgradeFactory.html", [
@@ -864,7 +864,7 @@ var hierarchy =
       [ "apps::http::SimpleSocketProtocolFactory", "classapps_1_1http_1_1SimpleSocketProtocolFactory.html", null ],
       [ "iot::mqtt::server::SharedSocketContextFactory", "classiot_1_1mqtt_1_1server_1_1SharedSocketContextFactory.html", null ],
       [ "iot::mqtt::server::SocketContextFactory", "classiot_1_1mqtt_1_1server_1_1SocketContextFactory.html", null ],
-      [ "web::http::SocketContextFactory< SocketContextT, RequestT, ResponseT >", "classweb_1_1http_1_1SocketContextFactory.html", null ],
+      [ "web::http::SocketContextFactory< SocketContextT >", "classweb_1_1http_1_1SocketContextFactory.html", null ],
       [ "web::http::SocketContextUpgradeFactory< RequestT, ResponseT >", "classweb_1_1http_1_1SocketContextUpgradeFactory.html", null ]
     ] ],
     [ "web::http::SocketContextUpgradeFactorySelector< SocketContextUpgradeFactoryT >::SocketContextPlugin", "structweb_1_1http_1_1SocketContextUpgradeFactorySelector_1_1SocketContextPlugin.html", null ],
@@ -879,7 +879,7 @@ var hierarchy =
       [ "core::socket::stream::SocketConnectionT< PhysicalSocketT, SocketReaderT, SocketWriterT >", "classcore_1_1socket_1_1stream_1_1SocketConnectionT.html", null ]
     ] ],
     [ "SocketServerT", null, [
-      [ "web::http::server::Server< SocketServerT, RequestT, ResponseT >", "classweb_1_1http_1_1server_1_1Server.html", null ]
+      [ "web::http::server::Server< SocketServerT >", "classweb_1_1http_1_1server_1_1Server.html", null ]
     ] ],
     [ "SocketWriterT", null, [
       [ "core::socket::stream::SocketConnectionT< PhysicalSocketT, SocketReaderT, SocketWriterT >", "classcore_1_1socket_1_1stream_1_1SocketConnectionT.html", null ]

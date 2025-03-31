@@ -128,8 +128,8 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ae33b43527d4c1ff377c0a3192c954bec" id="r_ae33b43527d4c1ff377c0a3192c954bec"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae33b43527d4c1ff377c0a3192c954bec">Mqtt</a> (const std::string &amp;<a class="el" href="classiot_1_1mqtt_1_1Mqtt.html#a7ecac0437e91c099ca1a1295e424bca0">connectionName</a>, const std::string &amp;<a class="el" href="classiot_1_1mqtt_1_1Mqtt.html#ac724b5224b3fd33fc03485589bf726d7">clientId</a>)</td></tr>
-<tr class="separator:ae33b43527d4c1ff377c0a3192c954bec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70b43af18c6600cd6b54a96e6c0dfb72" id="r_a70b43af18c6600cd6b54a96e6c0dfb72"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a70b43af18c6600cd6b54a96e6c0dfb72">Mqtt</a> (const std::string &amp;<a class="el" href="classiot_1_1mqtt_1_1Mqtt.html#a7ecac0437e91c099ca1a1295e424bca0">connectionName</a>, const std::string &amp;<a class="el" href="classiot_1_1mqtt_1_1Mqtt.html#ac724b5224b3fd33fc03485589bf726d7">clientId</a>, const std::string &amp;<a class="el" href="#a434be415266fdffdcf0f5767e4f23f61">sessionStoreFileName</a>)</td></tr>
+<tr class="separator:a70b43af18c6600cd6b54a96e6c0dfb72"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac0c13d093b5512cb736162843facf537" id="r_ac0c13d093b5512cb736162843facf537"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac0c13d093b5512cb736162843facf537">~Mqtt</a> () override</td></tr>
 <tr class="separator:ac0c13d093b5512cb736162843facf537"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a45ed00d710d808f1fb63ce2196ed04" id="r_a1a45ed00d710d808f1fb63ce2196ed04"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1a45ed00d710d808f1fb63ce2196ed04">sendConnect</a> (uint16_t <a class="el" href="#a1f814ea941194261f5be368b34df0b5c">keepAlive</a>, const std::string &amp;<a class="el" href="classiot_1_1mqtt_1_1Mqtt.html#ac724b5224b3fd33fc03485589bf726d7">clientId</a>, bool cleanSession, const std::string &amp;willTopic, const std::string &amp;willMessage, uint8_t willQoS, bool willRetain, const std::string &amp;username, const std::string &amp;password, bool loopPrevention=false)</td></tr>
@@ -303,8 +303,8 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="ae33b43527d4c1ff377c0a3192c954bec" name="ae33b43527d4c1ff377c0a3192c954bec"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae33b43527d4c1ff377c0a3192c954bec">&#9670;&#160;</a></span>Mqtt()</h2>
+<a id="a70b43af18c6600cd6b54a96e6c0dfb72" name="a70b43af18c6600cd6b54a96e6c0dfb72"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70b43af18c6600cd6b54a96e6c0dfb72">&#9670;&#160;</a></span>Mqtt()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -320,7 +320,12 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>clientId</em></span>&#160;)</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>clientId</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>sessionStoreFileName</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -330,39 +335,39 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="client_2Mqtt_8cpp_source.html#l00079">79</a> of file <a class="el" href="client_2Mqtt_8cpp_source.html">Mqtt.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   80</span>        : <a class="code hl_typedef" href="#aad9b49e5ddf3e3d782a9fd88e2fff165">Super</a>(<a class="code hl_variable" href="classiot_1_1mqtt_1_1Mqtt.html#a7ecac0437e91c099ca1a1295e424bca0">connectionName</a>, <a class="code hl_variable" href="classiot_1_1mqtt_1_1Mqtt.html#ac724b5224b3fd33fc03485589bf726d7">clientId</a>)</div>
-<div class="line"><span class="lineno">   81</span>        , <a class="code hl_variable" href="#a434be415266fdffdcf0f5767e4f23f61">sessionStoreFileName</a>((getenv(<span class="stringliteral">&quot;MQTT_SESSION_STORE&quot;</span>) != <span class="keyword">nullptr</span>) ? getenv(<span class="stringliteral">&quot;MQTT_SESSION_STORE&quot;</span>) : <span class="stringliteral">&quot;&quot;</span>) { <span class="comment">// NOLINT</span></div>
-<div class="line"><span class="lineno">   82</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="#a434be415266fdffdcf0f5767e4f23f61">sessionStoreFileName</a>.empty()) {</div>
-<div class="line"><span class="lineno">   83</span>            std::ifstream sessionStoreFile(<a class="code hl_variable" href="#a434be415266fdffdcf0f5767e4f23f61">sessionStoreFileName</a>);</div>
-<div class="line"><span class="lineno">   84</span> </div>
-<div class="line"><span class="lineno">   85</span>            <span class="keywordflow">if</span> (sessionStoreFile.is_open()) {</div>
-<div class="line"><span class="lineno">   86</span>                <span class="keywordflow">try</span> {</div>
-<div class="line"><span class="lineno">   87</span>                    nlohmann::json sessionStoreJson;</div>
-<div class="line"><span class="lineno">   88</span> </div>
-<div class="line"><span class="lineno">   89</span>                    sessionStoreFile &gt;&gt; sessionStoreJson;</div>
-<div class="line"><span class="lineno">   90</span> </div>
-<div class="line"><span class="lineno">   91</span>                    <a class="code hl_variable" href="#a24a10d4a6864e355bd5dd118be636881">session</a>.<a class="code hl_function" href="classiot_1_1mqtt_1_1Session.html#af06528da9b6c2681db92be904587d1ef">fromJson</a>(sessionStoreJson);</div>
-<div class="line"><span class="lineno">   92</span> </div>
-<div class="line"><span class="lineno">   93</span>                    LOG(DEBUG) &lt;&lt; <a class="code hl_variable" href="classiot_1_1mqtt_1_1Mqtt.html#a7ecac0437e91c099ca1a1295e424bca0">connectionName</a> &lt;&lt; <span class="stringliteral">&quot; MQTT Client:   ... Persistent session data loaded successful&quot;</span>;</div>
-<div class="line"><span class="lineno">   94</span>                } <span class="keywordflow">catch</span> (<span class="keyword">const</span> nlohmann::json::exception&amp;) {</div>
-<div class="line"><span class="lineno">   95</span>                    LOG(DEBUG) &lt;&lt; <a class="code hl_variable" href="classiot_1_1mqtt_1_1Mqtt.html#a7ecac0437e91c099ca1a1295e424bca0">connectionName</a> &lt;&lt; <span class="stringliteral">&quot; MQTT Client:   ... Starting with empty session: Session store &#39;&quot;</span></div>
-<div class="line"><span class="lineno">   96</span>                               &lt;&lt; <a class="code hl_variable" href="#a434be415266fdffdcf0f5767e4f23f61">sessionStoreFileName</a> &lt;&lt; <span class="stringliteral">&quot;&#39; empty or corrupted&quot;</span>;</div>
-<div class="line"><span class="lineno">   97</span> </div>
-<div class="line"><span class="lineno">   98</span>                    <a class="code hl_variable" href="#a24a10d4a6864e355bd5dd118be636881">session</a>.<a class="code hl_function" href="classiot_1_1mqtt_1_1Session.html#accf80b5030425b8cfa3d04e0867d711e">clear</a>();</div>
-<div class="line"><span class="lineno">   99</span>                }</div>
-<div class="line"><span class="lineno">  100</span> </div>
-<div class="line"><span class="lineno">  101</span>                sessionStoreFile.close();</div>
-<div class="line"><span class="lineno">  102</span>                std::remove(<a class="code hl_variable" href="#a434be415266fdffdcf0f5767e4f23f61">sessionStoreFileName</a>.data()); <span class="comment">// NOLINT</span></div>
-<div class="line"><span class="lineno">  103</span> </div>
-<div class="line"><span class="lineno">  104</span>                LOG(INFO) &lt;&lt; <a class="code hl_variable" href="classiot_1_1mqtt_1_1Mqtt.html#a7ecac0437e91c099ca1a1295e424bca0">connectionName</a> &lt;&lt; <span class="stringliteral">&quot; MQTT Client: Restoring saved session done&quot;</span>;</div>
-<div class="line"><span class="lineno">  105</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  106</span>                PLOG(WARNING) &lt;&lt; <a class="code hl_variable" href="classiot_1_1mqtt_1_1Mqtt.html#a7ecac0437e91c099ca1a1295e424bca0">connectionName</a> &lt;&lt; <span class="stringliteral">&quot; MQTT Client:   ... Could not read session store &#39;&quot;</span> &lt;&lt; <a class="code hl_variable" href="#a434be415266fdffdcf0f5767e4f23f61">sessionStoreFileName</a> &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
-<div class="line"><span class="lineno">  107</span>            }</div>
-<div class="line"><span class="lineno">  108</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  109</span>            LOG(INFO) &lt;&lt; <a class="code hl_variable" href="classiot_1_1mqtt_1_1Mqtt.html#a7ecac0437e91c099ca1a1295e424bca0">connectionName</a> &lt;&lt; <span class="stringliteral">&quot; MQTT Client: Session not reloaded: Session store filename empty&quot;</span>;</div>
-<div class="line"><span class="lineno">  110</span>        }</div>
-<div class="line"><span class="lineno">  111</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="client_2Mqtt_8cpp_source.html#l00078">78</a> of file <a class="el" href="client_2Mqtt_8cpp_source.html">Mqtt.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   79</span>        : <a class="code hl_typedef" href="#aad9b49e5ddf3e3d782a9fd88e2fff165">Super</a>(<a class="code hl_variable" href="classiot_1_1mqtt_1_1Mqtt.html#a7ecac0437e91c099ca1a1295e424bca0">connectionName</a>, <a class="code hl_variable" href="classiot_1_1mqtt_1_1Mqtt.html#ac724b5224b3fd33fc03485589bf726d7">clientId</a>)</div>
+<div class="line"><span class="lineno">   80</span>        , <a class="code hl_variable" href="#a434be415266fdffdcf0f5767e4f23f61">sessionStoreFileName</a>(<a class="code hl_variable" href="#a434be415266fdffdcf0f5767e4f23f61">sessionStoreFileName</a>) { <span class="comment">// NOLINT</span></div>
+<div class="line"><span class="lineno">   81</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="#a434be415266fdffdcf0f5767e4f23f61">sessionStoreFileName</a>.empty()) {</div>
+<div class="line"><span class="lineno">   82</span>            std::ifstream sessionStoreFile(<a class="code hl_variable" href="#a434be415266fdffdcf0f5767e4f23f61">sessionStoreFileName</a>);</div>
+<div class="line"><span class="lineno">   83</span> </div>
+<div class="line"><span class="lineno">   84</span>            <span class="keywordflow">if</span> (sessionStoreFile.is_open()) {</div>
+<div class="line"><span class="lineno">   85</span>                <span class="keywordflow">try</span> {</div>
+<div class="line"><span class="lineno">   86</span>                    nlohmann::json sessionStoreJson;</div>
+<div class="line"><span class="lineno">   87</span> </div>
+<div class="line"><span class="lineno">   88</span>                    sessionStoreFile &gt;&gt; sessionStoreJson;</div>
+<div class="line"><span class="lineno">   89</span> </div>
+<div class="line"><span class="lineno">   90</span>                    <a class="code hl_variable" href="#a24a10d4a6864e355bd5dd118be636881">session</a>.<a class="code hl_function" href="classiot_1_1mqtt_1_1Session.html#af06528da9b6c2681db92be904587d1ef">fromJson</a>(sessionStoreJson);</div>
+<div class="line"><span class="lineno">   91</span> </div>
+<div class="line"><span class="lineno">   92</span>                    LOG(DEBUG) &lt;&lt; <a class="code hl_variable" href="classiot_1_1mqtt_1_1Mqtt.html#a7ecac0437e91c099ca1a1295e424bca0">connectionName</a> &lt;&lt; <span class="stringliteral">&quot; MQTT Client:   ... Persistent session data loaded successful&quot;</span>;</div>
+<div class="line"><span class="lineno">   93</span>                } <span class="keywordflow">catch</span> (<span class="keyword">const</span> nlohmann::json::exception&amp;) {</div>
+<div class="line"><span class="lineno">   94</span>                    LOG(DEBUG) &lt;&lt; <a class="code hl_variable" href="classiot_1_1mqtt_1_1Mqtt.html#a7ecac0437e91c099ca1a1295e424bca0">connectionName</a> &lt;&lt; <span class="stringliteral">&quot; MQTT Client:   ... Starting with empty session: Session store &#39;&quot;</span></div>
+<div class="line"><span class="lineno">   95</span>                               &lt;&lt; <a class="code hl_variable" href="#a434be415266fdffdcf0f5767e4f23f61">sessionStoreFileName</a> &lt;&lt; <span class="stringliteral">&quot;&#39; empty or corrupted&quot;</span>;</div>
+<div class="line"><span class="lineno">   96</span> </div>
+<div class="line"><span class="lineno">   97</span>                    <a class="code hl_variable" href="#a24a10d4a6864e355bd5dd118be636881">session</a>.<a class="code hl_function" href="classiot_1_1mqtt_1_1Session.html#accf80b5030425b8cfa3d04e0867d711e">clear</a>();</div>
+<div class="line"><span class="lineno">   98</span>                }</div>
+<div class="line"><span class="lineno">   99</span> </div>
+<div class="line"><span class="lineno">  100</span>                sessionStoreFile.close();</div>
+<div class="line"><span class="lineno">  101</span>                std::remove(<a class="code hl_variable" href="#a434be415266fdffdcf0f5767e4f23f61">sessionStoreFileName</a>.data()); <span class="comment">// NOLINT</span></div>
+<div class="line"><span class="lineno">  102</span> </div>
+<div class="line"><span class="lineno">  103</span>                LOG(INFO) &lt;&lt; <a class="code hl_variable" href="classiot_1_1mqtt_1_1Mqtt.html#a7ecac0437e91c099ca1a1295e424bca0">connectionName</a> &lt;&lt; <span class="stringliteral">&quot; MQTT Client: Restoring saved session done&quot;</span>;</div>
+<div class="line"><span class="lineno">  104</span>            } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  105</span>                PLOG(WARNING) &lt;&lt; <a class="code hl_variable" href="classiot_1_1mqtt_1_1Mqtt.html#a7ecac0437e91c099ca1a1295e424bca0">connectionName</a> &lt;&lt; <span class="stringliteral">&quot; MQTT Client:   ... Could not read session store &#39;&quot;</span> &lt;&lt; <a class="code hl_variable" href="#a434be415266fdffdcf0f5767e4f23f61">sessionStoreFileName</a> &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
+<div class="line"><span class="lineno">  106</span>            }</div>
+<div class="line"><span class="lineno">  107</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  108</span>            LOG(INFO) &lt;&lt; <a class="code hl_variable" href="classiot_1_1mqtt_1_1Mqtt.html#a7ecac0437e91c099ca1a1295e424bca0">connectionName</a> &lt;&lt; <span class="stringliteral">&quot; MQTT Client: Session not reloaded: Session store filename empty&quot;</span>;</div>
+<div class="line"><span class="lineno">  109</span>        }</div>
+<div class="line"><span class="lineno">  110</span>    }</div>
 <div class="ttc" id="aclassiot_1_1mqtt_1_1Mqtt_html_a7ecac0437e91c099ca1a1295e424bca0"><div class="ttname"><a href="classiot_1_1mqtt_1_1Mqtt.html#a7ecac0437e91c099ca1a1295e424bca0">iot::mqtt::Mqtt::connectionName</a></div><div class="ttdeci">std::string connectionName</div><div class="ttdef"><b>Definition</b> <a href="Mqtt_8h_source.html#l00142">Mqtt.h:142</a></div></div>
 <div class="ttc" id="aclassiot_1_1mqtt_1_1Mqtt_html_ac724b5224b3fd33fc03485589bf726d7"><div class="ttname"><a href="classiot_1_1mqtt_1_1Mqtt.html#ac724b5224b3fd33fc03485589bf726d7">iot::mqtt::Mqtt::clientId</a></div><div class="ttdeci">std::string clientId</div><div class="ttdef"><b>Definition</b> <a href="Mqtt_8h_source.html#l00143">Mqtt.h:143</a></div></div>
 <div class="ttc" id="aclassiot_1_1mqtt_1_1Session_html_accf80b5030425b8cfa3d04e0867d711e"><div class="ttname"><a href="classiot_1_1mqtt_1_1Session.html#accf80b5030425b8cfa3d04e0867d711e">iot::mqtt::Session::clear</a></div><div class="ttdeci">void clear()</div><div class="ttdef"><b>Definition</b> <a href="Session_8cpp_source.html#l00111">Session.cpp:111</a></div></div>
@@ -371,18 +376,18 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassiot_1_1mqtt_1_1client_1_1Mqtt_html_a434be415266fdffdcf0f5767e4f23f61"><div class="ttname"><a href="#a434be415266fdffdcf0f5767e4f23f61">iot::mqtt::client::Mqtt::sessionStoreFileName</a></div><div class="ttdeci">std::string sessionStoreFileName</div><div class="ttdef"><b>Definition</b> <a href="client_2Mqtt_8h_source.html#l00140">Mqtt.h:140</a></div></div>
 <div class="ttc" id="aclassiot_1_1mqtt_1_1client_1_1Mqtt_html_aad9b49e5ddf3e3d782a9fd88e2fff165"><div class="ttname"><a href="#aad9b49e5ddf3e3d782a9fd88e2fff165">iot::mqtt::client::Mqtt::Super</a></div><div class="ttdeci">iot::mqtt::Mqtt Super</div><div class="ttdef"><b>Definition</b> <a href="client_2Mqtt_8h_source.html#l00086">Mqtt.h:86</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="client_2Mqtt_8cpp_source.html#l00079">Mqtt()</a>.</p>
+<p class="reference">References <a class="el" href="client_2Mqtt_8cpp_source.html#l00078">Mqtt()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="client_2Mqtt_8cpp_source.html#l00079">Mqtt()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="client_2Mqtt_8cpp_source.html#l00078">Mqtt()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classiot_1_1mqtt_1_1client_1_1Mqtt_ae33b43527d4c1ff377c0a3192c954bec_cgraph.svg" width="142" height="75"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classiot_1_1mqtt_1_1client_1_1Mqtt_a70b43af18c6600cd6b54a96e6c0dfb72_cgraph.svg" width="142" height="75"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classiot_1_1mqtt_1_1client_1_1Mqtt_ae33b43527d4c1ff377c0a3192c954bec_icgraph.svg" width="142" height="75"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classiot_1_1mqtt_1_1client_1_1Mqtt_a70b43af18c6600cd6b54a96e6c0dfb72_icgraph.svg" width="142" height="75"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -412,28 +417,28 @@ Here is the caller graph for this function:</div>
 
 <p>Reimplemented from <a class="el" href="classiot_1_1mqtt_1_1Mqtt.html#a968880be379ead547eb7107537029489">iot::mqtt::Mqtt</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="client_2Mqtt_8cpp_source.html#l00113">113</a> of file <a class="el" href="client_2Mqtt_8cpp_source.html">Mqtt.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  113</span>                {</div>
-<div class="line"><span class="lineno">  114</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="#a434be415266fdffdcf0f5767e4f23f61">sessionStoreFileName</a>.empty()) {</div>
-<div class="line"><span class="lineno">  115</span>            <span class="keyword">const</span> nlohmann::json sessionJson = <a class="code hl_variable" href="#a24a10d4a6864e355bd5dd118be636881">session</a>.<a class="code hl_function" href="classiot_1_1mqtt_1_1Session.html#a1b6f67378b069d481f318cd4f612ac2f">toJson</a>();</div>
-<div class="line"><span class="lineno">  116</span> </div>
-<div class="line"><span class="lineno">  117</span>            std::ofstream sessionStoreFile(<a class="code hl_variable" href="#a434be415266fdffdcf0f5767e4f23f61">sessionStoreFileName</a>);</div>
-<div class="line"><span class="lineno">  118</span> </div>
-<div class="line"><span class="lineno">  119</span>            <span class="keywordflow">if</span> (sessionStoreFile.is_open()) {</div>
-<div class="line"><span class="lineno">  120</span>                <span class="keywordflow">if</span> (!sessionJson.empty()) {</div>
-<div class="line"><span class="lineno">  121</span>                    sessionStoreFile &lt;&lt; sessionJson;</div>
-<div class="line"><span class="lineno">  122</span>                }</div>
-<div class="line"><span class="lineno">  123</span> </div>
-<div class="line"><span class="lineno">  124</span>                sessionStoreFile.close();</div>
-<div class="line"><span class="lineno">  125</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  126</span>                PLOG(DEBUG) &lt;&lt; <a class="code hl_variable" href="classiot_1_1mqtt_1_1Mqtt.html#a7ecac0437e91c099ca1a1295e424bca0">connectionName</a> &lt;&lt; <span class="stringliteral">&quot; MQTT Client: Could not write session store &#39;&quot;</span> &lt;&lt; <a class="code hl_variable" href="#a434be415266fdffdcf0f5767e4f23f61">sessionStoreFileName</a> &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
-<div class="line"><span class="lineno">  127</span>            }</div>
-<div class="line"><span class="lineno">  128</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  129</span>            LOG(INFO) &lt;&lt; <a class="code hl_variable" href="classiot_1_1mqtt_1_1Mqtt.html#a7ecac0437e91c099ca1a1295e424bca0">connectionName</a> &lt;&lt; <span class="stringliteral">&quot; MQTT Client: Session not saved: Session store filename empty&quot;</span>;</div>
-<div class="line"><span class="lineno">  130</span>        }</div>
-<div class="line"><span class="lineno">  131</span> </div>
-<div class="line"><span class="lineno">  132</span>        <a class="code hl_variable" href="#ae4ecc055fbd4453906b1c9b9e97b5ec2">pingTimer</a>.<a class="code hl_function" href="classcore_1_1Timer.html#a70f46820601c0dcf32d594f4ba4d41d3">cancel</a>();</div>
-<div class="line"><span class="lineno">  133</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="client_2Mqtt_8cpp_source.html#l00112">112</a> of file <a class="el" href="client_2Mqtt_8cpp_source.html">Mqtt.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  112</span>                {</div>
+<div class="line"><span class="lineno">  113</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="#a434be415266fdffdcf0f5767e4f23f61">sessionStoreFileName</a>.empty()) {</div>
+<div class="line"><span class="lineno">  114</span>            <span class="keyword">const</span> nlohmann::json sessionJson = <a class="code hl_variable" href="#a24a10d4a6864e355bd5dd118be636881">session</a>.<a class="code hl_function" href="classiot_1_1mqtt_1_1Session.html#a1b6f67378b069d481f318cd4f612ac2f">toJson</a>();</div>
+<div class="line"><span class="lineno">  115</span> </div>
+<div class="line"><span class="lineno">  116</span>            std::ofstream sessionStoreFile(<a class="code hl_variable" href="#a434be415266fdffdcf0f5767e4f23f61">sessionStoreFileName</a>);</div>
+<div class="line"><span class="lineno">  117</span> </div>
+<div class="line"><span class="lineno">  118</span>            <span class="keywordflow">if</span> (sessionStoreFile.is_open()) {</div>
+<div class="line"><span class="lineno">  119</span>                <span class="keywordflow">if</span> (!sessionJson.empty()) {</div>
+<div class="line"><span class="lineno">  120</span>                    sessionStoreFile &lt;&lt; sessionJson;</div>
+<div class="line"><span class="lineno">  121</span>                }</div>
+<div class="line"><span class="lineno">  122</span> </div>
+<div class="line"><span class="lineno">  123</span>                sessionStoreFile.close();</div>
+<div class="line"><span class="lineno">  124</span>            } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  125</span>                PLOG(DEBUG) &lt;&lt; <a class="code hl_variable" href="classiot_1_1mqtt_1_1Mqtt.html#a7ecac0437e91c099ca1a1295e424bca0">connectionName</a> &lt;&lt; <span class="stringliteral">&quot; MQTT Client: Could not write session store &#39;&quot;</span> &lt;&lt; <a class="code hl_variable" href="#a434be415266fdffdcf0f5767e4f23f61">sessionStoreFileName</a> &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
+<div class="line"><span class="lineno">  126</span>            }</div>
+<div class="line"><span class="lineno">  127</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  128</span>            LOG(INFO) &lt;&lt; <a class="code hl_variable" href="classiot_1_1mqtt_1_1Mqtt.html#a7ecac0437e91c099ca1a1295e424bca0">connectionName</a> &lt;&lt; <span class="stringliteral">&quot; MQTT Client: Session not saved: Session store filename empty&quot;</span>;</div>
+<div class="line"><span class="lineno">  129</span>        }</div>
+<div class="line"><span class="lineno">  130</span> </div>
+<div class="line"><span class="lineno">  131</span>        <a class="code hl_variable" href="#ae4ecc055fbd4453906b1c9b9e97b5ec2">pingTimer</a>.<a class="code hl_function" href="classcore_1_1Timer.html#a70f46820601c0dcf32d594f4ba4d41d3">cancel</a>();</div>
+<div class="line"><span class="lineno">  132</span>    }</div>
 <div class="ttc" id="aclasscore_1_1Timer_html_a70f46820601c0dcf32d594f4ba4d41d3"><div class="ttname"><a href="classcore_1_1Timer.html#a70f46820601c0dcf32d594f4ba4d41d3">core::Timer::cancel</a></div><div class="ttdeci">void cancel()</div><div class="ttdef"><b>Definition</b> <a href="Timer_8cpp_source.html#l00084">Timer.cpp:84</a></div></div>
 <div class="ttc" id="aclassiot_1_1mqtt_1_1Session_html_a1b6f67378b069d481f318cd4f612ac2f"><div class="ttname"><a href="classiot_1_1mqtt_1_1Session.html#a1b6f67378b069d481f318cd4f612ac2f">iot::mqtt::Session::toJson</a></div><div class="ttdeci">virtual nlohmann::json toJson() const</div><div class="ttdef"><b>Definition</b> <a href="Session_8cpp_source.html#l00059">Session.cpp:59</a></div></div>
 <div class="ttc" id="aclassiot_1_1mqtt_1_1client_1_1Mqtt_html_ae4ecc055fbd4453906b1c9b9e97b5ec2"><div class="ttname"><a href="#ae4ecc055fbd4453906b1c9b9e97b5ec2">iot::mqtt::client::Mqtt::pingTimer</a></div><div class="ttdeci">core::timer::Timer pingTimer</div><div class="ttdef"><b>Definition</b> <a href="client_2Mqtt_8h_source.html#l00143">Mqtt.h:143</a></div></div>
@@ -464,37 +469,37 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="client_2Mqtt_8cpp_source.html#l00194">194</a> of file <a class="el" href="client_2Mqtt_8cpp_source.html">Mqtt.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  194</span>                                                                    {</div>
-<div class="line"><span class="lineno">  195</span>        LOG(INFO) &lt;&lt; <a class="code hl_variable" href="classiot_1_1mqtt_1_1Mqtt.html#a7ecac0437e91c099ca1a1295e424bca0">connectionName</a> &lt;&lt; <span class="stringliteral">&quot; MQTT Client:   Acknowledge Flag: &quot;</span> &lt;&lt; <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(connack.<a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Connack.html#a9d5a9abd54366d63606e6aef01a97db2">getAcknowledgeFlags</a>());</div>
-<div class="line"><span class="lineno">  196</span>        LOG(INFO) &lt;&lt; <a class="code hl_variable" href="classiot_1_1mqtt_1_1Mqtt.html#a7ecac0437e91c099ca1a1295e424bca0">connectionName</a> &lt;&lt; <span class="stringliteral">&quot; MQTT Client:   Return code: &quot;</span> &lt;&lt; <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(connack.<a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Connack.html#a06bb934f481d45386d9e9e73e33b68e5">getReturnCode</a>());</div>
-<div class="line"><span class="lineno">  197</span>        LOG(INFO) &lt;&lt; <a class="code hl_variable" href="classiot_1_1mqtt_1_1Mqtt.html#a7ecac0437e91c099ca1a1295e424bca0">connectionName</a> &lt;&lt; <span class="stringliteral">&quot; MQTT Client:   Session present: &quot;</span> &lt;&lt; connack.<a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Connack.html#a7ba5c498454af80e8fbd82ebb3d34629">getSessionPresent</a>();</div>
-<div class="line"><span class="lineno">  198</span> </div>
-<div class="line"><span class="lineno">  199</span>        <span class="keywordflow">if</span> (connack.<a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Connack.html#a06bb934f481d45386d9e9e73e33b68e5">getReturnCode</a>() != <a class="code hl_define" href="mqtt-fast_2packets_2Connack_8h.html#aab798eaf9cf6476f6eb56968e037250f">MQTT_CONNACK_ACCEPT</a>) {</div>
-<div class="line"><span class="lineno">  200</span>            LOG(ERROR) &lt;&lt; <a class="code hl_variable" href="classiot_1_1mqtt_1_1Mqtt.html#a7ecac0437e91c099ca1a1295e424bca0">connectionName</a> &lt;&lt; <span class="stringliteral">&quot; MQTT Client:   Negative ack received&quot;</span>;</div>
-<div class="line"><span class="lineno">  201</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  202</span>            <a class="code hl_function" href="classiot_1_1mqtt_1_1Mqtt.html#acdbcec29233d4da1baef781336e7210c">initSession</a>(&amp;<a class="code hl_variable" href="#a24a10d4a6864e355bd5dd118be636881">session</a>, <a class="code hl_variable" href="#a1f814ea941194261f5be368b34df0b5c">keepAlive</a>);</div>
-<div class="line"><span class="lineno">  203</span> </div>
-<div class="line"><span class="lineno">  204</span>            <a class="code hl_variable" href="#ae4ecc055fbd4453906b1c9b9e97b5ec2">pingTimer</a> = <a class="code hl_function" href="classcore_1_1timer_1_1Timer.html#af40b96a1dac132592ede6b51ce0ec7f9">core::timer::Timer::intervalTimer</a>(</div>
-<div class="line"><span class="lineno">  205</span>                [<span class="keyword">this</span>]() {</div>
-<div class="line"><span class="lineno">  206</span>                    <a class="code hl_function" href="#ad91d635b135c0a9f5d67a4b7e51d3f42">sendPingreq</a>();</div>
-<div class="line"><span class="lineno">  207</span>                },</div>
-<div class="line"><span class="lineno">  208</span>                <a class="code hl_variable" href="#a1f814ea941194261f5be368b34df0b5c">keepAlive</a>);</div>
-<div class="line"><span class="lineno">  209</span> </div>
-<div class="line"><span class="lineno">  210</span>            <a class="code hl_function" href="#a790dd3ca635cabd8da183752aa8190e1">onConnack</a>(connack);</div>
-<div class="line"><span class="lineno">  211</span>        }</div>
-<div class="line"><span class="lineno">  212</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="client_2Mqtt_8cpp_source.html#l00193">193</a> of file <a class="el" href="client_2Mqtt_8cpp_source.html">Mqtt.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  193</span>                                                                    {</div>
+<div class="line"><span class="lineno">  194</span>        LOG(INFO) &lt;&lt; <a class="code hl_variable" href="classiot_1_1mqtt_1_1Mqtt.html#a7ecac0437e91c099ca1a1295e424bca0">connectionName</a> &lt;&lt; <span class="stringliteral">&quot; MQTT Client:   Acknowledge Flag: &quot;</span> &lt;&lt; <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(connack.<a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Connack.html#a9d5a9abd54366d63606e6aef01a97db2">getAcknowledgeFlags</a>());</div>
+<div class="line"><span class="lineno">  195</span>        LOG(INFO) &lt;&lt; <a class="code hl_variable" href="classiot_1_1mqtt_1_1Mqtt.html#a7ecac0437e91c099ca1a1295e424bca0">connectionName</a> &lt;&lt; <span class="stringliteral">&quot; MQTT Client:   Return code: &quot;</span> &lt;&lt; <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(connack.<a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Connack.html#a06bb934f481d45386d9e9e73e33b68e5">getReturnCode</a>());</div>
+<div class="line"><span class="lineno">  196</span>        LOG(INFO) &lt;&lt; <a class="code hl_variable" href="classiot_1_1mqtt_1_1Mqtt.html#a7ecac0437e91c099ca1a1295e424bca0">connectionName</a> &lt;&lt; <span class="stringliteral">&quot; MQTT Client:   Session present: &quot;</span> &lt;&lt; connack.<a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Connack.html#a7ba5c498454af80e8fbd82ebb3d34629">getSessionPresent</a>();</div>
+<div class="line"><span class="lineno">  197</span> </div>
+<div class="line"><span class="lineno">  198</span>        <span class="keywordflow">if</span> (connack.<a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Connack.html#a06bb934f481d45386d9e9e73e33b68e5">getReturnCode</a>() != <a class="code hl_define" href="mqtt-fast_2packets_2Connack_8h.html#aab798eaf9cf6476f6eb56968e037250f">MQTT_CONNACK_ACCEPT</a>) {</div>
+<div class="line"><span class="lineno">  199</span>            LOG(ERROR) &lt;&lt; <a class="code hl_variable" href="classiot_1_1mqtt_1_1Mqtt.html#a7ecac0437e91c099ca1a1295e424bca0">connectionName</a> &lt;&lt; <span class="stringliteral">&quot; MQTT Client:   Negative ack received&quot;</span>;</div>
+<div class="line"><span class="lineno">  200</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  201</span>            <a class="code hl_function" href="classiot_1_1mqtt_1_1Mqtt.html#acdbcec29233d4da1baef781336e7210c">initSession</a>(&amp;<a class="code hl_variable" href="#a24a10d4a6864e355bd5dd118be636881">session</a>, <a class="code hl_variable" href="#a1f814ea941194261f5be368b34df0b5c">keepAlive</a>);</div>
+<div class="line"><span class="lineno">  202</span> </div>
+<div class="line"><span class="lineno">  203</span>            <a class="code hl_variable" href="#ae4ecc055fbd4453906b1c9b9e97b5ec2">pingTimer</a> = <a class="code hl_function" href="classcore_1_1timer_1_1Timer.html#af40b96a1dac132592ede6b51ce0ec7f9">core::timer::Timer::intervalTimer</a>(</div>
+<div class="line"><span class="lineno">  204</span>                [<span class="keyword">this</span>]() {</div>
+<div class="line"><span class="lineno">  205</span>                    <a class="code hl_function" href="#ad91d635b135c0a9f5d67a4b7e51d3f42">sendPingreq</a>();</div>
+<div class="line"><span class="lineno">  206</span>                },</div>
+<div class="line"><span class="lineno">  207</span>                <a class="code hl_variable" href="#a1f814ea941194261f5be368b34df0b5c">keepAlive</a>);</div>
+<div class="line"><span class="lineno">  208</span> </div>
+<div class="line"><span class="lineno">  209</span>            <a class="code hl_function" href="#a790dd3ca635cabd8da183752aa8190e1">onConnack</a>(connack);</div>
+<div class="line"><span class="lineno">  210</span>        }</div>
+<div class="line"><span class="lineno">  211</span>    }</div>
 <div class="ttc" id="aclasscore_1_1timer_1_1Timer_html_af40b96a1dac132592ede6b51ce0ec7f9"><div class="ttname"><a href="classcore_1_1timer_1_1Timer.html#af40b96a1dac132592ede6b51ce0ec7f9">core::timer::Timer::intervalTimer</a></div><div class="ttdeci">static Timer intervalTimer(const std::function&lt; void(const std::function&lt; void()&gt; &amp;)&gt; &amp;dispatcher, const utils::Timeval &amp;timeout)</div><div class="ttdef"><b>Definition</b> <a href="timer_2Timer_8cpp_source.html#l00061">Timer.cpp:61</a></div></div>
 <div class="ttc" id="aclassiot_1_1mqtt_1_1Mqtt_html_acdbcec29233d4da1baef781336e7210c"><div class="ttname"><a href="classiot_1_1mqtt_1_1Mqtt.html#acdbcec29233d4da1baef781336e7210c">iot::mqtt::Mqtt::initSession</a></div><div class="ttdeci">void initSession(Session *session, utils::Timeval keepAlive)</div><div class="ttdef"><b>Definition</b> <a href="Mqtt_8cpp_source.html#l00174">Mqtt.cpp:174</a></div></div>
 <div class="ttc" id="aclassiot_1_1mqtt_1_1client_1_1Mqtt_html_a1f814ea941194261f5be368b34df0b5c"><div class="ttname"><a href="#a1f814ea941194261f5be368b34df0b5c">iot::mqtt::client::Mqtt::keepAlive</a></div><div class="ttdeci">uint16_t keepAlive</div><div class="ttdef"><b>Definition</b> <a href="client_2Mqtt_8h_source.html#l00138">Mqtt.h:138</a></div></div>
-<div class="ttc" id="aclassiot_1_1mqtt_1_1client_1_1Mqtt_html_a790dd3ca635cabd8da183752aa8190e1"><div class="ttname"><a href="#a790dd3ca635cabd8da183752aa8190e1">iot::mqtt::client::Mqtt::onConnack</a></div><div class="ttdeci">virtual void onConnack(const iot::mqtt::packets::Connack &amp;connack)</div><div class="ttdef"><b>Definition</b> <a href="client_2Mqtt_8cpp_source.html#l00182">Mqtt.cpp:182</a></div></div>
-<div class="ttc" id="aclassiot_1_1mqtt_1_1client_1_1Mqtt_html_ad91d635b135c0a9f5d67a4b7e51d3f42"><div class="ttname"><a href="#ad91d635b135c0a9f5d67a4b7e51d3f42">iot::mqtt::client::Mqtt::sendPingreq</a></div><div class="ttdeci">void sendPingreq() const</div><div class="ttdef"><b>Definition</b> <a href="client_2Mqtt_8cpp_source.html#l00290">Mqtt.cpp:290</a></div></div>
+<div class="ttc" id="aclassiot_1_1mqtt_1_1client_1_1Mqtt_html_a790dd3ca635cabd8da183752aa8190e1"><div class="ttname"><a href="#a790dd3ca635cabd8da183752aa8190e1">iot::mqtt::client::Mqtt::onConnack</a></div><div class="ttdeci">virtual void onConnack(const iot::mqtt::packets::Connack &amp;connack)</div><div class="ttdef"><b>Definition</b> <a href="client_2Mqtt_8cpp_source.html#l00181">Mqtt.cpp:181</a></div></div>
+<div class="ttc" id="aclassiot_1_1mqtt_1_1client_1_1Mqtt_html_ad91d635b135c0a9f5d67a4b7e51d3f42"><div class="ttname"><a href="#ad91d635b135c0a9f5d67a4b7e51d3f42">iot::mqtt::client::Mqtt::sendPingreq</a></div><div class="ttdeci">void sendPingreq() const</div><div class="ttdef"><b>Definition</b> <a href="client_2Mqtt_8cpp_source.html#l00289">Mqtt.cpp:289</a></div></div>
 <div class="ttc" id="aclassiot_1_1mqtt_1_1packets_1_1Connack_html_a06bb934f481d45386d9e9e73e33b68e5"><div class="ttname"><a href="classiot_1_1mqtt_1_1packets_1_1Connack.html#a06bb934f481d45386d9e9e73e33b68e5">iot::mqtt::packets::Connack::getReturnCode</a></div><div class="ttdeci">uint8_t getReturnCode() const</div><div class="ttdef"><b>Definition</b> <a href="mqtt_2packets_2Connack_8cpp_source.html#l00076">Connack.cpp:76</a></div></div>
 <div class="ttc" id="aclassiot_1_1mqtt_1_1packets_1_1Connack_html_a7ba5c498454af80e8fbd82ebb3d34629"><div class="ttname"><a href="classiot_1_1mqtt_1_1packets_1_1Connack.html#a7ba5c498454af80e8fbd82ebb3d34629">iot::mqtt::packets::Connack::getSessionPresent</a></div><div class="ttdeci">bool getSessionPresent() const</div><div class="ttdef"><b>Definition</b> <a href="mqtt_2packets_2Connack_8cpp_source.html#l00080">Connack.cpp:80</a></div></div>
 <div class="ttc" id="aclassiot_1_1mqtt_1_1packets_1_1Connack_html_a9d5a9abd54366d63606e6aef01a97db2"><div class="ttname"><a href="classiot_1_1mqtt_1_1packets_1_1Connack.html#a9d5a9abd54366d63606e6aef01a97db2">iot::mqtt::packets::Connack::getAcknowledgeFlags</a></div><div class="ttdeci">uint8_t getAcknowledgeFlags() const</div><div class="ttdef"><b>Definition</b> <a href="mqtt_2packets_2Connack_8cpp_source.html#l00072">Connack.cpp:72</a></div></div>
 <div class="ttc" id="amqtt-fast_2packets_2Connack_8h_html_aab798eaf9cf6476f6eb56968e037250f"><div class="ttname"><a href="mqtt-fast_2packets_2Connack_8h.html#aab798eaf9cf6476f6eb56968e037250f">MQTT_CONNACK_ACCEPT</a></div><div class="ttdeci">#define MQTT_CONNACK_ACCEPT</div><div class="ttdef"><b>Definition</b> <a href="mqtt-fast_2packets_2Connack_8h_source.html#l00059">Connack.h:59</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="client_2Mqtt_8cpp_source.html#l00182">onConnack()</a>.</p>
+<p class="reference">References <a class="el" href="client_2Mqtt_8cpp_source.html#l00181">onConnack()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -526,13 +531,13 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="client_2Mqtt_8cpp_source.html#l00258">258</a> of file <a class="el" href="client_2Mqtt_8cpp_source.html">Mqtt.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  258</span>                                                                       {</div>
-<div class="line"><span class="lineno">  259</span>        <a class="code hl_function" href="#a7c079803d205818f4ca025f8b9e16bd4">onPingresp</a>(pingresp);</div>
-<div class="line"><span class="lineno">  260</span>    }</div>
-<div class="ttc" id="aclassiot_1_1mqtt_1_1client_1_1Mqtt_html_a7c079803d205818f4ca025f8b9e16bd4"><div class="ttname"><a href="#a7c079803d205818f4ca025f8b9e16bd4">iot::mqtt::client::Mqtt::onPingresp</a></div><div class="ttdeci">virtual void onPingresp(const iot::mqtt::packets::Pingresp &amp;pingresp)</div><div class="ttdef"><b>Definition</b> <a href="client_2Mqtt_8cpp_source.html#l00191">Mqtt.cpp:191</a></div></div>
+<p class="definition">Definition at line <a class="el" href="client_2Mqtt_8cpp_source.html#l00257">257</a> of file <a class="el" href="client_2Mqtt_8cpp_source.html">Mqtt.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  257</span>                                                                       {</div>
+<div class="line"><span class="lineno">  258</span>        <a class="code hl_function" href="#a7c079803d205818f4ca025f8b9e16bd4">onPingresp</a>(pingresp);</div>
+<div class="line"><span class="lineno">  259</span>    }</div>
+<div class="ttc" id="aclassiot_1_1mqtt_1_1client_1_1Mqtt_html_a7c079803d205818f4ca025f8b9e16bd4"><div class="ttname"><a href="#a7c079803d205818f4ca025f8b9e16bd4">iot::mqtt::client::Mqtt::onPingresp</a></div><div class="ttdeci">virtual void onPingresp(const iot::mqtt::packets::Pingresp &amp;pingresp)</div><div class="ttdef"><b>Definition</b> <a href="client_2Mqtt_8cpp_source.html#l00190">Mqtt.cpp:190</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="client_2Mqtt_8cpp_source.html#l00191">onPingresp()</a>.</p>
+<p class="reference">References <a class="el" href="client_2Mqtt_8cpp_source.html#l00190">onPingresp()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -564,12 +569,12 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="client_2Mqtt_8cpp_source.html#l00214">214</a> of file <a class="el" href="client_2Mqtt_8cpp_source.html">Mqtt.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  214</span>                                                                    {</div>
-<div class="line"><span class="lineno">  215</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="classiot_1_1mqtt_1_1Mqtt.html#a8766079f6d926bc6b5201d7e46a00ed1">Super::_onPublish</a>(publish)) {</div>
-<div class="line"><span class="lineno">  216</span>            <a class="code hl_function" href="classiot_1_1mqtt_1_1Mqtt.html#a186716f44067e3b0c6ba668833db6938">onPublish</a>(publish);</div>
-<div class="line"><span class="lineno">  217</span>        }</div>
-<div class="line"><span class="lineno">  218</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="client_2Mqtt_8cpp_source.html#l00213">213</a> of file <a class="el" href="client_2Mqtt_8cpp_source.html">Mqtt.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  213</span>                                                                    {</div>
+<div class="line"><span class="lineno">  214</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="classiot_1_1mqtt_1_1Mqtt.html#a8766079f6d926bc6b5201d7e46a00ed1">Super::_onPublish</a>(publish)) {</div>
+<div class="line"><span class="lineno">  215</span>            <a class="code hl_function" href="classiot_1_1mqtt_1_1Mqtt.html#a186716f44067e3b0c6ba668833db6938">onPublish</a>(publish);</div>
+<div class="line"><span class="lineno">  216</span>        }</div>
+<div class="line"><span class="lineno">  217</span>    }</div>
 <div class="ttc" id="aclassiot_1_1mqtt_1_1Mqtt_html_a186716f44067e3b0c6ba668833db6938"><div class="ttname"><a href="classiot_1_1mqtt_1_1Mqtt.html#a186716f44067e3b0c6ba668833db6938">iot::mqtt::Mqtt::onPublish</a></div><div class="ttdeci">virtual void onPublish(const iot::mqtt::packets::Publish &amp;publish)</div><div class="ttdef"><b>Definition</b> <a href="Mqtt_8cpp_source.html#l00253">Mqtt.cpp:253</a></div></div>
 <div class="ttc" id="aclassiot_1_1mqtt_1_1Mqtt_html_a8766079f6d926bc6b5201d7e46a00ed1"><div class="ttname"><a href="classiot_1_1mqtt_1_1Mqtt.html#a8766079f6d926bc6b5201d7e46a00ed1">iot::mqtt::Mqtt::_onPublish</a></div><div class="ttdeci">bool _onPublish(const iot::mqtt::packets::Publish &amp;publish)</div><div class="ttdef"><b>Definition</b> <a href="Mqtt_8cpp_source.html#l00268">Mqtt.cpp:268</a></div></div>
 </div><!-- fragment -->
@@ -598,39 +603,39 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="client_2Mqtt_8cpp_source.html#l00220">220</a> of file <a class="el" href="client_2Mqtt_8cpp_source.html">Mqtt.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  220</span>                                                                 {</div>
-<div class="line"><span class="lineno">  221</span>        <span class="keywordflow">if</span> (suback.<a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Suback.html#a4b210bb967888e97f375d51b564a8256">getPacketIdentifier</a>() == 0) {</div>
-<div class="line"><span class="lineno">  222</span>            LOG(ERROR) &lt;&lt; <a class="code hl_variable" href="classiot_1_1mqtt_1_1Mqtt.html#a7ecac0437e91c099ca1a1295e424bca0">connectionName</a> &lt;&lt; <span class="stringliteral">&quot; MQTT Client:   PackageIdentifier missing&quot;</span>;</div>
-<div class="line"><span class="lineno">  223</span>            <a class="code hl_variable" href="classiot_1_1mqtt_1_1Mqtt.html#a043a3ff2dae61619cb319ccb128bb1eb">mqttContext</a>-&gt;<a class="code hl_function" href="classiot_1_1mqtt_1_1MqttContext.html#ada10a6f2fcf6953ed62d93bdb5907cd1">end</a>(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  224</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  225</span>            LOG(DEBUG) &lt;&lt; <a class="code hl_variable" href="classiot_1_1mqtt_1_1Mqtt.html#a7ecac0437e91c099ca1a1295e424bca0">connectionName</a> &lt;&lt; <span class="stringliteral">&quot; MQTT Client:  PacketIdentifier: 0x&quot;</span> &lt;&lt; std::hex &lt;&lt; std::setfill(<span class="charliteral">&#39;0&#39;</span>) &lt;&lt; std::setw(4)</div>
-<div class="line"><span class="lineno">  226</span>                       &lt;&lt; suback.<a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Suback.html#a4b210bb967888e97f375d51b564a8256">getPacketIdentifier</a>();</div>
-<div class="line"><span class="lineno">  227</span> </div>
-<div class="line"><span class="lineno">  228</span>            std::stringstream ss;</div>
-<div class="line"><span class="lineno">  229</span>            std::list&lt;uint8_t&gt;::size_type i = 0;</div>
-<div class="line"><span class="lineno">  230</span> </div>
-<div class="line"><span class="lineno">  231</span>            <span class="keywordflow">for</span> (<span class="keyword">const</span> uint8_t returnCode : suback.getReturnCodes()) {</div>
-<div class="line"><span class="lineno">  232</span>                <span class="keywordflow">if</span> (i != 0 &amp;&amp; i % 8 == 0 &amp;&amp; i != suback.<a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Suback.html#aeda5db3357a382a8e27124f849fe3787">getReturnCodes</a>().size()) {</div>
-<div class="line"><span class="lineno">  233</span>                    ss &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">  234</span>                    ss &lt;&lt; <span class="stringliteral">&quot;                                                       &quot;</span>;</div>
-<div class="line"><span class="lineno">  235</span>                }</div>
-<div class="line"><span class="lineno">  236</span>                ++i;</div>
-<div class="line"><span class="lineno">  237</span>                ss &lt;&lt; <span class="stringliteral">&quot;0x&quot;</span> &lt;&lt; std::hex &lt;&lt; std::setfill(&#39;0&#39;) &lt;&lt; std::setw(2) &lt;&lt; static_cast&lt;uint16_t&gt;(returnCode) &lt;&lt; <span class="stringliteral">&quot; &quot;</span>; <span class="comment">// &lt;&lt; &quot; | &quot;;</span></div>
-<div class="line"><span class="lineno">  238</span>            }</div>
-<div class="line"><span class="lineno">  239</span> </div>
-<div class="line"><span class="lineno">  240</span>            LOG(DEBUG) &lt;&lt; <a class="code hl_variable" href="classiot_1_1mqtt_1_1Mqtt.html#a7ecac0437e91c099ca1a1295e424bca0">connectionName</a> &lt;&lt; <span class="stringliteral">&quot; MQTT Client:  Return codes: &quot;</span> &lt;&lt; ss.str();</div>
-<div class="line"><span class="lineno">  241</span> </div>
-<div class="line"><span class="lineno">  242</span>            <a class="code hl_function" href="#acaacfad72b121df18686afdd69bbc62a">onSuback</a>(suback);</div>
-<div class="line"><span class="lineno">  243</span>        }</div>
-<div class="line"><span class="lineno">  244</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="client_2Mqtt_8cpp_source.html#l00219">219</a> of file <a class="el" href="client_2Mqtt_8cpp_source.html">Mqtt.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  219</span>                                                                 {</div>
+<div class="line"><span class="lineno">  220</span>        <span class="keywordflow">if</span> (suback.<a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Suback.html#a4b210bb967888e97f375d51b564a8256">getPacketIdentifier</a>() == 0) {</div>
+<div class="line"><span class="lineno">  221</span>            LOG(ERROR) &lt;&lt; <a class="code hl_variable" href="classiot_1_1mqtt_1_1Mqtt.html#a7ecac0437e91c099ca1a1295e424bca0">connectionName</a> &lt;&lt; <span class="stringliteral">&quot; MQTT Client:   PackageIdentifier missing&quot;</span>;</div>
+<div class="line"><span class="lineno">  222</span>            <a class="code hl_variable" href="classiot_1_1mqtt_1_1Mqtt.html#a043a3ff2dae61619cb319ccb128bb1eb">mqttContext</a>-&gt;<a class="code hl_function" href="classiot_1_1mqtt_1_1MqttContext.html#ada10a6f2fcf6953ed62d93bdb5907cd1">end</a>(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  223</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  224</span>            LOG(DEBUG) &lt;&lt; <a class="code hl_variable" href="classiot_1_1mqtt_1_1Mqtt.html#a7ecac0437e91c099ca1a1295e424bca0">connectionName</a> &lt;&lt; <span class="stringliteral">&quot; MQTT Client:  PacketIdentifier: 0x&quot;</span> &lt;&lt; std::hex &lt;&lt; std::setfill(<span class="charliteral">&#39;0&#39;</span>) &lt;&lt; std::setw(4)</div>
+<div class="line"><span class="lineno">  225</span>                       &lt;&lt; suback.<a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Suback.html#a4b210bb967888e97f375d51b564a8256">getPacketIdentifier</a>();</div>
+<div class="line"><span class="lineno">  226</span> </div>
+<div class="line"><span class="lineno">  227</span>            std::stringstream ss;</div>
+<div class="line"><span class="lineno">  228</span>            std::list&lt;uint8_t&gt;::size_type i = 0;</div>
+<div class="line"><span class="lineno">  229</span> </div>
+<div class="line"><span class="lineno">  230</span>            <span class="keywordflow">for</span> (<span class="keyword">const</span> uint8_t returnCode : suback.getReturnCodes()) {</div>
+<div class="line"><span class="lineno">  231</span>                <span class="keywordflow">if</span> (i != 0 &amp;&amp; i % 8 == 0 &amp;&amp; i != suback.<a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Suback.html#aeda5db3357a382a8e27124f849fe3787">getReturnCodes</a>().size()) {</div>
+<div class="line"><span class="lineno">  232</span>                    ss &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  233</span>                    ss &lt;&lt; <span class="stringliteral">&quot;                                                       &quot;</span>;</div>
+<div class="line"><span class="lineno">  234</span>                }</div>
+<div class="line"><span class="lineno">  235</span>                ++i;</div>
+<div class="line"><span class="lineno">  236</span>                ss &lt;&lt; <span class="stringliteral">&quot;0x&quot;</span> &lt;&lt; std::hex &lt;&lt; std::setfill(&#39;0&#39;) &lt;&lt; std::setw(2) &lt;&lt; static_cast&lt;uint16_t&gt;(returnCode) &lt;&lt; <span class="stringliteral">&quot; &quot;</span>; <span class="comment">// &lt;&lt; &quot; | &quot;;</span></div>
+<div class="line"><span class="lineno">  237</span>            }</div>
+<div class="line"><span class="lineno">  238</span> </div>
+<div class="line"><span class="lineno">  239</span>            LOG(DEBUG) &lt;&lt; <a class="code hl_variable" href="classiot_1_1mqtt_1_1Mqtt.html#a7ecac0437e91c099ca1a1295e424bca0">connectionName</a> &lt;&lt; <span class="stringliteral">&quot; MQTT Client:  Return codes: &quot;</span> &lt;&lt; ss.str();</div>
+<div class="line"><span class="lineno">  240</span> </div>
+<div class="line"><span class="lineno">  241</span>            <a class="code hl_function" href="#acaacfad72b121df18686afdd69bbc62a">onSuback</a>(suback);</div>
+<div class="line"><span class="lineno">  242</span>        }</div>
+<div class="line"><span class="lineno">  243</span>    }</div>
 <div class="ttc" id="aclassiot_1_1mqtt_1_1MqttContext_html_ada10a6f2fcf6953ed62d93bdb5907cd1"><div class="ttname"><a href="classiot_1_1mqtt_1_1MqttContext.html#ada10a6f2fcf6953ed62d93bdb5907cd1">iot::mqtt::MqttContext::end</a></div><div class="ttdeci">virtual void end(bool fatal=false)=0</div></div>
 <div class="ttc" id="aclassiot_1_1mqtt_1_1Mqtt_html_a043a3ff2dae61619cb319ccb128bb1eb"><div class="ttname"><a href="classiot_1_1mqtt_1_1Mqtt.html#a043a3ff2dae61619cb319ccb128bb1eb">iot::mqtt::Mqtt::mqttContext</a></div><div class="ttdeci">MqttContext * mqttContext</div><div class="ttdef"><b>Definition</b> <a href="Mqtt_8h_source.html#l00158">Mqtt.h:158</a></div></div>
-<div class="ttc" id="aclassiot_1_1mqtt_1_1client_1_1Mqtt_html_acaacfad72b121df18686afdd69bbc62a"><div class="ttname"><a href="#acaacfad72b121df18686afdd69bbc62a">iot::mqtt::client::Mqtt::onSuback</a></div><div class="ttdeci">virtual void onSuback(const iot::mqtt::packets::Suback &amp;suback)</div><div class="ttdef"><b>Definition</b> <a href="client_2Mqtt_8cpp_source.html#l00185">Mqtt.cpp:185</a></div></div>
+<div class="ttc" id="aclassiot_1_1mqtt_1_1client_1_1Mqtt_html_acaacfad72b121df18686afdd69bbc62a"><div class="ttname"><a href="#acaacfad72b121df18686afdd69bbc62a">iot::mqtt::client::Mqtt::onSuback</a></div><div class="ttdeci">virtual void onSuback(const iot::mqtt::packets::Suback &amp;suback)</div><div class="ttdef"><b>Definition</b> <a href="client_2Mqtt_8cpp_source.html#l00184">Mqtt.cpp:184</a></div></div>
 <div class="ttc" id="aclassiot_1_1mqtt_1_1packets_1_1Suback_html_a4b210bb967888e97f375d51b564a8256"><div class="ttname"><a href="classiot_1_1mqtt_1_1packets_1_1Suback.html#a4b210bb967888e97f375d51b564a8256">iot::mqtt::packets::Suback::getPacketIdentifier</a></div><div class="ttdeci">uint16_t getPacketIdentifier() const</div><div class="ttdef"><b>Definition</b> <a href="mqtt_2packets_2Suback_8cpp_source.html#l00071">Suback.cpp:71</a></div></div>
 <div class="ttc" id="aclassiot_1_1mqtt_1_1packets_1_1Suback_html_aeda5db3357a382a8e27124f849fe3787"><div class="ttname"><a href="classiot_1_1mqtt_1_1packets_1_1Suback.html#aeda5db3357a382a8e27124f849fe3787">iot::mqtt::packets::Suback::getReturnCodes</a></div><div class="ttdeci">const std::list&lt; uint8_t &gt; &amp; getReturnCodes() const</div><div class="ttdef"><b>Definition</b> <a href="mqtt_2packets_2Suback_8cpp_source.html#l00075">Suback.cpp:75</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="client_2Mqtt_8cpp_source.html#l00185">onSuback()</a>.</p>
+<p class="reference">References <a class="el" href="client_2Mqtt_8cpp_source.html#l00184">onSuback()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -662,22 +667,22 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="client_2Mqtt_8cpp_source.html#l00246">246</a> of file <a class="el" href="client_2Mqtt_8cpp_source.html">Mqtt.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  246</span>                                                                       {</div>
-<div class="line"><span class="lineno">  247</span>        <span class="keywordflow">if</span> (unsuback.<a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Unsuback.html#ac34590d5e625bc4413f6f36fda833e39">getPacketIdentifier</a>() == 0) {</div>
-<div class="line"><span class="lineno">  248</span>            LOG(ERROR) &lt;&lt; <a class="code hl_variable" href="classiot_1_1mqtt_1_1Mqtt.html#a7ecac0437e91c099ca1a1295e424bca0">connectionName</a> &lt;&lt; <span class="stringliteral">&quot; MQTT Client:  PacketIdentifier missing&quot;</span>;</div>
-<div class="line"><span class="lineno">  249</span>            <a class="code hl_variable" href="classiot_1_1mqtt_1_1Mqtt.html#a043a3ff2dae61619cb319ccb128bb1eb">mqttContext</a>-&gt;<a class="code hl_function" href="classiot_1_1mqtt_1_1MqttContext.html#ada10a6f2fcf6953ed62d93bdb5907cd1">end</a>(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  250</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  251</span>            LOG(DEBUG) &lt;&lt; <a class="code hl_variable" href="classiot_1_1mqtt_1_1Mqtt.html#a7ecac0437e91c099ca1a1295e424bca0">connectionName</a> &lt;&lt; <span class="stringliteral">&quot; MQTT Client:  PacketIdentifier: 0x&quot;</span> &lt;&lt; std::hex &lt;&lt; std::setfill(<span class="charliteral">&#39;0&#39;</span>) &lt;&lt; std::setw(4)</div>
-<div class="line"><span class="lineno">  252</span>                       &lt;&lt; unsuback.<a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Unsuback.html#ac34590d5e625bc4413f6f36fda833e39">getPacketIdentifier</a>();</div>
-<div class="line"><span class="lineno">  253</span> </div>
-<div class="line"><span class="lineno">  254</span>            <a class="code hl_function" href="#aa1c082319fe7ea71b4ae70c1367bc4da">onUnsuback</a>(unsuback);</div>
-<div class="line"><span class="lineno">  255</span>        }</div>
-<div class="line"><span class="lineno">  256</span>    }</div>
-<div class="ttc" id="aclassiot_1_1mqtt_1_1client_1_1Mqtt_html_aa1c082319fe7ea71b4ae70c1367bc4da"><div class="ttname"><a href="#aa1c082319fe7ea71b4ae70c1367bc4da">iot::mqtt::client::Mqtt::onUnsuback</a></div><div class="ttdeci">virtual void onUnsuback(const iot::mqtt::packets::Unsuback &amp;unsuback)</div><div class="ttdef"><b>Definition</b> <a href="client_2Mqtt_8cpp_source.html#l00188">Mqtt.cpp:188</a></div></div>
+<p class="definition">Definition at line <a class="el" href="client_2Mqtt_8cpp_source.html#l00245">245</a> of file <a class="el" href="client_2Mqtt_8cpp_source.html">Mqtt.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  245</span>                                                                       {</div>
+<div class="line"><span class="lineno">  246</span>        <span class="keywordflow">if</span> (unsuback.<a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Unsuback.html#ac34590d5e625bc4413f6f36fda833e39">getPacketIdentifier</a>() == 0) {</div>
+<div class="line"><span class="lineno">  247</span>            LOG(ERROR) &lt;&lt; <a class="code hl_variable" href="classiot_1_1mqtt_1_1Mqtt.html#a7ecac0437e91c099ca1a1295e424bca0">connectionName</a> &lt;&lt; <span class="stringliteral">&quot; MQTT Client:  PacketIdentifier missing&quot;</span>;</div>
+<div class="line"><span class="lineno">  248</span>            <a class="code hl_variable" href="classiot_1_1mqtt_1_1Mqtt.html#a043a3ff2dae61619cb319ccb128bb1eb">mqttContext</a>-&gt;<a class="code hl_function" href="classiot_1_1mqtt_1_1MqttContext.html#ada10a6f2fcf6953ed62d93bdb5907cd1">end</a>(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  249</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  250</span>            LOG(DEBUG) &lt;&lt; <a class="code hl_variable" href="classiot_1_1mqtt_1_1Mqtt.html#a7ecac0437e91c099ca1a1295e424bca0">connectionName</a> &lt;&lt; <span class="stringliteral">&quot; MQTT Client:  PacketIdentifier: 0x&quot;</span> &lt;&lt; std::hex &lt;&lt; std::setfill(<span class="charliteral">&#39;0&#39;</span>) &lt;&lt; std::setw(4)</div>
+<div class="line"><span class="lineno">  251</span>                       &lt;&lt; unsuback.<a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Unsuback.html#ac34590d5e625bc4413f6f36fda833e39">getPacketIdentifier</a>();</div>
+<div class="line"><span class="lineno">  252</span> </div>
+<div class="line"><span class="lineno">  253</span>            <a class="code hl_function" href="#aa1c082319fe7ea71b4ae70c1367bc4da">onUnsuback</a>(unsuback);</div>
+<div class="line"><span class="lineno">  254</span>        }</div>
+<div class="line"><span class="lineno">  255</span>    }</div>
+<div class="ttc" id="aclassiot_1_1mqtt_1_1client_1_1Mqtt_html_aa1c082319fe7ea71b4ae70c1367bc4da"><div class="ttname"><a href="#aa1c082319fe7ea71b4ae70c1367bc4da">iot::mqtt::client::Mqtt::onUnsuback</a></div><div class="ttdeci">virtual void onUnsuback(const iot::mqtt::packets::Unsuback &amp;unsuback)</div><div class="ttdef"><b>Definition</b> <a href="client_2Mqtt_8cpp_source.html#l00187">Mqtt.cpp:187</a></div></div>
 <div class="ttc" id="aclassiot_1_1mqtt_1_1packets_1_1Unsuback_html_ac34590d5e625bc4413f6f36fda833e39"><div class="ttname"><a href="classiot_1_1mqtt_1_1packets_1_1Unsuback.html#ac34590d5e625bc4413f6f36fda833e39">iot::mqtt::packets::Unsuback::getPacketIdentifier</a></div><div class="ttdeci">uint16_t getPacketIdentifier() const</div><div class="ttdef"><b>Definition</b> <a href="mqtt_2packets_2Unsuback_8cpp_source.html#l00066">Unsuback.cpp:66</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="client_2Mqtt_8cpp_source.html#l00188">onUnsuback()</a>.</p>
+<p class="reference">References <a class="el" href="client_2Mqtt_8cpp_source.html#l00187">onUnsuback()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -711,45 +716,45 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="classiot_1_1mqtt_1_1Mqtt.html#a89320a94a7005bbaf31478262b3509b4">iot::mqtt::Mqtt</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="client_2Mqtt_8cpp_source.html#l00135">135</a> of file <a class="el" href="client_2Mqtt_8cpp_source.html">Mqtt.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  135</span>                                                                                                           {</div>
-<div class="line"><span class="lineno">  136</span>        <a class="code hl_class" href="classiot_1_1mqtt_1_1ControlPacketDeserializer.html">iot::mqtt::ControlPacketDeserializer</a>* currentPacket = <span class="keyword">nullptr</span>;</div>
-<div class="line"><span class="lineno">  137</span> </div>
-<div class="line"><span class="lineno">  138</span>        <span class="keywordflow">switch</span> (<a class="code hl_variable" href="classiot_1_1mqtt_1_1Mqtt.html#a2468bbd7ce38673dc434e40a6c79c2c3">fixedHeader</a>.<a class="code hl_function" href="classiot_1_1mqtt_1_1FixedHeader.html#a259df159ad56447436abb2bb2e59af5a">getType</a>()) {</div>
-<div class="line"><span class="lineno">  139</span>            <span class="keywordflow">case</span> <a class="code hl_define" href="mqtt-fast_2packets_2Connack_8h.html#a09b0564b21f03d3d86bac8b5a09a4999">MQTT_CONNACK</a>:</div>
-<div class="line"><span class="lineno">  140</span>                currentPacket = <span class="keyword">new</span> <a class="code hl_class" href="classiot_1_1mqtt_1_1client_1_1packets_1_1Connack.html">iot::mqtt::client::packets::Connack</a>(<a class="code hl_variable" href="classiot_1_1mqtt_1_1Mqtt.html#a2468bbd7ce38673dc434e40a6c79c2c3">fixedHeader</a>.<a class="code hl_function" href="classiot_1_1mqtt_1_1FixedHeader.html#a8f5e18b4daadeee51cc9d939e563b371">getRemainingLength</a>(), <a class="code hl_variable" href="classiot_1_1mqtt_1_1Mqtt.html#a2468bbd7ce38673dc434e40a6c79c2c3">fixedHeader</a>.<a class="code hl_function" href="classiot_1_1mqtt_1_1FixedHeader.html#ab9269e79a2d71d2f2ae5bc52468dce38">getFlags</a>());</div>
-<div class="line"><span class="lineno">  141</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  142</span>            <span class="keywordflow">case</span> <a class="code hl_define" href="mqtt-fast_2packets_2Publish_8h.html#a3dc6a4b0dc54027175ff59c5c41ecd1d">MQTT_PUBLISH</a>:</div>
-<div class="line"><span class="lineno">  143</span>                currentPacket = <span class="keyword">new</span> <a class="code hl_class" href="classiot_1_1mqtt_1_1client_1_1packets_1_1Publish.html">iot::mqtt::client::packets::Publish</a>(<a class="code hl_variable" href="classiot_1_1mqtt_1_1Mqtt.html#a2468bbd7ce38673dc434e40a6c79c2c3">fixedHeader</a>.<a class="code hl_function" href="classiot_1_1mqtt_1_1FixedHeader.html#a8f5e18b4daadeee51cc9d939e563b371">getRemainingLength</a>(), <a class="code hl_variable" href="classiot_1_1mqtt_1_1Mqtt.html#a2468bbd7ce38673dc434e40a6c79c2c3">fixedHeader</a>.<a class="code hl_function" href="classiot_1_1mqtt_1_1FixedHeader.html#ab9269e79a2d71d2f2ae5bc52468dce38">getFlags</a>());</div>
-<div class="line"><span class="lineno">  144</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  145</span>            <span class="keywordflow">case</span> <a class="code hl_define" href="mqtt-fast_2packets_2Puback_8h.html#aae1d8c0d399f44b713ca57a3c1fab4d1">MQTT_PUBACK</a>:</div>
-<div class="line"><span class="lineno">  146</span>                currentPacket = <span class="keyword">new</span> <a class="code hl_class" href="classiot_1_1mqtt_1_1client_1_1packets_1_1Puback.html">iot::mqtt::client::packets::Puback</a>(<a class="code hl_variable" href="classiot_1_1mqtt_1_1Mqtt.html#a2468bbd7ce38673dc434e40a6c79c2c3">fixedHeader</a>.<a class="code hl_function" href="classiot_1_1mqtt_1_1FixedHeader.html#a8f5e18b4daadeee51cc9d939e563b371">getRemainingLength</a>(), <a class="code hl_variable" href="classiot_1_1mqtt_1_1Mqtt.html#a2468bbd7ce38673dc434e40a6c79c2c3">fixedHeader</a>.<a class="code hl_function" href="classiot_1_1mqtt_1_1FixedHeader.html#ab9269e79a2d71d2f2ae5bc52468dce38">getFlags</a>());</div>
-<div class="line"><span class="lineno">  147</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  148</span>            <span class="keywordflow">case</span> <a class="code hl_define" href="mqtt-fast_2packets_2Pubrec_8h.html#ada9449d30967db2a4c8f1c9a8321b4af">MQTT_PUBREC</a>:</div>
-<div class="line"><span class="lineno">  149</span>                currentPacket = <span class="keyword">new</span> <a class="code hl_class" href="classiot_1_1mqtt_1_1client_1_1packets_1_1Pubrec.html">iot::mqtt::client::packets::Pubrec</a>(<a class="code hl_variable" href="classiot_1_1mqtt_1_1Mqtt.html#a2468bbd7ce38673dc434e40a6c79c2c3">fixedHeader</a>.<a class="code hl_function" href="classiot_1_1mqtt_1_1FixedHeader.html#a8f5e18b4daadeee51cc9d939e563b371">getRemainingLength</a>(), <a class="code hl_variable" href="classiot_1_1mqtt_1_1Mqtt.html#a2468bbd7ce38673dc434e40a6c79c2c3">fixedHeader</a>.<a class="code hl_function" href="classiot_1_1mqtt_1_1FixedHeader.html#ab9269e79a2d71d2f2ae5bc52468dce38">getFlags</a>());</div>
-<div class="line"><span class="lineno">  150</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  151</span>            <span class="keywordflow">case</span> <a class="code hl_define" href="mqtt-fast_2packets_2Pubrel_8h.html#a8f672c2b5f68e723d8862f06a3d7eea9">MQTT_PUBREL</a>:</div>
-<div class="line"><span class="lineno">  152</span>                currentPacket = <span class="keyword">new</span> <a class="code hl_class" href="classiot_1_1mqtt_1_1client_1_1packets_1_1Pubrel.html">iot::mqtt::client::packets::Pubrel</a>(<a class="code hl_variable" href="classiot_1_1mqtt_1_1Mqtt.html#a2468bbd7ce38673dc434e40a6c79c2c3">fixedHeader</a>.<a class="code hl_function" href="classiot_1_1mqtt_1_1FixedHeader.html#a8f5e18b4daadeee51cc9d939e563b371">getRemainingLength</a>(), <a class="code hl_variable" href="classiot_1_1mqtt_1_1Mqtt.html#a2468bbd7ce38673dc434e40a6c79c2c3">fixedHeader</a>.<a class="code hl_function" href="classiot_1_1mqtt_1_1FixedHeader.html#ab9269e79a2d71d2f2ae5bc52468dce38">getFlags</a>());</div>
-<div class="line"><span class="lineno">  153</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  154</span>            <span class="keywordflow">case</span> <a class="code hl_define" href="mqtt-fast_2packets_2Pubcomp_8h.html#a0cd00365f23dfec0884163d77f64ac67">MQTT_PUBCOMP</a>:</div>
-<div class="line"><span class="lineno">  155</span>                currentPacket = <span class="keyword">new</span> <a class="code hl_class" href="classiot_1_1mqtt_1_1client_1_1packets_1_1Pubcomp.html">iot::mqtt::client::packets::Pubcomp</a>(<a class="code hl_variable" href="classiot_1_1mqtt_1_1Mqtt.html#a2468bbd7ce38673dc434e40a6c79c2c3">fixedHeader</a>.<a class="code hl_function" href="classiot_1_1mqtt_1_1FixedHeader.html#a8f5e18b4daadeee51cc9d939e563b371">getRemainingLength</a>(), <a class="code hl_variable" href="classiot_1_1mqtt_1_1Mqtt.html#a2468bbd7ce38673dc434e40a6c79c2c3">fixedHeader</a>.<a class="code hl_function" href="classiot_1_1mqtt_1_1FixedHeader.html#ab9269e79a2d71d2f2ae5bc52468dce38">getFlags</a>());</div>
-<div class="line"><span class="lineno">  156</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  157</span>            <span class="keywordflow">case</span> <a class="code hl_define" href="mqtt-fast_2packets_2Suback_8h.html#a8c5dda67f018a226499f0c44531fd5d6">MQTT_SUBACK</a>:</div>
-<div class="line"><span class="lineno">  158</span>                currentPacket = <span class="keyword">new</span> <a class="code hl_class" href="classiot_1_1mqtt_1_1client_1_1packets_1_1Suback.html">iot::mqtt::client::packets::Suback</a>(<a class="code hl_variable" href="classiot_1_1mqtt_1_1Mqtt.html#a2468bbd7ce38673dc434e40a6c79c2c3">fixedHeader</a>.<a class="code hl_function" href="classiot_1_1mqtt_1_1FixedHeader.html#a8f5e18b4daadeee51cc9d939e563b371">getRemainingLength</a>(), <a class="code hl_variable" href="classiot_1_1mqtt_1_1Mqtt.html#a2468bbd7ce38673dc434e40a6c79c2c3">fixedHeader</a>.<a class="code hl_function" href="classiot_1_1mqtt_1_1FixedHeader.html#ab9269e79a2d71d2f2ae5bc52468dce38">getFlags</a>());</div>
-<div class="line"><span class="lineno">  159</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  160</span>            <span class="keywordflow">case</span> <a class="code hl_define" href="mqtt-fast_2packets_2Unsuback_8h.html#a3005381a33134aecab624da1435eb5df">MQTT_UNSUBACK</a>:</div>
-<div class="line"><span class="lineno">  161</span>                currentPacket = <span class="keyword">new</span> <a class="code hl_class" href="classiot_1_1mqtt_1_1client_1_1packets_1_1Unsuback.html">iot::mqtt::client::packets::Unsuback</a>(<a class="code hl_variable" href="classiot_1_1mqtt_1_1Mqtt.html#a2468bbd7ce38673dc434e40a6c79c2c3">fixedHeader</a>.<a class="code hl_function" href="classiot_1_1mqtt_1_1FixedHeader.html#a8f5e18b4daadeee51cc9d939e563b371">getRemainingLength</a>(), <a class="code hl_variable" href="classiot_1_1mqtt_1_1Mqtt.html#a2468bbd7ce38673dc434e40a6c79c2c3">fixedHeader</a>.<a class="code hl_function" href="classiot_1_1mqtt_1_1FixedHeader.html#ab9269e79a2d71d2f2ae5bc52468dce38">getFlags</a>());</div>
-<div class="line"><span class="lineno">  162</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  163</span>            <span class="keywordflow">case</span> <a class="code hl_define" href="mqtt-fast_2packets_2Pingresp_8h.html#a3b53f25873b4c008f115245e53cbe98b">MQTT_PINGRESP</a>:</div>
-<div class="line"><span class="lineno">  164</span>                currentPacket = <span class="keyword">new</span> <a class="code hl_class" href="classiot_1_1mqtt_1_1client_1_1packets_1_1Pingresp.html">iot::mqtt::client::packets::Pingresp</a>(<a class="code hl_variable" href="classiot_1_1mqtt_1_1Mqtt.html#a2468bbd7ce38673dc434e40a6c79c2c3">fixedHeader</a>.<a class="code hl_function" href="classiot_1_1mqtt_1_1FixedHeader.html#a8f5e18b4daadeee51cc9d939e563b371">getRemainingLength</a>(), <a class="code hl_variable" href="classiot_1_1mqtt_1_1Mqtt.html#a2468bbd7ce38673dc434e40a6c79c2c3">fixedHeader</a>.<a class="code hl_function" href="classiot_1_1mqtt_1_1FixedHeader.html#ab9269e79a2d71d2f2ae5bc52468dce38">getFlags</a>());</div>
-<div class="line"><span class="lineno">  165</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  166</span>            <span class="keywordflow">default</span>:</div>
-<div class="line"><span class="lineno">  167</span>                currentPacket = <span class="keyword">nullptr</span>;</div>
-<div class="line"><span class="lineno">  168</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  169</span>        }</div>
-<div class="line"><span class="lineno">  170</span> </div>
-<div class="line"><span class="lineno">  171</span>        <span class="keywordflow">return</span> currentPacket;</div>
-<div class="line"><span class="lineno">  172</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="client_2Mqtt_8cpp_source.html#l00134">134</a> of file <a class="el" href="client_2Mqtt_8cpp_source.html">Mqtt.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  134</span>                                                                                                           {</div>
+<div class="line"><span class="lineno">  135</span>        <a class="code hl_class" href="classiot_1_1mqtt_1_1ControlPacketDeserializer.html">iot::mqtt::ControlPacketDeserializer</a>* currentPacket = <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">  136</span> </div>
+<div class="line"><span class="lineno">  137</span>        <span class="keywordflow">switch</span> (<a class="code hl_variable" href="classiot_1_1mqtt_1_1Mqtt.html#a2468bbd7ce38673dc434e40a6c79c2c3">fixedHeader</a>.<a class="code hl_function" href="classiot_1_1mqtt_1_1FixedHeader.html#a259df159ad56447436abb2bb2e59af5a">getType</a>()) {</div>
+<div class="line"><span class="lineno">  138</span>            <span class="keywordflow">case</span> <a class="code hl_define" href="mqtt-fast_2packets_2Connack_8h.html#a09b0564b21f03d3d86bac8b5a09a4999">MQTT_CONNACK</a>:</div>
+<div class="line"><span class="lineno">  139</span>                currentPacket = <span class="keyword">new</span> <a class="code hl_class" href="classiot_1_1mqtt_1_1client_1_1packets_1_1Connack.html">iot::mqtt::client::packets::Connack</a>(<a class="code hl_variable" href="classiot_1_1mqtt_1_1Mqtt.html#a2468bbd7ce38673dc434e40a6c79c2c3">fixedHeader</a>.<a class="code hl_function" href="classiot_1_1mqtt_1_1FixedHeader.html#a8f5e18b4daadeee51cc9d939e563b371">getRemainingLength</a>(), <a class="code hl_variable" href="classiot_1_1mqtt_1_1Mqtt.html#a2468bbd7ce38673dc434e40a6c79c2c3">fixedHeader</a>.<a class="code hl_function" href="classiot_1_1mqtt_1_1FixedHeader.html#ab9269e79a2d71d2f2ae5bc52468dce38">getFlags</a>());</div>
+<div class="line"><span class="lineno">  140</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  141</span>            <span class="keywordflow">case</span> <a class="code hl_define" href="mqtt-fast_2packets_2Publish_8h.html#a3dc6a4b0dc54027175ff59c5c41ecd1d">MQTT_PUBLISH</a>:</div>
+<div class="line"><span class="lineno">  142</span>                currentPacket = <span class="keyword">new</span> <a class="code hl_class" href="classiot_1_1mqtt_1_1client_1_1packets_1_1Publish.html">iot::mqtt::client::packets::Publish</a>(<a class="code hl_variable" href="classiot_1_1mqtt_1_1Mqtt.html#a2468bbd7ce38673dc434e40a6c79c2c3">fixedHeader</a>.<a class="code hl_function" href="classiot_1_1mqtt_1_1FixedHeader.html#a8f5e18b4daadeee51cc9d939e563b371">getRemainingLength</a>(), <a class="code hl_variable" href="classiot_1_1mqtt_1_1Mqtt.html#a2468bbd7ce38673dc434e40a6c79c2c3">fixedHeader</a>.<a class="code hl_function" href="classiot_1_1mqtt_1_1FixedHeader.html#ab9269e79a2d71d2f2ae5bc52468dce38">getFlags</a>());</div>
+<div class="line"><span class="lineno">  143</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  144</span>            <span class="keywordflow">case</span> <a class="code hl_define" href="mqtt-fast_2packets_2Puback_8h.html#aae1d8c0d399f44b713ca57a3c1fab4d1">MQTT_PUBACK</a>:</div>
+<div class="line"><span class="lineno">  145</span>                currentPacket = <span class="keyword">new</span> <a class="code hl_class" href="classiot_1_1mqtt_1_1client_1_1packets_1_1Puback.html">iot::mqtt::client::packets::Puback</a>(<a class="code hl_variable" href="classiot_1_1mqtt_1_1Mqtt.html#a2468bbd7ce38673dc434e40a6c79c2c3">fixedHeader</a>.<a class="code hl_function" href="classiot_1_1mqtt_1_1FixedHeader.html#a8f5e18b4daadeee51cc9d939e563b371">getRemainingLength</a>(), <a class="code hl_variable" href="classiot_1_1mqtt_1_1Mqtt.html#a2468bbd7ce38673dc434e40a6c79c2c3">fixedHeader</a>.<a class="code hl_function" href="classiot_1_1mqtt_1_1FixedHeader.html#ab9269e79a2d71d2f2ae5bc52468dce38">getFlags</a>());</div>
+<div class="line"><span class="lineno">  146</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  147</span>            <span class="keywordflow">case</span> <a class="code hl_define" href="mqtt-fast_2packets_2Pubrec_8h.html#ada9449d30967db2a4c8f1c9a8321b4af">MQTT_PUBREC</a>:</div>
+<div class="line"><span class="lineno">  148</span>                currentPacket = <span class="keyword">new</span> <a class="code hl_class" href="classiot_1_1mqtt_1_1client_1_1packets_1_1Pubrec.html">iot::mqtt::client::packets::Pubrec</a>(<a class="code hl_variable" href="classiot_1_1mqtt_1_1Mqtt.html#a2468bbd7ce38673dc434e40a6c79c2c3">fixedHeader</a>.<a class="code hl_function" href="classiot_1_1mqtt_1_1FixedHeader.html#a8f5e18b4daadeee51cc9d939e563b371">getRemainingLength</a>(), <a class="code hl_variable" href="classiot_1_1mqtt_1_1Mqtt.html#a2468bbd7ce38673dc434e40a6c79c2c3">fixedHeader</a>.<a class="code hl_function" href="classiot_1_1mqtt_1_1FixedHeader.html#ab9269e79a2d71d2f2ae5bc52468dce38">getFlags</a>());</div>
+<div class="line"><span class="lineno">  149</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  150</span>            <span class="keywordflow">case</span> <a class="code hl_define" href="mqtt-fast_2packets_2Pubrel_8h.html#a8f672c2b5f68e723d8862f06a3d7eea9">MQTT_PUBREL</a>:</div>
+<div class="line"><span class="lineno">  151</span>                currentPacket = <span class="keyword">new</span> <a class="code hl_class" href="classiot_1_1mqtt_1_1client_1_1packets_1_1Pubrel.html">iot::mqtt::client::packets::Pubrel</a>(<a class="code hl_variable" href="classiot_1_1mqtt_1_1Mqtt.html#a2468bbd7ce38673dc434e40a6c79c2c3">fixedHeader</a>.<a class="code hl_function" href="classiot_1_1mqtt_1_1FixedHeader.html#a8f5e18b4daadeee51cc9d939e563b371">getRemainingLength</a>(), <a class="code hl_variable" href="classiot_1_1mqtt_1_1Mqtt.html#a2468bbd7ce38673dc434e40a6c79c2c3">fixedHeader</a>.<a class="code hl_function" href="classiot_1_1mqtt_1_1FixedHeader.html#ab9269e79a2d71d2f2ae5bc52468dce38">getFlags</a>());</div>
+<div class="line"><span class="lineno">  152</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  153</span>            <span class="keywordflow">case</span> <a class="code hl_define" href="mqtt-fast_2packets_2Pubcomp_8h.html#a0cd00365f23dfec0884163d77f64ac67">MQTT_PUBCOMP</a>:</div>
+<div class="line"><span class="lineno">  154</span>                currentPacket = <span class="keyword">new</span> <a class="code hl_class" href="classiot_1_1mqtt_1_1client_1_1packets_1_1Pubcomp.html">iot::mqtt::client::packets::Pubcomp</a>(<a class="code hl_variable" href="classiot_1_1mqtt_1_1Mqtt.html#a2468bbd7ce38673dc434e40a6c79c2c3">fixedHeader</a>.<a class="code hl_function" href="classiot_1_1mqtt_1_1FixedHeader.html#a8f5e18b4daadeee51cc9d939e563b371">getRemainingLength</a>(), <a class="code hl_variable" href="classiot_1_1mqtt_1_1Mqtt.html#a2468bbd7ce38673dc434e40a6c79c2c3">fixedHeader</a>.<a class="code hl_function" href="classiot_1_1mqtt_1_1FixedHeader.html#ab9269e79a2d71d2f2ae5bc52468dce38">getFlags</a>());</div>
+<div class="line"><span class="lineno">  155</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  156</span>            <span class="keywordflow">case</span> <a class="code hl_define" href="mqtt-fast_2packets_2Suback_8h.html#a8c5dda67f018a226499f0c44531fd5d6">MQTT_SUBACK</a>:</div>
+<div class="line"><span class="lineno">  157</span>                currentPacket = <span class="keyword">new</span> <a class="code hl_class" href="classiot_1_1mqtt_1_1client_1_1packets_1_1Suback.html">iot::mqtt::client::packets::Suback</a>(<a class="code hl_variable" href="classiot_1_1mqtt_1_1Mqtt.html#a2468bbd7ce38673dc434e40a6c79c2c3">fixedHeader</a>.<a class="code hl_function" href="classiot_1_1mqtt_1_1FixedHeader.html#a8f5e18b4daadeee51cc9d939e563b371">getRemainingLength</a>(), <a class="code hl_variable" href="classiot_1_1mqtt_1_1Mqtt.html#a2468bbd7ce38673dc434e40a6c79c2c3">fixedHeader</a>.<a class="code hl_function" href="classiot_1_1mqtt_1_1FixedHeader.html#ab9269e79a2d71d2f2ae5bc52468dce38">getFlags</a>());</div>
+<div class="line"><span class="lineno">  158</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  159</span>            <span class="keywordflow">case</span> <a class="code hl_define" href="mqtt-fast_2packets_2Unsuback_8h.html#a3005381a33134aecab624da1435eb5df">MQTT_UNSUBACK</a>:</div>
+<div class="line"><span class="lineno">  160</span>                currentPacket = <span class="keyword">new</span> <a class="code hl_class" href="classiot_1_1mqtt_1_1client_1_1packets_1_1Unsuback.html">iot::mqtt::client::packets::Unsuback</a>(<a class="code hl_variable" href="classiot_1_1mqtt_1_1Mqtt.html#a2468bbd7ce38673dc434e40a6c79c2c3">fixedHeader</a>.<a class="code hl_function" href="classiot_1_1mqtt_1_1FixedHeader.html#a8f5e18b4daadeee51cc9d939e563b371">getRemainingLength</a>(), <a class="code hl_variable" href="classiot_1_1mqtt_1_1Mqtt.html#a2468bbd7ce38673dc434e40a6c79c2c3">fixedHeader</a>.<a class="code hl_function" href="classiot_1_1mqtt_1_1FixedHeader.html#ab9269e79a2d71d2f2ae5bc52468dce38">getFlags</a>());</div>
+<div class="line"><span class="lineno">  161</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  162</span>            <span class="keywordflow">case</span> <a class="code hl_define" href="mqtt-fast_2packets_2Pingresp_8h.html#a3b53f25873b4c008f115245e53cbe98b">MQTT_PINGRESP</a>:</div>
+<div class="line"><span class="lineno">  163</span>                currentPacket = <span class="keyword">new</span> <a class="code hl_class" href="classiot_1_1mqtt_1_1client_1_1packets_1_1Pingresp.html">iot::mqtt::client::packets::Pingresp</a>(<a class="code hl_variable" href="classiot_1_1mqtt_1_1Mqtt.html#a2468bbd7ce38673dc434e40a6c79c2c3">fixedHeader</a>.<a class="code hl_function" href="classiot_1_1mqtt_1_1FixedHeader.html#a8f5e18b4daadeee51cc9d939e563b371">getRemainingLength</a>(), <a class="code hl_variable" href="classiot_1_1mqtt_1_1Mqtt.html#a2468bbd7ce38673dc434e40a6c79c2c3">fixedHeader</a>.<a class="code hl_function" href="classiot_1_1mqtt_1_1FixedHeader.html#ab9269e79a2d71d2f2ae5bc52468dce38">getFlags</a>());</div>
+<div class="line"><span class="lineno">  164</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  165</span>            <span class="keywordflow">default</span>:</div>
+<div class="line"><span class="lineno">  166</span>                currentPacket = <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">  167</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  168</span>        }</div>
+<div class="line"><span class="lineno">  169</span> </div>
+<div class="line"><span class="lineno">  170</span>        <span class="keywordflow">return</span> currentPacket;</div>
+<div class="line"><span class="lineno">  171</span>    }</div>
 <div class="ttc" id="aclassiot_1_1mqtt_1_1ControlPacketDeserializer_html"><div class="ttname"><a href="classiot_1_1mqtt_1_1ControlPacketDeserializer.html">iot::mqtt::ControlPacketDeserializer</a></div><div class="ttdef"><b>Definition</b> <a href="ControlPacketDeserializer_8h_source.html#l00058">ControlPacketDeserializer.h:58</a></div></div>
 <div class="ttc" id="aclassiot_1_1mqtt_1_1FixedHeader_html_a259df159ad56447436abb2bb2e59af5a"><div class="ttname"><a href="classiot_1_1mqtt_1_1FixedHeader.html#a259df159ad56447436abb2bb2e59af5a">iot::mqtt::FixedHeader::getType</a></div><div class="ttdeci">uint8_t getType() const</div><div class="ttdef"><b>Definition</b> <a href="FixedHeader_8cpp_source.html#l00085">FixedHeader.cpp:85</a></div></div>
 <div class="ttc" id="aclassiot_1_1mqtt_1_1FixedHeader_html_a8f5e18b4daadeee51cc9d939e563b371"><div class="ttname"><a href="classiot_1_1mqtt_1_1FixedHeader.html#a8f5e18b4daadeee51cc9d939e563b371">iot::mqtt::FixedHeader::getRemainingLength</a></div><div class="ttdeci">uint32_t getRemainingLength() const</div><div class="ttdef"><b>Definition</b> <a href="FixedHeader_8cpp_source.html#l00097">FixedHeader.cpp:97</a></div></div>
@@ -801,13 +806,13 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="classiot_1_1mqtt_1_1Mqtt.html#a81a3e34b1bf6a9da02f3128624af0653">iot::mqtt::Mqtt</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="client_2Mqtt_8cpp_source.html#l00174">174</a> of file <a class="el" href="client_2Mqtt_8cpp_source.html">Mqtt.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  174</span>                                                                                        {</div>
-<div class="line"><span class="lineno">  175</span>        <span class="keyword">static_cast&lt;</span><a class="code hl_class" href="classiot_1_1mqtt_1_1client_1_1ControlPacketDeserializer.html">iot::mqtt::client::ControlPacketDeserializer</a>*<span class="keyword">&gt;</span>(<a class="code hl_variable" href="classiot_1_1mqtt_1_1Mqtt.html#aed008b980ca9bb79e15a9c4111b4014d">controlPacketDeserializer</a>)-&gt;<a class="code hl_function" href="#ad24611e904d6addc10f7d984ac54f83b">deliverPacket</a>(<span class="keyword">this</span>); <span class="comment">// NOLINT</span></div>
-<div class="line"><span class="lineno">  176</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="client_2Mqtt_8cpp_source.html#l00173">173</a> of file <a class="el" href="client_2Mqtt_8cpp_source.html">Mqtt.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  173</span>                                                                                        {</div>
+<div class="line"><span class="lineno">  174</span>        <span class="keyword">static_cast&lt;</span><a class="code hl_class" href="classiot_1_1mqtt_1_1client_1_1ControlPacketDeserializer.html">iot::mqtt::client::ControlPacketDeserializer</a>*<span class="keyword">&gt;</span>(<a class="code hl_variable" href="classiot_1_1mqtt_1_1Mqtt.html#aed008b980ca9bb79e15a9c4111b4014d">controlPacketDeserializer</a>)-&gt;<a class="code hl_function" href="#ad24611e904d6addc10f7d984ac54f83b">deliverPacket</a>(<span class="keyword">this</span>); <span class="comment">// NOLINT</span></div>
+<div class="line"><span class="lineno">  175</span>    }</div>
 <div class="ttc" id="aclassiot_1_1mqtt_1_1Mqtt_html_aed008b980ca9bb79e15a9c4111b4014d"><div class="ttname"><a href="classiot_1_1mqtt_1_1Mqtt.html#aed008b980ca9bb79e15a9c4111b4014d">iot::mqtt::Mqtt::controlPacketDeserializer</a></div><div class="ttdeci">iot::mqtt::ControlPacketDeserializer * controlPacketDeserializer</div><div class="ttdef"><b>Definition</b> <a href="Mqtt_8h_source.html#l00147">Mqtt.h:147</a></div></div>
 <div class="ttc" id="aclassiot_1_1mqtt_1_1client_1_1ControlPacketDeserializer_html"><div class="ttname"><a href="classiot_1_1mqtt_1_1client_1_1ControlPacketDeserializer.html">iot::mqtt::client::ControlPacketDeserializer</a></div><div class="ttdef"><b>Definition</b> <a href="client_2ControlPacketDeserializer_8h_source.html#l00057">ControlPacketDeserializer.h:57</a></div></div>
-<div class="ttc" id="aclassiot_1_1mqtt_1_1client_1_1Mqtt_html_ad24611e904d6addc10f7d984ac54f83b"><div class="ttname"><a href="#ad24611e904d6addc10f7d984ac54f83b">iot::mqtt::client::Mqtt::deliverPacket</a></div><div class="ttdeci">void deliverPacket(iot::mqtt::ControlPacketDeserializer *controlPacketDeserializer) override</div><div class="ttdef"><b>Definition</b> <a href="client_2Mqtt_8cpp_source.html#l00174">Mqtt.cpp:174</a></div></div>
+<div class="ttc" id="aclassiot_1_1mqtt_1_1client_1_1Mqtt_html_ad24611e904d6addc10f7d984ac54f83b"><div class="ttname"><a href="#ad24611e904d6addc10f7d984ac54f83b">iot::mqtt::client::Mqtt::deliverPacket</a></div><div class="ttdeci">void deliverPacket(iot::mqtt::ControlPacketDeserializer *controlPacketDeserializer) override</div><div class="ttdef"><b>Definition</b> <a href="client_2Mqtt_8cpp_source.html#l00173">Mqtt.cpp:173</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -834,11 +839,11 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="client_2Mqtt_8cpp_source.html#l00182">182</a> of file <a class="el" href="client_2Mqtt_8cpp_source.html">Mqtt.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  182</span>                                                                           {</div>
-<div class="line"><span class="lineno">  183</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="client_2Mqtt_8cpp_source.html#l00181">181</a> of file <a class="el" href="client_2Mqtt_8cpp_source.html">Mqtt.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  181</span>                                                                           {</div>
+<div class="line"><span class="lineno">  182</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="client_2Mqtt_8cpp_source.html#l00194">_onConnack()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="client_2Mqtt_8cpp_source.html#l00193">_onConnack()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -870,11 +875,11 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="client_2Mqtt_8cpp_source.html#l00191">191</a> of file <a class="el" href="client_2Mqtt_8cpp_source.html">Mqtt.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  191</span>                                                                              {</div>
-<div class="line"><span class="lineno">  192</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="client_2Mqtt_8cpp_source.html#l00190">190</a> of file <a class="el" href="client_2Mqtt_8cpp_source.html">Mqtt.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  190</span>                                                                              {</div>
+<div class="line"><span class="lineno">  191</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="client_2Mqtt_8cpp_source.html#l00258">_onPingresp()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="client_2Mqtt_8cpp_source.html#l00257">_onPingresp()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -908,10 +913,10 @@ Here is the caller graph for this function:</div>
 
 <p>Implements <a class="el" href="classiot_1_1mqtt_1_1Mqtt.html#ac5cfc8077b350503b38d54ceb2532361">iot::mqtt::Mqtt</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="client_2Mqtt_8cpp_source.html#l00178">178</a> of file <a class="el" href="client_2Mqtt_8cpp_source.html">Mqtt.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  178</span>                                                {</div>
-<div class="line"><span class="lineno">  179</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  180</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="client_2Mqtt_8cpp_source.html#l00177">177</a> of file <a class="el" href="client_2Mqtt_8cpp_source.html">Mqtt.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  177</span>                                                {</div>
+<div class="line"><span class="lineno">  178</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  179</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -938,11 +943,11 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="client_2Mqtt_8cpp_source.html#l00185">185</a> of file <a class="el" href="client_2Mqtt_8cpp_source.html">Mqtt.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  185</span>                                                                        {</div>
-<div class="line"><span class="lineno">  186</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="client_2Mqtt_8cpp_source.html#l00184">184</a> of file <a class="el" href="client_2Mqtt_8cpp_source.html">Mqtt.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  184</span>                                                                        {</div>
+<div class="line"><span class="lineno">  185</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="client_2Mqtt_8cpp_source.html#l00220">_onSuback()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="client_2Mqtt_8cpp_source.html#l00219">_onSuback()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -974,11 +979,11 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="client_2Mqtt_8cpp_source.html#l00188">188</a> of file <a class="el" href="client_2Mqtt_8cpp_source.html">Mqtt.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  188</span>                                                                              {</div>
-<div class="line"><span class="lineno">  189</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="client_2Mqtt_8cpp_source.html#l00187">187</a> of file <a class="el" href="client_2Mqtt_8cpp_source.html">Mqtt.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  187</span>                                                                              {</div>
+<div class="line"><span class="lineno">  188</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="client_2Mqtt_8cpp_source.html#l00246">_onUnsuback()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="client_2Mqtt_8cpp_source.html#l00245">_onUnsuback()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1046,17 +1051,17 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="client_2Mqtt_8cpp_source.html#l00262">262</a> of file <a class="el" href="client_2Mqtt_8cpp_source.html">Mqtt.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  271</span>                                                { <span class="comment">// Client</span></div>
-<div class="line"><span class="lineno">  272</span>        this-&gt;clientId = <a class="code hl_variable" href="classiot_1_1mqtt_1_1Mqtt.html#ac724b5224b3fd33fc03485589bf726d7">clientId</a>;</div>
-<div class="line"><span class="lineno">  273</span> </div>
-<div class="line"><span class="lineno">  274</span>        LOG(INFO) &lt;&lt; <a class="code hl_variable" href="classiot_1_1mqtt_1_1Mqtt.html#a7ecac0437e91c099ca1a1295e424bca0">connectionName</a> &lt;&lt; <span class="stringliteral">&quot; MQTT Client: CONNECT send: &quot;</span> &lt;&lt; <a class="code hl_variable" href="classiot_1_1mqtt_1_1Mqtt.html#ac724b5224b3fd33fc03485589bf726d7">clientId</a>;</div>
-<div class="line"><span class="lineno">  275</span> </div>
-<div class="line"><span class="lineno">  276</span>        <a class="code hl_function" href="classiot_1_1mqtt_1_1Mqtt.html#ac2c838576318814d55feaaf87cdca5b9">send</a>(<a class="code hl_class" href="classiot_1_1mqtt_1_1packets_1_1Connect.html">iot::mqtt::packets::Connect</a>(</div>
-<div class="line"><span class="lineno">  277</span>            <a class="code hl_variable" href="classiot_1_1mqtt_1_1Mqtt.html#ac724b5224b3fd33fc03485589bf726d7">clientId</a>, <a class="code hl_variable" href="#a1f814ea941194261f5be368b34df0b5c">keepAlive</a>, cleanSession, willTopic, willMessage, willQoS, willRetain, username, password, loopPrevention));</div>
-<div class="line"><span class="lineno">  278</span> </div>
-<div class="line"><span class="lineno">  279</span>        this-&gt;<a class="code hl_variable" href="#a1f814ea941194261f5be368b34df0b5c">keepAlive</a> = <a class="code hl_variable" href="#a1f814ea941194261f5be368b34df0b5c">keepAlive</a>;</div>
-<div class="line"><span class="lineno">  280</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="client_2Mqtt_8cpp_source.html#l00261">261</a> of file <a class="el" href="client_2Mqtt_8cpp_source.html">Mqtt.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  270</span>                                                { <span class="comment">// Client</span></div>
+<div class="line"><span class="lineno">  271</span>        this-&gt;clientId = <a class="code hl_variable" href="classiot_1_1mqtt_1_1Mqtt.html#ac724b5224b3fd33fc03485589bf726d7">clientId</a>;</div>
+<div class="line"><span class="lineno">  272</span> </div>
+<div class="line"><span class="lineno">  273</span>        LOG(INFO) &lt;&lt; <a class="code hl_variable" href="classiot_1_1mqtt_1_1Mqtt.html#a7ecac0437e91c099ca1a1295e424bca0">connectionName</a> &lt;&lt; <span class="stringliteral">&quot; MQTT Client: CONNECT send: &quot;</span> &lt;&lt; <a class="code hl_variable" href="classiot_1_1mqtt_1_1Mqtt.html#ac724b5224b3fd33fc03485589bf726d7">clientId</a>;</div>
+<div class="line"><span class="lineno">  274</span> </div>
+<div class="line"><span class="lineno">  275</span>        <a class="code hl_function" href="classiot_1_1mqtt_1_1Mqtt.html#ac2c838576318814d55feaaf87cdca5b9">send</a>(<a class="code hl_class" href="classiot_1_1mqtt_1_1packets_1_1Connect.html">iot::mqtt::packets::Connect</a>(</div>
+<div class="line"><span class="lineno">  276</span>            <a class="code hl_variable" href="classiot_1_1mqtt_1_1Mqtt.html#ac724b5224b3fd33fc03485589bf726d7">clientId</a>, <a class="code hl_variable" href="#a1f814ea941194261f5be368b34df0b5c">keepAlive</a>, cleanSession, willTopic, willMessage, willQoS, willRetain, username, password, loopPrevention));</div>
+<div class="line"><span class="lineno">  277</span> </div>
+<div class="line"><span class="lineno">  278</span>        this-&gt;<a class="code hl_variable" href="#a1f814ea941194261f5be368b34df0b5c">keepAlive</a> = <a class="code hl_variable" href="#a1f814ea941194261f5be368b34df0b5c">keepAlive</a>;</div>
+<div class="line"><span class="lineno">  279</span>    }</div>
 <div class="ttc" id="aclassiot_1_1mqtt_1_1Mqtt_html_ac2c838576318814d55feaaf87cdca5b9"><div class="ttname"><a href="classiot_1_1mqtt_1_1Mqtt.html#ac2c838576318814d55feaaf87cdca5b9">iot::mqtt::Mqtt::send</a></div><div class="ttdeci">void send(const iot::mqtt::ControlPacket &amp;controlPacket) const</div><div class="ttdef"><b>Definition</b> <a href="Mqtt_8cpp_source.html#l00205">Mqtt.cpp:205</a></div></div>
 <div class="ttc" id="aclassiot_1_1mqtt_1_1packets_1_1Connect_html"><div class="ttname"><a href="classiot_1_1mqtt_1_1packets_1_1Connect.html">iot::mqtt::packets::Connect</a></div><div class="ttdef"><b>Definition</b> <a href="mqtt_2packets_2Connect_8h_source.html#l00062">Connect.h:62</a></div></div>
 </div><!-- fragment -->
@@ -1079,12 +1084,12 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="client_2Mqtt_8cpp_source.html#l00294">294</a> of file <a class="el" href="client_2Mqtt_8cpp_source.html">Mqtt.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  294</span>                                    { <span class="comment">// Client</span></div>
-<div class="line"><span class="lineno">  295</span>        <a class="code hl_function" href="classiot_1_1mqtt_1_1Mqtt.html#ac2c838576318814d55feaaf87cdca5b9">send</a>(<a class="code hl_class" href="classiot_1_1mqtt_1_1packets_1_1Disconnect.html">iot::mqtt::packets::Disconnect</a>());</div>
-<div class="line"><span class="lineno">  296</span> </div>
-<div class="line"><span class="lineno">  297</span>        <a class="code hl_variable" href="classiot_1_1mqtt_1_1Mqtt.html#a043a3ff2dae61619cb319ccb128bb1eb">mqttContext</a>-&gt;<a class="code hl_function" href="classiot_1_1mqtt_1_1MqttContext.html#ada10a6f2fcf6953ed62d93bdb5907cd1">end</a>();</div>
-<div class="line"><span class="lineno">  298</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="client_2Mqtt_8cpp_source.html#l00293">293</a> of file <a class="el" href="client_2Mqtt_8cpp_source.html">Mqtt.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  293</span>                                    { <span class="comment">// Client</span></div>
+<div class="line"><span class="lineno">  294</span>        <a class="code hl_function" href="classiot_1_1mqtt_1_1Mqtt.html#ac2c838576318814d55feaaf87cdca5b9">send</a>(<a class="code hl_class" href="classiot_1_1mqtt_1_1packets_1_1Disconnect.html">iot::mqtt::packets::Disconnect</a>());</div>
+<div class="line"><span class="lineno">  295</span> </div>
+<div class="line"><span class="lineno">  296</span>        <a class="code hl_variable" href="classiot_1_1mqtt_1_1Mqtt.html#a043a3ff2dae61619cb319ccb128bb1eb">mqttContext</a>-&gt;<a class="code hl_function" href="classiot_1_1mqtt_1_1MqttContext.html#ada10a6f2fcf6953ed62d93bdb5907cd1">end</a>();</div>
+<div class="line"><span class="lineno">  297</span>    }</div>
 <div class="ttc" id="aclassiot_1_1mqtt_1_1packets_1_1Disconnect_html"><div class="ttname"><a href="classiot_1_1mqtt_1_1packets_1_1Disconnect.html">iot::mqtt::packets::Disconnect</a></div><div class="ttdef"><b>Definition</b> <a href="mqtt_2packets_2Disconnect_8h_source.html#l00053">Disconnect.h:53</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -1104,10 +1109,10 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="client_2Mqtt_8cpp_source.html#l00290">290</a> of file <a class="el" href="client_2Mqtt_8cpp_source.html">Mqtt.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  290</span>                                 { <span class="comment">// Client</span></div>
-<div class="line"><span class="lineno">  291</span>        <a class="code hl_function" href="classiot_1_1mqtt_1_1Mqtt.html#ac2c838576318814d55feaaf87cdca5b9">send</a>(<a class="code hl_class" href="classiot_1_1mqtt_1_1packets_1_1Pingreq.html">iot::mqtt::packets::Pingreq</a>());</div>
-<div class="line"><span class="lineno">  292</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="client_2Mqtt_8cpp_source.html#l00289">289</a> of file <a class="el" href="client_2Mqtt_8cpp_source.html">Mqtt.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  289</span>                                 { <span class="comment">// Client</span></div>
+<div class="line"><span class="lineno">  290</span>        <a class="code hl_function" href="classiot_1_1mqtt_1_1Mqtt.html#ac2c838576318814d55feaaf87cdca5b9">send</a>(<a class="code hl_class" href="classiot_1_1mqtt_1_1packets_1_1Pingreq.html">iot::mqtt::packets::Pingreq</a>());</div>
+<div class="line"><span class="lineno">  291</span>    }</div>
 <div class="ttc" id="aclassiot_1_1mqtt_1_1packets_1_1Pingreq_html"><div class="ttname"><a href="classiot_1_1mqtt_1_1packets_1_1Pingreq.html">iot::mqtt::packets::Pingreq</a></div><div class="ttdef"><b>Definition</b> <a href="mqtt_2packets_2Pingreq_8h_source.html#l00053">Pingreq.h:53</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -1127,10 +1132,10 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="client_2Mqtt_8cpp_source.html#l00282">282</a> of file <a class="el" href="client_2Mqtt_8cpp_source.html">Mqtt.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  282</span>                                                                { <span class="comment">// Client</span></div>
-<div class="line"><span class="lineno">  283</span>        <a class="code hl_function" href="classiot_1_1mqtt_1_1Mqtt.html#ac2c838576318814d55feaaf87cdca5b9">send</a>(<a class="code hl_class" href="classiot_1_1mqtt_1_1packets_1_1Subscribe.html">iot::mqtt::packets::Subscribe</a>(<a class="code hl_function" href="classiot_1_1mqtt_1_1Mqtt.html#a86ebf4f83f4881c2bb3ed1c9fc3ff0eb">getPacketIdentifier</a>(), topics));</div>
-<div class="line"><span class="lineno">  284</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="client_2Mqtt_8cpp_source.html#l00281">281</a> of file <a class="el" href="client_2Mqtt_8cpp_source.html">Mqtt.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  281</span>                                                                { <span class="comment">// Client</span></div>
+<div class="line"><span class="lineno">  282</span>        <a class="code hl_function" href="classiot_1_1mqtt_1_1Mqtt.html#ac2c838576318814d55feaaf87cdca5b9">send</a>(<a class="code hl_class" href="classiot_1_1mqtt_1_1packets_1_1Subscribe.html">iot::mqtt::packets::Subscribe</a>(<a class="code hl_function" href="classiot_1_1mqtt_1_1Mqtt.html#a86ebf4f83f4881c2bb3ed1c9fc3ff0eb">getPacketIdentifier</a>(), topics));</div>
+<div class="line"><span class="lineno">  283</span>    }</div>
 <div class="ttc" id="aclassiot_1_1mqtt_1_1Mqtt_html_a86ebf4f83f4881c2bb3ed1c9fc3ff0eb"><div class="ttname"><a href="classiot_1_1mqtt_1_1Mqtt.html#a86ebf4f83f4881c2bb3ed1c9fc3ff0eb">iot::mqtt::Mqtt::getPacketIdentifier</a></div><div class="ttdeci">uint16_t getPacketIdentifier()</div><div class="ttdef"><b>Definition</b> <a href="Mqtt_8cpp_source.html#l00398">Mqtt.cpp:398</a></div></div>
 <div class="ttc" id="aclassiot_1_1mqtt_1_1packets_1_1Subscribe_html"><div class="ttname"><a href="classiot_1_1mqtt_1_1packets_1_1Subscribe.html">iot::mqtt::packets::Subscribe</a></div><div class="ttdef"><b>Definition</b> <a href="mqtt_2packets_2Subscribe_8h_source.html#l00060">Subscribe.h:60</a></div></div>
 </div><!-- fragment -->
@@ -1151,10 +1156,10 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="client_2Mqtt_8cpp_source.html#l00286">286</a> of file <a class="el" href="client_2Mqtt_8cpp_source.html">Mqtt.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  286</span>                                                               { <span class="comment">// Client</span></div>
-<div class="line"><span class="lineno">  287</span>        <a class="code hl_function" href="classiot_1_1mqtt_1_1Mqtt.html#ac2c838576318814d55feaaf87cdca5b9">send</a>(<a class="code hl_class" href="classiot_1_1mqtt_1_1packets_1_1Unsubscribe.html">iot::mqtt::packets::Unsubscribe</a>(<a class="code hl_function" href="classiot_1_1mqtt_1_1Mqtt.html#a86ebf4f83f4881c2bb3ed1c9fc3ff0eb">getPacketIdentifier</a>(), topics));</div>
-<div class="line"><span class="lineno">  288</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="client_2Mqtt_8cpp_source.html#l00285">285</a> of file <a class="el" href="client_2Mqtt_8cpp_source.html">Mqtt.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  285</span>                                                               { <span class="comment">// Client</span></div>
+<div class="line"><span class="lineno">  286</span>        <a class="code hl_function" href="classiot_1_1mqtt_1_1Mqtt.html#ac2c838576318814d55feaaf87cdca5b9">send</a>(<a class="code hl_class" href="classiot_1_1mqtt_1_1packets_1_1Unsubscribe.html">iot::mqtt::packets::Unsubscribe</a>(<a class="code hl_function" href="classiot_1_1mqtt_1_1Mqtt.html#a86ebf4f83f4881c2bb3ed1c9fc3ff0eb">getPacketIdentifier</a>(), topics));</div>
+<div class="line"><span class="lineno">  287</span>    }</div>
 <div class="ttc" id="aclassiot_1_1mqtt_1_1packets_1_1Unsubscribe_html"><div class="ttname"><a href="classiot_1_1mqtt_1_1packets_1_1Unsubscribe.html">iot::mqtt::packets::Unsubscribe</a></div><div class="ttdef"><b>Definition</b> <a href="mqtt_2packets_2Unsubscribe_8h_source.html#l00059">Unsubscribe.h:59</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -1399,7 +1404,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="client_2Mqtt_8h_source.html#l00138">138</a> of file <a class="el" href="client_2Mqtt_8h_source.html">Mqtt.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="client_2Mqtt_8cpp_source.html#l00262">sendConnect()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="client_2Mqtt_8cpp_source.html#l00261">sendConnect()</a>.</p>
 
 </div>
 </div>
@@ -1485,7 +1490,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceiot.html">iot</a></li><li class="navelem"><a class="el" href="namespaceiot_1_1mqtt.html">mqtt</a></li><li class="navelem"><a class="el" href="namespaceiot_1_1mqtt_1_1client.html">client</a></li><li class="navelem"><a class="el" href="classiot_1_1mqtt_1_1client_1_1Mqtt.html">Mqtt</a></li>
-    <li class="footer">Generated on Sun Mar 9 2025 01:34:39 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generated on Mon Mar 31 2025 11:57:04 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
 </body>
