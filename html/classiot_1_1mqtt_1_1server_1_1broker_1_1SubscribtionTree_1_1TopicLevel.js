@@ -6,6 +6,8 @@ var classiot_1_1mqtt_1_1server_1_1broker_1_1SubscribtionTree_1_1TopicLevel =
     [ "fromJson", "classiot_1_1mqtt_1_1server_1_1broker_1_1SubscribtionTree_1_1TopicLevel.html#a4d9067806fd5f967b69db751346ad694", null ],
     [ "getSubscriptions", "classiot_1_1mqtt_1_1server_1_1broker_1_1SubscribtionTree_1_1TopicLevel.html#ae46fd0225f5f93147d900ee510a76006", null ],
     [ "getSubscriptions", "classiot_1_1mqtt_1_1server_1_1broker_1_1SubscribtionTree_1_1TopicLevel.html#ade481a0ea97da0ba949fd007b8c4c445", null ],
+    [ "getSubscriptionTree", "classiot_1_1mqtt_1_1server_1_1broker_1_1SubscribtionTree_1_1TopicLevel.html#aa6e4aae5ad303ddcd92f4accb72e9c70", null ],
+    [ "getSubscriptionTree", "classiot_1_1mqtt_1_1server_1_1broker_1_1SubscribtionTree_1_1TopicLevel.html#a95b996f24f620565a835e4e791db44c4", null ],
     [ "publish", "classiot_1_1mqtt_1_1server_1_1broker_1_1SubscribtionTree_1_1TopicLevel.html#a297a8200fe188fc5670fb8bdf791601f", null ],
     [ "subscribe", "classiot_1_1mqtt_1_1server_1_1broker_1_1SubscribtionTree_1_1TopicLevel.html#ae1b3190868bd9a64a003d0cdea356f20", null ],
     [ "toJson", "classiot_1_1mqtt_1_1server_1_1broker_1_1SubscribtionTree_1_1TopicLevel.html#a24a111ba7244f5b31fede66908abfa93", null ],

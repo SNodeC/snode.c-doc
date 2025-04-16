@@ -2,8 +2,8 @@ var classcore_1_1multiplexer_1_1poll_1_1PollFdsManager =
 [
     [ "PollFdIndex", "structcore_1_1multiplexer_1_1poll_1_1PollFdsManager_1_1PollFdIndex.html", "structcore_1_1multiplexer_1_1poll_1_1PollFdsManager_1_1PollFdIndex" ],
     [ "VarSizeTypeAllocator", "classcore_1_1multiplexer_1_1poll_1_1PollFdsManager_1_1VarSizeTypeAllocator.html", "classcore_1_1multiplexer_1_1poll_1_1PollFdsManager_1_1VarSizeTypeAllocator" ],
-    [ "pollfd_vector", "classcore_1_1multiplexer_1_1poll_1_1PollFdsManager.html#a3ed50ad89ac6ae26484649eb0a2508bb", null ],
-    [ "pollfdindex_map", "classcore_1_1multiplexer_1_1poll_1_1PollFdsManager.html#ae4b54a08dff1b8faa4736b9e5f7e263e", null ],
+    [ "pollfd_vector", "classcore_1_1multiplexer_1_1poll_1_1PollFdsManager.html#ae0fe4b122b5a1210241d358144f7e2ac", null ],
+    [ "pollfdindex_map", "classcore_1_1multiplexer_1_1poll_1_1PollFdsManager.html#a67aba98ec7ff6e8f52769d19b43b9961", null ],
     [ "PollFdsManager", "classcore_1_1multiplexer_1_1poll_1_1PollFdsManager.html#add6f86751dccce4c70f6c4b4f16e989c", null ],
     [ "compress", "classcore_1_1multiplexer_1_1poll_1_1PollFdsManager.html#a5fecc046d963886e6a59fb418a3fa932", null ],
     [ "getCurrentSize", "classcore_1_1multiplexer_1_1poll_1_1PollFdsManager.html#ace41c3c86a96b4c37741a88fe56b348a", null ],

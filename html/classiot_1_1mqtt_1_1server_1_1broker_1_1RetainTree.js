@@ -5,6 +5,8 @@ var classiot_1_1mqtt_1_1server_1_1broker_1_1RetainTree =
     [ "appear", "classiot_1_1mqtt_1_1server_1_1broker_1_1RetainTree.html#a0115fb136a4ab331003e393b6c5cdc8f", null ],
     [ "clear", "classiot_1_1mqtt_1_1server_1_1broker_1_1RetainTree.html#aeae126c5a3f18fce67b2295acbaccfda", null ],
     [ "fromJson", "classiot_1_1mqtt_1_1server_1_1broker_1_1RetainTree.html#a35b5514093e590d7a7e3d5889f7ab82e", null ],
+    [ "getRetainedTree", "classiot_1_1mqtt_1_1server_1_1broker_1_1RetainTree.html#a9d94103335f743b17e8ba2afae388852", null ],
+    [ "release", "classiot_1_1mqtt_1_1server_1_1broker_1_1RetainTree.html#af3c705cc9852c7e4f66c398eaaf4bb42", null ],
     [ "retain", "classiot_1_1mqtt_1_1server_1_1broker_1_1RetainTree.html#a2d42ef5b6dbda845fbb5587e4c9bc16f", null ],
     [ "toJson", "classiot_1_1mqtt_1_1server_1_1broker_1_1RetainTree.html#aae0deaaa49efc104b24a0e86b708fa72", null ],
     [ "head", "classiot_1_1mqtt_1_1server_1_1broker_1_1RetainTree.html#ae482a3a85119a8d57f4f99a9d9adc31e", null ]

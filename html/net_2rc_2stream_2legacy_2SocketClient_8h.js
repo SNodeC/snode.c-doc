@@ -1,4 +1,4 @@
 var net_2rc_2stream_2legacy_2SocketClient_8h =
 [
-    [ "SocketClient", "net_2rc_2stream_2legacy_2SocketClient_8h.html#ab0a41f65778177f8974c32cda2d4f3d2", null ]
+    [ "SocketClient", "net_2rc_2stream_2legacy_2SocketClient_8h.html#a89c804e0dc1dc7fc74bb2d85e0c85fef", null ]
 ];
