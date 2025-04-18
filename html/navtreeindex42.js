@@ -1,5 +1,7 @@
 var NAVTREEINDEX42 =
 {
+"legacy_2SocketReader_8cpp_source.html":[4,0,1,4,0,0,6],
+"legacy_2SocketReader_8h.html":[4,0,1,4,0,0,7],
 "legacy_2SocketReader_8h_source.html":[4,0,1,4,0,0,7],
 "legacy_2SocketWriter_8cpp.html":[4,0,1,4,0,0,8],
 "legacy_2SocketWriter_8cpp_source.html":[4,0,1,4,0,0,8],
@@ -247,7 +249,5 @@ var NAVTREEINDEX42 =
 "mqtt_2packets_2Publish_8h.html":[4,0,4,0,1,15],
 "mqtt_2packets_2Publish_8h_source.html":[4,0,4,0,1,15],
 "mqtt_2packets_2Pubrec_8cpp.html":[4,0,4,0,1,16],
-"mqtt_2packets_2Pubrec_8cpp_source.html":[4,0,4,0,1,16],
-"mqtt_2packets_2Pubrec_8h.html":[4,0,4,0,1,17],
-"mqtt_2packets_2Pubrec_8h_source.html":[4,0,4,0,1,17]
+"mqtt_2packets_2Pubrec_8cpp_source.html":[4,0,4,0,1,16]
 };

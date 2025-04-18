@@ -1,5 +1,7 @@
 var NAVTREEINDEX41 =
 {
+"in_2stream_2config_2ConfigSocketServer_8h_source.html":[4,0,6,1,2,0,3],
+"in_2stream_2legacy_2SocketClient_8cpp.html":[4,0,6,1,2,1,1],
 "in_2stream_2legacy_2SocketClient_8cpp_source.html":[4,0,6,1,2,1,1],
 "in_2stream_2legacy_2SocketServer_8cpp.html":[4,0,6,1,2,1,3],
 "in_2stream_2legacy_2SocketServer_8cpp_source.html":[4,0,6,1,2,1,3],
@@ -247,7 +249,5 @@ var NAVTREEINDEX41 =
 "legacy_2SocketConnector_8h_source.html":[4,0,1,4,0,0,4],
 "legacy_2SocketConnector_8hpp.html":[4,0,1,4,0,0,5],
 "legacy_2SocketConnector_8hpp_source.html":[4,0,1,4,0,0,5],
-"legacy_2SocketReader_8cpp.html":[4,0,1,4,0,0,6],
-"legacy_2SocketReader_8cpp_source.html":[4,0,1,4,0,0,6],
-"legacy_2SocketReader_8h.html":[4,0,1,4,0,0,7]
+"legacy_2SocketReader_8cpp.html":[4,0,1,4,0,0,6]
 };

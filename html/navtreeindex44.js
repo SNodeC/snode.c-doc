@@ -1,5 +1,7 @@
 var NAVTREEINDEX44 =
 {
+"namespaceexpress_1_1legacy_1_1in.html#a428f40c5b658a6ff34a930eb665dc5f8":[1,0,6,1,0,0],
+"namespaceexpress_1_1legacy_1_1in6.html":[1,0,6,1,1],
 "namespaceexpress_1_1legacy_1_1in6.html#a895fc0e634a93f577f7282114ec80c77":[1,0,6,1,1,0],
 "namespaceexpress_1_1legacy_1_1rc.html":[1,0,6,1,2],
 "namespaceexpress_1_1legacy_1_1rc.html#a53f63b318dfd010455dd1a3f9ec52df3":[1,0,6,1,2,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX44 =
 "net_2in_2SocketAddress_8cpp_source.html":[4,0,6,1,3],
 "net_2in_2SocketAddress_8h.html":[4,0,6,1,4],
 "net_2in_2SocketAddress_8h_source.html":[4,0,6,1,4],
-"net_2in_2stream_2SocketClient_8h.html":[4,0,6,1,2,3],
-"net_2in_2stream_2SocketClient_8h_source.html":[4,0,6,1,2,3],
-"net_2in_2stream_2SocketServer_8h.html":[4,0,6,1,2,4]
+"net_2in_2stream_2SocketClient_8h.html":[4,0,6,1,2,3]
 };

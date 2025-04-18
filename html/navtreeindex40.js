@@ -1,5 +1,7 @@
 var NAVTREEINDEX40 =
 {
+"functions_type_i.html":[3,3,3,2],
+"functions_type_l.html":[3,3,3,3],
 "functions_type_o.html":[3,3,3,4],
 "functions_type_p.html":[3,3,3,5],
 "functions_type_r.html":[3,3,3,6],
@@ -247,7 +249,5 @@ var NAVTREEINDEX40 =
 "in_2stream_2config_2ConfigSocketServer_8cpp.html#a03943706e48069237cd57f2d35ca987e":[4,0,6,1,2,0,2,1],
 "in_2stream_2config_2ConfigSocketServer_8cpp.html#a6388870e639eee9c0a69446876f1f8cc":[4,0,6,1,2,0,2,0],
 "in_2stream_2config_2ConfigSocketServer_8cpp_source.html":[4,0,6,1,2,0,2],
-"in_2stream_2config_2ConfigSocketServer_8h.html":[4,0,6,1,2,0,3],
-"in_2stream_2config_2ConfigSocketServer_8h_source.html":[4,0,6,1,2,0,3],
-"in_2stream_2legacy_2SocketClient_8cpp.html":[4,0,6,1,2,1,1]
+"in_2stream_2config_2ConfigSocketServer_8h.html":[4,0,6,1,2,0,3]
 };
