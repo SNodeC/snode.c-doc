@@ -53,17 +53,17 @@ var namespaces_dup =
     ] ],
     [ "iot", "namespaceiot.html", "namespaceiot" ],
     [ "legacy", "namespacelegacy.html", [
-      [ "SocketAddress", "namespacelegacy.html#ae9f14ce24b4a7be3dbba2ba6015a7949", null ],
-      [ "SocketClient", "namespacelegacy.html#aa6e9bfb4749914991178062171e4d4e0", null ],
-      [ "SocketConnection", "namespacelegacy.html#a496498405d58a2ab31780d5e3a652036", null ],
+      [ "SocketAddress", "namespacelegacy.html#a5cf8ceb021370a11d9b670263472600e", null ],
+      [ "SocketClient", "namespacelegacy.html#a404a8ba2c4de1a180f73d9911f213f04", null ],
+      [ "SocketConnection", "namespacelegacy.html#a1ec0795e6563c229358eb00d35a95595", null ],
       [ "getLegacyClient", "namespacelegacy.html#af964e2e82f4d4b80cea76cf218ba671c", null ]
     ] ],
     [ "logger", "namespacelogger.html", "namespacelogger" ],
     [ "net", "namespacenet.html", "namespacenet" ],
     [ "tls", "namespacetls.html", [
-      [ "SocketAddress", "namespacetls.html#a252f8c27b764c2115031b0e6dde1c392", null ],
-      [ "SocketClient", "namespacetls.html#a8d91dd7a32b4b44994ba14cc38a44962", null ],
-      [ "SocketConnection", "namespacetls.html#a1b981c1e57fdd37bf369e8711e307c5c", null ],
+      [ "SocketAddress", "namespacetls.html#afcb9219f4cf94a717de2044384768d63", null ],
+      [ "SocketClient", "namespacetls.html#a7213d52536dfd43348a3c7d2a6f08f0c", null ],
+      [ "SocketConnection", "namespacetls.html#a2a106f24546ba8758c3245d12a162ecb", null ],
       [ "getClient", "namespacetls.html#ac9c248ad49fa1a968e28d6e1a4e1a1c0", null ]
     ] ],
     [ "utils", "namespaceutils.html", "namespaceutils" ],

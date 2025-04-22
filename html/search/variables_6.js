@@ -8,7 +8,7 @@ var searchData=
   ['fieldcount_5',['fieldCount',['../classdatabase_1_1mariadb_1_1commands_1_1sync_1_1MariaDBFieldCountCommand.html#a00880c5af5c33d39a9bb14dd837fec85',1,'database::mariadb::commands::sync::MariaDBFieldCountCommand']]],
   ['fields_6',['fields',['../classweb_1_1http_1_1decoder_1_1Fields.html#a540270f2a59ec170a8d54e340f474340',1,'web::http::decoder::Fields']]],
   ['fieldsexpected_7',['fieldsExpected',['../classweb_1_1http_1_1decoder_1_1Fields.html#a96b3f3b4566a2163b0d060059d5caac0',1,'web::http::decoder::Fields']]],
-  ['file_8',['file',['../classweb_1_1http_1_1client_1_1commands_1_1SendFileCommand.html#a4a9440df4e15259fa1911dc64ef5f51e',1,'web::http::client::commands::SendFileCommand::file'],['../classexpress_1_1Request.html#af0561d7764068b8daf8b455057ee4fb7',1,'express::Request::file'],['../classcore_1_1socket_1_1State.html#acecec7bea752750e409349fbdc8d4b6d',1,'core::socket::State::file']]],
+  ['file_8',['file',['../classcore_1_1socket_1_1State.html#acecec7bea752750e409349fbdc8d4b6d',1,'core::socket::State::file'],['../classexpress_1_1Request.html#af0561d7764068b8daf8b455057ee4fb7',1,'express::Request::file'],['../classweb_1_1http_1_1client_1_1commands_1_1SendFileCommand.html#a4a9440df4e15259fa1911dc64ef5f51e',1,'web::http::client::commands::SendFileCommand::file']]],
   ['filename_9',['fileName',['../structcore_1_1DynamicLoader_1_1Library.html#af910ffb5cfa52da4be1c2abc72e875f8',1,'core::DynamicLoader::Library']]],
   ['fin_10',['fin',['../classweb_1_1websocket_1_1Receiver.html#a6ab242fdccb90233e6ddb6bbf16d2473',1,'web::websocket::Receiver']]],
   ['fixedheader_11',['fixedHeader',['../classiot_1_1mqtt_1_1Mqtt.html#a2468bbd7ce38673dc434e40a6c79c2c3',1,'iot::mqtt::Mqtt']]],

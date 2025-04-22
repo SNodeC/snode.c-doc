@@ -5,20 +5,20 @@ var index =
     [ "Copyright", "index.html#copyright", null ],
     [ "Quick Starting Guide", "index.html#quick-starting-guide", [
       [ "An \"Echo\" Application", "index.html#an-echo-application", [
-        [ "<tt>SocketServer</tt> and <tt>SocketClient</tt> Instances", "index.html#socketserver-and-socketclient-instances", null ],
-        [ "<tt>SocketContextFactory</tt> Classes", "index.html#socketcontextfactory-classes", [
-          [ "Echo-Server <tt>SocketContextFactory</tt>", "index.html#echo-server-socketcontextfactory", null ],
-          [ "Echo-Client <tt>SocketContextFactory</tt>", "index.html#echo-client-socketcontextfactory", null ]
+        [ "SocketServer and SocketClient Instances", "index.html#socketserver-and-socketclient-instances", null ],
+        [ "SocketContextFactory Classes", "index.html#socketcontextfactory-classes", [
+          [ "Echo-Server SocketContextFactory", "index.html#echo-server-socketcontextfactory", null ],
+          [ "Echo-Client SocketContextFactory", "index.html#echo-client-socketcontextfactory", null ]
         ] ],
-        [ "<tt>SocketContext</tt> Classes", "index.html#socketcontext-classes", [
-          [ "Echo-Server <tt>SocketContext</tt>", "index.html#echo-server-socketcontext", null ],
-          [ "Echo-Client <tt>SocketContext</tt>", "index.html#echo-client-socketcontext", null ]
+        [ "SocketContext Classes", "index.html#socketcontext-classes", [
+          [ "Echo-Server SocketContext", "index.html#echo-server-socketcontext", null ],
+          [ "Echo-Client SocketContext", "index.html#echo-client-socketcontext", null ]
         ] ],
         [ "Main Applications for Server and Client", "index.html#main-applications-for-server-and-client", [
           [ "Echo-Server Main Application", "index.html#echo-server-main-application", null ],
           [ "Echo-Client Main Application", "index.html#echo-client-main-application", null ]
         ] ],
-        [ "CMakeLists.txt file for Building and Installing our <em>echoserver</em> and <em>echoclient</em>", "index.html#cmakeliststxt-file-for-building-and-installing-our-echoserver-and-echoclient", null ]
+        [ "CMakeLists.txt file for Building and Installing our echoserver and echoclient", "index.html#cmakeliststxt-file-for-building-and-installing-our-echoserver-and-echoclient", null ]
       ] ],
       [ "Summary", "index.html#summary", null ]
     ] ],
@@ -56,50 +56,50 @@ var index =
       [ "Connection Layer", "index.html#connection-layer", null ],
       [ "Application Layer", "index.html#application-layer", null ]
     ] ],
-    [ "Existing <tt>SocketServer</tt> and <tt>SocketClient</tt> Classes", "index.html#existing-socketserver-and-socketclient-classes", [
-      [ "Common Aspects of <tt>SocketServer</tt> and <tt>SocketClient</tt> Classes", "index.html#common-aspects-of-socketserver-and-socketclient-classes", [
-        [ "<tt>SocketAddress</tt>", "index.html#socketaddress", [
-          [ "<tt>SocketAddress</tt> Constructors", "index.html#socketaddress-constructors", null ]
+    [ "Existing SocketServer and SocketClient Classes", "index.html#existing-socketserver-and-socketclient-classes", [
+      [ "Common Aspects of SocketServer and SocketClient Classes", "index.html#common-aspects-of-socketserver-and-socketclient-classes", [
+        [ "SocketAddress", "index.html#socketaddress", [
+          [ "SocketAddress Constructors", "index.html#socketaddress-constructors", null ]
         ] ],
-        [ "<tt>SocketConnection</tt>", "index.html#socketconnection", [
-          [ "Most Important common <tt>SocketConnection</tt> Methods", "index.html#most-important-common-socketconnection-methods", null ]
+        [ "SocketConnection", "index.html#socketconnection", [
+          [ "Most Important common SocketConnection Methods", "index.html#most-important-common-socketconnection-methods", null ]
         ] ],
-        [ "Constructors of <tt>SocketServer</tt> and <tt>SocketClient</tt> Classes", "index.html#constructors-of-socketserver-and-socketclient-classes", [
-          [ "All Constructors of <tt>SocketServer</tt> Classes", "index.html#all-constructors-of-socketserver-classes", null ],
-          [ "All Constructors of <tt>SocketClient</tt> Classes", "index.html#all-constructors-of-socketclient-classes", null ]
+        [ "Constructors of SocketServer and SocketClient Classes", "index.html#constructors-of-socketserver-and-socketclient-classes", [
+          [ "All Constructors of SocketServer Classes", "index.html#all-constructors-of-socketserver-classes", null ],
+          [ "All Constructors of SocketClient Classes", "index.html#all-constructors-of-socketclient-classes", null ]
         ] ],
         [ "Constructor Callbacks", "index.html#constructor-callbacks", [
-          [ "The <tt>onConnect</tt> Callback", "index.html#the-onconnect-callback", null ],
-          [ "The <tt>onConnected</tt> Callback", "index.html#the-onconnected-callback", null ],
-          [ "The <tt>onDisconnected</tt> Callback", "index.html#the-ondisconnected-callback", null ],
+          [ "The onConnect Callback", "index.html#the-onconnect-callback", null ],
+          [ "The onConnected Callback", "index.html#the-onconnected-callback", null ],
+          [ "The onDisconnected Callback", "index.html#the-ondisconnected-callback", null ],
           [ "Attaching the Callbacks during Instance Creation", "index.html#attaching-the-callbacks-during-instance-creation", null ],
           [ "Attaching the Callbacks to already existing Instances", "index.html#attaching-the-callbacks-to-already-existing-instances", null ]
         ] ]
       ] ],
-      [ "<tt>SocketServer</tt> Classes", "index.html#socketserver-classes", [
-        [ "<tt>SocketServer</tt> Header Files", "index.html#socketserver-header-files", null ],
+      [ "SocketServer Classes", "index.html#socketserver-classes", [
+        [ "SocketServer Header Files", "index.html#socketserver-header-files", null ],
         [ "Listen Methods", "index.html#listen-methods", [
-          [ "<tt>SocketAddress</tt> Types", "index.html#socketaddress-types", null ],
-          [ "The <tt>core::socket::State</tt> Object", "index.html#the-coresocketstate-object", null ],
-          [ "Common <tt>listen()</tt> Methods", "index.html#common-listen-methods", null ],
-          [ "IPv4 specific <tt>listen()</tt> Methods", "index.html#ipv4-specific-listen-methods", null ],
-          [ "IPv6 specific <tt>listen()</tt> Methods", "index.html#ipv6-specific-listen-methods", null ],
-          [ "Unix Domain Socket specific <tt>listen()</tt> Methods", "index.html#unix-domain-socket-specific-listen-methods", null ],
-          [ "Bluetooth RFCOMM specific <tt>listen()</tt> Methods", "index.html#bluetooth-rfcomm-specific-listen-methods", null ],
-          [ "Bluetooth L2CAP specific <tt>listen()</tt> Methods", "index.html#bluetooth-l2cap-specific-listen-methods", null ]
+          [ "SocketAddress Types", "index.html#socketaddress-types", null ],
+          [ "The core::socket::State Object", "index.html#the-coresocketstate-object", null ],
+          [ "Common listen() Methods", "index.html#common-listen-methods", null ],
+          [ "IPv4 specific listen() Methods", "index.html#ipv4-specific-listen-methods", null ],
+          [ "IPv6 specific listen() Methods", "index.html#ipv6-specific-listen-methods", null ],
+          [ "Unix Domain Socket specific listen() Methods", "index.html#unix-domain-socket-specific-listen-methods", null ],
+          [ "Bluetooth RFCOMM specific listen() Methods", "index.html#bluetooth-rfcomm-specific-listen-methods", null ],
+          [ "Bluetooth L2CAP specific listen() Methods", "index.html#bluetooth-l2cap-specific-listen-methods", null ]
         ] ]
       ] ],
-      [ "<tt>SocketClient</tt> Classes", "index.html#socketclient-classes", [
-        [ "<tt>SocketClient</tt> Header Files", "index.html#socketclient-header-files", null ],
+      [ "SocketClient Classes", "index.html#socketclient-classes", [
+        [ "SocketClient Header Files", "index.html#socketclient-header-files", null ],
         [ "Connect Methods", "index.html#connect-methods", [
-          [ "<tt>SocketAddress</tt> Types", "index.html#socketaddress-types-1", null ],
-          [ "The <tt>core::socket::State</tt> Object", "index.html#the-coresocketstate-object-1", null ],
-          [ "Common <tt>connect()</tt> Methods", "index.html#common-connect-methods", null ],
-          [ "IPv4 specific <tt>connect()</tt> Methods", "index.html#ipv4-specific-connect-methods", null ],
-          [ "IPv6 specific <tt>connect()</tt> Methods", "index.html#ipv6-specific-connect-methods", null ],
-          [ "Unix Domain Socket specific <tt>connect()</tt> Methods", "index.html#unix-domain-socket-specific-connect-methods", null ],
-          [ "Bluetooth RFCOMM specific <tt>connect()</tt> Methods", "index.html#bluetooth-rfcomm-specific-connect-methods", null ],
-          [ "Bluetooth L2CAP specific <tt>connect()</tt> Methods", "index.html#bluetooth-l2cap-specific-connect-methods", null ]
+          [ "SocketAddress Types", "index.html#socketaddress-types-1", null ],
+          [ "The core::socket::State Object", "index.html#the-coresocketstate-object-1", null ],
+          [ "Common connect() Methods", "index.html#common-connect-methods", null ],
+          [ "IPv4 specific connect() Methods", "index.html#ipv4-specific-connect-methods", null ],
+          [ "IPv6 specific connect() Methods", "index.html#ipv6-specific-connect-methods", null ],
+          [ "Unix Domain Socket specific connect() Methods", "index.html#unix-domain-socket-specific-connect-methods", null ],
+          [ "Bluetooth RFCOMM specific connect() Methods", "index.html#bluetooth-rfcomm-specific-connect-methods", null ],
+          [ "Bluetooth L2CAP specific connect() Methods", "index.html#bluetooth-l2cap-specific-connect-methods", null ]
         ] ]
       ] ]
     ] ],
@@ -110,7 +110,11 @@ var index =
         ] ],
         [ "Configuration via the Command Line", "index.html#configuration-via-the-command-line", [
           [ "Application Configuration", "index.html#application-configuration", null ],
-          [ "Instance Configuration", "index.html#instance-configuration", null ],
+          [ "Instance Configuration", "index.html#instance-configuration", [
+            [ "Sections", "index.html#sections", null ],
+            [ "Using the Parameterless listen() Methods when no Configuration File exists", "index.html#using-the-parameterless-listen-methods-when-no-configuration-file-exists", null ],
+            [ "Using the Parameterless connect() Methods when no Configuration File exists", "index.html#using-the-parameterless-connect-methods-when-no-configuration-file-exists", null ]
+          ] ],
           [ "Anatomy of the Command Line Interface", "index.html#anatomy-of-the-command-line-interface", null ]
         ] ],
         [ "Configuration via a Configuration File", "index.html#configuration-via-a-configuration-file", [
@@ -120,15 +124,15 @@ var index =
         ] ]
       ] ],
       [ "Important Configuration Sections", "index.html#important-configuration-sections", [
-        [ "SSL/TLS Configuration (Section <em>tls</em>)", "index.html#ssltls-configuration-section-tls", [
+        [ "SSL/TLS Configuration (Section tls)", "index.html#ssltls-configuration-section-tls", [
           [ "SSL/TLS In-Code Configuration", "index.html#ssltls-in-code-configuration", null ],
           [ "SSL/TLS Command Line Configuration", "index.html#ssltls-command-line-configuration", null ],
           [ "Using SSL/TLS with Other Network Layers", "index.html#using-ssltls-with-other-network-layers", null ]
         ] ],
-        [ "Socket Configuration (Section <em>socket</em>)", "index.html#socket-configuration-section-socket", [
-          [ "Common <em>socket</em> Options for <em>SocketServer</em> and <em>SocketClient</em> Instances", "index.html#common-socket-options-for-socketserver-and-socketclient-instances", null ],
-          [ "Specific <em>socket</em> Options for IPv4 and IPv6 <em>SocketServer</em>", "index.html#specific-socket-options-for-ipv4-and-ipv6-socketserver", null ],
-          [ "Specific <em>socket</em> Options for IPv6 <em>SocketServer</em> and <em>SocketClient</em>", "index.html#specific-socket-options-for-ipv6-socketserver-and-socketclient", null ]
+        [ "Socket Configuration (Section socket)", "index.html#socket-configuration-section-socket", [
+          [ "Common socket Options for SocketServer and SocketClient Instances", "index.html#common-socket-options-for-socketserver-and-socketclient-instances", null ],
+          [ "Specific socket Options for IPv4 and IPv6 SocketServer", "index.html#specific-socket-options-for-ipv4-and-ipv6-socketserver", null ],
+          [ "Specific socket Options for IPv6 SocketServer and SocketClient", "index.html#specific-socket-options-for-ipv6-socketserver-and-socketclient", null ]
         ] ]
       ] ]
     ] ],

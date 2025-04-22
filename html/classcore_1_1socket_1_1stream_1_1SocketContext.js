@@ -10,7 +10,6 @@ var classcore_1_1socket_1_1stream_1_1SocketContext =
     [ "onWriteError", "classcore_1_1socket_1_1stream_1_1SocketContext.html#a9ac0bc41b2d3020850c106ea84e274fb", null ],
     [ "readFromPeer", "classcore_1_1socket_1_1stream_1_1SocketContext.html#a5401a6174dbad9a6637c684a0fb952d9", null ],
     [ "sendToPeer", "classcore_1_1socket_1_1stream_1_1SocketContext.html#a7e80affcdada3ef5f1c52c283d65a89c", null ],
-    [ "sendToPeer", "classcore_1_1socket_1_1stream_1_1SocketContext.html#a9c39b9aaef96d65233ebc1c77ac5733c", null ],
     [ "sendToPeer", "classcore_1_1socket_1_1stream_1_1SocketContext.html#a171ec3bb2190630276ff2e6cb5fd9ccf", null ],
     [ "setTimeout", "classcore_1_1socket_1_1stream_1_1SocketContext.html#af2dbfff5f7495cf483a2b28133d5cc49", null ],
     [ "shutdownRead", "classcore_1_1socket_1_1stream_1_1SocketContext.html#abe74f8904842a349e29846b10828fba8", null ],

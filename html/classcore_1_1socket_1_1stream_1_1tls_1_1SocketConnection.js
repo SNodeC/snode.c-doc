@@ -4,7 +4,7 @@ var classcore_1_1socket_1_1stream_1_1tls_1_1SocketConnection =
     [ "SocketAddress", "classcore_1_1socket_1_1stream_1_1tls_1_1SocketConnection.html#a708fbe166648ae394536b6ca04b591f1", null ],
     [ "SocketReader", "classcore_1_1socket_1_1stream_1_1tls_1_1SocketConnection.html#a814fc5b7e3b052be703c84889869863e", null ],
     [ "SocketWriter", "classcore_1_1socket_1_1stream_1_1tls_1_1SocketConnection.html#ab750fdcfa79baa5254598f7cbbae8d4c", null ],
-    [ "Super", "classcore_1_1socket_1_1stream_1_1tls_1_1SocketConnection.html#a694c512733217fb105bc26f23f921063", null ],
+    [ "Super", "classcore_1_1socket_1_1stream_1_1tls_1_1SocketConnection.html#ad49e3040abbd94b6710e501815972015", null ],
     [ "SocketConnection", "classcore_1_1socket_1_1stream_1_1tls_1_1SocketConnection.html#a6ee222f1c3ab4415cd7acb654d6161e1", null ],
     [ "doSSLHandshake", "classcore_1_1socket_1_1stream_1_1tls_1_1SocketConnection.html#aa05398fc48824bcae5feba8e40d1c8e1", null ],
     [ "doSSLShutdown", "classcore_1_1socket_1_1stream_1_1tls_1_1SocketConnection.html#a011ca0151805c37fa561aad79927428b", null ],
