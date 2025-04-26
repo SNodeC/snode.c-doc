@@ -8,6 +8,6 @@ var classcore_1_1Timer =
     [ "operator=", "classcore_1_1Timer.html#a363a001c96ee36dd2c777c7bf96966fe", null ],
     [ "removeTimerEventReceiver", "classcore_1_1Timer.html#a7d3e4f597ef3306320a6944f66a3ee1e", null ],
     [ "restart", "classcore_1_1Timer.html#a5d112d80c602f8e279460c2c106d0e10", null ],
-    [ "TimerEventReceiver", "classcore_1_1Timer.html#a905dcb5827698c892f87ebe360a463c2", null ],
-    [ "timerEventReceiver", "classcore_1_1Timer.html#a6cb4b564ff85ccee2a8a90205396fac5", null ]
+    [ "timerEventReceiver", "classcore_1_1Timer.html#a6cb4b564ff85ccee2a8a90205396fac5", null ],
+    [ "TimerEventReceiver", "classcore_1_1Timer.html#a905dcb5827698c892f87ebe360a463c2", null ]
 ];
