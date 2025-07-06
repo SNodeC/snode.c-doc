@@ -17,6 +17,7 @@ var classutils_1_1Config =
     [ "bootstrap", "classutils_1_1Config.html#ac5d45b86d1281e70ddd8eaeb8ad369d1", null ],
     [ "disabled", "classutils_1_1Config.html#a4bf4f35dbdea895cd31f830b5e874265", null ],
     [ "getApplicationName", "classutils_1_1Config.html#ab85f6c9403162ed99bd1a32240df4d09", null ],
+    [ "getInstance", "classutils_1_1Config.html#a4dc89ed00d1bb5087c301abf5b3321f0", null ],
     [ "getLogLevel", "classutils_1_1Config.html#ac724cd29fdb967f4a050c4dceff35e02", null ],
     [ "getStringOptionValue", "classutils_1_1Config.html#a57ba2c249f34b5bc663e657b9d315cca", null ],
     [ "getVerboseLevel", "classutils_1_1Config.html#a60d33049c57d0f51ea2e08e3929e1838", null ],

@@ -643,7 +643,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">  222</span>            <a class="code hl_variable" href="classiot_1_1mqtt_1_1Mqtt.html#a043a3ff2dae61619cb319ccb128bb1eb">mqttContext</a>-&gt;<a class="code hl_function" href="classiot_1_1mqtt_1_1MqttContext.html#ada10a6f2fcf6953ed62d93bdb5907cd1">end</a>(<span class="keyword">true</span>);</div>
 <div class="line"><span class="lineno">  223</span>        } <span class="keywordflow">else</span> {</div>
 <div class="line"><span class="lineno">  224</span>            LOG(DEBUG) &lt;&lt; <a class="code hl_variable" href="classiot_1_1mqtt_1_1Mqtt.html#a7ecac0437e91c099ca1a1295e424bca0">connectionName</a> &lt;&lt; <span class="stringliteral">&quot; MQTT Client:  PacketIdentifier: 0x&quot;</span> &lt;&lt; std::hex &lt;&lt; std::setfill(<span class="charliteral">&#39;0&#39;</span>) &lt;&lt; std::setw(4)</div>
-<div class="line"><span class="lineno">  225</span>                       &lt;&lt; suback.<a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Suback.html#a4b210bb967888e97f375d51b564a8256">getPacketIdentifier</a>();</div>
+<div class="line"><span class="lineno">  225</span>                       &lt;&lt; suback.<a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Suback.html#a4b210bb967888e97f375d51b564a8256">getPacketIdentifier</a>() &lt;&lt; std::dec;</div>
 <div class="line"><span class="lineno">  226</span> </div>
 <div class="line"><span class="lineno">  227</span>            std::stringstream ss;</div>
 <div class="line"><span class="lineno">  228</span>            std::list&lt;uint8_t&gt;::size_type i = 0;</div>
@@ -715,7 +715,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">  248</span>            <a class="code hl_variable" href="classiot_1_1mqtt_1_1Mqtt.html#a043a3ff2dae61619cb319ccb128bb1eb">mqttContext</a>-&gt;<a class="code hl_function" href="classiot_1_1mqtt_1_1MqttContext.html#ada10a6f2fcf6953ed62d93bdb5907cd1">end</a>(<span class="keyword">true</span>);</div>
 <div class="line"><span class="lineno">  249</span>        } <span class="keywordflow">else</span> {</div>
 <div class="line"><span class="lineno">  250</span>            LOG(DEBUG) &lt;&lt; <a class="code hl_variable" href="classiot_1_1mqtt_1_1Mqtt.html#a7ecac0437e91c099ca1a1295e424bca0">connectionName</a> &lt;&lt; <span class="stringliteral">&quot; MQTT Client:  PacketIdentifier: 0x&quot;</span> &lt;&lt; std::hex &lt;&lt; std::setfill(<span class="charliteral">&#39;0&#39;</span>) &lt;&lt; std::setw(4)</div>
-<div class="line"><span class="lineno">  251</span>                       &lt;&lt; unsuback.<a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Unsuback.html#ac34590d5e625bc4413f6f36fda833e39">getPacketIdentifier</a>();</div>
+<div class="line"><span class="lineno">  251</span>                       &lt;&lt; unsuback.<a class="code hl_function" href="classiot_1_1mqtt_1_1packets_1_1Unsuback.html#ac34590d5e625bc4413f6f36fda833e39">getPacketIdentifier</a>() &lt;&lt; std::dec;</div>
 <div class="line"><span class="lineno">  252</span> </div>
 <div class="line"><span class="lineno">  253</span>            <a class="code hl_function" href="classiot_1_1mqtt_1_1client_1_1Mqtt.html#aa1c082319fe7ea71b4ae70c1367bc4da">onUnsuback</a>(unsuback);</div>
 <div class="line"><span class="lineno">  254</span>        }</div>
@@ -1247,10 +1247,10 @@ Here is the caller graph for this function:</div>
 <div class="fragment"><div class="line"><span class="lineno">  281</span>                                                                { <span class="comment">// Client</span></div>
 <div class="line"><span class="lineno">  282</span>        <a class="code hl_function" href="classiot_1_1mqtt_1_1Mqtt.html#ac2c838576318814d55feaaf87cdca5b9">send</a>(<a class="code hl_class" href="classiot_1_1mqtt_1_1packets_1_1Subscribe.html">iot::mqtt::packets::Subscribe</a>(<a class="code hl_function" href="classiot_1_1mqtt_1_1Mqtt.html#a86ebf4f83f4881c2bb3ed1c9fc3ff0eb">getPacketIdentifier</a>(), topics));</div>
 <div class="line"><span class="lineno">  283</span>    }</div>
-<div class="ttc" id="aclassiot_1_1mqtt_1_1Mqtt_html_a86ebf4f83f4881c2bb3ed1c9fc3ff0eb"><div class="ttname"><a href="classiot_1_1mqtt_1_1Mqtt.html#a86ebf4f83f4881c2bb3ed1c9fc3ff0eb">iot::mqtt::Mqtt::getPacketIdentifier</a></div><div class="ttdeci">uint16_t getPacketIdentifier()</div><div class="ttdef"><b>Definition</b> <a href="Mqtt_8cpp_source.html#l00398">Mqtt.cpp:398</a></div></div>
+<div class="ttc" id="aclassiot_1_1mqtt_1_1Mqtt_html_a86ebf4f83f4881c2bb3ed1c9fc3ff0eb"><div class="ttname"><a href="classiot_1_1mqtt_1_1Mqtt.html#a86ebf4f83f4881c2bb3ed1c9fc3ff0eb">iot::mqtt::Mqtt::getPacketIdentifier</a></div><div class="ttdeci">uint16_t getPacketIdentifier()</div><div class="ttdef"><b>Definition</b> <a href="Mqtt_8cpp_source.html#l00399">Mqtt.cpp:399</a></div></div>
 <div class="ttc" id="aclassiot_1_1mqtt_1_1packets_1_1Subscribe_html"><div class="ttname"><a href="classiot_1_1mqtt_1_1packets_1_1Subscribe.html">iot::mqtt::packets::Subscribe</a></div><div class="ttdef"><b>Definition</b> <a href="mqtt_2packets_2Subscribe_8h_source.html#l00060">Subscribe.h:60</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Mqtt_8cpp_source.html#l00398">iot::mqtt::Mqtt::getPacketIdentifier()</a>, <a class="el" href="Mqtt_8cpp_source.html#l00205">iot::mqtt::Mqtt::send()</a>, and <a class="el" href="mqtt_2packets_2Subscribe_8cpp_source.html#l00060">iot::mqtt::packets::Subscribe::Subscribe()</a>.</p>
+<p class="reference">References <a class="el" href="Mqtt_8cpp_source.html#l00399">iot::mqtt::Mqtt::getPacketIdentifier()</a>, <a class="el" href="Mqtt_8cpp_source.html#l00205">iot::mqtt::Mqtt::send()</a>, and <a class="el" href="mqtt_2packets_2Subscribe_8cpp_source.html#l00060">iot::mqtt::packets::Subscribe::Subscribe()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1281,7 +1281,7 @@ Here is the call graph for this function:</div>
 <div class="line"><span class="lineno">  287</span>    }</div>
 <div class="ttc" id="aclassiot_1_1mqtt_1_1packets_1_1Unsubscribe_html"><div class="ttname"><a href="classiot_1_1mqtt_1_1packets_1_1Unsubscribe.html">iot::mqtt::packets::Unsubscribe</a></div><div class="ttdef"><b>Definition</b> <a href="mqtt_2packets_2Unsubscribe_8h_source.html#l00059">Unsubscribe.h:59</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Mqtt_8cpp_source.html#l00398">iot::mqtt::Mqtt::getPacketIdentifier()</a>, <a class="el" href="Mqtt_8cpp_source.html#l00205">iot::mqtt::Mqtt::send()</a>, and <a class="el" href="mqtt_2packets_2Unsubscribe_8cpp_source.html#l00056">iot::mqtt::packets::Unsubscribe::Unsubscribe()</a>.</p>
+<p class="reference">References <a class="el" href="Mqtt_8cpp_source.html#l00399">iot::mqtt::Mqtt::getPacketIdentifier()</a>, <a class="el" href="Mqtt_8cpp_source.html#l00205">iot::mqtt::Mqtt::send()</a>, and <a class="el" href="mqtt_2packets_2Unsubscribe_8cpp_source.html#l00056">iot::mqtt::packets::Unsubscribe::Unsubscribe()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1622,7 +1622,7 @@ Here is the call graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceiot.html">iot</a></li><li class="navelem"><a class="el" href="namespaceiot_1_1mqtt.html">mqtt</a></li><li class="navelem"><a class="el" href="namespaceiot_1_1mqtt_1_1client.html">client</a></li><li class="navelem"><a class="el" href="classiot_1_1mqtt_1_1client_1_1Mqtt.html">Mqtt</a></li>
-    <li class="footer">Generated on Sat Apr 26 2025 15:51:49 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Sat Jul 5 2025 22:44:24 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

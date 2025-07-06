@@ -11,9 +11,10 @@ var classweb_1_1websocket_1_1Receiver =
       [ "PAYLOAD", "classweb_1_1websocket_1_1Receiver.html#a3cf4e2588c5333541e445cd7aef1eb9baca8fef80e43c8db749b7c9406d535b1a", null ],
       [ "ERROR", "classweb_1_1websocket_1_1Receiver.html#a3cf4e2588c5333541e445cd7aef1eb9babb1ca97ec761fc37101737ba0aa2e7c5", null ]
     ] ],
-    [ "Receiver", "classweb_1_1websocket_1_1Receiver.html#a89998966bc77bd5f2ae7e63f8a1d5574", null ],
+    [ "Receiver", "classweb_1_1websocket_1_1Receiver.html#a6c33a3859732e8828f1120221980152c", null ],
     [ "Receiver", "classweb_1_1websocket_1_1Receiver.html#a97c46555f6b1b929c44018b6f4a28621", null ],
     [ "~Receiver", "classweb_1_1websocket_1_1Receiver.html#aa11f6fa95a4bdcbca4d333d99342490e", null ],
+    [ "getPayloadTotalRead", "classweb_1_1websocket_1_1Receiver.html#afccbfe9ee0f7b887314bb352d3515c53", null ],
     [ "onMessageData", "classweb_1_1websocket_1_1Receiver.html#a81e8511ced9df841caffe5374be68a63", null ],
     [ "onMessageEnd", "classweb_1_1websocket_1_1Receiver.html#a0f54f3da386c2166362d48978de37550", null ],
     [ "onMessageError", "classweb_1_1websocket_1_1Receiver.html#a8af78fbe6a18dc8643c52306f006e1a3", null ],
@@ -22,6 +23,7 @@ var classweb_1_1websocket_1_1Receiver =
     [ "readELength", "classweb_1_1websocket_1_1Receiver.html#a67172021447182a7867efc354f2a14a9", null ],
     [ "readELength2", "classweb_1_1websocket_1_1Receiver.html#a0cbf3f3c06fab9d20382c45ce50545b2", null ],
     [ "readELength8", "classweb_1_1websocket_1_1Receiver.html#abf04cecb84201f1cd50c4c9cb1f3b279", null ],
+    [ "readFrameChunk", "classweb_1_1websocket_1_1Receiver.html#a81ee87c20c16e52401b250f72b0efdbb", null ],
     [ "readFrameData", "classweb_1_1websocket_1_1Receiver.html#a7ec21c8a50601402490f698552ed2245", null ],
     [ "readLength", "classweb_1_1websocket_1_1Receiver.html#a4d86cfda2cf5517c53efaf52f07ca06f", null ],
     [ "readMaskingKey", "classweb_1_1websocket_1_1Receiver.html#a572a3d6a32947d42e70ff548315e6541", null ],
@@ -37,12 +39,13 @@ var classweb_1_1websocket_1_1Receiver =
     [ "errorState", "classweb_1_1websocket_1_1Receiver.html#abbcde996aa21ee90e2110961d6848807", null ],
     [ "fin", "classweb_1_1websocket_1_1Receiver.html#a6ab242fdccb90233e6ddb6bbf16d2473", null ],
     [ "masked", "classweb_1_1websocket_1_1Receiver.html#a77a8d62fd300b093a1e258c9ea9572e2", null ],
+    [ "maskingExpected", "classweb_1_1websocket_1_1Receiver.html#aecde9fb98fcf98a9bbf517a0d8066438", null ],
     [ "maskingKey", "classweb_1_1websocket_1_1Receiver.html#a0e3dbbb66dcb339202b7f92e2bb37216", null ],
     [ "maskingKeyNumBytes", "classweb_1_1websocket_1_1Receiver.html#a540960ce74ba7bb12ac975ea221553f0", null ],
     [ "maskingKeyNumBytesLeft", "classweb_1_1websocket_1_1Receiver.html#abd0b6b885cf9aacb664feaf03f7c6aef", null ],
     [ "opCode", "classweb_1_1websocket_1_1Receiver.html#a7a88e22518a9869403815f13918c0adb", null ],
     [ "parserState", "classweb_1_1websocket_1_1Receiver.html#a85339f1c45bc22a3b463ba09d5a8f60f", null ],
-    [ "payLoadNumBytes", "classweb_1_1websocket_1_1Receiver.html#af35b01abdb17550cd430cd66745363fe", null ],
-    [ "payLoadNumBytesLeft", "classweb_1_1websocket_1_1Receiver.html#af02eba03070948648f309034371f0f1e", null ],
-    [ "socketConnection", "classweb_1_1websocket_1_1Receiver.html#a912879367cd681291a84c62ae996a0d5", null ]
+    [ "payloadNumBytes", "classweb_1_1websocket_1_1Receiver.html#ad5e1695f1fd515b40f4fc20e60f06236", null ],
+    [ "payloadNumBytesLeft", "classweb_1_1websocket_1_1Receiver.html#abe644e6b869f0e3716dfabd0f0d656ce", null ],
+    [ "payloadTotalRead", "classweb_1_1websocket_1_1Receiver.html#ad95d3920d9eb71c5c8fe1c47c8280c20", null ]
 ];

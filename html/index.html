@@ -96,7 +96,7 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 <div class="textblock"><p align="center"><a class="anchor" id="md__2home_2voc_2projects_2snodec_2snode_8c_2README"></a></p>
 <p><img src="./docs/assets/README/Logo-All-Horizontal.png" alt="" style="width: 70%;" class="inline"/></p>
 <p><a href="https://snodec.github.io/snode.c-doc/html/index.html">(API documentation)</a> is a very simple to use, lightweight, highly extensible, event driven, layer-based framework for network applications in the spirit of node.js written entirely in C++.</p>
-<p>The development of the framework began during the summer semester 2020 as part of the course <em>Network and Distributed Systems</em> in the master's program <a href="https://www.fh-ooe.at/en/hagenberg-campus/studiengaenge/master/interactive-media/">Interactive Media</a> at the department <a href="https://www.fh-ooe.at/en/campus-hagenberg/">Informatics, Communications and Media</a> at the <a href="https://www.fh-ooe.at/en/campus-hagenberg/">University of Applied Sciences Upper Austria, Campus Hagenberg</a>, to give students an insight into the fundamental techniques of network and web frameworks.</p>
+<p>The development of the framework began during the first corona lock down in Austria in the summer semester 2020 as part of the course <em>Network and Distributed Systems</em> in the master's program <a href="https://www.fh-ooe.at/en/hagenberg-campus/studiengaenge/master/interactive-media/">Interactive Media</a> at the department <a href="https://www.fh-ooe.at/en/campus-hagenberg/">Informatics, Communications and Media</a> at the <a href="https://www.fh-ooe.at/en/campus-hagenberg/">University of Applied Sciences Upper Austria, Campus Hagenberg</a>, to give students an insight into the fundamental techniques of network and web frameworks.</p>
 <p>Main focus (but not only) of the framework is on <em>Machine to Machine</em> (M2M) communication and in particular on the field of <em>Internet of Things</em> (IoT). As such, the SNode.C reference project <a href="https://github.com/SNodeC/mqttsuite">MQTTSuite</a> exists, which provides <em>MQTTBroker</em>, <em>MQTTIntegrator</em>, and <em>MQTTBridge</em> applications.</p>
 <h1><a class="anchor" id="table-of-content"></a>
 Table of Content</h1>
@@ -372,10 +372,10 @@ Echo-Server &lt;tt&gt;SocketContextFactory&lt;/tt&gt;</h4>
 <div class="line">        <span class="keywordflow">return</span> <span class="keyword">new</span> EchoServerContext(socketConnection);</div>
 <div class="line">    }</div>
 <div class="line">};</div>
-<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketConnection_html"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1SocketConnection.html">core::socket::stream::SocketConnection</a></div><div class="ttdef"><b>Definition</b> <a href="SocketConnection_8h_source.html#l00075">SocketConnection.h:75</a></div></div>
+<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketConnection_html"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1SocketConnection.html">core::socket::stream::SocketConnection</a></div><div class="ttdef"><b>Definition</b> <a href="SocketConnection_8h_source.html#l00078">SocketConnection.h:78</a></div></div>
 <div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketContextFactory_html"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1SocketContextFactory.html">core::socket::stream::SocketContextFactory</a></div><div class="ttdef"><b>Definition</b> <a href="core_2socket_2stream_2SocketContextFactory_8h_source.html#l00056">SocketContextFactory.h:56</a></div></div>
 <div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketContextFactory_html_a949c1b855fb495f0ab80d179e6a8c0b9"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1SocketContextFactory.html#a949c1b855fb495f0ab80d179e6a8c0b9">core::socket::stream::SocketContextFactory::create</a></div><div class="ttdeci">virtual core::socket::stream::SocketContext * create(core::socket::stream::SocketConnection *socketConnection)=0</div></div>
-<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketContext_html"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1SocketContext.html">core::socket::stream::SocketContext</a></div><div class="ttdef"><b>Definition</b> <a href="core_2socket_2stream_2SocketContext_8h_source.html#l00064">SocketContext.h:64</a></div></div>
+<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketContext_html"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1SocketContext.html">core::socket::stream::SocketContext</a></div><div class="ttdef"><b>Definition</b> <a href="core_2socket_2stream_2SocketContext_8h_source.html#l00066">SocketContext.h:66</a></div></div>
 <div class="ttc" id="acore_2socket_2stream_2SocketContextFactory_8h_html"><div class="ttname"><a href="core_2socket_2stream_2SocketContextFactory_8h.html">SocketContextFactory.h</a></div></div>
 </div><!-- fragment --><h4><a class="anchor" id="echo-client-socketcontextfactory"></a>
 Echo-Client &lt;tt&gt;SocketContextFactory&lt;/tt&gt;</h4>
@@ -444,21 +444,21 @@ Echo-Server &lt;tt&gt;SocketContext&lt;/tt&gt;</h4>
 <div class="line"> </div>
 <div class="line">    std::size_t <a class="code hl_function" href="classcore_1_1socket_1_1SocketContext.html#a34c520f17818f029395d2d2b4babc882">onReceivedFromPeer</a>()<span class="keyword"> override </span>{ <span class="comment">// Called in case data have already been received by the framework</span></div>
 <div class="line">                                                <span class="comment">// and thus are ready for preccessing.</span></div>
-<div class="line">        <span class="keywordtype">char</span> junk[4096];</div>
+<div class="line">        <span class="keywordtype">char</span> chunk[4096];</div>
 <div class="line"> </div>
-<div class="line">        std::size_t junkLen = <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a5401a6174dbad9a6637c684a0fb952d9">readFromPeer</a>(junk, 4096); <span class="comment">// Fetch data.</span></div>
-<div class="line">                                                        <span class="comment">// In case there are less than 4096 bytes available return at</span></div>
-<div class="line">                                                        <span class="comment">// least that amount of data.</span></div>
-<div class="line">                                                        <span class="comment">// In case more than 4096 bytes are available</span></div>
-<div class="line">                                                        <span class="comment">// onReceivedFromPeer will be called again.</span></div>
-<div class="line">                                                        <span class="comment">// No error can occure here.</span></div>
-<div class="line">        <span class="keywordflow">if</span> (junkLen &gt; 0) {</div>
-<div class="line">            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Data to reflect: &quot;</span> &lt;&lt; std::string(junk, junkLen);</div>
-<div class="line">            <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a7e80affcdada3ef5f1c52c283d65a89c">sendToPeer</a>(junk, junkLen); <span class="comment">// Reflect the received data back to the client.</span></div>
-<div class="line">                                       <span class="comment">// Out of memory is the only error which can occure here.</span></div>
+<div class="line">        std::size_t chunkLen = <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a5401a6174dbad9a6637c684a0fb952d9">readFromPeer</a>(chunk, 4096); <span class="comment">// Fetch data.</span></div>
+<div class="line">                                                          <span class="comment">// In case there are less than 4096 bytes available return at</span></div>
+<div class="line">                                                          <span class="comment">// least that amount of data.</span></div>
+<div class="line">                                                          <span class="comment">// In case more than 4096 bytes are available</span></div>
+<div class="line">                                                          <span class="comment">// onReceivedFromPeer will be called again.</span></div>
+<div class="line">                                                          <span class="comment">// No error can occure here.</span></div>
+<div class="line">        <span class="keywordflow">if</span> (chunkLen &gt; 0) {</div>
+<div class="line">            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Data to reflect: &quot;</span> &lt;&lt; std::string(chunk, chunkLen);</div>
+<div class="line">            <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a7e80affcdada3ef5f1c52c283d65a89c">sendToPeer</a>(chunk, chunkLen); <span class="comment">// Reflect the received data back to the client.</span></div>
+<div class="line">                                         <span class="comment">// Out of memory is the only error which can occure here.</span></div>
 <div class="line">        }</div>
 <div class="line"> </div>
-<div class="line">        <span class="keywordflow">return</span> junkLen; <span class="comment">// Return the amount of data processed to the framework.</span></div>
+<div class="line">        <span class="keywordflow">return</span> chunkLen; <span class="comment">// Return the amount of data processed to the framework.</span></div>
 <div class="line">    }</div>
 <div class="line">};</div>
 <div class="ttc" id="aLogger_8h_html"><div class="ttname"><a href="Logger_8h.html">Logger.h</a></div></div>
@@ -468,10 +468,10 @@ Echo-Server &lt;tt&gt;SocketContext&lt;/tt&gt;</h4>
 <div class="ttc" id="aclasscore_1_1socket_1_1SocketContext_html_acf0a2bbf56762577ced1dddc0914bc94"><div class="ttname"><a href="classcore_1_1socket_1_1SocketContext.html#acf0a2bbf56762577ced1dddc0914bc94">core::socket::SocketContext::SocketContext</a></div><div class="ttdeci">SocketContext()=default</div></div>
 <div class="ttc" id="aclasscore_1_1socket_1_1SocketContext_html_ad5a47157710544f1d90f1ebdf15fe49e"><div class="ttname"><a href="classcore_1_1socket_1_1SocketContext.html#ad5a47157710544f1d90f1ebdf15fe49e">core::socket::SocketContext::onSignal</a></div><div class="ttdeci">virtual bool onSignal(int sig)=0</div></div>
 <div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketConnection_html_a8676b9150b85fb2d2e5ef1d8daee0480"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#a8676b9150b85fb2d2e5ef1d8daee0480">core::socket::stream::SocketConnection::getRemoteAddress</a></div><div class="ttdeci">virtual const core::socket::SocketAddress &amp; getRemoteAddress() const =0</div></div>
-<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketContext_html_a02f0b93ac0ea376dabd6921c7589a8cf"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a02f0b93ac0ea376dabd6921c7589a8cf">core::socket::stream::SocketContext::getSocketConnection</a></div><div class="ttdeci">SocketConnection * getSocketConnection() const</div><div class="ttdef"><b>Definition</b> <a href="core_2socket_2stream_2SocketContext_8cpp_source.html#l00065">SocketContext.cpp:65</a></div></div>
-<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketContext_html_a5401a6174dbad9a6637c684a0fb952d9"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a5401a6174dbad9a6637c684a0fb952d9">core::socket::stream::SocketContext::readFromPeer</a></div><div class="ttdeci">std::size_t readFromPeer(char *chunk, std::size_t chunklen) const final</div><div class="ttdef"><b>Definition</b> <a href="core_2socket_2stream_2SocketContext_8cpp_source.html#l00081">SocketContext.cpp:81</a></div></div>
+<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketContext_html_a02f0b93ac0ea376dabd6921c7589a8cf"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a02f0b93ac0ea376dabd6921c7589a8cf">core::socket::stream::SocketContext::getSocketConnection</a></div><div class="ttdeci">SocketConnection * getSocketConnection() const</div><div class="ttdef"><b>Definition</b> <a href="core_2socket_2stream_2SocketContext_8cpp_source.html#l00075">SocketContext.cpp:75</a></div></div>
+<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketContext_html_a5401a6174dbad9a6637c684a0fb952d9"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a5401a6174dbad9a6637c684a0fb952d9">core::socket::stream::SocketContext::readFromPeer</a></div><div class="ttdeci">std::size_t readFromPeer(char *chunk, std::size_t chunklen) const final</div><div class="ttdef"><b>Definition</b> <a href="core_2socket_2stream_2SocketContext_8cpp_source.html#l00091">SocketContext.cpp:91</a></div></div>
 <div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketContext_html_a716a54b882173251b584439499ca0446"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a716a54b882173251b584439499ca0446">core::socket::stream::SocketContext::onConnected</a></div><div class="ttdeci">virtual void onConnected()=0</div></div>
-<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketContext_html_a7e80affcdada3ef5f1c52c283d65a89c"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a7e80affcdada3ef5f1c52c283d65a89c">core::socket::stream::SocketContext::sendToPeer</a></div><div class="ttdeci">void sendToPeer(const char *chunk, std::size_t chunkLen) const final</div><div class="ttdef"><b>Definition</b> <a href="core_2socket_2stream_2SocketContext_8cpp_source.html#l00069">SocketContext.cpp:69</a></div></div>
+<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketContext_html_a7e80affcdada3ef5f1c52c283d65a89c"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a7e80affcdada3ef5f1c52c283d65a89c">core::socket::stream::SocketContext::sendToPeer</a></div><div class="ttdeci">void sendToPeer(const char *chunk, std::size_t chunkLen) const final</div><div class="ttdef"><b>Definition</b> <a href="core_2socket_2stream_2SocketContext_8cpp_source.html#l00079">SocketContext.cpp:79</a></div></div>
 <div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketContext_html_ab9c932c5c1b706ffb84d97634514d20e"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1SocketContext.html#ab9c932c5c1b706ffb84d97634514d20e">core::socket::stream::SocketContext::onDisconnected</a></div><div class="ttdeci">virtual void onDisconnected()=0</div></div>
 <div class="ttc" id="acore_2socket_2SocketAddress_8h_html"><div class="ttname"><a href="core_2socket_2SocketAddress_8h.html">SocketAddress.h</a></div></div>
 <div class="ttc" id="acore_2socket_2stream_2SocketContext_8h_html"><div class="ttname"><a href="core_2socket_2stream_2SocketContext_8h.html">SocketContext.h</a></div></div>
@@ -510,21 +510,21 @@ Echo-Client &lt;tt&gt;SocketContext&lt;/tt&gt;</h4>
 <div class="line"> </div>
 <div class="line">    std::size_t <a class="code hl_function" href="classcore_1_1socket_1_1SocketContext.html#a34c520f17818f029395d2d2b4babc882">onReceivedFromPeer</a>()<span class="keyword"> override </span>{ <span class="comment">// Called in case data have already been received by the framework</span></div>
 <div class="line">                                                <span class="comment">// and thus are ready for preccessing.</span></div>
-<div class="line">        <span class="keywordtype">char</span> junk[4096];</div>
+<div class="line">        <span class="keywordtype">char</span> chunk[4096];</div>
 <div class="line"> </div>
-<div class="line">        std::size_t junkLen = <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a5401a6174dbad9a6637c684a0fb952d9">readFromPeer</a>(junk, 4096); <span class="comment">// Fetch data.</span></div>
-<div class="line">                                                        <span class="comment">// In case there are less than 4096 bytes available return at</span></div>
-<div class="line">                                                        <span class="comment">// least that amount of data.</span></div>
-<div class="line">                                                        <span class="comment">// In case more than 4096 bytes are available</span></div>
-<div class="line">                                                        <span class="comment">// onReceivedFromPeer will be called again.</span></div>
-<div class="line">                                                        <span class="comment">// No error can occure here.</span></div>
-<div class="line">        <span class="keywordflow">if</span> (junkLen &gt; 0) {</div>
-<div class="line">            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Data to reflect: &quot;</span> &lt;&lt; std::string(junk, junkLen);</div>
-<div class="line">            <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a7e80affcdada3ef5f1c52c283d65a89c">sendToPeer</a>(junk, junkLen); <span class="comment">// Reflect the received data back to the server.</span></div>
-<div class="line">                                       <span class="comment">// Out of memory is the only error which can occure here.</span></div>
+<div class="line">        std::size_t chunkLen = <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a5401a6174dbad9a6637c684a0fb952d9">readFromPeer</a>(chunk, 4096); <span class="comment">// Fetch data.</span></div>
+<div class="line">                                                          <span class="comment">// In case there are less than 4096 bytes available return at</span></div>
+<div class="line">                                                          <span class="comment">// least that amount of data.</span></div>
+<div class="line">                                                          <span class="comment">// In case more than 4096 bytes are available</span></div>
+<div class="line">                                                          <span class="comment">// onReceivedFromPeer will be called again.</span></div>
+<div class="line">                                                          <span class="comment">// No error can occure here.</span></div>
+<div class="line">        <span class="keywordflow">if</span> (chunkLen &gt; 0) {</div>
+<div class="line">            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Data to reflect: &quot;</span> &lt;&lt; std::string(chunk, chunkLen);</div>
+<div class="line">            <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a7e80affcdada3ef5f1c52c283d65a89c">sendToPeer</a>(chunk, chunkLen); <span class="comment">// Reflect the received data back to the server.</span></div>
+<div class="line">                                         <span class="comment">// Out of memory is the only error which can occure here.</span></div>
 <div class="line">        }</div>
 <div class="line"> </div>
-<div class="line">        <span class="keywordflow">return</span> junkLen; <span class="comment">// Return the amount of data processed to the framework.</span></div>
+<div class="line">        <span class="keywordflow">return</span> chunkLen; <span class="comment">// Return the amount of data processed to the framework.</span></div>
 <div class="line">    }</div>
 <div class="line">};</div>
 </div><!-- fragment --><h3><a class="anchor" id="main-applications-for-server-and-client"></a>
@@ -1124,13 +1124,13 @@ Most Important common &lt;tt&gt;SocketConnection&lt;/tt&gt; Methods</h4>
 <div class="fragment"><div class="line">SSL* getSSL();</div>
 </div><!-- fragment --></li>
 <li><p class="startli">Enqueue data to be send to the peer.</p>
-<div class="fragment"><div class="line"><span class="keywordtype">void</span> sendToPeer(<span class="keyword">const</span> <span class="keywordtype">char</span>* junk, std::size_t junkLen);</div>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> sendToPeer(<span class="keyword">const</span> <span class="keywordtype">char</span>* chunk, std::size_t chunkLen);</div>
 <div class="line"><span class="keywordtype">void</span> sendToPeer(<span class="keyword">const</span> std::string&amp; data);</div>
 <div class="line"><span class="keywordtype">void</span> sendToPeer(<span class="keyword">const</span> std::vector&lt;char&gt;&amp; data);</div>
 <div class="line"><span class="keywordtype">void</span> sendToPeer(<span class="keyword">const</span> std::vector&lt;int8_t&gt;&amp; data);</div>
 </div><!-- fragment --></li>
 <li><p class="startli">Read already received data from peer.</p>
-<div class="fragment"><div class="line">std::size_t readFromPeer(<span class="keywordtype">char</span>* junk, std::size_t junkLen);</div>
+<div class="fragment"><div class="line">std::size_t readFromPeer(<span class="keywordtype">char</span>* chunk, std::size_t chunkLen);</div>
 </div><!-- fragment --></li>
 <li><p class="startli">Shut down socket either for reading or writing. If <code>forceClose</code> is <code>true</code> the reading end will also be shut down.</p>
 <div class="fragment"><div class="line"><span class="keywordtype">void</span> shutdownRead();</div>
@@ -2647,7 +2647,7 @@ Using Regular Expressions in Routes</h2>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sat Apr 26 2025 15:51:50 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Sat Jul 5 2025 22:44:25 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

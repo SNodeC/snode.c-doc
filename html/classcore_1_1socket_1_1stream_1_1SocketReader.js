@@ -3,6 +3,8 @@ var classcore_1_1socket_1_1stream_1_1SocketReader =
     [ "SocketReader", "classcore_1_1socket_1_1stream_1_1SocketReader.html#a9908fc8c927bbadc8ffd5cae16074b5e", null ],
     [ "SocketReader", "classcore_1_1socket_1_1stream_1_1SocketReader.html#a9d9d3b5b1dd71824e88b79d7746ffee2", null ],
     [ "doRead", "classcore_1_1socket_1_1stream_1_1SocketReader.html#a209362160ea50351e6a6600598dedb96", null ],
+    [ "getTotalProcessed", "classcore_1_1socket_1_1stream_1_1SocketReader.html#acfa3f63d75d4be3f52bdddb54c3f0425", null ],
+    [ "getTotalRead", "classcore_1_1socket_1_1stream_1_1SocketReader.html#ad3cb83f4796d3da2b0a1345c8736c14c", null ],
     [ "onReceivedFromPeer", "classcore_1_1socket_1_1stream_1_1SocketReader.html#af8b066ed3d05fb7d5bef8c5ed923b503", null ],
     [ "read", "classcore_1_1socket_1_1stream_1_1SocketReader.html#afa10b4e63c2140a169961c63426c4ac6", null ],
     [ "readEvent", "classcore_1_1socket_1_1stream_1_1SocketReader.html#ae669637b5d29ab6909f4cd91028a87b3", null ],
@@ -16,5 +18,7 @@ var classcore_1_1socket_1_1stream_1_1SocketReader =
     [ "readBuffer", "classcore_1_1socket_1_1stream_1_1SocketReader.html#ab96c9ed59ae47c7f47d21009b969a1c0", null ],
     [ "shutdownInProgress", "classcore_1_1socket_1_1stream_1_1SocketReader.html#aedbea2263f70dc41862efcda729cd8be", null ],
     [ "size", "classcore_1_1socket_1_1stream_1_1SocketReader.html#a7a2b5ee255ee49473eb8d5e605f4bf32", null ],
-    [ "terminateTimeout", "classcore_1_1socket_1_1stream_1_1SocketReader.html#ac9045a4e59c0b683c4dd62dac511e933", null ]
+    [ "terminateTimeout", "classcore_1_1socket_1_1stream_1_1SocketReader.html#ac9045a4e59c0b683c4dd62dac511e933", null ],
+    [ "totalProcessed", "classcore_1_1socket_1_1stream_1_1SocketReader.html#a307a4d24b8f3628e7bb771eaff57d13f", null ],
+    [ "totalRead", "classcore_1_1socket_1_1stream_1_1SocketReader.html#acc84aeb1e6b7298fcd87042250183591", null ]
 ];

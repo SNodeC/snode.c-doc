@@ -130,6 +130,18 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a3b9e77659efd9e86e15dbf0a65824a42"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeb75ce250355b44292faee5d3a96e84f" id="r_aeb75ce250355b44292faee5d3a96e84f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcore_1_1socket_1_1SocketContext.html#aeb75ce250355b44292faee5d3a96e84f">close</a> ()=0</td></tr>
 <tr class="separator:aeb75ce250355b44292faee5d3a96e84f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a102d7821370d40e9d764e21a8bb1b0c3" id="r_a102d7821370d40e9d764e21a8bb1b0c3"><td class="memItemLeft" align="right" valign="top">virtual std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcore_1_1socket_1_1SocketContext.html#a102d7821370d40e9d764e21a8bb1b0c3">getTotalSent</a> () const =0</td></tr>
+<tr class="separator:a102d7821370d40e9d764e21a8bb1b0c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9487330c649e614e948d9878e31a8280" id="r_a9487330c649e614e948d9878e31a8280"><td class="memItemLeft" align="right" valign="top">virtual std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcore_1_1socket_1_1SocketContext.html#a9487330c649e614e948d9878e31a8280">getTotalQueued</a> () const =0</td></tr>
+<tr class="separator:a9487330c649e614e948d9878e31a8280"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7dc746b096e4747caf73250c54ed1550" id="r_a7dc746b096e4747caf73250c54ed1550"><td class="memItemLeft" align="right" valign="top">virtual std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcore_1_1socket_1_1SocketContext.html#a7dc746b096e4747caf73250c54ed1550">getTotalRead</a> () const =0</td></tr>
+<tr class="separator:a7dc746b096e4747caf73250c54ed1550"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad42463e46a901eb5fe4549483eb80a30" id="r_ad42463e46a901eb5fe4549483eb80a30"><td class="memItemLeft" align="right" valign="top">virtual std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcore_1_1socket_1_1SocketContext.html#ad42463e46a901eb5fe4549483eb80a30">getTotalProcessed</a> () const =0</td></tr>
+<tr class="separator:ad42463e46a901eb5fe4549483eb80a30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66306f604bd5d03746b58c60aad3e270" id="r_a66306f604bd5d03746b58c60aad3e270"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcore_1_1socket_1_1SocketContext.html#a66306f604bd5d03746b58c60aad3e270">getOnlineSince</a> () const =0</td></tr>
+<tr class="separator:a66306f604bd5d03746b58c60aad3e270"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a095695aa16c3f86bd02d58f0ed642f" id="r_a8a095695aa16c3f86bd02d58f0ed642f"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcore_1_1socket_1_1SocketContext.html#a8a095695aa16c3f86bd02d58f0ed642f">getOnlineDuration</a> () const =0</td></tr>
+<tr class="separator:a8a095695aa16c3f86bd02d58f0ed642f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -250,7 +262,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classweb_1_1http_1_1client_1_1SocketContext.html#a9aadcbd91fb83d8723bf55a628632b9a">web::http::client::SocketContext</a>.</p>
+<p>Reimplemented in <a class="el" href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a64576846739aefd7ea71976c861dc7d5">core::socket::stream::SocketContext</a>, and <a class="el" href="classweb_1_1http_1_1client_1_1SocketContext.html#a9aadcbd91fb83d8723bf55a628632b9a">web::http::client::SocketContext</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="core_2socket_2SocketContext_8cpp_source.html#l00050">50</a> of file <a class="el" href="core_2socket_2SocketContext_8cpp_source.html">SocketContext.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   50</span>                                  {</div>
@@ -283,6 +295,168 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implemented in <a class="el" href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a47b23b8583dfd3880232e748f284f380">core::socket::stream::SocketContext</a>, and <a class="el" href="classiot_1_1mqtt_1_1SocketContext.html#a6314a50fd9c58204e2833262214ce8ad">iot::mqtt::SocketContext</a>.</p>
+
+</div>
+</div>
+<a id="a8a095695aa16c3f86bd02d58f0ed642f" name="a8a095695aa16c3f86bd02d58f0ed642f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a095695aa16c3f86bd02d58f0ed642f">&#9670;&#160;</a></span>getOnlineDuration()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::string core::socket::SocketContext::getOnlineDuration </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="classcore_1_1socket_1_1stream_1_1SocketContext.html#aa4d8574e3aaf2d5db828cd5c879523c8">core::socket::stream::SocketContext</a>, <a class="el" href="classweb_1_1websocket_1_1SocketContextUpgrade.html#ab759f756a166e26af27eb6ad4eb9fabc">web::websocket::SocketContextUpgrade&lt; SubProtocolT, RequestT, ResponseT &gt;</a>, <a class="el" href="classweb_1_1websocket_1_1SocketContextUpgrade.html#ab759f756a166e26af27eb6ad4eb9fabc">web::websocket::SocketContextUpgrade&lt; SubProtocol, web::http::client::Request, web::http::client::Response &gt;</a>, and <a class="el" href="classweb_1_1websocket_1_1SocketContextUpgrade.html#ab759f756a166e26af27eb6ad4eb9fabc">web::websocket::SocketContextUpgrade&lt; SubProtocol, web::http::server::Request, web::http::server::Response &gt;</a>.</p>
+
+</div>
+</div>
+<a id="a66306f604bd5d03746b58c60aad3e270" name="a66306f604bd5d03746b58c60aad3e270"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66306f604bd5d03746b58c60aad3e270">&#9670;&#160;</a></span>getOnlineSince()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::string core::socket::SocketContext::getOnlineSince </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a002e939b8a267fc8df55c44b2f79b33d">core::socket::stream::SocketContext</a>, <a class="el" href="classweb_1_1websocket_1_1SocketContextUpgrade.html#a6e1f523549e900168018be05e36abf9e">web::websocket::SocketContextUpgrade&lt; SubProtocolT, RequestT, ResponseT &gt;</a>, <a class="el" href="classweb_1_1websocket_1_1SocketContextUpgrade.html#a6e1f523549e900168018be05e36abf9e">web::websocket::SocketContextUpgrade&lt; SubProtocol, web::http::client::Request, web::http::client::Response &gt;</a>, and <a class="el" href="classweb_1_1websocket_1_1SocketContextUpgrade.html#a6e1f523549e900168018be05e36abf9e">web::websocket::SocketContextUpgrade&lt; SubProtocol, web::http::server::Request, web::http::server::Response &gt;</a>.</p>
+
+</div>
+</div>
+<a id="ad42463e46a901eb5fe4549483eb80a30" name="ad42463e46a901eb5fe4549483eb80a30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad42463e46a901eb5fe4549483eb80a30">&#9670;&#160;</a></span>getTotalProcessed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::size_t core::socket::SocketContext::getTotalProcessed </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a20f2cf1e376c48f97018b6df977cdba1">core::socket::stream::SocketContext</a>.</p>
+
+</div>
+</div>
+<a id="a9487330c649e614e948d9878e31a8280" name="a9487330c649e614e948d9878e31a8280"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9487330c649e614e948d9878e31a8280">&#9670;&#160;</a></span>getTotalQueued()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::size_t core::socket::SocketContext::getTotalQueued </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a9c2c5e135d47632d212866c72489e549">core::socket::stream::SocketContext</a>.</p>
+
+</div>
+</div>
+<a id="a7dc746b096e4747caf73250c54ed1550" name="a7dc746b096e4747caf73250c54ed1550"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7dc746b096e4747caf73250c54ed1550">&#9670;&#160;</a></span>getTotalRead()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::size_t core::socket::SocketContext::getTotalRead </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="classcore_1_1socket_1_1stream_1_1SocketContext.html#af66d5239d61a20e46349acaa0d7b7ae3">core::socket::stream::SocketContext</a>.</p>
+
+</div>
+</div>
+<a id="a102d7821370d40e9d764e21a8bb1b0c3" name="a102d7821370d40e9d764e21a8bb1b0c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a102d7821370d40e9d764e21a8bb1b0c3">&#9670;&#160;</a></span>getTotalSent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::size_t core::socket::SocketContext::getTotalSent </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a827273102b77c080e9f0cf37cc6354b3">core::socket::stream::SocketContext</a>.</p>
 
 </div>
 </div>
@@ -339,7 +513,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Implemented in <a class="el" href="classiot_1_1mqtt__fast_1_1SocketContext.html#ac5f5635b2bd6f9b3ae6aabc9c9f31dcf">iot::mqtt_fast::SocketContext</a>, <a class="el" href="classapps_1_1echo_1_1model_1_1EchoSocketContext.html#ac4cded8642412b3ff4f92953bb758731">apps::echo::model::EchoSocketContext</a>, <a class="el" href="classapps_1_1http_1_1SimpleSocketProtocol.html#afd3ecdfb4d988ac77198f7db44e2200c">apps::http::SimpleSocketProtocol</a>, <a class="el" href="classapps_1_1http_1_1SimpleSocketProtocol.html#afd3ecdfb4d988ac77198f7db44e2200c">apps::http::SimpleSocketProtocol</a>, <a class="el" href="classiot_1_1mqtt_1_1SocketContext.html#ad63d9385473ba0841de03dc9af0c467e">iot::mqtt::SocketContext</a>, <a class="el" href="classweb_1_1http_1_1client_1_1SocketContext.html#a5ac9705bda485573e7af3228fefc8d2c">web::http::client::SocketContext</a>, <a class="el" href="classweb_1_1http_1_1server_1_1SocketContext.html#a939435de5ba9e7ac686efd2de1844741">web::http::server::SocketContext</a>, <a class="el" href="classweb_1_1websocket_1_1SocketContextUpgrade.html#ab23de2ad5c0c65e2a16bd2353b4b926b">web::websocket::SocketContextUpgrade&lt; SubProtocolT, RequestT, ResponseT &gt;</a>, <a class="el" href="classweb_1_1websocket_1_1SocketContextUpgrade.html#ab23de2ad5c0c65e2a16bd2353b4b926b">web::websocket::SocketContextUpgrade&lt; SubProtocol, web::http::client::Request, web::http::client::Response &gt;</a>, and <a class="el" href="classweb_1_1websocket_1_1SocketContextUpgrade.html#ab23de2ad5c0c65e2a16bd2353b4b926b">web::websocket::SocketContextUpgrade&lt; SubProtocol, web::http::server::Request, web::http::server::Response &gt;</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SocketConnection_8hpp_source.html#l00228">core::socket::stream::SocketConnectionT&lt; PhysicalSocketT, SocketReaderT, SocketWriterT &gt;::onReceivedFromPeer()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SocketConnection_8hpp_source.html#l00248">core::socket::stream::SocketConnectionT&lt; PhysicalSocketT, SocketReaderT, SocketWriterT &gt;::onReceivedFromPeer()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -374,7 +548,7 @@ Here is the caller graph for this function:</div>
 
 <p>Implemented in <a class="el" href="classiot_1_1mqtt_1_1SocketContext.html#a058e9a332dd8caec034a294a5bea05fd">iot::mqtt::SocketContext</a>, <a class="el" href="classweb_1_1websocket_1_1SocketContextUpgrade.html#a1b332f5ef5956cf2049e67b9eacfb3ae">web::websocket::SocketContextUpgrade&lt; SubProtocolT, RequestT, ResponseT &gt;</a>, <a class="el" href="classweb_1_1websocket_1_1SocketContextUpgrade.html#a1b332f5ef5956cf2049e67b9eacfb3ae">web::websocket::SocketContextUpgrade&lt; SubProtocol, web::http::client::Request, web::http::client::Response &gt;</a>, <a class="el" href="classweb_1_1websocket_1_1SocketContextUpgrade.html#a1b332f5ef5956cf2049e67b9eacfb3ae">web::websocket::SocketContextUpgrade&lt; SubProtocol, web::http::server::Request, web::http::server::Response &gt;</a>, <a class="el" href="classapps_1_1echo_1_1model_1_1EchoSocketContext.html#a4f121694bc208475adf020f730bd5655">apps::echo::model::EchoSocketContext</a>, <a class="el" href="classapps_1_1http_1_1SimpleSocketProtocol.html#ad360178653fadbd6e7e43109886ec796">apps::http::SimpleSocketProtocol</a>, <a class="el" href="classapps_1_1http_1_1SimpleSocketProtocol.html#ad360178653fadbd6e7e43109886ec796">apps::http::SimpleSocketProtocol</a>, <a class="el" href="classweb_1_1http_1_1client_1_1SocketContext.html#a79f52c1ad23adbd8c393ef7e4ca65c11">web::http::client::SocketContext</a>, and <a class="el" href="classweb_1_1http_1_1server_1_1SocketContext.html#a042c67d3e9abd44472b70f9227d33dc0">web::http::server::SocketContext</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SocketConnection_8hpp_source.html#l00256">core::socket::stream::SocketConnectionT&lt; PhysicalSocketT, SocketReaderT, SocketWriterT &gt;::onSignal()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SocketConnection_8hpp_source.html#l00276">core::socket::stream::SocketConnectionT&lt; PhysicalSocketT, SocketReaderT, SocketWriterT &gt;::onSignal()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -629,7 +803,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacecore.html">core</a></li><li class="navelem"><a class="el" href="namespacecore_1_1socket.html">socket</a></li><li class="navelem"><a class="el" href="classcore_1_1socket_1_1SocketContext.html">SocketContext</a></li>
-    <li class="footer">Generated on Sat Apr 26 2025 15:51:49 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Sat Jul 5 2025 22:44:24 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

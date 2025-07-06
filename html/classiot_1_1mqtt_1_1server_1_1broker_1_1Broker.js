@@ -26,5 +26,5 @@ var classiot_1_1mqtt_1_1server_1_1broker_1_1Broker =
     [ "retainTree", "classiot_1_1mqtt_1_1server_1_1broker_1_1Broker.html#a4e06e35b9d82894afce87d6686fecfef", null ],
     [ "sessionStore", "classiot_1_1mqtt_1_1server_1_1broker_1_1Broker.html#a5d746f27c12dcea57879da9f719fe914", null ],
     [ "sessionStoreFileName", "classiot_1_1mqtt_1_1server_1_1broker_1_1Broker.html#a156176254bc3221917da9ccda2bf7b5a", null ],
-    [ "subscribtionTree", "classiot_1_1mqtt_1_1server_1_1broker_1_1Broker.html#ae1dcd339fef332ce0bd8bb338349cd2d", null ]
+    [ "subscriptionTree", "classiot_1_1mqtt_1_1server_1_1broker_1_1Broker.html#a857b9e3e0309836cc4564fb6731b428e", null ]
 ];

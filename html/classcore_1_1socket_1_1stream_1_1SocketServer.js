@@ -17,12 +17,8 @@ var classcore_1_1socket_1_1stream_1_1SocketServer =
     [ "setOnConnect", "classcore_1_1socket_1_1stream_1_1SocketServer.html#a9164c33e71e377ad4a20f21a41205282", null ],
     [ "setOnConnected", "classcore_1_1socket_1_1stream_1_1SocketServer.html#a125c8addda5627ab214ab5910eeb4c49", null ],
     [ "setOnDisconnect", "classcore_1_1socket_1_1stream_1_1SocketServer.html#affc750c322094c4479c7c5ff5d4bb220", null ],
-    [ "currentError", "classcore_1_1socket_1_1stream_1_1SocketServer.html#afa0731ce7bc6bec717e898a0badc3972", null ],
-    [ "currentFatal", "classcore_1_1socket_1_1stream_1_1SocketServer.html#a31110565b69f2e087bffa449d9639931", null ],
-    [ "currentOk", "classcore_1_1socket_1_1stream_1_1SocketServer.html#a5c9cb488339807d4ebd13702ef739910", null ],
     [ "onConnect", "classcore_1_1socket_1_1stream_1_1SocketServer.html#a3bd512afe288b3fffe3ab5c2545f9ecc", null ],
     [ "onConnected", "classcore_1_1socket_1_1stream_1_1SocketServer.html#aadedfaa8f87906931f09d211c0899aad", null ],
     [ "onDisconnect", "classcore_1_1socket_1_1stream_1_1SocketServer.html#a5f78ed4036660b38687a5ba28d25371f", null ],
-    [ "socketContextFactory", "classcore_1_1socket_1_1stream_1_1SocketServer.html#a8fa1fa070474d60f4672ace8c3886bd1", null ],
-    [ "totalOk", "classcore_1_1socket_1_1stream_1_1SocketServer.html#ac7cc86894321d2267ceeeb1733f2bd03", null ]
+    [ "socketContextFactory", "classcore_1_1socket_1_1stream_1_1SocketServer.html#a8fa1fa070474d60f4672ace8c3886bd1", null ]
 ];

@@ -309,12 +309,13 @@ template&lt;template&lt; typename SocketContextFactoryT, typename... Args &gt; t
 <div class="line"><span class="lineno">   83</span>                    onConnect,</div>
 <div class="line"><span class="lineno">   84</span>                    onConnected,</div>
 <div class="line"><span class="lineno">   85</span>                    onDisconnect,</div>
-<div class="line"><span class="lineno">   86</span>                    std::forward&lt;std::function&lt;<span class="keywordtype">void</span>(<span class="keyword">const</span> std::shared_ptr&lt;Request&gt;&amp;)&gt;&gt;(onRequestBegin),</div>
-<div class="line"><span class="lineno">   87</span>                    std::forward&lt;std::function&lt;<span class="keywordtype">void</span>(<span class="keyword">const</span> std::shared_ptr&lt;Request&gt;&amp;)&gt;&gt;(onRequestEnd),</div>
-<div class="line"><span class="lineno">   88</span>                    [<span class="keyword">this</span>]() -&gt; <a class="code hl_class" href="classnet_1_1config_1_1ConfigInstance.html">net::config::ConfigInstance</a>&amp; {</div>
-<div class="line"><span class="lineno">   89</span>                        <span class="keywordflow">return</span> Super::getConfig();</div>
-<div class="line"><span class="lineno">   90</span>                    }) {</div>
-<div class="line"><span class="lineno">   91</span>        }</div>
+<div class="line"><span class="lineno">   86</span>                    <span class="comment">// SocketContextFactory Args...</span></div>
+<div class="line"><span class="lineno">   87</span>                    std::forward&lt;std::function&lt;<span class="keywordtype">void</span>(<span class="keyword">const</span> std::shared_ptr&lt;Request&gt;&amp;)&gt;&gt;(onRequestBegin),</div>
+<div class="line"><span class="lineno">   88</span>                    std::forward&lt;std::function&lt;<span class="keywordtype">void</span>(<span class="keyword">const</span> std::shared_ptr&lt;Request&gt;&amp;)&gt;&gt;(onRequestEnd),</div>
+<div class="line"><span class="lineno">   89</span>                    [<span class="keyword">this</span>]() -&gt; <a class="code hl_class" href="classnet_1_1config_1_1ConfigInstance.html">net::config::ConfigInstance</a>&amp; {</div>
+<div class="line"><span class="lineno">   90</span>                        <span class="keywordflow">return</span> Super::getConfig();</div>
+<div class="line"><span class="lineno">   91</span>                    }) {</div>
+<div class="line"><span class="lineno">   92</span>        }</div>
 <div class="ttc" id="aclassnet_1_1config_1_1ConfigInstance_html"><div class="ttname"><a href="classnet_1_1config_1_1ConfigInstance.html">net::config::ConfigInstance</a></div><div class="ttdef"><b>Definition</b> <a href="ConfigInstance_8h_source.html#l00063">ConfigInstance.h:63</a></div></div>
 <div class="ttc" id="aclassweb_1_1http_1_1client_1_1Client_html_af5c56745e99a25b763eb02e73f98ddf9"><div class="ttname"><a href="classweb_1_1http_1_1client_1_1Client.html#af5c56745e99a25b763eb02e73f98ddf9">web::http::client::Client::Super</a></div><div class="ttdeci">SocketClientT&lt; web::http::client::SocketContextFactory, std::function&lt; void(const std::shared_ptr&lt; web::http::client::Request &gt; &amp;)&gt;, std::function&lt; void(const std::shared_ptr&lt; web::http::client::Request &gt; &amp;)&gt;, std::function&lt; net::config::ConfigInstance &amp;()&gt; &gt; Super</div><div class="ttdef"><b>Definition</b> <a href="client_2Client_8h_source.html#l00067">Client.h:70</a></div></div>
 </div><!-- fragment -->
@@ -374,14 +375,14 @@ template&lt;template&lt; typename SocketContextFactoryT, typename... Args &gt; t
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="client_2Client_8h_source.html#l00093">93</a> of file <a class="el" href="client_2Client_8h_source.html">Client.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   98</span>            : <a class="code hl_function" href="classweb_1_1http_1_1client_1_1Client.html#aaf37a83fb70329a682ee35bde3602269">Client</a>(<span class="stringliteral">&quot;&quot;</span>,</div>
-<div class="line"><span class="lineno">   99</span>                     onConnect,</div>
-<div class="line"><span class="lineno">  100</span>                     onConnected,</div>
-<div class="line"><span class="lineno">  101</span>                     onDisconnect,</div>
-<div class="line"><span class="lineno">  102</span>                     std::forward&lt;std::function&lt;<span class="keywordtype">void</span>(<span class="keyword">const</span> std::shared_ptr&lt;Request&gt;&amp;)&gt;&gt;(onRequestBegin),</div>
-<div class="line"><span class="lineno">  103</span>                     std::forward&lt;std::function&lt;<span class="keywordtype">void</span>(<span class="keyword">const</span> std::shared_ptr&lt;Request&gt;&amp;)&gt;&gt;(onRequestEnd)) {</div>
-<div class="line"><span class="lineno">  104</span>        }</div>
+<p class="definition">Definition at line <a class="el" href="client_2Client_8h_source.html#l00094">94</a> of file <a class="el" href="client_2Client_8h_source.html">Client.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   99</span>            : <a class="code hl_function" href="classweb_1_1http_1_1client_1_1Client.html#aaf37a83fb70329a682ee35bde3602269">Client</a>(<span class="stringliteral">&quot;&quot;</span>,</div>
+<div class="line"><span class="lineno">  100</span>                     onConnect,</div>
+<div class="line"><span class="lineno">  101</span>                     onConnected,</div>
+<div class="line"><span class="lineno">  102</span>                     onDisconnect,</div>
+<div class="line"><span class="lineno">  103</span>                     std::forward&lt;std::function&lt;<span class="keywordtype">void</span>(<span class="keyword">const</span> std::shared_ptr&lt;Request&gt;&amp;)&gt;&gt;(onRequestBegin),</div>
+<div class="line"><span class="lineno">  104</span>                     std::forward&lt;std::function&lt;<span class="keywordtype">void</span>(<span class="keyword">const</span> std::shared_ptr&lt;Request&gt;&amp;)&gt;&gt;(onRequestEnd)) {</div>
+<div class="line"><span class="lineno">  105</span>        }</div>
 <div class="ttc" id="aclassweb_1_1http_1_1client_1_1Client_html_aaf37a83fb70329a682ee35bde3602269"><div class="ttname"><a href="classweb_1_1http_1_1client_1_1Client.html#aaf37a83fb70329a682ee35bde3602269">web::http::client::Client::Client</a></div><div class="ttdeci">Client(const std::string &amp;name, const std::function&lt; void(SocketConnection *)&gt; &amp;onConnect, const std::function&lt; void(SocketConnection *)&gt; &amp;onConnected, const std::function&lt; void(SocketConnection *)&gt; &amp;onDisconnect, std::function&lt; void(const std::shared_ptr&lt; Request &gt; &amp;)&gt; &amp;&amp;onRequestBegin, std::function&lt; void(const std::shared_ptr&lt; Request &gt; &amp;)&gt; &amp;&amp;onRequestEnd)</div><div class="ttdef"><b>Definition</b> <a href="client_2Client_8h_source.html#l00076">Client.h:76</a></div></div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="ResourceServer_8cpp_source.html#l00053">main()</a>.</p>
@@ -435,14 +436,15 @@ template&lt;template&lt; typename SocketContextFactoryT, typename... Args &gt; t
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="client_2Client_8h_source.html#l00106">106</a> of file <a class="el" href="client_2Client_8h_source.html">Client.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  109</span>            : <a class="code hl_typedef" href="classweb_1_1http_1_1client_1_1Client.html#af5c56745e99a25b763eb02e73f98ddf9">Super</a>(name,</div>
-<div class="line"><span class="lineno">  110</span>                    std::forward&lt;std::function&lt;<span class="keywordtype">void</span>(<span class="keyword">const</span> std::shared_ptr&lt;Request&gt;&amp;)&gt;&gt;(onRequestBegin),</div>
-<div class="line"><span class="lineno">  111</span>                    std::forward&lt;std::function&lt;<span class="keywordtype">void</span>(<span class="keyword">const</span> std::shared_ptr&lt;Request&gt;&amp;)&gt;&gt;(onRequestEnd),</div>
-<div class="line"><span class="lineno">  112</span>                    [<span class="keyword">this</span>]() -&gt; <a class="code hl_class" href="classnet_1_1config_1_1ConfigInstance.html">net::config::ConfigInstance</a>&amp; {</div>
-<div class="line"><span class="lineno">  113</span>                        <span class="keywordflow">return</span> Super::getConfig();</div>
-<div class="line"><span class="lineno">  114</span>                    }) {</div>
-<div class="line"><span class="lineno">  115</span>        }</div>
+<p class="definition">Definition at line <a class="el" href="client_2Client_8h_source.html#l00107">107</a> of file <a class="el" href="client_2Client_8h_source.html">Client.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  110</span>            : <a class="code hl_typedef" href="classweb_1_1http_1_1client_1_1Client.html#af5c56745e99a25b763eb02e73f98ddf9">Super</a>(name,</div>
+<div class="line"><span class="lineno">  111</span>                    <span class="comment">// SocketContextFactory Args...</span></div>
+<div class="line"><span class="lineno">  112</span>                    std::forward&lt;std::function&lt;<span class="keywordtype">void</span>(<span class="keyword">const</span> std::shared_ptr&lt;Request&gt;&amp;)&gt;&gt;(onRequestBegin),</div>
+<div class="line"><span class="lineno">  113</span>                    std::forward&lt;std::function&lt;<span class="keywordtype">void</span>(<span class="keyword">const</span> std::shared_ptr&lt;Request&gt;&amp;)&gt;&gt;(onRequestEnd),</div>
+<div class="line"><span class="lineno">  114</span>                    [<span class="keyword">this</span>]() -&gt; <a class="code hl_class" href="classnet_1_1config_1_1ConfigInstance.html">net::config::ConfigInstance</a>&amp; {</div>
+<div class="line"><span class="lineno">  115</span>                        <span class="keywordflow">return</span> Super::getConfig();</div>
+<div class="line"><span class="lineno">  116</span>                    }) {</div>
+<div class="line"><span class="lineno">  117</span>        }</div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="jsonclient_8cpp_source.html#l00053">main()</a>.</p>
 <div class="dynheader">
@@ -489,11 +491,11 @@ template&lt;template&lt; typename SocketContextFactoryT, typename... Args &gt; t
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="client_2Client_8h_source.html#l00117">117</a> of file <a class="el" href="client_2Client_8h_source.html">Client.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  119</span>            : <a class="code hl_function" href="classweb_1_1http_1_1client_1_1Client.html#aaf37a83fb70329a682ee35bde3602269">Client</a>(<span class="stringliteral">&quot;&quot;</span>,</div>
-<div class="line"><span class="lineno">  120</span>                     std::forward&lt;std::function&lt;<span class="keywordtype">void</span>(<span class="keyword">const</span> std::shared_ptr&lt;Request&gt;&amp;)&gt;&gt;(onRequestBegin),</div>
-<div class="line"><span class="lineno">  121</span>                     std::forward&lt;std::function&lt;<span class="keywordtype">void</span>(<span class="keyword">const</span> std::shared_ptr&lt;Request&gt;&amp;)&gt;&gt;(onRequestEnd)) {</div>
-<div class="line"><span class="lineno">  122</span>        }</div>
+<p class="definition">Definition at line <a class="el" href="client_2Client_8h_source.html#l00119">119</a> of file <a class="el" href="client_2Client_8h_source.html">Client.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  121</span>            : <a class="code hl_function" href="classweb_1_1http_1_1client_1_1Client.html#aaf37a83fb70329a682ee35bde3602269">Client</a>(<span class="stringliteral">&quot;&quot;</span>,</div>
+<div class="line"><span class="lineno">  122</span>                     std::forward&lt;std::function&lt;<span class="keywordtype">void</span>(<span class="keyword">const</span> std::shared_ptr&lt;Request&gt;&amp;)&gt;&gt;(onRequestBegin),</div>
+<div class="line"><span class="lineno">  123</span>                     std::forward&lt;std::function&lt;<span class="keywordtype">void</span>(<span class="keyword">const</span> std::shared_ptr&lt;Request&gt;&amp;)&gt;&gt;(onRequestEnd)) {</div>
+<div class="line"><span class="lineno">  124</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -524,10 +526,10 @@ template&lt;template&lt; typename SocketContextFactoryT, typename... Args &gt; t
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="client_2Client_8h_source.html#l00124">124</a> of file <a class="el" href="client_2Client_8h_source.html">Client.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  124</span>                                                          {</div>
-<div class="line"><span class="lineno">  125</span>            Super::getSocketContextFactory()-&gt;setPipelinedRequests(pipelinedRequests);</div>
-<div class="line"><span class="lineno">  126</span>        }</div>
+<p class="definition">Definition at line <a class="el" href="client_2Client_8h_source.html#l00126">126</a> of file <a class="el" href="client_2Client_8h_source.html">Client.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  126</span>                                                          {</div>
+<div class="line"><span class="lineno">  127</span>            Super::getSocketContextFactory()-&gt;setPipelinedRequests(pipelinedRequests);</div>
+<div class="line"><span class="lineno">  128</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -540,7 +542,7 @@ template&lt;template&lt; typename SocketContextFactoryT, typename... Args &gt; t
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceweb.html">web</a></li><li class="navelem"><a class="el" href="namespaceweb_1_1http.html">http</a></li><li class="navelem"><a class="el" href="namespaceweb_1_1http_1_1client.html">client</a></li><li class="navelem"><a class="el" href="classweb_1_1http_1_1client_1_1Client.html">Client</a></li>
-    <li class="footer">Generated on Sat Apr 26 2025 15:51:50 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Sat Jul 5 2025 22:44:25 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

@@ -407,9 +407,9 @@ Here is the call graph for this function:</div>
 <p class="definition">Definition at line <a class="el" href="PipeSink_8cpp_source.html#l00071">71</a> of file <a class="el" href="PipeSink_8cpp_source.html">PipeSink.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   71</span>                             {</div>
 <div class="line"><span class="lineno">   72</span>        <span class="comment">// NOLINTNEXTLINE(cppcoreguidelines-avoid-c-arrays, hicpp-avoid-c-arrays, modernize-avoid-c-arrays)</span></div>
-<div class="line"><span class="lineno">   73</span>        <span class="keyword">static</span> <span class="keywordtype">char</span> chunk[<a class="code hl_define" href="PipeSink_8cpp.html#ad64da5cbb2a93af7c8ac5419d7d0c5cd">MAX_READ_JUNKSIZE</a>];</div>
+<div class="line"><span class="lineno">   73</span>        <span class="keyword">static</span> <span class="keywordtype">char</span> chunk[<a class="code hl_define" href="PipeSink_8cpp.html#ad9136b766efbbd57c170b8cbb2cbfbeb">MAX_READ_CHUNKSIZE</a>];</div>
 <div class="line"><span class="lineno">   74</span> </div>
-<div class="line"><span class="lineno">   75</span>        <span class="keyword">const</span> ssize_t ret = <a class="code hl_function" href="namespacecore_1_1system.html#a38a2ef544196b684eb5850c42e8ee770">core::system::read</a>(<a class="code hl_function" href="classcore_1_1DescriptorEventReceiver.html#a79f301b292a4c64f35f5bf44c9b7ad8f">getRegisteredFd</a>(), chunk, <a class="code hl_define" href="PipeSink_8cpp.html#ad64da5cbb2a93af7c8ac5419d7d0c5cd">MAX_READ_JUNKSIZE</a>);</div>
+<div class="line"><span class="lineno">   75</span>        <span class="keyword">const</span> ssize_t ret = <a class="code hl_function" href="namespacecore_1_1system.html#a38a2ef544196b684eb5850c42e8ee770">core::system::read</a>(<a class="code hl_function" href="classcore_1_1DescriptorEventReceiver.html#a79f301b292a4c64f35f5bf44c9b7ad8f">getRegisteredFd</a>(), chunk, <a class="code hl_define" href="PipeSink_8cpp.html#ad9136b766efbbd57c170b8cbb2cbfbeb">MAX_READ_CHUNKSIZE</a>);</div>
 <div class="line"><span class="lineno">   76</span> </div>
 <div class="line"><span class="lineno">   77</span>        <span class="keywordflow">if</span> (ret &gt; 0) {</div>
 <div class="line"><span class="lineno">   78</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classcore_1_1pipe_1_1PipeSink.html#a35d01b884f9634ffc0ddfdc70f1382bb">onData</a>) {</div>
@@ -429,7 +429,7 @@ Here is the call graph for this function:</div>
 <div class="line"><span class="lineno">   92</span>            }</div>
 <div class="line"><span class="lineno">   93</span>        }</div>
 <div class="line"><span class="lineno">   94</span>    }</div>
-<div class="ttc" id="aPipeSink_8cpp_html_ad64da5cbb2a93af7c8ac5419d7d0c5cd"><div class="ttname"><a href="PipeSink_8cpp.html#ad64da5cbb2a93af7c8ac5419d7d0c5cd">MAX_READ_JUNKSIZE</a></div><div class="ttdeci">#define MAX_READ_JUNKSIZE</div><div class="ttdef"><b>Definition</b> <a href="PipeSink_8cpp_source.html#l00055">PipeSink.cpp:55</a></div></div>
+<div class="ttc" id="aPipeSink_8cpp_html_ad9136b766efbbd57c170b8cbb2cbfbeb"><div class="ttname"><a href="PipeSink_8cpp.html#ad9136b766efbbd57c170b8cbb2cbfbeb">MAX_READ_CHUNKSIZE</a></div><div class="ttdeci">#define MAX_READ_CHUNKSIZE</div><div class="ttdef"><b>Definition</b> <a href="PipeSink_8cpp_source.html#l00055">PipeSink.cpp:55</a></div></div>
 <div class="ttc" id="aclasscore_1_1pipe_1_1PipeSink_html_a35d01b884f9634ffc0ddfdc70f1382bb"><div class="ttname"><a href="classcore_1_1pipe_1_1PipeSink.html#a35d01b884f9634ffc0ddfdc70f1382bb">core::pipe::PipeSink::onData</a></div><div class="ttdeci">std::function&lt; void(const char *, std::size_t)&gt; onData</div><div class="ttdef"><b>Definition</b> <a href="PipeSink_8h_source.html#l00073">PipeSink.h:73</a></div></div>
 <div class="ttc" id="aclasscore_1_1pipe_1_1PipeSink_html_a5b4b3948290c96709b187114addd3820"><div class="ttname"><a href="classcore_1_1pipe_1_1PipeSink.html#a5b4b3948290c96709b187114addd3820">core::pipe::PipeSink::onEof</a></div><div class="ttdeci">std::function&lt; void()&gt; onEof</div><div class="ttdef"><b>Definition</b> <a href="PipeSink_8h_source.html#l00074">PipeSink.h:74</a></div></div>
 <div class="ttc" id="aclasscore_1_1pipe_1_1PipeSink_html_af0e2ee8e24401066c472b0335dacda48"><div class="ttname"><a href="classcore_1_1pipe_1_1PipeSink.html#af0e2ee8e24401066c472b0335dacda48">core::pipe::PipeSink::onError</a></div><div class="ttdeci">std::function&lt; void(int errnum)&gt; onError</div><div class="ttdef"><b>Definition</b> <a href="PipeSink_8h_source.html#l00075">PipeSink.h:75</a></div></div>
@@ -661,7 +661,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacecore.html">core</a></li><li class="navelem"><a class="el" href="namespacecore_1_1pipe.html">pipe</a></li><li class="navelem"><a class="el" href="classcore_1_1pipe_1_1PipeSink.html">PipeSink</a></li>
-    <li class="footer">Generated on Sat Apr 26 2025 15:51:49 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Sat Jul 5 2025 22:44:24 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

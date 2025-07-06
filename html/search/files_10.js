@@ -91,6 +91,6 @@ var searchData=
   ['subprotocolfactoryselector_2ehpp_88',['SubProtocolFactorySelector.hpp',['../SubProtocolFactorySelector_8hpp.html',1,'']]],
   ['subscribe_2ecpp_89',['subscribe.cpp',['../mqtt_2server_2packets_2Subscribe_8cpp.html',1,'(Global Namespace)'],['../mqtt_2packets_2Subscribe_8cpp.html',1,'(Global Namespace)'],['../mqtt-fast_2packets_2Subscribe_8cpp.html',1,'(Global Namespace)']]],
   ['subscribe_2eh_90',['subscribe.h',['../mqtt_2server_2packets_2Subscribe_8h.html',1,'(Global Namespace)'],['../mqtt_2packets_2Subscribe_8h.html',1,'(Global Namespace)'],['../mqtt-fast_2packets_2Subscribe_8h.html',1,'(Global Namespace)']]],
-  ['subscribtiontree_2ecpp_91',['SubscribtionTree.cpp',['../SubscribtionTree_8cpp.html',1,'']]],
-  ['subscribtiontree_2eh_92',['SubscribtionTree.h',['../SubscribtionTree_8h.html',1,'']]]
+  ['subscriptiontree_2ecpp_91',['SubscriptionTree.cpp',['../SubscriptionTree_8cpp.html',1,'']]],
+  ['subscriptiontree_2eh_92',['SubscriptionTree.h',['../SubscriptionTree_8h.html',1,'']]]
 ];

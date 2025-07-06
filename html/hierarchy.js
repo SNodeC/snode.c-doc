@@ -744,7 +744,7 @@ var hierarchy =
     [ "web::websocket::SubProtocolFactorySelector< web::websocket::SubProtocolFactory< web::websocket::server::SubProtocol > >", "classweb_1_1websocket_1_1SubProtocolFactorySelector.html", [
       [ "web::websocket::server::SubProtocolFactorySelector", "classweb_1_1websocket_1_1server_1_1SubProtocolFactorySelector.html", null ]
     ] ],
-    [ "iot::mqtt::server::broker::SubscribtionTree", "classiot_1_1mqtt_1_1server_1_1broker_1_1SubscribtionTree.html", null ],
+    [ "iot::mqtt::server::broker::SubscriptionTree", "classiot_1_1mqtt_1_1server_1_1broker_1_1SubscriptionTree.html", null ],
     [ "CLI::Success", null, [
       [ "CLI::CallForCommandline", "classCLI_1_1CallForCommandline.html", null ],
       [ "CLI::CallForShowConfig", "classCLI_1_1CallForShowConfig.html", null ],
@@ -760,7 +760,7 @@ var hierarchy =
     [ "iot::mqtt::Topic", "classiot_1_1mqtt_1_1Topic.html", null ],
     [ "iot::mqtt_fast::Topic", "classiot_1_1mqtt__fast_1_1Topic.html", null ],
     [ "iot::mqtt::server::broker::RetainTree::TopicLevel", "classiot_1_1mqtt_1_1server_1_1broker_1_1RetainTree_1_1TopicLevel.html", null ],
-    [ "iot::mqtt::server::broker::SubscribtionTree::TopicLevel", "classiot_1_1mqtt_1_1server_1_1broker_1_1SubscribtionTree_1_1TopicLevel.html", null ],
+    [ "iot::mqtt::server::broker::SubscriptionTree::TopicLevel", "classiot_1_1mqtt_1_1server_1_1broker_1_1SubscriptionTree_1_1TopicLevel.html", null ],
     [ "web::websocket::Transmitter", "classweb_1_1websocket_1_1Transmitter.html", [
       [ "web::websocket::SubProtocolContext", "classweb_1_1websocket_1_1SubProtocolContext.html", null ]
     ] ],

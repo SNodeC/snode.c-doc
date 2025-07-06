@@ -82,5 +82,5 @@ var searchData=
   ['subprotocolfactoryselector_3c_20web_3a_3awebsocket_3a_3asubprotocolfactory_3c_20web_3a_3awebsocket_3a_3aclient_3a_3asubprotocol_20_3e_20_3e_79',['SubProtocolFactorySelector&lt; web::websocket::SubProtocolFactory&lt; web::websocket::client::SubProtocol &gt; &gt;',['../classweb_1_1websocket_1_1SubProtocolFactorySelector.html',1,'web::websocket']]],
   ['subprotocolfactoryselector_3c_20web_3a_3awebsocket_3a_3asubprotocolfactory_3c_20web_3a_3awebsocket_3a_3aserver_3a_3asubprotocol_20_3e_20_3e_80',['SubProtocolFactorySelector&lt; web::websocket::SubProtocolFactory&lt; web::websocket::server::SubProtocol &gt; &gt;',['../classweb_1_1websocket_1_1SubProtocolFactorySelector.html',1,'web::websocket']]],
   ['subscribe_81',['subscribe',['../classiot_1_1mqtt_1_1packets_1_1Subscribe.html',1,'iot::mqtt::packets::Subscribe'],['../classiot_1_1mqtt_1_1server_1_1packets_1_1Subscribe.html',1,'iot::mqtt::server::packets::Subscribe'],['../classiot_1_1mqtt__fast_1_1packets_1_1Subscribe.html',1,'iot::mqtt_fast::packets::Subscribe']]],
-  ['subscribtiontree_82',['SubscribtionTree',['../classiot_1_1mqtt_1_1server_1_1broker_1_1SubscribtionTree.html',1,'iot::mqtt::server::broker']]]
+  ['subscriptiontree_82',['SubscriptionTree',['../classiot_1_1mqtt_1_1server_1_1broker_1_1SubscriptionTree.html',1,'iot::mqtt::server::broker']]]
 ];

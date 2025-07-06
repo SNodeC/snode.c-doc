@@ -136,10 +136,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a05bfc24d7ae7380ef9b2fcb64ce37526 inherit pub_methods_classiot_1_1mqtt_1_1ControlPacket"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d35b63fe04256fa31650462db1b311a inherit pub_methods_classiot_1_1mqtt_1_1ControlPacket" id="r_a1d35b63fe04256fa31650462db1b311a"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiot_1_1mqtt_1_1ControlPacket.html#a1d35b63fe04256fa31650462db1b311a">getName</a> () const</td></tr>
 <tr class="separator:a1d35b63fe04256fa31650462db1b311a inherit pub_methods_classiot_1_1mqtt_1_1ControlPacket"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2010ac4f0ef53a8c8140faa953b5a6cd inherit pub_methods_classiot_1_1mqtt_1_1ControlPacket" id="r_a2010ac4f0ef53a8c8140faa953b5a6cd"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiot_1_1mqtt_1_1ControlPacket.html#a2010ac4f0ef53a8c8140faa953b5a6cd">getType</a> () const</td></tr>
-<tr class="separator:a2010ac4f0ef53a8c8140faa953b5a6cd inherit pub_methods_classiot_1_1mqtt_1_1ControlPacket"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5010a3ec8f0c9d1a95b1fd1e85d77f71 inherit pub_methods_classiot_1_1mqtt_1_1ControlPacket" id="r_a5010a3ec8f0c9d1a95b1fd1e85d77f71"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiot_1_1mqtt_1_1ControlPacket.html#a5010a3ec8f0c9d1a95b1fd1e85d77f71">getFlags</a> () const</td></tr>
-<tr class="separator:a5010a3ec8f0c9d1a95b1fd1e85d77f71 inherit pub_methods_classiot_1_1mqtt_1_1ControlPacket"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -153,6 +149,14 @@ Protected Attributes</h2></td></tr>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:a57cd6122cd41f06e121ebbb5d4b53832" id="r_a57cd6122cd41f06e121ebbb5d4b53832"><td class="memItemLeft" align="right" valign="top">std::vector&lt; char &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiot_1_1mqtt_1_1packets_1_1Pubrec.html#a57cd6122cd41f06e121ebbb5d4b53832">serializeVP</a> () const override</td></tr>
 <tr class="separator:a57cd6122cd41f06e121ebbb5d4b53832"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pro_methods_classiot_1_1mqtt_1_1ControlPacket"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classiot_1_1mqtt_1_1ControlPacket')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classiot_1_1mqtt_1_1ControlPacket.html">iot::mqtt::ControlPacket</a></td></tr>
+<tr class="memitem:a2010ac4f0ef53a8c8140faa953b5a6cd inherit pro_methods_classiot_1_1mqtt_1_1ControlPacket" id="r_a2010ac4f0ef53a8c8140faa953b5a6cd"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiot_1_1mqtt_1_1ControlPacket.html#a2010ac4f0ef53a8c8140faa953b5a6cd">getType</a> () const</td></tr>
+<tr class="separator:a2010ac4f0ef53a8c8140faa953b5a6cd inherit pro_methods_classiot_1_1mqtt_1_1ControlPacket"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5010a3ec8f0c9d1a95b1fd1e85d77f71 inherit pro_methods_classiot_1_1mqtt_1_1ControlPacket" id="r_a5010a3ec8f0c9d1a95b1fd1e85d77f71"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiot_1_1mqtt_1_1ControlPacket.html#a5010a3ec8f0c9d1a95b1fd1e85d77f71">getFlags</a> () const</td></tr>
+<tr class="separator:a5010a3ec8f0c9d1a95b1fd1e85d77f71 inherit pro_methods_classiot_1_1mqtt_1_1ControlPacket"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
@@ -303,9 +307,9 @@ Here is the caller graph for this function:</div>
 <div class="fragment"><div class="line"><span class="lineno">   62</span>                                              {</div>
 <div class="line"><span class="lineno">   63</span>        <span class="keywordflow">return</span> std::vector&lt;char&gt;(<a class="code hl_variable" href="classiot_1_1mqtt_1_1packets_1_1Pubrec.html#a51652fa56faa052cf14563e325f41eac">packetIdentifier</a>.<a class="code hl_function" href="classiot_1_1mqtt_1_1types_1_1TypeBase.html#a7e6939bfafb586b2c2990b485bc5218a">serialize</a>());</div>
 <div class="line"><span class="lineno">   64</span>    }</div>
-<div class="ttc" id="aclassiot_1_1mqtt_1_1types_1_1TypeBase_html_a7e6939bfafb586b2c2990b485bc5218a"><div class="ttname"><a href="classiot_1_1mqtt_1_1types_1_1TypeBase.html#a7e6939bfafb586b2c2990b485bc5218a">iot::mqtt::types::TypeBase::serialize</a></div><div class="ttdeci">virtual std::vector&lt; char &gt; serialize() const</div><div class="ttdef"><b>Definition</b> <a href="TypeBase_8hpp_source.html#l00083">TypeBase.hpp:83</a></div></div>
+<div class="ttc" id="aclassiot_1_1mqtt_1_1types_1_1TypeBase_html_a7e6939bfafb586b2c2990b485bc5218a"><div class="ttname"><a href="classiot_1_1mqtt_1_1types_1_1TypeBase.html#a7e6939bfafb586b2c2990b485bc5218a">iot::mqtt::types::TypeBase::serialize</a></div><div class="ttdeci">virtual std::vector&lt; char &gt; serialize() const</div><div class="ttdef"><b>Definition</b> <a href="TypeBase_8hpp_source.html#l00082">TypeBase.hpp:82</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="mqtt_2packets_2Pubrec_8h_source.html#l00068">packetIdentifier</a>, and <a class="el" href="TypeBase_8hpp_source.html#l00083">iot::mqtt::types::TypeBase&lt; ValueTypeT &gt;::serialize()</a>.</p>
+<p class="reference">References <a class="el" href="mqtt_2packets_2Pubrec_8h_source.html#l00068">packetIdentifier</a>, and <a class="el" href="TypeBase_8hpp_source.html#l00082">iot::mqtt::types::TypeBase&lt; ValueTypeT &gt;::serialize()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -351,7 +355,7 @@ Here is the call graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceiot.html">iot</a></li><li class="navelem"><a class="el" href="namespaceiot_1_1mqtt.html">mqtt</a></li><li class="navelem"><a class="el" href="namespaceiot_1_1mqtt_1_1packets.html">packets</a></li><li class="navelem"><a class="el" href="classiot_1_1mqtt_1_1packets_1_1Pubrec.html">Pubrec</a></li>
-    <li class="footer">Generated on Sat Apr 26 2025 15:51:49 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Sat Jul 5 2025 22:44:24 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

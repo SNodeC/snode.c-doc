@@ -464,8 +464,8 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">   99</span>        webApp.setOnConnect([webApp](<a class="code hl_typedef" href="namespaceapps_1_1http_1_1tls.html#a0223ca2b2774dfa7effc765820883ab5">SocketConnection</a>* socketConnection) { <span class="comment">// onConnect</span></div>
 <div class="line"><span class="lineno">  100</span>            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;OnConnect &quot;</span> &lt;&lt; webApp.getConfig().getInstanceName();</div>
 <div class="line"><span class="lineno">  101</span> </div>
-<div class="line"><span class="lineno">  102</span>            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;\tLocal: &quot;</span> &lt;&lt; socketConnection-&gt;getLocalAddress().toString();</div>
-<div class="line"><span class="lineno">  103</span>            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;\tPeer:  &quot;</span> &lt;&lt; socketConnection-&gt;getRemoteAddress().toString();</div>
+<div class="line"><span class="lineno">  102</span>            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;  Local: &quot;</span> &lt;&lt; socketConnection-&gt;getLocalAddress().toString();</div>
+<div class="line"><span class="lineno">  103</span>            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;   Peer: &quot;</span> &lt;&lt; socketConnection-&gt;getRemoteAddress().toString();</div>
 <div class="line"><span class="lineno">  104</span> </div>
 <div class="line"><span class="lineno">  105</span>            <span class="comment">/* Enable automatic hostname checks */</span></div>
 <div class="line"><span class="lineno">  106</span>            <span class="comment">// X509_VERIFY_PARAM* param = SSL_get0_param(socketConnection-&gt;getSSL());</span></div>
@@ -560,12 +560,22 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">  195</span>        webApp.setOnDisconnect([webApp](SocketConnection* socketConnection) { <span class="comment">// onDisconnect</span></div>
 <div class="line"><span class="lineno">  196</span>            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;OnDisconnect &quot;</span> &lt;&lt; webApp.getConfig().getInstanceName();</div>
 <div class="line"><span class="lineno">  197</span> </div>
-<div class="line"><span class="lineno">  198</span>            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;\tLocal: &quot;</span> &lt;&lt; socketConnection-&gt;getLocalAddress().toString();</div>
-<div class="line"><span class="lineno">  199</span>            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;\tPeer:  &quot;</span> &lt;&lt; socketConnection-&gt;getRemoteAddress().toString();</div>
-<div class="line"><span class="lineno">  200</span>        });</div>
-<div class="line"><span class="lineno">  201</span> </div>
-<div class="line"><span class="lineno">  202</span>        <span class="keywordflow">return</span> webApp;</div>
-<div class="line"><span class="lineno">  203</span>    }</div>
+<div class="line"><span class="lineno">  198</span>            VLOG(2) &lt;&lt; <span class="stringliteral">&quot;            Local: &quot;</span> &lt;&lt; socketConnection-&gt;getLocalAddress().toString();</div>
+<div class="line"><span class="lineno">  199</span>            VLOG(2) &lt;&lt; <span class="stringliteral">&quot;             Peer: &quot;</span> &lt;&lt; socketConnection-&gt;getRemoteAddress().toString();</div>
+<div class="line"><span class="lineno">  200</span> </div>
+<div class="line"><span class="lineno">  201</span>            VLOG(2) &lt;&lt; <span class="stringliteral">&quot;     Online Since: &quot;</span> &lt;&lt; socketConnection-&gt;getOnlineSince();</div>
+<div class="line"><span class="lineno">  202</span>            VLOG(2) &lt;&lt; <span class="stringliteral">&quot;  Online Duration: &quot;</span> &lt;&lt; socketConnection-&gt;getOnlineDuration();</div>
+<div class="line"><span class="lineno">  203</span> </div>
+<div class="line"><span class="lineno">  204</span>            VLOG(2) &lt;&lt; <span class="stringliteral">&quot;     Total Queued: &quot;</span> &lt;&lt; socketConnection-&gt;getTotalQueued();</div>
+<div class="line"><span class="lineno">  205</span>            VLOG(2) &lt;&lt; <span class="stringliteral">&quot;       Total Sent: &quot;</span> &lt;&lt; socketConnection-&gt;getTotalSent();</div>
+<div class="line"><span class="lineno">  206</span>            VLOG(2) &lt;&lt; <span class="stringliteral">&quot;      Write Delta: &quot;</span> &lt;&lt; socketConnection-&gt;getTotalQueued() - socketConnection-&gt;getTotalSent();</div>
+<div class="line"><span class="lineno">  207</span>            VLOG(2) &lt;&lt; <span class="stringliteral">&quot;       Total Read: &quot;</span> &lt;&lt; socketConnection-&gt;getTotalRead();</div>
+<div class="line"><span class="lineno">  208</span>            VLOG(2) &lt;&lt; <span class="stringliteral">&quot;  Total Processed: &quot;</span> &lt;&lt; socketConnection-&gt;getTotalProcessed();</div>
+<div class="line"><span class="lineno">  209</span>            VLOG(2) &lt;&lt; <span class="stringliteral">&quot;       Read Delta: &quot;</span> &lt;&lt; socketConnection-&gt;getTotalRead() - socketConnection-&gt;getTotalProcessed();</div>
+<div class="line"><span class="lineno">  210</span>        });</div>
+<div class="line"><span class="lineno">  211</span> </div>
+<div class="line"><span class="lineno">  212</span>        <span class="keywordflow">return</span> webApp;</div>
+<div class="line"><span class="lineno">  213</span>    }</div>
 <div class="ttc" id="ahttp_2model_2servers_8h_html_aed80b929c5eb7ce39f27c73b5f05fa96"><div class="ttname"><a href="http_2model_2servers_8h.html#aed80b929c5eb7ce39f27c73b5f05fa96">getRouter</a></div><div class="ttdeci">static express::Router getRouter()</div><div class="ttdef"><b>Definition</b> <a href="http_2model_2servers_8h_source.html#l00068">servers.h:68</a></div></div>
 <div class="ttc" id="anamespaceapps_1_1http_1_1tls_html_a0223ca2b2774dfa7effc765820883ab5"><div class="ttname"><a href="namespaceapps_1_1http_1_1tls.html#a0223ca2b2774dfa7effc765820883ab5">apps::http::tls::SocketConnection</a></div><div class="ttdeci">Client::SocketConnection SocketConnection</div><div class="ttdef"><b>Definition</b> <a href="http_2model_2clients_8h_source.html#l00358">clients.h:358</a></div></div>
 <div class="ttc" id="anamespaceapps_1_1http_1_1tls_html_a4b8475aef3d3098b7f623c329a69a8a8"><div class="ttname"><a href="namespaceapps_1_1http_1_1tls.html#a4b8475aef3d3098b7f623c329a69a8a8">apps::http::tls::WebApp</a></div><div class="ttdeci">express::tls::NET::WebApp WebApp</div><div class="ttdef"><b>Definition</b> <a href="http_2model_2servers_8h_source.html#l00093">servers.h:93</a></div></div>
@@ -585,7 +595,7 @@ Here is the call graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceapps.html">apps</a></li><li class="navelem"><a class="el" href="namespaceapps_1_1http.html">http</a></li><li class="navelem"><a class="el" href="namespaceapps_1_1http_1_1tls.html">tls</a></li>
-    <li class="footer">Generated on Sat Apr 26 2025 15:51:49 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Sat Jul 5 2025 22:44:24 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

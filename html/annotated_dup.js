@@ -223,7 +223,7 @@ var annotated_dup =
             [ "Message", "classiot_1_1mqtt_1_1server_1_1broker_1_1Message.html", "classiot_1_1mqtt_1_1server_1_1broker_1_1Message" ],
             [ "RetainTree", "classiot_1_1mqtt_1_1server_1_1broker_1_1RetainTree.html", "classiot_1_1mqtt_1_1server_1_1broker_1_1RetainTree" ],
             [ "Session", "classiot_1_1mqtt_1_1server_1_1broker_1_1Session.html", "classiot_1_1mqtt_1_1server_1_1broker_1_1Session" ],
-            [ "SubscribtionTree", "classiot_1_1mqtt_1_1server_1_1broker_1_1SubscribtionTree.html", "classiot_1_1mqtt_1_1server_1_1broker_1_1SubscribtionTree" ]
+            [ "SubscriptionTree", "classiot_1_1mqtt_1_1server_1_1broker_1_1SubscriptionTree.html", "classiot_1_1mqtt_1_1server_1_1broker_1_1SubscriptionTree" ]
           ] ],
           [ "packets", "namespaceiot_1_1mqtt_1_1server_1_1packets.html", [
             [ "Connect", "classiot_1_1mqtt_1_1server_1_1packets_1_1Connect.html", "classiot_1_1mqtt_1_1server_1_1packets_1_1Connect" ],
