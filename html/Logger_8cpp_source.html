@@ -149,9 +149,9 @@ $(document).ready(function(){initNavTree('Logger_8cpp_source.html',''); initResi
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>INITIALIZE_EASYLOGGINGPP</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="keyword">namespace</span> logger {</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="keyword">namespace</span> <a class="code hl_namespace" href="namespacelogger.html">logger</a> {</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="classlogger_1_1Logger.html#abab0f18929e134d658ea323245f6cab8">   54</a></span>    <span class="keywordtype">void</span> Logger::init() {</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="classlogger_1_1Logger.html#abab0f18929e134d658ea323245f6cab8">   54</a></span>    <span class="keywordtype">void</span> <a class="code hl_class" href="classlogger_1_1Logger.html">Logger</a>::<a class="code hl_function" href="classlogger_1_1Logger.html#abab0f18929e134d658ea323245f6cab8">init</a>() {</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        el::Configurations conf = *el::Loggers::defaultConfigurations();</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        conf.setGlobally(el::ConfigurationType::Enabled, <span class="stringliteral">&quot;true&quot;</span>);</div>
@@ -171,17 +171,17 @@ $(document).ready(function(){initNavTree('Logger_8cpp_source.html',''); initResi
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        el::Loggers::setDefaultConfigurations(conf, <span class="keyword">true</span>);</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        setVerboseLevel(0);</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        setLogLevel(0);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        <a class="code hl_function" href="classlogger_1_1Logger.html#a31d2cc6f94e95cea600c9579c981875c">setVerboseLevel</a><a class="code hl_function" href="classlogger_1_1Logger.html#a31d2cc6f94e95cea600c9579c981875c">(</a>0<a class="code hl_function" href="classlogger_1_1Logger.html#a31d2cc6f94e95cea600c9579c981875c">)</a>;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <a class="code hl_function" href="classlogger_1_1Logger.html#a7d70e6711ec68f00c5c68946fd030ff9">setLogLevel</a><a class="code hl_function" href="classlogger_1_1Logger.html#a7d70e6711ec68f00c5c68946fd030ff9">(</a>0<a class="code hl_function" href="classlogger_1_1Logger.html#a7d70e6711ec68f00c5c68946fd030ff9">)</a>;</div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    }</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="classlogger_1_1Logger.html#a545211a93eadc019ebe4301426594a69">   78</a></span>    <span class="keywordtype">void</span> Logger::setCustomFormatSpec(<span class="keyword">const</span> <span class="keywordtype">char</span>* format, <span class="keyword">const</span> el::FormatSpecifierValueResolver&amp; resolver) {</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="classlogger_1_1Logger.html#a545211a93eadc019ebe4301426594a69">   78</a></span>    <span class="keywordtype">void</span> <a class="code hl_class" href="classlogger_1_1Logger.html">Logger</a>::<a class="code hl_function" href="classlogger_1_1Logger.html#a545211a93eadc019ebe4301426594a69">setCustomFormatSpec</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* format, <span class="keyword">const</span> el::FormatSpecifierValueResolver&amp; resolver) {</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        el::Helpers::installCustomFormatSpecifier(el::CustomFormatSpecifier(format, resolver));</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    }</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="comment">// Application logging should be done with VLOG(loglevel)</span></div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="comment">// Framework logging should use one of the following levels</span></div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="classlogger_1_1Logger.html#a7d70e6711ec68f00c5c68946fd030ff9">   84</a></span>    <span class="keywordtype">void</span> Logger::setLogLevel(<span class="keywordtype">int</span> level) {</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="classlogger_1_1Logger.html#a7d70e6711ec68f00c5c68946fd030ff9">   84</a></span>    <span class="keywordtype">void</span> <a class="code hl_class" href="classlogger_1_1Logger.html">Logger</a>::<a class="code hl_function" href="classlogger_1_1Logger.html#a7d70e6711ec68f00c5c68946fd030ff9">setLogLevel</a>(<span class="keywordtype">int</span> level) {</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        el::Configurations conf = *el::Loggers::defaultConfigurations();</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        conf.set(el::Level::Trace, el::ConfigurationType::Enabled, <span class="stringliteral">&quot;false&quot;</span>);   <span class="comment">// trace method/function calling</span></div>
@@ -218,13 +218,13 @@ $(document).ready(function(){initNavTree('Logger_8cpp_source.html',''); initResi
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        el::Loggers::setDefaultConfigurations(conf, <span class="keyword">true</span>);</div>
 <div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    }</div>
 <div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno"><a class="line" href="classlogger_1_1Logger.html#a31d2cc6f94e95cea600c9579c981875c">  121</a></span>    <span class="keywordtype">void</span> Logger::setVerboseLevel(<span class="keywordtype">int</span> level) {</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno"><a class="line" href="classlogger_1_1Logger.html#a31d2cc6f94e95cea600c9579c981875c">  121</a></span>    <span class="keywordtype">void</span> <a class="code hl_class" href="classlogger_1_1Logger.html">Logger</a>::<a class="code hl_function" href="classlogger_1_1Logger.html#a31d2cc6f94e95cea600c9579c981875c">setVerboseLevel</a>(<span class="keywordtype">int</span> level) {</div>
 <div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>        <span class="keywordflow">if</span> (level &gt;= 0) {</div>
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>            el::Loggers::setVerboseLevel(<span class="keyword">static_cast</span>&lt;el::base::type::VerboseLevel&gt;(level));</div>
 <div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        }</div>
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    }</div>
 <div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno"><a class="line" href="classlogger_1_1Logger.html#a2fe71814296a418393065c3c7299ff41">  127</a></span>    <span class="keywordtype">void</span> Logger::logToFile(<span class="keyword">const</span> std::string&amp; logFile) {</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno"><a class="line" href="classlogger_1_1Logger.html#a2fe71814296a418393065c3c7299ff41">  127</a></span>    <span class="keywordtype">void</span> <a class="code hl_class" href="classlogger_1_1Logger.html">Logger</a>::<a class="code hl_function" href="classlogger_1_1Logger.html#a2fe71814296a418393065c3c7299ff41">logToFile</a>(<span class="keyword">const</span> std::string&amp; logFile) {</div>
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>        el::Configurations conf = *el::Loggers::defaultConfigurations();</div>
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
 <div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        conf.setGlobally(el::ConfigurationType::Filename, logFile);</div>
@@ -233,7 +233,7 @@ $(document).ready(function(){initNavTree('Logger_8cpp_source.html',''); initResi
 <div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>        el::Loggers::setDefaultConfigurations(conf, <span class="keyword">true</span>);</div>
 <div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    }</div>
 <div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span> </div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno"><a class="line" href="classlogger_1_1Logger.html#abbe17b0b008e0db4cc58ca239f3a4f03">  136</a></span>    <span class="keywordtype">void</span> Logger::setQuiet(<span class="keywordtype">bool</span> quiet) {</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno"><a class="line" href="classlogger_1_1Logger.html#abbe17b0b008e0db4cc58ca239f3a4f03">  136</a></span>    <span class="keywordtype">void</span> <a class="code hl_class" href="classlogger_1_1Logger.html">Logger</a>::<a class="code hl_function" href="classlogger_1_1Logger.html#abbe17b0b008e0db4cc58ca239f3a4f03">setQuiet</a>(<span class="keywordtype">bool</span> quiet) {</div>
 <div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>        el::Configurations conf = *el::Loggers::defaultConfigurations();</div>
 <div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span> </div>
 <div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>        conf.setGlobally(el::ConfigurationType::ToStandardOutput, quiet ? <span class="stringliteral">&quot;false&quot;</span> : <span class="stringliteral">&quot;true&quot;</span>);</div>
@@ -243,16 +243,26 @@ $(document).ready(function(){initNavTree('Logger_8cpp_source.html',''); initResi
 <div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span> </div>
 <div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>} <span class="comment">// namespace logger</span></div>
 <div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span> </div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno"><a class="line" href="namespaceColor.html#a0a74c83ead3176702da8b8249d9c8672">  146</a></span>std::ostream&amp; Color::operator&lt;&lt;(std::ostream&amp; os, Code code) {</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno"><a class="line" href="namespaceColor.html#a0a74c83ead3176702da8b8249d9c8672">  146</a></span>std::ostream&amp; <a class="code hl_namespace" href="namespaceColor.html">Color</a>::operator&lt;&lt;(std::ostream&amp; os, <a class="code hl_enumeration" href="namespaceColor.html#a20a7b04657c1d83fae5d54514d3f1622">Code</a> code) {</div>
 <div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    <span class="keywordflow">return</span> os &lt;&lt; <span class="stringliteral">&quot;\033[&quot;</span> &lt;&lt; <span class="keyword">static_cast</span>&lt;<span class="keywordtype">int</span>&gt;(code) &lt;&lt; <span class="stringliteral">&quot;m&quot;</span>;</div>
 <div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>}</div>
+<div class="ttc" id="aclasslogger_1_1Logger_html"><div class="ttname"><a href="classlogger_1_1Logger.html">logger::Logger</a></div><div class="ttdef"><b>Definition</b> <a href="Logger_8h_source.html#l00096">Logger.h:96</a></div></div>
+<div class="ttc" id="aclasslogger_1_1Logger_html_a2fe71814296a418393065c3c7299ff41"><div class="ttname"><a href="classlogger_1_1Logger.html#a2fe71814296a418393065c3c7299ff41">logger::Logger::logToFile</a></div><div class="ttdeci">static void logToFile(const std::string &amp;logFile)</div><div class="ttdef"><b>Definition</b> <a href="Logger_8cpp_source.html#l00127">Logger.cpp:127</a></div></div>
+<div class="ttc" id="aclasslogger_1_1Logger_html_a31d2cc6f94e95cea600c9579c981875c"><div class="ttname"><a href="classlogger_1_1Logger.html#a31d2cc6f94e95cea600c9579c981875c">logger::Logger::setVerboseLevel</a></div><div class="ttdeci">static void setVerboseLevel(int level)</div><div class="ttdef"><b>Definition</b> <a href="Logger_8cpp_source.html#l00121">Logger.cpp:121</a></div></div>
+<div class="ttc" id="aclasslogger_1_1Logger_html_a545211a93eadc019ebe4301426594a69"><div class="ttname"><a href="classlogger_1_1Logger.html#a545211a93eadc019ebe4301426594a69">logger::Logger::setCustomFormatSpec</a></div><div class="ttdeci">static void setCustomFormatSpec(const char *format, const el::FormatSpecifierValueResolver &amp;resolver)</div><div class="ttdef"><b>Definition</b> <a href="Logger_8cpp_source.html#l00078">Logger.cpp:78</a></div></div>
+<div class="ttc" id="aclasslogger_1_1Logger_html_a7d70e6711ec68f00c5c68946fd030ff9"><div class="ttname"><a href="classlogger_1_1Logger.html#a7d70e6711ec68f00c5c68946fd030ff9">logger::Logger::setLogLevel</a></div><div class="ttdeci">static void setLogLevel(int level)</div><div class="ttdef"><b>Definition</b> <a href="Logger_8cpp_source.html#l00084">Logger.cpp:84</a></div></div>
+<div class="ttc" id="aclasslogger_1_1Logger_html_abab0f18929e134d658ea323245f6cab8"><div class="ttname"><a href="classlogger_1_1Logger.html#abab0f18929e134d658ea323245f6cab8">logger::Logger::init</a></div><div class="ttdeci">static void init()</div><div class="ttdef"><b>Definition</b> <a href="Logger_8cpp_source.html#l00054">Logger.cpp:54</a></div></div>
+<div class="ttc" id="aclasslogger_1_1Logger_html_abbe17b0b008e0db4cc58ca239f3a4f03"><div class="ttname"><a href="classlogger_1_1Logger.html#abbe17b0b008e0db4cc58ca239f3a4f03">logger::Logger::setQuiet</a></div><div class="ttdeci">static void setQuiet(bool quiet=true)</div><div class="ttdef"><b>Definition</b> <a href="Logger_8cpp_source.html#l00136">Logger.cpp:136</a></div></div>
+<div class="ttc" id="anamespaceColor_html"><div class="ttname"><a href="namespaceColor.html">Color</a></div><div class="ttdef"><b>Definition</b> <a href="Logger_8h_source.html#l00064">Logger.h:64</a></div></div>
+<div class="ttc" id="anamespaceColor_html_a20a7b04657c1d83fae5d54514d3f1622"><div class="ttname"><a href="namespaceColor.html#a20a7b04657c1d83fae5d54514d3f1622">Color::Code</a></div><div class="ttdeci">Code</div><div class="ttdef"><b>Definition</b> <a href="Logger_8h_source.html#l00066">Logger.h:66</a></div></div>
+<div class="ttc" id="anamespacelogger_html"><div class="ttname"><a href="namespacelogger.html">logger</a></div><div class="ttdef"><b>Definition</b> <a href="Logger_8h_source.html#l00094">Logger.h:94</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_9381a7bbd03577d6d8720c7f35c94ffa.html">log</a></li><li class="navelem"><a class="el" href="Logger_8cpp.html">Logger.cpp</a></li>
-    <li class="footer">Generated on Sat Jul 5 2025 22:42:25 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Fri Sep 12 2025 18:57:10 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

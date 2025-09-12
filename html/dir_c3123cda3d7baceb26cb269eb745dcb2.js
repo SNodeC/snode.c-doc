@@ -6,7 +6,7 @@ var dir_c3123cda3d7baceb26cb269eb745dcb2 =
     [ "RequestParser.h", "RequestParser_8h.html", "RequestParser_8h" ],
     [ "Response.cpp", "web_2http_2server_2Response_8cpp.html", "web_2http_2server_2Response_8cpp" ],
     [ "Response.h", "web_2http_2server_2Response_8h.html", "web_2http_2server_2Response_8h" ],
-    [ "Server.h", "server_2Server_8h.html", "server_2Server_8h" ],
+    [ "Server.h", "web_2http_2server_2Server_8h.html", "web_2http_2server_2Server_8h" ],
     [ "SocketContext.cpp", "web_2http_2server_2SocketContext_8cpp.html", null ],
     [ "SocketContext.h", "web_2http_2server_2SocketContext_8h.html", "web_2http_2server_2SocketContext_8h" ],
     [ "SocketContextFactory.cpp", "web_2http_2server_2SocketContextFactory_8cpp.html", null ],

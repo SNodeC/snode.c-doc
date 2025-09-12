@@ -516,15 +516,15 @@ template&lt;typename <a class="el" href="classweb_1_1http_1_1SocketContextUpgrad
 <div class="line"><span class="lineno">   97</span> </div>
 <div class="line"><span class="lineno">   98</span>                <span class="keywordflow">if</span> (socketContextUpgradeFactory != <span class="keyword">nullptr</span>) {</div>
 <div class="line"><span class="lineno">   99</span>                    <span class="keywordflow">if</span> (<a class="code hl_function" href="classweb_1_1http_1_1SocketContextUpgradeFactorySelector.html#ae19db7f28cb2e9f2c493e0616877ba6b">add</a>(socketContextUpgradeFactory, handle)) {</div>
-<div class="line"><span class="lineno">  100</span>                        LOG(DEBUG) &lt;&lt; <span class="stringliteral">&quot;HTTP: SocketContextUpgradeFactory created successful: &quot;</span> &lt;&lt; socketContextUpgradeName;</div>
+<div class="line"><span class="lineno">  100</span>                        LOG(TRACE) &lt;&lt; <span class="stringliteral">&quot;HTTP: SocketContextUpgradeFactory create success: &quot;</span> &lt;&lt; socketContextUpgradeName;</div>
 <div class="line"><span class="lineno">  101</span>                    } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  102</span>                        LOG(DEBUG) &lt;&lt; <span class="stringliteral">&quot;HTTP: UpgradeSocketContext already existing. Not using: &quot;</span> &lt;&lt; socketContextUpgradeName;</div>
+<div class="line"><span class="lineno">  102</span>                        LOG(TRACE) &lt;&lt; <span class="stringliteral">&quot;HTTP: SocketContextUpgradeFactory already existing: &quot;</span> &lt;&lt; socketContextUpgradeName;</div>
 <div class="line"><span class="lineno">  103</span>                        <span class="keyword">delete</span> socketContextUpgradeFactory;</div>
 <div class="line"><span class="lineno">  104</span>                        socketContextUpgradeFactory = <span class="keyword">nullptr</span>;</div>
 <div class="line"><span class="lineno">  105</span>                        <a class="code hl_function" href="classcore_1_1DynamicLoader.html#a42ac52cda1ec4534f1cc9e225dcb31b0">core::DynamicLoader::dlClose</a>(handle);</div>
 <div class="line"><span class="lineno">  106</span>                    }</div>
 <div class="line"><span class="lineno">  107</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  108</span>                    LOG(ERROR) &lt;&lt; <span class="stringliteral">&quot;HTTP: SocketContextUpgradeFactory not created: &quot;</span> &lt;&lt; socketContextUpgradeName;</div>
+<div class="line"><span class="lineno">  108</span>                    LOG(ERROR) &lt;&lt; <span class="stringliteral">&quot;HTTP: SocketContextUpgradeFactory create failed: &quot;</span> &lt;&lt; socketContextUpgradeName;</div>
 <div class="line"><span class="lineno">  109</span>                    <a class="code hl_function" href="classcore_1_1DynamicLoader.html#a42ac52cda1ec4534f1cc9e225dcb31b0">core::DynamicLoader::dlClose</a>(handle);</div>
 <div class="line"><span class="lineno">  110</span>                }</div>
 <div class="line"><span class="lineno">  111</span>            } <span class="keywordflow">else</span> {</div>
@@ -783,7 +783,7 @@ template&lt;typename SocketContextUpgradeFactoryT &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceweb.html">web</a></li><li class="navelem"><a class="el" href="namespaceweb_1_1http.html">http</a></li><li class="navelem"><a class="el" href="classweb_1_1http_1_1SocketContextUpgradeFactorySelector.html">SocketContextUpgradeFactorySelector</a></li>
-    <li class="footer">Generated on Sat Jul 5 2025 22:44:25 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Fri Sep 12 2025 18:59:00 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

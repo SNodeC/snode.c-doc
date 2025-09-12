@@ -26,7 +26,7 @@ var classutils_1_1Config =
     [ "parse1", "classutils_1_1Config.html#a0da9402c3269b43baedbf5f18e8ce67d", null ],
     [ "parse2", "classutils_1_1Config.html#a64c65019364b162f92c0f1eb1fb26ba1", null ],
     [ "removeInstance", "classutils_1_1Config.html#aa75c679e1a1a09be88df94d81901d464", null ],
-    [ "required", "classutils_1_1Config.html#ab93445a04bef08b0a60cd3c90c17482f", null ],
+    [ "required", "classutils_1_1Config.html#afd86b60b9eb111b48761fd77d6320b4c", null ],
     [ "terminate", "classutils_1_1Config.html#ad88e08009a309e143a17fd63b477cdbe", null ],
     [ "aliases", "classutils_1_1Config.html#aa96c9b4e2274c77f4e64e8c281825c03", null ],
     [ "app", "classutils_1_1Config.html#a6d6c3a6b7c77d7f63f69b6a6823cccf3", null ],
@@ -38,12 +38,14 @@ var classutils_1_1Config =
     [ "daemonizeOpt", "classutils_1_1Config.html#aebf83ee0d2bb229abf3e6632be439c43", null ],
     [ "enforceLogFileOpt", "classutils_1_1Config.html#ac2a965618ccd087c53898ef2a7113388", null ],
     [ "groupNameOpt", "classutils_1_1Config.html#a77640f705b1c5d9130425d6382b12fde", null ],
+    [ "helpApp", "classutils_1_1Config.html#ac9cfb7e88b0ca0699d34e0b47c963175", null ],
     [ "logDirectory", "classutils_1_1Config.html#ad6436881181bbd9fe0ae1e96c0cbae82", null ],
     [ "logFileOpt", "classutils_1_1Config.html#aba2faeb0b03f445e691bae4c9f1a62c9", null ],
     [ "logLevelOpt", "classutils_1_1Config.html#a3f78a0bd8709f7321b269697983ca6bd", null ],
     [ "pidDirectory", "classutils_1_1Config.html#a9eb8d3b3c99a1203b56c4c522e4bccf9", null ],
     [ "quietOpt", "classutils_1_1Config.html#a8aa29691ff5769bc30a734fe50a46d90", null ],
     [ "sectionFormatter", "classutils_1_1Config.html#aa898ba1c8bd3eced8b1127ca6325c9c8", null ],
+    [ "subParse", "classutils_1_1Config.html#a1eadbe577f383479b6464d71483edae4", null ],
     [ "userNameOpt", "classutils_1_1Config.html#ae3d4522fe3d5172b72726c377418de97", null ],
     [ "verboseLevelOpt", "classutils_1_1Config.html#a885a3c5db803f103ed3efbf8e607a4f5", null ]
 ];

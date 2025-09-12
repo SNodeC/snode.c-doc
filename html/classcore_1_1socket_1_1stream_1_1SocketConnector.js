@@ -3,7 +3,7 @@ var classcore_1_1socket_1_1stream_1_1SocketConnector =
     [ "Config", "classcore_1_1socket_1_1stream_1_1SocketConnector.html#a45a0ca2fcb8c2f3fe870d8469d4972f4", null ],
     [ "PhysicalClientSocket", "classcore_1_1socket_1_1stream_1_1SocketConnector.html#aa1cab9eee4a6038352eb9e9328f2083b", null ],
     [ "SocketAddress", "classcore_1_1socket_1_1stream_1_1SocketConnector.html#a129471adf94d653baa0e0add8f570d8e", null ],
-    [ "SocketConnection", "classcore_1_1socket_1_1stream_1_1SocketConnector.html#a4bdb15720d6610c3009b14fade335b45", null ],
+    [ "SocketConnection", "classcore_1_1socket_1_1stream_1_1SocketConnector.html#a63cb248a435c889e919b360e3797e08e", null ],
     [ "SocketConnector", "classcore_1_1socket_1_1stream_1_1SocketConnector.html#adfc9c27364cc6402e2cf8d14e5f642ab", null ],
     [ "SocketConnector", "classcore_1_1socket_1_1stream_1_1SocketConnector.html#a38a0ce2d9d4a212145c3021b3ab3460f", null ],
     [ "~SocketConnector", "classcore_1_1socket_1_1stream_1_1SocketConnector.html#aed7bb767910f9cfa4d742aef23625953", null ],

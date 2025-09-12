@@ -40,8 +40,7 @@ var classweb_1_1http_1_1server_1_1Response =
     [ "headers", "classweb_1_1http_1_1server_1_1Response.html#a74e3f6e47a393a423668e35958c915ab", null ],
     [ "httpMajor", "classweb_1_1http_1_1server_1_1Response.html#acd1edf503d2c9f79ff97145b1d4c40ae", null ],
     [ "httpMinor", "classweb_1_1http_1_1server_1_1Response.html#a04b1e287957d2d2f2425a14043101909", null ],
-    [ "socketContext", "classweb_1_1http_1_1server_1_1Response.html#a31c1100bbbca1612c0f9f17d4d55d858", null ],
-    [ "socketContextUpgrade", "classweb_1_1http_1_1server_1_1Response.html#aa12a7246ba9da57a391d0358d48f0a26", null ],
+    [ "socketContext", "classweb_1_1http_1_1server_1_1Response.html#aaddaf6b6c22fb143d9ca31c125404aea", null ],
     [ "statusCode", "classweb_1_1http_1_1server_1_1Response.html#ae13f2139d51211dedd40bca1751e1120", null ],
     [ "trailer", "classweb_1_1http_1_1server_1_1Response.html#a72dd0234ffbb51e7e56b6d2ed226452f", null ],
     [ "transferEncoding", "classweb_1_1http_1_1server_1_1Response.html#a82f26623d9ad3ef44abb74d35aaba7d0", null ]

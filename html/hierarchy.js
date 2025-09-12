@@ -1,9 +1,5 @@
 var hierarchy =
 [
-    [ "core::socket::stream:: SocketConnectionT", null, [
-      [ "core::socket::stream::legacy::SocketConnection< PhysicalSocketT >", "classcore_1_1socket_1_1stream_1_1legacy_1_1SocketConnection.html", null ],
-      [ "core::socket::stream::tls::SocketConnection< PhysicalSocketT >", "classcore_1_1socket_1_1stream_1_1tls_1_1SocketConnection.html", null ]
-    ] ],
     [ "utils::AttributeProxy< Attribute >", "classutils_1_1AttributeProxy.html", null ],
     [ "iot::mqtt::server::broker::Broker", "classiot_1_1mqtt_1_1server_1_1broker_1_1Broker.html", null ],
     [ "web::http::decoder::Chunked::Chunk", "classweb_1_1http_1_1decoder_1_1Chunked_1_1Chunk.html", null ],
@@ -393,8 +389,16 @@ var hierarchy =
           [ "apps::towercalculator::KeyboardReader", "classapps_1_1towercalculator_1_1KeyboardReader.html", null ],
           [ "core::pipe::PipeSink", "classcore_1_1pipe_1_1PipeSink.html", null ],
           [ "core::socket::stream::SocketReader", "classcore_1_1socket_1_1stream_1_1SocketReader.html", [
-            [ "core::socket::stream::legacy::SocketReader", "classcore_1_1socket_1_1stream_1_1legacy_1_1SocketReader.html", null ],
-            [ "core::socket::stream::tls::SocketReader", "classcore_1_1socket_1_1stream_1_1tls_1_1SocketReader.html", null ]
+            [ "core::socket::stream::legacy::SocketReader", "classcore_1_1socket_1_1stream_1_1legacy_1_1SocketReader.html", [
+              [ "core::socket::stream::SocketConnectionT< PhysicalSocketT, core::socket::stream::legacy::SocketReader, core::socket::stream::legacy::SocketWriter, ConfigT >", "classcore_1_1socket_1_1stream_1_1SocketConnectionT.html", [
+                [ "core::socket::stream::legacy::SocketConnection< PhysicalSocketT, ConfigT >", "classcore_1_1socket_1_1stream_1_1legacy_1_1SocketConnection.html", null ]
+              ] ]
+            ] ],
+            [ "core::socket::stream::tls::SocketReader", "classcore_1_1socket_1_1stream_1_1tls_1_1SocketReader.html", [
+              [ "core::socket::stream::SocketConnectionT< PhysicalSocketT, core::socket::stream::tls::SocketReader, core::socket::stream::tls::SocketWriter, ConfigT >", "classcore_1_1socket_1_1stream_1_1SocketConnectionT.html", [
+                [ "core::socket::stream::tls::SocketConnection< PhysicalSocketT, ConfigT >", "classcore_1_1socket_1_1stream_1_1tls_1_1SocketConnection.html", null ]
+              ] ]
+            ] ]
           ] ],
           [ "core::socket::stream::tls::TLSHandshake", "classcore_1_1socket_1_1stream_1_1tls_1_1TLSHandshake.html", null ],
           [ "core::socket::stream::tls::TLSShutdown", "classcore_1_1socket_1_1stream_1_1tls_1_1TLSShutdown.html", null ],
@@ -403,8 +407,12 @@ var hierarchy =
         [ "core::eventreceiver::WriteEventReceiver", "classcore_1_1eventreceiver_1_1WriteEventReceiver.html", [
           [ "core::pipe::PipeSource", "classcore_1_1pipe_1_1PipeSource.html", null ],
           [ "core::socket::stream::SocketWriter", "classcore_1_1socket_1_1stream_1_1SocketWriter.html", [
-            [ "core::socket::stream::legacy::SocketWriter", "classcore_1_1socket_1_1stream_1_1legacy_1_1SocketWriter.html", null ],
-            [ "core::socket::stream::tls::SocketWriter", "classcore_1_1socket_1_1stream_1_1tls_1_1SocketWriter.html", null ]
+            [ "core::socket::stream::legacy::SocketWriter", "classcore_1_1socket_1_1stream_1_1legacy_1_1SocketWriter.html", [
+              [ "core::socket::stream::SocketConnectionT< PhysicalSocketT, core::socket::stream::legacy::SocketReader, core::socket::stream::legacy::SocketWriter, ConfigT >", "classcore_1_1socket_1_1stream_1_1SocketConnectionT.html", null ]
+            ] ],
+            [ "core::socket::stream::tls::SocketWriter", "classcore_1_1socket_1_1stream_1_1tls_1_1SocketWriter.html", [
+              [ "core::socket::stream::SocketConnectionT< PhysicalSocketT, core::socket::stream::tls::SocketReader, core::socket::stream::tls::SocketWriter, ConfigT >", "classcore_1_1socket_1_1stream_1_1SocketConnectionT.html", null ]
+            ] ]
           ] ],
           [ "core::socket::stream::tls::TLSHandshake", "classcore_1_1socket_1_1stream_1_1tls_1_1TLSHandshake.html", null ],
           [ "core::socket::stream::tls::TLSShutdown", "classcore_1_1socket_1_1stream_1_1tls_1_1TLSShutdown.html", null ],
@@ -650,7 +658,9 @@ var hierarchy =
       [ "web::http::client::Client< SocketClientT >", "classweb_1_1http_1_1client_1_1Client.html", null ]
     ] ],
     [ "core::socket::stream::SocketConnection", "classcore_1_1socket_1_1stream_1_1SocketConnection.html", [
-      [ "core::socket::stream::SocketConnectionT< PhysicalSocketT, SocketReaderT, SocketWriterT >", "classcore_1_1socket_1_1stream_1_1SocketConnectionT.html", null ]
+      [ "core::socket::stream::SocketConnectionT< PhysicalSocketT, core::socket::stream::legacy::SocketReader, core::socket::stream::legacy::SocketWriter, ConfigT >", "classcore_1_1socket_1_1stream_1_1SocketConnectionT.html", null ],
+      [ "core::socket::stream::SocketConnectionT< PhysicalSocketT, core::socket::stream::tls::SocketReader, core::socket::stream::tls::SocketWriter, ConfigT >", "classcore_1_1socket_1_1stream_1_1SocketConnectionT.html", null ],
+      [ "core::socket::stream::SocketConnectionT< PhysicalSocketT, SocketReaderT, SocketWriterT, ConfigT >", "classcore_1_1socket_1_1stream_1_1SocketConnectionT.html", null ]
     ] ],
     [ "core::socket::SocketContext", "classcore_1_1socket_1_1SocketContext.html", [
       [ "core::socket::stream::SocketContext", "classcore_1_1socket_1_1stream_1_1SocketContext.html", [
@@ -705,13 +715,13 @@ var hierarchy =
       [ "web::http::server::SocketContextUpgradeFactorySelector", "classweb_1_1http_1_1server_1_1SocketContextUpgradeFactorySelector.html", null ]
     ] ],
     [ "SocketReaderT", null, [
-      [ "core::socket::stream::SocketConnectionT< PhysicalSocketT, SocketReaderT, SocketWriterT >", "classcore_1_1socket_1_1stream_1_1SocketConnectionT.html", null ]
+      [ "core::socket::stream::SocketConnectionT< PhysicalSocketT, SocketReaderT, SocketWriterT, ConfigT >", "classcore_1_1socket_1_1stream_1_1SocketConnectionT.html", null ]
     ] ],
     [ "SocketServerT", null, [
       [ "web::http::server::Server< SocketServerT >", "classweb_1_1http_1_1server_1_1Server.html", null ]
     ] ],
     [ "SocketWriterT", null, [
-      [ "core::socket::stream::SocketConnectionT< PhysicalSocketT, SocketReaderT, SocketWriterT >", "classcore_1_1socket_1_1stream_1_1SocketConnectionT.html", null ]
+      [ "core::socket::stream::SocketConnectionT< PhysicalSocketT, SocketReaderT, SocketWriterT, ConfigT >", "classcore_1_1socket_1_1stream_1_1SocketConnectionT.html", null ]
     ] ],
     [ "core::pipe::Source", "classcore_1_1pipe_1_1Source.html", [
       [ "core::file::FileReader", "classcore_1_1file_1_1FileReader.html", null ]

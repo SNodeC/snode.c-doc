@@ -8,6 +8,7 @@ var classnet_1_1in_1_1SocketAddress =
     [ "SocketAddress", "classnet_1_1in_1_1SocketAddress.html#a057d046a3dfdb55eb9ceb9793aa0495b", null ],
     [ "SocketAddress", "classnet_1_1in_1_1SocketAddress.html#a9baecfd0d2c08553586614eb8c075869", null ],
     [ "getCanonName", "classnet_1_1in_1_1SocketAddress.html#a6777145a27013183f86e1cd6e7b0e4ce", null ],
+    [ "getEndpoint", "classnet_1_1in_1_1SocketAddress.html#aa8bda208f804cb66ccf4655ea73150a1", null ],
     [ "getHost", "classnet_1_1in_1_1SocketAddress.html#a479aee4d53f3256f88ae06781d70bcac", null ],
     [ "getPort", "classnet_1_1in_1_1SocketAddress.html#af752b8cd61e0f80598ae6a71404ad40a", null ],
     [ "init", "classnet_1_1in_1_1SocketAddress.html#af66002eac6563751350abf91e6cb392e", null ],
