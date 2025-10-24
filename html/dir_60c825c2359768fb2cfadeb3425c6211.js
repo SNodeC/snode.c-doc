@@ -8,6 +8,8 @@ var dir_60c825c2359768fb2cfadeb3425c6211 =
     [ "SendFragmentCommand.h", "SendFragmentCommand_8h.html", "SendFragmentCommand_8h" ],
     [ "SendHeaderCommand.cpp", "SendHeaderCommand_8cpp.html", null ],
     [ "SendHeaderCommand.h", "SendHeaderCommand_8h.html", "SendHeaderCommand_8h" ],
+    [ "SseCommand.cpp", "SseCommand_8cpp.html", null ],
+    [ "SseCommand.h", "SseCommand_8h.html", "SseCommand_8h" ],
     [ "UpgradeCommand.cpp", "UpgradeCommand_8cpp.html", null ],
     [ "UpgradeCommand.h", "UpgradeCommand_8h.html", "UpgradeCommand_8h" ]
 ];

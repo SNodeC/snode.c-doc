@@ -1,8 +1,10 @@
 var namespaceweb_1_1http_1_1client =
 [
     [ "commands", "namespaceweb_1_1http_1_1client_1_1commands.html", "namespaceweb_1_1http_1_1client_1_1commands" ],
+    [ "tools", "namespaceweb_1_1http_1_1client_1_1tools.html", "namespaceweb_1_1http_1_1client_1_1tools" ],
     [ "Client", "classweb_1_1http_1_1client_1_1Client.html", "classweb_1_1http_1_1client_1_1Client" ],
     [ "ConfigHTTP", "classweb_1_1http_1_1client_1_1ConfigHTTP.html", "classweb_1_1http_1_1client_1_1ConfigHTTP" ],
+    [ "MasterRequest", "classweb_1_1http_1_1client_1_1MasterRequest.html", "classweb_1_1http_1_1client_1_1MasterRequest" ],
     [ "Request", "classweb_1_1http_1_1client_1_1Request.html", "classweb_1_1http_1_1client_1_1Request" ],
     [ "RequestCommand", "classweb_1_1http_1_1client_1_1RequestCommand.html", "classweb_1_1http_1_1client_1_1RequestCommand" ],
     [ "Response", "classweb_1_1http_1_1client_1_1Response.html", "classweb_1_1http_1_1client_1_1Response" ],

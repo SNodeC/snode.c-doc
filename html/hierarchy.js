@@ -5,6 +5,7 @@ var hierarchy =
     [ "web::http::decoder::Chunked::Chunk", "classweb_1_1http_1_1decoder_1_1Chunked_1_1Chunk.html", null ],
     [ "web::http::ciLess", "structweb_1_1http_1_1ciLess.html", null ],
     [ "utils::Config", "classutils_1_1Config.html", null ],
+    [ "web::http::client::tools::EventSourceT< Client >::Config", "structweb_1_1http_1_1client_1_1tools_1_1EventSourceT_1_1Config.html", null ],
     [ "net::in6::config::ConfigAddress", null, [
       [ "net::config::stream::ConfigSocketClient< net::in6::config::ConfigAddress >", "classnet_1_1config_1_1stream_1_1ConfigSocketClient.html", [
         [ "net::in6::stream::config::ConfigSocketClient", "classnet_1_1in6_1_1stream_1_1config_1_1ConfigSocketClient.html", [
@@ -352,6 +353,33 @@ var hierarchy =
     [ "core::DynamicLoader", "classcore_1_1DynamicLoader.html", null ],
     [ "web::websocket::Receiver::ELength2", "unionweb_1_1websocket_1_1Receiver_1_1ELength2.html", null ],
     [ "web::websocket::Receiver::ELength8", "unionweb_1_1websocket_1_1Receiver_1_1ELength8.html", null ],
+    [ "std::enable_shared_from_this", null, [
+      [ "web::http::client::tools::EventSourceT< web::http::legacy::in6::Client >", "classweb_1_1http_1_1client_1_1tools_1_1EventSourceT.html", [
+        [ "web::http::legacy::in6::EventSource", "classweb_1_1http_1_1legacy_1_1in6_1_1EventSource.html", null ]
+      ] ],
+      [ "web::http::client::tools::EventSourceT< web::http::legacy::in::Client >", "classweb_1_1http_1_1client_1_1tools_1_1EventSourceT.html", [
+        [ "web::http::legacy::in::EventSource", "classweb_1_1http_1_1legacy_1_1in_1_1EventSource.html", null ]
+      ] ],
+      [ "web::http::client::tools::EventSourceT< web::http::legacy::rc::Client >", "classweb_1_1http_1_1client_1_1tools_1_1EventSourceT.html", [
+        [ "web::http::legacy::rc::EventSource", "classweb_1_1http_1_1legacy_1_1rc_1_1EventSource.html", null ]
+      ] ],
+      [ "web::http::client::tools::EventSourceT< web::http::legacy::un::Client >", "classweb_1_1http_1_1client_1_1tools_1_1EventSourceT.html", [
+        [ "web::http::legacy::un::EventSource", "classweb_1_1http_1_1legacy_1_1un_1_1EventSource.html", null ]
+      ] ],
+      [ "web::http::client::tools::EventSourceT< web::http::tls::in6::Client >", "classweb_1_1http_1_1client_1_1tools_1_1EventSourceT.html", [
+        [ "web::http::tls::in6::EventSource", "classweb_1_1http_1_1tls_1_1in6_1_1EventSource.html", null ]
+      ] ],
+      [ "web::http::client::tools::EventSourceT< web::http::tls::in::Client >", "classweb_1_1http_1_1client_1_1tools_1_1EventSourceT.html", [
+        [ "web::http::tls::in::EventSource", "classweb_1_1http_1_1tls_1_1in_1_1EventSource.html", null ]
+      ] ],
+      [ "web::http::client::tools::EventSourceT< web::http::tls::rc::Client >", "classweb_1_1http_1_1client_1_1tools_1_1EventSourceT.html", [
+        [ "web::http::tls::rc::EventSource", "classweb_1_1http_1_1tls_1_1rc_1_1EventSource.html", null ]
+      ] ],
+      [ "web::http::client::tools::EventSourceT< web::http::tls::un::Client >", "classweb_1_1http_1_1client_1_1tools_1_1EventSourceT.html", [
+        [ "web::http::tls::un::EventSource", "classweb_1_1http_1_1tls_1_1un_1_1EventSource.html", null ]
+      ] ],
+      [ "web::http::client::tools::EventSourceT< Client >", "classweb_1_1http_1_1client_1_1tools_1_1EventSourceT.html", null ]
+    ] ],
     [ "core::multiplexer::epoll::DescriptorEventPublisher::EPollEvents", "classcore_1_1multiplexer_1_1epoll_1_1DescriptorEventPublisher_1_1EPollEvents.html", null ],
     [ "core::Event", "classcore_1_1Event.html", null ],
     [ "core::EventLoop", "classcore_1_1EventLoop.html", null ],
@@ -428,6 +456,17 @@ var hierarchy =
       [ "database::mariadb::MariaDBCommandStartEvent", "classdatabase_1_1mariadb_1_1MariaDBCommandStartEvent.html", null ],
       [ "iot::mqtt::OnReceivedFromPeerEvent", "classiot_1_1mqtt_1_1OnReceivedFromPeerEvent.html", null ]
     ] ],
+    [ "web::http::client::tools::EventSource", "classweb_1_1http_1_1client_1_1tools_1_1EventSource.html", [
+      [ "web::http::client::tools::EventSourceT< web::http::legacy::in6::Client >", "classweb_1_1http_1_1client_1_1tools_1_1EventSourceT.html", null ],
+      [ "web::http::client::tools::EventSourceT< web::http::legacy::in::Client >", "classweb_1_1http_1_1client_1_1tools_1_1EventSourceT.html", null ],
+      [ "web::http::client::tools::EventSourceT< web::http::legacy::rc::Client >", "classweb_1_1http_1_1client_1_1tools_1_1EventSourceT.html", null ],
+      [ "web::http::client::tools::EventSourceT< web::http::legacy::un::Client >", "classweb_1_1http_1_1client_1_1tools_1_1EventSourceT.html", null ],
+      [ "web::http::client::tools::EventSourceT< web::http::tls::in6::Client >", "classweb_1_1http_1_1client_1_1tools_1_1EventSourceT.html", null ],
+      [ "web::http::client::tools::EventSourceT< web::http::tls::in::Client >", "classweb_1_1http_1_1client_1_1tools_1_1EventSourceT.html", null ],
+      [ "web::http::client::tools::EventSourceT< web::http::tls::rc::Client >", "classweb_1_1http_1_1client_1_1tools_1_1EventSourceT.html", null ],
+      [ "web::http::client::tools::EventSourceT< web::http::tls::un::Client >", "classweb_1_1http_1_1client_1_1tools_1_1EventSourceT.html", null ],
+      [ "web::http::client::tools::EventSourceT< Client >", "classweb_1_1http_1_1client_1_1tools_1_1EventSourceT.html", null ]
+    ] ],
     [ "std::exception", null, [
       [ "std::runtime_error", null, [
         [ "core::socket::SocketAddress::BadSocketAddress", "classcore_1_1socket_1_1SocketAddress_1_1BadSocketAddress.html", null ],
@@ -481,6 +520,7 @@ var hierarchy =
     ] ],
     [ "database::mariadb::MariaDBConnectionDetails", "structdatabase_1_1mariadb_1_1MariaDBConnectionDetails.html", null ],
     [ "iot::mqtt::server::broker::Message", "classiot_1_1mqtt_1_1server_1_1broker_1_1Message.html", null ],
+    [ "web::http::client::tools::EventSource::MessageEvent", "structweb_1_1http_1_1client_1_1tools_1_1EventSource_1_1MessageEvent.html", null ],
     [ "web::http::MimeTypes", "classweb_1_1http_1_1MimeTypes.html", null ],
     [ "express::MountPoint", "structexpress_1_1MountPoint.html", null ],
     [ "iot::mqtt::Mqtt", "classiot_1_1mqtt_1_1Mqtt.html", [
@@ -560,12 +600,16 @@ var hierarchy =
         [ "web::websocket::SocketContextUpgrade< SubProtocolT, RequestT, ResponseT >", "classweb_1_1websocket_1_1SocketContextUpgrade.html", null ]
       ] ]
     ] ],
+    [ "web::http::client::Request", "classweb_1_1http_1_1client_1_1Request.html", [
+      [ "web::http::client::MasterRequest", "classweb_1_1http_1_1client_1_1MasterRequest.html", null ]
+    ] ],
     [ "web::http::server::Request", "classweb_1_1http_1_1server_1_1Request.html", null ],
     [ "web::http::client::RequestCommand", "classweb_1_1http_1_1client_1_1RequestCommand.html", [
       [ "web::http::client::commands::EndCommand", "classweb_1_1http_1_1client_1_1commands_1_1EndCommand.html", null ],
       [ "web::http::client::commands::SendFileCommand", "classweb_1_1http_1_1client_1_1commands_1_1SendFileCommand.html", null ],
       [ "web::http::client::commands::SendFragmentCommand", "classweb_1_1http_1_1client_1_1commands_1_1SendFragmentCommand.html", null ],
       [ "web::http::client::commands::SendHeaderCommand", "classweb_1_1http_1_1client_1_1commands_1_1SendHeaderCommand.html", null ],
+      [ "web::http::client::commands::SseCommand", "classweb_1_1http_1_1client_1_1commands_1_1SseCommand.html", null ],
       [ "web::http::client::commands::UpgradeCommand", "classweb_1_1http_1_1client_1_1commands_1_1UpgradeCommand.html", null ]
     ] ],
     [ "express::Response", "classexpress_1_1Response.html", null ],
@@ -591,9 +635,10 @@ var hierarchy =
       [ "iot::mqtt::server::broker::Session", "classiot_1_1mqtt_1_1server_1_1broker_1_1Session.html", null ]
     ] ],
     [ "utils::SHA1", "classutils_1_1SHA1.html", null ],
+    [ "web::http::client::tools::EventSource::SharedState", "structweb_1_1http_1_1client_1_1tools_1_1EventSource_1_1SharedState.html", null ],
     [ "utils::SingleAttributeInjector", "classutils_1_1SingleAttributeInjector.html", null ],
     [ "core::pipe::Sink", "classcore_1_1pipe_1_1Sink.html", [
-      [ "web::http::client::Request", "classweb_1_1http_1_1client_1_1Request.html", null ],
+      [ "web::http::client::MasterRequest", "classweb_1_1http_1_1client_1_1MasterRequest.html", null ],
       [ "web::http::server::Response", "classweb_1_1http_1_1server_1_1Response.html", null ]
     ] ],
     [ "core::SNodeC", "classcore_1_1SNodeC.html", null ],

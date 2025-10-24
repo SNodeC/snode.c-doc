@@ -21,6 +21,10 @@ var namespaceweb_1_1http =
       [ "Keep", "namespaceweb_1_1http.html#ac27fdcf348c7472940ecd0e34342dca1a19331c4aeb7eb71943963ec94adb057e", null ],
       [ "Close", "namespaceweb_1_1http.html#ac27fdcf348c7472940ecd0e34342dca1a31333582a62633255ac3791bd7f5af0b", null ]
     ] ],
+    [ "ContentType", "namespaceweb_1_1http.html#ad399eea57779ac5f97cc0c1cd0851ff7", [
+      [ "Normal", "namespaceweb_1_1http.html#ad399eea57779ac5f97cc0c1cd0851ff7afbfe7011c815582fd99d34ae45014fc7", null ],
+      [ "EventStream", "namespaceweb_1_1http.html#ad399eea57779ac5f97cc0c1cd0851ff7a34ffbef8be46da1f0b32e23cafa6e565", null ]
+    ] ],
     [ "TransferEncoding", "namespaceweb_1_1http.html#a40edb0fffda79adf1a8a5b95fdd6e7b2", [
       [ "HTTP10", "namespaceweb_1_1http.html#a40edb0fffda79adf1a8a5b95fdd6e7b2a1658d985aca123ee47d2e16a4aff73a6", null ],
       [ "Identity", "namespaceweb_1_1http.html#a40edb0fffda79adf1a8a5b95fdd6e7b2ac9c5c65fb4af9cf90eb99b3b84424189", null ],

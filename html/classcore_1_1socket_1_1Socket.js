@@ -2,6 +2,7 @@ var classcore_1_1socket_1_1Socket =
 [
     [ "Config", "classcore_1_1socket_1_1Socket.html#a8322727680d1b398830d8d88faf79b8a", null ],
     [ "Socket", "classcore_1_1socket_1_1Socket.html#ae816a15281c2e2338d47d546762f0d67", null ],
+    [ "Socket", "classcore_1_1socket_1_1Socket.html#aa99cc8752865b57215c594530995f461", null ],
     [ "Socket", "classcore_1_1socket_1_1Socket.html#a9e2119d4270820ae8cad0ef17d46d882", null ],
     [ "Socket", "classcore_1_1socket_1_1Socket.html#acef242f0fa4e852ef943fbe8ee716015", null ],
     [ "~Socket", "classcore_1_1socket_1_1Socket.html#a1f2ecd8e699b57a1d98665923ac21072", null ],

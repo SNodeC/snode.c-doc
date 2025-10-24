@@ -5,6 +5,7 @@ var classexpress_1_1middleware_1_1VerboseRequest =
       [ "W_REQUEST", "classexpress_1_1middleware_1_1VerboseRequest.html#aae17348f5373a80d776ad8dc77eff1fdab5bb7eead989641bad11ed329e287f71", null ],
       [ "W_QUERIES", "classexpress_1_1middleware_1_1VerboseRequest.html#aae17348f5373a80d776ad8dc77eff1fda5bb9727c297b3bdd10674d2574319a9a", null ],
       [ "W_HEADERS", "classexpress_1_1middleware_1_1VerboseRequest.html#aae17348f5373a80d776ad8dc77eff1fdae4436fe59d581f673724fcb22578d2ef", null ],
+      [ "W_TRAILER", "classexpress_1_1middleware_1_1VerboseRequest.html#aae17348f5373a80d776ad8dc77eff1fda62474085b2bcd0c66904f4e69b34e717", null ],
       [ "W_COOKIES", "classexpress_1_1middleware_1_1VerboseRequest.html#aae17348f5373a80d776ad8dc77eff1fda75ec1e649c44f5060ccf096f3785025c", null ],
       [ "W_CONTENT", "classexpress_1_1middleware_1_1VerboseRequest.html#aae17348f5373a80d776ad8dc77eff1fda353b8ce82dfe7872c3961a9fbdbb6a46", null ],
       [ "W_ALL", "classexpress_1_1middleware_1_1VerboseRequest.html#aae17348f5373a80d776ad8dc77eff1fda2d79b1da3d670fd6b3d0b6d9ca5bc94a", null ]

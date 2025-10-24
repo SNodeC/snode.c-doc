@@ -118,8 +118,8 @@ Functions</h2></td></tr>
 <tr class="separator:a4a2597267a4c6fae315ab7b85273ea61"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4dd60a8e2472042c70e00dec22ebf927" id="r_a4dd60a8e2472042c70e00dec22ebf927"><td class="memItemLeft" align="right" valign="top">std::string::iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehttputils.html#a4dd60a8e2472042c70e00dec22ebf927">to_lower</a> (std::string &amp;string)</td></tr>
 <tr class="separator:a4dd60a8e2472042c70e00dec22ebf927"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af7ff5dae5306b760dc94a3d86366b711" id="r_af7ff5dae5306b760dc94a3d86366b711"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehttputils.html#af7ff5dae5306b760dc94a3d86366b711">toString</a> (const std::string &amp;method, const std::string &amp;url, const std::string &amp;version, const <a class="el" href="classweb_1_1http_1_1CiStringMap.html">web::http::CiStringMap</a>&lt; std::string &gt; &amp;queries, const <a class="el" href="classweb_1_1http_1_1CiStringMap.html">web::http::CiStringMap</a>&lt; std::string &gt; &amp;header, const <a class="el" href="classweb_1_1http_1_1CiStringMap.html">web::http::CiStringMap</a>&lt; std::string &gt; &amp;cookies, const std::vector&lt; char &gt; &amp;body)</td></tr>
-<tr class="separator:af7ff5dae5306b760dc94a3d86366b711"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab84b77e9fb1e16e00e250d981aec32de" id="r_ab84b77e9fb1e16e00e250d981aec32de"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehttputils.html#ab84b77e9fb1e16e00e250d981aec32de">toString</a> (const std::string &amp;method, const std::string &amp;url, const std::string &amp;version, const <a class="el" href="classweb_1_1http_1_1CiStringMap.html">web::http::CiStringMap</a>&lt; std::string &gt; &amp;queries, const <a class="el" href="classweb_1_1http_1_1CiStringMap.html">web::http::CiStringMap</a>&lt; std::string &gt; &amp;header, const <a class="el" href="classweb_1_1http_1_1CiStringMap.html">web::http::CiStringMap</a>&lt; std::string &gt; &amp;trailer, const <a class="el" href="classweb_1_1http_1_1CiStringMap.html">web::http::CiStringMap</a>&lt; std::string &gt; &amp;cookies, const std::vector&lt; char &gt; &amp;body)</td></tr>
+<tr class="separator:ab84b77e9fb1e16e00e250d981aec32de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0bddb3cfe692a3ccb900548313a99768" id="r_a0bddb3cfe692a3ccb900548313a99768"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehttputils.html#a0bddb3cfe692a3ccb900548313a99768">toString</a> (const std::string &amp;version, const std::string &amp;statusCode, const std::string &amp;reason, const <a class="el" href="classweb_1_1http_1_1CiStringMap.html">web::http::CiStringMap</a>&lt; std::string &gt; &amp;header, const <a class="el" href="classweb_1_1http_1_1CiStringMap.html">web::http::CiStringMap</a>&lt; <a class="el" href="classweb_1_1http_1_1CookieOptions.html">web::http::CookieOptions</a> &gt; &amp;cookies, const std::vector&lt; char &gt; &amp;body)</td></tr>
 <tr class="separator:a0bddb3cfe692a3ccb900548313a99768"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -153,7 +153,7 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">  175</span>        <span class="keywordflow">return</span> std::string(buf);</div>
 <div class="line"><span class="lineno">  176</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="web_2http_2client_2Request_8cpp_source.html#l00476">web::http::client::Request::executeSendFile()</a>, and <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00308">web::http::server::Response::sendFile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="web_2http_2client_2Request_8cpp_source.html#l00567">web::http::client::MasterRequest::executeSendFile()</a>, and <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00324">web::http::server::Response::sendFile()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -269,7 +269,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">  123</span>        <span class="keywordflow">return</span> split;</div>
 <div class="line"><span class="lineno">  124</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="Parser_8cpp_source.html#l00160">web::http::Parser::analyzeHeader()</a>, <a class="el" href="ResponseParser_8cpp_source.html#l00110">web::http::client::ResponseParser::analyzeHeader()</a>, <a class="el" href="RequestParser_8cpp_source.html#l00111">web::http::server::RequestParser::analyzeHeader()</a>, <a class="el" href="BasicAuthentication_8cpp_source.html#l00056">express::middleware::BasicAuthentication::BasicAuthentication()</a>, <a class="el" href="websocket_2server_2SocketContextUpgradeFactory_8cpp_source.html#l00065">web::websocket::server::SocketContextUpgradeFactory::create()</a>, <a class="el" href="ResponseParser_8cpp_source.html#l00081">web::http::client::ResponseParser::parseStartLine()</a>, <a class="el" href="RequestParser_8cpp_source.html#l00074">web::http::server::RequestParser::parseStartLine()</a>, <a class="el" href="client_2SocketContextUpgradeFactorySelector_8cpp_source.html#l00085">web::http::client::SocketContextUpgradeFactorySelector::select()</a>, <a class="el" href="server_2SocketContextUpgradeFactorySelector_8cpp_source.html#l00085">web::http::server::SocketContextUpgradeFactorySelector::select()</a>, and <a class="el" href="Fields_8cpp_source.html#l00131">web::http::decoder::Fields::splitLine()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Parser_8cpp_source.html#l00160">web::http::Parser::analyzeHeader()</a>, <a class="el" href="ResponseParser_8cpp_source.html#l00107">web::http::client::ResponseParser::analyzeHeader()</a>, <a class="el" href="RequestParser_8cpp_source.html#l00117">web::http::server::RequestParser::analyzeHeader()</a>, <a class="el" href="BasicAuthentication_8cpp_source.html#l00056">express::middleware::BasicAuthentication::BasicAuthentication()</a>, <a class="el" href="websocket_2server_2SocketContextUpgradeFactory_8cpp_source.html#l00065">web::websocket::server::SocketContextUpgradeFactory::create()</a>, <a class="el" href="ResponseParser_8cpp_source.html#l00072">web::http::client::ResponseParser::parseStartLine()</a>, <a class="el" href="RequestParser_8cpp_source.html#l00074">web::http::server::RequestParser::parseStartLine()</a>, <a class="el" href="client_2SocketContextUpgradeFactorySelector_8cpp_source.html#l00085">web::http::client::SocketContextUpgradeFactorySelector::select()</a>, <a class="el" href="server_2SocketContextUpgradeFactorySelector_8cpp_source.html#l00085">web::http::server::SocketContextUpgradeFactorySelector::select()</a>, and <a class="el" href="Fields_8cpp_source.html#l00131">web::http::decoder::Fields::splitLine()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -352,7 +352,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">  109</span>        <span class="keywordflow">return</span> text;</div>
 <div class="line"><span class="lineno">  110</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="Parser_8cpp_source.html#l00160">web::http::Parser::analyzeHeader()</a>, <a class="el" href="ResponseParser_8cpp_source.html#l00110">web::http::client::ResponseParser::analyzeHeader()</a>, <a class="el" href="RequestParser_8cpp_source.html#l00111">web::http::server::RequestParser::analyzeHeader()</a>, <a class="el" href="websocket_2server_2SocketContextUpgradeFactory_8cpp_source.html#l00065">web::websocket::server::SocketContextUpgradeFactory::create()</a>, <a class="el" href="client_2SocketContextUpgradeFactorySelector_8cpp_source.html#l00085">web::http::client::SocketContextUpgradeFactorySelector::select()</a>, <a class="el" href="server_2SocketContextUpgradeFactorySelector_8cpp_source.html#l00085">web::http::server::SocketContextUpgradeFactorySelector::select()</a>, and <a class="el" href="Fields_8cpp_source.html#l00131">web::http::decoder::Fields::splitLine()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Parser_8cpp_source.html#l00160">web::http::Parser::analyzeHeader()</a>, <a class="el" href="ResponseParser_8cpp_source.html#l00107">web::http::client::ResponseParser::analyzeHeader()</a>, <a class="el" href="RequestParser_8cpp_source.html#l00117">web::http::server::RequestParser::analyzeHeader()</a>, <a class="el" href="websocket_2server_2SocketContextUpgradeFactory_8cpp_source.html#l00065">web::websocket::server::SocketContextUpgradeFactory::create()</a>, <a class="el" href="client_2SocketContextUpgradeFactorySelector_8cpp_source.html#l00085">web::http::client::SocketContextUpgradeFactorySelector::select()</a>, <a class="el" href="server_2SocketContextUpgradeFactorySelector_8cpp_source.html#l00085">web::http::server::SocketContextUpgradeFactorySelector::select()</a>, and <a class="el" href="Fields_8cpp_source.html#l00131">web::http::decoder::Fields::splitLine()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -400,7 +400,7 @@ Here is the caller graph for this function:</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="time_8cpp_source.html#l00062">utils::system::gmtime()</a>, and <a class="el" href="time_8cpp_source.html#l00052">utils::system::time()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00181">web::http::server::Response::clearCookie()</a>, <a class="el" href="web_2http_2client_2Request_8cpp_source.html#l00567">web::http::client::Request::executeSendHeader()</a>, and <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00350">web::http::server::Response::sendHeader()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00186">web::http::server::Response::clearCookie()</a>, <a class="el" href="web_2http_2client_2Request_8cpp_source.html#l00664">web::http::client::MasterRequest::executeSendHeader()</a>, and <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00367">web::http::server::Response::sendHeader()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -444,8 +444,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="af7ff5dae5306b760dc94a3d86366b711" name="af7ff5dae5306b760dc94a3d86366b711"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af7ff5dae5306b760dc94a3d86366b711">&#9670;&#160;</a></span>toString() <span class="overload">[1/2]</span></h2>
+<a id="ab84b77e9fb1e16e00e250d981aec32de" name="ab84b77e9fb1e16e00e250d981aec32de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab84b77e9fb1e16e00e250d981aec32de">&#9670;&#160;</a></span>toString() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -484,6 +484,12 @@ Here is the caller graph for this function:</div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="classweb_1_1http_1_1CiStringMap.html">web::http::CiStringMap</a>&lt; std::string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>trailer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classweb_1_1http_1_1CiStringMap.html">web::http::CiStringMap</a>&lt; std::string &gt; &amp;&#160;</td>
           <td class="paramname"><em>cookies</em>, </td>
         </tr>
         <tr>
@@ -501,84 +507,95 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="http__utils_8cpp_source.html#l00182">182</a> of file <a class="el" href="http__utils_8cpp_source.html">http_utils.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  188</span>                                                      {</div>
-<div class="line"><span class="lineno">  189</span>        <span class="keyword">const</span> <span class="keywordtype">int</span> prefixLength = 9;</div>
-<div class="line"><span class="lineno">  190</span>        <span class="keywordtype">int</span> keyLength = 0;</div>
-<div class="line"><span class="lineno">  191</span> </div>
-<div class="line"><span class="lineno">  192</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; [key, value] : queries) {</div>
-<div class="line"><span class="lineno">  193</span>            keyLength = std::max(keyLength, <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(key.size()));</div>
-<div class="line"><span class="lineno">  194</span>        }</div>
-<div class="line"><span class="lineno">  195</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; [key, value] : header) {</div>
-<div class="line"><span class="lineno">  196</span>            keyLength = std::max(keyLength, <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(key.size()));</div>
-<div class="line"><span class="lineno">  197</span>        }</div>
-<div class="line"><span class="lineno">  198</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; [key, value] : cookies) {</div>
-<div class="line"><span class="lineno">  199</span>            keyLength = std::max(keyLength, <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(key.size()));</div>
-<div class="line"><span class="lineno">  200</span>        }</div>
-<div class="line"><span class="lineno">  201</span> </div>
-<div class="line"><span class="lineno">  202</span>        std::stringstream requestStream;</div>
-<div class="line"><span class="lineno">  203</span> </div>
-<div class="line"><span class="lineno">  204</span>        requestStream &lt;&lt; std::setw(prefixLength) &lt;&lt; <span class="stringliteral">&quot;Request&quot;</span></div>
-<div class="line"><span class="lineno">  205</span>                      &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; std::setw(keyLength) &lt;&lt; <span class="stringliteral">&quot;Method&quot;</span></div>
-<div class="line"><span class="lineno">  206</span>                      &lt;&lt; <span class="stringliteral">&quot; : &quot;</span> &lt;&lt; method &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><span class="lineno">  207</span>        requestStream &lt;&lt; std::setw(prefixLength) &lt;&lt; <span class="stringliteral">&quot;&quot;</span></div>
-<div class="line"><span class="lineno">  208</span>                      &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; std::setw(keyLength) &lt;&lt; <span class="stringliteral">&quot;Url&quot;</span></div>
-<div class="line"><span class="lineno">  209</span>                      &lt;&lt; <span class="stringliteral">&quot; : &quot;</span> &lt;&lt; url &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><span class="lineno">  210</span>        requestStream &lt;&lt; std::setw(prefixLength) &lt;&lt; <span class="stringliteral">&quot;&quot;</span></div>
-<div class="line"><span class="lineno">  211</span>                      &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; std::setw(keyLength) &lt;&lt; <span class="stringliteral">&quot;Version&quot;</span></div>
-<div class="line"><span class="lineno">  212</span>                      &lt;&lt; <span class="stringliteral">&quot; : &quot;</span> &lt;&lt; version &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><span class="lineno">  213</span> </div>
-<div class="line"><span class="lineno">  214</span>        std::string prefix;</div>
-<div class="line"><span class="lineno">  215</span> </div>
-<div class="line"><span class="lineno">  216</span>        <span class="keywordflow">if</span> (!queries.empty()) {</div>
-<div class="line"><span class="lineno">  217</span>            prefix = <span class="stringliteral">&quot;Queries&quot;</span>;</div>
-<div class="line"><span class="lineno">  218</span>            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; [query, value] : queries) {</div>
-<div class="line"><span class="lineno">  219</span>                requestStream &lt;&lt; std::setw(prefixLength) &lt;&lt; prefix &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; std::setw(keyLength) &lt;&lt; query &lt;&lt; <span class="stringliteral">&quot; : &quot;</span> &lt;&lt; value &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><span class="lineno">  220</span>                prefix = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">  221</span>            }</div>
-<div class="line"><span class="lineno">  222</span>        }</div>
-<div class="line"><span class="lineno">  223</span> </div>
-<div class="line"><span class="lineno">  224</span>        <span class="keywordflow">if</span> (!header.empty()) {</div>
-<div class="line"><span class="lineno">  225</span>            prefix = <span class="stringliteral">&quot;Header&quot;</span>;</div>
-<div class="line"><span class="lineno">  226</span>            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; [field, value] : header) {</div>
-<div class="line"><span class="lineno">  227</span>                requestStream &lt;&lt; std::setw(prefixLength) &lt;&lt; prefix &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; std::setw(keyLength) &lt;&lt; field &lt;&lt; <span class="stringliteral">&quot; : &quot;</span> &lt;&lt; value &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><span class="lineno">  228</span>                prefix = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">  229</span>            }</div>
-<div class="line"><span class="lineno">  230</span>        }</div>
-<div class="line"><span class="lineno">  231</span> </div>
-<div class="line"><span class="lineno">  232</span>        <span class="keywordflow">if</span> (!cookies.empty()) {</div>
-<div class="line"><span class="lineno">  233</span>            prefix = <span class="stringliteral">&quot;Cookies&quot;</span>;</div>
-<div class="line"><span class="lineno">  234</span>            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; [cookie, value] : cookies) {</div>
-<div class="line"><span class="lineno">  235</span>                requestStream &lt;&lt; std::setw(prefixLength) &lt;&lt; prefix &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; std::setw(keyLength) &lt;&lt; cookie &lt;&lt; <span class="stringliteral">&quot; : &quot;</span> &lt;&lt; value &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><span class="lineno">  236</span>                prefix = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">  237</span>            }</div>
-<div class="line"><span class="lineno">  238</span>        }</div>
-<div class="line"><span class="lineno">  239</span> </div>
-<div class="line"><span class="lineno">  240</span>        <span class="keywordflow">if</span> (!body.empty()) {</div>
-<div class="line"><span class="lineno">  241</span>            prefix = <span class="stringliteral">&quot;Body&quot;</span>;</div>
-<div class="line"><span class="lineno">  242</span>            requestStream &lt;&lt; std::setw(prefixLength) &lt;&lt; prefix &lt;&lt; <a class="code hl_function" href="namespaceutils.html#ad8af90943f5b6e2c985db811abae8730">utils::hexDump</a>(body, prefixLength) &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><span class="lineno">  243</span>        }</div>
-<div class="line"><span class="lineno">  244</span> </div>
-<div class="line"><span class="lineno">  245</span>        std::string <span class="keywordtype">string</span> = requestStream.str();</div>
-<div class="line"><span class="lineno">  246</span>        <span class="keywordflow">if</span> (!<span class="keywordtype">string</span>.empty()) {</div>
-<div class="line"><span class="lineno">  247</span>            <span class="keywordtype">string</span>.pop_back();</div>
-<div class="line"><span class="lineno">  248</span>        }</div>
-<div class="line"><span class="lineno">  249</span> </div>
-<div class="line"><span class="lineno">  250</span>        <span class="keywordflow">return</span> string;</div>
-<div class="line"><span class="lineno">  251</span>    }</div>
+<div class="fragment"><div class="line"><span class="lineno">  189</span>                                                      {</div>
+<div class="line"><span class="lineno">  190</span>        <span class="keyword">const</span> <span class="keywordtype">int</span> prefixLength = 9;</div>
+<div class="line"><span class="lineno">  191</span>        <span class="keywordtype">int</span> keyLength = 0;</div>
+<div class="line"><span class="lineno">  192</span> </div>
+<div class="line"><span class="lineno">  193</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; [key, value] : queries) {</div>
+<div class="line"><span class="lineno">  194</span>            keyLength = std::max(keyLength, <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(key.size()));</div>
+<div class="line"><span class="lineno">  195</span>        }</div>
+<div class="line"><span class="lineno">  196</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; [key, value] : header) {</div>
+<div class="line"><span class="lineno">  197</span>            keyLength = std::max(keyLength, <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(key.size()));</div>
+<div class="line"><span class="lineno">  198</span>        }</div>
+<div class="line"><span class="lineno">  199</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; [key, value] : trailer) {</div>
+<div class="line"><span class="lineno">  200</span>            keyLength = std::max(keyLength, <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(key.size()));</div>
+<div class="line"><span class="lineno">  201</span>        }</div>
+<div class="line"><span class="lineno">  202</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; [key, value] : cookies) {</div>
+<div class="line"><span class="lineno">  203</span>            keyLength = std::max(keyLength, <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(key.size()));</div>
+<div class="line"><span class="lineno">  204</span>        }</div>
+<div class="line"><span class="lineno">  205</span> </div>
+<div class="line"><span class="lineno">  206</span>        std::stringstream requestStream;</div>
+<div class="line"><span class="lineno">  207</span> </div>
+<div class="line"><span class="lineno">  208</span>        requestStream &lt;&lt; std::setw(prefixLength) &lt;&lt; <span class="stringliteral">&quot;Request&quot;</span></div>
+<div class="line"><span class="lineno">  209</span>                      &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; std::setw(keyLength) &lt;&lt; <span class="stringliteral">&quot;Method&quot;</span></div>
+<div class="line"><span class="lineno">  210</span>                      &lt;&lt; <span class="stringliteral">&quot; : &quot;</span> &lt;&lt; method &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  211</span>        requestStream &lt;&lt; std::setw(prefixLength) &lt;&lt; <span class="stringliteral">&quot;&quot;</span></div>
+<div class="line"><span class="lineno">  212</span>                      &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; std::setw(keyLength) &lt;&lt; <span class="stringliteral">&quot;Url&quot;</span></div>
+<div class="line"><span class="lineno">  213</span>                      &lt;&lt; <span class="stringliteral">&quot; : &quot;</span> &lt;&lt; url &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  214</span>        requestStream &lt;&lt; std::setw(prefixLength) &lt;&lt; <span class="stringliteral">&quot;&quot;</span></div>
+<div class="line"><span class="lineno">  215</span>                      &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; std::setw(keyLength) &lt;&lt; <span class="stringliteral">&quot;Version&quot;</span></div>
+<div class="line"><span class="lineno">  216</span>                      &lt;&lt; <span class="stringliteral">&quot; : &quot;</span> &lt;&lt; version &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  217</span> </div>
+<div class="line"><span class="lineno">  218</span>        std::string prefix;</div>
+<div class="line"><span class="lineno">  219</span> </div>
+<div class="line"><span class="lineno">  220</span>        <span class="keywordflow">if</span> (!queries.empty()) {</div>
+<div class="line"><span class="lineno">  221</span>            prefix = <span class="stringliteral">&quot;Queries&quot;</span>;</div>
+<div class="line"><span class="lineno">  222</span>            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; [query, value] : queries) {</div>
+<div class="line"><span class="lineno">  223</span>                requestStream &lt;&lt; std::setw(prefixLength) &lt;&lt; prefix &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; std::setw(keyLength) &lt;&lt; query &lt;&lt; <span class="stringliteral">&quot; : &quot;</span> &lt;&lt; value &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  224</span>                prefix = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">  225</span>            }</div>
+<div class="line"><span class="lineno">  226</span>        }</div>
+<div class="line"><span class="lineno">  227</span> </div>
+<div class="line"><span class="lineno">  228</span>        <span class="keywordflow">if</span> (!header.empty()) {</div>
+<div class="line"><span class="lineno">  229</span>            prefix = <span class="stringliteral">&quot;Header&quot;</span>;</div>
+<div class="line"><span class="lineno">  230</span>            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; [field, value] : header) {</div>
+<div class="line"><span class="lineno">  231</span>                requestStream &lt;&lt; std::setw(prefixLength) &lt;&lt; prefix &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; std::setw(keyLength) &lt;&lt; field &lt;&lt; <span class="stringliteral">&quot; : &quot;</span> &lt;&lt; value &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  232</span>                prefix = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">  233</span>            }</div>
+<div class="line"><span class="lineno">  234</span>        }</div>
+<div class="line"><span class="lineno">  235</span> </div>
+<div class="line"><span class="lineno">  236</span>        <span class="keywordflow">if</span> (!trailer.empty()) {</div>
+<div class="line"><span class="lineno">  237</span>            prefix = <span class="stringliteral">&quot;Trailer&quot;</span>;</div>
+<div class="line"><span class="lineno">  238</span>            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; [field, value] : trailer) {</div>
+<div class="line"><span class="lineno">  239</span>                requestStream &lt;&lt; std::setw(prefixLength) &lt;&lt; prefix &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; std::setw(keyLength) &lt;&lt; field &lt;&lt; <span class="stringliteral">&quot; : &quot;</span> &lt;&lt; value &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  240</span>                prefix = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">  241</span>            }</div>
+<div class="line"><span class="lineno">  242</span>        }</div>
+<div class="line"><span class="lineno">  243</span> </div>
+<div class="line"><span class="lineno">  244</span>        <span class="keywordflow">if</span> (!cookies.empty()) {</div>
+<div class="line"><span class="lineno">  245</span>            prefix = <span class="stringliteral">&quot;Cookies&quot;</span>;</div>
+<div class="line"><span class="lineno">  246</span>            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; [cookie, value] : cookies) {</div>
+<div class="line"><span class="lineno">  247</span>                requestStream &lt;&lt; std::setw(prefixLength) &lt;&lt; prefix &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; std::setw(keyLength) &lt;&lt; cookie &lt;&lt; <span class="stringliteral">&quot; : &quot;</span> &lt;&lt; value &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  248</span>                prefix = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">  249</span>            }</div>
+<div class="line"><span class="lineno">  250</span>        }</div>
+<div class="line"><span class="lineno">  251</span> </div>
+<div class="line"><span class="lineno">  252</span>        <span class="keywordflow">if</span> (!body.empty()) {</div>
+<div class="line"><span class="lineno">  253</span>            prefix = <span class="stringliteral">&quot;Body&quot;</span>;</div>
+<div class="line"><span class="lineno">  254</span>            requestStream &lt;&lt; std::setw(prefixLength) &lt;&lt; prefix &lt;&lt; <a class="code hl_function" href="namespaceutils.html#ad8af90943f5b6e2c985db811abae8730">utils::hexDump</a>(body, prefixLength) &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  255</span>        }</div>
+<div class="line"><span class="lineno">  256</span> </div>
+<div class="line"><span class="lineno">  257</span>        std::string <span class="keywordtype">string</span> = requestStream.str();</div>
+<div class="line"><span class="lineno">  258</span>        <span class="keywordflow">if</span> (!<span class="keywordtype">string</span>.empty()) {</div>
+<div class="line"><span class="lineno">  259</span>            <span class="keywordtype">string</span>.pop_back();</div>
+<div class="line"><span class="lineno">  260</span>        }</div>
+<div class="line"><span class="lineno">  261</span> </div>
+<div class="line"><span class="lineno">  262</span>        <span class="keywordflow">return</span> string;</div>
+<div class="line"><span class="lineno">  263</span>    }</div>
 <div class="ttc" id="anamespaceutils_html_ad8af90943f5b6e2c985db811abae8730"><div class="ttname"><a href="namespaceutils.html#ad8af90943f5b6e2c985db811abae8730">utils::hexDump</a></div><div class="ttdeci">std::string hexDump(const std::vector&lt; char &gt; &amp;bytes, int prefixLength, bool prefixAtFirstLine)</div><div class="ttdef"><b>Definition</b> <a href="hexdump_8cpp_source.html#l00058">hexdump.cpp:58</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="hexdump_8cpp_source.html#l00058">utils::hexDump()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="web_2http_2client_2Request_8cpp_source.html#l00518">web::http::client::Request::executeUpgrade()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00241">web::http::server::Response::upgrade()</a>, and <a class="el" href="VerboseRequest_8cpp_source.html#l00058">express::middleware::VerboseRequest::VerboseRequest()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="web_2http_2client_2Request_8cpp_source.html#l00610">web::http::client::MasterRequest::executeUpgrade()</a>, <a class="el" href="web_2http_2client_2SocketContext_8cpp_source.html#l00103">web::http::client::SocketContext::requestPrepared()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00248">web::http::server::Response::upgrade()</a>, and <a class="el" href="VerboseRequest_8cpp_source.html#l00058">express::middleware::VerboseRequest::VerboseRequest()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="namespacehttputils_af7ff5dae5306b760dc94a3d86366b711_cgraph.svg" width="484" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacehttputils_ab84b77e9fb1e16e00e250d981aec32de_cgraph.svg" width="484" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="namespacehttputils_af7ff5dae5306b760dc94a3d86366b711_icgraph.svg" width="100%" height="446"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="namespacehttputils_ab84b77e9fb1e16e00e250d981aec32de_icgraph.svg" width="100%" height="580"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -633,70 +650,70 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="http__utils_8cpp_source.html#l00253">253</a> of file <a class="el" href="http__utils_8cpp_source.html">http_utils.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  258</span>                                                      {</div>
-<div class="line"><span class="lineno">  259</span>        <span class="keyword">const</span> <span class="keywordtype">int</span> prefixLength = 9;</div>
-<div class="line"><span class="lineno">  260</span>        <span class="keywordtype">int</span> keyLength = 0;</div>
-<div class="line"><span class="lineno">  261</span> </div>
-<div class="line"><span class="lineno">  262</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; [key, value] : header) {</div>
-<div class="line"><span class="lineno">  263</span>            keyLength = std::max(keyLength, <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(key.size()));</div>
-<div class="line"><span class="lineno">  264</span>        }</div>
-<div class="line"><span class="lineno">  265</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; [key, value] : cookies) {</div>
-<div class="line"><span class="lineno">  266</span>            keyLength = std::max(keyLength, <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(key.size()));</div>
-<div class="line"><span class="lineno">  267</span>        }</div>
-<div class="line"><span class="lineno">  268</span> </div>
-<div class="line"><span class="lineno">  269</span>        std::stringstream requestStream;</div>
-<div class="line"><span class="lineno">  270</span> </div>
-<div class="line"><span class="lineno">  271</span>        requestStream &lt;&lt; std::setw(prefixLength) &lt;&lt; <span class="stringliteral">&quot;Response&quot;</span></div>
-<div class="line"><span class="lineno">  272</span>                      &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; std::setw(keyLength) &lt;&lt; <span class="stringliteral">&quot;Version&quot;</span></div>
-<div class="line"><span class="lineno">  273</span>                      &lt;&lt; <span class="stringliteral">&quot; : &quot;</span> &lt;&lt; version &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><span class="lineno">  274</span>        requestStream &lt;&lt; std::setw(prefixLength) &lt;&lt; <span class="stringliteral">&quot;&quot;</span></div>
-<div class="line"><span class="lineno">  275</span>                      &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; std::setw(keyLength) &lt;&lt; <span class="stringliteral">&quot;Status&quot;</span></div>
-<div class="line"><span class="lineno">  276</span>                      &lt;&lt; <span class="stringliteral">&quot; : &quot;</span> &lt;&lt; statusCode &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><span class="lineno">  277</span>        requestStream &lt;&lt; std::setw(prefixLength) &lt;&lt; <span class="stringliteral">&quot;&quot;</span></div>
-<div class="line"><span class="lineno">  278</span>                      &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; std::setw(keyLength) &lt;&lt; <span class="stringliteral">&quot;Reason&quot;</span></div>
-<div class="line"><span class="lineno">  279</span>                      &lt;&lt; <span class="stringliteral">&quot; : &quot;</span> &lt;&lt; reason &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<p class="definition">Definition at line <a class="el" href="http__utils_8cpp_source.html#l00265">265</a> of file <a class="el" href="http__utils_8cpp_source.html">http_utils.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  270</span>                                                      {</div>
+<div class="line"><span class="lineno">  271</span>        <span class="keyword">const</span> <span class="keywordtype">int</span> prefixLength = 9;</div>
+<div class="line"><span class="lineno">  272</span>        <span class="keywordtype">int</span> keyLength = 0;</div>
+<div class="line"><span class="lineno">  273</span> </div>
+<div class="line"><span class="lineno">  274</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; [key, value] : header) {</div>
+<div class="line"><span class="lineno">  275</span>            keyLength = std::max(keyLength, <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(key.size()));</div>
+<div class="line"><span class="lineno">  276</span>        }</div>
+<div class="line"><span class="lineno">  277</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; [key, value] : cookies) {</div>
+<div class="line"><span class="lineno">  278</span>            keyLength = std::max(keyLength, <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(key.size()));</div>
+<div class="line"><span class="lineno">  279</span>        }</div>
 <div class="line"><span class="lineno">  280</span> </div>
-<div class="line"><span class="lineno">  281</span>        std::string prefix;</div>
+<div class="line"><span class="lineno">  281</span>        std::stringstream requestStream;</div>
 <div class="line"><span class="lineno">  282</span> </div>
-<div class="line"><span class="lineno">  283</span>        <span class="keywordflow">if</span> (!header.empty()) {</div>
-<div class="line"><span class="lineno">  284</span>            prefix = <span class="stringliteral">&quot;Header&quot;</span>;</div>
-<div class="line"><span class="lineno">  285</span>            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; [field, value] : header) {</div>
-<div class="line"><span class="lineno">  286</span>                requestStream &lt;&lt; std::setw(prefixLength) &lt;&lt; prefix &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; std::setw(keyLength) &lt;&lt; field &lt;&lt; <span class="stringliteral">&quot; : &quot;</span> &lt;&lt; value &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><span class="lineno">  287</span>                prefix = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">  288</span>            }</div>
-<div class="line"><span class="lineno">  289</span>        }</div>
-<div class="line"><span class="lineno">  290</span> </div>
-<div class="line"><span class="lineno">  291</span>        <span class="keywordflow">if</span> (!cookies.empty()) {</div>
-<div class="line"><span class="lineno">  292</span>            prefix = <span class="stringliteral">&quot;Cookies&quot;</span>;</div>
-<div class="line"><span class="lineno">  293</span>            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; [cookie, options] : cookies) {</div>
-<div class="line"><span class="lineno">  294</span>                requestStream &lt;&lt; std::setw(prefixLength) &lt;&lt; prefix &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; std::setw(keyLength) &lt;&lt; cookie &lt;&lt; <span class="stringliteral">&quot; : &quot;</span> &lt;&lt; options.getValue()</div>
-<div class="line"><span class="lineno">  295</span>                              &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><span class="lineno">  296</span>                <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; [optionKey, optionValue] : options.getOptions()) {</div>
-<div class="line"><span class="lineno">  297</span>                    requestStream &lt;&lt; std::setw(prefixLength) &lt;&lt; <span class="stringliteral">&quot;&quot;</span></div>
-<div class="line"><span class="lineno">  298</span>                                  &lt;&lt; <span class="stringliteral">&quot;:&quot;</span> &lt;&lt; std::setw(keyLength) &lt;&lt; <span class="stringliteral">&quot;&quot;</span></div>
-<div class="line"><span class="lineno">  299</span>                                  &lt;&lt; <span class="stringliteral">&quot; : &quot;</span> &lt;&lt; optionKey &lt;&lt; <span class="stringliteral">&quot;=&quot;</span> &lt;&lt; optionValue &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><span class="lineno">  300</span>                }</div>
-<div class="line"><span class="lineno">  301</span>                prefix = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">  302</span>            }</div>
-<div class="line"><span class="lineno">  303</span>        }</div>
-<div class="line"><span class="lineno">  304</span> </div>
-<div class="line"><span class="lineno">  305</span>        <span class="keywordflow">if</span> (!body.empty()) {</div>
-<div class="line"><span class="lineno">  306</span>            prefix = <span class="stringliteral">&quot;Body&quot;</span>;</div>
-<div class="line"><span class="lineno">  307</span>            requestStream &lt;&lt; std::setw(prefixLength) &lt;&lt; prefix &lt;&lt; <a class="code hl_function" href="namespaceutils.html#ad8af90943f5b6e2c985db811abae8730">utils::hexDump</a>(body, prefixLength) &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><span class="lineno">  308</span>        }</div>
-<div class="line"><span class="lineno">  309</span> </div>
-<div class="line"><span class="lineno">  310</span>        std::string <span class="keywordtype">string</span> = requestStream.str();</div>
-<div class="line"><span class="lineno">  311</span>        <span class="keywordflow">if</span> (!<span class="keywordtype">string</span>.empty()) {</div>
-<div class="line"><span class="lineno">  312</span>            <span class="keywordtype">string</span>.pop_back();</div>
-<div class="line"><span class="lineno">  313</span>        }</div>
-<div class="line"><span class="lineno">  314</span> </div>
-<div class="line"><span class="lineno">  315</span>        <span class="keywordflow">return</span> string;</div>
-<div class="line"><span class="lineno">  316</span>    }</div>
+<div class="line"><span class="lineno">  283</span>        requestStream &lt;&lt; std::setw(prefixLength) &lt;&lt; <span class="stringliteral">&quot;Response&quot;</span></div>
+<div class="line"><span class="lineno">  284</span>                      &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; std::setw(keyLength) &lt;&lt; <span class="stringliteral">&quot;Version&quot;</span></div>
+<div class="line"><span class="lineno">  285</span>                      &lt;&lt; <span class="stringliteral">&quot; : &quot;</span> &lt;&lt; version &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  286</span>        requestStream &lt;&lt; std::setw(prefixLength) &lt;&lt; <span class="stringliteral">&quot;&quot;</span></div>
+<div class="line"><span class="lineno">  287</span>                      &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; std::setw(keyLength) &lt;&lt; <span class="stringliteral">&quot;Status&quot;</span></div>
+<div class="line"><span class="lineno">  288</span>                      &lt;&lt; <span class="stringliteral">&quot; : &quot;</span> &lt;&lt; statusCode &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  289</span>        requestStream &lt;&lt; std::setw(prefixLength) &lt;&lt; <span class="stringliteral">&quot;&quot;</span></div>
+<div class="line"><span class="lineno">  290</span>                      &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; std::setw(keyLength) &lt;&lt; <span class="stringliteral">&quot;Reason&quot;</span></div>
+<div class="line"><span class="lineno">  291</span>                      &lt;&lt; <span class="stringliteral">&quot; : &quot;</span> &lt;&lt; reason &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  292</span> </div>
+<div class="line"><span class="lineno">  293</span>        std::string prefix;</div>
+<div class="line"><span class="lineno">  294</span> </div>
+<div class="line"><span class="lineno">  295</span>        <span class="keywordflow">if</span> (!header.empty()) {</div>
+<div class="line"><span class="lineno">  296</span>            prefix = <span class="stringliteral">&quot;Header&quot;</span>;</div>
+<div class="line"><span class="lineno">  297</span>            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; [field, value] : header) {</div>
+<div class="line"><span class="lineno">  298</span>                requestStream &lt;&lt; std::setw(prefixLength) &lt;&lt; prefix &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; std::setw(keyLength) &lt;&lt; field &lt;&lt; <span class="stringliteral">&quot; : &quot;</span> &lt;&lt; value &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  299</span>                prefix = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">  300</span>            }</div>
+<div class="line"><span class="lineno">  301</span>        }</div>
+<div class="line"><span class="lineno">  302</span> </div>
+<div class="line"><span class="lineno">  303</span>        <span class="keywordflow">if</span> (!cookies.empty()) {</div>
+<div class="line"><span class="lineno">  304</span>            prefix = <span class="stringliteral">&quot;Cookies&quot;</span>;</div>
+<div class="line"><span class="lineno">  305</span>            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; [cookie, options] : cookies) {</div>
+<div class="line"><span class="lineno">  306</span>                requestStream &lt;&lt; std::setw(prefixLength) &lt;&lt; prefix &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; std::setw(keyLength) &lt;&lt; cookie &lt;&lt; <span class="stringliteral">&quot; : &quot;</span> &lt;&lt; options.getValue()</div>
+<div class="line"><span class="lineno">  307</span>                              &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  308</span>                <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; [optionKey, optionValue] : options.getOptions()) {</div>
+<div class="line"><span class="lineno">  309</span>                    requestStream &lt;&lt; std::setw(prefixLength) &lt;&lt; <span class="stringliteral">&quot;&quot;</span></div>
+<div class="line"><span class="lineno">  310</span>                                  &lt;&lt; <span class="stringliteral">&quot;:&quot;</span> &lt;&lt; std::setw(keyLength) &lt;&lt; <span class="stringliteral">&quot;&quot;</span></div>
+<div class="line"><span class="lineno">  311</span>                                  &lt;&lt; <span class="stringliteral">&quot; : &quot;</span> &lt;&lt; optionKey &lt;&lt; <span class="stringliteral">&quot;=&quot;</span> &lt;&lt; optionValue &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  312</span>                }</div>
+<div class="line"><span class="lineno">  313</span>                prefix = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">  314</span>            }</div>
+<div class="line"><span class="lineno">  315</span>        }</div>
+<div class="line"><span class="lineno">  316</span> </div>
+<div class="line"><span class="lineno">  317</span>        <span class="keywordflow">if</span> (!body.empty()) {</div>
+<div class="line"><span class="lineno">  318</span>            prefix = <span class="stringliteral">&quot;Body&quot;</span>;</div>
+<div class="line"><span class="lineno">  319</span>            requestStream &lt;&lt; std::setw(prefixLength) &lt;&lt; prefix &lt;&lt; <a class="code hl_function" href="namespaceutils.html#ad8af90943f5b6e2c985db811abae8730">utils::hexDump</a>(body, prefixLength) &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  320</span>        }</div>
+<div class="line"><span class="lineno">  321</span> </div>
+<div class="line"><span class="lineno">  322</span>        std::string <span class="keywordtype">string</span> = requestStream.str();</div>
+<div class="line"><span class="lineno">  323</span>        <span class="keywordflow">if</span> (!<span class="keywordtype">string</span>.empty()) {</div>
+<div class="line"><span class="lineno">  324</span>            <span class="keywordtype">string</span>.pop_back();</div>
+<div class="line"><span class="lineno">  325</span>        }</div>
+<div class="line"><span class="lineno">  326</span> </div>
+<div class="line"><span class="lineno">  327</span>        <span class="keywordflow">return</span> string;</div>
+<div class="line"><span class="lineno">  328</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="CookieOptions_8h_source.html#l00069">web::http::CookieOptions::getOptions()</a>, <a class="el" href="CookieOptions_8h_source.html#l00073">web::http::CookieOptions::getValue()</a>, and <a class="el" href="hexdump_8cpp_source.html#l00058">utils::hexDump()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="web_2http_2client_2Request_8cpp_source.html#l00302">web::http::client::Request::upgrade()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00248">web::http::server::Response::upgrade()</a>, and <a class="el" href="web_2http_2client_2Request_8cpp_source.html#l00387">web::http::client::MasterRequest::upgrade()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -705,7 +722,7 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="namespacehttputils_a0bddb3cfe692a3ccb900548313a99768_icgraph.svg" width="432" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="namespacehttputils_a0bddb3cfe692a3ccb900548313a99768_icgraph.svg" width="100%" height="386"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -800,7 +817,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">  102</span>        <span class="keywordflow">return</span> escaped.str();</div>
 <div class="line"><span class="lineno">  103</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="web_2http_2client_2Request_8cpp_source.html#l00567">web::http::client::Request::executeSendHeader()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="web_2http_2client_2Request_8cpp_source.html#l00664">web::http::client::MasterRequest::executeSendHeader()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -815,7 +832,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacehttputils.html">httputils</a></li>
-    <li class="footer">Generated on Fri Sep 12 2025 18:58:59 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Fri Oct 24 2025 11:05:09 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

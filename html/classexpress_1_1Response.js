@@ -13,6 +13,7 @@ var classexpress_1_1Response =
     [ "end", "classexpress_1_1Response.html#a229eb88872cbaf3887cda0b64703796f", null ],
     [ "getSocketContext", "classexpress_1_1Response.html#ac540951b9ff6dcdbf9f0f0f74352320a", null ],
     [ "header", "classexpress_1_1Response.html#ac70aef04f8361e95c052726c282b230f", null ],
+    [ "isConnected", "classexpress_1_1Response.html#a0374b9d6a74f174ee9e33f72c5a6d2c2", null ],
     [ "json", "classexpress_1_1Response.html#ae60d0bae9024f07455b4d54c6fe9b4a0", null ],
     [ "location", "classexpress_1_1Response.html#afae395131573ca1f1365df599d985a3c", null ],
     [ "operator=", "classexpress_1_1Response.html#a2855b1db107d93636e763a47fa3a7fed", null ],

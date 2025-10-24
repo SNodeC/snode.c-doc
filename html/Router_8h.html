@@ -170,33 +170,34 @@ Macros</h2></td></tr>
 <div class="line"><span class="lineno">  100</span>        Router(<span class="keyword">const</span> Router&amp;) = <span class="keywordflow">default</span>;</div>
 <div class="line"><span class="lineno">  101</span> </div>
 <div class="line"><span class="lineno">  102</span>        <span class="keyword">const</span> Router&amp; setStrictRouting(<span class="keywordtype">bool</span> strictRouting = <span class="keyword">true</span>) <span class="keyword">const</span>;</div>
-<div class="line"><span class="lineno">  103</span> </div>
-<div class="line"><span class="lineno">  104</span>        std::list&lt;std::string&gt; getRoutes() <span class="keyword">const</span>;</div>
-<div class="line"><span class="lineno">  105</span> </div>
-<div class="line"><span class="lineno">  106</span>        <a class="code hl_define" href="Router_8h.html#a0da4b635facd60d48b0917059cfae32c">DECLARE_ROUTER_REQUESTMETHOD</a>(use)</div>
-<div class="line"><span class="lineno">  107</span>        <a class="code hl_define" href="Router_8h.html#a0da4b635facd60d48b0917059cfae32c">DECLARE_ROUTER_REQUESTMETHOD</a>(all)</div>
-<div class="line"><span class="lineno">  108</span>        <a class="code hl_define" href="Router_8h.html#a0da4b635facd60d48b0917059cfae32c">DECLARE_ROUTER_REQUESTMETHOD</a>(<span class="keyword">get</span>)</div>
-<div class="line"><span class="lineno">  109</span>        <a class="code hl_define" href="Router_8h.html#a0da4b635facd60d48b0917059cfae32c">DECLARE_ROUTER_REQUESTMETHOD</a>(put)</div>
-<div class="line"><span class="lineno">  110</span>        <a class="code hl_define" href="Router_8h.html#a0da4b635facd60d48b0917059cfae32c">DECLARE_ROUTER_REQUESTMETHOD</a>(post)</div>
-<div class="line"><span class="lineno">  111</span>        <a class="code hl_define" href="Router_8h.html#a0da4b635facd60d48b0917059cfae32c">DECLARE_ROUTER_REQUESTMETHOD</a>(del)</div>
-<div class="line"><span class="lineno">  112</span>        <a class="code hl_define" href="Router_8h.html#a0da4b635facd60d48b0917059cfae32c">DECLARE_ROUTER_REQUESTMETHOD</a>(connect)</div>
-<div class="line"><span class="lineno">  113</span>        <a class="code hl_define" href="Router_8h.html#a0da4b635facd60d48b0917059cfae32c">DECLARE_ROUTER_REQUESTMETHOD</a>(options)</div>
-<div class="line"><span class="lineno">  114</span>        <a class="code hl_define" href="Router_8h.html#a0da4b635facd60d48b0917059cfae32c">DECLARE_ROUTER_REQUESTMETHOD</a>(trace)</div>
-<div class="line"><span class="lineno">  115</span>        <a class="code hl_define" href="Router_8h.html#a0da4b635facd60d48b0917059cfae32c">DECLARE_ROUTER_REQUESTMETHOD</a>(patch)</div>
-<div class="line"><span class="lineno">  116</span>        <a class="code hl_define" href="Router_8h.html#a0da4b635facd60d48b0917059cfae32c">DECLARE_ROUTER_REQUESTMETHOD</a>(head)</div>
-<div class="line"><span class="lineno">  117</span> </div>
-<div class="line"><span class="lineno">  118</span>    protected:</div>
-<div class="line"><span class="lineno">  119</span>        std::shared_ptr&lt;RootRoute&gt; rootRoute = <span class="keywordtype">nullptr</span>;</div>
-<div class="line"><span class="lineno">  120</span> </div>
-<div class="line"><span class="lineno">  121</span>        friend class Route;</div>
-<div class="line"><span class="lineno">  122</span>        friend class RootRoute;</div>
-<div class="line"><span class="lineno">  123</span>    };</div>
-<div class="line"><span class="lineno">  124</span> </div>
-<div class="line"><span class="lineno">  125</span>} <span class="comment">// namespace express</span></div>
-<div class="line"><span class="lineno">  126</span> </div>
-<div class="line"><span class="lineno">  127</span><span class="preprocessor">#include &quot;express/Router.hpp&quot; </span><span class="comment">// IWYU pragma: export</span></div>
-<div class="line"><span class="lineno">  128</span> </div>
-<div class="line"><span class="lineno">  129</span><span class="preprocessor">#endif </span><span class="comment">// EXPRESS_ROUTER_H</span></div>
+<div class="line"><span class="lineno">  103</span>        <span class="keyword">const</span> Router&amp; setCaseInsensitiveRouting(<span class="keywordtype">bool</span> caseInsensitiveRouting = <span class="keyword">true</span>) <span class="keyword">const</span>;</div>
+<div class="line"><span class="lineno">  104</span> </div>
+<div class="line"><span class="lineno">  105</span>        std::list&lt;std::string&gt; getRoutes() <span class="keyword">const</span>;</div>
+<div class="line"><span class="lineno">  106</span> </div>
+<div class="line"><span class="lineno">  107</span>        <a class="code hl_define" href="Router_8h.html#a0da4b635facd60d48b0917059cfae32c">DECLARE_ROUTER_REQUESTMETHOD</a>(use)</div>
+<div class="line"><span class="lineno">  108</span>        <a class="code hl_define" href="Router_8h.html#a0da4b635facd60d48b0917059cfae32c">DECLARE_ROUTER_REQUESTMETHOD</a>(all)</div>
+<div class="line"><span class="lineno">  109</span>        <a class="code hl_define" href="Router_8h.html#a0da4b635facd60d48b0917059cfae32c">DECLARE_ROUTER_REQUESTMETHOD</a>(<span class="keyword">get</span>)</div>
+<div class="line"><span class="lineno">  110</span>        <a class="code hl_define" href="Router_8h.html#a0da4b635facd60d48b0917059cfae32c">DECLARE_ROUTER_REQUESTMETHOD</a>(put)</div>
+<div class="line"><span class="lineno">  111</span>        <a class="code hl_define" href="Router_8h.html#a0da4b635facd60d48b0917059cfae32c">DECLARE_ROUTER_REQUESTMETHOD</a>(post)</div>
+<div class="line"><span class="lineno">  112</span>        <a class="code hl_define" href="Router_8h.html#a0da4b635facd60d48b0917059cfae32c">DECLARE_ROUTER_REQUESTMETHOD</a>(del)</div>
+<div class="line"><span class="lineno">  113</span>        <a class="code hl_define" href="Router_8h.html#a0da4b635facd60d48b0917059cfae32c">DECLARE_ROUTER_REQUESTMETHOD</a>(connect)</div>
+<div class="line"><span class="lineno">  114</span>        <a class="code hl_define" href="Router_8h.html#a0da4b635facd60d48b0917059cfae32c">DECLARE_ROUTER_REQUESTMETHOD</a>(options)</div>
+<div class="line"><span class="lineno">  115</span>        <a class="code hl_define" href="Router_8h.html#a0da4b635facd60d48b0917059cfae32c">DECLARE_ROUTER_REQUESTMETHOD</a>(trace)</div>
+<div class="line"><span class="lineno">  116</span>        <a class="code hl_define" href="Router_8h.html#a0da4b635facd60d48b0917059cfae32c">DECLARE_ROUTER_REQUESTMETHOD</a>(patch)</div>
+<div class="line"><span class="lineno">  117</span>        <a class="code hl_define" href="Router_8h.html#a0da4b635facd60d48b0917059cfae32c">DECLARE_ROUTER_REQUESTMETHOD</a>(head)</div>
+<div class="line"><span class="lineno">  118</span> </div>
+<div class="line"><span class="lineno">  119</span>    protected:</div>
+<div class="line"><span class="lineno">  120</span>        std::shared_ptr&lt;RootRoute&gt; rootRoute = <span class="keywordtype">nullptr</span>;</div>
+<div class="line"><span class="lineno">  121</span> </div>
+<div class="line"><span class="lineno">  122</span>        friend class Route;</div>
+<div class="line"><span class="lineno">  123</span>        friend class RootRoute;</div>
+<div class="line"><span class="lineno">  124</span>    };</div>
+<div class="line"><span class="lineno">  125</span> </div>
+<div class="line"><span class="lineno">  126</span>} <span class="comment">// namespace express</span></div>
+<div class="line"><span class="lineno">  127</span> </div>
+<div class="line"><span class="lineno">  128</span><span class="preprocessor">#include &quot;express/Router.hpp&quot; </span><span class="comment">// IWYU pragma: export</span></div>
+<div class="line"><span class="lineno">  129</span> </div>
+<div class="line"><span class="lineno">  130</span><span class="preprocessor">#endif </span><span class="comment">// EXPRESS_ROUTER_H</span></div>
 <div class="ttc" id="aRouter_8h_html_a0da4b635facd60d48b0917059cfae32c"><div class="ttname"><a href="Router_8h.html#a0da4b635facd60d48b0917059cfae32c">DECLARE_ROUTER_REQUESTMETHOD</a></div><div class="ttdeci">#define DECLARE_ROUTER_REQUESTMETHOD(METHOD)</div><div class="ttdef"><b>Definition</b> <a href="Router_8h_source.html#l00071">Router.h:71</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -291,7 +292,7 @@ Macros</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_e2b20abddc1d75e9fa824bc5544f9c72.html">express</a></li><li class="navelem"><a class="el" href="Router_8h.html">Router.h</a></li>
-    <li class="footer">Generated on Fri Sep 12 2025 18:58:59 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Fri Oct 24 2025 11:05:08 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

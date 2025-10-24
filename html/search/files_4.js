@@ -16,12 +16,14 @@ var searchData=
   ['event_2eh_13',['Event.h',['../Event_8h.html',1,'']]],
   ['eventloop_2ecpp_14',['EventLoop.cpp',['../EventLoop_8cpp.html',1,'']]],
   ['eventloop_2eh_15',['EventLoop.h',['../EventLoop_8h.html',1,'']]],
-  ['eventmultiplexer_2ecpp_16',['eventmultiplexer.cpp',['../multiplexer_2select_2EventMultiplexer_8cpp.html',1,'(Global Namespace)'],['../multiplexer_2poll_2EventMultiplexer_8cpp.html',1,'(Global Namespace)'],['../multiplexer_2epoll_2EventMultiplexer_8cpp.html',1,'(Global Namespace)'],['../EventMultiplexer_8cpp.html',1,'(Global Namespace)']]],
-  ['eventmultiplexer_2eh_17',['eventmultiplexer.h',['../EventMultiplexer_8h.html',1,'(Global Namespace)'],['../multiplexer_2epoll_2EventMultiplexer_8h.html',1,'(Global Namespace)'],['../multiplexer_2poll_2EventMultiplexer_8h.html',1,'(Global Namespace)'],['../multiplexer_2select_2EventMultiplexer_8h.html',1,'(Global Namespace)']]],
+  ['eventmultiplexer_2ecpp_16',['eventmultiplexer.cpp',['../EventMultiplexer_8cpp.html',1,'(Global Namespace)'],['../multiplexer_2epoll_2EventMultiplexer_8cpp.html',1,'(Global Namespace)'],['../multiplexer_2poll_2EventMultiplexer_8cpp.html',1,'(Global Namespace)'],['../multiplexer_2select_2EventMultiplexer_8cpp.html',1,'(Global Namespace)']]],
+  ['eventmultiplexer_2eh_17',['eventmultiplexer.h',['../multiplexer_2epoll_2EventMultiplexer_8h.html',1,'(Global Namespace)'],['../multiplexer_2select_2EventMultiplexer_8h.html',1,'(Global Namespace)'],['../multiplexer_2poll_2EventMultiplexer_8h.html',1,'(Global Namespace)'],['../EventMultiplexer_8h.html',1,'(Global Namespace)']]],
   ['eventreceiver_2ecpp_18',['EventReceiver.cpp',['../EventReceiver_8cpp.html',1,'']]],
   ['eventreceiver_2eh_19',['EventReceiver.h',['../EventReceiver_8h.html',1,'']]],
-  ['exceptionalconditioneventreceiver_2ecpp_20',['ExceptionalConditionEventReceiver.cpp',['../ExceptionalConditionEventReceiver_8cpp.html',1,'']]],
-  ['exceptionalconditioneventreceiver_2eh_21',['ExceptionalConditionEventReceiver.h',['../ExceptionalConditionEventReceiver_8h.html',1,'']]],
-  ['exceptions_2ecpp_22',['Exceptions.cpp',['../Exceptions_8cpp.html',1,'']]],
-  ['exceptions_2eh_23',['Exceptions.h',['../Exceptions_8h.html',1,'']]]
+  ['eventsource_2ecpp_20',['EventSource.cpp',['../EventSource_8cpp.html',1,'']]],
+  ['eventsource_2eh_21',['eventsource.h',['../tls_2un_2EventSource_8h.html',1,'(Global Namespace)'],['../tls_2rc_2EventSource_8h.html',1,'(Global Namespace)'],['../tls_2in6_2EventSource_8h.html',1,'(Global Namespace)'],['../tls_2in_2EventSource_8h.html',1,'(Global Namespace)'],['../legacy_2un_2EventSource_8h.html',1,'(Global Namespace)'],['../legacy_2rc_2EventSource_8h.html',1,'(Global Namespace)'],['../legacy_2in6_2EventSource_8h.html',1,'(Global Namespace)'],['../legacy_2in_2EventSource_8h.html',1,'(Global Namespace)'],['../client_2tools_2EventSource_8h.html',1,'(Global Namespace)']]],
+  ['exceptionalconditioneventreceiver_2ecpp_22',['ExceptionalConditionEventReceiver.cpp',['../ExceptionalConditionEventReceiver_8cpp.html',1,'']]],
+  ['exceptionalconditioneventreceiver_2eh_23',['ExceptionalConditionEventReceiver.h',['../ExceptionalConditionEventReceiver_8h.html',1,'']]],
+  ['exceptions_2ecpp_24',['Exceptions.cpp',['../Exceptions_8cpp.html',1,'']]],
+  ['exceptions_2eh_25',['Exceptions.h',['../Exceptions_8h.html',1,'']]]
 ];

@@ -145,15 +145,15 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="StatusCodes_8cpp_source.html#l00126">126</a> of file <a class="el" href="StatusCodes_8cpp_source.html">StatusCodes.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  126</span>                                        {</div>
-<div class="line"><span class="lineno">  127</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classweb_1_1http_1_1StatusCode.html#a7b28ffa7972dfdf33e0cb6b6a1b8f453">statusCode</a>.contains(status);</div>
-<div class="line"><span class="lineno">  128</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="StatusCodes_8cpp_source.html#l00131">131</a> of file <a class="el" href="StatusCodes_8cpp_source.html">StatusCodes.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  131</span>                                        {</div>
+<div class="line"><span class="lineno">  132</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classweb_1_1http_1_1StatusCode.html#a7b28ffa7972dfdf33e0cb6b6a1b8f453">statusCode</a>.contains(status);</div>
+<div class="line"><span class="lineno">  133</span>    }</div>
 <div class="ttc" id="aclassweb_1_1http_1_1StatusCode_html_a7b28ffa7972dfdf33e0cb6b6a1b8f453"><div class="ttname"><a href="classweb_1_1http_1_1StatusCode.html#a7b28ffa7972dfdf33e0cb6b6a1b8f453">web::http::StatusCode::statusCode</a></div><div class="ttdeci">static std::map&lt; int, std::string &gt; statusCode</div><div class="ttdef"><b>Definition</b> <a href="StatusCodes_8h_source.html#l00060">StatusCodes.h:60</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="StatusCodes_8h_source.html#l00060">statusCode</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ResponseParser_8cpp_source.html#l00081">web::http::client::ResponseParser::parseStartLine()</a>, and <a class="el" href="StatusCodes_8cpp_source.html#l00116">reason()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ResponseParser_8cpp_source.html#l00072">web::http::client::ResponseParser::parseStartLine()</a>, and <a class="el" href="StatusCodes_8cpp_source.html#l00121">reason()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -186,21 +186,21 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="StatusCodes_8cpp_source.html#l00116">116</a> of file <a class="el" href="StatusCodes_8cpp_source.html">StatusCodes.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  116</span>                                           {</div>
-<div class="line"><span class="lineno">  117</span>        std::string reasonPhrase = <span class="stringliteral">&quot;unknown status code&quot;</span>;</div>
-<div class="line"><span class="lineno">  118</span> </div>
-<div class="line"><span class="lineno">  119</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="classweb_1_1http_1_1StatusCode.html#a7128168d2becba8d8bfd0e47ab2854ff">StatusCode::contains</a>(status)) {</div>
-<div class="line"><span class="lineno">  120</span>            reasonPhrase = <a class="code hl_variable" href="classweb_1_1http_1_1StatusCode.html#a7b28ffa7972dfdf33e0cb6b6a1b8f453">statusCode</a>[status];</div>
-<div class="line"><span class="lineno">  121</span>        }</div>
-<div class="line"><span class="lineno">  122</span> </div>
-<div class="line"><span class="lineno">  123</span>        <span class="keywordflow">return</span> reasonPhrase;</div>
-<div class="line"><span class="lineno">  124</span>    }</div>
-<div class="ttc" id="aclassweb_1_1http_1_1StatusCode_html_a7128168d2becba8d8bfd0e47ab2854ff"><div class="ttname"><a href="classweb_1_1http_1_1StatusCode.html#a7128168d2becba8d8bfd0e47ab2854ff">web::http::StatusCode::contains</a></div><div class="ttdeci">static bool contains(int status)</div><div class="ttdef"><b>Definition</b> <a href="StatusCodes_8cpp_source.html#l00126">StatusCodes.cpp:126</a></div></div>
+<p class="definition">Definition at line <a class="el" href="StatusCodes_8cpp_source.html#l00121">121</a> of file <a class="el" href="StatusCodes_8cpp_source.html">StatusCodes.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  121</span>                                           {</div>
+<div class="line"><span class="lineno">  122</span>        std::string reasonPhrase = <span class="stringliteral">&quot;unknown status code&quot;</span>;</div>
+<div class="line"><span class="lineno">  123</span> </div>
+<div class="line"><span class="lineno">  124</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="classweb_1_1http_1_1StatusCode.html#a7128168d2becba8d8bfd0e47ab2854ff">StatusCode::contains</a>(status)) {</div>
+<div class="line"><span class="lineno">  125</span>            reasonPhrase = <a class="code hl_variable" href="classweb_1_1http_1_1StatusCode.html#a7b28ffa7972dfdf33e0cb6b6a1b8f453">statusCode</a>[status];</div>
+<div class="line"><span class="lineno">  126</span>        }</div>
+<div class="line"><span class="lineno">  127</span> </div>
+<div class="line"><span class="lineno">  128</span>        <span class="keywordflow">return</span> reasonPhrase;</div>
+<div class="line"><span class="lineno">  129</span>    }</div>
+<div class="ttc" id="aclassweb_1_1http_1_1StatusCode_html_a7128168d2becba8d8bfd0e47ab2854ff"><div class="ttname"><a href="classweb_1_1http_1_1StatusCode.html#a7128168d2becba8d8bfd0e47ab2854ff">web::http::StatusCode::contains</a></div><div class="ttdeci">static bool contains(int status)</div><div class="ttdef"><b>Definition</b> <a href="StatusCodes_8cpp_source.html#l00131">StatusCodes.cpp:131</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="StatusCodes_8cpp_source.html#l00126">contains()</a>, and <a class="el" href="StatusCodes_8h_source.html#l00060">statusCode</a>.</p>
+<p class="reference">References <a class="el" href="StatusCodes_8cpp_source.html#l00131">contains()</a>, and <a class="el" href="StatusCodes_8h_source.html#l00060">statusCode</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00350">web::http::server::Response::sendHeader()</a>, <a class="el" href="express_2Response_8cpp_source.html#l00091">express::Response::sendStatus()</a>, and <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00229">web::http::server::Response::sendStatus()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="web_2http_2server_2Request_8cpp_source.html#l00055">web::http::server::Request::Request()</a>, <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00160">web::http::server::SocketContext::requestCompleted()</a>, <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00149">web::http::server::SocketContext::responseCompleted()</a>, <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00126">web::http::server::SocketContext::responseStarted()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00367">web::http::server::Response::sendHeader()</a>, <a class="el" href="express_2Response_8cpp_source.html#l00095">express::Response::sendStatus()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00236">web::http::server::Response::sendStatus()</a>, and <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00248">web::http::server::Response::upgrade()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -237,7 +237,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="StatusCodes_8h_source.html#l00060">60</a> of file <a class="el" href="StatusCodes_8h_source.html">StatusCodes.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="StatusCodes_8cpp_source.html#l00126">contains()</a>, and <a class="el" href="StatusCodes_8cpp_source.html#l00116">reason()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="StatusCodes_8cpp_source.html#l00131">contains()</a>, and <a class="el" href="StatusCodes_8cpp_source.html#l00121">reason()</a>.</p>
 
 </div>
 </div>
@@ -251,7 +251,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceweb.html">web</a></li><li class="navelem"><a class="el" href="namespaceweb_1_1http.html">http</a></li><li class="navelem"><a class="el" href="classweb_1_1http_1_1StatusCode.html">StatusCode</a></li>
-    <li class="footer">Generated on Fri Sep 12 2025 18:59:00 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Fri Oct 24 2025 11:05:09 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

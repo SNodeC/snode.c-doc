@@ -93,6 +93,7 @@ var classexpress_1_1Router =
     [ "put", "classexpress_1_1Router.html#a265577ed7c9ab76e85c8e358c3741bda", null ],
     [ "put", "classexpress_1_1Router.html#a03bb3ffd45564e652d3446688d781891", null ],
     [ "put", "classexpress_1_1Router.html#a5be2e8669e47c9fbbdc68a5bd447efc1", null ],
+    [ "setCaseInsensitiveRouting", "classexpress_1_1Router.html#a44a47c91e6f66b6213b19ed80fd92795", null ],
     [ "setStrictRouting", "classexpress_1_1Router.html#a52af5e0a7c89819edac8fb1c59d45e36", null ],
     [ "trace", "classexpress_1_1Router.html#ab71927c6d9ec2203b7884b795c370f6e", null ],
     [ "trace", "classexpress_1_1Router.html#a4aeca216bcaf046eac4cba4f874713b4", null ],

@@ -60,6 +60,7 @@ var classexpress_1_1RootRoute =
     [ "put", "classexpress_1_1RootRoute.html#aaee0bd57d0bd2cb815dbfb817e927208", null ],
     [ "put", "classexpress_1_1RootRoute.html#ad33de9e0dca782f9fc3c90838ce3e911", null ],
     [ "routes", "classexpress_1_1RootRoute.html#a7b10d9fbf7f98e46a2ee84e0d4bb9c63", null ],
+    [ "setCaseInsensitiveRouting", "classexpress_1_1RootRoute.html#a1ba9caa328e1f3e456bc83ac9e3e73e3", null ],
     [ "setStrictRouting", "classexpress_1_1RootRoute.html#a5620d20f1ca6b8ec8d4342b538475bc5", null ],
     [ "trace", "classexpress_1_1RootRoute.html#a7f258c229d91b8a0de00b6361c1f3443", null ],
     [ "trace", "classexpress_1_1RootRoute.html#a7ff4edf9d9d1df16f0996e4ed8bec532", null ],

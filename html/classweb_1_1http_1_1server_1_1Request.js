@@ -3,6 +3,7 @@ var classweb_1_1http_1_1server_1_1Request =
     [ "Request", "classweb_1_1http_1_1server_1_1Request.html#a9147d174fe3e97836fdf8fb63ee302b6", null ],
     [ "Request", "classweb_1_1http_1_1server_1_1Request.html#ac585b69636d7f7e0dfac265c696e3ba9", null ],
     [ "Request", "classweb_1_1http_1_1server_1_1Request.html#a3a0958c701dfdf24f6b40dcf5c905bf3", null ],
+    [ "Request", "classweb_1_1http_1_1server_1_1Request.html#a3c95f3045640c2871de3ee3dbe4e3edd", null ],
     [ "cookie", "classweb_1_1http_1_1server_1_1Request.html#a682573954449cf969511fbcbe25f19cc", null ],
     [ "get", "classweb_1_1http_1_1server_1_1Request.html#aa29d8d5a5b007453ce2b96b55e63960f", null ],
     [ "operator=", "classweb_1_1http_1_1server_1_1Request.html#a24002bf2b8ab2d2c5d96a4f3c2488d7f", null ],
@@ -20,5 +21,7 @@ var classweb_1_1http_1_1server_1_1Request =
     [ "method", "classweb_1_1http_1_1server_1_1Request.html#a7bbff0c0900a11bab6fbb98b95d74a01", null ],
     [ "nullstr", "classweb_1_1http_1_1server_1_1Request.html#abbc56ed49a648427ea68413cc20a353c", null ],
     [ "queries", "classweb_1_1http_1_1server_1_1Request.html#a7b988d44be49587aa0432fcd33630ae4", null ],
+    [ "reason", "classweb_1_1http_1_1server_1_1Request.html#aa7cb0c2b381d847be28a6579a5edea75", null ],
+    [ "status", "classweb_1_1http_1_1server_1_1Request.html#ad7289fdba9fee72d6c6951012e072ea2", null ],
     [ "url", "classweb_1_1http_1_1server_1_1Request.html#a2c2ef2815be183f1130e9a4fd43f9851", null ]
 ];

@@ -10,13 +10,14 @@ var classweb_1_1http_1_1server_1_1SocketContext =
     [ "onReceivedFromPeer", "classweb_1_1http_1_1server_1_1SocketContext.html#a939435de5ba9e7ac686efd2de1844741", null ],
     [ "onSignal", "classweb_1_1http_1_1server_1_1SocketContext.html#a042c67d3e9abd44472b70f9227d33dc0", null ],
     [ "onWriteError", "classweb_1_1http_1_1server_1_1SocketContext.html#a9830e713ac33db36761364262d28394a", null ],
-    [ "requestCompleted", "classweb_1_1http_1_1server_1_1SocketContext.html#aa91d12601bb4b7ccf9381d64286c4a0c", null ],
-    [ "responseCompleted", "classweb_1_1http_1_1server_1_1SocketContext.html#a445fce1f4b75291dbc566f79f8795765", null ],
-    [ "responseStarted", "classweb_1_1http_1_1server_1_1SocketContext.html#a3fb957f3a38174ca3d067750d0fadafe", null ],
+    [ "requestCompleted", "classweb_1_1http_1_1server_1_1SocketContext.html#aa6410812de05b931c69b0b55d1cdc947", null ],
+    [ "responseCompleted", "classweb_1_1http_1_1server_1_1SocketContext.html#a4d88902e4b881471e4b377ce533e79ad", null ],
+    [ "responseStarted", "classweb_1_1http_1_1server_1_1SocketContext.html#aa03164f2beb37a1e271db355ae660eaf", null ],
     [ "httpClose", "classweb_1_1http_1_1server_1_1SocketContext.html#a6768395fc2c81378d92462cd98e2c19d", null ],
     [ "masterResponse", "classweb_1_1http_1_1server_1_1SocketContext.html#a6f19c485ddf2b2ddc1805006a7d423e6", null ],
     [ "onRequestReady", "classweb_1_1http_1_1server_1_1SocketContext.html#ac2e57456f05d3fdeaa2b5940a1495466", null ],
     [ "parser", "classweb_1_1http_1_1server_1_1SocketContext.html#ab1b443170605afb9a8dbb5fb39af0c12", null ],
     [ "pendingRequests", "classweb_1_1http_1_1server_1_1SocketContext.html#af5aaead93ddb3699c9664b5244a4b7b8", null ],
-    [ "Response", "classweb_1_1http_1_1server_1_1SocketContext.html#a2d5a78713a5fe3c58cdec992ad6b22c8", null ]
+    [ "Response", "classweb_1_1http_1_1server_1_1SocketContext.html#a2d5a78713a5fe3c58cdec992ad6b22c8", null ],
+    [ "serverSentEvent", "classweb_1_1http_1_1server_1_1SocketContext.html#a9c22041e5e54b9596e7bfd21f891ba1c", null ]
 ];

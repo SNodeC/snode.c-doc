@@ -1,7 +1,7 @@
 var classiot_1_1mqtt_1_1client_1_1Mqtt =
 [
     [ "Super", "classiot_1_1mqtt_1_1client_1_1Mqtt.html#aad9b49e5ddf3e3d782a9fd88e2fff165", null ],
-    [ "Mqtt", "classiot_1_1mqtt_1_1client_1_1Mqtt.html#a70b43af18c6600cd6b54a96e6c0dfb72", null ],
+    [ "Mqtt", "classiot_1_1mqtt_1_1client_1_1Mqtt.html#a076a16767a7732eede1b3b3f9cdc9362", null ],
     [ "~Mqtt", "classiot_1_1mqtt_1_1client_1_1Mqtt.html#ac0c13d093b5512cb736162843facf537", null ],
     [ "_onConnack", "classiot_1_1mqtt_1_1client_1_1Mqtt.html#ab0f25dbc1908fdc2b6e5293c4d83e8fc", null ],
     [ "_onPingresp", "classiot_1_1mqtt_1_1client_1_1Mqtt.html#a780777d4135f1f364c35378c117960fd", null ],
@@ -15,11 +15,11 @@ var classiot_1_1mqtt_1_1client_1_1Mqtt =
     [ "onSignal", "classiot_1_1mqtt_1_1client_1_1Mqtt.html#abefe29d03408e3f0efb0d5a64c901e93", null ],
     [ "onSuback", "classiot_1_1mqtt_1_1client_1_1Mqtt.html#acaacfad72b121df18686afdd69bbc62a", null ],
     [ "onUnsuback", "classiot_1_1mqtt_1_1client_1_1Mqtt.html#aa1c082319fe7ea71b4ae70c1367bc4da", null ],
-    [ "sendConnect", "classiot_1_1mqtt_1_1client_1_1Mqtt.html#a1a45ed00d710d808f1fb63ce2196ed04", null ],
+    [ "sendConnect", "classiot_1_1mqtt_1_1client_1_1Mqtt.html#a1679410433a3bb7f18cce69218dd3882", null ],
     [ "sendDisconnect", "classiot_1_1mqtt_1_1client_1_1Mqtt.html#adf779c71dc8cc51b39cf5dc63f9736f7", null ],
     [ "sendPingreq", "classiot_1_1mqtt_1_1client_1_1Mqtt.html#ad91d635b135c0a9f5d67a4b7e51d3f42", null ],
-    [ "sendSubscribe", "classiot_1_1mqtt_1_1client_1_1Mqtt.html#a8d0e76c75ea0ca1440f63172fd91a557", null ],
-    [ "sendUnsubscribe", "classiot_1_1mqtt_1_1client_1_1Mqtt.html#abe29fc3ea2162ce7304fe6dc53b594dc", null ],
+    [ "sendSubscribe", "classiot_1_1mqtt_1_1client_1_1Mqtt.html#a888c7bb0c50c6fdafb418eb3e4917938", null ],
+    [ "sendUnsubscribe", "classiot_1_1mqtt_1_1client_1_1Mqtt.html#a508f87b10b02fed7467b1d75804bb36b", null ],
     [ "iot::mqtt::client::packets::Connack", "classiot_1_1mqtt_1_1client_1_1Mqtt.html#a8abcf349620d8034686f7c8b65e60ddf", null ],
     [ "iot::mqtt::client::packets::Pingresp", "classiot_1_1mqtt_1_1client_1_1Mqtt.html#abe920beec2daed92a7fa78488619bcda", null ],
     [ "iot::mqtt::client::packets::Puback", "classiot_1_1mqtt_1_1client_1_1Mqtt.html#a7ed359359f433d3995c7a5a6efed174f", null ],

@@ -544,10 +544,16 @@ var annotated_dup =
             [ "SendFileCommand", "classweb_1_1http_1_1client_1_1commands_1_1SendFileCommand.html", "classweb_1_1http_1_1client_1_1commands_1_1SendFileCommand" ],
             [ "SendFragmentCommand", "classweb_1_1http_1_1client_1_1commands_1_1SendFragmentCommand.html", "classweb_1_1http_1_1client_1_1commands_1_1SendFragmentCommand" ],
             [ "SendHeaderCommand", "classweb_1_1http_1_1client_1_1commands_1_1SendHeaderCommand.html", "classweb_1_1http_1_1client_1_1commands_1_1SendHeaderCommand" ],
+            [ "SseCommand", "classweb_1_1http_1_1client_1_1commands_1_1SseCommand.html", "classweb_1_1http_1_1client_1_1commands_1_1SseCommand" ],
             [ "UpgradeCommand", "classweb_1_1http_1_1client_1_1commands_1_1UpgradeCommand.html", "classweb_1_1http_1_1client_1_1commands_1_1UpgradeCommand" ]
+          ] ],
+          [ "tools", "namespaceweb_1_1http_1_1client_1_1tools.html", [
+            [ "EventSource", "classweb_1_1http_1_1client_1_1tools_1_1EventSource.html", "classweb_1_1http_1_1client_1_1tools_1_1EventSource" ],
+            [ "EventSourceT", "classweb_1_1http_1_1client_1_1tools_1_1EventSourceT.html", "classweb_1_1http_1_1client_1_1tools_1_1EventSourceT" ]
           ] ],
           [ "Client", "classweb_1_1http_1_1client_1_1Client.html", "classweb_1_1http_1_1client_1_1Client" ],
           [ "ConfigHTTP", "classweb_1_1http_1_1client_1_1ConfigHTTP.html", "classweb_1_1http_1_1client_1_1ConfigHTTP" ],
+          [ "MasterRequest", "classweb_1_1http_1_1client_1_1MasterRequest.html", "classweb_1_1http_1_1client_1_1MasterRequest" ],
           [ "Request", "classweb_1_1http_1_1client_1_1Request.html", "classweb_1_1http_1_1client_1_1Request" ],
           [ "RequestCommand", "classweb_1_1http_1_1client_1_1RequestCommand.html", "classweb_1_1http_1_1client_1_1RequestCommand" ],
           [ "Response", "classweb_1_1http_1_1client_1_1Response.html", "classweb_1_1http_1_1client_1_1Response" ],
@@ -563,6 +569,20 @@ var annotated_dup =
           [ "HTTP10Response", "classweb_1_1http_1_1decoder_1_1HTTP10Response.html", "classweb_1_1http_1_1decoder_1_1HTTP10Response" ],
           [ "Identity", "classweb_1_1http_1_1decoder_1_1Identity.html", "classweb_1_1http_1_1decoder_1_1Identity" ]
         ] ],
+        [ "legacy", "namespaceweb_1_1http_1_1legacy.html", [
+          [ "in", "namespaceweb_1_1http_1_1legacy_1_1in.html", [
+            [ "EventSource", "classweb_1_1http_1_1legacy_1_1in_1_1EventSource.html", "classweb_1_1http_1_1legacy_1_1in_1_1EventSource" ]
+          ] ],
+          [ "in6", "namespaceweb_1_1http_1_1legacy_1_1in6.html", [
+            [ "EventSource", "classweb_1_1http_1_1legacy_1_1in6_1_1EventSource.html", "classweb_1_1http_1_1legacy_1_1in6_1_1EventSource" ]
+          ] ],
+          [ "rc", "namespaceweb_1_1http_1_1legacy_1_1rc.html", [
+            [ "EventSource", "classweb_1_1http_1_1legacy_1_1rc_1_1EventSource.html", "classweb_1_1http_1_1legacy_1_1rc_1_1EventSource" ]
+          ] ],
+          [ "un", "namespaceweb_1_1http_1_1legacy_1_1un.html", [
+            [ "EventSource", "classweb_1_1http_1_1legacy_1_1un_1_1EventSource.html", "classweb_1_1http_1_1legacy_1_1un_1_1EventSource" ]
+          ] ]
+        ] ],
         [ "server", "namespaceweb_1_1http_1_1server.html", [
           [ "Request", "classweb_1_1http_1_1server_1_1Request.html", "classweb_1_1http_1_1server_1_1Request" ],
           [ "RequestParser", "classweb_1_1http_1_1server_1_1RequestParser.html", "classweb_1_1http_1_1server_1_1RequestParser" ],
@@ -572,6 +592,20 @@ var annotated_dup =
           [ "SocketContextFactory", "classweb_1_1http_1_1server_1_1SocketContextFactory.html", "classweb_1_1http_1_1server_1_1SocketContextFactory" ],
           [ "SocketContextUpgradeFactory", "classweb_1_1http_1_1server_1_1SocketContextUpgradeFactory.html", "classweb_1_1http_1_1server_1_1SocketContextUpgradeFactory" ],
           [ "SocketContextUpgradeFactorySelector", "classweb_1_1http_1_1server_1_1SocketContextUpgradeFactorySelector.html", "classweb_1_1http_1_1server_1_1SocketContextUpgradeFactorySelector" ]
+        ] ],
+        [ "tls", "namespaceweb_1_1http_1_1tls.html", [
+          [ "in", "namespaceweb_1_1http_1_1tls_1_1in.html", [
+            [ "EventSource", "classweb_1_1http_1_1tls_1_1in_1_1EventSource.html", "classweb_1_1http_1_1tls_1_1in_1_1EventSource" ]
+          ] ],
+          [ "in6", "namespaceweb_1_1http_1_1tls_1_1in6.html", [
+            [ "EventSource", "classweb_1_1http_1_1tls_1_1in6_1_1EventSource.html", "classweb_1_1http_1_1tls_1_1in6_1_1EventSource" ]
+          ] ],
+          [ "rc", "namespaceweb_1_1http_1_1tls_1_1rc.html", [
+            [ "EventSource", "classweb_1_1http_1_1tls_1_1rc_1_1EventSource.html", "classweb_1_1http_1_1tls_1_1rc_1_1EventSource" ]
+          ] ],
+          [ "un", "namespaceweb_1_1http_1_1tls_1_1un.html", [
+            [ "EventSource", "classweb_1_1http_1_1tls_1_1un_1_1EventSource.html", "classweb_1_1http_1_1tls_1_1un_1_1EventSource" ]
+          ] ]
         ] ],
         [ "ciLess", "structweb_1_1http_1_1ciLess.html", "structweb_1_1http_1_1ciLess" ],
         [ "CiStringMap", "classweb_1_1http_1_1CiStringMap.html", null ],

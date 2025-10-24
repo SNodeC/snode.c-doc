@@ -2,7 +2,6 @@ var classcore_1_1socket_1_1stream_1_1SocketContext =
 [
     [ "Super", "classcore_1_1socket_1_1stream_1_1SocketContext.html#a7450b1250668ff062d5c009472b7d430", null ],
     [ "SocketContext", "classcore_1_1socket_1_1stream_1_1SocketContext.html#a2264c67933db0880ba40e5cd44ffa981", null ],
-    [ "~SocketContext", "classcore_1_1socket_1_1stream_1_1SocketContext.html#a64576846739aefd7ea71976c861dc7d5", null ],
     [ "attach", "classcore_1_1socket_1_1stream_1_1SocketContext.html#af8e76943ef2429fdae9133c26576c1c8", null ],
     [ "close", "classcore_1_1socket_1_1stream_1_1SocketContext.html#a47b23b8583dfd3880232e748f284f380", null ],
     [ "detach", "classcore_1_1socket_1_1stream_1_1SocketContext.html#a707e29a08777dca91b44f43345474133", null ],

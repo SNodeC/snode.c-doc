@@ -1,5 +1,6 @@
 var namespaceexpress =
 [
+    [ "detail", "namespaceexpress_1_1detail.html", null ],
     [ "dispatcher", "namespaceexpress_1_1dispatcher.html", "namespaceexpress_1_1dispatcher" ],
     [ "legacy", "namespaceexpress_1_1legacy.html", "namespaceexpress_1_1legacy" ],
     [ "middleware", "namespaceexpress_1_1middleware.html", "namespaceexpress_1_1middleware" ],

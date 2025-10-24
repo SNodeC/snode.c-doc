@@ -10,6 +10,7 @@ var dir_890691660869da6a17298077dcca53fb =
     [ "ConnectionState.h", "ConnectionState_8h.html", "ConnectionState_8h" ],
     [ "ContentDecoder.cpp", "ContentDecoder_8cpp.html", null ],
     [ "ContentDecoder.h", "ContentDecoder_8h.html", "ContentDecoder_8h" ],
+    [ "ContentType.h", "ContentType_8h.html", "ContentType_8h" ],
     [ "CookieOptions.h", "CookieOptions_8h.html", "CookieOptions_8h" ],
     [ "http_utils.cpp", "http__utils_8cpp.html", "http__utils_8cpp" ],
     [ "http_utils.h", "http__utils_8h.html", "http__utils_8h" ],

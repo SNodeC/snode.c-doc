@@ -9,7 +9,7 @@ var searchData=
   ['maskingkey_6',['maskingKey',['../classweb_1_1websocket_1_1Receiver.html#a0e3dbbb66dcb339202b7f92e2bb37216',1,'web::websocket::Receiver']]],
   ['maskingkeynumbytes_7',['maskingKeyNumBytes',['../classweb_1_1websocket_1_1Receiver.html#a540960ce74ba7bb12ac975ea221553f0',1,'web::websocket::Receiver']]],
   ['maskingkeynumbytesleft_8',['maskingKeyNumBytesLeft',['../classweb_1_1websocket_1_1Receiver.html#abd0b6b885cf9aacb664feaf03f7c6aef',1,'web::websocket::Receiver']]],
-  ['masterrequest_9',['masterrequest',['../classweb_1_1http_1_1client_1_1Request.html#ae33fc53c4140a8cd9f0aff280628b0c3',1,'web::http::client::Request::masterRequest'],['../classweb_1_1http_1_1client_1_1SocketContext.html#ad767afba91f4afd7ccdbe797aa4ff675',1,'web::http::client::SocketContext::masterRequest']]],
+  ['masterrequest_9',['masterrequest',['../classweb_1_1http_1_1client_1_1Request.html#a6da1284f7fa29c4c211eca73cd365f81',1,'web::http::client::Request::masterRequest'],['../classweb_1_1http_1_1client_1_1SocketContext.html#a871a51baad117568877e90096ac94fd7',1,'web::http::client::SocketContext::masterRequest']]],
   ['masterresponse_10',['masterResponse',['../classweb_1_1http_1_1server_1_1SocketContext.html#a6f19c485ddf2b2ddc1805006a7d423e6',1,'web::http::server::SocketContext']]],
   ['max_11',['MAX',['../structcore_1_1DescriptorEventReceiver_1_1TIMEOUT.html#a66faca140de0c0f8dbdd6d0757ac1ee2',1,'core::DescriptorEventReceiver::TIMEOUT']]],
   ['maxinactivity_12',['maxInactivity',['../classcore_1_1DescriptorEventReceiver.html#a1f1288f7ed5140d353e24b611a942618',1,'core::DescriptorEventReceiver']]],

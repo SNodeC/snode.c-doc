@@ -141,6 +141,8 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a8faf5086993260d6b916f020bd5e45cc inherit pub_methods_classexpress_1_1Router"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a52af5e0a7c89819edac8fb1c59d45e36 inherit pub_methods_classexpress_1_1Router" id="r_a52af5e0a7c89819edac8fb1c59d45e36"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classexpress_1_1Router.html">Router</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classexpress_1_1Router.html#a52af5e0a7c89819edac8fb1c59d45e36">setStrictRouting</a> (bool strictRouting=true) const</td></tr>
 <tr class="separator:a52af5e0a7c89819edac8fb1c59d45e36 inherit pub_methods_classexpress_1_1Router"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44a47c91e6f66b6213b19ed80fd92795 inherit pub_methods_classexpress_1_1Router" id="r_a44a47c91e6f66b6213b19ed80fd92795"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classexpress_1_1Router.html">Router</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classexpress_1_1Router.html#a44a47c91e6f66b6213b19ed80fd92795">setCaseInsensitiveRouting</a> (bool caseInsensitiveRouting=true) const</td></tr>
+<tr class="separator:a44a47c91e6f66b6213b19ed80fd92795 inherit pub_methods_classexpress_1_1Router"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac3107c8acf16cdccc5adb23623fda8c9 inherit pub_methods_classexpress_1_1Router" id="r_ac3107c8acf16cdccc5adb23623fda8c9"><td class="memItemLeft" align="right" valign="top">std::list&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classexpress_1_1Router.html#ac3107c8acf16cdccc5adb23623fda8c9">getRoutes</a> () const</td></tr>
 <tr class="separator:ac3107c8acf16cdccc5adb23623fda8c9 inherit pub_methods_classexpress_1_1Router"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9f5c02a219a67bf1fc031bdbf71b7566 inherit pub_methods_classexpress_1_1Router" id="r_a9f5c02a219a67bf1fc031bdbf71b7566"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classexpress_1_1Route.html">Route</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classexpress_1_1Router.html#a9f5c02a219a67bf1fc031bdbf71b7566">use</a> (const <a class="el" href="classexpress_1_1Router.html">Router</a> &amp;<a class="el" href="testregex_8cpp.html#ab024e3c77aeb1487da4b33877cdfc1fb">router</a>) const</td></tr>
@@ -439,23 +441,24 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="VHost_8cpp_source.html#l00050">50</a> of file <a class="el" href="VHost_8cpp_source.html">VHost.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   51</span>        : <a class="code hl_variable" href="classexpress_1_1middleware_1_1VHost.html#a1635415d2b3f6857d8f86396af13f136">host</a>(<a class="code hl_variable" href="classexpress_1_1middleware_1_1VHost.html#a1635415d2b3f6857d8f86396af13f136">host</a>) {</div>
-<div class="line"><span class="lineno">   52</span>        <a class="code hl_function" href="classexpress_1_1Router.html#a9f5c02a219a67bf1fc031bdbf71b7566">use</a>(<span class="stringliteral">&quot;/&quot;</span>, [&amp;<a class="code hl_variable" href="classexpress_1_1middleware_1_1VHost.html#a1635415d2b3f6857d8f86396af13f136">host</a> = this-&gt;<a class="code hl_variable" href="classexpress_1_1middleware_1_1VHost.html#a1635415d2b3f6857d8f86396af13f136">host</a>] <a class="code hl_define" href="Router_8h.html#ac5313b926a3bc0fb106bffb31e93dc71">MIDDLEWARE</a>(req, res, next) {</div>
-<div class="line"><span class="lineno">   53</span>            <span class="keywordflow">if</span> (req-&gt;get(<span class="stringliteral">&quot;Host&quot;</span>) == <a class="code hl_variable" href="classexpress_1_1middleware_1_1VHost.html#a1635415d2b3f6857d8f86396af13f136">host</a>) {</div>
-<div class="line"><span class="lineno">   54</span>                next();</div>
-<div class="line"><span class="lineno">   55</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   56</span>                next(<span class="stringliteral">&quot;router&quot;</span>);</div>
-<div class="line"><span class="lineno">   57</span>            }</div>
-<div class="line"><span class="lineno">   58</span>        });</div>
-<div class="line"><span class="lineno">   59</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="VHost_8cpp_source.html#l00079">79</a> of file <a class="el" href="VHost_8cpp_source.html">VHost.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   80</span>        : <a class="code hl_variable" href="classexpress_1_1middleware_1_1VHost.html#a1635415d2b3f6857d8f86396af13f136">host</a>(<a class="code hl_variable" href="classexpress_1_1middleware_1_1VHost.html#a1635415d2b3f6857d8f86396af13f136">host</a>) {</div>
+<div class="line"><span class="lineno">   81</span>        <a class="code hl_function" href="classexpress_1_1Router.html#a9f5c02a219a67bf1fc031bdbf71b7566">use</a>(<span class="stringliteral">&quot;/&quot;</span>, [&amp;<a class="code hl_variable" href="classexpress_1_1middleware_1_1VHost.html#a1635415d2b3f6857d8f86396af13f136">host</a> = this-&gt;<a class="code hl_variable" href="classexpress_1_1middleware_1_1VHost.html#a1635415d2b3f6857d8f86396af13f136">host</a>] <a class="code hl_define" href="Router_8h.html#ac5313b926a3bc0fb106bffb31e93dc71">MIDDLEWARE</a>(req, res, next) {</div>
+<div class="line"><span class="lineno">   82</span>            <span class="keywordflow">if</span> (req-&gt;get(<span class="stringliteral">&quot;Host&quot;</span>) == <a class="code hl_variable" href="classexpress_1_1middleware_1_1VHost.html#a1635415d2b3f6857d8f86396af13f136">host</a> || <a class="code hl_function" href="namespaceexpress_1_1middleware.html#a54f501c5233820e7e2fb950978001ed8">hostWithoutPort</a>(req-&gt;get(<span class="stringliteral">&quot;Host&quot;</span>)) == <a class="code hl_variable" href="classexpress_1_1middleware_1_1VHost.html#a1635415d2b3f6857d8f86396af13f136">host</a>) {</div>
+<div class="line"><span class="lineno">   83</span>                next();</div>
+<div class="line"><span class="lineno">   84</span>            } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">   85</span>                next(<span class="stringliteral">&quot;router&quot;</span>);</div>
+<div class="line"><span class="lineno">   86</span>            }</div>
+<div class="line"><span class="lineno">   87</span>        });</div>
+<div class="line"><span class="lineno">   88</span>    }</div>
 <div class="ttc" id="aRouter_8h_html_ac5313b926a3bc0fb106bffb31e93dc71"><div class="ttname"><a href="Router_8h.html#ac5313b926a3bc0fb106bffb31e93dc71">MIDDLEWARE</a></div><div class="ttdeci">#define MIDDLEWARE(req, res, next)</div><div class="ttdef"><b>Definition</b> <a href="Router_8h_source.html#l00063">Router.h:63</a></div></div>
-<div class="ttc" id="aclassexpress_1_1Router_html_a9f5c02a219a67bf1fc031bdbf71b7566"><div class="ttname"><a href="classexpress_1_1Router.html#a9f5c02a219a67bf1fc031bdbf71b7566">express::Router::use</a></div><div class="ttdeci">Route &amp; use(const Router &amp;router) const</div><div class="ttdef"><b>Definition</b> <a href="Router_8cpp_source.html#l00088">Router.cpp:88</a></div></div>
+<div class="ttc" id="aclassexpress_1_1Router_html_a9f5c02a219a67bf1fc031bdbf71b7566"><div class="ttname"><a href="classexpress_1_1Router.html#a9f5c02a219a67bf1fc031bdbf71b7566">express::Router::use</a></div><div class="ttdeci">Route &amp; use(const Router &amp;router) const</div><div class="ttdef"><b>Definition</b> <a href="Router_8cpp_source.html#l00094">Router.cpp:94</a></div></div>
 <div class="ttc" id="aclassexpress_1_1middleware_1_1VHost_html_a1635415d2b3f6857d8f86396af13f136"><div class="ttname"><a href="classexpress_1_1middleware_1_1VHost.html#a1635415d2b3f6857d8f86396af13f136">express::middleware::VHost::host</a></div><div class="ttdeci">std::string host</div><div class="ttdef"><b>Definition</b> <a href="VHost_8h_source.html#l00061">VHost.h:61</a></div></div>
+<div class="ttc" id="anamespaceexpress_1_1middleware_html_a54f501c5233820e7e2fb950978001ed8"><div class="ttname"><a href="namespaceexpress_1_1middleware.html#a54f501c5233820e7e2fb950978001ed8">express::middleware::hostWithoutPort</a></div><div class="ttdeci">static std::string_view hostWithoutPort(std::string_view host)</div><div class="ttdef"><b>Definition</b> <a href="VHost_8cpp_source.html#l00052">VHost.cpp:52</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="express_2Request_8cpp_source.html#l00093">express::Request::get()</a>, <a class="el" href="VHost_8h_source.html#l00061">host</a>, and <a class="el" href="Next_8cpp_source.html#l00056">express::Next::operator()()</a>.</p>
+<p class="reference">References <a class="el" href="express_2Request_8cpp_source.html#l00093">express::Request::get()</a>, <a class="el" href="VHost_8h_source.html#l00061">host</a>, <a class="el" href="VHost_8cpp_source.html#l00052">express::middleware::hostWithoutPort()</a>, and <a class="el" href="Next_8cpp_source.html#l00056">express::Next::operator()()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="VHost_8cpp_source.html#l00061">instance()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="VHost_8cpp_source.html#l00090">instance()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -494,22 +497,22 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="VHost_8cpp_source.html#l00061">61</a> of file <a class="el" href="VHost_8cpp_source.html">VHost.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   61</span>                                                      {</div>
-<div class="line"><span class="lineno">   62</span>        <span class="comment">// Keep all created vhost middlewares alive</span></div>
-<div class="line"><span class="lineno">   63</span>        <span class="keyword">static</span> std::map&lt;std::string, std::shared_ptr&lt;class VHost&gt;&gt; vHostMiddlewares;</div>
-<div class="line"><span class="lineno">   64</span> </div>
-<div class="line"><span class="lineno">   65</span>        <span class="keywordflow">if</span> (!vHostMiddlewares.contains(<a class="code hl_variable" href="classexpress_1_1middleware_1_1VHost.html#a1635415d2b3f6857d8f86396af13f136">host</a>)) {</div>
-<div class="line"><span class="lineno">   66</span>            vHostMiddlewares[<a class="code hl_variable" href="classexpress_1_1middleware_1_1VHost.html#a1635415d2b3f6857d8f86396af13f136">host</a>] = std::shared_ptr&lt;VHost&gt;(<span class="keyword">new</span> <a class="code hl_function" href="classexpress_1_1middleware_1_1VHost.html#ab60d9df1ad85a8ee414c111135e250b1">VHost</a>(<a class="code hl_variable" href="classexpress_1_1middleware_1_1VHost.html#a1635415d2b3f6857d8f86396af13f136">host</a>));</div>
-<div class="line"><span class="lineno">   67</span>        }</div>
-<div class="line"><span class="lineno">   68</span> </div>
-<div class="line"><span class="lineno">   69</span>        <span class="keywordflow">return</span> *vHostMiddlewares[<a class="code hl_variable" href="classexpress_1_1middleware_1_1VHost.html#a1635415d2b3f6857d8f86396af13f136">host</a>];</div>
-<div class="line"><span class="lineno">   70</span>    }</div>
-<div class="ttc" id="aclassexpress_1_1middleware_1_1VHost_html_ab60d9df1ad85a8ee414c111135e250b1"><div class="ttname"><a href="classexpress_1_1middleware_1_1VHost.html#ab60d9df1ad85a8ee414c111135e250b1">express::middleware::VHost::VHost</a></div><div class="ttdeci">VHost(const std::string &amp;host)</div><div class="ttdef"><b>Definition</b> <a href="VHost_8cpp_source.html#l00050">VHost.cpp:50</a></div></div>
+<p class="definition">Definition at line <a class="el" href="VHost_8cpp_source.html#l00090">90</a> of file <a class="el" href="VHost_8cpp_source.html">VHost.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   90</span>                                                      {</div>
+<div class="line"><span class="lineno">   91</span>        <span class="comment">// Keep all created vhost middlewares alive</span></div>
+<div class="line"><span class="lineno">   92</span>        <span class="keyword">static</span> std::map&lt;std::string, std::shared_ptr&lt;class VHost&gt;&gt; vHostMiddlewares;</div>
+<div class="line"><span class="lineno">   93</span> </div>
+<div class="line"><span class="lineno">   94</span>        <span class="keywordflow">if</span> (!vHostMiddlewares.contains(<a class="code hl_variable" href="classexpress_1_1middleware_1_1VHost.html#a1635415d2b3f6857d8f86396af13f136">host</a>)) {</div>
+<div class="line"><span class="lineno">   95</span>            vHostMiddlewares[<a class="code hl_variable" href="classexpress_1_1middleware_1_1VHost.html#a1635415d2b3f6857d8f86396af13f136">host</a>] = std::shared_ptr&lt;VHost&gt;(<span class="keyword">new</span> <a class="code hl_function" href="classexpress_1_1middleware_1_1VHost.html#ab60d9df1ad85a8ee414c111135e250b1">VHost</a>(<a class="code hl_variable" href="classexpress_1_1middleware_1_1VHost.html#a1635415d2b3f6857d8f86396af13f136">host</a>));</div>
+<div class="line"><span class="lineno">   96</span>        }</div>
+<div class="line"><span class="lineno">   97</span> </div>
+<div class="line"><span class="lineno">   98</span>        <span class="keywordflow">return</span> *vHostMiddlewares[<a class="code hl_variable" href="classexpress_1_1middleware_1_1VHost.html#a1635415d2b3f6857d8f86396af13f136">host</a>];</div>
+<div class="line"><span class="lineno">   99</span>    }</div>
+<div class="ttc" id="aclassexpress_1_1middleware_1_1VHost_html_ab60d9df1ad85a8ee414c111135e250b1"><div class="ttname"><a href="classexpress_1_1middleware_1_1VHost.html#ab60d9df1ad85a8ee414c111135e250b1">express::middleware::VHost::VHost</a></div><div class="ttdeci">VHost(const std::string &amp;host)</div><div class="ttdef"><b>Definition</b> <a href="VHost_8cpp_source.html#l00079">VHost.cpp:79</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="VHost_8cpp_source.html#l00050">VHost()</a>.</p>
+<p class="reference">References <a class="el" href="VHost_8cpp_source.html#l00079">VHost()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="VHost_8cpp_source.html#l00073">VHost</a>.</p>
+<p class="reference">Referenced by <a class="el" href="VHost_8cpp_source.html#l00102">VHost</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -548,13 +551,13 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="VHost_8cpp_source.html#l00073">73</a> of file <a class="el" href="VHost_8cpp_source.html">VHost.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   73</span>                                              {</div>
-<div class="line"><span class="lineno">   74</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classexpress_1_1middleware_1_1VHost.html#aedfd77e91aabab72a4b6bf19c9047876">VHost::instance</a>(<a class="code hl_variable" href="classexpress_1_1middleware_1_1VHost.html#a1635415d2b3f6857d8f86396af13f136">host</a>);</div>
-<div class="line"><span class="lineno">   75</span>    }</div>
-<div class="ttc" id="aclassexpress_1_1middleware_1_1VHost_html_aedfd77e91aabab72a4b6bf19c9047876"><div class="ttname"><a href="classexpress_1_1middleware_1_1VHost.html#aedfd77e91aabab72a4b6bf19c9047876">express::middleware::VHost::instance</a></div><div class="ttdeci">static class VHost &amp; instance(const std::string &amp;host)</div><div class="ttdef"><b>Definition</b> <a href="VHost_8cpp_source.html#l00061">VHost.cpp:61</a></div></div>
+<p class="definition">Definition at line <a class="el" href="VHost_8cpp_source.html#l00102">102</a> of file <a class="el" href="VHost_8cpp_source.html">VHost.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  102</span>                                              {</div>
+<div class="line"><span class="lineno">  103</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classexpress_1_1middleware_1_1VHost.html#aedfd77e91aabab72a4b6bf19c9047876">VHost::instance</a>(<a class="code hl_variable" href="classexpress_1_1middleware_1_1VHost.html#a1635415d2b3f6857d8f86396af13f136">host</a>);</div>
+<div class="line"><span class="lineno">  104</span>    }</div>
+<div class="ttc" id="aclassexpress_1_1middleware_1_1VHost_html_aedfd77e91aabab72a4b6bf19c9047876"><div class="ttname"><a href="classexpress_1_1middleware_1_1VHost.html#aedfd77e91aabab72a4b6bf19c9047876">express::middleware::VHost::instance</a></div><div class="ttdeci">static class VHost &amp; instance(const std::string &amp;host)</div><div class="ttdef"><b>Definition</b> <a href="VHost_8cpp_source.html#l00090">VHost.cpp:90</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="VHost_8cpp_source.html#l00061">instance()</a>.</p>
+<p class="reference">References <a class="el" href="VHost_8cpp_source.html#l00090">instance()</a>.</p>
 
 </div>
 </div>
@@ -581,7 +584,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="VHost_8h_source.html#l00061">61</a> of file <a class="el" href="VHost_8h_source.html">VHost.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="VHost_8cpp_source.html#l00050">VHost()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="VHost_8cpp_source.html#l00079">VHost()</a>.</p>
 
 </div>
 </div>
@@ -595,7 +598,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceexpress.html">express</a></li><li class="navelem"><a class="el" href="namespaceexpress_1_1middleware.html">middleware</a></li><li class="navelem"><a class="el" href="classexpress_1_1middleware_1_1VHost.html">VHost</a></li>
-    <li class="footer">Generated on Fri Sep 12 2025 18:58:59 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Fri Oct 24 2025 11:05:09 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>
