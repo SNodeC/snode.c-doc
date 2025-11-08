@@ -5,7 +5,6 @@ var hierarchy =
     [ "web::http::decoder::Chunked::Chunk", "classweb_1_1http_1_1decoder_1_1Chunked_1_1Chunk.html", null ],
     [ "web::http::ciLess", "structweb_1_1http_1_1ciLess.html", null ],
     [ "utils::Config", "classutils_1_1Config.html", null ],
-    [ "web::http::client::tools::EventSourceT< Client >::Config", "structweb_1_1http_1_1client_1_1tools_1_1EventSourceT_1_1Config.html", null ],
     [ "net::in6::config::ConfigAddress", null, [
       [ "net::config::stream::ConfigSocketClient< net::in6::config::ConfigAddress >", "classnet_1_1config_1_1stream_1_1ConfigSocketClient.html", [
         [ "net::in6::stream::config::ConfigSocketClient", "classnet_1_1in6_1_1stream_1_1config_1_1ConfigSocketClient.html", [
@@ -519,6 +518,7 @@ var hierarchy =
       ] ]
     ] ],
     [ "database::mariadb::MariaDBConnectionDetails", "structdatabase_1_1mariadb_1_1MariaDBConnectionDetails.html", null ],
+    [ "database::mariadb::MariaDBState", "structdatabase_1_1mariadb_1_1MariaDBState.html", null ],
     [ "iot::mqtt::server::broker::Message", "classiot_1_1mqtt_1_1server_1_1broker_1_1Message.html", null ],
     [ "web::http::client::tools::EventSource::MessageEvent", "structweb_1_1http_1_1client_1_1tools_1_1EventSource_1_1MessageEvent.html", null ],
     [ "web::http::MimeTypes", "classweb_1_1http_1_1MimeTypes.html", null ],
@@ -635,6 +635,7 @@ var hierarchy =
       [ "iot::mqtt::server::broker::Session", "classiot_1_1mqtt_1_1server_1_1broker_1_1Session.html", null ]
     ] ],
     [ "utils::SHA1", "classutils_1_1SHA1.html", null ],
+    [ "web::http::client::tools::EventSourceT< Client >::SharedConfig", "structweb_1_1http_1_1client_1_1tools_1_1EventSourceT_1_1SharedConfig.html", null ],
     [ "web::http::client::tools::EventSource::SharedState", "structweb_1_1http_1_1client_1_1tools_1_1EventSource_1_1SharedState.html", null ],
     [ "utils::SingleAttributeInjector", "classutils_1_1SingleAttributeInjector.html", null ],
     [ "core::pipe::Sink", "classcore_1_1pipe_1_1Sink.html", [

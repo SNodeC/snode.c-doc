@@ -263,506 +263,515 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">   95</span>    <span class="keyword">const</span> <a class="code hl_class" href="classexpress_1_1WebAppT.html">express::legacy::in::WebApp</a> app(<span class="stringliteral">&quot;OAuth2AuthorizationServer&quot;</span>);</div>
 <div class="line"><span class="lineno">   96</span> </div>
 <div class="line"><span class="lineno">   97</span>    <span class="keyword">const</span> <a class="code hl_struct" href="structdatabase_1_1mariadb_1_1MariaDBConnectionDetails.html">database::mariadb::MariaDBConnectionDetails</a> details{</div>
-<div class="line"><span class="lineno">   98</span>        .<a class="code hl_variable" href="structdatabase_1_1mariadb_1_1MariaDBConnectionDetails.html#a13f008b21ad1be16b56b19df467924ac">hostname</a> = <span class="stringliteral">&quot;localhost&quot;</span>,</div>
-<div class="line"><span class="lineno">   99</span>        .username = <span class="stringliteral">&quot;rathalin&quot;</span>,</div>
-<div class="line"><span class="lineno">  100</span>        .password = <span class="stringliteral">&quot;rathalin&quot;</span>,</div>
-<div class="line"><span class="lineno">  101</span>        .database = <span class="stringliteral">&quot;oauth2&quot;</span>,</div>
-<div class="line"><span class="lineno">  102</span>        .port = 3306,</div>
-<div class="line"><span class="lineno">  103</span>        .socket = <span class="stringliteral">&quot;/run/mysqld/mysqld.sock&quot;</span>,</div>
-<div class="line"><span class="lineno">  104</span>        .flags = 0,</div>
-<div class="line"><span class="lineno">  105</span>    };</div>
-<div class="line"><span class="lineno">  106</span>    <a class="code hl_class" href="classdatabase_1_1mariadb_1_1MariaDBClient.html">database::mariadb::MariaDBClient</a> db{details};</div>
-<div class="line"><span class="lineno">  107</span> </div>
-<div class="line"><span class="lineno">  108</span>    app.use(<a class="code hl_class" href="classexpress_1_1middleware_1_1JsonMiddleware.html">express::middleware::JsonMiddleware</a>());</div>
-<div class="line"><span class="lineno">  109</span> </div>
-<div class="line"><span class="lineno">  110</span>    <span class="keyword">const</span> <a class="code hl_class" href="classexpress_1_1Router.html">express::Router</a> <a class="code hl_function" href="testregex_8cpp.html#ab024e3c77aeb1487da4b33877cdfc1fb">router</a>{};</div>
-<div class="line"><span class="lineno">  111</span> </div>
-<div class="line"><span class="lineno">  112</span>    <span class="comment">// Middleware to catch requests without a valid client_id</span></div>
-<div class="line"><span class="lineno">  113</span>    <a class="code hl_function" href="testregex_8cpp.html#ab024e3c77aeb1487da4b33877cdfc1fb">router</a>.<a class="code hl_function" href="classexpress_1_1Router.html#a9f5c02a219a67bf1fc031bdbf71b7566">use</a>([&amp;db] <a class="code hl_define" href="Router_8h.html#ac5313b926a3bc0fb106bffb31e93dc71">MIDDLEWARE</a>(req, res, next) {</div>
-<div class="line"><span class="lineno">  114</span>        <span class="keyword">const</span> std::string queryClientId{req-&gt;query(<span class="stringliteral">&quot;client_id&quot;</span>)};</div>
-<div class="line"><span class="lineno">  115</span>        <span class="keywordflow">if</span> (queryClientId.length() &gt; 0) {</div>
-<div class="line"><span class="lineno">  116</span>            db.query(</div>
-<div class="line"><span class="lineno">  117</span>                <span class="stringliteral">&quot;select count(*) from client where uuid = &#39;&quot;</span> + queryClientId + <span class="stringliteral">&quot;&#39;&quot;</span>,</div>
-<div class="line"><span class="lineno">  118</span>                [req, res, next, queryClientId](const MYSQL_ROW row) {</div>
-<div class="line"><span class="lineno">  119</span>                    if (row != nullptr) {</div>
-<div class="line"><span class="lineno">  120</span>                        if (std::stoi(row[0]) &gt; 0) {</div>
-<div class="line"><span class="lineno">  121</span>                            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Valid client id &#39;&quot;</span> &lt;&lt; queryClientId &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
-<div class="line"><span class="lineno">  122</span>                            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Next with &quot;</span> &lt;&lt; req-&gt;httpVersion &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; req-&gt;method &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; req-&gt;url;</div>
-<div class="line"><span class="lineno">  123</span>                            next();</div>
-<div class="line"><span class="lineno">  124</span>                        } else {</div>
-<div class="line"><span class="lineno">  125</span>                            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Invalid client id &#39;&quot;</span> &lt;&lt; queryClientId &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
-<div class="line"><span class="lineno">  126</span>                            res-&gt;sendStatus(401);</div>
-<div class="line"><span class="lineno">  127</span>                        }</div>
-<div class="line"><span class="lineno">  128</span>                    }</div>
-<div class="line"><span class="lineno">  129</span>                },</div>
-<div class="line"><span class="lineno">  130</span>                [res](<span class="keyword">const</span> std::string&amp; errorString, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> errorNumber) {</div>
-<div class="line"><span class="lineno">  131</span>                    VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Database error: &quot;</span> &lt;&lt; errorString &lt;&lt; <span class="stringliteral">&quot; : &quot;</span> &lt;&lt; errorNumber;</div>
-<div class="line"><span class="lineno">  132</span>                    res-&gt;sendStatus(500);</div>
-<div class="line"><span class="lineno">  133</span>                });</div>
-<div class="line"><span class="lineno">  134</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  135</span>            res-&gt;status(401).send(<span class="stringliteral">&quot;Invalid client_id&quot;</span>);</div>
-<div class="line"><span class="lineno">  136</span>        }</div>
-<div class="line"><span class="lineno">  137</span>    });</div>
-<div class="line"><span class="lineno">  138</span> </div>
-<div class="line"><span class="lineno">  139</span>    <a class="code hl_function" href="testregex_8cpp.html#ab024e3c77aeb1487da4b33877cdfc1fb">router</a>.<a class="code hl_function" href="classexpress_1_1Route.html#aafcc7bc007a6252455fc2e102bc3e282">get</a>(<span class="stringliteral">&quot;/authorize&quot;</span>, [&amp;db] <a class="code hl_define" href="Router_8h.html#a8b7131df91fe7a961e2cdadcedb55232">APPLICATION</a>(req, res) {</div>
-<div class="line"><span class="lineno">  140</span>        <span class="comment">// REQUIRED: response_type, client_id</span></div>
-<div class="line"><span class="lineno">  141</span>        <span class="comment">// OPTIONAL: redirect_uri, scope</span></div>
-<div class="line"><span class="lineno">  142</span>        <span class="comment">// RECOMMENDED: state</span></div>
-<div class="line"><span class="lineno">  143</span>        <span class="keyword">const</span> std::string paramResponseType{req-&gt;query(<span class="stringliteral">&quot;response_type&quot;</span>)};</div>
-<div class="line"><span class="lineno">  144</span>        <span class="keyword">const</span> std::string paramClientId{req-&gt;query(<span class="stringliteral">&quot;client_id&quot;</span>)};</div>
-<div class="line"><span class="lineno">  145</span>        <span class="keyword">const</span> std::string paramRedirectUri{req-&gt;query(<span class="stringliteral">&quot;redirect_uri&quot;</span>)};</div>
-<div class="line"><span class="lineno">  146</span>        <span class="keyword">const</span> std::string paramScope{req-&gt;query(<span class="stringliteral">&quot;scope&quot;</span>)};</div>
-<div class="line"><span class="lineno">  147</span>        <span class="keyword">const</span> std::string paramState{req-&gt;query(<span class="stringliteral">&quot;state&quot;</span>)};</div>
-<div class="line"><span class="lineno">  148</span> </div>
-<div class="line"><span class="lineno">  149</span>        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Query params: &quot;</span></div>
-<div class="line"><span class="lineno">  150</span>                &lt;&lt; <span class="stringliteral">&quot;response_type=&quot;</span> &lt;&lt; req-&gt;query(<span class="stringliteral">&quot;response_type&quot;</span>) &lt;&lt; <span class="stringliteral">&quot;, &quot;</span></div>
-<div class="line"><span class="lineno">  151</span>                &lt;&lt; <span class="stringliteral">&quot;redirect_uri=&quot;</span> &lt;&lt; req-&gt;query(<span class="stringliteral">&quot;redirect_uri&quot;</span>) &lt;&lt; <span class="stringliteral">&quot;, &quot;</span></div>
-<div class="line"><span class="lineno">  152</span>                &lt;&lt; <span class="stringliteral">&quot;scope=&quot;</span> &lt;&lt; req-&gt;query(<span class="stringliteral">&quot;scope&quot;</span>) &lt;&lt; <span class="stringliteral">&quot;, &quot;</span></div>
-<div class="line"><span class="lineno">  153</span>                &lt;&lt; <span class="stringliteral">&quot;state=&quot;</span> &lt;&lt; req-&gt;query(<span class="stringliteral">&quot;state&quot;</span>) &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><span class="lineno">  154</span> </div>
-<div class="line"><span class="lineno">  155</span>        <span class="keywordflow">if</span> (paramResponseType != <span class="stringliteral">&quot;code&quot;</span>) {</div>
-<div class="line"><span class="lineno">  156</span>            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Auth invalid, sending Bad Request&quot;</span>;</div>
-<div class="line"><span class="lineno">  157</span>            res-&gt;sendStatus(400);</div>
-<div class="line"><span class="lineno">  158</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  159</span>        }</div>
-<div class="line"><span class="lineno">  160</span> </div>
-<div class="line"><span class="lineno">  161</span>        <span class="keywordflow">if</span> (!paramRedirectUri.empty()) {</div>
-<div class="line"><span class="lineno">  162</span>            db.exec(</div>
-<div class="line"><span class="lineno">  163</span>                <span class="stringliteral">&quot;update client set redirect_uri = &#39;&quot;</span> + paramRedirectUri + <span class="stringliteral">&quot;&#39; where uuid = &#39;&quot;</span> + paramClientId + <span class="stringliteral">&quot;&#39;&quot;</span>,</div>
-<div class="line"><span class="lineno">  164</span>                [paramRedirectUri]() {</div>
-<div class="line"><span class="lineno">  165</span>                    VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Database: Set redirect_uri to &quot;</span> &lt;&lt; paramRedirectUri;</div>
-<div class="line"><span class="lineno">  166</span>                },</div>
-<div class="line"><span class="lineno">  167</span>                [](<span class="keyword">const</span> std::string&amp; errorString, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> errorNumber) {</div>
-<div class="line"><span class="lineno">  168</span>                    VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Database error: &quot;</span> &lt;&lt; errorString &lt;&lt; <span class="stringliteral">&quot; : &quot;</span> &lt;&lt; errorNumber;</div>
-<div class="line"><span class="lineno">  169</span>                });</div>
-<div class="line"><span class="lineno">  170</span>        }</div>
-<div class="line"><span class="lineno">  171</span> </div>
-<div class="line"><span class="lineno">  172</span>        <span class="keywordflow">if</span> (!paramScope.empty()) {</div>
-<div class="line"><span class="lineno">  173</span>            db.exec(</div>
-<div class="line"><span class="lineno">  174</span>                <span class="stringliteral">&quot;update client set scope = &#39;&quot;</span> + paramScope + <span class="stringliteral">&quot;&#39; where uuid = &#39;&quot;</span> + paramClientId + <span class="stringliteral">&quot;&#39;&quot;</span>,</div>
-<div class="line"><span class="lineno">  175</span>                [paramScope]() {</div>
-<div class="line"><span class="lineno">  176</span>                    VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Database: Set scope to &quot;</span> &lt;&lt; paramScope;</div>
-<div class="line"><span class="lineno">  177</span>                },</div>
-<div class="line"><span class="lineno">  178</span>                [](<span class="keyword">const</span> std::string&amp; errorString, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> errorNumber) {</div>
-<div class="line"><span class="lineno">  179</span>                    VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Database error: &quot;</span> &lt;&lt; errorString &lt;&lt; <span class="stringliteral">&quot; : &quot;</span> &lt;&lt; errorNumber;</div>
-<div class="line"><span class="lineno">  180</span>                });</div>
-<div class="line"><span class="lineno">  181</span>        }</div>
-<div class="line"><span class="lineno">  182</span> </div>
-<div class="line"><span class="lineno">  183</span>        <span class="keywordflow">if</span> (!paramState.empty()) {</div>
-<div class="line"><span class="lineno">  184</span>            db.exec(</div>
-<div class="line"><span class="lineno">  185</span>                <span class="stringliteral">&quot;update client set state = &#39;&quot;</span> + paramState + <span class="stringliteral">&quot;&#39; where uuid = &#39;&quot;</span> + paramClientId + <span class="stringliteral">&quot;&#39;&quot;</span>,</div>
-<div class="line"><span class="lineno">  186</span>                [paramState]() {</div>
-<div class="line"><span class="lineno">  187</span>                    VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Database: Set state to &quot;</span> &lt;&lt; paramState;</div>
-<div class="line"><span class="lineno">  188</span>                },</div>
-<div class="line"><span class="lineno">  189</span>                [](<span class="keyword">const</span> std::string&amp; errorString, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> errorNumber) {</div>
-<div class="line"><span class="lineno">  190</span>                    VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Database error: &quot;</span> &lt;&lt; errorString &lt;&lt; <span class="stringliteral">&quot; : &quot;</span> &lt;&lt; errorNumber;</div>
-<div class="line"><span class="lineno">  191</span>                });</div>
-<div class="line"><span class="lineno">  192</span>        }</div>
-<div class="line"><span class="lineno">  193</span> </div>
-<div class="line"><span class="lineno">  194</span>        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Auth request valid, redirecting to login&quot;</span>;</div>
-<div class="line"><span class="lineno">  195</span>        std::string loginUri{<span class="stringliteral">&quot;/oauth2/login&quot;</span>};</div>
-<div class="line"><span class="lineno">  196</span>        <a class="code hl_function" href="AuthorizationServer_8cpp.html#a6c1dfe5df352bedbe1c485f3120383da">addQueryParamToUri</a>(loginUri, <span class="stringliteral">&quot;client_id&quot;</span>, paramClientId);</div>
-<div class="line"><span class="lineno">  197</span>        res-&gt;redirect(loginUri);</div>
-<div class="line"><span class="lineno">  198</span>    });</div>
-<div class="line"><span class="lineno">  199</span> </div>
-<div class="line"><span class="lineno">  200</span>    <a class="code hl_function" href="testregex_8cpp.html#ab024e3c77aeb1487da4b33877cdfc1fb">router</a>.<a class="code hl_function" href="classexpress_1_1Route.html#aafcc7bc007a6252455fc2e102bc3e282">get</a>(<span class="stringliteral">&quot;/login&quot;</span>, [] <a class="code hl_define" href="Router_8h.html#a8b7131df91fe7a961e2cdadcedb55232">APPLICATION</a>(req, res) {</div>
-<div class="line"><span class="lineno">  201</span>        res-&gt;sendFile(<span class="stringliteral">&quot;/home/rathalin/projects/snode.c/src/oauth2/authorization_server/vue-frontend-oauth2-auth-server/dist/index.html&quot;</span>,</div>
-<div class="line"><span class="lineno">  202</span>                      [req](<span class="keywordtype">int</span> ret) {</div>
-<div class="line"><span class="lineno">  203</span>                          <span class="keywordflow">if</span> (ret != 0) {</div>
-<div class="line"><span class="lineno">  204</span>                              PLOG(ERROR) &lt;&lt; req-&gt;url;</div>
-<div class="line"><span class="lineno">  205</span>                          }</div>
-<div class="line"><span class="lineno">  206</span>                      });</div>
+<div class="line"><span class="lineno">   98</span>        .<a class="code hl_variable" href="structdatabase_1_1mariadb_1_1MariaDBConnectionDetails.html#aa755b7b4ad51a440eafc89066de81262">connectionName</a> = <span class="stringliteral">&quot;authorization&quot;</span>,</div>
+<div class="line"><span class="lineno">   99</span>        .hostname = <span class="stringliteral">&quot;localhost&quot;</span>,</div>
+<div class="line"><span class="lineno">  100</span>        .username = <span class="stringliteral">&quot;rathalin&quot;</span>,</div>
+<div class="line"><span class="lineno">  101</span>        .password = <span class="stringliteral">&quot;rathalin&quot;</span>,</div>
+<div class="line"><span class="lineno">  102</span>        .database = <span class="stringliteral">&quot;oauth2&quot;</span>,</div>
+<div class="line"><span class="lineno">  103</span>        .port = 3306,</div>
+<div class="line"><span class="lineno">  104</span>        .socket = <span class="stringliteral">&quot;/run/mysqld/mysqld.sock&quot;</span>,</div>
+<div class="line"><span class="lineno">  105</span>        .flags = 0,</div>
+<div class="line"><span class="lineno">  106</span>    };</div>
+<div class="line"><span class="lineno">  107</span>    <a class="code hl_class" href="classdatabase_1_1mariadb_1_1MariaDBClient.html">database::mariadb::MariaDBClient</a> db{details, [](<span class="keyword">const</span> <a class="code hl_struct" href="structdatabase_1_1mariadb_1_1MariaDBState.html">database::mariadb::MariaDBState</a>&amp; state) {</div>
+<div class="line"><span class="lineno">  108</span>                                            <span class="keywordflow">if</span> (state.error != 0) {</div>
+<div class="line"><span class="lineno">  109</span>                                                VLOG(0) &lt;&lt; <span class="stringliteral">&quot;MySQL error: &quot;</span> &lt;&lt; state.errorMessage &lt;&lt; <span class="stringliteral">&quot; [&quot;</span> &lt;&lt; state.error &lt;&lt; <span class="stringliteral">&quot;]&quot;</span>;</div>
+<div class="line"><span class="lineno">  110</span>                                            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (state.connected) {</div>
+<div class="line"><span class="lineno">  111</span>                                                VLOG(0) &lt;&lt; <span class="stringliteral">&quot;MySQL connected&quot;</span>;</div>
+<div class="line"><span class="lineno">  112</span>                                            } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  113</span>                                                VLOG(0) &lt;&lt; <span class="stringliteral">&quot;MySQL disconnected&quot;</span>;</div>
+<div class="line"><span class="lineno">  114</span>                                            }</div>
+<div class="line"><span class="lineno">  115</span>                                        }};</div>
+<div class="line"><span class="lineno">  116</span> </div>
+<div class="line"><span class="lineno">  117</span>    app.use(<a class="code hl_class" href="classexpress_1_1middleware_1_1JsonMiddleware.html">express::middleware::JsonMiddleware</a>());</div>
+<div class="line"><span class="lineno">  118</span> </div>
+<div class="line"><span class="lineno">  119</span>    <span class="keyword">const</span> <a class="code hl_class" href="classexpress_1_1Router.html">express::Router</a> <a class="code hl_function" href="testregex_8cpp.html#ab024e3c77aeb1487da4b33877cdfc1fb">router</a>{};</div>
+<div class="line"><span class="lineno">  120</span> </div>
+<div class="line"><span class="lineno">  121</span>    <span class="comment">// Middleware to catch requests without a valid client_id</span></div>
+<div class="line"><span class="lineno">  122</span>    <a class="code hl_function" href="testregex_8cpp.html#ab024e3c77aeb1487da4b33877cdfc1fb">router</a>.<a class="code hl_function" href="classexpress_1_1Router.html#a9f5c02a219a67bf1fc031bdbf71b7566">use</a>([&amp;db] <a class="code hl_define" href="Router_8h.html#ac5313b926a3bc0fb106bffb31e93dc71">MIDDLEWARE</a>(req, res, next) {</div>
+<div class="line"><span class="lineno">  123</span>        <span class="keyword">const</span> std::string queryClientId{req-&gt;query(<span class="stringliteral">&quot;client_id&quot;</span>)};</div>
+<div class="line"><span class="lineno">  124</span>        <span class="keywordflow">if</span> (queryClientId.length() &gt; 0) {</div>
+<div class="line"><span class="lineno">  125</span>            db.query(</div>
+<div class="line"><span class="lineno">  126</span>                <span class="stringliteral">&quot;select count(*) from client where uuid = &#39;&quot;</span> + queryClientId + <span class="stringliteral">&quot;&#39;&quot;</span>,</div>
+<div class="line"><span class="lineno">  127</span>                [req, res, next, queryClientId](const MYSQL_ROW row) {</div>
+<div class="line"><span class="lineno">  128</span>                    if (row != nullptr) {</div>
+<div class="line"><span class="lineno">  129</span>                        if (std::stoi(row[0]) &gt; 0) {</div>
+<div class="line"><span class="lineno">  130</span>                            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Valid client id &#39;&quot;</span> &lt;&lt; queryClientId &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
+<div class="line"><span class="lineno">  131</span>                            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Next with &quot;</span> &lt;&lt; req-&gt;httpVersion &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; req-&gt;method &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; req-&gt;url;</div>
+<div class="line"><span class="lineno">  132</span>                            next();</div>
+<div class="line"><span class="lineno">  133</span>                        } else {</div>
+<div class="line"><span class="lineno">  134</span>                            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Invalid client id &#39;&quot;</span> &lt;&lt; queryClientId &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
+<div class="line"><span class="lineno">  135</span>                            res-&gt;sendStatus(401);</div>
+<div class="line"><span class="lineno">  136</span>                        }</div>
+<div class="line"><span class="lineno">  137</span>                    }</div>
+<div class="line"><span class="lineno">  138</span>                },</div>
+<div class="line"><span class="lineno">  139</span>                [res](<span class="keyword">const</span> std::string&amp; errorString, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> errorNumber) {</div>
+<div class="line"><span class="lineno">  140</span>                    VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Database error: &quot;</span> &lt;&lt; errorString &lt;&lt; <span class="stringliteral">&quot; : &quot;</span> &lt;&lt; errorNumber;</div>
+<div class="line"><span class="lineno">  141</span>                    res-&gt;sendStatus(500);</div>
+<div class="line"><span class="lineno">  142</span>                });</div>
+<div class="line"><span class="lineno">  143</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  144</span>            res-&gt;status(401).send(<span class="stringliteral">&quot;Invalid client_id&quot;</span>);</div>
+<div class="line"><span class="lineno">  145</span>        }</div>
+<div class="line"><span class="lineno">  146</span>    });</div>
+<div class="line"><span class="lineno">  147</span> </div>
+<div class="line"><span class="lineno">  148</span>    <a class="code hl_function" href="testregex_8cpp.html#ab024e3c77aeb1487da4b33877cdfc1fb">router</a>.<a class="code hl_function" href="classexpress_1_1Route.html#aafcc7bc007a6252455fc2e102bc3e282">get</a>(<span class="stringliteral">&quot;/authorize&quot;</span>, [&amp;db] <a class="code hl_define" href="Router_8h.html#a8b7131df91fe7a961e2cdadcedb55232">APPLICATION</a>(req, res) {</div>
+<div class="line"><span class="lineno">  149</span>        <span class="comment">// REQUIRED: response_type, client_id</span></div>
+<div class="line"><span class="lineno">  150</span>        <span class="comment">// OPTIONAL: redirect_uri, scope</span></div>
+<div class="line"><span class="lineno">  151</span>        <span class="comment">// RECOMMENDED: state</span></div>
+<div class="line"><span class="lineno">  152</span>        <span class="keyword">const</span> std::string paramResponseType{req-&gt;query(<span class="stringliteral">&quot;response_type&quot;</span>)};</div>
+<div class="line"><span class="lineno">  153</span>        <span class="keyword">const</span> std::string paramClientId{req-&gt;query(<span class="stringliteral">&quot;client_id&quot;</span>)};</div>
+<div class="line"><span class="lineno">  154</span>        <span class="keyword">const</span> std::string paramRedirectUri{req-&gt;query(<span class="stringliteral">&quot;redirect_uri&quot;</span>)};</div>
+<div class="line"><span class="lineno">  155</span>        <span class="keyword">const</span> std::string paramScope{req-&gt;query(<span class="stringliteral">&quot;scope&quot;</span>)};</div>
+<div class="line"><span class="lineno">  156</span>        <span class="keyword">const</span> std::string paramState{req-&gt;query(<span class="stringliteral">&quot;state&quot;</span>)};</div>
+<div class="line"><span class="lineno">  157</span> </div>
+<div class="line"><span class="lineno">  158</span>        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Query params: &quot;</span></div>
+<div class="line"><span class="lineno">  159</span>                &lt;&lt; <span class="stringliteral">&quot;response_type=&quot;</span> &lt;&lt; req-&gt;query(<span class="stringliteral">&quot;response_type&quot;</span>) &lt;&lt; <span class="stringliteral">&quot;, &quot;</span></div>
+<div class="line"><span class="lineno">  160</span>                &lt;&lt; <span class="stringliteral">&quot;redirect_uri=&quot;</span> &lt;&lt; req-&gt;query(<span class="stringliteral">&quot;redirect_uri&quot;</span>) &lt;&lt; <span class="stringliteral">&quot;, &quot;</span></div>
+<div class="line"><span class="lineno">  161</span>                &lt;&lt; <span class="stringliteral">&quot;scope=&quot;</span> &lt;&lt; req-&gt;query(<span class="stringliteral">&quot;scope&quot;</span>) &lt;&lt; <span class="stringliteral">&quot;, &quot;</span></div>
+<div class="line"><span class="lineno">  162</span>                &lt;&lt; <span class="stringliteral">&quot;state=&quot;</span> &lt;&lt; req-&gt;query(<span class="stringliteral">&quot;state&quot;</span>) &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  163</span> </div>
+<div class="line"><span class="lineno">  164</span>        <span class="keywordflow">if</span> (paramResponseType != <span class="stringliteral">&quot;code&quot;</span>) {</div>
+<div class="line"><span class="lineno">  165</span>            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Auth invalid, sending Bad Request&quot;</span>;</div>
+<div class="line"><span class="lineno">  166</span>            res-&gt;sendStatus(400);</div>
+<div class="line"><span class="lineno">  167</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  168</span>        }</div>
+<div class="line"><span class="lineno">  169</span> </div>
+<div class="line"><span class="lineno">  170</span>        <span class="keywordflow">if</span> (!paramRedirectUri.empty()) {</div>
+<div class="line"><span class="lineno">  171</span>            db.exec(</div>
+<div class="line"><span class="lineno">  172</span>                <span class="stringliteral">&quot;update client set redirect_uri = &#39;&quot;</span> + paramRedirectUri + <span class="stringliteral">&quot;&#39; where uuid = &#39;&quot;</span> + paramClientId + <span class="stringliteral">&quot;&#39;&quot;</span>,</div>
+<div class="line"><span class="lineno">  173</span>                [paramRedirectUri]() {</div>
+<div class="line"><span class="lineno">  174</span>                    VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Database: Set redirect_uri to &quot;</span> &lt;&lt; paramRedirectUri;</div>
+<div class="line"><span class="lineno">  175</span>                },</div>
+<div class="line"><span class="lineno">  176</span>                [](<span class="keyword">const</span> std::string&amp; errorString, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> errorNumber) {</div>
+<div class="line"><span class="lineno">  177</span>                    VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Database error: &quot;</span> &lt;&lt; errorString &lt;&lt; <span class="stringliteral">&quot; : &quot;</span> &lt;&lt; errorNumber;</div>
+<div class="line"><span class="lineno">  178</span>                });</div>
+<div class="line"><span class="lineno">  179</span>        }</div>
+<div class="line"><span class="lineno">  180</span> </div>
+<div class="line"><span class="lineno">  181</span>        <span class="keywordflow">if</span> (!paramScope.empty()) {</div>
+<div class="line"><span class="lineno">  182</span>            db.exec(</div>
+<div class="line"><span class="lineno">  183</span>                <span class="stringliteral">&quot;update client set scope = &#39;&quot;</span> + paramScope + <span class="stringliteral">&quot;&#39; where uuid = &#39;&quot;</span> + paramClientId + <span class="stringliteral">&quot;&#39;&quot;</span>,</div>
+<div class="line"><span class="lineno">  184</span>                [paramScope]() {</div>
+<div class="line"><span class="lineno">  185</span>                    VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Database: Set scope to &quot;</span> &lt;&lt; paramScope;</div>
+<div class="line"><span class="lineno">  186</span>                },</div>
+<div class="line"><span class="lineno">  187</span>                [](<span class="keyword">const</span> std::string&amp; errorString, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> errorNumber) {</div>
+<div class="line"><span class="lineno">  188</span>                    VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Database error: &quot;</span> &lt;&lt; errorString &lt;&lt; <span class="stringliteral">&quot; : &quot;</span> &lt;&lt; errorNumber;</div>
+<div class="line"><span class="lineno">  189</span>                });</div>
+<div class="line"><span class="lineno">  190</span>        }</div>
+<div class="line"><span class="lineno">  191</span> </div>
+<div class="line"><span class="lineno">  192</span>        <span class="keywordflow">if</span> (!paramState.empty()) {</div>
+<div class="line"><span class="lineno">  193</span>            db.exec(</div>
+<div class="line"><span class="lineno">  194</span>                <span class="stringliteral">&quot;update client set state = &#39;&quot;</span> + paramState + <span class="stringliteral">&quot;&#39; where uuid = &#39;&quot;</span> + paramClientId + <span class="stringliteral">&quot;&#39;&quot;</span>,</div>
+<div class="line"><span class="lineno">  195</span>                [paramState]() {</div>
+<div class="line"><span class="lineno">  196</span>                    VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Database: Set state to &quot;</span> &lt;&lt; paramState;</div>
+<div class="line"><span class="lineno">  197</span>                },</div>
+<div class="line"><span class="lineno">  198</span>                [](<span class="keyword">const</span> std::string&amp; errorString, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> errorNumber) {</div>
+<div class="line"><span class="lineno">  199</span>                    VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Database error: &quot;</span> &lt;&lt; errorString &lt;&lt; <span class="stringliteral">&quot; : &quot;</span> &lt;&lt; errorNumber;</div>
+<div class="line"><span class="lineno">  200</span>                });</div>
+<div class="line"><span class="lineno">  201</span>        }</div>
+<div class="line"><span class="lineno">  202</span> </div>
+<div class="line"><span class="lineno">  203</span>        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Auth request valid, redirecting to login&quot;</span>;</div>
+<div class="line"><span class="lineno">  204</span>        std::string loginUri{<span class="stringliteral">&quot;/oauth2/login&quot;</span>};</div>
+<div class="line"><span class="lineno">  205</span>        <a class="code hl_function" href="AuthorizationServer_8cpp.html#a6c1dfe5df352bedbe1c485f3120383da">addQueryParamToUri</a>(loginUri, <span class="stringliteral">&quot;client_id&quot;</span>, paramClientId);</div>
+<div class="line"><span class="lineno">  206</span>        res-&gt;redirect(loginUri);</div>
 <div class="line"><span class="lineno">  207</span>    });</div>
 <div class="line"><span class="lineno">  208</span> </div>
-<div class="line"><span class="lineno">  209</span>    <a class="code hl_function" href="testregex_8cpp.html#ab024e3c77aeb1487da4b33877cdfc1fb">router</a>.<a class="code hl_function" href="classexpress_1_1Route.html#ab1351a7034c36af5d8fec290ec5445b7">post</a>(<span class="stringliteral">&quot;/login&quot;</span>, [&amp;db] <a class="code hl_define" href="Router_8h.html#a8b7131df91fe7a961e2cdadcedb55232">APPLICATION</a>(req, res) {</div>
-<div class="line"><span class="lineno">  210</span>        req-&gt;getAttribute&lt;nlohmann::json&gt;(</div>
-<div class="line"><span class="lineno">  211</span>            [req, res, &amp;db](nlohmann::json&amp; body) {</div>
-<div class="line"><span class="lineno">  212</span>                db.query(</div>
-<div class="line"><span class="lineno">  213</span>                    <span class="stringliteral">&quot;select email, password_hash, password_salt, redirect_uri, state &quot;</span></div>
-<div class="line"><span class="lineno">  214</span>                    <span class="stringliteral">&quot;from client &quot;</span></div>
-<div class="line"><span class="lineno">  215</span>                    <span class="stringliteral">&quot;where uuid = &#39;&quot;</span> +</div>
-<div class="line"><span class="lineno">  216</span>                        req-&gt;query(<span class="stringliteral">&quot;client_id&quot;</span>) + <span class="stringliteral">&quot;&#39;&quot;</span>,</div>
-<div class="line"><span class="lineno">  217</span>                    [req, res, &amp;db, &amp;body](<span class="keyword">const</span> MYSQL_ROW row) {</div>
-<div class="line"><span class="lineno">  218</span>                        <span class="keywordflow">if</span> (row != <span class="keyword">nullptr</span>) {</div>
-<div class="line"><span class="lineno">  219</span>                            <span class="keyword">const</span> std::string dbEmail{row[0]};</div>
-<div class="line"><span class="lineno">  220</span>                            <span class="keyword">const</span> std::string dbPasswordHash{row[1]};</div>
-<div class="line"><span class="lineno">  221</span>                            <span class="keyword">const</span> std::string dbPasswordSalt{row[2]};</div>
-<div class="line"><span class="lineno">  222</span>                            <span class="keyword">const</span> std::string dbRedirectUri{row[3]};</div>
-<div class="line"><span class="lineno">  223</span>                            <span class="keyword">const</span> std::string dbState{row[4]};</div>
-<div class="line"><span class="lineno">  224</span>                            <span class="keyword">const</span> std::string queryEmail{body[<span class="stringliteral">&quot;email&quot;</span>]};</div>
-<div class="line"><span class="lineno">  225</span>                            <span class="keyword">const</span> std::string queryPassword{body[<span class="stringliteral">&quot;password&quot;</span>]};</div>
-<div class="line"><span class="lineno">  226</span>                            <span class="comment">// Check email and password</span></div>
-<div class="line"><span class="lineno">  227</span>                            <span class="keywordflow">if</span> (dbEmail != queryEmail) {</div>
-<div class="line"><span class="lineno">  228</span>                                res-&gt;status(401).send(<span class="stringliteral">&quot;Invalid email address&quot;</span>);</div>
-<div class="line"><span class="lineno">  229</span>                            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (dbPasswordHash != <a class="code hl_function" href="AuthorizationServer_8cpp.html#a9eb739c5d48b3ee7bb59d5b46824677b">hashSha1</a>(dbPasswordSalt + queryPassword)) {</div>
-<div class="line"><span class="lineno">  230</span>                                res-&gt;status(401).send(<span class="stringliteral">&quot;Invalid password&quot;</span>);</div>
-<div class="line"><span class="lineno">  231</span>                            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  232</span>                                <span class="comment">// Generate auth code which expires after 10 minutes</span></div>
-<div class="line"><span class="lineno">  233</span>                                <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> expireMinutes{10};</div>
-<div class="line"><span class="lineno">  234</span>                                <span class="keyword">const</span> std::string authCode{<a class="code hl_function" href="AuthorizationServer_8cpp.html#a8b076d290fad3ac101ff150646b801a6">getNewUUID</a>()};</div>
-<div class="line"><span class="lineno">  235</span>                                db.exec(</div>
-<div class="line"><span class="lineno">  236</span>                                      <span class="stringliteral">&quot;insert into token(uuid, expire_datetime) &quot;</span></div>
-<div class="line"><span class="lineno">  237</span>                                      <span class="stringliteral">&quot;values(&#39;&quot;</span> +</div>
-<div class="line"><span class="lineno">  238</span>                                          authCode + <span class="stringliteral">&quot;&#39;, &#39;&quot;</span> +</div>
-<div class="line"><span class="lineno">  239</span>                                          <a class="code hl_function" href="AuthorizationServer_8cpp.html#a233038a531225852d6f2d69915d1e532">timeToString</a>(std::chrono::system_clock::now() + std::chrono::minutes(expireMinutes)) + <span class="stringliteral">&quot;&#39;)&quot;</span>,</div>
-<div class="line"><span class="lineno">  240</span>                                      []() {</div>
-<div class="line"><span class="lineno">  241</span>                                      },</div>
-<div class="line"><span class="lineno">  242</span>                                      [res](<span class="keyword">const</span> std::string&amp; errorString, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> errorNumber) {</div>
-<div class="line"><span class="lineno">  243</span>                                          VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Database error: &quot;</span> &lt;&lt; errorString &lt;&lt; <span class="stringliteral">&quot; : &quot;</span> &lt;&lt; errorNumber;</div>
-<div class="line"><span class="lineno">  244</span>                                          res-&gt;sendStatus(500);</div>
-<div class="line"><span class="lineno">  245</span>                                      })</div>
-<div class="line"><span class="lineno">  246</span>                                    .query(</div>
-<div class="line"><span class="lineno">  247</span>                                        <span class="stringliteral">&quot;select last_insert_id()&quot;</span>,</div>
-<div class="line"><span class="lineno">  248</span>                                        [req, res, &amp;db, dbState, dbRedirectUri, authCode](<span class="keyword">const</span> MYSQL_ROW row) {</div>
-<div class="line"><span class="lineno">  249</span>                                            <span class="keywordflow">if</span> (row != <span class="keyword">nullptr</span>) {</div>
-<div class="line"><span class="lineno">  250</span>                                                db.exec(</div>
-<div class="line"><span class="lineno">  251</span>                                                    <span class="stringliteral">&quot;update client &quot;</span></div>
-<div class="line"><span class="lineno">  252</span>                                                    <span class="stringliteral">&quot;set auth_code_id = &#39;&quot;</span> +</div>
-<div class="line"><span class="lineno">  253</span>                                                        std::string{row[0]} +</div>
-<div class="line"><span class="lineno">  254</span>                                                        <span class="stringliteral">&quot;&#39; &quot;</span></div>
-<div class="line"><span class="lineno">  255</span>                                                        <span class="stringliteral">&quot;where uuid = &#39;&quot;</span> +</div>
-<div class="line"><span class="lineno">  256</span>                                                        req-&gt;query(<span class="stringliteral">&quot;client_id&quot;</span>) + <span class="stringliteral">&quot;&#39;&quot;</span>,</div>
-<div class="line"><span class="lineno">  257</span>                                                    [res, dbState, dbRedirectUri, authCode]() {</div>
-<div class="line"><span class="lineno">  258</span>                                                        <span class="comment">// Redirect back to the client app</span></div>
-<div class="line"><span class="lineno">  259</span>                                                        std::string clientRedirectUri{dbRedirectUri};</div>
-<div class="line"><span class="lineno">  260</span>                                                        <a class="code hl_function" href="AuthorizationServer_8cpp.html#a6c1dfe5df352bedbe1c485f3120383da">addQueryParamToUri</a>(clientRedirectUri, <span class="stringliteral">&quot;code&quot;</span>, authCode);</div>
-<div class="line"><span class="lineno">  261</span>                                                        <span class="keywordflow">if</span> (!dbState.empty()) {</div>
-<div class="line"><span class="lineno">  262</span>                                                            <a class="code hl_function" href="AuthorizationServer_8cpp.html#a6c1dfe5df352bedbe1c485f3120383da">addQueryParamToUri</a>(clientRedirectUri, <span class="stringliteral">&quot;state&quot;</span>, dbState);</div>
-<div class="line"><span class="lineno">  263</span>                                                        }</div>
-<div class="line"><span class="lineno">  264</span>                                                        <span class="comment">// Set CORS header</span></div>
-<div class="line"><span class="lineno">  265</span>                                                        res-&gt;set(<span class="stringliteral">&quot;Access-Control-Allow-Origin&quot;</span>, <span class="stringliteral">&quot;*&quot;</span>);</div>
-<div class="line"><span class="lineno">  266</span>                                                        <span class="keyword">const</span> nlohmann::json responseJson = {{<span class="stringliteral">&quot;redirect_uri&quot;</span>, clientRedirectUri}};</div>
-<div class="line"><span class="lineno">  267</span>                                                        <span class="keyword">const</span> std::string responseJsonString{responseJson.dump(4)};</div>
-<div class="line"><span class="lineno">  268</span>                                                        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Sending json reponse: &quot;</span> &lt;&lt; responseJsonString;</div>
-<div class="line"><span class="lineno">  269</span>                                                        res-&gt;send(responseJsonString);</div>
-<div class="line"><span class="lineno">  270</span>                                                    },</div>
-<div class="line"><span class="lineno">  271</span>                                                    [res](<span class="keyword">const</span> std::string&amp; errorString, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> errorNumber) {</div>
-<div class="line"><span class="lineno">  272</span>                                                        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Database error: &quot;</span> &lt;&lt; errorString &lt;&lt; <span class="stringliteral">&quot; : &quot;</span> &lt;&lt; errorNumber;</div>
-<div class="line"><span class="lineno">  273</span>                                                        res-&gt;sendStatus(500);</div>
-<div class="line"><span class="lineno">  274</span>                                                    });</div>
-<div class="line"><span class="lineno">  275</span>                                            }</div>
-<div class="line"><span class="lineno">  276</span>                                        },</div>
-<div class="line"><span class="lineno">  277</span>                                        [res](<span class="keyword">const</span> std::string&amp; errorString, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> errorNumber) {</div>
-<div class="line"><span class="lineno">  278</span>                                            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Database error: &quot;</span> &lt;&lt; errorString &lt;&lt; <span class="stringliteral">&quot; : &quot;</span> &lt;&lt; errorNumber;</div>
-<div class="line"><span class="lineno">  279</span>                                            res-&gt;sendStatus(500);</div>
-<div class="line"><span class="lineno">  280</span>                                        });</div>
-<div class="line"><span class="lineno">  281</span>                            }</div>
-<div class="line"><span class="lineno">  282</span>                        }</div>
-<div class="line"><span class="lineno">  283</span>                    },</div>
-<div class="line"><span class="lineno">  284</span>                    [res](<span class="keyword">const</span> std::string&amp; errorString, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> errorNumber) {</div>
-<div class="line"><span class="lineno">  285</span>                        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Database error: &quot;</span> &lt;&lt; errorString &lt;&lt; <span class="stringliteral">&quot; : &quot;</span> &lt;&lt; errorNumber;</div>
-<div class="line"><span class="lineno">  286</span>                        res-&gt;sendStatus(500);</div>
-<div class="line"><span class="lineno">  287</span>                    });</div>
-<div class="line"><span class="lineno">  288</span>            },</div>
-<div class="line"><span class="lineno">  289</span>            [res]([[maybe_unused]] <span class="keyword">const</span> std::string&amp; key) {</div>
-<div class="line"><span class="lineno">  290</span>                res-&gt;sendStatus(500);</div>
-<div class="line"><span class="lineno">  291</span>            });</div>
-<div class="line"><span class="lineno">  292</span>    });</div>
-<div class="line"><span class="lineno">  293</span> </div>
-<div class="line"><span class="lineno">  294</span>    <a class="code hl_function" href="testregex_8cpp.html#ab024e3c77aeb1487da4b33877cdfc1fb">router</a>.<a class="code hl_function" href="classexpress_1_1Route.html#aafcc7bc007a6252455fc2e102bc3e282">get</a>(<span class="stringliteral">&quot;/token&quot;</span>, [&amp;db] <a class="code hl_define" href="Router_8h.html#a8b7131df91fe7a961e2cdadcedb55232">APPLICATION</a>(req, res) {</div>
-<div class="line"><span class="lineno">  295</span>        res-&gt;set(<span class="stringliteral">&quot;Access-Control-Allow-Origin&quot;</span>, <span class="stringliteral">&quot;*&quot;</span>);</div>
-<div class="line"><span class="lineno">  296</span>        <span class="keyword">auto</span> queryGrantType = req-&gt;query(<span class="stringliteral">&quot;grant_type&quot;</span>);</div>
-<div class="line"><span class="lineno">  297</span>        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;GrandType: &quot;</span> &lt;&lt; queryGrantType;</div>
-<div class="line"><span class="lineno">  298</span>        <span class="keyword">auto</span> queryCode = req-&gt;query(<span class="stringliteral">&quot;code&quot;</span>);</div>
-<div class="line"><span class="lineno">  299</span>        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Code: &quot;</span> &lt;&lt; queryCode;</div>
-<div class="line"><span class="lineno">  300</span>        <span class="keyword">auto</span> queryRedirectUri = req-&gt;query(<span class="stringliteral">&quot;redirect_uri&quot;</span>);</div>
-<div class="line"><span class="lineno">  301</span>        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;RedirectUri: &quot;</span> &lt;&lt; queryRedirectUri;</div>
-<div class="line"><span class="lineno">  302</span>        <span class="keywordflow">if</span> (queryGrantType != <span class="stringliteral">&quot;authorization_code&quot;</span>) {</div>
-<div class="line"><span class="lineno">  303</span>            res-&gt;status(400).send(<span class="stringliteral">&quot;Invalid query parameter &#39;grant_type&#39;, value must be &#39;authorization_code&#39;&quot;</span>);</div>
-<div class="line"><span class="lineno">  304</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  305</span>        }</div>
-<div class="line"><span class="lineno">  306</span>        <span class="keywordflow">if</span> (queryCode.length() == 0) {</div>
-<div class="line"><span class="lineno">  307</span>            res-&gt;status(400).send(<span class="stringliteral">&quot;Missing query parameter &#39;code&#39;&quot;</span>);</div>
-<div class="line"><span class="lineno">  308</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  309</span>        }</div>
-<div class="line"><span class="lineno">  310</span>        <span class="keywordflow">if</span> (queryRedirectUri.length() == 0) {</div>
-<div class="line"><span class="lineno">  311</span>            res-&gt;status(400).send(<span class="stringliteral">&quot;Missing query parameter &#39;redirect_uri&#39;&quot;</span>);</div>
-<div class="line"><span class="lineno">  312</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  313</span>        }</div>
-<div class="line"><span class="lineno">  314</span>        db.query(</div>
-<div class="line"><span class="lineno">  315</span>            <span class="stringliteral">&quot;select count(*) &quot;</span></div>
-<div class="line"><span class="lineno">  316</span>            <span class="stringliteral">&quot;from client &quot;</span></div>
-<div class="line"><span class="lineno">  317</span>            <span class="stringliteral">&quot;where uuid = &#39;&quot;</span> +</div>
-<div class="line"><span class="lineno">  318</span>                req-&gt;query(<span class="stringliteral">&quot;client_id&quot;</span>) +</div>
-<div class="line"><span class="lineno">  319</span>                <span class="stringliteral">&quot;&#39; &quot;</span></div>
-<div class="line"><span class="lineno">  320</span>                <span class="stringliteral">&quot;and redirect_uri = &#39;&quot;</span> +</div>
-<div class="line"><span class="lineno">  321</span>                queryRedirectUri + <span class="stringliteral">&quot;&#39;&quot;</span>,</div>
-<div class="line"><span class="lineno">  322</span>            [req, res, &amp;db](<span class="keyword">const</span> MYSQL_ROW row) {</div>
-<div class="line"><span class="lineno">  323</span>                if (row != nullptr) {</div>
-<div class="line"><span class="lineno">  324</span>                    if (std::stoi(row[0]) == 0) {</div>
-<div class="line"><span class="lineno">  325</span>                        res-&gt;status(400).send(<span class="stringliteral">&quot;Query param &#39;redirect_uri&#39; must be the same as in the initial request&quot;</span>);</div>
-<div class="line"><span class="lineno">  326</span>                    } else {</div>
-<div class="line"><span class="lineno">  327</span>                        db.query(</div>
-<div class="line"><span class="lineno">  328</span>                            <span class="stringliteral">&quot;select count(*) &quot;</span></div>
-<div class="line"><span class="lineno">  329</span>                            <span class="stringliteral">&quot;from client c &quot;</span></div>
-<div class="line"><span class="lineno">  330</span>                            <span class="stringliteral">&quot;join token a &quot;</span></div>
-<div class="line"><span class="lineno">  331</span>                            <span class="stringliteral">&quot;on c.auth_code_id = a.id &quot;</span></div>
-<div class="line"><span class="lineno">  332</span>                            <span class="stringliteral">&quot;where c.uuid = &#39;&quot;</span> +</div>
-<div class="line"><span class="lineno">  333</span>                                req-&gt;query(<span class="stringliteral">&quot;client_id&quot;</span>) +</div>
-<div class="line"><span class="lineno">  334</span>                                <span class="stringliteral">&quot;&#39; &quot;</span></div>
-<div class="line"><span class="lineno">  335</span>                                <span class="stringliteral">&quot;and a.uuid = &#39;&quot;</span> +</div>
-<div class="line"><span class="lineno">  336</span>                                req-&gt;query(<span class="stringliteral">&quot;code&quot;</span>) +</div>
-<div class="line"><span class="lineno">  337</span>                                <span class="stringliteral">&quot;&#39; &quot;</span></div>
-<div class="line"><span class="lineno">  338</span>                                <span class="stringliteral">&quot;and timestampdiff(second, current_timestamp(), a.expire_datetime) &gt; 0&quot;</span>,</div>
-<div class="line"><span class="lineno">  339</span>                            [req, res, &amp;db](const MYSQL_ROW row) {</div>
-<div class="line"><span class="lineno">  340</span>                                if (row != nullptr) {</div>
-<div class="line"><span class="lineno">  341</span>                                    if (std::stoi(row[0]) == 0) {</div>
-<div class="line"><span class="lineno">  342</span>                                        res-&gt;status(401).send(<span class="stringliteral">&quot;Invalid auth token&quot;</span>);</div>
-<div class="line"><span class="lineno">  343</span>                                        return;</div>
-<div class="line"><span class="lineno">  344</span>                                    }</div>
-<div class="line"><span class="lineno">  345</span>                                    <span class="comment">// Generate access and refresh token</span></div>
-<div class="line"><span class="lineno">  346</span>                                    const std::string accessToken{getNewUUID()};</div>
-<div class="line"><span class="lineno">  347</span>                                    const unsigned int accessTokenExpireSeconds{60 * 60}; <span class="comment">// 1 hour</span></div>
-<div class="line"><span class="lineno">  348</span>                                    const std::string refreshToken{getNewUUID()};</div>
-<div class="line"><span class="lineno">  349</span>                                    const unsigned int refreshTokenExpireSeconds{60 * 60 * 24}; <span class="comment">// 24 hours</span></div>
-<div class="line"><span class="lineno">  350</span>                                    db.exec(</div>
-<div class="line"><span class="lineno">  351</span>                                          <span class="stringliteral">&quot;insert into token(uuid, expire_datetime) &quot;</span></div>
-<div class="line"><span class="lineno">  352</span>                                          <span class="stringliteral">&quot;values(&#39;&quot;</span> +</div>
-<div class="line"><span class="lineno">  353</span>                                              accessToken + <span class="stringliteral">&quot;&#39;, &#39;&quot;</span> +</div>
-<div class="line"><span class="lineno">  354</span>                                              timeToString(std::chrono::system_clock::now() +</div>
-<div class="line"><span class="lineno">  355</span>                                                           std::chrono::seconds(accessTokenExpireSeconds)) +</div>
-<div class="line"><span class="lineno">  356</span>                                              <span class="stringliteral">&quot;&#39;)&quot;</span>,</div>
-<div class="line"><span class="lineno">  357</span>                                          []() {</div>
-<div class="line"><span class="lineno">  358</span>                                          },</div>
-<div class="line"><span class="lineno">  359</span>                                          [res](const std::string&amp; errorString, unsigned int errorNumber) {</div>
-<div class="line"><span class="lineno">  360</span>                                              VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Database error: &quot;</span> &lt;&lt; errorString &lt;&lt; <span class="stringliteral">&quot; : &quot;</span> &lt;&lt; errorNumber;</div>
-<div class="line"><span class="lineno">  361</span>                                              res-&gt;sendStatus(500);</div>
-<div class="line"><span class="lineno">  362</span>                                          })</div>
-<div class="line"><span class="lineno">  363</span>                                        .query(</div>
-<div class="line"><span class="lineno">  364</span>                                            <span class="stringliteral">&quot;select last_insert_id()&quot;</span>,</div>
-<div class="line"><span class="lineno">  365</span>                                            [req, res, &amp;db](const MYSQL_ROW row) {</div>
-<div class="line"><span class="lineno">  366</span>                                                if (row != nullptr) {</div>
-<div class="line"><span class="lineno">  367</span>                                                    db.exec(</div>
-<div class="line"><span class="lineno">  368</span>                                                        <span class="stringliteral">&quot;update client &quot;</span></div>
-<div class="line"><span class="lineno">  369</span>                                                        <span class="stringliteral">&quot;set access_token_id = &#39;&quot;</span> +</div>
-<div class="line"><span class="lineno">  370</span>                                                            std::string{row[0]} +</div>
-<div class="line"><span class="lineno">  371</span>                                                            <span class="stringliteral">&quot;&#39; &quot;</span></div>
-<div class="line"><span class="lineno">  372</span>                                                            <span class="stringliteral">&quot;where uuid = &#39;&quot;</span> +</div>
-<div class="line"><span class="lineno">  373</span>                                                            req-&gt;query(<span class="stringliteral">&quot;client_id&quot;</span>) + <span class="stringliteral">&quot;&#39;&quot;</span>,</div>
-<div class="line"><span class="lineno">  374</span>                                                        []() {</div>
-<div class="line"><span class="lineno">  375</span>                                                        },</div>
-<div class="line"><span class="lineno">  376</span>                                                        [res](const std::string&amp; errorString, unsigned int errorNumber) {</div>
-<div class="line"><span class="lineno">  377</span>                                                            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Database error: &quot;</span> &lt;&lt; errorString &lt;&lt; <span class="stringliteral">&quot; : &quot;</span> &lt;&lt; errorNumber;</div>
-<div class="line"><span class="lineno">  378</span>                                                            res-&gt;sendStatus(500);</div>
-<div class="line"><span class="lineno">  379</span>                                                        });</div>
-<div class="line"><span class="lineno">  380</span>                                                }</div>
-<div class="line"><span class="lineno">  381</span>                                            },</div>
-<div class="line"><span class="lineno">  382</span>                                            [res](const std::string&amp; errorString, unsigned int errorNumber) {</div>
-<div class="line"><span class="lineno">  383</span>                                                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Database error: &quot;</span> &lt;&lt; errorString &lt;&lt; <span class="stringliteral">&quot; : &quot;</span> &lt;&lt; errorNumber;</div>
-<div class="line"><span class="lineno">  384</span>                                                res-&gt;sendStatus(500);</div>
-<div class="line"><span class="lineno">  385</span>                                            })</div>
-<div class="line"><span class="lineno">  386</span>                                        .exec(</div>
-<div class="line"><span class="lineno">  387</span>                                            <span class="stringliteral">&quot;insert into token(uuid, expire_datetime) &quot;</span></div>
-<div class="line"><span class="lineno">  388</span>                                            <span class="stringliteral">&quot;values(&#39;&quot;</span> +</div>
-<div class="line"><span class="lineno">  389</span>                                                refreshToken + <span class="stringliteral">&quot;&#39;, &#39;&quot;</span> +</div>
-<div class="line"><span class="lineno">  390</span>                                                timeToString(std::chrono::system_clock::now() +</div>
-<div class="line"><span class="lineno">  391</span>                                                             std::chrono::seconds(refreshTokenExpireSeconds)) +</div>
-<div class="line"><span class="lineno">  392</span>                                                <span class="stringliteral">&quot;&#39;)&quot;</span>,</div>
-<div class="line"><span class="lineno">  393</span>                                            []() {</div>
-<div class="line"><span class="lineno">  394</span>                                            },</div>
-<div class="line"><span class="lineno">  395</span>                                            [res](const std::string&amp; errorString, unsigned int errorNumber) {</div>
-<div class="line"><span class="lineno">  396</span>                                                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Database error: &quot;</span> &lt;&lt; errorString &lt;&lt; <span class="stringliteral">&quot; : &quot;</span> &lt;&lt; errorNumber;</div>
-<div class="line"><span class="lineno">  397</span>                                                res-&gt;sendStatus(500);</div>
-<div class="line"><span class="lineno">  398</span>                                            })</div>
-<div class="line"><span class="lineno">  399</span>                                        .query(</div>
-<div class="line"><span class="lineno">  400</span>                                            <span class="stringliteral">&quot;select last_insert_id()&quot;</span>,</div>
-<div class="line"><span class="lineno">  401</span>                                            [req, res, &amp;db, accessToken, accessTokenExpireSeconds, refreshToken](const MYSQL_ROW row) {</div>
-<div class="line"><span class="lineno">  402</span>                                                if (row != nullptr) {</div>
-<div class="line"><span class="lineno">  403</span>                                                    db.exec(</div>
-<div class="line"><span class="lineno">  404</span>                                                        <span class="stringliteral">&quot;update client &quot;</span></div>
-<div class="line"><span class="lineno">  405</span>                                                        <span class="stringliteral">&quot;set refresh_token_id = &#39;&quot;</span> +</div>
-<div class="line"><span class="lineno">  406</span>                                                            std::string{row[0]} +</div>
-<div class="line"><span class="lineno">  407</span>                                                            <span class="stringliteral">&quot;&#39; &quot;</span></div>
-<div class="line"><span class="lineno">  408</span>                                                            <span class="stringliteral">&quot;where uuid = &#39;&quot;</span> +</div>
-<div class="line"><span class="lineno">  409</span>                                                            req-&gt;query(<span class="stringliteral">&quot;client_id&quot;</span>) + <span class="stringliteral">&quot;&#39;&quot;</span>,</div>
-<div class="line"><span class="lineno">  410</span>                                                        [res, accessToken, accessTokenExpireSeconds, refreshToken]() {</div>
-<div class="line"><span class="lineno">  411</span>                                                            <span class="comment">// Send auth token and refresh token</span></div>
-<div class="line"><span class="lineno">  412</span>                                                            const nlohmann::json jsonResponse = {{<span class="stringliteral">&quot;access_token&quot;</span>, accessToken},</div>
-<div class="line"><span class="lineno">  413</span>                                                                                                 {<span class="stringliteral">&quot;expires_in&quot;</span>, accessTokenExpireSeconds},</div>
-<div class="line"><span class="lineno">  414</span>                                                                                                 {<span class="stringliteral">&quot;refresh_token&quot;</span>, refreshToken}};</div>
-<div class="line"><span class="lineno">  415</span>                                                            const std::string jsonResponseString{jsonResponse.dump(4)};</div>
-<div class="line"><span class="lineno">  416</span>                                                            res-&gt;send(jsonResponseString);</div>
-<div class="line"><span class="lineno">  417</span>                                                        },</div>
-<div class="line"><span class="lineno">  418</span>                                                        [res](const std::string&amp; errorString, unsigned int errorNumber) {</div>
-<div class="line"><span class="lineno">  419</span>                                                            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Database error: &quot;</span> &lt;&lt; errorString &lt;&lt; <span class="stringliteral">&quot; : &quot;</span> &lt;&lt; errorNumber;</div>
-<div class="line"><span class="lineno">  420</span>                                                            res-&gt;sendStatus(500);</div>
-<div class="line"><span class="lineno">  421</span>                                                        });</div>
-<div class="line"><span class="lineno">  422</span>                                                }</div>
-<div class="line"><span class="lineno">  423</span>                                            },</div>
-<div class="line"><span class="lineno">  424</span>                                            [res](const std::string&amp; errorString, unsigned int errorNumber) {</div>
-<div class="line"><span class="lineno">  425</span>                                                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Database error: &quot;</span> &lt;&lt; errorString &lt;&lt; <span class="stringliteral">&quot; : &quot;</span> &lt;&lt; errorNumber;</div>
-<div class="line"><span class="lineno">  426</span>                                                res-&gt;sendStatus(500);</div>
-<div class="line"><span class="lineno">  427</span>                                            });</div>
-<div class="line"><span class="lineno">  428</span>                                }</div>
-<div class="line"><span class="lineno">  429</span>                            },</div>
-<div class="line"><span class="lineno">  430</span>                            [res](const std::string&amp; errorString, unsigned int errorNumber) {</div>
-<div class="line"><span class="lineno">  431</span>                                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Database error: &quot;</span> &lt;&lt; errorString &lt;&lt; <span class="stringliteral">&quot; : &quot;</span> &lt;&lt; errorNumber;</div>
-<div class="line"><span class="lineno">  432</span>                                res-&gt;sendStatus(500);</div>
-<div class="line"><span class="lineno">  433</span>                            });</div>
-<div class="line"><span class="lineno">  434</span>                    }</div>
-<div class="line"><span class="lineno">  435</span>                }</div>
-<div class="line"><span class="lineno">  436</span>            },</div>
-<div class="line"><span class="lineno">  437</span>            [res](<span class="keyword">const</span> std::string&amp; errorString, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> errorNumber) {</div>
-<div class="line"><span class="lineno">  438</span>                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Database error: &quot;</span> &lt;&lt; errorString &lt;&lt; <span class="stringliteral">&quot; : &quot;</span> &lt;&lt; errorNumber;</div>
-<div class="line"><span class="lineno">  439</span>                res-&gt;sendStatus(500);</div>
-<div class="line"><span class="lineno">  440</span>            });</div>
-<div class="line"><span class="lineno">  441</span>    });</div>
-<div class="line"><span class="lineno">  442</span> </div>
-<div class="line"><span class="lineno">  443</span>    <a class="code hl_function" href="testregex_8cpp.html#ab024e3c77aeb1487da4b33877cdfc1fb">router</a>.<a class="code hl_function" href="classexpress_1_1Route.html#ab1351a7034c36af5d8fec290ec5445b7">post</a>(<span class="stringliteral">&quot;/token/refresh&quot;</span>, [&amp;db] <a class="code hl_define" href="Router_8h.html#a8b7131df91fe7a961e2cdadcedb55232">APPLICATION</a>(req, res) {</div>
-<div class="line"><span class="lineno">  444</span>        res-&gt;set(<span class="stringliteral">&quot;Access-Control-Allow-Origin&quot;</span>, <span class="stringliteral">&quot;*&quot;</span>);</div>
-<div class="line"><span class="lineno">  445</span>        <span class="keyword">auto</span> queryClientId = req-&gt;query(<span class="stringliteral">&quot;client_id&quot;</span>);</div>
-<div class="line"><span class="lineno">  446</span>        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;ClientId: &quot;</span> &lt;&lt; queryClientId;</div>
-<div class="line"><span class="lineno">  447</span>        <span class="keyword">auto</span> queryGrantType = req-&gt;query(<span class="stringliteral">&quot;grant_type&quot;</span>);</div>
-<div class="line"><span class="lineno">  448</span>        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;GrandType: &quot;</span> &lt;&lt; queryGrantType;</div>
-<div class="line"><span class="lineno">  449</span>        <span class="keyword">auto</span> queryRefreshToken = req-&gt;query(<span class="stringliteral">&quot;refresh_token&quot;</span>);</div>
-<div class="line"><span class="lineno">  450</span>        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;RefreshToken: &quot;</span> &lt;&lt; queryRefreshToken;</div>
-<div class="line"><span class="lineno">  451</span>        <span class="keyword">auto</span> queryState = req-&gt;query(<span class="stringliteral">&quot;state&quot;</span>);</div>
-<div class="line"><span class="lineno">  452</span>        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;State: &quot;</span> &lt;&lt; queryState;</div>
-<div class="line"><span class="lineno">  453</span>        <span class="keywordflow">if</span> (queryGrantType.length() == 0) {</div>
-<div class="line"><span class="lineno">  454</span>            res-&gt;status(400).send(<span class="stringliteral">&quot;Missing query parameter &#39;grant_type&#39;&quot;</span>);</div>
-<div class="line"><span class="lineno">  455</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  456</span>        }</div>
-<div class="line"><span class="lineno">  457</span>        <span class="keywordflow">if</span> (queryGrantType != <span class="stringliteral">&quot;refresh_token&quot;</span>) {</div>
-<div class="line"><span class="lineno">  458</span>            res-&gt;status(400).send(<span class="stringliteral">&quot;Invalid query parameter &#39;grant_type&#39;, value must be &#39;refresh_token&#39;&quot;</span>);</div>
-<div class="line"><span class="lineno">  459</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  460</span>        }</div>
-<div class="line"><span class="lineno">  461</span>        <span class="keywordflow">if</span> (queryRefreshToken.empty()) {</div>
-<div class="line"><span class="lineno">  462</span>            res-&gt;status(400).send(<span class="stringliteral">&quot;Missing query parameter &#39;refresh_token&#39;&quot;</span>);</div>
-<div class="line"><span class="lineno">  463</span>        }</div>
-<div class="line"><span class="lineno">  464</span>        db.query(</div>
-<div class="line"><span class="lineno">  465</span>            <span class="stringliteral">&quot;select count(*) &quot;</span></div>
-<div class="line"><span class="lineno">  466</span>            <span class="stringliteral">&quot;from client c &quot;</span></div>
-<div class="line"><span class="lineno">  467</span>            <span class="stringliteral">&quot;join token r &quot;</span></div>
-<div class="line"><span class="lineno">  468</span>            <span class="stringliteral">&quot;on c.refresh_token_id = r.id &quot;</span></div>
-<div class="line"><span class="lineno">  469</span>            <span class="stringliteral">&quot;where c.uuid = &#39;&quot;</span> +</div>
-<div class="line"><span class="lineno">  470</span>                req-&gt;query(<span class="stringliteral">&quot;client_id&quot;</span>) +</div>
-<div class="line"><span class="lineno">  471</span>                <span class="stringliteral">&quot;&#39; &quot;</span></div>
-<div class="line"><span class="lineno">  472</span>                <span class="stringliteral">&quot;and r.uuid = &#39;&quot;</span> +</div>
-<div class="line"><span class="lineno">  473</span>                req-&gt;query(<span class="stringliteral">&quot;refresh_token&quot;</span>) +</div>
-<div class="line"><span class="lineno">  474</span>                <span class="stringliteral">&quot;&#39; &quot;</span></div>
-<div class="line"><span class="lineno">  475</span>                <span class="stringliteral">&quot;and timestampdiff(second, current_timestamp(), r.expire_datetime) &gt; 0&quot;</span>,</div>
-<div class="line"><span class="lineno">  476</span>            [req, res, &amp;db](<span class="keyword">const</span> MYSQL_ROW row) {</div>
-<div class="line"><span class="lineno">  477</span>                if (row != nullptr) {</div>
-<div class="line"><span class="lineno">  478</span>                    if (std::stoi(row[0]) == 0) {</div>
-<div class="line"><span class="lineno">  479</span>                        res-&gt;status(401).send(<span class="stringliteral">&quot;Invalid refresh token&quot;</span>);</div>
-<div class="line"><span class="lineno">  480</span>                        return;</div>
-<div class="line"><span class="lineno">  481</span>                    }</div>
-<div class="line"><span class="lineno">  482</span>                    <span class="comment">// Generate access token</span></div>
-<div class="line"><span class="lineno">  483</span>                    std::string accessToken{getNewUUID()};</div>
-<div class="line"><span class="lineno">  484</span>                    unsigned int accessTokenExpireSeconds{60 * 60}; <span class="comment">// 1 hour</span></div>
-<div class="line"><span class="lineno">  485</span>                    db.exec(</div>
-<div class="line"><span class="lineno">  486</span>                          <span class="stringliteral">&quot;insert into token(uuid, expire_datetime) &quot;</span></div>
-<div class="line"><span class="lineno">  487</span>                          <span class="stringliteral">&quot;values(&#39;&quot;</span> +</div>
-<div class="line"><span class="lineno">  488</span>                              accessToken + <span class="stringliteral">&quot;&#39;, &#39;&quot;</span> +</div>
-<div class="line"><span class="lineno">  489</span>                              timeToString(std::chrono::system_clock::now() + std::chrono::seconds(accessTokenExpireSeconds)) + <span class="stringliteral">&quot;&#39;)&quot;</span>,</div>
-<div class="line"><span class="lineno">  490</span>                          []() {</div>
-<div class="line"><span class="lineno">  491</span>                          },</div>
-<div class="line"><span class="lineno">  492</span>                          [res](const std::string&amp; errorString, unsigned int errorNumber) {</div>
-<div class="line"><span class="lineno">  493</span>                              VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Database error: &quot;</span> &lt;&lt; errorString &lt;&lt; <span class="stringliteral">&quot; : &quot;</span> &lt;&lt; errorNumber;</div>
-<div class="line"><span class="lineno">  494</span>                              res-&gt;sendStatus(500);</div>
-<div class="line"><span class="lineno">  495</span>                          })</div>
-<div class="line"><span class="lineno">  496</span>                        .query(</div>
-<div class="line"><span class="lineno">  497</span>                            <span class="stringliteral">&quot;select last_insert_id()&quot;</span>,</div>
-<div class="line"><span class="lineno">  498</span>                            [req, res, &amp;db, accessToken, accessTokenExpireSeconds](const MYSQL_ROW row) {</div>
-<div class="line"><span class="lineno">  499</span>                                if (row != nullptr) {</div>
-<div class="line"><span class="lineno">  500</span>                                    db.exec(</div>
-<div class="line"><span class="lineno">  501</span>                                        <span class="stringliteral">&quot;update client &quot;</span></div>
-<div class="line"><span class="lineno">  502</span>                                        <span class="stringliteral">&quot;set access_token_id = &#39;&quot;</span> +</div>
-<div class="line"><span class="lineno">  503</span>                                            std::string{row[0]} +</div>
-<div class="line"><span class="lineno">  504</span>                                            <span class="stringliteral">&quot;&#39; &quot;</span></div>
-<div class="line"><span class="lineno">  505</span>                                            <span class="stringliteral">&quot;where uuid = &#39;&quot;</span> +</div>
-<div class="line"><span class="lineno">  506</span>                                            req-&gt;query(<span class="stringliteral">&quot;client_id&quot;</span>) + <span class="stringliteral">&quot;&#39;&quot;</span>,</div>
-<div class="line"><span class="lineno">  507</span>                                        [res, accessToken, accessTokenExpireSeconds]() {</div>
-<div class="line"><span class="lineno">  508</span>                                            const nlohmann::json responseJson = {{<span class="stringliteral">&quot;access_token&quot;</span>, accessToken},</div>
-<div class="line"><span class="lineno">  509</span>                                                                                 {<span class="stringliteral">&quot;expires_in&quot;</span>, accessTokenExpireSeconds}};</div>
-<div class="line"><span class="lineno">  510</span>                                            res-&gt;send(responseJson.dump(4));</div>
-<div class="line"><span class="lineno">  511</span>                                        },</div>
-<div class="line"><span class="lineno">  512</span>                                        [res](const std::string&amp; errorString, unsigned int errorNumber) {</div>
-<div class="line"><span class="lineno">  513</span>                                            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Database error: &quot;</span> &lt;&lt; errorString &lt;&lt; <span class="stringliteral">&quot; : &quot;</span> &lt;&lt; errorNumber;</div>
-<div class="line"><span class="lineno">  514</span>                                            res-&gt;sendStatus(500);</div>
-<div class="line"><span class="lineno">  515</span>                                        });</div>
-<div class="line"><span class="lineno">  516</span>                                }</div>
-<div class="line"><span class="lineno">  517</span>                            },</div>
-<div class="line"><span class="lineno">  518</span>                            [res](const std::string&amp; errorString, unsigned int errorNumber) {</div>
-<div class="line"><span class="lineno">  519</span>                                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Database error: &quot;</span> &lt;&lt; errorString &lt;&lt; <span class="stringliteral">&quot; : &quot;</span> &lt;&lt; errorNumber;</div>
-<div class="line"><span class="lineno">  520</span>                                res-&gt;sendStatus(500);</div>
-<div class="line"><span class="lineno">  521</span>                            });</div>
-<div class="line"><span class="lineno">  522</span>                }</div>
-<div class="line"><span class="lineno">  523</span>            },</div>
-<div class="line"><span class="lineno">  524</span>            [res](<span class="keyword">const</span> std::string&amp; errorString, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> errorNumber) {</div>
-<div class="line"><span class="lineno">  525</span>                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Database error: &quot;</span> &lt;&lt; errorString &lt;&lt; <span class="stringliteral">&quot; : &quot;</span> &lt;&lt; errorNumber;</div>
-<div class="line"><span class="lineno">  526</span>                res-&gt;sendStatus(500);</div>
-<div class="line"><span class="lineno">  527</span>            });</div>
-<div class="line"><span class="lineno">  528</span>    });</div>
-<div class="line"><span class="lineno">  529</span> </div>
-<div class="line"><span class="lineno">  530</span>    <a class="code hl_function" href="testregex_8cpp.html#ab024e3c77aeb1487da4b33877cdfc1fb">router</a>.<a class="code hl_function" href="classexpress_1_1Route.html#ab1351a7034c36af5d8fec290ec5445b7">post</a>(<span class="stringliteral">&quot;/token/validate&quot;</span>, [&amp;db] <a class="code hl_define" href="Router_8h.html#a8b7131df91fe7a961e2cdadcedb55232">APPLICATION</a>(req, res) {</div>
-<div class="line"><span class="lineno">  531</span>        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;POST /token/validate&quot;</span>;</div>
-<div class="line"><span class="lineno">  532</span>        req-&gt;getAttribute&lt;nlohmann::json&gt;([res, &amp;db](nlohmann::json&amp; jsonBody) {</div>
-<div class="line"><span class="lineno">  533</span>            <span class="keywordflow">if</span> (!jsonBody.contains(<span class="stringliteral">&quot;access_token&quot;</span>)) {</div>
-<div class="line"><span class="lineno">  534</span>                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Missing &#39;access_token&#39; in json&quot;</span>;</div>
-<div class="line"><span class="lineno">  535</span>                res-&gt;status(500).send(<span class="stringliteral">&quot;Missing &#39;access_token&#39; in json&quot;</span>);</div>
-<div class="line"><span class="lineno">  536</span>                <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  537</span>            }</div>
-<div class="line"><span class="lineno">  538</span>            <span class="keyword">const</span> std::string jsonAccessToken{jsonBody[<span class="stringliteral">&quot;access_token&quot;</span>]};</div>
-<div class="line"><span class="lineno">  539</span>            <span class="keywordflow">if</span> (!jsonBody.contains(<span class="stringliteral">&quot;client_id&quot;</span>)) {</div>
-<div class="line"><span class="lineno">  540</span>                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Missing &#39;client_id&#39; in json&quot;</span>;</div>
-<div class="line"><span class="lineno">  541</span>                res-&gt;status(500).send(<span class="stringliteral">&quot;Missing &#39;client_id&#39; in json&quot;</span>);</div>
-<div class="line"><span class="lineno">  542</span>                <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  543</span>            }</div>
-<div class="line"><span class="lineno">  544</span>            <span class="keyword">const</span> std::string jsonClientId{jsonBody[<span class="stringliteral">&quot;client_id&quot;</span>]};</div>
-<div class="line"><span class="lineno">  545</span>            db.query(</div>
-<div class="line"><span class="lineno">  546</span>                <span class="stringliteral">&quot;select count(*) &quot;</span></div>
-<div class="line"><span class="lineno">  547</span>                <span class="stringliteral">&quot;from client c &quot;</span></div>
-<div class="line"><span class="lineno">  548</span>                <span class="stringliteral">&quot;join token a &quot;</span></div>
-<div class="line"><span class="lineno">  549</span>                <span class="stringliteral">&quot;on c.access_token_id = a.id &quot;</span></div>
-<div class="line"><span class="lineno">  550</span>                <span class="stringliteral">&quot;where c.uuid = &#39;&quot;</span> +</div>
-<div class="line"><span class="lineno">  551</span>                    jsonClientId +</div>
-<div class="line"><span class="lineno">  552</span>                    <span class="stringliteral">&quot;&#39; &quot;</span></div>
-<div class="line"><span class="lineno">  553</span>                    <span class="stringliteral">&quot;and a.uuid = &#39;&quot;</span> +</div>
-<div class="line"><span class="lineno">  554</span>                    jsonAccessToken + <span class="stringliteral">&quot;&#39;&quot;</span>,</div>
-<div class="line"><span class="lineno">  555</span>                [res, jsonClientId, jsonAccessToken](<span class="keyword">const</span> MYSQL_ROW row) {</div>
-<div class="line"><span class="lineno">  556</span>                    <span class="keywordflow">if</span> (row != <span class="keyword">nullptr</span>) {</div>
-<div class="line"><span class="lineno">  557</span>                        <span class="keywordflow">if</span> (std::stoi(row[0]) == 0) {</div>
-<div class="line"><span class="lineno">  558</span>                            <span class="keyword">const</span> nlohmann::json errorJson = {{<span class="stringliteral">&quot;error&quot;</span>, <span class="stringliteral">&quot;Invalid access token&quot;</span>}};</div>
-<div class="line"><span class="lineno">  559</span>                            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Sending 401: Invalid access token &#39;&quot;</span> &lt;&lt; jsonAccessToken &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
-<div class="line"><span class="lineno">  560</span>                            res-&gt;status(401).send(errorJson.dump(4));</div>
-<div class="line"><span class="lineno">  561</span>                        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  562</span>                            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Sending 200: Valid access token &#39;&quot;</span> &lt;&lt; jsonAccessToken &lt;&lt; <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">  563</span>                            <span class="keyword">const</span> nlohmann::json successJson = {{<span class="stringliteral">&quot;success&quot;</span>, <span class="stringliteral">&quot;Valid access token&quot;</span>}};</div>
-<div class="line"><span class="lineno">  564</span>                            res-&gt;status(200).send(successJson.dump(4));</div>
-<div class="line"><span class="lineno">  565</span>                        }</div>
-<div class="line"><span class="lineno">  566</span>                    }</div>
-<div class="line"><span class="lineno">  567</span>                },</div>
-<div class="line"><span class="lineno">  568</span>                [res](<span class="keyword">const</span> std::string&amp; errorString, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> errorNumber) {</div>
-<div class="line"><span class="lineno">  569</span>                    VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Database error: &quot;</span> &lt;&lt; errorString &lt;&lt; <span class="stringliteral">&quot; : &quot;</span> &lt;&lt; errorNumber;</div>
-<div class="line"><span class="lineno">  570</span>                    res-&gt;sendStatus(500);</div>
-<div class="line"><span class="lineno">  571</span>                });</div>
-<div class="line"><span class="lineno">  572</span>        });</div>
-<div class="line"><span class="lineno">  573</span>    });</div>
-<div class="line"><span class="lineno">  574</span> </div>
-<div class="line"><span class="lineno">  575</span>    app.<a class="code hl_function" href="classexpress_1_1Route.html#a5a7bd1d3aeb4c57c5e4665d1f0e9d052">use</a>(<span class="stringliteral">&quot;/oauth2&quot;</span>, <a class="code hl_function" href="testregex_8cpp.html#ab024e3c77aeb1487da4b33877cdfc1fb">router</a>);</div>
-<div class="line"><span class="lineno">  576</span>    app.<a class="code hl_function" href="classexpress_1_1Route.html#a5a7bd1d3aeb4c57c5e4665d1f0e9d052">use</a>(<a class="code hl_class" href="classexpress_1_1middleware_1_1StaticMiddleware.html">express::middleware::StaticMiddleware</a>(</div>
-<div class="line"><span class="lineno">  577</span>        <span class="stringliteral">&quot;/home/rathalin/projects/snode.c/src/oauth2/authorization_server/vue-frontend-oauth2-auth-server/dist/&quot;</span>));</div>
-<div class="line"><span class="lineno">  578</span> </div>
-<div class="line"><span class="lineno">  579</span>    app.listen(8082, [](<span class="keyword">const</span> <a class="code hl_typedef" href="classexpress_1_1WebAppT.html#ae6c8401e279b2a243f2fb0e498ef319e">express::legacy::in::WebApp::SocketAddress</a>&amp; socketAddress, <span class="keyword">const</span> <a class="code hl_class" href="classcore_1_1socket_1_1State.html">core::socket::State</a>&amp; state) {</div>
-<div class="line"><span class="lineno">  580</span>        <span class="keywordflow">switch</span> (state) {</div>
-<div class="line"><span class="lineno">  581</span>            <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a744e04217104f055ae728e8d884f25de">core::socket::State::OK</a>:</div>
-<div class="line"><span class="lineno">  582</span>                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;OAuth2AuthorizationServer: listening on &#39;&quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
-<div class="line"><span class="lineno">  583</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  584</span>            <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a26b8a9154524cfbba2729255cb184331">core::socket::State::DISABLED</a>:</div>
-<div class="line"><span class="lineno">  585</span>                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;OAuth2AuthorizationServer: disabled&quot;</span>;</div>
-<div class="line"><span class="lineno">  586</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  587</span>            <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a3dcc747a68a4c163fcf1c57d9852cab3">core::socket::State::ERROR</a>:</div>
-<div class="line"><span class="lineno">  588</span>                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;OAuth2AuthorizationServer: error occurred&quot;</span>;</div>
-<div class="line"><span class="lineno">  589</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  590</span>            <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a5d0a9047c96edac9ffd9cd12574328c0">core::socket::State::FATAL</a>:</div>
-<div class="line"><span class="lineno">  591</span>                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;OAuth2AuthorizationServer: fatal error occurred&quot;</span>;</div>
+<div class="line"><span class="lineno">  209</span>    <a class="code hl_function" href="testregex_8cpp.html#ab024e3c77aeb1487da4b33877cdfc1fb">router</a>.<a class="code hl_function" href="classexpress_1_1Route.html#aafcc7bc007a6252455fc2e102bc3e282">get</a>(<span class="stringliteral">&quot;/login&quot;</span>, [] <a class="code hl_define" href="Router_8h.html#a8b7131df91fe7a961e2cdadcedb55232">APPLICATION</a>(req, res) {</div>
+<div class="line"><span class="lineno">  210</span>        res-&gt;sendFile(<span class="stringliteral">&quot;/home/rathalin/projects/snode.c/src/oauth2/authorization_server/vue-frontend-oauth2-auth-server/dist/index.html&quot;</span>,</div>
+<div class="line"><span class="lineno">  211</span>                      [req](<span class="keywordtype">int</span> ret) {</div>
+<div class="line"><span class="lineno">  212</span>                          <span class="keywordflow">if</span> (ret != 0) {</div>
+<div class="line"><span class="lineno">  213</span>                              PLOG(ERROR) &lt;&lt; req-&gt;url;</div>
+<div class="line"><span class="lineno">  214</span>                          }</div>
+<div class="line"><span class="lineno">  215</span>                      });</div>
+<div class="line"><span class="lineno">  216</span>    });</div>
+<div class="line"><span class="lineno">  217</span> </div>
+<div class="line"><span class="lineno">  218</span>    <a class="code hl_function" href="testregex_8cpp.html#ab024e3c77aeb1487da4b33877cdfc1fb">router</a>.<a class="code hl_function" href="classexpress_1_1Route.html#ab1351a7034c36af5d8fec290ec5445b7">post</a>(<span class="stringliteral">&quot;/login&quot;</span>, [&amp;db] <a class="code hl_define" href="Router_8h.html#a8b7131df91fe7a961e2cdadcedb55232">APPLICATION</a>(req, res) {</div>
+<div class="line"><span class="lineno">  219</span>        req-&gt;getAttribute&lt;nlohmann::json&gt;(</div>
+<div class="line"><span class="lineno">  220</span>            [req, res, &amp;db](nlohmann::json&amp; body) {</div>
+<div class="line"><span class="lineno">  221</span>                db.query(</div>
+<div class="line"><span class="lineno">  222</span>                    <span class="stringliteral">&quot;select email, password_hash, password_salt, redirect_uri, state &quot;</span></div>
+<div class="line"><span class="lineno">  223</span>                    <span class="stringliteral">&quot;from client &quot;</span></div>
+<div class="line"><span class="lineno">  224</span>                    <span class="stringliteral">&quot;where uuid = &#39;&quot;</span> +</div>
+<div class="line"><span class="lineno">  225</span>                        req-&gt;query(<span class="stringliteral">&quot;client_id&quot;</span>) + <span class="stringliteral">&quot;&#39;&quot;</span>,</div>
+<div class="line"><span class="lineno">  226</span>                    [req, res, &amp;db, &amp;body](<span class="keyword">const</span> MYSQL_ROW row) {</div>
+<div class="line"><span class="lineno">  227</span>                        <span class="keywordflow">if</span> (row != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><span class="lineno">  228</span>                            <span class="keyword">const</span> std::string dbEmail{row[0]};</div>
+<div class="line"><span class="lineno">  229</span>                            <span class="keyword">const</span> std::string dbPasswordHash{row[1]};</div>
+<div class="line"><span class="lineno">  230</span>                            <span class="keyword">const</span> std::string dbPasswordSalt{row[2]};</div>
+<div class="line"><span class="lineno">  231</span>                            <span class="keyword">const</span> std::string dbRedirectUri{row[3]};</div>
+<div class="line"><span class="lineno">  232</span>                            <span class="keyword">const</span> std::string dbState{row[4]};</div>
+<div class="line"><span class="lineno">  233</span>                            <span class="keyword">const</span> std::string queryEmail{body[<span class="stringliteral">&quot;email&quot;</span>]};</div>
+<div class="line"><span class="lineno">  234</span>                            <span class="keyword">const</span> std::string queryPassword{body[<span class="stringliteral">&quot;password&quot;</span>]};</div>
+<div class="line"><span class="lineno">  235</span>                            <span class="comment">// Check email and password</span></div>
+<div class="line"><span class="lineno">  236</span>                            <span class="keywordflow">if</span> (dbEmail != queryEmail) {</div>
+<div class="line"><span class="lineno">  237</span>                                res-&gt;status(401).send(<span class="stringliteral">&quot;Invalid email address&quot;</span>);</div>
+<div class="line"><span class="lineno">  238</span>                            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (dbPasswordHash != <a class="code hl_function" href="AuthorizationServer_8cpp.html#a9eb739c5d48b3ee7bb59d5b46824677b">hashSha1</a>(dbPasswordSalt + queryPassword)) {</div>
+<div class="line"><span class="lineno">  239</span>                                res-&gt;status(401).send(<span class="stringliteral">&quot;Invalid password&quot;</span>);</div>
+<div class="line"><span class="lineno">  240</span>                            } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  241</span>                                <span class="comment">// Generate auth code which expires after 10 minutes</span></div>
+<div class="line"><span class="lineno">  242</span>                                <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> expireMinutes{10};</div>
+<div class="line"><span class="lineno">  243</span>                                <span class="keyword">const</span> std::string authCode{<a class="code hl_function" href="AuthorizationServer_8cpp.html#a8b076d290fad3ac101ff150646b801a6">getNewUUID</a>()};</div>
+<div class="line"><span class="lineno">  244</span>                                db.exec(</div>
+<div class="line"><span class="lineno">  245</span>                                      <span class="stringliteral">&quot;insert into token(uuid, expire_datetime) &quot;</span></div>
+<div class="line"><span class="lineno">  246</span>                                      <span class="stringliteral">&quot;values(&#39;&quot;</span> +</div>
+<div class="line"><span class="lineno">  247</span>                                          authCode + <span class="stringliteral">&quot;&#39;, &#39;&quot;</span> +</div>
+<div class="line"><span class="lineno">  248</span>                                          <a class="code hl_function" href="AuthorizationServer_8cpp.html#a233038a531225852d6f2d69915d1e532">timeToString</a>(std::chrono::system_clock::now() + std::chrono::minutes(expireMinutes)) + <span class="stringliteral">&quot;&#39;)&quot;</span>,</div>
+<div class="line"><span class="lineno">  249</span>                                      []() {</div>
+<div class="line"><span class="lineno">  250</span>                                      },</div>
+<div class="line"><span class="lineno">  251</span>                                      [res](<span class="keyword">const</span> std::string&amp; errorString, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> errorNumber) {</div>
+<div class="line"><span class="lineno">  252</span>                                          VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Database error: &quot;</span> &lt;&lt; errorString &lt;&lt; <span class="stringliteral">&quot; : &quot;</span> &lt;&lt; errorNumber;</div>
+<div class="line"><span class="lineno">  253</span>                                          res-&gt;sendStatus(500);</div>
+<div class="line"><span class="lineno">  254</span>                                      })</div>
+<div class="line"><span class="lineno">  255</span>                                    .query(</div>
+<div class="line"><span class="lineno">  256</span>                                        <span class="stringliteral">&quot;select last_insert_id()&quot;</span>,</div>
+<div class="line"><span class="lineno">  257</span>                                        [req, res, &amp;db, dbState, dbRedirectUri, authCode](<span class="keyword">const</span> MYSQL_ROW row) {</div>
+<div class="line"><span class="lineno">  258</span>                                            <span class="keywordflow">if</span> (row != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><span class="lineno">  259</span>                                                db.exec(</div>
+<div class="line"><span class="lineno">  260</span>                                                    <span class="stringliteral">&quot;update client &quot;</span></div>
+<div class="line"><span class="lineno">  261</span>                                                    <span class="stringliteral">&quot;set auth_code_id = &#39;&quot;</span> +</div>
+<div class="line"><span class="lineno">  262</span>                                                        std::string{row[0]} +</div>
+<div class="line"><span class="lineno">  263</span>                                                        <span class="stringliteral">&quot;&#39; &quot;</span></div>
+<div class="line"><span class="lineno">  264</span>                                                        <span class="stringliteral">&quot;where uuid = &#39;&quot;</span> +</div>
+<div class="line"><span class="lineno">  265</span>                                                        req-&gt;query(<span class="stringliteral">&quot;client_id&quot;</span>) + <span class="stringliteral">&quot;&#39;&quot;</span>,</div>
+<div class="line"><span class="lineno">  266</span>                                                    [res, dbState, dbRedirectUri, authCode]() {</div>
+<div class="line"><span class="lineno">  267</span>                                                        <span class="comment">// Redirect back to the client app</span></div>
+<div class="line"><span class="lineno">  268</span>                                                        std::string clientRedirectUri{dbRedirectUri};</div>
+<div class="line"><span class="lineno">  269</span>                                                        <a class="code hl_function" href="AuthorizationServer_8cpp.html#a6c1dfe5df352bedbe1c485f3120383da">addQueryParamToUri</a>(clientRedirectUri, <span class="stringliteral">&quot;code&quot;</span>, authCode);</div>
+<div class="line"><span class="lineno">  270</span>                                                        <span class="keywordflow">if</span> (!dbState.empty()) {</div>
+<div class="line"><span class="lineno">  271</span>                                                            <a class="code hl_function" href="AuthorizationServer_8cpp.html#a6c1dfe5df352bedbe1c485f3120383da">addQueryParamToUri</a>(clientRedirectUri, <span class="stringliteral">&quot;state&quot;</span>, dbState);</div>
+<div class="line"><span class="lineno">  272</span>                                                        }</div>
+<div class="line"><span class="lineno">  273</span>                                                        <span class="comment">// Set CORS header</span></div>
+<div class="line"><span class="lineno">  274</span>                                                        res-&gt;set(<span class="stringliteral">&quot;Access-Control-Allow-Origin&quot;</span>, <span class="stringliteral">&quot;*&quot;</span>);</div>
+<div class="line"><span class="lineno">  275</span>                                                        <span class="keyword">const</span> nlohmann::json responseJson = {{<span class="stringliteral">&quot;redirect_uri&quot;</span>, clientRedirectUri}};</div>
+<div class="line"><span class="lineno">  276</span>                                                        <span class="keyword">const</span> std::string responseJsonString{responseJson.dump(4)};</div>
+<div class="line"><span class="lineno">  277</span>                                                        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Sending json reponse: &quot;</span> &lt;&lt; responseJsonString;</div>
+<div class="line"><span class="lineno">  278</span>                                                        res-&gt;send(responseJsonString);</div>
+<div class="line"><span class="lineno">  279</span>                                                    },</div>
+<div class="line"><span class="lineno">  280</span>                                                    [res](<span class="keyword">const</span> std::string&amp; errorString, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> errorNumber) {</div>
+<div class="line"><span class="lineno">  281</span>                                                        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Database error: &quot;</span> &lt;&lt; errorString &lt;&lt; <span class="stringliteral">&quot; : &quot;</span> &lt;&lt; errorNumber;</div>
+<div class="line"><span class="lineno">  282</span>                                                        res-&gt;sendStatus(500);</div>
+<div class="line"><span class="lineno">  283</span>                                                    });</div>
+<div class="line"><span class="lineno">  284</span>                                            }</div>
+<div class="line"><span class="lineno">  285</span>                                        },</div>
+<div class="line"><span class="lineno">  286</span>                                        [res](<span class="keyword">const</span> std::string&amp; errorString, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> errorNumber) {</div>
+<div class="line"><span class="lineno">  287</span>                                            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Database error: &quot;</span> &lt;&lt; errorString &lt;&lt; <span class="stringliteral">&quot; : &quot;</span> &lt;&lt; errorNumber;</div>
+<div class="line"><span class="lineno">  288</span>                                            res-&gt;sendStatus(500);</div>
+<div class="line"><span class="lineno">  289</span>                                        });</div>
+<div class="line"><span class="lineno">  290</span>                            }</div>
+<div class="line"><span class="lineno">  291</span>                        }</div>
+<div class="line"><span class="lineno">  292</span>                    },</div>
+<div class="line"><span class="lineno">  293</span>                    [res](<span class="keyword">const</span> std::string&amp; errorString, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> errorNumber) {</div>
+<div class="line"><span class="lineno">  294</span>                        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Database error: &quot;</span> &lt;&lt; errorString &lt;&lt; <span class="stringliteral">&quot; : &quot;</span> &lt;&lt; errorNumber;</div>
+<div class="line"><span class="lineno">  295</span>                        res-&gt;sendStatus(500);</div>
+<div class="line"><span class="lineno">  296</span>                    });</div>
+<div class="line"><span class="lineno">  297</span>            },</div>
+<div class="line"><span class="lineno">  298</span>            [res]([[maybe_unused]] <span class="keyword">const</span> std::string&amp; key) {</div>
+<div class="line"><span class="lineno">  299</span>                res-&gt;sendStatus(500);</div>
+<div class="line"><span class="lineno">  300</span>            });</div>
+<div class="line"><span class="lineno">  301</span>    });</div>
+<div class="line"><span class="lineno">  302</span> </div>
+<div class="line"><span class="lineno">  303</span>    <a class="code hl_function" href="testregex_8cpp.html#ab024e3c77aeb1487da4b33877cdfc1fb">router</a>.<a class="code hl_function" href="classexpress_1_1Route.html#aafcc7bc007a6252455fc2e102bc3e282">get</a>(<span class="stringliteral">&quot;/token&quot;</span>, [&amp;db] <a class="code hl_define" href="Router_8h.html#a8b7131df91fe7a961e2cdadcedb55232">APPLICATION</a>(req, res) {</div>
+<div class="line"><span class="lineno">  304</span>        res-&gt;set(<span class="stringliteral">&quot;Access-Control-Allow-Origin&quot;</span>, <span class="stringliteral">&quot;*&quot;</span>);</div>
+<div class="line"><span class="lineno">  305</span>        <span class="keyword">auto</span> queryGrantType = req-&gt;query(<span class="stringliteral">&quot;grant_type&quot;</span>);</div>
+<div class="line"><span class="lineno">  306</span>        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;GrandType: &quot;</span> &lt;&lt; queryGrantType;</div>
+<div class="line"><span class="lineno">  307</span>        <span class="keyword">auto</span> queryCode = req-&gt;query(<span class="stringliteral">&quot;code&quot;</span>);</div>
+<div class="line"><span class="lineno">  308</span>        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Code: &quot;</span> &lt;&lt; queryCode;</div>
+<div class="line"><span class="lineno">  309</span>        <span class="keyword">auto</span> queryRedirectUri = req-&gt;query(<span class="stringliteral">&quot;redirect_uri&quot;</span>);</div>
+<div class="line"><span class="lineno">  310</span>        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;RedirectUri: &quot;</span> &lt;&lt; queryRedirectUri;</div>
+<div class="line"><span class="lineno">  311</span>        <span class="keywordflow">if</span> (queryGrantType != <span class="stringliteral">&quot;authorization_code&quot;</span>) {</div>
+<div class="line"><span class="lineno">  312</span>            res-&gt;status(400).send(<span class="stringliteral">&quot;Invalid query parameter &#39;grant_type&#39;, value must be &#39;authorization_code&#39;&quot;</span>);</div>
+<div class="line"><span class="lineno">  313</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  314</span>        }</div>
+<div class="line"><span class="lineno">  315</span>        <span class="keywordflow">if</span> (queryCode.length() == 0) {</div>
+<div class="line"><span class="lineno">  316</span>            res-&gt;status(400).send(<span class="stringliteral">&quot;Missing query parameter &#39;code&#39;&quot;</span>);</div>
+<div class="line"><span class="lineno">  317</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  318</span>        }</div>
+<div class="line"><span class="lineno">  319</span>        <span class="keywordflow">if</span> (queryRedirectUri.length() == 0) {</div>
+<div class="line"><span class="lineno">  320</span>            res-&gt;status(400).send(<span class="stringliteral">&quot;Missing query parameter &#39;redirect_uri&#39;&quot;</span>);</div>
+<div class="line"><span class="lineno">  321</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  322</span>        }</div>
+<div class="line"><span class="lineno">  323</span>        db.query(</div>
+<div class="line"><span class="lineno">  324</span>            <span class="stringliteral">&quot;select count(*) &quot;</span></div>
+<div class="line"><span class="lineno">  325</span>            <span class="stringliteral">&quot;from client &quot;</span></div>
+<div class="line"><span class="lineno">  326</span>            <span class="stringliteral">&quot;where uuid = &#39;&quot;</span> +</div>
+<div class="line"><span class="lineno">  327</span>                req-&gt;query(<span class="stringliteral">&quot;client_id&quot;</span>) +</div>
+<div class="line"><span class="lineno">  328</span>                <span class="stringliteral">&quot;&#39; &quot;</span></div>
+<div class="line"><span class="lineno">  329</span>                <span class="stringliteral">&quot;and redirect_uri = &#39;&quot;</span> +</div>
+<div class="line"><span class="lineno">  330</span>                queryRedirectUri + <span class="stringliteral">&quot;&#39;&quot;</span>,</div>
+<div class="line"><span class="lineno">  331</span>            [req, res, &amp;db](<span class="keyword">const</span> MYSQL_ROW row) {</div>
+<div class="line"><span class="lineno">  332</span>                if (row != nullptr) {</div>
+<div class="line"><span class="lineno">  333</span>                    if (std::stoi(row[0]) == 0) {</div>
+<div class="line"><span class="lineno">  334</span>                        res-&gt;status(400).send(<span class="stringliteral">&quot;Query param &#39;redirect_uri&#39; must be the same as in the initial request&quot;</span>);</div>
+<div class="line"><span class="lineno">  335</span>                    } else {</div>
+<div class="line"><span class="lineno">  336</span>                        db.query(</div>
+<div class="line"><span class="lineno">  337</span>                            <span class="stringliteral">&quot;select count(*) &quot;</span></div>
+<div class="line"><span class="lineno">  338</span>                            <span class="stringliteral">&quot;from client c &quot;</span></div>
+<div class="line"><span class="lineno">  339</span>                            <span class="stringliteral">&quot;join token a &quot;</span></div>
+<div class="line"><span class="lineno">  340</span>                            <span class="stringliteral">&quot;on c.auth_code_id = a.id &quot;</span></div>
+<div class="line"><span class="lineno">  341</span>                            <span class="stringliteral">&quot;where c.uuid = &#39;&quot;</span> +</div>
+<div class="line"><span class="lineno">  342</span>                                req-&gt;query(<span class="stringliteral">&quot;client_id&quot;</span>) +</div>
+<div class="line"><span class="lineno">  343</span>                                <span class="stringliteral">&quot;&#39; &quot;</span></div>
+<div class="line"><span class="lineno">  344</span>                                <span class="stringliteral">&quot;and a.uuid = &#39;&quot;</span> +</div>
+<div class="line"><span class="lineno">  345</span>                                req-&gt;query(<span class="stringliteral">&quot;code&quot;</span>) +</div>
+<div class="line"><span class="lineno">  346</span>                                <span class="stringliteral">&quot;&#39; &quot;</span></div>
+<div class="line"><span class="lineno">  347</span>                                <span class="stringliteral">&quot;and timestampdiff(second, current_timestamp(), a.expire_datetime) &gt; 0&quot;</span>,</div>
+<div class="line"><span class="lineno">  348</span>                            [req, res, &amp;db](const MYSQL_ROW row) {</div>
+<div class="line"><span class="lineno">  349</span>                                if (row != nullptr) {</div>
+<div class="line"><span class="lineno">  350</span>                                    if (std::stoi(row[0]) == 0) {</div>
+<div class="line"><span class="lineno">  351</span>                                        res-&gt;status(401).send(<span class="stringliteral">&quot;Invalid auth token&quot;</span>);</div>
+<div class="line"><span class="lineno">  352</span>                                        return;</div>
+<div class="line"><span class="lineno">  353</span>                                    }</div>
+<div class="line"><span class="lineno">  354</span>                                    <span class="comment">// Generate access and refresh token</span></div>
+<div class="line"><span class="lineno">  355</span>                                    const std::string accessToken{getNewUUID()};</div>
+<div class="line"><span class="lineno">  356</span>                                    const unsigned int accessTokenExpireSeconds{60 * 60}; <span class="comment">// 1 hour</span></div>
+<div class="line"><span class="lineno">  357</span>                                    const std::string refreshToken{getNewUUID()};</div>
+<div class="line"><span class="lineno">  358</span>                                    const unsigned int refreshTokenExpireSeconds{60 * 60 * 24}; <span class="comment">// 24 hours</span></div>
+<div class="line"><span class="lineno">  359</span>                                    db.exec(</div>
+<div class="line"><span class="lineno">  360</span>                                          <span class="stringliteral">&quot;insert into token(uuid, expire_datetime) &quot;</span></div>
+<div class="line"><span class="lineno">  361</span>                                          <span class="stringliteral">&quot;values(&#39;&quot;</span> +</div>
+<div class="line"><span class="lineno">  362</span>                                              accessToken + <span class="stringliteral">&quot;&#39;, &#39;&quot;</span> +</div>
+<div class="line"><span class="lineno">  363</span>                                              timeToString(std::chrono::system_clock::now() +</div>
+<div class="line"><span class="lineno">  364</span>                                                           std::chrono::seconds(accessTokenExpireSeconds)) +</div>
+<div class="line"><span class="lineno">  365</span>                                              <span class="stringliteral">&quot;&#39;)&quot;</span>,</div>
+<div class="line"><span class="lineno">  366</span>                                          []() {</div>
+<div class="line"><span class="lineno">  367</span>                                          },</div>
+<div class="line"><span class="lineno">  368</span>                                          [res](const std::string&amp; errorString, unsigned int errorNumber) {</div>
+<div class="line"><span class="lineno">  369</span>                                              VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Database error: &quot;</span> &lt;&lt; errorString &lt;&lt; <span class="stringliteral">&quot; : &quot;</span> &lt;&lt; errorNumber;</div>
+<div class="line"><span class="lineno">  370</span>                                              res-&gt;sendStatus(500);</div>
+<div class="line"><span class="lineno">  371</span>                                          })</div>
+<div class="line"><span class="lineno">  372</span>                                        .query(</div>
+<div class="line"><span class="lineno">  373</span>                                            <span class="stringliteral">&quot;select last_insert_id()&quot;</span>,</div>
+<div class="line"><span class="lineno">  374</span>                                            [req, res, &amp;db](const MYSQL_ROW row) {</div>
+<div class="line"><span class="lineno">  375</span>                                                if (row != nullptr) {</div>
+<div class="line"><span class="lineno">  376</span>                                                    db.exec(</div>
+<div class="line"><span class="lineno">  377</span>                                                        <span class="stringliteral">&quot;update client &quot;</span></div>
+<div class="line"><span class="lineno">  378</span>                                                        <span class="stringliteral">&quot;set access_token_id = &#39;&quot;</span> +</div>
+<div class="line"><span class="lineno">  379</span>                                                            std::string{row[0]} +</div>
+<div class="line"><span class="lineno">  380</span>                                                            <span class="stringliteral">&quot;&#39; &quot;</span></div>
+<div class="line"><span class="lineno">  381</span>                                                            <span class="stringliteral">&quot;where uuid = &#39;&quot;</span> +</div>
+<div class="line"><span class="lineno">  382</span>                                                            req-&gt;query(<span class="stringliteral">&quot;client_id&quot;</span>) + <span class="stringliteral">&quot;&#39;&quot;</span>,</div>
+<div class="line"><span class="lineno">  383</span>                                                        []() {</div>
+<div class="line"><span class="lineno">  384</span>                                                        },</div>
+<div class="line"><span class="lineno">  385</span>                                                        [res](const std::string&amp; errorString, unsigned int errorNumber) {</div>
+<div class="line"><span class="lineno">  386</span>                                                            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Database error: &quot;</span> &lt;&lt; errorString &lt;&lt; <span class="stringliteral">&quot; : &quot;</span> &lt;&lt; errorNumber;</div>
+<div class="line"><span class="lineno">  387</span>                                                            res-&gt;sendStatus(500);</div>
+<div class="line"><span class="lineno">  388</span>                                                        });</div>
+<div class="line"><span class="lineno">  389</span>                                                }</div>
+<div class="line"><span class="lineno">  390</span>                                            },</div>
+<div class="line"><span class="lineno">  391</span>                                            [res](const std::string&amp; errorString, unsigned int errorNumber) {</div>
+<div class="line"><span class="lineno">  392</span>                                                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Database error: &quot;</span> &lt;&lt; errorString &lt;&lt; <span class="stringliteral">&quot; : &quot;</span> &lt;&lt; errorNumber;</div>
+<div class="line"><span class="lineno">  393</span>                                                res-&gt;sendStatus(500);</div>
+<div class="line"><span class="lineno">  394</span>                                            })</div>
+<div class="line"><span class="lineno">  395</span>                                        .exec(</div>
+<div class="line"><span class="lineno">  396</span>                                            <span class="stringliteral">&quot;insert into token(uuid, expire_datetime) &quot;</span></div>
+<div class="line"><span class="lineno">  397</span>                                            <span class="stringliteral">&quot;values(&#39;&quot;</span> +</div>
+<div class="line"><span class="lineno">  398</span>                                                refreshToken + <span class="stringliteral">&quot;&#39;, &#39;&quot;</span> +</div>
+<div class="line"><span class="lineno">  399</span>                                                timeToString(std::chrono::system_clock::now() +</div>
+<div class="line"><span class="lineno">  400</span>                                                             std::chrono::seconds(refreshTokenExpireSeconds)) +</div>
+<div class="line"><span class="lineno">  401</span>                                                <span class="stringliteral">&quot;&#39;)&quot;</span>,</div>
+<div class="line"><span class="lineno">  402</span>                                            []() {</div>
+<div class="line"><span class="lineno">  403</span>                                            },</div>
+<div class="line"><span class="lineno">  404</span>                                            [res](const std::string&amp; errorString, unsigned int errorNumber) {</div>
+<div class="line"><span class="lineno">  405</span>                                                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Database error: &quot;</span> &lt;&lt; errorString &lt;&lt; <span class="stringliteral">&quot; : &quot;</span> &lt;&lt; errorNumber;</div>
+<div class="line"><span class="lineno">  406</span>                                                res-&gt;sendStatus(500);</div>
+<div class="line"><span class="lineno">  407</span>                                            })</div>
+<div class="line"><span class="lineno">  408</span>                                        .query(</div>
+<div class="line"><span class="lineno">  409</span>                                            <span class="stringliteral">&quot;select last_insert_id()&quot;</span>,</div>
+<div class="line"><span class="lineno">  410</span>                                            [req, res, &amp;db, accessToken, accessTokenExpireSeconds, refreshToken](const MYSQL_ROW row) {</div>
+<div class="line"><span class="lineno">  411</span>                                                if (row != nullptr) {</div>
+<div class="line"><span class="lineno">  412</span>                                                    db.exec(</div>
+<div class="line"><span class="lineno">  413</span>                                                        <span class="stringliteral">&quot;update client &quot;</span></div>
+<div class="line"><span class="lineno">  414</span>                                                        <span class="stringliteral">&quot;set refresh_token_id = &#39;&quot;</span> +</div>
+<div class="line"><span class="lineno">  415</span>                                                            std::string{row[0]} +</div>
+<div class="line"><span class="lineno">  416</span>                                                            <span class="stringliteral">&quot;&#39; &quot;</span></div>
+<div class="line"><span class="lineno">  417</span>                                                            <span class="stringliteral">&quot;where uuid = &#39;&quot;</span> +</div>
+<div class="line"><span class="lineno">  418</span>                                                            req-&gt;query(<span class="stringliteral">&quot;client_id&quot;</span>) + <span class="stringliteral">&quot;&#39;&quot;</span>,</div>
+<div class="line"><span class="lineno">  419</span>                                                        [res, accessToken, accessTokenExpireSeconds, refreshToken]() {</div>
+<div class="line"><span class="lineno">  420</span>                                                            <span class="comment">// Send auth token and refresh token</span></div>
+<div class="line"><span class="lineno">  421</span>                                                            const nlohmann::json jsonResponse = {{<span class="stringliteral">&quot;access_token&quot;</span>, accessToken},</div>
+<div class="line"><span class="lineno">  422</span>                                                                                                 {<span class="stringliteral">&quot;expires_in&quot;</span>, accessTokenExpireSeconds},</div>
+<div class="line"><span class="lineno">  423</span>                                                                                                 {<span class="stringliteral">&quot;refresh_token&quot;</span>, refreshToken}};</div>
+<div class="line"><span class="lineno">  424</span>                                                            const std::string jsonResponseString{jsonResponse.dump(4)};</div>
+<div class="line"><span class="lineno">  425</span>                                                            res-&gt;send(jsonResponseString);</div>
+<div class="line"><span class="lineno">  426</span>                                                        },</div>
+<div class="line"><span class="lineno">  427</span>                                                        [res](const std::string&amp; errorString, unsigned int errorNumber) {</div>
+<div class="line"><span class="lineno">  428</span>                                                            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Database error: &quot;</span> &lt;&lt; errorString &lt;&lt; <span class="stringliteral">&quot; : &quot;</span> &lt;&lt; errorNumber;</div>
+<div class="line"><span class="lineno">  429</span>                                                            res-&gt;sendStatus(500);</div>
+<div class="line"><span class="lineno">  430</span>                                                        });</div>
+<div class="line"><span class="lineno">  431</span>                                                }</div>
+<div class="line"><span class="lineno">  432</span>                                            },</div>
+<div class="line"><span class="lineno">  433</span>                                            [res](const std::string&amp; errorString, unsigned int errorNumber) {</div>
+<div class="line"><span class="lineno">  434</span>                                                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Database error: &quot;</span> &lt;&lt; errorString &lt;&lt; <span class="stringliteral">&quot; : &quot;</span> &lt;&lt; errorNumber;</div>
+<div class="line"><span class="lineno">  435</span>                                                res-&gt;sendStatus(500);</div>
+<div class="line"><span class="lineno">  436</span>                                            });</div>
+<div class="line"><span class="lineno">  437</span>                                }</div>
+<div class="line"><span class="lineno">  438</span>                            },</div>
+<div class="line"><span class="lineno">  439</span>                            [res](const std::string&amp; errorString, unsigned int errorNumber) {</div>
+<div class="line"><span class="lineno">  440</span>                                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Database error: &quot;</span> &lt;&lt; errorString &lt;&lt; <span class="stringliteral">&quot; : &quot;</span> &lt;&lt; errorNumber;</div>
+<div class="line"><span class="lineno">  441</span>                                res-&gt;sendStatus(500);</div>
+<div class="line"><span class="lineno">  442</span>                            });</div>
+<div class="line"><span class="lineno">  443</span>                    }</div>
+<div class="line"><span class="lineno">  444</span>                }</div>
+<div class="line"><span class="lineno">  445</span>            },</div>
+<div class="line"><span class="lineno">  446</span>            [res](<span class="keyword">const</span> std::string&amp; errorString, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> errorNumber) {</div>
+<div class="line"><span class="lineno">  447</span>                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Database error: &quot;</span> &lt;&lt; errorString &lt;&lt; <span class="stringliteral">&quot; : &quot;</span> &lt;&lt; errorNumber;</div>
+<div class="line"><span class="lineno">  448</span>                res-&gt;sendStatus(500);</div>
+<div class="line"><span class="lineno">  449</span>            });</div>
+<div class="line"><span class="lineno">  450</span>    });</div>
+<div class="line"><span class="lineno">  451</span> </div>
+<div class="line"><span class="lineno">  452</span>    <a class="code hl_function" href="testregex_8cpp.html#ab024e3c77aeb1487da4b33877cdfc1fb">router</a>.<a class="code hl_function" href="classexpress_1_1Route.html#ab1351a7034c36af5d8fec290ec5445b7">post</a>(<span class="stringliteral">&quot;/token/refresh&quot;</span>, [&amp;db] <a class="code hl_define" href="Router_8h.html#a8b7131df91fe7a961e2cdadcedb55232">APPLICATION</a>(req, res) {</div>
+<div class="line"><span class="lineno">  453</span>        res-&gt;set(<span class="stringliteral">&quot;Access-Control-Allow-Origin&quot;</span>, <span class="stringliteral">&quot;*&quot;</span>);</div>
+<div class="line"><span class="lineno">  454</span>        <span class="keyword">auto</span> queryClientId = req-&gt;query(<span class="stringliteral">&quot;client_id&quot;</span>);</div>
+<div class="line"><span class="lineno">  455</span>        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;ClientId: &quot;</span> &lt;&lt; queryClientId;</div>
+<div class="line"><span class="lineno">  456</span>        <span class="keyword">auto</span> queryGrantType = req-&gt;query(<span class="stringliteral">&quot;grant_type&quot;</span>);</div>
+<div class="line"><span class="lineno">  457</span>        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;GrandType: &quot;</span> &lt;&lt; queryGrantType;</div>
+<div class="line"><span class="lineno">  458</span>        <span class="keyword">auto</span> queryRefreshToken = req-&gt;query(<span class="stringliteral">&quot;refresh_token&quot;</span>);</div>
+<div class="line"><span class="lineno">  459</span>        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;RefreshToken: &quot;</span> &lt;&lt; queryRefreshToken;</div>
+<div class="line"><span class="lineno">  460</span>        <span class="keyword">auto</span> queryState = req-&gt;query(<span class="stringliteral">&quot;state&quot;</span>);</div>
+<div class="line"><span class="lineno">  461</span>        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;State: &quot;</span> &lt;&lt; queryState;</div>
+<div class="line"><span class="lineno">  462</span>        <span class="keywordflow">if</span> (queryGrantType.length() == 0) {</div>
+<div class="line"><span class="lineno">  463</span>            res-&gt;status(400).send(<span class="stringliteral">&quot;Missing query parameter &#39;grant_type&#39;&quot;</span>);</div>
+<div class="line"><span class="lineno">  464</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  465</span>        }</div>
+<div class="line"><span class="lineno">  466</span>        <span class="keywordflow">if</span> (queryGrantType != <span class="stringliteral">&quot;refresh_token&quot;</span>) {</div>
+<div class="line"><span class="lineno">  467</span>            res-&gt;status(400).send(<span class="stringliteral">&quot;Invalid query parameter &#39;grant_type&#39;, value must be &#39;refresh_token&#39;&quot;</span>);</div>
+<div class="line"><span class="lineno">  468</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  469</span>        }</div>
+<div class="line"><span class="lineno">  470</span>        <span class="keywordflow">if</span> (queryRefreshToken.empty()) {</div>
+<div class="line"><span class="lineno">  471</span>            res-&gt;status(400).send(<span class="stringliteral">&quot;Missing query parameter &#39;refresh_token&#39;&quot;</span>);</div>
+<div class="line"><span class="lineno">  472</span>        }</div>
+<div class="line"><span class="lineno">  473</span>        db.query(</div>
+<div class="line"><span class="lineno">  474</span>            <span class="stringliteral">&quot;select count(*) &quot;</span></div>
+<div class="line"><span class="lineno">  475</span>            <span class="stringliteral">&quot;from client c &quot;</span></div>
+<div class="line"><span class="lineno">  476</span>            <span class="stringliteral">&quot;join token r &quot;</span></div>
+<div class="line"><span class="lineno">  477</span>            <span class="stringliteral">&quot;on c.refresh_token_id = r.id &quot;</span></div>
+<div class="line"><span class="lineno">  478</span>            <span class="stringliteral">&quot;where c.uuid = &#39;&quot;</span> +</div>
+<div class="line"><span class="lineno">  479</span>                req-&gt;query(<span class="stringliteral">&quot;client_id&quot;</span>) +</div>
+<div class="line"><span class="lineno">  480</span>                <span class="stringliteral">&quot;&#39; &quot;</span></div>
+<div class="line"><span class="lineno">  481</span>                <span class="stringliteral">&quot;and r.uuid = &#39;&quot;</span> +</div>
+<div class="line"><span class="lineno">  482</span>                req-&gt;query(<span class="stringliteral">&quot;refresh_token&quot;</span>) +</div>
+<div class="line"><span class="lineno">  483</span>                <span class="stringliteral">&quot;&#39; &quot;</span></div>
+<div class="line"><span class="lineno">  484</span>                <span class="stringliteral">&quot;and timestampdiff(second, current_timestamp(), r.expire_datetime) &gt; 0&quot;</span>,</div>
+<div class="line"><span class="lineno">  485</span>            [req, res, &amp;db](<span class="keyword">const</span> MYSQL_ROW row) {</div>
+<div class="line"><span class="lineno">  486</span>                if (row != nullptr) {</div>
+<div class="line"><span class="lineno">  487</span>                    if (std::stoi(row[0]) == 0) {</div>
+<div class="line"><span class="lineno">  488</span>                        res-&gt;status(401).send(<span class="stringliteral">&quot;Invalid refresh token&quot;</span>);</div>
+<div class="line"><span class="lineno">  489</span>                        return;</div>
+<div class="line"><span class="lineno">  490</span>                    }</div>
+<div class="line"><span class="lineno">  491</span>                    <span class="comment">// Generate access token</span></div>
+<div class="line"><span class="lineno">  492</span>                    std::string accessToken{getNewUUID()};</div>
+<div class="line"><span class="lineno">  493</span>                    unsigned int accessTokenExpireSeconds{60 * 60}; <span class="comment">// 1 hour</span></div>
+<div class="line"><span class="lineno">  494</span>                    db.exec(</div>
+<div class="line"><span class="lineno">  495</span>                          <span class="stringliteral">&quot;insert into token(uuid, expire_datetime) &quot;</span></div>
+<div class="line"><span class="lineno">  496</span>                          <span class="stringliteral">&quot;values(&#39;&quot;</span> +</div>
+<div class="line"><span class="lineno">  497</span>                              accessToken + <span class="stringliteral">&quot;&#39;, &#39;&quot;</span> +</div>
+<div class="line"><span class="lineno">  498</span>                              timeToString(std::chrono::system_clock::now() + std::chrono::seconds(accessTokenExpireSeconds)) + <span class="stringliteral">&quot;&#39;)&quot;</span>,</div>
+<div class="line"><span class="lineno">  499</span>                          []() {</div>
+<div class="line"><span class="lineno">  500</span>                          },</div>
+<div class="line"><span class="lineno">  501</span>                          [res](const std::string&amp; errorString, unsigned int errorNumber) {</div>
+<div class="line"><span class="lineno">  502</span>                              VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Database error: &quot;</span> &lt;&lt; errorString &lt;&lt; <span class="stringliteral">&quot; : &quot;</span> &lt;&lt; errorNumber;</div>
+<div class="line"><span class="lineno">  503</span>                              res-&gt;sendStatus(500);</div>
+<div class="line"><span class="lineno">  504</span>                          })</div>
+<div class="line"><span class="lineno">  505</span>                        .query(</div>
+<div class="line"><span class="lineno">  506</span>                            <span class="stringliteral">&quot;select last_insert_id()&quot;</span>,</div>
+<div class="line"><span class="lineno">  507</span>                            [req, res, &amp;db, accessToken, accessTokenExpireSeconds](const MYSQL_ROW row) {</div>
+<div class="line"><span class="lineno">  508</span>                                if (row != nullptr) {</div>
+<div class="line"><span class="lineno">  509</span>                                    db.exec(</div>
+<div class="line"><span class="lineno">  510</span>                                        <span class="stringliteral">&quot;update client &quot;</span></div>
+<div class="line"><span class="lineno">  511</span>                                        <span class="stringliteral">&quot;set access_token_id = &#39;&quot;</span> +</div>
+<div class="line"><span class="lineno">  512</span>                                            std::string{row[0]} +</div>
+<div class="line"><span class="lineno">  513</span>                                            <span class="stringliteral">&quot;&#39; &quot;</span></div>
+<div class="line"><span class="lineno">  514</span>                                            <span class="stringliteral">&quot;where uuid = &#39;&quot;</span> +</div>
+<div class="line"><span class="lineno">  515</span>                                            req-&gt;query(<span class="stringliteral">&quot;client_id&quot;</span>) + <span class="stringliteral">&quot;&#39;&quot;</span>,</div>
+<div class="line"><span class="lineno">  516</span>                                        [res, accessToken, accessTokenExpireSeconds]() {</div>
+<div class="line"><span class="lineno">  517</span>                                            const nlohmann::json responseJson = {{<span class="stringliteral">&quot;access_token&quot;</span>, accessToken},</div>
+<div class="line"><span class="lineno">  518</span>                                                                                 {<span class="stringliteral">&quot;expires_in&quot;</span>, accessTokenExpireSeconds}};</div>
+<div class="line"><span class="lineno">  519</span>                                            res-&gt;send(responseJson.dump(4));</div>
+<div class="line"><span class="lineno">  520</span>                                        },</div>
+<div class="line"><span class="lineno">  521</span>                                        [res](const std::string&amp; errorString, unsigned int errorNumber) {</div>
+<div class="line"><span class="lineno">  522</span>                                            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Database error: &quot;</span> &lt;&lt; errorString &lt;&lt; <span class="stringliteral">&quot; : &quot;</span> &lt;&lt; errorNumber;</div>
+<div class="line"><span class="lineno">  523</span>                                            res-&gt;sendStatus(500);</div>
+<div class="line"><span class="lineno">  524</span>                                        });</div>
+<div class="line"><span class="lineno">  525</span>                                }</div>
+<div class="line"><span class="lineno">  526</span>                            },</div>
+<div class="line"><span class="lineno">  527</span>                            [res](const std::string&amp; errorString, unsigned int errorNumber) {</div>
+<div class="line"><span class="lineno">  528</span>                                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Database error: &quot;</span> &lt;&lt; errorString &lt;&lt; <span class="stringliteral">&quot; : &quot;</span> &lt;&lt; errorNumber;</div>
+<div class="line"><span class="lineno">  529</span>                                res-&gt;sendStatus(500);</div>
+<div class="line"><span class="lineno">  530</span>                            });</div>
+<div class="line"><span class="lineno">  531</span>                }</div>
+<div class="line"><span class="lineno">  532</span>            },</div>
+<div class="line"><span class="lineno">  533</span>            [res](<span class="keyword">const</span> std::string&amp; errorString, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> errorNumber) {</div>
+<div class="line"><span class="lineno">  534</span>                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Database error: &quot;</span> &lt;&lt; errorString &lt;&lt; <span class="stringliteral">&quot; : &quot;</span> &lt;&lt; errorNumber;</div>
+<div class="line"><span class="lineno">  535</span>                res-&gt;sendStatus(500);</div>
+<div class="line"><span class="lineno">  536</span>            });</div>
+<div class="line"><span class="lineno">  537</span>    });</div>
+<div class="line"><span class="lineno">  538</span> </div>
+<div class="line"><span class="lineno">  539</span>    <a class="code hl_function" href="testregex_8cpp.html#ab024e3c77aeb1487da4b33877cdfc1fb">router</a>.<a class="code hl_function" href="classexpress_1_1Route.html#ab1351a7034c36af5d8fec290ec5445b7">post</a>(<span class="stringliteral">&quot;/token/validate&quot;</span>, [&amp;db] <a class="code hl_define" href="Router_8h.html#a8b7131df91fe7a961e2cdadcedb55232">APPLICATION</a>(req, res) {</div>
+<div class="line"><span class="lineno">  540</span>        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;POST /token/validate&quot;</span>;</div>
+<div class="line"><span class="lineno">  541</span>        req-&gt;getAttribute&lt;nlohmann::json&gt;([res, &amp;db](nlohmann::json&amp; jsonBody) {</div>
+<div class="line"><span class="lineno">  542</span>            <span class="keywordflow">if</span> (!jsonBody.contains(<span class="stringliteral">&quot;access_token&quot;</span>)) {</div>
+<div class="line"><span class="lineno">  543</span>                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Missing &#39;access_token&#39; in json&quot;</span>;</div>
+<div class="line"><span class="lineno">  544</span>                res-&gt;status(500).send(<span class="stringliteral">&quot;Missing &#39;access_token&#39; in json&quot;</span>);</div>
+<div class="line"><span class="lineno">  545</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  546</span>            }</div>
+<div class="line"><span class="lineno">  547</span>            <span class="keyword">const</span> std::string jsonAccessToken{jsonBody[<span class="stringliteral">&quot;access_token&quot;</span>]};</div>
+<div class="line"><span class="lineno">  548</span>            <span class="keywordflow">if</span> (!jsonBody.contains(<span class="stringliteral">&quot;client_id&quot;</span>)) {</div>
+<div class="line"><span class="lineno">  549</span>                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Missing &#39;client_id&#39; in json&quot;</span>;</div>
+<div class="line"><span class="lineno">  550</span>                res-&gt;status(500).send(<span class="stringliteral">&quot;Missing &#39;client_id&#39; in json&quot;</span>);</div>
+<div class="line"><span class="lineno">  551</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  552</span>            }</div>
+<div class="line"><span class="lineno">  553</span>            <span class="keyword">const</span> std::string jsonClientId{jsonBody[<span class="stringliteral">&quot;client_id&quot;</span>]};</div>
+<div class="line"><span class="lineno">  554</span>            db.query(</div>
+<div class="line"><span class="lineno">  555</span>                <span class="stringliteral">&quot;select count(*) &quot;</span></div>
+<div class="line"><span class="lineno">  556</span>                <span class="stringliteral">&quot;from client c &quot;</span></div>
+<div class="line"><span class="lineno">  557</span>                <span class="stringliteral">&quot;join token a &quot;</span></div>
+<div class="line"><span class="lineno">  558</span>                <span class="stringliteral">&quot;on c.access_token_id = a.id &quot;</span></div>
+<div class="line"><span class="lineno">  559</span>                <span class="stringliteral">&quot;where c.uuid = &#39;&quot;</span> +</div>
+<div class="line"><span class="lineno">  560</span>                    jsonClientId +</div>
+<div class="line"><span class="lineno">  561</span>                    <span class="stringliteral">&quot;&#39; &quot;</span></div>
+<div class="line"><span class="lineno">  562</span>                    <span class="stringliteral">&quot;and a.uuid = &#39;&quot;</span> +</div>
+<div class="line"><span class="lineno">  563</span>                    jsonAccessToken + <span class="stringliteral">&quot;&#39;&quot;</span>,</div>
+<div class="line"><span class="lineno">  564</span>                [res, jsonClientId, jsonAccessToken](<span class="keyword">const</span> MYSQL_ROW row) {</div>
+<div class="line"><span class="lineno">  565</span>                    <span class="keywordflow">if</span> (row != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><span class="lineno">  566</span>                        <span class="keywordflow">if</span> (std::stoi(row[0]) == 0) {</div>
+<div class="line"><span class="lineno">  567</span>                            <span class="keyword">const</span> nlohmann::json errorJson = {{<span class="stringliteral">&quot;error&quot;</span>, <span class="stringliteral">&quot;Invalid access token&quot;</span>}};</div>
+<div class="line"><span class="lineno">  568</span>                            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Sending 401: Invalid access token &#39;&quot;</span> &lt;&lt; jsonAccessToken &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
+<div class="line"><span class="lineno">  569</span>                            res-&gt;status(401).send(errorJson.dump(4));</div>
+<div class="line"><span class="lineno">  570</span>                        } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  571</span>                            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Sending 200: Valid access token &#39;&quot;</span> &lt;&lt; jsonAccessToken &lt;&lt; <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">  572</span>                            <span class="keyword">const</span> nlohmann::json successJson = {{<span class="stringliteral">&quot;success&quot;</span>, <span class="stringliteral">&quot;Valid access token&quot;</span>}};</div>
+<div class="line"><span class="lineno">  573</span>                            res-&gt;status(200).send(successJson.dump(4));</div>
+<div class="line"><span class="lineno">  574</span>                        }</div>
+<div class="line"><span class="lineno">  575</span>                    }</div>
+<div class="line"><span class="lineno">  576</span>                },</div>
+<div class="line"><span class="lineno">  577</span>                [res](<span class="keyword">const</span> std::string&amp; errorString, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> errorNumber) {</div>
+<div class="line"><span class="lineno">  578</span>                    VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Database error: &quot;</span> &lt;&lt; errorString &lt;&lt; <span class="stringliteral">&quot; : &quot;</span> &lt;&lt; errorNumber;</div>
+<div class="line"><span class="lineno">  579</span>                    res-&gt;sendStatus(500);</div>
+<div class="line"><span class="lineno">  580</span>                });</div>
+<div class="line"><span class="lineno">  581</span>        });</div>
+<div class="line"><span class="lineno">  582</span>    });</div>
+<div class="line"><span class="lineno">  583</span> </div>
+<div class="line"><span class="lineno">  584</span>    app.<a class="code hl_function" href="classexpress_1_1Route.html#a5a7bd1d3aeb4c57c5e4665d1f0e9d052">use</a>(<span class="stringliteral">&quot;/oauth2&quot;</span>, <a class="code hl_function" href="testregex_8cpp.html#ab024e3c77aeb1487da4b33877cdfc1fb">router</a>);</div>
+<div class="line"><span class="lineno">  585</span>    app.<a class="code hl_function" href="classexpress_1_1Route.html#a5a7bd1d3aeb4c57c5e4665d1f0e9d052">use</a>(<a class="code hl_class" href="classexpress_1_1middleware_1_1StaticMiddleware.html">express::middleware::StaticMiddleware</a>(</div>
+<div class="line"><span class="lineno">  586</span>        <span class="stringliteral">&quot;/home/rathalin/projects/snode.c/src/oauth2/authorization_server/vue-frontend-oauth2-auth-server/dist/&quot;</span>));</div>
+<div class="line"><span class="lineno">  587</span> </div>
+<div class="line"><span class="lineno">  588</span>    app.listen(8082, [](<span class="keyword">const</span> <a class="code hl_typedef" href="classexpress_1_1WebAppT.html#ae6c8401e279b2a243f2fb0e498ef319e">express::legacy::in::WebApp::SocketAddress</a>&amp; socketAddress, <span class="keyword">const</span> <a class="code hl_class" href="classcore_1_1socket_1_1State.html">core::socket::State</a>&amp; state) {</div>
+<div class="line"><span class="lineno">  589</span>        <span class="keywordflow">switch</span> (state) {</div>
+<div class="line"><span class="lineno">  590</span>            <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a744e04217104f055ae728e8d884f25de">core::socket::State::OK</a>:</div>
+<div class="line"><span class="lineno">  591</span>                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;OAuth2AuthorizationServer: listening on &#39;&quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
 <div class="line"><span class="lineno">  592</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  593</span>        }</div>
-<div class="line"><span class="lineno">  594</span>    });</div>
-<div class="line"><span class="lineno">  595</span> </div>
-<div class="line"><span class="lineno">  596</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="classexpress_1_1WebApp.html#a54e6910c9466c61d0b217490b7d9bb5a">express::WebApp::start</a>();</div>
-<div class="line"><span class="lineno">  597</span>}</div>
+<div class="line"><span class="lineno">  593</span>            <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a26b8a9154524cfbba2729255cb184331">core::socket::State::DISABLED</a>:</div>
+<div class="line"><span class="lineno">  594</span>                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;OAuth2AuthorizationServer: disabled&quot;</span>;</div>
+<div class="line"><span class="lineno">  595</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  596</span>            <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a3dcc747a68a4c163fcf1c57d9852cab3">core::socket::State::ERROR</a>:</div>
+<div class="line"><span class="lineno">  597</span>                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;OAuth2AuthorizationServer: error occurred&quot;</span>;</div>
+<div class="line"><span class="lineno">  598</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  599</span>            <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a5d0a9047c96edac9ffd9cd12574328c0">core::socket::State::FATAL</a>:</div>
+<div class="line"><span class="lineno">  600</span>                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;OAuth2AuthorizationServer: fatal error occurred&quot;</span>;</div>
+<div class="line"><span class="lineno">  601</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  602</span>        }</div>
+<div class="line"><span class="lineno">  603</span>    });</div>
+<div class="line"><span class="lineno">  604</span> </div>
+<div class="line"><span class="lineno">  605</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="classexpress_1_1WebApp.html#a54e6910c9466c61d0b217490b7d9bb5a">express::WebApp::start</a>();</div>
+<div class="line"><span class="lineno">  606</span>}</div>
 <div class="ttc" id="aAuthorizationServer_8cpp_html_a233038a531225852d6f2d69915d1e532"><div class="ttname"><a href="AuthorizationServer_8cpp.html#a233038a531225852d6f2d69915d1e532">timeToString</a></div><div class="ttdeci">std::string timeToString(std::chrono::time_point&lt; std::chrono::system_clock &gt; time)</div><div class="ttdef"><b>Definition</b> <a href="AuthorizationServer_8cpp_source.html#l00071">AuthorizationServer.cpp:71</a></div></div>
 <div class="ttc" id="aAuthorizationServer_8cpp_html_a6c1dfe5df352bedbe1c485f3120383da"><div class="ttname"><a href="AuthorizationServer_8cpp.html#a6c1dfe5df352bedbe1c485f3120383da">addQueryParamToUri</a></div><div class="ttdeci">void addQueryParamToUri(std::string &amp;uri, const std::string &amp;queryParamName, const std::string &amp;queryParamValue)</div><div class="ttdef"><b>Definition</b> <a href="AuthorizationServer_8cpp_source.html#l00062">AuthorizationServer.cpp:62</a></div></div>
 <div class="ttc" id="aAuthorizationServer_8cpp_html_a8b076d290fad3ac101ff150646b801a6"><div class="ttname"><a href="AuthorizationServer_8cpp.html#a8b076d290fad3ac101ff150646b801a6">getNewUUID</a></div><div class="ttdeci">std::string getNewUUID()</div><div class="ttdef"><b>Definition</b> <a href="AuthorizationServer_8cpp_source.html#l00078">AuthorizationServer.cpp:78</a></div></div>
@@ -774,7 +783,7 @@ Functions</h2></td></tr>
 <div class="ttc" id="aclasscore_1_1socket_1_1State_html_a3dcc747a68a4c163fcf1c57d9852cab3"><div class="ttname"><a href="classcore_1_1socket_1_1State.html#a3dcc747a68a4c163fcf1c57d9852cab3">core::socket::State::ERROR</a></div><div class="ttdeci">static constexpr int ERROR</div><div class="ttdef"><b>Definition</b> <a href="socket_2State_8h_source.html#l00057">State.h:57</a></div></div>
 <div class="ttc" id="aclasscore_1_1socket_1_1State_html_a5d0a9047c96edac9ffd9cd12574328c0"><div class="ttname"><a href="classcore_1_1socket_1_1State.html#a5d0a9047c96edac9ffd9cd12574328c0">core::socket::State::FATAL</a></div><div class="ttdeci">static constexpr int FATAL</div><div class="ttdef"><b>Definition</b> <a href="socket_2State_8h_source.html#l00058">State.h:58</a></div></div>
 <div class="ttc" id="aclasscore_1_1socket_1_1State_html_a744e04217104f055ae728e8d884f25de"><div class="ttname"><a href="classcore_1_1socket_1_1State.html#a744e04217104f055ae728e8d884f25de">core::socket::State::OK</a></div><div class="ttdeci">static constexpr int OK</div><div class="ttdef"><b>Definition</b> <a href="socket_2State_8h_source.html#l00055">State.h:55</a></div></div>
-<div class="ttc" id="aclassdatabase_1_1mariadb_1_1MariaDBClient_html"><div class="ttname"><a href="classdatabase_1_1mariadb_1_1MariaDBClient.html">database::mariadb::MariaDBClient</a></div><div class="ttdef"><b>Definition</b> <a href="MariaDBClient_8h_source.html#l00083">MariaDBClient.h:85</a></div></div>
+<div class="ttc" id="aclassdatabase_1_1mariadb_1_1MariaDBClient_html"><div class="ttname"><a href="classdatabase_1_1mariadb_1_1MariaDBClient.html">database::mariadb::MariaDBClient</a></div><div class="ttdef"><b>Definition</b> <a href="MariaDBClient_8h_source.html#l00092">MariaDBClient.h:94</a></div></div>
 <div class="ttc" id="aclassexpress_1_1Route_html_a5a7bd1d3aeb4c57c5e4665d1f0e9d052"><div class="ttname"><a href="classexpress_1_1Route.html#a5a7bd1d3aeb4c57c5e4665d1f0e9d052">express::Route::use</a></div><div class="ttdeci">Route &amp; use(const std::function&lt; void(const std::shared_ptr&lt; Request &gt; &amp;, const std::shared_ptr&lt; Response &gt; &amp;)&gt; &amp;lambda) const</div><div class="ttdef"><b>Definition</b> <a href="Route_8cpp_source.html#l00131">Route.cpp:131</a></div></div>
 <div class="ttc" id="aclassexpress_1_1Route_html_aafcc7bc007a6252455fc2e102bc3e282"><div class="ttname"><a href="classexpress_1_1Route.html#aafcc7bc007a6252455fc2e102bc3e282">express::Route::get</a></div><div class="ttdeci">Route &amp; get(const std::function&lt; void(const std::shared_ptr&lt; Request &gt; &amp;, const std::shared_ptr&lt; Response &gt; &amp;)&gt; &amp;lambda) const</div><div class="ttdef"><b>Definition</b> <a href="Route_8cpp_source.html#l00133">Route.cpp:133</a></div></div>
 <div class="ttc" id="aclassexpress_1_1Route_html_ab1351a7034c36af5d8fec290ec5445b7"><div class="ttname"><a href="classexpress_1_1Route.html#ab1351a7034c36af5d8fec290ec5445b7">express::Route::post</a></div><div class="ttdeci">Route &amp; post(const std::function&lt; void(const std::shared_ptr&lt; Request &gt; &amp;, const std::shared_ptr&lt; Response &gt; &amp;)&gt; &amp;lambda) const</div><div class="ttdef"><b>Definition</b> <a href="Route_8cpp_source.html#l00135">Route.cpp:135</a></div></div>
@@ -787,14 +796,15 @@ Functions</h2></td></tr>
 <div class="ttc" id="aclassexpress_1_1middleware_1_1JsonMiddleware_html"><div class="ttname"><a href="classexpress_1_1middleware_1_1JsonMiddleware.html">express::middleware::JsonMiddleware</a></div><div class="ttdef"><b>Definition</b> <a href="JsonMiddleware_8h_source.html#l00053">JsonMiddleware.h:53</a></div></div>
 <div class="ttc" id="aclassexpress_1_1middleware_1_1StaticMiddleware_html"><div class="ttname"><a href="classexpress_1_1middleware_1_1StaticMiddleware.html">express::middleware::StaticMiddleware</a></div><div class="ttdef"><b>Definition</b> <a href="StaticMiddleware_8h_source.html#l00059">StaticMiddleware.h:59</a></div></div>
 <div class="ttc" id="astructdatabase_1_1mariadb_1_1MariaDBConnectionDetails_html"><div class="ttname"><a href="structdatabase_1_1mariadb_1_1MariaDBConnectionDetails.html">database::mariadb::MariaDBConnectionDetails</a></div><div class="ttdef"><b>Definition</b> <a href="MariaDBConnectionDetails_8h_source.html#l00054">MariaDBConnectionDetails.h:54</a></div></div>
-<div class="ttc" id="astructdatabase_1_1mariadb_1_1MariaDBConnectionDetails_html_a13f008b21ad1be16b56b19df467924ac"><div class="ttname"><a href="structdatabase_1_1mariadb_1_1MariaDBConnectionDetails.html#a13f008b21ad1be16b56b19df467924ac">database::mariadb::MariaDBConnectionDetails::hostname</a></div><div class="ttdeci">std::string hostname</div><div class="ttdef"><b>Definition</b> <a href="MariaDBConnectionDetails_8h_source.html#l00055">MariaDBConnectionDetails.h:55</a></div></div>
+<div class="ttc" id="astructdatabase_1_1mariadb_1_1MariaDBConnectionDetails_html_aa755b7b4ad51a440eafc89066de81262"><div class="ttname"><a href="structdatabase_1_1mariadb_1_1MariaDBConnectionDetails.html#aa755b7b4ad51a440eafc89066de81262">database::mariadb::MariaDBConnectionDetails::connectionName</a></div><div class="ttdeci">std::string connectionName</div><div class="ttdef"><b>Definition</b> <a href="MariaDBConnectionDetails_8h_source.html#l00055">MariaDBConnectionDetails.h:55</a></div></div>
+<div class="ttc" id="astructdatabase_1_1mariadb_1_1MariaDBState_html"><div class="ttname"><a href="structdatabase_1_1mariadb_1_1MariaDBState.html">database::mariadb::MariaDBState</a></div><div class="ttdef"><b>Definition</b> <a href="MariaDBClient_8h_source.html#l00086">MariaDBClient.h:86</a></div></div>
 <div class="ttc" id="atestregex_8cpp_html_ab024e3c77aeb1487da4b33877cdfc1fb"><div class="ttname"><a href="testregex_8cpp.html#ab024e3c77aeb1487da4b33877cdfc1fb">router</a></div><div class="ttdeci">Router router(database::mariadb::MariaDBClient &amp;db)</div><div class="ttdef"><b>Definition</b> <a href="testregex_8cpp_source.html#l00068">testregex.cpp:68</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="MariaDBConnectionDetails_8h_source.html#l00058">database::mariadb::MariaDBConnectionDetails::database</a>, <a class="el" href="MariaDBClientASyncAPI_8cpp_source.html#l00088">database::mariadb::MariaDBClientASyncAPI::exec()</a>, <a class="el" href="MariaDBConnectionDetails_8h_source.html#l00061">database::mariadb::MariaDBConnectionDetails::flags</a>, <a class="el" href="MariaDBConnectionDetails_8h_source.html#l00055">database::mariadb::MariaDBConnectionDetails::hostname</a>, <a class="el" href="MariaDBClient_8cpp_source.html#l00056">database::mariadb::MariaDBClient::MariaDBClient()</a>, <a class="el" href="MariaDBConnectionDetails_8h_source.html#l00057">database::mariadb::MariaDBConnectionDetails::password</a>, <a class="el" href="MariaDBConnectionDetails_8h_source.html#l00059">database::mariadb::MariaDBConnectionDetails::port</a>, <a class="el" href="MariaDBConnectionDetails_8h_source.html#l00060">database::mariadb::MariaDBConnectionDetails::socket</a>, and <a class="el" href="MariaDBConnectionDetails_8h_source.html#l00056">database::mariadb::MariaDBConnectionDetails::username</a>.</p>
+<p class="reference">References <a class="el" href="MariaDBClient_8h_source.html#l00089">database::mariadb::MariaDBState::connected</a>, <a class="el" href="MariaDBConnectionDetails_8h_source.html#l00055">database::mariadb::MariaDBConnectionDetails::connectionName</a>, <a class="el" href="MariaDBConnectionDetails_8h_source.html#l00059">database::mariadb::MariaDBConnectionDetails::database</a>, <a class="el" href="MariaDBClient_8h_source.html#l00087">database::mariadb::MariaDBState::error</a>, <a class="el" href="MariaDBClient_8h_source.html#l00088">database::mariadb::MariaDBState::errorMessage</a>, <a class="el" href="MariaDBClientASyncAPI_8cpp_source.html#l00088">database::mariadb::MariaDBClientASyncAPI::exec()</a>, <a class="el" href="MariaDBConnectionDetails_8h_source.html#l00062">database::mariadb::MariaDBConnectionDetails::flags</a>, <a class="el" href="MariaDBConnectionDetails_8h_source.html#l00056">database::mariadb::MariaDBConnectionDetails::hostname</a>, <a class="el" href="MariaDBConnectionDetails_8h_source.html#l00058">database::mariadb::MariaDBConnectionDetails::password</a>, <a class="el" href="MariaDBConnectionDetails_8h_source.html#l00060">database::mariadb::MariaDBConnectionDetails::port</a>, <a class="el" href="MariaDBConnectionDetails_8h_source.html#l00061">database::mariadb::MariaDBConnectionDetails::socket</a>, and <a class="el" href="MariaDBConnectionDetails_8h_source.html#l00057">database::mariadb::MariaDBConnectionDetails::username</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="AuthorizationServer_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph.svg" width="558" height="123"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="AuthorizationServer_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph.svg" width="555" height="66"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -831,7 +841,7 @@ Here is the call graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_9654b8d08f4bba4e84b362c5fd320bee.html">apps</a></li><li class="navelem"><a class="el" href="dir_f0c47b07b9ea05f6a7a6131667da911b.html">oauth2</a></li><li class="navelem"><a class="el" href="dir_1513eb8307a0595b76062a7d9e099b88.html">authorization_server</a></li><li class="navelem"><a class="el" href="AuthorizationServer_8cpp.html">AuthorizationServer.cpp</a></li>
-    <li class="footer">Generated on Fri Oct 24 2025 11:05:08 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Sat Nov 8 2025 16:00:25 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

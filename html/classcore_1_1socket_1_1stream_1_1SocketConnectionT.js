@@ -7,7 +7,7 @@ var classcore_1_1socket_1_1stream_1_1SocketConnectionT =
     [ "SocketWriter", "classcore_1_1socket_1_1stream_1_1SocketConnectionT.html#ac7904515293387ba0ef67e162d7c5512", null ],
     [ "Super", "classcore_1_1socket_1_1stream_1_1SocketConnectionT.html#a45b1bb69c5e87f85fcf345c812a9244b", null ],
     [ "SocketConnectionT", "classcore_1_1socket_1_1stream_1_1SocketConnectionT.html#abb77a11d7544ae144a8de47d9dec1087", null ],
-    [ "SocketConnectionT", "classcore_1_1socket_1_1stream_1_1SocketConnectionT.html#a3dfd4b80dd1f4f3631adbe9a0c4414d8", null ],
+    [ "SocketConnectionT", "classcore_1_1socket_1_1stream_1_1SocketConnectionT.html#a3f3c37102dee77d9b9bd62d7ce2f7d8f", null ],
     [ "~SocketConnectionT", "classcore_1_1socket_1_1stream_1_1SocketConnectionT.html#abd530889db0a8f9f456e766811320243", null ],
     [ "close", "classcore_1_1socket_1_1stream_1_1SocketConnectionT.html#a7b12c41b547c6bd90374615475f43531", null ],
     [ "doWriteShutdown", "classcore_1_1socket_1_1stream_1_1SocketConnectionT.html#a4bf2a6e5b74369d76c6fc6acb2893305", null ],

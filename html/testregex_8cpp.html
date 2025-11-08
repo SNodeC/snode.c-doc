@@ -145,198 +145,205 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">  270</span>    <a class="code hl_function" href="classexpress_1_1WebApp.html#a0a01439a0cc8dfc86ed14f1094826b7e">WebApp::init</a>(argc, argv);</div>
 <div class="line"><span class="lineno">  271</span> </div>
 <div class="line"><span class="lineno">  272</span>    <span class="keyword">const</span> <a class="code hl_struct" href="structdatabase_1_1mariadb_1_1MariaDBConnectionDetails.html">database::mariadb::MariaDBConnectionDetails</a> details = {</div>
-<div class="line"><span class="lineno">  273</span>        .<a class="code hl_variable" href="structdatabase_1_1mariadb_1_1MariaDBConnectionDetails.html#a13f008b21ad1be16b56b19df467924ac">hostname</a> = <span class="stringliteral">&quot;localhost&quot;</span>,</div>
-<div class="line"><span class="lineno">  274</span>        .username = <span class="stringliteral">&quot;snodec&quot;</span>,</div>
-<div class="line"><span class="lineno">  275</span>        .password = <span class="stringliteral">&quot;pentium5&quot;</span>,</div>
-<div class="line"><span class="lineno">  276</span>        .database = <span class="stringliteral">&quot;snodec&quot;</span>,</div>
-<div class="line"><span class="lineno">  277</span>        .port = 3306,</div>
-<div class="line"><span class="lineno">  278</span>        .socket = <span class="stringliteral">&quot;/run/mysqld/mysqld.sock&quot;</span>,</div>
-<div class="line"><span class="lineno">  279</span>        .flags = 0,</div>
-<div class="line"><span class="lineno">  280</span>    };</div>
-<div class="line"><span class="lineno">  281</span> </div>
-<div class="line"><span class="lineno">  282</span>    <span class="comment">// CREATE USER &#39;snodec&#39;@localhost IDENTIFIED BY &#39;pentium5&#39;</span></div>
-<div class="line"><span class="lineno">  283</span>    <span class="comment">// GRANT ALL PRIVILEGES ON *.* TO &#39;snodec&#39;@localhost</span></div>
-<div class="line"><span class="lineno">  284</span>    <span class="comment">// GRANT ALL PRIVILEGES ON &#39;snodec&#39;.&#39;snodec&#39; TO &#39;snodec&#39;@localhost</span></div>
-<div class="line"><span class="lineno">  285</span>    <span class="comment">// CREATE DATABASE &#39;snodec&#39;;</span></div>
-<div class="line"><span class="lineno">  286</span>    <span class="comment">// CREATE TABLE &#39;snodec&#39; (&#39;username&#39; text NOT NULL, &#39;password&#39; text NOT NULL ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4</span></div>
-<div class="line"><span class="lineno">  287</span> </div>
-<div class="line"><span class="lineno">  288</span>    <a class="code hl_class" href="classdatabase_1_1mariadb_1_1MariaDBClient.html">database::mariadb::MariaDBClient</a> db(details);</div>
-<div class="line"><span class="lineno">  289</span> </div>
-<div class="line"><span class="lineno">  290</span>    {</div>
-<div class="line"><span class="lineno">  291</span>        <a class="code hl_class" href="classexpress_1_1WebAppT.html">legacy::in::WebApp</a> legacyApp(<span class="stringliteral">&quot;legacy-testregex&quot;</span>);</div>
-<div class="line"><span class="lineno">  292</span> </div>
-<div class="line"><span class="lineno">  293</span>        legacyApp.use(<a class="code hl_function" href="testregex_8cpp.html#ab024e3c77aeb1487da4b33877cdfc1fb">router</a>(db));</div>
-<div class="line"><span class="lineno">  294</span> </div>
-<div class="line"><span class="lineno">  295</span>        legacyApp.listen(8080, [](<span class="keyword">const</span> <a class="code hl_typedef" href="classexpress_1_1WebAppT.html#ae6c8401e279b2a243f2fb0e498ef319e">legacy::in::WebApp::SocketAddress</a>&amp; socketAddress, <span class="keyword">const</span> <a class="code hl_class" href="classcore_1_1socket_1_1State.html">core::socket::State</a>&amp; state) {</div>
-<div class="line"><span class="lineno">  296</span>            <span class="keywordflow">switch</span> (state) {</div>
-<div class="line"><span class="lineno">  297</span>                <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a744e04217104f055ae728e8d884f25de">core::socket::State::OK</a>:</div>
-<div class="line"><span class="lineno">  298</span>                    VLOG(1) &lt;&lt; <span class="stringliteral">&quot;legacy-testregex: listening on &#39;&quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
-<div class="line"><span class="lineno">  299</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  300</span>                <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a26b8a9154524cfbba2729255cb184331">core::socket::State::DISABLED</a>:</div>
-<div class="line"><span class="lineno">  301</span>                    VLOG(1) &lt;&lt; <span class="stringliteral">&quot;legacy-testregex: disabled&quot;</span>;</div>
-<div class="line"><span class="lineno">  302</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  303</span>                <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a3dcc747a68a4c163fcf1c57d9852cab3">core::socket::State::ERROR</a>:</div>
-<div class="line"><span class="lineno">  304</span>                    VLOG(1) &lt;&lt; <span class="stringliteral">&quot;legacy-testregex: error occurred&quot;</span>;</div>
-<div class="line"><span class="lineno">  305</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  306</span>                <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a5d0a9047c96edac9ffd9cd12574328c0">core::socket::State::FATAL</a>:</div>
-<div class="line"><span class="lineno">  307</span>                    VLOG(1) &lt;&lt; <span class="stringliteral">&quot;legacy-testregex: fatal error occurred&quot;</span>;</div>
+<div class="line"><span class="lineno">  273</span>        .<a class="code hl_variable" href="structdatabase_1_1mariadb_1_1MariaDBConnectionDetails.html#aa755b7b4ad51a440eafc89066de81262">connectionName</a> = <span class="stringliteral">&quot;regex&quot;</span>,</div>
+<div class="line"><span class="lineno">  274</span>        .hostname = <span class="stringliteral">&quot;localhost&quot;</span>,</div>
+<div class="line"><span class="lineno">  275</span>        .username = <span class="stringliteral">&quot;snodec&quot;</span>,</div>
+<div class="line"><span class="lineno">  276</span>        .password = <span class="stringliteral">&quot;pentium5&quot;</span>,</div>
+<div class="line"><span class="lineno">  277</span>        .database = <span class="stringliteral">&quot;snodec&quot;</span>,</div>
+<div class="line"><span class="lineno">  278</span>        .port = 3306,</div>
+<div class="line"><span class="lineno">  279</span>        .socket = <span class="stringliteral">&quot;/run/mysqld/mysqld.sock&quot;</span>,</div>
+<div class="line"><span class="lineno">  280</span>        .flags = 0,</div>
+<div class="line"><span class="lineno">  281</span>    };</div>
+<div class="line"><span class="lineno">  282</span> </div>
+<div class="line"><span class="lineno">  283</span>    <span class="comment">// CREATE USER &#39;snodec&#39;@localhost IDENTIFIED BY &#39;pentium5&#39;</span></div>
+<div class="line"><span class="lineno">  284</span>    <span class="comment">// GRANT ALL PRIVILEGES ON *.* TO &#39;snodec&#39;@localhost</span></div>
+<div class="line"><span class="lineno">  285</span>    <span class="comment">// GRANT ALL PRIVILEGES ON &#39;snodec&#39;.&#39;snodec&#39; TO &#39;snodec&#39;@localhost</span></div>
+<div class="line"><span class="lineno">  286</span>    <span class="comment">// CREATE DATABASE &#39;snodec&#39;;</span></div>
+<div class="line"><span class="lineno">  287</span>    <span class="comment">// CREATE TABLE &#39;snodec&#39; (&#39;username&#39; text NOT NULL, &#39;password&#39; text NOT NULL ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4</span></div>
+<div class="line"><span class="lineno">  288</span> </div>
+<div class="line"><span class="lineno">  289</span>    <a class="code hl_class" href="classdatabase_1_1mariadb_1_1MariaDBClient.html">database::mariadb::MariaDBClient</a> db(details, [](<span class="keyword">const</span> <a class="code hl_struct" href="structdatabase_1_1mariadb_1_1MariaDBState.html">database::mariadb::MariaDBState</a>&amp; state) {</div>
+<div class="line"><span class="lineno">  290</span>        <span class="keywordflow">if</span> (state.<a class="code hl_variable" href="structdatabase_1_1mariadb_1_1MariaDBState.html#a40e0ca57a63dfbee735978d04ff387fd">error</a> != 0) {</div>
+<div class="line"><span class="lineno">  291</span>            VLOG(0) &lt;&lt; <span class="stringliteral">&quot;MySQL error: &quot;</span> &lt;&lt; state.errorMessage &lt;&lt; <span class="stringliteral">&quot; [&quot;</span> &lt;&lt; state.error &lt;&lt; <span class="stringliteral">&quot;]&quot;</span>;</div>
+<div class="line"><span class="lineno">  292</span>        } <span class="keywordflow">else</span> if (state.<a class="code hl_variable" href="structdatabase_1_1mariadb_1_1MariaDBState.html#a062fe50b345cfbfa950fa8cbdbb2326a">connected</a>) {</div>
+<div class="line"><span class="lineno">  293</span>            VLOG(0) &lt;&lt; <span class="stringliteral">&quot;MySQL connected&quot;</span>;</div>
+<div class="line"><span class="lineno">  294</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  295</span>            VLOG(0) &lt;&lt; <span class="stringliteral">&quot;MySQL disconnected&quot;</span>;</div>
+<div class="line"><span class="lineno">  296</span>        }</div>
+<div class="line"><span class="lineno">  297</span>    });</div>
+<div class="line"><span class="lineno">  298</span> </div>
+<div class="line"><span class="lineno">  299</span>    {</div>
+<div class="line"><span class="lineno">  300</span>        <a class="code hl_class" href="classexpress_1_1WebAppT.html">legacy::in::WebApp</a> legacyApp(<span class="stringliteral">&quot;legacy-testregex&quot;</span>);</div>
+<div class="line"><span class="lineno">  301</span> </div>
+<div class="line"><span class="lineno">  302</span>        legacyApp.use(<a class="code hl_function" href="testregex_8cpp.html#ab024e3c77aeb1487da4b33877cdfc1fb">router</a>(db));</div>
+<div class="line"><span class="lineno">  303</span> </div>
+<div class="line"><span class="lineno">  304</span>        legacyApp.listen(8080, [](<span class="keyword">const</span> <a class="code hl_typedef" href="classexpress_1_1WebAppT.html#ae6c8401e279b2a243f2fb0e498ef319e">legacy::in::WebApp::SocketAddress</a>&amp; socketAddress, <span class="keyword">const</span> <a class="code hl_class" href="classcore_1_1socket_1_1State.html">core::socket::State</a>&amp; state) {</div>
+<div class="line"><span class="lineno">  305</span>            <span class="keywordflow">switch</span> (state) {</div>
+<div class="line"><span class="lineno">  306</span>                <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a744e04217104f055ae728e8d884f25de">core::socket::State::OK</a>:</div>
+<div class="line"><span class="lineno">  307</span>                    VLOG(1) &lt;&lt; <span class="stringliteral">&quot;legacy-testregex: listening on &#39;&quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
 <div class="line"><span class="lineno">  308</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  309</span>            }</div>
-<div class="line"><span class="lineno">  310</span>        });</div>
-<div class="line"><span class="lineno">  311</span> </div>
-<div class="line"><span class="lineno">  312</span>        legacyApp.setOnConnect([](<a class="code hl_typedef" href="classexpress_1_1WebAppT.html#aac2a3855a73cbf3547da8e1268605f02">legacy::in::WebApp::SocketConnection</a>* socketConnection) {</div>
-<div class="line"><span class="lineno">  313</span>            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;OnConnect:&quot;</span>;</div>
-<div class="line"><span class="lineno">  314</span> </div>
-<div class="line"><span class="lineno">  315</span>            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;\tServer: &quot;</span> + socketConnection-&gt;getRemoteAddress().toString();</div>
-<div class="line"><span class="lineno">  316</span>            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;\tClient: &quot;</span> + socketConnection-&gt;getLocalAddress().toString();</div>
-<div class="line"><span class="lineno">  317</span>        });</div>
-<div class="line"><span class="lineno">  318</span> </div>
-<div class="line"><span class="lineno">  319</span>        legacyApp.setOnDisconnect([](<a class="code hl_typedef" href="classexpress_1_1WebAppT.html#aac2a3855a73cbf3547da8e1268605f02">legacy::in::WebApp::SocketConnection</a>* socketConnection) {</div>
-<div class="line"><span class="lineno">  320</span>            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;OnDisconnect:&quot;</span>;</div>
-<div class="line"><span class="lineno">  321</span> </div>
-<div class="line"><span class="lineno">  322</span>            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;\tServer: &quot;</span> + socketConnection-&gt;getRemoteAddress().toString();</div>
-<div class="line"><span class="lineno">  323</span>            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;\tClient: &quot;</span> + socketConnection-&gt;getLocalAddress().toString();</div>
-<div class="line"><span class="lineno">  324</span>        });</div>
-<div class="line"><span class="lineno">  325</span> </div>
-<div class="line"><span class="lineno">  326</span>        <a class="code hl_class" href="classexpress_1_1WebAppT.html">tls::in::WebApp</a> tlsApp(<span class="stringliteral">&quot;tls-testregex&quot;</span>);</div>
+<div class="line"><span class="lineno">  309</span>                <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a26b8a9154524cfbba2729255cb184331">core::socket::State::DISABLED</a>:</div>
+<div class="line"><span class="lineno">  310</span>                    VLOG(1) &lt;&lt; <span class="stringliteral">&quot;legacy-testregex: disabled&quot;</span>;</div>
+<div class="line"><span class="lineno">  311</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  312</span>                <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a3dcc747a68a4c163fcf1c57d9852cab3">core::socket::State::ERROR</a>:</div>
+<div class="line"><span class="lineno">  313</span>                    VLOG(1) &lt;&lt; <span class="stringliteral">&quot;legacy-testregex: error occurred&quot;</span>;</div>
+<div class="line"><span class="lineno">  314</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  315</span>                <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a5d0a9047c96edac9ffd9cd12574328c0">core::socket::State::FATAL</a>:</div>
+<div class="line"><span class="lineno">  316</span>                    VLOG(1) &lt;&lt; <span class="stringliteral">&quot;legacy-testregex: fatal error occurred&quot;</span>;</div>
+<div class="line"><span class="lineno">  317</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  318</span>            }</div>
+<div class="line"><span class="lineno">  319</span>        });</div>
+<div class="line"><span class="lineno">  320</span> </div>
+<div class="line"><span class="lineno">  321</span>        legacyApp.setOnConnect([](<a class="code hl_typedef" href="classexpress_1_1WebAppT.html#aac2a3855a73cbf3547da8e1268605f02">legacy::in::WebApp::SocketConnection</a>* socketConnection) {</div>
+<div class="line"><span class="lineno">  322</span>            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;OnConnect:&quot;</span>;</div>
+<div class="line"><span class="lineno">  323</span> </div>
+<div class="line"><span class="lineno">  324</span>            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;\tServer: &quot;</span> + socketConnection-&gt;getRemoteAddress().toString();</div>
+<div class="line"><span class="lineno">  325</span>            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;\tClient: &quot;</span> + socketConnection-&gt;getLocalAddress().toString();</div>
+<div class="line"><span class="lineno">  326</span>        });</div>
 <div class="line"><span class="lineno">  327</span> </div>
-<div class="line"><span class="lineno">  328</span>        tlsApp.use(legacyApp);</div>
-<div class="line"><span class="lineno">  329</span> </div>
-<div class="line"><span class="lineno">  330</span>        tlsApp.listen(8088, [](<span class="keyword">const</span> <a class="code hl_typedef" href="classexpress_1_1WebAppT.html#ae6c8401e279b2a243f2fb0e498ef319e">tls::in::WebApp::SocketAddress</a>&amp; socketAddress, <span class="keyword">const</span> <a class="code hl_class" href="classcore_1_1socket_1_1State.html">core::socket::State</a>&amp; state) {</div>
-<div class="line"><span class="lineno">  331</span>            <span class="keywordflow">switch</span> (state) {</div>
-<div class="line"><span class="lineno">  332</span>                <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a744e04217104f055ae728e8d884f25de">core::socket::State::OK</a>:</div>
-<div class="line"><span class="lineno">  333</span>                    VLOG(1) &lt;&lt; <span class="stringliteral">&quot;tls-testregex: listening on &#39;&quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
-<div class="line"><span class="lineno">  334</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  335</span>                <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a26b8a9154524cfbba2729255cb184331">core::socket::State::DISABLED</a>:</div>
-<div class="line"><span class="lineno">  336</span>                    VLOG(1) &lt;&lt; <span class="stringliteral">&quot;tls-testregex: disabled&quot;</span>;</div>
-<div class="line"><span class="lineno">  337</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  338</span>                <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a3dcc747a68a4c163fcf1c57d9852cab3">core::socket::State::ERROR</a>:</div>
-<div class="line"><span class="lineno">  339</span>                    VLOG(1) &lt;&lt; <span class="stringliteral">&quot;tls-testregex: error occurred&quot;</span>;</div>
-<div class="line"><span class="lineno">  340</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  341</span>                <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a5d0a9047c96edac9ffd9cd12574328c0">core::socket::State::FATAL</a>:</div>
-<div class="line"><span class="lineno">  342</span>                    VLOG(1) &lt;&lt; <span class="stringliteral">&quot;tls-testregex: fatal error occurred&quot;</span>;</div>
+<div class="line"><span class="lineno">  328</span>        legacyApp.setOnDisconnect([](<a class="code hl_typedef" href="classexpress_1_1WebAppT.html#aac2a3855a73cbf3547da8e1268605f02">legacy::in::WebApp::SocketConnection</a>* socketConnection) {</div>
+<div class="line"><span class="lineno">  329</span>            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;OnDisconnect:&quot;</span>;</div>
+<div class="line"><span class="lineno">  330</span> </div>
+<div class="line"><span class="lineno">  331</span>            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;\tServer: &quot;</span> + socketConnection-&gt;getRemoteAddress().toString();</div>
+<div class="line"><span class="lineno">  332</span>            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;\tClient: &quot;</span> + socketConnection-&gt;getLocalAddress().toString();</div>
+<div class="line"><span class="lineno">  333</span>        });</div>
+<div class="line"><span class="lineno">  334</span> </div>
+<div class="line"><span class="lineno">  335</span>        <a class="code hl_class" href="classexpress_1_1WebAppT.html">tls::in::WebApp</a> tlsApp(<span class="stringliteral">&quot;tls-testregex&quot;</span>);</div>
+<div class="line"><span class="lineno">  336</span> </div>
+<div class="line"><span class="lineno">  337</span>        tlsApp.use(legacyApp);</div>
+<div class="line"><span class="lineno">  338</span> </div>
+<div class="line"><span class="lineno">  339</span>        tlsApp.listen(8088, [](<span class="keyword">const</span> <a class="code hl_typedef" href="classexpress_1_1WebAppT.html#ae6c8401e279b2a243f2fb0e498ef319e">tls::in::WebApp::SocketAddress</a>&amp; socketAddress, <span class="keyword">const</span> <a class="code hl_class" href="classcore_1_1socket_1_1State.html">core::socket::State</a>&amp; state) {</div>
+<div class="line"><span class="lineno">  340</span>            <span class="keywordflow">switch</span> (state) {</div>
+<div class="line"><span class="lineno">  341</span>                <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a744e04217104f055ae728e8d884f25de">core::socket::State::OK</a>:</div>
+<div class="line"><span class="lineno">  342</span>                    VLOG(1) &lt;&lt; <span class="stringliteral">&quot;tls-testregex: listening on &#39;&quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
 <div class="line"><span class="lineno">  343</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  344</span>            }</div>
-<div class="line"><span class="lineno">  345</span>        });</div>
-<div class="line"><span class="lineno">  346</span> </div>
-<div class="line"><span class="lineno">  347</span>        tlsApp.setOnConnect([](<a class="code hl_typedef" href="classexpress_1_1WebAppT.html#aac2a3855a73cbf3547da8e1268605f02">tls::in::WebApp::SocketConnection</a>* socketConnection) {</div>
-<div class="line"><span class="lineno">  348</span>            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;OnConnect:&quot;</span>;</div>
-<div class="line"><span class="lineno">  349</span> </div>
-<div class="line"><span class="lineno">  350</span>            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;\tServer: &quot;</span> + socketConnection-&gt;getRemoteAddress().toString();</div>
-<div class="line"><span class="lineno">  351</span>            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;\tClient: &quot;</span> + socketConnection-&gt;getLocalAddress().toString();</div>
-<div class="line"><span class="lineno">  352</span>        });</div>
-<div class="line"><span class="lineno">  353</span> </div>
-<div class="line"><span class="lineno">  354</span>        tlsApp.setOnConnected([](<a class="code hl_typedef" href="classexpress_1_1WebAppT.html#aac2a3855a73cbf3547da8e1268605f02">tls::in::WebApp::SocketConnection</a>* socketConnection) {</div>
-<div class="line"><span class="lineno">  355</span>            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;OnConnected:&quot;</span>;</div>
-<div class="line"><span class="lineno">  356</span> </div>
-<div class="line"><span class="lineno">  357</span>            X509* client_cert = SSL_get_peer_certificate(socketConnection-&gt;getSSL());</div>
+<div class="line"><span class="lineno">  344</span>                <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a26b8a9154524cfbba2729255cb184331">core::socket::State::DISABLED</a>:</div>
+<div class="line"><span class="lineno">  345</span>                    VLOG(1) &lt;&lt; <span class="stringliteral">&quot;tls-testregex: disabled&quot;</span>;</div>
+<div class="line"><span class="lineno">  346</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  347</span>                <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a3dcc747a68a4c163fcf1c57d9852cab3">core::socket::State::ERROR</a>:</div>
+<div class="line"><span class="lineno">  348</span>                    VLOG(1) &lt;&lt; <span class="stringliteral">&quot;tls-testregex: error occurred&quot;</span>;</div>
+<div class="line"><span class="lineno">  349</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  350</span>                <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a5d0a9047c96edac9ffd9cd12574328c0">core::socket::State::FATAL</a>:</div>
+<div class="line"><span class="lineno">  351</span>                    VLOG(1) &lt;&lt; <span class="stringliteral">&quot;tls-testregex: fatal error occurred&quot;</span>;</div>
+<div class="line"><span class="lineno">  352</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  353</span>            }</div>
+<div class="line"><span class="lineno">  354</span>        });</div>
+<div class="line"><span class="lineno">  355</span> </div>
+<div class="line"><span class="lineno">  356</span>        tlsApp.setOnConnect([](<a class="code hl_typedef" href="classexpress_1_1WebAppT.html#aac2a3855a73cbf3547da8e1268605f02">tls::in::WebApp::SocketConnection</a>* socketConnection) {</div>
+<div class="line"><span class="lineno">  357</span>            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;OnConnect:&quot;</span>;</div>
 <div class="line"><span class="lineno">  358</span> </div>
-<div class="line"><span class="lineno">  359</span>            <span class="keywordflow">if</span> (client_cert != <span class="keyword">nullptr</span>) {</div>
-<div class="line"><span class="lineno">  360</span>                <span class="keyword">const</span> <span class="keywordtype">long</span> verifyErr = SSL_get_verify_result(socketConnection-&gt;getSSL());</div>
-<div class="line"><span class="lineno">  361</span> </div>
-<div class="line"><span class="lineno">  362</span>                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;\tClient certificate: &quot;</span> + std::string(X509_verify_cert_error_string(verifyErr));</div>
-<div class="line"><span class="lineno">  363</span> </div>
-<div class="line"><span class="lineno">  364</span>                <span class="keywordtype">char</span>* str = X509_NAME_oneline(X509_get_subject_name(client_cert), <span class="keyword">nullptr</span>, 0);</div>
-<div class="line"><span class="lineno">  365</span>                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;\t   Subject: &quot;</span> + std::string(str);</div>
-<div class="line"><span class="lineno">  366</span>                OPENSSL_free(str);</div>
+<div class="line"><span class="lineno">  359</span>            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;\tServer: &quot;</span> + socketConnection-&gt;getRemoteAddress().toString();</div>
+<div class="line"><span class="lineno">  360</span>            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;\tClient: &quot;</span> + socketConnection-&gt;getLocalAddress().toString();</div>
+<div class="line"><span class="lineno">  361</span>        });</div>
+<div class="line"><span class="lineno">  362</span> </div>
+<div class="line"><span class="lineno">  363</span>        tlsApp.setOnConnected([](<a class="code hl_typedef" href="classexpress_1_1WebAppT.html#aac2a3855a73cbf3547da8e1268605f02">tls::in::WebApp::SocketConnection</a>* socketConnection) {</div>
+<div class="line"><span class="lineno">  364</span>            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;OnConnected:&quot;</span>;</div>
+<div class="line"><span class="lineno">  365</span> </div>
+<div class="line"><span class="lineno">  366</span>            X509* client_cert = SSL_get_peer_certificate(socketConnection-&gt;getSSL());</div>
 <div class="line"><span class="lineno">  367</span> </div>
-<div class="line"><span class="lineno">  368</span>                str = X509_NAME_oneline(X509_get_issuer_name(client_cert), <span class="keyword">nullptr</span>, 0);</div>
-<div class="line"><span class="lineno">  369</span>                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;\t   Issuer: &quot;</span> + std::string(str);</div>
-<div class="line"><span class="lineno">  370</span>                OPENSSL_free(str);</div>
-<div class="line"><span class="lineno">  371</span> </div>
-<div class="line"><span class="lineno">  372</span>                <span class="comment">// We could do all sorts of certificate verification stuff here before deallocating the certificate.</span></div>
-<div class="line"><span class="lineno">  373</span> </div>
-<div class="line"><span class="lineno">  374</span>                GENERAL_NAMES* subjectAltNames =</div>
-<div class="line"><span class="lineno">  375</span>                    <span class="keyword">static_cast&lt;</span>GENERAL_NAMES*<span class="keyword">&gt;</span>(X509_get_ext_d2i(client_cert, NID_subject_alt_name, <span class="keyword">nullptr</span>, <span class="keyword">nullptr</span>));</div>
-<div class="line"><span class="lineno">  376</span><span class="preprocessor">#ifdef __GNUC__</span></div>
-<div class="line"><span class="lineno">  377</span><span class="preprocessor">#pragma GCC diagnostic push</span></div>
-<div class="line"><span class="lineno">  378</span><span class="preprocessor">#ifdef __has_warning</span></div>
-<div class="line"><span class="lineno">  379</span><span class="preprocessor">#if __has_warning(&quot;-Wused-but-marked-unused&quot;)</span></div>
-<div class="line"><span class="lineno">  380</span><span class="preprocessor">#pragma GCC diagnostic ignored &quot;-Wused-but-marked-unused&quot;</span></div>
-<div class="line"><span class="lineno">  381</span><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="lineno">  382</span><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="lineno">  383</span><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="lineno">  384</span>                <span class="keyword">const</span> int32_t altNameCount = sk_GENERAL_NAME_num(subjectAltNames);</div>
-<div class="line"><span class="lineno">  385</span><span class="preprocessor">#ifdef __GNUC_</span></div>
-<div class="line"><span class="lineno">  386</span><span class="preprocessor">#pragma GCC diagnostic pop</span></div>
-<div class="line"><span class="lineno">  387</span><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="lineno">  388</span>                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;\t   Subject alternative name count: &quot;</span> &lt;&lt; altNameCount;</div>
-<div class="line"><span class="lineno">  389</span>                <span class="keywordflow">for</span> (int32_t i = 0; i &lt; altNameCount; ++i) {</div>
-<div class="line"><span class="lineno">  390</span><span class="preprocessor">#ifdef __GNUC__</span></div>
-<div class="line"><span class="lineno">  391</span><span class="preprocessor">#pragma GCC diagnostic push</span></div>
-<div class="line"><span class="lineno">  392</span><span class="preprocessor">#ifdef __has_warning</span></div>
-<div class="line"><span class="lineno">  393</span><span class="preprocessor">#if __has_warning(&quot;-Wused-but-marked-unused&quot;)</span></div>
-<div class="line"><span class="lineno">  394</span><span class="preprocessor">#pragma GCC diagnostic ignored &quot;-Wused-but-marked-unused&quot;</span></div>
-<div class="line"><span class="lineno">  395</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  368</span>            <span class="keywordflow">if</span> (client_cert != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><span class="lineno">  369</span>                <span class="keyword">const</span> <span class="keywordtype">long</span> verifyErr = SSL_get_verify_result(socketConnection-&gt;getSSL());</div>
+<div class="line"><span class="lineno">  370</span> </div>
+<div class="line"><span class="lineno">  371</span>                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;\tClient certificate: &quot;</span> + std::string(X509_verify_cert_error_string(verifyErr));</div>
+<div class="line"><span class="lineno">  372</span> </div>
+<div class="line"><span class="lineno">  373</span>                <span class="keywordtype">char</span>* str = X509_NAME_oneline(X509_get_subject_name(client_cert), <span class="keyword">nullptr</span>, 0);</div>
+<div class="line"><span class="lineno">  374</span>                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;\t   Subject: &quot;</span> + std::string(str);</div>
+<div class="line"><span class="lineno">  375</span>                OPENSSL_free(str);</div>
+<div class="line"><span class="lineno">  376</span> </div>
+<div class="line"><span class="lineno">  377</span>                str = X509_NAME_oneline(X509_get_issuer_name(client_cert), <span class="keyword">nullptr</span>, 0);</div>
+<div class="line"><span class="lineno">  378</span>                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;\t   Issuer: &quot;</span> + std::string(str);</div>
+<div class="line"><span class="lineno">  379</span>                OPENSSL_free(str);</div>
+<div class="line"><span class="lineno">  380</span> </div>
+<div class="line"><span class="lineno">  381</span>                <span class="comment">// We could do all sorts of certificate verification stuff here before deallocating the certificate.</span></div>
+<div class="line"><span class="lineno">  382</span> </div>
+<div class="line"><span class="lineno">  383</span>                GENERAL_NAMES* subjectAltNames =</div>
+<div class="line"><span class="lineno">  384</span>                    <span class="keyword">static_cast&lt;</span>GENERAL_NAMES*<span class="keyword">&gt;</span>(X509_get_ext_d2i(client_cert, NID_subject_alt_name, <span class="keyword">nullptr</span>, <span class="keyword">nullptr</span>));</div>
+<div class="line"><span class="lineno">  385</span><span class="preprocessor">#ifdef __GNUC__</span></div>
+<div class="line"><span class="lineno">  386</span><span class="preprocessor">#pragma GCC diagnostic push</span></div>
+<div class="line"><span class="lineno">  387</span><span class="preprocessor">#ifdef __has_warning</span></div>
+<div class="line"><span class="lineno">  388</span><span class="preprocessor">#if __has_warning(&quot;-Wused-but-marked-unused&quot;)</span></div>
+<div class="line"><span class="lineno">  389</span><span class="preprocessor">#pragma GCC diagnostic ignored &quot;-Wused-but-marked-unused&quot;</span></div>
+<div class="line"><span class="lineno">  390</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  391</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  392</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  393</span>                <span class="keyword">const</span> int32_t altNameCount = sk_GENERAL_NAME_num(subjectAltNames);</div>
+<div class="line"><span class="lineno">  394</span><span class="preprocessor">#ifdef __GNUC_</span></div>
+<div class="line"><span class="lineno">  395</span><span class="preprocessor">#pragma GCC diagnostic pop</span></div>
 <div class="line"><span class="lineno">  396</span><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="lineno">  397</span><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="lineno">  398</span>                    GENERAL_NAME* generalName = sk_GENERAL_NAME_value(subjectAltNames, i);</div>
-<div class="line"><span class="lineno">  399</span><span class="preprocessor">#ifdef __GNUC_</span></div>
-<div class="line"><span class="lineno">  400</span><span class="preprocessor">#pragma GCC diagnostic pop</span></div>
-<div class="line"><span class="lineno">  401</span><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="lineno">  402</span>                    <span class="keywordflow">if</span> (generalName-&gt;type == GEN_URI) {</div>
-<div class="line"><span class="lineno">  403</span>                        <span class="keyword">const</span> std::string subjectAltName =</div>
-<div class="line"><span class="lineno">  404</span>                            std::string(<span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(ASN1_STRING_get0_data(generalName-&gt;d.uniformResourceIdentifier)),</div>
-<div class="line"><span class="lineno">  405</span>                                        <span class="keyword">static_cast&lt;</span>std::size_t<span class="keyword">&gt;</span>(ASN1_STRING_length(generalName-&gt;d.uniformResourceIdentifier)));</div>
-<div class="line"><span class="lineno">  406</span>                        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;\t      SAN (URI): &#39;&quot;</span> + subjectAltName;</div>
-<div class="line"><span class="lineno">  407</span>                    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (generalName-&gt;type == GEN_DNS) {</div>
-<div class="line"><span class="lineno">  408</span>                        <span class="keyword">const</span> std::string subjectAltName =</div>
-<div class="line"><span class="lineno">  409</span>                            std::string(<span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(ASN1_STRING_get0_data(generalName-&gt;d.dNSName)),</div>
-<div class="line"><span class="lineno">  410</span>                                        <span class="keyword">static_cast&lt;</span>std::size_t<span class="keyword">&gt;</span>(ASN1_STRING_length(generalName-&gt;d.dNSName)));</div>
-<div class="line"><span class="lineno">  411</span>                        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;\t      SAN (DNS): &#39;&quot;</span> + subjectAltName;</div>
-<div class="line"><span class="lineno">  412</span>                    } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  413</span>                        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;\t      SAN (Type): &#39;&quot;</span> + std::to_string(generalName-&gt;type);</div>
-<div class="line"><span class="lineno">  414</span>                    }</div>
-<div class="line"><span class="lineno">  415</span>                }</div>
-<div class="line"><span class="lineno">  416</span><span class="preprocessor">#ifdef __GNUC__</span></div>
-<div class="line"><span class="lineno">  417</span><span class="preprocessor">#pragma GCC diagnostic push</span></div>
-<div class="line"><span class="lineno">  418</span><span class="preprocessor">#ifdef __has_warning</span></div>
-<div class="line"><span class="lineno">  419</span><span class="preprocessor">#if __has_warning(&quot;-Wused-but-marked-unused&quot;)</span></div>
-<div class="line"><span class="lineno">  420</span><span class="preprocessor">#pragma GCC diagnostic ignored &quot;-Wused-but-marked-unused&quot;</span></div>
-<div class="line"><span class="lineno">  421</span><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="lineno">  422</span><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="lineno">  423</span><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="lineno">  424</span>                sk_GENERAL_NAME_pop_free(subjectAltNames, GENERAL_NAME_free);</div>
-<div class="line"><span class="lineno">  425</span><span class="preprocessor">#ifdef __GNUC_</span></div>
-<div class="line"><span class="lineno">  426</span><span class="preprocessor">#pragma GCC diagnostic pop</span></div>
-<div class="line"><span class="lineno">  427</span><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="lineno">  428</span>                X509_free(client_cert);</div>
-<div class="line"><span class="lineno">  429</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  430</span>                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;\tClient certificate: no certificate&quot;</span>;</div>
-<div class="line"><span class="lineno">  431</span>            }</div>
-<div class="line"><span class="lineno">  432</span>        });</div>
-<div class="line"><span class="lineno">  433</span> </div>
-<div class="line"><span class="lineno">  434</span>        tlsApp.setOnDisconnect([](<a class="code hl_typedef" href="classexpress_1_1WebAppT.html#aac2a3855a73cbf3547da8e1268605f02">tls::in::WebApp::SocketConnection</a>* socketConnection) {</div>
-<div class="line"><span class="lineno">  435</span>            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;OnDisconnect:&quot;</span>;</div>
-<div class="line"><span class="lineno">  436</span> </div>
-<div class="line"><span class="lineno">  437</span>            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;\tServer: &quot;</span> + socketConnection-&gt;getRemoteAddress().toString();</div>
-<div class="line"><span class="lineno">  438</span>            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;\tClient: &quot;</span> + socketConnection-&gt;getLocalAddress().toString();</div>
-<div class="line"><span class="lineno">  439</span>        });</div>
-<div class="line"><span class="lineno">  440</span>    }</div>
-<div class="line"><span class="lineno">  441</span> </div>
-<div class="line"><span class="lineno">  442</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="classexpress_1_1WebApp.html#a54e6910c9466c61d0b217490b7d9bb5a">WebApp::start</a>();</div>
-<div class="line"><span class="lineno">  443</span>}</div>
+<div class="line"><span class="lineno">  397</span>                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;\t   Subject alternative name count: &quot;</span> &lt;&lt; altNameCount;</div>
+<div class="line"><span class="lineno">  398</span>                <span class="keywordflow">for</span> (int32_t i = 0; i &lt; altNameCount; ++i) {</div>
+<div class="line"><span class="lineno">  399</span><span class="preprocessor">#ifdef __GNUC__</span></div>
+<div class="line"><span class="lineno">  400</span><span class="preprocessor">#pragma GCC diagnostic push</span></div>
+<div class="line"><span class="lineno">  401</span><span class="preprocessor">#ifdef __has_warning</span></div>
+<div class="line"><span class="lineno">  402</span><span class="preprocessor">#if __has_warning(&quot;-Wused-but-marked-unused&quot;)</span></div>
+<div class="line"><span class="lineno">  403</span><span class="preprocessor">#pragma GCC diagnostic ignored &quot;-Wused-but-marked-unused&quot;</span></div>
+<div class="line"><span class="lineno">  404</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  405</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  406</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  407</span>                    GENERAL_NAME* generalName = sk_GENERAL_NAME_value(subjectAltNames, i);</div>
+<div class="line"><span class="lineno">  408</span><span class="preprocessor">#ifdef __GNUC_</span></div>
+<div class="line"><span class="lineno">  409</span><span class="preprocessor">#pragma GCC diagnostic pop</span></div>
+<div class="line"><span class="lineno">  410</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  411</span>                    <span class="keywordflow">if</span> (generalName-&gt;type == GEN_URI) {</div>
+<div class="line"><span class="lineno">  412</span>                        <span class="keyword">const</span> std::string subjectAltName =</div>
+<div class="line"><span class="lineno">  413</span>                            std::string(<span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(ASN1_STRING_get0_data(generalName-&gt;d.uniformResourceIdentifier)),</div>
+<div class="line"><span class="lineno">  414</span>                                        <span class="keyword">static_cast&lt;</span>std::size_t<span class="keyword">&gt;</span>(ASN1_STRING_length(generalName-&gt;d.uniformResourceIdentifier)));</div>
+<div class="line"><span class="lineno">  415</span>                        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;\t      SAN (URI): &#39;&quot;</span> + subjectAltName;</div>
+<div class="line"><span class="lineno">  416</span>                    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (generalName-&gt;type == GEN_DNS) {</div>
+<div class="line"><span class="lineno">  417</span>                        <span class="keyword">const</span> std::string subjectAltName =</div>
+<div class="line"><span class="lineno">  418</span>                            std::string(<span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(ASN1_STRING_get0_data(generalName-&gt;d.dNSName)),</div>
+<div class="line"><span class="lineno">  419</span>                                        <span class="keyword">static_cast&lt;</span>std::size_t<span class="keyword">&gt;</span>(ASN1_STRING_length(generalName-&gt;d.dNSName)));</div>
+<div class="line"><span class="lineno">  420</span>                        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;\t      SAN (DNS): &#39;&quot;</span> + subjectAltName;</div>
+<div class="line"><span class="lineno">  421</span>                    } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  422</span>                        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;\t      SAN (Type): &#39;&quot;</span> + std::to_string(generalName-&gt;type);</div>
+<div class="line"><span class="lineno">  423</span>                    }</div>
+<div class="line"><span class="lineno">  424</span>                }</div>
+<div class="line"><span class="lineno">  425</span><span class="preprocessor">#ifdef __GNUC__</span></div>
+<div class="line"><span class="lineno">  426</span><span class="preprocessor">#pragma GCC diagnostic push</span></div>
+<div class="line"><span class="lineno">  427</span><span class="preprocessor">#ifdef __has_warning</span></div>
+<div class="line"><span class="lineno">  428</span><span class="preprocessor">#if __has_warning(&quot;-Wused-but-marked-unused&quot;)</span></div>
+<div class="line"><span class="lineno">  429</span><span class="preprocessor">#pragma GCC diagnostic ignored &quot;-Wused-but-marked-unused&quot;</span></div>
+<div class="line"><span class="lineno">  430</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  431</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  432</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  433</span>                sk_GENERAL_NAME_pop_free(subjectAltNames, GENERAL_NAME_free);</div>
+<div class="line"><span class="lineno">  434</span><span class="preprocessor">#ifdef __GNUC_</span></div>
+<div class="line"><span class="lineno">  435</span><span class="preprocessor">#pragma GCC diagnostic pop</span></div>
+<div class="line"><span class="lineno">  436</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  437</span>                X509_free(client_cert);</div>
+<div class="line"><span class="lineno">  438</span>            } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  439</span>                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;\tClient certificate: no certificate&quot;</span>;</div>
+<div class="line"><span class="lineno">  440</span>            }</div>
+<div class="line"><span class="lineno">  441</span>        });</div>
+<div class="line"><span class="lineno">  442</span> </div>
+<div class="line"><span class="lineno">  443</span>        tlsApp.setOnDisconnect([](<a class="code hl_typedef" href="classexpress_1_1WebAppT.html#aac2a3855a73cbf3547da8e1268605f02">tls::in::WebApp::SocketConnection</a>* socketConnection) {</div>
+<div class="line"><span class="lineno">  444</span>            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;OnDisconnect:&quot;</span>;</div>
+<div class="line"><span class="lineno">  445</span> </div>
+<div class="line"><span class="lineno">  446</span>            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;\tServer: &quot;</span> + socketConnection-&gt;getRemoteAddress().toString();</div>
+<div class="line"><span class="lineno">  447</span>            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;\tClient: &quot;</span> + socketConnection-&gt;getLocalAddress().toString();</div>
+<div class="line"><span class="lineno">  448</span>        });</div>
+<div class="line"><span class="lineno">  449</span>    }</div>
+<div class="line"><span class="lineno">  450</span> </div>
+<div class="line"><span class="lineno">  451</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="classexpress_1_1WebApp.html#a54e6910c9466c61d0b217490b7d9bb5a">WebApp::start</a>();</div>
+<div class="line"><span class="lineno">  452</span>}</div>
 <div class="ttc" id="aclasscore_1_1socket_1_1State_html"><div class="ttname"><a href="classcore_1_1socket_1_1State.html">core::socket::State</a></div><div class="ttdef"><b>Definition</b> <a href="socket_2State_8h_source.html#l00053">State.h:53</a></div></div>
 <div class="ttc" id="aclasscore_1_1socket_1_1State_html_a26b8a9154524cfbba2729255cb184331"><div class="ttname"><a href="classcore_1_1socket_1_1State.html#a26b8a9154524cfbba2729255cb184331">core::socket::State::DISABLED</a></div><div class="ttdeci">static constexpr int DISABLED</div><div class="ttdef"><b>Definition</b> <a href="socket_2State_8h_source.html#l00056">State.h:56</a></div></div>
 <div class="ttc" id="aclasscore_1_1socket_1_1State_html_a3dcc747a68a4c163fcf1c57d9852cab3"><div class="ttname"><a href="classcore_1_1socket_1_1State.html#a3dcc747a68a4c163fcf1c57d9852cab3">core::socket::State::ERROR</a></div><div class="ttdeci">static constexpr int ERROR</div><div class="ttdef"><b>Definition</b> <a href="socket_2State_8h_source.html#l00057">State.h:57</a></div></div>
 <div class="ttc" id="aclasscore_1_1socket_1_1State_html_a5d0a9047c96edac9ffd9cd12574328c0"><div class="ttname"><a href="classcore_1_1socket_1_1State.html#a5d0a9047c96edac9ffd9cd12574328c0">core::socket::State::FATAL</a></div><div class="ttdeci">static constexpr int FATAL</div><div class="ttdef"><b>Definition</b> <a href="socket_2State_8h_source.html#l00058">State.h:58</a></div></div>
 <div class="ttc" id="aclasscore_1_1socket_1_1State_html_a744e04217104f055ae728e8d884f25de"><div class="ttname"><a href="classcore_1_1socket_1_1State.html#a744e04217104f055ae728e8d884f25de">core::socket::State::OK</a></div><div class="ttdeci">static constexpr int OK</div><div class="ttdef"><b>Definition</b> <a href="socket_2State_8h_source.html#l00055">State.h:55</a></div></div>
-<div class="ttc" id="aclassdatabase_1_1mariadb_1_1MariaDBClient_html"><div class="ttname"><a href="classdatabase_1_1mariadb_1_1MariaDBClient.html">database::mariadb::MariaDBClient</a></div><div class="ttdef"><b>Definition</b> <a href="MariaDBClient_8h_source.html#l00083">MariaDBClient.h:85</a></div></div>
+<div class="ttc" id="aclassdatabase_1_1mariadb_1_1MariaDBClient_html"><div class="ttname"><a href="classdatabase_1_1mariadb_1_1MariaDBClient.html">database::mariadb::MariaDBClient</a></div><div class="ttdef"><b>Definition</b> <a href="MariaDBClient_8h_source.html#l00092">MariaDBClient.h:94</a></div></div>
 <div class="ttc" id="aclassexpress_1_1WebAppT_html"><div class="ttname"><a href="classexpress_1_1WebAppT.html">express::WebAppT</a></div><div class="ttdef"><b>Definition</b> <a href="WebAppT_8h_source.html#l00059">WebAppT.h:61</a></div></div>
 <div class="ttc" id="aclassexpress_1_1WebAppT_html_aac2a3855a73cbf3547da8e1268605f02"><div class="ttname"><a href="classexpress_1_1WebAppT.html#aac2a3855a73cbf3547da8e1268605f02">express::WebAppT::SocketConnection</a></div><div class="ttdeci">typename Server::SocketConnection SocketConnection</div><div class="ttdef"><b>Definition</b> <a href="WebAppT_8h_source.html#l00069">WebAppT.h:69</a></div></div>
 <div class="ttc" id="aclassexpress_1_1WebAppT_html_ae6c8401e279b2a243f2fb0e498ef319e"><div class="ttname"><a href="classexpress_1_1WebAppT.html#ae6c8401e279b2a243f2fb0e498ef319e">express::WebAppT::SocketAddress</a></div><div class="ttdeci">typename Server::SocketAddress SocketAddress</div><div class="ttdef"><b>Definition</b> <a href="WebAppT_8h_source.html#l00070">WebAppT.h:70</a></div></div>
 <div class="ttc" id="aclassexpress_1_1WebApp_html_a0a01439a0cc8dfc86ed14f1094826b7e"><div class="ttname"><a href="classexpress_1_1WebApp.html#a0a01439a0cc8dfc86ed14f1094826b7e">express::WebApp::init</a></div><div class="ttdeci">static void init(int argc, char *argv[])</div><div class="ttdef"><b>Definition</b> <a href="WebApp_8cpp_source.html#l00056">WebApp.cpp:56</a></div></div>
 <div class="ttc" id="aclassexpress_1_1WebApp_html_a54e6910c9466c61d0b217490b7d9bb5a"><div class="ttname"><a href="classexpress_1_1WebApp.html#a54e6910c9466c61d0b217490b7d9bb5a">express::WebApp::start</a></div><div class="ttdeci">static int start(const utils::Timeval &amp;timeOut={LONG_MAX, 0})</div><div class="ttdef"><b>Definition</b> <a href="WebApp_8cpp_source.html#l00060">WebApp.cpp:60</a></div></div>
 <div class="ttc" id="astructdatabase_1_1mariadb_1_1MariaDBConnectionDetails_html"><div class="ttname"><a href="structdatabase_1_1mariadb_1_1MariaDBConnectionDetails.html">database::mariadb::MariaDBConnectionDetails</a></div><div class="ttdef"><b>Definition</b> <a href="MariaDBConnectionDetails_8h_source.html#l00054">MariaDBConnectionDetails.h:54</a></div></div>
-<div class="ttc" id="astructdatabase_1_1mariadb_1_1MariaDBConnectionDetails_html_a13f008b21ad1be16b56b19df467924ac"><div class="ttname"><a href="structdatabase_1_1mariadb_1_1MariaDBConnectionDetails.html#a13f008b21ad1be16b56b19df467924ac">database::mariadb::MariaDBConnectionDetails::hostname</a></div><div class="ttdeci">std::string hostname</div><div class="ttdef"><b>Definition</b> <a href="MariaDBConnectionDetails_8h_source.html#l00055">MariaDBConnectionDetails.h:55</a></div></div>
+<div class="ttc" id="astructdatabase_1_1mariadb_1_1MariaDBConnectionDetails_html_aa755b7b4ad51a440eafc89066de81262"><div class="ttname"><a href="structdatabase_1_1mariadb_1_1MariaDBConnectionDetails.html#aa755b7b4ad51a440eafc89066de81262">database::mariadb::MariaDBConnectionDetails::connectionName</a></div><div class="ttdeci">std::string connectionName</div><div class="ttdef"><b>Definition</b> <a href="MariaDBConnectionDetails_8h_source.html#l00055">MariaDBConnectionDetails.h:55</a></div></div>
+<div class="ttc" id="astructdatabase_1_1mariadb_1_1MariaDBState_html"><div class="ttname"><a href="structdatabase_1_1mariadb_1_1MariaDBState.html">database::mariadb::MariaDBState</a></div><div class="ttdef"><b>Definition</b> <a href="MariaDBClient_8h_source.html#l00086">MariaDBClient.h:86</a></div></div>
+<div class="ttc" id="astructdatabase_1_1mariadb_1_1MariaDBState_html_a062fe50b345cfbfa950fa8cbdbb2326a"><div class="ttname"><a href="structdatabase_1_1mariadb_1_1MariaDBState.html#a062fe50b345cfbfa950fa8cbdbb2326a">database::mariadb::MariaDBState::connected</a></div><div class="ttdeci">bool connected</div><div class="ttdef"><b>Definition</b> <a href="MariaDBClient_8h_source.html#l00089">MariaDBClient.h:89</a></div></div>
+<div class="ttc" id="astructdatabase_1_1mariadb_1_1MariaDBState_html_a40e0ca57a63dfbee735978d04ff387fd"><div class="ttname"><a href="structdatabase_1_1mariadb_1_1MariaDBState.html#a40e0ca57a63dfbee735978d04ff387fd">database::mariadb::MariaDBState::error</a></div><div class="ttdeci">unsigned int error</div><div class="ttdef"><b>Definition</b> <a href="MariaDBClient_8h_source.html#l00087">MariaDBClient.h:87</a></div></div>
 <div class="ttc" id="atestregex_8cpp_html_ab024e3c77aeb1487da4b33877cdfc1fb"><div class="ttname"><a href="testregex_8cpp.html#ab024e3c77aeb1487da4b33877cdfc1fb">router</a></div><div class="ttdeci">Router router(database::mariadb::MariaDBClient &amp;db)</div><div class="ttdef"><b>Definition</b> <a href="testregex_8cpp_source.html#l00068">testregex.cpp:68</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="MariaDBConnectionDetails_8h_source.html#l00058">database::mariadb::MariaDBConnectionDetails::database</a>, <a class="el" href="MariaDBConnectionDetails_8h_source.html#l00061">database::mariadb::MariaDBConnectionDetails::flags</a>, <a class="el" href="MariaDBConnectionDetails_8h_source.html#l00055">database::mariadb::MariaDBConnectionDetails::hostname</a>, <a class="el" href="MariaDBClient_8cpp_source.html#l00056">database::mariadb::MariaDBClient::MariaDBClient()</a>, <a class="el" href="MariaDBConnectionDetails_8h_source.html#l00057">database::mariadb::MariaDBConnectionDetails::password</a>, <a class="el" href="MariaDBConnectionDetails_8h_source.html#l00059">database::mariadb::MariaDBConnectionDetails::port</a>, <a class="el" href="MariaDBConnectionDetails_8h_source.html#l00060">database::mariadb::MariaDBConnectionDetails::socket</a>, and <a class="el" href="MariaDBConnectionDetails_8h_source.html#l00056">database::mariadb::MariaDBConnectionDetails::username</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="testregex_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph.svg" width="332" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<p class="reference">References <a class="el" href="MariaDBClient_8h_source.html#l00089">database::mariadb::MariaDBState::connected</a>, <a class="el" href="MariaDBConnectionDetails_8h_source.html#l00055">database::mariadb::MariaDBConnectionDetails::connectionName</a>, <a class="el" href="MariaDBConnectionDetails_8h_source.html#l00059">database::mariadb::MariaDBConnectionDetails::database</a>, <a class="el" href="MariaDBClient_8h_source.html#l00087">database::mariadb::MariaDBState::error</a>, <a class="el" href="MariaDBClient_8h_source.html#l00088">database::mariadb::MariaDBState::errorMessage</a>, <a class="el" href="MariaDBConnectionDetails_8h_source.html#l00062">database::mariadb::MariaDBConnectionDetails::flags</a>, <a class="el" href="MariaDBConnectionDetails_8h_source.html#l00056">database::mariadb::MariaDBConnectionDetails::hostname</a>, <a class="el" href="MariaDBConnectionDetails_8h_source.html#l00058">database::mariadb::MariaDBConnectionDetails::password</a>, <a class="el" href="MariaDBConnectionDetails_8h_source.html#l00060">database::mariadb::MariaDBConnectionDetails::port</a>, <a class="el" href="MariaDBConnectionDetails_8h_source.html#l00061">database::mariadb::MariaDBConnectionDetails::socket</a>, and <a class="el" href="MariaDBConnectionDetails_8h_source.html#l00057">database::mariadb::MariaDBConnectionDetails::username</a>.</p>
 
 </div>
 </div>
@@ -580,7 +587,7 @@ Here is the call graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_9654b8d08f4bba4e84b362c5fd320bee.html">apps</a></li><li class="navelem"><a class="el" href="testregex_8cpp.html">testregex.cpp</a></li>
-    <li class="footer">Generated on Fri Oct 24 2025 11:05:08 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Sat Nov 8 2025 16:00:25 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

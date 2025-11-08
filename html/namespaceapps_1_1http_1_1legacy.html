@@ -222,6 +222,9 @@ Functions</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="namespaceapps_1_1http_1_1legacy.html#ac601241d8487c346389932a6dab7928d">Client</a> apps::http::legacy::getClient </td>
@@ -230,10 +233,15 @@ Functions</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="http_2model_2clients_8h_source.html#l00096">96</a> of file <a class="el" href="http_2model_2clients_8h_source.html">clients.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   96</span>                       {</div>
+<div class="fragment"><div class="line"><span class="lineno">   96</span>                              {</div>
 <div class="line"><span class="lineno">   97</span>        <a class="code hl_typedef" href="namespaceapps_1_1http_1_1legacy.html#ac601241d8487c346389932a6dab7928d">Client</a> client(</div>
 <div class="line"><span class="lineno">   98</span>            <span class="stringliteral">&quot;httpclient&quot;</span>,</div>
 <div class="line"><span class="lineno">   99</span>            [](<span class="keyword">const</span> std::shared_ptr&lt;MasterRequest&gt;&amp; req) {</div>
@@ -431,230 +439,240 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">  291</span>                    [req](<span class="keyword">const</span> std::shared_ptr&lt;Request&gt;&amp;, <span class="keyword">const</span> std::string&amp;) {</div>
 <div class="line"><span class="lineno">  292</span>                    });</div>
 <div class="line"><span class="lineno">  293</span> </div>
-<div class="line"><span class="lineno">  294</span>                req-&gt;httpMajor = 1;</div>
-<div class="line"><span class="lineno">  295</span>                req-&gt;httpMinor = 1;</div>
-<div class="line"><span class="lineno">  296</span> </div>
-<div class="line"><span class="lineno">  297</span>                req-&gt;set(<span class="stringliteral">&quot;Connection&quot;</span>, <span class="stringliteral">&quot;keep-alive&quot;</span>);</div>
-<div class="line"><span class="lineno">  298</span>                req-&gt;set(<span class="stringliteral">&quot;Accept&quot;</span>, <span class="stringliteral">&quot;text/event-stream&quot;</span>);</div>
-<div class="line"><span class="lineno">  299</span>                req-&gt;set(<span class="stringliteral">&quot;Cache-Control&quot;</span>, <span class="stringliteral">&quot;no-cache&quot;</span>);</div>
-<div class="line"><span class="lineno">  300</span> </div>
-<div class="line"><span class="lineno">  301</span>                <span class="keyword">const</span> std::shared_ptr&lt;web::http::client::tools::EventSource&gt; eventStream_1 =</div>
-<div class="line"><span class="lineno">  302</span>                    web::http::legacy::NET::EventSource(<span class="stringliteral">&quot;http://localhost:8080/sse&quot;</span>);</div>
-<div class="line"><span class="lineno">  303</span> </div>
-<div class="line"><span class="lineno">  304</span>                eventStream_1-&gt;onOpen([]() {</div>
-<div class="line"><span class="lineno">  305</span>                    VLOG(0) &lt;&lt; <span class="stringliteral">&quot;OnOpen 1&quot;</span>;</div>
-<div class="line"><span class="lineno">  306</span>                });</div>
-<div class="line"><span class="lineno">  307</span> </div>
-<div class="line"><span class="lineno">  308</span>                eventStream_1-&gt;onError([]() {</div>
-<div class="line"><span class="lineno">  309</span>                    VLOG(0) &lt;&lt; <span class="stringliteral">&quot;onError 1&quot;</span>;</div>
-<div class="line"><span class="lineno">  310</span>                });</div>
-<div class="line"><span class="lineno">  311</span> </div>
-<div class="line"><span class="lineno">  312</span>                eventStream_1-&gt;onMessage([](<span class="keyword">const</span> <a class="code hl_struct" href="structweb_1_1http_1_1client_1_1tools_1_1EventSource_1_1MessageEvent.html">web::http::client::tools::EventSource::MessageEvent</a>&amp; message) {</div>
-<div class="line"><span class="lineno">  313</span>                    VLOG(0) &lt;&lt; <span class="stringliteral">&quot;OnMessage 1:1: &quot;</span> &lt;&lt; message.<a class="code hl_variable" href="structweb_1_1http_1_1client_1_1tools_1_1EventSource_1_1MessageEvent.html#a20b3f2d716b8f7c6eceaa83ce4e6ab39">data</a>;</div>
-<div class="line"><span class="lineno">  314</span>                });</div>
-<div class="line"><span class="lineno">  315</span>                eventStream_1-&gt;onMessage([](<span class="keyword">const</span> <a class="code hl_struct" href="structweb_1_1http_1_1client_1_1tools_1_1EventSource_1_1MessageEvent.html">web::http::client::tools::EventSource::MessageEvent</a>&amp; message) {</div>
-<div class="line"><span class="lineno">  316</span>                    VLOG(0) &lt;&lt; <span class="stringliteral">&quot;OnMessage 1:2: &quot;</span> &lt;&lt; message.<a class="code hl_variable" href="structweb_1_1http_1_1client_1_1tools_1_1EventSource_1_1MessageEvent.html#a20b3f2d716b8f7c6eceaa83ce4e6ab39">data</a>;</div>
-<div class="line"><span class="lineno">  317</span>                });</div>
-<div class="line"><span class="lineno">  318</span>                eventStream_1-&gt;addEventListener(<span class="stringliteral">&quot;myevent&quot;</span>, [](<span class="keyword">const</span> <a class="code hl_struct" href="structweb_1_1http_1_1client_1_1tools_1_1EventSource_1_1MessageEvent.html">web::http::client::tools::EventSource::MessageEvent</a>&amp; message) {</div>
-<div class="line"><span class="lineno">  319</span>                    VLOG(0) &lt;&lt; <span class="stringliteral">&quot;EventListener for &#39;myevent&#39; 1:1: &quot;</span> &lt;&lt; message.<a class="code hl_variable" href="structweb_1_1http_1_1client_1_1tools_1_1EventSource_1_1MessageEvent.html#a285ccb6695ae789a75b809ccd4a507d3">lastEventId</a> &lt;&lt; <span class="stringliteral">&quot; : &quot;</span> &lt;&lt; message.<a class="code hl_variable" href="structweb_1_1http_1_1client_1_1tools_1_1EventSource_1_1MessageEvent.html#a20b3f2d716b8f7c6eceaa83ce4e6ab39">data</a>;</div>
-<div class="line"><span class="lineno">  320</span>                });</div>
-<div class="line"><span class="lineno">  321</span>                eventStream_1-&gt;addEventListener(<span class="stringliteral">&quot;myevent&quot;</span>, [](<span class="keyword">const</span> <a class="code hl_struct" href="structweb_1_1http_1_1client_1_1tools_1_1EventSource_1_1MessageEvent.html">web::http::client::tools::EventSource::MessageEvent</a>&amp; message) {</div>
-<div class="line"><span class="lineno">  322</span>                    VLOG(0) &lt;&lt; <span class="stringliteral">&quot;EventListener for &#39;myevent&#39; 1:2: &quot;</span> &lt;&lt; message.<a class="code hl_variable" href="structweb_1_1http_1_1client_1_1tools_1_1EventSource_1_1MessageEvent.html#a285ccb6695ae789a75b809ccd4a507d3">lastEventId</a> &lt;&lt; <span class="stringliteral">&quot; : &quot;</span> &lt;&lt; message.<a class="code hl_variable" href="structweb_1_1http_1_1client_1_1tools_1_1EventSource_1_1MessageEvent.html#a20b3f2d716b8f7c6eceaa83ce4e6ab39">data</a>;</div>
-<div class="line"><span class="lineno">  323</span>                });</div>
-<div class="line"><span class="lineno">  324</span> </div>
-<div class="line"><span class="lineno">  325</span>                <a class="code hl_function" href="classcore_1_1timer_1_1Timer.html#a9847ce4e56baf9141cc880aa7e20c71a">core::timer::Timer::singleshotTimer</a>(</div>
-<div class="line"><span class="lineno">  326</span>                    [eventStream_1]() {</div>
-<div class="line"><span class="lineno">  327</span>                        eventStream_1-&gt;close();</div>
-<div class="line"><span class="lineno">  328</span>                    },</div>
-<div class="line"><span class="lineno">  329</span>                    5);</div>
-<div class="line"><span class="lineno">  330</span> </div>
-<div class="line"><span class="lineno">  331</span>                <span class="keyword">auto</span> eventStream_2 = web::http::legacy::NET::EventSource(<span class="stringliteral">&quot;http://localhost:8080/sse&quot;</span>);</div>
-<div class="line"><span class="lineno">  332</span> </div>
-<div class="line"><span class="lineno">  333</span>                eventStream_2-&gt;onOpen([]() {</div>
-<div class="line"><span class="lineno">  334</span>                    VLOG(0) &lt;&lt; <span class="stringliteral">&quot;OnOpen 2&quot;</span>;</div>
-<div class="line"><span class="lineno">  335</span>                });</div>
-<div class="line"><span class="lineno">  336</span> </div>
-<div class="line"><span class="lineno">  337</span>                eventStream_2-&gt;onError([]() {</div>
-<div class="line"><span class="lineno">  338</span>                    VLOG(0) &lt;&lt; <span class="stringliteral">&quot;onError 2&quot;</span>;</div>
-<div class="line"><span class="lineno">  339</span>                });</div>
+<div class="line"><span class="lineno">  294</span>                <span class="comment">/*</span></div>
+<div class="line"><span class="lineno">  295</span><span class="comment">                    const std::shared_ptr&lt;web::http::client::tools::EventSource&gt; eventStream_1 =</span></div>
+<div class="line"><span class="lineno">  296</span><span class="comment">                        web::http::legacy::NET::EventSource(&quot;http://localhost:8080/sse&quot;);</span></div>
+<div class="line"><span class="lineno">  297</span><span class="comment">                */</span></div>
+<div class="line"><span class="lineno">  298</span>                <span class="comment">/*</span></div>
+<div class="line"><span class="lineno">  299</span><span class="comment">                const std::shared_ptr&lt;web::http::client::tools::EventSource&gt; eventStream_1 =</span></div>
+<div class="line"><span class="lineno">  300</span><span class="comment">                    web::http::legacy::NET::EventSource(&quot;localhost&quot;, 8080, &quot;/sse&quot;);</span></div>
+<div class="line"><span class="lineno">  301</span><span class="comment">                */</span></div>
+<div class="line"><span class="lineno">  302</span>                <span class="comment">/*</span></div>
+<div class="line"><span class="lineno">  303</span><span class="comment">                const std::shared_ptr&lt;web::http::client::tools::EventSource&gt; eventStream_1 =</span></div>
+<div class="line"><span class="lineno">  304</span><span class="comment">                    web::http::legacy::NET::EventSource(&quot;http://localhost:8080&quot;, &quot;/sse&quot;);</span></div>
+<div class="line"><span class="lineno">  305</span><span class="comment">                */</span></div>
+<div class="line"><span class="lineno">  306</span> </div>
+<div class="line"><span class="lineno">  307</span>                <span class="keyword">const</span> std::shared_ptr&lt;web::http::client::tools::EventSource&gt; eventStream_1 =</div>
+<div class="line"><span class="lineno">  308</span>                    web::http::legacy::NET::EventSource(<span class="stringliteral">&quot;http://&quot;</span> + req-&gt;hostFieldValue, <span class="stringliteral">&quot;/sse?hihi=3&quot;</span>);</div>
+<div class="line"><span class="lineno">  309</span> </div>
+<div class="line"><span class="lineno">  310</span>                <span class="keywordflow">if</span> (eventStream_1) {</div>
+<div class="line"><span class="lineno">  311</span>                    eventStream_1-&gt;onOpen([]() {</div>
+<div class="line"><span class="lineno">  312</span>                        VLOG(0) &lt;&lt; <span class="stringliteral">&quot;OnOpen 1&quot;</span>;</div>
+<div class="line"><span class="lineno">  313</span>                    });</div>
+<div class="line"><span class="lineno">  314</span> </div>
+<div class="line"><span class="lineno">  315</span>                    eventStream_1-&gt;onError([]() {</div>
+<div class="line"><span class="lineno">  316</span>                        VLOG(0) &lt;&lt; <span class="stringliteral">&quot;onError 1&quot;</span>;</div>
+<div class="line"><span class="lineno">  317</span>                    });</div>
+<div class="line"><span class="lineno">  318</span> </div>
+<div class="line"><span class="lineno">  319</span>                    eventStream_1-&gt;onMessage([](<span class="keyword">const</span> <a class="code hl_struct" href="structweb_1_1http_1_1client_1_1tools_1_1EventSource_1_1MessageEvent.html">web::http::client::tools::EventSource::MessageEvent</a>&amp; message) {</div>
+<div class="line"><span class="lineno">  320</span>                        VLOG(0) &lt;&lt; <span class="stringliteral">&quot;OnMessage 1:1: &quot;</span> &lt;&lt; message.<a class="code hl_variable" href="structweb_1_1http_1_1client_1_1tools_1_1EventSource_1_1MessageEvent.html#a20b3f2d716b8f7c6eceaa83ce4e6ab39">data</a>;</div>
+<div class="line"><span class="lineno">  321</span>                    });</div>
+<div class="line"><span class="lineno">  322</span>                    eventStream_1-&gt;onMessage([](<span class="keyword">const</span> <a class="code hl_struct" href="structweb_1_1http_1_1client_1_1tools_1_1EventSource_1_1MessageEvent.html">web::http::client::tools::EventSource::MessageEvent</a>&amp; message) {</div>
+<div class="line"><span class="lineno">  323</span>                        VLOG(0) &lt;&lt; <span class="stringliteral">&quot;OnMessage 1:2: &quot;</span> &lt;&lt; message.<a class="code hl_variable" href="structweb_1_1http_1_1client_1_1tools_1_1EventSource_1_1MessageEvent.html#a20b3f2d716b8f7c6eceaa83ce4e6ab39">data</a>;</div>
+<div class="line"><span class="lineno">  324</span>                    });</div>
+<div class="line"><span class="lineno">  325</span>                    eventStream_1-&gt;addEventListener(<span class="stringliteral">&quot;myevent&quot;</span>, [](<span class="keyword">const</span> <a class="code hl_struct" href="structweb_1_1http_1_1client_1_1tools_1_1EventSource_1_1MessageEvent.html">web::http::client::tools::EventSource::MessageEvent</a>&amp; message) {</div>
+<div class="line"><span class="lineno">  326</span>                        VLOG(0) &lt;&lt; <span class="stringliteral">&quot;EventListener for &#39;myevent&#39; 1:1: &quot;</span> &lt;&lt; message.<a class="code hl_variable" href="structweb_1_1http_1_1client_1_1tools_1_1EventSource_1_1MessageEvent.html#a285ccb6695ae789a75b809ccd4a507d3">lastEventId</a> &lt;&lt; <span class="stringliteral">&quot; : &quot;</span> &lt;&lt; message.<a class="code hl_variable" href="structweb_1_1http_1_1client_1_1tools_1_1EventSource_1_1MessageEvent.html#a20b3f2d716b8f7c6eceaa83ce4e6ab39">data</a>;</div>
+<div class="line"><span class="lineno">  327</span>                    });</div>
+<div class="line"><span class="lineno">  328</span>                    eventStream_1-&gt;addEventListener(<span class="stringliteral">&quot;myevent&quot;</span>, [](<span class="keyword">const</span> <a class="code hl_struct" href="structweb_1_1http_1_1client_1_1tools_1_1EventSource_1_1MessageEvent.html">web::http::client::tools::EventSource::MessageEvent</a>&amp; message) {</div>
+<div class="line"><span class="lineno">  329</span>                        VLOG(0) &lt;&lt; <span class="stringliteral">&quot;EventListener for &#39;myevent&#39; 1:2: &quot;</span> &lt;&lt; message.<a class="code hl_variable" href="structweb_1_1http_1_1client_1_1tools_1_1EventSource_1_1MessageEvent.html#a285ccb6695ae789a75b809ccd4a507d3">lastEventId</a> &lt;&lt; <span class="stringliteral">&quot; : &quot;</span> &lt;&lt; message.<a class="code hl_variable" href="structweb_1_1http_1_1client_1_1tools_1_1EventSource_1_1MessageEvent.html#a20b3f2d716b8f7c6eceaa83ce4e6ab39">data</a>;</div>
+<div class="line"><span class="lineno">  330</span>                    });</div>
+<div class="line"><span class="lineno">  331</span> </div>
+<div class="line"><span class="lineno">  332</span>                    <a class="code hl_function" href="classcore_1_1timer_1_1Timer.html#a9847ce4e56baf9141cc880aa7e20c71a">core::timer::Timer::singleshotTimer</a>(</div>
+<div class="line"><span class="lineno">  333</span>                        [eventStream_1]() {</div>
+<div class="line"><span class="lineno">  334</span>                            eventStream_1-&gt;close();</div>
+<div class="line"><span class="lineno">  335</span>                        },</div>
+<div class="line"><span class="lineno">  336</span>                        5);</div>
+<div class="line"><span class="lineno">  337</span>                }</div>
+<div class="line"><span class="lineno">  338</span> </div>
+<div class="line"><span class="lineno">  339</span>                <span class="keyword">auto</span> eventStream_2 = web::http::legacy::NET::EventSource(<span class="stringliteral">&quot;http://localhost:8080/sse&quot;</span>);</div>
 <div class="line"><span class="lineno">  340</span> </div>
-<div class="line"><span class="lineno">  341</span>                eventStream_2-&gt;onMessage([](<span class="keyword">const</span> <a class="code hl_struct" href="structweb_1_1http_1_1client_1_1tools_1_1EventSource_1_1MessageEvent.html">web::http::client::tools::EventSource::MessageEvent</a>&amp; message) {</div>
-<div class="line"><span class="lineno">  342</span>                    VLOG(0) &lt;&lt; <span class="stringliteral">&quot;OnMessage 2:1: &quot;</span> &lt;&lt; message.<a class="code hl_variable" href="structweb_1_1http_1_1client_1_1tools_1_1EventSource_1_1MessageEvent.html#a20b3f2d716b8f7c6eceaa83ce4e6ab39">data</a>;</div>
-<div class="line"><span class="lineno">  343</span>                });</div>
-<div class="line"><span class="lineno">  344</span>                eventStream_2-&gt;onMessage([](<span class="keyword">const</span> <a class="code hl_struct" href="structweb_1_1http_1_1client_1_1tools_1_1EventSource_1_1MessageEvent.html">web::http::client::tools::EventSource::MessageEvent</a>&amp; message) {</div>
-<div class="line"><span class="lineno">  345</span>                    VLOG(0) &lt;&lt; <span class="stringliteral">&quot;OnMessage 2:2: &quot;</span> &lt;&lt; message.<a class="code hl_variable" href="structweb_1_1http_1_1client_1_1tools_1_1EventSource_1_1MessageEvent.html#a20b3f2d716b8f7c6eceaa83ce4e6ab39">data</a>;</div>
-<div class="line"><span class="lineno">  346</span>                });</div>
-<div class="line"><span class="lineno">  347</span>                eventStream_2-&gt;addEventListener(<span class="stringliteral">&quot;myevent&quot;</span>, [](<span class="keyword">const</span> <a class="code hl_struct" href="structweb_1_1http_1_1client_1_1tools_1_1EventSource_1_1MessageEvent.html">web::http::client::tools::EventSource::MessageEvent</a>&amp; message) {</div>
-<div class="line"><span class="lineno">  348</span>                    VLOG(0) &lt;&lt; <span class="stringliteral">&quot;EventListener for &#39;myevent&#39; 2:1: &quot;</span> &lt;&lt; message.<a class="code hl_variable" href="structweb_1_1http_1_1client_1_1tools_1_1EventSource_1_1MessageEvent.html#a285ccb6695ae789a75b809ccd4a507d3">lastEventId</a> &lt;&lt; <span class="stringliteral">&quot; : &quot;</span> &lt;&lt; message.<a class="code hl_variable" href="structweb_1_1http_1_1client_1_1tools_1_1EventSource_1_1MessageEvent.html#a20b3f2d716b8f7c6eceaa83ce4e6ab39">data</a>;</div>
-<div class="line"><span class="lineno">  349</span>                });</div>
-<div class="line"><span class="lineno">  350</span>                eventStream_2-&gt;addEventListener(<span class="stringliteral">&quot;myevent&quot;</span>, [](<span class="keyword">const</span> <a class="code hl_struct" href="structweb_1_1http_1_1client_1_1tools_1_1EventSource_1_1MessageEvent.html">web::http::client::tools::EventSource::MessageEvent</a>&amp; message) {</div>
-<div class="line"><span class="lineno">  351</span>                    VLOG(0) &lt;&lt; <span class="stringliteral">&quot;EventListener for &#39;myevent&#39; 2:2: &quot;</span> &lt;&lt; message.<a class="code hl_variable" href="structweb_1_1http_1_1client_1_1tools_1_1EventSource_1_1MessageEvent.html#a285ccb6695ae789a75b809ccd4a507d3">lastEventId</a> &lt;&lt; <span class="stringliteral">&quot; : &quot;</span> &lt;&lt; message.<a class="code hl_variable" href="structweb_1_1http_1_1client_1_1tools_1_1EventSource_1_1MessageEvent.html#a20b3f2d716b8f7c6eceaa83ce4e6ab39">data</a>;</div>
-<div class="line"><span class="lineno">  352</span>                });</div>
-<div class="line"><span class="lineno">  353</span> </div>
-<div class="line"><span class="lineno">  354</span>            <span class="comment">/*</span></div>
-<div class="line"><span class="lineno">  355</span><span class="comment">                req-&gt;requestEventSource(&quot;/sse&quot;, [request = std::weak_ptr&lt;MasterRequest&gt;(req)]() -&gt; std::size_t {</span></div>
-<div class="line"><span class="lineno">  356</span><span class="comment">                    std::size_t consumed = 0;</span></div>
-<div class="line"><span class="lineno">  357</span><span class="comment"></span> </div>
-<div class="line"><span class="lineno">  358</span><span class="comment">                    if (!request.expired()) {</span></div>
-<div class="line"><span class="lineno">  359</span><span class="comment">                        char message[2048];</span></div>
-<div class="line"><span class="lineno">  360</span><span class="comment">                        consumed = request.lock()-&gt;getSocketContext()-&gt;readFromPeer(message, 2047);</span></div>
-<div class="line"><span class="lineno">  361</span><span class="comment">                        message[consumed] = 0;</span></div>
-<div class="line"><span class="lineno">  362</span><span class="comment"></span> </div>
-<div class="line"><span class="lineno">  363</span><span class="comment">                        std::cout &lt;&lt; &quot;Message: &quot; &lt;&lt; message;</span></div>
-<div class="line"><span class="lineno">  364</span><span class="comment">                    } else {</span></div>
-<div class="line"><span class="lineno">  365</span><span class="comment">                        if (!request.expired()) {</span></div>
-<div class="line"><span class="lineno">  366</span><span class="comment">                            logResponse(request.lock(), std::shared_ptr&lt;web::http::client::Response&gt;());</span></div>
-<div class="line"><span class="lineno">  367</span><span class="comment">                        }</span></div>
-<div class="line"><span class="lineno">  368</span><span class="comment">                    }</span></div>
-<div class="line"><span class="lineno">  369</span><span class="comment"></span> </div>
-<div class="line"><span class="lineno">  370</span><span class="comment">                    return consumed;</span></div>
-<div class="line"><span class="lineno">  371</span><span class="comment">                });</span></div>
-<div class="line"><span class="lineno">  372</span><span class="comment">            */</span></div>
-<div class="line"><span class="lineno">  373</span> </div>
-<div class="line"><span class="lineno">  374</span>            <span class="comment">/*</span></div>
-<div class="line"><span class="lineno">  375</span><span class="comment">            req-&gt;httpMinor = 1;</span></div>
-<div class="line"><span class="lineno">  376</span><span class="comment">            req-&gt;method = &quot;GET&quot;;</span></div>
-<div class="line"><span class="lineno">  377</span><span class="comment">            req-&gt;url = &quot;/&quot;;</span></div>
-<div class="line"><span class="lineno">  378</span><span class="comment">            req-&gt;set(&quot;Test&quot;, &quot;aaa&quot;);</span></div>
-<div class="line"><span class="lineno">  379</span><span class="comment">            req-&gt;setTrailer(&quot;MyTrailer1&quot;,</span></div>
-<div class="line"><span class="lineno">  380</span><span class="comment">                            &quot;MyTrailerValue1&quot;); // Full trailer processing. Header field &quot;Trailer&quot; set and the Trailer itself is also</span></div>
-<div class="line"><span class="lineno">  381</span><span class="comment">            // sent because here content will be sent with &quot;Transfer-Encoding:chunked&quot;</span></div>
-<div class="line"><span class="lineno">  382</span><span class="comment">            req-&gt;setTrailer(&quot;MyTrailer2&quot;, &quot;MyTrailerValue2&quot;);</span></div>
-<div class="line"><span class="lineno">  383</span><span class="comment">            req-&gt;setTrailer(&quot;MyTrailer3&quot;, &quot;MyTrailerValue3&quot;);</span></div>
-<div class="line"><span class="lineno">  384</span><span class="comment">            req-&gt;setTrailer(&quot;MyTrailer4&quot;, &quot;MyTrailerValue4&quot;);</span></div>
-<div class="line"><span class="lineno">  385</span><span class="comment">            req-&gt;setTrailer(&quot;MyTrailer5&quot;, &quot;MyTrailerValue5&quot;);</span></div>
-<div class="line"><span class="lineno">  386</span><span class="comment">            req-&gt;setTrailer(&quot;MyTrailer6&quot;, &quot;MyTrailerValue6&quot;);</span></div>
-<div class="line"><span class="lineno">  387</span><span class="comment">            req-&gt;query(&quot;Query1&quot;, &quot;QueryValue1&quot;);</span></div>
-<div class="line"><span class="lineno">  388</span><span class="comment">            req-&gt;query(&quot;Query2&quot;, &quot;QueryValue2&quot;);</span></div>
-<div class="line"><span class="lineno">  389</span><span class="comment">            req-&gt;sendFile(</span></div>
-<div class="line"><span class="lineno">  390</span><span class="comment">                &quot;/home/voc/projects/snodec/snode.c/CMakeLists.txt&quot;,</span></div>
-<div class="line"><span class="lineno">  391</span><span class="comment">                [req](int ret) {</span></div>
-<div class="line"><span class="lineno">  392</span><span class="comment">                    if (ret == 0) {</span></div>
-<div class="line"><span class="lineno">  393</span><span class="comment">                        VLOG(1) &lt;&lt; req-&gt;getSocketContext()-&gt;getSocketConnection()-&gt;getConnectionName()</span></div>
-<div class="line"><span class="lineno">  394</span><span class="comment">                                &lt;&lt; &quot; HTTP: Request accepted: GET / HTTP/&quot; &lt;&lt; req-&gt;httpMajor &lt;&lt; &quot;.&quot; &lt;&lt; req-&gt;httpMinor;</span></div>
-<div class="line"><span class="lineno">  395</span><span class="comment">                        VLOG(1) &lt;&lt; &quot;  /home/voc/projects/snodec/snode.c/CMakeLists.txt&quot;;</span></div>
-<div class="line"><span class="lineno">  396</span><span class="comment">                    } else {</span></div>
-<div class="line"><span class="lineno">  397</span><span class="comment">                        LOG(ERROR) &lt;&lt; req-&gt;getSocketContext()-&gt;getSocketConnection()-&gt;getConnectionName()</span></div>
-<div class="line"><span class="lineno">  398</span><span class="comment">                                   &lt;&lt; &quot; HTTP: Request failed: GET / HTTP/&quot; &lt;&lt; req-&gt;httpMajor &lt;&lt; &quot;.&quot; &lt;&lt; req-&gt;httpMinor;</span></div>
-<div class="line"><span class="lineno">  399</span><span class="comment">                        PLOG(ERROR) &lt;&lt; &quot;  /home/voc/projects/snodec/snode.c/CMakeLists.txt&quot;;</span></div>
-<div class="line"><span class="lineno">  400</span><span class="comment">                    }</span></div>
-<div class="line"><span class="lineno">  401</span><span class="comment">                },</span></div>
-<div class="line"><span class="lineno">  402</span><span class="comment">                [&amp;req](const std::shared_ptr&lt;Request&gt;&amp; reqa, const std::shared_ptr&lt;Response&gt;&amp; res) {</span></div>
-<div class="line"><span class="lineno">  403</span><span class="comment">                    logResponse(reqa, res);</span></div>
-<div class="line"><span class="lineno">  404</span><span class="comment"></span> </div>
-<div class="line"><span class="lineno">  405</span><span class="comment">                    req-&gt;method = &quot;GET&quot;;</span></div>
-<div class="line"><span class="lineno">  406</span><span class="comment">                    req-&gt;url = &quot;/sdfsdf&quot;;</span></div>
-<div class="line"><span class="lineno">  407</span><span class="comment">                    req-&gt;set(&quot;Connection&quot;, &quot;close&quot;);</span></div>
-<div class="line"><span class="lineno">  408</span><span class="comment">                    req-&gt;set(&quot;Test&quot;, &quot;bbb&quot;);</span></div>
-<div class="line"><span class="lineno">  409</span><span class="comment">                    req-&gt;sendFile(</span></div>
-<div class="line"><span class="lineno">  410</span><span class="comment">                        &quot;/home/voc/projects/snodec/snode.c/CMakeLists.txt&quot;,</span></div>
-<div class="line"><span class="lineno">  411</span><span class="comment">                        [&amp;req](int ret) {</span></div>
-<div class="line"><span class="lineno">  412</span><span class="comment">                            if (ret == 0) {</span></div>
-<div class="line"><span class="lineno">  413</span><span class="comment">                                VLOG(1) &lt;&lt; req-&gt;getSocketContext()-&gt;getSocketConnection()-&gt;getConnectionName()</span></div>
-<div class="line"><span class="lineno">  414</span><span class="comment">                                        &lt;&lt; &quot; HTTP: Request accepted: GET / HTTP/&quot; &lt;&lt; req-&gt;httpMajor &lt;&lt; &quot;.&quot; &lt;&lt; req-&gt;httpMinor;</span></div>
-<div class="line"><span class="lineno">  415</span><span class="comment">                                VLOG(1) &lt;&lt; &quot;  /home/voc/projects/snodec/snode.c/CMakeLists.txt&quot;;</span></div>
-<div class="line"><span class="lineno">  416</span><span class="comment">                            } else {</span></div>
-<div class="line"><span class="lineno">  417</span><span class="comment">                                LOG(ERROR) &lt;&lt; req-&gt;getSocketContext()-&gt;getSocketConnection()-&gt;getConnectionName()</span></div>
-<div class="line"><span class="lineno">  418</span><span class="comment">                                           &lt;&lt; &quot; HTTP: Request failed: GET / HTTP/&quot; &lt;&lt; req-&gt;httpMajor &lt;&lt; &quot;.&quot; &lt;&lt; req-&gt;httpMinor;</span></div>
-<div class="line"><span class="lineno">  419</span><span class="comment">                                PLOG(ERROR) &lt;&lt; &quot;  /home/voc/projects/snodec/snode.c/CMakeLists.txt&quot;;</span></div>
-<div class="line"><span class="lineno">  420</span><span class="comment">                            }</span></div>
-<div class="line"><span class="lineno">  421</span><span class="comment">                        },</span></div>
-<div class="line"><span class="lineno">  422</span><span class="comment">                        [](const std::shared_ptr&lt;Request&gt;&amp; req, const std::shared_ptr&lt;Response&gt;&amp; res) {</span></div>
-<div class="line"><span class="lineno">  423</span><span class="comment">                            logResponse(req, res);</span></div>
-<div class="line"><span class="lineno">  424</span><span class="comment">                        },</span></div>
-<div class="line"><span class="lineno">  425</span><span class="comment">                        [req](const std::shared_ptr&lt;Request&gt;&amp;, const std::string&amp;) {</span></div>
-<div class="line"><span class="lineno">  426</span><span class="comment">                        });</span></div>
-<div class="line"><span class="lineno">  427</span><span class="comment">                },</span></div>
-<div class="line"><span class="lineno">  428</span><span class="comment">                [req](const std::shared_ptr&lt;Request&gt;&amp;, const std::string&amp;) {</span></div>
-<div class="line"><span class="lineno">  429</span><span class="comment">                });</span></div>
-<div class="line"><span class="lineno">  430</span><span class="comment">            req-&gt;method = &quot;GET&quot;;</span></div>
-<div class="line"><span class="lineno">  431</span><span class="comment">            req-&gt;url = &quot;/&quot;;</span></div>
-<div class="line"><span class="lineno">  432</span><span class="comment">            //                req-&gt;set(&quot;Connection&quot;, &quot;close&quot;);</span></div>
-<div class="line"><span class="lineno">  433</span><span class="comment">            req-&gt;set(&quot;Test&quot;, &quot;xxx&quot;);</span></div>
-<div class="line"><span class="lineno">  434</span><span class="comment">            req-&gt;end(</span></div>
-<div class="line"><span class="lineno">  435</span><span class="comment">                [](const std::shared_ptr&lt;Request&gt;&amp; req, const std::shared_ptr&lt;Response&gt;&amp; res) {</span></div>
-<div class="line"><span class="lineno">  436</span><span class="comment">                    logResponse(req, res);</span></div>
+<div class="line"><span class="lineno">  341</span>                <span class="keywordflow">if</span> (eventStream_2) {</div>
+<div class="line"><span class="lineno">  342</span>                    eventStream_2-&gt;onOpen([]() {</div>
+<div class="line"><span class="lineno">  343</span>                        VLOG(0) &lt;&lt; <span class="stringliteral">&quot;OnOpen 2&quot;</span>;</div>
+<div class="line"><span class="lineno">  344</span>                    });</div>
+<div class="line"><span class="lineno">  345</span> </div>
+<div class="line"><span class="lineno">  346</span>                    eventStream_2-&gt;onError([]() {</div>
+<div class="line"><span class="lineno">  347</span>                        VLOG(0) &lt;&lt; <span class="stringliteral">&quot;onError 2&quot;</span>;</div>
+<div class="line"><span class="lineno">  348</span>                    });</div>
+<div class="line"><span class="lineno">  349</span> </div>
+<div class="line"><span class="lineno">  350</span>                    eventStream_2-&gt;onMessage([](<span class="keyword">const</span> <a class="code hl_struct" href="structweb_1_1http_1_1client_1_1tools_1_1EventSource_1_1MessageEvent.html">web::http::client::tools::EventSource::MessageEvent</a>&amp; message) {</div>
+<div class="line"><span class="lineno">  351</span>                        VLOG(0) &lt;&lt; <span class="stringliteral">&quot;OnMessage 2:1: &quot;</span> &lt;&lt; message.<a class="code hl_variable" href="structweb_1_1http_1_1client_1_1tools_1_1EventSource_1_1MessageEvent.html#a20b3f2d716b8f7c6eceaa83ce4e6ab39">data</a>;</div>
+<div class="line"><span class="lineno">  352</span>                    });</div>
+<div class="line"><span class="lineno">  353</span>                    eventStream_2-&gt;onMessage([](<span class="keyword">const</span> <a class="code hl_struct" href="structweb_1_1http_1_1client_1_1tools_1_1EventSource_1_1MessageEvent.html">web::http::client::tools::EventSource::MessageEvent</a>&amp; message) {</div>
+<div class="line"><span class="lineno">  354</span>                        VLOG(0) &lt;&lt; <span class="stringliteral">&quot;OnMessage 2:2: &quot;</span> &lt;&lt; message.<a class="code hl_variable" href="structweb_1_1http_1_1client_1_1tools_1_1EventSource_1_1MessageEvent.html#a20b3f2d716b8f7c6eceaa83ce4e6ab39">data</a>;</div>
+<div class="line"><span class="lineno">  355</span>                    });</div>
+<div class="line"><span class="lineno">  356</span>                    eventStream_2-&gt;addEventListener(<span class="stringliteral">&quot;myevent&quot;</span>, [](<span class="keyword">const</span> <a class="code hl_struct" href="structweb_1_1http_1_1client_1_1tools_1_1EventSource_1_1MessageEvent.html">web::http::client::tools::EventSource::MessageEvent</a>&amp; message) {</div>
+<div class="line"><span class="lineno">  357</span>                        VLOG(0) &lt;&lt; <span class="stringliteral">&quot;EventListener for &#39;myevent&#39; 2:1: &quot;</span> &lt;&lt; message.<a class="code hl_variable" href="structweb_1_1http_1_1client_1_1tools_1_1EventSource_1_1MessageEvent.html#a285ccb6695ae789a75b809ccd4a507d3">lastEventId</a> &lt;&lt; <span class="stringliteral">&quot; : &quot;</span> &lt;&lt; message.<a class="code hl_variable" href="structweb_1_1http_1_1client_1_1tools_1_1EventSource_1_1MessageEvent.html#a20b3f2d716b8f7c6eceaa83ce4e6ab39">data</a>;</div>
+<div class="line"><span class="lineno">  358</span>                    });</div>
+<div class="line"><span class="lineno">  359</span>                    eventStream_2-&gt;addEventListener(<span class="stringliteral">&quot;myevent&quot;</span>, [](<span class="keyword">const</span> <a class="code hl_struct" href="structweb_1_1http_1_1client_1_1tools_1_1EventSource_1_1MessageEvent.html">web::http::client::tools::EventSource::MessageEvent</a>&amp; message) {</div>
+<div class="line"><span class="lineno">  360</span>                        VLOG(0) &lt;&lt; <span class="stringliteral">&quot;EventListener for &#39;myevent&#39; 2:2: &quot;</span> &lt;&lt; message.<a class="code hl_variable" href="structweb_1_1http_1_1client_1_1tools_1_1EventSource_1_1MessageEvent.html#a285ccb6695ae789a75b809ccd4a507d3">lastEventId</a> &lt;&lt; <span class="stringliteral">&quot; : &quot;</span> &lt;&lt; message.<a class="code hl_variable" href="structweb_1_1http_1_1client_1_1tools_1_1EventSource_1_1MessageEvent.html#a20b3f2d716b8f7c6eceaa83ce4e6ab39">data</a>;</div>
+<div class="line"><span class="lineno">  361</span>                    });</div>
+<div class="line"><span class="lineno">  362</span>                }</div>
+<div class="line"><span class="lineno">  363</span> </div>
+<div class="line"><span class="lineno">  364</span>            <span class="comment">/*</span></div>
+<div class="line"><span class="lineno">  365</span><span class="comment">                req-&gt;requestEventSource(&quot;/sse&quot;, [request = std::weak_ptr&lt;MasterRequest&gt;(req)]() -&gt; std::size_t {</span></div>
+<div class="line"><span class="lineno">  366</span><span class="comment">                    std::size_t consumed = 0;</span></div>
+<div class="line"><span class="lineno">  367</span><span class="comment"></span> </div>
+<div class="line"><span class="lineno">  368</span><span class="comment">                    if (!request.expired()) {</span></div>
+<div class="line"><span class="lineno">  369</span><span class="comment">                        char message[2048];</span></div>
+<div class="line"><span class="lineno">  370</span><span class="comment">                        consumed = request.lock()-&gt;getSocketContext()-&gt;readFromPeer(message, 2047);</span></div>
+<div class="line"><span class="lineno">  371</span><span class="comment">                        message[consumed] = 0;</span></div>
+<div class="line"><span class="lineno">  372</span><span class="comment"></span> </div>
+<div class="line"><span class="lineno">  373</span><span class="comment">                        std::cout &lt;&lt; &quot;Message: &quot; &lt;&lt; message;</span></div>
+<div class="line"><span class="lineno">  374</span><span class="comment">                    } else {</span></div>
+<div class="line"><span class="lineno">  375</span><span class="comment">                        if (!request.expired()) {</span></div>
+<div class="line"><span class="lineno">  376</span><span class="comment">                            logResponse(request.lock(), std::shared_ptr&lt;web::http::client::Response&gt;());</span></div>
+<div class="line"><span class="lineno">  377</span><span class="comment">                        }</span></div>
+<div class="line"><span class="lineno">  378</span><span class="comment">                    }</span></div>
+<div class="line"><span class="lineno">  379</span><span class="comment"></span> </div>
+<div class="line"><span class="lineno">  380</span><span class="comment">                    return consumed;</span></div>
+<div class="line"><span class="lineno">  381</span><span class="comment">                });</span></div>
+<div class="line"><span class="lineno">  382</span><span class="comment">            */</span></div>
+<div class="line"><span class="lineno">  383</span> </div>
+<div class="line"><span class="lineno">  384</span>            <span class="comment">/*</span></div>
+<div class="line"><span class="lineno">  385</span><span class="comment">            req-&gt;httpMinor = 1;</span></div>
+<div class="line"><span class="lineno">  386</span><span class="comment">            req-&gt;method = &quot;GET&quot;;</span></div>
+<div class="line"><span class="lineno">  387</span><span class="comment">            req-&gt;url = &quot;/&quot;;</span></div>
+<div class="line"><span class="lineno">  388</span><span class="comment">            req-&gt;set(&quot;Test&quot;, &quot;aaa&quot;);</span></div>
+<div class="line"><span class="lineno">  389</span><span class="comment">            req-&gt;setTrailer(&quot;MyTrailer1&quot;,</span></div>
+<div class="line"><span class="lineno">  390</span><span class="comment">                            &quot;MyTrailerValue1&quot;); // Full trailer processing. Header field &quot;Trailer&quot; set and the Trailer itself is also</span></div>
+<div class="line"><span class="lineno">  391</span><span class="comment">            // sent because here content will be sent with &quot;Transfer-Encoding:chunked&quot;</span></div>
+<div class="line"><span class="lineno">  392</span><span class="comment">            req-&gt;setTrailer(&quot;MyTrailer2&quot;, &quot;MyTrailerValue2&quot;);</span></div>
+<div class="line"><span class="lineno">  393</span><span class="comment">            req-&gt;setTrailer(&quot;MyTrailer3&quot;, &quot;MyTrailerValue3&quot;);</span></div>
+<div class="line"><span class="lineno">  394</span><span class="comment">            req-&gt;setTrailer(&quot;MyTrailer4&quot;, &quot;MyTrailerValue4&quot;);</span></div>
+<div class="line"><span class="lineno">  395</span><span class="comment">            req-&gt;setTrailer(&quot;MyTrailer5&quot;, &quot;MyTrailerValue5&quot;);</span></div>
+<div class="line"><span class="lineno">  396</span><span class="comment">            req-&gt;setTrailer(&quot;MyTrailer6&quot;, &quot;MyTrailerValue6&quot;);</span></div>
+<div class="line"><span class="lineno">  397</span><span class="comment">            req-&gt;query(&quot;Query1&quot;, &quot;QueryValue1&quot;);</span></div>
+<div class="line"><span class="lineno">  398</span><span class="comment">            req-&gt;query(&quot;Query2&quot;, &quot;QueryValue2&quot;);</span></div>
+<div class="line"><span class="lineno">  399</span><span class="comment">            req-&gt;sendFile(</span></div>
+<div class="line"><span class="lineno">  400</span><span class="comment">                &quot;/home/voc/projects/snodec/snode.c/CMakeLists.txt&quot;,</span></div>
+<div class="line"><span class="lineno">  401</span><span class="comment">                [req](int ret) {</span></div>
+<div class="line"><span class="lineno">  402</span><span class="comment">                    if (ret == 0) {</span></div>
+<div class="line"><span class="lineno">  403</span><span class="comment">                        VLOG(1) &lt;&lt; req-&gt;getSocketContext()-&gt;getSocketConnection()-&gt;getConnectionName()</span></div>
+<div class="line"><span class="lineno">  404</span><span class="comment">                                &lt;&lt; &quot; HTTP: Request accepted: GET / HTTP/&quot; &lt;&lt; req-&gt;httpMajor &lt;&lt; &quot;.&quot; &lt;&lt; req-&gt;httpMinor;</span></div>
+<div class="line"><span class="lineno">  405</span><span class="comment">                        VLOG(1) &lt;&lt; &quot;  /home/voc/projects/snodec/snode.c/CMakeLists.txt&quot;;</span></div>
+<div class="line"><span class="lineno">  406</span><span class="comment">                    } else {</span></div>
+<div class="line"><span class="lineno">  407</span><span class="comment">                        LOG(ERROR) &lt;&lt; req-&gt;getSocketContext()-&gt;getSocketConnection()-&gt;getConnectionName()</span></div>
+<div class="line"><span class="lineno">  408</span><span class="comment">                                   &lt;&lt; &quot; HTTP: Request failed: GET / HTTP/&quot; &lt;&lt; req-&gt;httpMajor &lt;&lt; &quot;.&quot; &lt;&lt; req-&gt;httpMinor;</span></div>
+<div class="line"><span class="lineno">  409</span><span class="comment">                        PLOG(ERROR) &lt;&lt; &quot;  /home/voc/projects/snodec/snode.c/CMakeLists.txt&quot;;</span></div>
+<div class="line"><span class="lineno">  410</span><span class="comment">                    }</span></div>
+<div class="line"><span class="lineno">  411</span><span class="comment">                },</span></div>
+<div class="line"><span class="lineno">  412</span><span class="comment">                [&amp;req](const std::shared_ptr&lt;Request&gt;&amp; reqa, const std::shared_ptr&lt;Response&gt;&amp; res) {</span></div>
+<div class="line"><span class="lineno">  413</span><span class="comment">                    logResponse(reqa, res);</span></div>
+<div class="line"><span class="lineno">  414</span><span class="comment"></span> </div>
+<div class="line"><span class="lineno">  415</span><span class="comment">                    req-&gt;method = &quot;GET&quot;;</span></div>
+<div class="line"><span class="lineno">  416</span><span class="comment">                    req-&gt;url = &quot;/sdfsdf&quot;;</span></div>
+<div class="line"><span class="lineno">  417</span><span class="comment">                    req-&gt;set(&quot;Connection&quot;, &quot;close&quot;);</span></div>
+<div class="line"><span class="lineno">  418</span><span class="comment">                    req-&gt;set(&quot;Test&quot;, &quot;bbb&quot;);</span></div>
+<div class="line"><span class="lineno">  419</span><span class="comment">                    req-&gt;sendFile(</span></div>
+<div class="line"><span class="lineno">  420</span><span class="comment">                        &quot;/home/voc/projects/snodec/snode.c/CMakeLists.txt&quot;,</span></div>
+<div class="line"><span class="lineno">  421</span><span class="comment">                        [&amp;req](int ret) {</span></div>
+<div class="line"><span class="lineno">  422</span><span class="comment">                            if (ret == 0) {</span></div>
+<div class="line"><span class="lineno">  423</span><span class="comment">                                VLOG(1) &lt;&lt; req-&gt;getSocketContext()-&gt;getSocketConnection()-&gt;getConnectionName()</span></div>
+<div class="line"><span class="lineno">  424</span><span class="comment">                                        &lt;&lt; &quot; HTTP: Request accepted: GET / HTTP/&quot; &lt;&lt; req-&gt;httpMajor &lt;&lt; &quot;.&quot; &lt;&lt; req-&gt;httpMinor;</span></div>
+<div class="line"><span class="lineno">  425</span><span class="comment">                                VLOG(1) &lt;&lt; &quot;  /home/voc/projects/snodec/snode.c/CMakeLists.txt&quot;;</span></div>
+<div class="line"><span class="lineno">  426</span><span class="comment">                            } else {</span></div>
+<div class="line"><span class="lineno">  427</span><span class="comment">                                LOG(ERROR) &lt;&lt; req-&gt;getSocketContext()-&gt;getSocketConnection()-&gt;getConnectionName()</span></div>
+<div class="line"><span class="lineno">  428</span><span class="comment">                                           &lt;&lt; &quot; HTTP: Request failed: GET / HTTP/&quot; &lt;&lt; req-&gt;httpMajor &lt;&lt; &quot;.&quot; &lt;&lt; req-&gt;httpMinor;</span></div>
+<div class="line"><span class="lineno">  429</span><span class="comment">                                PLOG(ERROR) &lt;&lt; &quot;  /home/voc/projects/snodec/snode.c/CMakeLists.txt&quot;;</span></div>
+<div class="line"><span class="lineno">  430</span><span class="comment">                            }</span></div>
+<div class="line"><span class="lineno">  431</span><span class="comment">                        },</span></div>
+<div class="line"><span class="lineno">  432</span><span class="comment">                        [](const std::shared_ptr&lt;Request&gt;&amp; req, const std::shared_ptr&lt;Response&gt;&amp; res) {</span></div>
+<div class="line"><span class="lineno">  433</span><span class="comment">                            logResponse(req, res);</span></div>
+<div class="line"><span class="lineno">  434</span><span class="comment">                        },</span></div>
+<div class="line"><span class="lineno">  435</span><span class="comment">                        [req](const std::shared_ptr&lt;Request&gt;&amp;, const std::string&amp;) {</span></div>
+<div class="line"><span class="lineno">  436</span><span class="comment">                        });</span></div>
 <div class="line"><span class="lineno">  437</span><span class="comment">                },</span></div>
 <div class="line"><span class="lineno">  438</span><span class="comment">                [req](const std::shared_ptr&lt;Request&gt;&amp;, const std::string&amp;) {</span></div>
 <div class="line"><span class="lineno">  439</span><span class="comment">                });</span></div>
-<div class="line"><span class="lineno">  440</span><span class="comment">            core::EventReceiver::atNextTick([&amp;req]() {</span></div>
-<div class="line"><span class="lineno">  441</span><span class="comment">                req-&gt;method = &quot;GET&quot;;</span></div>
-<div class="line"><span class="lineno">  442</span><span class="comment">                req-&gt;url = &quot;/&quot;;</span></div>
-<div class="line"><span class="lineno">  443</span><span class="comment">                req-&gt;set(&quot;Connection&quot;, &quot;keep-alive&quot;);</span></div>
-<div class="line"><span class="lineno">  444</span><span class="comment">                req-&gt;set(&quot;Test&quot;, &quot;ddd&quot;);</span></div>
-<div class="line"><span class="lineno">  445</span><span class="comment">                req-&gt;sendFile(</span></div>
-<div class="line"><span class="lineno">  446</span><span class="comment">                    &quot;/home/voc/projects/snodec/snode.c/CMakeLists.txt&quot;,</span></div>
-<div class="line"><span class="lineno">  447</span><span class="comment">                    [req](int ret) {</span></div>
-<div class="line"><span class="lineno">  448</span><span class="comment">                        if (ret == 0) {</span></div>
-<div class="line"><span class="lineno">  449</span><span class="comment">                            VLOG(1) &lt;&lt; req-&gt;getSocketContext()-&gt;getSocketConnection()-&gt;getConnectionName()</span></div>
-<div class="line"><span class="lineno">  450</span><span class="comment">                                    &lt;&lt; &quot; HTTP: Request accepted: GET / HTTP/&quot; &lt;&lt; req-&gt;httpMajor &lt;&lt; &quot;.&quot; &lt;&lt; req-&gt;httpMinor;</span></div>
-<div class="line"><span class="lineno">  451</span><span class="comment">                            VLOG(1) &lt;&lt; &quot;  /home/voc/projects/snodec/snode.c/CMakeLists.txt&quot;;</span></div>
-<div class="line"><span class="lineno">  452</span><span class="comment">                        } else {</span></div>
-<div class="line"><span class="lineno">  453</span><span class="comment">                            LOG(ERROR) &lt;&lt; req-&gt;getSocketContext()-&gt;getSocketConnection()-&gt;getConnectionName()</span></div>
-<div class="line"><span class="lineno">  454</span><span class="comment">                                       &lt;&lt; &quot; HTTP: Request failed: GET / HTTP/&quot; &lt;&lt; req-&gt;httpMajor &lt;&lt; &quot;.&quot; &lt;&lt; req-&gt;httpMinor;</span></div>
-<div class="line"><span class="lineno">  455</span><span class="comment">                            PLOG(ERROR) &lt;&lt; &quot;  /home/voc/projects/snodec/snode.c/CMakeLists.txt&quot;;</span></div>
-<div class="line"><span class="lineno">  456</span><span class="comment">                        }</span></div>
-<div class="line"><span class="lineno">  457</span><span class="comment">                    },</span></div>
-<div class="line"><span class="lineno">  458</span><span class="comment">                    [](const std::shared_ptr&lt;Request&gt;&amp; req, const std::shared_ptr&lt;Response&gt;&amp; res) {</span></div>
-<div class="line"><span class="lineno">  459</span><span class="comment">                        logResponse(req, res);</span></div>
-<div class="line"><span class="lineno">  460</span><span class="comment">                    },</span></div>
-<div class="line"><span class="lineno">  461</span><span class="comment">                    [req](const std::shared_ptr&lt;Request&gt;&amp;, const std::string&amp;) {</span></div>
-<div class="line"><span class="lineno">  462</span><span class="comment">                    });</span></div>
-<div class="line"><span class="lineno">  463</span><span class="comment"></span> </div>
-<div class="line"><span class="lineno">  464</span><span class="comment">                req-&gt;method = &quot;GET&quot;;</span></div>
-<div class="line"><span class="lineno">  465</span><span class="comment">                req-&gt;url = &quot;/&quot;;</span></div>
-<div class="line"><span class="lineno">  466</span><span class="comment">                req-&gt;set(&quot;Connection&quot;, &quot;keep-alive&quot;);</span></div>
-<div class="line"><span class="lineno">  467</span><span class="comment">                req-&gt;set(&quot;Test&quot;, &quot;eee&quot;);</span></div>
-<div class="line"><span class="lineno">  468</span><span class="comment">                req-&gt;setTrailer(&quot;MyTrailer1&quot;, &quot;MyTrailerValue1&quot;);</span></div>
-<div class="line"><span class="lineno">  469</span><span class="comment">                req-&gt;setTrailer(&quot;MyTrailer2&quot;, &quot;MyTrailerValue2&quot;);</span></div>
-<div class="line"><span class="lineno">  470</span><span class="comment">                req-&gt;sendFile(</span></div>
-<div class="line"><span class="lineno">  471</span><span class="comment">                    &quot;/home/voc/projects/snodec/snode.c/CMakeLists.txt&quot;,</span></div>
-<div class="line"><span class="lineno">  472</span><span class="comment">                    [req](int ret) {</span></div>
-<div class="line"><span class="lineno">  473</span><span class="comment">                        if (ret == 0) {</span></div>
-<div class="line"><span class="lineno">  474</span><span class="comment">                            VLOG(1) &lt;&lt; req-&gt;getSocketContext()-&gt;getSocketConnection()-&gt;getConnectionName()</span></div>
-<div class="line"><span class="lineno">  475</span><span class="comment">                                    &lt;&lt; &quot; HTTP: Request accepted: GET / HTTP/&quot; &lt;&lt; req-&gt;httpMajor &lt;&lt; &quot;.&quot; &lt;&lt; req-&gt;httpMinor;</span></div>
-<div class="line"><span class="lineno">  476</span><span class="comment">                            VLOG(1) &lt;&lt; &quot;  /home/voc/projects/snodec/snode.c/CMakeLists.txt&quot;;</span></div>
-<div class="line"><span class="lineno">  477</span><span class="comment">                        } else {</span></div>
-<div class="line"><span class="lineno">  478</span><span class="comment">                            LOG(ERROR) &lt;&lt; req-&gt;getSocketContext()-&gt;getSocketConnection()-&gt;getConnectionName()</span></div>
-<div class="line"><span class="lineno">  479</span><span class="comment">                                       &lt;&lt; &quot; HTTP: Request failed: GET / HTTP/&quot; &lt;&lt; req-&gt;httpMajor &lt;&lt; &quot;.&quot; &lt;&lt; req-&gt;httpMinor;</span></div>
-<div class="line"><span class="lineno">  480</span><span class="comment">                            PLOG(ERROR) &lt;&lt; &quot;  /home/voc/projects/snodec/snode.c/CMakeLists.txt&quot;;</span></div>
-<div class="line"><span class="lineno">  481</span><span class="comment">                        }</span></div>
-<div class="line"><span class="lineno">  482</span><span class="comment">                    },</span></div>
-<div class="line"><span class="lineno">  483</span><span class="comment">                    [](const std::shared_ptr&lt;Request&gt;&amp; req, const std::shared_ptr&lt;Response&gt;&amp; res) {</span></div>
-<div class="line"><span class="lineno">  484</span><span class="comment">                        logResponse(req, res);</span></div>
-<div class="line"><span class="lineno">  485</span><span class="comment">                    },</span></div>
-<div class="line"><span class="lineno">  486</span><span class="comment">                    [req](const std::shared_ptr&lt;Request&gt;&amp;, const std::string&amp;) {</span></div>
-<div class="line"><span class="lineno">  487</span><span class="comment">                    });</span></div>
-<div class="line"><span class="lineno">  488</span><span class="comment">            });</span></div>
-<div class="line"><span class="lineno">  489</span><span class="comment">            */</span></div>
-<div class="line"><span class="lineno">  490</span><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="lineno">  491</span>            },</div>
-<div class="line"><span class="lineno">  492</span>            []([[maybe_unused]] <span class="keyword">const</span> std::shared_ptr&lt;Request&gt;&amp; req) {</div>
-<div class="line"><span class="lineno">  493</span>                VLOG(1) &lt;&lt; req-&gt;getSocketContext()-&gt;getSocketConnection()-&gt;getConnectionName() &lt;&lt; <span class="stringliteral">&quot;: OnRequestEnd&quot;</span>;</div>
-<div class="line"><span class="lineno">  494</span>            });</div>
-<div class="line"><span class="lineno">  495</span> </div>
-<div class="line"><span class="lineno">  496</span>        client.setOnConnect([](SocketConnection* socketConnection) { <span class="comment">// onConnect</span></div>
-<div class="line"><span class="lineno">  497</span>            VLOG(1) &lt;&lt; socketConnection-&gt;getConnectionName() &lt;&lt; <span class="stringliteral">&quot;: OnConnect&quot;</span>;</div>
-<div class="line"><span class="lineno">  498</span> </div>
-<div class="line"><span class="lineno">  499</span>            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;\tLocal: &quot;</span> &lt;&lt; socketConnection-&gt;getLocalAddress().toString();</div>
-<div class="line"><span class="lineno">  500</span>            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;\tPeer:  &quot;</span> &lt;&lt; socketConnection-&gt;getRemoteAddress().toString();</div>
-<div class="line"><span class="lineno">  501</span>        });</div>
-<div class="line"><span class="lineno">  502</span> </div>
-<div class="line"><span class="lineno">  503</span>        client.setOnDisconnect([](SocketConnection* socketConnection) { <span class="comment">// onDisconnect</span></div>
-<div class="line"><span class="lineno">  504</span>            VLOG(1) &lt;&lt; socketConnection-&gt;getConnectionName() &lt;&lt; <span class="stringliteral">&quot;: OnDisconnect&quot;</span>;</div>
+<div class="line"><span class="lineno">  440</span><span class="comment">            req-&gt;method = &quot;GET&quot;;</span></div>
+<div class="line"><span class="lineno">  441</span><span class="comment">            req-&gt;url = &quot;/&quot;;</span></div>
+<div class="line"><span class="lineno">  442</span><span class="comment">            //                req-&gt;set(&quot;Connection&quot;, &quot;close&quot;);</span></div>
+<div class="line"><span class="lineno">  443</span><span class="comment">            req-&gt;set(&quot;Test&quot;, &quot;xxx&quot;);</span></div>
+<div class="line"><span class="lineno">  444</span><span class="comment">            req-&gt;end(</span></div>
+<div class="line"><span class="lineno">  445</span><span class="comment">                [](const std::shared_ptr&lt;Request&gt;&amp; req, const std::shared_ptr&lt;Response&gt;&amp; res) {</span></div>
+<div class="line"><span class="lineno">  446</span><span class="comment">                    logResponse(req, res);</span></div>
+<div class="line"><span class="lineno">  447</span><span class="comment">                },</span></div>
+<div class="line"><span class="lineno">  448</span><span class="comment">                [req](const std::shared_ptr&lt;Request&gt;&amp;, const std::string&amp;) {</span></div>
+<div class="line"><span class="lineno">  449</span><span class="comment">                });</span></div>
+<div class="line"><span class="lineno">  450</span><span class="comment">            core::EventReceiver::atNextTick([&amp;req]() {</span></div>
+<div class="line"><span class="lineno">  451</span><span class="comment">                req-&gt;method = &quot;GET&quot;;</span></div>
+<div class="line"><span class="lineno">  452</span><span class="comment">                req-&gt;url = &quot;/&quot;;</span></div>
+<div class="line"><span class="lineno">  453</span><span class="comment">                req-&gt;set(&quot;Connection&quot;, &quot;keep-alive&quot;);</span></div>
+<div class="line"><span class="lineno">  454</span><span class="comment">                req-&gt;set(&quot;Test&quot;, &quot;ddd&quot;);</span></div>
+<div class="line"><span class="lineno">  455</span><span class="comment">                req-&gt;sendFile(</span></div>
+<div class="line"><span class="lineno">  456</span><span class="comment">                    &quot;/home/voc/projects/snodec/snode.c/CMakeLists.txt&quot;,</span></div>
+<div class="line"><span class="lineno">  457</span><span class="comment">                    [req](int ret) {</span></div>
+<div class="line"><span class="lineno">  458</span><span class="comment">                        if (ret == 0) {</span></div>
+<div class="line"><span class="lineno">  459</span><span class="comment">                            VLOG(1) &lt;&lt; req-&gt;getSocketContext()-&gt;getSocketConnection()-&gt;getConnectionName()</span></div>
+<div class="line"><span class="lineno">  460</span><span class="comment">                                    &lt;&lt; &quot; HTTP: Request accepted: GET / HTTP/&quot; &lt;&lt; req-&gt;httpMajor &lt;&lt; &quot;.&quot; &lt;&lt; req-&gt;httpMinor;</span></div>
+<div class="line"><span class="lineno">  461</span><span class="comment">                            VLOG(1) &lt;&lt; &quot;  /home/voc/projects/snodec/snode.c/CMakeLists.txt&quot;;</span></div>
+<div class="line"><span class="lineno">  462</span><span class="comment">                        } else {</span></div>
+<div class="line"><span class="lineno">  463</span><span class="comment">                            LOG(ERROR) &lt;&lt; req-&gt;getSocketContext()-&gt;getSocketConnection()-&gt;getConnectionName()</span></div>
+<div class="line"><span class="lineno">  464</span><span class="comment">                                       &lt;&lt; &quot; HTTP: Request failed: GET / HTTP/&quot; &lt;&lt; req-&gt;httpMajor &lt;&lt; &quot;.&quot; &lt;&lt; req-&gt;httpMinor;</span></div>
+<div class="line"><span class="lineno">  465</span><span class="comment">                            PLOG(ERROR) &lt;&lt; &quot;  /home/voc/projects/snodec/snode.c/CMakeLists.txt&quot;;</span></div>
+<div class="line"><span class="lineno">  466</span><span class="comment">                        }</span></div>
+<div class="line"><span class="lineno">  467</span><span class="comment">                    },</span></div>
+<div class="line"><span class="lineno">  468</span><span class="comment">                    [](const std::shared_ptr&lt;Request&gt;&amp; req, const std::shared_ptr&lt;Response&gt;&amp; res) {</span></div>
+<div class="line"><span class="lineno">  469</span><span class="comment">                        logResponse(req, res);</span></div>
+<div class="line"><span class="lineno">  470</span><span class="comment">                    },</span></div>
+<div class="line"><span class="lineno">  471</span><span class="comment">                    [req](const std::shared_ptr&lt;Request&gt;&amp;, const std::string&amp;) {</span></div>
+<div class="line"><span class="lineno">  472</span><span class="comment">                    });</span></div>
+<div class="line"><span class="lineno">  473</span><span class="comment"></span> </div>
+<div class="line"><span class="lineno">  474</span><span class="comment">                req-&gt;method = &quot;GET&quot;;</span></div>
+<div class="line"><span class="lineno">  475</span><span class="comment">                req-&gt;url = &quot;/&quot;;</span></div>
+<div class="line"><span class="lineno">  476</span><span class="comment">                req-&gt;set(&quot;Connection&quot;, &quot;keep-alive&quot;);</span></div>
+<div class="line"><span class="lineno">  477</span><span class="comment">                req-&gt;set(&quot;Test&quot;, &quot;eee&quot;);</span></div>
+<div class="line"><span class="lineno">  478</span><span class="comment">                req-&gt;setTrailer(&quot;MyTrailer1&quot;, &quot;MyTrailerValue1&quot;);</span></div>
+<div class="line"><span class="lineno">  479</span><span class="comment">                req-&gt;setTrailer(&quot;MyTrailer2&quot;, &quot;MyTrailerValue2&quot;);</span></div>
+<div class="line"><span class="lineno">  480</span><span class="comment">                req-&gt;sendFile(</span></div>
+<div class="line"><span class="lineno">  481</span><span class="comment">                    &quot;/home/voc/projects/snodec/snode.c/CMakeLists.txt&quot;,</span></div>
+<div class="line"><span class="lineno">  482</span><span class="comment">                    [req](int ret) {</span></div>
+<div class="line"><span class="lineno">  483</span><span class="comment">                        if (ret == 0) {</span></div>
+<div class="line"><span class="lineno">  484</span><span class="comment">                            VLOG(1) &lt;&lt; req-&gt;getSocketContext()-&gt;getSocketConnection()-&gt;getConnectionName()</span></div>
+<div class="line"><span class="lineno">  485</span><span class="comment">                                    &lt;&lt; &quot; HTTP: Request accepted: GET / HTTP/&quot; &lt;&lt; req-&gt;httpMajor &lt;&lt; &quot;.&quot; &lt;&lt; req-&gt;httpMinor;</span></div>
+<div class="line"><span class="lineno">  486</span><span class="comment">                            VLOG(1) &lt;&lt; &quot;  /home/voc/projects/snodec/snode.c/CMakeLists.txt&quot;;</span></div>
+<div class="line"><span class="lineno">  487</span><span class="comment">                        } else {</span></div>
+<div class="line"><span class="lineno">  488</span><span class="comment">                            LOG(ERROR) &lt;&lt; req-&gt;getSocketContext()-&gt;getSocketConnection()-&gt;getConnectionName()</span></div>
+<div class="line"><span class="lineno">  489</span><span class="comment">                                       &lt;&lt; &quot; HTTP: Request failed: GET / HTTP/&quot; &lt;&lt; req-&gt;httpMajor &lt;&lt; &quot;.&quot; &lt;&lt; req-&gt;httpMinor;</span></div>
+<div class="line"><span class="lineno">  490</span><span class="comment">                            PLOG(ERROR) &lt;&lt; &quot;  /home/voc/projects/snodec/snode.c/CMakeLists.txt&quot;;</span></div>
+<div class="line"><span class="lineno">  491</span><span class="comment">                        }</span></div>
+<div class="line"><span class="lineno">  492</span><span class="comment">                    },</span></div>
+<div class="line"><span class="lineno">  493</span><span class="comment">                    [](const std::shared_ptr&lt;Request&gt;&amp; req, const std::shared_ptr&lt;Response&gt;&amp; res) {</span></div>
+<div class="line"><span class="lineno">  494</span><span class="comment">                        logResponse(req, res);</span></div>
+<div class="line"><span class="lineno">  495</span><span class="comment">                    },</span></div>
+<div class="line"><span class="lineno">  496</span><span class="comment">                    [req](const std::shared_ptr&lt;Request&gt;&amp;, const std::string&amp;) {</span></div>
+<div class="line"><span class="lineno">  497</span><span class="comment">                    });</span></div>
+<div class="line"><span class="lineno">  498</span><span class="comment">            });</span></div>
+<div class="line"><span class="lineno">  499</span><span class="comment">            */</span></div>
+<div class="line"><span class="lineno">  500</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  501</span>            },</div>
+<div class="line"><span class="lineno">  502</span>            []([[maybe_unused]] <span class="keyword">const</span> std::shared_ptr&lt;Request&gt;&amp; req) {</div>
+<div class="line"><span class="lineno">  503</span>                VLOG(1) &lt;&lt; req-&gt;getSocketContext()-&gt;getSocketConnection()-&gt;getConnectionName() &lt;&lt; <span class="stringliteral">&quot;: OnRequestEnd&quot;</span>;</div>
+<div class="line"><span class="lineno">  504</span>            });</div>
 <div class="line"><span class="lineno">  505</span> </div>
-<div class="line"><span class="lineno">  506</span>            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;\tLocal: &quot;</span> &lt;&lt; socketConnection-&gt;getLocalAddress().toString();</div>
-<div class="line"><span class="lineno">  507</span>            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;\tPeer:  &quot;</span> &lt;&lt; socketConnection-&gt;getRemoteAddress().toString();</div>
-<div class="line"><span class="lineno">  508</span>        });</div>
-<div class="line"><span class="lineno">  509</span> </div>
-<div class="line"><span class="lineno">  510</span>        <span class="keywordflow">return</span> client;</div>
-<div class="line"><span class="lineno">  511</span>    }</div>
+<div class="line"><span class="lineno">  506</span>        client.setOnConnect([](SocketConnection* socketConnection) { <span class="comment">// onConnect</span></div>
+<div class="line"><span class="lineno">  507</span>            VLOG(1) &lt;&lt; socketConnection-&gt;getConnectionName() &lt;&lt; <span class="stringliteral">&quot;: OnConnect&quot;</span>;</div>
+<div class="line"><span class="lineno">  508</span> </div>
+<div class="line"><span class="lineno">  509</span>            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;\tLocal: &quot;</span> &lt;&lt; socketConnection-&gt;getLocalAddress().toString();</div>
+<div class="line"><span class="lineno">  510</span>            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;\tPeer:  &quot;</span> &lt;&lt; socketConnection-&gt;getRemoteAddress().toString();</div>
+<div class="line"><span class="lineno">  511</span>        });</div>
+<div class="line"><span class="lineno">  512</span> </div>
+<div class="line"><span class="lineno">  513</span>        client.setOnDisconnect([](SocketConnection* socketConnection) { <span class="comment">// onDisconnect</span></div>
+<div class="line"><span class="lineno">  514</span>            VLOG(1) &lt;&lt; socketConnection-&gt;getConnectionName() &lt;&lt; <span class="stringliteral">&quot;: OnDisconnect&quot;</span>;</div>
+<div class="line"><span class="lineno">  515</span> </div>
+<div class="line"><span class="lineno">  516</span>            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;\tLocal: &quot;</span> &lt;&lt; socketConnection-&gt;getLocalAddress().toString();</div>
+<div class="line"><span class="lineno">  517</span>            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;\tPeer:  &quot;</span> &lt;&lt; socketConnection-&gt;getRemoteAddress().toString();</div>
+<div class="line"><span class="lineno">  518</span>        });</div>
+<div class="line"><span class="lineno">  519</span> </div>
+<div class="line"><span class="lineno">  520</span>        <span class="keywordflow">return</span> client;</div>
+<div class="line"><span class="lineno">  521</span>    }</div>
 <div class="ttc" id="aclasscore_1_1timer_1_1Timer_html_a9847ce4e56baf9141cc880aa7e20c71a"><div class="ttname"><a href="classcore_1_1timer_1_1Timer.html#a9847ce4e56baf9141cc880aa7e20c71a">core::timer::Timer::singleshotTimer</a></div><div class="ttdeci">static Timer singleshotTimer(const std::function&lt; void()&gt; &amp;dispatcher, const utils::Timeval &amp;timeout)</div><div class="ttdef"><b>Definition</b> <a href="timer_2Timer_8cpp_source.html#l00057">Timer.cpp:57</a></div></div>
 <div class="ttc" id="ahttp_2model_2clients_8h_html_a938620a45c7f124ce0ed9e6cd64968ba"><div class="ttname"><a href="http_2model_2clients_8h.html#a938620a45c7f124ce0ed9e6cd64968ba">logResponse</a></div><div class="ttdeci">static void logResponse(const std::shared_ptr&lt; web::http::client::Request &gt; &amp;req, const std::shared_ptr&lt; web::http::client::Response &gt; &amp;res)</div><div class="ttdef"><b>Definition</b> <a href="http_2model_2clients_8h_source.html#l00071">clients.h:71</a></div></div>
 <div class="ttc" id="anamespaceapps_1_1http_1_1legacy_html_ac601241d8487c346389932a6dab7928d"><div class="ttname"><a href="namespaceapps_1_1http_1_1legacy.html#ac601241d8487c346389932a6dab7928d">apps::http::legacy::Client</a></div><div class="ttdeci">web::http::legacy::NET::Client Client</div><div class="ttdef"><b>Definition</b> <a href="http_2model_2clients_8h_source.html#l00090">clients.h:90</a></div></div>
-<div class="ttc" id="astructweb_1_1http_1_1client_1_1tools_1_1EventSource_1_1MessageEvent_html"><div class="ttname"><a href="structweb_1_1http_1_1client_1_1tools_1_1EventSource_1_1MessageEvent.html">web::http::client::tools::EventSource::MessageEvent</a></div><div class="ttdef"><b>Definition</b> <a href="client_2tools_2EventSource_8h_source.html#l00074">EventSource.h:74</a></div></div>
-<div class="ttc" id="astructweb_1_1http_1_1client_1_1tools_1_1EventSource_1_1MessageEvent_html_a20b3f2d716b8f7c6eceaa83ce4e6ab39"><div class="ttname"><a href="structweb_1_1http_1_1client_1_1tools_1_1EventSource_1_1MessageEvent.html#a20b3f2d716b8f7c6eceaa83ce4e6ab39">web::http::client::tools::EventSource::MessageEvent::data</a></div><div class="ttdeci">std::string data</div><div class="ttdef"><b>Definition</b> <a href="client_2tools_2EventSource_8h_source.html#l00076">EventSource.h:76</a></div></div>
-<div class="ttc" id="astructweb_1_1http_1_1client_1_1tools_1_1EventSource_1_1MessageEvent_html_a285ccb6695ae789a75b809ccd4a507d3"><div class="ttname"><a href="structweb_1_1http_1_1client_1_1tools_1_1EventSource_1_1MessageEvent.html#a285ccb6695ae789a75b809ccd4a507d3">web::http::client::tools::EventSource::MessageEvent::lastEventId</a></div><div class="ttdeci">std::string lastEventId</div><div class="ttdef"><b>Definition</b> <a href="client_2tools_2EventSource_8h_source.html#l00077">EventSource.h:77</a></div></div>
+<div class="ttc" id="astructweb_1_1http_1_1client_1_1tools_1_1EventSource_1_1MessageEvent_html"><div class="ttname"><a href="structweb_1_1http_1_1client_1_1tools_1_1EventSource_1_1MessageEvent.html">web::http::client::tools::EventSource::MessageEvent</a></div><div class="ttdef"><b>Definition</b> <a href="client_2tools_2EventSource_8h_source.html#l00073">EventSource.h:73</a></div></div>
+<div class="ttc" id="astructweb_1_1http_1_1client_1_1tools_1_1EventSource_1_1MessageEvent_html_a20b3f2d716b8f7c6eceaa83ce4e6ab39"><div class="ttname"><a href="structweb_1_1http_1_1client_1_1tools_1_1EventSource_1_1MessageEvent.html#a20b3f2d716b8f7c6eceaa83ce4e6ab39">web::http::client::tools::EventSource::MessageEvent::data</a></div><div class="ttdeci">std::string data</div><div class="ttdef"><b>Definition</b> <a href="client_2tools_2EventSource_8h_source.html#l00075">EventSource.h:75</a></div></div>
+<div class="ttc" id="astructweb_1_1http_1_1client_1_1tools_1_1EventSource_1_1MessageEvent_html_a285ccb6695ae789a75b809ccd4a507d3"><div class="ttname"><a href="structweb_1_1http_1_1client_1_1tools_1_1EventSource_1_1MessageEvent.html#a285ccb6695ae789a75b809ccd4a507d3">web::http::client::tools::EventSource::MessageEvent::lastEventId</a></div><div class="ttdeci">std::string lastEventId</div><div class="ttdef"><b>Definition</b> <a href="client_2tools_2EventSource_8h_source.html#l00076">EventSource.h:76</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -706,7 +724,7 @@ Here is the call graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceapps.html">apps</a></li><li class="navelem"><a class="el" href="namespaceapps_1_1http.html">http</a></li><li class="navelem"><a class="el" href="namespaceapps_1_1http_1_1legacy.html">legacy</a></li>
-    <li class="footer">Generated on Fri Oct 24 2025 11:05:08 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Sat Nov 8 2025 16:00:25 for SNode.C by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

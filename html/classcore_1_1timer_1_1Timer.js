@@ -1,5 +1,6 @@
 var classcore_1_1timer_1_1Timer =
 [
+    [ "Timer", "classcore_1_1timer_1_1Timer.html#af5a51defac5180752cf5b5a57040065c", null ],
     [ "~Timer", "classcore_1_1timer_1_1Timer.html#ae5a1c3eed235e6220f5e22ce54fe8a9c", null ],
     [ "intervalTimer", "classcore_1_1timer_1_1Timer.html#afb7f888ed0b254a49ebc87f0312f06d6", null ],
     [ "intervalTimer", "classcore_1_1timer_1_1Timer.html#af40b96a1dac132592ede6b51ce0ec7f9", null ],

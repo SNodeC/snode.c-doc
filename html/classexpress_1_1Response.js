@@ -24,7 +24,7 @@ var classexpress_1_1Response =
     [ "send", "classexpress_1_1Response.html#a55934f3429d433fd03e1c4f3d0a90e8c", null ],
     [ "sendFile", "classexpress_1_1Response.html#a337a357254e090aa67ad5cc5bd703fcb", null ],
     [ "sendFragment", "classexpress_1_1Response.html#a4a2b4233665bf2cefa83235d94c58e84", null ],
-    [ "sendFragment", "classexpress_1_1Response.html#a4933fe9a2a5db0251865a2969ab30f74", null ],
+    [ "sendFragment", "classexpress_1_1Response.html#a4f58b3914de9ac446c5c323bc9fe22fe", null ],
     [ "sendHeader", "classexpress_1_1Response.html#a135176b4c7f4055c97fd7982cd7e9756", null ],
     [ "sendStatus", "classexpress_1_1Response.html#a3594f40a7f6b8d06bfdd7922bade4e7c", null ],
     [ "set", "classexpress_1_1Response.html#ab51373273e70eea1ed559a1af40d0a48", null ],

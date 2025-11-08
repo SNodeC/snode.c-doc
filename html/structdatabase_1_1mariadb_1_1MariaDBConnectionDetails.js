@@ -1,5 +1,6 @@
 var structdatabase_1_1mariadb_1_1MariaDBConnectionDetails =
 [
+    [ "connectionName", "structdatabase_1_1mariadb_1_1MariaDBConnectionDetails.html#aa755b7b4ad51a440eafc89066de81262", null ],
     [ "database", "structdatabase_1_1mariadb_1_1MariaDBConnectionDetails.html#ac8844713a503b07b4b41040afbb2c9a7", null ],
     [ "flags", "structdatabase_1_1mariadb_1_1MariaDBConnectionDetails.html#ad189b5330fbba5651eaed354fa498a6a", null ],
     [ "hostname", "structdatabase_1_1mariadb_1_1MariaDBConnectionDetails.html#a13f008b21ad1be16b56b19df467924ac", null ],

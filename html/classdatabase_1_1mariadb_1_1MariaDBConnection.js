@@ -1,6 +1,6 @@
 var classdatabase_1_1mariadb_1_1MariaDBConnection =
 [
-    [ "MariaDBConnection", "classdatabase_1_1mariadb_1_1MariaDBConnection.html#a794891f07a71729619f09610842ec23c", null ],
+    [ "MariaDBConnection", "classdatabase_1_1mariadb_1_1MariaDBConnection.html#a36a87f4761b9f086e9b9f10ab18b27f5", null ],
     [ "MariaDBConnection", "classdatabase_1_1mariadb_1_1MariaDBConnection.html#ad16055156c7dee517d4c3414eee9521c", null ],
     [ "~MariaDBConnection", "classdatabase_1_1mariadb_1_1MariaDBConnection.html#a848267cbce2a6c8d5dc7a308d0e6fc9f", null ],
     [ "checkStatus", "classdatabase_1_1mariadb_1_1MariaDBConnection.html#afd1535c332bed7e8562eb5cbe9feaa66", null ],
@@ -21,7 +21,9 @@ var classdatabase_1_1mariadb_1_1MariaDBConnection =
     [ "commandSequenceQueue", "classdatabase_1_1mariadb_1_1MariaDBConnection.html#a56d334a645656ceb0a7731fa287d2208", null ],
     [ "commandStartEvent", "classdatabase_1_1mariadb_1_1MariaDBConnection.html#a0310d0696884d57c2429071c0f428071", null ],
     [ "connected", "classdatabase_1_1mariadb_1_1MariaDBConnection.html#a93aa4f49e94e59ffb3d5abfa3d896cd7", null ],
+    [ "connectionName", "classdatabase_1_1mariadb_1_1MariaDBConnection.html#aa2c2d330273d1027d6ee8c505173e7ed", null ],
     [ "currentCommand", "classdatabase_1_1mariadb_1_1MariaDBConnection.html#a77a1b6f9ec23251b2b733c8efaf4bd8b", null ],
     [ "mariaDBClient", "classdatabase_1_1mariadb_1_1MariaDBConnection.html#ae362c5a3873cf5d31f6538e76e83a807", null ],
-    [ "mysql", "classdatabase_1_1mariadb_1_1MariaDBConnection.html#af58e98f5442cd28fce95b0433538f11d", null ]
+    [ "mysql", "classdatabase_1_1mariadb_1_1MariaDBConnection.html#af58e98f5442cd28fce95b0433538f11d", null ],
+    [ "onStateChanged", "classdatabase_1_1mariadb_1_1MariaDBConnection.html#ab871140e9023f16eb82989d6a1808b08", null ]
 ];
