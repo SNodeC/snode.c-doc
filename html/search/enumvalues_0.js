@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['begin_0',['begin',['../classweb_1_1http_1_1Parser.html#a94ab44c0d65451be6ba3e6e389a8b7d5a19aad9f2fe3ce0023298ab83f7e75775',1,'web::http::Parser::BEGIN'],['../classweb_1_1websocket_1_1Receiver.html#a3cf4e2588c5333541e445cd7aef1eb9ba19aad9f2fe3ce0023298ab83f7e75775',1,'web::websocket::Receiver::BEGIN']]],
+  ['begin_0',['BEGIN',['../classweb_1_1http_1_1Parser.html#a94ab44c0d65451be6ba3e6e389a8b7d5a19aad9f2fe3ce0023298ab83f7e75775',1,'web::http::Parser::BEGIN'],['../classweb_1_1websocket_1_1Receiver.html#a3cf4e2588c5333541e445cd7aef1eb9ba19aad9f2fe3ce0023298ab83f7e75775',1,'web::websocket::Receiver::BEGIN']]],
   ['bg_5fblue_1',['BG_BLUE',['../namespaceColor.html#a20a7b04657c1d83fae5d54514d3f1622a6048affb47a52a91de89790038b5ab27',1,'Color']]],
   ['bg_5fdefault_2',['BG_DEFAULT',['../namespaceColor.html#a20a7b04657c1d83fae5d54514d3f1622a1b6f054082feceb002af4726d29c463f',1,'Color']]],
   ['bg_5fgreen_3',['BG_GREEN',['../namespaceColor.html#a20a7b04657c1d83fae5d54514d3f1622a52be40da845c5ad545356e5d8573cb78',1,'Color']]],

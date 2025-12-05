@@ -1,4 +1,4 @@
 var legacy_2rc_2Client_8h =
 [
-    [ "Client", "legacy_2rc_2Client_8h.html#a62be008034e497d02271d4b84a083c55", null ]
+    [ "web::http::legacy::rc::Client", "namespaceweb_1_1http_1_1legacy_1_1rc.html#a8716801019f0aa00aded636425316a21", null ]
 ];

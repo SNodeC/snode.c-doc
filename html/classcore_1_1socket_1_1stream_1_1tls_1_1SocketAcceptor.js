@@ -8,5 +8,6 @@ var classcore_1_1socket_1_1stream_1_1tls_1_1SocketAcceptor =
     [ "SocketAcceptor", "classcore_1_1socket_1_1stream_1_1tls_1_1SocketAcceptor.html#a929fd4348a07181a4d4398480cdf309c", null ],
     [ "clientHelloCallback", "classcore_1_1socket_1_1stream_1_1tls_1_1SocketAcceptor.html#a3c9a519fa59d27638a2717db44c886ea", null ],
     [ "init", "classcore_1_1socket_1_1stream_1_1tls_1_1SocketAcceptor.html#a6657559b8e24b24dc6a9da1e2090c837", null ],
-    [ "useNextSocketAddress", "classcore_1_1socket_1_1stream_1_1tls_1_1SocketAcceptor.html#aae56eb14b4706fc6fb69b67c1dfe815b", null ]
+    [ "useNextSocketAddress", "classcore_1_1socket_1_1stream_1_1tls_1_1SocketAcceptor.html#aae56eb14b4706fc6fb69b67c1dfe815b", null ],
+    [ "config", "classcore_1_1socket_1_1stream_1_1tls_1_1SocketAcceptor.html#a1d954893c9874c954f89526cc98a4763", null ]
 ];

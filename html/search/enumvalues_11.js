@@ -8,5 +8,5 @@ var searchData=
   ['w_5fqueries_5',['W_QUERIES',['../classexpress_1_1middleware_1_1VerboseRequest.html#aae17348f5373a80d776ad8dc77eff1fda5bb9727c297b3bdd10674d2574319a9a',1,'express::middleware::VerboseRequest']]],
   ['w_5frequest_6',['W_REQUEST',['../classexpress_1_1middleware_1_1VerboseRequest.html#aae17348f5373a80d776ad8dc77eff1fdab5bb7eead989641bad11ed329e287f71',1,'express::middleware::VerboseRequest']]],
   ['w_5ftrailer_7',['W_TRAILER',['../classexpress_1_1middleware_1_1VerboseRequest.html#aae17348f5373a80d776ad8dc77eff1fda62474085b2bcd0c66904f4e69b34e717',1,'express::middleware::VerboseRequest']]],
-  ['wr_8',['wr',['../classcore_1_1EventMultiplexer.html#a922f1b8ccf15265807a9f7ebce6d5097a861593a7d9f4abff46ef45b13df6fc53',1,'core::EventMultiplexer::WR'],['../classnet_1_1phy_1_1stream_1_1PhysicalSocket.html#abc1cca417fccc52ea36dbfe55bad77fdabffb78c9f13fef2abe18bc0747673839',1,'net::phy::stream::PhysicalSocket::WR']]]
+  ['wr_8',['WR',['../classcore_1_1EventMultiplexer.html#a922f1b8ccf15265807a9f7ebce6d5097a861593a7d9f4abff46ef45b13df6fc53',1,'core::EventMultiplexer::WR'],['../classnet_1_1phy_1_1stream_1_1PhysicalSocket.html#abc1cca417fccc52ea36dbfe55bad77fdabffb78c9f13fef2abe18bc0747673839',1,'net::phy::stream::PhysicalSocket::WR']]]
 ];

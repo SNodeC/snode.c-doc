@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['object_0',['Object',['../index.html#the-coresocketstate-object',1,'The &lt;span class=&quot;tt&quot;&gt;core::socket::State&lt;/span&gt; Object'],['../index.html#the-coresocketstate-object-1',1,'The &lt;span class=&quot;tt&quot;&gt;core::socket::State&lt;/span&gt; Object']]],
+  ['of_20a_20configuration_20file_1',['Default Name of a Configuration File',['../index.html#default-name-of-a-configuration-file',1,'']]],
+  ['of_20all_20configuration_20items_2',['List of all Configuration Items',['../index.html#list-of-all-configuration-items',1,'']]],
+  ['of_20configuration_20files_3',['Default Location of Configuration Files',['../index.html#default-location-of-configuration-files',1,'']]],
+  ['of_20content_4',['Table of Content',['../index.html#table-of-content',1,'']]],
+  ['of_20socketclient_20classes_5',['All Constructors of &lt;span class=&quot;tt&quot;&gt;SocketClient&lt;/span&gt; Classes',['../index.html#all-constructors-of-socketclient-classes',1,'']]],
+  ['of_20socketserver_20and_20socketclient_20classes_6',['of SocketServer and SocketClient Classes',['../index.html#common-aspects-of-socketserver-and-socketclient-classes',1,'Common Aspects of &lt;span class=&quot;tt&quot;&gt;SocketServer&lt;/span&gt; and &lt;span class=&quot;tt&quot;&gt;SocketClient&lt;/span&gt; Classes'],['../index.html#constructors-of-socketserver-and-socketclient-classes',1,'Constructors of &lt;span class=&quot;tt&quot;&gt;SocketServer&lt;/span&gt; and &lt;span class=&quot;tt&quot;&gt;SocketClient&lt;/span&gt; Classes']]],
+  ['of_20socketserver_20classes_7',['All Constructors of &lt;span class=&quot;tt&quot;&gt;SocketServer&lt;/span&gt; Classes',['../index.html#all-constructors-of-socketserver-classes',1,'']]],
+  ['of_20the_20command_20line_20interface_8',['Anatomy of the Command Line Interface',['../index.html#anatomy-of-the-command-line-interface',1,'']]],
+  ['on_20debian_20style_20systems_20x86_2064_20arm_9',['Installation on Debian Style Systems (x86-64, Arm)',['../index.html#installation-on-debian-style-systems-x86-64-arm',1,'']]],
+  ['on_20openwrt_10',['Deploment on OpenWRT',['../index.html#deploment-on-openwrt',1,'']]],
+  ['onconnect_20callback_11',['The &lt;span class=&quot;tt&quot;&gt;onConnect&lt;/span&gt; Callback',['../index.html#the-onconnect-callback',1,'']]],
+  ['onconnected_20callback_12',['The &lt;span class=&quot;tt&quot;&gt;onConnected&lt;/span&gt; Callback',['../index.html#the-onconnected-callback',1,'']]],
+  ['ondisconnected_20callback_13',['The &lt;span class=&quot;tt&quot;&gt;onDisconnected&lt;/span&gt; Callback',['../index.html#the-ondisconnected-callback',1,'']]],
+  ['one_20instance_20in_20an_20application_14',['Using More Than One Instance in an Application',['../index.html#using-more-than-one-instance-in-an-application',1,'']]],
+  ['openwrt_15',['Deploment on OpenWRT',['../index.html#deploment-on-openwrt',1,'']]],
+  ['optional_16',['Optional',['../index.html#optional',1,'Optional'],['../index.html#optional-1',1,'Optional']]],
+  ['options_20for_20configuration_17',['Three different Options for Configuration',['../index.html#three-different-options-for-configuration',1,'']]],
+  ['options_20for_20ipv4_20and_20ipv6_20socketserver_18',['Specific &lt;em&gt;socket&lt;/em&gt; Options for IPv4 and IPv6 &lt;em&gt;SocketServer&lt;/em&gt;',['../index.html#specific-socket-options-for-ipv4-and-ipv6-socketserver',1,'']]],
+  ['options_20for_20ipv6_20socketserver_20and_20socketclient_19',['Specific &lt;em&gt;socket&lt;/em&gt; Options for IPv6 &lt;em&gt;SocketServer&lt;/em&gt; and &lt;em&gt;SocketClient&lt;/em&gt;',['../index.html#specific-socket-options-for-ipv6-socketserver-and-socketclient',1,'']]],
+  ['options_20for_20socketserver_20and_20socketclient_20instances_20',['Common &lt;em&gt;socket&lt;/em&gt; Options for &lt;em&gt;SocketServer&lt;/em&gt; and &lt;em&gt;SocketClient&lt;/em&gt; Instances',['../index.html#common-socket-options-for-socketserver-and-socketclient-instances',1,'']]],
+  ['other_20network_20layers_21',['Using SSL/TLS with Other Network Layers',['../index.html#using-ssltls-with-other-network-layers',1,'']]],
+  ['our_20echoserver_20and_20echoclient_22',['CMakeLists.txt file for Building and Installing our &lt;em&gt;echoserver&lt;/em&gt; and &lt;em&gt;echoclient&lt;/em&gt;',['../index.html#cmakeliststxt-file-for-building-and-installing-our-echoserver-and-echoclient',1,'']]],
+  ['over_20websocket_23',['MQTT Over WebSocket',['../index.html#mqtt-over-websocket',1,'']]]
+];

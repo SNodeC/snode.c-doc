@@ -1,7 +1,7 @@
 var classweb_1_1websocket_1_1Receiver =
 [
-    [ "ELength2", "unionweb_1_1websocket_1_1Receiver_1_1ELength2.html", "unionweb_1_1websocket_1_1Receiver_1_1ELength2" ],
     [ "ELength8", "unionweb_1_1websocket_1_1Receiver_1_1ELength8.html", "unionweb_1_1websocket_1_1Receiver_1_1ELength8" ],
+    [ "ELength2", "unionweb_1_1websocket_1_1Receiver_1_1ELength2.html", "unionweb_1_1websocket_1_1Receiver_1_1ELength2" ],
     [ "ParserState", "classweb_1_1websocket_1_1Receiver.html#a3cf4e2588c5333541e445cd7aef1eb9b", [
       [ "BEGIN", "classweb_1_1websocket_1_1Receiver.html#a3cf4e2588c5333541e445cd7aef1eb9ba19aad9f2fe3ce0023298ab83f7e75775", null ],
       [ "OPCODE", "classweb_1_1websocket_1_1Receiver.html#a3cf4e2588c5333541e445cd7aef1eb9ba11bdee9fdefbd8d33a25257557bddbef", null ],

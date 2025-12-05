@@ -1,10 +1,11 @@
 var namespacecore =
 [
+    [ "timer", "namespacecore_1_1timer.html", "namespacecore_1_1timer" ],
+    [ "socket", "namespacecore_1_1socket.html", "namespacecore_1_1socket" ],
+    [ "pipe", "namespacecore_1_1pipe.html", "namespacecore_1_1pipe" ],
     [ "eventreceiver", "namespacecore_1_1eventreceiver.html", "namespacecore_1_1eventreceiver" ],
     [ "file", "namespacecore_1_1file.html", "namespacecore_1_1file" ],
     [ "multiplexer", "namespacecore_1_1multiplexer.html", "namespacecore_1_1multiplexer" ],
-    [ "pipe", "namespacecore_1_1pipe.html", "namespacecore_1_1pipe" ],
-    [ "socket", "namespacecore_1_1socket.html", "namespacecore_1_1socket" ],
     [ "ssl", "namespacecore_1_1ssl.html", [
       [ "SSL_read", "namespacecore_1_1ssl.html#a7a7db589912354e9adb47a18b8c5433f", null ],
       [ "SSL_write", "namespacecore_1_1ssl.html#a352e8be6a2fa7ad8fe817dd4d642bf3d", null ]
@@ -46,19 +47,18 @@ var namespacecore =
       [ "socket", "namespacecore_1_1system.html#a5ffaddeca7b0ee1c5ee33addd15e02db", null ],
       [ "write", "namespacecore_1_1system.html#ae492f0526e716bf3a8bf341386bae61c", null ]
     ] ],
-    [ "timer", "namespacecore_1_1timer.html", "namespacecore_1_1timer" ],
+    [ "SNodeC", "classcore_1_1SNodeC.html", "classcore_1_1SNodeC" ],
     [ "Descriptor", "classcore_1_1Descriptor.html", "classcore_1_1Descriptor" ],
     [ "DescriptorEventPublisher", "classcore_1_1DescriptorEventPublisher.html", "classcore_1_1DescriptorEventPublisher" ],
+    [ "Observer", "classcore_1_1Observer.html", "classcore_1_1Observer" ],
     [ "DescriptorEventReceiver", "classcore_1_1DescriptorEventReceiver.html", "classcore_1_1DescriptorEventReceiver" ],
-    [ "DynamicLoader", "classcore_1_1DynamicLoader.html", "classcore_1_1DynamicLoader" ],
     [ "Event", "classcore_1_1Event.html", "classcore_1_1Event" ],
     [ "EventLoop", "classcore_1_1EventLoop.html", "classcore_1_1EventLoop" ],
     [ "EventMultiplexer", "classcore_1_1EventMultiplexer.html", "classcore_1_1EventMultiplexer" ],
     [ "EventReceiver", "classcore_1_1EventReceiver.html", "classcore_1_1EventReceiver" ],
-    [ "Observer", "classcore_1_1Observer.html", "classcore_1_1Observer" ],
-    [ "SNodeC", "classcore_1_1SNodeC.html", "classcore_1_1SNodeC" ],
-    [ "Timer", "classcore_1_1Timer.html", "classcore_1_1Timer" ],
+    [ "DynamicLoader", "classcore_1_1DynamicLoader.html", "classcore_1_1DynamicLoader" ],
     [ "TimerEventPublisher", "classcore_1_1TimerEventPublisher.html", "classcore_1_1TimerEventPublisher" ],
+    [ "Timer", "classcore_1_1Timer.html", "classcore_1_1Timer" ],
     [ "TimerEventReceiver", "classcore_1_1TimerEventReceiver.html", "classcore_1_1TimerEventReceiver" ],
     [ "State", "namespacecore.html#a6613a3d81c1d25590b1cd31540d08815", [
       [ "LOADED", "namespacecore.html#a6613a3d81c1d25590b1cd31540d08815ab638272ceeff54912f043465e9a28c9b", null ],

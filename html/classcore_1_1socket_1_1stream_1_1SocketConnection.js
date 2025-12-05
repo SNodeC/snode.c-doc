@@ -6,7 +6,7 @@ var classcore_1_1socket_1_1stream_1_1SocketConnection =
     [ "close", "classcore_1_1socket_1_1stream_1_1SocketConnection.html#aed398e81ede92d1d1cfae2597580ad2c", null ],
     [ "durationToString", "classcore_1_1socket_1_1stream_1_1SocketConnection.html#a51c23c6a619b159883b096695e1e6d68", null ],
     [ "getBindAddress", "classcore_1_1socket_1_1stream_1_1SocketConnection.html#a388bdc33114aedda7cd094562da03f30", null ],
-    [ "getConfig", "classcore_1_1socket_1_1stream_1_1SocketConnection.html#afa573e6f2ca419daf92e74e491d5aae3", null ],
+    [ "getConfigInstance", "classcore_1_1socket_1_1stream_1_1SocketConnection.html#a3e7c54b2dabfa7c299ce925b214faf39", null ],
     [ "getConnectionName", "classcore_1_1socket_1_1stream_1_1SocketConnection.html#a5e26cd617f07295e8579ddb9c41bdd2c", null ],
     [ "getFd", "classcore_1_1socket_1_1stream_1_1SocketConnection.html#a8a928ac8f0b64ca57315d00f9487098c", null ],
     [ "getInstanceName", "classcore_1_1socket_1_1stream_1_1SocketConnection.html#aff2eb3e752c798455541e85054bf91de", null ],
@@ -38,6 +38,7 @@ var classcore_1_1socket_1_1stream_1_1SocketConnection =
     [ "config", "classcore_1_1socket_1_1stream_1_1SocketConnection.html#a12c73523979bdc3af402e25ba7deb6bb", null ],
     [ "connectionName", "classcore_1_1socket_1_1stream_1_1SocketConnection.html#a004417b3407f8f904b9f9e065c072525", null ],
     [ "instanceName", "classcore_1_1socket_1_1stream_1_1SocketConnection.html#aa7cc6419cb07a70c39647ed4af2e9dc4", null ],
+    [ "newSocketContext", "classcore_1_1socket_1_1stream_1_1SocketConnection.html#a17ddc2779f02bced3e42036891f66227", null ],
     [ "onlineSinceTimePoint", "classcore_1_1socket_1_1stream_1_1SocketConnection.html#af8ba1026b3629d3edfecc62a54b9bccd", null ],
     [ "socketContext", "classcore_1_1socket_1_1stream_1_1SocketConnection.html#a1c808a61977a62399c5b017a8d48c291", null ]
 ];

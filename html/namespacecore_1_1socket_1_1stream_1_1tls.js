@@ -1,13 +1,13 @@
 var namespacecore_1_1socket_1_1stream_1_1tls =
 [
-    [ "SocketAcceptor", "classcore_1_1socket_1_1stream_1_1tls_1_1SocketAcceptor.html", "classcore_1_1socket_1_1stream_1_1tls_1_1SocketAcceptor" ],
-    [ "SocketConnection", "classcore_1_1socket_1_1stream_1_1tls_1_1SocketConnection.html", "classcore_1_1socket_1_1stream_1_1tls_1_1SocketConnection" ],
-    [ "SocketConnector", "classcore_1_1socket_1_1stream_1_1tls_1_1SocketConnector.html", "classcore_1_1socket_1_1stream_1_1tls_1_1SocketConnector" ],
     [ "SocketReader", "classcore_1_1socket_1_1stream_1_1tls_1_1SocketReader.html", "classcore_1_1socket_1_1stream_1_1tls_1_1SocketReader" ],
     [ "SocketWriter", "classcore_1_1socket_1_1stream_1_1tls_1_1SocketWriter.html", "classcore_1_1socket_1_1stream_1_1tls_1_1SocketWriter" ],
-    [ "SslConfig", "structcore_1_1socket_1_1stream_1_1tls_1_1SslConfig.html", "structcore_1_1socket_1_1stream_1_1tls_1_1SslConfig" ],
     [ "TLSHandshake", "classcore_1_1socket_1_1stream_1_1tls_1_1TLSHandshake.html", "classcore_1_1socket_1_1stream_1_1tls_1_1TLSHandshake" ],
     [ "TLSShutdown", "classcore_1_1socket_1_1stream_1_1tls_1_1TLSShutdown.html", "classcore_1_1socket_1_1stream_1_1tls_1_1TLSShutdown" ],
+    [ "SocketConnection", "classcore_1_1socket_1_1stream_1_1tls_1_1SocketConnection.html", "classcore_1_1socket_1_1stream_1_1tls_1_1SocketConnection" ],
+    [ "SocketConnector", "classcore_1_1socket_1_1stream_1_1tls_1_1SocketConnector.html", "classcore_1_1socket_1_1stream_1_1tls_1_1SocketConnector" ],
+    [ "SslConfig", "structcore_1_1socket_1_1stream_1_1tls_1_1SslConfig.html", "structcore_1_1socket_1_1stream_1_1tls_1_1SslConfig" ],
+    [ "SocketAcceptor", "classcore_1_1socket_1_1stream_1_1tls_1_1SocketAcceptor.html", "classcore_1_1socket_1_1stream_1_1tls_1_1SocketAcceptor" ],
     [ "match", "namespacecore_1_1socket_1_1stream_1_1tls.html#a30e53f6d342e6345afe3a14e2d848894", null ],
     [ "password_callback", "namespacecore_1_1socket_1_1stream_1_1tls.html#a3d19258d83489ec6962a3b19da46d0c1", null ],
     [ "ssl_ctx_free", "namespacecore_1_1socket_1_1stream_1_1tls.html#adde4230d032163f2dc88e773632f9413", null ],

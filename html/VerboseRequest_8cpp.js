@@ -1,4 +1,4 @@
 var VerboseRequest_8cpp =
 [
-    [ "VerboseRequest", "VerboseRequest_8cpp.html#a1b0838f76426aa08aa88b7368de01b51", null ]
+    [ "express::middleware::VerboseRequest", "namespaceexpress_1_1middleware.html#a102255da44bc70860800d42685e7bccb", null ]
 ];

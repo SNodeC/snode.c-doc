@@ -4,6 +4,5 @@ var classcore_1_1socket_1_1stream_1_1tls_1_1SocketReader =
     [ "doSSLHandshake", "classcore_1_1socket_1_1stream_1_1tls_1_1SocketReader.html#a450a71feef299409959a0152f595ec63", null ],
     [ "onReadShutdown", "classcore_1_1socket_1_1stream_1_1tls_1_1SocketReader.html#a30686b0a8614f5ebeffe0dcae5ee0b84", null ],
     [ "read", "classcore_1_1socket_1_1stream_1_1tls_1_1SocketReader.html#a54cdad97a3553c1ba42f21192ccf22b2", null ],
-    [ "closeNotifyIsEOF", "classcore_1_1socket_1_1stream_1_1tls_1_1SocketReader.html#afd487ff376b06f76fb47c3d66054a1fc", null ],
     [ "ssl", "classcore_1_1socket_1_1stream_1_1tls_1_1SocketReader.html#a47671bff87f92462f5b6ce34ea0c414e", null ]
 ];

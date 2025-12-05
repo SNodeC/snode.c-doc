@@ -11,8 +11,8 @@ var indexSectionsWithContent =
   8: "bcdefghiklmnoprstw",
   9: "bcdegijmnorstvw",
   10: "acdehlmnpqstwx",
-  11: "cins",
-  12: "u"
+  11: "6abcdefghijlmnopqrstuvwx",
+  12: "i"
 };
 
 var indexSectionNames =

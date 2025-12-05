@@ -6,5 +6,5 @@ var namespaceiot_1_1mqtt_1_1server =
     [ "Mqtt", "classiot_1_1mqtt_1_1server_1_1Mqtt.html", "classiot_1_1mqtt_1_1server_1_1Mqtt" ],
     [ "SharedSocketContextFactory", "classiot_1_1mqtt_1_1server_1_1SharedSocketContextFactory.html", "classiot_1_1mqtt_1_1server_1_1SharedSocketContextFactory" ],
     [ "SocketContextFactory", "classiot_1_1mqtt_1_1server_1_1SocketContextFactory.html", "classiot_1_1mqtt_1_1server_1_1SocketContextFactory" ],
-    [ "SubProtocol", "namespaceiot_1_1mqtt_1_1server.html#aa9f6be400667cdb10b3e6474b496f00f", null ]
+    [ "SubProtocol", "namespaceiot_1_1mqtt_1_1server.html#a6f32b2d124ddbcdd134735fd762fae19", null ]
 ];

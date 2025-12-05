@@ -1,4 +1,4 @@
 var web_2http_2legacy_2rc_2Server_8h =
 [
-    [ "Server", "web_2http_2legacy_2rc_2Server_8h.html#a6e63cbb15760103bce661f3eacb34a59", null ]
+    [ "web::http::legacy::rc::Server", "namespaceweb_1_1http_1_1legacy_1_1rc.html#ad595577f538ad782138812f38dde35e0", null ]
 ];

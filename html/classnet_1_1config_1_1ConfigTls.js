@@ -34,7 +34,7 @@ var classnet_1_1config_1_1ConfigTls =
     [ "certOpt", "classnet_1_1config_1_1ConfigTls.html#a2510c47dde4129bbcdec99143ffdc435", null ],
     [ "cipherListOpt", "classnet_1_1config_1_1ConfigTls.html#ad602caa31c438a2ef1018034f5e0fb42", null ],
     [ "initTimeoutOpt", "classnet_1_1config_1_1ConfigTls.html#a64f7a79b3148835eff9a8a54d5ea0e40", null ],
-    [ "noCloseNotifyIsEOFOpt", "classnet_1_1config_1_1ConfigTls.html#a8fa29daf2fd5e161ef156e3a76f86d86", null ],
+    [ "noCloseNotifyIsEOFOpt", "classnet_1_1config_1_1ConfigTls.html#af854e2c64c91367ca5277217c938a4cb", null ],
     [ "shutdownTimeoutOpt", "classnet_1_1config_1_1ConfigTls.html#a2754f4c8d93ba2808f3e2d8bb8403586", null ],
     [ "sslOptionsOpt", "classnet_1_1config_1_1ConfigTls.html#a774ba125242b573f57c08cd388397c1d", null ]
 ];

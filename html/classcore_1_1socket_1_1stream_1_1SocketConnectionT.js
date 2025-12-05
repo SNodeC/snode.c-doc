@@ -27,7 +27,6 @@ var classcore_1_1socket_1_1stream_1_1SocketConnectionT =
     [ "readFromPeer", "classcore_1_1socket_1_1stream_1_1SocketConnectionT.html#aa7a9fe836f68a747b53bc1e768e99f00", null ],
     [ "readTimeout", "classcore_1_1socket_1_1stream_1_1SocketConnectionT.html#a424c4fefcacb436f239cd6a71c0fd9bb", null ],
     [ "sendToPeer", "classcore_1_1socket_1_1stream_1_1SocketConnectionT.html#a653af216d8e327787174ded4230d0505", null ],
-    [ "sendToPeer", "classcore_1_1socket_1_1stream_1_1SocketConnectionT.html#a0e8eedcbfe5dc63e1c1682b5beaf90da", null ],
     [ "sendToPeer", "classcore_1_1socket_1_1stream_1_1SocketConnectionT.html#aaf1da1865583314900f65795d97f4d3f", null ],
     [ "setReadTimeout", "classcore_1_1socket_1_1stream_1_1SocketConnectionT.html#a3c7a78f0b023522effbd8cabb88002bb", null ],
     [ "setTimeout", "classcore_1_1socket_1_1stream_1_1SocketConnectionT.html#a7b451a6f1a972d58052034e3707d6e63", null ],

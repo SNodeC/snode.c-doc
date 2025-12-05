@@ -7,5 +7,6 @@ var classcore_1_1socket_1_1stream_1_1tls_1_1SocketConnector =
     [ "SocketConnector", "classcore_1_1socket_1_1stream_1_1tls_1_1SocketConnector.html#af45c181a742d6ed7e96eb52da07269f7", null ],
     [ "SocketConnector", "classcore_1_1socket_1_1stream_1_1tls_1_1SocketConnector.html#aa471ae44c1a8f4b1c640856a87a0746b", null ],
     [ "init", "classcore_1_1socket_1_1stream_1_1tls_1_1SocketConnector.html#a72d36ae5b8318b1f31fc404ca754f125", null ],
-    [ "useNextSocketAddress", "classcore_1_1socket_1_1stream_1_1tls_1_1SocketConnector.html#a5a50e5ce6aac0b3237bda03c88f1cc14", null ]
+    [ "useNextSocketAddress", "classcore_1_1socket_1_1stream_1_1tls_1_1SocketConnector.html#a5a50e5ce6aac0b3237bda03c88f1cc14", null ],
+    [ "config", "classcore_1_1socket_1_1stream_1_1tls_1_1SocketConnector.html#ab106b7ef505666b63fb9e4c6002c887a", null ]
 ];
