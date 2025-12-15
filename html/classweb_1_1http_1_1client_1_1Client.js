@@ -10,5 +10,5 @@ var classweb_1_1http_1_1client_1_1Client =
     [ "Client", "classweb_1_1http_1_1client_1_1Client.html#a6f5679bbd50d76a3d9d6ae23f9b8d209", null ],
     [ "Client", "classweb_1_1http_1_1client_1_1Client.html#ab094107b696bc37a5a2c06b1709cb98f", null ],
     [ "Client", "classweb_1_1http_1_1client_1_1Client.html#a391eb4161b99852109628b5f74f15ae1", null ],
-    [ "setPipelinedRequests", "classweb_1_1http_1_1client_1_1Client.html#ae3470613084a73a3af01560a875e75c3", null ]
+    [ "setPipelinedRequests", "classweb_1_1http_1_1client_1_1Client.html#ac865033c2288f2089d8176134099da79", null ]
 ];

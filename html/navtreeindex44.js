@@ -1,17 +1,5 @@
 var NAVTREEINDEX44 =
 {
-"mqtt_2client_2packets_2Pingresp_8h_source.html":[4,0,4,0,0,0,3],
-"mqtt_2client_2packets_2Puback_8cpp.html":[4,0,4,0,0,0,4],
-"mqtt_2client_2packets_2Puback_8cpp_source.html":[4,0,4,0,0,0,4],
-"mqtt_2client_2packets_2Puback_8h.html":[4,0,4,0,0,0,5],
-"mqtt_2client_2packets_2Puback_8h_source.html":[4,0,4,0,0,0,5],
-"mqtt_2client_2packets_2Pubcomp_8cpp.html":[4,0,4,0,0,0,6],
-"mqtt_2client_2packets_2Pubcomp_8cpp_source.html":[4,0,4,0,0,0,6],
-"mqtt_2client_2packets_2Pubcomp_8h.html":[4,0,4,0,0,0,7],
-"mqtt_2client_2packets_2Pubcomp_8h_source.html":[4,0,4,0,0,0,7],
-"mqtt_2client_2packets_2Publish_8cpp.html":[4,0,4,0,0,0,8],
-"mqtt_2client_2packets_2Publish_8cpp_source.html":[4,0,4,0,0,0,8],
-"mqtt_2client_2packets_2Publish_8h.html":[4,0,4,0,0,0,9],
 "mqtt_2client_2packets_2Publish_8h_source.html":[4,0,4,0,0,0,9],
 "mqtt_2client_2packets_2Pubrec_8cpp.html":[4,0,4,0,0,0,10],
 "mqtt_2client_2packets_2Pubrec_8cpp_source.html":[4,0,4,0,0,0,10],
@@ -249,5 +237,17 @@ var NAVTREEINDEX44 =
 "namespacecore_1_1multiplexer_1_1select.html":[1,0,4,5,2],
 "namespacecore_1_1pipe.html":[1,0,4,2],
 "namespacecore_1_1socket.html":[1,0,4,1],
-"namespacecore_1_1socket_1_1stream.html":[1,0,4,1,0]
+"namespacecore_1_1socket_1_1stream.html":[1,0,4,1,0],
+"namespacecore_1_1socket_1_1stream.html#a1c2a8be99fe91523dcc41ce0e97085f7":[1,0,4,1,0,16],
+"namespacecore_1_1socket_1_1stream.html#ab1c80abfd897354e39405a2262153b2f":[1,0,4,1,0,18],
+"namespacecore_1_1socket_1_1stream.html#aebec07caeb27d0a80d1929382921d7a6":[1,0,4,1,0,13],
+"namespacecore_1_1socket_1_1stream.html#aecb4c38cfb5bd5a8e1f1a65c4e2c2e91":[1,0,4,1,0,14],
+"namespacecore_1_1socket_1_1stream.html#af7e042d68b8b8065c11332824c38c98d":[1,0,4,1,0,17],
+"namespacecore_1_1socket_1_1stream.html#afe631ab6ff33cc38df894fa7ef3c8f81":[1,0,4,1,0,15],
+"namespacecore_1_1socket_1_1stream_1_1legacy.html":[1,0,4,1,0,0],
+"namespacecore_1_1socket_1_1stream_1_1stream.html":[1,0,4,1,0,2],
+"namespacecore_1_1socket_1_1stream_1_1tls.html":[1,0,4,1,0,1],
+"namespacecore_1_1socket_1_1stream_1_1tls.html#a02131376c1eb2971279b609d72e32784":[1,0,4,1,0,1,18],
+"namespacecore_1_1socket_1_1stream_1_1tls.html#a30e53f6d342e6345afe3a14e2d848894":[1,0,4,1,0,1,8],
+"namespacecore_1_1socket_1_1stream_1_1tls.html#a322715864c9cd97e7b46ddebffef8fa5":[1,0,4,1,0,1,20]
 };

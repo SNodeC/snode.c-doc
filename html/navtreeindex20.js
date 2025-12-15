@@ -1,17 +1,5 @@
 var NAVTREEINDEX20 =
 {
-"classiot_1_1mqtt_1_1server_1_1Mqtt.html#a92036680046e60baa280afa4f20c5580":[1,0,8,1,3,3,3],
-"classiot_1_1mqtt_1_1server_1_1Mqtt.html#a92036680046e60baa280afa4f20c5580":[3,0,5,1,3,3,3],
-"classiot_1_1mqtt_1_1server_1_1Mqtt.html#a9232774fb242f72b608bc2ce4dbbedfc":[1,0,8,1,3,3,38],
-"classiot_1_1mqtt_1_1server_1_1Mqtt.html#a9232774fb242f72b608bc2ce4dbbedfc":[3,0,5,1,3,3,38],
-"classiot_1_1mqtt_1_1server_1_1Mqtt.html#a96a6804327a823841124ac64947dcd9d":[1,0,8,1,3,3,59],
-"classiot_1_1mqtt_1_1server_1_1Mqtt.html#a96a6804327a823841124ac64947dcd9d":[3,0,5,1,3,3,59],
-"classiot_1_1mqtt_1_1server_1_1Mqtt.html#a97da3792044e7651be30d476afddd608":[1,0,8,1,3,3,65],
-"classiot_1_1mqtt_1_1server_1_1Mqtt.html#a97da3792044e7651be30d476afddd608":[3,0,5,1,3,3,65],
-"classiot_1_1mqtt_1_1server_1_1Mqtt.html#a998fa2832ab45f2599ad4cca5f26bb60":[1,0,8,1,3,3,37],
-"classiot_1_1mqtt_1_1server_1_1Mqtt.html#a998fa2832ab45f2599ad4cca5f26bb60":[3,0,5,1,3,3,37],
-"classiot_1_1mqtt_1_1server_1_1Mqtt.html#a9c4745d607ad80e90fb815eb309165ea":[1,0,8,1,3,3,62],
-"classiot_1_1mqtt_1_1server_1_1Mqtt.html#a9c4745d607ad80e90fb815eb309165ea":[3,0,5,1,3,3,62],
 "classiot_1_1mqtt_1_1server_1_1Mqtt.html#a9e03409a5d5c162867e02b586368f975":[1,0,8,1,3,3,60],
 "classiot_1_1mqtt_1_1server_1_1Mqtt.html#a9e03409a5d5c162867e02b586368f975":[3,0,5,1,3,3,60],
 "classiot_1_1mqtt_1_1server_1_1Mqtt.html#a9f9cfb6f141acdd5d293853a42f8c9f6":[1,0,8,1,3,3,12],
@@ -249,5 +237,17 @@ var NAVTREEINDEX20 =
 "classiot_1_1mqtt_1_1server_1_1broker_1_1SubscriptionTree.html#a20275d08afb78365f3cdbc65998690b8":[1,0,8,1,3,0,3,11],
 "classiot_1_1mqtt_1_1server_1_1broker_1_1SubscriptionTree.html#a20275d08afb78365f3cdbc65998690b8":[3,0,5,1,3,0,3,11],
 "classiot_1_1mqtt_1_1server_1_1broker_1_1SubscriptionTree.html#a3204d1532d108585a31e49dd2deee35b":[1,0,8,1,3,0,3,4],
-"classiot_1_1mqtt_1_1server_1_1broker_1_1SubscriptionTree.html#a3204d1532d108585a31e49dd2deee35b":[3,0,5,1,3,0,3,4]
+"classiot_1_1mqtt_1_1server_1_1broker_1_1SubscriptionTree.html#a3204d1532d108585a31e49dd2deee35b":[3,0,5,1,3,0,3,4],
+"classiot_1_1mqtt_1_1server_1_1broker_1_1SubscriptionTree.html#a45e77b2d03d28531e859a6d8299f2dc0":[1,0,8,1,3,0,3,10],
+"classiot_1_1mqtt_1_1server_1_1broker_1_1SubscriptionTree.html#a45e77b2d03d28531e859a6d8299f2dc0":[3,0,5,1,3,0,3,10],
+"classiot_1_1mqtt_1_1server_1_1broker_1_1SubscriptionTree.html#a482e882ae03e4d8f658dc66b9ccee974":[1,0,8,1,3,0,3,9],
+"classiot_1_1mqtt_1_1server_1_1broker_1_1SubscriptionTree.html#a482e882ae03e4d8f658dc66b9ccee974":[3,0,5,1,3,0,3,9],
+"classiot_1_1mqtt_1_1server_1_1broker_1_1SubscriptionTree.html#a4de52b300df228bf0418a65f58e314fd":[1,0,8,1,3,0,3,5],
+"classiot_1_1mqtt_1_1server_1_1broker_1_1SubscriptionTree.html#a4de52b300df228bf0418a65f58e314fd":[3,0,5,1,3,0,3,5],
+"classiot_1_1mqtt_1_1server_1_1broker_1_1SubscriptionTree.html#a6ed80f3b6927c5bb17704d3d75dc1713":[1,0,8,1,3,0,3,8],
+"classiot_1_1mqtt_1_1server_1_1broker_1_1SubscriptionTree.html#a6ed80f3b6927c5bb17704d3d75dc1713":[3,0,5,1,3,0,3,8],
+"classiot_1_1mqtt_1_1server_1_1broker_1_1SubscriptionTree.html#a856353adf6b5b87a85094901178c87d7":[1,0,8,1,3,0,3,7],
+"classiot_1_1mqtt_1_1server_1_1broker_1_1SubscriptionTree.html#a856353adf6b5b87a85094901178c87d7":[3,0,5,1,3,0,3,7],
+"classiot_1_1mqtt_1_1server_1_1broker_1_1SubscriptionTree.html#a96c626378e95d32637df714bdbc19fe9":[1,0,8,1,3,0,3,3],
+"classiot_1_1mqtt_1_1server_1_1broker_1_1SubscriptionTree.html#a96c626378e95d32637df714bdbc19fe9":[3,0,5,1,3,0,3,3]
 };

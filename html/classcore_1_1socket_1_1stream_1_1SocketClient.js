@@ -1,5 +1,6 @@
 var classcore_1_1socket_1_1stream_1_1SocketClient =
 [
+    [ "Context", "structcore_1_1socket_1_1stream_1_1SocketClient_1_1Context.html", "structcore_1_1socket_1_1stream_1_1SocketClient_1_1Context" ],
     [ "Config", "classcore_1_1socket_1_1stream_1_1SocketClient.html#aaa9712caeb5a566ef0c5779809a40278", null ],
     [ "SocketAddress", "classcore_1_1socket_1_1stream_1_1SocketClient.html#a777e7cf9a1c2f695565638fa6e8180dc", null ],
     [ "SocketConnection", "classcore_1_1socket_1_1stream_1_1SocketClient.html#a90422a2b7373dcc8d8703b20ab2bd936", null ],
@@ -11,19 +12,16 @@ var classcore_1_1socket_1_1stream_1_1SocketClient =
     [ "SocketClient", "classcore_1_1socket_1_1stream_1_1SocketClient.html#a99ff74954a0a1928e2d5eabefced9367", null ],
     [ "SocketClient", "classcore_1_1socket_1_1stream_1_1SocketClient.html#a3d01f357d4fdc914ba0f2c5a2efb394c", null ],
     [ "SocketClient", "classcore_1_1socket_1_1stream_1_1SocketClient.html#af0cefe1a9d8309841ac4bc8b0768637a", null ],
-    [ "connect", "classcore_1_1socket_1_1stream_1_1SocketClient.html#a03ddd89794644e6e592f6a75c91a26dc", null ],
-    [ "connect", "classcore_1_1socket_1_1stream_1_1SocketClient.html#ab41511e7e8d8b1f288b992ebd4901de0", null ],
-    [ "connect", "classcore_1_1socket_1_1stream_1_1SocketClient.html#a65ee11dd2232cee1d26602d6758017df", null ],
+    [ "connect", "classcore_1_1socket_1_1stream_1_1SocketClient.html#a1757b0fdd4c61cf95604cabc22bb5f48", null ],
+    [ "connect", "classcore_1_1socket_1_1stream_1_1SocketClient.html#ae839248e329dc062f200ac4c626490a5", null ],
+    [ "connect", "classcore_1_1socket_1_1stream_1_1SocketClient.html#a727ee15e841a13f3b233edf27b969822", null ],
     [ "getOnConnect", "classcore_1_1socket_1_1stream_1_1SocketClient.html#ae6e355e76fff80c622184b20294f3d2a", null ],
-    [ "getOnConnected", "classcore_1_1socket_1_1stream_1_1SocketClient.html#af965b14c012603ba47ce4c4bdd0ebad0", null ],
-    [ "getOnDisconnect", "classcore_1_1socket_1_1stream_1_1SocketClient.html#ac4634e92ce9c10a17ea3409f2ff8f476", null ],
+    [ "getOnConnected", "classcore_1_1socket_1_1stream_1_1SocketClient.html#a8962480de25ffcd1e9dd55f57c9f2b78", null ],
+    [ "getOnDisconnect", "classcore_1_1socket_1_1stream_1_1SocketClient.html#a27a6e192a03af05e6b8cfb1ad0391789", null ],
     [ "getSocketContextFactory", "classcore_1_1socket_1_1stream_1_1SocketClient.html#a989fa7cdfc4790e334356d244d6bf6db", null ],
-    [ "realConnect", "classcore_1_1socket_1_1stream_1_1SocketClient.html#aedafd316be0720f11079ff1d5ea6a083", null ],
-    [ "setOnConnect", "classcore_1_1socket_1_1stream_1_1SocketClient.html#a72f2c989da9f9103d4756dc2ba045862", null ],
-    [ "setOnConnected", "classcore_1_1socket_1_1stream_1_1SocketClient.html#a169dcc281a82e3acb84f74fc430aabca", null ],
-    [ "setOnDisconnect", "classcore_1_1socket_1_1stream_1_1SocketClient.html#ae7ccc660e0964ff761b1bfafe001b4d7", null ],
-    [ "onConnect", "classcore_1_1socket_1_1stream_1_1SocketClient.html#a710c0f399d01662c9cc3265c2e4affba", null ],
-    [ "onConnected", "classcore_1_1socket_1_1stream_1_1SocketClient.html#ac671fbf3b4ec942265ea6e14bad51c31", null ],
-    [ "onDisconnect", "classcore_1_1socket_1_1stream_1_1SocketClient.html#ab1f37d28af21d868ac8aa62691a33804", null ],
-    [ "socketContextFactory", "classcore_1_1socket_1_1stream_1_1SocketClient.html#a0b243041b7214c0a6b325ed7b257d9f6", null ]
+    [ "realConnect", "classcore_1_1socket_1_1stream_1_1SocketClient.html#a8ad2d2a77ef6bdf884383acfa9c17883", null ],
+    [ "setOnConnect", "classcore_1_1socket_1_1stream_1_1SocketClient.html#a8807acca2612620cfe4c6bb0cdc6109a", null ],
+    [ "setOnConnected", "classcore_1_1socket_1_1stream_1_1SocketClient.html#afa5c5898e3c46c2a11cf160582ff8915", null ],
+    [ "setOnDisconnect", "classcore_1_1socket_1_1stream_1_1SocketClient.html#ab2a59e50b8cf42cd8639785e98db10aa", null ],
+    [ "sharedContext", "classcore_1_1socket_1_1stream_1_1SocketClient.html#af976a0700829339c2710521aec70e13d", null ]
 ];

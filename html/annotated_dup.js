@@ -42,8 +42,8 @@ var annotated_dup =
       [ "timer", "namespacecore_1_1timer.html", [
         [ "Timer", "classcore_1_1timer_1_1Timer.html", "classcore_1_1timer_1_1Timer" ],
         [ "IntervalTimer", "classcore_1_1timer_1_1IntervalTimer.html", "classcore_1_1timer_1_1IntervalTimer" ],
-        [ "IntervalTimerStopable", "classcore_1_1timer_1_1IntervalTimerStopable.html", "classcore_1_1timer_1_1IntervalTimerStopable" ],
-        [ "SingleshotTimer", "classcore_1_1timer_1_1SingleshotTimer.html", "classcore_1_1timer_1_1SingleshotTimer" ]
+        [ "SingleshotTimer", "classcore_1_1timer_1_1SingleshotTimer.html", "classcore_1_1timer_1_1SingleshotTimer" ],
+        [ "IntervalTimerStopable", "classcore_1_1timer_1_1IntervalTimerStopable.html", "classcore_1_1timer_1_1IntervalTimerStopable" ]
       ] ],
       [ "socket", "namespacecore_1_1socket.html", [
         [ "stream", "namespacecore_1_1socket_1_1stream.html", [
@@ -119,11 +119,11 @@ var annotated_dup =
       [ "DescriptorEventPublisher", "classcore_1_1DescriptorEventPublisher.html", "classcore_1_1DescriptorEventPublisher" ],
       [ "Observer", "classcore_1_1Observer.html", "classcore_1_1Observer" ],
       [ "DescriptorEventReceiver", "classcore_1_1DescriptorEventReceiver.html", "classcore_1_1DescriptorEventReceiver" ],
+      [ "DynamicLoader", "classcore_1_1DynamicLoader.html", "classcore_1_1DynamicLoader" ],
       [ "Event", "classcore_1_1Event.html", "classcore_1_1Event" ],
       [ "EventLoop", "classcore_1_1EventLoop.html", "classcore_1_1EventLoop" ],
       [ "EventMultiplexer", "classcore_1_1EventMultiplexer.html", "classcore_1_1EventMultiplexer" ],
       [ "EventReceiver", "classcore_1_1EventReceiver.html", "classcore_1_1EventReceiver" ],
-      [ "DynamicLoader", "classcore_1_1DynamicLoader.html", "classcore_1_1DynamicLoader" ],
       [ "TimerEventPublisher", "classcore_1_1TimerEventPublisher.html", "classcore_1_1TimerEventPublisher" ],
       [ "Timer", "classcore_1_1Timer.html", "classcore_1_1Timer" ],
       [ "TimerEventReceiver", "classcore_1_1TimerEventReceiver.html", "classcore_1_1TimerEventReceiver" ]
@@ -250,9 +250,9 @@ var annotated_dup =
           [ "String", "classiot_1_1mqtt_1_1types_1_1String.html", "classiot_1_1mqtt_1_1types_1_1String" ],
           [ "UInt16", "classiot_1_1mqtt_1_1types_1_1UInt16.html", "classiot_1_1mqtt_1_1types_1_1UInt16" ],
           [ "BinaryData", "classiot_1_1mqtt_1_1types_1_1BinaryData.html", "classiot_1_1mqtt_1_1types_1_1BinaryData" ],
-          [ "TypeBase", "classiot_1_1mqtt_1_1types_1_1TypeBase.html", "classiot_1_1mqtt_1_1types_1_1TypeBase" ],
           [ "StringPair", "classiot_1_1mqtt_1_1types_1_1StringPair.html", "classiot_1_1mqtt_1_1types_1_1StringPair" ],
           [ "StringRaw", "classiot_1_1mqtt_1_1types_1_1StringRaw.html", "classiot_1_1mqtt_1_1types_1_1StringRaw" ],
+          [ "TypeBase", "classiot_1_1mqtt_1_1types_1_1TypeBase.html", "classiot_1_1mqtt_1_1types_1_1TypeBase" ],
           [ "UInt32", "classiot_1_1mqtt_1_1types_1_1UInt32.html", "classiot_1_1mqtt_1_1types_1_1UInt32" ],
           [ "UInt8", "classiot_1_1mqtt_1_1types_1_1UInt8.html", "classiot_1_1mqtt_1_1types_1_1UInt8" ],
           [ "UIntV", "classiot_1_1mqtt_1_1types_1_1UIntV.html", "classiot_1_1mqtt_1_1types_1_1UIntV" ]
@@ -283,8 +283,8 @@ var annotated_dup =
           [ "SocketContextFactory", "classiot_1_1mqtt_1_1server_1_1SocketContextFactory.html", "classiot_1_1mqtt_1_1server_1_1SocketContextFactory" ]
         ] ],
         [ "ControlPacket", "classiot_1_1mqtt_1_1ControlPacket.html", "classiot_1_1mqtt_1_1ControlPacket" ],
-        [ "FixedHeader", "classiot_1_1mqtt_1_1FixedHeader.html", "classiot_1_1mqtt_1_1FixedHeader" ],
         [ "ControlPacketDeserializer", "classiot_1_1mqtt_1_1ControlPacketDeserializer.html", "classiot_1_1mqtt_1_1ControlPacketDeserializer" ],
+        [ "FixedHeader", "classiot_1_1mqtt_1_1FixedHeader.html", "classiot_1_1mqtt_1_1FixedHeader" ],
         [ "Session", "classiot_1_1mqtt_1_1Session.html", "classiot_1_1mqtt_1_1Session" ],
         [ "MqttContext", "classiot_1_1mqtt_1_1MqttContext.html", "classiot_1_1mqtt_1_1MqttContext" ],
         [ "Mqtt", "classiot_1_1mqtt_1_1Mqtt.html", "classiot_1_1mqtt_1_1Mqtt" ],
@@ -349,11 +349,11 @@ var annotated_dup =
         ] ],
         [ "ConfigInstance", "classnet_1_1config_1_1ConfigInstance.html", "classnet_1_1config_1_1ConfigInstance" ],
         [ "ConfigConnection", "classnet_1_1config_1_1ConfigConnection.html", "classnet_1_1config_1_1ConfigConnection" ],
+        [ "ConfigSection", "classnet_1_1config_1_1ConfigSection.html", "classnet_1_1config_1_1ConfigSection" ],
         [ "ConfigLegacy", "classnet_1_1config_1_1ConfigLegacy.html", "classnet_1_1config_1_1ConfigLegacy" ],
         [ "ConfigPhysicalSocket", "classnet_1_1config_1_1ConfigPhysicalSocket.html", "classnet_1_1config_1_1ConfigPhysicalSocket" ],
         [ "ConfigPhysicalSocketClient", "classnet_1_1config_1_1ConfigPhysicalSocketClient.html", "classnet_1_1config_1_1ConfigPhysicalSocketClient" ],
         [ "ConfigPhysicalSocketServer", "classnet_1_1config_1_1ConfigPhysicalSocketServer.html", "classnet_1_1config_1_1ConfigPhysicalSocketServer" ],
-        [ "ConfigSection", "classnet_1_1config_1_1ConfigSection.html", "classnet_1_1config_1_1ConfigSection" ],
         [ "ConfigTls", "classnet_1_1config_1_1ConfigTls.html", "classnet_1_1config_1_1ConfigTls" ],
         [ "ConfigTlsClient", "classnet_1_1config_1_1ConfigTlsClient.html", "classnet_1_1config_1_1ConfigTlsClient" ],
         [ "ConfigTlsServer", "classnet_1_1config_1_1ConfigTlsServer.html", "classnet_1_1config_1_1ConfigTlsServer" ],
@@ -366,8 +366,8 @@ var annotated_dup =
       [ "phy", "namespacenet_1_1phy.html", [
         [ "stream", "namespacenet_1_1phy_1_1stream.html", [
           [ "PhysicalSocket", "classnet_1_1phy_1_1stream_1_1PhysicalSocket.html", "classnet_1_1phy_1_1stream_1_1PhysicalSocket" ],
-          [ "PhysicalSocketServer", "classnet_1_1phy_1_1stream_1_1PhysicalSocketServer.html", "classnet_1_1phy_1_1stream_1_1PhysicalSocketServer" ],
-          [ "PhysicalSocketClient", "classnet_1_1phy_1_1stream_1_1PhysicalSocketClient.html", "classnet_1_1phy_1_1stream_1_1PhysicalSocketClient" ]
+          [ "PhysicalSocketClient", "classnet_1_1phy_1_1stream_1_1PhysicalSocketClient.html", "classnet_1_1phy_1_1stream_1_1PhysicalSocketClient" ],
+          [ "PhysicalSocketServer", "classnet_1_1phy_1_1stream_1_1PhysicalSocketServer.html", "classnet_1_1phy_1_1stream_1_1PhysicalSocketServer" ]
         ] ],
         [ "dgram", "namespacenet_1_1phy_1_1dgram.html", [
           [ "PeerSocket", "classnet_1_1phy_1_1dgram_1_1PeerSocket.html", "classnet_1_1phy_1_1dgram_1_1PeerSocket" ]
@@ -556,9 +556,9 @@ var annotated_dup =
           [ "Request", "classweb_1_1http_1_1client_1_1Request.html", "classweb_1_1http_1_1client_1_1Request" ],
           [ "MasterRequest", "classweb_1_1http_1_1client_1_1MasterRequest.html", "classweb_1_1http_1_1client_1_1MasterRequest" ],
           [ "ConfigHTTP", "classweb_1_1http_1_1client_1_1ConfigHTTP.html", "classweb_1_1http_1_1client_1_1ConfigHTTP" ],
-          [ "SocketContext", "classweb_1_1http_1_1client_1_1SocketContext.html", "classweb_1_1http_1_1client_1_1SocketContext" ],
           [ "RequestCommand", "classweb_1_1http_1_1client_1_1RequestCommand.html", "classweb_1_1http_1_1client_1_1RequestCommand" ],
           [ "Response", "classweb_1_1http_1_1client_1_1Response.html", "classweb_1_1http_1_1client_1_1Response" ],
+          [ "SocketContext", "classweb_1_1http_1_1client_1_1SocketContext.html", "classweb_1_1http_1_1client_1_1SocketContext" ],
           [ "SocketContextFactory", "classweb_1_1http_1_1client_1_1SocketContextFactory.html", "classweb_1_1http_1_1client_1_1SocketContextFactory" ],
           [ "SocketContextUpgradeFactory", "classweb_1_1http_1_1client_1_1SocketContextUpgradeFactory.html", "classweb_1_1http_1_1client_1_1SocketContextUpgradeFactory" ],
           [ "SocketContextUpgradeFactorySelector", "classweb_1_1http_1_1client_1_1SocketContextUpgradeFactorySelector.html", "classweb_1_1http_1_1client_1_1SocketContextUpgradeFactorySelector" ],
@@ -629,8 +629,8 @@ var annotated_dup =
         [ "server", "namespaceweb_1_1websocket_1_1server.html", [
           [ "GroupsManager", "classweb_1_1websocket_1_1server_1_1GroupsManager.html", "classweb_1_1websocket_1_1server_1_1GroupsManager" ],
           [ "SubProtocol", "classweb_1_1websocket_1_1server_1_1SubProtocol.html", "classweb_1_1websocket_1_1server_1_1SubProtocol" ],
-          [ "SocketContextUpgrade", "classweb_1_1websocket_1_1server_1_1SocketContextUpgrade.html", "classweb_1_1websocket_1_1server_1_1SocketContextUpgrade" ],
           [ "SocketContextUpgradeFactory", "classweb_1_1websocket_1_1server_1_1SocketContextUpgradeFactory.html", "classweb_1_1websocket_1_1server_1_1SocketContextUpgradeFactory" ],
+          [ "SocketContextUpgrade", "classweb_1_1websocket_1_1server_1_1SocketContextUpgrade.html", "classweb_1_1websocket_1_1server_1_1SocketContextUpgrade" ],
           [ "SubProtocolFactorySelector", "classweb_1_1websocket_1_1server_1_1SubProtocolFactorySelector.html", "classweb_1_1websocket_1_1server_1_1SubProtocolFactorySelector" ]
         ] ],
         [ "SubProtocolFactory", "classweb_1_1websocket_1_1SubProtocolFactory.html", "classweb_1_1websocket_1_1SubProtocolFactory" ],

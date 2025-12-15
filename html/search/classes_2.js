@@ -90,9 +90,10 @@ var searchData=
   ['connect_87',['Connect',['../classiot_1_1mqtt_1_1packets_1_1Connect.html',1,'iot::mqtt::packets::Connect'],['../classiot_1_1mqtt_1_1server_1_1packets_1_1Connect.html',1,'iot::mqtt::server::packets::Connect'],['../classiot_1_1mqtt__fast_1_1packets_1_1Connect.html',1,'iot::mqtt_fast::packets::Connect']]],
   ['connecteventreceiver_88',['ConnectEventReceiver',['../classcore_1_1eventreceiver_1_1ConnectEventReceiver.html',1,'core::eventreceiver']]],
   ['contentdecoder_89',['ContentDecoder',['../classweb_1_1http_1_1ContentDecoder.html',1,'web::http']]],
-  ['controller_90',['Controller',['../classexpress_1_1Controller.html',1,'express']]],
-  ['controlpacket_91',['ControlPacket',['../classiot_1_1mqtt_1_1ControlPacket.html',1,'iot::mqtt::ControlPacket'],['../classiot_1_1mqtt__fast_1_1ControlPacket.html',1,'iot::mqtt_fast::ControlPacket']]],
-  ['controlpacketdeserializer_92',['ControlPacketDeserializer',['../classiot_1_1mqtt_1_1client_1_1ControlPacketDeserializer.html',1,'iot::mqtt::client::ControlPacketDeserializer'],['../classiot_1_1mqtt_1_1ControlPacketDeserializer.html',1,'iot::mqtt::ControlPacketDeserializer'],['../classiot_1_1mqtt_1_1server_1_1ControlPacketDeserializer.html',1,'iot::mqtt::server::ControlPacketDeserializer']]],
-  ['controlpacketfactory_93',['ControlPacketFactory',['../classiot_1_1mqtt__fast_1_1ControlPacketFactory.html',1,'iot::mqtt_fast']]],
-  ['cookieoptions_94',['CookieOptions',['../classweb_1_1http_1_1CookieOptions.html',1,'web::http']]]
+  ['context_90',['Context',['../structcore_1_1socket_1_1stream_1_1SocketClient_1_1Context.html',1,'core::socket::stream::SocketClient&lt; SocketConnectorT, SocketContextFactoryT, Args &gt;::Context'],['../structcore_1_1socket_1_1stream_1_1SocketServer_1_1Context.html',1,'core::socket::stream::SocketServer&lt; SocketAcceptorT, SocketContextFactoryT, Args &gt;::Context']]],
+  ['controller_91',['Controller',['../classexpress_1_1Controller.html',1,'express']]],
+  ['controlpacket_92',['ControlPacket',['../classiot_1_1mqtt_1_1ControlPacket.html',1,'iot::mqtt::ControlPacket'],['../classiot_1_1mqtt__fast_1_1ControlPacket.html',1,'iot::mqtt_fast::ControlPacket']]],
+  ['controlpacketdeserializer_93',['ControlPacketDeserializer',['../classiot_1_1mqtt_1_1client_1_1ControlPacketDeserializer.html',1,'iot::mqtt::client::ControlPacketDeserializer'],['../classiot_1_1mqtt_1_1ControlPacketDeserializer.html',1,'iot::mqtt::ControlPacketDeserializer'],['../classiot_1_1mqtt_1_1server_1_1ControlPacketDeserializer.html',1,'iot::mqtt::server::ControlPacketDeserializer']]],
+  ['controlpacketfactory_94',['ControlPacketFactory',['../classiot_1_1mqtt__fast_1_1ControlPacketFactory.html',1,'iot::mqtt_fast']]],
+  ['cookieoptions_95',['CookieOptions',['../classweb_1_1http_1_1CookieOptions.html',1,'web::http']]]
 ];

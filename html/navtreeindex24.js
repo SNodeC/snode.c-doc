@@ -1,17 +1,5 @@
 var NAVTREEINDEX24 =
 {
-"classiot_1_1mqtt__fast_1_1packets_1_1Pubrel.html#a61bbe57ec05e913c5d7da8a1e67c854f":[1,0,8,0,0,9,1],
-"classiot_1_1mqtt__fast_1_1packets_1_1Pubrel.html#a61bbe57ec05e913c5d7da8a1e67c854f":[3,0,5,0,0,9,1],
-"classiot_1_1mqtt__fast_1_1packets_1_1Pubrel.html#a909f3c2b21b7bcd71c8273ec51654e48":[1,0,8,0,0,9,3],
-"classiot_1_1mqtt__fast_1_1packets_1_1Pubrel.html#a909f3c2b21b7bcd71c8273ec51654e48":[3,0,5,0,0,9,3],
-"classiot_1_1mqtt__fast_1_1packets_1_1Pubrel.html#a91415207675b31e21866981415054d6c":[1,0,8,0,0,9,0],
-"classiot_1_1mqtt__fast_1_1packets_1_1Pubrel.html#a91415207675b31e21866981415054d6c":[3,0,5,0,0,9,0],
-"classiot_1_1mqtt__fast_1_1packets_1_1Suback.html":[1,0,8,0,0,10],
-"classiot_1_1mqtt__fast_1_1packets_1_1Suback.html":[3,0,5,0,0,10],
-"classiot_1_1mqtt__fast_1_1packets_1_1Suback.html#a49c7ce5b344c8a63008ca23b843a3bd3":[1,0,8,0,0,10,3],
-"classiot_1_1mqtt__fast_1_1packets_1_1Suback.html#a49c7ce5b344c8a63008ca23b843a3bd3":[3,0,5,0,0,10,3],
-"classiot_1_1mqtt__fast_1_1packets_1_1Suback.html#a5fc9d18c37ec2c87bd917ba22726ae98":[1,0,8,0,0,10,2],
-"classiot_1_1mqtt__fast_1_1packets_1_1Suback.html#a5fc9d18c37ec2c87bd917ba22726ae98":[3,0,5,0,0,10,2],
 "classiot_1_1mqtt__fast_1_1packets_1_1Suback.html#abb78cc49a9a05bf193cfa4800a91ddd0":[1,0,8,0,0,10,0],
 "classiot_1_1mqtt__fast_1_1packets_1_1Suback.html#abb78cc49a9a05bf193cfa4800a91ddd0":[3,0,5,0,0,10,0],
 "classiot_1_1mqtt__fast_1_1packets_1_1Suback.html#abc568fe902e1c5c14e4046e19d5c42c7":[1,0,8,0,0,10,4],
@@ -249,5 +237,17 @@ var NAVTREEINDEX24 =
 "classnet_1_1config_1_1ConfigAddressLocal.html#acb5d7eb6a8bcc536136eecd4175cd6c5":[1,0,11,1,12,0],
 "classnet_1_1config_1_1ConfigAddressLocal.html#acb5d7eb6a8bcc536136eecd4175cd6c5":[3,0,7,1,12,0],
 "classnet_1_1config_1_1ConfigAddressRemote.html":[1,0,11,1,13],
-"classnet_1_1config_1_1ConfigAddressRemote.html":[3,0,7,1,13]
+"classnet_1_1config_1_1ConfigAddressRemote.html":[3,0,7,1,13],
+"classnet_1_1config_1_1ConfigAddressRemote.html#a59a4f8582a1d2e123203d77f9982df14":[1,0,11,1,13,0],
+"classnet_1_1config_1_1ConfigAddressRemote.html#a59a4f8582a1d2e123203d77f9982df14":[3,0,7,1,13,0],
+"classnet_1_1config_1_1ConfigAddressReverse.html":[1,0,11,1,14],
+"classnet_1_1config_1_1ConfigAddressReverse.html":[3,0,7,1,14],
+"classnet_1_1config_1_1ConfigAddressReverse.html#ad4ae5aef1b11306ba1c0c849f58c85bd":[1,0,11,1,14,0],
+"classnet_1_1config_1_1ConfigAddressReverse.html#ad4ae5aef1b11306ba1c0c849f58c85bd":[3,0,7,1,14,0],
+"classnet_1_1config_1_1ConfigConnection.html":[1,0,11,1,2],
+"classnet_1_1config_1_1ConfigConnection.html":[3,0,7,1,2],
+"classnet_1_1config_1_1ConfigConnection.html#a0ae627618e9d6ab1f1c961264b23d7c8":[1,0,11,1,2,10],
+"classnet_1_1config_1_1ConfigConnection.html#a0ae627618e9d6ab1f1c961264b23d7c8":[3,0,7,1,2,10],
+"classnet_1_1config_1_1ConfigConnection.html#a0d5ef0c1174efeacd3f37b1372d5a1a7":[1,0,11,1,2,5],
+"classnet_1_1config_1_1ConfigConnection.html#a0d5ef0c1174efeacd3f37b1372d5a1a7":[3,0,7,1,2,5]
 };

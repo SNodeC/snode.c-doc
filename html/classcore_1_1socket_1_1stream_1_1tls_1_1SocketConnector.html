@@ -111,7 +111,7 @@ $(function() {
 <div class="dynheader">
 Inheritance diagram for core::socket::stream::tls::SocketConnector&lt; PhysicalSocketClientT, ConfigT &gt;:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classcore_1_1socket_1_1stream_1_1tls_1_1SocketConnector__inherit__graph.svg" width="296" height="432"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classcore_1_1socket_1_1stream_1_1tls_1_1SocketConnector__inherit__graph.svg" width="294" height="460"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Collaboration diagram for core::socket::stream::tls::SocketConnector&lt; PhysicalSocketClientT, ConfigT &gt;:</div>
@@ -334,14 +334,21 @@ template&lt;typename <a class="el" href="classcore_1_1socket_1_1stream_1_1Socket
 <div class="line"><span class="lineno">  109</span>              },</div>
 <div class="line"><span class="lineno">  110</span>              <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a3b8242696da2e881d5c7a601146b8d44">onStatus</a>,</div>
 <div class="line"><span class="lineno">  111</span>              <a class="code hl_variable" href="#ab106b7ef505666b63fb9e4c6002c887a">config</a>) {</div>
-<div class="line"><span class="lineno">  112</span>    }</div>
+<div class="line"><span class="lineno">  112</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classcore_1_1socket_1_1stream_1_1tls_1_1SocketConnector.html">core::eventLoopState</a>() == <a class="code hl_class" href="classcore_1_1socket_1_1stream_1_1tls_1_1SocketConnector.html">core::State::RUNNING</a>) {</div>
+<div class="line"><span class="lineno">  113</span>            <a class="code hl_function" href="#a72d36ae5b8318b1f31fc404ca754f125">init</a>();</div>
+<div class="line"><span class="lineno">  114</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  115</span>            <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#acb03092786e852e56c2886bba0787d32">Super::destruct</a>();</div>
+<div class="line"><span class="lineno">  116</span>        }</div>
+<div class="line"><span class="lineno">  117</span>    }</div>
 <div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketConnector_html_a3b8242696da2e881d5c7a601146b8d44"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a3b8242696da2e881d5c7a601146b8d44">core::socket::stream::SocketConnector&lt; PhysicalSocketClientT, ConfigT, core::socket::stream::tls::SocketConnection &gt;::onStatus</a></div><div class="ttdeci">std::function&lt; void(const SocketAddress &amp;, core::socket::State)&gt; onStatus</div><div class="ttdef"><b>Definition</b> <a href="SocketConnector_8h_source.html#l00107">SocketConnector.h:107</a></div></div>
 <div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketConnector_html_a6c78d1635423072b874b370413f88f63"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a6c78d1635423072b874b370413f88f63">core::socket::stream::SocketConnector&lt; PhysicalSocketClientT, ConfigT, core::socket::stream::tls::SocketConnection &gt;::onConnected</a></div><div class="ttdeci">std::function&lt; void(SocketConnection *)&gt; onConnected</div><div class="ttdef"><b>Definition</b> <a href="SocketConnector_8h_source.html#l00104">SocketConnector.h:104</a></div></div>
 <div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketConnector_html_a91c598275749ce41f26c19940d26cef9"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a91c598275749ce41f26c19940d26cef9">core::socket::stream::SocketConnector&lt; PhysicalSocketClientT, ConfigT, core::socket::stream::tls::SocketConnection &gt;::config</a></div><div class="ttdeci">std::shared_ptr&lt; Config &gt; config</div><div class="ttdef"><b>Definition</b> <a href="SocketConnector_8h_source.html#l00109">SocketConnector.h:109</a></div></div>
 <div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketConnector_html_a9c6092754f10aae4c186ec90548afa53"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a9c6092754f10aae4c186ec90548afa53">core::socket::stream::SocketConnector&lt; PhysicalSocketClientT, ConfigT, core::socket::stream::tls::SocketConnection &gt;::onDisconnect</a></div><div class="ttdeci">std::function&lt; void(SocketConnection *)&gt; onDisconnect</div><div class="ttdef"><b>Definition</b> <a href="SocketConnector_8h_source.html#l00105">SocketConnector.h:105</a></div></div>
 <div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketConnector_html_ab821939276a3b5a000a77296704538a6"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#ab821939276a3b5a000a77296704538a6">core::socket::stream::SocketConnector&lt; PhysicalSocketClientT, ConfigT, core::socket::stream::tls::SocketConnection &gt;::onConnect</a></div><div class="ttdeci">std::function&lt; void(SocketConnection *)&gt; onConnect</div><div class="ttdef"><b>Definition</b> <a href="SocketConnector_8h_source.html#l00103">SocketConnector.h:103</a></div></div>
+<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketConnector_html_acb03092786e852e56c2886bba0787d32"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#acb03092786e852e56c2886bba0787d32">core::socket::stream::SocketConnector&lt; PhysicalSocketClientT, ConfigT, core::socket::stream::tls::SocketConnection &gt;::destruct</a></div><div class="ttdeci">void destruct() final</div></div>
 <div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1tls_1_1SocketConnector_html"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1tls_1_1SocketConnector.html">core::socket::stream::tls::SocketConnector</a></div><div class="ttdef"><b>Definition</b> <a href="tls_2SocketConnector_8h_source.html#l00059">SocketConnector.h:60</a></div></div>
 <div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1tls_1_1SocketConnector_html_a0b4ff9288044d16e7631104a31eafeff"><div class="ttname"><a href="#a0b4ff9288044d16e7631104a31eafeff">core::socket::stream::tls::SocketConnector::Super</a></div><div class="ttdeci">core::socket::stream::SocketConnector&lt; PhysicalSocketClientT, ConfigT, core::socket::stream::tls::SocketConnection &gt; Super</div><div class="ttdef"><b>Definition</b> <a href="tls_2SocketConnector_8h_source.html#l00062">SocketConnector.h:62</a></div></div>
+<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1tls_1_1SocketConnector_html_a72d36ae5b8318b1f31fc404ca754f125"><div class="ttname"><a href="#a72d36ae5b8318b1f31fc404ca754f125">core::socket::stream::tls::SocketConnector::init</a></div><div class="ttdeci">void init() final</div><div class="ttdef"><b>Definition</b> <a href="tls_2SocketConnector_8hpp_source.html#l00135">SocketConnector.hpp:135</a></div></div>
 <div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1tls_1_1SocketConnector_html_ab106b7ef505666b63fb9e4c6002c887a"><div class="ttname"><a href="#ab106b7ef505666b63fb9e4c6002c887a">core::socket::stream::tls::SocketConnector::config</a></div><div class="ttdeci">std::shared_ptr&lt; Config &gt; config</div><div class="ttdef"><b>Definition</b> <a href="SocketConnector_8h_source.html#l00109">SocketConnector.h:109</a></div></div>
 <div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1tls_1_1SocketConnector_html_ab81f80fc4afc2027226830519613e755"><div class="ttname"><a href="#ab81f80fc4afc2027226830519613e755">core::socket::stream::tls::SocketConnector::SocketConnection</a></div><div class="ttdeci">typename Super::SocketConnection SocketConnection</div><div class="ttdef"><b>Definition</b> <a href="tls_2SocketConnector_8h_source.html#l00067">SocketConnector.h:67</a></div></div>
 <div class="ttc" id="anamespacecore_1_1socket_1_1stream_1_1tls_html_a02131376c1eb2971279b609d72e32784"><div class="ttname"><a href="namespacecore_1_1socket_1_1stream_1_1tls.html#a02131376c1eb2971279b609d72e32784">core::socket::stream::tls::ssl_set_sni</a></div><div class="ttdeci">void ssl_set_sni(SSL *ssl, const std::string &amp;sni)</div><div class="ttdef"><b>Definition</b> <a href="ssl__utils_8cpp_source.html#l00249">ssl_utils.cpp:249</a></div></div>
@@ -365,10 +372,22 @@ template&lt;typename PhysicalSocketServer, typename <a class="el" href="#adb09a3
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="tls_2SocketConnector_8hpp_source.html#l00115">115</a> of file <a class="el" href="tls_2SocketConnector_8hpp_source.html">SocketConnector.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  116</span>        : <a class="code hl_typedef" href="#a0b4ff9288044d16e7631104a31eafeff">Super</a>(<a class="code hl_class" href="classcore_1_1socket_1_1stream_1_1tls_1_1SocketConnector.html">socketConnector</a>) {</div>
-<div class="line"><span class="lineno">  117</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="tls_2SocketConnector_8hpp_source.html#l00120">120</a> of file <a class="el" href="tls_2SocketConnector_8hpp_source.html">SocketConnector.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  121</span>        : <a class="code hl_typedef" href="#a0b4ff9288044d16e7631104a31eafeff">Super</a>(<a class="code hl_class" href="classcore_1_1socket_1_1stream_1_1tls_1_1SocketConnector.html">socketConnector</a>) {</div>
+<div class="line"><span class="lineno">  122</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classcore_1_1socket_1_1stream_1_1tls_1_1SocketConnector.html">core::eventLoopState</a>() == <a class="code hl_class" href="classcore_1_1socket_1_1stream_1_1tls_1_1SocketConnector.html">core::State::RUNNING</a>) {</div>
+<div class="line"><span class="lineno">  123</span>            <a class="code hl_function" href="#a72d36ae5b8318b1f31fc404ca754f125">init</a>();</div>
+<div class="line"><span class="lineno">  124</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  125</span>            <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#acb03092786e852e56c2886bba0787d32">Super::destruct</a>();</div>
+<div class="line"><span class="lineno">  126</span>        }</div>
+<div class="line"><span class="lineno">  127</span>    }</div>
 </div><!-- fragment -->
+<p class="reference">References <a class="el" href="State_8cpp_source.html#l00052">core::eventLoopState()</a>, <a class="el" href="tls_2SocketConnector_8hpp_source.html#l00135">init()</a>, and <a class="el" href="State_8h_source.html#l00051">core::RUNNING</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="classcore_1_1socket_1_1stream_1_1tls_1_1SocketConnector_aa471ae44c1a8f4b1c640856a87a0746b_cgraph.svg" width="100%" height="370"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
@@ -399,33 +418,39 @@ template&lt;typename PhysicalSocketClient, typename <a class="el" href="#adb09a3
 
 <p>Reimplemented from <a class="el" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#aca7fb1d650de9a84d410ef41847625bb">core::socket::stream::SocketConnector&lt; PhysicalSocketClientT, ConfigT, core::socket::stream::tls::SocketConnection &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="tls_2SocketConnector_8hpp_source.html#l00125">125</a> of file <a class="el" href="tls_2SocketConnector_8hpp_source.html">SocketConnector.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  125</span>                                                             {</div>
-<div class="line"><span class="lineno">  126</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classcore_1_1socket_1_1stream_1_1tls_1_1SocketConnector.html">core::eventLoopState</a>() == <a class="code hl_class" href="classcore_1_1socket_1_1stream_1_1tls_1_1SocketConnector.html">core::State::RUNNING</a> &amp;&amp; !<a class="code hl_variable" href="#ab106b7ef505666b63fb9e4c6002c887a">config</a>-&gt;getDisabled()) {</div>
-<div class="line"><span class="lineno">  127</span>            <a class="code hl_class" href="classcore_1_1socket_1_1stream_1_1tls_1_1SocketConnector.html">LOG</a>(<a class="code hl_class" href="classcore_1_1socket_1_1stream_1_1tls_1_1SocketConnector.html">TRACE</a>) &lt;&lt; <a class="code hl_variable" href="#ab106b7ef505666b63fb9e4c6002c887a">config</a>-&gt;getInstanceName() &lt;&lt; <span class="stringliteral">&quot; SSL/TLS: SSL_CTX creating ...&quot;</span>;</div>
-<div class="line"><span class="lineno">  128</span> </div>
-<div class="line"><span class="lineno">  129</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="#ab106b7ef505666b63fb9e4c6002c887a">config</a>-&gt;getSslCtx() != <span class="keyword">nullptr</span>) {</div>
-<div class="line"><span class="lineno">  130</span>                <a class="code hl_class" href="classcore_1_1socket_1_1stream_1_1tls_1_1SocketConnector.html">LOG</a>(<a class="code hl_class" href="classcore_1_1socket_1_1stream_1_1tls_1_1SocketConnector.html">DEBUG</a>) &lt;&lt; <a class="code hl_variable" href="#ab106b7ef505666b63fb9e4c6002c887a">config</a>-&gt;getInstanceName() &lt;&lt; <span class="stringliteral">&quot; SSL/TLS: SSL_CTX created&quot;</span>;</div>
-<div class="line"><span class="lineno">  131</span> </div>
-<div class="line"><span class="lineno">  132</span>                <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#aca7fb1d650de9a84d410ef41847625bb">Super::init</a>();</div>
-<div class="line"><span class="lineno">  133</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  134</span>                <a class="code hl_class" href="classcore_1_1socket_1_1stream_1_1tls_1_1SocketConnector.html">LOG</a>(<a class="code hl_class" href="classcore_1_1socket_1_1stream_1_1tls_1_1SocketConnector.html">ERROR</a>) &lt;&lt; <a class="code hl_variable" href="#ab106b7ef505666b63fb9e4c6002c887a">config</a>-&gt;getInstanceName() &lt;&lt; <span class="stringliteral">&quot; SSL/TLS: SSL_CTX creation failed&quot;</span>;</div>
-<div class="line"><span class="lineno">  135</span> </div>
-<div class="line"><span class="lineno">  136</span>                <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a3b8242696da2e881d5c7a601146b8d44">Super::onStatus</a>(<a class="code hl_variable" href="#ab106b7ef505666b63fb9e4c6002c887a">config</a>-&gt;Remote::getSocketAddress(), <a class="code hl_class" href="classcore_1_1socket_1_1stream_1_1tls_1_1SocketConnector.html">core::socket::STATE_FATAL</a>);</div>
-<div class="line"><span class="lineno">  137</span>                <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#acb03092786e852e56c2886bba0787d32">Super::destruct</a>();</div>
-<div class="line"><span class="lineno">  138</span>            }</div>
-<div class="line"><span class="lineno">  139</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  140</span>            <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#aca7fb1d650de9a84d410ef41847625bb">Super::init</a>();</div>
-<div class="line"><span class="lineno">  141</span>        }</div>
-<div class="line"><span class="lineno">  142</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="tls_2SocketConnector_8hpp_source.html#l00135">135</a> of file <a class="el" href="tls_2SocketConnector_8hpp_source.html">SocketConnector.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  135</span>                                                             {</div>
+<div class="line"><span class="lineno">  136</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classcore_1_1socket_1_1stream_1_1tls_1_1SocketConnector.html">core::eventLoopState</a>() == <a class="code hl_class" href="classcore_1_1socket_1_1stream_1_1tls_1_1SocketConnector.html">core::State::RUNNING</a> &amp;&amp; !<a class="code hl_variable" href="#ab106b7ef505666b63fb9e4c6002c887a">config</a>-&gt;getDisabled()) {</div>
+<div class="line"><span class="lineno">  137</span>            <a class="code hl_class" href="classcore_1_1socket_1_1stream_1_1tls_1_1SocketConnector.html">LOG</a>(<a class="code hl_class" href="classcore_1_1socket_1_1stream_1_1tls_1_1SocketConnector.html">TRACE</a>) &lt;&lt; <a class="code hl_variable" href="#ab106b7ef505666b63fb9e4c6002c887a">config</a>-&gt;getInstanceName() &lt;&lt; <span class="stringliteral">&quot; SSL/TLS: SSL_CTX creating ...&quot;</span>;</div>
+<div class="line"><span class="lineno">  138</span> </div>
+<div class="line"><span class="lineno">  139</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="#ab106b7ef505666b63fb9e4c6002c887a">config</a>-&gt;getSslCtx() != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><span class="lineno">  140</span>                <a class="code hl_class" href="classcore_1_1socket_1_1stream_1_1tls_1_1SocketConnector.html">LOG</a>(<a class="code hl_class" href="classcore_1_1socket_1_1stream_1_1tls_1_1SocketConnector.html">DEBUG</a>) &lt;&lt; <a class="code hl_variable" href="#ab106b7ef505666b63fb9e4c6002c887a">config</a>-&gt;getInstanceName() &lt;&lt; <span class="stringliteral">&quot; SSL/TLS: SSL_CTX created&quot;</span>;</div>
+<div class="line"><span class="lineno">  141</span> </div>
+<div class="line"><span class="lineno">  142</span>                <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#aca7fb1d650de9a84d410ef41847625bb">Super::init</a>();</div>
+<div class="line"><span class="lineno">  143</span>            } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  144</span>                <a class="code hl_class" href="classcore_1_1socket_1_1stream_1_1tls_1_1SocketConnector.html">LOG</a>(<a class="code hl_class" href="classcore_1_1socket_1_1stream_1_1tls_1_1SocketConnector.html">ERROR</a>) &lt;&lt; <a class="code hl_variable" href="#ab106b7ef505666b63fb9e4c6002c887a">config</a>-&gt;getInstanceName() &lt;&lt; <span class="stringliteral">&quot; SSL/TLS: SSL_CTX creation failed&quot;</span>;</div>
+<div class="line"><span class="lineno">  145</span> </div>
+<div class="line"><span class="lineno">  146</span>                <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a3b8242696da2e881d5c7a601146b8d44">Super::onStatus</a>(<a class="code hl_variable" href="#ab106b7ef505666b63fb9e4c6002c887a">config</a>-&gt;Remote::getSocketAddress(), <a class="code hl_class" href="classcore_1_1socket_1_1stream_1_1tls_1_1SocketConnector.html">core::socket::STATE_FATAL</a>);</div>
+<div class="line"><span class="lineno">  147</span>                <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#acb03092786e852e56c2886bba0787d32">Super::destruct</a>();</div>
+<div class="line"><span class="lineno">  148</span>            }</div>
+<div class="line"><span class="lineno">  149</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  150</span>            <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#aca7fb1d650de9a84d410ef41847625bb">Super::init</a>();</div>
+<div class="line"><span class="lineno">  151</span>        }</div>
+<div class="line"><span class="lineno">  152</span>    }</div>
 <div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketConnector_html_aca7fb1d650de9a84d410ef41847625bb"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#aca7fb1d650de9a84d410ef41847625bb">core::socket::stream::SocketConnector&lt; PhysicalSocketClientT, ConfigT, core::socket::stream::tls::SocketConnection &gt;::init</a></div><div class="ttdeci">virtual void init()</div></div>
-<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketConnector_html_acb03092786e852e56c2886bba0787d32"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#acb03092786e852e56c2886bba0787d32">core::socket::stream::SocketConnector&lt; PhysicalSocketClientT, ConfigT, core::socket::stream::tls::SocketConnection &gt;::destruct</a></div><div class="ttdeci">void destruct() final</div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="State_8cpp_source.html#l00052">core::eventLoopState()</a>, and <a class="el" href="State_8h_source.html#l00051">core::RUNNING</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="tls_2SocketConnector_8hpp_source.html#l00120">SocketConnector()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classcore_1_1socket_1_1stream_1_1tls_1_1SocketConnector_a72d36ae5b8318b1f31fc404ca754f125_cgraph.svg" width="651" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classcore_1_1socket_1_1stream_1_1tls_1_1SocketConnector_a72d36ae5b8318b1f31fc404ca754f125_cgraph.svg" width="650" height="56"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classcore_1_1socket_1_1stream_1_1tls_1_1SocketConnector_a72d36ae5b8318b1f31fc404ca754f125_icgraph.svg" width="412" height="72"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -457,10 +482,10 @@ template&lt;typename <a class="el" href="classcore_1_1socket_1_1stream_1_1Socket
 
 <p>Implements <a class="el" href="classcore_1_1socket_1_1stream_1_1SocketConnector.html#a1d8c24ec81c34a281d7adf47ccadc08d">core::socket::stream::SocketConnector&lt; PhysicalSocketClientT, ConfigT, core::socket::stream::tls::SocketConnection &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="tls_2SocketConnector_8hpp_source.html#l00120">120</a> of file <a class="el" href="tls_2SocketConnector_8hpp_source.html">SocketConnector.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  120</span>                                                                             {</div>
-<div class="line"><span class="lineno">  121</span>        <span class="keyword">new</span> <a class="code hl_function" href="#af45c181a742d6ed7e96eb52da07269f7">SocketConnector</a>(*<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  122</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="tls_2SocketConnector_8hpp_source.html#l00130">130</a> of file <a class="el" href="tls_2SocketConnector_8hpp_source.html">SocketConnector.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  130</span>                                                                             {</div>
+<div class="line"><span class="lineno">  131</span>        <span class="keyword">new</span> <a class="code hl_function" href="#af45c181a742d6ed7e96eb52da07269f7">SocketConnector</a>(*<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  132</span>    }</div>
 <div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1tls_1_1SocketConnector_html_af45c181a742d6ed7e96eb52da07269f7"><div class="ttname"><a href="#af45c181a742d6ed7e96eb52da07269f7">core::socket::stream::tls::SocketConnector::SocketConnector</a></div><div class="ttdeci">SocketConnector(const std::shared_ptr&lt; core::socket::stream::SocketContextFactory &gt; &amp;socketContextFactory, const std::function&lt; void(SocketConnection *)&gt; &amp;onConnect, const std::function&lt; void(SocketConnection *)&gt; &amp;onConnected, const std::function&lt; void(SocketConnection *)&gt; &amp;onDisconnect, const std::function&lt; void(const SocketAddress &amp;, core::socket::State)&gt; &amp;onStatus, const std::shared_ptr&lt; Config &gt; &amp;config)</div><div class="ttdef"><b>Definition</b> <a href="tls_2SocketConnector_8hpp_source.html#l00060">SocketConnector.hpp:60</a></div></div>
 </div><!-- fragment -->
 </div>

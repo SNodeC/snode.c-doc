@@ -111,7 +111,7 @@ $(function() {
 <div class="dynheader">
 Inheritance diagram for core::socket::stream::legacy::SocketAcceptor&lt; PhysicalServerSocketT, ConfigT &gt;:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classcore_1_1socket_1_1stream_1_1legacy_1_1SocketAcceptor__inherit__graph.svg" width="284" height="432"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classcore_1_1socket_1_1stream_1_1legacy_1_1SocketAcceptor__inherit__graph.svg" width="282" height="460"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Collaboration diagram for core::socket::stream::legacy::SocketAcceptor&lt; PhysicalServerSocketT, ConfigT &gt;:</div>
@@ -295,11 +295,18 @@ template&lt;typename <a class="el" href="classcore_1_1socket_1_1stream_1_1Socket
 <div class="line"><span class="lineno">   68</span>              <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketAcceptor.html#a984eb5749393111680236d7df0ca02b9">onDisconnect</a>,</div>
 <div class="line"><span class="lineno">   69</span>              <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketAcceptor.html#af1ff5c5756325f3b77b92db681fbff33">onStatus</a>,</div>
 <div class="line"><span class="lineno">   70</span>              <a class="code hl_variable" href="classcore_1_1socket_1_1stream_1_1SocketAcceptor.html#aacb2b281b66356948dd6cd2ef18bbf14">config</a>) {</div>
-<div class="line"><span class="lineno">   71</span>    }</div>
+<div class="line"><span class="lineno">   71</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classcore_1_1socket_1_1stream_1_1legacy_1_1SocketAcceptor.html">core::eventLoopState</a>() == <a class="code hl_class" href="classcore_1_1socket_1_1stream_1_1legacy_1_1SocketAcceptor.html">core::State::RUNNING</a>) {</div>
+<div class="line"><span class="lineno">   72</span>            <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketAcceptor.html#a09e5e8a98b842d4b0d30e0a965f8aa4a">Super::init</a>();</div>
+<div class="line"><span class="lineno">   73</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">   74</span>            <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketAcceptor.html#ae65f895c75667e3955c1451a37233420">Super::destruct</a>();</div>
+<div class="line"><span class="lineno">   75</span>        }</div>
+<div class="line"><span class="lineno">   76</span>    }</div>
+<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketAcceptor_html_a09e5e8a98b842d4b0d30e0a965f8aa4a"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1SocketAcceptor.html#a09e5e8a98b842d4b0d30e0a965f8aa4a">core::socket::stream::SocketAcceptor&lt; PhysicalServerSocketT, ConfigT, core::socket::stream::legacy::SocketConnection &gt;::init</a></div><div class="ttdeci">virtual void init()</div></div>
 <div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketAcceptor_html_a100bf272bb467642c0b226fa8cf10da5"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1SocketAcceptor.html#a100bf272bb467642c0b226fa8cf10da5">core::socket::stream::SocketAcceptor&lt; PhysicalServerSocketT, ConfigT, core::socket::stream::legacy::SocketConnection &gt;::onConnected</a></div><div class="ttdeci">std::function&lt; void(SocketConnection *)&gt; onConnected</div><div class="ttdef"><b>Definition</b> <a href="SocketAcceptor_8h_source.html#l00108">SocketAcceptor.h:108</a></div></div>
 <div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketAcceptor_html_a8b30777b51d10ab27896e68889a7e0a1"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1SocketAcceptor.html#a8b30777b51d10ab27896e68889a7e0a1">core::socket::stream::SocketAcceptor&lt; PhysicalServerSocketT, ConfigT, core::socket::stream::legacy::SocketConnection &gt;::onConnect</a></div><div class="ttdeci">std::function&lt; void(SocketConnection *)&gt; onConnect</div><div class="ttdef"><b>Definition</b> <a href="SocketAcceptor_8h_source.html#l00107">SocketAcceptor.h:107</a></div></div>
 <div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketAcceptor_html_a984eb5749393111680236d7df0ca02b9"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1SocketAcceptor.html#a984eb5749393111680236d7df0ca02b9">core::socket::stream::SocketAcceptor&lt; PhysicalServerSocketT, ConfigT, core::socket::stream::legacy::SocketConnection &gt;::onDisconnect</a></div><div class="ttdeci">std::function&lt; void(SocketConnection *)&gt; onDisconnect</div><div class="ttdef"><b>Definition</b> <a href="SocketAcceptor_8h_source.html#l00109">SocketAcceptor.h:109</a></div></div>
 <div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketAcceptor_html_aacb2b281b66356948dd6cd2ef18bbf14"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1SocketAcceptor.html#aacb2b281b66356948dd6cd2ef18bbf14">core::socket::stream::SocketAcceptor&lt; PhysicalServerSocketT, ConfigT, core::socket::stream::legacy::SocketConnection &gt;::config</a></div><div class="ttdeci">std::shared_ptr&lt; Config &gt; config</div><div class="ttdef"><b>Definition</b> <a href="SocketAcceptor_8h_source.html#l00113">SocketAcceptor.h:113</a></div></div>
+<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketAcceptor_html_ae65f895c75667e3955c1451a37233420"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1SocketAcceptor.html#ae65f895c75667e3955c1451a37233420">core::socket::stream::SocketAcceptor&lt; PhysicalServerSocketT, ConfigT, core::socket::stream::legacy::SocketConnection &gt;::destruct</a></div><div class="ttdeci">void destruct() final</div></div>
 <div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketAcceptor_html_af1ff5c5756325f3b77b92db681fbff33"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1SocketAcceptor.html#af1ff5c5756325f3b77b92db681fbff33">core::socket::stream::SocketAcceptor&lt; PhysicalServerSocketT, ConfigT, core::socket::stream::legacy::SocketConnection &gt;::onStatus</a></div><div class="ttdeci">std::function&lt; void(const SocketAddress &amp;, core::socket::State)&gt; onStatus</div><div class="ttdef"><b>Definition</b> <a href="SocketAcceptor_8h_source.html#l00111">SocketAcceptor.h:111</a></div></div>
 <div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1legacy_1_1SocketAcceptor_html"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1legacy_1_1SocketAcceptor.html">core::socket::stream::legacy::SocketAcceptor</a></div><div class="ttdef"><b>Definition</b> <a href="legacy_2SocketAcceptor_8h_source.html#l00059">SocketAcceptor.h:60</a></div></div>
 <div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1legacy_1_1SocketAcceptor_html_a93b2e547e6b013b1d7b484836a46abde"><div class="ttname"><a href="#a93b2e547e6b013b1d7b484836a46abde">core::socket::stream::legacy::SocketAcceptor::SocketConnection</a></div><div class="ttdeci">typename Super::SocketConnection SocketConnection</div><div class="ttdef"><b>Definition</b> <a href="legacy_2SocketAcceptor_8h_source.html#l00067">SocketAcceptor.h:67</a></div></div>
@@ -324,10 +331,22 @@ template&lt;typename PhysicalSocketServer, typename <a class="el" href="#a34bfcd
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="legacy_2SocketAcceptor_8hpp_source.html#l00074">74</a> of file <a class="el" href="legacy_2SocketAcceptor_8hpp_source.html">SocketAcceptor.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   75</span>        : <a class="code hl_typedef" href="#a9d961a2e2ec4bd1f6e8ef6949baf75cf">Super</a>(<a class="code hl_class" href="classcore_1_1socket_1_1stream_1_1legacy_1_1SocketAcceptor.html">socketAcceptor</a>) {</div>
-<div class="line"><span class="lineno">   76</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="legacy_2SocketAcceptor_8hpp_source.html#l00079">79</a> of file <a class="el" href="legacy_2SocketAcceptor_8hpp_source.html">SocketAcceptor.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   80</span>        : <a class="code hl_typedef" href="#a9d961a2e2ec4bd1f6e8ef6949baf75cf">Super</a>(<a class="code hl_class" href="classcore_1_1socket_1_1stream_1_1legacy_1_1SocketAcceptor.html">socketAcceptor</a>) {</div>
+<div class="line"><span class="lineno">   81</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classcore_1_1socket_1_1stream_1_1legacy_1_1SocketAcceptor.html">core::eventLoopState</a>() == <a class="code hl_class" href="classcore_1_1socket_1_1stream_1_1legacy_1_1SocketAcceptor.html">core::State::RUNNING</a>) {</div>
+<div class="line"><span class="lineno">   82</span>            <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketAcceptor.html#a09e5e8a98b842d4b0d30e0a965f8aa4a">Super::init</a>();</div>
+<div class="line"><span class="lineno">   83</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">   84</span>            <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketAcceptor.html#ae65f895c75667e3955c1451a37233420">Super::destruct</a>();</div>
+<div class="line"><span class="lineno">   85</span>        }</div>
+<div class="line"><span class="lineno">   86</span>    }</div>
 </div><!-- fragment -->
+<p class="reference">References <a class="el" href="State_8cpp_source.html#l00052">core::eventLoopState()</a>, and <a class="el" href="State_8h_source.html#l00051">core::RUNNING</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classcore_1_1socket_1_1stream_1_1legacy_1_1SocketAcceptor_af03f7d8dc46d5e309589a50e1df8897c_cgraph.svg" width="638" height="72"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
@@ -358,10 +377,10 @@ template&lt;typename PhysicalClientSocket, typename <a class="el" href="#a34bfcd
 
 <p>Implements <a class="el" href="classcore_1_1socket_1_1stream_1_1SocketAcceptor.html#ac0f218e1234accc463c6871c9a9ee6d0">core::socket::stream::SocketAcceptor&lt; PhysicalServerSocketT, ConfigT, core::socket::stream::legacy::SocketConnection &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="legacy_2SocketAcceptor_8hpp_source.html#l00079">79</a> of file <a class="el" href="legacy_2SocketAcceptor_8hpp_source.html">SocketAcceptor.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   79</span>                                                                            {</div>
-<div class="line"><span class="lineno">   80</span>        <span class="keyword">new</span> <a class="code hl_function" href="#aff295c5961f4ad3173685fb459571fc2">SocketAcceptor</a>(*<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">   81</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="legacy_2SocketAcceptor_8hpp_source.html#l00089">89</a> of file <a class="el" href="legacy_2SocketAcceptor_8hpp_source.html">SocketAcceptor.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   89</span>                                                                            {</div>
+<div class="line"><span class="lineno">   90</span>        <span class="keyword">new</span> <a class="code hl_function" href="#aff295c5961f4ad3173685fb459571fc2">SocketAcceptor</a>(*<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   91</span>    }</div>
 <div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1legacy_1_1SocketAcceptor_html_aff295c5961f4ad3173685fb459571fc2"><div class="ttname"><a href="#aff295c5961f4ad3173685fb459571fc2">core::socket::stream::legacy::SocketAcceptor::SocketAcceptor</a></div><div class="ttdeci">SocketAcceptor(const std::shared_ptr&lt; core::socket::stream::SocketContextFactory &gt; &amp;socketContextFactory, const std::function&lt; void(SocketConnection *)&gt; &amp;onConnect, const std::function&lt; void(SocketConnection *)&gt; &amp;onConnected, const std::function&lt; void(SocketConnection *)&gt; &amp;onDisconnect, const std::function&lt; void(const SocketAddress &amp;, core::socket::State)&gt; &amp;onStatus, const std::shared_ptr&lt; Config &gt; &amp;config)</div><div class="ttdef"><b>Definition</b> <a href="legacy_2SocketAcceptor_8hpp_source.html#l00054">SocketAcceptor.hpp:54</a></div></div>
 </div><!-- fragment -->
 </div>

@@ -1,5 +1,6 @@
 var classcore_1_1socket_1_1stream_1_1SocketServer =
 [
+    [ "Context", "structcore_1_1socket_1_1stream_1_1SocketServer_1_1Context.html", "structcore_1_1socket_1_1stream_1_1SocketServer_1_1Context" ],
     [ "Config", "classcore_1_1socket_1_1stream_1_1SocketServer.html#af351802e5777123e41fc840b3970ef0e", null ],
     [ "SocketAcceptor", "classcore_1_1socket_1_1stream_1_1SocketServer.html#a042dce3ddd51a613f9e278b1a07a4669", null ],
     [ "SocketAddress", "classcore_1_1socket_1_1stream_1_1SocketServer.html#a2cbf0748db2e1cc9f61f44b439e402d2", null ],
@@ -11,19 +12,16 @@ var classcore_1_1socket_1_1stream_1_1SocketServer =
     [ "SocketServer", "classcore_1_1socket_1_1stream_1_1SocketServer.html#a47470c5dba0bf622bfeb10e26a404d4d", null ],
     [ "SocketServer", "classcore_1_1socket_1_1stream_1_1SocketServer.html#a322ac4f001845b24cda41ebd9788c149", null ],
     [ "SocketServer", "classcore_1_1socket_1_1stream_1_1SocketServer.html#a0dbd4a71778d88e9668469977f71b347", null ],
-    [ "getOnConnect", "classcore_1_1socket_1_1stream_1_1SocketServer.html#a06d131ba2f8a897c1348e7cbb78d662e", null ],
-    [ "getOnConnected", "classcore_1_1socket_1_1stream_1_1SocketServer.html#ac787b8dccf85ca9afa0dce0714850b34", null ],
-    [ "getOnDisconnect", "classcore_1_1socket_1_1stream_1_1SocketServer.html#a4ed802c036f0d39386be45576de6293a", null ],
-    [ "getSocketContextFactory", "classcore_1_1socket_1_1stream_1_1SocketServer.html#ad172e64bdfc2befd0e0f56c52e03585f", null ],
-    [ "listen", "classcore_1_1socket_1_1stream_1_1SocketServer.html#a8e06926bdf456389bdd810fad2c26309", null ],
-    [ "listen", "classcore_1_1socket_1_1stream_1_1SocketServer.html#a649708e7ee0691573f948b3d4ff7198f", null ],
-    [ "listen", "classcore_1_1socket_1_1stream_1_1SocketServer.html#a9e1dd326ba3403a4c6eeb83a4a92a95d", null ],
-    [ "realListen", "classcore_1_1socket_1_1stream_1_1SocketServer.html#a221e38a6b6df96de45063940ebcbbfa5", null ],
-    [ "setOnConnect", "classcore_1_1socket_1_1stream_1_1SocketServer.html#a4ea45be1a6bc9e7b2422fe2e4dcb6fcb", null ],
-    [ "setOnConnected", "classcore_1_1socket_1_1stream_1_1SocketServer.html#a0d2ee230c8048572181c9e2a1f7af47f", null ],
-    [ "setOnDisconnect", "classcore_1_1socket_1_1stream_1_1SocketServer.html#a58ea4aae3466a7a7717433a380713719", null ],
-    [ "onConnect", "classcore_1_1socket_1_1stream_1_1SocketServer.html#a3bd512afe288b3fffe3ab5c2545f9ecc", null ],
-    [ "onConnected", "classcore_1_1socket_1_1stream_1_1SocketServer.html#aadedfaa8f87906931f09d211c0899aad", null ],
-    [ "onDisconnect", "classcore_1_1socket_1_1stream_1_1SocketServer.html#a5f78ed4036660b38687a5ba28d25371f", null ],
-    [ "socketContextFactory", "classcore_1_1socket_1_1stream_1_1SocketServer.html#a8fa1fa070474d60f4672ace8c3886bd1", null ]
+    [ "getOnConnect", "classcore_1_1socket_1_1stream_1_1SocketServer.html#ac65bca9818d5887e01a9d05fe6622fc2", null ],
+    [ "getOnConnected", "classcore_1_1socket_1_1stream_1_1SocketServer.html#a6b289428b37d893404fe441eefb1e4ee", null ],
+    [ "getOnDisconnect", "classcore_1_1socket_1_1stream_1_1SocketServer.html#a576a98cb9359af30362148bb69c5c4f7", null ],
+    [ "getSocketContextFactory", "classcore_1_1socket_1_1stream_1_1SocketServer.html#a1d73290e0a6902cafafbc230dc505735", null ],
+    [ "listen", "classcore_1_1socket_1_1stream_1_1SocketServer.html#a0e78c05da28286001785582314fecb72", null ],
+    [ "listen", "classcore_1_1socket_1_1stream_1_1SocketServer.html#ade9573f3d4edadfbbffa88be18aab141", null ],
+    [ "listen", "classcore_1_1socket_1_1stream_1_1SocketServer.html#a9a713f1b302ec01e28621b606af23e4c", null ],
+    [ "realListen", "classcore_1_1socket_1_1stream_1_1SocketServer.html#a64020939e9a94e44979be4ac244bd063", null ],
+    [ "setOnConnect", "classcore_1_1socket_1_1stream_1_1SocketServer.html#a91f2e714c92057ac3abec42f2c17e99e", null ],
+    [ "setOnConnected", "classcore_1_1socket_1_1stream_1_1SocketServer.html#a7606575ba9a0d5777f3d4dc4195f81a2", null ],
+    [ "setOnDisconnect", "classcore_1_1socket_1_1stream_1_1SocketServer.html#ac4a24afb17adaa4c1a8899e7c388b001", null ],
+    [ "sharedContext", "classcore_1_1socket_1_1stream_1_1SocketServer.html#aa338d0aef8e9e6d3e23bfa19efd9f210", null ]
 ];

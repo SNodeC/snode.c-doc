@@ -1,17 +1,5 @@
 var NAVTREEINDEX41 =
 {
-"dir_d432e6c3a679c624a15492bbfd3d4fcd.html":[4,0,6,6,0],
-"dir_d4656c550979e96ea65bd38fb85a1693.html":[4,0,8,0,4,2],
-"dir_d685347193a023c899730a1eeeeaf1a8.html":[4,0,2,0,0,0],
-"dir_d9c17deaa6c86031093c8043c808700c.html":[4,0,4,1],
-"dir_dc8029cc338eb1f6373ec075df64a819.html":[4,0,0,1],
-"dir_dd539c2e115b371121a54eb936446b5d.html":[4,0,6,3,1],
-"dir_ddeab0661943ca2a344224c1b2445b85.html":[4,0,1,5],
-"dir_df97675e296f0af2ec2c415f47c645d5.html":[4,0,0,2,0],
-"dir_e0d56fb46e79aa9c29f483b29529b947.html":[4,0,1,2,2],
-"dir_e2b20abddc1d75e9fa824bc5544f9c72.html":[4,0,3],
-"dir_e8720d6b101b4b59c5d3f7ef61a380d5.html":[4,0,6,5,2,0],
-"dir_e953a5f60b3d805e83bfc061e959af34.html":[4,0,6,5,2,1,0],
 "dir_e9ebd21ce333461684192093a49fdb54.html":[4,0,6,1,2],
 "dir_eb8446218e0b7071f2da473d22fd438c.html":[4,0,6,6,3],
 "dir_ed7c8568981476a71224254c17415b3f.html":[4,0,8,0,2,3],
@@ -249,5 +237,17 @@ var NAVTREEINDEX41 =
 "in6_2phy_2stream_2PhysicalSocket_8h.html":[4,0,6,2,1,0,1],
 "in6_2phy_2stream_2PhysicalSocket_8h_source.html":[4,0,6,2,1,0,1],
 "in6_2phy_2stream_2PhysicalSocket_8hpp.html":[4,0,6,2,1,0,2],
-"in6_2phy_2stream_2PhysicalSocket_8hpp_source.html":[4,0,6,2,1,0,2]
+"in6_2phy_2stream_2PhysicalSocket_8hpp_source.html":[4,0,6,2,1,0,2],
+"in6_2stream_2config_2ConfigSocketClient_8cpp.html":[4,0,6,2,2,0,0],
+"in6_2stream_2config_2ConfigSocketClient_8cpp.html#a03943706e48069237cd57f2d35ca987e":[4,0,6,2,2,0,0,1],
+"in6_2stream_2config_2ConfigSocketClient_8cpp.html#a6388870e639eee9c0a69446876f1f8cc":[4,0,6,2,2,0,0,0],
+"in6_2stream_2config_2ConfigSocketClient_8cpp_source.html":[4,0,6,2,2,0,0],
+"in6_2stream_2config_2ConfigSocketClient_8h.html":[4,0,6,2,2,0,1],
+"in6_2stream_2config_2ConfigSocketClient_8h_source.html":[4,0,6,2,2,0,1],
+"in6_2stream_2config_2ConfigSocketServer_8cpp.html":[4,0,6,2,2,0,2],
+"in6_2stream_2config_2ConfigSocketServer_8cpp.html#a03943706e48069237cd57f2d35ca987e":[4,0,6,2,2,0,2,1],
+"in6_2stream_2config_2ConfigSocketServer_8cpp.html#a6388870e639eee9c0a69446876f1f8cc":[4,0,6,2,2,0,2,0],
+"in6_2stream_2config_2ConfigSocketServer_8cpp_source.html":[4,0,6,2,2,0,2],
+"in6_2stream_2config_2ConfigSocketServer_8h.html":[4,0,6,2,2,0,3],
+"in6_2stream_2config_2ConfigSocketServer_8h_source.html":[4,0,6,2,2,0,3]
 };

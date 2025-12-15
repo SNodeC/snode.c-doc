@@ -116,7 +116,7 @@ Inheritance diagram for net::config::ConfigSection:</div>
 <div class="dynheader">
 Collaboration diagram for net::config::ConfigSection:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classnet_1_1config_1_1ConfigSection__coll__graph.svg" width="232" height="338"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classnet_1_1config_1_1ConfigSection__coll__graph.svg" width="231" height="356"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -189,30 +189,30 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ConfigSection_8cpp_source.html#l00072">72</a> of file <a class="el" href="ConfigSection_8cpp_source.html">ConfigSection.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   73</span>        : <a class="code hl_variable" href="#abb79a8f4f69c1730bf7716eea73384c4">instance</a>(<a class="code hl_variable" href="#abb79a8f4f69c1730bf7716eea73384c4">instance</a>) {</div>
-<div class="line"><span class="lineno">   74</span>        CLI::App* existingSection = <a class="code hl_variable" href="#abb79a8f4f69c1730bf7716eea73384c4">instance</a>-&gt;getSection(name);</div>
-<div class="line"><span class="lineno">   75</span>        <a class="code hl_variable" href="#ace462619a37549762b6dc2583fcd14c3">section</a> = existingSection != <span class="keyword">nullptr</span> ? existingSection</div>
-<div class="line"><span class="lineno">   76</span>                                             : <a class="code hl_variable" href="#abb79a8f4f69c1730bf7716eea73384c4">instance</a> <span class="comment">//</span></div>
-<div class="line"><span class="lineno">   77</span>                                                   -&gt;addSection(name, description + <span class="stringliteral">&quot; for instance &#39;&quot;</span> + <a class="code hl_variable" href="#abb79a8f4f69c1730bf7716eea73384c4">instance</a>-&gt;getInstanceName() + <span class="stringliteral">&quot;&#39;&quot;</span>)</div>
-<div class="line"><span class="lineno">   78</span>                                                   -&gt;disabled()</div>
-<div class="line"><span class="lineno">   79</span>                                                   -&gt;group(<span class="stringliteral">&quot;Sections&quot;</span>);</div>
-<div class="line"><span class="lineno">   80</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ConfigSection_8cpp_source.html#l00078">78</a> of file <a class="el" href="ConfigSection_8cpp_source.html">ConfigSection.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   79</span>        : <a class="code hl_variable" href="#abb79a8f4f69c1730bf7716eea73384c4">instance</a>(<a class="code hl_variable" href="#abb79a8f4f69c1730bf7716eea73384c4">instance</a>) {</div>
+<div class="line"><span class="lineno">   80</span>        CLI::App* existingSection = <a class="code hl_variable" href="#abb79a8f4f69c1730bf7716eea73384c4">instance</a>-&gt;getSection(name);</div>
+<div class="line"><span class="lineno">   81</span>        <a class="code hl_variable" href="#ace462619a37549762b6dc2583fcd14c3">section</a> = existingSection != <span class="keyword">nullptr</span> ? existingSection</div>
+<div class="line"><span class="lineno">   82</span>                                             : <a class="code hl_variable" href="#abb79a8f4f69c1730bf7716eea73384c4">instance</a> <span class="comment">//</span></div>
+<div class="line"><span class="lineno">   83</span>                                                   -&gt;addSection(name, description + <span class="stringliteral">&quot; for instance &#39;&quot;</span> + <a class="code hl_variable" href="#abb79a8f4f69c1730bf7716eea73384c4">instance</a>-&gt;getInstanceName() + <span class="stringliteral">&quot;&#39;&quot;</span>)</div>
+<div class="line"><span class="lineno">   84</span>                                                   -&gt;disabled()</div>
+<div class="line"><span class="lineno">   85</span>                                                   -&gt;group(<span class="stringliteral">&quot;Sections&quot;</span>);</div>
+<div class="line"><span class="lineno">   86</span>    }</div>
 <div class="ttc" id="aclassnet_1_1config_1_1ConfigSection_html_abb79a8f4f69c1730bf7716eea73384c4"><div class="ttname"><a href="#abb79a8f4f69c1730bf7716eea73384c4">net::config::ConfigSection::instance</a></div><div class="ttdeci">ConfigInstance * instance</div><div class="ttdef"><b>Definition</b> <a href="ConfigSection_8h_source.html#l00133">ConfigSection.h:133</a></div></div>
 <div class="ttc" id="aclassnet_1_1config_1_1ConfigSection_html_ace462619a37549762b6dc2583fcd14c3"><div class="ttname"><a href="#ace462619a37549762b6dc2583fcd14c3">net::config::ConfigSection::section</a></div><div class="ttdeci">CLI::App * section</div><div class="ttdef"><b>Definition</b> <a href="ConfigSection_8h_source.html#l00130">ConfigSection.h:130</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ConfigInstance_8cpp_source.html#l00117">net::config::ConfigInstance::addSection()</a>, <a class="el" href="ConfigInstance_8cpp_source.html#l00109">net::config::ConfigInstance::getInstanceName()</a>, <a class="el" href="ConfigInstance_8cpp_source.html#l00170">net::config::ConfigInstance::getSection()</a>, <a class="el" href="ConfigSection_8h_source.html#l00133">instance</a>, and <a class="el" href="ConfigSection_8h_source.html#l00130">section</a>.</p>
+<p class="reference">References <a class="el" href="ConfigInstance_8cpp_source.html#l00123">net::config::ConfigInstance::addSection()</a>, <a class="el" href="ConfigInstance_8cpp_source.html#l00115">net::config::ConfigInstance::getInstanceName()</a>, <a class="el" href="ConfigInstance_8cpp_source.html#l00176">net::config::ConfigInstance::getSection()</a>, <a class="el" href="ConfigSection_8h_source.html#l00133">instance</a>, and <a class="el" href="ConfigSection_8h_source.html#l00130">section</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="ConfigConnection_8cpp_source.html#l00052">net::config::ConfigConnection::ConfigConnection()</a>, <a class="el" href="ConfigHTTP_8cpp_source.html#l00055">web::http::client::ConfigHTTP::ConfigHTTP()</a>, <a class="el" href="ConfigLegacy_8cpp_source.html#l00050">net::config::ConfigLegacy::ConfigLegacy()</a>, <a class="el" href="ConfigPhysicalSocket_8cpp_source.html#l00059">net::config::ConfigPhysicalSocket::ConfigPhysicalSocket()</a>, and <a class="el" href="ConfigTls_8cpp_source.html#l00052">net::config::ConfigTls::ConfigTls()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classnet_1_1config_1_1ConfigSection_a160becc89b9f497e672c269051f56089_cgraph.svg" width="444" height="179"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="classnet_1_1config_1_1ConfigSection_a160becc89b9f497e672c269051f56089_cgraph.svg" width="100%" height="461"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="classnet_1_1config_1_1ConfigSection_a160becc89b9f497e672c269051f56089_icgraph.svg" width="100%" height="595"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="classnet_1_1config_1_1ConfigSection_a160becc89b9f497e672c269051f56089_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -292,27 +292,27 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ConfigSection_8cpp_source.html#l00131">131</a> of file <a class="el" href="ConfigSection_8cpp_source.html">ConfigSection.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  131</span>                                                                                                                    {</div>
-<div class="line"><span class="lineno">  132</span>        <a class="code hl_variable" href="#ace462619a37549762b6dc2583fcd14c3">section</a>-&gt;disabled(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  133</span> </div>
-<div class="line"><span class="lineno">  134</span>        CLI::Option* opt = <a class="code hl_variable" href="#ace462619a37549762b6dc2583fcd14c3">section</a> <span class="comment">//</span></div>
-<div class="line"><span class="lineno">  135</span>                               -&gt;add_flag(name, description)</div>
-<div class="line"><span class="lineno">  136</span>                               -&gt;type_name(typeName);</div>
-<div class="line"><span class="lineno">  137</span>        <span class="keywordflow">if</span> (opt-&gt;get_configurable()) {</div>
-<div class="line"><span class="lineno">  138</span>            opt-&gt;group(<a class="code hl_variable" href="#ace462619a37549762b6dc2583fcd14c3">section</a>-&gt;get_formatter()-&gt;get_label(<span class="stringliteral">&quot;Persistent Options&quot;</span>));</div>
-<div class="line"><span class="lineno">  139</span>        }</div>
-<div class="line"><span class="lineno">  140</span> </div>
-<div class="line"><span class="lineno">  141</span>        <span class="keywordflow">return</span> opt;</div>
-<div class="line"><span class="lineno">  142</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ConfigSection_8cpp_source.html#l00137">137</a> of file <a class="el" href="ConfigSection_8cpp_source.html">ConfigSection.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  137</span>                                                                                                                    {</div>
+<div class="line"><span class="lineno">  138</span>        <a class="code hl_variable" href="#ace462619a37549762b6dc2583fcd14c3">section</a>-&gt;disabled(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  139</span> </div>
+<div class="line"><span class="lineno">  140</span>        CLI::Option* opt = <a class="code hl_variable" href="#ace462619a37549762b6dc2583fcd14c3">section</a> <span class="comment">//</span></div>
+<div class="line"><span class="lineno">  141</span>                               -&gt;add_flag(name, description)</div>
+<div class="line"><span class="lineno">  142</span>                               -&gt;type_name(typeName);</div>
+<div class="line"><span class="lineno">  143</span>        <span class="keywordflow">if</span> (opt-&gt;get_configurable()) {</div>
+<div class="line"><span class="lineno">  144</span>            opt-&gt;group(<a class="code hl_variable" href="#ace462619a37549762b6dc2583fcd14c3">section</a>-&gt;get_formatter()-&gt;get_label(<span class="stringliteral">&quot;Persistent Options&quot;</span>));</div>
+<div class="line"><span class="lineno">  145</span>        }</div>
+<div class="line"><span class="lineno">  146</span> </div>
+<div class="line"><span class="lineno">  147</span>        <span class="keywordflow">return</span> opt;</div>
+<div class="line"><span class="lineno">  148</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="ConfigSection_8h_source.html#l00130">section</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ConfigSection_8cpp_source.html#l00144">addFlag()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ConfigSection_8cpp_source.html#l00150">addFlag()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classnet_1_1config_1_1ConfigSection_af1c436d41e943e6189691758e6d2d5aa_icgraph.svg" width="438" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classnet_1_1config_1_1ConfigSection_af1c436d41e943e6189691758e6d2d5aa_icgraph.svg" width="436" height="56"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -346,18 +346,18 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ConfigSection_8cpp_source.html#l00144">144</a> of file <a class="el" href="ConfigSection_8cpp_source.html">ConfigSection.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  147</span>                                                                                 {</div>
-<div class="line"><span class="lineno">  148</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="#af1c436d41e943e6189691758e6d2d5aa">addFlag</a>(name, description, typeName) <span class="comment">//</span></div>
-<div class="line"><span class="lineno">  149</span>            -&gt;check(additionalValidator);</div>
-<div class="line"><span class="lineno">  150</span>    }</div>
-<div class="ttc" id="aclassnet_1_1config_1_1ConfigSection_html_af1c436d41e943e6189691758e6d2d5aa"><div class="ttname"><a href="#af1c436d41e943e6189691758e6d2d5aa">net::config::ConfigSection::addFlag</a></div><div class="ttdeci">CLI::Option * addFlag(const std::string &amp;name, const std::string &amp;description, const std::string &amp;typeName)</div><div class="ttdef"><b>Definition</b> <a href="ConfigSection_8cpp_source.html#l00131">ConfigSection.cpp:131</a></div></div>
+<p class="definition">Definition at line <a class="el" href="ConfigSection_8cpp_source.html#l00150">150</a> of file <a class="el" href="ConfigSection_8cpp_source.html">ConfigSection.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  153</span>                                                                                 {</div>
+<div class="line"><span class="lineno">  154</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="#af1c436d41e943e6189691758e6d2d5aa">addFlag</a>(name, description, typeName) <span class="comment">//</span></div>
+<div class="line"><span class="lineno">  155</span>            -&gt;check(additionalValidator);</div>
+<div class="line"><span class="lineno">  156</span>    }</div>
+<div class="ttc" id="aclassnet_1_1config_1_1ConfigSection_html_af1c436d41e943e6189691758e6d2d5aa"><div class="ttname"><a href="#af1c436d41e943e6189691758e6d2d5aa">net::config::ConfigSection::addFlag</a></div><div class="ttdeci">CLI::Option * addFlag(const std::string &amp;name, const std::string &amp;description, const std::string &amp;typeName)</div><div class="ttdef"><b>Definition</b> <a href="ConfigSection_8cpp_source.html#l00137">ConfigSection.cpp:137</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ConfigSection_8cpp_source.html#l00131">addFlag()</a>.</p>
+<p class="reference">References <a class="el" href="ConfigSection_8cpp_source.html#l00137">addFlag()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classnet_1_1config_1_1ConfigSection_a7ab3e1c554fd58a1dc06146a915aea51_cgraph.svg" width="438" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classnet_1_1config_1_1ConfigSection_a7ab3e1c554fd58a1dc06146a915aea51_cgraph.svg" width="436" height="56"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -393,11 +393,11 @@ template&lt;typename ValueType&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ConfigSection_8hpp_source.html#l00086">86</a> of file <a class="el" href="ConfigSection_8hpp_source.html">ConfigSection.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   86</span>                                                                                                                                 {</div>
-<div class="line"><span class="lineno">   87</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="#af1c436d41e943e6189691758e6d2d5aa">addFlag</a>(name, description, typeName) <span class="comment">//</span></div>
-<div class="line"><span class="lineno">   88</span>            -&gt;default_val(defaultValue);</div>
-<div class="line"><span class="lineno">   89</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ConfigSection_8hpp_source.html#l00092">92</a> of file <a class="el" href="ConfigSection_8hpp_source.html">ConfigSection.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   92</span>                                                                                                                                 {</div>
+<div class="line"><span class="lineno">   93</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="#af1c436d41e943e6189691758e6d2d5aa">addFlag</a>(name, description, typeName) <span class="comment">//</span></div>
+<div class="line"><span class="lineno">   94</span>            -&gt;default_val(defaultValue);</div>
+<div class="line"><span class="lineno">   95</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -437,11 +437,11 @@ template&lt;typename ValueType&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ConfigSection_8hpp_source.html#l00092">92</a> of file <a class="el" href="ConfigSection_8hpp_source.html">ConfigSection.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   96</span>                                                                                 {</div>
-<div class="line"><span class="lineno">   97</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="#af1c436d41e943e6189691758e6d2d5aa">addFlag</a>(name, description, typeName, defaultValue) <span class="comment">//</span></div>
-<div class="line"><span class="lineno">   98</span>            -&gt;check(additionalValidator);</div>
-<div class="line"><span class="lineno">   99</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ConfigSection_8hpp_source.html#l00098">98</a> of file <a class="el" href="ConfigSection_8hpp_source.html">ConfigSection.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  102</span>                                                                                 {</div>
+<div class="line"><span class="lineno">  103</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="#af1c436d41e943e6189691758e6d2d5aa">addFlag</a>(name, description, typeName, defaultValue) <span class="comment">//</span></div>
+<div class="line"><span class="lineno">  104</span>            -&gt;check(additionalValidator);</div>
+<div class="line"><span class="lineno">  105</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -518,7 +518,7 @@ template&lt;typename ValueTypeT&gt; </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="classnet_1_1config_1_1ConfigSection_a95ffd0ca5955502fb43ff5ed2b0d9da1_icgraph.svg" width="100%" height="564"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="classnet_1_1config_1_1ConfigSection_a95ffd0ca5955502fb43ff5ed2b0d9da1_icgraph.svg" width="100%" height="586"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -557,30 +557,30 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ConfigSection_8cpp_source.html#l00152">152</a> of file <a class="el" href="ConfigSection_8cpp_source.html">ConfigSection.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  156</span>                                                                               {</div>
-<div class="line"><span class="lineno">  157</span>        <a class="code hl_variable" href="#ace462619a37549762b6dc2583fcd14c3">section</a>-&gt;disabled(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  158</span> </div>
-<div class="line"><span class="lineno">  159</span>        CLI::Option* opt = <a class="code hl_variable" href="#ace462619a37549762b6dc2583fcd14c3">section</a> <span class="comment">//</span></div>
-<div class="line"><span class="lineno">  160</span>                               -&gt;add_flag_function(</div>
-<div class="line"><span class="lineno">  161</span>                                   name,</div>
-<div class="line"><span class="lineno">  162</span>                                   [callback](std::int64_t) {</div>
-<div class="line"><span class="lineno">  163</span>                                       callback();</div>
-<div class="line"><span class="lineno">  164</span>                                   },</div>
-<div class="line"><span class="lineno">  165</span>                                   description)</div>
-<div class="line"><span class="lineno">  166</span>                               -&gt;default_val(defaultValue)</div>
-<div class="line"><span class="lineno">  167</span>                               -&gt;type_name(typeName)</div>
-<div class="line"><span class="lineno">  168</span>                               -&gt;take_last();</div>
-<div class="line"><span class="lineno">  169</span>        <span class="keywordflow">if</span> (opt-&gt;get_configurable()) {</div>
-<div class="line"><span class="lineno">  170</span>            opt-&gt;group(<a class="code hl_variable" href="#ace462619a37549762b6dc2583fcd14c3">section</a>-&gt;get_formatter()-&gt;get_label(<span class="stringliteral">&quot;Persistent Options&quot;</span>));</div>
-<div class="line"><span class="lineno">  171</span>        }</div>
-<div class="line"><span class="lineno">  172</span> </div>
-<div class="line"><span class="lineno">  173</span>        <span class="keywordflow">return</span> opt;</div>
-<div class="line"><span class="lineno">  174</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ConfigSection_8cpp_source.html#l00158">158</a> of file <a class="el" href="ConfigSection_8cpp_source.html">ConfigSection.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  162</span>                                                                               {</div>
+<div class="line"><span class="lineno">  163</span>        <a class="code hl_variable" href="#ace462619a37549762b6dc2583fcd14c3">section</a>-&gt;disabled(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  164</span> </div>
+<div class="line"><span class="lineno">  165</span>        CLI::Option* opt = <a class="code hl_variable" href="#ace462619a37549762b6dc2583fcd14c3">section</a> <span class="comment">//</span></div>
+<div class="line"><span class="lineno">  166</span>                               -&gt;add_flag_function(</div>
+<div class="line"><span class="lineno">  167</span>                                   name,</div>
+<div class="line"><span class="lineno">  168</span>                                   [callback](std::int64_t) {</div>
+<div class="line"><span class="lineno">  169</span>                                       callback();</div>
+<div class="line"><span class="lineno">  170</span>                                   },</div>
+<div class="line"><span class="lineno">  171</span>                                   description)</div>
+<div class="line"><span class="lineno">  172</span>                               -&gt;default_val(defaultValue)</div>
+<div class="line"><span class="lineno">  173</span>                               -&gt;type_name(typeName)</div>
+<div class="line"><span class="lineno">  174</span>                               -&gt;take_last();</div>
+<div class="line"><span class="lineno">  175</span>        <span class="keywordflow">if</span> (opt-&gt;get_configurable()) {</div>
+<div class="line"><span class="lineno">  176</span>            opt-&gt;group(<a class="code hl_variable" href="#ace462619a37549762b6dc2583fcd14c3">section</a>-&gt;get_formatter()-&gt;get_label(<span class="stringliteral">&quot;Persistent Options&quot;</span>));</div>
+<div class="line"><span class="lineno">  177</span>        }</div>
+<div class="line"><span class="lineno">  178</span> </div>
+<div class="line"><span class="lineno">  179</span>        <span class="keywordflow">return</span> opt;</div>
+<div class="line"><span class="lineno">  180</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="ConfigSection_8h_source.html#l00130">section</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ConfigSection_8cpp_source.html#l00176">addFlagFunction()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ConfigSection_8cpp_source.html#l00182">addFlagFunction()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -628,20 +628,20 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ConfigSection_8cpp_source.html#l00176">176</a> of file <a class="el" href="ConfigSection_8cpp_source.html">ConfigSection.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  181</span>                                                                               {</div>
-<div class="line"><span class="lineno">  182</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="#a8bb603baa8b62771c6eaea319c0af906">addFlagFunction</a>(name, callback, description, typeName, defaultValue) <span class="comment">//</span></div>
-<div class="line"><span class="lineno">  183</span>            -&gt;check(validator);</div>
-<div class="line"><span class="lineno">  184</span>    }</div>
-<div class="ttc" id="aclassnet_1_1config_1_1ConfigSection_html_a8bb603baa8b62771c6eaea319c0af906"><div class="ttname"><a href="#a8bb603baa8b62771c6eaea319c0af906">net::config::ConfigSection::addFlagFunction</a></div><div class="ttdeci">CLI::Option * addFlagFunction(const std::string &amp;name, const std::function&lt; void()&gt; &amp;callback, const std::string &amp;description, const std::string &amp;typeName, const std::string &amp;defaultValue)</div><div class="ttdef"><b>Definition</b> <a href="ConfigSection_8cpp_source.html#l00152">ConfigSection.cpp:152</a></div></div>
+<p class="definition">Definition at line <a class="el" href="ConfigSection_8cpp_source.html#l00182">182</a> of file <a class="el" href="ConfigSection_8cpp_source.html">ConfigSection.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  187</span>                                                                               {</div>
+<div class="line"><span class="lineno">  188</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="#a8bb603baa8b62771c6eaea319c0af906">addFlagFunction</a>(name, callback, description, typeName, defaultValue) <span class="comment">//</span></div>
+<div class="line"><span class="lineno">  189</span>            -&gt;check(validator);</div>
+<div class="line"><span class="lineno">  190</span>    }</div>
+<div class="ttc" id="aclassnet_1_1config_1_1ConfigSection_html_a8bb603baa8b62771c6eaea319c0af906"><div class="ttname"><a href="#a8bb603baa8b62771c6eaea319c0af906">net::config::ConfigSection::addFlagFunction</a></div><div class="ttdeci">CLI::Option * addFlagFunction(const std::string &amp;name, const std::function&lt; void()&gt; &amp;callback, const std::string &amp;description, const std::string &amp;typeName, const std::string &amp;defaultValue)</div><div class="ttdef"><b>Definition</b> <a href="ConfigSection_8cpp_source.html#l00158">ConfigSection.cpp:158</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ConfigSection_8cpp_source.html#l00152">addFlagFunction()</a>.</p>
+<p class="reference">References <a class="el" href="ConfigSection_8cpp_source.html#l00158">addFlagFunction()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="ConfigPhysicalSocket_8cpp_source.html#l00126">net::config::ConfigPhysicalSocket::addSocketOption()</a>, <a class="el" href="ConfigPhysicalSocket_8cpp_source.html#l00059">net::config::ConfigPhysicalSocket::ConfigPhysicalSocket()</a>, and <a class="el" href="ConfigPhysicalSocketClient_8cpp_source.html#l00059">net::config::ConfigPhysicalSocketClient::ConfigPhysicalSocketClient()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classnet_1_1config_1_1ConfigSection_abec153e5e45d1177a9ff6f7ac8845893_cgraph.svg" width="438" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classnet_1_1config_1_1ConfigSection_abec153e5e45d1177a9ff6f7ac8845893_cgraph.svg" width="436" height="56"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -670,34 +670,34 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ConfigSection_8cpp_source.html#l00103">103</a> of file <a class="el" href="ConfigSection_8cpp_source.html">ConfigSection.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  103</span>                                                                                           {</div>
-<div class="line"><span class="lineno">  104</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="#abb79a8f4f69c1730bf7716eea73384c4">instance</a>-&gt;getInstanceName().empty() &amp;&amp; !<a class="code hl_variable" href="#ace462619a37549762b6dc2583fcd14c3">section</a>-&gt;get_display_name().empty()) {</div>
-<div class="line"><span class="lineno">  105</span>            <a class="code hl_variable" href="#ace462619a37549762b6dc2583fcd14c3">section</a>-&gt;disabled(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  106</span>        }</div>
-<div class="line"><span class="lineno">  107</span> </div>
-<div class="line"><span class="lineno">  108</span>        CLI::Option* opt = <a class="code hl_variable" href="#ace462619a37549762b6dc2583fcd14c3">section</a> <span class="comment">//</span></div>
-<div class="line"><span class="lineno">  109</span>                               -&gt;add_option(name, description);</div>
-<div class="line"><span class="lineno">  110</span> </div>
-<div class="line"><span class="lineno">  111</span>        <span class="keywordflow">if</span> (opt-&gt;get_configurable()) {</div>
-<div class="line"><span class="lineno">  112</span>            opt-&gt;group(<a class="code hl_variable" href="#ace462619a37549762b6dc2583fcd14c3">section</a>-&gt;get_formatter()-&gt;get_label(<span class="stringliteral">&quot;Persistent Options&quot;</span>));</div>
-<div class="line"><span class="lineno">  113</span>        }</div>
-<div class="line"><span class="lineno">  114</span> </div>
-<div class="line"><span class="lineno">  115</span>        <span class="keywordflow">return</span> opt;</div>
-<div class="line"><span class="lineno">  116</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ConfigSection_8cpp_source.html#l00109">109</a> of file <a class="el" href="ConfigSection_8cpp_source.html">ConfigSection.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  109</span>                                                                                           {</div>
+<div class="line"><span class="lineno">  110</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="#abb79a8f4f69c1730bf7716eea73384c4">instance</a>-&gt;getInstanceName().empty() &amp;&amp; !<a class="code hl_variable" href="#ace462619a37549762b6dc2583fcd14c3">section</a>-&gt;get_display_name().empty()) {</div>
+<div class="line"><span class="lineno">  111</span>            <a class="code hl_variable" href="#ace462619a37549762b6dc2583fcd14c3">section</a>-&gt;disabled(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  112</span>        }</div>
+<div class="line"><span class="lineno">  113</span> </div>
+<div class="line"><span class="lineno">  114</span>        CLI::Option* opt = <a class="code hl_variable" href="#ace462619a37549762b6dc2583fcd14c3">section</a> <span class="comment">//</span></div>
+<div class="line"><span class="lineno">  115</span>                               -&gt;add_option(name, description);</div>
+<div class="line"><span class="lineno">  116</span> </div>
+<div class="line"><span class="lineno">  117</span>        <span class="keywordflow">if</span> (opt-&gt;get_configurable()) {</div>
+<div class="line"><span class="lineno">  118</span>            opt-&gt;group(<a class="code hl_variable" href="#ace462619a37549762b6dc2583fcd14c3">section</a>-&gt;get_formatter()-&gt;get_label(<span class="stringliteral">&quot;Persistent Options&quot;</span>));</div>
+<div class="line"><span class="lineno">  119</span>        }</div>
+<div class="line"><span class="lineno">  120</span> </div>
+<div class="line"><span class="lineno">  121</span>        <span class="keywordflow">return</span> opt;</div>
+<div class="line"><span class="lineno">  122</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ConfigInstance_8cpp_source.html#l00109">net::config::ConfigInstance::getInstanceName()</a>, <a class="el" href="ConfigSection_8h_source.html#l00133">instance</a>, and <a class="el" href="ConfigSection_8h_source.html#l00130">section</a>.</p>
+<p class="reference">References <a class="el" href="ConfigInstance_8cpp_source.html#l00115">net::config::ConfigInstance::getInstanceName()</a>, <a class="el" href="ConfigSection_8h_source.html#l00133">instance</a>, and <a class="el" href="ConfigSection_8h_source.html#l00130">section</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ConfigSection_8cpp_source.html#l00118">addOption()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ConfigSection_8cpp_source.html#l00124">addOption()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classnet_1_1config_1_1ConfigSection_a3bd28fd716c3c4e085cba02844aadb1e_cgraph.svg" width="444" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classnet_1_1config_1_1ConfigSection_a3bd28fd716c3c4e085cba02844aadb1e_cgraph.svg" width="443" height="56"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="classnet_1_1config_1_1ConfigSection_a3bd28fd716c3c4e085cba02844aadb1e_icgraph.svg" width="100%" height="392"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="classnet_1_1config_1_1ConfigSection_a3bd28fd716c3c4e085cba02844aadb1e_icgraph.svg" width="100%" height="400"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -726,16 +726,16 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ConfigSection_8cpp_source.html#l00118">118</a> of file <a class="el" href="ConfigSection_8cpp_source.html">ConfigSection.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  118</span>                                                                                                                      {</div>
-<div class="line"><span class="lineno">  119</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="#a3bd28fd716c3c4e085cba02844aadb1e">addOption</a>(name, description) <span class="comment">//</span></div>
-<div class="line"><span class="lineno">  120</span>            -&gt;type_name(typeName);</div>
-<div class="line"><span class="lineno">  121</span>    }</div>
-<div class="ttc" id="aclassnet_1_1config_1_1ConfigSection_html_a3bd28fd716c3c4e085cba02844aadb1e"><div class="ttname"><a href="#a3bd28fd716c3c4e085cba02844aadb1e">net::config::ConfigSection::addOption</a></div><div class="ttdeci">CLI::Option * addOption(const std::string &amp;name, const std::string &amp;description)</div><div class="ttdef"><b>Definition</b> <a href="ConfigSection_8cpp_source.html#l00103">ConfigSection.cpp:103</a></div></div>
+<p class="definition">Definition at line <a class="el" href="ConfigSection_8cpp_source.html#l00124">124</a> of file <a class="el" href="ConfigSection_8cpp_source.html">ConfigSection.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  124</span>                                                                                                                      {</div>
+<div class="line"><span class="lineno">  125</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="#a3bd28fd716c3c4e085cba02844aadb1e">addOption</a>(name, description) <span class="comment">//</span></div>
+<div class="line"><span class="lineno">  126</span>            -&gt;type_name(typeName);</div>
+<div class="line"><span class="lineno">  127</span>    }</div>
+<div class="ttc" id="aclassnet_1_1config_1_1ConfigSection_html_a3bd28fd716c3c4e085cba02844aadb1e"><div class="ttname"><a href="#a3bd28fd716c3c4e085cba02844aadb1e">net::config::ConfigSection::addOption</a></div><div class="ttdeci">CLI::Option * addOption(const std::string &amp;name, const std::string &amp;description)</div><div class="ttdef"><b>Definition</b> <a href="ConfigSection_8cpp_source.html#l00109">ConfigSection.cpp:109</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ConfigSection_8cpp_source.html#l00103">addOption()</a>.</p>
+<p class="reference">References <a class="el" href="ConfigSection_8cpp_source.html#l00109">addOption()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ConfigSection_8cpp_source.html#l00123">addOption()</a>, and <a class="el" href="ConfigHTTP_8cpp_source.html#l00055">web::http::client::ConfigHTTP::ConfigHTTP()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ConfigSection_8cpp_source.html#l00129">addOption()</a>, and <a class="el" href="ConfigHTTP_8cpp_source.html#l00055">web::http::client::ConfigHTTP::ConfigHTTP()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -744,7 +744,7 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classnet_1_1config_1_1ConfigSection_a34b7d4e1abe68bb1f15a70bb5a1d9f94_icgraph.svg" width="658" height="123"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classnet_1_1config_1_1ConfigSection_a34b7d4e1abe68bb1f15a70bb5a1d9f94_icgraph.svg" width="655" height="134"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -778,13 +778,13 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ConfigSection_8cpp_source.html#l00123">123</a> of file <a class="el" href="ConfigSection_8cpp_source.html">ConfigSection.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  126</span>                                                                                   {</div>
-<div class="line"><span class="lineno">  127</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="#a3bd28fd716c3c4e085cba02844aadb1e">addOption</a>(name, description, typeName) <span class="comment">//</span></div>
-<div class="line"><span class="lineno">  128</span>            -&gt;check(additionalValidator);</div>
-<div class="line"><span class="lineno">  129</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ConfigSection_8cpp_source.html#l00129">129</a> of file <a class="el" href="ConfigSection_8cpp_source.html">ConfigSection.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  132</span>                                                                                   {</div>
+<div class="line"><span class="lineno">  133</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="#a3bd28fd716c3c4e085cba02844aadb1e">addOption</a>(name, description, typeName) <span class="comment">//</span></div>
+<div class="line"><span class="lineno">  134</span>            -&gt;check(additionalValidator);</div>
+<div class="line"><span class="lineno">  135</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ConfigSection_8cpp_source.html#l00118">addOption()</a>.</p>
+<p class="reference">References <a class="el" href="ConfigSection_8cpp_source.html#l00124">addOption()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -824,11 +824,11 @@ template&lt;typename ValueType&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ConfigSection_8hpp_source.html#l00069">69</a> of file <a class="el" href="ConfigSection_8hpp_source.html">ConfigSection.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   69</span>                                                                                                                                   {</div>
-<div class="line"><span class="lineno">   70</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="#a3bd28fd716c3c4e085cba02844aadb1e">addOption</a>(name, description, typeName) <span class="comment">//</span></div>
-<div class="line"><span class="lineno">   71</span>            -&gt;default_val(defaultValue);</div>
-<div class="line"><span class="lineno">   72</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ConfigSection_8hpp_source.html#l00075">75</a> of file <a class="el" href="ConfigSection_8hpp_source.html">ConfigSection.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   75</span>                                                                                                                                   {</div>
+<div class="line"><span class="lineno">   76</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="#a3bd28fd716c3c4e085cba02844aadb1e">addOption</a>(name, description, typeName) <span class="comment">//</span></div>
+<div class="line"><span class="lineno">   77</span>            -&gt;default_val(defaultValue);</div>
+<div class="line"><span class="lineno">   78</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -868,11 +868,11 @@ template&lt;typename ValueType&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ConfigSection_8hpp_source.html#l00075">75</a> of file <a class="el" href="ConfigSection_8hpp_source.html">ConfigSection.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   79</span>                                                                                   {</div>
-<div class="line"><span class="lineno">   80</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="#a3bd28fd716c3c4e085cba02844aadb1e">addOption</a>(name, description, typeName, defaultValue) <span class="comment">//</span></div>
-<div class="line"><span class="lineno">   81</span>            -&gt;check(additionalValidator);</div>
-<div class="line"><span class="lineno">   82</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ConfigSection_8hpp_source.html#l00081">81</a> of file <a class="el" href="ConfigSection_8hpp_source.html">ConfigSection.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   85</span>                                                                                   {</div>
+<div class="line"><span class="lineno">   86</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="#a3bd28fd716c3c4e085cba02844aadb1e">addOption</a>(name, description, typeName, defaultValue) <span class="comment">//</span></div>
+<div class="line"><span class="lineno">   87</span>            -&gt;check(additionalValidator);</div>
+<div class="line"><span class="lineno">   88</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -911,7 +911,7 @@ template&lt;typename ValueTypeT&gt; </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classnet_1_1config_1_1ConfigSection_a49b8b1a82ea4c182b798c165567bd462_icgraph.svg" width="659" height="115"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classnet_1_1config_1_1ConfigSection_a49b8b1a82ea4c182b798c165567bd462_icgraph.svg" width="656" height="126"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -956,7 +956,7 @@ template&lt;typename ValueTypeT&gt; </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classnet_1_1config_1_1ConfigSection_a7afd42971ea3fcc6ddc5c19a40ca2f91_icgraph.svg" width="659" height="115"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classnet_1_1config_1_1ConfigSection_a7afd42971ea3fcc6ddc5c19a40ca2f91_icgraph.svg" width="656" height="126"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -1026,10 +1026,10 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ConfigSection_8cpp_source.html#l00099">99</a> of file <a class="el" href="ConfigSection_8cpp_source.html">ConfigSection.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   99</span>                                       {</div>
-<div class="line"><span class="lineno">  100</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#ab27dc40ed9c1564341868bdc4da4448d">requiredCount</a> &gt; 0;</div>
-<div class="line"><span class="lineno">  101</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ConfigSection_8cpp_source.html#l00105">105</a> of file <a class="el" href="ConfigSection_8cpp_source.html">ConfigSection.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  105</span>                                       {</div>
+<div class="line"><span class="lineno">  106</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#ab27dc40ed9c1564341868bdc4da4448d">requiredCount</a> &gt; 0;</div>
+<div class="line"><span class="lineno">  107</span>    }</div>
 <div class="ttc" id="aclassnet_1_1config_1_1ConfigSection_html_ab27dc40ed9c1564341868bdc4da4448d"><div class="ttname"><a href="#ab27dc40ed9c1564341868bdc4da4448d">net::config::ConfigSection::requiredCount</a></div><div class="ttdeci">uint8_t requiredCount</div><div class="ttdef"><b>Definition</b> <a href="ConfigSection_8h_source.html#l00135">ConfigSection.h:135</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="ConfigSection_8h_source.html#l00135">requiredCount</a>.</p>
@@ -1055,29 +1055,36 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ConfigSection_8cpp_source.html#l00082">82</a> of file <a class="el" href="ConfigSection_8cpp_source.html">ConfigSection.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   82</span>                                                         {</div>
-<div class="line"><span class="lineno">   83</span>        <span class="keywordflow">if</span> (req != opt-&gt;get_required()) {</div>
-<div class="line"><span class="lineno">   84</span>            <span class="keywordflow">if</span> (req) {</div>
-<div class="line"><span class="lineno">   85</span>                ++<a class="code hl_variable" href="#ab27dc40ed9c1564341868bdc4da4448d">requiredCount</a>;</div>
-<div class="line"><span class="lineno">   86</span>                <a class="code hl_variable" href="#ace462619a37549762b6dc2583fcd14c3">section</a>-&gt;needs(opt);</div>
-<div class="line"><span class="lineno">   87</span>                opt-&gt;default_str(<span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><span class="lineno">   88</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   89</span>                --<a class="code hl_variable" href="#ab27dc40ed9c1564341868bdc4da4448d">requiredCount</a>;</div>
-<div class="line"><span class="lineno">   90</span>                <a class="code hl_variable" href="#ace462619a37549762b6dc2583fcd14c3">section</a>-&gt;remove_needs(opt);</div>
-<div class="line"><span class="lineno">   91</span>            }</div>
-<div class="line"><span class="lineno">   92</span> </div>
-<div class="line"><span class="lineno">   93</span>            opt-&gt;required(req);</div>
-<div class="line"><span class="lineno">   94</span> </div>
-<div class="line"><span class="lineno">   95</span>            <a class="code hl_variable" href="#abb79a8f4f69c1730bf7716eea73384c4">instance</a>-&gt;required(<a class="code hl_variable" href="#ace462619a37549762b6dc2583fcd14c3">section</a>, <a class="code hl_variable" href="#ab27dc40ed9c1564341868bdc4da4448d">requiredCount</a> &gt; 0);</div>
-<div class="line"><span class="lineno">   96</span>        }</div>
-<div class="line"><span class="lineno">   97</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ConfigSection_8cpp_source.html#l00088">88</a> of file <a class="el" href="ConfigSection_8cpp_source.html">ConfigSection.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   88</span>                                                         {</div>
+<div class="line"><span class="lineno">   89</span>        <span class="keywordflow">if</span> (req != opt-&gt;get_required()) {</div>
+<div class="line"><span class="lineno">   90</span>            <span class="keywordflow">if</span> (req) {</div>
+<div class="line"><span class="lineno">   91</span>                ++<a class="code hl_variable" href="#ab27dc40ed9c1564341868bdc4da4448d">requiredCount</a>;</div>
+<div class="line"><span class="lineno">   92</span>                <a class="code hl_variable" href="#ace462619a37549762b6dc2583fcd14c3">section</a>-&gt;needs(opt);</div>
+<div class="line"><span class="lineno">   93</span>                opt-&gt;default_str(<span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">   94</span>            } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">   95</span>                --<a class="code hl_variable" href="#ab27dc40ed9c1564341868bdc4da4448d">requiredCount</a>;</div>
+<div class="line"><span class="lineno">   96</span>                <a class="code hl_variable" href="#ace462619a37549762b6dc2583fcd14c3">section</a>-&gt;remove_needs(opt);</div>
+<div class="line"><span class="lineno">   97</span>            }</div>
+<div class="line"><span class="lineno">   98</span> </div>
+<div class="line"><span class="lineno">   99</span>            opt-&gt;required(req);</div>
+<div class="line"><span class="lineno">  100</span> </div>
+<div class="line"><span class="lineno">  101</span>            <a class="code hl_variable" href="#abb79a8f4f69c1730bf7716eea73384c4">instance</a>-&gt;required(<a class="code hl_variable" href="#ace462619a37549762b6dc2583fcd14c3">section</a>, <a class="code hl_variable" href="#ab27dc40ed9c1564341868bdc4da4448d">requiredCount</a> &gt; 0);</div>
+<div class="line"><span class="lineno">  102</span>        }</div>
+<div class="line"><span class="lineno">  103</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ConfigSection_8h_source.html#l00133">instance</a>, <a class="el" href="ConfigInstance_8cpp_source.html#l00139">net::config::ConfigInstance::required()</a>, <a class="el" href="ConfigSection_8h_source.html#l00135">requiredCount</a>, and <a class="el" href="ConfigSection_8h_source.html#l00130">section</a>.</p>
+<p class="reference">References <a class="el" href="ConfigSection_8h_source.html#l00133">instance</a>, <a class="el" href="ConfigInstance_8cpp_source.html#l00145">net::config::ConfigInstance::required()</a>, <a class="el" href="ConfigSection_8h_source.html#l00135">requiredCount</a>, and <a class="el" href="ConfigSection_8h_source.html#l00130">section</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="httpserver_8cpp_source.html#l00064">main()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="classnet_1_1config_1_1ConfigSection_afe7a0030f5ef727586a4dc6d32410ce7_cgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="classnet_1_1config_1_1ConfigSection_afe7a0030f5ef727586a4dc6d32410ce7_cgraph.svg" width="100%" height="380"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classnet_1_1config_1_1ConfigSection_afe7a0030f5ef727586a4dc6d32410ce7_icgraph.svg" width="302" height="56"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -1105,7 +1112,7 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="ConfigSection_8h_source.html#l00133">133</a> of file <a class="el" href="ConfigSection_8h_source.html">ConfigSection.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ConfigSection_8cpp_source.html#l00103">addOption()</a>, <a class="el" href="ConfigSection_8cpp_source.html#l00072">ConfigSection()</a>, and <a class="el" href="ConfigSection_8cpp_source.html#l00082">required()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ConfigSection_8cpp_source.html#l00109">addOption()</a>, <a class="el" href="ConfigSection_8cpp_source.html#l00078">ConfigSection()</a>, and <a class="el" href="ConfigSection_8cpp_source.html#l00088">required()</a>.</p>
 
 </div>
 </div>
@@ -1131,7 +1138,7 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="ConfigSection_8h_source.html#l00135">135</a> of file <a class="el" href="ConfigSection_8h_source.html">ConfigSection.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ConfigSection_8cpp_source.html#l00099">required()</a>, and <a class="el" href="ConfigSection_8cpp_source.html#l00082">required()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ConfigSection_8cpp_source.html#l00105">required()</a>, and <a class="el" href="ConfigSection_8cpp_source.html#l00088">required()</a>.</p>
 
 </div>
 </div>
@@ -1157,7 +1164,7 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="ConfigSection_8h_source.html#l00130">130</a> of file <a class="el" href="ConfigSection_8h_source.html">ConfigSection.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ConfigSection_8cpp_source.html#l00131">addFlag()</a>, <a class="el" href="ConfigSection_8cpp_source.html#l00152">addFlagFunction()</a>, <a class="el" href="ConfigSection_8cpp_source.html#l00103">addOption()</a>, <a class="el" href="ConfigPhysicalSocket_8cpp_source.html#l00126">net::config::ConfigPhysicalSocket::addSocketOption()</a>, <a class="el" href="ConfigSection_8cpp_source.html#l00072">ConfigSection()</a>, <a class="el" href="ConfigTlsServer_8cpp_source.html#l00055">net::config::ConfigTlsServer::ConfigTlsServer()</a>, and <a class="el" href="ConfigSection_8cpp_source.html#l00082">required()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ConfigSection_8cpp_source.html#l00137">addFlag()</a>, <a class="el" href="ConfigSection_8cpp_source.html#l00158">addFlagFunction()</a>, <a class="el" href="ConfigSection_8cpp_source.html#l00109">addOption()</a>, <a class="el" href="ConfigPhysicalSocket_8cpp_source.html#l00126">net::config::ConfigPhysicalSocket::addSocketOption()</a>, <a class="el" href="ConfigSection_8cpp_source.html#l00078">ConfigSection()</a>, <a class="el" href="ConfigTlsServer_8cpp_source.html#l00055">net::config::ConfigTlsServer::ConfigTlsServer()</a>, and <a class="el" href="ConfigSection_8cpp_source.html#l00088">required()</a>.</p>
 
 </div>
 </div>

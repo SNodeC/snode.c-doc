@@ -335,6 +335,8 @@ var hierarchy =
       [ "web::http::decoder::HTTP10Response", "classweb_1_1http_1_1decoder_1_1HTTP10Response.html", null ],
       [ "web::http::decoder::Identity", "classweb_1_1http_1_1decoder_1_1Identity.html", null ]
     ] ],
+    [ "core::socket::stream::SocketClient&lt; SocketConnectorT, SocketContextFactoryT, Args &gt;::Context", "structcore_1_1socket_1_1stream_1_1SocketClient_1_1Context.html", null ],
+    [ "core::socket::stream::SocketServer&lt; SocketAcceptorT, SocketContextFactoryT, Args &gt;::Context", "structcore_1_1socket_1_1stream_1_1SocketServer_1_1Context.html", null ],
     [ "express::Controller", "classexpress_1_1Controller.html", null ],
     [ "iot::mqtt::ControlPacket", "classiot_1_1mqtt_1_1ControlPacket.html", [
       [ "iot::mqtt::packets::Connack", "classiot_1_1mqtt_1_1packets_1_1Connack.html", [
@@ -498,11 +500,11 @@ var hierarchy =
       [ "apps::towercalculator::TowerCalculator", "classapps_1_1towercalculator_1_1TowerCalculator.html", null ],
       [ "core::DescriptorEventReceiver", "classcore_1_1DescriptorEventReceiver.html", [
         [ "core::eventreceiver::AcceptEventReceiver", "classcore_1_1eventreceiver_1_1AcceptEventReceiver.html", [
-          [ "core::socket::stream::SocketAcceptor< PhysicalServerSocketT, ConfigT, core::socket::stream::legacy::SocketConnection >", "classcore_1_1socket_1_1stream_1_1SocketAcceptor.html", [
-            [ "core::socket::stream::legacy::SocketAcceptor< PhysicalServerSocketT, ConfigT >", "classcore_1_1socket_1_1stream_1_1legacy_1_1SocketAcceptor.html", null ]
-          ] ],
           [ "core::socket::stream::SocketAcceptor< PhysicalSocketServerT, ConfigT, core::socket::stream::tls::SocketConnection >", "classcore_1_1socket_1_1stream_1_1SocketAcceptor.html", [
             [ "core::socket::stream::tls::SocketAcceptor< PhysicalSocketServerT, ConfigT >", "classcore_1_1socket_1_1stream_1_1tls_1_1SocketAcceptor.html", null ]
+          ] ],
+          [ "core::socket::stream::SocketAcceptor< PhysicalServerSocketT, ConfigT, core::socket::stream::legacy::SocketConnection >", "classcore_1_1socket_1_1stream_1_1SocketAcceptor.html", [
+            [ "core::socket::stream::legacy::SocketAcceptor< PhysicalServerSocketT, ConfigT >", "classcore_1_1socket_1_1stream_1_1legacy_1_1SocketAcceptor.html", null ]
           ] ],
           [ "core::socket::stream::SocketAcceptor< PhysicalSocketServerT, ConfigT, SocketConnectionT >", "classcore_1_1socket_1_1stream_1_1SocketAcceptor.html", null ]
         ] ],
