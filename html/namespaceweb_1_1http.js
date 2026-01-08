@@ -35,5 +35,7 @@ var namespaceweb_1_1http =
     [ "ciContains", "namespaceweb_1_1http.html#a1f64d7d534ae76729c7bae5e5264e5d4", null ],
     [ "ciEquals", "namespaceweb_1_1http.html#a14b1ae6d62f77d5b144063d213fd1cf7", null ],
     [ "operator&", "namespaceweb_1_1http.html#aaaea7be99953ca24762cd078c5fddb67", null ],
-    [ "operator|", "namespaceweb_1_1http.html#afa13392af1208680e6244deae2a810a2", null ]
+    [ "operator|", "namespaceweb_1_1http.html#afa13392af1208680e6244deae2a810a2", null ],
+    [ "parseContentLengthStrict", "namespaceweb_1_1http.html#a9378f38f682dd8c89797da5720fb83ba", null ],
+    [ "transferEncodingHasChunked", "namespaceweb_1_1http.html#a5032557cee44799ebb761ec2db1d316a", null ]
 ];

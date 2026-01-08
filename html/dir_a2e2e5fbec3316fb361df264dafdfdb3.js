@@ -17,5 +17,7 @@ var dir_a2e2e5fbec3316fb361df264dafdfdb3 =
     [ "MariaDBCommandSync.h", "MariaDBCommandSync_8h.html", "MariaDBCommandSync_8h" ],
     [ "MariaDBConnection.cpp", "MariaDBConnection_8cpp.html", null ],
     [ "MariaDBConnection.h", "MariaDBConnection_8h.html", "MariaDBConnection_8h" ],
-    [ "MariaDBConnectionDetails.h", "MariaDBConnectionDetails_8h.html", "MariaDBConnectionDetails_8h" ]
+    [ "MariaDBConnectionDetails.h", "MariaDBConnectionDetails_8h.html", "MariaDBConnectionDetails_8h" ],
+    [ "MariaDBLibrary.cpp", "MariaDBLibrary_8cpp.html", null ],
+    [ "MariaDBLibrary.h", "MariaDBLibrary_8h.html", "MariaDBLibrary_8h" ]
 ];

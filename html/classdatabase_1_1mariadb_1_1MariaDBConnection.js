@@ -18,6 +18,7 @@ var classdatabase_1_1mariadb_1_1MariaDBConnection =
     [ "unobservedEvent", "classdatabase_1_1mariadb_1_1MariaDBConnection.html#a01cb3517e4aee6f27290dc5a96e475cb", null ],
     [ "writeEvent", "classdatabase_1_1mariadb_1_1MariaDBConnection.html#a72c76aacb77fc28fb4be83ec7347bfc7", null ],
     [ "writeTimeout", "classdatabase_1_1mariadb_1_1MariaDBConnection.html#a10d6d386d7c038ac0562dd92a91d557a", null ],
+    [ "closing", "classdatabase_1_1mariadb_1_1MariaDBConnection.html#ab9e7fcc3e2767cb740d6cd2bcc4b7820", null ],
     [ "commandSequenceQueue", "classdatabase_1_1mariadb_1_1MariaDBConnection.html#a56d334a645656ceb0a7731fa287d2208", null ],
     [ "commandStartEvent", "classdatabase_1_1mariadb_1_1MariaDBConnection.html#a0310d0696884d57c2429071c0f428071", null ],
     [ "connected", "classdatabase_1_1mariadb_1_1MariaDBConnection.html#a93aa4f49e94e59ffb3d5abfa3d896cd7", null ],

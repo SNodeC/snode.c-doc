@@ -420,7 +420,7 @@ template&lt;typename <a class="el" href="classweb_1_1http_1_1client_1_1Client.ht
 <div class="line"><span class="lineno">  433</span>            <a class="code hl_variable" href="#a02e53da5bcd6b17e933ddb8d97a06d92">sharedConfig</a>-&gt;config-&gt;setRetry(<span class="keyword">false</span>);</div>
 <div class="line"><span class="lineno">  434</span> </div>
 <div class="line"><span class="lineno">  435</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="#ae6ba8bd300e58139d7911a35ef6fefdc">socketConnection</a> != <span class="keyword">nullptr</span>) {</div>
-<div class="line"><span class="lineno">  436</span>                <a class="code hl_variable" href="#ae6ba8bd300e58139d7911a35ef6fefdc">socketConnection</a>-&gt;shutdownWrite(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  436</span>                <a class="code hl_variable" href="#ae6ba8bd300e58139d7911a35ef6fefdc">socketConnection</a>-&gt;shutdownWrite();</div>
 <div class="line"><span class="lineno">  437</span>            }</div>
 <div class="line"><span class="lineno">  438</span>        }</div>
 <div class="ttc" id="aclassweb_1_1http_1_1client_1_1tools_1_1EventSourceT_html_ae6ba8bd300e58139d7911a35ef6fefdc"><div class="ttname"><a href="#ae6ba8bd300e58139d7911a35ef6fefdc">web::http::client::tools::EventSourceT::socketConnection</a></div><div class="ttdeci">SocketConnection * socketConnection</div><div class="ttdef"><b>Definition</b> <a href="client_2tools_2EventSource_8h_source.html#l00442">EventSource.h:442</a></div></div>
@@ -701,7 +701,7 @@ template&lt;typename <a class="el" href="classweb_1_1http_1_1client_1_1Client.ht
 <div class="line"><span class="lineno">  357</span>                                    sharedState-&gt;pending.append(buf, consumed);</div>
 <div class="line"><span class="lineno">  358</span> </div>
 <div class="line"><span class="lineno">  359</span>                                    if (!parse(sharedState, sharedConfig)) {</div>
-<div class="line"><span class="lineno">  360</span>                                        masterRequest-&gt;getSocketContext()-&gt;shutdownWrite(true);</div>
+<div class="line"><span class="lineno">  360</span>                                        masterRequest-&gt;getSocketContext()-&gt;close();</div>
 <div class="line"><span class="lineno">  361</span>                                    }</div>
 <div class="line"><span class="lineno">  362</span>                                } <span class="keywordflow">else</span> {</div>
 <div class="line"><span class="lineno">  363</span>                                    LOG(DEBUG) &lt;&lt; connectionName &lt;&lt; <span class="stringliteral">&quot;: server-sent event: server disconnect&quot;</span>;</div>

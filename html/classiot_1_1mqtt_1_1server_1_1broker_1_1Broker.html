@@ -129,13 +129,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae184a687d5c585004feabe28fb7461c6" id="r_ae184a687d5c585004feabe28fb7461c6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae184a687d5c585004feabe28fb7461c6">hasRetainedSession</a> (const std::string &amp;clientId)</td></tr>
 <tr class="memitem:a3d5b3db3104fd91a2449769d24186205" id="r_a3d5b3db3104fd91a2449769d24186205"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3d5b3db3104fd91a2449769d24186205">isActiveSession</a> (const std::string &amp;clientId, const <a class="el" href="classiot_1_1mqtt_1_1server_1_1Mqtt.html">Mqtt</a> *<a class="el" href="namespaceiot_1_1mqtt.html">mqtt</a>)</td></tr>
 <tr class="memitem:a808b519175381ec92e3f8ae9e2618f1f" id="r_a808b519175381ec92e3f8ae9e2618f1f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a808b519175381ec92e3f8ae9e2618f1f">appear</a> (const std::string &amp;clientId, const std::string &amp;topic, uint8_t qoS)</td></tr>
-<tr class="memitem:a7651b8dc5b72fd7cea8a4060b08428ce" id="r_a7651b8dc5b72fd7cea8a4060b08428ce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7651b8dc5b72fd7cea8a4060b08428ce">release</a> (const std::string &amp;topic)</td></tr>
 <tr class="memitem:a2f5c56fec4bedbcc73948d46a825e7e6" id="r_a2f5c56fec4bedbcc73948d46a825e7e6"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2f5c56fec4bedbcc73948d46a825e7e6">subscribe</a> (const std::string &amp;clientId, const std::string &amp;topic, uint8_t qoS)</td></tr>
 <tr class="memitem:ad413dd846088c7eeda3d3177871d4400" id="r_ad413dd846088c7eeda3d3177871d4400"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad413dd846088c7eeda3d3177871d4400">unsubscribe</a> (const std::string &amp;clientId)</td></tr>
 <tr class="memitem:ab31233ea92f5e2959f4bc0300b049023" id="r_ab31233ea92f5e2959f4bc0300b049023"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab31233ea92f5e2959f4bc0300b049023">unsubscribe</a> (const std::string &amp;clientId, const std::string &amp;topic)</td></tr>
 <tr class="memitem:a5f6350a21d778609152f2fe6516ff7f5" id="r_a5f6350a21d778609152f2fe6516ff7f5"><td class="memItemLeft" align="right" valign="top">std::list&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5f6350a21d778609152f2fe6516ff7f5">getSubscriptions</a> (const std::string &amp;clientId) const</td></tr>
 <tr class="memitem:ad670996242e511e37d225c323a94e742" id="r_ad670996242e511e37d225c323a94e742"><td class="memItemLeft" align="right" valign="top">std::map&lt; std::string, std::list&lt; std::pair&lt; std::string, uint8_t &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad670996242e511e37d225c323a94e742">getSubscriptionTree</a> () const</td></tr>
-<tr class="memitem:abd9c00107d087733c2a1a609058ee085" id="r_abd9c00107d087733c2a1a609058ee085"><td class="memItemLeft" align="right" valign="top">std::list&lt; std::pair&lt; std::string, std::string &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abd9c00107d087733c2a1a609058ee085">getRetainTree</a> ()</td></tr>
+<tr class="memitem:a646f40a763dad9fab5e565e3995f235e" id="r_a646f40a763dad9fab5e565e3995f235e"><td class="memItemLeft" align="right" valign="top">std::list&lt; std::pair&lt; std::string, std::pair&lt; std::string, uint8_t &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a646f40a763dad9fab5e565e3995f235e">getRetainTree</a> () const</td></tr>
 <tr class="memitem:ae776d5b70c46dd5e2b80e111119c866e" id="r_ae776d5b70c46dd5e2b80e111119c866e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae776d5b70c46dd5e2b80e111119c866e">sendPublish</a> (const std::string &amp;clientId, <a class="el" href="classiot_1_1mqtt_1_1server_1_1broker_1_1Message.html">Message</a> &amp;message, uint8_t qoS, bool retain)</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
@@ -214,13 +213,13 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">   98</span>            LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker: Session not reloaded: Session store filename empty&quot;</span>;</div>
 <div class="line"><span class="lineno">   99</span>        }</div>
 <div class="line"><span class="lineno">  100</span>    }</div>
-<div class="ttc" id="aclassiot_1_1mqtt_1_1server_1_1broker_1_1Broker_html_a156176254bc3221917da9ccda2bf7b5a"><div class="ttname"><a href="#a156176254bc3221917da9ccda2bf7b5a">iot::mqtt::server::broker::Broker::sessionStoreFileName</a></div><div class="ttdeci">std::string sessionStoreFileName</div><div class="ttdef"><b>Definition</b> <a href="Broker_8h_source.html#l00109">Broker.h:109</a></div></div>
-<div class="ttc" id="aclassiot_1_1mqtt_1_1server_1_1broker_1_1Broker_html_a4e06e35b9d82894afce87d6686fecfef"><div class="ttname"><a href="#a4e06e35b9d82894afce87d6686fecfef">iot::mqtt::server::broker::Broker::retainTree</a></div><div class="ttdeci">iot::mqtt::server::broker::RetainTree retainTree</div><div class="ttdef"><b>Definition</b> <a href="Broker_8h_source.html#l00113">Broker.h:113</a></div></div>
-<div class="ttc" id="aclassiot_1_1mqtt_1_1server_1_1broker_1_1Broker_html_a5d746f27c12dcea57879da9f719fe914"><div class="ttname"><a href="#a5d746f27c12dcea57879da9f719fe914">iot::mqtt::server::broker::Broker::sessionStore</a></div><div class="ttdeci">std::map&lt; std::string, iot::mqtt::server::broker::Session &gt; sessionStore</div><div class="ttdef"><b>Definition</b> <a href="Broker_8h_source.html#l00115">Broker.h:115</a></div></div>
-<div class="ttc" id="aclassiot_1_1mqtt_1_1server_1_1broker_1_1Broker_html_a819d7557d683e45a97366b1a54868df5"><div class="ttname"><a href="#a819d7557d683e45a97366b1a54868df5">iot::mqtt::server::broker::Broker::maxQoS</a></div><div class="ttdeci">uint8_t maxQoS</div><div class="ttdef"><b>Definition</b> <a href="Broker_8h_source.html#l00110">Broker.h:110</a></div></div>
-<div class="ttc" id="aclassiot_1_1mqtt_1_1server_1_1broker_1_1Broker_html_a857b9e3e0309836cc4564fb6731b428e"><div class="ttname"><a href="#a857b9e3e0309836cc4564fb6731b428e">iot::mqtt::server::broker::Broker::subscriptionTree</a></div><div class="ttdeci">iot::mqtt::server::broker::SubscriptionTree subscriptionTree</div><div class="ttdef"><b>Definition</b> <a href="Broker_8h_source.html#l00112">Broker.h:112</a></div></div>
+<div class="ttc" id="aclassiot_1_1mqtt_1_1server_1_1broker_1_1Broker_html_a156176254bc3221917da9ccda2bf7b5a"><div class="ttname"><a href="#a156176254bc3221917da9ccda2bf7b5a">iot::mqtt::server::broker::Broker::sessionStoreFileName</a></div><div class="ttdeci">std::string sessionStoreFileName</div><div class="ttdef"><b>Definition</b> <a href="Broker_8h_source.html#l00108">Broker.h:108</a></div></div>
+<div class="ttc" id="aclassiot_1_1mqtt_1_1server_1_1broker_1_1Broker_html_a4e06e35b9d82894afce87d6686fecfef"><div class="ttname"><a href="#a4e06e35b9d82894afce87d6686fecfef">iot::mqtt::server::broker::Broker::retainTree</a></div><div class="ttdeci">iot::mqtt::server::broker::RetainTree retainTree</div><div class="ttdef"><b>Definition</b> <a href="Broker_8h_source.html#l00112">Broker.h:112</a></div></div>
+<div class="ttc" id="aclassiot_1_1mqtt_1_1server_1_1broker_1_1Broker_html_a5d746f27c12dcea57879da9f719fe914"><div class="ttname"><a href="#a5d746f27c12dcea57879da9f719fe914">iot::mqtt::server::broker::Broker::sessionStore</a></div><div class="ttdeci">std::map&lt; std::string, iot::mqtt::server::broker::Session &gt; sessionStore</div><div class="ttdef"><b>Definition</b> <a href="Broker_8h_source.html#l00114">Broker.h:114</a></div></div>
+<div class="ttc" id="aclassiot_1_1mqtt_1_1server_1_1broker_1_1Broker_html_a819d7557d683e45a97366b1a54868df5"><div class="ttname"><a href="#a819d7557d683e45a97366b1a54868df5">iot::mqtt::server::broker::Broker::maxQoS</a></div><div class="ttdeci">uint8_t maxQoS</div><div class="ttdef"><b>Definition</b> <a href="Broker_8h_source.html#l00109">Broker.h:109</a></div></div>
+<div class="ttc" id="aclassiot_1_1mqtt_1_1server_1_1broker_1_1Broker_html_a857b9e3e0309836cc4564fb6731b428e"><div class="ttname"><a href="#a857b9e3e0309836cc4564fb6731b428e">iot::mqtt::server::broker::Broker::subscriptionTree</a></div><div class="ttdeci">iot::mqtt::server::broker::SubscriptionTree subscriptionTree</div><div class="ttdef"><b>Definition</b> <a href="Broker_8h_source.html#l00111">Broker.h:111</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="RetainTree_8cpp_source.html#l00097">iot::mqtt::server::broker::RetainTree::clear()</a>, <a class="el" href="SubscriptionTree_8cpp_source.html#l00124">iot::mqtt::server::broker::SubscriptionTree::clear()</a>, <a class="el" href="RetainTree_8cpp_source.html#l00083">iot::mqtt::server::broker::RetainTree::fromJson()</a>, <a class="el" href="server_2broker_2Session_8cpp_source.html#l00131">iot::mqtt::server::broker::Session::fromJson()</a>, <a class="el" href="SubscriptionTree_8cpp_source.html#l00114">iot::mqtt::server::broker::SubscriptionTree::fromJson()</a>, <a class="el" href="Broker_8h_source.html#l00110">maxQoS</a>, <a class="el" href="RetainTree_8cpp_source.html#l00061">iot::mqtt::server::broker::RetainTree::RetainTree()</a>, <a class="el" href="Broker_8h_source.html#l00113">retainTree</a>, <a class="el" href="Broker_8h_source.html#l00115">sessionStore</a>, <a class="el" href="Broker_8h_source.html#l00109">sessionStoreFileName</a>, <a class="el" href="SubscriptionTree_8cpp_source.html#l00061">iot::mqtt::server::broker::SubscriptionTree::SubscriptionTree()</a>, and <a class="el" href="Broker_8h_source.html#l00112">subscriptionTree</a>.</p>
+<p class="reference">References <a class="el" href="RetainTree_8cpp_source.html#l00097">iot::mqtt::server::broker::RetainTree::clear()</a>, <a class="el" href="SubscriptionTree_8cpp_source.html#l00124">iot::mqtt::server::broker::SubscriptionTree::clear()</a>, <a class="el" href="RetainTree_8cpp_source.html#l00083">iot::mqtt::server::broker::RetainTree::fromJson()</a>, <a class="el" href="server_2broker_2Session_8cpp_source.html#l00135">iot::mqtt::server::broker::Session::fromJson()</a>, <a class="el" href="SubscriptionTree_8cpp_source.html#l00114">iot::mqtt::server::broker::SubscriptionTree::fromJson()</a>, <a class="el" href="Broker_8h_source.html#l00109">maxQoS</a>, <a class="el" href="RetainTree_8cpp_source.html#l00061">iot::mqtt::server::broker::RetainTree::RetainTree()</a>, <a class="el" href="Broker_8h_source.html#l00112">retainTree</a>, <a class="el" href="Broker_8h_source.html#l00114">sessionStore</a>, <a class="el" href="Broker_8h_source.html#l00108">sessionStoreFileName</a>, <a class="el" href="SubscriptionTree_8cpp_source.html#l00061">iot::mqtt::server::broker::SubscriptionTree::SubscriptionTree()</a>, and <a class="el" href="Broker_8h_source.html#l00111">subscriptionTree</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -283,7 +282,7 @@ Here is the call graph for this function:</div>
 <div class="line"><span class="lineno">  137</span>        }</div>
 <div class="line"><span class="lineno">  138</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Broker_8h_source.html#l00113">retainTree</a>, <a class="el" href="Broker_8h_source.html#l00115">sessionStore</a>, <a class="el" href="Broker_8h_source.html#l00109">sessionStoreFileName</a>, <a class="el" href="Broker_8h_source.html#l00112">subscriptionTree</a>, <a class="el" href="RetainTree_8cpp_source.html#l00093">iot::mqtt::server::broker::RetainTree::toJson()</a>, <a class="el" href="server_2broker_2Session_8cpp_source.html#l00121">iot::mqtt::server::broker::Session::toJson()</a>, and <a class="el" href="SubscriptionTree_8cpp_source.html#l00120">iot::mqtt::server::broker::SubscriptionTree::toJson()</a>.</p>
+<p class="reference">References <a class="el" href="Broker_8h_source.html#l00112">retainTree</a>, <a class="el" href="Broker_8h_source.html#l00114">sessionStore</a>, <a class="el" href="Broker_8h_source.html#l00108">sessionStoreFileName</a>, <a class="el" href="Broker_8h_source.html#l00111">subscriptionTree</a>, <a class="el" href="RetainTree_8cpp_source.html#l00093">iot::mqtt::server::broker::RetainTree::toJson()</a>, <a class="el" href="server_2broker_2Session_8cpp_source.html#l00125">iot::mqtt::server::broker::Session::toJson()</a>, and <a class="el" href="SubscriptionTree_8cpp_source.html#l00120">iot::mqtt::server::broker::SubscriptionTree::toJson()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -322,7 +321,7 @@ Here is the call graph for this function:</div>
 <div class="line"><span class="lineno">  199</span>        <a class="code hl_variable" href="#a4e06e35b9d82894afce87d6686fecfef">retainTree</a>.appear(clientId, topic, qoS);</div>
 <div class="line"><span class="lineno">  200</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="RetainTree_8cpp_source.html#l00075">iot::mqtt::server::broker::RetainTree::appear()</a>, and <a class="el" href="Broker_8h_source.html#l00113">retainTree</a>.</p>
+<p class="reference">References <a class="el" href="RetainTree_8cpp_source.html#l00075">iot::mqtt::server::broker::RetainTree::appear()</a>, and <a class="el" href="Broker_8h_source.html#l00112">retainTree</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="SubscriptionTree_8cpp_source.html#l00133">iot::mqtt::server::broker::SubscriptionTree::TopicLevel::appear()</a>.</p>
 <div class="dynheader">
@@ -359,9 +358,9 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">  179</span>        <a class="code hl_variable" href="#a5d746f27c12dcea57879da9f719fe914">sessionStore</a>.erase(clientId);</div>
 <div class="line"><span class="lineno">  180</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Broker_8h_source.html#l00115">sessionStore</a>, <a class="el" href="Broker_8h_source.html#l00112">subscriptionTree</a>, and <a class="el" href="SubscriptionTree_8cpp_source.html#l00102">iot::mqtt::server::broker::SubscriptionTree::unsubscribe()</a>.</p>
+<p class="reference">References <a class="el" href="Broker_8h_source.html#l00114">sessionStore</a>, <a class="el" href="Broker_8h_source.html#l00111">subscriptionTree</a>, and <a class="el" href="SubscriptionTree_8cpp_source.html#l00102">iot::mqtt::server::broker::SubscriptionTree::unsubscribe()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="server_2Mqtt_8cpp_source.html#l00192">iot::mqtt::server::Mqtt::releaseSession()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="server_2Mqtt_8cpp_source.html#l00184">iot::mqtt::server::Mqtt::releaseSession()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -375,31 +374,31 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="abd9c00107d087733c2a1a609058ee085" name="abd9c00107d087733c2a1a609058ee085"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abd9c00107d087733c2a1a609058ee085">&#9670;&#160;</a></span>getRetainTree()</h2>
+<a id="a646f40a763dad9fab5e565e3995f235e" name="a646f40a763dad9fab5e565e3995f235e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a646f40a763dad9fab5e565e3995f235e">&#9670;&#160;</a></span>getRetainTree()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::list&lt; std::pair&lt; std::string, std::string &gt; &gt; iot::mqtt::server::broker::Broker::getRetainTree </td>
+          <td class="memname">std::list&lt; std::pair&lt; std::string, std::pair&lt; std::string, uint8_t &gt; &gt; &gt; iot::mqtt::server::broker::Broker::getRetainTree </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Broker_8cpp_source.html#l00237">237</a> of file <a class="el" href="Broker_8cpp_source.html">Broker.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  237</span>                                                                 {</div>
-<div class="line"><span class="lineno">  238</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#a4e06e35b9d82894afce87d6686fecfef">retainTree</a>.getRetainTree();</div>
-<div class="line"><span class="lineno">  239</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Broker_8cpp_source.html#l00233">233</a> of file <a class="el" href="Broker_8cpp_source.html">Broker.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  233</span>                                                                                         {</div>
+<div class="line"><span class="lineno">  234</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#a4e06e35b9d82894afce87d6686fecfef">retainTree</a>.getRetainTree();</div>
+<div class="line"><span class="lineno">  235</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="RetainTree_8cpp_source.html#l00089">iot::mqtt::server::broker::RetainTree::getRetainTree()</a>, and <a class="el" href="Broker_8h_source.html#l00113">retainTree</a>.</p>
+<p class="reference">References <a class="el" href="RetainTree_8cpp_source.html#l00089">iot::mqtt::server::broker::RetainTree::getRetainTree()</a>, and <a class="el" href="Broker_8h_source.html#l00112">retainTree</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="classiot_1_1mqtt_1_1server_1_1broker_1_1Broker_abd9c00107d087733c2a1a609058ee085_cgraph.svg" width="100%" height="372"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="classiot_1_1mqtt_1_1server_1_1broker_1_1Broker_a646f40a763dad9fab5e565e3995f235e_cgraph.svg" width="100%" height="394"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -419,14 +418,14 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Broker_8cpp_source.html#l00229">229</a> of file <a class="el" href="Broker_8cpp_source.html">Broker.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  229</span>                                                                               {</div>
-<div class="line"><span class="lineno">  230</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#a857b9e3e0309836cc4564fb6731b428e">subscriptionTree</a>.getSubscriptions(clientId);</div>
-<div class="line"><span class="lineno">  231</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Broker_8cpp_source.html#l00225">225</a> of file <a class="el" href="Broker_8cpp_source.html">Broker.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  225</span>                                                                               {</div>
+<div class="line"><span class="lineno">  226</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#a857b9e3e0309836cc4564fb6731b428e">subscriptionTree</a>.getSubscriptions(clientId);</div>
+<div class="line"><span class="lineno">  227</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="SubscriptionTree_8cpp_source.html#l00106">iot::mqtt::server::broker::SubscriptionTree::getSubscriptions()</a>, and <a class="el" href="Broker_8h_source.html#l00112">subscriptionTree</a>.</p>
+<p class="reference">References <a class="el" href="SubscriptionTree_8cpp_source.html#l00106">iot::mqtt::server::broker::SubscriptionTree::getSubscriptions()</a>, and <a class="el" href="Broker_8h_source.html#l00111">subscriptionTree</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="server_2Mqtt_8cpp_source.html#l00372">iot::mqtt::server::Mqtt::getSubscriptions()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="server_2Mqtt_8cpp_source.html#l00380">iot::mqtt::server::Mqtt::getSubscriptions()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -455,12 +454,12 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Broker_8cpp_source.html#l00233">233</a> of file <a class="el" href="Broker_8cpp_source.html">Broker.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  233</span>                                                                                              {</div>
-<div class="line"><span class="lineno">  234</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#a857b9e3e0309836cc4564fb6731b428e">subscriptionTree</a>.getSubscriptionTree();</div>
-<div class="line"><span class="lineno">  235</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Broker_8cpp_source.html#l00229">229</a> of file <a class="el" href="Broker_8cpp_source.html">Broker.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  229</span>                                                                                              {</div>
+<div class="line"><span class="lineno">  230</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#a857b9e3e0309836cc4564fb6731b428e">subscriptionTree</a>.getSubscriptionTree();</div>
+<div class="line"><span class="lineno">  231</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="SubscriptionTree_8cpp_source.html#l00110">iot::mqtt::server::broker::SubscriptionTree::getSubscriptionTree()</a>, and <a class="el" href="Broker_8h_source.html#l00112">subscriptionTree</a>.</p>
+<p class="reference">References <a class="el" href="SubscriptionTree_8cpp_source.html#l00110">iot::mqtt::server::broker::SubscriptionTree::getSubscriptionTree()</a>, and <a class="el" href="Broker_8h_source.html#l00111">subscriptionTree</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -490,9 +489,9 @@ Here is the call graph for this function:</div>
 <div class="line"><span class="lineno">  188</span>    }</div>
 <div class="ttc" id="aclassiot_1_1mqtt_1_1server_1_1broker_1_1Broker_html_a7adc3607c5da7096fd38778d22da7e9c"><div class="ttname"><a href="#a7adc3607c5da7096fd38778d22da7e9c">iot::mqtt::server::broker::Broker::hasSession</a></div><div class="ttdeci">bool hasSession(const std::string &amp;clientId)</div><div class="ttdef"><b>Definition</b> <a href="Broker_8cpp_source.html#l00182">Broker.cpp:182</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Broker_8cpp_source.html#l00182">hasSession()</a>, <a class="el" href="server_2broker_2Session_8cpp_source.html#l00113">iot::mqtt::server::broker::Session::isActive()</a>, and <a class="el" href="Broker_8h_source.html#l00115">sessionStore</a>.</p>
+<p class="reference">References <a class="el" href="Broker_8cpp_source.html#l00182">hasSession()</a>, <a class="el" href="server_2broker_2Session_8cpp_source.html#l00117">iot::mqtt::server::broker::Session::isActive()</a>, and <a class="el" href="Broker_8h_source.html#l00114">sessionStore</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="server_2Mqtt_8cpp_source.html#l00155">iot::mqtt::server::Mqtt::initSession()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="server_2Mqtt_8cpp_source.html#l00147">iot::mqtt::server::Mqtt::initSession()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -526,9 +525,9 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">  191</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="#a7adc3607c5da7096fd38778d22da7e9c">hasSession</a>(clientId) &amp;&amp; !<a class="code hl_variable" href="#a5d746f27c12dcea57879da9f719fe914">sessionStore</a>[clientId].isActive();</div>
 <div class="line"><span class="lineno">  192</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Broker_8cpp_source.html#l00182">hasSession()</a>, <a class="el" href="server_2broker_2Session_8cpp_source.html#l00113">iot::mqtt::server::broker::Session::isActive()</a>, and <a class="el" href="Broker_8h_source.html#l00115">sessionStore</a>.</p>
+<p class="reference">References <a class="el" href="Broker_8cpp_source.html#l00182">hasSession()</a>, <a class="el" href="server_2broker_2Session_8cpp_source.html#l00117">iot::mqtt::server::broker::Session::isActive()</a>, and <a class="el" href="Broker_8h_source.html#l00114">sessionStore</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="server_2Mqtt_8cpp_source.html#l00155">iot::mqtt::server::Mqtt::initSession()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="server_2Mqtt_8cpp_source.html#l00147">iot::mqtt::server::Mqtt::initSession()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -562,7 +561,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">  183</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#a5d746f27c12dcea57879da9f719fe914">sessionStore</a>.contains(clientId);</div>
 <div class="line"><span class="lineno">  184</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Broker_8h_source.html#l00115">sessionStore</a>.</p>
+<p class="reference">References <a class="el" href="Broker_8h_source.html#l00114">sessionStore</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="Broker_8cpp_source.html#l00186">hasActiveSession()</a>, <a class="el" href="Broker_8cpp_source.html#l00190">hasRetainedSession()</a>, and <a class="el" href="Broker_8cpp_source.html#l00194">isActiveSession()</a>.</p>
 <div class="dynheader">
@@ -640,9 +639,9 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">  195</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="#a7adc3607c5da7096fd38778d22da7e9c">hasSession</a>(clientId) &amp;&amp; <a class="code hl_variable" href="#a5d746f27c12dcea57879da9f719fe914">sessionStore</a>[clientId].isOwnedBy(mqtt);</div>
 <div class="line"><span class="lineno">  196</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Broker_8cpp_source.html#l00182">hasSession()</a>, <a class="el" href="server_2broker_2Session_8cpp_source.html#l00117">iot::mqtt::server::broker::Session::isOwnedBy()</a>, and <a class="el" href="Broker_8h_source.html#l00115">sessionStore</a>.</p>
+<p class="reference">References <a class="el" href="Broker_8cpp_source.html#l00182">hasSession()</a>, <a class="el" href="server_2broker_2Session_8cpp_source.html#l00121">iot::mqtt::server::broker::Session::isOwnedBy()</a>, and <a class="el" href="Broker_8h_source.html#l00114">sessionStore</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="server_2Mqtt_8cpp_source.html#l00192">iot::mqtt::server::Mqtt::releaseSession()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="server_2Mqtt_8cpp_source.html#l00184">iot::mqtt::server::Mqtt::releaseSession()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -682,9 +681,9 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">  158</span>        <span class="keywordflow">return</span> &amp;<a class="code hl_variable" href="#a5d746f27c12dcea57879da9f719fe914">sessionStore</a>[clientId];</div>
 <div class="line"><span class="lineno">  159</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="server_2broker_2Session_8cpp_source.html#l00062">iot::mqtt::server::broker::Session::Session()</a>, and <a class="el" href="Broker_8h_source.html#l00115">sessionStore</a>.</p>
+<p class="reference">References <a class="el" href="server_2broker_2Session_8cpp_source.html#l00062">iot::mqtt::server::broker::Session::Session()</a>, and <a class="el" href="Broker_8h_source.html#l00114">sessionStore</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="server_2Mqtt_8cpp_source.html#l00155">iot::mqtt::server::Mqtt::initSession()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="server_2Mqtt_8cpp_source.html#l00147">iot::mqtt::server::Mqtt::initSession()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -741,9 +740,9 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">  152</span>        }</div>
 <div class="line"><span class="lineno">  153</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Message_8cpp_source.html#l00053">iot::mqtt::server::broker::Message::Message()</a>, <a class="el" href="SubscriptionTree_8cpp_source.html#l00084">iot::mqtt::server::broker::SubscriptionTree::publish()</a>, <a class="el" href="RetainTree_8cpp_source.html#l00065">iot::mqtt::server::broker::RetainTree::retain()</a>, <a class="el" href="Broker_8h_source.html#l00113">retainTree</a>, and <a class="el" href="Broker_8h_source.html#l00112">subscriptionTree</a>.</p>
+<p class="reference">References <a class="el" href="Message_8cpp_source.html#l00053">iot::mqtt::server::broker::Message::Message()</a>, <a class="el" href="SubscriptionTree_8cpp_source.html#l00084">iot::mqtt::server::broker::SubscriptionTree::publish()</a>, <a class="el" href="RetainTree_8cpp_source.html#l00065">iot::mqtt::server::broker::RetainTree::retain()</a>, <a class="el" href="Broker_8h_source.html#l00112">retainTree</a>, and <a class="el" href="Broker_8h_source.html#l00111">subscriptionTree</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="server_2Mqtt_8cpp_source.html#l00287">iot::mqtt::server::Mqtt::_onPublish()</a>, and <a class="el" href="server_2Mqtt_8cpp_source.html#l00078">iot::mqtt::server::Mqtt::~Mqtt()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="server_2Mqtt_8cpp_source.html#l00358">iot::mqtt::server::Mqtt::deliverPublish()</a>, and <a class="el" href="server_2Mqtt_8cpp_source.html#l00078">iot::mqtt::server::Mqtt::~Mqtt()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -752,36 +751,7 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classiot_1_1mqtt_1_1server_1_1broker_1_1Broker_a5a70d29895fbdb8cf6422ad98fd6ebed_icgraph.svg" width="631" height="126"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-
-</div>
-</div>
-<a id="a7651b8dc5b72fd7cea8a4060b08428ce" name="a7651b8dc5b72fd7cea8a4060b08428ce"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7651b8dc5b72fd7cea8a4060b08428ce">&#9670;&#160;</a></span>release()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void iot::mqtt::server::broker::Broker::release </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>topic</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="Broker_8cpp_source.html#l00202">202</a> of file <a class="el" href="Broker_8cpp_source.html">Broker.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  202</span>                                               {</div>
-<div class="line"><span class="lineno">  203</span>        <a class="code hl_variable" href="#a4e06e35b9d82894afce87d6686fecfef">retainTree</a>.release(topic);</div>
-<div class="line"><span class="lineno">  204</span>    }</div>
-</div><!-- fragment -->
-<p class="reference">References <a class="el" href="RetainTree_8cpp_source.html#l00079">iot::mqtt::server::broker::RetainTree::release()</a>, and <a class="el" href="Broker_8h_source.html#l00113">retainTree</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="classiot_1_1mqtt_1_1server_1_1broker_1_1Broker_a7651b8dc5b72fd7cea8a4060b08428ce_cgraph.svg" width="100%" height="498"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="classiot_1_1mqtt_1_1server_1_1broker_1_1Broker_a5a70d29895fbdb8cf6422ad98fd6ebed_icgraph.svg" width="100%" height="394"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -810,9 +780,9 @@ Here is the call graph for this function:</div>
 <div class="line"><span class="lineno">  162</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#a5d746f27c12dcea57879da9f719fe914">sessionStore</a>[clientId].renew(mqtt);</div>
 <div class="line"><span class="lineno">  163</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="server_2broker_2Session_8cpp_source.html#l00103">iot::mqtt::server::broker::Session::renew()</a>, and <a class="el" href="Broker_8h_source.html#l00115">sessionStore</a>.</p>
+<p class="reference">References <a class="el" href="server_2broker_2Session_8cpp_source.html#l00107">iot::mqtt::server::broker::Session::renew()</a>, and <a class="el" href="Broker_8h_source.html#l00114">sessionStore</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="server_2Mqtt_8cpp_source.html#l00155">iot::mqtt::server::Mqtt::initSession()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="server_2Mqtt_8cpp_source.html#l00147">iot::mqtt::server::Mqtt::initSession()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -850,9 +820,9 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">  170</span>        <a class="code hl_variable" href="#a5d746f27c12dcea57879da9f719fe914">sessionStore</a>[clientId].publishQueued();</div>
 <div class="line"><span class="lineno">  171</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="SubscriptionTree_8cpp_source.html#l00065">iot::mqtt::server::broker::SubscriptionTree::appear()</a>, <a class="el" href="server_2broker_2Session_8cpp_source.html#l00093">iot::mqtt::server::broker::Session::publishQueued()</a>, <a class="el" href="Broker_8h_source.html#l00115">sessionStore</a>, and <a class="el" href="Broker_8h_source.html#l00112">subscriptionTree</a>.</p>
+<p class="reference">References <a class="el" href="SubscriptionTree_8cpp_source.html#l00065">iot::mqtt::server::broker::SubscriptionTree::appear()</a>, <a class="el" href="server_2broker_2Session_8cpp_source.html#l00097">iot::mqtt::server::broker::Session::publishQueued()</a>, <a class="el" href="Broker_8h_source.html#l00114">sessionStore</a>, and <a class="el" href="Broker_8h_source.html#l00111">subscriptionTree</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="server_2Mqtt_8cpp_source.html#l00155">iot::mqtt::server::Mqtt::initSession()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="server_2Mqtt_8cpp_source.html#l00147">iot::mqtt::server::Mqtt::initSession()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -886,9 +856,9 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">  174</span>        <a class="code hl_variable" href="#a5d746f27c12dcea57879da9f719fe914">sessionStore</a>[clientId].retain();</div>
 <div class="line"><span class="lineno">  175</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="server_2broker_2Session_8cpp_source.html#l00109">iot::mqtt::server::broker::Session::retain()</a>, and <a class="el" href="Broker_8h_source.html#l00115">sessionStore</a>.</p>
+<p class="reference">References <a class="el" href="server_2broker_2Session_8cpp_source.html#l00113">iot::mqtt::server::broker::Session::retain()</a>, and <a class="el" href="Broker_8h_source.html#l00114">sessionStore</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="server_2Mqtt_8cpp_source.html#l00192">iot::mqtt::server::Mqtt::releaseSession()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="server_2Mqtt_8cpp_source.html#l00184">iot::mqtt::server::Mqtt::releaseSession()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -931,14 +901,14 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Broker_8cpp_source.html#l00241">241</a> of file <a class="el" href="Broker_8cpp_source.html">Broker.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  241</span>                                                                                                  {</div>
-<div class="line"><span class="lineno">  242</span>        LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker: Send PUBLISH: &quot;</span> &lt;&lt; clientId;</div>
-<div class="line"><span class="lineno">  243</span> </div>
-<div class="line"><span class="lineno">  244</span>        <a class="code hl_variable" href="#a5d746f27c12dcea57879da9f719fe914">sessionStore</a>[clientId].sendPublish(message, qoS, retain);</div>
-<div class="line"><span class="lineno">  245</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Broker_8cpp_source.html#l00237">237</a> of file <a class="el" href="Broker_8cpp_source.html">Broker.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  237</span>                                                                                                  {</div>
+<div class="line"><span class="lineno">  238</span>        LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;MQTT Broker: Send PUBLISH: &quot;</span> &lt;&lt; clientId;</div>
+<div class="line"><span class="lineno">  239</span> </div>
+<div class="line"><span class="lineno">  240</span>        <a class="code hl_variable" href="#a5d746f27c12dcea57879da9f719fe914">sessionStore</a>[clientId].sendPublish(message, qoS, retain);</div>
+<div class="line"><span class="lineno">  241</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="server_2broker_2Session_8cpp_source.html#l00066">iot::mqtt::server::broker::Session::sendPublish()</a>, and <a class="el" href="Broker_8h_source.html#l00115">sessionStore</a>.</p>
+<p class="reference">References <a class="el" href="server_2broker_2Session_8cpp_source.html#l00066">iot::mqtt::server::broker::Session::sendPublish()</a>, and <a class="el" href="Broker_8h_source.html#l00114">sessionStore</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="RetainTree_8cpp_source.html#l00159">iot::mqtt::server::broker::RetainTree::TopicLevel::appear()</a>, <a class="el" href="RetainTree_8cpp_source.html#l00195">iot::mqtt::server::broker::RetainTree::TopicLevel::appear()</a>, and <a class="el" href="SubscriptionTree_8cpp_source.html#l00168">iot::mqtt::server::broker::SubscriptionTree::TopicLevel::publish()</a>.</p>
 <div class="dynheader">
@@ -949,7 +919,7 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="classiot_1_1mqtt_1_1server_1_1broker_1_1Broker_ae776d5b70c46dd5e2b80e111119c866e_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="classiot_1_1mqtt_1_1server_1_1broker_1_1Broker_ae776d5b70c46dd5e2b80e111119c866e_icgraph.svg" width="100%" height="545"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -978,27 +948,27 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Broker_8cpp_source.html#l00206">206</a> of file <a class="el" href="Broker_8cpp_source.html">Broker.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  206</span>                                                                                            {</div>
-<div class="line"><span class="lineno">  207</span>        qoS = std::min(<a class="code hl_variable" href="#a819d7557d683e45a97366b1a54868df5">maxQoS</a>, qoS);</div>
-<div class="line"><span class="lineno">  208</span>        uint8_t returnCode = 0;</div>
-<div class="line"><span class="lineno">  209</span> </div>
-<div class="line"><span class="lineno">  210</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a857b9e3e0309836cc4564fb6731b428e">subscriptionTree</a>.subscribe(topic, clientId, qoS)) {</div>
-<div class="line"><span class="lineno">  211</span>            <a class="code hl_variable" href="#a4e06e35b9d82894afce87d6686fecfef">retainTree</a>.appear(clientId, topic, qoS);</div>
-<div class="line"><span class="lineno">  212</span> </div>
-<div class="line"><span class="lineno">  213</span>            returnCode = <a class="code hl_define" href="Broker_8h.html#ae3210c68347def92a8fcdda01b705f0c">SUBSCRIPTION_SUCCESS</a> | qoS;</div>
-<div class="line"><span class="lineno">  214</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  215</span>            returnCode = <a class="code hl_define" href="Broker_8h.html#ab780cd4545064f2eab3d061fed55b7d0">SUBSCRIPTION_FAILURE</a>;</div>
-<div class="line"><span class="lineno">  216</span>        }</div>
-<div class="line"><span class="lineno">  217</span> </div>
-<div class="line"><span class="lineno">  218</span>        <span class="keywordflow">return</span> returnCode;</div>
-<div class="line"><span class="lineno">  219</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Broker_8cpp_source.html#l00202">202</a> of file <a class="el" href="Broker_8cpp_source.html">Broker.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  202</span>                                                                                            {</div>
+<div class="line"><span class="lineno">  203</span>        qoS = std::min(<a class="code hl_variable" href="#a819d7557d683e45a97366b1a54868df5">maxQoS</a>, qoS);</div>
+<div class="line"><span class="lineno">  204</span>        uint8_t returnCode = 0;</div>
+<div class="line"><span class="lineno">  205</span> </div>
+<div class="line"><span class="lineno">  206</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a857b9e3e0309836cc4564fb6731b428e">subscriptionTree</a>.subscribe(topic, clientId, qoS)) {</div>
+<div class="line"><span class="lineno">  207</span>            <a class="code hl_variable" href="#a4e06e35b9d82894afce87d6686fecfef">retainTree</a>.appear(clientId, topic, qoS);</div>
+<div class="line"><span class="lineno">  208</span> </div>
+<div class="line"><span class="lineno">  209</span>            returnCode = <a class="code hl_define" href="Broker_8h.html#ae3210c68347def92a8fcdda01b705f0c">SUBSCRIPTION_SUCCESS</a> | qoS;</div>
+<div class="line"><span class="lineno">  210</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  211</span>            returnCode = <a class="code hl_define" href="Broker_8h.html#ab780cd4545064f2eab3d061fed55b7d0">SUBSCRIPTION_FAILURE</a>;</div>
+<div class="line"><span class="lineno">  212</span>        }</div>
+<div class="line"><span class="lineno">  213</span> </div>
+<div class="line"><span class="lineno">  214</span>        <span class="keywordflow">return</span> returnCode;</div>
+<div class="line"><span class="lineno">  215</span>    }</div>
 <div class="ttc" id="aBroker_8h_html_ab780cd4545064f2eab3d061fed55b7d0"><div class="ttname"><a href="Broker_8h.html#ab780cd4545064f2eab3d061fed55b7d0">SUBSCRIPTION_FAILURE</a></div><div class="ttdeci">#define SUBSCRIPTION_FAILURE</div><div class="ttdef"><b>Definition</b> <a href="Broker_8h_source.html#l00069">Broker.h:69</a></div></div>
 <div class="ttc" id="aBroker_8h_html_ae3210c68347def92a8fcdda01b705f0c"><div class="ttname"><a href="Broker_8h.html#ae3210c68347def92a8fcdda01b705f0c">SUBSCRIPTION_SUCCESS</a></div><div class="ttdeci">#define SUBSCRIPTION_SUCCESS</div><div class="ttdef"><b>Definition</b> <a href="Broker_8h_source.html#l00068">Broker.h:68</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="RetainTree_8cpp_source.html#l00075">iot::mqtt::server::broker::RetainTree::appear()</a>, <a class="el" href="Broker_8h_source.html#l00110">maxQoS</a>, <a class="el" href="Broker_8h_source.html#l00113">retainTree</a>, <a class="el" href="SubscriptionTree_8cpp_source.html#l00069">iot::mqtt::server::broker::SubscriptionTree::subscribe()</a>, and <a class="el" href="Broker_8h_source.html#l00112">subscriptionTree</a>.</p>
+<p class="reference">References <a class="el" href="RetainTree_8cpp_source.html#l00075">iot::mqtt::server::broker::RetainTree::appear()</a>, <a class="el" href="Broker_8h_source.html#l00109">maxQoS</a>, <a class="el" href="Broker_8h_source.html#l00112">retainTree</a>, <a class="el" href="SubscriptionTree_8cpp_source.html#l00069">iot::mqtt::server::broker::SubscriptionTree::subscribe()</a>, and <a class="el" href="Broker_8h_source.html#l00111">subscriptionTree</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="server_2Mqtt_8cpp_source.html#l00295">iot::mqtt::server::Mqtt::_onSubscribe()</a>, and <a class="el" href="server_2Mqtt_8cpp_source.html#l00086">iot::mqtt::server::Mqtt::subscribe()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="server_2Mqtt_8cpp_source.html#l00297">iot::mqtt::server::Mqtt::_onSubscribe()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1007,7 +977,7 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classiot_1_1mqtt_1_1server_1_1broker_1_1Broker_a2f5c56fec4bedbcc73948d46a825e7e6_icgraph.svg" width="586" height="134"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classiot_1_1mqtt_1_1server_1_1broker_1_1Broker_a2f5c56fec4bedbcc73948d46a825e7e6_icgraph.svg" width="586" height="72"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -1027,14 +997,14 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Broker_8cpp_source.html#l00221">221</a> of file <a class="el" href="Broker_8cpp_source.html">Broker.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  221</span>                                                      {</div>
-<div class="line"><span class="lineno">  222</span>        <a class="code hl_variable" href="#a857b9e3e0309836cc4564fb6731b428e">subscriptionTree</a>.unsubscribe(clientId);</div>
-<div class="line"><span class="lineno">  223</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Broker_8cpp_source.html#l00217">217</a> of file <a class="el" href="Broker_8cpp_source.html">Broker.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  217</span>                                                      {</div>
+<div class="line"><span class="lineno">  218</span>        <a class="code hl_variable" href="#a857b9e3e0309836cc4564fb6731b428e">subscriptionTree</a>.unsubscribe(clientId);</div>
+<div class="line"><span class="lineno">  219</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Broker_8h_source.html#l00112">subscriptionTree</a>, and <a class="el" href="SubscriptionTree_8cpp_source.html#l00102">iot::mqtt::server::broker::SubscriptionTree::unsubscribe()</a>.</p>
+<p class="reference">References <a class="el" href="Broker_8h_source.html#l00111">subscriptionTree</a>, and <a class="el" href="SubscriptionTree_8cpp_source.html#l00102">iot::mqtt::server::broker::SubscriptionTree::unsubscribe()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="server_2Mqtt_8cpp_source.html#l00155">iot::mqtt::server::Mqtt::initSession()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="server_2Mqtt_8cpp_source.html#l00147">iot::mqtt::server::Mqtt::initSession()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1067,14 +1037,14 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Broker_8cpp_source.html#l00225">225</a> of file <a class="el" href="Broker_8cpp_source.html">Broker.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  225</span>                                                                              {</div>
-<div class="line"><span class="lineno">  226</span>        <a class="code hl_variable" href="#a857b9e3e0309836cc4564fb6731b428e">subscriptionTree</a>.unsubscribe(topic, clientId);</div>
-<div class="line"><span class="lineno">  227</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Broker_8cpp_source.html#l00221">221</a> of file <a class="el" href="Broker_8cpp_source.html">Broker.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  221</span>                                                                              {</div>
+<div class="line"><span class="lineno">  222</span>        <a class="code hl_variable" href="#a857b9e3e0309836cc4564fb6731b428e">subscriptionTree</a>.unsubscribe(topic, clientId);</div>
+<div class="line"><span class="lineno">  223</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Broker_8h_source.html#l00112">subscriptionTree</a>, and <a class="el" href="SubscriptionTree_8cpp_source.html#l00093">iot::mqtt::server::broker::SubscriptionTree::unsubscribe()</a>.</p>
+<p class="reference">References <a class="el" href="Broker_8h_source.html#l00111">subscriptionTree</a>, and <a class="el" href="SubscriptionTree_8cpp_source.html#l00093">iot::mqtt::server::broker::SubscriptionTree::unsubscribe()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="server_2Mqtt_8cpp_source.html#l00320">iot::mqtt::server::Mqtt::_onUnsubscribe()</a>, and <a class="el" href="server_2Mqtt_8cpp_source.html#l00090">iot::mqtt::server::Mqtt::unsubscribe()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="server_2Mqtt_8cpp_source.html#l00322">iot::mqtt::server::Mqtt::_onUnsubscribe()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1083,7 +1053,7 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classiot_1_1mqtt_1_1server_1_1broker_1_1Broker_ab31233ea92f5e2959f4bc0300b049023_icgraph.svg" width="627" height="134"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classiot_1_1mqtt_1_1server_1_1broker_1_1Broker_ab31233ea92f5e2959f4bc0300b049023_icgraph.svg" width="627" height="72"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -1109,9 +1079,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Broker_8h_source.html#l00110">110</a> of file <a class="el" href="Broker_8h_source.html">Broker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Broker_8h_source.html#l00109">109</a> of file <a class="el" href="Broker_8h_source.html">Broker.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Broker_8cpp_source.html#l00060">Broker()</a>, and <a class="el" href="Broker_8cpp_source.html#l00206">subscribe()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Broker_8cpp_source.html#l00060">Broker()</a>, and <a class="el" href="Broker_8cpp_source.html#l00202">subscribe()</a>.</p>
 
 </div>
 </div>
@@ -1135,9 +1105,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Broker_8h_source.html#l00113">113</a> of file <a class="el" href="Broker_8h_source.html">Broker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Broker_8h_source.html#l00112">112</a> of file <a class="el" href="Broker_8h_source.html">Broker.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Broker_8cpp_source.html#l00198">appear()</a>, <a class="el" href="Broker_8cpp_source.html#l00060">Broker()</a>, <a class="el" href="Broker_8cpp_source.html#l00237">getRetainTree()</a>, <a class="el" href="Broker_8cpp_source.html#l00147">publish()</a>, <a class="el" href="Broker_8cpp_source.html#l00202">release()</a>, <a class="el" href="Broker_8cpp_source.html#l00206">subscribe()</a>, and <a class="el" href="Broker_8cpp_source.html#l00102">~Broker()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Broker_8cpp_source.html#l00198">appear()</a>, <a class="el" href="Broker_8cpp_source.html#l00060">Broker()</a>, <a class="el" href="Broker_8cpp_source.html#l00233">getRetainTree()</a>, <a class="el" href="Broker_8cpp_source.html#l00147">publish()</a>, <a class="el" href="Broker_8cpp_source.html#l00202">subscribe()</a>, and <a class="el" href="Broker_8cpp_source.html#l00102">~Broker()</a>.</p>
 
 </div>
 </div>
@@ -1161,9 +1131,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Broker_8h_source.html#l00115">115</a> of file <a class="el" href="Broker_8h_source.html">Broker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Broker_8h_source.html#l00114">114</a> of file <a class="el" href="Broker_8h_source.html">Broker.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Broker_8cpp_source.html#l00060">Broker()</a>, <a class="el" href="Broker_8cpp_source.html#l00177">deleteSession()</a>, <a class="el" href="Broker_8cpp_source.html#l00186">hasActiveSession()</a>, <a class="el" href="Broker_8cpp_source.html#l00190">hasRetainedSession()</a>, <a class="el" href="Broker_8cpp_source.html#l00182">hasSession()</a>, <a class="el" href="Broker_8cpp_source.html#l00194">isActiveSession()</a>, <a class="el" href="Broker_8cpp_source.html#l00155">newSession()</a>, <a class="el" href="Broker_8cpp_source.html#l00161">renewSession()</a>, <a class="el" href="Broker_8cpp_source.html#l00165">restartSession()</a>, <a class="el" href="Broker_8cpp_source.html#l00173">retainSession()</a>, <a class="el" href="Broker_8cpp_source.html#l00241">sendPublish()</a>, and <a class="el" href="Broker_8cpp_source.html#l00102">~Broker()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Broker_8cpp_source.html#l00060">Broker()</a>, <a class="el" href="Broker_8cpp_source.html#l00177">deleteSession()</a>, <a class="el" href="Broker_8cpp_source.html#l00186">hasActiveSession()</a>, <a class="el" href="Broker_8cpp_source.html#l00190">hasRetainedSession()</a>, <a class="el" href="Broker_8cpp_source.html#l00182">hasSession()</a>, <a class="el" href="Broker_8cpp_source.html#l00194">isActiveSession()</a>, <a class="el" href="Broker_8cpp_source.html#l00155">newSession()</a>, <a class="el" href="Broker_8cpp_source.html#l00161">renewSession()</a>, <a class="el" href="Broker_8cpp_source.html#l00165">restartSession()</a>, <a class="el" href="Broker_8cpp_source.html#l00173">retainSession()</a>, <a class="el" href="Broker_8cpp_source.html#l00237">sendPublish()</a>, and <a class="el" href="Broker_8cpp_source.html#l00102">~Broker()</a>.</p>
 
 </div>
 </div>
@@ -1187,7 +1157,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Broker_8h_source.html#l00109">109</a> of file <a class="el" href="Broker_8h_source.html">Broker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Broker_8h_source.html#l00108">108</a> of file <a class="el" href="Broker_8h_source.html">Broker.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="Broker_8cpp_source.html#l00060">Broker()</a>, and <a class="el" href="Broker_8cpp_source.html#l00102">~Broker()</a>.</p>
 
@@ -1213,9 +1183,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Broker_8h_source.html#l00112">112</a> of file <a class="el" href="Broker_8h_source.html">Broker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Broker_8h_source.html#l00111">111</a> of file <a class="el" href="Broker_8h_source.html">Broker.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Broker_8cpp_source.html#l00060">Broker()</a>, <a class="el" href="Broker_8cpp_source.html#l00177">deleteSession()</a>, <a class="el" href="Broker_8cpp_source.html#l00229">getSubscriptions()</a>, <a class="el" href="Broker_8cpp_source.html#l00233">getSubscriptionTree()</a>, <a class="el" href="Broker_8cpp_source.html#l00147">publish()</a>, <a class="el" href="Broker_8cpp_source.html#l00165">restartSession()</a>, <a class="el" href="Broker_8cpp_source.html#l00206">subscribe()</a>, <a class="el" href="Broker_8cpp_source.html#l00221">unsubscribe()</a>, <a class="el" href="Broker_8cpp_source.html#l00225">unsubscribe()</a>, and <a class="el" href="Broker_8cpp_source.html#l00102">~Broker()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Broker_8cpp_source.html#l00060">Broker()</a>, <a class="el" href="Broker_8cpp_source.html#l00177">deleteSession()</a>, <a class="el" href="Broker_8cpp_source.html#l00225">getSubscriptions()</a>, <a class="el" href="Broker_8cpp_source.html#l00229">getSubscriptionTree()</a>, <a class="el" href="Broker_8cpp_source.html#l00147">publish()</a>, <a class="el" href="Broker_8cpp_source.html#l00165">restartSession()</a>, <a class="el" href="Broker_8cpp_source.html#l00202">subscribe()</a>, <a class="el" href="Broker_8cpp_source.html#l00217">unsubscribe()</a>, <a class="el" href="Broker_8cpp_source.html#l00221">unsubscribe()</a>, and <a class="el" href="Broker_8cpp_source.html#l00102">~Broker()</a>.</p>
 
 </div>
 </div>

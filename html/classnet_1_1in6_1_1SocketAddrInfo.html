@@ -283,7 +283,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">  106</span>                        <span class="keyword">sizeof</span>(servBfr),</div>
 <div class="line"><span class="lineno">  107</span>                        NI_NUMERICHOST | NI_NUMERICSERV);</div>
 <div class="line"><span class="lineno">  108</span> </div>
-<div class="line"><span class="lineno">  109</span>            <span class="keyword">struct </span>sockaddr_in* aiAddr = <span class="keyword">reinterpret_cast&lt;</span>sockaddr_in*<span class="keyword">&gt;</span>(<a class="code hl_variable" href="#a42e6b430b919438df6c8f1a546d6724d">currentAddrInfo</a>-&gt;ai_addr);</div>
+<div class="line"><span class="lineno">  109</span>            <span class="keyword">const</span> <span class="keyword">struct </span>sockaddr_in* aiAddr = <span class="keyword">reinterpret_cast&lt;</span>sockaddr_in*<span class="keyword">&gt;</span>(<a class="code hl_variable" href="#a42e6b430b919438df6c8f1a546d6724d">currentAddrInfo</a>-&gt;ai_addr);</div>
 <div class="line"><span class="lineno">  110</span> </div>
 <div class="line"><span class="lineno">  111</span>            <span class="keyword">const</span> std::string format = <span class="stringliteral">&quot;AddressInfo:\n&quot;</span></div>
 <div class="line"><span class="lineno">  112</span>                                       <span class="stringliteral">&quot;   ai_next      = %v\n&quot;</span></div>

@@ -4,7 +4,7 @@ var classiot_1_1mqtt_1_1SubProtocol =
     [ "SubProtocol", "classiot_1_1mqtt_1_1SubProtocol.html#abcfe4fc7236ee728417d9d5c36d025c9", null ],
     [ "~SubProtocol", "classiot_1_1mqtt_1_1SubProtocol.html#afed08088f877f27f35a007aefa4762cc", null ],
     [ "close", "classiot_1_1mqtt_1_1SubProtocol.html#a46e445768600d208112a40ba52f7e2a9", null ],
-    [ "end", "classiot_1_1mqtt_1_1SubProtocol.html#a58fc8fa528644604c353b56b8a8beb4a", null ],
+    [ "end", "classiot_1_1mqtt_1_1SubProtocol.html#a4a7efe89b36482e94dbf5f4636469d90", null ],
     [ "getSocketConnection", "classiot_1_1mqtt_1_1SubProtocol.html#a666d6b30138920f9332bca695f605d76", null ],
     [ "onConnected", "classiot_1_1mqtt_1_1SubProtocol.html#a26ddb43046e7cf3765e3048030b0b68e", null ],
     [ "onDisconnected", "classiot_1_1mqtt_1_1SubProtocol.html#a114a1b2571f3c0f95289db366eb05aa2", null ],

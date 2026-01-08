@@ -30,7 +30,7 @@ var classcore_1_1socket_1_1stream_1_1SocketConnection =
     [ "setTimeout", "classcore_1_1socket_1_1stream_1_1SocketConnection.html#a37134f664c9d8d624709c9d37e0b5cfb", null ],
     [ "setWriteTimeout", "classcore_1_1socket_1_1stream_1_1SocketConnection.html#a22ce28dcd2c6450c0cf16ad6f25dd471", null ],
     [ "shutdownRead", "classcore_1_1socket_1_1stream_1_1SocketConnection.html#a048516eda8dc42294fbcdf866977fb82", null ],
-    [ "shutdownWrite", "classcore_1_1socket_1_1stream_1_1SocketConnection.html#ab4496d58a35b0fa62a01f8aa78869522", null ],
+    [ "shutdownWrite", "classcore_1_1socket_1_1stream_1_1SocketConnection.html#a73fe465f2fee94189954baa41dedd7e8", null ],
     [ "streamEof", "classcore_1_1socket_1_1stream_1_1SocketConnection.html#aa97ffc0eb464e9c1c4f22db55d2edc67", null ],
     [ "streamToPeer", "classcore_1_1socket_1_1stream_1_1SocketConnection.html#afd5970a79ee4dbf1d18652d2c338fe44", null ],
     [ "timePointToString", "classcore_1_1socket_1_1stream_1_1SocketConnection.html#a3332f36257f140f0e93108d8f866168b", null ],

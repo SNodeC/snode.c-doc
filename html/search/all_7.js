@@ -64,7 +64,7 @@ var searchData=
   ['for_20socketserver_20and_20socketclient_20instances_61',['Common &lt;em&gt;socket&lt;/em&gt; Options for &lt;em&gt;SocketServer&lt;/em&gt; and &lt;em&gt;SocketClient&lt;/em&gt; Instances',['../index.html#common-socket-options-for-socketserver-and-socketclient-instances',1,'']]],
   ['for_20static_20html_20pages_62',['HTTP/S Web-Server for Static HTML-Pages',['../index.html#https-web-server-for-static-html-pages',1,'']]],
   ['forcesniopt_63',['forceSniOpt',['../classnet_1_1config_1_1ConfigTlsServer.html#a682744dc3b42e828002c14f8d213a2c7',1,'net::config::ConfigTlsServer']]],
-  ['foreachclient_64',['forEachClient',['../classweb_1_1websocket_1_1server_1_1GroupsManager.html#a63ea56a08e9b4bdbb9d44100b1399f81',1,'web::websocket::server::GroupsManager::forEachClient()'],['../classweb_1_1websocket_1_1server_1_1SubProtocol.html#a20e68e51f011ff441cfa638217b1af80',1,'web::websocket::server::SubProtocol::forEachClient()']]],
+  ['foreachclient_64',['forEachClient',['../classweb_1_1websocket_1_1server_1_1SubProtocol.html#a20e68e51f011ff441cfa638217b1af80',1,'web::websocket::server::SubProtocol::forEachClient()'],['../classweb_1_1websocket_1_1server_1_1GroupsManager.html#a63ea56a08e9b4bdbb9d44100b1399f81',1,'web::websocket::server::GroupsManager::forEachClient()']]],
   ['format_65',['Configuration File Format',['../index.html#configuration-file-format',1,'']]],
   ['formatter_2ecpp_66',['Formatter.cpp',['../Formatter_8cpp.html',1,'']]],
   ['formatter_2eh_67',['Formatter.h',['../Formatter_8h.html',1,'']]],

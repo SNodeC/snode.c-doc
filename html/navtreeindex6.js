@@ -1,5 +1,12 @@
 var NAVTREEINDEX6 =
 {
+"classcore_1_1multiplexer_1_1epoll_1_1DescriptorEventPublisher.html":[1,0,4,5,0,0],
+"classcore_1_1multiplexer_1_1epoll_1_1DescriptorEventPublisher.html":[3,0,2,5,0,0],
+"classcore_1_1multiplexer_1_1epoll_1_1DescriptorEventPublisher.html#a193ff9309913732850ee352635b2e40f":[1,0,4,5,0,0,2],
+"classcore_1_1multiplexer_1_1epoll_1_1DescriptorEventPublisher.html#a193ff9309913732850ee352635b2e40f":[3,0,2,5,0,0,2],
+"classcore_1_1multiplexer_1_1epoll_1_1DescriptorEventPublisher.html#a4662cc7ecd10b8a72f1828cfac687adc":[1,0,4,5,0,0,1],
+"classcore_1_1multiplexer_1_1epoll_1_1DescriptorEventPublisher.html#a4662cc7ecd10b8a72f1828cfac687adc":[3,0,2,5,0,0,1],
+"classcore_1_1multiplexer_1_1epoll_1_1DescriptorEventPublisher.html#a6d3c69e9c964e30e9ca4e8628485c389":[1,0,4,5,0,0,7],
 "classcore_1_1multiplexer_1_1epoll_1_1DescriptorEventPublisher.html#a6d3c69e9c964e30e9ca4e8628485c389":[3,0,2,5,0,0,7],
 "classcore_1_1multiplexer_1_1epoll_1_1DescriptorEventPublisher.html#a6fed4ddb74374056a3ad4ba5531ec979":[1,0,4,5,0,0,8],
 "classcore_1_1multiplexer_1_1epoll_1_1DescriptorEventPublisher.html#a6fed4ddb74374056a3ad4ba5531ec979":[3,0,2,5,0,0,8],
@@ -242,12 +249,5 @@ var NAVTREEINDEX6 =
 "classcore_1_1pipe_1_1PipeSource.html#a0340bdd362eb05edc36f610ec94bd738":[1,0,4,2,2,10],
 "classcore_1_1pipe_1_1PipeSource.html#a0340bdd362eb05edc36f610ec94bd738":[3,0,2,2,2,10],
 "classcore_1_1pipe_1_1PipeSource.html#a2ba3cc78619bdac77b168df677bf9f6f":[1,0,4,2,2,5],
-"classcore_1_1pipe_1_1PipeSource.html#a2ba3cc78619bdac77b168df677bf9f6f":[3,0,2,2,2,5],
-"classcore_1_1pipe_1_1PipeSource.html#a39b9fdbb94241dfd6865129d6f7eef8b":[1,0,4,2,2,3],
-"classcore_1_1pipe_1_1PipeSource.html#a39b9fdbb94241dfd6865129d6f7eef8b":[3,0,2,2,2,3],
-"classcore_1_1pipe_1_1PipeSource.html#a3ce6372cca5ef1c1a822507a74246fd0":[1,0,4,2,2,2],
-"classcore_1_1pipe_1_1PipeSource.html#a3ce6372cca5ef1c1a822507a74246fd0":[3,0,2,2,2,2],
-"classcore_1_1pipe_1_1PipeSource.html#a402476cf32128425a28224c8e91a4978":[1,0,4,2,2,6],
-"classcore_1_1pipe_1_1PipeSource.html#a402476cf32128425a28224c8e91a4978":[3,0,2,2,2,6],
-"classcore_1_1pipe_1_1PipeSource.html#a43492505e91c1e2886552595985d38f2":[1,0,4,2,2,11]
+"classcore_1_1pipe_1_1PipeSource.html#a2ba3cc78619bdac77b168df677bf9f6f":[3,0,2,2,2,5]
 };

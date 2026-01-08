@@ -1,6 +1,5 @@
 var NAVTREEINDEX1 =
 {
-"Int__1_8cpp.html":[4,0,4,1,1,2],
 "Int__1_8cpp_source.html":[4,0,4,1,1,2],
 "Int__1_8h.html":[4,0,4,1,1,3],
 "Int__1_8h_source.html":[4,0,4,1,1,3],
@@ -94,6 +93,10 @@ var NAVTREEINDEX1 =
 "MariaDBFreeResultCommand_8cpp_source.html":[4,0,2,0,0,0,10],
 "MariaDBFreeResultCommand_8h.html":[4,0,2,0,0,0,11],
 "MariaDBFreeResultCommand_8h_source.html":[4,0,2,0,0,0,11],
+"MariaDBLibrary_8cpp.html":[4,0,2,0,18],
+"MariaDBLibrary_8cpp_source.html":[4,0,2,0,18],
+"MariaDBLibrary_8h.html":[4,0,2,0,19],
+"MariaDBLibrary_8h_source.html":[4,0,2,0,19],
 "MariaDBQueryCommand_8cpp.html":[4,0,2,0,0,0,12],
 "MariaDBQueryCommand_8cpp_source.html":[4,0,2,0,0,0,12],
 "MariaDBQueryCommand_8h.html":[4,0,2,0,0,0,13],
@@ -246,8 +249,5 @@ var NAVTREEINDEX1 =
 "SendHeaderCommand_8cpp_source.html":[4,0,8,0,0,0,6],
 "SendHeaderCommand_8h.html":[4,0,8,0,0,0,7],
 "SendHeaderCommand_8h_source.html":[4,0,8,0,0,0,7],
-"Session_8cpp.html":[4,0,4,0,14],
-"Session_8cpp_source.html":[4,0,4,0,14],
-"Session_8h.html":[4,0,4,0,15],
-"Session_8h_source.html":[4,0,4,0,15]
+"Session_8cpp.html":[4,0,4,0,14]
 };

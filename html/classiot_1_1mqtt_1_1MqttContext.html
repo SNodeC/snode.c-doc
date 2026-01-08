@@ -128,7 +128,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a319ea16029337ef5b2f08b51d5b26d1a" id="r_a319ea16029337ef5b2f08b51d5b26d1a"><td class="memItemLeft" align="right" valign="top">virtual std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a319ea16029337ef5b2f08b51d5b26d1a">recv</a> (char *chunk, std::size_t chunklen)=0</td></tr>
 <tr class="memitem:ab674b33f357f43982863a67c0429dd5b" id="r_ab674b33f357f43982863a67c0429dd5b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab674b33f357f43982863a67c0429dd5b">send</a> (const char *chunk, std::size_t chunklen)=0</td></tr>
 <tr class="memitem:acc1d2a7dc58b95abc6446e3e62f247f6" id="r_acc1d2a7dc58b95abc6446e3e62f247f6"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html">core::socket::stream::SocketConnection</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acc1d2a7dc58b95abc6446e3e62f247f6">getSocketConnection</a> () const =0</td></tr>
-<tr class="memitem:ada10a6f2fcf6953ed62d93bdb5907cd1" id="r_ada10a6f2fcf6953ed62d93bdb5907cd1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ada10a6f2fcf6953ed62d93bdb5907cd1">end</a> (bool fatal=false)=0</td></tr>
+<tr class="memitem:a4fa9607d0ddfbf54e2c46b43e81c4c39" id="r_a4fa9607d0ddfbf54e2c46b43e81c4c39"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4fa9607d0ddfbf54e2c46b43e81c4c39">end</a> ()=0</td></tr>
 <tr class="memitem:af44399b7e355931397763d0ef887375b" id="r_af44399b7e355931397763d0ef887375b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af44399b7e355931397763d0ef887375b">close</a> ()=0</td></tr>
 <tr class="memitem:a1d9be2439663ba186832e2259f344ace" id="r_a1d9be2439663ba186832e2259f344ace"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1d9be2439663ba186832e2259f344ace">onConnected</a> ()</td></tr>
 <tr class="memitem:a614ee4495a17d7f004355578f73cc29c" id="r_a614ee4495a17d7f004355578f73cc29c"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a614ee4495a17d7f004355578f73cc29c">onReceivedFromPeer</a> ()</td></tr>
@@ -271,17 +271,17 @@ Here is the caller graph for this function:</div>
 
 <p>Implemented in <a class="el" href="classiot_1_1mqtt_1_1SocketContext.html#a6314a50fd9c58204e2833262214ce8ad">iot::mqtt::SocketContext</a>, <a class="el" href="classiot_1_1mqtt_1_1SubProtocol.html#a46e445768600d208112a40ba52f7e2a9">iot::mqtt::SubProtocol&lt; WSSubProtocolRoleT &gt;</a>, <a class="el" href="classiot_1_1mqtt_1_1SubProtocol.html#a46e445768600d208112a40ba52f7e2a9">iot::mqtt::SubProtocol&lt; web::websocket::client::SubProtocol &gt;</a>, and <a class="el" href="classiot_1_1mqtt_1_1SubProtocol.html#a46e445768600d208112a40ba52f7e2a9">iot::mqtt::SubProtocol&lt; web::websocket::server::SubProtocol &gt;</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Mqtt_8cpp_source.html#l00174">iot::mqtt::Mqtt::initSession()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="server_2Mqtt_8cpp_source.html#l00213">iot::mqtt::server::Mqtt::_onConnect()</a>, <a class="el" href="Mqtt_8cpp_source.html#l00323">iot::mqtt::Mqtt::_onPuback()</a>, <a class="el" href="Mqtt_8cpp_source.html#l00385">iot::mqtt::Mqtt::_onPubcomp()</a>, <a class="el" href="Mqtt_8cpp_source.html#l00266">iot::mqtt::Mqtt::_onPublish()</a>, <a class="el" href="Mqtt_8cpp_source.html#l00337">iot::mqtt::Mqtt::_onPubrec()</a>, <a class="el" href="Mqtt_8cpp_source.html#l00354">iot::mqtt::Mqtt::_onPubrel()</a>, <a class="el" href="client_2Mqtt_8cpp_source.html#l00220">iot::mqtt::client::Mqtt::_onSuback()</a>, <a class="el" href="server_2Mqtt_8cpp_source.html#l00297">iot::mqtt::server::Mqtt::_onSubscribe()</a>, <a class="el" href="client_2Mqtt_8cpp_source.html#l00246">iot::mqtt::client::Mqtt::_onUnsuback()</a>, <a class="el" href="server_2Mqtt_8cpp_source.html#l00322">iot::mqtt::server::Mqtt::_onUnsubscribe()</a>, and <a class="el" href="Mqtt_8cpp_source.html#l00174">iot::mqtt::Mqtt::initSession()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="classiot_1_1mqtt_1_1MqttContext_af44399b7e355931397763d0ef887375b_icgraph.svg" width="100%" height="394"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="classiot_1_1mqtt_1_1MqttContext_af44399b7e355931397763d0ef887375b_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
 </div>
-<a id="ada10a6f2fcf6953ed62d93bdb5907cd1" name="ada10a6f2fcf6953ed62d93bdb5907cd1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ada10a6f2fcf6953ed62d93bdb5907cd1">&#9670;&#160;</a></span>end()</h2>
+<a id="a4fa9607d0ddfbf54e2c46b43e81c4c39" name="a4fa9607d0ddfbf54e2c46b43e81c4c39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4fa9607d0ddfbf54e2c46b43e81c4c39">&#9670;&#160;</a></span>end()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -292,7 +292,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">virtual void iot::mqtt::MqttContext::end </td>
           <td>(</td>
-          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>fatal</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -303,13 +303,13 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classiot_1_1mqtt_1_1SocketContext.html#a592c91e5ea4be112339353d940d47475">iot::mqtt::SocketContext</a>, <a class="el" href="classiot_1_1mqtt_1_1SubProtocol.html#a58fc8fa528644604c353b56b8a8beb4a">iot::mqtt::SubProtocol&lt; WSSubProtocolRoleT &gt;</a>, <a class="el" href="classiot_1_1mqtt_1_1SubProtocol.html#a58fc8fa528644604c353b56b8a8beb4a">iot::mqtt::SubProtocol&lt; web::websocket::client::SubProtocol &gt;</a>, and <a class="el" href="classiot_1_1mqtt_1_1SubProtocol.html#a58fc8fa528644604c353b56b8a8beb4a">iot::mqtt::SubProtocol&lt; web::websocket::server::SubProtocol &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classiot_1_1mqtt_1_1SocketContext.html#aff144ab2b731eed8a090eaa537a52993">iot::mqtt::SocketContext</a>, <a class="el" href="classiot_1_1mqtt_1_1SubProtocol.html#a4a7efe89b36482e94dbf5f4636469d90">iot::mqtt::SubProtocol&lt; WSSubProtocolRoleT &gt;</a>, <a class="el" href="classiot_1_1mqtt_1_1SubProtocol.html#a4a7efe89b36482e94dbf5f4636469d90">iot::mqtt::SubProtocol&lt; web::websocket::client::SubProtocol &gt;</a>, and <a class="el" href="classiot_1_1mqtt_1_1SubProtocol.html#a4a7efe89b36482e94dbf5f4636469d90">iot::mqtt::SubProtocol&lt; web::websocket::server::SubProtocol &gt;</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="server_2Mqtt_8cpp_source.html#l00221">iot::mqtt::server::Mqtt::_onConnect()</a>, <a class="el" href="Mqtt_8cpp_source.html#l00308">iot::mqtt::Mqtt::_onPuback()</a>, <a class="el" href="Mqtt_8cpp_source.html#l00353">iot::mqtt::Mqtt::_onPubcomp()</a>, <a class="el" href="Mqtt_8cpp_source.html#l00268">iot::mqtt::Mqtt::_onPublish()</a>, <a class="el" href="Mqtt_8cpp_source.html#l00320">iot::mqtt::Mqtt::_onPubrec()</a>, <a class="el" href="Mqtt_8cpp_source.html#l00337">iot::mqtt::Mqtt::_onPubrel()</a>, <a class="el" href="client_2Mqtt_8cpp_source.html#l00220">iot::mqtt::client::Mqtt::_onSuback()</a>, <a class="el" href="server_2Mqtt_8cpp_source.html#l00295">iot::mqtt::server::Mqtt::_onSubscribe()</a>, <a class="el" href="client_2Mqtt_8cpp_source.html#l00246">iot::mqtt::client::Mqtt::_onUnsuback()</a>, <a class="el" href="server_2Mqtt_8cpp_source.html#l00320">iot::mqtt::server::Mqtt::_onUnsubscribe()</a>, and <a class="el" href="client_2Mqtt_8cpp_source.html#l00292">iot::mqtt::client::Mqtt::sendDisconnect()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="client_2Mqtt_8cpp_source.html#l00296">iot::mqtt::client::Mqtt::sendDisconnect()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="classiot_1_1mqtt_1_1MqttContext_ada10a6f2fcf6953ed62d93bdb5907cd1_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classiot_1_1mqtt_1_1MqttContext_a4fa9607d0ddfbf54e2c46b43e81c4c39_icgraph.svg" width="420" height="56"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -370,7 +370,7 @@ Here is the caller graph for this function:</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="MqttContext_8h_source.html#l00084">mqtt</a>, and <a class="el" href="Mqtt_8cpp_source.html#l00095">iot::mqtt::Mqtt::onConnected()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="iot_2mqtt_2SocketContext_8cpp_source.html#l00055">iot::mqtt::SocketContext::onConnected()</a>, and <a class="el" href="iot_2mqtt_2SubProtocol_8hpp_source.html#l00104">iot::mqtt::SubProtocol&lt; WSSubProtocolRoleT &gt;::onConnected()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="iot_2mqtt_2SocketContext_8cpp_source.html#l00055">iot::mqtt::SocketContext::onConnected()</a>, and <a class="el" href="iot_2mqtt_2SubProtocol_8hpp_source.html#l00106">iot::mqtt::SubProtocol&lt; WSSubProtocolRoleT &gt;::onConnected()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -406,7 +406,7 @@ Here is the caller graph for this function:</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="MqttContext_8h_source.html#l00084">mqtt</a>, and <a class="el" href="Mqtt_8cpp_source.html#l00166">iot::mqtt::Mqtt::onDisconnected()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="iot_2mqtt_2SocketContext_8cpp_source.html#l00059">iot::mqtt::SocketContext::onDisconnected()</a>, and <a class="el" href="iot_2mqtt_2SubProtocol_8hpp_source.html#l00149">iot::mqtt::SubProtocol&lt; WSSubProtocolRoleT &gt;::onDisconnected()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="iot_2mqtt_2SocketContext_8cpp_source.html#l00059">iot::mqtt::SocketContext::onDisconnected()</a>, and <a class="el" href="iot_2mqtt_2SubProtocol_8hpp_source.html#l00151">iot::mqtt::SubProtocol&lt; WSSubProtocolRoleT &gt;::onDisconnected()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -478,7 +478,7 @@ Here is the caller graph for this function:</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="MqttContext_8h_source.html#l00084">mqtt</a>, and <a class="el" href="classiot_1_1mqtt_1_1Mqtt.html#ac5cfc8077b350503b38d54ceb2532361">iot::mqtt::Mqtt::onSignal()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="iot_2mqtt_2SocketContext_8cpp_source.html#l00063">iot::mqtt::SocketContext::onSignal()</a>, and <a class="el" href="iot_2mqtt_2SubProtocol_8hpp_source.html#l00155">iot::mqtt::SubProtocol&lt; WSSubProtocolRoleT &gt;::onSignal()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="iot_2mqtt_2SocketContext_8cpp_source.html#l00063">iot::mqtt::SocketContext::onSignal()</a>, and <a class="el" href="iot_2mqtt_2SubProtocol_8hpp_source.html#l00157">iot::mqtt::SubProtocol&lt; WSSubProtocolRoleT &gt;::onSignal()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">

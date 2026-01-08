@@ -1,5 +1,12 @@
 var NAVTREEINDEX10 =
 {
+"classcore_1_1socket_1_1stream_1_1SocketWriter.html#a888c40c034b95b66f2750f6ea8518e5f":[1,0,4,1,0,8,5],
+"classcore_1_1socket_1_1stream_1_1SocketWriter.html#a888c40c034b95b66f2750f6ea8518e5f":[3,0,2,1,0,7,5],
+"classcore_1_1socket_1_1stream_1_1SocketWriter.html#a9308f104283a0def976d31fd7b00ad1c":[1,0,4,1,0,8,14],
+"classcore_1_1socket_1_1stream_1_1SocketWriter.html#a9308f104283a0def976d31fd7b00ad1c":[3,0,2,1,0,7,14],
+"classcore_1_1socket_1_1stream_1_1SocketWriter.html#aa5f4b435a74fe70f54946750cfd003e6":[1,0,4,1,0,8,22],
+"classcore_1_1socket_1_1stream_1_1SocketWriter.html#aa5f4b435a74fe70f54946750cfd003e6":[3,0,2,1,0,7,22],
+"classcore_1_1socket_1_1stream_1_1SocketWriter.html#ab32b65e1272e37676d730c8e6850fd62":[1,0,4,1,0,8,6],
 "classcore_1_1socket_1_1stream_1_1SocketWriter.html#ab32b65e1272e37676d730c8e6850fd62":[3,0,2,1,0,7,6],
 "classcore_1_1socket_1_1stream_1_1SocketWriter.html#abd61595d46548f991c15c5abf50aa1dd":[1,0,4,1,0,8,9],
 "classcore_1_1socket_1_1stream_1_1SocketWriter.html#abd61595d46548f991c15c5abf50aa1dd":[3,0,2,1,0,7,9],
@@ -242,12 +249,5 @@ var NAVTREEINDEX10 =
 "classcore_1_1socket_1_1stream_1_1tls_1_1TLSShutdown.html#aed6dfd51e40c52b0b08b82305e275fd7":[1,0,4,1,0,1,3,6],
 "classcore_1_1socket_1_1stream_1_1tls_1_1TLSShutdown.html#aed6dfd51e40c52b0b08b82305e275fd7":[3,0,2,1,0,1,3,6],
 "classcore_1_1socket_1_1stream_1_1tls_1_1TLSShutdown.html#af81d23a4b803c5151f98bdac10a05e0b":[1,0,4,1,0,1,3,8],
-"classcore_1_1socket_1_1stream_1_1tls_1_1TLSShutdown.html#af81d23a4b803c5151f98bdac10a05e0b":[3,0,2,1,0,1,3,8],
-"classcore_1_1timer_1_1IntervalTimer.html":[1,0,4,0,1],
-"classcore_1_1timer_1_1IntervalTimer.html":[3,0,2,0,1],
-"classcore_1_1timer_1_1IntervalTimer.html#a197b46a64f340168faf976c5d75a4f76":[1,0,4,0,1,7],
-"classcore_1_1timer_1_1IntervalTimer.html#a197b46a64f340168faf976c5d75a4f76":[3,0,2,0,1,7],
-"classcore_1_1timer_1_1IntervalTimer.html#a43563100fc459ce781dac1a12e9dea69":[1,0,4,0,1,1],
-"classcore_1_1timer_1_1IntervalTimer.html#a43563100fc459ce781dac1a12e9dea69":[3,0,2,0,1,1],
-"classcore_1_1timer_1_1IntervalTimer.html#a4ba7992afdc48d50b85f0603647e2e7e":[1,0,4,0,1,2]
+"classcore_1_1socket_1_1stream_1_1tls_1_1TLSShutdown.html#af81d23a4b803c5151f98bdac10a05e0b":[3,0,2,1,0,1,3,8]
 };

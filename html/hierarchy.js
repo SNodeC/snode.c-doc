@@ -500,11 +500,11 @@ var hierarchy =
       [ "apps::towercalculator::TowerCalculator", "classapps_1_1towercalculator_1_1TowerCalculator.html", null ],
       [ "core::DescriptorEventReceiver", "classcore_1_1DescriptorEventReceiver.html", [
         [ "core::eventreceiver::AcceptEventReceiver", "classcore_1_1eventreceiver_1_1AcceptEventReceiver.html", [
-          [ "core::socket::stream::SocketAcceptor< PhysicalSocketServerT, ConfigT, core::socket::stream::tls::SocketConnection >", "classcore_1_1socket_1_1stream_1_1SocketAcceptor.html", [
-            [ "core::socket::stream::tls::SocketAcceptor< PhysicalSocketServerT, ConfigT >", "classcore_1_1socket_1_1stream_1_1tls_1_1SocketAcceptor.html", null ]
-          ] ],
           [ "core::socket::stream::SocketAcceptor< PhysicalServerSocketT, ConfigT, core::socket::stream::legacy::SocketConnection >", "classcore_1_1socket_1_1stream_1_1SocketAcceptor.html", [
             [ "core::socket::stream::legacy::SocketAcceptor< PhysicalServerSocketT, ConfigT >", "classcore_1_1socket_1_1stream_1_1legacy_1_1SocketAcceptor.html", null ]
+          ] ],
+          [ "core::socket::stream::SocketAcceptor< PhysicalSocketServerT, ConfigT, core::socket::stream::tls::SocketConnection >", "classcore_1_1socket_1_1stream_1_1SocketAcceptor.html", [
+            [ "core::socket::stream::tls::SocketAcceptor< PhysicalSocketServerT, ConfigT >", "classcore_1_1socket_1_1stream_1_1tls_1_1SocketAcceptor.html", null ]
           ] ],
           [ "core::socket::stream::SocketAcceptor< PhysicalSocketServerT, ConfigT, SocketConnectionT >", "classcore_1_1socket_1_1stream_1_1SocketAcceptor.html", null ]
         ] ],
@@ -626,6 +626,7 @@ var hierarchy =
       ] ]
     ] ],
     [ "database::mariadb::MariaDBConnectionDetails", "structdatabase_1_1mariadb_1_1MariaDBConnectionDetails.html", null ],
+    [ "database::mariadb::MariaDBLibrary", "classdatabase_1_1mariadb_1_1MariaDBLibrary.html", null ],
     [ "database::mariadb::MariaDBState", "structdatabase_1_1mariadb_1_1MariaDBState.html", null ],
     [ "iot::mqtt::server::broker::Message", "classiot_1_1mqtt_1_1server_1_1broker_1_1Message.html", null ],
     [ "web::http::client::tools::EventSource::MessageEvent", "structweb_1_1http_1_1client_1_1tools_1_1EventSource_1_1MessageEvent.html", null ],
@@ -737,9 +738,9 @@ var hierarchy =
     ] ],
     [ "express::Router", "classexpress_1_1Router.html", [
       [ "express::WebApp", "classexpress_1_1WebApp.html", [
-        [ "express::WebAppT< web::http::legacy::in::Server >", "classexpress_1_1WebAppT.html", null ],
         [ "express::WebAppT< web::http::legacy::in6::Server >", "classexpress_1_1WebAppT.html", null ],
         [ "express::WebAppT< web::http::tls::in6::Server >", "classexpress_1_1WebAppT.html", null ],
+        [ "express::WebAppT< web::http::legacy::in::Server >", "classexpress_1_1WebAppT.html", null ],
         [ "express::WebAppT< web::http::tls::in::Server >", "classexpress_1_1WebAppT.html", null ],
         [ "express::WebAppT< web::http::legacy::rc::Server >", "classexpress_1_1WebAppT.html", null ],
         [ "express::WebAppT< web::http::legacy::un::Server >", "classexpress_1_1WebAppT.html", null ],
@@ -986,8 +987,10 @@ var hierarchy =
       ] ]
     ] ],
     [ "web::websocket::SubProtocolFactory&lt; SubProtocolT &gt;", "classweb_1_1websocket_1_1SubProtocolFactory.html", null ],
-    [ "web::websocket::SubProtocolFactory&lt; Echo &gt;", "classweb_1_1websocket_1_1SubProtocolFactory.html", [
-      [ "apps::websocket::subprotocol::echo::client::EchoFactory", "classapps_1_1websocket_1_1subprotocol_1_1echo_1_1client_1_1EchoFactory.html", null ],
+    [ "web::websocket::SubProtocolFactory&lt; web::websocket::client::SubProtocol &gt;", "classweb_1_1websocket_1_1SubProtocolFactory.html", [
+      [ "apps::websocket::subprotocol::echo::client::EchoFactory", "classapps_1_1websocket_1_1subprotocol_1_1echo_1_1client_1_1EchoFactory.html", null ]
+    ] ],
+    [ "web::websocket::SubProtocolFactory&lt; web::websocket::server::SubProtocol &gt;", "classweb_1_1websocket_1_1SubProtocolFactory.html", [
       [ "apps::websocket::subprotocol::echo::server::EchoFactory", "classapps_1_1websocket_1_1subprotocol_1_1echo_1_1server_1_1EchoFactory.html", null ]
     ] ],
     [ "web::websocket::SubProtocolFactorySelector&lt; SubProtocolFactoryT &gt;", "classweb_1_1websocket_1_1SubProtocolFactorySelector.html", null ],

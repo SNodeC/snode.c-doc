@@ -56,7 +56,9 @@ var searchData=
   ['optname_53',['optName',['../classnet_1_1phy_1_1PhysicalSocketOption.html#abef62a9e5f0d6c7cf75a0fe72f6c2773',1,'net::phy::PhysicalSocketOption']]],
   ['optvalue_54',['optValue',['../classnet_1_1phy_1_1PhysicalSocketOption.html#a80752e6ec71e435efad49ca035c37dde',1,'net::phy::PhysicalSocketOption']]],
   ['origin_55',['origin',['../structweb_1_1http_1_1client_1_1tools_1_1EventSource_1_1MessageEvent.html#a7362910cb648f716d327873c1e45cb21',1,'web::http::client::tools::EventSource::MessageEvent::origin'],['../structweb_1_1http_1_1client_1_1tools_1_1EventSource_1_1SharedState.html#ad6d6c6a32794a8e3ec3e065fc8b39c70',1,'web::http::client::tools::EventSource::SharedState::origin']]],
-  ['originalurl_56',['originalUrl',['../classexpress_1_1Request.html#a21d73e07910e59803aecd3da071b5f7e',1,'express::Request']]],
-  ['originclientid_57',['originClientId',['../classiot_1_1mqtt_1_1server_1_1broker_1_1Message.html#a24f265717e9297b756c339d82b8d1efb',1,'iot::mqtt::server::broker::Message']]],
-  ['originretain_58',['originRetain',['../classiot_1_1mqtt_1_1server_1_1broker_1_1Message.html#adeca5c4d209d9c4cddd2ffde9b69dfb0',1,'iot::mqtt::server::broker::Message']]]
+  ['originalpath_56',['originalPath',['../classexpress_1_1Request.html#a5988980fbbe05bdbbc91da5b13a55346',1,'express::Request']]],
+  ['originalurl_57',['originalUrl',['../classexpress_1_1Request.html#a21d73e07910e59803aecd3da071b5f7e',1,'express::Request']]],
+  ['originclientid_58',['originClientId',['../classiot_1_1mqtt_1_1server_1_1broker_1_1Message.html#a24f265717e9297b756c339d82b8d1efb',1,'iot::mqtt::server::broker::Message']]],
+  ['originretain_59',['originRetain',['../classiot_1_1mqtt_1_1server_1_1broker_1_1Message.html#adeca5c4d209d9c4cddd2ffde9b69dfb0',1,'iot::mqtt::server::broker::Message']]],
+  ['outgoingpublishmap_60',['outgoingPublishMap',['../classiot_1_1mqtt_1_1Session.html#a22e3d95c4ac07940a54b1b45357662af',1,'iot::mqtt::Session']]]
 ];

@@ -1,6 +1,5 @@
 var classiot_1_1mqtt_1_1ControlPacketDeserializer =
 [
-    [ "ControlPacketDeserializer", "classiot_1_1mqtt_1_1ControlPacketDeserializer.html#a81eaf6214045805782b56f738fc48c6f", null ],
     [ "ControlPacketDeserializer", "classiot_1_1mqtt_1_1ControlPacketDeserializer.html#ae64beb7171b4191285e97ac7fc323cc4", null ],
     [ "~ControlPacketDeserializer", "classiot_1_1mqtt_1_1ControlPacketDeserializer.html#a1b52ae76edd63273a0fae41698fa6b13", null ],
     [ "deserialize", "classiot_1_1mqtt_1_1ControlPacketDeserializer.html#a15fced5af1fb9760e3a7e5d39d63252b", null ],

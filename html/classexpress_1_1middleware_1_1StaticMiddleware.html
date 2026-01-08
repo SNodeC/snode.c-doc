@@ -395,38 +395,44 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   81</span>                }</div>
 <div class="line"><span class="lineno">   82</span>            },</div>
 <div class="line"><span class="lineno">   83</span>            [&amp;<a class="code hl_variable" href="#aafd0ff259b03721c98e9111668b5d539">index</a> = this-&gt;<a class="code hl_variable" href="#aafd0ff259b03721c98e9111668b5d539">index</a>] <a class="code hl_define" href="Router_8h.html#ac5313b926a3bc0fb106bffb31e93dc71">MIDDLEWARE</a>(req, res, next) {</div>
-<div class="line"><span class="lineno">   84</span>                <span class="keywordflow">if</span> (req-&gt;url.ends_with(<span class="stringliteral">&quot;/&quot;</span>)) {</div>
+<div class="line"><span class="lineno">   84</span>                <span class="keywordflow">if</span> (req-&gt;path == <span class="stringliteral">&quot;/&quot;</span>) {</div>
 <div class="line"><span class="lineno">   85</span>                    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="#aafd0ff259b03721c98e9111668b5d539">index</a>.empty()) {</div>
 <div class="line"><span class="lineno">   86</span>                        LOG(INFO) &lt;&lt; res-&gt;getSocketContext()-&gt;getSocketConnection()-&gt;getConnectionName()</div>
-<div class="line"><span class="lineno">   87</span>                                  &lt;&lt; <span class="stringliteral">&quot; Express StaticMiddleware Redirecting: &quot;</span> &lt;&lt; req-&gt;url &lt;&lt; <span class="stringliteral">&quot; -&gt; &quot;</span> &lt;&lt; req-&gt;url + <a class="code hl_variable" href="#aafd0ff259b03721c98e9111668b5d539">index</a>;</div>
-<div class="line"><span class="lineno">   88</span>                        res-&gt;redirect(308, req-&gt;url + <a class="code hl_variable" href="#aafd0ff259b03721c98e9111668b5d539">index</a>);</div>
-<div class="line"><span class="lineno">   89</span>                    } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   90</span>                        res-&gt;status(404).send(<span class="stringliteral">&quot;Unsupported resource: &quot;</span> + req-&gt;url + <span class="stringliteral">&quot;\n&quot;</span>);</div>
-<div class="line"><span class="lineno">   91</span>                    }</div>
-<div class="line"><span class="lineno">   92</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   93</span>                    next();</div>
-<div class="line"><span class="lineno">   94</span>                }</div>
-<div class="line"><span class="lineno">   95</span>            },</div>
-<div class="line"><span class="lineno">   96</span>            [&amp;<a class="code hl_variable" href="#a4c1b12467fbff98a6aeecb56774a779e">root</a> = this-&gt;<a class="code hl_variable" href="#a4c1b12467fbff98a6aeecb56774a779e">root</a>] <a class="code hl_define" href="Router_8h.html#ac5313b926a3bc0fb106bffb31e93dc71">MIDDLEWARE</a>(req, res, next) {</div>
-<div class="line"><span class="lineno">   97</span>                <span class="keyword">const</span> <span class="keywordtype">bool</span> fileAllowed = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   98</span> </div>
-<div class="line"><span class="lineno">   99</span>                <span class="keywordflow">if</span> (fileAllowed) {</div>
-<div class="line"><span class="lineno">  100</span>                    res-&gt;sendFile(<a class="code hl_variable" href="#a4c1b12467fbff98a6aeecb56774a779e">root</a> + req-&gt;url, [&amp;<a class="code hl_variable" href="#a4c1b12467fbff98a6aeecb56774a779e">root</a>, req, res](<span class="keywordtype">int</span> ret) {</div>
-<div class="line"><span class="lineno">  101</span>                        if (ret == 0) {</div>
-<div class="line"><span class="lineno">  102</span>                            LOG(INFO) &lt;&lt; res-&gt;getSocketContext()-&gt;getSocketConnection()-&gt;getConnectionName()</div>
-<div class="line"><span class="lineno">  103</span>                                      &lt;&lt; <span class="stringliteral">&quot; Express StaticMiddleware: GET &quot;</span> &lt;&lt; req-&gt;url + <span class="stringliteral">&quot; -&gt; &quot;</span> &lt;&lt; root + req-&gt;url;</div>
-<div class="line"><span class="lineno">  104</span>                        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  105</span>                            PLOG(ERROR) &lt;&lt; res-&gt;getSocketContext()-&gt;getSocketConnection()-&gt;getConnectionName()</div>
-<div class="line"><span class="lineno">  106</span>                                        &lt;&lt; <span class="stringliteral">&quot; Express StaticMiddleware &quot;</span> &lt;&lt; req-&gt;url + <span class="stringliteral">&quot; -&gt; &quot;</span> &lt;&lt; root + req-&gt;url;</div>
-<div class="line"><span class="lineno">  107</span> </div>
-<div class="line"><span class="lineno">  108</span>                            res-&gt;sendStatus(404);</div>
-<div class="line"><span class="lineno">  109</span>                        }</div>
-<div class="line"><span class="lineno">  110</span>                    });</div>
-<div class="line"><span class="lineno">  111</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  112</span>                    next();</div>
-<div class="line"><span class="lineno">  113</span>                }</div>
-<div class="line"><span class="lineno">  114</span>            });</div>
-<div class="line"><span class="lineno">  115</span>    }</div>
+<div class="line"><span class="lineno">   87</span>                                  &lt;&lt; <span class="stringliteral">&quot; Express StaticMiddleware Redirecting: &quot;</span> &lt;&lt; req-&gt;url &lt;&lt; <span class="stringliteral">&quot; -&gt; &quot;</span></div>
+<div class="line"><span class="lineno">   88</span>                                  &lt;&lt; req-&gt;originalPath +</div>
+<div class="line"><span class="lineno">   89</span>                                         (!req-&gt;originalPath.empty() &amp;&amp; req-&gt;originalPath.back() != <span class="charliteral">&#39;/&#39;</span> &amp;&amp; <a class="code hl_variable" href="#aafd0ff259b03721c98e9111668b5d539">index</a>.front() != <span class="charliteral">&#39;/&#39;</span> ? <span class="stringliteral">&quot;/&quot;</span></div>
+<div class="line"><span class="lineno">   90</span>                                                                                                                                : <span class="stringliteral">&quot;&quot;</span>) +</div>
+<div class="line"><span class="lineno">   91</span>                                         <a class="code hl_variable" href="#aafd0ff259b03721c98e9111668b5d539">index</a>;</div>
+<div class="line"><span class="lineno">   92</span>                        res-&gt;redirect(</div>
+<div class="line"><span class="lineno">   93</span>                            308,</div>
+<div class="line"><span class="lineno">   94</span>                            req-&gt;originalPath +</div>
+<div class="line"><span class="lineno">   95</span>                                (!req-&gt;originalPath.empty() &amp;&amp; req-&gt;originalPath.back() != <span class="charliteral">&#39;/&#39;</span> &amp;&amp; <a class="code hl_variable" href="#aafd0ff259b03721c98e9111668b5d539">index</a>.front() != <span class="charliteral">&#39;/&#39;</span> ? <span class="stringliteral">&quot;/&quot;</span> : <span class="stringliteral">&quot;&quot;</span>) + <a class="code hl_variable" href="#aafd0ff259b03721c98e9111668b5d539">index</a>);</div>
+<div class="line"><span class="lineno">   96</span>                    } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">   97</span>                        res-&gt;status(404).send(<span class="stringliteral">&quot;Unsupported resource: &quot;</span> + req-&gt;url + <span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line"><span class="lineno">   98</span>                    }</div>
+<div class="line"><span class="lineno">   99</span>                } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  100</span>                    next();</div>
+<div class="line"><span class="lineno">  101</span>                }</div>
+<div class="line"><span class="lineno">  102</span>            },</div>
+<div class="line"><span class="lineno">  103</span>            [&amp;<a class="code hl_variable" href="#a4c1b12467fbff98a6aeecb56774a779e">root</a> = this-&gt;<a class="code hl_variable" href="#a4c1b12467fbff98a6aeecb56774a779e">root</a>] <a class="code hl_define" href="Router_8h.html#ac5313b926a3bc0fb106bffb31e93dc71">MIDDLEWARE</a>(req, res, next) {</div>
+<div class="line"><span class="lineno">  104</span>                <span class="keyword">const</span> <span class="keywordtype">bool</span> fileAllowed = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  105</span>                <span class="keywordflow">if</span> (fileAllowed) {</div>
+<div class="line"><span class="lineno">  106</span>                    res-&gt;sendFile(<a class="code hl_variable" href="#a4c1b12467fbff98a6aeecb56774a779e">root</a> + req-&gt;path, [&amp;<a class="code hl_variable" href="#a4c1b12467fbff98a6aeecb56774a779e">root</a>, req, res](<span class="keywordtype">int</span> ret) {</div>
+<div class="line"><span class="lineno">  107</span>                        if (ret == 0) {</div>
+<div class="line"><span class="lineno">  108</span>                            LOG(INFO) &lt;&lt; res-&gt;getSocketContext()-&gt;getSocketConnection()-&gt;getConnectionName()</div>
+<div class="line"><span class="lineno">  109</span>                                      &lt;&lt; <span class="stringliteral">&quot; Express StaticMiddleware: GET &quot;</span> &lt;&lt; req-&gt;url + <span class="stringliteral">&quot; -&gt; &quot;</span> &lt;&lt; root + req-&gt;path;</div>
+<div class="line"><span class="lineno">  110</span>                        } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  111</span>                            PLOG(ERROR) &lt;&lt; res-&gt;getSocketContext()-&gt;getSocketConnection()-&gt;getConnectionName()</div>
+<div class="line"><span class="lineno">  112</span>                                        &lt;&lt; <span class="stringliteral">&quot; Express StaticMiddleware &quot;</span> &lt;&lt; req-&gt;url + <span class="stringliteral">&quot; -&gt; &quot;</span> &lt;&lt; root + req-&gt;path;</div>
+<div class="line"><span class="lineno">  113</span> </div>
+<div class="line"><span class="lineno">  114</span>                            res-&gt;sendStatus(404);</div>
+<div class="line"><span class="lineno">  115</span>                        }</div>
+<div class="line"><span class="lineno">  116</span>                    });</div>
+<div class="line"><span class="lineno">  117</span>                } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  118</span>                    next();</div>
+<div class="line"><span class="lineno">  119</span>                }</div>
+<div class="line"><span class="lineno">  120</span>            });</div>
+<div class="line"><span class="lineno">  121</span>    }</div>
 <div class="ttc" id="aRouter_8h_html_ac5313b926a3bc0fb106bffb31e93dc71"><div class="ttname"><a href="Router_8h.html#ac5313b926a3bc0fb106bffb31e93dc71">MIDDLEWARE</a></div><div class="ttdeci">#define MIDDLEWARE(req, res, next)</div><div class="ttdef"><b>Definition</b> <a href="Router_8h_source.html#l00063">Router.h:63</a></div></div>
 <div class="ttc" id="aclassexpress_1_1Router_html_a52af5e0a7c89819edac8fb1c59d45e36"><div class="ttname"><a href="classexpress_1_1Router.html#a52af5e0a7c89819edac8fb1c59d45e36">express::Router::setStrictRouting</a></div><div class="ttdeci">const Router &amp; setStrictRouting(bool strictRouting=true) const</div><div class="ttdef"><b>Definition</b> <a href="Router_8cpp_source.html#l00078">Router.cpp:78</a></div></div>
 <div class="ttc" id="aclassexpress_1_1Router_html_a53489bf51a50fb256082f476bb5843cc"><div class="ttname"><a href="classexpress_1_1Router.html#a53489bf51a50fb256082f476bb5843cc">express::Router::options</a></div><div class="ttdeci">Route &amp; options(const Router &amp;router) const</div><div class="ttdef"><b>Definition</b> <a href="Router_8cpp_source.html#l00101">Router.cpp:101</a></div></div>
@@ -439,7 +445,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="anamespaceweb_1_1http_html_ac27fdcf348c7472940ecd0e34342dca1a19331c4aeb7eb71943963ec94adb057e"><div class="ttname"><a href="namespaceweb_1_1http.html#ac27fdcf348c7472940ecd0e34342dca1a19331c4aeb7eb71943963ec94adb057e">web::http::Keep</a></div><div class="ttdeci">@ Keep</div><div class="ttdef"><b>Definition</b> <a href="ConnectionState_8h_source.html#l00051">ConnectionState.h:51</a></div></div>
 <div class="ttc" id="anamespaceweb_1_1http_html_ac27fdcf348c7472940ecd0e34342dca1a31333582a62633255ac3791bd7f5af0b"><div class="ttname"><a href="namespaceweb_1_1http.html#ac27fdcf348c7472940ecd0e34342dca1a31333582a62633255ac3791bd7f5af0b">web::http::Close</a></div><div class="ttdeci">@ Close</div><div class="ttdef"><b>Definition</b> <a href="ConnectionState_8h_source.html#l00051">ConnectionState.h:51</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ConnectionState_8h_source.html#l00051">web::http::Close</a>, <a class="el" href="express_2Response_8cpp_source.html#l00147">express::Response::cookie()</a>, <a class="el" href="StaticMiddleware_8h_source.html#l00084">defaultConnectionState</a>, <a class="el" href="SocketConnection_8cpp_source.html#l00112">core::socket::stream::SocketConnection::getConnectionName()</a>, <a class="el" href="CookieOptions_8h_source.html#l00069">web::http::CookieOptions::getOptions()</a>, <a class="el" href="core_2socket_2stream_2SocketContext_8cpp_source.html#l00065">core::socket::stream::SocketContext::getSocketConnection()</a>, <a class="el" href="express_2Response_8cpp_source.html#l00068">express::Response::getSocketContext()</a>, <a class="el" href="CookieOptions_8h_source.html#l00073">web::http::CookieOptions::getValue()</a>, <a class="el" href="StaticMiddleware_8h_source.html#l00081">index</a>, <a class="el" href="ConnectionState_8h_source.html#l00051">web::http::Keep</a>, <a class="el" href="express_2Request_8h_source.html#l00095">express::Request::method</a>, <a class="el" href="Next_8cpp_source.html#l00056">express::Next::operator()()</a>, <a class="el" href="express_2Response_8cpp_source.html#l00090">express::Response::redirect()</a>, <a class="el" href="StaticMiddleware_8h_source.html#l00080">root</a>, <a class="el" href="express_2Response_8cpp_source.html#l00169">express::Response::send()</a>, <a class="el" href="express_2Response_8cpp_source.html#l00181">express::Response::sendFile()</a>, <a class="el" href="express_2Response_8cpp_source.html#l00095">express::Response::sendStatus()</a>, <a class="el" href="express_2Response_8cpp_source.html#l00135">express::Response::set()</a>, <a class="el" href="express_2Response_8cpp_source.html#l00129">express::Response::set()</a>, <a class="el" href="Router_8cpp_source.html#l00078">express::Router::setStrictRouting()</a>, <a class="el" href="express_2Response_8cpp_source.html#l00117">express::Response::status()</a>, and <a class="el" href="express_2Request_8h_source.html#l00096">express::Request::url</a>.</p>
+<p class="reference">References <a class="el" href="ConnectionState_8h_source.html#l00051">web::http::Close</a>, <a class="el" href="express_2Response_8cpp_source.html#l00147">express::Response::cookie()</a>, <a class="el" href="StaticMiddleware_8h_source.html#l00084">defaultConnectionState</a>, <a class="el" href="SocketConnection_8cpp_source.html#l00112">core::socket::stream::SocketConnection::getConnectionName()</a>, <a class="el" href="CookieOptions_8h_source.html#l00069">web::http::CookieOptions::getOptions()</a>, <a class="el" href="core_2socket_2stream_2SocketContext_8cpp_source.html#l00065">core::socket::stream::SocketContext::getSocketConnection()</a>, <a class="el" href="express_2Response_8cpp_source.html#l00068">express::Response::getSocketContext()</a>, <a class="el" href="CookieOptions_8h_source.html#l00073">web::http::CookieOptions::getValue()</a>, <a class="el" href="StaticMiddleware_8h_source.html#l00081">index</a>, <a class="el" href="ConnectionState_8h_source.html#l00051">web::http::Keep</a>, <a class="el" href="express_2Request_8h_source.html#l00097">express::Request::method</a>, <a class="el" href="Next_8cpp_source.html#l00056">express::Next::operator()()</a>, <a class="el" href="express_2Request_8h_source.html#l00078">express::Request::originalPath</a>, <a class="el" href="express_2Request_8h_source.html#l00079">express::Request::path</a>, <a class="el" href="express_2Response_8cpp_source.html#l00090">express::Response::redirect()</a>, <a class="el" href="StaticMiddleware_8h_source.html#l00080">root</a>, <a class="el" href="express_2Response_8cpp_source.html#l00169">express::Response::send()</a>, <a class="el" href="express_2Response_8cpp_source.html#l00181">express::Response::sendFile()</a>, <a class="el" href="express_2Response_8cpp_source.html#l00095">express::Response::sendStatus()</a>, <a class="el" href="express_2Response_8cpp_source.html#l00135">express::Response::set()</a>, <a class="el" href="express_2Response_8cpp_source.html#l00129">express::Response::set()</a>, <a class="el" href="Router_8cpp_source.html#l00078">express::Router::setStrictRouting()</a>, <a class="el" href="express_2Response_8cpp_source.html#l00117">express::Response::status()</a>, and <a class="el" href="express_2Request_8h_source.html#l00098">express::Request::url</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -464,12 +470,12 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="StaticMiddleware_8cpp_source.html#l00155">155</a> of file <a class="el" href="StaticMiddleware_8cpp_source.html">StaticMiddleware.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  155</span>                                                                                                  {</div>
-<div class="line"><span class="lineno">  156</span>        this-&gt;<a class="code hl_variable" href="#a2044da61644dd22bd947caf65bfd802e">defaultConnectionState</a> = connectionState;</div>
-<div class="line"><span class="lineno">  157</span> </div>
-<div class="line"><span class="lineno">  158</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">  159</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="StaticMiddleware_8cpp_source.html#l00161">161</a> of file <a class="el" href="StaticMiddleware_8cpp_source.html">StaticMiddleware.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  161</span>                                                                                                  {</div>
+<div class="line"><span class="lineno">  162</span>        this-&gt;<a class="code hl_variable" href="#a2044da61644dd22bd947caf65bfd802e">defaultConnectionState</a> = connectionState;</div>
+<div class="line"><span class="lineno">  163</span> </div>
+<div class="line"><span class="lineno">  164</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">  165</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="StaticMiddleware_8h_source.html#l00084">defaultConnectionState</a>.</p>
 
@@ -499,12 +505,12 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="StaticMiddleware_8cpp_source.html#l00147">147</a> of file <a class="el" href="StaticMiddleware_8cpp_source.html">StaticMiddleware.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  149</span>                                                                                                           {</div>
-<div class="line"><span class="lineno">  150</span>        this-&gt;<a class="code hl_variable" href="#a0a6f1426d1d24d50b1af2710a8241bc4">stdCookies</a>.insert({name, web::http::CookieOptions(value, <a class="code hl_function" href="classexpress_1_1Router.html#a53489bf51a50fb256082f476bb5843cc">options</a>)});</div>
-<div class="line"><span class="lineno">  151</span> </div>
-<div class="line"><span class="lineno">  152</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">  153</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="StaticMiddleware_8cpp_source.html#l00153">153</a> of file <a class="el" href="StaticMiddleware_8cpp_source.html">StaticMiddleware.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  155</span>                                                                                                           {</div>
+<div class="line"><span class="lineno">  156</span>        this-&gt;<a class="code hl_variable" href="#a0a6f1426d1d24d50b1af2710a8241bc4">stdCookies</a>.insert({name, web::http::CookieOptions(value, <a class="code hl_function" href="classexpress_1_1Router.html#a53489bf51a50fb256082f476bb5843cc">options</a>)});</div>
+<div class="line"><span class="lineno">  157</span> </div>
+<div class="line"><span class="lineno">  158</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">  159</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="CookieOptions_8h_source.html#l00056">web::http::CookieOptions::CookieOptions()</a>, and <a class="el" href="StaticMiddleware_8h_source.html#l00083">stdCookies</a>.</p>
 <div class="dynheader">
@@ -530,12 +536,12 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="StaticMiddleware_8cpp_source.html#l00135">135</a> of file <a class="el" href="StaticMiddleware_8cpp_source.html">StaticMiddleware.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  135</span>                                                                                                             {</div>
-<div class="line"><span class="lineno">  136</span>        this-&gt;<a class="code hl_variable" href="#a8ce62963e4bb98b3999d8748c9b97b51">stdHeaders</a>.insert(<a class="code hl_variable" href="#a8ce62963e4bb98b3999d8748c9b97b51">stdHeaders</a>.begin(), <a class="code hl_variable" href="#a8ce62963e4bb98b3999d8748c9b97b51">stdHeaders</a>.end());</div>
-<div class="line"><span class="lineno">  137</span> </div>
-<div class="line"><span class="lineno">  138</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">  139</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="StaticMiddleware_8cpp_source.html#l00141">141</a> of file <a class="el" href="StaticMiddleware_8cpp_source.html">StaticMiddleware.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  141</span>                                                                                                             {</div>
+<div class="line"><span class="lineno">  142</span>        this-&gt;<a class="code hl_variable" href="#a8ce62963e4bb98b3999d8748c9b97b51">stdHeaders</a>.insert(<a class="code hl_variable" href="#a8ce62963e4bb98b3999d8748c9b97b51">stdHeaders</a>.begin(), <a class="code hl_variable" href="#a8ce62963e4bb98b3999d8748c9b97b51">stdHeaders</a>.end());</div>
+<div class="line"><span class="lineno">  143</span> </div>
+<div class="line"><span class="lineno">  144</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">  145</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="StaticMiddleware_8h_source.html#l00082">stdHeaders</a>.</p>
 
@@ -560,12 +566,12 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="StaticMiddleware_8cpp_source.html#l00141">141</a> of file <a class="el" href="StaticMiddleware_8cpp_source.html">StaticMiddleware.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  141</span>                                                                                                             {</div>
-<div class="line"><span class="lineno">  142</span>        this-&gt;<a class="code hl_variable" href="#a8ce62963e4bb98b3999d8748c9b97b51">stdHeaders</a>[field] = value;</div>
-<div class="line"><span class="lineno">  143</span> </div>
-<div class="line"><span class="lineno">  144</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">  145</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="StaticMiddleware_8cpp_source.html#l00147">147</a> of file <a class="el" href="StaticMiddleware_8cpp_source.html">StaticMiddleware.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  147</span>                                                                                                             {</div>
+<div class="line"><span class="lineno">  148</span>        this-&gt;<a class="code hl_variable" href="#a8ce62963e4bb98b3999d8748c9b97b51">stdHeaders</a>[field] = value;</div>
+<div class="line"><span class="lineno">  149</span> </div>
+<div class="line"><span class="lineno">  150</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">  151</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="StaticMiddleware_8h_source.html#l00082">stdHeaders</a>.</p>
 
@@ -586,12 +592,12 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="StaticMiddleware_8cpp_source.html#l00123">123</a> of file <a class="el" href="StaticMiddleware_8cpp_source.html">StaticMiddleware.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  123</span>                                                              {</div>
-<div class="line"><span class="lineno">  124</span>        this-&gt;<a class="code hl_variable" href="#a8ce62963e4bb98b3999d8748c9b97b51">stdHeaders</a>.clear();</div>
-<div class="line"><span class="lineno">  125</span> </div>
-<div class="line"><span class="lineno">  126</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">  127</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="StaticMiddleware_8cpp_source.html#l00129">129</a> of file <a class="el" href="StaticMiddleware_8cpp_source.html">StaticMiddleware.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  129</span>                                                              {</div>
+<div class="line"><span class="lineno">  130</span>        this-&gt;<a class="code hl_variable" href="#a8ce62963e4bb98b3999d8748c9b97b51">stdHeaders</a>.clear();</div>
+<div class="line"><span class="lineno">  131</span> </div>
+<div class="line"><span class="lineno">  132</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">  133</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="StaticMiddleware_8h_source.html#l00082">stdHeaders</a>.</p>
 
@@ -620,17 +626,17 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="StaticMiddleware_8cpp_source.html#l00161">161</a> of file <a class="el" href="StaticMiddleware_8cpp_source.html">StaticMiddleware.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  161</span>                                                                            {</div>
-<div class="line"><span class="lineno">  162</span>        <span class="comment">// Keep all created static middlewares alive</span></div>
-<div class="line"><span class="lineno">  163</span>        <span class="keyword">static</span> std::map&lt;const std::string, std::shared_ptr&lt;class StaticMiddleware&gt;&gt; staticMiddlewares;</div>
-<div class="line"><span class="lineno">  164</span> </div>
-<div class="line"><span class="lineno">  165</span>        <span class="keywordflow">if</span> (!staticMiddlewares.contains(<a class="code hl_variable" href="#a4c1b12467fbff98a6aeecb56774a779e">root</a>)) {</div>
-<div class="line"><span class="lineno">  166</span>            staticMiddlewares[<a class="code hl_variable" href="#a4c1b12467fbff98a6aeecb56774a779e">root</a>] = std::shared_ptr&lt;StaticMiddleware&gt;(<span class="keyword">new</span> <a class="code hl_function" href="#a573c60de5962113fc441e2494b87f79f">StaticMiddleware</a>(<a class="code hl_variable" href="#a4c1b12467fbff98a6aeecb56774a779e">root</a>));</div>
-<div class="line"><span class="lineno">  167</span>        }</div>
-<div class="line"><span class="lineno">  168</span> </div>
-<div class="line"><span class="lineno">  169</span>        <span class="keywordflow">return</span> *staticMiddlewares[<a class="code hl_variable" href="#a4c1b12467fbff98a6aeecb56774a779e">root</a>];</div>
-<div class="line"><span class="lineno">  170</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="StaticMiddleware_8cpp_source.html#l00167">167</a> of file <a class="el" href="StaticMiddleware_8cpp_source.html">StaticMiddleware.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  167</span>                                                                            {</div>
+<div class="line"><span class="lineno">  168</span>        <span class="comment">// Keep all created static middlewares alive</span></div>
+<div class="line"><span class="lineno">  169</span>        <span class="keyword">static</span> std::map&lt;const std::string, std::shared_ptr&lt;class StaticMiddleware&gt;&gt; staticMiddlewares;</div>
+<div class="line"><span class="lineno">  170</span> </div>
+<div class="line"><span class="lineno">  171</span>        <span class="keywordflow">if</span> (!staticMiddlewares.contains(<a class="code hl_variable" href="#a4c1b12467fbff98a6aeecb56774a779e">root</a>)) {</div>
+<div class="line"><span class="lineno">  172</span>            staticMiddlewares[<a class="code hl_variable" href="#a4c1b12467fbff98a6aeecb56774a779e">root</a>] = std::shared_ptr&lt;StaticMiddleware&gt;(<span class="keyword">new</span> <a class="code hl_function" href="#a573c60de5962113fc441e2494b87f79f">StaticMiddleware</a>(<a class="code hl_variable" href="#a4c1b12467fbff98a6aeecb56774a779e">root</a>));</div>
+<div class="line"><span class="lineno">  173</span>        }</div>
+<div class="line"><span class="lineno">  174</span> </div>
+<div class="line"><span class="lineno">  175</span>        <span class="keywordflow">return</span> *staticMiddlewares[<a class="code hl_variable" href="#a4c1b12467fbff98a6aeecb56774a779e">root</a>];</div>
+<div class="line"><span class="lineno">  176</span>    }</div>
 <div class="ttc" id="aclassexpress_1_1middleware_1_1StaticMiddleware_html_a573c60de5962113fc441e2494b87f79f"><div class="ttname"><a href="#a573c60de5962113fc441e2494b87f79f">express::middleware::StaticMiddleware::StaticMiddleware</a></div><div class="ttdeci">StaticMiddleware(const StaticMiddleware &amp;)=delete</div></div>
 </div><!-- fragment -->
 </div>
@@ -675,12 +681,12 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="StaticMiddleware_8cpp_source.html#l00117">117</a> of file <a class="el" href="StaticMiddleware_8cpp_source.html">StaticMiddleware.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  117</span>                                                                             {</div>
-<div class="line"><span class="lineno">  118</span>        this-&gt;<a class="code hl_variable" href="#aafd0ff259b03721c98e9111668b5d539">index</a> = <a class="code hl_variable" href="#aafd0ff259b03721c98e9111668b5d539">index</a>;</div>
-<div class="line"><span class="lineno">  119</span> </div>
-<div class="line"><span class="lineno">  120</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">  121</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="StaticMiddleware_8cpp_source.html#l00123">123</a> of file <a class="el" href="StaticMiddleware_8cpp_source.html">StaticMiddleware.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  123</span>                                                                             {</div>
+<div class="line"><span class="lineno">  124</span>        this-&gt;<a class="code hl_variable" href="#aafd0ff259b03721c98e9111668b5d539">index</a> = <a class="code hl_variable" href="#aafd0ff259b03721c98e9111668b5d539">index</a>;</div>
+<div class="line"><span class="lineno">  125</span> </div>
+<div class="line"><span class="lineno">  126</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">  127</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="StaticMiddleware_8h_source.html#l00081">index</a>.</p>
 
@@ -701,12 +707,12 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="StaticMiddleware_8cpp_source.html#l00129">129</a> of file <a class="el" href="StaticMiddleware_8cpp_source.html">StaticMiddleware.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  129</span>                                                                                                          {</div>
-<div class="line"><span class="lineno">  130</span>        this-&gt;<a class="code hl_variable" href="#a8ce62963e4bb98b3999d8748c9b97b51">stdHeaders</a> = <a class="code hl_variable" href="#a8ce62963e4bb98b3999d8748c9b97b51">stdHeaders</a>;</div>
-<div class="line"><span class="lineno">  131</span> </div>
-<div class="line"><span class="lineno">  132</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">  133</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="StaticMiddleware_8cpp_source.html#l00135">135</a> of file <a class="el" href="StaticMiddleware_8cpp_source.html">StaticMiddleware.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  135</span>                                                                                                          {</div>
+<div class="line"><span class="lineno">  136</span>        this-&gt;<a class="code hl_variable" href="#a8ce62963e4bb98b3999d8748c9b97b51">stdHeaders</a> = <a class="code hl_variable" href="#a8ce62963e4bb98b3999d8748c9b97b51">stdHeaders</a>;</div>
+<div class="line"><span class="lineno">  137</span> </div>
+<div class="line"><span class="lineno">  138</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">  139</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="StaticMiddleware_8h_source.html#l00082">stdHeaders</a>.</p>
 
@@ -736,11 +742,11 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="StaticMiddleware_8cpp_source.html#l00173">173</a> of file <a class="el" href="StaticMiddleware_8cpp_source.html">StaticMiddleware.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  173</span>                                                                    {</div>
-<div class="line"><span class="lineno">  174</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="#abf7aad109677706e3b41004be8ac2f53">StaticMiddleware::instance</a>(<a class="code hl_variable" href="#a4c1b12467fbff98a6aeecb56774a779e">root</a>);</div>
-<div class="line"><span class="lineno">  175</span>    }</div>
-<div class="ttc" id="aclassexpress_1_1middleware_1_1StaticMiddleware_html_abf7aad109677706e3b41004be8ac2f53"><div class="ttname"><a href="#abf7aad109677706e3b41004be8ac2f53">express::middleware::StaticMiddleware::instance</a></div><div class="ttdeci">static class StaticMiddleware &amp; instance(const std::string &amp;root)</div><div class="ttdef"><b>Definition</b> <a href="StaticMiddleware_8cpp_source.html#l00161">StaticMiddleware.cpp:161</a></div></div>
+<p class="definition">Definition at line <a class="el" href="StaticMiddleware_8cpp_source.html#l00179">179</a> of file <a class="el" href="StaticMiddleware_8cpp_source.html">StaticMiddleware.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  179</span>                                                                    {</div>
+<div class="line"><span class="lineno">  180</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="#abf7aad109677706e3b41004be8ac2f53">StaticMiddleware::instance</a>(<a class="code hl_variable" href="#a4c1b12467fbff98a6aeecb56774a779e">root</a>);</div>
+<div class="line"><span class="lineno">  181</span>    }</div>
+<div class="ttc" id="aclassexpress_1_1middleware_1_1StaticMiddleware_html_abf7aad109677706e3b41004be8ac2f53"><div class="ttname"><a href="#abf7aad109677706e3b41004be8ac2f53">express::middleware::StaticMiddleware::instance</a></div><div class="ttdeci">static class StaticMiddleware &amp; instance(const std::string &amp;root)</div><div class="ttdef"><b>Definition</b> <a href="StaticMiddleware_8cpp_source.html#l00167">StaticMiddleware.cpp:167</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -767,7 +773,7 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="StaticMiddleware_8h_source.html#l00084">84</a> of file <a class="el" href="StaticMiddleware_8h_source.html">StaticMiddleware.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="StaticMiddleware_8cpp_source.html#l00155">afterResponse()</a>, and <a class="el" href="StaticMiddleware_8cpp_source.html#l00057">StaticMiddleware()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="StaticMiddleware_8cpp_source.html#l00161">afterResponse()</a>, and <a class="el" href="StaticMiddleware_8cpp_source.html#l00057">StaticMiddleware()</a>.</p>
 
 </div>
 </div>
@@ -793,7 +799,7 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="StaticMiddleware_8h_source.html#l00081">81</a> of file <a class="el" href="StaticMiddleware_8h_source.html">StaticMiddleware.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="StaticMiddleware_8cpp_source.html#l00117">setIndex()</a>, and <a class="el" href="StaticMiddleware_8cpp_source.html#l00057">StaticMiddleware()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="StaticMiddleware_8cpp_source.html#l00123">setIndex()</a>, and <a class="el" href="StaticMiddleware_8cpp_source.html#l00057">StaticMiddleware()</a>.</p>
 
 </div>
 </div>
@@ -845,7 +851,7 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="StaticMiddleware_8h_source.html#l00083">83</a> of file <a class="el" href="StaticMiddleware_8h_source.html">StaticMiddleware.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="StaticMiddleware_8cpp_source.html#l00147">appendStdCookie()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="StaticMiddleware_8cpp_source.html#l00153">appendStdCookie()</a>.</p>
 
 </div>
 </div>
@@ -872,7 +878,7 @@ Here is the call graph for this function:</div>
 <p class="definition">Definition at line <a class="el" href="StaticMiddleware_8h_source.html#l00082">82</a> of file <a class="el" href="StaticMiddleware_8h_source.html">StaticMiddleware.h</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   82</span>{{<span class="stringliteral">&quot;Cache-Control&quot;</span>, <span class="stringliteral">&quot;public, max-age=0&quot;</span>}, {<span class="stringliteral">&quot;Accept-Ranges&quot;</span>, <span class="stringliteral">&quot;bytes&quot;</span>}};</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="StaticMiddleware_8cpp_source.html#l00135">appendStdHeaders()</a>, <a class="el" href="StaticMiddleware_8cpp_source.html#l00141">appendStdHeaders()</a>, <a class="el" href="StaticMiddleware_8cpp_source.html#l00123">clearStdHeaders()</a>, and <a class="el" href="StaticMiddleware_8cpp_source.html#l00129">setStdHeaders()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="StaticMiddleware_8cpp_source.html#l00141">appendStdHeaders()</a>, <a class="el" href="StaticMiddleware_8cpp_source.html#l00147">appendStdHeaders()</a>, <a class="el" href="StaticMiddleware_8cpp_source.html#l00129">clearStdHeaders()</a>, and <a class="el" href="StaticMiddleware_8cpp_source.html#l00135">setStdHeaders()</a>.</p>
 
 </div>
 </div>

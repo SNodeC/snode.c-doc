@@ -354,11 +354,19 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="dlfcn_8cpp_source.html#l00057">57</a> of file <a class="el" href="dlfcn_8cpp_source.html">dlfcn.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   57</span>                              {</div>
-<div class="line"><span class="lineno">   58</span>        errno = 0;</div>
+<div class="line"><span class="lineno">   58</span>        <a class="code hl_function" href="#ad04dc647899e7a1c52498190f5e16f1c">dlerror</a>();</div>
 <div class="line"><span class="lineno">   59</span>        return ::dlclose(handle);</div>
 <div class="line"><span class="lineno">   60</span>    }</div>
+<div class="ttc" id="anamespacecore_1_1system_html_ad04dc647899e7a1c52498190f5e16f1c"><div class="ttname"><a href="#ad04dc647899e7a1c52498190f5e16f1c">core::system::dlerror</a></div><div class="ttdeci">char * dlerror()</div><div class="ttdef"><b>Definition</b> <a href="dlfcn_8cpp_source.html#l00067">dlfcn.cpp:67</a></div></div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="DynamicLoader_8cpp_source.html#l00115">core::DynamicLoader::realExecDlClose()</a>.</p>
+<p class="reference">References <a class="el" href="dlfcn_8cpp_source.html#l00067">dlerror()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="DynamicLoader_8cpp_source.html#l00191">core::DynamicLoader::realExecDlClose()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="namespacecore_1_1system_a4317d54914cd18248143183ea71252d3_cgraph.svg" width="375" height="39"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -388,7 +396,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">   69</span>        return ::dlerror();</div>
 <div class="line"><span class="lineno">   70</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="DynamicLoader_8cpp_source.html#l00111">core::DynamicLoader::dlError()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="dlfcn_8cpp_source.html#l00057">dlclose()</a>, <a class="el" href="DynamicLoader_8cpp_source.html#l00186">core::DynamicLoader::dlError()</a>, <a class="el" href="dlfcn_8cpp_source.html#l00052">dlopen()</a>, and <a class="el" href="dlfcn_8cpp_source.html#l00062">dlsym()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -418,10 +426,24 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="dlfcn_8cpp_source.html#l00052">52</a> of file <a class="el" href="dlfcn_8cpp_source.html">dlfcn.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   52</span>                                                  {</div>
-<div class="line"><span class="lineno">   53</span>        errno = 0;</div>
+<div class="line"><span class="lineno">   53</span>        <a class="code hl_function" href="#ad04dc647899e7a1c52498190f5e16f1c">dlerror</a>();</div>
 <div class="line"><span class="lineno">   54</span>        return ::dlopen(filename, flags);</div>
 <div class="line"><span class="lineno">   55</span>    }</div>
 </div><!-- fragment -->
+<p class="reference">References <a class="el" href="dlfcn_8cpp_source.html#l00067">dlerror()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="DynamicLoader_8cpp_source.html#l00076">core::DynamicLoader::dlOpen()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="namespacecore_1_1system_a87ab6f4aac806776e472cc3abeb61447_cgraph.svg" width="372" height="39"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="namespacecore_1_1system_a87ab6f4aac806776e472cc3abeb61447_icgraph.svg" width="100%" height="420"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
 </div>
 </div>
 <a id="a83d3862b9812ad39b93753bbea40238b" name="a83d3862b9812ad39b93753bbea40238b"></a>
@@ -445,11 +467,18 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="dlfcn_8cpp_source.html#l00062">62</a> of file <a class="el" href="dlfcn_8cpp_source.html">dlfcn.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   62</span>                                                  {</div>
-<div class="line"><span class="lineno">   63</span>        errno = 0;</div>
+<div class="line"><span class="lineno">   63</span>        <a class="code hl_function" href="#ad04dc647899e7a1c52498190f5e16f1c">dlerror</a>();</div>
 <div class="line"><span class="lineno">   64</span>        return ::dlsym(handle, symbol);</div>
 <div class="line"><span class="lineno">   65</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="DynamicLoader_8cpp_source.html#l00107">core::DynamicLoader::dlSym()</a>.</p>
+<p class="reference">References <a class="el" href="dlfcn_8cpp_source.html#l00067">dlerror()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="DynamicLoader_8cpp_source.html#l00181">core::DynamicLoader::dlSym()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="namespacecore_1_1system_a83d3862b9812ad39b93753bbea40238b_cgraph.svg" width="368" height="39"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
