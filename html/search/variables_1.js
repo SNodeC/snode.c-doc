@@ -24,5 +24,6 @@ var searchData=
   ['attribute_21',['attribute',['../classutils_1_1AttributeProxy.html#a1a94d84d5ce6efd76e333a7b5bdf01e4',1,'utils::AttributeProxy::attribute'],['../classutils_1_1SingleAttributeInjector.html#a6483f3e54ffbb659dd10882261e99901',1,'utils::SingleAttributeInjector::attribute']]],
   ['attributes_22',['attributes',['../classutils_1_1MultibleAttributeInjector.html#abbd17a17039df8a8eeb865a3967bba0d',1,'utils::MultibleAttributeInjector']]],
   ['attributetype_23',['attributeType',['../classutils_1_1SingleAttributeInjector.html#a2d778aa5ac9752992a1a14ea025fd6bc',1,'utils::SingleAttributeInjector']]],
-  ['autocommit_24',['autoCommit',['../classdatabase_1_1mariadb_1_1commands_1_1async_1_1MariaDBAutoCommitCommand.html#a9f803d243e4c4fb570e8834fa4d36038',1,'database::mariadb::commands::async::MariaDBAutoCommitCommand']]]
+  ['autocommit_24',['autoCommit',['../classdatabase_1_1mariadb_1_1commands_1_1async_1_1MariaDBAutoCommitCommand.html#a9f803d243e4c4fb570e8834fa4d36038',1,'database::mariadb::commands::async::MariaDBAutoCommitCommand']]],
+  ['autoconnectcontrol_25',['autoConnectControl',['../structcore_1_1socket_1_1stream_1_1SocketClient_1_1Context.html#a5e40b4058c575e3ef4eb5c50e6daba30',1,'core::socket::stream::SocketClient::Context::autoConnectControl'],['../structcore_1_1socket_1_1stream_1_1SocketServer_1_1Context.html#a9a42805f9eef0e4821b0b28ac5e9da9c',1,'core::socket::stream::SocketServer::Context::autoConnectControl']]]
 ];

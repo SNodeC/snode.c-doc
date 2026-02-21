@@ -1,8 +1,10 @@
 var classnet_1_1config_1_1ConfigSection =
 [
-    [ "ConfigSection", "classnet_1_1config_1_1ConfigSection.html#a160becc89b9f497e672c269051f56089", null ],
+    [ "ConfigSection", "classnet_1_1config_1_1ConfigSection.html#a839f1c45c71e402cbaebff2a4288a018", null ],
+    [ "~ConfigSection", "classnet_1_1config_1_1ConfigSection.html#a92499a4d2229e485c0689f632fc055b6", null ],
     [ "ConfigSection", "classnet_1_1config_1_1ConfigSection.html#a54d0dfa0da65da3d610f2bb7d84eb238", null ],
     [ "ConfigSection", "classnet_1_1config_1_1ConfigSection.html#abb6ceadb48ce22e47a2f35a8187591d9", null ],
+    [ "addFlag", "classnet_1_1config_1_1ConfigSection.html#a5120f8ebadc117756ff504b37540e4aa", null ],
     [ "addFlag", "classnet_1_1config_1_1ConfigSection.html#af1c436d41e943e6189691758e6d2d5aa", null ],
     [ "addFlag", "classnet_1_1config_1_1ConfigSection.html#a7ab3e1c554fd58a1dc06146a915aea51", null ],
     [ "addFlag", "classnet_1_1config_1_1ConfigSection.html#a1645552201a47f08f0a0a68fb1933741", null ],
@@ -18,11 +20,15 @@ var classnet_1_1config_1_1ConfigSection =
     [ "addOption", "classnet_1_1config_1_1ConfigSection.html#acae02b69bfc82aaaf42b2aa081008719", null ],
     [ "addOption", "classnet_1_1config_1_1ConfigSection.html#a49b8b1a82ea4c182b798c165567bd462", null ],
     [ "addOption", "classnet_1_1config_1_1ConfigSection.html#a7afd42971ea3fcc6ddc5c19a40ca2f91", null ],
+    [ "addOptionFunction", "classnet_1_1config_1_1ConfigSection.html#a812ccee6e49f1b1c2d8056ce9f3b817b", null ],
+    [ "getOption", "classnet_1_1config_1_1ConfigSection.html#adb093aa1f5933d7d07e039542084e02c", null ],
+    [ "getRequired", "classnet_1_1config_1_1ConfigSection.html#aff5f07d523cbc2d6e63314b0053f508b", null ],
     [ "operator=", "classnet_1_1config_1_1ConfigSection.html#a6858e6540e42ec96ff500e2ff3e81f8e", null ],
     [ "operator=", "classnet_1_1config_1_1ConfigSection.html#ae9844d9baaa07fdcff992374983a927f", null ],
-    [ "required", "classnet_1_1config_1_1ConfigSection.html#a118e54017223e71db5cf1a1ec690dc4a", null ],
+    [ "required", "classnet_1_1config_1_1ConfigSection.html#a33dedf9f70ad5934178e1c021571a45a", null ],
     [ "required", "classnet_1_1config_1_1ConfigSection.html#afe7a0030f5ef727586a4dc6d32410ce7", null ],
+    [ "setConfigurable", "classnet_1_1config_1_1ConfigSection.html#a4b3513c553a73ec318fff95181087ce9", null ],
     [ "instance", "classnet_1_1config_1_1ConfigSection.html#abb79a8f4f69c1730bf7716eea73384c4", null ],
     [ "requiredCount", "classnet_1_1config_1_1ConfigSection.html#ab27dc40ed9c1564341868bdc4da4448d", null ],
-    [ "section", "classnet_1_1config_1_1ConfigSection.html#ace462619a37549762b6dc2583fcd14c3", null ]
+    [ "sectionSc", "classnet_1_1config_1_1ConfigSection.html#a1a6991f063def43d2d0f10ef0d511182", null ]
 ];

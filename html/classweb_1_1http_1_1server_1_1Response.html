@@ -398,12 +398,12 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">  188</span> </div>
 <div class="line"><span class="lineno">  189</span>        opts.erase(<span class="stringliteral">&quot;Max-Age&quot;</span>);</div>
 <div class="line"><span class="lineno">  190</span>        <span class="keyword">const</span> time_t <a class="code hl_function" href="namespaceutils_1_1system.html#aa36252afed0ca4903feb511649270d1c">time</a> = 0;</div>
-<div class="line"><span class="lineno">  191</span>        opts[<span class="stringliteral">&quot;Expires&quot;</span>] = <a class="code hl_function" href="namespacehttputils.html#a01539c1af68e4d072d3507ae44c0b02a">httputils::to_http_date</a>(<a class="code hl_function" href="namespaceutils_1_1system.html#a629a1ebec50192eff5587cdd5d51bf20">utils::system::gmtime</a>(&amp;time));</div>
+<div class="line"><span class="lineno">  191</span>        opts[<span class="stringliteral">&quot;Expires&quot;</span>] = <a class="code hl_function" href="namespacehttputils.html#ad53daa08390598493f3f4ae09164a60a">httputils::to_http_date</a>(<a class="code hl_function" href="namespaceutils_1_1system.html#a629a1ebec50192eff5587cdd5d51bf20">utils::system::gmtime</a>(&amp;time));</div>
 <div class="line"><span class="lineno">  192</span> </div>
 <div class="line"><span class="lineno">  193</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="#aa9a6f2cbf1a4f186db94f9a2d5d6da08">cookie</a>(name, <span class="stringliteral">&quot;&quot;</span>, opts);</div>
 <div class="line"><span class="lineno">  194</span>    }</div>
 <div class="ttc" id="aclassweb_1_1http_1_1server_1_1Response_html_aa9a6f2cbf1a4f186db94f9a2d5d6da08"><div class="ttname"><a href="#aa9a6f2cbf1a4f186db94f9a2d5d6da08">web::http::server::Response::cookie</a></div><div class="ttdeci">Response &amp; cookie(const std::string &amp;name, const std::string &amp;value, const std::map&lt; std::string, std::string &gt; &amp;options={})</div><div class="ttdef"><b>Definition</b> <a href="web_2http_2server_2Response_8cpp_source.html#l00180">Response.cpp:180</a></div></div>
-<div class="ttc" id="anamespacehttputils_html_a01539c1af68e4d072d3507ae44c0b02a"><div class="ttname"><a href="namespacehttputils.html#a01539c1af68e4d072d3507ae44c0b02a">httputils::to_http_date</a></div><div class="ttdeci">std::string to_http_date(struct tm *tm)</div><div class="ttdef"><b>Definition</b> <a href="http__utils_8cpp_source.html#l00140">http_utils.cpp:140</a></div></div>
+<div class="ttc" id="anamespacehttputils_html_ad53daa08390598493f3f4ae09164a60a"><div class="ttname"><a href="namespacehttputils.html#ad53daa08390598493f3f4ae09164a60a">httputils::to_http_date</a></div><div class="ttdeci">std::string to_http_date(struct tm *tm=nullptr)</div><div class="ttdef"><b>Definition</b> <a href="http__utils_8cpp_source.html#l00140">http_utils.cpp:140</a></div></div>
 <div class="ttc" id="anamespaceutils_1_1system_html_a629a1ebec50192eff5587cdd5d51bf20"><div class="ttname"><a href="namespaceutils_1_1system.html#a629a1ebec50192eff5587cdd5d51bf20">utils::system::gmtime</a></div><div class="ttdeci">struct tm * gmtime(const time_t *timep)</div><div class="ttdef"><b>Definition</b> <a href="time_8cpp_source.html#l00062">time.cpp:62</a></div></div>
 <div class="ttc" id="anamespaceutils_1_1system_html_aa36252afed0ca4903feb511649270d1c"><div class="ttname"><a href="namespaceutils_1_1system.html#aa36252afed0ca4903feb511649270d1c">utils::system::time</a></div><div class="ttdeci">time_t time(time_t *tloc)</div><div class="ttdef"><b>Definition</b> <a href="time_8cpp_source.html#l00052">time.cpp:52</a></div></div>
 </div><!-- fragment -->
@@ -466,7 +466,7 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classweb_1_1http_1_1server_1_1Response_aa9a6f2cbf1a4f186db94f9a2d5d6da08_icgraph.svg" width="574" height="142"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="classweb_1_1http_1_1server_1_1Response_aa9a6f2cbf1a4f186db94f9a2d5d6da08_icgraph.svg" width="100%" height="406"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -524,10 +524,10 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00363">363</a> of file <a class="el" href="web_2http_2server_2Response_8cpp_source.html">Response.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  363</span>                       {</div>
-<div class="line"><span class="lineno">  364</span>        <a class="code hl_function" href="#a6a6cd44cb3d0f3a65e38f5a4cd9cc05b">send</a>(<span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><span class="lineno">  365</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00364">364</a> of file <a class="el" href="web_2http_2server_2Response_8cpp_source.html">Response.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  364</span>                       {</div>
+<div class="line"><span class="lineno">  365</span>        <a class="code hl_function" href="#a6a6cd44cb3d0f3a65e38f5a4cd9cc05b">send</a>(<span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">  366</span>    }</div>
 <div class="ttc" id="aclassweb_1_1http_1_1server_1_1Response_html_a6a6cd44cb3d0f3a65e38f5a4cd9cc05b"><div class="ttname"><a href="#a6a6cd44cb3d0f3a65e38f5a4cd9cc05b">web::http::server::Response::send</a></div><div class="ttdeci">void send(const char *chunk, std::size_t chunkLen)</div><div class="ttdef"><b>Definition</b> <a href="web_2http_2server_2Response_8cpp_source.html#l00215">Response.cpp:215</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00228">send()</a>.</p>
@@ -561,10 +561,10 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00485">485</a> of file <a class="el" href="web_2http_2server_2Response_8cpp_source.html">Response.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  485</span>                                                    {</div>
-<div class="line"><span class="lineno">  486</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#aaddaf6b6c22fb143d9ca31c125404aea">socketContext</a>;</div>
-<div class="line"><span class="lineno">  487</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00495">495</a> of file <a class="el" href="web_2http_2server_2Response_8cpp_source.html">Response.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  495</span>                                                    {</div>
+<div class="line"><span class="lineno">  496</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#aaddaf6b6c22fb143d9ca31c125404aea">socketContext</a>;</div>
+<div class="line"><span class="lineno">  497</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="web_2http_2server_2Response_8h_source.html#l00135">socketContext</a>.</p>
 
@@ -592,10 +592,10 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00481">481</a> of file <a class="el" href="web_2http_2server_2Response_8cpp_source.html">Response.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  481</span>                                                            {</div>
-<div class="line"><span class="lineno">  482</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#a74e3f6e47a393a423668e35958c915ab">headers</a>[field];</div>
-<div class="line"><span class="lineno">  483</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00491">491</a> of file <a class="el" href="web_2http_2server_2Response_8cpp_source.html">Response.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  491</span>                                                            {</div>
+<div class="line"><span class="lineno">  492</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#a74e3f6e47a393a423668e35958c915ab">headers</a>[field];</div>
+<div class="line"><span class="lineno">  493</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="web_2http_2server_2Response_8h_source.html#l00127">headers</a>.</p>
 
@@ -688,7 +688,7 @@ Here is the caller graph for this function:</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="web_2http_2server_2Response_8h_source.html#l00135">socketContext</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="express_2Response_8cpp_source.html#l00064">express::Response::isConnected()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00444">onSourceConnect()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00462">onSourceEof()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00470">onSourceError()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00215">send()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00426">sendCompleted()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00324">sendFile()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00404">sendFragment()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00367">sendHeader()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00248">upgrade()</a>, and <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00076">~Response()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="express_2Response_8cpp_source.html#l00064">express::Response::isConnected()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00454">onSourceConnect()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00472">onSourceEof()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00480">onSourceError()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00215">send()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00431">sendCompleted()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00324">sendFile()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00405">sendFragment()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00368">sendHeader()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00248">upgrade()</a>, and <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00076">~Response()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -722,24 +722,24 @@ Here is the caller graph for this function:</div>
 
 <p>Implements <a class="el" href="classcore_1_1pipe_1_1Sink.html#a9b2113a428b672de7d0858d6e23488f2">core::pipe::Sink</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00444">444</a> of file <a class="el" href="web_2http_2server_2Response_8cpp_source.html">Response.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  444</span>                                                         {</div>
-<div class="line"><span class="lineno">  445</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="#a38927f6cae7dd71fba0d417e1666609f">isConnected</a>()) {</div>
-<div class="line"><span class="lineno">  446</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="#aaddaf6b6c22fb143d9ca31c125404aea">socketContext</a>-&gt;streamToPeer(<a class="code hl_variable" href="classcore_1_1pipe_1_1Sink.html#a626e0ac9ec30956fc7988e09790d526f">source</a>)) {</div>
-<div class="line"><span class="lineno">  447</span>                <a class="code hl_function" href="#a8f6c40b9d266cd754cd8d3e2612d22de">sendHeader</a>();</div>
-<div class="line"><span class="lineno">  448</span> </div>
-<div class="line"><span class="lineno">  449</span>                <a class="code hl_variable" href="classcore_1_1pipe_1_1Sink.html#a626e0ac9ec30956fc7988e09790d526f">source</a>-&gt;start();</div>
-<div class="line"><span class="lineno">  450</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  451</span>                <a class="code hl_variable" href="classcore_1_1pipe_1_1Sink.html#a626e0ac9ec30956fc7988e09790d526f">source</a>-&gt;stop();</div>
-<div class="line"><span class="lineno">  452</span>            }</div>
-<div class="line"><span class="lineno">  453</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  454</span>            <a class="code hl_variable" href="classcore_1_1pipe_1_1Sink.html#a626e0ac9ec30956fc7988e09790d526f">source</a>-&gt;stop();</div>
-<div class="line"><span class="lineno">  455</span>        }</div>
-<div class="line"><span class="lineno">  456</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00454">454</a> of file <a class="el" href="web_2http_2server_2Response_8cpp_source.html">Response.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  454</span>                                                         {</div>
+<div class="line"><span class="lineno">  455</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="#a38927f6cae7dd71fba0d417e1666609f">isConnected</a>()) {</div>
+<div class="line"><span class="lineno">  456</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="#aaddaf6b6c22fb143d9ca31c125404aea">socketContext</a>-&gt;streamToPeer(<a class="code hl_variable" href="classcore_1_1pipe_1_1Sink.html#a626e0ac9ec30956fc7988e09790d526f">source</a>)) {</div>
+<div class="line"><span class="lineno">  457</span>                <a class="code hl_function" href="#a8f6c40b9d266cd754cd8d3e2612d22de">sendHeader</a>();</div>
+<div class="line"><span class="lineno">  458</span> </div>
+<div class="line"><span class="lineno">  459</span>                <a class="code hl_variable" href="classcore_1_1pipe_1_1Sink.html#a626e0ac9ec30956fc7988e09790d526f">source</a>-&gt;start();</div>
+<div class="line"><span class="lineno">  460</span>            } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  461</span>                <a class="code hl_variable" href="classcore_1_1pipe_1_1Sink.html#a626e0ac9ec30956fc7988e09790d526f">source</a>-&gt;stop();</div>
+<div class="line"><span class="lineno">  462</span>            }</div>
+<div class="line"><span class="lineno">  463</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  464</span>            <a class="code hl_variable" href="classcore_1_1pipe_1_1Sink.html#a626e0ac9ec30956fc7988e09790d526f">source</a>-&gt;stop();</div>
+<div class="line"><span class="lineno">  465</span>        }</div>
+<div class="line"><span class="lineno">  466</span>    }</div>
 <div class="ttc" id="aclasscore_1_1pipe_1_1Sink_html_a626e0ac9ec30956fc7988e09790d526f"><div class="ttname"><a href="classcore_1_1pipe_1_1Sink.html#a626e0ac9ec30956fc7988e09790d526f">core::pipe::Sink::source</a></div><div class="ttdeci">Source * source</div><div class="ttdef"><b>Definition</b> <a href="Sink_8h_source.html#l00090">Sink.h:90</a></div></div>
-<div class="ttc" id="aclassweb_1_1http_1_1server_1_1Response_html_a8f6c40b9d266cd754cd8d3e2612d22de"><div class="ttname"><a href="#a8f6c40b9d266cd754cd8d3e2612d22de">web::http::server::Response::sendHeader</a></div><div class="ttdeci">Response &amp; sendHeader()</div><div class="ttdef"><b>Definition</b> <a href="web_2http_2server_2Response_8cpp_source.html#l00367">Response.cpp:367</a></div></div>
+<div class="ttc" id="aclassweb_1_1http_1_1server_1_1Response_html_a8f6c40b9d266cd754cd8d3e2612d22de"><div class="ttname"><a href="#a8f6c40b9d266cd754cd8d3e2612d22de">web::http::server::Response::sendHeader</a></div><div class="ttdeci">Response &amp; sendHeader()</div><div class="ttdef"><b>Definition</b> <a href="web_2http_2server_2Response_8cpp_source.html#l00368">Response.cpp:368</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00087">isConnected()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00367">sendHeader()</a>, <a class="el" href="web_2http_2server_2Response_8h_source.html#l00135">socketContext</a>, <a class="el" href="classcore_1_1pipe_1_1Source.html#aff2dbd7ea45b5b8fcaa8bece4572c003">core::pipe::Source::start()</a>, <a class="el" href="classcore_1_1pipe_1_1Source.html#a1f2713b56b2210fade76e3699d4bc95d">core::pipe::Source::stop()</a>, and <a class="el" href="core_2socket_2stream_2SocketContext_8cpp_source.html#l00073">core::socket::stream::SocketContext::streamToPeer()</a>.</p>
+<p class="reference">References <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00087">isConnected()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00368">sendHeader()</a>, <a class="el" href="web_2http_2server_2Response_8h_source.html#l00135">socketContext</a>, <a class="el" href="classcore_1_1pipe_1_1Source.html#aff2dbd7ea45b5b8fcaa8bece4572c003">core::pipe::Source::start()</a>, <a class="el" href="classcore_1_1pipe_1_1Source.html#a1f2713b56b2210fade76e3699d4bc95d">core::pipe::Source::stop()</a>, and <a class="el" href="core_2socket_2stream_2SocketContext_8cpp_source.html#l00073">core::socket::stream::SocketContext::streamToPeer()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -777,13 +777,13 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="classcore_1_1pipe_1_1Sink.html#abe361ff8d262bf5a72447eea469cbdd8">core::pipe::Sink</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00458">458</a> of file <a class="el" href="web_2http_2server_2Response_8cpp_source.html">Response.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  458</span>                                                                     {</div>
-<div class="line"><span class="lineno">  459</span>        <a class="code hl_function" href="#ad582a9f1649f000a7df6404a922ae772">sendFragment</a>(chunk, chunkLen);</div>
-<div class="line"><span class="lineno">  460</span>    }</div>
-<div class="ttc" id="aclassweb_1_1http_1_1server_1_1Response_html_ad582a9f1649f000a7df6404a922ae772"><div class="ttname"><a href="#ad582a9f1649f000a7df6404a922ae772">web::http::server::Response::sendFragment</a></div><div class="ttdeci">Response &amp; sendFragment(const char *chunk, std::size_t chunkLen)</div><div class="ttdef"><b>Definition</b> <a href="web_2http_2server_2Response_8cpp_source.html#l00404">Response.cpp:404</a></div></div>
+<p class="definition">Definition at line <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00468">468</a> of file <a class="el" href="web_2http_2server_2Response_8cpp_source.html">Response.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  468</span>                                                                     {</div>
+<div class="line"><span class="lineno">  469</span>        <a class="code hl_function" href="#ad582a9f1649f000a7df6404a922ae772">sendFragment</a>(chunk, chunkLen);</div>
+<div class="line"><span class="lineno">  470</span>    }</div>
+<div class="ttc" id="aclassweb_1_1http_1_1server_1_1Response_html_ad582a9f1649f000a7df6404a922ae772"><div class="ttname"><a href="#ad582a9f1649f000a7df6404a922ae772">web::http::server::Response::sendFragment</a></div><div class="ttdeci">Response &amp; sendFragment(const char *chunk, std::size_t chunkLen)</div><div class="ttdef"><b>Definition</b> <a href="web_2http_2server_2Response_8cpp_source.html#l00405">Response.cpp:405</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00404">sendFragment()</a>.</p>
+<p class="reference">References <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00405">sendFragment()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -817,17 +817,17 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="classcore_1_1pipe_1_1Sink.html#a4485cdfe60dd8a6a0b167b0bd69a64fd">core::pipe::Sink</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00462">462</a> of file <a class="el" href="web_2http_2server_2Response_8cpp_source.html">Response.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  462</span>                               {</div>
-<div class="line"><span class="lineno">  463</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="#a38927f6cae7dd71fba0d417e1666609f">isConnected</a>()) {</div>
-<div class="line"><span class="lineno">  464</span>            <a class="code hl_variable" href="#aaddaf6b6c22fb143d9ca31c125404aea">socketContext</a>-&gt;streamEof();</div>
-<div class="line"><span class="lineno">  465</span>        }</div>
-<div class="line"><span class="lineno">  466</span> </div>
-<div class="line"><span class="lineno">  467</span>        <a class="code hl_function" href="#a78a2a745922ae71ca035ce38b07fb9bc">sendCompleted</a>();</div>
-<div class="line"><span class="lineno">  468</span>    }</div>
-<div class="ttc" id="aclassweb_1_1http_1_1server_1_1Response_html_a78a2a745922ae71ca035ce38b07fb9bc"><div class="ttname"><a href="#a78a2a745922ae71ca035ce38b07fb9bc">web::http::server::Response::sendCompleted</a></div><div class="ttdeci">void sendCompleted()</div><div class="ttdef"><b>Definition</b> <a href="web_2http_2server_2Response_8cpp_source.html#l00426">Response.cpp:426</a></div></div>
+<p class="definition">Definition at line <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00472">472</a> of file <a class="el" href="web_2http_2server_2Response_8cpp_source.html">Response.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  472</span>                               {</div>
+<div class="line"><span class="lineno">  473</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="#a38927f6cae7dd71fba0d417e1666609f">isConnected</a>()) {</div>
+<div class="line"><span class="lineno">  474</span>            <a class="code hl_variable" href="#aaddaf6b6c22fb143d9ca31c125404aea">socketContext</a>-&gt;streamEof();</div>
+<div class="line"><span class="lineno">  475</span>        }</div>
+<div class="line"><span class="lineno">  476</span> </div>
+<div class="line"><span class="lineno">  477</span>        <a class="code hl_function" href="#a78a2a745922ae71ca035ce38b07fb9bc">sendCompleted</a>();</div>
+<div class="line"><span class="lineno">  478</span>    }</div>
+<div class="ttc" id="aclassweb_1_1http_1_1server_1_1Response_html_a78a2a745922ae71ca035ce38b07fb9bc"><div class="ttname"><a href="#a78a2a745922ae71ca035ce38b07fb9bc">web::http::server::Response::sendCompleted</a></div><div class="ttdeci">void sendCompleted()</div><div class="ttdef"><b>Definition</b> <a href="web_2http_2server_2Response_8cpp_source.html#l00431">Response.cpp:431</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00087">isConnected()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00426">sendCompleted()</a>, <a class="el" href="web_2http_2server_2Response_8h_source.html#l00135">socketContext</a>, and <a class="el" href="core_2socket_2stream_2SocketContext_8cpp_source.html#l00077">core::socket::stream::SocketContext::streamEof()</a>.</p>
+<p class="reference">References <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00087">isConnected()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00431">sendCompleted()</a>, <a class="el" href="web_2http_2server_2Response_8h_source.html#l00135">socketContext</a>, and <a class="el" href="core_2socket_2stream_2SocketContext_8cpp_source.html#l00077">core::socket::stream::SocketContext::streamEof()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -861,19 +861,19 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="classcore_1_1pipe_1_1Sink.html#ae6252a06b8a6c18ded21f2b190683531">core::pipe::Sink</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00470">470</a> of file <a class="el" href="web_2http_2server_2Response_8cpp_source.html">Response.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  470</span>                                           {</div>
-<div class="line"><span class="lineno">  471</span>        errno = errnum;</div>
-<div class="line"><span class="lineno">  472</span> </div>
-<div class="line"><span class="lineno">  473</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="#a38927f6cae7dd71fba0d417e1666609f">isConnected</a>()) {</div>
-<div class="line"><span class="lineno">  474</span>            <a class="code hl_variable" href="#aaddaf6b6c22fb143d9ca31c125404aea">socketContext</a>-&gt;streamEof();</div>
-<div class="line"><span class="lineno">  475</span>            <a class="code hl_variable" href="#aaddaf6b6c22fb143d9ca31c125404aea">socketContext</a>-&gt;close();</div>
-<div class="line"><span class="lineno">  476</span>        }</div>
-<div class="line"><span class="lineno">  477</span> </div>
-<div class="line"><span class="lineno">  478</span>        <a class="code hl_function" href="#a78a2a745922ae71ca035ce38b07fb9bc">sendCompleted</a>();</div>
-<div class="line"><span class="lineno">  479</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00480">480</a> of file <a class="el" href="web_2http_2server_2Response_8cpp_source.html">Response.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  480</span>                                           {</div>
+<div class="line"><span class="lineno">  481</span>        errno = errnum;</div>
+<div class="line"><span class="lineno">  482</span> </div>
+<div class="line"><span class="lineno">  483</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="#a38927f6cae7dd71fba0d417e1666609f">isConnected</a>()) {</div>
+<div class="line"><span class="lineno">  484</span>            <a class="code hl_variable" href="#aaddaf6b6c22fb143d9ca31c125404aea">socketContext</a>-&gt;streamEof();</div>
+<div class="line"><span class="lineno">  485</span>            <a class="code hl_variable" href="#aaddaf6b6c22fb143d9ca31c125404aea">socketContext</a>-&gt;close();</div>
+<div class="line"><span class="lineno">  486</span>        }</div>
+<div class="line"><span class="lineno">  487</span> </div>
+<div class="line"><span class="lineno">  488</span>        <a class="code hl_function" href="#a78a2a745922ae71ca035ce38b07fb9bc">sendCompleted</a>();</div>
+<div class="line"><span class="lineno">  489</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="core_2socket_2stream_2SocketContext_8cpp_source.html#l00093">core::socket::stream::SocketContext::close()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00087">isConnected()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00426">sendCompleted()</a>, <a class="el" href="web_2http_2server_2Response_8h_source.html#l00135">socketContext</a>, and <a class="el" href="core_2socket_2stream_2SocketContext_8cpp_source.html#l00077">core::socket::stream::SocketContext::streamEof()</a>.</p>
+<p class="reference">References <a class="el" href="core_2socket_2stream_2SocketContext_8cpp_source.html#l00093">core::socket::stream::SocketContext::close()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00087">isConnected()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00431">sendCompleted()</a>, <a class="el" href="web_2http_2server_2Response_8h_source.html#l00135">socketContext</a>, and <a class="el" href="core_2socket_2stream_2SocketContext_8cpp_source.html#l00077">core::socket::stream::SocketContext::streamEof()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -965,7 +965,7 @@ Here is the call graph for this function:</div>
 <div class="line"><span class="lineno">  225</span>        }</div>
 <div class="line"><span class="lineno">  226</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00087">isConnected()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00426">sendCompleted()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00404">sendFragment()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00367">sendHeader()</a>, and <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00130">set()</a>.</p>
+<p class="reference">References <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00087">isConnected()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00431">sendCompleted()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00405">sendFragment()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00368">sendHeader()</a>, and <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00130">set()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="express_2Response_8cpp_source.html#l00165">express::Response::send()</a>, and <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00228">send()</a>.</p>
 <div class="dynheader">
@@ -1007,7 +1007,7 @@ Here is the caller graph for this function:</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00215">send()</a>, and <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00130">set()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00107">web::http::server::SocketContext::deliverRequest()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00363">end()</a>, <a class="el" href="express_2Response_8cpp_source.html#l00169">express::Response::send()</a>, and <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00236">sendStatus()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00107">web::http::server::SocketContext::deliverRequest()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00364">end()</a>, <a class="el" href="express_2Response_8cpp_source.html#l00169">express::Response::send()</a>, and <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00236">sendStatus()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1044,30 +1044,36 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00426">426</a> of file <a class="el" href="web_2http_2server_2Response_8cpp_source.html">Response.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  426</span>                                 {</div>
-<div class="line"><span class="lineno">  427</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="#a38927f6cae7dd71fba0d417e1666609f">isConnected</a>()) {</div>
-<div class="line"><span class="lineno">  428</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a82f26623d9ad3ef44abb74d35aaba7d0">transferEncoding</a> == <a class="code hl_enumvalue" href="namespaceweb_1_1http.html#a40edb0fffda79adf1a8a5b95fdd6e7b2a7920ba6b75e24916e97632ed0bafec4f">TransferEncoding::Chunked</a>) {</div>
-<div class="line"><span class="lineno">  429</span>                <a class="code hl_function" href="#ad582a9f1649f000a7df6404a922ae772">sendFragment</a>(<span class="stringliteral">&quot;&quot;</span>); <span class="comment">// For transfer encoding chunked. Terminate the chunk sequence.</span></div>
-<div class="line"><span class="lineno">  430</span> </div>
-<div class="line"><span class="lineno">  431</span>                <span class="keywordflow">if</span> (!<a class="code hl_variable" href="#a72dd0234ffbb51e7e56b6d2ed226452f">trailer</a>.empty()) {</div>
-<div class="line"><span class="lineno">  432</span>                    <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; [field, value] : <a class="code hl_variable" href="#a72dd0234ffbb51e7e56b6d2ed226452f">trailer</a>) {</div>
-<div class="line"><span class="lineno">  433</span>                        <a class="code hl_variable" href="#aaddaf6b6c22fb143d9ca31c125404aea">socketContext</a>-&gt;sendToPeer(std::string(field).<a class="code hl_function" href="#aca4f9f371930dfc5cbe938a6a1c8ecb9">append</a>(<span class="stringliteral">&quot;:&quot;</span>).<a class="code hl_function" href="#aca4f9f371930dfc5cbe938a6a1c8ecb9">append</a>(value).<a class="code hl_function" href="#aca4f9f371930dfc5cbe938a6a1c8ecb9">append</a>(<span class="stringliteral">&quot;\r\n&quot;</span>));</div>
-<div class="line"><span class="lineno">  434</span>                    }</div>
+<p class="definition">Definition at line <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00431">431</a> of file <a class="el" href="web_2http_2server_2Response_8cpp_source.html">Response.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  431</span>                                 {</div>
+<div class="line"><span class="lineno">  432</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="#a38927f6cae7dd71fba0d417e1666609f">isConnected</a>()) {</div>
+<div class="line"><span class="lineno">  433</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a82f26623d9ad3ef44abb74d35aaba7d0">transferEncoding</a> == <a class="code hl_enumvalue" href="namespaceweb_1_1http.html#a40edb0fffda79adf1a8a5b95fdd6e7b2a7920ba6b75e24916e97632ed0bafec4f">TransferEncoding::Chunked</a>) {</div>
+<div class="line"><span class="lineno">  434</span>                <a class="code hl_function" href="#ad582a9f1649f000a7df6404a922ae772">sendFragment</a>(<span class="stringliteral">&quot;&quot;</span>); <span class="comment">// For transfer encoding chunked. Terminate the chunk sequence.</span></div>
 <div class="line"><span class="lineno">  435</span> </div>
-<div class="line"><span class="lineno">  436</span>                    <a class="code hl_variable" href="#aaddaf6b6c22fb143d9ca31c125404aea">socketContext</a>-&gt;sendToPeer(<span class="stringliteral">&quot;\r\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  437</span>                }</div>
-<div class="line"><span class="lineno">  438</span>            }</div>
-<div class="line"><span class="lineno">  439</span> </div>
-<div class="line"><span class="lineno">  440</span>            <a class="code hl_variable" href="#aaddaf6b6c22fb143d9ca31c125404aea">socketContext</a>-&gt;responseCompleted(*<span class="keyword">this</span>, <a class="code hl_variable" href="#a27d7c297ceff0e46f6b64d5c6cf6f1d1">contentSent</a> == <a class="code hl_variable" href="#aa3b44867b06641f5b396b432b5f498eb">contentLength</a> || (<a class="code hl_variable" href="#acd1edf503d2c9f79ff97145b1d4c40ae">httpMajor</a> == 1 &amp;&amp; <a class="code hl_variable" href="#a04b1e287957d2d2f2425a14043101909">httpMinor</a> == 0));</div>
-<div class="line"><span class="lineno">  441</span>        }</div>
-<div class="line"><span class="lineno">  442</span>    }</div>
+<div class="line"><span class="lineno">  436</span>                <span class="keywordflow">if</span> (!<a class="code hl_variable" href="#a72dd0234ffbb51e7e56b6d2ed226452f">trailer</a>.empty()) {</div>
+<div class="line"><span class="lineno">  437</span>                    <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; [field, value] : <a class="code hl_variable" href="#a72dd0234ffbb51e7e56b6d2ed226452f">trailer</a>) {</div>
+<div class="line"><span class="lineno">  438</span>                        <a class="code hl_variable" href="#aaddaf6b6c22fb143d9ca31c125404aea">socketContext</a>-&gt;sendToPeer(std::string(field).<a class="code hl_function" href="#aca4f9f371930dfc5cbe938a6a1c8ecb9">append</a>(<span class="stringliteral">&quot;:&quot;</span>).<a class="code hl_function" href="#aca4f9f371930dfc5cbe938a6a1c8ecb9">append</a>(value).<a class="code hl_function" href="#aca4f9f371930dfc5cbe938a6a1c8ecb9">append</a>(<span class="stringliteral">&quot;\r\n&quot;</span>));</div>
+<div class="line"><span class="lineno">  439</span>                    }</div>
+<div class="line"><span class="lineno">  440</span> </div>
+<div class="line"><span class="lineno">  441</span>                    <a class="code hl_variable" href="#aaddaf6b6c22fb143d9ca31c125404aea">socketContext</a>-&gt;sendToPeer(<span class="stringliteral">&quot;\r\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  442</span>                }</div>
+<div class="line"><span class="lineno">  443</span>            }</div>
+<div class="line"><span class="lineno">  444</span> </div>
+<div class="line"><span class="lineno">  445</span>            <span class="keyword">const</span> <span class="keywordtype">bool</span> isHead = (<a class="code hl_variable" href="#a6ec325e00170f03f48c3ec959b0ca3c3">requestMethod</a> == <span class="stringliteral">&quot;HEAD&quot;</span>);</div>
+<div class="line"><span class="lineno">  446</span>            <span class="keywordflow">if</span> (isHead) {</div>
+<div class="line"><span class="lineno">  447</span>                <span class="comment">// Pretend we sent the full body length; this prevents keep-alive logic from treating HEAD as incomplete.</span></div>
+<div class="line"><span class="lineno">  448</span>                <a class="code hl_variable" href="#a27d7c297ceff0e46f6b64d5c6cf6f1d1">contentSent</a> = <a class="code hl_variable" href="#aa3b44867b06641f5b396b432b5f498eb">contentLength</a>;</div>
+<div class="line"><span class="lineno">  449</span>            }</div>
+<div class="line"><span class="lineno">  450</span>            <a class="code hl_variable" href="#aaddaf6b6c22fb143d9ca31c125404aea">socketContext</a>-&gt;responseCompleted(*<span class="keyword">this</span>, isHead || <a class="code hl_variable" href="#a27d7c297ceff0e46f6b64d5c6cf6f1d1">contentSent</a> == <a class="code hl_variable" href="#aa3b44867b06641f5b396b432b5f498eb">contentLength</a> || (<a class="code hl_variable" href="#acd1edf503d2c9f79ff97145b1d4c40ae">httpMajor</a> == 1 &amp;&amp; <a class="code hl_variable" href="#a04b1e287957d2d2f2425a14043101909">httpMinor</a> == 0));</div>
+<div class="line"><span class="lineno">  451</span>        }</div>
+<div class="line"><span class="lineno">  452</span>    }</div>
+<div class="ttc" id="aclassweb_1_1http_1_1server_1_1Response_html_a6ec325e00170f03f48c3ec959b0ca3c3"><div class="ttname"><a href="#a6ec325e00170f03f48c3ec959b0ca3c3">web::http::server::Response::requestMethod</a></div><div class="ttdeci">std::string requestMethod</div><div class="ttdef"><b>Definition</b> <a href="web_2http_2server_2Response_8h_source.html#l00121">Response.h:121</a></div></div>
 <div class="ttc" id="aclassweb_1_1http_1_1server_1_1Response_html_aca4f9f371930dfc5cbe938a6a1c8ecb9"><div class="ttname"><a href="#aca4f9f371930dfc5cbe938a6a1c8ecb9">web::http::server::Response::append</a></div><div class="ttdeci">Response &amp; append(const std::string &amp;field, const std::string &amp;value)</div><div class="ttdef"><b>Definition</b> <a href="web_2http_2server_2Response_8cpp_source.html#l00110">Response.cpp:110</a></div></div>
 <div class="ttc" id="anamespaceweb_1_1http_html_a40edb0fffda79adf1a8a5b95fdd6e7b2a7920ba6b75e24916e97632ed0bafec4f"><div class="ttname"><a href="namespaceweb_1_1http.html#a40edb0fffda79adf1a8a5b95fdd6e7b2a7920ba6b75e24916e97632ed0bafec4f">web::http::TransferEncoding::Chunked</a></div><div class="ttdeci">@ Chunked</div><div class="ttdef"><b>Definition</b> <a href="TransferEncoding_8h_source.html#l00050">TransferEncoding.h:50</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="TransferEncoding_8h_source.html#l00050">web::http::Chunked</a>, <a class="el" href="web_2http_2server_2Response_8h_source.html#l00133">contentLength</a>, <a class="el" href="web_2http_2server_2Response_8h_source.html#l00132">contentSent</a>, <a class="el" href="web_2http_2server_2Response_8h_source.html#l00123">httpMajor</a>, <a class="el" href="web_2http_2server_2Response_8h_source.html#l00124">httpMinor</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00087">isConnected()</a>, <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00164">web::http::server::SocketContext::responseCompleted()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00422">sendFragment()</a>, <a class="el" href="core_2socket_2SocketContext_8cpp_source.html#l00053">core::socket::SocketContext::sendToPeer()</a>, <a class="el" href="web_2http_2server_2Response_8h_source.html#l00135">socketContext</a>, <a class="el" href="web_2http_2server_2Response_8h_source.html#l00129">trailer</a>, and <a class="el" href="web_2http_2server_2Response_8h_source.html#l00138">transferEncoding</a>.</p>
+<p class="reference">References <a class="el" href="TransferEncoding_8h_source.html#l00050">web::http::Chunked</a>, <a class="el" href="web_2http_2server_2Response_8h_source.html#l00133">contentLength</a>, <a class="el" href="web_2http_2server_2Response_8h_source.html#l00132">contentSent</a>, <a class="el" href="web_2http_2server_2Response_8h_source.html#l00123">httpMajor</a>, <a class="el" href="web_2http_2server_2Response_8h_source.html#l00124">httpMinor</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00087">isConnected()</a>, <a class="el" href="web_2http_2server_2Response_8h_source.html#l00121">requestMethod</a>, <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00164">web::http::server::SocketContext::responseCompleted()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00427">sendFragment()</a>, <a class="el" href="core_2socket_2SocketContext_8cpp_source.html#l00053">core::socket::SocketContext::sendToPeer()</a>, <a class="el" href="web_2http_2server_2Response_8h_source.html#l00135">socketContext</a>, <a class="el" href="web_2http_2server_2Response_8h_source.html#l00129">trailer</a>, and <a class="el" href="web_2http_2server_2Response_8h_source.html#l00138">transferEncoding</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00462">onSourceEof()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00470">onSourceError()</a>, and <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00215">send()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00472">onSourceEof()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00480">onSourceError()</a>, and <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00215">send()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1114,31 +1120,32 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">  334</span>                        onStatus(errno);</div>
 <div class="line"><span class="lineno">  335</span> </div>
 <div class="line"><span class="lineno">  336</span>                        <span class="keywordflow">if</span> (fd &gt;= 0) {</div>
-<div class="line"><span class="lineno">  337</span>                            <a class="code hl_function" href="#a82301ce94e8418a2d0b9bc052207a178">set</a>(<span class="stringliteral">&quot;Content-Type&quot;</span>, <a class="code hl_function" href="classweb_1_1http_1_1MimeTypes.html#a08aa7365e19c29f97369a3bedfcc3721">web::http::MimeTypes::contentType</a>(absolutFileName), <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  338</span>                            <a class="code hl_function" href="#a82301ce94e8418a2d0b9bc052207a178">set</a>(<span class="stringliteral">&quot;Last-Modified&quot;</span>, <a class="code hl_function" href="namespacehttputils.html#a4a2597267a4c6fae315ab7b85273ea61">httputils::file_mod_http_date</a>(absolutFileName), <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  339</span>                            <span class="keywordflow">if</span> (<a class="code hl_variable" href="#acd1edf503d2c9f79ff97145b1d4c40ae">httpMajor</a> == 1) {</div>
-<div class="line"><span class="lineno">  340</span>                                <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a04b1e287957d2d2f2425a14043101909">httpMinor</a> == 1) {</div>
-<div class="line"><span class="lineno">  341</span>                                    <a class="code hl_function" href="#a82301ce94e8418a2d0b9bc052207a178">set</a>(<span class="stringliteral">&quot;Transfer-Encoding&quot;</span>, <span class="stringliteral">&quot;chunked&quot;</span>);</div>
-<div class="line"><span class="lineno">  342</span>                                } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  343</span>                                    <a class="code hl_function" href="#a82301ce94e8418a2d0b9bc052207a178">set</a>(<span class="stringliteral">&quot;Content-Length&quot;</span>, std::to_string(std::filesystem::file_size(absolutFileName)));</div>
-<div class="line"><span class="lineno">  344</span>                                }</div>
-<div class="line"><span class="lineno">  345</span>                            }</div>
-<div class="line"><span class="lineno">  346</span>                        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  347</span>                            <a class="code hl_function" href="#a361cfafb9b3d50b671bfdc21c27467c1">status</a>(404);</div>
-<div class="line"><span class="lineno">  348</span>                        }</div>
-<div class="line"><span class="lineno">  349</span>                    })-&gt;<a class="code hl_function" href="classcore_1_1pipe_1_1Sink.html#a4d790c7938a0920a81445a58a868b5a8">pipe</a>(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  350</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  351</span>                    <a class="code hl_function" href="#a361cfafb9b3d50b671bfdc21c27467c1">status</a>(404);</div>
-<div class="line"><span class="lineno">  352</span>                    errno = EEXIST;</div>
-<div class="line"><span class="lineno">  353</span>                    onStatus(errno);</div>
-<div class="line"><span class="lineno">  354</span>                }</div>
-<div class="line"><span class="lineno">  355</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  356</span>                <a class="code hl_function" href="#a361cfafb9b3d50b671bfdc21c27467c1">status</a>(404);</div>
-<div class="line"><span class="lineno">  357</span>                errno = ENOENT;</div>
-<div class="line"><span class="lineno">  358</span>                onStatus(errno);</div>
-<div class="line"><span class="lineno">  359</span>            }</div>
-<div class="line"><span class="lineno">  360</span>        }</div>
-<div class="line"><span class="lineno">  361</span>    }</div>
+<div class="line"><span class="lineno">  337</span>                            <a class="code hl_function" href="#a361cfafb9b3d50b671bfdc21c27467c1">status</a>(200);</div>
+<div class="line"><span class="lineno">  338</span>                            <a class="code hl_function" href="#a82301ce94e8418a2d0b9bc052207a178">set</a>(<span class="stringliteral">&quot;Content-Type&quot;</span>, <a class="code hl_function" href="classweb_1_1http_1_1MimeTypes.html#a08aa7365e19c29f97369a3bedfcc3721">web::http::MimeTypes::contentType</a>(absolutFileName), <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  339</span>                            <a class="code hl_function" href="#a82301ce94e8418a2d0b9bc052207a178">set</a>(<span class="stringliteral">&quot;Last-Modified&quot;</span>, <a class="code hl_function" href="namespacehttputils.html#a4a2597267a4c6fae315ab7b85273ea61">httputils::file_mod_http_date</a>(absolutFileName), <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  340</span>                            <span class="keywordflow">if</span> (<a class="code hl_variable" href="#acd1edf503d2c9f79ff97145b1d4c40ae">httpMajor</a> == 1) {</div>
+<div class="line"><span class="lineno">  341</span>                                <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a04b1e287957d2d2f2425a14043101909">httpMinor</a> == 1) {</div>
+<div class="line"><span class="lineno">  342</span>                                    <a class="code hl_function" href="#a82301ce94e8418a2d0b9bc052207a178">set</a>(<span class="stringliteral">&quot;Transfer-Encoding&quot;</span>, <span class="stringliteral">&quot;chunked&quot;</span>);</div>
+<div class="line"><span class="lineno">  343</span>                                } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  344</span>                                    <a class="code hl_function" href="#a82301ce94e8418a2d0b9bc052207a178">set</a>(<span class="stringliteral">&quot;Content-Length&quot;</span>, std::to_string(std::filesystem::file_size(absolutFileName)));</div>
+<div class="line"><span class="lineno">  345</span>                                }</div>
+<div class="line"><span class="lineno">  346</span>                            }</div>
+<div class="line"><span class="lineno">  347</span>                        } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  348</span>                            <a class="code hl_function" href="#a361cfafb9b3d50b671bfdc21c27467c1">status</a>(404);</div>
+<div class="line"><span class="lineno">  349</span>                        }</div>
+<div class="line"><span class="lineno">  350</span>                    })-&gt;<a class="code hl_function" href="classcore_1_1pipe_1_1Sink.html#a4d790c7938a0920a81445a58a868b5a8">pipe</a>(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  351</span>                } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  352</span>                    <a class="code hl_function" href="#a361cfafb9b3d50b671bfdc21c27467c1">status</a>(404);</div>
+<div class="line"><span class="lineno">  353</span>                    errno = EEXIST;</div>
+<div class="line"><span class="lineno">  354</span>                    onStatus(errno);</div>
+<div class="line"><span class="lineno">  355</span>                }</div>
+<div class="line"><span class="lineno">  356</span>            } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  357</span>                <a class="code hl_function" href="#a361cfafb9b3d50b671bfdc21c27467c1">status</a>(404);</div>
+<div class="line"><span class="lineno">  358</span>                errno = ENOENT;</div>
+<div class="line"><span class="lineno">  359</span>                onStatus(errno);</div>
+<div class="line"><span class="lineno">  360</span>            }</div>
+<div class="line"><span class="lineno">  361</span>        }</div>
+<div class="line"><span class="lineno">  362</span>    }</div>
 <div class="ttc" id="aclasscore_1_1file_1_1FileReader_html_a683aa2c0bf29e1a84335385b6cbea339"><div class="ttname"><a href="classcore_1_1file_1_1FileReader.html#a683aa2c0bf29e1a84335385b6cbea339">core::file::FileReader::open</a></div><div class="ttdeci">static FileReader * open(const std::string &amp;path, const std::function&lt; void(int)&gt; &amp;callback)</div><div class="ttdef"><b>Definition</b> <a href="FileReader_8cpp_source.html#l00066">FileReader.cpp:66</a></div></div>
 <div class="ttc" id="aclasscore_1_1pipe_1_1Sink_html_a4d790c7938a0920a81445a58a868b5a8"><div class="ttname"><a href="classcore_1_1pipe_1_1Sink.html#a4d790c7938a0920a81445a58a868b5a8">core::pipe::Sink::pipe</a></div><div class="ttdeci">void pipe(Source *source)</div><div class="ttdef"><b>Definition</b> <a href="Sink_8cpp_source.html#l00058">Sink.cpp:58</a></div></div>
 <div class="ttc" id="aclassweb_1_1http_1_1MimeTypes_html_a08aa7365e19c29f97369a3bedfcc3721"><div class="ttname"><a href="classweb_1_1http_1_1MimeTypes.html#a08aa7365e19c29f97369a3bedfcc3721">web::http::MimeTypes::contentType</a></div><div class="ttdeci">static std::string contentType(const std::string &amp;file)</div><div class="ttdef"><b>Definition</b> <a href="MimeTypes_8cpp_source.html#l00262">MimeTypes.cpp:262</a></div></div>
@@ -1180,30 +1187,34 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00404">404</a> of file <a class="el" href="web_2http_2server_2Response_8cpp_source.html">Response.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  404</span>                                                                          {</div>
-<div class="line"><span class="lineno">  405</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="#a38927f6cae7dd71fba0d417e1666609f">isConnected</a>()) {</div>
-<div class="line"><span class="lineno">  406</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a82f26623d9ad3ef44abb74d35aaba7d0">transferEncoding</a> == <a class="code hl_enumvalue" href="namespaceweb_1_1http.html#a40edb0fffda79adf1a8a5b95fdd6e7b2a7920ba6b75e24916e97632ed0bafec4f">TransferEncoding::Chunked</a>) {</div>
-<div class="line"><span class="lineno">  407</span>                <a class="code hl_variable" href="#aaddaf6b6c22fb143d9ca31c125404aea">socketContext</a>-&gt;sendToPeer(<a class="code hl_define" href="web_2http_2client_2Request_8cpp.html#a3885521091d42b2f92ce233bf94a4960">to_hex_str</a>(chunkLen).<a class="code hl_function" href="#aca4f9f371930dfc5cbe938a6a1c8ecb9">append</a>(<span class="stringliteral">&quot;\r\n&quot;</span>));</div>
-<div class="line"><span class="lineno">  408</span>            }</div>
-<div class="line"><span class="lineno">  409</span> </div>
-<div class="line"><span class="lineno">  410</span>            <a class="code hl_variable" href="#aaddaf6b6c22fb143d9ca31c125404aea">socketContext</a>-&gt;sendToPeer(chunk, chunkLen);</div>
-<div class="line"><span class="lineno">  411</span>            <a class="code hl_variable" href="#a27d7c297ceff0e46f6b64d5c6cf6f1d1">contentSent</a> += chunkLen;</div>
-<div class="line"><span class="lineno">  412</span> </div>
-<div class="line"><span class="lineno">  413</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a82f26623d9ad3ef44abb74d35aaba7d0">transferEncoding</a> == <a class="code hl_enumvalue" href="namespaceweb_1_1http.html#a40edb0fffda79adf1a8a5b95fdd6e7b2a7920ba6b75e24916e97632ed0bafec4f">TransferEncoding::Chunked</a> || <a class="code hl_function" href="namespaceweb_1_1http.html#a1f64d7d534ae76729c7bae5e5264e5d4">web::http::ciContains</a>(<a class="code hl_variable" href="#a74e3f6e47a393a423668e35958c915ab">headers</a>[<span class="stringliteral">&quot;Content-Type&quot;</span>], <span class="stringliteral">&quot;text/event-stream&quot;</span>)) {</div>
-<div class="line"><span class="lineno">  414</span>                <a class="code hl_variable" href="#aaddaf6b6c22fb143d9ca31c125404aea">socketContext</a>-&gt;sendToPeer(<span class="stringliteral">&quot;\r\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  415</span>                <a class="code hl_variable" href="#aa3b44867b06641f5b396b432b5f498eb">contentLength</a> += chunkLen;</div>
-<div class="line"><span class="lineno">  416</span>            }</div>
-<div class="line"><span class="lineno">  417</span>        }</div>
-<div class="line"><span class="lineno">  418</span> </div>
-<div class="line"><span class="lineno">  419</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">  420</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00405">405</a> of file <a class="el" href="web_2http_2server_2Response_8cpp_source.html">Response.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  405</span>                                                                          {</div>
+<div class="line"><span class="lineno">  406</span>        <span class="comment">// RFC 9110 / Express semantics: HEAD responses must not include a message body.</span></div>
+<div class="line"><span class="lineno">  407</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a6ec325e00170f03f48c3ec959b0ca3c3">requestMethod</a> == <span class="stringliteral">&quot;HEAD&quot;</span>) {</div>
+<div class="line"><span class="lineno">  408</span>            <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">  409</span>        }</div>
+<div class="line"><span class="lineno">  410</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="#a38927f6cae7dd71fba0d417e1666609f">isConnected</a>()) {</div>
+<div class="line"><span class="lineno">  411</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a82f26623d9ad3ef44abb74d35aaba7d0">transferEncoding</a> == <a class="code hl_enumvalue" href="namespaceweb_1_1http.html#a40edb0fffda79adf1a8a5b95fdd6e7b2a7920ba6b75e24916e97632ed0bafec4f">TransferEncoding::Chunked</a>) {</div>
+<div class="line"><span class="lineno">  412</span>                <a class="code hl_variable" href="#aaddaf6b6c22fb143d9ca31c125404aea">socketContext</a>-&gt;sendToPeer(<a class="code hl_define" href="web_2http_2client_2Request_8cpp.html#a3885521091d42b2f92ce233bf94a4960">to_hex_str</a>(chunkLen).<a class="code hl_function" href="#aca4f9f371930dfc5cbe938a6a1c8ecb9">append</a>(<span class="stringliteral">&quot;\r\n&quot;</span>));</div>
+<div class="line"><span class="lineno">  413</span>            }</div>
+<div class="line"><span class="lineno">  414</span> </div>
+<div class="line"><span class="lineno">  415</span>            <a class="code hl_variable" href="#aaddaf6b6c22fb143d9ca31c125404aea">socketContext</a>-&gt;sendToPeer(chunk, chunkLen);</div>
+<div class="line"><span class="lineno">  416</span>            <a class="code hl_variable" href="#a27d7c297ceff0e46f6b64d5c6cf6f1d1">contentSent</a> += chunkLen;</div>
+<div class="line"><span class="lineno">  417</span> </div>
+<div class="line"><span class="lineno">  418</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a82f26623d9ad3ef44abb74d35aaba7d0">transferEncoding</a> == <a class="code hl_enumvalue" href="namespaceweb_1_1http.html#a40edb0fffda79adf1a8a5b95fdd6e7b2a7920ba6b75e24916e97632ed0bafec4f">TransferEncoding::Chunked</a> || <a class="code hl_function" href="namespaceweb_1_1http.html#a1f64d7d534ae76729c7bae5e5264e5d4">web::http::ciContains</a>(<a class="code hl_variable" href="#a74e3f6e47a393a423668e35958c915ab">headers</a>[<span class="stringliteral">&quot;Content-Type&quot;</span>], <span class="stringliteral">&quot;text/event-stream&quot;</span>)) {</div>
+<div class="line"><span class="lineno">  419</span>                <a class="code hl_variable" href="#aaddaf6b6c22fb143d9ca31c125404aea">socketContext</a>-&gt;sendToPeer(<span class="stringliteral">&quot;\r\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  420</span>                <a class="code hl_variable" href="#aa3b44867b06641f5b396b432b5f498eb">contentLength</a> += chunkLen;</div>
+<div class="line"><span class="lineno">  421</span>            }</div>
+<div class="line"><span class="lineno">  422</span>        }</div>
+<div class="line"><span class="lineno">  423</span> </div>
+<div class="line"><span class="lineno">  424</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">  425</span>    }</div>
 <div class="ttc" id="anamespaceweb_1_1http_html_a1f64d7d534ae76729c7bae5e5264e5d4"><div class="ttname"><a href="namespaceweb_1_1http.html#a1f64d7d534ae76729c7bae5e5264e5d4">web::http::ciContains</a></div><div class="ttdeci">bool ciContains(const std::string &amp;str1, const std::string &amp;str2)</div><div class="ttdef"><b>Definition</b> <a href="CiStringMap_8cpp_source.html#l00053">CiStringMap.cpp:53</a></div></div>
 <div class="ttc" id="aweb_2http_2client_2Request_8cpp_html_a3885521091d42b2f92ce233bf94a4960"><div class="ttname"><a href="web_2http_2client_2Request_8cpp.html#a3885521091d42b2f92ce233bf94a4960">to_hex_str</a></div><div class="ttdeci">#define to_hex_str(int_val)</div><div class="ttdef"><b>Definition</b> <a href="web_2http_2client_2Request_8cpp_source.html#l00073">Request.cpp:73</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="TransferEncoding_8h_source.html#l00050">web::http::Chunked</a>, <a class="el" href="CiStringMap_8cpp_source.html#l00053">web::http::ciContains()</a>, <a class="el" href="web_2http_2server_2Response_8h_source.html#l00133">contentLength</a>, <a class="el" href="web_2http_2server_2Response_8h_source.html#l00132">contentSent</a>, <a class="el" href="web_2http_2server_2Response_8h_source.html#l00127">headers</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00087">isConnected()</a>, <a class="el" href="core_2socket_2SocketContext_8cpp_source.html#l00053">core::socket::SocketContext::sendToPeer()</a>, <a class="el" href="core_2socket_2stream_2SocketContext_8cpp_source.html#l00069">core::socket::stream::SocketContext::sendToPeer()</a>, <a class="el" href="web_2http_2server_2Response_8h_source.html#l00135">socketContext</a>, and <a class="el" href="web_2http_2server_2Response_8h_source.html#l00138">transferEncoding</a>.</p>
+<p class="reference">References <a class="el" href="TransferEncoding_8h_source.html#l00050">web::http::Chunked</a>, <a class="el" href="CiStringMap_8cpp_source.html#l00053">web::http::ciContains()</a>, <a class="el" href="web_2http_2server_2Response_8h_source.html#l00133">contentLength</a>, <a class="el" href="web_2http_2server_2Response_8h_source.html#l00132">contentSent</a>, <a class="el" href="web_2http_2server_2Response_8h_source.html#l00127">headers</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00087">isConnected()</a>, <a class="el" href="web_2http_2server_2Response_8h_source.html#l00121">requestMethod</a>, <a class="el" href="core_2socket_2SocketContext_8cpp_source.html#l00053">core::socket::SocketContext::sendToPeer()</a>, <a class="el" href="core_2socket_2stream_2SocketContext_8cpp_source.html#l00069">core::socket::stream::SocketContext::sendToPeer()</a>, <a class="el" href="web_2http_2server_2Response_8h_source.html#l00135">socketContext</a>, and <a class="el" href="web_2http_2server_2Response_8h_source.html#l00138">transferEncoding</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00458">onSourceData()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00215">send()</a>, <a class="el" href="express_2Response_8cpp_source.html#l00191">express::Response::sendFragment()</a>, and <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00422">sendFragment()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00468">onSourceData()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00215">send()</a>, <a class="el" href="express_2Response_8cpp_source.html#l00191">express::Response::sendFragment()</a>, and <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00427">sendFragment()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1232,14 +1243,14 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00422">422</a> of file <a class="el" href="web_2http_2server_2Response_8cpp_source.html">Response.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  422</span>                                                           {</div>
-<div class="line"><span class="lineno">  423</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="#ad582a9f1649f000a7df6404a922ae772">sendFragment</a>(chunk.data(), chunk.size());</div>
-<div class="line"><span class="lineno">  424</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00427">427</a> of file <a class="el" href="web_2http_2server_2Response_8cpp_source.html">Response.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  427</span>                                                           {</div>
+<div class="line"><span class="lineno">  428</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="#ad582a9f1649f000a7df6404a922ae772">sendFragment</a>(chunk.data(), chunk.size());</div>
+<div class="line"><span class="lineno">  429</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00404">sendFragment()</a>.</p>
+<p class="reference">References <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00405">sendFragment()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00426">sendCompleted()</a>, and <a class="el" href="express_2Response_8cpp_source.html#l00197">express::Response::sendFragment()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00431">sendCompleted()</a>, and <a class="el" href="express_2Response_8cpp_source.html#l00197">express::Response::sendFragment()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1268,48 +1279,48 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00367">367</a> of file <a class="el" href="web_2http_2server_2Response_8cpp_source.html">Response.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  367</span>                                   {</div>
-<div class="line"><span class="lineno">  368</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="#a38927f6cae7dd71fba0d417e1666609f">isConnected</a>()) {</div>
-<div class="line"><span class="lineno">  369</span>            <a class="code hl_variable" href="#aaddaf6b6c22fb143d9ca31c125404aea">socketContext</a>-&gt;responseStarted(*<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  370</span> </div>
-<div class="line"><span class="lineno">  371</span>            <a class="code hl_variable" href="#aaddaf6b6c22fb143d9ca31c125404aea">socketContext</a>-&gt;sendToPeer(<span class="stringliteral">&quot;HTTP/&quot;</span> + std::to_string(<a class="code hl_variable" href="#acd1edf503d2c9f79ff97145b1d4c40ae">httpMajor</a>)</div>
-<div class="line"><span class="lineno">  372</span>                                                    .<a class="code hl_function" href="#aca4f9f371930dfc5cbe938a6a1c8ecb9">append</a>(<span class="stringliteral">&quot;.&quot;</span>)</div>
-<div class="line"><span class="lineno">  373</span>                                                    .<a class="code hl_function" href="#aca4f9f371930dfc5cbe938a6a1c8ecb9">append</a>(std::to_string(<a class="code hl_variable" href="#a04b1e287957d2d2f2425a14043101909">httpMinor</a>))</div>
-<div class="line"><span class="lineno">  374</span>                                                    .<a class="code hl_function" href="#aca4f9f371930dfc5cbe938a6a1c8ecb9">append</a>(<span class="stringliteral">&quot; &quot;</span>)</div>
-<div class="line"><span class="lineno">  375</span>                                                    .<a class="code hl_function" href="#aca4f9f371930dfc5cbe938a6a1c8ecb9">append</a>(std::to_string(<a class="code hl_variable" href="#ae13f2139d51211dedd40bca1751e1120">statusCode</a>))</div>
-<div class="line"><span class="lineno">  376</span>                                                    .<a class="code hl_function" href="#aca4f9f371930dfc5cbe938a6a1c8ecb9">append</a>(<span class="stringliteral">&quot; &quot;</span>)</div>
-<div class="line"><span class="lineno">  377</span>                                                    .<a class="code hl_function" href="#aca4f9f371930dfc5cbe938a6a1c8ecb9">append</a>(<a class="code hl_function" href="classweb_1_1http_1_1StatusCode.html#ad3c635f1cb778cdb4a2e23332ebda277">StatusCode::reason</a>(<a class="code hl_variable" href="#ae13f2139d51211dedd40bca1751e1120">statusCode</a>))</div>
-<div class="line"><span class="lineno">  378</span>                                                    .<a class="code hl_function" href="#aca4f9f371930dfc5cbe938a6a1c8ecb9">append</a>(<span class="stringliteral">&quot;\r\n&quot;</span>));</div>
-<div class="line"><span class="lineno">  379</span>            <a class="code hl_variable" href="#aaddaf6b6c22fb143d9ca31c125404aea">socketContext</a>-&gt;sendToPeer(<span class="stringliteral">&quot;Date: &quot;</span> + <a class="code hl_function" href="namespacehttputils.html#a01539c1af68e4d072d3507ae44c0b02a">httputils::to_http_date</a>() + <span class="stringliteral">&quot;\r\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  380</span> </div>
-<div class="line"><span class="lineno">  381</span>            <a class="code hl_function" href="#a82301ce94e8418a2d0b9bc052207a178">set</a>(<span class="stringliteral">&quot;X-Powered-By&quot;</span>, <span class="stringliteral">&quot;snode.c&quot;</span>);</div>
-<div class="line"><span class="lineno">  382</span> </div>
-<div class="line"><span class="lineno">  383</span>            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; [field, value] : <a class="code hl_variable" href="#a74e3f6e47a393a423668e35958c915ab">headers</a>) {</div>
-<div class="line"><span class="lineno">  384</span>                <a class="code hl_variable" href="#aaddaf6b6c22fb143d9ca31c125404aea">socketContext</a>-&gt;sendToPeer(std::string(field).<a class="code hl_function" href="#aca4f9f371930dfc5cbe938a6a1c8ecb9">append</a>(<span class="stringliteral">&quot;: &quot;</span>).<a class="code hl_function" href="#aca4f9f371930dfc5cbe938a6a1c8ecb9">append</a>(value).<a class="code hl_function" href="#aca4f9f371930dfc5cbe938a6a1c8ecb9">append</a>(<span class="stringliteral">&quot;\r\n&quot;</span>));</div>
-<div class="line"><span class="lineno">  385</span>            }</div>
-<div class="line"><span class="lineno">  386</span> </div>
-<div class="line"><span class="lineno">  387</span>            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; [<a class="code hl_function" href="#aa9a6f2cbf1a4f186db94f9a2d5d6da08">cookie</a>, cookieValue] : <a class="code hl_variable" href="#a34eb779b643aeaf1f6d4fced3b30b5e6">cookies</a>) {</div>
-<div class="line"><span class="lineno">  388</span>                <span class="keyword">const</span> std::string cookieString = std::accumulate(</div>
-<div class="line"><span class="lineno">  389</span>                    cookieValue.getOptions().begin(),</div>
-<div class="line"><span class="lineno">  390</span>                    cookieValue.getOptions().end(),</div>
-<div class="line"><span class="lineno">  391</span>                    <a class="code hl_function" href="#aa9a6f2cbf1a4f186db94f9a2d5d6da08">cookie</a> + <span class="stringliteral">&quot;=&quot;</span> + cookieValue.getValue(),</div>
-<div class="line"><span class="lineno">  392</span>                    [](<span class="keyword">const</span> std::string&amp; str, <span class="keyword">const</span> std::pair&lt;const std::string&amp;, const std::string&amp;&gt; option) -&gt; std::string {</div>
-<div class="line"><span class="lineno">  393</span>                        return str + <span class="stringliteral">&quot;; &quot;</span> + option.first + (!option.second.empty() ? <span class="stringliteral">&quot;=&quot;</span> + option.second : <span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><span class="lineno">  394</span>                    });</div>
-<div class="line"><span class="lineno">  395</span>                <a class="code hl_variable" href="#aaddaf6b6c22fb143d9ca31c125404aea">socketContext</a>-&gt;sendToPeer(<span class="stringliteral">&quot;Set-Cookie: &quot;</span> + cookieString + <span class="stringliteral">&quot;\r\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  396</span>            }</div>
-<div class="line"><span class="lineno">  397</span> </div>
-<div class="line"><span class="lineno">  398</span>            <a class="code hl_variable" href="#aaddaf6b6c22fb143d9ca31c125404aea">socketContext</a>-&gt;sendToPeer(<span class="stringliteral">&quot;\r\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  399</span>        }</div>
-<div class="line"><span class="lineno">  400</span> </div>
-<div class="line"><span class="lineno">  401</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">  402</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00368">368</a> of file <a class="el" href="web_2http_2server_2Response_8cpp_source.html">Response.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  368</span>                                   {</div>
+<div class="line"><span class="lineno">  369</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="#a38927f6cae7dd71fba0d417e1666609f">isConnected</a>()) {</div>
+<div class="line"><span class="lineno">  370</span>            <a class="code hl_variable" href="#aaddaf6b6c22fb143d9ca31c125404aea">socketContext</a>-&gt;responseStarted(*<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  371</span> </div>
+<div class="line"><span class="lineno">  372</span>            <a class="code hl_variable" href="#aaddaf6b6c22fb143d9ca31c125404aea">socketContext</a>-&gt;sendToPeer(<span class="stringliteral">&quot;HTTP/&quot;</span> + std::to_string(<a class="code hl_variable" href="#acd1edf503d2c9f79ff97145b1d4c40ae">httpMajor</a>)</div>
+<div class="line"><span class="lineno">  373</span>                                                    .<a class="code hl_function" href="#aca4f9f371930dfc5cbe938a6a1c8ecb9">append</a>(<span class="stringliteral">&quot;.&quot;</span>)</div>
+<div class="line"><span class="lineno">  374</span>                                                    .<a class="code hl_function" href="#aca4f9f371930dfc5cbe938a6a1c8ecb9">append</a>(std::to_string(<a class="code hl_variable" href="#a04b1e287957d2d2f2425a14043101909">httpMinor</a>))</div>
+<div class="line"><span class="lineno">  375</span>                                                    .<a class="code hl_function" href="#aca4f9f371930dfc5cbe938a6a1c8ecb9">append</a>(<span class="stringliteral">&quot; &quot;</span>)</div>
+<div class="line"><span class="lineno">  376</span>                                                    .<a class="code hl_function" href="#aca4f9f371930dfc5cbe938a6a1c8ecb9">append</a>(std::to_string(<a class="code hl_variable" href="#ae13f2139d51211dedd40bca1751e1120">statusCode</a>))</div>
+<div class="line"><span class="lineno">  377</span>                                                    .<a class="code hl_function" href="#aca4f9f371930dfc5cbe938a6a1c8ecb9">append</a>(<span class="stringliteral">&quot; &quot;</span>)</div>
+<div class="line"><span class="lineno">  378</span>                                                    .<a class="code hl_function" href="#aca4f9f371930dfc5cbe938a6a1c8ecb9">append</a>(<a class="code hl_function" href="classweb_1_1http_1_1StatusCode.html#ad3c635f1cb778cdb4a2e23332ebda277">StatusCode::reason</a>(<a class="code hl_variable" href="#ae13f2139d51211dedd40bca1751e1120">statusCode</a>))</div>
+<div class="line"><span class="lineno">  379</span>                                                    .<a class="code hl_function" href="#aca4f9f371930dfc5cbe938a6a1c8ecb9">append</a>(<span class="stringliteral">&quot;\r\n&quot;</span>));</div>
+<div class="line"><span class="lineno">  380</span>            <a class="code hl_variable" href="#aaddaf6b6c22fb143d9ca31c125404aea">socketContext</a>-&gt;sendToPeer(<span class="stringliteral">&quot;Date: &quot;</span> + <a class="code hl_function" href="namespacehttputils.html#ad53daa08390598493f3f4ae09164a60a">httputils::to_http_date</a>() + <span class="stringliteral">&quot;\r\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  381</span> </div>
+<div class="line"><span class="lineno">  382</span>            <a class="code hl_function" href="#a82301ce94e8418a2d0b9bc052207a178">set</a>(<span class="stringliteral">&quot;X-Powered-By&quot;</span>, <span class="stringliteral">&quot;SNode.C&quot;</span>);</div>
+<div class="line"><span class="lineno">  383</span> </div>
+<div class="line"><span class="lineno">  384</span>            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; [field, value] : <a class="code hl_variable" href="#a74e3f6e47a393a423668e35958c915ab">headers</a>) {</div>
+<div class="line"><span class="lineno">  385</span>                <a class="code hl_variable" href="#aaddaf6b6c22fb143d9ca31c125404aea">socketContext</a>-&gt;sendToPeer(std::string(field).<a class="code hl_function" href="#aca4f9f371930dfc5cbe938a6a1c8ecb9">append</a>(<span class="stringliteral">&quot;: &quot;</span>).<a class="code hl_function" href="#aca4f9f371930dfc5cbe938a6a1c8ecb9">append</a>(value).<a class="code hl_function" href="#aca4f9f371930dfc5cbe938a6a1c8ecb9">append</a>(<span class="stringliteral">&quot;\r\n&quot;</span>));</div>
+<div class="line"><span class="lineno">  386</span>            }</div>
+<div class="line"><span class="lineno">  387</span> </div>
+<div class="line"><span class="lineno">  388</span>            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; [<a class="code hl_function" href="#aa9a6f2cbf1a4f186db94f9a2d5d6da08">cookie</a>, cookieValue] : <a class="code hl_variable" href="#a34eb779b643aeaf1f6d4fced3b30b5e6">cookies</a>) {</div>
+<div class="line"><span class="lineno">  389</span>                <span class="keyword">const</span> std::string cookieString = std::accumulate(</div>
+<div class="line"><span class="lineno">  390</span>                    cookieValue.getOptions().begin(),</div>
+<div class="line"><span class="lineno">  391</span>                    cookieValue.getOptions().end(),</div>
+<div class="line"><span class="lineno">  392</span>                    <a class="code hl_function" href="#aa9a6f2cbf1a4f186db94f9a2d5d6da08">cookie</a> + <span class="stringliteral">&quot;=&quot;</span> + cookieValue.getValue(),</div>
+<div class="line"><span class="lineno">  393</span>                    [](<span class="keyword">const</span> std::string&amp; str, <span class="keyword">const</span> std::pair&lt;const std::string&amp;, const std::string&amp;&gt; option) -&gt; std::string {</div>
+<div class="line"><span class="lineno">  394</span>                        return str + <span class="stringliteral">&quot;; &quot;</span> + option.first + (!option.second.empty() ? <span class="stringliteral">&quot;=&quot;</span> + option.second : <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">  395</span>                    });</div>
+<div class="line"><span class="lineno">  396</span>                <a class="code hl_variable" href="#aaddaf6b6c22fb143d9ca31c125404aea">socketContext</a>-&gt;sendToPeer(<span class="stringliteral">&quot;Set-Cookie: &quot;</span> + cookieString + <span class="stringliteral">&quot;\r\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  397</span>            }</div>
+<div class="line"><span class="lineno">  398</span> </div>
+<div class="line"><span class="lineno">  399</span>            <a class="code hl_variable" href="#aaddaf6b6c22fb143d9ca31c125404aea">socketContext</a>-&gt;sendToPeer(<span class="stringliteral">&quot;\r\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  400</span>        }</div>
+<div class="line"><span class="lineno">  401</span> </div>
+<div class="line"><span class="lineno">  402</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">  403</span>    }</div>
 <div class="ttc" id="aclassweb_1_1http_1_1StatusCode_html_ad3c635f1cb778cdb4a2e23332ebda277"><div class="ttname"><a href="classweb_1_1http_1_1StatusCode.html#ad3c635f1cb778cdb4a2e23332ebda277">web::http::StatusCode::reason</a></div><div class="ttdeci">static std::string reason(int status)</div><div class="ttdef"><b>Definition</b> <a href="StatusCodes_8cpp_source.html#l00121">StatusCodes.cpp:121</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="web_2http_2server_2Response_8h_source.html#l00128">cookies</a>, <a class="el" href="CookieOptions_8h_source.html#l00069">web::http::CookieOptions::getOptions()</a>, <a class="el" href="CookieOptions_8h_source.html#l00073">web::http::CookieOptions::getValue()</a>, <a class="el" href="web_2http_2server_2Response_8h_source.html#l00127">headers</a>, <a class="el" href="web_2http_2server_2Response_8h_source.html#l00123">httpMajor</a>, <a class="el" href="web_2http_2server_2Response_8h_source.html#l00124">httpMinor</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00087">isConnected()</a>, <a class="el" href="StatusCodes_8cpp_source.html#l00121">web::http::StatusCode::reason()</a>, <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00141">web::http::server::SocketContext::responseStarted()</a>, <a class="el" href="core_2socket_2SocketContext_8cpp_source.html#l00053">core::socket::SocketContext::sendToPeer()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00130">set()</a>, <a class="el" href="web_2http_2server_2Response_8h_source.html#l00135">socketContext</a>, <a class="el" href="web_2http_2server_2Response_8h_source.html#l00122">statusCode</a>, and <a class="el" href="http__utils_8cpp_source.html#l00140">httputils::to_http_date()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00444">onSourceConnect()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00215">send()</a>, and <a class="el" href="express_2Response_8cpp_source.html#l00185">express::Response::sendHeader()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00454">onSourceConnect()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00215">send()</a>, and <a class="el" href="express_2Response_8cpp_source.html#l00185">express::Response::sendHeader()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1393,7 +1404,7 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classweb_1_1http_1_1server_1_1Response_a6f8d3d143f82fc3b48fe2d705e95a0c7_icgraph.svg" width="575" height="72"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="classweb_1_1http_1_1server_1_1Response_a6f8d3d143f82fc3b48fe2d705e95a0c7_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -1475,7 +1486,7 @@ Here is the caller graph for this function:</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="TransferEncoding_8h_source.html#l00050">web::http::Chunked</a>, <a class="el" href="CiStringMap_8cpp_source.html#l00053">web::http::ciContains()</a>, <a class="el" href="CiStringMap_8cpp_source.html#l00061">web::http::ciEquals()</a>, <a class="el" href="ConnectionState_8h_source.html#l00051">web::http::Close</a>, <a class="el" href="web_2http_2server_2Response_8h_source.html#l00137">connectionState</a>, <a class="el" href="web_2http_2server_2Response_8h_source.html#l00133">contentLength</a>, <a class="el" href="web_2http_2server_2Response_8h_source.html#l00127">headers</a>, <a class="el" href="TransferEncoding_8h_source.html#l00050">web::http::Identity</a>, <a class="el" href="ConnectionState_8h_source.html#l00051">web::http::Keep</a>, and <a class="el" href="web_2http_2server_2Response_8h_source.html#l00138">transferEncoding</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00110">append()</a>, <a class="el" href="websocket_2server_2SocketContextUpgradeFactory_8cpp_source.html#l00065">web::websocket::server::SocketContextUpgradeFactory::create()</a>, <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00107">web::http::server::SocketContext::deliverRequest()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00215">send()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00228">send()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00324">sendFile()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00367">sendHeader()</a>, <a class="el" href="express_2Response_8cpp_source.html#l00129">express::Response::set()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00122">set()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00196">setTrailer()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00176">type()</a>, and <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00248">upgrade()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00110">append()</a>, <a class="el" href="websocket_2server_2SocketContextUpgradeFactory_8cpp_source.html#l00065">web::websocket::server::SocketContextUpgradeFactory::create()</a>, <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00107">web::http::server::SocketContext::deliverRequest()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00215">send()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00228">send()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00324">sendFile()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00368">sendHeader()</a>, <a class="el" href="express_2Response_8cpp_source.html#l00129">express::Response::set()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00122">set()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00196">setTrailer()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00176">type()</a>, and <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00248">upgrade()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1649,7 +1660,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">  254</span>            <span class="keywordflow">if</span> (request != <span class="keyword">nullptr</span>) {</div>
 <div class="line"><span class="lineno">  255</span>                LOG(DEBUG) &lt;&lt; connectionName &lt;&lt; <span class="stringliteral">&quot; HTTP: Initiating upgrade: &quot;</span> &lt;&lt; request-&gt;method &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; request-&gt;url</div>
 <div class="line"><span class="lineno">  256</span>                           &lt;&lt; <span class="stringliteral">&quot; HTTP/&quot;</span> + std::to_string(<a class="code hl_variable" href="#acd1edf503d2c9f79ff97145b1d4c40ae">httpMajor</a>) + <span class="stringliteral">&quot;.&quot;</span> + std::to_string(<a class="code hl_variable" href="#a04b1e287957d2d2f2425a14043101909">httpMinor</a>) &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span></div>
-<div class="line"><span class="lineno">  257</span>                           &lt;&lt; <a class="code hl_function" href="namespacehttputils.html#ab84b77e9fb1e16e00e250d981aec32de">httputils::toString</a>(request-&gt;method,</div>
+<div class="line"><span class="lineno">  257</span>                           &lt;&lt; <a class="code hl_function" href="namespacehttputils.html#af919da8fec482281cd8066f4e4e4a457">httputils::toString</a>(request-&gt;method,</div>
 <div class="line"><span class="lineno">  258</span>                                                  request-&gt;url,</div>
 <div class="line"><span class="lineno">  259</span>                                                  <span class="stringliteral">&quot;HTTP/&quot;</span> + std::to_string(request-&gt;httpMajor) + <span class="stringliteral">&quot;.&quot;</span> + std::to_string(request-&gt;httpMinor),</div>
 <div class="line"><span class="lineno">  260</span>                                                  request-&gt;queries,</div>
@@ -1674,7 +1685,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">  279</span> </div>
 <div class="line"><span class="lineno">  280</span>                            LOG(DEBUG) &lt;&lt; connectionName &lt;&lt; <span class="stringliteral">&quot; HTTP upgrade: Response to upgrade request: &quot;</span> &lt;&lt; request-&gt;method &lt;&lt; <span class="stringliteral">&quot; &quot;</span></div>
 <div class="line"><span class="lineno">  281</span>                                       &lt;&lt; request-&gt;url &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; <span class="stringliteral">&quot;HTTP/&quot;</span> &lt;&lt; request-&gt;httpMajor &lt;&lt; <span class="stringliteral">&quot;.&quot;</span> &lt;&lt; request-&gt;httpMinor &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span></div>
-<div class="line"><span class="lineno">  282</span>                                       &lt;&lt; <a class="code hl_function" href="namespacehttputils.html#ab84b77e9fb1e16e00e250d981aec32de">httputils::toString</a>(<span class="stringliteral">&quot;HTTP/&quot;</span> + std::to_string(<a class="code hl_variable" href="#acd1edf503d2c9f79ff97145b1d4c40ae">httpMajor</a>) + <span class="stringliteral">&quot;.&quot;</span> + std::to_string(<a class="code hl_variable" href="#a04b1e287957d2d2f2425a14043101909">httpMinor</a>),</div>
+<div class="line"><span class="lineno">  282</span>                                       &lt;&lt; <a class="code hl_function" href="namespacehttputils.html#af919da8fec482281cd8066f4e4e4a457">httputils::toString</a>(<span class="stringliteral">&quot;HTTP/&quot;</span> + std::to_string(<a class="code hl_variable" href="#acd1edf503d2c9f79ff97145b1d4c40ae">httpMajor</a>) + <span class="stringliteral">&quot;.&quot;</span> + std::to_string(<a class="code hl_variable" href="#a04b1e287957d2d2f2425a14043101909">httpMinor</a>),</div>
 <div class="line"><span class="lineno">  283</span>                                                              std::to_string(<a class="code hl_variable" href="#ae13f2139d51211dedd40bca1751e1120">statusCode</a>),</div>
 <div class="line"><span class="lineno">  284</span>                                                              <a class="code hl_function" href="classweb_1_1http_1_1StatusCode.html#ad3c635f1cb778cdb4a2e23332ebda277">StatusCode::reason</a>(<a class="code hl_variable" href="#ae13f2139d51211dedd40bca1751e1120">statusCode</a>),</div>
 <div class="line"><span class="lineno">  285</span>                                                              <a class="code hl_variable" href="#a74e3f6e47a393a423668e35958c915ab">headers</a>,</div>
@@ -1715,12 +1726,12 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">  320</span>            LOG(ERROR) &lt;&lt; <span class="stringliteral">&quot;HTTP upgrade: Unexpected disconnect&quot;</span>;</div>
 <div class="line"><span class="lineno">  321</span>        }</div>
 <div class="line"><span class="lineno">  322</span>    }</div>
-<div class="ttc" id="aclassweb_1_1http_1_1server_1_1Response_html_afe8d52fa54eb3d7f5a55f9030903c02d"><div class="ttname"><a href="#afe8d52fa54eb3d7f5a55f9030903c02d">web::http::server::Response::header</a></div><div class="ttdeci">const std::string &amp; header(const std::string &amp;field)</div><div class="ttdef"><b>Definition</b> <a href="web_2http_2server_2Response_8cpp_source.html#l00481">Response.cpp:481</a></div></div>
+<div class="ttc" id="aclassweb_1_1http_1_1server_1_1Response_html_afe8d52fa54eb3d7f5a55f9030903c02d"><div class="ttname"><a href="#afe8d52fa54eb3d7f5a55f9030903c02d">web::http::server::Response::header</a></div><div class="ttdeci">const std::string &amp; header(const std::string &amp;field)</div><div class="ttdef"><b>Definition</b> <a href="web_2http_2server_2Response_8cpp_source.html#l00491">Response.cpp:491</a></div></div>
 <div class="ttc" id="aclassweb_1_1http_1_1server_1_1SocketContextUpgradeFactorySelector_html_a0f3c3fc11f20bc704da83f07ad3fa2ff"><div class="ttname"><a href="classweb_1_1http_1_1server_1_1SocketContextUpgradeFactorySelector.html#a0f3c3fc11f20bc704da83f07ad3fa2ff">web::http::server::SocketContextUpgradeFactorySelector::select</a></div><div class="ttdeci">SocketContextUpgradeFactory * select(Request &amp;req, Response &amp;res) override</div><div class="ttdef"><b>Definition</b> <a href="server_2SocketContextUpgradeFactorySelector_8cpp_source.html#l00085">SocketContextUpgradeFactorySelector.cpp:85</a></div></div>
 <div class="ttc" id="aclassweb_1_1http_1_1server_1_1SocketContextUpgradeFactorySelector_html_a568eb6d1145d9494f8b903609a59f0f0"><div class="ttname"><a href="classweb_1_1http_1_1server_1_1SocketContextUpgradeFactorySelector.html#a568eb6d1145d9494f8b903609a59f0f0">web::http::server::SocketContextUpgradeFactorySelector::instance</a></div><div class="ttdeci">static SocketContextUpgradeFactorySelector * instance()</div><div class="ttdef"><b>Definition</b> <a href="server_2SocketContextUpgradeFactorySelector_8cpp_source.html#l00079">SocketContextUpgradeFactorySelector.cpp:79</a></div></div>
-<div class="ttc" id="anamespacehttputils_html_ab84b77e9fb1e16e00e250d981aec32de"><div class="ttname"><a href="namespacehttputils.html#ab84b77e9fb1e16e00e250d981aec32de">httputils::toString</a></div><div class="ttdeci">std::string toString(const std::string &amp;method, const std::string &amp;url, const std::string &amp;version, const web::http::CiStringMap&lt; std::string &gt; &amp;queries, const web::http::CiStringMap&lt; std::string &gt; &amp;header, const web::http::CiStringMap&lt; std::string &gt; &amp;trailer, const web::http::CiStringMap&lt; std::string &gt; &amp;cookies, const std::vector&lt; char &gt; &amp;body)</div><div class="ttdef"><b>Definition</b> <a href="http__utils_8cpp_source.html#l00182">http_utils.cpp:182</a></div></div>
+<div class="ttc" id="anamespacehttputils_html_af919da8fec482281cd8066f4e4e4a457"><div class="ttname"><a href="namespacehttputils.html#af919da8fec482281cd8066f4e4e4a457">httputils::toString</a></div><div class="ttdeci">std::string toString(const std::string &amp;method, const std::string &amp;url, const std::string &amp;version, const std::map&lt; std::string, std::string &gt; &amp;queries, const web::http::CiStringMap&lt; std::string &gt; &amp;header, const web::http::CiStringMap&lt; std::string &gt; &amp;trailer, const web::http::CiStringMap&lt; std::string &gt; &amp;cookies, const std::vector&lt; char &gt; &amp;body)</div><div class="ttdef"><b>Definition</b> <a href="http__utils_8cpp_source.html#l00182">http_utils.cpp:182</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="CiStringMap_8cpp_source.html#l00053">web::http::ciContains()</a>, <a class="el" href="web_2http_2server_2Request_8h_source.html#l00087">web::http::server::Request::cookies</a>, <a class="el" href="web_2http_2server_2Response_8h_source.html#l00128">cookies</a>, <a class="el" href="SocketContextUpgradeFactory_8hpp_source.html#l00058">web::http::SocketContextUpgradeFactory&lt; RequestT, ResponseT &gt;::create()</a>, <a class="el" href="web_2http_2server_2Request_8cpp_source.html#l00060">web::http::server::Request::get()</a>, <a class="el" href="SocketConnection_8cpp_source.html#l00112">core::socket::stream::SocketConnection::getConnectionName()</a>, <a class="el" href="core_2socket_2stream_2SocketContext_8cpp_source.html#l00065">core::socket::stream::SocketContext::getSocketConnection()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00481">header()</a>, <a class="el" href="web_2http_2server_2Request_8h_source.html#l00086">web::http::server::Request::headers</a>, <a class="el" href="web_2http_2server_2Response_8h_source.html#l00127">headers</a>, <a class="el" href="web_2http_2server_2Request_8h_source.html#l00082">web::http::server::Request::httpMajor</a>, <a class="el" href="web_2http_2server_2Response_8h_source.html#l00123">httpMajor</a>, <a class="el" href="web_2http_2server_2Request_8h_source.html#l00083">web::http::server::Request::httpMinor</a>, <a class="el" href="web_2http_2server_2Response_8h_source.html#l00124">httpMinor</a>, <a class="el" href="server_2SocketContextUpgradeFactorySelector_8cpp_source.html#l00079">web::http::server::SocketContextUpgradeFactorySelector::instance()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00087">isConnected()</a>, <a class="el" href="web_2http_2server_2Request_8h_source.html#l00079">web::http::server::Request::method</a>, <a class="el" href="classweb_1_1http_1_1SocketContextUpgradeFactory.html#afae3ffca7956a1db027b587fe0c218f7">web::http::SocketContextUpgradeFactory&lt; RequestT, ResponseT &gt;::name()</a>, <a class="el" href="web_2http_2server_2Request_8h_source.html#l00085">web::http::server::Request::queries</a>, <a class="el" href="StatusCodes_8cpp_source.html#l00121">web::http::StatusCode::reason()</a>, <a class="el" href="server_2SocketContextUpgradeFactorySelector_8cpp_source.html#l00085">web::http::server::SocketContextUpgradeFactorySelector::select()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00130">set()</a>, <a class="el" href="SocketConnection_8cpp_source.html#l00084">core::socket::stream::SocketConnection::setSocketContext()</a>, <a class="el" href="web_2http_2server_2Response_8h_source.html#l00135">socketContext</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00104">status()</a>, <a class="el" href="web_2http_2server_2Response_8h_source.html#l00122">statusCode</a>, <a class="el" href="http__utils_8cpp_source.html#l00182">httputils::toString()</a>, <a class="el" href="http__utils_8cpp_source.html#l00265">httputils::toString()</a>, and <a class="el" href="web_2http_2server_2Request_8h_source.html#l00080">web::http::server::Request::url</a>.</p>
+<p class="reference">References <a class="el" href="CiStringMap_8cpp_source.html#l00053">web::http::ciContains()</a>, <a class="el" href="web_2http_2server_2Request_8h_source.html#l00087">web::http::server::Request::cookies</a>, <a class="el" href="web_2http_2server_2Response_8h_source.html#l00128">cookies</a>, <a class="el" href="SocketContextUpgradeFactory_8hpp_source.html#l00058">web::http::SocketContextUpgradeFactory&lt; RequestT, ResponseT &gt;::create()</a>, <a class="el" href="web_2http_2server_2Request_8cpp_source.html#l00060">web::http::server::Request::get()</a>, <a class="el" href="SocketConnection_8cpp_source.html#l00112">core::socket::stream::SocketConnection::getConnectionName()</a>, <a class="el" href="core_2socket_2stream_2SocketContext_8cpp_source.html#l00065">core::socket::stream::SocketContext::getSocketConnection()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00491">header()</a>, <a class="el" href="web_2http_2server_2Request_8h_source.html#l00086">web::http::server::Request::headers</a>, <a class="el" href="web_2http_2server_2Response_8h_source.html#l00127">headers</a>, <a class="el" href="web_2http_2server_2Request_8h_source.html#l00082">web::http::server::Request::httpMajor</a>, <a class="el" href="web_2http_2server_2Response_8h_source.html#l00123">httpMajor</a>, <a class="el" href="web_2http_2server_2Request_8h_source.html#l00083">web::http::server::Request::httpMinor</a>, <a class="el" href="web_2http_2server_2Response_8h_source.html#l00124">httpMinor</a>, <a class="el" href="server_2SocketContextUpgradeFactorySelector_8cpp_source.html#l00079">web::http::server::SocketContextUpgradeFactorySelector::instance()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00087">isConnected()</a>, <a class="el" href="web_2http_2server_2Request_8h_source.html#l00079">web::http::server::Request::method</a>, <a class="el" href="classweb_1_1http_1_1SocketContextUpgradeFactory.html#afae3ffca7956a1db027b587fe0c218f7">web::http::SocketContextUpgradeFactory&lt; RequestT, ResponseT &gt;::name()</a>, <a class="el" href="web_2http_2server_2Request_8h_source.html#l00085">web::http::server::Request::queries</a>, <a class="el" href="StatusCodes_8cpp_source.html#l00121">web::http::StatusCode::reason()</a>, <a class="el" href="server_2SocketContextUpgradeFactorySelector_8cpp_source.html#l00085">web::http::server::SocketContextUpgradeFactorySelector::select()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00130">set()</a>, <a class="el" href="SocketConnection_8cpp_source.html#l00084">core::socket::stream::SocketConnection::setSocketContext()</a>, <a class="el" href="web_2http_2server_2Response_8h_source.html#l00135">socketContext</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00104">status()</a>, <a class="el" href="web_2http_2server_2Response_8h_source.html#l00122">statusCode</a>, <a class="el" href="http__utils_8cpp_source.html#l00182">httputils::toString()</a>, <a class="el" href="http__utils_8cpp_source.html#l00265">httputils::toString()</a>, and <a class="el" href="web_2http_2server_2Request_8h_source.html#l00080">web::http::server::Request::url</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="express_2Response_8cpp_source.html#l00173">express::Response::upgrade()</a>.</p>
 <div class="dynheader">
@@ -1810,7 +1821,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="web_2http_2server_2Response_8h_source.html#l00133">133</a> of file <a class="el" href="web_2http_2server_2Response_8h_source.html">Response.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00091">init()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00426">sendCompleted()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00404">sendFragment()</a>, and <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00130">set()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00091">init()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00431">sendCompleted()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00405">sendFragment()</a>, and <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00130">set()</a>.</p>
 
 </div>
 </div>
@@ -1836,7 +1847,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="web_2http_2server_2Response_8h_source.html#l00132">132</a> of file <a class="el" href="web_2http_2server_2Response_8h_source.html">Response.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00091">init()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00426">sendCompleted()</a>, and <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00404">sendFragment()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00091">init()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00431">sendCompleted()</a>, and <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00405">sendFragment()</a>.</p>
 
 </div>
 </div>
@@ -1862,7 +1873,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="web_2http_2server_2Response_8h_source.html#l00128">128</a> of file <a class="el" href="web_2http_2server_2Response_8h_source.html">Response.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00180">cookie()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00091">init()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00367">sendHeader()</a>, and <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00248">upgrade()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00180">cookie()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00091">init()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00368">sendHeader()</a>, and <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00248">upgrade()</a>.</p>
 
 </div>
 </div>
@@ -1888,7 +1899,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="web_2http_2server_2Response_8h_source.html#l00127">127</a> of file <a class="el" href="web_2http_2server_2Response_8h_source.html">Response.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00110">append()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00481">header()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00091">init()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00404">sendFragment()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00367">sendHeader()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00130">set()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00196">setTrailer()</a>, and <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00248">upgrade()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00110">append()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00491">header()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00091">init()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00405">sendFragment()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00368">sendHeader()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00130">set()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00196">setTrailer()</a>, and <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00248">upgrade()</a>.</p>
 
 </div>
 </div>
@@ -1906,7 +1917,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="web_2http_2server_2Response_8h_source.html#l00123">123</a> of file <a class="el" href="web_2http_2server_2Response_8h_source.html">Response.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00107">web::http::server::SocketContext::deliverRequest()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00091">init()</a>, <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00175">web::http::server::SocketContext::requestCompleted()</a>, <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00141">web::http::server::SocketContext::responseStarted()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00426">sendCompleted()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00324">sendFile()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00367">sendHeader()</a>, and <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00248">upgrade()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00107">web::http::server::SocketContext::deliverRequest()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00091">init()</a>, <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00175">web::http::server::SocketContext::requestCompleted()</a>, <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00141">web::http::server::SocketContext::responseStarted()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00431">sendCompleted()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00324">sendFile()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00368">sendHeader()</a>, and <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00248">upgrade()</a>.</p>
 
 </div>
 </div>
@@ -1924,7 +1935,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="web_2http_2server_2Response_8h_source.html#l00124">124</a> of file <a class="el" href="web_2http_2server_2Response_8h_source.html">Response.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00107">web::http::server::SocketContext::deliverRequest()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00091">init()</a>, <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00175">web::http::server::SocketContext::requestCompleted()</a>, <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00141">web::http::server::SocketContext::responseStarted()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00426">sendCompleted()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00324">sendFile()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00367">sendHeader()</a>, and <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00248">upgrade()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00107">web::http::server::SocketContext::deliverRequest()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00091">init()</a>, <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00175">web::http::server::SocketContext::requestCompleted()</a>, <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00141">web::http::server::SocketContext::responseStarted()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00431">sendCompleted()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00324">sendFile()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00368">sendHeader()</a>, and <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00248">upgrade()</a>.</p>
 
 </div>
 </div>
@@ -1942,7 +1953,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="web_2http_2server_2Response_8h_source.html#l00121">121</a> of file <a class="el" href="web_2http_2server_2Response_8h_source.html">Response.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00107">web::http::server::SocketContext::deliverRequest()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00107">web::http::server::SocketContext::deliverRequest()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00431">sendCompleted()</a>, and <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00405">sendFragment()</a>.</p>
 
 </div>
 </div>
@@ -1968,7 +1979,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="web_2http_2server_2Response_8h_source.html#l00135">135</a> of file <a class="el" href="web_2http_2server_2Response_8h_source.html">Response.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00082">disconnect()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00485">getSocketContext()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00087">isConnected()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00444">onSourceConnect()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00462">onSourceEof()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00470">onSourceError()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00072">Response()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00426">sendCompleted()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00404">sendFragment()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00367">sendHeader()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00248">upgrade()</a>, and <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00076">~Response()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00082">disconnect()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00495">getSocketContext()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00087">isConnected()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00454">onSourceConnect()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00472">onSourceEof()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00480">onSourceError()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00072">Response()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00431">sendCompleted()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00405">sendFragment()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00368">sendHeader()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00248">upgrade()</a>, and <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00076">~Response()</a>.</p>
 
 </div>
 </div>
@@ -1986,7 +1997,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="web_2http_2server_2Response_8h_source.html#l00122">122</a> of file <a class="el" href="web_2http_2server_2Response_8h_source.html">Response.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00091">init()</a>, <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00175">web::http::server::SocketContext::requestCompleted()</a>, <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00164">web::http::server::SocketContext::responseCompleted()</a>, <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00141">web::http::server::SocketContext::responseStarted()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00367">sendHeader()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00104">status()</a>, and <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00248">upgrade()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00091">init()</a>, <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00175">web::http::server::SocketContext::requestCompleted()</a>, <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00164">web::http::server::SocketContext::responseCompleted()</a>, <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00141">web::http::server::SocketContext::responseStarted()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00368">sendHeader()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00104">status()</a>, and <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00248">upgrade()</a>.</p>
 
 </div>
 </div>
@@ -2012,7 +2023,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="web_2http_2server_2Response_8h_source.html#l00129">129</a> of file <a class="el" href="web_2http_2server_2Response_8h_source.html">Response.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00091">init()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00426">sendCompleted()</a>, and <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00196">setTrailer()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00091">init()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00431">sendCompleted()</a>, and <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00196">setTrailer()</a>.</p>
 
 </div>
 </div>
@@ -2038,7 +2049,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="web_2http_2server_2Response_8h_source.html#l00138">138</a> of file <a class="el" href="web_2http_2server_2Response_8h_source.html">Response.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00091">init()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00426">sendCompleted()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00404">sendFragment()</a>, and <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00130">set()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00091">init()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00431">sendCompleted()</a>, <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00405">sendFragment()</a>, and <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00130">set()</a>.</p>
 
 </div>
 </div>

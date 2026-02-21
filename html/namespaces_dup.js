@@ -44,13 +44,14 @@ var namespaces_dup =
       [ "str_split", "namespacehttputils.html#a9e46abe5c20380871f3884c9176a424d", null ],
       [ "str_split_last", "namespacehttputils.html#a80eaf509829378ed76d2dad7fd41bef0", null ],
       [ "str_trimm", "namespacehttputils.html#aaa1e55d83548ea4ebf224d695f73c874", null ],
-      [ "to_http_date", "namespacehttputils.html#a01539c1af68e4d072d3507ae44c0b02a", null ],
+      [ "to_http_date", "namespacehttputils.html#ad53daa08390598493f3f4ae09164a60a", null ],
       [ "to_lower", "namespacehttputils.html#a4dd60a8e2472042c70e00dec22ebf927", null ],
-      [ "toString", "namespacehttputils.html#ab84b77e9fb1e16e00e250d981aec32de", null ],
+      [ "toString", "namespacehttputils.html#af919da8fec482281cd8066f4e4e4a457", null ],
       [ "toString", "namespacehttputils.html#a0bddb3cfe692a3ccb900548313a99768", null ],
       [ "url_decode", "namespacehttputils.html#a818b4991d32a494fb64a2f7cf1b25087", null ],
       [ "url_encode", "namespacehttputils.html#a386473920285bded181a38ffac8fe833", null ]
     ] ],
+    [ "instance", "namespaceinstance.html", "namespaceinstance" ],
     [ "iot", "namespaceiot.html", "namespaceiot" ],
     [ "legacy", "namespacelegacy.html", [
       [ "SocketAddress", "namespacelegacy.html#a727707e0d5d637504894447ebd104cd9", null ],
@@ -60,6 +61,7 @@ var namespaces_dup =
     ] ],
     [ "logger", "namespacelogger.html", "namespacelogger" ],
     [ "net", "namespacenet.html", "namespacenet" ],
+    [ "section", "namespacesection.html", "namespacesection" ],
     [ "tls", "namespacetls.html", [
       [ "SocketAddress", "namespacetls.html#adc9ca1ef132516ac61198863375b680f", null ],
       [ "SocketClient", "namespacetls.html#a7213d52536dfd43348a3c7d2a6f08f0c", null ],

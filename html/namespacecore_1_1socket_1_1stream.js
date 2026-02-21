@@ -3,6 +3,7 @@ var namespacecore_1_1socket_1_1stream =
     [ "legacy", "namespacecore_1_1socket_1_1stream_1_1legacy.html", "namespacecore_1_1socket_1_1stream_1_1legacy" ],
     [ "tls", "namespacecore_1_1socket_1_1stream_1_1tls.html", "namespacecore_1_1socket_1_1stream_1_1tls" ],
     [ "stream", "namespacecore_1_1socket_1_1stream_1_1stream.html", null ],
+    [ "AutoConnectControl", "classcore_1_1socket_1_1stream_1_1AutoConnectControl.html", "classcore_1_1socket_1_1stream_1_1AutoConnectControl" ],
     [ "SocketContext", "classcore_1_1socket_1_1stream_1_1SocketContext.html", "classcore_1_1socket_1_1stream_1_1SocketContext" ],
     [ "SocketConnection", "classcore_1_1socket_1_1stream_1_1SocketConnection.html", "classcore_1_1socket_1_1stream_1_1SocketConnection" ],
     [ "SocketConnectionT", "classcore_1_1socket_1_1stream_1_1SocketConnectionT.html", "classcore_1_1socket_1_1stream_1_1SocketConnectionT" ],

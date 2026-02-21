@@ -6,6 +6,7 @@ var dir_cbdb8362360e11eafe2fa3bc74cf0ffd =
     [ "base64.h", "base64_8h.html", "base64_8h" ],
     [ "Config.cpp", "Config_8cpp.html", "Config_8cpp" ],
     [ "Config.h", "Config_8h.html", "Config_8h" ],
+    [ "ConfigApp.h", "ConfigApp_8h.html", "ConfigApp_8h" ],
     [ "Daemon.cpp", "Daemon_8cpp.html", null ],
     [ "Daemon.h", "Daemon_8h.html", "Daemon_8h" ],
     [ "Exceptions.cpp", "Exceptions_8cpp.html", null ],

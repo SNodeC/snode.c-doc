@@ -10,5 +10,6 @@ var searchData=
   ['instancesc_7',['instanceSc',['../classnet_1_1config_1_1ConfigInstance.html#a7a695588c7946a1eeb547db4b69e1b44',1,'net::config::ConfigInstance']]],
   ['interestcount_8',['interestCount',['../classcore_1_1multiplexer_1_1epoll_1_1DescriptorEventPublisher_1_1EPollEvents.html#a9e71c9dac1f67f6b6c19be176ec655fd',1,'core::multiplexer::epoll::DescriptorEventPublisher::EPollEvents']]],
   ['ipv4mappedopt_9',['ipv4MappedOpt',['../classnet_1_1in6_1_1config_1_1ConfigAddress.html#aeb121339062e651d7741874f221a935b',1,'net::in6::config::ConfigAddress']]],
-  ['ipv6onlyopt_10',['iPv6OnlyOpt',['../classnet_1_1in6_1_1stream_1_1config_1_1ConfigSocketServer.html#ab79346daecdee305f152a6719586a940',1,'net::in6::stream::config::ConfigSocketServer']]]
+  ['ipv6onlyopt_10',['iPv6OnlyOpt',['../classnet_1_1in6_1_1stream_1_1config_1_1ConfigSocketServer.html#ab79346daecdee305f152a6719586a940',1,'net::in6::stream::config::ConfigSocketServer']]],
+  ['isprefix_11',['isPrefix',['../structexpress_1_1dispatcher_1_1MountMatchResult.html#a87eb4e6f8411fa36eb4791096d0e24a1',1,'express::dispatcher::MountMatchResult']]]
 ];

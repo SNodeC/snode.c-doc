@@ -1,5 +1,8 @@
 var hierarchy =
 [
+    [ "CLI::App", null, [
+      [ "utils::AppWithPtr< T >", "structutils_1_1AppWithPtr.html", null ]
+    ] ],
     [ "utils::AttributeProxy&lt; Attribute &gt;", "classutils_1_1AttributeProxy.html", null ],
     [ "iot::mqtt::server::broker::Broker", "classiot_1_1mqtt_1_1server_1_1broker_1_1Broker.html", null ],
     [ "web::http::decoder::Chunked::Chunk", "classweb_1_1http_1_1decoder_1_1Chunked_1_1Chunk.html", null ],
@@ -9,6 +12,203 @@ var hierarchy =
       [ "core::socket::stream::SocketConnectionT< PhysicalServerSocket, Config >", "classcore_1_1socket_1_1stream_1_1SocketConnectionT.html", null ]
     ] ],
     [ "utils::Config", "classutils_1_1Config.html", null ],
+    [ "net::config::ConfigAddressBase&lt; SocketAddressT &gt;", "classnet_1_1config_1_1ConfigAddressBase.html", [
+      [ "net::config::ConfigAddress< SocketAddressT >", "classnet_1_1config_1_1ConfigAddress.html", [
+        [ "net::config::ConfigAddressLocal< SocketAddressT >", "classnet_1_1config_1_1ConfigAddressLocal.html", null ],
+        [ "net::config::ConfigAddressRemote< SocketAddressT >", "classnet_1_1config_1_1ConfigAddressRemote.html", null ]
+      ] ],
+      [ "net::config::ConfigAddressReverse< SocketAddressT >", "classnet_1_1config_1_1ConfigAddressReverse.html", null ]
+    ] ],
+    [ "net::config::ConfigAddressBase&lt; net::in6::SocketAddress &gt;", "classnet_1_1config_1_1ConfigAddressBase.html", [
+      [ "net::config::ConfigAddress< net::in6::SocketAddress >", "classnet_1_1config_1_1ConfigAddress.html", [
+        [ "net::config::ConfigAddressLocal< net::in6::SocketAddress >", "classnet_1_1config_1_1ConfigAddressLocal.html", [
+          [ "net::in6::config::ConfigAddress< net::config::ConfigAddressLocal >", "classnet_1_1in6_1_1config_1_1ConfigAddress.html", [
+            [ "net::config::stream::ConfigSocketClient< net::in6::config::ConfigAddress >", "classnet_1_1config_1_1stream_1_1ConfigSocketClient.html", [
+              [ "net::in6::stream::config::ConfigSocketClient", "classnet_1_1in6_1_1stream_1_1config_1_1ConfigSocketClient.html", [
+                [ "net::config::stream::legacy::ConfigSocketClient< net::in6::stream::config::ConfigSocketClient >", "classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketClient.html", [
+                  [ "net::in6::stream::legacy::config::ConfigSocketClient", "classnet_1_1in6_1_1stream_1_1legacy_1_1config_1_1ConfigSocketClient.html", null ]
+                ] ],
+                [ "net::config::stream::tls::ConfigSocketClient< net::in6::stream::config::ConfigSocketClient >", "classnet_1_1config_1_1stream_1_1tls_1_1ConfigSocketClient.html", [
+                  [ "net::in6::stream::tls::config::ConfigSocketClient", "classnet_1_1in6_1_1stream_1_1tls_1_1config_1_1ConfigSocketClient.html", null ]
+                ] ]
+              ] ]
+            ] ],
+            [ "net::config::stream::ConfigSocketServer< net::in6::config::ConfigAddress, net::in6::config::ConfigAddressReverse >", "classnet_1_1config_1_1stream_1_1ConfigSocketServer.html", [
+              [ "net::in6::stream::config::ConfigSocketServer", "classnet_1_1in6_1_1stream_1_1config_1_1ConfigSocketServer.html", [
+                [ "net::config::stream::legacy::ConfigSocketServer< net::in6::stream::config::ConfigSocketServer >", "classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketServer.html", [
+                  [ "net::in6::stream::legacy::config::ConfigSocketServer", "classnet_1_1in6_1_1stream_1_1legacy_1_1config_1_1ConfigSocketServer.html", null ]
+                ] ],
+                [ "net::config::stream::tls::ConfigSocketServer< net::in6::stream::config::ConfigSocketServer >", "classnet_1_1config_1_1stream_1_1tls_1_1ConfigSocketServer.html", [
+                  [ "net::in6::stream::tls::config::ConfigSocketServer", "classnet_1_1in6_1_1stream_1_1tls_1_1config_1_1ConfigSocketServer.html", null ]
+                ] ]
+              ] ]
+            ] ]
+          ] ]
+        ] ],
+        [ "net::config::ConfigAddressRemote< net::in6::SocketAddress >", "classnet_1_1config_1_1ConfigAddressRemote.html", [
+          [ "net::in6::config::ConfigAddress< net::config::ConfigAddressRemote >", "classnet_1_1in6_1_1config_1_1ConfigAddress.html", [
+            [ "net::config::stream::ConfigSocketClient< net::in6::config::ConfigAddress >", "classnet_1_1config_1_1stream_1_1ConfigSocketClient.html", null ]
+          ] ]
+        ] ]
+      ] ],
+      [ "net::config::ConfigAddressReverse< net::in6::SocketAddress >", "classnet_1_1config_1_1ConfigAddressReverse.html", [
+        [ "net::in6::config::ConfigAddressReverse< net::config::ConfigAddressReverse >", "classnet_1_1in6_1_1config_1_1ConfigAddressReverse.html", [
+          [ "net::config::stream::ConfigSocketServer< net::in6::config::ConfigAddress, net::in6::config::ConfigAddressReverse >", "classnet_1_1config_1_1stream_1_1ConfigSocketServer.html", null ]
+        ] ]
+      ] ]
+    ] ],
+    [ "net::config::ConfigAddressBase&lt; net::in::SocketAddress &gt;", "classnet_1_1config_1_1ConfigAddressBase.html", [
+      [ "net::config::ConfigAddress< net::in::SocketAddress >", "classnet_1_1config_1_1ConfigAddress.html", [
+        [ "net::config::ConfigAddressLocal< net::in::SocketAddress >", "classnet_1_1config_1_1ConfigAddressLocal.html", [
+          [ "net::in::config::ConfigAddress< net::config::ConfigAddressLocal >", "classnet_1_1in_1_1config_1_1ConfigAddress.html", [
+            [ "net::config::stream::ConfigSocketClient< net::in::config::ConfigAddress >", "classnet_1_1config_1_1stream_1_1ConfigSocketClient.html", [
+              [ "net::in::stream::config::ConfigSocketClient", "classnet_1_1in_1_1stream_1_1config_1_1ConfigSocketClient.html", [
+                [ "net::config::stream::legacy::ConfigSocketClient< net::in::stream::config::ConfigSocketClient >", "classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketClient.html", [
+                  [ "net::in::stream::legacy::config::ConfigSocketClient", "classnet_1_1in_1_1stream_1_1legacy_1_1config_1_1ConfigSocketClient.html", null ]
+                ] ],
+                [ "net::config::stream::tls::ConfigSocketClient< net::in::stream::config::ConfigSocketClient >", "classnet_1_1config_1_1stream_1_1tls_1_1ConfigSocketClient.html", [
+                  [ "net::in::stream::tls::config::ConfigSocketClient", "classnet_1_1in_1_1stream_1_1tls_1_1config_1_1ConfigSocketClient.html", null ]
+                ] ]
+              ] ]
+            ] ],
+            [ "net::config::stream::ConfigSocketServer< net::in::config::ConfigAddress, net::in::config::ConfigAddressReverse >", "classnet_1_1config_1_1stream_1_1ConfigSocketServer.html", [
+              [ "net::in::stream::config::ConfigSocketServer", "classnet_1_1in_1_1stream_1_1config_1_1ConfigSocketServer.html", [
+                [ "net::config::stream::legacy::ConfigSocketServer< net::in::stream::config::ConfigSocketServer >", "classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketServer.html", [
+                  [ "net::in::stream::legacy::config::ConfigSocketServer", "classnet_1_1in_1_1stream_1_1legacy_1_1config_1_1ConfigSocketServer.html", null ]
+                ] ],
+                [ "net::config::stream::tls::ConfigSocketServer< net::in::stream::config::ConfigSocketServer >", "classnet_1_1config_1_1stream_1_1tls_1_1ConfigSocketServer.html", [
+                  [ "net::in::stream::tls::config::ConfigSocketServer", "classnet_1_1in_1_1stream_1_1tls_1_1config_1_1ConfigSocketServer.html", null ]
+                ] ]
+              ] ]
+            ] ]
+          ] ]
+        ] ],
+        [ "net::config::ConfigAddressRemote< net::in::SocketAddress >", "classnet_1_1config_1_1ConfigAddressRemote.html", [
+          [ "net::in::config::ConfigAddress< net::config::ConfigAddressRemote >", "classnet_1_1in_1_1config_1_1ConfigAddress.html", [
+            [ "net::config::stream::ConfigSocketClient< net::in::config::ConfigAddress >", "classnet_1_1config_1_1stream_1_1ConfigSocketClient.html", null ]
+          ] ]
+        ] ]
+      ] ],
+      [ "net::config::ConfigAddressReverse< net::in::SocketAddress >", "classnet_1_1config_1_1ConfigAddressReverse.html", [
+        [ "net::in::config::ConfigAddressReverse< net::config::ConfigAddressReverse >", "classnet_1_1in_1_1config_1_1ConfigAddressReverse.html", [
+          [ "net::config::stream::ConfigSocketServer< net::in::config::ConfigAddress, net::in::config::ConfigAddressReverse >", "classnet_1_1config_1_1stream_1_1ConfigSocketServer.html", null ]
+        ] ]
+      ] ]
+    ] ],
+    [ "net::config::ConfigAddressBase&lt; net::l2::SocketAddress &gt;", "classnet_1_1config_1_1ConfigAddressBase.html", [
+      [ "net::config::ConfigAddress< net::l2::SocketAddress >", "classnet_1_1config_1_1ConfigAddress.html", [
+        [ "net::config::ConfigAddressLocal< net::l2::SocketAddress >", "classnet_1_1config_1_1ConfigAddressLocal.html", [
+          [ "net::l2::config::ConfigAddress< net::config::ConfigAddressLocal >", "classnet_1_1l2_1_1config_1_1ConfigAddress.html", [
+            [ "net::config::stream::ConfigSocketClient< net::l2::config::ConfigAddress >", "classnet_1_1config_1_1stream_1_1ConfigSocketClient.html", [
+              [ "net::l2::stream::config::ConfigSocketClient", "classnet_1_1l2_1_1stream_1_1config_1_1ConfigSocketClient.html", [
+                [ "net::config::stream::legacy::ConfigSocketClient< net::l2::stream::config::ConfigSocketClient >", "classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketClient.html", [
+                  [ "net::l2::stream::legacy::config::ConfigSocketClient", "classnet_1_1l2_1_1stream_1_1legacy_1_1config_1_1ConfigSocketClient.html", null ]
+                ] ],
+                [ "net::config::stream::tls::ConfigSocketClient< net::l2::stream::config::ConfigSocketClient >", "classnet_1_1config_1_1stream_1_1tls_1_1ConfigSocketClient.html", [
+                  [ "net::l2::stream::tls::config::ConfigSocketClient", "classnet_1_1l2_1_1stream_1_1tls_1_1config_1_1ConfigSocketClient.html", null ]
+                ] ]
+              ] ]
+            ] ],
+            [ "net::config::stream::ConfigSocketServer< net::l2::config::ConfigAddress, net::l2::config::ConfigAddressReverse >", "classnet_1_1config_1_1stream_1_1ConfigSocketServer.html", [
+              [ "net::l2::stream::config::ConfigSocketServer", "classnet_1_1l2_1_1stream_1_1config_1_1ConfigSocketServer.html", [
+                [ "net::config::stream::legacy::ConfigSocketServer< net::l2::stream::config::ConfigSocketServer >", "classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketServer.html", [
+                  [ "net::l2::stream::legacy::config::ConfigSocketServer", "classnet_1_1l2_1_1stream_1_1legacy_1_1config_1_1ConfigSocketServer.html", null ]
+                ] ],
+                [ "net::config::stream::tls::ConfigSocketServer< net::l2::stream::config::ConfigSocketServer >", "classnet_1_1config_1_1stream_1_1tls_1_1ConfigSocketServer.html", [
+                  [ "net::l2::stream::tls::config::ConfigSocketServer", "classnet_1_1l2_1_1stream_1_1tls_1_1config_1_1ConfigSocketServer.html", null ]
+                ] ]
+              ] ]
+            ] ]
+          ] ]
+        ] ],
+        [ "net::config::ConfigAddressRemote< net::l2::SocketAddress >", "classnet_1_1config_1_1ConfigAddressRemote.html", [
+          [ "net::l2::config::ConfigAddress< net::config::ConfigAddressRemote >", "classnet_1_1l2_1_1config_1_1ConfigAddress.html", [
+            [ "net::config::stream::ConfigSocketClient< net::l2::config::ConfigAddress >", "classnet_1_1config_1_1stream_1_1ConfigSocketClient.html", null ]
+          ] ]
+        ] ]
+      ] ],
+      [ "net::config::ConfigAddressReverse< net::l2::SocketAddress >", "classnet_1_1config_1_1ConfigAddressReverse.html", [
+        [ "net::l2::config::ConfigAddressReverse< net::config::ConfigAddressReverse >", "classnet_1_1l2_1_1config_1_1ConfigAddressReverse.html", [
+          [ "net::config::stream::ConfigSocketServer< net::l2::config::ConfigAddress, net::l2::config::ConfigAddressReverse >", "classnet_1_1config_1_1stream_1_1ConfigSocketServer.html", null ]
+        ] ]
+      ] ]
+    ] ],
+    [ "net::config::ConfigAddressBase&lt; net::rc::SocketAddress &gt;", "classnet_1_1config_1_1ConfigAddressBase.html", [
+      [ "net::config::ConfigAddress< net::rc::SocketAddress >", "classnet_1_1config_1_1ConfigAddress.html", [
+        [ "net::config::ConfigAddressLocal< net::rc::SocketAddress >", "classnet_1_1config_1_1ConfigAddressLocal.html", [
+          [ "net::rc::config::ConfigAddress< net::config::ConfigAddressLocal >", "classnet_1_1rc_1_1config_1_1ConfigAddress.html", [
+            [ "net::config::stream::ConfigSocketClient< net::rc::config::ConfigAddress >", "classnet_1_1config_1_1stream_1_1ConfigSocketClient.html", [
+              [ "net::rc::stream::config::ConfigSocketClient", "classnet_1_1rc_1_1stream_1_1config_1_1ConfigSocketClient.html", [
+                [ "net::config::stream::legacy::ConfigSocketClient< net::rc::stream::config::ConfigSocketClient >", "classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketClient.html", [
+                  [ "net::rc::stream::legacy::config::ConfigSocketClient", "classnet_1_1rc_1_1stream_1_1legacy_1_1config_1_1ConfigSocketClient.html", null ]
+                ] ],
+                [ "net::config::stream::tls::ConfigSocketClient< net::rc::stream::config::ConfigSocketClient >", "classnet_1_1config_1_1stream_1_1tls_1_1ConfigSocketClient.html", [
+                  [ "net::rc::stream::tls::config::ConfigSocketClient", "classnet_1_1rc_1_1stream_1_1tls_1_1config_1_1ConfigSocketClient.html", null ]
+                ] ]
+              ] ]
+            ] ],
+            [ "net::config::stream::ConfigSocketServer< net::rc::config::ConfigAddress, net::rc::config::ConfigAddressReverse >", "classnet_1_1config_1_1stream_1_1ConfigSocketServer.html", [
+              [ "net::rc::stream::config::ConfigSocketServer", "classnet_1_1rc_1_1stream_1_1config_1_1ConfigSocketServer.html", [
+                [ "net::config::stream::legacy::ConfigSocketServer< net::rc::stream::config::ConfigSocketServer >", "classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketServer.html", [
+                  [ "net::rc::stream::legacy::config::ConfigSocketServer", "classnet_1_1rc_1_1stream_1_1legacy_1_1config_1_1ConfigSocketServer.html", null ]
+                ] ],
+                [ "net::config::stream::tls::ConfigSocketServer< net::rc::stream::config::ConfigSocketServer >", "classnet_1_1config_1_1stream_1_1tls_1_1ConfigSocketServer.html", [
+                  [ "net::rc::stream::tls::config::ConfigSocketServer", "classnet_1_1rc_1_1stream_1_1tls_1_1config_1_1ConfigSocketServer.html", null ]
+                ] ]
+              ] ]
+            ] ]
+          ] ]
+        ] ],
+        [ "net::config::ConfigAddressRemote< net::rc::SocketAddress >", "classnet_1_1config_1_1ConfigAddressRemote.html", [
+          [ "net::rc::config::ConfigAddress< net::config::ConfigAddressRemote >", "classnet_1_1rc_1_1config_1_1ConfigAddress.html", [
+            [ "net::config::stream::ConfigSocketClient< net::rc::config::ConfigAddress >", "classnet_1_1config_1_1stream_1_1ConfigSocketClient.html", null ]
+          ] ]
+        ] ]
+      ] ],
+      [ "net::config::ConfigAddressReverse< net::rc::SocketAddress >", "classnet_1_1config_1_1ConfigAddressReverse.html", [
+        [ "net::rc::config::ConfigAddressReverse< net::config::ConfigAddressReverse >", "classnet_1_1rc_1_1config_1_1ConfigAddressReverse.html", [
+          [ "net::config::stream::ConfigSocketServer< net::rc::config::ConfigAddress, net::rc::config::ConfigAddressReverse >", "classnet_1_1config_1_1stream_1_1ConfigSocketServer.html", null ]
+        ] ]
+      ] ]
+    ] ],
+    [ "net::config::ConfigAddressBase&lt; net::un::SocketAddress &gt;", "classnet_1_1config_1_1ConfigAddressBase.html", [
+      [ "net::config::ConfigAddress< net::un::SocketAddress >", "classnet_1_1config_1_1ConfigAddress.html", [
+        [ "net::config::ConfigAddressLocal< net::un::SocketAddress >", "classnet_1_1config_1_1ConfigAddressLocal.html", [
+          [ "net::un::config::ConfigAddress< net::config::ConfigAddressLocal >", "classnet_1_1un_1_1config_1_1ConfigAddress.html", [
+            [ "net::config::stream::ConfigSocketClient< net::un::config::ConfigAddress >", "classnet_1_1config_1_1stream_1_1ConfigSocketClient.html", [
+              [ "net::un::stream::config::ConfigSocketClient", "classnet_1_1un_1_1stream_1_1config_1_1ConfigSocketClient.html", [
+                [ "net::config::stream::legacy::ConfigSocketClient< net::un::stream::config::ConfigSocketClient >", "classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketClient.html", [
+                  [ "net::un::stream::legacy::config::ConfigSocketClient", "classnet_1_1un_1_1stream_1_1legacy_1_1config_1_1ConfigSocketClient.html", null ]
+                ] ],
+                [ "net::config::stream::tls::ConfigSocketClient< net::un::stream::config::ConfigSocketClient >", "classnet_1_1config_1_1stream_1_1tls_1_1ConfigSocketClient.html", [
+                  [ "net::un::stream::tls::config::ConfigSocketClient", "classnet_1_1un_1_1stream_1_1tls_1_1config_1_1ConfigSocketClient.html", null ]
+                ] ]
+              ] ]
+            ] ],
+            [ "net::config::stream::ConfigSocketServer< net::un::config::ConfigAddress, net::un::config::ConfigAddressReverse >", "classnet_1_1config_1_1stream_1_1ConfigSocketServer.html", [
+              [ "net::un::stream::config::ConfigSocketServer", "classnet_1_1un_1_1stream_1_1config_1_1ConfigSocketServer.html", [
+                [ "net::config::stream::legacy::ConfigSocketServer< net::un::stream::config::ConfigSocketServer >", "classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketServer.html", [
+                  [ "net::un::stream::legacy::config::ConfigSocketServer", "classnet_1_1un_1_1stream_1_1legacy_1_1config_1_1ConfigSocketServer.html", null ]
+                ] ],
+                [ "net::config::stream::tls::ConfigSocketServer< net::un::stream::config::ConfigSocketServer >", "classnet_1_1config_1_1stream_1_1tls_1_1ConfigSocketServer.html", [
+                  [ "net::un::stream::tls::config::ConfigSocketServer", "classnet_1_1un_1_1stream_1_1tls_1_1config_1_1ConfigSocketServer.html", null ]
+                ] ]
+              ] ]
+            ] ]
+          ] ]
+        ] ],
+        [ "net::config::ConfigAddressRemote< net::un::SocketAddress >", "classnet_1_1config_1_1ConfigAddressRemote.html", [
+          [ "net::un::config::ConfigAddress< net::config::ConfigAddressRemote >", "classnet_1_1un_1_1config_1_1ConfigAddress.html", [
+            [ "net::config::stream::ConfigSocketClient< net::un::config::ConfigAddress >", "classnet_1_1config_1_1stream_1_1ConfigSocketClient.html", null ]
+          ] ]
+        ] ]
+      ] ],
+      [ "net::config::ConfigAddressReverse< net::un::SocketAddress >", "classnet_1_1config_1_1ConfigAddressReverse.html", [
+        [ "net::un::config::ConfigAddressReverse< net::config::ConfigAddressReverse >", "classnet_1_1un_1_1config_1_1ConfigAddressReverse.html", [
+          [ "net::config::stream::ConfigSocketServer< net::un::config::ConfigAddress, net::un::config::ConfigAddressReverse >", "classnet_1_1config_1_1stream_1_1ConfigSocketServer.html", null ]
+        ] ]
+      ] ]
+    ] ],
     [ "ConfigAddressLocalT", null, [
       [ "net::config::stream::ConfigSocketClient< ConfigAddressLocalT, ConfigAddressRemoteT >", "classnet_1_1config_1_1stream_1_1ConfigSocketClient.html", null ],
       [ "net::config::stream::ConfigSocketClient< ConfigAddressLocalT, ConfigAddressRemoteT >", "classnet_1_1config_1_1stream_1_1ConfigSocketClient.html", null ],
@@ -32,231 +232,67 @@ var hierarchy =
     [ "ConfigBase", null, [
       [ "CLI::ConfigFormatter", "classCLI_1_1ConfigFormatter.html", null ]
     ] ],
-    [ "web::http::client::ConfigHTTP", "classweb_1_1http_1_1client_1_1ConfigHTTP.html", null ],
+    [ "ConfigDb", "classConfigDb.html", null ],
     [ "net::config::ConfigInstance", "classnet_1_1config_1_1ConfigInstance.html", [
-      [ "net::config::stream::legacy::ConfigSocketClient< net::in6::stream::config::ConfigSocketClient >", "classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketClient.html", [
-        [ "net::in6::stream::legacy::config::ConfigSocketClient", "classnet_1_1in6_1_1stream_1_1legacy_1_1config_1_1ConfigSocketClient.html", null ]
-      ] ],
-      [ "net::config::stream::legacy::ConfigSocketClient< net::in::stream::config::ConfigSocketClient >", "classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketClient.html", [
-        [ "net::in::stream::legacy::config::ConfigSocketClient", "classnet_1_1in_1_1stream_1_1legacy_1_1config_1_1ConfigSocketClient.html", null ]
-      ] ],
-      [ "net::config::stream::legacy::ConfigSocketClient< net::l2::stream::config::ConfigSocketClient >", "classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketClient.html", [
-        [ "net::l2::stream::legacy::config::ConfigSocketClient", "classnet_1_1l2_1_1stream_1_1legacy_1_1config_1_1ConfigSocketClient.html", null ]
-      ] ],
-      [ "net::config::stream::legacy::ConfigSocketClient< net::rc::stream::config::ConfigSocketClient >", "classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketClient.html", [
-        [ "net::rc::stream::legacy::config::ConfigSocketClient", "classnet_1_1rc_1_1stream_1_1legacy_1_1config_1_1ConfigSocketClient.html", null ]
-      ] ],
-      [ "net::config::stream::legacy::ConfigSocketClient< net::un::stream::config::ConfigSocketClient >", "classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketClient.html", [
-        [ "net::un::stream::legacy::config::ConfigSocketClient", "classnet_1_1un_1_1stream_1_1legacy_1_1config_1_1ConfigSocketClient.html", null ]
-      ] ],
-      [ "net::config::stream::legacy::ConfigSocketServer< net::in6::stream::config::ConfigSocketServer >", "classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketServer.html", [
-        [ "net::in6::stream::legacy::config::ConfigSocketServer", "classnet_1_1in6_1_1stream_1_1legacy_1_1config_1_1ConfigSocketServer.html", null ]
-      ] ],
-      [ "net::config::stream::legacy::ConfigSocketServer< net::in::stream::config::ConfigSocketServer >", "classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketServer.html", [
-        [ "net::in::stream::legacy::config::ConfigSocketServer", "classnet_1_1in_1_1stream_1_1legacy_1_1config_1_1ConfigSocketServer.html", null ]
-      ] ],
-      [ "net::config::stream::legacy::ConfigSocketServer< net::l2::stream::config::ConfigSocketServer >", "classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketServer.html", [
-        [ "net::l2::stream::legacy::config::ConfigSocketServer", "classnet_1_1l2_1_1stream_1_1legacy_1_1config_1_1ConfigSocketServer.html", null ]
-      ] ],
-      [ "net::config::stream::legacy::ConfigSocketServer< net::rc::stream::config::ConfigSocketServer >", "classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketServer.html", [
-        [ "net::rc::stream::legacy::config::ConfigSocketServer", "classnet_1_1rc_1_1stream_1_1legacy_1_1config_1_1ConfigSocketServer.html", null ]
-      ] ],
-      [ "net::config::stream::legacy::ConfigSocketServer< net::un::stream::config::ConfigSocketServer >", "classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketServer.html", [
-        [ "net::un::stream::legacy::config::ConfigSocketServer", "classnet_1_1un_1_1stream_1_1legacy_1_1config_1_1ConfigSocketServer.html", null ]
-      ] ],
-      [ "net::config::stream::tls::ConfigSocketClient< net::in6::stream::config::ConfigSocketClient >", "classnet_1_1config_1_1stream_1_1tls_1_1ConfigSocketClient.html", [
-        [ "net::in6::stream::tls::config::ConfigSocketClient", "classnet_1_1in6_1_1stream_1_1tls_1_1config_1_1ConfigSocketClient.html", null ]
-      ] ],
-      [ "net::config::stream::tls::ConfigSocketClient< net::in::stream::config::ConfigSocketClient >", "classnet_1_1config_1_1stream_1_1tls_1_1ConfigSocketClient.html", [
-        [ "net::in::stream::tls::config::ConfigSocketClient", "classnet_1_1in_1_1stream_1_1tls_1_1config_1_1ConfigSocketClient.html", null ]
-      ] ],
-      [ "net::config::stream::tls::ConfigSocketClient< net::l2::stream::config::ConfigSocketClient >", "classnet_1_1config_1_1stream_1_1tls_1_1ConfigSocketClient.html", [
-        [ "net::l2::stream::tls::config::ConfigSocketClient", "classnet_1_1l2_1_1stream_1_1tls_1_1config_1_1ConfigSocketClient.html", null ]
-      ] ],
-      [ "net::config::stream::tls::ConfigSocketClient< net::rc::stream::config::ConfigSocketClient >", "classnet_1_1config_1_1stream_1_1tls_1_1ConfigSocketClient.html", [
-        [ "net::rc::stream::tls::config::ConfigSocketClient", "classnet_1_1rc_1_1stream_1_1tls_1_1config_1_1ConfigSocketClient.html", null ]
-      ] ],
-      [ "net::config::stream::tls::ConfigSocketClient< net::un::stream::config::ConfigSocketClient >", "classnet_1_1config_1_1stream_1_1tls_1_1ConfigSocketClient.html", [
-        [ "net::un::stream::tls::config::ConfigSocketClient", "classnet_1_1un_1_1stream_1_1tls_1_1config_1_1ConfigSocketClient.html", null ]
-      ] ],
-      [ "net::config::stream::tls::ConfigSocketServer< net::in6::stream::config::ConfigSocketServer >", "classnet_1_1config_1_1stream_1_1tls_1_1ConfigSocketServer.html", [
-        [ "net::in6::stream::tls::config::ConfigSocketServer", "classnet_1_1in6_1_1stream_1_1tls_1_1config_1_1ConfigSocketServer.html", null ]
-      ] ],
-      [ "net::config::stream::tls::ConfigSocketServer< net::in::stream::config::ConfigSocketServer >", "classnet_1_1config_1_1stream_1_1tls_1_1ConfigSocketServer.html", [
-        [ "net::in::stream::tls::config::ConfigSocketServer", "classnet_1_1in_1_1stream_1_1tls_1_1config_1_1ConfigSocketServer.html", null ]
-      ] ],
-      [ "net::config::stream::tls::ConfigSocketServer< net::l2::stream::config::ConfigSocketServer >", "classnet_1_1config_1_1stream_1_1tls_1_1ConfigSocketServer.html", [
-        [ "net::l2::stream::tls::config::ConfigSocketServer", "classnet_1_1l2_1_1stream_1_1tls_1_1config_1_1ConfigSocketServer.html", null ]
-      ] ],
-      [ "net::config::stream::tls::ConfigSocketServer< net::rc::stream::config::ConfigSocketServer >", "classnet_1_1config_1_1stream_1_1tls_1_1ConfigSocketServer.html", [
-        [ "net::rc::stream::tls::config::ConfigSocketServer", "classnet_1_1rc_1_1stream_1_1tls_1_1config_1_1ConfigSocketServer.html", null ]
-      ] ],
-      [ "net::config::stream::tls::ConfigSocketServer< net::un::stream::config::ConfigSocketServer >", "classnet_1_1config_1_1stream_1_1tls_1_1ConfigSocketServer.html", [
-        [ "net::un::stream::tls::config::ConfigSocketServer", "classnet_1_1un_1_1stream_1_1tls_1_1config_1_1ConfigSocketServer.html", null ]
-      ] ],
+      [ "net::config::stream::legacy::ConfigSocketClient< net::in6::stream::config::ConfigSocketClient >", "classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketClient.html", null ],
+      [ "net::config::stream::legacy::ConfigSocketClient< net::in::stream::config::ConfigSocketClient >", "classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketClient.html", null ],
+      [ "net::config::stream::legacy::ConfigSocketClient< net::l2::stream::config::ConfigSocketClient >", "classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketClient.html", null ],
+      [ "net::config::stream::legacy::ConfigSocketClient< net::rc::stream::config::ConfigSocketClient >", "classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketClient.html", null ],
+      [ "net::config::stream::legacy::ConfigSocketClient< net::un::stream::config::ConfigSocketClient >", "classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketClient.html", null ],
+      [ "net::config::stream::legacy::ConfigSocketServer< net::in6::stream::config::ConfigSocketServer >", "classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketServer.html", null ],
+      [ "net::config::stream::legacy::ConfigSocketServer< net::in::stream::config::ConfigSocketServer >", "classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketServer.html", null ],
+      [ "net::config::stream::legacy::ConfigSocketServer< net::l2::stream::config::ConfigSocketServer >", "classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketServer.html", null ],
+      [ "net::config::stream::legacy::ConfigSocketServer< net::rc::stream::config::ConfigSocketServer >", "classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketServer.html", null ],
+      [ "net::config::stream::legacy::ConfigSocketServer< net::un::stream::config::ConfigSocketServer >", "classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketServer.html", null ],
+      [ "net::config::stream::tls::ConfigSocketClient< net::in6::stream::config::ConfigSocketClient >", "classnet_1_1config_1_1stream_1_1tls_1_1ConfigSocketClient.html", null ],
+      [ "net::config::stream::tls::ConfigSocketClient< net::in::stream::config::ConfigSocketClient >", "classnet_1_1config_1_1stream_1_1tls_1_1ConfigSocketClient.html", null ],
+      [ "net::config::stream::tls::ConfigSocketClient< net::l2::stream::config::ConfigSocketClient >", "classnet_1_1config_1_1stream_1_1tls_1_1ConfigSocketClient.html", null ],
+      [ "net::config::stream::tls::ConfigSocketClient< net::rc::stream::config::ConfigSocketClient >", "classnet_1_1config_1_1stream_1_1tls_1_1ConfigSocketClient.html", null ],
+      [ "net::config::stream::tls::ConfigSocketClient< net::un::stream::config::ConfigSocketClient >", "classnet_1_1config_1_1stream_1_1tls_1_1ConfigSocketClient.html", null ],
+      [ "net::config::stream::tls::ConfigSocketServer< net::in6::stream::config::ConfigSocketServer >", "classnet_1_1config_1_1stream_1_1tls_1_1ConfigSocketServer.html", null ],
+      [ "net::config::stream::tls::ConfigSocketServer< net::in::stream::config::ConfigSocketServer >", "classnet_1_1config_1_1stream_1_1tls_1_1ConfigSocketServer.html", null ],
+      [ "net::config::stream::tls::ConfigSocketServer< net::l2::stream::config::ConfigSocketServer >", "classnet_1_1config_1_1stream_1_1tls_1_1ConfigSocketServer.html", null ],
+      [ "net::config::stream::tls::ConfigSocketServer< net::rc::stream::config::ConfigSocketServer >", "classnet_1_1config_1_1stream_1_1tls_1_1ConfigSocketServer.html", null ],
+      [ "net::config::stream::tls::ConfigSocketServer< net::un::stream::config::ConfigSocketServer >", "classnet_1_1config_1_1stream_1_1tls_1_1ConfigSocketServer.html", null ],
       [ "net::config::stream::legacy::ConfigSocketClient< ConfigSocketClientBaseT >", "classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketClient.html", null ],
       [ "net::config::stream::legacy::ConfigSocketServer< ConfigSocketServerBaseT >", "classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketServer.html", null ],
       [ "net::config::stream::tls::ConfigSocketClient< ConfigSocketClientBaseT >", "classnet_1_1config_1_1stream_1_1tls_1_1ConfigSocketClient.html", null ],
       [ "net::config::stream::tls::ConfigSocketServer< ConfigSocketServerBaseT >", "classnet_1_1config_1_1stream_1_1tls_1_1ConfigSocketServer.html", null ]
     ] ],
+    [ "net::config::ConfigPhysicalSocket", "classnet_1_1config_1_1ConfigPhysicalSocket.html", [
+      [ "net::config::ConfigPhysicalSocketClient", "classnet_1_1config_1_1ConfigPhysicalSocketClient.html", [
+        [ "net::config::stream::ConfigSocketClient< net::in6::config::ConfigAddress >", "classnet_1_1config_1_1stream_1_1ConfigSocketClient.html", null ],
+        [ "net::config::stream::ConfigSocketClient< net::in::config::ConfigAddress >", "classnet_1_1config_1_1stream_1_1ConfigSocketClient.html", null ],
+        [ "net::config::stream::ConfigSocketClient< net::l2::config::ConfigAddress >", "classnet_1_1config_1_1stream_1_1ConfigSocketClient.html", null ],
+        [ "net::config::stream::ConfigSocketClient< net::rc::config::ConfigAddress >", "classnet_1_1config_1_1stream_1_1ConfigSocketClient.html", null ],
+        [ "net::config::stream::ConfigSocketClient< net::un::config::ConfigAddress >", "classnet_1_1config_1_1stream_1_1ConfigSocketClient.html", null ],
+        [ "net::config::stream::ConfigSocketClient< ConfigAddressLocalT, ConfigAddressRemoteT >", "classnet_1_1config_1_1stream_1_1ConfigSocketClient.html", null ]
+      ] ],
+      [ "net::config::ConfigPhysicalSocketServer", "classnet_1_1config_1_1ConfigPhysicalSocketServer.html", [
+        [ "net::config::stream::ConfigSocketServer< net::in6::config::ConfigAddress, net::in6::config::ConfigAddressReverse >", "classnet_1_1config_1_1stream_1_1ConfigSocketServer.html", null ],
+        [ "net::config::stream::ConfigSocketServer< net::in::config::ConfigAddress, net::in::config::ConfigAddressReverse >", "classnet_1_1config_1_1stream_1_1ConfigSocketServer.html", null ],
+        [ "net::config::stream::ConfigSocketServer< net::l2::config::ConfigAddress, net::l2::config::ConfigAddressReverse >", "classnet_1_1config_1_1stream_1_1ConfigSocketServer.html", null ],
+        [ "net::config::stream::ConfigSocketServer< net::rc::config::ConfigAddress, net::rc::config::ConfigAddressReverse >", "classnet_1_1config_1_1stream_1_1ConfigSocketServer.html", null ],
+        [ "net::config::stream::ConfigSocketServer< net::un::config::ConfigAddress, net::un::config::ConfigAddressReverse >", "classnet_1_1config_1_1stream_1_1ConfigSocketServer.html", null ],
+        [ "net::config::stream::ConfigSocketServer< ConfigAddressLocalT, ConfigAddressRemoteT >", "classnet_1_1config_1_1stream_1_1ConfigSocketServer.html", null ]
+      ] ]
+    ] ],
     [ "net::config::ConfigSection", "classnet_1_1config_1_1ConfigSection.html", [
-      [ "net::config::ConfigAddressBase< net::in6::SocketAddress >", "classnet_1_1config_1_1ConfigAddressBase.html", [
-        [ "net::config::ConfigAddress< net::in6::SocketAddress >", "classnet_1_1config_1_1ConfigAddress.html", [
-          [ "net::config::ConfigAddressLocal< net::in6::SocketAddress >", "classnet_1_1config_1_1ConfigAddressLocal.html", [
-            [ "net::in6::config::ConfigAddress< net::config::ConfigAddressLocal >", "classnet_1_1in6_1_1config_1_1ConfigAddress.html", [
-              [ "net::config::stream::ConfigSocketClient< net::in6::config::ConfigAddress >", "classnet_1_1config_1_1stream_1_1ConfigSocketClient.html", [
-                [ "net::in6::stream::config::ConfigSocketClient", "classnet_1_1in6_1_1stream_1_1config_1_1ConfigSocketClient.html", [
-                  [ "net::config::stream::legacy::ConfigSocketClient< net::in6::stream::config::ConfigSocketClient >", "classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketClient.html", null ],
-                  [ "net::config::stream::tls::ConfigSocketClient< net::in6::stream::config::ConfigSocketClient >", "classnet_1_1config_1_1stream_1_1tls_1_1ConfigSocketClient.html", null ]
-                ] ]
-              ] ],
-              [ "net::config::stream::ConfigSocketServer< net::in6::config::ConfigAddress, net::in6::config::ConfigAddressReverse >", "classnet_1_1config_1_1stream_1_1ConfigSocketServer.html", [
-                [ "net::in6::stream::config::ConfigSocketServer", "classnet_1_1in6_1_1stream_1_1config_1_1ConfigSocketServer.html", [
-                  [ "net::config::stream::legacy::ConfigSocketServer< net::in6::stream::config::ConfigSocketServer >", "classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketServer.html", null ],
-                  [ "net::config::stream::tls::ConfigSocketServer< net::in6::stream::config::ConfigSocketServer >", "classnet_1_1config_1_1stream_1_1tls_1_1ConfigSocketServer.html", null ]
-                ] ]
-              ] ]
-            ] ]
-          ] ],
-          [ "net::config::ConfigAddressRemote< net::in6::SocketAddress >", "classnet_1_1config_1_1ConfigAddressRemote.html", [
-            [ "net::in6::config::ConfigAddress< net::config::ConfigAddressRemote >", "classnet_1_1in6_1_1config_1_1ConfigAddress.html", [
-              [ "net::config::stream::ConfigSocketClient< net::in6::config::ConfigAddress >", "classnet_1_1config_1_1stream_1_1ConfigSocketClient.html", null ]
-            ] ]
-          ] ]
-        ] ],
-        [ "net::config::ConfigAddressReverse< net::in6::SocketAddress >", "classnet_1_1config_1_1ConfigAddressReverse.html", [
-          [ "net::in6::config::ConfigAddressReverse< net::config::ConfigAddressReverse >", "classnet_1_1in6_1_1config_1_1ConfigAddressReverse.html", [
-            [ "net::config::stream::ConfigSocketServer< net::in6::config::ConfigAddress, net::in6::config::ConfigAddressReverse >", "classnet_1_1config_1_1stream_1_1ConfigSocketServer.html", null ]
-          ] ]
-        ] ]
-      ] ],
-      [ "net::config::ConfigAddressBase< net::in::SocketAddress >", "classnet_1_1config_1_1ConfigAddressBase.html", [
-        [ "net::config::ConfigAddress< net::in::SocketAddress >", "classnet_1_1config_1_1ConfigAddress.html", [
-          [ "net::config::ConfigAddressLocal< net::in::SocketAddress >", "classnet_1_1config_1_1ConfigAddressLocal.html", [
-            [ "net::in::config::ConfigAddress< net::config::ConfigAddressLocal >", "classnet_1_1in_1_1config_1_1ConfigAddress.html", [
-              [ "net::config::stream::ConfigSocketClient< net::in::config::ConfigAddress >", "classnet_1_1config_1_1stream_1_1ConfigSocketClient.html", [
-                [ "net::in::stream::config::ConfigSocketClient", "classnet_1_1in_1_1stream_1_1config_1_1ConfigSocketClient.html", [
-                  [ "net::config::stream::legacy::ConfigSocketClient< net::in::stream::config::ConfigSocketClient >", "classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketClient.html", null ],
-                  [ "net::config::stream::tls::ConfigSocketClient< net::in::stream::config::ConfigSocketClient >", "classnet_1_1config_1_1stream_1_1tls_1_1ConfigSocketClient.html", null ]
-                ] ]
-              ] ],
-              [ "net::config::stream::ConfigSocketServer< net::in::config::ConfigAddress, net::in::config::ConfigAddressReverse >", "classnet_1_1config_1_1stream_1_1ConfigSocketServer.html", [
-                [ "net::in::stream::config::ConfigSocketServer", "classnet_1_1in_1_1stream_1_1config_1_1ConfigSocketServer.html", [
-                  [ "net::config::stream::legacy::ConfigSocketServer< net::in::stream::config::ConfigSocketServer >", "classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketServer.html", null ],
-                  [ "net::config::stream::tls::ConfigSocketServer< net::in::stream::config::ConfigSocketServer >", "classnet_1_1config_1_1stream_1_1tls_1_1ConfigSocketServer.html", null ]
-                ] ]
-              ] ]
-            ] ]
-          ] ],
-          [ "net::config::ConfigAddressRemote< net::in::SocketAddress >", "classnet_1_1config_1_1ConfigAddressRemote.html", [
-            [ "net::in::config::ConfigAddress< net::config::ConfigAddressRemote >", "classnet_1_1in_1_1config_1_1ConfigAddress.html", [
-              [ "net::config::stream::ConfigSocketClient< net::in::config::ConfigAddress >", "classnet_1_1config_1_1stream_1_1ConfigSocketClient.html", null ]
-            ] ]
-          ] ]
-        ] ],
-        [ "net::config::ConfigAddressReverse< net::in::SocketAddress >", "classnet_1_1config_1_1ConfigAddressReverse.html", [
-          [ "net::in::config::ConfigAddressReverse< net::config::ConfigAddressReverse >", "classnet_1_1in_1_1config_1_1ConfigAddressReverse.html", [
-            [ "net::config::stream::ConfigSocketServer< net::in::config::ConfigAddress, net::in::config::ConfigAddressReverse >", "classnet_1_1config_1_1stream_1_1ConfigSocketServer.html", null ]
-          ] ]
-        ] ]
-      ] ],
-      [ "net::config::ConfigAddressBase< net::l2::SocketAddress >", "classnet_1_1config_1_1ConfigAddressBase.html", [
-        [ "net::config::ConfigAddress< net::l2::SocketAddress >", "classnet_1_1config_1_1ConfigAddress.html", [
-          [ "net::config::ConfigAddressLocal< net::l2::SocketAddress >", "classnet_1_1config_1_1ConfigAddressLocal.html", [
-            [ "net::l2::config::ConfigAddress< net::config::ConfigAddressLocal >", "classnet_1_1l2_1_1config_1_1ConfigAddress.html", [
-              [ "net::config::stream::ConfigSocketClient< net::l2::config::ConfigAddress >", "classnet_1_1config_1_1stream_1_1ConfigSocketClient.html", [
-                [ "net::l2::stream::config::ConfigSocketClient", "classnet_1_1l2_1_1stream_1_1config_1_1ConfigSocketClient.html", [
-                  [ "net::config::stream::legacy::ConfigSocketClient< net::l2::stream::config::ConfigSocketClient >", "classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketClient.html", null ],
-                  [ "net::config::stream::tls::ConfigSocketClient< net::l2::stream::config::ConfigSocketClient >", "classnet_1_1config_1_1stream_1_1tls_1_1ConfigSocketClient.html", null ]
-                ] ]
-              ] ],
-              [ "net::config::stream::ConfigSocketServer< net::l2::config::ConfigAddress, net::l2::config::ConfigAddressReverse >", "classnet_1_1config_1_1stream_1_1ConfigSocketServer.html", [
-                [ "net::l2::stream::config::ConfigSocketServer", "classnet_1_1l2_1_1stream_1_1config_1_1ConfigSocketServer.html", [
-                  [ "net::config::stream::legacy::ConfigSocketServer< net::l2::stream::config::ConfigSocketServer >", "classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketServer.html", null ],
-                  [ "net::config::stream::tls::ConfigSocketServer< net::l2::stream::config::ConfigSocketServer >", "classnet_1_1config_1_1stream_1_1tls_1_1ConfigSocketServer.html", null ]
-                ] ]
-              ] ]
-            ] ]
-          ] ],
-          [ "net::config::ConfigAddressRemote< net::l2::SocketAddress >", "classnet_1_1config_1_1ConfigAddressRemote.html", [
-            [ "net::l2::config::ConfigAddress< net::config::ConfigAddressRemote >", "classnet_1_1l2_1_1config_1_1ConfigAddress.html", [
-              [ "net::config::stream::ConfigSocketClient< net::l2::config::ConfigAddress >", "classnet_1_1config_1_1stream_1_1ConfigSocketClient.html", null ]
-            ] ]
-          ] ]
-        ] ],
-        [ "net::config::ConfigAddressReverse< net::l2::SocketAddress >", "classnet_1_1config_1_1ConfigAddressReverse.html", [
-          [ "net::l2::config::ConfigAddressReverse< net::config::ConfigAddressReverse >", "classnet_1_1l2_1_1config_1_1ConfigAddressReverse.html", [
-            [ "net::config::stream::ConfigSocketServer< net::l2::config::ConfigAddress, net::l2::config::ConfigAddressReverse >", "classnet_1_1config_1_1stream_1_1ConfigSocketServer.html", null ]
-          ] ]
-        ] ]
-      ] ],
-      [ "net::config::ConfigAddressBase< net::rc::SocketAddress >", "classnet_1_1config_1_1ConfigAddressBase.html", [
-        [ "net::config::ConfigAddress< net::rc::SocketAddress >", "classnet_1_1config_1_1ConfigAddress.html", [
-          [ "net::config::ConfigAddressLocal< net::rc::SocketAddress >", "classnet_1_1config_1_1ConfigAddressLocal.html", [
-            [ "net::rc::config::ConfigAddress< net::config::ConfigAddressLocal >", "classnet_1_1rc_1_1config_1_1ConfigAddress.html", [
-              [ "net::config::stream::ConfigSocketClient< net::rc::config::ConfigAddress >", "classnet_1_1config_1_1stream_1_1ConfigSocketClient.html", [
-                [ "net::rc::stream::config::ConfigSocketClient", "classnet_1_1rc_1_1stream_1_1config_1_1ConfigSocketClient.html", [
-                  [ "net::config::stream::legacy::ConfigSocketClient< net::rc::stream::config::ConfigSocketClient >", "classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketClient.html", null ],
-                  [ "net::config::stream::tls::ConfigSocketClient< net::rc::stream::config::ConfigSocketClient >", "classnet_1_1config_1_1stream_1_1tls_1_1ConfigSocketClient.html", null ]
-                ] ]
-              ] ],
-              [ "net::config::stream::ConfigSocketServer< net::rc::config::ConfigAddress, net::rc::config::ConfigAddressReverse >", "classnet_1_1config_1_1stream_1_1ConfigSocketServer.html", [
-                [ "net::rc::stream::config::ConfigSocketServer", "classnet_1_1rc_1_1stream_1_1config_1_1ConfigSocketServer.html", [
-                  [ "net::config::stream::legacy::ConfigSocketServer< net::rc::stream::config::ConfigSocketServer >", "classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketServer.html", null ],
-                  [ "net::config::stream::tls::ConfigSocketServer< net::rc::stream::config::ConfigSocketServer >", "classnet_1_1config_1_1stream_1_1tls_1_1ConfigSocketServer.html", null ]
-                ] ]
-              ] ]
-            ] ]
-          ] ],
-          [ "net::config::ConfigAddressRemote< net::rc::SocketAddress >", "classnet_1_1config_1_1ConfigAddressRemote.html", [
-            [ "net::rc::config::ConfigAddress< net::config::ConfigAddressRemote >", "classnet_1_1rc_1_1config_1_1ConfigAddress.html", [
-              [ "net::config::stream::ConfigSocketClient< net::rc::config::ConfigAddress >", "classnet_1_1config_1_1stream_1_1ConfigSocketClient.html", null ]
-            ] ]
-          ] ]
-        ] ],
-        [ "net::config::ConfigAddressReverse< net::rc::SocketAddress >", "classnet_1_1config_1_1ConfigAddressReverse.html", [
-          [ "net::rc::config::ConfigAddressReverse< net::config::ConfigAddressReverse >", "classnet_1_1rc_1_1config_1_1ConfigAddressReverse.html", [
-            [ "net::config::stream::ConfigSocketServer< net::rc::config::ConfigAddress, net::rc::config::ConfigAddressReverse >", "classnet_1_1config_1_1stream_1_1ConfigSocketServer.html", null ]
-          ] ]
-        ] ]
-      ] ],
-      [ "net::config::ConfigAddressBase< net::un::SocketAddress >", "classnet_1_1config_1_1ConfigAddressBase.html", [
-        [ "net::config::ConfigAddress< net::un::SocketAddress >", "classnet_1_1config_1_1ConfigAddress.html", [
-          [ "net::config::ConfigAddressLocal< net::un::SocketAddress >", "classnet_1_1config_1_1ConfigAddressLocal.html", [
-            [ "net::un::config::ConfigAddress< net::config::ConfigAddressLocal >", "classnet_1_1un_1_1config_1_1ConfigAddress.html", [
-              [ "net::config::stream::ConfigSocketClient< net::un::config::ConfigAddress >", "classnet_1_1config_1_1stream_1_1ConfigSocketClient.html", [
-                [ "net::un::stream::config::ConfigSocketClient", "classnet_1_1un_1_1stream_1_1config_1_1ConfigSocketClient.html", [
-                  [ "net::config::stream::legacy::ConfigSocketClient< net::un::stream::config::ConfigSocketClient >", "classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketClient.html", null ],
-                  [ "net::config::stream::tls::ConfigSocketClient< net::un::stream::config::ConfigSocketClient >", "classnet_1_1config_1_1stream_1_1tls_1_1ConfigSocketClient.html", null ]
-                ] ]
-              ] ],
-              [ "net::config::stream::ConfigSocketServer< net::un::config::ConfigAddress, net::un::config::ConfigAddressReverse >", "classnet_1_1config_1_1stream_1_1ConfigSocketServer.html", [
-                [ "net::un::stream::config::ConfigSocketServer", "classnet_1_1un_1_1stream_1_1config_1_1ConfigSocketServer.html", [
-                  [ "net::config::stream::legacy::ConfigSocketServer< net::un::stream::config::ConfigSocketServer >", "classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketServer.html", null ],
-                  [ "net::config::stream::tls::ConfigSocketServer< net::un::stream::config::ConfigSocketServer >", "classnet_1_1config_1_1stream_1_1tls_1_1ConfigSocketServer.html", null ]
-                ] ]
-              ] ]
-            ] ]
-          ] ],
-          [ "net::config::ConfigAddressRemote< net::un::SocketAddress >", "classnet_1_1config_1_1ConfigAddressRemote.html", [
-            [ "net::un::config::ConfigAddress< net::config::ConfigAddressRemote >", "classnet_1_1un_1_1config_1_1ConfigAddress.html", [
-              [ "net::config::stream::ConfigSocketClient< net::un::config::ConfigAddress >", "classnet_1_1config_1_1stream_1_1ConfigSocketClient.html", null ]
-            ] ]
-          ] ]
-        ] ],
-        [ "net::config::ConfigAddressReverse< net::un::SocketAddress >", "classnet_1_1config_1_1ConfigAddressReverse.html", [
-          [ "net::un::config::ConfigAddressReverse< net::config::ConfigAddressReverse >", "classnet_1_1un_1_1config_1_1ConfigAddressReverse.html", [
-            [ "net::config::stream::ConfigSocketServer< net::un::config::ConfigAddress, net::un::config::ConfigAddressReverse >", "classnet_1_1config_1_1stream_1_1ConfigSocketServer.html", null ]
-          ] ]
-        ] ]
-      ] ],
-      [ "net::config::ConfigAddressBase< SocketAddressT >", "classnet_1_1config_1_1ConfigAddressBase.html", [
-        [ "net::config::ConfigAddress< SocketAddressT >", "classnet_1_1config_1_1ConfigAddress.html", [
-          [ "net::config::ConfigAddressLocal< SocketAddressT >", "classnet_1_1config_1_1ConfigAddressLocal.html", null ],
-          [ "net::config::ConfigAddressRemote< SocketAddressT >", "classnet_1_1config_1_1ConfigAddressRemote.html", null ]
-        ] ],
-        [ "net::config::ConfigAddressReverse< SocketAddressT >", "classnet_1_1config_1_1ConfigAddressReverse.html", null ]
-      ] ],
+      [ "net::in6::config::ConfigAddress< net::config::ConfigAddressRemote >", "classnet_1_1in6_1_1config_1_1ConfigAddress.html", null ],
+      [ "net::in6::config::ConfigAddress< net::config::ConfigAddressLocal >", "classnet_1_1in6_1_1config_1_1ConfigAddress.html", null ],
+      [ "net::in6::config::ConfigAddressReverse< net::config::ConfigAddressReverse >", "classnet_1_1in6_1_1config_1_1ConfigAddressReverse.html", null ],
+      [ "net::in::config::ConfigAddress< net::config::ConfigAddressRemote >", "classnet_1_1in_1_1config_1_1ConfigAddress.html", null ],
+      [ "net::in::config::ConfigAddress< net::config::ConfigAddressLocal >", "classnet_1_1in_1_1config_1_1ConfigAddress.html", null ],
+      [ "net::in::config::ConfigAddressReverse< net::config::ConfigAddressReverse >", "classnet_1_1in_1_1config_1_1ConfigAddressReverse.html", null ],
+      [ "net::l2::config::ConfigAddress< net::config::ConfigAddressRemote >", "classnet_1_1l2_1_1config_1_1ConfigAddress.html", null ],
+      [ "net::l2::config::ConfigAddress< net::config::ConfigAddressLocal >", "classnet_1_1l2_1_1config_1_1ConfigAddress.html", null ],
+      [ "net::l2::config::ConfigAddressReverse< net::config::ConfigAddressReverse >", "classnet_1_1l2_1_1config_1_1ConfigAddressReverse.html", null ],
+      [ "net::rc::config::ConfigAddress< net::config::ConfigAddressRemote >", "classnet_1_1rc_1_1config_1_1ConfigAddress.html", null ],
+      [ "net::rc::config::ConfigAddress< net::config::ConfigAddressLocal >", "classnet_1_1rc_1_1config_1_1ConfigAddress.html", null ],
+      [ "net::rc::config::ConfigAddressReverse< net::config::ConfigAddressReverse >", "classnet_1_1rc_1_1config_1_1ConfigAddressReverse.html", null ],
+      [ "net::un::config::ConfigAddress< net::config::ConfigAddressRemote >", "classnet_1_1un_1_1config_1_1ConfigAddress.html", null ],
+      [ "net::un::config::ConfigAddress< net::config::ConfigAddressLocal >", "classnet_1_1un_1_1config_1_1ConfigAddress.html", null ],
+      [ "net::un::config::ConfigAddressReverse< net::config::ConfigAddressReverse >", "classnet_1_1un_1_1config_1_1ConfigAddressReverse.html", null ],
       [ "net::config::ConfigConnection", "classnet_1_1config_1_1ConfigConnection.html", [
         [ "net::config::stream::ConfigSocketClient< net::in6::config::ConfigAddress >", "classnet_1_1config_1_1stream_1_1ConfigSocketClient.html", null ],
         [ "net::config::stream::ConfigSocketClient< net::in::config::ConfigAddress >", "classnet_1_1config_1_1stream_1_1ConfigSocketClient.html", null ],
@@ -285,42 +321,36 @@ var hierarchy =
         [ "net::config::stream::legacy::ConfigSocketClient< ConfigSocketClientBaseT >", "classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketClient.html", null ],
         [ "net::config::stream::legacy::ConfigSocketServer< ConfigSocketServerBaseT >", "classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketServer.html", null ]
       ] ],
-      [ "net::config::ConfigPhysicalSocket", "classnet_1_1config_1_1ConfigPhysicalSocket.html", [
-        [ "net::config::ConfigPhysicalSocketClient", "classnet_1_1config_1_1ConfigPhysicalSocketClient.html", [
-          [ "net::config::stream::ConfigSocketClient< net::in6::config::ConfigAddress >", "classnet_1_1config_1_1stream_1_1ConfigSocketClient.html", null ],
-          [ "net::config::stream::ConfigSocketClient< net::in::config::ConfigAddress >", "classnet_1_1config_1_1stream_1_1ConfigSocketClient.html", null ],
-          [ "net::config::stream::ConfigSocketClient< net::l2::config::ConfigAddress >", "classnet_1_1config_1_1stream_1_1ConfigSocketClient.html", null ],
-          [ "net::config::stream::ConfigSocketClient< net::rc::config::ConfigAddress >", "classnet_1_1config_1_1stream_1_1ConfigSocketClient.html", null ],
-          [ "net::config::stream::ConfigSocketClient< net::un::config::ConfigAddress >", "classnet_1_1config_1_1stream_1_1ConfigSocketClient.html", null ],
-          [ "net::config::stream::ConfigSocketClient< ConfigAddressLocalT, ConfigAddressRemoteT >", "classnet_1_1config_1_1stream_1_1ConfigSocketClient.html", null ]
-        ] ],
-        [ "net::config::ConfigPhysicalSocketServer", "classnet_1_1config_1_1ConfigPhysicalSocketServer.html", [
-          [ "net::config::stream::ConfigSocketServer< net::in6::config::ConfigAddress, net::in6::config::ConfigAddressReverse >", "classnet_1_1config_1_1stream_1_1ConfigSocketServer.html", null ],
-          [ "net::config::stream::ConfigSocketServer< net::in::config::ConfigAddress, net::in::config::ConfigAddressReverse >", "classnet_1_1config_1_1stream_1_1ConfigSocketServer.html", null ],
-          [ "net::config::stream::ConfigSocketServer< net::l2::config::ConfigAddress, net::l2::config::ConfigAddressReverse >", "classnet_1_1config_1_1stream_1_1ConfigSocketServer.html", null ],
-          [ "net::config::stream::ConfigSocketServer< net::rc::config::ConfigAddress, net::rc::config::ConfigAddressReverse >", "classnet_1_1config_1_1stream_1_1ConfigSocketServer.html", null ],
-          [ "net::config::stream::ConfigSocketServer< net::un::config::ConfigAddress, net::un::config::ConfigAddressReverse >", "classnet_1_1config_1_1stream_1_1ConfigSocketServer.html", null ],
-          [ "net::config::stream::ConfigSocketServer< ConfigAddressLocalT, ConfigAddressRemoteT >", "classnet_1_1config_1_1stream_1_1ConfigSocketServer.html", null ]
-        ] ]
+      [ "net::config::ConfigPhysicalSocketClient", "classnet_1_1config_1_1ConfigPhysicalSocketClient.html", null ],
+      [ "net::config::ConfigPhysicalSocketServer", "classnet_1_1config_1_1ConfigPhysicalSocketServer.html", null ],
+      [ "net::config::ConfigTlsClient", "classnet_1_1config_1_1ConfigTlsClient.html", [
+        [ "net::config::stream::tls::ConfigSocketClient< net::in6::stream::config::ConfigSocketClient >", "classnet_1_1config_1_1stream_1_1tls_1_1ConfigSocketClient.html", null ],
+        [ "net::config::stream::tls::ConfigSocketClient< net::in::stream::config::ConfigSocketClient >", "classnet_1_1config_1_1stream_1_1tls_1_1ConfigSocketClient.html", null ],
+        [ "net::config::stream::tls::ConfigSocketClient< net::l2::stream::config::ConfigSocketClient >", "classnet_1_1config_1_1stream_1_1tls_1_1ConfigSocketClient.html", null ],
+        [ "net::config::stream::tls::ConfigSocketClient< net::rc::stream::config::ConfigSocketClient >", "classnet_1_1config_1_1stream_1_1tls_1_1ConfigSocketClient.html", null ],
+        [ "net::config::stream::tls::ConfigSocketClient< net::un::stream::config::ConfigSocketClient >", "classnet_1_1config_1_1stream_1_1tls_1_1ConfigSocketClient.html", null ],
+        [ "net::config::stream::tls::ConfigSocketClient< ConfigSocketClientBaseT >", "classnet_1_1config_1_1stream_1_1tls_1_1ConfigSocketClient.html", null ]
       ] ],
-      [ "net::config::ConfigTls", "classnet_1_1config_1_1ConfigTls.html", [
-        [ "net::config::ConfigTlsClient", "classnet_1_1config_1_1ConfigTlsClient.html", [
-          [ "net::config::stream::tls::ConfigSocketClient< net::in6::stream::config::ConfigSocketClient >", "classnet_1_1config_1_1stream_1_1tls_1_1ConfigSocketClient.html", null ],
-          [ "net::config::stream::tls::ConfigSocketClient< net::in::stream::config::ConfigSocketClient >", "classnet_1_1config_1_1stream_1_1tls_1_1ConfigSocketClient.html", null ],
-          [ "net::config::stream::tls::ConfigSocketClient< net::l2::stream::config::ConfigSocketClient >", "classnet_1_1config_1_1stream_1_1tls_1_1ConfigSocketClient.html", null ],
-          [ "net::config::stream::tls::ConfigSocketClient< net::rc::stream::config::ConfigSocketClient >", "classnet_1_1config_1_1stream_1_1tls_1_1ConfigSocketClient.html", null ],
-          [ "net::config::stream::tls::ConfigSocketClient< net::un::stream::config::ConfigSocketClient >", "classnet_1_1config_1_1stream_1_1tls_1_1ConfigSocketClient.html", null ],
-          [ "net::config::stream::tls::ConfigSocketClient< ConfigSocketClientBaseT >", "classnet_1_1config_1_1stream_1_1tls_1_1ConfigSocketClient.html", null ]
-        ] ],
-        [ "net::config::ConfigTlsServer", "classnet_1_1config_1_1ConfigTlsServer.html", [
-          [ "net::config::stream::tls::ConfigSocketServer< net::in6::stream::config::ConfigSocketServer >", "classnet_1_1config_1_1stream_1_1tls_1_1ConfigSocketServer.html", null ],
-          [ "net::config::stream::tls::ConfigSocketServer< net::in::stream::config::ConfigSocketServer >", "classnet_1_1config_1_1stream_1_1tls_1_1ConfigSocketServer.html", null ],
-          [ "net::config::stream::tls::ConfigSocketServer< net::l2::stream::config::ConfigSocketServer >", "classnet_1_1config_1_1stream_1_1tls_1_1ConfigSocketServer.html", null ],
-          [ "net::config::stream::tls::ConfigSocketServer< net::rc::stream::config::ConfigSocketServer >", "classnet_1_1config_1_1stream_1_1tls_1_1ConfigSocketServer.html", null ],
-          [ "net::config::stream::tls::ConfigSocketServer< net::un::stream::config::ConfigSocketServer >", "classnet_1_1config_1_1stream_1_1tls_1_1ConfigSocketServer.html", null ],
-          [ "net::config::stream::tls::ConfigSocketServer< ConfigSocketServerBaseT >", "classnet_1_1config_1_1stream_1_1tls_1_1ConfigSocketServer.html", null ]
-        ] ]
-      ] ]
+      [ "net::config::ConfigTlsServer", "classnet_1_1config_1_1ConfigTlsServer.html", [
+        [ "net::config::stream::tls::ConfigSocketServer< net::in6::stream::config::ConfigSocketServer >", "classnet_1_1config_1_1stream_1_1tls_1_1ConfigSocketServer.html", null ],
+        [ "net::config::stream::tls::ConfigSocketServer< net::in::stream::config::ConfigSocketServer >", "classnet_1_1config_1_1stream_1_1tls_1_1ConfigSocketServer.html", null ],
+        [ "net::config::stream::tls::ConfigSocketServer< net::l2::stream::config::ConfigSocketServer >", "classnet_1_1config_1_1stream_1_1tls_1_1ConfigSocketServer.html", null ],
+        [ "net::config::stream::tls::ConfigSocketServer< net::rc::stream::config::ConfigSocketServer >", "classnet_1_1config_1_1stream_1_1tls_1_1ConfigSocketServer.html", null ],
+        [ "net::config::stream::tls::ConfigSocketServer< net::un::stream::config::ConfigSocketServer >", "classnet_1_1config_1_1stream_1_1tls_1_1ConfigSocketServer.html", null ],
+        [ "net::config::stream::tls::ConfigSocketServer< ConfigSocketServerBaseT >", "classnet_1_1config_1_1stream_1_1tls_1_1ConfigSocketServer.html", null ]
+      ] ],
+      [ "net::in6::config::ConfigAddress< ConfigAddressTypeT >", "classnet_1_1in6_1_1config_1_1ConfigAddress.html", null ],
+      [ "net::in6::config::ConfigAddressReverse< ConfigAddressTypeT >", "classnet_1_1in6_1_1config_1_1ConfigAddressReverse.html", null ],
+      [ "net::in::config::ConfigAddress< ConfigAddressTypeT >", "classnet_1_1in_1_1config_1_1ConfigAddress.html", null ],
+      [ "net::in::config::ConfigAddressReverse< ConfigAddressTypeT >", "classnet_1_1in_1_1config_1_1ConfigAddressReverse.html", null ],
+      [ "net::l2::config::ConfigAddress< ConfigAddressTypeT >", "classnet_1_1l2_1_1config_1_1ConfigAddress.html", null ],
+      [ "net::l2::config::ConfigAddressReverse< ConfigAddressTypeT >", "classnet_1_1l2_1_1config_1_1ConfigAddressReverse.html", null ],
+      [ "net::rc::config::ConfigAddress< ConfigAddressTypeT >", "classnet_1_1rc_1_1config_1_1ConfigAddress.html", null ],
+      [ "net::rc::config::ConfigAddressReverse< ConfigAddressTypeT >", "classnet_1_1rc_1_1config_1_1ConfigAddressReverse.html", null ],
+      [ "net::un::config::ConfigAddress< ConfigAddressTypeT >", "classnet_1_1un_1_1config_1_1ConfigAddress.html", null ],
+      [ "net::un::config::ConfigAddressReverse< ConfigAddressTypeT >", "classnet_1_1un_1_1config_1_1ConfigAddressReverse.html", null ],
+      [ "section::ConfigWWW", "classsection_1_1ConfigWWW.html", null ],
+      [ "web::http::client::ConfigHTTP", "classweb_1_1http_1_1client_1_1ConfigHTTP.html", null ]
     ] ],
     [ "ConfigSocketClientBaseT", null, [
       [ "net::config::stream::legacy::ConfigSocketClient< ConfigSocketClientBaseT >", "classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketClient.html", null ],
@@ -330,6 +360,11 @@ var hierarchy =
       [ "net::config::stream::legacy::ConfigSocketServer< ConfigSocketServerBaseT >", "classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketServer.html", null ],
       [ "net::config::stream::tls::ConfigSocketServer< ConfigSocketServerBaseT >", "classnet_1_1config_1_1stream_1_1tls_1_1ConfigSocketServer.html", null ]
     ] ],
+    [ "net::config::ConfigTls", "classnet_1_1config_1_1ConfigTls.html", [
+      [ "net::config::ConfigTlsClient", "classnet_1_1config_1_1ConfigTlsClient.html", null ],
+      [ "net::config::ConfigTlsServer", "classnet_1_1config_1_1ConfigTlsServer.html", null ]
+    ] ],
+    [ "instance::ConfigWWW", "classinstance_1_1ConfigWWW.html", null ],
     [ "web::http::ContentDecoder", "classweb_1_1http_1_1ContentDecoder.html", [
       [ "web::http::decoder::Chunked", "classweb_1_1http_1_1decoder_1_1Chunked.html", null ],
       [ "web::http::decoder::HTTP10Response", "classweb_1_1http_1_1decoder_1_1HTTP10Response.html", null ],
@@ -485,6 +520,7 @@ var hierarchy =
       [ "web::http::client::tools::EventSourceT< web::http::tls::un::Client >", "classweb_1_1http_1_1client_1_1tools_1_1EventSourceT.html", [
         [ "web::http::tls::un::EventSource", "classweb_1_1http_1_1tls_1_1un_1_1EventSource.html", null ]
       ] ],
+      [ "core::socket::stream::AutoConnectControl", "classcore_1_1socket_1_1stream_1_1AutoConnectControl.html", null ],
       [ "web::http::client::tools::EventSourceT< Client >", "classweb_1_1http_1_1client_1_1tools_1_1EventSourceT.html", null ]
     ] ],
     [ "core::multiplexer::epoll::DescriptorEventPublisher::EPollEvents", "classcore_1_1multiplexer_1_1epoll_1_1DescriptorEventPublisher_1_1EPollEvents.html", null ],
@@ -631,6 +667,7 @@ var hierarchy =
     [ "iot::mqtt::server::broker::Message", "classiot_1_1mqtt_1_1server_1_1broker_1_1Message.html", null ],
     [ "web::http::client::tools::EventSource::MessageEvent", "structweb_1_1http_1_1client_1_1tools_1_1EventSource_1_1MessageEvent.html", null ],
     [ "web::http::MimeTypes", "classweb_1_1http_1_1MimeTypes.html", null ],
+    [ "express::dispatcher::MountMatchResult", "structexpress_1_1dispatcher_1_1MountMatchResult.html", null ],
     [ "express::MountPoint", "structexpress_1_1MountPoint.html", null ],
     [ "iot::mqtt::Mqtt", "classiot_1_1mqtt_1_1Mqtt.html", [
       [ "iot::mqtt::client::Mqtt", "classiot_1_1mqtt_1_1client_1_1Mqtt.html", null ],
@@ -754,6 +791,16 @@ var hierarchy =
       [ "express::middleware::VHost", "classexpress_1_1middleware_1_1VHost.html", null ],
       [ "express::middleware::VerboseRequest", "classexpress_1_1middleware_1_1VerboseRequest.html", null ]
     ] ],
+    [ "Router", "classRouter.html", [
+      [ "express::WebApp", "classexpress_1_1WebApp.html", null ],
+      [ "express::middleware::BasicAuthentication", "classexpress_1_1middleware_1_1BasicAuthentication.html", null ],
+      [ "express::middleware::JsonMiddleware", "classexpress_1_1middleware_1_1JsonMiddleware.html", null ],
+      [ "express::middleware::StaticMiddleware", "classexpress_1_1middleware_1_1StaticMiddleware.html", null ],
+      [ "express::middleware::VHost", "classexpress_1_1middleware_1_1VHost.html", null ],
+      [ "express::middleware::VerboseRequest", "classexpress_1_1middleware_1_1VerboseRequest.html", null ]
+    ] ],
+    [ "express::dispatcher::ScopedParams", "classexpress_1_1dispatcher_1_1ScopedParams.html", null ],
+    [ "express::dispatcher::ScopedPathStrip", "classexpress_1_1dispatcher_1_1ScopedPathStrip.html", null ],
     [ "ServerT", null, [
       [ "express::WebAppT< ServerT >", "classexpress_1_1WebAppT.html", null ]
     ] ],

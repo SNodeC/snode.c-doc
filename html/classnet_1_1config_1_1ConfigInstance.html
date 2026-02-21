@@ -116,7 +116,7 @@ Inheritance diagram for net::config::ConfigInstance:</div>
 <div class="dynheader">
 Collaboration diagram for net::config::ConfigInstance:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classnet_1_1config_1_1ConfigInstance__coll__graph.svg" width="231" height="256"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classnet_1_1config_1_1ConfigInstance__coll__graph.svg" width="348" height="592"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-types" class="groupheader"><a id="pub-types" name="pub-types"></a>
@@ -124,7 +124,6 @@ Public Types</h2></td></tr>
 <tr class="memitem:a21ca5568aa45bd1bb91d2fa79687a9e2" id="r_a21ca5568aa45bd1bb91d2fa79687a9e2"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a21ca5568aa45bd1bb91d2fa79687a9e2">Role</a> { <a class="el" href="#a21ca5568aa45bd1bb91d2fa79687a9e2a3d27c95bfdbea691b250894d96852844">SERVER</a>
 , <a class="el" href="#a21ca5568aa45bd1bb91d2fa79687a9e2aef10c650df47bffd6399e5e78da2a9b1">CLIENT</a>
  }</td></tr>
-<tr class="memitem:af59b2ebc19a23c22770f8e93a2f9616e" id="r_af59b2ebc19a23c22770f8e93a2f9616e"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af59b2ebc19a23c22770f8e93a2f9616e">Instance</a> = <a class="el" href="#a7fd41c5db4865443c184508a4435f7aa">ConfigInstance</a></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -137,17 +136,29 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a674f358ab15c39d47580a50be0f803e3" id="r_a674f358ab15c39d47580a50be0f803e3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a674f358ab15c39d47580a50be0f803e3">setInstanceName</a> (const std::string &amp;<a class="el" href="#afc45c33c68307d087a96e36039d832cc">instanceName</a>)</td></tr>
 <tr class="memitem:a90d65c7f0497bb5636c7efef37bcfd1f" id="r_a90d65c7f0497bb5636c7efef37bcfd1f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a90d65c7f0497bb5636c7efef37bcfd1f">getDisabled</a> () const</td></tr>
 <tr class="memitem:a513b580faa06a43d0b25b14d3ba58128" id="r_a513b580faa06a43d0b25b14d3ba58128"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a513b580faa06a43d0b25b14d3ba58128">setDisabled</a> (bool disabled=true)</td></tr>
-<tr class="memitem:a00106763b2a084d8fcb01c37155ad5e3" id="r_a00106763b2a084d8fcb01c37155ad5e3"><td class="memItemLeft" align="right" valign="top">CLI::App *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a00106763b2a084d8fcb01c37155ad5e3">addSection</a> (const std::string &amp;name, const std::string &amp;description, const std::string &amp;group=&quot;Sections&quot;)</td></tr>
-<tr class="memitem:a01536703bcccfa6594ed7b89c5a842eb" id="r_a01536703bcccfa6594ed7b89c5a842eb"><td class="memItemLeft" align="right" valign="top">CLI::App *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a01536703bcccfa6594ed7b89c5a842eb">getSection</a> (const std::string &amp;name, bool onlyGot=false, bool recursive=false) const</td></tr>
+<tr class="memitem:a8218ff6d31d4641772933b5773f304c1" id="r_a8218ff6d31d4641772933b5773f304c1"><td class="memItemLeft" align="right" valign="top">CLI::App *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8218ff6d31d4641772933b5773f304c1">newSection</a> (std::shared_ptr&lt; CLI::App &gt; appWithPtr, const std::string &amp;group)</td></tr>
+<tr class="memitem:a0b63ce6307b20589457d3e2359a15447" id="r_a0b63ce6307b20589457d3e2359a15447"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classnet_1_1config_1_1ConfigSection.html">net::config::ConfigSection</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0b63ce6307b20589457d3e2359a15447">addSection</a> (std::shared_ptr&lt; <a class="el" href="classnet_1_1config_1_1ConfigSection.html">net::config::ConfigSection</a> &gt; &amp;&amp;configSection)</td></tr>
+<tr class="memitem:a6b0c6a4b7b14fdb7787292781e7bd168" id="r_a6b0c6a4b7b14fdb7787292781e7bd168"><td class="memTemplParams" colspan="2">template&lt;typename ConcreteConfigSection, typename... Args&gt; </td></tr>
+<tr class="memitem:a6b0c6a4b7b14fdb7787292781e7bd168 template"><td class="memItemLeft" align="right" valign="top">ConcreteConfigSection *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6b0c6a4b7b14fdb7787292781e7bd168">addSection</a> (Args &amp;&amp;... args)</td></tr>
+<tr class="memitem:a9d691806050868326f02eed0583e2a4c" id="r_a9d691806050868326f02eed0583e2a4c"><td class="memTemplParams" colspan="2">template&lt;typename SectionTypeT&gt; </td></tr>
+<tr class="memitem:a9d691806050868326f02eed0583e2a4c template"><td class="memItemLeft" align="right" valign="top">SectionTypeT *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9d691806050868326f02eed0583e2a4c">getSection</a> () const</td></tr>
 <tr class="memitem:af65d41949b4ff04dacfba0a58da83ea0" id="r_af65d41949b4ff04dacfba0a58da83ea0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af65d41949b4ff04dacfba0a58da83ea0">gotSection</a> (const std::string &amp;name, bool recursive=false) const</td></tr>
-<tr class="memitem:afc1c3ec014ddd8cc8a08113feed00fe5" id="r_afc1c3ec014ddd8cc8a08113feed00fe5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afc1c3ec014ddd8cc8a08113feed00fe5">required</a> (CLI::App *section, bool req=true)</td></tr>
+<tr class="memitem:accc65978a2ec93df27c740cc325f2345" id="r_accc65978a2ec93df27c740cc325f2345"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#accc65978a2ec93df27c740cc325f2345">required</a> (bool required=true)</td></tr>
+<tr class="memitem:afc1c3ec014ddd8cc8a08113feed00fe5" id="r_afc1c3ec014ddd8cc8a08113feed00fe5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afc1c3ec014ddd8cc8a08113feed00fe5">required</a> (CLI::App *<a class="el" href="namespacesection.html">section</a>, bool req=true)</td></tr>
 <tr class="memitem:a508316f29b4a5c8e3f47f0c403132708" id="r_a508316f29b4a5c8e3f47f0c403132708"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a508316f29b4a5c8e3f47f0c403132708">getRequired</a> () const</td></tr>
 <tr class="memitem:a55f8da2ebef59a5b9a145c309f902694" id="r_a55f8da2ebef59a5b9a145c309f902694"><td class="memItemLeft" align="right" valign="top">CLI::App *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a55f8da2ebef59a5b9a145c309f902694">get</a> () const</td></tr>
+<tr class="memitem:a6833456e0af9a7fdaad320414913b8fc" id="r_a6833456e0af9a7fdaad320414913b8fc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6833456e0af9a7fdaad320414913b8fc">configurable</a> (bool configurable=true)</td></tr>
+<tr class="memitem:a14d36acd2ce9a0ec6248986bde9fb41e" id="r_a14d36acd2ce9a0ec6248986bde9fb41e"><td class="memTemplParams" colspan="2">template&lt;typename SectionType&gt; </td></tr>
+<tr class="memitem:a14d36acd2ce9a0ec6248986bde9fb41e template"><td class="memItemLeft" align="right" valign="top">SectionType *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a14d36acd2ce9a0ec6248986bde9fb41e">getSection</a> () const</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a7fd41c5db4865443c184508a4435f7aa" id="r_a7fd41c5db4865443c184508a4435f7aa"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7fd41c5db4865443c184508a4435f7aa">ConfigInstance</a> (const std::string &amp;<a class="el" href="#afc45c33c68307d087a96e36039d832cc">instanceName</a>, <a class="el" href="#a21ca5568aa45bd1bb91d2fa79687a9e2">Role</a> <a class="el" href="#a909cf1595a45032459773a412533cf14">role</a>)</td></tr>
 <tr class="memitem:a49b02d691b760b249fdc133581f0b942" id="r_a49b02d691b760b249fdc133581f0b942"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a49b02d691b760b249fdc133581f0b942">~ConfigInstance</a> ()</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:af35a7959d32a5af0e1c0f35d981d87a0" id="r_af35a7959d32a5af0e1c0f35d981d87a0"><td class="memItemLeft" align="right" valign="top">const CLI::App *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af35a7959d32a5af0e1c0f35d981d87a0">getSection</a> (const std::string &amp;name) const</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -156,6 +167,7 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:a909cf1595a45032459773a412533cf14" id="r_a909cf1595a45032459773a412533cf14"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a21ca5568aa45bd1bb91d2fa79687a9e2">Role</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a909cf1595a45032459773a412533cf14">role</a></td></tr>
 <tr class="memitem:a7a695588c7946a1eeb547db4b69e1b44" id="r_a7a695588c7946a1eeb547db4b69e1b44"><td class="memItemLeft" align="right" valign="top">CLI::App *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7a695588c7946a1eeb547db4b69e1b44">instanceSc</a> = nullptr</td></tr>
 <tr class="memitem:a903207c799a648bf5742f5941465ed7c" id="r_a903207c799a648bf5742f5941465ed7c"><td class="memItemLeft" align="right" valign="top">CLI::Option *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a903207c799a648bf5742f5941465ed7c">disableOpt</a> = nullptr</td></tr>
+<tr class="memitem:a3eca3043a997cb7ef50b335df6986fce" id="r_a3eca3043a997cb7ef50b335df6986fce"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::shared_ptr&lt; <a class="el" href="classnet_1_1config_1_1ConfigSection.html">net::config::ConfigSection</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3eca3043a997cb7ef50b335df6986fce">configSections</a></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pri-static-attribs" class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
 Static Private Attributes</h2></td></tr>
@@ -167,25 +179,8 @@ Friends</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="ConfigInstance_8h_source.html#l00063">63</a> of file <a class="el" href="ConfigInstance_8h_source.html">ConfigInstance.h</a>.</p>
-</div><a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Member Typedef Documentation</h2>
-<a id="af59b2ebc19a23c22770f8e93a2f9616e" name="af59b2ebc19a23c22770f8e93a2f9616e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af59b2ebc19a23c22770f8e93a2f9616e">&#9670;&#160;</a></span>Instance</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="#af59b2ebc19a23c22770f8e93a2f9616e">net::config::ConfigInstance::Instance</a> = <a class="el" href="#a7fd41c5db4865443c184508a4435f7aa">ConfigInstance</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
 <p class="definition">Definition at line <a class="el" href="ConfigInstance_8h_source.html#l00065">65</a> of file <a class="el" href="ConfigInstance_8h_source.html">ConfigInstance.h</a>.</p>
-
-</div>
-</div>
-<a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Member Enumeration Documentation</h2>
+</div><a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Member Enumeration Documentation</h2>
 <a id="a21ca5568aa45bd1bb91d2fa79687a9e2" name="a21ca5568aa45bd1bb91d2fa79687a9e2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a21ca5568aa45bd1bb91d2fa79687a9e2">&#9670;&#160;</a></span>Role</h2>
 
@@ -243,44 +238,46 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ConfigInstance_8cpp_source.html#l00081">81</a> of file <a class="el" href="ConfigInstance_8cpp_source.html">ConfigInstance.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   82</span>        : <a class="code hl_variable" href="#afc45c33c68307d087a96e36039d832cc">instanceName</a>(<a class="code hl_variable" href="#afc45c33c68307d087a96e36039d832cc">instanceName</a>)</div>
-<div class="line"><span class="lineno">   83</span>        , <a class="code hl_variable" href="#a909cf1595a45032459773a412533cf14">role</a>(<a class="code hl_variable" href="#a909cf1595a45032459773a412533cf14">role</a>) {</div>
-<div class="line"><span class="lineno">   84</span>        <a class="code hl_variable" href="#a7a695588c7946a1eeb547db4b69e1b44">instanceSc</a> = <a class="code hl_function" href="classutils_1_1Config.html#a8feefa9dbb7e4381ad6b990bf1e711d0">utils::Config::addInstance</a>(<a class="code hl_variable" href="#afc45c33c68307d087a96e36039d832cc">instanceName</a>,</div>
-<div class="line"><span class="lineno">   85</span>                                                std::string(<span class="stringliteral">&quot;Configuration for &quot;</span>)</div>
-<div class="line"><span class="lineno">   86</span>                                                    .append(<a class="code hl_variable" href="#a909cf1595a45032459773a412533cf14">role</a> == <a class="code hl_enumvalue" href="#a21ca5568aa45bd1bb91d2fa79687a9e2a3d27c95bfdbea691b250894d96852844">Role::SERVER</a> ? <span class="stringliteral">&quot;server&quot;</span> : <span class="stringliteral">&quot;client&quot;</span>)</div>
-<div class="line"><span class="lineno">   87</span>                                                    .append(<span class="stringliteral">&quot; instance &#39;&quot;</span>)</div>
-<div class="line"><span class="lineno">   88</span>                                                    .append(<a class="code hl_variable" href="#afc45c33c68307d087a96e36039d832cc">instanceName</a>)</div>
-<div class="line"><span class="lineno">   89</span>                                                    .append(<span class="stringliteral">&quot;&#39;&quot;</span>),</div>
-<div class="line"><span class="lineno">   90</span>                                                <span class="stringliteral">&quot;Instances&quot;</span>);</div>
-<div class="line"><span class="lineno">   91</span> </div>
-<div class="line"><span class="lineno">   92</span>        <a class="code hl_variable" href="#a903207c799a648bf5742f5941465ed7c">disableOpt</a> = <a class="code hl_variable" href="#a7a695588c7946a1eeb547db4b69e1b44">instanceSc</a></div>
-<div class="line"><span class="lineno">   93</span>                         -&gt;add_flag_function(</div>
-<div class="line"><span class="lineno">   94</span>                             <span class="stringliteral">&quot;--disabled{true}&quot;</span>,</div>
-<div class="line"><span class="lineno">   95</span>                             [<span class="keyword">this</span>](std::size_t) {</div>
-<div class="line"><span class="lineno">   96</span>                                 <a class="code hl_function" href="classutils_1_1Config.html#a895744238727a62946b042a62ef99ca6">utils::Config::disabled</a>(<a class="code hl_variable" href="#a7a695588c7946a1eeb547db4b69e1b44">instanceSc</a>, <a class="code hl_variable" href="#a903207c799a648bf5742f5941465ed7c">disableOpt</a>-&gt;as&lt;<span class="keywordtype">bool</span>&gt;());</div>
-<div class="line"><span class="lineno">   97</span>                             },</div>
-<div class="line"><span class="lineno">   98</span>                             <span class="stringliteral">&quot;Disable this instance&quot;</span>)</div>
-<div class="line"><span class="lineno">   99</span>                         -&gt;multi_option_policy(CLI::MultiOptionPolicy::TakeLast)</div>
-<div class="line"><span class="lineno">  100</span>                         -&gt;trigger_on_parse()</div>
-<div class="line"><span class="lineno">  101</span>                         -&gt;default_str(<span class="stringliteral">&quot;false&quot;</span>)</div>
-<div class="line"><span class="lineno">  102</span>                         -&gt;type_name(<span class="stringliteral">&quot;bool&quot;</span>)</div>
-<div class="line"><span class="lineno">  103</span>                         -&gt;check(CLI::IsMember({<span class="stringliteral">&quot;true&quot;</span>, <span class="stringliteral">&quot;false&quot;</span>}))</div>
-<div class="line"><span class="lineno">  104</span>                         -&gt;group(<a class="code hl_variable" href="#a7a695588c7946a1eeb547db4b69e1b44">instanceSc</a>-&gt;get_formatter()-&gt;get_label(<span class="stringliteral">&quot;Persistent Options&quot;</span>));</div>
-<div class="line"><span class="lineno">  105</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ConfigInstance_8cpp_source.html#l00061">61</a> of file <a class="el" href="ConfigInstance_8cpp_source.html">ConfigInstance.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   62</span>        : <a class="code hl_variable" href="#afc45c33c68307d087a96e36039d832cc">instanceName</a>(<a class="code hl_variable" href="#afc45c33c68307d087a96e36039d832cc">instanceName</a>)</div>
+<div class="line"><span class="lineno">   63</span>        , <a class="code hl_variable" href="#a909cf1595a45032459773a412533cf14">role</a>(<a class="code hl_variable" href="#a909cf1595a45032459773a412533cf14">role</a>) {</div>
+<div class="line"><span class="lineno">   64</span>        <span class="keyword">auto</span> configInstanceApp = <a class="code hl_function" href="namespacenet_1_1config.html#af56c62a370fe6f9386a7fe92ceb5759c">net::config::Instance</a>(<a class="code hl_variable" href="#afc45c33c68307d087a96e36039d832cc">instanceName</a>,</div>
+<div class="line"><span class="lineno">   65</span>                                                       std::string(<span class="stringliteral">&quot;Configuration for &quot;</span>)</div>
+<div class="line"><span class="lineno">   66</span>                                                           .append(<a class="code hl_variable" href="#a909cf1595a45032459773a412533cf14">role</a> == <a class="code hl_enumvalue" href="#a21ca5568aa45bd1bb91d2fa79687a9e2a3d27c95bfdbea691b250894d96852844">Role::SERVER</a> ? <span class="stringliteral">&quot;server&quot;</span> : <span class="stringliteral">&quot;client&quot;</span>)</div>
+<div class="line"><span class="lineno">   67</span>                                                           .append(<span class="stringliteral">&quot; instance &#39;&quot;</span>)</div>
+<div class="line"><span class="lineno">   68</span>                                                           .append(<a class="code hl_variable" href="#afc45c33c68307d087a96e36039d832cc">instanceName</a>)</div>
+<div class="line"><span class="lineno">   69</span>                                                           .append(<span class="stringliteral">&quot;&#39;&quot;</span>),</div>
+<div class="line"><span class="lineno">   70</span>                                                       <span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   71</span>        <a class="code hl_variable" href="#a7a695588c7946a1eeb547db4b69e1b44">instanceSc</a> = <a class="code hl_function" href="classutils_1_1Config.html#ae4986697c7167257552c00ac17f9c20f">utils::Config::newInstance</a>(configInstanceApp, <span class="stringliteral">&quot;Instances&quot;</span>);</div>
+<div class="line"><span class="lineno">   72</span> </div>
+<div class="line"><span class="lineno">   73</span>        <a class="code hl_variable" href="#a903207c799a648bf5742f5941465ed7c">disableOpt</a> = <a class="code hl_variable" href="#a7a695588c7946a1eeb547db4b69e1b44">instanceSc</a></div>
+<div class="line"><span class="lineno">   74</span>                         -&gt;add_flag_function(</div>
+<div class="line"><span class="lineno">   75</span>                             <span class="stringliteral">&quot;--disabled{true}&quot;</span>,</div>
+<div class="line"><span class="lineno">   76</span>                             [<span class="keyword">this</span>](std::size_t) {</div>
+<div class="line"><span class="lineno">   77</span>                                 <a class="code hl_function" href="classutils_1_1Config.html#a895744238727a62946b042a62ef99ca6">utils::Config::disabled</a>(<a class="code hl_variable" href="#a7a695588c7946a1eeb547db4b69e1b44">instanceSc</a>, <a class="code hl_variable" href="#a903207c799a648bf5742f5941465ed7c">disableOpt</a>-&gt;as&lt;<span class="keywordtype">bool</span>&gt;());</div>
+<div class="line"><span class="lineno">   78</span>                             },</div>
+<div class="line"><span class="lineno">   79</span>                             <span class="stringliteral">&quot;Disable this instance&quot;</span>)</div>
+<div class="line"><span class="lineno">   80</span>                         -&gt;multi_option_policy(CLI::MultiOptionPolicy::TakeLast)</div>
+<div class="line"><span class="lineno">   81</span>                         -&gt;trigger_on_parse()</div>
+<div class="line"><span class="lineno">   82</span>                         -&gt;default_str(<span class="stringliteral">&quot;false&quot;</span>)</div>
+<div class="line"><span class="lineno">   83</span>                         -&gt;type_name(<span class="stringliteral">&quot;bool&quot;</span>)</div>
+<div class="line"><span class="lineno">   84</span>                         -&gt;check(CLI::IsMember({<span class="stringliteral">&quot;true&quot;</span>, <span class="stringliteral">&quot;false&quot;</span>}))</div>
+<div class="line"><span class="lineno">   85</span>                         -&gt;group(<a class="code hl_variable" href="#a7a695588c7946a1eeb547db4b69e1b44">instanceSc</a>-&gt;get_formatter()-&gt;get_label(<span class="stringliteral">&quot;Persistent Options&quot;</span>));</div>
+<div class="line"><span class="lineno">   86</span>    }</div>
 <div class="ttc" id="aclassnet_1_1config_1_1ConfigInstance_html_a21ca5568aa45bd1bb91d2fa79687a9e2a3d27c95bfdbea691b250894d96852844"><div class="ttname"><a href="#a21ca5568aa45bd1bb91d2fa79687a9e2a3d27c95bfdbea691b250894d96852844">net::config::ConfigInstance::Role::SERVER</a></div><div class="ttdeci">@ SERVER</div><div class="ttdef"><b>Definition</b> <a href="ConfigInstance_8h_source.html#l00067">ConfigInstance.h:67</a></div></div>
-<div class="ttc" id="aclassnet_1_1config_1_1ConfigInstance_html_a7a695588c7946a1eeb547db4b69e1b44"><div class="ttname"><a href="#a7a695588c7946a1eeb547db4b69e1b44">net::config::ConfigInstance::instanceSc</a></div><div class="ttdeci">CLI::App * instanceSc</div><div class="ttdef"><b>Definition</b> <a href="ConfigInstance_8h_source.html#l00106">ConfigInstance.h:106</a></div></div>
-<div class="ttc" id="aclassnet_1_1config_1_1ConfigInstance_html_a903207c799a648bf5742f5941465ed7c"><div class="ttname"><a href="#a903207c799a648bf5742f5941465ed7c">net::config::ConfigInstance::disableOpt</a></div><div class="ttdeci">CLI::Option * disableOpt</div><div class="ttdef"><b>Definition</b> <a href="ConfigInstance_8h_source.html#l00107">ConfigInstance.h:107</a></div></div>
-<div class="ttc" id="aclassnet_1_1config_1_1ConfigInstance_html_a909cf1595a45032459773a412533cf14"><div class="ttname"><a href="#a909cf1595a45032459773a412533cf14">net::config::ConfigInstance::role</a></div><div class="ttdeci">Role role</div><div class="ttdef"><b>Definition</b> <a href="ConfigInstance_8h_source.html#l00104">ConfigInstance.h:104</a></div></div>
-<div class="ttc" id="aclassnet_1_1config_1_1ConfigInstance_html_afc45c33c68307d087a96e36039d832cc"><div class="ttname"><a href="#afc45c33c68307d087a96e36039d832cc">net::config::ConfigInstance::instanceName</a></div><div class="ttdeci">std::string instanceName</div><div class="ttdef"><b>Definition</b> <a href="ConfigInstance_8h_source.html#l00101">ConfigInstance.h:101</a></div></div>
-<div class="ttc" id="aclassutils_1_1Config_html_a895744238727a62946b042a62ef99ca6"><div class="ttname"><a href="classutils_1_1Config.html#a895744238727a62946b042a62ef99ca6">utils::Config::disabled</a></div><div class="ttdeci">static void disabled(CLI::App *instance, bool disabled=true)</div><div class="ttdef"><b>Definition</b> <a href="Config_8cpp_source.html#l00889">Config.cpp:889</a></div></div>
-<div class="ttc" id="aclassutils_1_1Config_html_a8feefa9dbb7e4381ad6b990bf1e711d0"><div class="ttname"><a href="classutils_1_1Config.html#a8feefa9dbb7e4381ad6b990bf1e711d0">utils::Config::addInstance</a></div><div class="ttdeci">static CLI::App * addInstance(const std::string &amp;name, const std::string &amp;description, const std::string &amp;group, bool final=false)</div><div class="ttdef"><b>Definition</b> <a href="Config_8cpp_source.html#l00736">Config.cpp:736</a></div></div>
+<div class="ttc" id="aclassnet_1_1config_1_1ConfigInstance_html_a7a695588c7946a1eeb547db4b69e1b44"><div class="ttname"><a href="#a7a695588c7946a1eeb547db4b69e1b44">net::config::ConfigInstance::instanceSc</a></div><div class="ttdeci">CLI::App * instanceSc</div><div class="ttdef"><b>Definition</b> <a href="ConfigInstance_8h_source.html#l00121">ConfigInstance.h:121</a></div></div>
+<div class="ttc" id="aclassnet_1_1config_1_1ConfigInstance_html_a903207c799a648bf5742f5941465ed7c"><div class="ttname"><a href="#a903207c799a648bf5742f5941465ed7c">net::config::ConfigInstance::disableOpt</a></div><div class="ttdeci">CLI::Option * disableOpt</div><div class="ttdef"><b>Definition</b> <a href="ConfigInstance_8h_source.html#l00122">ConfigInstance.h:122</a></div></div>
+<div class="ttc" id="aclassnet_1_1config_1_1ConfigInstance_html_a909cf1595a45032459773a412533cf14"><div class="ttname"><a href="#a909cf1595a45032459773a412533cf14">net::config::ConfigInstance::role</a></div><div class="ttdeci">Role role</div><div class="ttdef"><b>Definition</b> <a href="ConfigInstance_8h_source.html#l00119">ConfigInstance.h:119</a></div></div>
+<div class="ttc" id="aclassnet_1_1config_1_1ConfigInstance_html_afc45c33c68307d087a96e36039d832cc"><div class="ttname"><a href="#afc45c33c68307d087a96e36039d832cc">net::config::ConfigInstance::instanceName</a></div><div class="ttdeci">std::string instanceName</div><div class="ttdef"><b>Definition</b> <a href="ConfigInstance_8h_source.html#l00116">ConfigInstance.h:116</a></div></div>
+<div class="ttc" id="aclassutils_1_1Config_html_a895744238727a62946b042a62ef99ca6"><div class="ttname"><a href="classutils_1_1Config.html#a895744238727a62946b042a62ef99ca6">utils::Config::disabled</a></div><div class="ttdeci">static void disabled(CLI::App *instance, bool disabled=true)</div><div class="ttdef"><b>Definition</b> <a href="Config_8cpp_source.html#l00888">Config.cpp:888</a></div></div>
+<div class="ttc" id="aclassutils_1_1Config_html_ae4986697c7167257552c00ac17f9c20f"><div class="ttname"><a href="classutils_1_1Config.html#ae4986697c7167257552c00ac17f9c20f">utils::Config::newInstance</a></div><div class="ttdeci">static CLI::App * newInstance(std::shared_ptr&lt; CLI::App &gt; appWithPtr, const std::string &amp;group, bool final=false)</div><div class="ttdef"><b>Definition</b> <a href="Config_8cpp_source.html#l00736">Config.cpp:736</a></div></div>
+<div class="ttc" id="anamespacenet_1_1config_html_af56c62a370fe6f9386a7fe92ceb5759c"><div class="ttname"><a href="namespacenet_1_1config.html#af56c62a370fe6f9386a7fe92ceb5759c">net::config::Instance</a></div><div class="ttdeci">std::shared_ptr&lt; utils::AppWithPtr&lt; T &gt; &gt; Instance(const std::string &amp;name, const std::string &amp;description, T *section)</div><div class="ttdef"><b>Definition</b> <a href="ConfigInstanceAPI_8hpp_source.html#l00060">ConfigInstanceAPI.hpp:60</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Config_8cpp_source.html#l00736">utils::Config::addInstance()</a>, <a class="el" href="Config_8cpp_source.html#l00889">utils::Config::disabled()</a>, <a class="el" href="ConfigInstance_8h_source.html#l00107">disableOpt</a>, <a class="el" href="ConfigInstance_8h_source.html#l00101">instanceName</a>, <a class="el" href="ConfigInstance_8h_source.html#l00106">instanceSc</a>, <a class="el" href="ConfigInstance_8h_source.html#l00104">role</a>, and <a class="el" href="ConfigInstance_8h_source.html#l00067">SERVER</a>.</p>
+<p class="reference">References <a class="el" href="Config_8cpp_source.html#l00888">utils::Config::disabled()</a>, <a class="el" href="ConfigInstance_8h_source.html#l00122">disableOpt</a>, <a class="el" href="ConfigInstanceAPI_8hpp_source.html#l00060">net::config::Instance()</a>, <a class="el" href="ConfigInstance_8h_source.html#l00116">instanceName</a>, <a class="el" href="ConfigInstance_8h_source.html#l00121">instanceSc</a>, <a class="el" href="Config_8cpp_source.html#l00736">utils::Config::newInstance()</a>, <a class="el" href="ConfigInstance_8h_source.html#l00119">role</a>, and <a class="el" href="ConfigInstance_8h_source.html#l00067">SERVER</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="classnet_1_1config_1_1ConfigInstance_a7fd41c5db4865443c184508a4435f7aa_cgraph.svg" width="100%" height="419"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="classnet_1_1config_1_1ConfigInstance_a7fd41c5db4865443c184508a4435f7aa_cgraph.svg" width="100%" height="458"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -308,13 +305,13 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ConfigInstance_8cpp_source.html#l00107">107</a> of file <a class="el" href="ConfigInstance_8cpp_source.html">ConfigInstance.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  107</span>                                    {</div>
-<div class="line"><span class="lineno">  108</span>        <a class="code hl_function" href="classutils_1_1Config.html#a13edb691d21cd083408fbdebff91a450">utils::Config::removeInstance</a>(<a class="code hl_variable" href="#a7a695588c7946a1eeb547db4b69e1b44">instanceSc</a>);</div>
-<div class="line"><span class="lineno">  109</span>    }</div>
-<div class="ttc" id="aclassutils_1_1Config_html_a13edb691d21cd083408fbdebff91a450"><div class="ttname"><a href="classutils_1_1Config.html#a13edb691d21cd083408fbdebff91a450">utils::Config::removeInstance</a></div><div class="ttdeci">static bool removeInstance(CLI::App *instance)</div><div class="ttdef"><b>Definition</b> <a href="Config_8cpp_source.html#l00917">Config.cpp:917</a></div></div>
+<p class="definition">Definition at line <a class="el" href="ConfigInstance_8cpp_source.html#l00088">88</a> of file <a class="el" href="ConfigInstance_8cpp_source.html">ConfigInstance.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   88</span>                                    {</div>
+<div class="line"><span class="lineno">   89</span>        <a class="code hl_function" href="classutils_1_1Config.html#a13edb691d21cd083408fbdebff91a450">utils::Config::removeInstance</a>(<a class="code hl_variable" href="#a7a695588c7946a1eeb547db4b69e1b44">instanceSc</a>);</div>
+<div class="line"><span class="lineno">   90</span>    }</div>
+<div class="ttc" id="aclassutils_1_1Config_html_a13edb691d21cd083408fbdebff91a450"><div class="ttname"><a href="classutils_1_1Config.html#a13edb691d21cd083408fbdebff91a450">utils::Config::removeInstance</a></div><div class="ttdeci">static bool removeInstance(CLI::App *instance)</div><div class="ttdef"><b>Definition</b> <a href="Config_8cpp_source.html#l00916">Config.cpp:916</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ConfigInstance_8h_source.html#l00106">instanceSc</a>, and <a class="el" href="Config_8cpp_source.html#l00917">utils::Config::removeInstance()</a>.</p>
+<p class="reference">References <a class="el" href="ConfigInstance_8h_source.html#l00121">instanceSc</a>, and <a class="el" href="Config_8cpp_source.html#l00916">utils::Config::removeInstance()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -374,68 +371,80 @@ Here is the call graph for this function:</div>
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
-<a id="a00106763b2a084d8fcb01c37155ad5e3" name="a00106763b2a084d8fcb01c37155ad5e3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a00106763b2a084d8fcb01c37155ad5e3">&#9670;&#160;</a></span>addSection()</h2>
+<a id="a6b0c6a4b7b14fdb7787292781e7bd168" name="a6b0c6a4b7b14fdb7787292781e7bd168"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b0c6a4b7b14fdb7787292781e7bd168">&#9670;&#160;</a></span>addSection() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ConcreteConfigSection, typename... Args&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">ConcreteConfigSection * net::config::ConfigInstance::addSection </td>
+          <td>(</td>
+          <td class="paramtype">Args &amp;&amp;...</td>          <td class="paramname"><span class="paramname"><em>args</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="ConfigInstanceAPI_8hpp_source.html#l00079">79</a> of file <a class="el" href="ConfigInstanceAPI_8hpp_source.html">ConfigInstanceAPI.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   79</span>                                                                    {</div>
+<div class="line"><span class="lineno">   80</span>        <span class="keywordflow">return</span> <span class="keyword">dynamic_cast&lt;</span>ConcreteConfigSection*<span class="keyword">&gt;</span>(<a class="code hl_function" href="#a0b63ce6307b20589457d3e2359a15447">addSection</a>(std::make_shared&lt;ConcreteConfigSection&gt;(<span class="keyword">this</span>, std::forward&lt;Args&gt;(args)...)));</div>
+<div class="line"><span class="lineno">   81</span>    }</div>
+<div class="ttc" id="aclassnet_1_1config_1_1ConfigInstance_html_a0b63ce6307b20589457d3e2359a15447"><div class="ttname"><a href="#a0b63ce6307b20589457d3e2359a15447">net::config::ConfigInstance::addSection</a></div><div class="ttdeci">net::config::ConfigSection * addSection(std::shared_ptr&lt; net::config::ConfigSection &gt; &amp;&amp;configSection)</div><div class="ttdef"><b>Definition</b> <a href="ConfigInstance_8cpp_source.html#l00128">ConfigInstance.cpp:128</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a0b63ce6307b20589457d3e2359a15447" name="a0b63ce6307b20589457d3e2359a15447"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b63ce6307b20589457d3e2359a15447">&#9670;&#160;</a></span>addSection() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">CLI::App * net::config::ConfigInstance::addSection </td>
+          <td class="memname"><a class="el" href="classnet_1_1config_1_1ConfigSection.html">net::config::ConfigSection</a> * net::config::ConfigInstance::addSection </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classnet_1_1config_1_1ConfigSection.html">net::config::ConfigSection</a> &gt; &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>configSection</em></span></td><td>)</td>
           <td></td>
-          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>description</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>group</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;Sections&quot;</span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ConfigInstance_8cpp_source.html#l00123">123</a> of file <a class="el" href="ConfigInstance_8cpp_source.html">ConfigInstance.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  123</span>                                                                                                                  {</div>
-<div class="line"><span class="lineno">  124</span>        CLI::App* sectionSc = <a class="code hl_variable" href="#a7a695588c7946a1eeb547db4b69e1b44">instanceSc</a> <span class="comment">//</span></div>
-<div class="line"><span class="lineno">  125</span>                                  -&gt;add_subcommand(name, description)</div>
-<div class="line"><span class="lineno">  126</span>                                  -&gt;fallthrough()</div>
-<div class="line"><span class="lineno">  127</span>                                  -&gt;configurable(<span class="keyword">false</span>)</div>
-<div class="line"><span class="lineno">  128</span>                                  -&gt;allow_extras(<span class="keyword">false</span>)</div>
-<div class="line"><span class="lineno">  129</span>                                  -&gt;group(group)</div>
-<div class="line"><span class="lineno">  130</span>                                  -&gt;ignore_case(<span class="keyword">false</span>)</div>
-<div class="line"><span class="lineno">  131</span>                                  -&gt;disabled(this-&gt;<a class="code hl_variable" href="#afc45c33c68307d087a96e36039d832cc">instanceName</a>.empty() || name.empty());</div>
-<div class="line"><span class="lineno">  132</span> </div>
-<div class="line"><span class="lineno">  133</span>        sectionSc <span class="comment">//</span></div>
-<div class="line"><span class="lineno">  134</span>            -&gt;option_defaults()</div>
-<div class="line"><span class="lineno">  135</span>            -&gt;configurable(!sectionSc-&gt;get_disabled());</div>
-<div class="line"><span class="lineno">  136</span> </div>
-<div class="line"><span class="lineno">  137</span>        <span class="keywordflow">if</span> (!sectionSc-&gt;get_disabled()) {</div>
-<div class="line"><span class="lineno">  138</span>            <a class="code hl_function" href="classutils_1_1Config.html#a90e8e890cf5043d0ade8df401f30df0f">utils::Config::addStandardFlags</a>(sectionSc);</div>
-<div class="line"><span class="lineno">  139</span>            <a class="code hl_function" href="classutils_1_1Config.html#a6603086ea4f9eb8b5c85b06dcc3054f5">utils::Config::addSimpleHelp</a>(sectionSc);</div>
-<div class="line"><span class="lineno">  140</span>        }</div>
-<div class="line"><span class="lineno">  141</span> </div>
-<div class="line"><span class="lineno">  142</span>        <span class="keywordflow">return</span> sectionSc;</div>
-<div class="line"><span class="lineno">  143</span>    }</div>
-<div class="ttc" id="aclassutils_1_1Config_html_a6603086ea4f9eb8b5c85b06dcc3054f5"><div class="ttname"><a href="classutils_1_1Config.html#a6603086ea4f9eb8b5c85b06dcc3054f5">utils::Config::addSimpleHelp</a></div><div class="ttdeci">static CLI::App * addSimpleHelp(CLI::App *app)</div><div class="ttdef"><b>Definition</b> <a href="Config_8cpp_source.html#l00851">Config.cpp:851</a></div></div>
-<div class="ttc" id="aclassutils_1_1Config_html_a90e8e890cf5043d0ade8df401f30df0f"><div class="ttname"><a href="classutils_1_1Config.html#a90e8e890cf5043d0ade8df401f30df0f">utils::Config::addStandardFlags</a></div><div class="ttdeci">static CLI::App * addStandardFlags(CLI::App *app)</div><div class="ttdef"><b>Definition</b> <a href="Config_8cpp_source.html#l00771">Config.cpp:771</a></div></div>
+<p class="definition">Definition at line <a class="el" href="ConfigInstance_8cpp_source.html#l00128">128</a> of file <a class="el" href="ConfigInstance_8cpp_source.html">ConfigInstance.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  128</span>                                                                                                            {</div>
+<div class="line"><span class="lineno">  129</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#a3eca3043a997cb7ef50b335df6986fce">configSections</a>.emplace_back(configSection).get();</div>
+<div class="line"><span class="lineno">  130</span>    }</div>
+<div class="ttc" id="aclassnet_1_1config_1_1ConfigInstance_html_a3eca3043a997cb7ef50b335df6986fce"><div class="ttname"><a href="#a3eca3043a997cb7ef50b335df6986fce">net::config::ConfigInstance::configSections</a></div><div class="ttdeci">std::vector&lt; std::shared_ptr&lt; net::config::ConfigSection &gt; &gt; configSections</div><div class="ttdef"><b>Definition</b> <a href="ConfigInstance_8h_source.html#l00124">ConfigInstance.h:124</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Config_8cpp_source.html#l00851">utils::Config::addSimpleHelp()</a>, <a class="el" href="Config_8cpp_source.html#l00771">utils::Config::addStandardFlags()</a>, <a class="el" href="ConfigInstance_8h_source.html#l00101">instanceName</a>, and <a class="el" href="ConfigInstance_8h_source.html#l00106">instanceSc</a>.</p>
+<p class="reference">References <a class="el" href="ConfigInstance_8h_source.html#l00124">configSections</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ConfigSection_8cpp_source.html#l00078">net::config::ConfigSection::ConfigSection()</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="classnet_1_1config_1_1ConfigInstance_a00106763b2a084d8fcb01c37155ad5e3_cgraph.svg" width="100%" height="380"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="classnet_1_1config_1_1ConfigInstance_a00106763b2a084d8fcb01c37155ad5e3_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
+<a id="a6833456e0af9a7fdaad320414913b8fc" name="a6833456e0af9a7fdaad320414913b8fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6833456e0af9a7fdaad320414913b8fc">&#9670;&#160;</a></span>configurable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void net::config::ConfigInstance::configurable </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>configurable</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="ConfigInstance_8cpp_source.html#l00167">167</a> of file <a class="el" href="ConfigInstance_8cpp_source.html">ConfigInstance.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  167</span>                                                       {</div>
+<div class="line"><span class="lineno">  168</span>        <a class="code hl_variable" href="#a903207c799a648bf5742f5941465ed7c">disableOpt</a>-&gt;configurable(<a class="code hl_function" href="#a6833456e0af9a7fdaad320414913b8fc">configurable</a>);</div>
+<div class="line"><span class="lineno">  169</span> </div>
+<div class="line"><span class="lineno">  170</span>        <a class="code hl_variable" href="#a903207c799a648bf5742f5941465ed7c">disableOpt</a>-&gt;group(<a class="code hl_variable" href="#a7a695588c7946a1eeb547db4b69e1b44">instanceSc</a>-&gt;get_formatter()-&gt;get_label(<a class="code hl_function" href="#a6833456e0af9a7fdaad320414913b8fc">configurable</a> ? <span class="stringliteral">&quot;Persistent Options&quot;</span> : <span class="stringliteral">&quot;Nonpersistent Options&quot;</span>));</div>
+<div class="line"><span class="lineno">  171</span>    }</div>
+<div class="ttc" id="aclassnet_1_1config_1_1ConfigInstance_html_a6833456e0af9a7fdaad320414913b8fc"><div class="ttname"><a href="#a6833456e0af9a7fdaad320414913b8fc">net::config::ConfigInstance::configurable</a></div><div class="ttdeci">void configurable(bool configurable=true)</div><div class="ttdef"><b>Definition</b> <a href="ConfigInstance_8cpp_source.html#l00167">ConfigInstance.cpp:167</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ConfigInstance_8h_source.html#l00122">disableOpt</a>, and <a class="el" href="ConfigInstance_8h_source.html#l00121">instanceSc</a>.</p>
 
 </div>
 </div>
@@ -454,12 +463,12 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ConfigInstance_8cpp_source.html#l00172">172</a> of file <a class="el" href="ConfigInstance_8cpp_source.html">ConfigInstance.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  172</span>                                      {</div>
-<div class="line"><span class="lineno">  173</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#a7a695588c7946a1eeb547db4b69e1b44">instanceSc</a>;</div>
-<div class="line"><span class="lineno">  174</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ConfigInstance_8cpp_source.html#l00163">163</a> of file <a class="el" href="ConfigInstance_8cpp_source.html">ConfigInstance.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  163</span>                                      {</div>
+<div class="line"><span class="lineno">  164</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#a7a695588c7946a1eeb547db4b69e1b44">instanceSc</a>;</div>
+<div class="line"><span class="lineno">  165</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ConfigInstance_8h_source.html#l00106">instanceSc</a>.</p>
+<p class="reference">References <a class="el" href="ConfigInstance_8h_source.html#l00121">instanceSc</a>.</p>
 
 </div>
 </div>
@@ -478,19 +487,19 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ConfigInstance_8cpp_source.html#l00197">197</a> of file <a class="el" href="ConfigInstance_8cpp_source.html">ConfigInstance.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  197</span>                                           {</div>
-<div class="line"><span class="lineno">  198</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#a903207c799a648bf5742f5941465ed7c">disableOpt</a> <span class="comment">//</span></div>
-<div class="line"><span class="lineno">  199</span>            -&gt;as&lt;<span class="keywordtype">bool</span>&gt;();</div>
-<div class="line"><span class="lineno">  200</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ConfigInstance_8cpp_source.html#l00183">183</a> of file <a class="el" href="ConfigInstance_8cpp_source.html">ConfigInstance.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  183</span>                                           {</div>
+<div class="line"><span class="lineno">  184</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#a903207c799a648bf5742f5941465ed7c">disableOpt</a> <span class="comment">//</span></div>
+<div class="line"><span class="lineno">  185</span>            -&gt;as&lt;<span class="keywordtype">bool</span>&gt;();</div>
+<div class="line"><span class="lineno">  186</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ConfigInstance_8h_source.html#l00107">disableOpt</a>.</p>
+<p class="reference">References <a class="el" href="ConfigInstance_8h_source.html#l00122">disableOpt</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ConfigInstance_8cpp_source.html#l00145">required()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ConfigInstance_8cpp_source.html#l00132">required()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="classnet_1_1config_1_1ConfigInstance_a90d65c7f0497bb5636c7efef37bcfd1f_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="classnet_1_1config_1_1ConfigInstance_a90d65c7f0497bb5636c7efef37bcfd1f_icgraph.svg" width="100%" height="394"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -510,15 +519,15 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ConfigInstance_8cpp_source.html#l00115">115</a> of file <a class="el" href="ConfigInstance_8cpp_source.html">ConfigInstance.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  115</span>                                                           {</div>
-<div class="line"><span class="lineno">  116</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#afc45c33c68307d087a96e36039d832cc">instanceName</a>.empty() ? <a class="code hl_variable" href="#a89cea1ed580b431417a98cdb1e3bc94f">nameAnonymous</a> : <a class="code hl_variable" href="#afc45c33c68307d087a96e36039d832cc">instanceName</a>;</div>
-<div class="line"><span class="lineno">  117</span>    }</div>
-<div class="ttc" id="aclassnet_1_1config_1_1ConfigInstance_html_a89cea1ed580b431417a98cdb1e3bc94f"><div class="ttname"><a href="#a89cea1ed580b431417a98cdb1e3bc94f">net::config::ConfigInstance::nameAnonymous</a></div><div class="ttdeci">static const std::string nameAnonymous</div><div class="ttdef"><b>Definition</b> <a href="ConfigInstance_8h_source.html#l00102">ConfigInstance.h:102</a></div></div>
+<p class="definition">Definition at line <a class="el" href="ConfigInstance_8cpp_source.html#l00096">96</a> of file <a class="el" href="ConfigInstance_8cpp_source.html">ConfigInstance.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   96</span>                                                           {</div>
+<div class="line"><span class="lineno">   97</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#afc45c33c68307d087a96e36039d832cc">instanceName</a>.empty() ? <a class="code hl_variable" href="#a89cea1ed580b431417a98cdb1e3bc94f">nameAnonymous</a> : <a class="code hl_variable" href="#afc45c33c68307d087a96e36039d832cc">instanceName</a>;</div>
+<div class="line"><span class="lineno">   98</span>    }</div>
+<div class="ttc" id="aclassnet_1_1config_1_1ConfigInstance_html_a89cea1ed580b431417a98cdb1e3bc94f"><div class="ttname"><a href="#a89cea1ed580b431417a98cdb1e3bc94f">net::config::ConfigInstance::nameAnonymous</a></div><div class="ttdeci">static const std::string nameAnonymous</div><div class="ttdef"><b>Definition</b> <a href="ConfigInstance_8h_source.html#l00117">ConfigInstance.h:117</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ConfigInstance_8h_source.html#l00101">instanceName</a>, and <a class="el" href="ConfigInstance_8h_source.html#l00102">nameAnonymous</a>.</p>
+<p class="reference">References <a class="el" href="ConfigInstance_8h_source.html#l00116">instanceName</a>, and <a class="el" href="ConfigInstance_8h_source.html#l00117">nameAnonymous</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ConfigSection_8cpp_source.html#l00109">net::config::ConfigSection::addOption()</a>, <a class="el" href="un_2config_2ConfigAddress_8cpp_source.html#l00062">net::un::config::ConfigAddress&lt; ConfigAddressTypeT &gt;::ConfigAddress()</a>, <a class="el" href="ConfigSection_8cpp_source.html#l00078">net::config::ConfigSection::ConfigSection()</a>, <a class="el" href="httplowlevelclient_8cpp_source.html#l00148">tls::getClient()</a>, <a class="el" href="httplowlevelclient_8cpp_source.html#l00257">legacy::getLegacyClient()</a>, <a class="el" href="tls_2ConfigSocketServer_8hpp_source.html#l00162">net::config::stream::tls::ConfigSocketServer&lt; ConfigSocketServerBaseT &gt;::getSniCtx()</a>, <a class="el" href="tls_2ConfigSocketClient_8hpp_source.html#l00065">net::config::stream::tls::ConfigSocketClient&lt; ConfigSocketClientBaseT &gt;::getSslCtx()</a>, <a class="el" href="tls_2ConfigSocketServer_8hpp_source.html#l00078">net::config::stream::tls::ConfigSocketServer&lt; ConfigSocketServerBaseT &gt;::getSslCtx()</a>, <a class="el" href="httplowlevelclient_8cpp_source.html#l00310">main()</a>, and <a class="el" href="SocketConnection_8cpp_source.html#l00062">core::socket::stream::SocketConnection::SocketConnection()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ConfigSection_8cpp_source.html#l00111">net::config::ConfigSection::addOption()</a>, <a class="el" href="un_2config_2ConfigAddress_8cpp_source.html#l00062">net::un::config::ConfigAddressReverse&lt; net::config::ConfigAddressReverse &gt;::ConfigAddressReverse()</a>, <a class="el" href="ConfigSection_8hpp_source.html#l00099">net::config::ConfigSection::ConfigSection()</a>, <a class="el" href="httplowlevelclient_8cpp_source.html#l00148">tls::getClient()</a>, <a class="el" href="httplowlevelclient_8cpp_source.html#l00257">legacy::getLegacyClient()</a>, <a class="el" href="tls_2ConfigSocketServer_8hpp_source.html#l00162">net::config::stream::tls::ConfigSocketServer&lt; ConfigSocketServerBaseT &gt;::getSniCtx()</a>, <a class="el" href="tls_2ConfigSocketClient_8hpp_source.html#l00065">net::config::stream::tls::ConfigSocketClient&lt; ConfigSocketClientBaseT &gt;::getSslCtx()</a>, <a class="el" href="tls_2ConfigSocketServer_8hpp_source.html#l00078">net::config::stream::tls::ConfigSocketServer&lt; ConfigSocketServerBaseT &gt;::getSslCtx()</a>, <a class="el" href="httplowlevelclient_8cpp_source.html#l00310">main()</a>, and <a class="el" href="SocketConnection_8cpp_source.html#l00062">core::socket::stream::SocketConnection::SocketConnection()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -542,13 +551,13 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ConfigInstance_8cpp_source.html#l00168">168</a> of file <a class="el" href="ConfigInstance_8cpp_source.html">ConfigInstance.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  168</span>                                           {</div>
-<div class="line"><span class="lineno">  169</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#a3c312e8ce5b01a90f60e22369393e099">requiredCount</a> &gt; 0;</div>
-<div class="line"><span class="lineno">  170</span>    }</div>
-<div class="ttc" id="aclassnet_1_1config_1_1ConfigInstance_html_a3c312e8ce5b01a90f60e22369393e099"><div class="ttname"><a href="#a3c312e8ce5b01a90f60e22369393e099">net::config::ConfigInstance::requiredCount</a></div><div class="ttdeci">uint8_t requiredCount</div><div class="ttdef"><b>Definition</b> <a href="ConfigInstance_8h_source.html#l00099">ConfigInstance.h:99</a></div></div>
+<p class="definition">Definition at line <a class="el" href="ConfigInstance_8cpp_source.html#l00159">159</a> of file <a class="el" href="ConfigInstance_8cpp_source.html">ConfigInstance.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  159</span>                                           {</div>
+<div class="line"><span class="lineno">  160</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#a3c312e8ce5b01a90f60e22369393e099">requiredCount</a> &gt; 0;</div>
+<div class="line"><span class="lineno">  161</span>    }</div>
+<div class="ttc" id="aclassnet_1_1config_1_1ConfigInstance_html_a3c312e8ce5b01a90f60e22369393e099"><div class="ttname"><a href="#a3c312e8ce5b01a90f60e22369393e099">net::config::ConfigInstance::requiredCount</a></div><div class="ttdeci">uint8_t requiredCount</div><div class="ttdef"><b>Definition</b> <a href="ConfigInstance_8h_source.html#l00114">ConfigInstance.h:114</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ConfigInstance_8h_source.html#l00099">requiredCount</a>.</p>
+<p class="reference">References <a class="el" href="ConfigInstance_8h_source.html#l00114">requiredCount</a>.</p>
 
 </div>
 </div>
@@ -567,63 +576,100 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ConfigInstance_8cpp_source.html#l00111">111</a> of file <a class="el" href="ConfigInstance_8cpp_source.html">ConfigInstance.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  111</span>                                               {</div>
-<div class="line"><span class="lineno">  112</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#a909cf1595a45032459773a412533cf14">role</a>;</div>
-<div class="line"><span class="lineno">  113</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ConfigInstance_8cpp_source.html#l00092">92</a> of file <a class="el" href="ConfigInstance_8cpp_source.html">ConfigInstance.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   92</span>                                               {</div>
+<div class="line"><span class="lineno">   93</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#a909cf1595a45032459773a412533cf14">role</a>;</div>
+<div class="line"><span class="lineno">   94</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ConfigInstance_8h_source.html#l00104">role</a>.</p>
+<p class="reference">References <a class="el" href="ConfigInstance_8h_source.html#l00119">role</a>.</p>
 
 </div>
 </div>
-<a id="a01536703bcccfa6594ed7b89c5a842eb" name="a01536703bcccfa6594ed7b89c5a842eb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a01536703bcccfa6594ed7b89c5a842eb">&#9670;&#160;</a></span>getSection()</h2>
+<a id="a9d691806050868326f02eed0583e2a4c" name="a9d691806050868326f02eed0583e2a4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d691806050868326f02eed0583e2a4c">&#9670;&#160;</a></span>getSection() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename SectionTypeT&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">CLI::App * net::config::ConfigInstance::getSection </td>
+          <td class="memname">SectionTypeT * net::config::ConfigInstance::getSection </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>onlyGot</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>recursive</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span>&#160;) const</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ConfigInstance_8cpp_source.html#l00176">176</a> of file <a class="el" href="ConfigInstance_8cpp_source.html">ConfigInstance.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  176</span>                                                                                                {</div>
-<div class="line"><span class="lineno">  177</span>        CLI::App* resultSc = <span class="keyword">nullptr</span>;</div>
-<div class="line"><span class="lineno">  178</span> </div>
-<div class="line"><span class="lineno">  179</span>        CLI::App* sectionSc = <a class="code hl_variable" href="#a7a695588c7946a1eeb547db4b69e1b44">instanceSc</a>-&gt;get_subcommand_no_throw(name);</div>
-<div class="line"><span class="lineno">  180</span>        CLI::App* parentSectionSc = <a class="code hl_variable" href="#a7a695588c7946a1eeb547db4b69e1b44">instanceSc</a>-&gt;get_parent()-&gt;get_subcommand_no_throw(name);</div>
-<div class="line"><span class="lineno">  181</span> </div>
-<div class="line"><span class="lineno">  182</span>        <span class="keywordflow">if</span> (sectionSc != <span class="keyword">nullptr</span> &amp;&amp; (sectionSc-&gt;count_all() &gt; 0 || !onlyGot)) {</div>
-<div class="line"><span class="lineno">  183</span>            resultSc = sectionSc;</div>
-<div class="line"><span class="lineno">  184</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (recursive &amp;&amp; parentSectionSc != <span class="keyword">nullptr</span> &amp;&amp; (parentSectionSc-&gt;count_all() &gt; 0 || !onlyGot)) {</div>
-<div class="line"><span class="lineno">  185</span>            resultSc = parentSectionSc;</div>
-<div class="line"><span class="lineno">  186</span>        }</div>
-<div class="line"><span class="lineno">  187</span> </div>
-<div class="line"><span class="lineno">  188</span>        <span class="keywordflow">return</span> resultSc;</div>
-<div class="line"><span class="lineno">  189</span>    }</div>
-</div><!-- fragment -->
-<p class="reference">References <a class="el" href="ConfigInstance_8h_source.html#l00106">instanceSc</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="ConfigSection_8cpp_source.html#l00078">net::config::ConfigSection::ConfigSection()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="web_2http_2client_2SocketContextFactory_8cpp_source.html#l00063">web::http::client::SocketContextFactory::create()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="classnet_1_1config_1_1ConfigInstance_a01536703bcccfa6594ed7b89c5a842eb_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classnet_1_1config_1_1ConfigInstance_a9d691806050868326f02eed0583e2a4c_icgraph.svg" width="418" height="72"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
+
+</div>
+</div>
+<a id="a14d36acd2ce9a0ec6248986bde9fb41e" name="a14d36acd2ce9a0ec6248986bde9fb41e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14d36acd2ce9a0ec6248986bde9fb41e">&#9670;&#160;</a></span>getSection() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename SectionType&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">SectionType * net::config::ConfigInstance::getSection </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="ConfigInstanceAPI_8hpp_source.html#l00071">71</a> of file <a class="el" href="ConfigInstanceAPI_8hpp_source.html">ConfigInstanceAPI.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   71</span>                                                  {</div>
+<div class="line"><span class="lineno">   72</span>        utils::AppWithPtr&lt;SectionType&gt;* sectionApp =</div>
+<div class="line"><span class="lineno">   73</span>            <span class="keyword">dynamic_cast&lt;</span>utils::AppWithPtr&lt;SectionType&gt;*<span class="keyword">&gt;</span>(<a class="code hl_variable" href="#a7a695588c7946a1eeb547db4b69e1b44">instanceSc</a>-&gt;get_subcommand_no_throw(std::string(SectionType::name)));</div>
+<div class="line"><span class="lineno">   74</span> </div>
+<div class="line"><span class="lineno">   75</span>        <span class="keywordflow">return</span> sectionApp != <span class="keyword">nullptr</span> ? sectionApp-&gt;<a class="code hl_function" href="structutils_1_1AppWithPtr.html#a1155c16e1bcc2e33fbf2cebe33c40300">getPtr</a>() : <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">   76</span>    }</div>
+<div class="ttc" id="astructutils_1_1AppWithPtr_html_a1155c16e1bcc2e33fbf2cebe33c40300"><div class="ttname"><a href="structutils_1_1AppWithPtr.html#a1155c16e1bcc2e33fbf2cebe33c40300">utils::AppWithPtr::getPtr</a></div><div class="ttdeci">const T * getPtr() const</div><div class="ttdef"><b>Definition</b> <a href="ConfigApp_8h_source.html#l00103">ConfigApp.h:103</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ConfigInstance_8h_source.html#l00121">instanceSc</a>.</p>
+
+</div>
+</div>
+<a id="af35a7959d32a5af0e1c0f35d981d87a0" name="af35a7959d32a5af0e1c0f35d981d87a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af35a7959d32a5af0e1c0f35d981d87a0">&#9670;&#160;</a></span>getSection() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const CLI::App * net::config::ConfigInstance::getSection </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="ConfigInstance_8cpp_source.html#l00173">173</a> of file <a class="el" href="ConfigInstance_8cpp_source.html">ConfigInstance.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  173</span>                                                                        {</div>
+<div class="line"><span class="lineno">  174</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#a7a695588c7946a1eeb547db4b69e1b44">instanceSc</a>-&gt;get_subcommand_no_throw(name);</div>
+<div class="line"><span class="lineno">  175</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ConfigInstance_8h_source.html#l00121">instanceSc</a>.</p>
 
 </div>
 </div>
@@ -646,14 +692,76 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ConfigInstance_8cpp_source.html#l00191">191</a> of file <a class="el" href="ConfigInstance_8cpp_source.html">ConfigInstance.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  191</span>                                                                               {</div>
-<div class="line"><span class="lineno">  192</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#a7a695588c7946a1eeb547db4b69e1b44">instanceSc</a> <span class="comment">//</span></div>
-<div class="line"><span class="lineno">  193</span>                   -&gt;got_subcommand(name) ||</div>
-<div class="line"><span class="lineno">  194</span>               (recursive &amp;&amp; <a class="code hl_variable" href="#a7a695588c7946a1eeb547db4b69e1b44">instanceSc</a>-&gt;get_parent()-&gt;got_subcommand(name));</div>
-<div class="line"><span class="lineno">  195</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ConfigInstance_8cpp_source.html#l00177">177</a> of file <a class="el" href="ConfigInstance_8cpp_source.html">ConfigInstance.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  177</span>                                                                               {</div>
+<div class="line"><span class="lineno">  178</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#a7a695588c7946a1eeb547db4b69e1b44">instanceSc</a> <span class="comment">//</span></div>
+<div class="line"><span class="lineno">  179</span>                   -&gt;got_subcommand(name) ||</div>
+<div class="line"><span class="lineno">  180</span>               (recursive &amp;&amp; <a class="code hl_variable" href="#a7a695588c7946a1eeb547db4b69e1b44">instanceSc</a>-&gt;get_parent()-&gt;got_subcommand(name));</div>
+<div class="line"><span class="lineno">  181</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ConfigInstance_8h_source.html#l00106">instanceSc</a>.</p>
+<p class="reference">References <a class="el" href="ConfigInstance_8h_source.html#l00121">instanceSc</a>.</p>
+
+</div>
+</div>
+<a id="a8218ff6d31d4641772933b5773f304c1" name="a8218ff6d31d4641772933b5773f304c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8218ff6d31d4641772933b5773f304c1">&#9670;&#160;</a></span>newSection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CLI::App * net::config::ConfigInstance::newSection </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; CLI::App &gt;</td>          <td class="paramname"><span class="paramname"><em>appWithPtr</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>group</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="ConfigInstance_8cpp_source.html#l00104">104</a> of file <a class="el" href="ConfigInstance_8cpp_source.html">ConfigInstance.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  104</span>                                                                                               {</div>
+<div class="line"><span class="lineno">  105</span>        CLI::App* sectionSc = <a class="code hl_variable" href="#a7a695588c7946a1eeb547db4b69e1b44">instanceSc</a>-&gt;add_subcommand(appWithPtr)</div>
+<div class="line"><span class="lineno">  106</span>                                  -&gt;fallthrough()</div>
+<div class="line"><span class="lineno">  107</span>                                  -&gt;configurable(<span class="keyword">false</span>)</div>
+<div class="line"><span class="lineno">  108</span>                                  -&gt;allow_extras(<span class="keyword">false</span>)</div>
+<div class="line"><span class="lineno">  109</span>                                  -&gt;allow_config_extras()</div>
+<div class="line"><span class="lineno">  110</span>                                  -&gt;group(group)</div>
+<div class="line"><span class="lineno">  111</span>                                  -&gt;ignore_case(<span class="keyword">false</span>)</div>
+<div class="line"><span class="lineno">  112</span>                                  -&gt;disabled(appWithPtr-&gt;get_name().empty())</div>
+<div class="line"><span class="lineno">  113</span>                                  -&gt;formatter(<a class="code hl_variable" href="#a7a695588c7946a1eeb547db4b69e1b44">instanceSc</a>-&gt;get_formatter())</div>
+<div class="line"><span class="lineno">  114</span>                                  -&gt;config_formatter(<a class="code hl_variable" href="#a7a695588c7946a1eeb547db4b69e1b44">instanceSc</a>-&gt;get_config_formatter());</div>
+<div class="line"><span class="lineno">  115</span> </div>
+<div class="line"><span class="lineno">  116</span>        sectionSc <span class="comment">//</span></div>
+<div class="line"><span class="lineno">  117</span>            -&gt;option_defaults()</div>
+<div class="line"><span class="lineno">  118</span>            -&gt;configurable(!sectionSc-&gt;get_disabled());</div>
+<div class="line"><span class="lineno">  119</span> </div>
+<div class="line"><span class="lineno">  120</span>        <span class="keywordflow">if</span> (!sectionSc-&gt;get_disabled()) {</div>
+<div class="line"><span class="lineno">  121</span>            <a class="code hl_function" href="classutils_1_1Config.html#a90e8e890cf5043d0ade8df401f30df0f">utils::Config::addStandardFlags</a>(sectionSc);</div>
+<div class="line"><span class="lineno">  122</span>            <a class="code hl_function" href="classutils_1_1Config.html#a6603086ea4f9eb8b5c85b06dcc3054f5">utils::Config::addSimpleHelp</a>(sectionSc);</div>
+<div class="line"><span class="lineno">  123</span>        }</div>
+<div class="line"><span class="lineno">  124</span> </div>
+<div class="line"><span class="lineno">  125</span>        <span class="keywordflow">return</span> sectionSc;</div>
+<div class="line"><span class="lineno">  126</span>    }</div>
+<div class="ttc" id="aclassutils_1_1Config_html_a6603086ea4f9eb8b5c85b06dcc3054f5"><div class="ttname"><a href="classutils_1_1Config.html#a6603086ea4f9eb8b5c85b06dcc3054f5">utils::Config::addSimpleHelp</a></div><div class="ttdeci">static CLI::App * addSimpleHelp(CLI::App *app)</div><div class="ttdef"><b>Definition</b> <a href="Config_8cpp_source.html#l00850">Config.cpp:850</a></div></div>
+<div class="ttc" id="aclassutils_1_1Config_html_a90e8e890cf5043d0ade8df401f30df0f"><div class="ttname"><a href="classutils_1_1Config.html#a90e8e890cf5043d0ade8df401f30df0f">utils::Config::addStandardFlags</a></div><div class="ttdeci">static CLI::App * addStandardFlags(CLI::App *app)</div><div class="ttdef"><b>Definition</b> <a href="Config_8cpp_source.html#l00770">Config.cpp:770</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Config_8cpp_source.html#l00850">utils::Config::addSimpleHelp()</a>, <a class="el" href="Config_8cpp_source.html#l00770">utils::Config::addStandardFlags()</a>, and <a class="el" href="ConfigInstance_8h_source.html#l00121">instanceSc</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ConfigSection_8hpp_source.html#l00099">net::config::ConfigSection::ConfigSection()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="classnet_1_1config_1_1ConfigInstance_a8218ff6d31d4641772933b5773f304c1_cgraph.svg" width="100%" height="380"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="classnet_1_1config_1_1ConfigInstance_a8218ff6d31d4641772933b5773f304c1_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
 
 </div>
 </div>
@@ -707,8 +815,49 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a id="accc65978a2ec93df27c740cc325f2345" name="accc65978a2ec93df27c740cc325f2345"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#accc65978a2ec93df27c740cc325f2345">&#9670;&#160;</a></span>required() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void net::config::ConfigInstance::required </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>required</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="ConfigInstance_8cpp_source.html#l00132">132</a> of file <a class="el" href="ConfigInstance_8cpp_source.html">ConfigInstance.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  132</span>                                               {</div>
+<div class="line"><span class="lineno">  133</span>        <span class="keywordflow">if</span> (!<a class="code hl_function" href="#a90d65c7f0497bb5636c7efef37bcfd1f">getDisabled</a>()) {</div>
+<div class="line"><span class="lineno">  134</span>            <a class="code hl_function" href="classutils_1_1Config.html#aa4d75cb6e191e92ca0f7ea6245343552">utils::Config::required</a>(<a class="code hl_variable" href="#a7a695588c7946a1eeb547db4b69e1b44">instanceSc</a>, <a class="code hl_function" href="#accc65978a2ec93df27c740cc325f2345">required</a>);</div>
+<div class="line"><span class="lineno">  135</span>        }</div>
+<div class="line"><span class="lineno">  136</span>    }</div>
+<div class="ttc" id="aclassnet_1_1config_1_1ConfigInstance_html_a90d65c7f0497bb5636c7efef37bcfd1f"><div class="ttname"><a href="#a90d65c7f0497bb5636c7efef37bcfd1f">net::config::ConfigInstance::getDisabled</a></div><div class="ttdeci">bool getDisabled() const</div><div class="ttdef"><b>Definition</b> <a href="ConfigInstance_8cpp_source.html#l00183">ConfigInstance.cpp:183</a></div></div>
+<div class="ttc" id="aclassnet_1_1config_1_1ConfigInstance_html_accc65978a2ec93df27c740cc325f2345"><div class="ttname"><a href="#accc65978a2ec93df27c740cc325f2345">net::config::ConfigInstance::required</a></div><div class="ttdeci">void required(bool required=true)</div><div class="ttdef"><b>Definition</b> <a href="ConfigInstance_8cpp_source.html#l00132">ConfigInstance.cpp:132</a></div></div>
+<div class="ttc" id="aclassutils_1_1Config_html_aa4d75cb6e191e92ca0f7ea6245343552"><div class="ttname"><a href="classutils_1_1Config.html#aa4d75cb6e191e92ca0f7ea6245343552">utils::Config::required</a></div><div class="ttdeci">static void required(CLI::App *instance, bool required=true)</div><div class="ttdef"><b>Definition</b> <a href="Config_8cpp_source.html#l00865">Config.cpp:865</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ConfigInstance_8cpp_source.html#l00183">getDisabled()</a>, <a class="el" href="ConfigInstance_8h_source.html#l00121">instanceSc</a>, and <a class="el" href="Config_8cpp_source.html#l00865">utils::Config::required()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ConfigInstance_8cpp_source.html#l00138">required()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classnet_1_1config_1_1ConfigInstance_accc65978a2ec93df27c740cc325f2345_cgraph.svg" width="450" height="107"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="classnet_1_1config_1_1ConfigInstance_accc65978a2ec93df27c740cc325f2345_icgraph.svg" width="100%" height="394"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
 <a id="afc1c3ec014ddd8cc8a08113feed00fe5" name="afc1c3ec014ddd8cc8a08113feed00fe5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afc1c3ec014ddd8cc8a08113feed00fe5">&#9670;&#160;</a></span>required()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#afc1c3ec014ddd8cc8a08113feed00fe5">&#9670;&#160;</a></span>required() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -726,44 +875,40 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ConfigInstance_8cpp_source.html#l00145">145</a> of file <a class="el" href="ConfigInstance_8cpp_source.html">ConfigInstance.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  145</span>                                                           {</div>
-<div class="line"><span class="lineno">  146</span>        <span class="keywordflow">if</span> (req != section-&gt;get_required()) {</div>
-<div class="line"><span class="lineno">  147</span>            <span class="keywordflow">if</span> (req) {</div>
-<div class="line"><span class="lineno">  148</span>                ++<a class="code hl_variable" href="#a3c312e8ce5b01a90f60e22369393e099">requiredCount</a>;</div>
-<div class="line"><span class="lineno">  149</span>                <a class="code hl_variable" href="#a7a695588c7946a1eeb547db4b69e1b44">instanceSc</a> <span class="comment">//</span></div>
-<div class="line"><span class="lineno">  150</span>                    -&gt;needs(section);</div>
-<div class="line"><span class="lineno">  151</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  152</span>                --<a class="code hl_variable" href="#a3c312e8ce5b01a90f60e22369393e099">requiredCount</a>;</div>
-<div class="line"><span class="lineno">  153</span>                <a class="code hl_variable" href="#a7a695588c7946a1eeb547db4b69e1b44">instanceSc</a> <span class="comment">//</span></div>
-<div class="line"><span class="lineno">  154</span>                    -&gt;remove_needs(section);</div>
-<div class="line"><span class="lineno">  155</span>            }</div>
-<div class="line"><span class="lineno">  156</span> </div>
-<div class="line"><span class="lineno">  157</span>            section <span class="comment">//</span></div>
-<div class="line"><span class="lineno">  158</span>                -&gt;required(req);</div>
-<div class="line"><span class="lineno">  159</span>            section <span class="comment">//</span></div>
-<div class="line"><span class="lineno">  160</span>                -&gt;ignore_case(req);</div>
-<div class="line"><span class="lineno">  161</span> </div>
-<div class="line"><span class="lineno">  162</span>            <span class="keywordflow">if</span> (!<a class="code hl_function" href="#a90d65c7f0497bb5636c7efef37bcfd1f">getDisabled</a>()) {</div>
-<div class="line"><span class="lineno">  163</span>                <a class="code hl_function" href="classutils_1_1Config.html#aa4d75cb6e191e92ca0f7ea6245343552">utils::Config::required</a>(<a class="code hl_variable" href="#a7a695588c7946a1eeb547db4b69e1b44">instanceSc</a>, <a class="code hl_variable" href="#a3c312e8ce5b01a90f60e22369393e099">requiredCount</a> &gt; 0);</div>
-<div class="line"><span class="lineno">  164</span>            }</div>
-<div class="line"><span class="lineno">  165</span>        }</div>
-<div class="line"><span class="lineno">  166</span>    }</div>
-<div class="ttc" id="aclassnet_1_1config_1_1ConfigInstance_html_a90d65c7f0497bb5636c7efef37bcfd1f"><div class="ttname"><a href="#a90d65c7f0497bb5636c7efef37bcfd1f">net::config::ConfigInstance::getDisabled</a></div><div class="ttdeci">bool getDisabled() const</div><div class="ttdef"><b>Definition</b> <a href="ConfigInstance_8cpp_source.html#l00197">ConfigInstance.cpp:197</a></div></div>
-<div class="ttc" id="aclassutils_1_1Config_html_aa4d75cb6e191e92ca0f7ea6245343552"><div class="ttname"><a href="classutils_1_1Config.html#aa4d75cb6e191e92ca0f7ea6245343552">utils::Config::required</a></div><div class="ttdeci">static void required(CLI::App *instance, bool required=true)</div><div class="ttdef"><b>Definition</b> <a href="Config_8cpp_source.html#l00866">Config.cpp:866</a></div></div>
+<p class="definition">Definition at line <a class="el" href="ConfigInstance_8cpp_source.html#l00138">138</a> of file <a class="el" href="ConfigInstance_8cpp_source.html">ConfigInstance.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  138</span>                                                           {</div>
+<div class="line"><span class="lineno">  139</span>        <span class="keywordflow">if</span> (req != section-&gt;get_required()) {</div>
+<div class="line"><span class="lineno">  140</span>            <span class="keywordflow">if</span> (req) {</div>
+<div class="line"><span class="lineno">  141</span>                ++<a class="code hl_variable" href="#a3c312e8ce5b01a90f60e22369393e099">requiredCount</a>;</div>
+<div class="line"><span class="lineno">  142</span>                <a class="code hl_variable" href="#a7a695588c7946a1eeb547db4b69e1b44">instanceSc</a> <span class="comment">//</span></div>
+<div class="line"><span class="lineno">  143</span>                    -&gt;needs(section);</div>
+<div class="line"><span class="lineno">  144</span>            } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  145</span>                --<a class="code hl_variable" href="#a3c312e8ce5b01a90f60e22369393e099">requiredCount</a>;</div>
+<div class="line"><span class="lineno">  146</span>                <a class="code hl_variable" href="#a7a695588c7946a1eeb547db4b69e1b44">instanceSc</a> <span class="comment">//</span></div>
+<div class="line"><span class="lineno">  147</span>                    -&gt;remove_needs(section);</div>
+<div class="line"><span class="lineno">  148</span>            }</div>
+<div class="line"><span class="lineno">  149</span> </div>
+<div class="line"><span class="lineno">  150</span>            section <span class="comment">//</span></div>
+<div class="line"><span class="lineno">  151</span>                -&gt;required(req);</div>
+<div class="line"><span class="lineno">  152</span>            section <span class="comment">//</span></div>
+<div class="line"><span class="lineno">  153</span>                -&gt;ignore_case(req);</div>
+<div class="line"><span class="lineno">  154</span> </div>
+<div class="line"><span class="lineno">  155</span>            <a class="code hl_function" href="#accc65978a2ec93df27c740cc325f2345">required</a>(<a class="code hl_variable" href="#a3c312e8ce5b01a90f60e22369393e099">requiredCount</a> &gt; 0);</div>
+<div class="line"><span class="lineno">  156</span>        }</div>
+<div class="line"><span class="lineno">  157</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ConfigInstance_8cpp_source.html#l00197">getDisabled()</a>, <a class="el" href="ConfigInstance_8h_source.html#l00106">instanceSc</a>, <a class="el" href="Config_8cpp_source.html#l00866">utils::Config::required()</a>, and <a class="el" href="ConfigInstance_8h_source.html#l00099">requiredCount</a>.</p>
+<p class="reference">References <a class="el" href="ConfigInstance_8h_source.html#l00121">instanceSc</a>, <a class="el" href="ConfigInstance_8cpp_source.html#l00132">required()</a>, and <a class="el" href="ConfigInstance_8h_source.html#l00114">requiredCount</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ConfigSection_8cpp_source.html#l00088">net::config::ConfigSection::required()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ConfigSection_8cpp_source.html#l00098">net::config::ConfigSection::required()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classnet_1_1config_1_1ConfigInstance_afc1c3ec014ddd8cc8a08113feed00fe5_cgraph.svg" width="450" height="107"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="classnet_1_1config_1_1ConfigInstance_afc1c3ec014ddd8cc8a08113feed00fe5_cgraph.svg" width="100%" height="380"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classnet_1_1config_1_1ConfigInstance_afc1c3ec014ddd8cc8a08113feed00fe5_icgraph.svg" width="546" height="56"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="classnet_1_1config_1_1ConfigInstance_afc1c3ec014ddd8cc8a08113feed00fe5_icgraph.svg" width="100%" height="394"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -783,16 +928,16 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ConfigInstance_8cpp_source.html#l00202">202</a> of file <a class="el" href="ConfigInstance_8cpp_source.html">ConfigInstance.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  202</span>                                                  {</div>
-<div class="line"><span class="lineno">  203</span>        <a class="code hl_variable" href="#a903207c799a648bf5742f5941465ed7c">disableOpt</a> <span class="comment">//</span></div>
-<div class="line"><span class="lineno">  204</span>            -&gt;default_str(disabled ? <span class="stringliteral">&quot;true&quot;</span> : <span class="stringliteral">&quot;false&quot;</span>)</div>
-<div class="line"><span class="lineno">  205</span>            -&gt;clear();</div>
-<div class="line"><span class="lineno">  206</span> </div>
-<div class="line"><span class="lineno">  207</span>        <a class="code hl_function" href="classutils_1_1Config.html#a895744238727a62946b042a62ef99ca6">utils::Config::disabled</a>(<a class="code hl_variable" href="#a7a695588c7946a1eeb547db4b69e1b44">instanceSc</a>, disabled);</div>
-<div class="line"><span class="lineno">  208</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ConfigInstance_8cpp_source.html#l00188">188</a> of file <a class="el" href="ConfigInstance_8cpp_source.html">ConfigInstance.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  188</span>                                                  {</div>
+<div class="line"><span class="lineno">  189</span>        <a class="code hl_variable" href="#a903207c799a648bf5742f5941465ed7c">disableOpt</a> <span class="comment">//</span></div>
+<div class="line"><span class="lineno">  190</span>            -&gt;default_str(disabled ? <span class="stringliteral">&quot;true&quot;</span> : <span class="stringliteral">&quot;false&quot;</span>)</div>
+<div class="line"><span class="lineno">  191</span>            -&gt;clear();</div>
+<div class="line"><span class="lineno">  192</span> </div>
+<div class="line"><span class="lineno">  193</span>        <a class="code hl_function" href="classutils_1_1Config.html#a895744238727a62946b042a62ef99ca6">utils::Config::disabled</a>(<a class="code hl_variable" href="#a7a695588c7946a1eeb547db4b69e1b44">instanceSc</a>, disabled);</div>
+<div class="line"><span class="lineno">  194</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Config_8cpp_source.html#l00889">utils::Config::disabled()</a>, <a class="el" href="ConfigInstance_8h_source.html#l00107">disableOpt</a>, and <a class="el" href="ConfigInstance_8h_source.html#l00106">instanceSc</a>.</p>
+<p class="reference">References <a class="el" href="Config_8cpp_source.html#l00888">utils::Config::disabled()</a>, <a class="el" href="ConfigInstance_8h_source.html#l00122">disableOpt</a>, and <a class="el" href="ConfigInstance_8h_source.html#l00121">instanceSc</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -816,12 +961,12 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ConfigInstance_8cpp_source.html#l00119">119</a> of file <a class="el" href="ConfigInstance_8cpp_source.html">ConfigInstance.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  119</span>                                                                      {</div>
-<div class="line"><span class="lineno">  120</span>        this-&gt;<a class="code hl_variable" href="#afc45c33c68307d087a96e36039d832cc">instanceName</a> = <a class="code hl_variable" href="#afc45c33c68307d087a96e36039d832cc">instanceName</a>;</div>
-<div class="line"><span class="lineno">  121</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ConfigInstance_8cpp_source.html#l00100">100</a> of file <a class="el" href="ConfigInstance_8cpp_source.html">ConfigInstance.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  100</span>                                                                      {</div>
+<div class="line"><span class="lineno">  101</span>        this-&gt;<a class="code hl_variable" href="#afc45c33c68307d087a96e36039d832cc">instanceName</a> = <a class="code hl_variable" href="#afc45c33c68307d087a96e36039d832cc">instanceName</a>;</div>
+<div class="line"><span class="lineno">  102</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ConfigInstance_8h_source.html#l00101">instanceName</a>.</p>
+<p class="reference">References <a class="el" href="ConfigInstance_8h_source.html#l00116">instanceName</a>.</p>
 
 </div>
 </div>
@@ -846,11 +991,37 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ConfigInstance_8h_source.html#l00109">109</a> of file <a class="el" href="ConfigInstance_8h_source.html">ConfigInstance.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ConfigInstance_8h_source.html#l00126">126</a> of file <a class="el" href="ConfigInstance_8h_source.html">ConfigInstance.h</a>.</p>
 
 </div>
 </div>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a id="a3eca3043a997cb7ef50b335df6986fce" name="a3eca3043a997cb7ef50b335df6986fce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3eca3043a997cb7ef50b335df6986fce">&#9670;&#160;</a></span>configSections</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::shared_ptr&lt;<a class="el" href="classnet_1_1config_1_1ConfigSection.html">net::config::ConfigSection</a>&gt; &gt; net::config::ConfigInstance::configSections</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="ConfigInstance_8h_source.html#l00124">124</a> of file <a class="el" href="ConfigInstance_8h_source.html">ConfigInstance.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ConfigInstance_8cpp_source.html#l00128">addSection()</a>.</p>
+
+</div>
+</div>
 <a id="a903207c799a648bf5742f5941465ed7c" name="a903207c799a648bf5742f5941465ed7c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a903207c799a648bf5742f5941465ed7c">&#9670;&#160;</a></span>disableOpt</h2>
 
@@ -871,9 +1042,9 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ConfigInstance_8h_source.html#l00107">107</a> of file <a class="el" href="ConfigInstance_8h_source.html">ConfigInstance.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ConfigInstance_8h_source.html#l00122">122</a> of file <a class="el" href="ConfigInstance_8h_source.html">ConfigInstance.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ConfigInstance_8cpp_source.html#l00081">ConfigInstance()</a>, <a class="el" href="ConfigInstance_8cpp_source.html#l00197">getDisabled()</a>, and <a class="el" href="ConfigInstance_8cpp_source.html#l00202">setDisabled()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ConfigInstance_8cpp_source.html#l00061">ConfigInstance()</a>, <a class="el" href="ConfigInstance_8cpp_source.html#l00167">configurable()</a>, <a class="el" href="ConfigInstance_8cpp_source.html#l00183">getDisabled()</a>, and <a class="el" href="ConfigInstance_8cpp_source.html#l00188">setDisabled()</a>.</p>
 
 </div>
 </div>
@@ -897,9 +1068,9 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ConfigInstance_8h_source.html#l00101">101</a> of file <a class="el" href="ConfigInstance_8h_source.html">ConfigInstance.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ConfigInstance_8h_source.html#l00116">116</a> of file <a class="el" href="ConfigInstance_8h_source.html">ConfigInstance.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ConfigInstance_8cpp_source.html#l00123">addSection()</a>, <a class="el" href="ConfigInstance_8cpp_source.html#l00081">ConfigInstance()</a>, <a class="el" href="ConfigInstance_8cpp_source.html#l00115">getInstanceName()</a>, and <a class="el" href="ConfigInstance_8cpp_source.html#l00119">setInstanceName()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ConfigInstance_8cpp_source.html#l00061">ConfigInstance()</a>, <a class="el" href="ConfigInstance_8cpp_source.html#l00096">getInstanceName()</a>, and <a class="el" href="ConfigInstance_8cpp_source.html#l00100">setInstanceName()</a>.</p>
 
 </div>
 </div>
@@ -923,9 +1094,9 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ConfigInstance_8h_source.html#l00106">106</a> of file <a class="el" href="ConfigInstance_8h_source.html">ConfigInstance.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ConfigInstance_8h_source.html#l00121">121</a> of file <a class="el" href="ConfigInstance_8h_source.html">ConfigInstance.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ConfigInstance_8cpp_source.html#l00123">addSection()</a>, <a class="el" href="ConfigInstance_8cpp_source.html#l00081">ConfigInstance()</a>, <a class="el" href="ConfigInstance_8cpp_source.html#l00172">get()</a>, <a class="el" href="ConfigInstance_8cpp_source.html#l00176">getSection()</a>, <a class="el" href="ConfigInstance_8cpp_source.html#l00191">gotSection()</a>, <a class="el" href="ConfigInstance_8cpp_source.html#l00145">required()</a>, <a class="el" href="ConfigInstance_8cpp_source.html#l00202">setDisabled()</a>, and <a class="el" href="ConfigInstance_8cpp_source.html#l00107">~ConfigInstance()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ConfigInstance_8cpp_source.html#l00061">ConfigInstance()</a>, <a class="el" href="ConfigInstance_8cpp_source.html#l00167">configurable()</a>, <a class="el" href="ConfigInstance_8cpp_source.html#l00163">get()</a>, <a class="el" href="ConfigInstanceAPI_8hpp_source.html#l00071">getSection()</a>, <a class="el" href="ConfigInstance_8cpp_source.html#l00173">getSection()</a>, <a class="el" href="ConfigInstance_8cpp_source.html#l00177">gotSection()</a>, <a class="el" href="ConfigInstance_8cpp_source.html#l00104">newSection()</a>, <a class="el" href="ConfigInstance_8cpp_source.html#l00132">required()</a>, <a class="el" href="ConfigInstance_8cpp_source.html#l00138">required()</a>, <a class="el" href="ConfigInstance_8cpp_source.html#l00188">setDisabled()</a>, and <a class="el" href="ConfigInstance_8cpp_source.html#l00088">~ConfigInstance()</a>.</p>
 
 </div>
 </div>
@@ -949,9 +1120,9 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ConfigInstance_8h_source.html#l00102">102</a> of file <a class="el" href="ConfigInstance_8h_source.html">ConfigInstance.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ConfigInstance_8h_source.html#l00117">117</a> of file <a class="el" href="ConfigInstance_8h_source.html">ConfigInstance.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ConfigInstance_8cpp_source.html#l00115">getInstanceName()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ConfigInstance_8cpp_source.html#l00096">getInstanceName()</a>.</p>
 
 </div>
 </div>
@@ -975,9 +1146,9 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ConfigInstance_8h_source.html#l00099">99</a> of file <a class="el" href="ConfigInstance_8h_source.html">ConfigInstance.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ConfigInstance_8h_source.html#l00114">114</a> of file <a class="el" href="ConfigInstance_8h_source.html">ConfigInstance.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ConfigInstance_8cpp_source.html#l00168">getRequired()</a>, and <a class="el" href="ConfigInstance_8cpp_source.html#l00145">required()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ConfigInstance_8cpp_source.html#l00159">getRequired()</a>, and <a class="el" href="ConfigInstance_8cpp_source.html#l00138">required()</a>.</p>
 
 </div>
 </div>
@@ -1001,14 +1172,15 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ConfigInstance_8h_source.html#l00104">104</a> of file <a class="el" href="ConfigInstance_8h_source.html">ConfigInstance.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ConfigInstance_8h_source.html#l00119">119</a> of file <a class="el" href="ConfigInstance_8h_source.html">ConfigInstance.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ConfigInstance_8cpp_source.html#l00081">ConfigInstance()</a>, and <a class="el" href="ConfigInstance_8cpp_source.html#l00111">getRole()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ConfigInstance_8cpp_source.html#l00061">ConfigInstance()</a>, and <a class="el" href="ConfigInstance_8cpp_source.html#l00092">getRole()</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>net/config/<a class="el" href="ConfigInstance_8h_source.html">ConfigInstance.h</a></li>
+<li>net/config/<a class="el" href="ConfigInstanceAPI_8hpp_source.html">ConfigInstanceAPI.hpp</a></li>
 <li>net/config/<a class="el" href="ConfigInstance_8cpp_source.html">ConfigInstance.cpp</a></li>
 </ul>
 </div><!-- contents -->

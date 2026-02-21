@@ -1,6 +1,6 @@
 var classnet_1_1config_1_1ConfigPhysicalSocket =
 [
-    [ "ConfigPhysicalSocket", "classnet_1_1config_1_1ConfigPhysicalSocket.html#a81ee28df66c529d2d9aecd10dc50b0cb", null ],
+    [ "ConfigPhysicalSocket", "classnet_1_1config_1_1ConfigPhysicalSocket.html#ae10f814dd5a619a50dd5403a198a249f", null ],
     [ "addSocketOption", "classnet_1_1config_1_1ConfigPhysicalSocket.html#acf7fff27b12f756414dafcd63d41fbf6", null ],
     [ "addSocketOption", "classnet_1_1config_1_1ConfigPhysicalSocket.html#a73bd76272b4f178d7e6a073e01b5405e", null ],
     [ "addSocketOption", "classnet_1_1config_1_1ConfigPhysicalSocket.html#a9806eb4905419f194681051ecf177695", null ],
@@ -21,6 +21,8 @@ var classnet_1_1config_1_1ConfigPhysicalSocket =
     [ "setRetryOnFatal", "classnet_1_1config_1_1ConfigPhysicalSocket.html#a95d7abf5f753a76ba1b2b8d10c954266", null ],
     [ "setRetryTimeout", "classnet_1_1config_1_1ConfigPhysicalSocket.html#a39e6f00c6097262bce2248e606227355", null ],
     [ "setRetryTries", "classnet_1_1config_1_1ConfigPhysicalSocket.html#af2ca23e2ca78a7022001b9bc7094d7cc", null ],
+    [ "description", "classnet_1_1config_1_1ConfigPhysicalSocket.html#a63510c590f34b2f7aa23805d5bf14456", null ],
+    [ "name", "classnet_1_1config_1_1ConfigPhysicalSocket.html#a3af49db033814e7339c21605e7336761", null ],
     [ "retryBaseOpt", "classnet_1_1config_1_1ConfigPhysicalSocket.html#a7a353b8758c7799862061c971b913037", null ],
     [ "retryJitterOpt", "classnet_1_1config_1_1ConfigPhysicalSocket.html#a5b1502f931c111a292ae3f6f663a0b68", null ],
     [ "retryLimitOpt", "classnet_1_1config_1_1ConfigPhysicalSocket.html#ae07c8e7706bc23459235e5d5834007e3", null ],
@@ -28,5 +30,6 @@ var classnet_1_1config_1_1ConfigPhysicalSocket =
     [ "retryOpt", "classnet_1_1config_1_1ConfigPhysicalSocket.html#adf927e1acf3114a9f683b70f1f41e1c9", null ],
     [ "retryTimeoutOpt", "classnet_1_1config_1_1ConfigPhysicalSocket.html#adf277aec58ff6e5a744004916ee12dfa", null ],
     [ "retryTriesOpt", "classnet_1_1config_1_1ConfigPhysicalSocket.html#a91d3a345eddceb373bc7daa3872de9bd", null ],
+    [ "section", "classnet_1_1config_1_1ConfigPhysicalSocket.html#a996648e8d911bcde06a9d9f3a0a0fc79", null ],
     [ "socketOptionsMapMap", "classnet_1_1config_1_1ConfigPhysicalSocket.html#a7dfbdb3e675740f3cb9e709f8ee9ae08", null ]
 ];

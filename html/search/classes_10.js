@@ -12,6 +12,6 @@ var searchData=
   ['retaintree_9',['RetainTree',['../classiot_1_1mqtt_1_1server_1_1broker_1_1RetainTree.html',1,'iot::mqtt::server::broker']]],
   ['rootroute_10',['RootRoute',['../classexpress_1_1RootRoute.html',1,'express']]],
   ['route_11',['Route',['../classexpress_1_1Route.html',1,'express']]],
-  ['router_12',['Router',['../classexpress_1_1Router.html',1,'express']]],
+  ['router_12',['Router',['../classexpress_1_1Router.html',1,'express::Router'],['../classRouter.html',1,'Router']]],
   ['routerdispatcher_13',['RouterDispatcher',['../classexpress_1_1dispatcher_1_1RouterDispatcher.html',1,'express::dispatcher']]]
 ];

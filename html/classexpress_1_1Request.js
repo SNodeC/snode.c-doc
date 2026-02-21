@@ -26,7 +26,7 @@ var classexpress_1_1Request =
     [ "originalUrl", "classexpress_1_1Request.html#a21d73e07910e59803aecd3da071b5f7e", null ],
     [ "params", "classexpress_1_1Request.html#a4c1c3216fd224c56ae84160f9cece116", null ],
     [ "path", "classexpress_1_1Request.html#adf410ff07b928b21b24fd1b773ccc38a", null ],
-    [ "queries", "classexpress_1_1Request.html#a6dd93f69b957179ee3b1fd91bc1ccaf9", null ],
+    [ "queries", "classexpress_1_1Request.html#abb47614b9c0cd0dd32e4b101d106a853", null ],
     [ "requestBase", "classexpress_1_1Request.html#a949db2cced6b890e018cb251fa892fb3", null ],
     [ "trailer", "classexpress_1_1Request.html#ac3a5c8d580b770510ee5d85aecfd4b00", null ],
     [ "url", "classexpress_1_1Request.html#a2e2747cb7093d50c8e9339a96c32fb05", null ]

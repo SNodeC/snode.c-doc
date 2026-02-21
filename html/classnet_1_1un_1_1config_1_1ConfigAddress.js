@@ -2,6 +2,7 @@ var classnet_1_1un_1_1config_1_1ConfigAddress =
 [
     [ "Super", "classnet_1_1un_1_1config_1_1ConfigAddress.html#af0603795723c202f8e84e4c42245155c", null ],
     [ "ConfigAddress", "classnet_1_1un_1_1config_1_1ConfigAddress.html#abc2ccd093c92317c45086106e9a889b4", null ],
+    [ "configurable", "classnet_1_1un_1_1config_1_1ConfigAddress.html#a349094c2373f65a66142446a8c251e9b", null ],
     [ "getSunPath", "classnet_1_1un_1_1config_1_1ConfigAddress.html#af2288db1ea29657533a007300802134e", null ],
     [ "init", "classnet_1_1un_1_1config_1_1ConfigAddress.html#a676924815be4fd6ed35dde04889e4201", null ],
     [ "setSocketAddress", "classnet_1_1un_1_1config_1_1ConfigAddress.html#ac373b2f6cc80ccbdf178f91450ae2eae", null ],

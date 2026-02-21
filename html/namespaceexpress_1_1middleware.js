@@ -1,9 +1,9 @@
 var namespaceexpress_1_1middleware =
 [
     [ "StaticMiddleware", "classexpress_1_1middleware_1_1StaticMiddleware.html", "classexpress_1_1middleware_1_1StaticMiddleware" ],
-    [ "JsonMiddleware", "classexpress_1_1middleware_1_1JsonMiddleware.html", "classexpress_1_1middleware_1_1JsonMiddleware" ],
     [ "BasicAuthentication", "classexpress_1_1middleware_1_1BasicAuthentication.html", "classexpress_1_1middleware_1_1BasicAuthentication" ],
     [ "VHost", "classexpress_1_1middleware_1_1VHost.html", "classexpress_1_1middleware_1_1VHost" ],
+    [ "JsonMiddleware", "classexpress_1_1middleware_1_1JsonMiddleware.html", "classexpress_1_1middleware_1_1JsonMiddleware" ],
     [ "VerboseRequest", "classexpress_1_1middleware_1_1VerboseRequest.html", "classexpress_1_1middleware_1_1VerboseRequest" ],
     [ "BasicAuthentication", "namespaceexpress_1_1middleware.html#ae7c0a9d2496da8f4bb727cbc33bd4779", null ],
     [ "hostWithoutPort", "namespaceexpress_1_1middleware.html#a54f501c5233820e7e2fb950978001ed8", null ],

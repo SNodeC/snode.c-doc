@@ -1,10 +1,5 @@
 var classexpress_1_1Route =
 [
-    [ "StrictRouting", "classexpress_1_1Route.html#aed91335d6862879c2f06adc00310f551", [
-      [ "INHERIT", "classexpress_1_1Route.html#aed91335d6862879c2f06adc00310f551ace138ec8d8aadff7e1db3c13b62c3d16", null ],
-      [ "STRICT", "classexpress_1_1Route.html#aed91335d6862879c2f06adc00310f551a4c50b1af679a751969aaad2881a34bef", null ],
-      [ "LAX", "classexpress_1_1Route.html#aed91335d6862879c2f06adc00310f551a1656b5b29550d4c6dd8ba4dee070f631", null ]
-    ] ],
     [ "Route", "classexpress_1_1Route.html#a6689e4c962079c0c35f9cd25f74f46ba", null ],
     [ "Route", "classexpress_1_1Route.html#adfd62addad52b4ca99d9c98e06499baa", null ],
     [ "all", "classexpress_1_1Route.html#aa820643ed06649b5bed31f919dae7514", null ],
@@ -19,15 +14,13 @@ var classexpress_1_1Route =
     [ "del", "classexpress_1_1Route.html#ad09960450af281040bb17e0f69a69a15", null ],
     [ "del", "classexpress_1_1Route.html#aef876e1929dddc4b225cca0a238430f5", null ],
     [ "del", "classexpress_1_1Route.html#a5f79106f5b3aa06e88216cdb135db821", null ],
-    [ "dispatch", "classexpress_1_1Route.html#a6d78c3ba853829e162a3c646f896d06a", null ],
-    [ "dispatch", "classexpress_1_1Route.html#a1aea7b29f8470cd6394ab72d5daeb66d", null ],
-    [ "dispatchNext", "classexpress_1_1Route.html#a8c878f3ae8be82aa01d8a73d55759771", null ],
+    [ "dispatch", "classexpress_1_1Route.html#aed172dab33994395c3872cfd41e896ee", null ],
+    [ "dispatchNext", "classexpress_1_1Route.html#a4630108e11c43b8babc0ca7d381daa53", null ],
     [ "get", "classexpress_1_1Route.html#aafcc7bc007a6252455fc2e102bc3e282", null ],
     [ "get", "classexpress_1_1Route.html#aeaa28d87d1cb8f5e5e18f8fd07e8e2ed", null ],
     [ "get", "classexpress_1_1Route.html#a1366704bb9bc2e8d315f499d802dc177", null ],
     [ "get", "classexpress_1_1Route.html#a433f7c3fc2ee1679ed4f344b77ac7cd5", null ],
     [ "getRoute", "classexpress_1_1Route.html#abb8e6506433479e5bd42250aa6262655", null ],
-    [ "getStrictRouting", "classexpress_1_1Route.html#ad17454199262a1c3bd0a38886c4dbcd1", null ],
     [ "head", "classexpress_1_1Route.html#a425709731827e0612118455b9d631256", null ],
     [ "head", "classexpress_1_1Route.html#a4e3d362b4ba281ac6bec9b4f9ceaa14c", null ],
     [ "head", "classexpress_1_1Route.html#a9403e7008fee294b26173f9fb541a241", null ],
@@ -48,7 +41,6 @@ var classexpress_1_1Route =
     [ "put", "classexpress_1_1Route.html#a8e79209de31f5834c08de1b4bf61aecf", null ],
     [ "put", "classexpress_1_1Route.html#a48d590e2b581de374a8b7f504a481a64", null ],
     [ "put", "classexpress_1_1Route.html#ad3204cd8a4faf08d089d6c16825e6e50", null ],
-    [ "setStrictRouting", "classexpress_1_1Route.html#a9701e32c4f4567ea0f6174d98127fd01", null ],
     [ "trace", "classexpress_1_1Route.html#aefabaea42601e9e5b03ac00b5a6bf243", null ],
     [ "trace", "classexpress_1_1Route.html#ac03ca3066e753ed0f286ff4d37192b67", null ],
     [ "trace", "classexpress_1_1Route.html#a5f4f15a87754200be21b7391f086d6e8", null ],
@@ -62,6 +54,5 @@ var classexpress_1_1Route =
     [ "dispatcher::RouterDispatcher", "classexpress_1_1Route.html#a0dd18791e067f69dd9b940cc0735bb82", null ],
     [ "RootRoute", "classexpress_1_1Route.html#adae34d50b8e74146566b05400257bcb0", null ],
     [ "dispatcher", "classexpress_1_1Route.html#a35432e8c2edafc9174a5bebf4c388029", null ],
-    [ "mountPoint", "classexpress_1_1Route.html#a3b85feb0ad74c97e1f406818a5b8d6eb", null ],
-    [ "strictRouting", "classexpress_1_1Route.html#a332db65535402414fa6623cab5f74092", null ]
+    [ "mountPoint", "classexpress_1_1Route.html#a3b85feb0ad74c97e1f406818a5b8d6eb", null ]
 ];

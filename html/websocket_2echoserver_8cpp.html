@@ -106,7 +106,8 @@ $(function() {
   <div class="headertitle"><div class="title">echoserver.cpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="legacy_2in_2WebApp_8h_source.html">express/legacy/in/WebApp.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="AcceptEventReceiver_8h_source.html">core/eventreceiver/AcceptEventReceiver.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="legacy_2in_2WebApp_8h_source.html">express/legacy/in/WebApp.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="VerboseRequest_8h_source.html">express/middleware/VerboseRequest.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="tls_2in_2WebApp_8h_source.html">express/tls/in/WebApp.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
@@ -141,153 +142,165 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="websocket_2echoserver_8cpp_source.html#l00059">59</a> of file <a class="el" href="websocket_2echoserver_8cpp_source.html">echoserver.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   59</span>                                 {</div>
-<div class="line"><span class="lineno">   60</span>    <a class="code hl_function" href="classexpress_1_1WebApp.html#a0a01439a0cc8dfc86ed14f1094826b7e">express::WebApp::init</a>(argc, argv);</div>
-<div class="line"><span class="lineno">   61</span> </div>
-<div class="line"><span class="lineno">   62</span>    <span class="keyword">using </span>LegacyWebApp = <a class="code hl_typedef" href="namespaceexpress_1_1legacy_1_1in.html#ae117911fb1d6811868691d20e494b046">express::legacy::in::WebApp</a>;</div>
-<div class="line"><span class="lineno">   63</span>    <span class="keyword">using </span><a class="code hl_class" href="classexpress_1_1Request.html">Request</a> = LegacyWebApp::Request;</div>
-<div class="line"><span class="lineno">   64</span>    <span class="keyword">using </span><a class="code hl_class" href="classexpress_1_1Response.html">Response</a> = LegacyWebApp::Response;</div>
-<div class="line"><span class="lineno">   65</span>    <span class="keyword">using </span><a class="code hl_typedef" href="namespacetls.html#adc9ca1ef132516ac61198863375b680f">SocketAddress</a> = LegacyWebApp::SocketAddress;</div>
-<div class="line"><span class="lineno">   66</span> </div>
-<div class="line"><span class="lineno">   67</span>    <span class="keyword">const</span> LegacyWebApp legacyApp(<span class="stringliteral">&quot;legacy&quot;</span>);</div>
-<div class="line"><span class="lineno">   68</span> </div>
-<div class="line"><span class="lineno">   69</span>    legacyApp.use(<a class="code hl_class" href="classexpress_1_1middleware_1_1VerboseRequest.html">express::middleware::VerboseRequest</a>());</div>
-<div class="line"><span class="lineno">   70</span> </div>
-<div class="line"><span class="lineno">   71</span>    legacyApp.get(<span class="stringliteral">&quot;/ws&quot;</span>, [](<span class="keyword">const</span> std::shared_ptr&lt;Request&gt;&amp; req, <span class="keyword">const</span> std::shared_ptr&lt;Response&gt;&amp; res) {</div>
-<div class="line"><span class="lineno">   72</span>        <span class="keyword">const</span> std::string connectionName = res-&gt;getSocketContext()-&gt;getSocketConnection()-&gt;getConnectionName();</div>
-<div class="line"><span class="lineno">   73</span> </div>
-<div class="line"><span class="lineno">   74</span>        res-&gt;upgrade(req, [req, res, connectionName](<span class="keyword">const</span> std::string&amp; name) {</div>
-<div class="line"><span class="lineno">   75</span>            <span class="keywordflow">if</span> (!name.empty()) {</div>
-<div class="line"><span class="lineno">   76</span>                VLOG(1) &lt;&lt; connectionName &lt;&lt; <span class="stringliteral">&quot;: Successful upgrade:&quot;</span>;</div>
-<div class="line"><span class="lineno">   77</span>                VLOG(1) &lt;&lt; connectionName &lt;&lt; <span class="stringliteral">&quot;:   Requested: &quot;</span> &lt;&lt; req-&gt;get(<span class="stringliteral">&quot;upgrade&quot;</span>);</div>
-<div class="line"><span class="lineno">   78</span>                VLOG(1) &lt;&lt; connectionName &lt;&lt; <span class="stringliteral">&quot;:    Selected: &quot;</span> &lt;&lt; name;</div>
-<div class="line"><span class="lineno">   79</span> </div>
-<div class="line"><span class="lineno">   80</span>                res-&gt;end();</div>
-<div class="line"><span class="lineno">   81</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   82</span>                VLOG(1) &lt;&lt; connectionName &lt;&lt; <span class="stringliteral">&quot;: Can not upgrade to any of &#39;&quot;</span> &lt;&lt; req-&gt;get(<span class="stringliteral">&quot;upgrade&quot;</span>) &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
-<div class="line"><span class="lineno">   83</span> </div>
-<div class="line"><span class="lineno">   84</span>                res-&gt;sendStatus(404);</div>
-<div class="line"><span class="lineno">   85</span>            }</div>
-<div class="line"><span class="lineno">   86</span>        });</div>
-<div class="line"><span class="lineno">   87</span>    });</div>
-<div class="line"><span class="lineno">   88</span> </div>
-<div class="line"><span class="lineno">   89</span>    legacyApp.get(<span class="stringliteral">&quot;/&quot;</span>, [] <a class="code hl_define" href="Router_8h.html#a8b7131df91fe7a961e2cdadcedb55232">APPLICATION</a>(req, res) {</div>
-<div class="line"><span class="lineno">   90</span>        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;HTTP GET on &quot;</span></div>
-<div class="line"><span class="lineno">   91</span>                &lt;&lt; <span class="stringliteral">&quot;/&quot;</span>;</div>
-<div class="line"><span class="lineno">   92</span>        <span class="keywordflow">if</span> (req-&gt;url == <span class="stringliteral">&quot;/&quot;</span> || req-&gt;url == <span class="stringliteral">&quot;/index.html&quot;</span>) {</div>
-<div class="line"><span class="lineno">   93</span>            req-&gt;url = <span class="stringliteral">&quot;/wstest.html&quot;</span>;</div>
-<div class="line"><span class="lineno">   94</span>        }</div>
-<div class="line"><span class="lineno">   95</span> </div>
-<div class="line"><span class="lineno">   96</span>        VLOG(1) &lt;&lt; CMAKE_CURRENT_SOURCE_DIR <span class="stringliteral">&quot;/html&quot;</span> + req-&gt;url;</div>
-<div class="line"><span class="lineno">   97</span>        res-&gt;sendFile(CMAKE_CURRENT_SOURCE_DIR <span class="stringliteral">&quot;/html&quot;</span> + req-&gt;url, [req, res](<span class="keywordtype">int</span> errnum) {</div>
-<div class="line"><span class="lineno">   98</span>            if (errnum == 0) {</div>
-<div class="line"><span class="lineno">   99</span>                VLOG(1) &lt;&lt; req-&gt;url;</div>
-<div class="line"><span class="lineno">  100</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  101</span>                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;HTTP response send file failed: &quot;</span> &lt;&lt; std::strerror(errnum);</div>
-<div class="line"><span class="lineno">  102</span>                res-&gt;sendStatus(404);</div>
-<div class="line"><span class="lineno">  103</span>            }</div>
-<div class="line"><span class="lineno">  104</span>        });</div>
-<div class="line"><span class="lineno">  105</span>    });</div>
-<div class="line"><span class="lineno">  106</span> </div>
-<div class="line"><span class="lineno">  107</span>    legacyApp.listen(</div>
-<div class="line"><span class="lineno">  108</span>        [instanceName = legacyApp.getConfig().getInstanceName()](<span class="keyword">const</span> <a class="code hl_typedef" href="namespacetls.html#adc9ca1ef132516ac61198863375b680f">SocketAddress</a>&amp; socketAddress, <span class="keyword">const</span> <a class="code hl_class" href="classcore_1_1socket_1_1State.html">core::socket::State</a>&amp; state) {</div>
-<div class="line"><span class="lineno">  109</span>            <span class="keywordflow">switch</span> (state) {</div>
-<div class="line"><span class="lineno">  110</span>                <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a744e04217104f055ae728e8d884f25de">core::socket::State::OK</a>:</div>
-<div class="line"><span class="lineno">  111</span>                    VLOG(1) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot; listening on &#39;&quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
-<div class="line"><span class="lineno">  112</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  113</span>                <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a26b8a9154524cfbba2729255cb184331">core::socket::State::DISABLED</a>:</div>
-<div class="line"><span class="lineno">  114</span>                    VLOG(1) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot; disabled&quot;</span>;</div>
-<div class="line"><span class="lineno">  115</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  116</span>                <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a3dcc747a68a4c163fcf1c57d9852cab3">core::socket::State::ERROR</a>:</div>
-<div class="line"><span class="lineno">  117</span>                    VLOG(1) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; state.what();</div>
-<div class="line"><span class="lineno">  118</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  119</span>                <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a5d0a9047c96edac9ffd9cd12574328c0">core::socket::State::FATAL</a>:</div>
-<div class="line"><span class="lineno">  120</span>                    VLOG(1) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; state.what();</div>
-<div class="line"><span class="lineno">  121</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  122</span>            }</div>
-<div class="line"><span class="lineno">  123</span>        });</div>
-<div class="line"><span class="lineno">  124</span> </div>
-<div class="line"><span class="lineno">  125</span>    VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Legacy Routes:&quot;</span>;</div>
-<div class="line"><span class="lineno">  126</span>    <span class="keywordflow">for</span> (std::string&amp; route : legacyApp.getRoutes()) {</div>
-<div class="line"><span class="lineno">  127</span>        route.erase(std::remove(route.begin(), route.end(), <span class="charliteral">&#39;$&#39;</span>), route.end());</div>
-<div class="line"><span class="lineno">  128</span> </div>
-<div class="line"><span class="lineno">  129</span>        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;  &quot;</span> &lt;&lt; route;</div>
-<div class="line"><span class="lineno">  130</span>    }</div>
-<div class="line"><span class="lineno">  131</span> </div>
-<div class="line"><span class="lineno">  132</span>    {</div>
-<div class="line"><span class="lineno">  133</span>        <span class="keyword">using </span>TlsWebApp = <a class="code hl_typedef" href="namespaceexpress_1_1tls_1_1in.html#a7fcb8097ef9b37166901c5561ccabd8f">express::tls::in::WebApp</a>;</div>
-<div class="line"><span class="lineno">  134</span>        <span class="keyword">using </span><a class="code hl_class" href="classexpress_1_1Request.html">Request</a> = TlsWebApp::Request;</div>
-<div class="line"><span class="lineno">  135</span>        <span class="keyword">using </span><a class="code hl_class" href="classexpress_1_1Response.html">Response</a> = TlsWebApp::Response;</div>
-<div class="line"><span class="lineno">  136</span>        <span class="keyword">using </span><a class="code hl_typedef" href="namespacetls.html#adc9ca1ef132516ac61198863375b680f">SocketAddress</a> = TlsWebApp::SocketAddress;</div>
-<div class="line"><span class="lineno">  137</span> </div>
-<div class="line"><span class="lineno">  138</span>        <span class="keyword">const</span> TlsWebApp tlsApp(<span class="stringliteral">&quot;tls&quot;</span>);</div>
+<p class="definition">Definition at line <a class="el" href="websocket_2echoserver_8cpp_source.html#l00060">60</a> of file <a class="el" href="websocket_2echoserver_8cpp_source.html">echoserver.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   60</span>                                 {</div>
+<div class="line"><span class="lineno">   61</span>    <a class="code hl_function" href="classexpress_1_1WebApp.html#a0a01439a0cc8dfc86ed14f1094826b7e">express::WebApp::init</a>(argc, argv);</div>
+<div class="line"><span class="lineno">   62</span> </div>
+<div class="line"><span class="lineno">   63</span>    <span class="keyword">using </span>LegacyWebApp = <a class="code hl_typedef" href="namespaceexpress_1_1legacy_1_1in.html#ae117911fb1d6811868691d20e494b046">express::legacy::in::WebApp</a>;</div>
+<div class="line"><span class="lineno">   64</span>    <span class="keyword">using </span><a class="code hl_class" href="classexpress_1_1Request.html">Request</a> = LegacyWebApp::Request;</div>
+<div class="line"><span class="lineno">   65</span>    <span class="keyword">using </span><a class="code hl_class" href="classexpress_1_1Response.html">Response</a> = LegacyWebApp::Response;</div>
+<div class="line"><span class="lineno">   66</span>    <span class="keyword">using </span><a class="code hl_typedef" href="namespacetls.html#adc9ca1ef132516ac61198863375b680f">SocketAddress</a> = LegacyWebApp::SocketAddress;</div>
+<div class="line"><span class="lineno">   67</span> </div>
+<div class="line"><span class="lineno">   68</span>    <span class="keyword">const</span> LegacyWebApp legacyApp(<span class="stringliteral">&quot;legacy&quot;</span>);</div>
+<div class="line"><span class="lineno">   69</span> </div>
+<div class="line"><span class="lineno">   70</span>    legacyApp.use(<a class="code hl_class" href="classexpress_1_1middleware_1_1VerboseRequest.html">express::middleware::VerboseRequest</a>());</div>
+<div class="line"><span class="lineno">   71</span> </div>
+<div class="line"><span class="lineno">   72</span>    legacyApp.get(<span class="stringliteral">&quot;/ws&quot;</span>, [](<span class="keyword">const</span> std::shared_ptr&lt;Request&gt;&amp; req, <span class="keyword">const</span> std::shared_ptr&lt;Response&gt;&amp; res) {</div>
+<div class="line"><span class="lineno">   73</span>        <span class="keyword">const</span> std::string connectionName = res-&gt;getSocketContext()-&gt;getSocketConnection()-&gt;getConnectionName();</div>
+<div class="line"><span class="lineno">   74</span> </div>
+<div class="line"><span class="lineno">   75</span>        res-&gt;upgrade(req, [req, res, connectionName](<span class="keyword">const</span> std::string&amp; name) {</div>
+<div class="line"><span class="lineno">   76</span>            <span class="keywordflow">if</span> (!name.empty()) {</div>
+<div class="line"><span class="lineno">   77</span>                VLOG(1) &lt;&lt; connectionName &lt;&lt; <span class="stringliteral">&quot;: Successful upgrade:&quot;</span>;</div>
+<div class="line"><span class="lineno">   78</span>                VLOG(1) &lt;&lt; connectionName &lt;&lt; <span class="stringliteral">&quot;:   Requested: &quot;</span> &lt;&lt; req-&gt;get(<span class="stringliteral">&quot;upgrade&quot;</span>);</div>
+<div class="line"><span class="lineno">   79</span>                VLOG(1) &lt;&lt; connectionName &lt;&lt; <span class="stringliteral">&quot;:    Selected: &quot;</span> &lt;&lt; name;</div>
+<div class="line"><span class="lineno">   80</span> </div>
+<div class="line"><span class="lineno">   81</span>                res-&gt;end();</div>
+<div class="line"><span class="lineno">   82</span>            } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">   83</span>                VLOG(1) &lt;&lt; connectionName &lt;&lt; <span class="stringliteral">&quot;: Can not upgrade to any of &#39;&quot;</span> &lt;&lt; req-&gt;get(<span class="stringliteral">&quot;upgrade&quot;</span>) &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
+<div class="line"><span class="lineno">   84</span> </div>
+<div class="line"><span class="lineno">   85</span>                res-&gt;sendStatus(404);</div>
+<div class="line"><span class="lineno">   86</span>            }</div>
+<div class="line"><span class="lineno">   87</span>        });</div>
+<div class="line"><span class="lineno">   88</span>    });</div>
+<div class="line"><span class="lineno">   89</span> </div>
+<div class="line"><span class="lineno">   90</span>    legacyApp.get(<span class="stringliteral">&quot;/&quot;</span>, [] <a class="code hl_define" href="Router_8h.html#a8b7131df91fe7a961e2cdadcedb55232">APPLICATION</a>(req, res) {</div>
+<div class="line"><span class="lineno">   91</span>        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;HTTP GET on &quot;</span></div>
+<div class="line"><span class="lineno">   92</span>                &lt;&lt; <span class="stringliteral">&quot;/&quot;</span>;</div>
+<div class="line"><span class="lineno">   93</span>        <span class="keywordflow">if</span> (req-&gt;url == <span class="stringliteral">&quot;/&quot;</span> || req-&gt;url == <span class="stringliteral">&quot;/index.html&quot;</span>) {</div>
+<div class="line"><span class="lineno">   94</span>            req-&gt;url = <span class="stringliteral">&quot;/wstest.html&quot;</span>;</div>
+<div class="line"><span class="lineno">   95</span>        }</div>
+<div class="line"><span class="lineno">   96</span> </div>
+<div class="line"><span class="lineno">   97</span>        VLOG(1) &lt;&lt; CMAKE_CURRENT_SOURCE_DIR <span class="stringliteral">&quot;/html&quot;</span> + req-&gt;url;</div>
+<div class="line"><span class="lineno">   98</span>        res-&gt;sendFile(CMAKE_CURRENT_SOURCE_DIR <span class="stringliteral">&quot;/html&quot;</span> + req-&gt;url, [req, res](<span class="keywordtype">int</span> errnum) {</div>
+<div class="line"><span class="lineno">   99</span>            if (errnum == 0) {</div>
+<div class="line"><span class="lineno">  100</span>                VLOG(1) &lt;&lt; req-&gt;url;</div>
+<div class="line"><span class="lineno">  101</span>            } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  102</span>                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;HTTP response send file failed: &quot;</span> &lt;&lt; std::strerror(errnum);</div>
+<div class="line"><span class="lineno">  103</span>                res-&gt;sendStatus(404);</div>
+<div class="line"><span class="lineno">  104</span>            }</div>
+<div class="line"><span class="lineno">  105</span>        });</div>
+<div class="line"><span class="lineno">  106</span>    });</div>
+<div class="line"><span class="lineno">  107</span> </div>
+<div class="line"><span class="lineno">  108</span>    legacyApp</div>
+<div class="line"><span class="lineno">  109</span>        .setOnInitState([]([[maybe_unused]] <a class="code hl_class" href="classcore_1_1eventreceiver_1_1AcceptEventReceiver.html">core::eventreceiver::AcceptEventReceiver</a>* acceptEventReceiver) {</div>
+<div class="line"><span class="lineno">  110</span>            VLOG(0) &lt;&lt; <span class="stringliteral">&quot;------------------- Legacy Server Init: &quot;</span> &lt;&lt; acceptEventReceiver;</div>
+<div class="line"><span class="lineno">  111</span>            <span class="keywordflow">if</span> (acceptEventReceiver-&gt;isEnabled()) {</div>
+<div class="line"><span class="lineno">  112</span>                acceptEventReceiver-&gt;stopListen();</div>
+<div class="line"><span class="lineno">  113</span>            }</div>
+<div class="line"><span class="lineno">  114</span>        })</div>
+<div class="line"><span class="lineno">  115</span>        .<a class="code hl_function" href="namespacecore_1_1system.html#a8d02857d418a45aa380ebafec930b18f">listen</a>(</div>
+<div class="line"><span class="lineno">  116</span>            [instanceName = legacyApp.getConfig().getInstanceName()](<span class="keyword">const</span> <a class="code hl_typedef" href="namespacetls.html#adc9ca1ef132516ac61198863375b680f">SocketAddress</a>&amp; socketAddress, <span class="keyword">const</span> <a class="code hl_class" href="classcore_1_1socket_1_1State.html">core::socket::State</a>&amp; state) {</div>
+<div class="line"><span class="lineno">  117</span>                <span class="keywordflow">switch</span> (state) {</div>
+<div class="line"><span class="lineno">  118</span>                    <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a744e04217104f055ae728e8d884f25de">core::socket::State::OK</a>:</div>
+<div class="line"><span class="lineno">  119</span>                        VLOG(1) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot; listening on &#39;&quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
+<div class="line"><span class="lineno">  120</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  121</span>                    <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a26b8a9154524cfbba2729255cb184331">core::socket::State::DISABLED</a>:</div>
+<div class="line"><span class="lineno">  122</span>                        VLOG(1) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot; disabled&quot;</span>;</div>
+<div class="line"><span class="lineno">  123</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  124</span>                    <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a3dcc747a68a4c163fcf1c57d9852cab3">core::socket::State::ERROR</a>:</div>
+<div class="line"><span class="lineno">  125</span>                        VLOG(1) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; state.what();</div>
+<div class="line"><span class="lineno">  126</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  127</span>                    <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a5d0a9047c96edac9ffd9cd12574328c0">core::socket::State::FATAL</a>:</div>
+<div class="line"><span class="lineno">  128</span>                        VLOG(1) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; state.what();</div>
+<div class="line"><span class="lineno">  129</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  130</span>                }</div>
+<div class="line"><span class="lineno">  131</span>            });</div>
+<div class="line"><span class="lineno">  132</span> </div>
+<div class="line"><span class="lineno">  133</span>    VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Legacy Routes:&quot;</span>;</div>
+<div class="line"><span class="lineno">  134</span>    <span class="keywordflow">for</span> (std::string&amp; route : legacyApp.getRoutes()) {</div>
+<div class="line"><span class="lineno">  135</span>        route.erase(std::remove(route.begin(), route.end(), <span class="charliteral">&#39;$&#39;</span>), route.end());</div>
+<div class="line"><span class="lineno">  136</span> </div>
+<div class="line"><span class="lineno">  137</span>        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;  &quot;</span> &lt;&lt; route;</div>
+<div class="line"><span class="lineno">  138</span>    }</div>
 <div class="line"><span class="lineno">  139</span> </div>
-<div class="line"><span class="lineno">  140</span>        tlsApp.use(<a class="code hl_class" href="classexpress_1_1middleware_1_1VerboseRequest.html">express::middleware::VerboseRequest</a>());</div>
-<div class="line"><span class="lineno">  141</span> </div>
-<div class="line"><span class="lineno">  142</span>        tlsApp.get(<span class="stringliteral">&quot;/ws&quot;</span>, [](<span class="keyword">const</span> std::shared_ptr&lt;Request&gt;&amp; req, <span class="keyword">const</span> std::shared_ptr&lt;Response&gt;&amp; res) {</div>
-<div class="line"><span class="lineno">  143</span>            <span class="keyword">const</span> std::string connectionName = res-&gt;getSocketContext()-&gt;getSocketConnection()-&gt;getConnectionName();</div>
-<div class="line"><span class="lineno">  144</span> </div>
-<div class="line"><span class="lineno">  145</span>            res-&gt;upgrade(req, [req, res, connectionName](<span class="keyword">const</span> std::string&amp; name) {</div>
-<div class="line"><span class="lineno">  146</span>                <span class="keywordflow">if</span> (!name.empty()) {</div>
-<div class="line"><span class="lineno">  147</span>                    VLOG(1) &lt;&lt; connectionName &lt;&lt; <span class="stringliteral">&quot;: Upgrade success:&quot;</span>;</div>
-<div class="line"><span class="lineno">  148</span>                    VLOG(1) &lt;&lt; connectionName &lt;&lt; <span class="stringliteral">&quot;:   Requested: &quot;</span> &lt;&lt; req-&gt;get(<span class="stringliteral">&quot;upgrade&quot;</span>);</div>
-<div class="line"><span class="lineno">  149</span>                    VLOG(1) &lt;&lt; connectionName &lt;&lt; <span class="stringliteral">&quot;:    Selected: &quot;</span> &lt;&lt; name;</div>
-<div class="line"><span class="lineno">  150</span> </div>
-<div class="line"><span class="lineno">  151</span>                    res-&gt;end();</div>
-<div class="line"><span class="lineno">  152</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  153</span>                    VLOG(1) &lt;&lt; connectionName &lt;&lt; <span class="stringliteral">&quot;: Can not upgrade to any of &#39;&quot;</span> &lt;&lt; req-&gt;get(<span class="stringliteral">&quot;upgrade&quot;</span>) &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
-<div class="line"><span class="lineno">  154</span> </div>
-<div class="line"><span class="lineno">  155</span>                    res-&gt;sendStatus(404);</div>
-<div class="line"><span class="lineno">  156</span>                }</div>
-<div class="line"><span class="lineno">  157</span>            });</div>
-<div class="line"><span class="lineno">  158</span>        });</div>
-<div class="line"><span class="lineno">  159</span> </div>
-<div class="line"><span class="lineno">  160</span>        tlsApp.get(<span class="stringliteral">&quot;/&quot;</span>, [] <a class="code hl_define" href="Router_8h.html#a8b7131df91fe7a961e2cdadcedb55232">APPLICATION</a>(req, res) {</div>
-<div class="line"><span class="lineno">  161</span>            <span class="keywordflow">if</span> (req-&gt;url == <span class="stringliteral">&quot;/&quot;</span> || req-&gt;url == <span class="stringliteral">&quot;/index.html&quot;</span>) {</div>
-<div class="line"><span class="lineno">  162</span>                req-&gt;url = <span class="stringliteral">&quot;/wstest.html&quot;</span>;</div>
-<div class="line"><span class="lineno">  163</span>            }</div>
-<div class="line"><span class="lineno">  164</span> </div>
-<div class="line"><span class="lineno">  165</span>            VLOG(1) &lt;&lt; CMAKE_CURRENT_SOURCE_DIR <span class="stringliteral">&quot;/html&quot;</span> + req-&gt;url;</div>
-<div class="line"><span class="lineno">  166</span>            res-&gt;sendFile(CMAKE_CURRENT_SOURCE_DIR <span class="stringliteral">&quot;/html&quot;</span> + req-&gt;url, [req, res](<span class="keywordtype">int</span> errnum) {</div>
-<div class="line"><span class="lineno">  167</span>                if (errnum == 0) {</div>
-<div class="line"><span class="lineno">  168</span>                    VLOG(1) &lt;&lt; req-&gt;url;</div>
-<div class="line"><span class="lineno">  169</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  170</span>                    VLOG(1) &lt;&lt; <span class="stringliteral">&quot;HTTP response send file failed: &quot;</span> &lt;&lt; std::strerror(errnum);</div>
-<div class="line"><span class="lineno">  171</span>                    res-&gt;sendStatus(404);</div>
-<div class="line"><span class="lineno">  172</span>                }</div>
-<div class="line"><span class="lineno">  173</span>            });</div>
-<div class="line"><span class="lineno">  174</span>        });</div>
-<div class="line"><span class="lineno">  175</span> </div>
-<div class="line"><span class="lineno">  176</span>        tlsApp.listen(</div>
-<div class="line"><span class="lineno">  177</span>            [instanceName = tlsApp.getConfig().getInstanceName()](<span class="keyword">const</span> <a class="code hl_typedef" href="namespacetls.html#adc9ca1ef132516ac61198863375b680f">SocketAddress</a>&amp; socketAddress, <span class="keyword">const</span> <a class="code hl_class" href="classcore_1_1socket_1_1State.html">core::socket::State</a>&amp; state) {</div>
-<div class="line"><span class="lineno">  178</span>                <span class="keywordflow">switch</span> (state) {</div>
-<div class="line"><span class="lineno">  179</span>                    <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a744e04217104f055ae728e8d884f25de">core::socket::State::OK</a>:</div>
-<div class="line"><span class="lineno">  180</span>                        VLOG(1) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot; listening on &#39;&quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
-<div class="line"><span class="lineno">  181</span>                        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  182</span>                    <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a26b8a9154524cfbba2729255cb184331">core::socket::State::DISABLED</a>:</div>
-<div class="line"><span class="lineno">  183</span>                        VLOG(1) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot; disabled&quot;</span>;</div>
-<div class="line"><span class="lineno">  184</span>                        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  185</span>                    <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a3dcc747a68a4c163fcf1c57d9852cab3">core::socket::State::ERROR</a>:</div>
-<div class="line"><span class="lineno">  186</span>                        VLOG(1) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; state.what();</div>
-<div class="line"><span class="lineno">  187</span>                        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  188</span>                    <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a5d0a9047c96edac9ffd9cd12574328c0">core::socket::State::FATAL</a>:</div>
-<div class="line"><span class="lineno">  189</span>                        VLOG(1) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; state.what();</div>
-<div class="line"><span class="lineno">  190</span>                        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  191</span>                }</div>
-<div class="line"><span class="lineno">  192</span>            });</div>
-<div class="line"><span class="lineno">  193</span> </div>
-<div class="line"><span class="lineno">  194</span>        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Tls Routes:&quot;</span>;</div>
-<div class="line"><span class="lineno">  195</span>        <span class="keywordflow">for</span> (std::string&amp; route : legacyApp.getRoutes()) {</div>
-<div class="line"><span class="lineno">  196</span>            route.erase(std::remove(route.begin(), route.end(), <span class="charliteral">&#39;$&#39;</span>), route.end());</div>
-<div class="line"><span class="lineno">  197</span> </div>
-<div class="line"><span class="lineno">  198</span>            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;  &quot;</span> &lt;&lt; route;</div>
-<div class="line"><span class="lineno">  199</span>        }</div>
-<div class="line"><span class="lineno">  200</span>    }</div>
-<div class="line"><span class="lineno">  201</span> </div>
-<div class="line"><span class="lineno">  202</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="classexpress_1_1WebApp.html#a54e6910c9466c61d0b217490b7d9bb5a">express::WebApp::start</a>();</div>
-<div class="line"><span class="lineno">  203</span>}</div>
+<div class="line"><span class="lineno">  140</span>    {</div>
+<div class="line"><span class="lineno">  141</span>        <span class="keyword">using </span>TlsWebApp = <a class="code hl_typedef" href="namespaceexpress_1_1tls_1_1in.html#a7fcb8097ef9b37166901c5561ccabd8f">express::tls::in::WebApp</a>;</div>
+<div class="line"><span class="lineno">  142</span>        <span class="keyword">using </span><a class="code hl_class" href="classexpress_1_1Request.html">Request</a> = TlsWebApp::Request;</div>
+<div class="line"><span class="lineno">  143</span>        <span class="keyword">using </span><a class="code hl_class" href="classexpress_1_1Response.html">Response</a> = TlsWebApp::Response;</div>
+<div class="line"><span class="lineno">  144</span>        <span class="keyword">using </span><a class="code hl_typedef" href="namespacetls.html#adc9ca1ef132516ac61198863375b680f">SocketAddress</a> = TlsWebApp::SocketAddress;</div>
+<div class="line"><span class="lineno">  145</span> </div>
+<div class="line"><span class="lineno">  146</span>        <span class="keyword">const</span> TlsWebApp tlsApp(<span class="stringliteral">&quot;tls&quot;</span>);</div>
+<div class="line"><span class="lineno">  147</span> </div>
+<div class="line"><span class="lineno">  148</span>        tlsApp.use(<a class="code hl_class" href="classexpress_1_1middleware_1_1VerboseRequest.html">express::middleware::VerboseRequest</a>());</div>
+<div class="line"><span class="lineno">  149</span> </div>
+<div class="line"><span class="lineno">  150</span>        tlsApp.get(<span class="stringliteral">&quot;/ws&quot;</span>, [](<span class="keyword">const</span> std::shared_ptr&lt;Request&gt;&amp; req, <span class="keyword">const</span> std::shared_ptr&lt;Response&gt;&amp; res) {</div>
+<div class="line"><span class="lineno">  151</span>            <span class="keyword">const</span> std::string connectionName = res-&gt;getSocketContext()-&gt;getSocketConnection()-&gt;getConnectionName();</div>
+<div class="line"><span class="lineno">  152</span> </div>
+<div class="line"><span class="lineno">  153</span>            res-&gt;upgrade(req, [req, res, connectionName](<span class="keyword">const</span> std::string&amp; name) {</div>
+<div class="line"><span class="lineno">  154</span>                <span class="keywordflow">if</span> (!name.empty()) {</div>
+<div class="line"><span class="lineno">  155</span>                    VLOG(1) &lt;&lt; connectionName &lt;&lt; <span class="stringliteral">&quot;: Upgrade success:&quot;</span>;</div>
+<div class="line"><span class="lineno">  156</span>                    VLOG(1) &lt;&lt; connectionName &lt;&lt; <span class="stringliteral">&quot;:   Requested: &quot;</span> &lt;&lt; req-&gt;get(<span class="stringliteral">&quot;upgrade&quot;</span>);</div>
+<div class="line"><span class="lineno">  157</span>                    VLOG(1) &lt;&lt; connectionName &lt;&lt; <span class="stringliteral">&quot;:    Selected: &quot;</span> &lt;&lt; name;</div>
+<div class="line"><span class="lineno">  158</span> </div>
+<div class="line"><span class="lineno">  159</span>                    res-&gt;end();</div>
+<div class="line"><span class="lineno">  160</span>                } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  161</span>                    VLOG(1) &lt;&lt; connectionName &lt;&lt; <span class="stringliteral">&quot;: Can not upgrade to any of &#39;&quot;</span> &lt;&lt; req-&gt;get(<span class="stringliteral">&quot;upgrade&quot;</span>) &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
+<div class="line"><span class="lineno">  162</span> </div>
+<div class="line"><span class="lineno">  163</span>                    res-&gt;sendStatus(404);</div>
+<div class="line"><span class="lineno">  164</span>                }</div>
+<div class="line"><span class="lineno">  165</span>            });</div>
+<div class="line"><span class="lineno">  166</span>        });</div>
+<div class="line"><span class="lineno">  167</span> </div>
+<div class="line"><span class="lineno">  168</span>        tlsApp.get(<span class="stringliteral">&quot;/&quot;</span>, [] <a class="code hl_define" href="Router_8h.html#a8b7131df91fe7a961e2cdadcedb55232">APPLICATION</a>(req, res) {</div>
+<div class="line"><span class="lineno">  169</span>            <span class="keywordflow">if</span> (req-&gt;url == <span class="stringliteral">&quot;/&quot;</span> || req-&gt;url == <span class="stringliteral">&quot;/index.html&quot;</span>) {</div>
+<div class="line"><span class="lineno">  170</span>                req-&gt;url = <span class="stringliteral">&quot;/wstest.html&quot;</span>;</div>
+<div class="line"><span class="lineno">  171</span>            }</div>
+<div class="line"><span class="lineno">  172</span> </div>
+<div class="line"><span class="lineno">  173</span>            VLOG(1) &lt;&lt; CMAKE_CURRENT_SOURCE_DIR <span class="stringliteral">&quot;/html&quot;</span> + req-&gt;url;</div>
+<div class="line"><span class="lineno">  174</span>            res-&gt;sendFile(CMAKE_CURRENT_SOURCE_DIR <span class="stringliteral">&quot;/html&quot;</span> + req-&gt;url, [req, res](<span class="keywordtype">int</span> errnum) {</div>
+<div class="line"><span class="lineno">  175</span>                if (errnum == 0) {</div>
+<div class="line"><span class="lineno">  176</span>                    VLOG(1) &lt;&lt; req-&gt;url;</div>
+<div class="line"><span class="lineno">  177</span>                } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  178</span>                    VLOG(1) &lt;&lt; <span class="stringliteral">&quot;HTTP response send file failed: &quot;</span> &lt;&lt; std::strerror(errnum);</div>
+<div class="line"><span class="lineno">  179</span>                    res-&gt;sendStatus(404);</div>
+<div class="line"><span class="lineno">  180</span>                }</div>
+<div class="line"><span class="lineno">  181</span>            });</div>
+<div class="line"><span class="lineno">  182</span>        });</div>
+<div class="line"><span class="lineno">  183</span> </div>
+<div class="line"><span class="lineno">  184</span>        tlsApp</div>
+<div class="line"><span class="lineno">  185</span>            .setOnInitState([]([[maybe_unused]] <a class="code hl_class" href="classcore_1_1eventreceiver_1_1AcceptEventReceiver.html">core::eventreceiver::AcceptEventReceiver</a>* acceptEventReceiver) {</div>
+<div class="line"><span class="lineno">  186</span>                VLOG(0) &lt;&lt; <span class="stringliteral">&quot;------------------- TLS Server Init: &quot;</span> &lt;&lt; acceptEventReceiver;</div>
+<div class="line"><span class="lineno">  187</span>            })</div>
+<div class="line"><span class="lineno">  188</span>            .<a class="code hl_function" href="namespacecore_1_1system.html#a8d02857d418a45aa380ebafec930b18f">listen</a>([instanceName = tlsApp.getConfig().getInstanceName()](<span class="keyword">const</span> <a class="code hl_typedef" href="namespacetls.html#adc9ca1ef132516ac61198863375b680f">SocketAddress</a>&amp; socketAddress,</div>
+<div class="line"><span class="lineno">  189</span>                                                                          <span class="keyword">const</span> <a class="code hl_class" href="classcore_1_1socket_1_1State.html">core::socket::State</a>&amp; state) {</div>
+<div class="line"><span class="lineno">  190</span>                <span class="keywordflow">switch</span> (state) {</div>
+<div class="line"><span class="lineno">  191</span>                    <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a744e04217104f055ae728e8d884f25de">core::socket::State::OK</a>:</div>
+<div class="line"><span class="lineno">  192</span>                        VLOG(1) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot; listening on &#39;&quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
+<div class="line"><span class="lineno">  193</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  194</span>                    <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a26b8a9154524cfbba2729255cb184331">core::socket::State::DISABLED</a>:</div>
+<div class="line"><span class="lineno">  195</span>                        VLOG(1) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot; disabled&quot;</span>;</div>
+<div class="line"><span class="lineno">  196</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  197</span>                    <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a3dcc747a68a4c163fcf1c57d9852cab3">core::socket::State::ERROR</a>:</div>
+<div class="line"><span class="lineno">  198</span>                        VLOG(1) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; state.what();</div>
+<div class="line"><span class="lineno">  199</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  200</span>                    <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a5d0a9047c96edac9ffd9cd12574328c0">core::socket::State::FATAL</a>:</div>
+<div class="line"><span class="lineno">  201</span>                        VLOG(1) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; state.what();</div>
+<div class="line"><span class="lineno">  202</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  203</span>                }</div>
+<div class="line"><span class="lineno">  204</span>            });</div>
+<div class="line"><span class="lineno">  205</span> </div>
+<div class="line"><span class="lineno">  206</span>        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Tls Routes:&quot;</span>;</div>
+<div class="line"><span class="lineno">  207</span>        <span class="keywordflow">for</span> (std::string&amp; route : legacyApp.getRoutes()) {</div>
+<div class="line"><span class="lineno">  208</span>            route.erase(std::remove(route.begin(), route.end(), <span class="charliteral">&#39;$&#39;</span>), route.end());</div>
+<div class="line"><span class="lineno">  209</span> </div>
+<div class="line"><span class="lineno">  210</span>            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;  &quot;</span> &lt;&lt; route;</div>
+<div class="line"><span class="lineno">  211</span>        }</div>
+<div class="line"><span class="lineno">  212</span>    }</div>
+<div class="line"><span class="lineno">  213</span> </div>
+<div class="line"><span class="lineno">  214</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="classexpress_1_1WebApp.html#a54e6910c9466c61d0b217490b7d9bb5a">express::WebApp::start</a>();</div>
+<div class="line"><span class="lineno">  215</span>}</div>
 <div class="ttc" id="aRouter_8h_html_a8b7131df91fe7a961e2cdadcedb55232"><div class="ttname"><a href="Router_8h.html#a8b7131df91fe7a961e2cdadcedb55232">APPLICATION</a></div><div class="ttdeci">#define APPLICATION(req, res)</div><div class="ttdef"><b>Definition</b> <a href="Router_8h_source.html#l00068">Router.h:68</a></div></div>
+<div class="ttc" id="aclasscore_1_1eventreceiver_1_1AcceptEventReceiver_html"><div class="ttname"><a href="classcore_1_1eventreceiver_1_1AcceptEventReceiver.html">core::eventreceiver::AcceptEventReceiver</a></div><div class="ttdef"><b>Definition</b> <a href="AcceptEventReceiver_8h_source.html#l00057">AcceptEventReceiver.h:57</a></div></div>
 <div class="ttc" id="aclasscore_1_1socket_1_1State_html"><div class="ttname"><a href="classcore_1_1socket_1_1State.html">core::socket::State</a></div><div class="ttdef"><b>Definition</b> <a href="socket_2State_8h_source.html#l00053">State.h:53</a></div></div>
 <div class="ttc" id="aclasscore_1_1socket_1_1State_html_a26b8a9154524cfbba2729255cb184331"><div class="ttname"><a href="classcore_1_1socket_1_1State.html#a26b8a9154524cfbba2729255cb184331">core::socket::State::DISABLED</a></div><div class="ttdeci">static constexpr int DISABLED</div><div class="ttdef"><b>Definition</b> <a href="socket_2State_8h_source.html#l00056">State.h:56</a></div></div>
 <div class="ttc" id="aclasscore_1_1socket_1_1State_html_a3dcc747a68a4c163fcf1c57d9852cab3"><div class="ttname"><a href="classcore_1_1socket_1_1State.html#a3dcc747a68a4c163fcf1c57d9852cab3">core::socket::State::ERROR</a></div><div class="ttdeci">static constexpr int ERROR</div><div class="ttdef"><b>Definition</b> <a href="socket_2State_8h_source.html#l00057">State.h:57</a></div></div>
@@ -298,11 +311,12 @@ Functions</h2></td></tr>
 <div class="ttc" id="aclassexpress_1_1WebApp_html_a0a01439a0cc8dfc86ed14f1094826b7e"><div class="ttname"><a href="classexpress_1_1WebApp.html#a0a01439a0cc8dfc86ed14f1094826b7e">express::WebApp::init</a></div><div class="ttdeci">static void init(int argc, char *argv[])</div><div class="ttdef"><b>Definition</b> <a href="WebApp_8cpp_source.html#l00056">WebApp.cpp:56</a></div></div>
 <div class="ttc" id="aclassexpress_1_1WebApp_html_a54e6910c9466c61d0b217490b7d9bb5a"><div class="ttname"><a href="classexpress_1_1WebApp.html#a54e6910c9466c61d0b217490b7d9bb5a">express::WebApp::start</a></div><div class="ttdeci">static int start(const utils::Timeval &amp;timeOut={LONG_MAX, 0})</div><div class="ttdef"><b>Definition</b> <a href="WebApp_8cpp_source.html#l00060">WebApp.cpp:60</a></div></div>
 <div class="ttc" id="aclassexpress_1_1middleware_1_1VerboseRequest_html"><div class="ttname"><a href="classexpress_1_1middleware_1_1VerboseRequest.html">express::middleware::VerboseRequest</a></div><div class="ttdef"><b>Definition</b> <a href="VerboseRequest_8h_source.html#l00053">VerboseRequest.h:53</a></div></div>
+<div class="ttc" id="anamespacecore_1_1system_html_a8d02857d418a45aa380ebafec930b18f"><div class="ttname"><a href="namespacecore_1_1system.html#a8d02857d418a45aa380ebafec930b18f">core::system::listen</a></div><div class="ttdeci">int listen(int sockfd, int backlog)</div><div class="ttdef"><b>Definition</b> <a href="socket_8cpp_source.html#l00062">socket.cpp:62</a></div></div>
 <div class="ttc" id="anamespaceexpress_1_1legacy_1_1in_html_ae117911fb1d6811868691d20e494b046"><div class="ttname"><a href="namespaceexpress_1_1legacy_1_1in.html#ae117911fb1d6811868691d20e494b046">express::legacy::in::WebApp</a></div><div class="ttdeci">WebAppT&lt; web::http::legacy::in::Server &gt; WebApp</div><div class="ttdef"><b>Definition</b> <a href="legacy_2in_2WebApp_8h_source.html#l00056">WebApp.h:56</a></div></div>
 <div class="ttc" id="anamespaceexpress_1_1tls_1_1in_html_a7fcb8097ef9b37166901c5561ccabd8f"><div class="ttname"><a href="namespaceexpress_1_1tls_1_1in.html#a7fcb8097ef9b37166901c5561ccabd8f">express::tls::in::WebApp</a></div><div class="ttdeci">WebAppT&lt; web::http::tls::in::Server &gt; WebApp</div><div class="ttdef"><b>Definition</b> <a href="tls_2in_2WebApp_8h_source.html#l00054">WebApp.h:54</a></div></div>
 <div class="ttc" id="anamespacetls_html_adc9ca1ef132516ac61198863375b680f"><div class="ttname"><a href="namespacetls.html#adc9ca1ef132516ac61198863375b680f">tls::SocketAddress</a></div><div class="ttdeci">SocketClient::SocketAddress SocketAddress</div><div class="ttdef"><b>Definition</b> <a href="httplowlevelclient_8cpp_source.html#l00145">httplowlevelclient.cpp:145</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="socket_2State_8h_source.html#l00056">core::socket::State::DISABLED</a>, <a class="el" href="express_2Response_8cpp_source.html#l00177">express::Response::end()</a>, <a class="el" href="socket_2State_8h_source.html#l00057">core::socket::State::ERROR</a>, <a class="el" href="socket_2State_8h_source.html#l00058">core::socket::State::FATAL</a>, <a class="el" href="express_2Request_8cpp_source.html#l00095">express::Request::get()</a>, <a class="el" href="Socket_8hpp_source.html#l00065">core::socket::Socket&lt; ConfigT &gt;::getConfig()</a>, <a class="el" href="SocketConnection_8cpp_source.html#l00112">core::socket::stream::SocketConnection::getConnectionName()</a>, <a class="el" href="ConfigInstance_8cpp_source.html#l00115">net::config::ConfigInstance::getInstanceName()</a>, <a class="el" href="Router_8cpp_source.html#l00090">express::Router::getRoutes()</a>, <a class="el" href="core_2socket_2stream_2SocketContext_8cpp_source.html#l00065">core::socket::stream::SocketContext::getSocketConnection()</a>, <a class="el" href="express_2Response_8cpp_source.html#l00068">express::Response::getSocketContext()</a>, <a class="el" href="WebApp_8cpp_source.html#l00056">express::WebApp::init()</a>, <a class="el" href="core_2socket_2stream_2SocketServer_8h_source.html#l00223">core::socket::stream::SocketServer&lt; SocketAcceptorT, SocketContextFactoryT, Args &gt;::listen()</a>, <a class="el" href="socket_2State_8h_source.html#l00055">core::socket::State::OK</a>, <a class="el" href="express_2Response_8cpp_source.html#l00181">express::Response::sendFile()</a>, <a class="el" href="express_2Response_8cpp_source.html#l00095">express::Response::sendStatus()</a>, <a class="el" href="WebApp_8cpp_source.html#l00060">express::WebApp::start()</a>, <a class="el" href="net_2in_2SocketAddress_8cpp_source.html#l00171">net::in::SocketAddress::toString()</a>, <a class="el" href="express_2Response_8cpp_source.html#l00173">express::Response::upgrade()</a>, <a class="el" href="express_2Request_8h_source.html#l00098">express::Request::url</a>, <a class="el" href="WebAppT_8h_source.html#l00076">express::WebAppT&lt; ServerT &gt;::WebAppT()</a>, and <a class="el" href="socket_2State_8cpp_source.html#l00114">core::socket::State::what()</a>.</p>
+<p class="reference">References <a class="el" href="socket_2State_8h_source.html#l00056">core::socket::State::DISABLED</a>, <a class="el" href="express_2Response_8cpp_source.html#l00177">express::Response::end()</a>, <a class="el" href="socket_2State_8h_source.html#l00057">core::socket::State::ERROR</a>, <a class="el" href="socket_2State_8h_source.html#l00058">core::socket::State::FATAL</a>, <a class="el" href="express_2Request_8cpp_source.html#l00095">express::Request::get()</a>, <a class="el" href="Socket_8hpp_source.html#l00065">core::socket::Socket&lt; ConfigT &gt;::getConfig()</a>, <a class="el" href="SocketConnection_8cpp_source.html#l00112">core::socket::stream::SocketConnection::getConnectionName()</a>, <a class="el" href="ConfigInstance_8cpp_source.html#l00096">net::config::ConfigInstance::getInstanceName()</a>, <a class="el" href="Router_8cpp_source.html#l00096">express::Router::getRoutes()</a>, <a class="el" href="core_2socket_2stream_2SocketContext_8cpp_source.html#l00065">core::socket::stream::SocketContext::getSocketConnection()</a>, <a class="el" href="express_2Response_8cpp_source.html#l00068">express::Response::getSocketContext()</a>, <a class="el" href="WebApp_8cpp_source.html#l00056">express::WebApp::init()</a>, <a class="el" href="DescriptorEventReceiver_8cpp_source.html#l00088">core::DescriptorEventReceiver::isEnabled()</a>, <a class="el" href="core_2socket_2stream_2SocketServer_8h_source.html#l00256">core::socket::stream::SocketServer&lt; SocketAcceptorT, SocketContextFactoryT, Args &gt;::listen()</a>, <a class="el" href="socket_2State_8h_source.html#l00055">core::socket::State::OK</a>, <a class="el" href="express_2Response_8cpp_source.html#l00181">express::Response::sendFile()</a>, <a class="el" href="express_2Response_8cpp_source.html#l00095">express::Response::sendStatus()</a>, <a class="el" href="core_2socket_2stream_2SocketServer_8h_source.html#l00345">core::socket::stream::SocketServer&lt; SocketAcceptorT, SocketContextFactoryT, Args &gt;::setOnInitState()</a>, <a class="el" href="WebApp_8cpp_source.html#l00060">express::WebApp::start()</a>, <a class="el" href="AcceptEventReceiver_8cpp_source.html#l00064">core::eventreceiver::AcceptEventReceiver::stopListen()</a>, <a class="el" href="net_2in_2SocketAddress_8cpp_source.html#l00171">net::in::SocketAddress::toString()</a>, <a class="el" href="express_2Response_8cpp_source.html#l00173">express::Response::upgrade()</a>, <a class="el" href="express_2Request_8h_source.html#l00098">express::Request::url</a>, <a class="el" href="WebAppT_8h_source.html#l00076">express::WebAppT&lt; ServerT &gt;::WebAppT()</a>, and <a class="el" href="socket_2State_8cpp_source.html#l00114">core::socket::State::what()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">

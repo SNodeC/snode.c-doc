@@ -3,6 +3,7 @@ var classnet_1_1config_1_1ConfigPhysicalSocketServer =
     [ "Socket", "classnet_1_1config_1_1ConfigPhysicalSocketServer.html#aa876801555708c1ab312337969b35814", null ],
     [ "Super", "classnet_1_1config_1_1ConfigPhysicalSocketServer.html#ab8a79a7afdbd96c9ee5f1923f53a874d", null ],
     [ "ConfigPhysicalSocketServer", "classnet_1_1config_1_1ConfigPhysicalSocketServer.html#a2dcb1e4ab807cae99c773d16ae8f4b13", null ],
+    [ "~ConfigPhysicalSocketServer", "classnet_1_1config_1_1ConfigPhysicalSocketServer.html#ad63222c837c64a47f686e106fa52663a", null ],
     [ "getAcceptsPerTick", "classnet_1_1config_1_1ConfigPhysicalSocketServer.html#a94941180b7331b848961417fd688a18b", null ],
     [ "getAcceptTimeout", "classnet_1_1config_1_1ConfigPhysicalSocketServer.html#a33a77d049f706570bf6e1eea628647ba", null ],
     [ "getBacklog", "classnet_1_1config_1_1ConfigPhysicalSocketServer.html#a024bcff766725e0298fc6c8f570aee10", null ],

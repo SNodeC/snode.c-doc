@@ -151,11 +151,13 @@ Macros</h2></td></tr>
 <div class="line">        <span class="keywordflow">return</span> *(dispatcher-&gt;nextRoute = std::make_shared&lt;Route&gt;(                                                                          \</div>
 <div class="line">                     HTTP_METHOD, mountPoint.relativeMountPath, std::make_shared&lt;dispatcher::MiddlewareDispatcher&gt;(lambda)))               \</div>
 <div class="line">                    .get();                                                                                                                \</div>
+<div class="line">        ;                                                                                                                                  \</div>
 <div class="line">    }                                                                                                                                      \</div>
 <div class="line">    Route&amp; Route::METHOD(<span class="keyword">const</span> std::function&lt;<span class="keywordtype">void</span>(<span class="keyword">const</span> std::shared_ptr&lt;Request&gt;&amp;, <span class="keyword">const</span> std::shared_ptr&lt;Response&gt;&amp;)&gt;&amp; lambda)<span class="keyword"> const </span>{     \</div>
 <div class="line">        <span class="keywordflow">return</span> *(dispatcher-&gt;nextRoute = std::make_shared&lt;Route&gt;(                                                                          \</div>
 <div class="line">                     HTTP_METHOD, mountPoint.relativeMountPath, std::make_shared&lt;dispatcher::ApplicationDispatcher&gt;(lambda)))              \</div>
 <div class="line">                    .get();                                                                                                                \</div>
+<div class="line">        ;                                                                                                                                  \</div>
 <div class="line">    }</div>
 </div><!-- fragment -->
 <p class="definition">Definition at line <a class="el" href="Route_8cpp_source.html#l00055">55</a> of file <a class="el" href="Route_8cpp_source.html">Route.cpp</a>.</p>
@@ -165,12 +167,14 @@ Macros</h2></td></tr>
 <div class="line"><span class="lineno">   58</span><span class="preprocessor">        return *(dispatcher-&gt;nextRoute = std::make_shared&lt;Route&gt;(                                                                          \</span></div>
 <div class="line"><span class="lineno">   59</span><span class="preprocessor">                     HTTP_METHOD, mountPoint.relativeMountPath, std::make_shared&lt;dispatcher::MiddlewareDispatcher&gt;(lambda)))               \</span></div>
 <div class="line"><span class="lineno">   60</span><span class="preprocessor">                    .get();                                                                                                                \</span></div>
-<div class="line"><span class="lineno">   61</span><span class="preprocessor">    }                                                                                                                                      \</span></div>
-<div class="line"><span class="lineno">   62</span><span class="preprocessor">    Route&amp; Route::METHOD(const std::function&lt;void(const std::shared_ptr&lt;Request&gt;&amp;, const std::shared_ptr&lt;Response&gt;&amp;)&gt;&amp; lambda) const {     \</span></div>
-<div class="line"><span class="lineno">   63</span><span class="preprocessor">        return *(dispatcher-&gt;nextRoute = std::make_shared&lt;Route&gt;(                                                                          \</span></div>
-<div class="line"><span class="lineno">   64</span><span class="preprocessor">                     HTTP_METHOD, mountPoint.relativeMountPath, std::make_shared&lt;dispatcher::ApplicationDispatcher&gt;(lambda)))              \</span></div>
-<div class="line"><span class="lineno">   65</span><span class="preprocessor">                    .get();                                                                                                                \</span></div>
-<div class="line"><span class="lineno">   66</span><span class="preprocessor">    }</span></div>
+<div class="line"><span class="lineno">   61</span><span class="preprocessor">        ;                                                                                                                                  \</span></div>
+<div class="line"><span class="lineno">   62</span><span class="preprocessor">    }                                                                                                                                      \</span></div>
+<div class="line"><span class="lineno">   63</span><span class="preprocessor">    Route&amp; Route::METHOD(const std::function&lt;void(const std::shared_ptr&lt;Request&gt;&amp;, const std::shared_ptr&lt;Response&gt;&amp;)&gt;&amp; lambda) const {     \</span></div>
+<div class="line"><span class="lineno">   64</span><span class="preprocessor">        return *(dispatcher-&gt;nextRoute = std::make_shared&lt;Route&gt;(                                                                          \</span></div>
+<div class="line"><span class="lineno">   65</span><span class="preprocessor">                     HTTP_METHOD, mountPoint.relativeMountPath, std::make_shared&lt;dispatcher::ApplicationDispatcher&gt;(lambda)))              \</span></div>
+<div class="line"><span class="lineno">   66</span><span class="preprocessor">                    .get();                                                                                                                \</span></div>
+<div class="line"><span class="lineno">   67</span><span class="preprocessor">        ;                                                                                                                                  \</span></div>
+<div class="line"><span class="lineno">   68</span><span class="preprocessor">    }</span></div>
 </div><!-- fragment -->
 </div>
 </div>

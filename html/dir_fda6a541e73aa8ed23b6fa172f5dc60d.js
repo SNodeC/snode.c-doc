@@ -2,6 +2,8 @@ var dir_fda6a541e73aa8ed23b6fa172f5dc60d =
 [
     [ "legacy", "dir_490bc242d87f3ecd276dcf8d39b4fe54.html", "dir_490bc242d87f3ecd276dcf8d39b4fe54" ],
     [ "tls", "dir_b54354194172df550fb2bdb507d33122.html", "dir_b54354194172df550fb2bdb507d33122" ],
+    [ "AutoConnectControl.cpp", "AutoConnectControl_8cpp.html", null ],
+    [ "AutoConnectControl.h", "AutoConnectControl_8h.html", "AutoConnectControl_8h" ],
     [ "SocketAcceptor.h", "SocketAcceptor_8h.html", "SocketAcceptor_8h" ],
     [ "SocketAcceptor.hpp", "SocketAcceptor_8hpp.html", null ],
     [ "SocketClient.h", "core_2socket_2stream_2SocketClient_8h.html", "core_2socket_2stream_2SocketClient_8h" ],

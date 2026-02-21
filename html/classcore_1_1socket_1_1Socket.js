@@ -9,5 +9,5 @@ var classcore_1_1socket_1_1Socket =
     [ "getConfig", "classcore_1_1socket_1_1Socket.html#ac9b7df3682b2a24b5c7fce9bcff1c441", null ],
     [ "operator=", "classcore_1_1socket_1_1Socket.html#a42415477ad5ed2bdcbc30b2dd144e4ef", null ],
     [ "operator=", "classcore_1_1socket_1_1Socket.html#a1bf36fc09db3cac5fc8e53a067a94b9b", null ],
-    [ "config", "classcore_1_1socket_1_1Socket.html#acc9aa0fd3ebc8742df03d69d675ad02d", null ]
+    [ "config", "classcore_1_1socket_1_1Socket.html#a29362f3a3b5843f706daf077fa6b1a3d", null ]
 ];

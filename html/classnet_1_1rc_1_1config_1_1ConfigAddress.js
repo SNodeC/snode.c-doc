@@ -2,6 +2,7 @@ var classnet_1_1rc_1_1config_1_1ConfigAddress =
 [
     [ "Super", "classnet_1_1rc_1_1config_1_1ConfigAddress.html#a796653e7a0d2c6a8a9c9c490987e2ca2", null ],
     [ "ConfigAddress", "classnet_1_1rc_1_1config_1_1ConfigAddress.html#a7b86ffccbe2e8c5d6e5245cbd37783d4", null ],
+    [ "configurable", "classnet_1_1rc_1_1config_1_1ConfigAddress.html#a9f5dfdedd69ccf1ec03ea275298e0278", null ],
     [ "getBtAddress", "classnet_1_1rc_1_1config_1_1ConfigAddress.html#a77f82a698ab0ca43a3ea863908e5d4b6", null ],
     [ "getChannel", "classnet_1_1rc_1_1config_1_1ConfigAddress.html#a78b8a92fcea3421c97949efab738d1b9", null ],
     [ "init", "classnet_1_1rc_1_1config_1_1ConfigAddress.html#a1abb7a953202db98625b2591590ea420", null ],

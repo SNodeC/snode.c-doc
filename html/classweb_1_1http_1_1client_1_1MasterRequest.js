@@ -38,6 +38,7 @@ var classweb_1_1http_1_1client_1_1MasterRequest =
     [ "commands::SseCommand", "classweb_1_1http_1_1client_1_1MasterRequest.html#a537df746b1d23fd603db9ae3f93540e6", null ],
     [ "commands::UpgradeCommand", "classweb_1_1http_1_1client_1_1MasterRequest.html#a452041faaf1985484ecfd14eed56319c", null ],
     [ "SocketContext", "classweb_1_1http_1_1client_1_1MasterRequest.html#ab7996d16e63168521871184317240dbd", null ],
+    [ "tools::EventSourceT", "classweb_1_1http_1_1client_1_1MasterRequest.html#afd26318b2b53edd0454e38baf358f526", null ],
     [ "contentLengthSent", "classweb_1_1http_1_1client_1_1MasterRequest.html#aa4494b7ebf114850a6265248701157ce", null ],
     [ "onResponseParseError", "classweb_1_1http_1_1client_1_1MasterRequest.html#a742ee0910ce7ea649e6fe17750874efc", null ],
     [ "onResponseReceived", "classweb_1_1http_1_1client_1_1MasterRequest.html#a8828c9241847b4a892d7f86b14c3c728", null ],

@@ -2,6 +2,7 @@ var classnet_1_1config_1_1ConfigConnection =
 [
     [ "Connection", "classnet_1_1config_1_1ConfigConnection.html#a512ce1e5f3d37d79a59ea1ac22849143", null ],
     [ "ConfigConnection", "classnet_1_1config_1_1ConfigConnection.html#a1d8baec82a32959898beefa712a2a3d6", null ],
+    [ "~ConfigConnection", "classnet_1_1config_1_1ConfigConnection.html#a948fa8aa30af2fb92db20a790862f1b3", null ],
     [ "getReadBlockSize", "classnet_1_1config_1_1ConfigConnection.html#afa717bd0952a08a2586f3ff858e5f208", null ],
     [ "getReadTimeout", "classnet_1_1config_1_1ConfigConnection.html#afc4a2b632ef8a2e9be5aa0e5b11db29f", null ],
     [ "getTerminateTimeout", "classnet_1_1config_1_1ConfigConnection.html#ae8a7ef942ed3ffa0dbde1b5b56597cac", null ],
@@ -12,6 +13,8 @@ var classnet_1_1config_1_1ConfigConnection =
     [ "setTerminateTimeout", "classnet_1_1config_1_1ConfigConnection.html#a8cc492dd5e0972b829124b6462264018", null ],
     [ "setWriteBlockSize", "classnet_1_1config_1_1ConfigConnection.html#a0ae627618e9d6ab1f1c961264b23d7c8", null ],
     [ "setWriteTimeout", "classnet_1_1config_1_1ConfigConnection.html#a1c21804392807f388b2d4318c5d8622f", null ],
+    [ "description", "classnet_1_1config_1_1ConfigConnection.html#aa3a6845a078a9de11db92e99358926dc", null ],
+    [ "name", "classnet_1_1config_1_1ConfigConnection.html#a650a310c88209f1b57d335a145ac6efd", null ],
     [ "readBlockSizeOpt", "classnet_1_1config_1_1ConfigConnection.html#a610eb7f918b7935148111ec71b243bc9", null ],
     [ "readTimeoutOpt", "classnet_1_1config_1_1ConfigConnection.html#a6afd08823c3a119336ff3d803ebd3907", null ],
     [ "terminateTimeoutOpt", "classnet_1_1config_1_1ConfigConnection.html#a3a986a582b6b569d385e4c06964b212c", null ],

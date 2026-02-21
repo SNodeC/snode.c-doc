@@ -433,7 +433,7 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">  283</span>                    [req](<span class="keyword">const</span> std::shared_ptr&lt;Request&gt;&amp;, <span class="keyword">const</span> std::string&amp;) {</div>
 <div class="line"><span class="lineno">  284</span>                    });</div>
 <div class="line"><span class="lineno">  285</span>                req-&gt;url = <span class="stringliteral">&quot;/&quot;</span>;</div>
-<div class="line"><span class="lineno">  286</span>                req-&gt;set(<span class="stringliteral">&quot;Connection&quot;</span>, <span class="stringliteral">&quot;keep-alive&quot;</span>);</div>
+<div class="line"><span class="lineno">  286</span>                req-&gt;set(<span class="stringliteral">&quot;Connection&quot;</span>, <span class="stringliteral">&quot;close&quot;</span>);</div>
 <div class="line"><span class="lineno">  287</span>                req-&gt;end(</div>
 <div class="line"><span class="lineno">  288</span>                    [](<span class="keyword">const</span> std::shared_ptr&lt;Request&gt;&amp; req, <span class="keyword">const</span> std::shared_ptr&lt;Response&gt;&amp; res) {</div>
 <div class="line"><span class="lineno">  289</span>                        <a class="code hl_function" href="http_2model_2clients_8h.html#a938620a45c7f124ce0ed9e6cd64968ba">logResponse</a>(req, res);</div>

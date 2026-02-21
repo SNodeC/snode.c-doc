@@ -111,7 +111,7 @@ $(function() {
 <div class="dynheader">
 Collaboration diagram for web::http::server::Request:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classweb_1_1http_1_1server_1_1Request__coll__graph.svg" width="463" height="458"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classweb_1_1http_1_1server_1_1Request__coll__graph.svg" width="628" height="506"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -132,7 +132,7 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a8094ae39445aef4b1bb729e47297537e" id="r_a8094ae39445aef4b1bb729e47297537e"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8094ae39445aef4b1bb729e47297537e">httpVersion</a></td></tr>
 <tr class="memitem:a9830d0fa4e479713dbdb438aeed897db" id="r_a9830d0fa4e479713dbdb438aeed897db"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9830d0fa4e479713dbdb438aeed897db">httpMajor</a> = 0</td></tr>
 <tr class="memitem:a1ca6289401e639e7ef23a3ad426e64af" id="r_a1ca6289401e639e7ef23a3ad426e64af"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1ca6289401e639e7ef23a3ad426e64af">httpMinor</a> = 0</td></tr>
-<tr class="memitem:a7b988d44be49587aa0432fcd33630ae4" id="r_a7b988d44be49587aa0432fcd33630ae4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classweb_1_1http_1_1CiStringMap.html">CiStringMap</a>&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7b988d44be49587aa0432fcd33630ae4">queries</a></td></tr>
+<tr class="memitem:a2fdb3d31083fb88ced7c42df354134e3" id="r_a2fdb3d31083fb88ced7c42df354134e3"><td class="memItemLeft" align="right" valign="top">std::map&lt; std::string, std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2fdb3d31083fb88ced7c42df354134e3">queries</a></td></tr>
 <tr class="memitem:a2eac2c7b4507306b72806976574f18f2" id="r_a2eac2c7b4507306b72806976574f18f2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classweb_1_1http_1_1CiStringMap.html">CiStringMap</a>&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2eac2c7b4507306b72806976574f18f2">headers</a></td></tr>
 <tr class="memitem:a259053314b9940cfebf482ca0eb05ece" id="r_a259053314b9940cfebf482ca0eb05ece"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classweb_1_1http_1_1CiStringMap.html">CiStringMap</a>&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a259053314b9940cfebf482ca0eb05ece">cookies</a></td></tr>
 <tr class="memitem:a0dda9cdb94135b33f4c9ae4819d8966a" id="r_a0dda9cdb94135b33f4c9ae4819d8966a"><td class="memItemLeft" align="right" valign="top">std::vector&lt; char &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0dda9cdb94135b33f4c9ae4819d8966a">body</a></td></tr>
@@ -427,15 +427,15 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="web_2http_2server_2Request_8cpp_source.html#l00086">86</a> of file <a class="el" href="web_2http_2server_2Request_8cpp_source.html">Request.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   86</span>                                                              {</div>
-<div class="line"><span class="lineno">   87</span>        <span class="keyword">const</span> std::map&lt;std::string, std::string&gt;::const_iterator it = <a class="code hl_variable" href="#a7b988d44be49587aa0432fcd33630ae4">queries</a>.find(key);</div>
+<div class="line"><span class="lineno">   87</span>        <span class="keyword">const</span> std::map&lt;std::string, std::string&gt;::const_iterator it = <a class="code hl_variable" href="#a2fdb3d31083fb88ced7c42df354134e3">queries</a>.find(key);</div>
 <div class="line"><span class="lineno">   88</span> </div>
-<div class="line"><span class="lineno">   89</span>        <span class="keywordflow">if</span> (it != <a class="code hl_variable" href="#a7b988d44be49587aa0432fcd33630ae4">queries</a>.end()) {</div>
+<div class="line"><span class="lineno">   89</span>        <span class="keywordflow">if</span> (it != <a class="code hl_variable" href="#a2fdb3d31083fb88ced7c42df354134e3">queries</a>.end()) {</div>
 <div class="line"><span class="lineno">   90</span>            <span class="keywordflow">return</span> it-&gt;second;</div>
 <div class="line"><span class="lineno">   91</span>        }</div>
 <div class="line"><span class="lineno">   92</span> </div>
 <div class="line"><span class="lineno">   93</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#abbc56ed49a648427ea68413cc20a353c">nullstr</a>;</div>
 <div class="line"><span class="lineno">   94</span>    }</div>
-<div class="ttc" id="aclassweb_1_1http_1_1server_1_1Request_html_a7b988d44be49587aa0432fcd33630ae4"><div class="ttname"><a href="#a7b988d44be49587aa0432fcd33630ae4">web::http::server::Request::queries</a></div><div class="ttdeci">CiStringMap&lt; std::string &gt; queries</div><div class="ttdef"><b>Definition</b> <a href="web_2http_2server_2Request_8h_source.html#l00085">Request.h:85</a></div></div>
+<div class="ttc" id="aclassweb_1_1http_1_1server_1_1Request_html_a2fdb3d31083fb88ced7c42df354134e3"><div class="ttname"><a href="#a2fdb3d31083fb88ced7c42df354134e3">web::http::server::Request::queries</a></div><div class="ttdeci">std::map&lt; std::string, std::string &gt; queries</div><div class="ttdef"><b>Definition</b> <a href="web_2http_2server_2Request_8h_source.html#l00085">Request.h:85</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="web_2http_2server_2Request_8h_source.html#l00093">nullstr</a>, and <a class="el" href="web_2http_2server_2Request_8h_source.html#l00085">queries</a>.</p>
 
@@ -505,7 +505,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="web_2http_2server_2Request_8h_source.html#l00088">88</a> of file <a class="el" href="web_2http_2server_2Request_8h_source.html">Request.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="RequestParser_8cpp_source.html#l00161">web::http::server::RequestParser::parsingFinished()</a>, and <a class="el" href="express_2Request_8cpp_source.html#l00057">express::Request::Request()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="RequestParser_8cpp_source.html#l00166">web::http::server::RequestParser::parsingFinished()</a>, and <a class="el" href="express_2Request_8cpp_source.html#l00056">express::Request::Request()</a>.</p>
 
 </div>
 </div>
@@ -531,7 +531,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="web_2http_2server_2Request_8h_source.html#l00075">75</a> of file <a class="el" href="web_2http_2server_2Request_8h_source.html">Request.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="RequestParser_8cpp_source.html#l00117">web::http::server::RequestParser::analyzeHeader()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="RequestParser_8cpp_source.html#l00122">web::http::server::RequestParser::analyzeHeader()</a>.</p>
 
 </div>
 </div>
@@ -549,7 +549,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="web_2http_2server_2Request_8h_source.html#l00087">87</a> of file <a class="el" href="web_2http_2server_2Request_8h_source.html">Request.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="RequestParser_8cpp_source.html#l00117">web::http::server::RequestParser::analyzeHeader()</a>, <a class="el" href="web_2http_2server_2Request_8cpp_source.html#l00076">cookie()</a>, <a class="el" href="express_2Request_8cpp_source.html#l00057">express::Request::Request()</a>, and <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00248">web::http::server::Response::upgrade()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="RequestParser_8cpp_source.html#l00122">web::http::server::RequestParser::analyzeHeader()</a>, <a class="el" href="web_2http_2server_2Request_8cpp_source.html#l00076">cookie()</a>, <a class="el" href="express_2Request_8cpp_source.html#l00056">express::Request::Request()</a>, and <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00248">web::http::server::Response::upgrade()</a>.</p>
 
 </div>
 </div>
@@ -567,7 +567,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="web_2http_2server_2Request_8h_source.html#l00086">86</a> of file <a class="el" href="web_2http_2server_2Request_8h_source.html">Request.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="web_2http_2server_2Request_8cpp_source.html#l00060">get()</a>, <a class="el" href="RequestParser_8cpp_source.html#l00161">web::http::server::RequestParser::parsingFinished()</a>, <a class="el" href="express_2Request_8cpp_source.html#l00057">express::Request::Request()</a>, and <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00248">web::http::server::Response::upgrade()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="web_2http_2server_2Request_8cpp_source.html#l00060">get()</a>, <a class="el" href="RequestParser_8cpp_source.html#l00166">web::http::server::RequestParser::parsingFinished()</a>, <a class="el" href="express_2Request_8cpp_source.html#l00056">express::Request::Request()</a>, and <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00248">web::http::server::Response::upgrade()</a>.</p>
 
 </div>
 </div>
@@ -585,7 +585,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="web_2http_2server_2Request_8h_source.html#l00082">82</a> of file <a class="el" href="web_2http_2server_2Request_8h_source.html">Request.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00107">web::http::server::SocketContext::deliverRequest()</a>, <a class="el" href="RequestParser_8cpp_source.html#l00161">web::http::server::RequestParser::parsingFinished()</a>, <a class="el" href="express_2Request_8cpp_source.html#l00057">express::Request::Request()</a>, <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00175">web::http::server::SocketContext::requestCompleted()</a>, <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00141">web::http::server::SocketContext::responseStarted()</a>, and <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00248">web::http::server::Response::upgrade()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00107">web::http::server::SocketContext::deliverRequest()</a>, <a class="el" href="RequestParser_8cpp_source.html#l00166">web::http::server::RequestParser::parsingFinished()</a>, <a class="el" href="express_2Request_8cpp_source.html#l00056">express::Request::Request()</a>, <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00175">web::http::server::SocketContext::requestCompleted()</a>, <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00141">web::http::server::SocketContext::responseStarted()</a>, and <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00248">web::http::server::Response::upgrade()</a>.</p>
 
 </div>
 </div>
@@ -603,7 +603,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="web_2http_2server_2Request_8h_source.html#l00083">83</a> of file <a class="el" href="web_2http_2server_2Request_8h_source.html">Request.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00107">web::http::server::SocketContext::deliverRequest()</a>, <a class="el" href="RequestParser_8cpp_source.html#l00161">web::http::server::RequestParser::parsingFinished()</a>, <a class="el" href="express_2Request_8cpp_source.html#l00057">express::Request::Request()</a>, <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00175">web::http::server::SocketContext::requestCompleted()</a>, <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00141">web::http::server::SocketContext::responseStarted()</a>, and <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00248">web::http::server::Response::upgrade()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00107">web::http::server::SocketContext::deliverRequest()</a>, <a class="el" href="RequestParser_8cpp_source.html#l00166">web::http::server::RequestParser::parsingFinished()</a>, <a class="el" href="express_2Request_8cpp_source.html#l00056">express::Request::Request()</a>, <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00175">web::http::server::SocketContext::requestCompleted()</a>, <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00141">web::http::server::SocketContext::responseStarted()</a>, and <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00248">web::http::server::Response::upgrade()</a>.</p>
 
 </div>
 </div>
@@ -621,7 +621,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="web_2http_2server_2Request_8h_source.html#l00081">81</a> of file <a class="el" href="web_2http_2server_2Request_8h_source.html">Request.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="RequestParser_8cpp_source.html#l00074">web::http::server::RequestParser::parseStartLine()</a>, and <a class="el" href="express_2Request_8cpp_source.html#l00057">express::Request::Request()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="RequestParser_8cpp_source.html#l00074">web::http::server::RequestParser::parseStartLine()</a>, and <a class="el" href="express_2Request_8cpp_source.html#l00056">express::Request::Request()</a>.</p>
 
 </div>
 </div>
@@ -639,7 +639,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="web_2http_2server_2Request_8h_source.html#l00079">79</a> of file <a class="el" href="web_2http_2server_2Request_8h_source.html">Request.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00107">web::http::server::SocketContext::deliverRequest()</a>, <a class="el" href="RequestParser_8cpp_source.html#l00074">web::http::server::RequestParser::parseStartLine()</a>, <a class="el" href="express_2Request_8cpp_source.html#l00057">express::Request::Request()</a>, <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00175">web::http::server::SocketContext::requestCompleted()</a>, <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00141">web::http::server::SocketContext::responseStarted()</a>, and <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00248">web::http::server::Response::upgrade()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00107">web::http::server::SocketContext::deliverRequest()</a>, <a class="el" href="RequestParser_8cpp_source.html#l00074">web::http::server::RequestParser::parseStartLine()</a>, <a class="el" href="express_2Request_8cpp_source.html#l00056">express::Request::Request()</a>, <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00175">web::http::server::SocketContext::requestCompleted()</a>, <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00141">web::http::server::SocketContext::responseStarted()</a>, and <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00248">web::http::server::Response::upgrade()</a>.</p>
 
 </div>
 </div>
@@ -669,21 +669,21 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a7b988d44be49587aa0432fcd33630ae4" name="a7b988d44be49587aa0432fcd33630ae4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7b988d44be49587aa0432fcd33630ae4">&#9670;&#160;</a></span>queries</h2>
+<a id="a2fdb3d31083fb88ced7c42df354134e3" name="a2fdb3d31083fb88ced7c42df354134e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2fdb3d31083fb88ced7c42df354134e3">&#9670;&#160;</a></span>queries</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classweb_1_1http_1_1CiStringMap.html">CiStringMap</a>&lt;std::string&gt; web::http::server::Request::queries</td>
+          <td class="memname">std::map&lt;std::string, std::string&gt; web::http::server::Request::queries</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="web_2http_2server_2Request_8h_source.html#l00085">85</a> of file <a class="el" href="web_2http_2server_2Request_8h_source.html">Request.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="RequestParser_8cpp_source.html#l00074">web::http::server::RequestParser::parseStartLine()</a>, <a class="el" href="web_2http_2server_2Request_8cpp_source.html#l00086">query()</a>, <a class="el" href="express_2Request_8cpp_source.html#l00057">express::Request::Request()</a>, and <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00248">web::http::server::Response::upgrade()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="RequestParser_8cpp_source.html#l00074">web::http::server::RequestParser::parseStartLine()</a>, <a class="el" href="web_2http_2server_2Request_8cpp_source.html#l00086">query()</a>, <a class="el" href="express_2Request_8cpp_source.html#l00056">express::Request::Request()</a>, and <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00248">web::http::server::Response::upgrade()</a>.</p>
 
 </div>
 </div>
@@ -753,7 +753,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="web_2http_2server_2Request_8h_source.html#l00080">80</a> of file <a class="el" href="web_2http_2server_2Request_8h_source.html">Request.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00107">web::http::server::SocketContext::deliverRequest()</a>, <a class="el" href="RequestParser_8cpp_source.html#l00074">web::http::server::RequestParser::parseStartLine()</a>, <a class="el" href="express_2Request_8cpp_source.html#l00057">express::Request::Request()</a>, <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00175">web::http::server::SocketContext::requestCompleted()</a>, <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00141">web::http::server::SocketContext::responseStarted()</a>, and <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00248">web::http::server::Response::upgrade()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00107">web::http::server::SocketContext::deliverRequest()</a>, <a class="el" href="RequestParser_8cpp_source.html#l00074">web::http::server::RequestParser::parseStartLine()</a>, <a class="el" href="express_2Request_8cpp_source.html#l00056">express::Request::Request()</a>, <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00175">web::http::server::SocketContext::requestCompleted()</a>, <a class="el" href="web_2http_2server_2SocketContext_8cpp_source.html#l00141">web::http::server::SocketContext::responseStarted()</a>, and <a class="el" href="web_2http_2server_2Response_8cpp_source.html#l00248">web::http::server::Response::upgrade()</a>.</p>
 
 </div>
 </div>

@@ -20,7 +20,7 @@ var classweb_1_1http_1_1server_1_1Request =
     [ "httpVersion", "classweb_1_1http_1_1server_1_1Request.html#a8094ae39445aef4b1bb729e47297537e", null ],
     [ "method", "classweb_1_1http_1_1server_1_1Request.html#a7bbff0c0900a11bab6fbb98b95d74a01", null ],
     [ "nullstr", "classweb_1_1http_1_1server_1_1Request.html#abbc56ed49a648427ea68413cc20a353c", null ],
-    [ "queries", "classweb_1_1http_1_1server_1_1Request.html#a7b988d44be49587aa0432fcd33630ae4", null ],
+    [ "queries", "classweb_1_1http_1_1server_1_1Request.html#a2fdb3d31083fb88ced7c42df354134e3", null ],
     [ "reason", "classweb_1_1http_1_1server_1_1Request.html#aa7cb0c2b381d847be28a6579a5edea75", null ],
     [ "status", "classweb_1_1http_1_1server_1_1Request.html#ad7289fdba9fee72d6c6951012e072ea2", null ],
     [ "url", "classweb_1_1http_1_1server_1_1Request.html#a2c2ef2815be183f1130e9a4fd43f9851", null ]

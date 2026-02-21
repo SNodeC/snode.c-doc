@@ -1,17 +1,10 @@
 var regex__utils_8h =
 [
-    [ "express::dispatcher::boundaryPrefix", "namespaceexpress_1_1dispatcher.html#a523a8b6e0e8adb5c3aebb0b5b6d55739", null ],
-    [ "express::dispatcher::compileParamRegex", "namespaceexpress_1_1dispatcher.html#a545809e41717a65e8413c905289b4a47", null ],
-    [ "express::dispatcher::equalPath", "namespaceexpress_1_1dispatcher.html#abee407a7298b726c75db688cc66faf66", null ],
-    [ "express::dispatcher::explode", "namespaceexpress_1_1dispatcher.html#a3f4ade65de8940df9cc5eb592f8b2bf9", null ],
-    [ "express::dispatcher::hasResult", "namespaceexpress_1_1dispatcher.html#a8a7580a939d02f430b311ebe2285c651", null ],
+    [ "express::dispatcher::MountMatchResult", "structexpress_1_1dispatcher_1_1MountMatchResult.html", "structexpress_1_1dispatcher_1_1MountMatchResult" ],
+    [ "express::dispatcher::ScopedPathStrip", "classexpress_1_1dispatcher_1_1ScopedPathStrip.html", "classexpress_1_1dispatcher_1_1ScopedPathStrip" ],
+    [ "express::dispatcher::ScopedParams", "classexpress_1_1dispatcher_1_1ScopedParams.html", "classexpress_1_1dispatcher_1_1ScopedParams" ],
     [ "express::dispatcher::ieq", "namespaceexpress_1_1dispatcher.html#a66d4a407d78cb8f42f7f6792763ff444", null ],
-    [ "express::dispatcher::matchAndFillParams", "namespaceexpress_1_1dispatcher.html#a07c3098728fe6320b8b6fd201b8194b2", null ],
-    [ "express::dispatcher::matchResult", "namespaceexpress_1_1dispatcher.html#a5f63daa42e77ff99c8049d1d34b51159", null ],
-    [ "express::dispatcher::parseQuery", "namespaceexpress_1_1dispatcher.html#a785d8e9d2b76c9a6a54daff046a9576f", null ],
-    [ "express::dispatcher::pathRegex", "namespaceexpress_1_1dispatcher.html#af0eb131eb8db907ff38d832318c57153", null ],
-    [ "express::dispatcher::querySupersetMatches", "namespaceexpress_1_1dispatcher.html#a28e64a921dc57a080af532c244ba4f39", null ],
-    [ "express::dispatcher::setParams", "namespaceexpress_1_1dispatcher.html#a383db1fb291317caf5c61e4922f123d8", null ],
-    [ "express::dispatcher::splitPathAndQuery", "namespaceexpress_1_1dispatcher.html#a40efe79fbc7f12c0fd3aa55120642b20", null ],
-    [ "express::dispatcher::trimOneTrailingSlash", "namespaceexpress_1_1dispatcher.html#a99a1b526b86e9e7108fc1a06c5e48605", null ]
+    [ "express::dispatcher::joinMountPath", "namespaceexpress_1_1dispatcher.html#a1ef85375975b3edaff59dee5871619a1", null ],
+    [ "express::dispatcher::matchMountPoint", "namespaceexpress_1_1dispatcher.html#a3e26a9e598c934031d3db8083102be1b", null ],
+    [ "express::dispatcher::methodMatches", "namespaceexpress_1_1dispatcher.html#aecfcb63143fcdd17100b9490aa1e788b", null ]
 ];

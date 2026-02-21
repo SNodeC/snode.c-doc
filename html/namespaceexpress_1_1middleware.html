@@ -110,17 +110,17 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:StaticMiddleware" id="r_StaticMiddleware"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classexpress_1_1middleware_1_1StaticMiddleware.html">StaticMiddleware</a></td></tr>
-<tr class="memitem:JsonMiddleware" id="r_JsonMiddleware"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classexpress_1_1middleware_1_1JsonMiddleware.html">JsonMiddleware</a></td></tr>
 <tr class="memitem:BasicAuthentication" id="r_BasicAuthentication"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classexpress_1_1middleware_1_1BasicAuthentication.html">BasicAuthentication</a></td></tr>
 <tr class="memitem:VHost" id="r_VHost"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classexpress_1_1middleware_1_1VHost.html">VHost</a></td></tr>
+<tr class="memitem:JsonMiddleware" id="r_JsonMiddleware"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classexpress_1_1middleware_1_1JsonMiddleware.html">JsonMiddleware</a></td></tr>
 <tr class="memitem:VerboseRequest" id="r_VerboseRequest"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classexpress_1_1middleware_1_1VerboseRequest.html">VerboseRequest</a></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a2fb128871e11fe983884f466d01bee94" id="r_a2fb128871e11fe983884f466d01bee94"><td class="memItemLeft" align="right" valign="top">class StaticMiddleware &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2fb128871e11fe983884f466d01bee94">StaticMiddleware</a> (const std::string &amp;root)</td></tr>
-<tr class="memitem:a35fbbb0ab8dc42ea09af1abfd9962624" id="r_a35fbbb0ab8dc42ea09af1abfd9962624"><td class="memItemLeft" align="right" valign="top">class JsonMiddleware &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a35fbbb0ab8dc42ea09af1abfd9962624">JsonMiddleware</a> ()</td></tr>
 <tr class="memitem:ae7c0a9d2496da8f4bb727cbc33bd4779" id="r_ae7c0a9d2496da8f4bb727cbc33bd4779"><td class="memItemLeft" align="right" valign="top">class BasicAuthentication &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae7c0a9d2496da8f4bb727cbc33bd4779">BasicAuthentication</a> (const std::string &amp;userName, const std::string &amp;password, const std::string &amp;realm)</td></tr>
 <tr class="memitem:aafc55af11280a46aa664c858db1088e9" id="r_aafc55af11280a46aa664c858db1088e9"><td class="memItemLeft" align="right" valign="top">class VHost &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aafc55af11280a46aa664c858db1088e9">VHost</a> (const std::string &amp;host)</td></tr>
+<tr class="memitem:a35fbbb0ab8dc42ea09af1abfd9962624" id="r_a35fbbb0ab8dc42ea09af1abfd9962624"><td class="memItemLeft" align="right" valign="top">class JsonMiddleware &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a35fbbb0ab8dc42ea09af1abfd9962624">JsonMiddleware</a> ()</td></tr>
 <tr class="memitem:a102255da44bc70860800d42685e7bccb" id="r_a102255da44bc70860800d42685e7bccb"><td class="memItemLeft" align="right" valign="top">class VerboseRequest &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a102255da44bc70860800d42685e7bccb">VerboseRequest</a> (<a class="el" href="classexpress_1_1middleware_1_1VerboseRequest.html#aae17348f5373a80d776ad8dc77eff1fd">VerboseRequest::Details</a> details=<a class="el" href="classexpress_1_1middleware_1_1VerboseRequest.html#aae17348f5373a80d776ad8dc77eff1fda2d79b1da3d670fd6b3d0b6d9ca5bc94a">VerboseRequest::W_ALL</a>)</td></tr>
 <tr class="memitem:a54f501c5233820e7e2fb950978001ed8" id="r_a54f501c5233820e7e2fb950978001ed8"><td class="memItemLeft" align="right" valign="top">static std::string_view&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a54f501c5233820e7e2fb950978001ed8">hostWithoutPort</a> (std::string_view host)</td></tr>
 </table>
@@ -255,11 +255,11 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="StaticMiddleware_8cpp_source.html#l00179">179</a> of file <a class="el" href="StaticMiddleware_8cpp_source.html">StaticMiddleware.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  179</span>                                                                    {</div>
-<div class="line"><span class="lineno">  180</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classexpress_1_1middleware_1_1StaticMiddleware.html#abf7aad109677706e3b41004be8ac2f53">StaticMiddleware::instance</a>(root);</div>
-<div class="line"><span class="lineno">  181</span>    }</div>
-<div class="ttc" id="aclassexpress_1_1middleware_1_1StaticMiddleware_html_abf7aad109677706e3b41004be8ac2f53"><div class="ttname"><a href="classexpress_1_1middleware_1_1StaticMiddleware.html#abf7aad109677706e3b41004be8ac2f53">express::middleware::StaticMiddleware::instance</a></div><div class="ttdeci">static class StaticMiddleware &amp; instance(const std::string &amp;root)</div><div class="ttdef"><b>Definition</b> <a href="StaticMiddleware_8cpp_source.html#l00167">StaticMiddleware.cpp:167</a></div></div>
+<p class="definition">Definition at line <a class="el" href="StaticMiddleware_8cpp_source.html#l00177">177</a> of file <a class="el" href="StaticMiddleware_8cpp_source.html">StaticMiddleware.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  177</span>                                                                    {</div>
+<div class="line"><span class="lineno">  178</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classexpress_1_1middleware_1_1StaticMiddleware.html#abf7aad109677706e3b41004be8ac2f53">StaticMiddleware::instance</a>(root);</div>
+<div class="line"><span class="lineno">  179</span>    }</div>
+<div class="ttc" id="aclassexpress_1_1middleware_1_1StaticMiddleware_html_abf7aad109677706e3b41004be8ac2f53"><div class="ttname"><a href="classexpress_1_1middleware_1_1StaticMiddleware.html#abf7aad109677706e3b41004be8ac2f53">express::middleware::StaticMiddleware::instance</a></div><div class="ttdeci">static class StaticMiddleware &amp; instance(const std::string &amp;root)</div><div class="ttdef"><b>Definition</b> <a href="StaticMiddleware_8cpp_source.html#l00165">StaticMiddleware.cpp:165</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>

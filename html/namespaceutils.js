@@ -9,7 +9,7 @@ var namespaceutils =
       [ "time", "namespaceutils_1_1system.html#aa36252afed0ca4903feb511649270d1c", null ]
     ] ],
     [ "Config", "classutils_1_1Config.html", "classutils_1_1Config" ],
-    [ "SHA1", "classutils_1_1SHA1.html", "classutils_1_1SHA1" ],
+    [ "AppWithPtr", "structutils_1_1AppWithPtr.html", "structutils_1_1AppWithPtr" ],
     [ "DaemonFailure", "classutils_1_1DaemonFailure.html", "classutils_1_1DaemonFailure" ],
     [ "DaemonError", "classutils_1_1DaemonError.html", "classutils_1_1DaemonError" ],
     [ "DaemonSignaled", "classutils_1_1DaemonSignaled.html", "classutils_1_1DaemonSignaled" ],
@@ -21,6 +21,7 @@ var namespaceutils =
     [ "AttributeProxy", "classutils_1_1AttributeProxy.html", "classutils_1_1AttributeProxy" ],
     [ "SingleAttributeInjector", "classutils_1_1SingleAttributeInjector.html", "classutils_1_1SingleAttributeInjector" ],
     [ "MultibleAttributeInjector", "classutils_1_1MultibleAttributeInjector.html", "classutils_1_1MultibleAttributeInjector" ],
+    [ "SHA1", "classutils_1_1SHA1.html", "classutils_1_1SHA1" ],
     [ "Timeval", "classutils_1_1Timeval.html", "classutils_1_1Timeval" ],
     [ "InjectableAttribute", "conceptutils_1_1InjectableAttribute.html", null ],
     [ "bash_backslash_escape_no_whitespace", "namespaceutils.html#ad6f33a47f8bc2b7f4581ade69caa2dd9", null ],

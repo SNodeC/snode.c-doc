@@ -2,6 +2,7 @@ var classnet_1_1in6_1_1config_1_1ConfigAddress =
 [
     [ "Super", "classnet_1_1in6_1_1config_1_1ConfigAddress.html#a97828a1376d801ba0843b7dd26f4dd9e", null ],
     [ "ConfigAddress", "classnet_1_1in6_1_1config_1_1ConfigAddress.html#a641111acf64373bdda414517fc738ff3", null ],
+    [ "configurable", "classnet_1_1in6_1_1config_1_1ConfigAddress.html#af887819afe44fe85910deab9426af469", null ],
     [ "getAiFlags", "classnet_1_1in6_1_1config_1_1ConfigAddress.html#ae7607f2ec4ed17966a0d127e450c27a5", null ],
     [ "getAiProtocol", "classnet_1_1in6_1_1config_1_1ConfigAddress.html#a8a4c98bd2835e7bfecdb2463111ab2f0", null ],
     [ "getAiSockType", "classnet_1_1in6_1_1config_1_1ConfigAddress.html#afaae41c01fc45b6d005a7888ecd4b3ef", null ],

@@ -1,9 +1,9 @@
 var namespacedatabase_1_1mariadb =
 [
     [ "commands", "namespacedatabase_1_1mariadb_1_1commands.html", "namespacedatabase_1_1mariadb_1_1commands" ],
+    [ "MariaDBCommandSequence", "classdatabase_1_1mariadb_1_1MariaDBCommandSequence.html", "classdatabase_1_1mariadb_1_1MariaDBCommandSequence" ],
     [ "MariaDBState", "structdatabase_1_1mariadb_1_1MariaDBState.html", "structdatabase_1_1mariadb_1_1MariaDBState" ],
     [ "MariaDBClient", "classdatabase_1_1mariadb_1_1MariaDBClient.html", "classdatabase_1_1mariadb_1_1MariaDBClient" ],
-    [ "MariaDBCommandSequence", "classdatabase_1_1mariadb_1_1MariaDBCommandSequence.html", "classdatabase_1_1mariadb_1_1MariaDBCommandSequence" ],
     [ "MariaDBConnectionDetails", "structdatabase_1_1mariadb_1_1MariaDBConnectionDetails.html", "structdatabase_1_1mariadb_1_1MariaDBConnectionDetails" ],
     [ "MariaDBCommandSync", "classdatabase_1_1mariadb_1_1MariaDBCommandSync.html", "classdatabase_1_1mariadb_1_1MariaDBCommandSync" ],
     [ "MariaDBCommandStartEvent", "classdatabase_1_1mariadb_1_1MariaDBCommandStartEvent.html", "classdatabase_1_1mariadb_1_1MariaDBCommandStartEvent" ],

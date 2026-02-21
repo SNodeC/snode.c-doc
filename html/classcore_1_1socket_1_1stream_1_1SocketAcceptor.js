@@ -4,7 +4,7 @@ var classcore_1_1socket_1_1stream_1_1SocketAcceptor =
     [ "PhysicalServerSocket", "classcore_1_1socket_1_1stream_1_1SocketAcceptor.html#a3b4f3f613d3f4993299838686d06d98b", null ],
     [ "SocketAddress", "classcore_1_1socket_1_1stream_1_1SocketAcceptor.html#ac8e66958cca7114bb029a641025f53ed", null ],
     [ "SocketConnection", "classcore_1_1socket_1_1stream_1_1SocketAcceptor.html#a30c0cbf1c58f6dc3e95d233897a76fc2", null ],
-    [ "SocketAcceptor", "classcore_1_1socket_1_1stream_1_1SocketAcceptor.html#addf1e6a0b7c39cdb8937a5158c9c557e", null ],
+    [ "SocketAcceptor", "classcore_1_1socket_1_1stream_1_1SocketAcceptor.html#a8973a728f96424c9f117a34ebc507751", null ],
     [ "SocketAcceptor", "classcore_1_1socket_1_1stream_1_1SocketAcceptor.html#a53978288346040b061c00691d6c6d118", null ],
     [ "~SocketAcceptor", "classcore_1_1socket_1_1stream_1_1SocketAcceptor.html#adfd11d9aa9655f80be63eabbe9062256", null ],
     [ "acceptEvent", "classcore_1_1socket_1_1stream_1_1SocketAcceptor.html#a43173b9c28fcd96df9d7b4242c3d658a", null ],
@@ -17,6 +17,7 @@ var classcore_1_1socket_1_1stream_1_1SocketAcceptor =
     [ "onConnect", "classcore_1_1socket_1_1stream_1_1SocketAcceptor.html#a8b30777b51d10ab27896e68889a7e0a1", null ],
     [ "onConnected", "classcore_1_1socket_1_1stream_1_1SocketAcceptor.html#a100bf272bb467642c0b226fa8cf10da5", null ],
     [ "onDisconnect", "classcore_1_1socket_1_1stream_1_1SocketAcceptor.html#a984eb5749393111680236d7df0ca02b9", null ],
+    [ "onInitState", "classcore_1_1socket_1_1stream_1_1SocketAcceptor.html#af1690ab3aeb850b8a94a25c4b11d7853", null ],
     [ "onStatus", "classcore_1_1socket_1_1stream_1_1SocketAcceptor.html#af1ff5c5756325f3b77b92db681fbff33", null ],
     [ "physicalServerSocket", "classcore_1_1socket_1_1stream_1_1SocketAcceptor.html#aeec75b53d529d1d78a3713ff7243bc64", null ]
 ];
