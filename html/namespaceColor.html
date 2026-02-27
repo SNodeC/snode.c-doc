@@ -141,7 +141,9 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a0a74c83ead3176702da8b8249d9c8672" id="r_a0a74c83ead3176702da8b8249d9c8672"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0a74c83ead3176702da8b8249d9c8672">operator&lt;&lt;</a> (std::ostream &amp;os, <a class="el" href="#a20a7b04657c1d83fae5d54514d3f1622">Code</a> code)</td></tr>
+<tr class="memitem:a81c051abf856d9966cd8cc4b9f6a75f7" id="r_a81c051abf856d9966cd8cc4b9f6a75f7"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a81c051abf856d9966cd8cc4b9f6a75f7">operator&lt;&lt;</a> (std::ostream &amp;os, const <a class="el" href="#a20a7b04657c1d83fae5d54514d3f1622">Code</a> &amp;code)</td></tr>
+<tr class="memitem:a6d7eec98115ea6d6eab8997cacd6ac85" id="r_a6d7eec98115ea6d6eab8997cacd6ac85"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6d7eec98115ea6d6eab8997cacd6ac85">operator+</a> (const std::string &amp;string, const <a class="el" href="#a20a7b04657c1d83fae5d54514d3f1622">Code</a> &amp;code)</td></tr>
+<tr class="memitem:af34902a851833effa2093899013ed10c" id="r_af34902a851833effa2093899013ed10c"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af34902a851833effa2093899013ed10c">operator+</a> (const <a class="el" href="#a20a7b04657c1d83fae5d54514d3f1622">Code</a> &amp;code, const std::string &amp;string)</td></tr>
 </table>
 <a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Enumeration Type Documentation</h2>
 <a id="a20a7b04657c1d83fae5d54514d3f1622" name="a20a7b04657c1d83fae5d54514d3f1622"></a>
@@ -236,8 +238,72 @@ Functions</h2></td></tr>
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
-<a id="a0a74c83ead3176702da8b8249d9c8672" name="a0a74c83ead3176702da8b8249d9c8672"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0a74c83ead3176702da8b8249d9c8672">&#9670;&#160;</a></span>operator&lt;&lt;()</h2>
+<a id="af34902a851833effa2093899013ed10c" name="af34902a851833effa2093899013ed10c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af34902a851833effa2093899013ed10c">&#9670;&#160;</a></span>operator+() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Color::operator+ </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a20a7b04657c1d83fae5d54514d3f1622">Code</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>code</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>string</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="Logger_8cpp_source.html#l00172">172</a> of file <a class="el" href="Logger_8cpp_source.html">Logger.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  172</span>                                                                    {</div>
+<div class="line"><span class="lineno">  173</span>    <span class="keywordflow">return</span> (!<a class="code hl_variable" href="classlogger_1_1Logger.html#a0e97d79c40a1fcf5148a7067cd9e50dd">logger::Logger::disableColorLog</a> ? (<span class="stringliteral">&quot;\033[&quot;</span> + std::to_string(<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(code)) + <span class="stringliteral">&quot;m&quot;</span>) : <span class="stringliteral">&quot;&quot;</span>) + string;</div>
+<div class="line"><span class="lineno">  174</span>}</div>
+<div class="ttc" id="aclasslogger_1_1Logger_html_a0e97d79c40a1fcf5148a7067cd9e50dd"><div class="ttname"><a href="classlogger_1_1Logger.html#a0e97d79c40a1fcf5148a7067cd9e50dd">logger::Logger::disableColorLog</a></div><div class="ttdeci">static bool disableColorLog</div><div class="ttdef"><b>Definition</b> <a href="Logger_8h_source.html#l00124">Logger.h:124</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Logger_8h_source.html#l00124">logger::Logger::disableColorLog</a>.</p>
+
+</div>
+</div>
+<a id="a6d7eec98115ea6d6eab8997cacd6ac85" name="a6d7eec98115ea6d6eab8997cacd6ac85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d7eec98115ea6d6eab8997cacd6ac85">&#9670;&#160;</a></span>operator+() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Color::operator+ </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>string</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="#a20a7b04657c1d83fae5d54514d3f1622">Code</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>code</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="Logger_8cpp_source.html#l00168">168</a> of file <a class="el" href="Logger_8cpp_source.html">Logger.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  168</span>                                                                    {</div>
+<div class="line"><span class="lineno">  169</span>    <span class="keywordflow">return</span> <span class="keywordtype">string</span> + (!<a class="code hl_variable" href="classlogger_1_1Logger.html#a0e97d79c40a1fcf5148a7067cd9e50dd">logger::Logger::disableColorLog</a> ? (<span class="stringliteral">&quot;\033[&quot;</span> + std::to_string(<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(code)) + <span class="stringliteral">&quot;m&quot;</span>) : <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">  170</span>}</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Logger_8h_source.html#l00124">logger::Logger::disableColorLog</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Config_8cpp_source.html#l00473">utils::createCommandLineOptions()</a>, and <a class="el" href="Formatter_8cpp_source.html#l00063">CLI::ConfigFormatter::to_config()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="namespaceColor_a6d7eec98115ea6d6eab8997cacd6ac85_icgraph.svg" width="100%" height="472"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="a81c051abf856d9966cd8cc4b9f6a75f7" name="a81c051abf856d9966cd8cc4b9f6a75f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81c051abf856d9966cd8cc4b9f6a75f7">&#9670;&#160;</a></span>operator&lt;&lt;()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -250,16 +316,18 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="#a20a7b04657c1d83fae5d54514d3f1622">Code</a></td>          <td class="paramname"><span class="paramname"><em>code</em></span>&#160;)</td>
+          <td class="paramtype">const <a class="el" href="#a20a7b04657c1d83fae5d54514d3f1622">Code</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>code</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Logger_8cpp_source.html#l00146">146</a> of file <a class="el" href="Logger_8cpp_source.html">Logger.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  146</span>                                                       {</div>
-<div class="line"><span class="lineno">  147</span>    <span class="keywordflow">return</span> os &lt;&lt; <span class="stringliteral">&quot;\033[&quot;</span> &lt;&lt; <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(code) &lt;&lt; <span class="stringliteral">&quot;m&quot;</span>;</div>
-<div class="line"><span class="lineno">  148</span>}</div>
+<p class="definition">Definition at line <a class="el" href="Logger_8cpp_source.html#l00164">164</a> of file <a class="el" href="Logger_8cpp_source.html">Logger.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  164</span>                                                              {</div>
+<div class="line"><span class="lineno">  165</span>    <span class="keywordflow">return</span> os &lt;&lt; (!<a class="code hl_variable" href="classlogger_1_1Logger.html#a0e97d79c40a1fcf5148a7067cd9e50dd">logger::Logger::disableColorLog</a> ? (<span class="stringliteral">&quot;\033[&quot;</span> + std::to_string(<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(code)) + <span class="stringliteral">&quot;m&quot;</span>) : <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">  166</span>}</div>
 </div><!-- fragment -->
+<p class="reference">References <a class="el" href="Logger_8h_source.html#l00124">logger::Logger::disableColorLog</a>.</p>
+
 </div>
 </div>
 </div><!-- contents -->

@@ -7,7 +7,7 @@ var classnet_1_1config_1_1ConfigTlsServer =
     [ "addSniCert", "classnet_1_1config_1_1ConfigTlsServer.html#a7e9c2bfe0c19f17117d6b35a5f1bd4ba", null ],
     [ "addSniCerts", "classnet_1_1config_1_1ConfigTlsServer.html#a377311db88b35a49475ffda629f9fc34", null ],
     [ "getForceSni", "classnet_1_1config_1_1ConfigTlsServer.html#adac2f6dcd1da07ab1c2b3666c7819234", null ],
-    [ "getSniCerts", "classnet_1_1config_1_1ConfigTlsServer.html#a845949ee9135c3feed4b8b53e933879d", null ],
+    [ "getSniCerts", "classnet_1_1config_1_1ConfigTlsServer.html#a4eebf8e4098393ec39b80fceee1c09b7", null ],
     [ "setForceSni", "classnet_1_1config_1_1ConfigTlsServer.html#a4560b828581fd585fc9019c13212d279", null ],
     [ "configuredSniCerts", "classnet_1_1config_1_1ConfigTlsServer.html#a0b2de0562c07c002cf54939e48e22f8c", null ],
     [ "defaultSniCerts", "classnet_1_1config_1_1ConfigTlsServer.html#a589bbb18ba7299fcda7f752a02354a27", null ],

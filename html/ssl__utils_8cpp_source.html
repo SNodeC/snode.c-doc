@@ -184,11 +184,11 @@ $(function() {
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
 <div class="foldopen" id="foldopen00075" data-start="{" data-end="}">
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="namespacecore_1_1socket_1_1stream_1_1tls.html#a322715864c9cd97e7b46ddebffef8fa5">   75</a></span>    <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code hl_function" href="namespacecore_1_1socket_1_1stream_1_1tls.html#a322715864c9cd97e7b46ddebffef8fa5">verify_callback</a>(<span class="keywordtype">int</span> preverify_ok, X509_STORE_CTX* ctx) {</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        SSL* ssl = <span class="keyword">static_cast</span>&lt;SSL*&gt;(X509_STORE_CTX_get_ex_data(ctx, SSL_get_ex_data_X509_STORE_CTX_idx()));</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        <span class="keyword">const</span> SSL* ssl = <span class="keyword">static_cast</span>&lt;SSL*&gt;(X509_STORE_CTX_get_ex_data(ctx, SSL_get_ex_data_X509_STORE_CTX_idx()));</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        <span class="keyword">const</span> std::string connectionName = *<span class="keyword">static_cast</span>&lt;std::string*&gt;(SSL_get_ex_data(ssl, 0));</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        X509* curr_cert = X509_STORE_CTX_get_current_cert(ctx);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        <span class="keyword">const</span> X509* curr_cert = X509_STORE_CTX_get_current_cert(ctx);</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        <span class="keyword">const</span> <span class="keywordtype">int</span> depth = X509_STORE_CTX_get_error_depth(ctx);</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        <span class="keywordtype">char</span> subjectName[256];</div>
@@ -339,7 +339,7 @@ $(function() {
 <div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>        std::map&lt;std::string, SSL_CTX*&gt; sans;</div>
 <div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span> </div>
 <div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>        <span class="keywordflow">if</span> (sslCtx != <span class="keywordtype">nullptr</span>) {</div>
-<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>            X509* x509 = SSL_CTX_get0_certificate(sslCtx);</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>            <span class="keyword">const</span> X509* x509 = SSL_CTX_get0_certificate(sslCtx);</div>
 <div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>            <span class="keywordflow">if</span> (x509 != <span class="keywordtype">nullptr</span>) {</div>
 <div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>                GENERAL_NAMES* subjectAltNames =</div>
 <div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>                    <span class="keyword">static_cast</span>&lt;GENERAL_NAMES*&gt;(X509_get_ext_d2i(x509, NID_subject_alt_name, <span class="keywordtype">nullptr</span>, <span class="keywordtype">nullptr</span>));</div>
@@ -347,7 +347,7 @@ $(function() {
 <div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>                <span class="keyword">const</span> int32_t altNameCount = sk_GENERAL_NAME_num(subjectAltNames);</div>
 <div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span> </div>
 <div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>                <span class="keywordflow">for</span> (int32_t i = 0; i &lt; altNameCount; ++i) {</div>
-<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>                    GENERAL_NAME* generalName = sk_GENERAL_NAME_value(subjectAltNames, i);</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>                    <span class="keyword">const</span> GENERAL_NAME* generalName = sk_GENERAL_NAME_value(subjectAltNames, i);</div>
 <div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>                    <span class="keywordflow">if</span> (generalName-&gt;type == GEN_DNS || generalName-&gt;type == GEN_URI || generalName-&gt;type == GEN_EMAIL) {</div>
 <div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>                        <span class="keyword">const</span> std::string subjectAltName =</div>
 <div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>                            std::string(<span class="keyword">reinterpret_cast</span>&lt;<span class="keyword">const</span> <span class="keywordtype">char</span>*&gt;(ASN1_STRING_get0_data(generalName-&gt;d.dNSName)),</div>

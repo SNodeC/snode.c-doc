@@ -129,7 +129,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:adac2f6dcd1da07ab1c2b3666c7819234" id="r_adac2f6dcd1da07ab1c2b3666c7819234"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adac2f6dcd1da07ab1c2b3666c7819234">getForceSni</a> () const</td></tr>
 <tr class="memitem:a377311db88b35a49475ffda629f9fc34" id="r_a377311db88b35a49475ffda629f9fc34"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a44171b2eb48f19d0faec39d2c7965a1a">ConfigTlsServer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a377311db88b35a49475ffda629f9fc34">addSniCerts</a> (const std::map&lt; std::string, std::map&lt; std::string, std::variant&lt; std::string, bool, ssl_option_t &gt; &gt; &gt; &amp;sniCerts)</td></tr>
 <tr class="memitem:a7e9c2bfe0c19f17117d6b35a5f1bd4ba" id="r_a7e9c2bfe0c19f17117d6b35a5f1bd4ba"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a44171b2eb48f19d0faec39d2c7965a1a">ConfigTlsServer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7e9c2bfe0c19f17117d6b35a5f1bd4ba">addSniCert</a> (const std::string &amp;domain, const std::map&lt; std::string, std::variant&lt; std::string, bool, ssl_option_t &gt; &gt; &amp;sniCert)</td></tr>
-<tr class="memitem:a845949ee9135c3feed4b8b53e933879d" id="r_a845949ee9135c3feed4b8b53e933879d"><td class="memItemLeft" align="right" valign="top">const std::map&lt; std::string, std::map&lt; std::string, std::variant&lt; std::string, bool, ssl_option_t &gt; &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a845949ee9135c3feed4b8b53e933879d">getSniCerts</a> ()</td></tr>
+<tr class="memitem:a4eebf8e4098393ec39b80fceee1c09b7" id="r_a4eebf8e4098393ec39b80fceee1c09b7"><td class="memItemLeft" align="right" valign="top">const std::map&lt; std::string, std::map&lt; std::string, std::variant&lt; std::string, bool, ssl_option_t &gt; &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4eebf8e4098393ec39b80fceee1c09b7">getSniCerts</a> () const</td></tr>
 <tr class="inherit_header pub_methods_classnet_1_1config_1_1ConfigTls"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classnet_1_1config_1_1ConfigTls')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="classnet_1_1config_1_1ConfigTls.html">net::config::ConfigTls</a></td></tr>
 <tr class="memitem:a639537a682ef2409de4871aa81ec2005 inherit pub_methods_classnet_1_1config_1_1ConfigTls" id="r_a639537a682ef2409de4871aa81ec2005"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classnet_1_1config_1_1ConfigTls.html#a2ef227db9c43efdeb017a9e82a7096cc">ConfigTls</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnet_1_1config_1_1ConfigTls.html#a639537a682ef2409de4871aa81ec2005">setInitTimeout</a> (const <a class="el" href="classutils_1_1Timeval.html">utils::Timeval</a> &amp;newInitTimeout)</td></tr>
 <tr class="memitem:afd899edd3cb612bef25f17f866d17524 inherit pub_methods_classnet_1_1config_1_1ConfigTls" id="r_afd899edd3cb612bef25f17f866d17524"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classutils_1_1Timeval.html">utils::Timeval</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnet_1_1config_1_1ConfigTls.html#afd899edd3cb612bef25f17f866d17524">getInitTimeout</a> () const</td></tr>
@@ -189,41 +189,31 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:abb6ceadb48ce22e47a2f35a8187591d9 inherit pub_methods_classnet_1_1config_1_1ConfigSection" id="r_abb6ceadb48ce22e47a2f35a8187591d9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnet_1_1config_1_1ConfigSection.html#abb6ceadb48ce22e47a2f35a8187591d9">ConfigSection</a> (ConfigSection &amp;&amp;)=delete</td></tr>
 <tr class="memitem:ae9844d9baaa07fdcff992374983a927f inherit pub_methods_classnet_1_1config_1_1ConfigSection" id="r_ae9844d9baaa07fdcff992374983a927f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classnet_1_1config_1_1ConfigSection.html#a839f1c45c71e402cbaebff2a4288a018">ConfigSection</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnet_1_1config_1_1ConfigSection.html#ae9844d9baaa07fdcff992374983a927f">operator=</a> (const <a class="el" href="classnet_1_1config_1_1ConfigSection.html#a839f1c45c71e402cbaebff2a4288a018">ConfigSection</a> &amp;)=delete</td></tr>
 <tr class="memitem:a6858e6540e42ec96ff500e2ff3e81f8e inherit pub_methods_classnet_1_1config_1_1ConfigSection" id="r_a6858e6540e42ec96ff500e2ff3e81f8e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classnet_1_1config_1_1ConfigSection.html#a839f1c45c71e402cbaebff2a4288a018">ConfigSection</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnet_1_1config_1_1ConfigSection.html#a6858e6540e42ec96ff500e2ff3e81f8e">operator=</a> (<a class="el" href="classnet_1_1config_1_1ConfigSection.html#a839f1c45c71e402cbaebff2a4288a018">ConfigSection</a> &amp;&amp;)=delete</td></tr>
-<tr class="memitem:a3bd28fd716c3c4e085cba02844aadb1e inherit pub_methods_classnet_1_1config_1_1ConfigSection" id="r_a3bd28fd716c3c4e085cba02844aadb1e"><td class="memItemLeft" align="right" valign="top">CLI::Option *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnet_1_1config_1_1ConfigSection.html#a3bd28fd716c3c4e085cba02844aadb1e">addOption</a> (const std::string &amp;name, const std::string &amp;description)</td></tr>
-<tr class="memitem:a34b7d4e1abe68bb1f15a70bb5a1d9f94 inherit pub_methods_classnet_1_1config_1_1ConfigSection" id="r_a34b7d4e1abe68bb1f15a70bb5a1d9f94"><td class="memItemLeft" align="right" valign="top">CLI::Option *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnet_1_1config_1_1ConfigSection.html#a34b7d4e1abe68bb1f15a70bb5a1d9f94">addOption</a> (const std::string &amp;name, const std::string &amp;description, const std::string &amp;typeName)</td></tr>
 <tr class="memitem:a04123940dc4d632688000c65373dc792 inherit pub_methods_classnet_1_1config_1_1ConfigSection" id="r_a04123940dc4d632688000c65373dc792"><td class="memItemLeft" align="right" valign="top">CLI::Option *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnet_1_1config_1_1ConfigSection.html#a04123940dc4d632688000c65373dc792">addOption</a> (const std::string &amp;name, const std::string &amp;description, const std::string &amp;typeName, const CLI::Validator &amp;additionalValidator)</td></tr>
-<tr class="memitem:a49b8b1a82ea4c182b798c165567bd462 inherit pub_methods_classnet_1_1config_1_1ConfigSection" id="r_a49b8b1a82ea4c182b798c165567bd462"><td class="memTemplParams" colspan="2">template&lt;typename ValueTypeT&gt; </td></tr>
-<tr class="memitem:a49b8b1a82ea4c182b798c165567bd462 inherit pub_methods_classnet_1_1config_1_1ConfigSection template"><td class="memItemLeft" align="right" valign="top">CLI::Option *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnet_1_1config_1_1ConfigSection.html#a49b8b1a82ea4c182b798c165567bd462">addOption</a> (const std::string &amp;name, const std::string &amp;description, const std::string &amp;typeName, ValueTypeT defaultValue)</td></tr>
 <tr class="memitem:a7afd42971ea3fcc6ddc5c19a40ca2f91 inherit pub_methods_classnet_1_1config_1_1ConfigSection" id="r_a7afd42971ea3fcc6ddc5c19a40ca2f91"><td class="memTemplParams" colspan="2">template&lt;typename ValueTypeT&gt; </td></tr>
 <tr class="memitem:a7afd42971ea3fcc6ddc5c19a40ca2f91 inherit pub_methods_classnet_1_1config_1_1ConfigSection template"><td class="memItemLeft" align="right" valign="top">CLI::Option *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnet_1_1config_1_1ConfigSection.html#a7afd42971ea3fcc6ddc5c19a40ca2f91">addOption</a> (const std::string &amp;name, const std::string &amp;description, const std::string &amp;typeName, ValueTypeT defaultValue, const CLI::Validator &amp;additionalValidator)</td></tr>
-<tr class="memitem:a812ccee6e49f1b1c2d8056ce9f3b817b inherit pub_methods_classnet_1_1config_1_1ConfigSection" id="r_a812ccee6e49f1b1c2d8056ce9f3b817b"><td class="memTemplParams" colspan="2">template&lt;typename ValueTypeT&gt; </td></tr>
-<tr class="memitem:a812ccee6e49f1b1c2d8056ce9f3b817b inherit pub_methods_classnet_1_1config_1_1ConfigSection template"><td class="memItemLeft" align="right" valign="top">CLI::Option *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnet_1_1config_1_1ConfigSection.html#a812ccee6e49f1b1c2d8056ce9f3b817b">addOptionFunction</a> (const std::string &amp;name, const std::function&lt; void(const std::string &amp;)&gt; &amp;optionFunction, const std::string &amp;description)</td></tr>
-<tr class="memitem:a5120f8ebadc117756ff504b37540e4aa inherit pub_methods_classnet_1_1config_1_1ConfigSection" id="r_a5120f8ebadc117756ff504b37540e4aa"><td class="memItemLeft" align="right" valign="top">CLI::Option *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnet_1_1config_1_1ConfigSection.html#a5120f8ebadc117756ff504b37540e4aa">addFlag</a> (const std::string &amp;name, const std::string &amp;description)</td></tr>
-<tr class="memitem:af1c436d41e943e6189691758e6d2d5aa inherit pub_methods_classnet_1_1config_1_1ConfigSection" id="r_af1c436d41e943e6189691758e6d2d5aa"><td class="memItemLeft" align="right" valign="top">CLI::Option *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnet_1_1config_1_1ConfigSection.html#af1c436d41e943e6189691758e6d2d5aa">addFlag</a> (const std::string &amp;name, const std::string &amp;description, const std::string &amp;typeName)</td></tr>
 <tr class="memitem:a7ab3e1c554fd58a1dc06146a915aea51 inherit pub_methods_classnet_1_1config_1_1ConfigSection" id="r_a7ab3e1c554fd58a1dc06146a915aea51"><td class="memItemLeft" align="right" valign="top">CLI::Option *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnet_1_1config_1_1ConfigSection.html#a7ab3e1c554fd58a1dc06146a915aea51">addFlag</a> (const std::string &amp;name, const std::string &amp;description, const std::string &amp;typeName, const CLI::Validator &amp;additionalValidator)</td></tr>
-<tr class="memitem:a8c1b762eb99543f6659540639d73905b inherit pub_methods_classnet_1_1config_1_1ConfigSection" id="r_a8c1b762eb99543f6659540639d73905b"><td class="memTemplParams" colspan="2">template&lt;typename ValueTypeT&gt; </td></tr>
-<tr class="memitem:a8c1b762eb99543f6659540639d73905b inherit pub_methods_classnet_1_1config_1_1ConfigSection template"><td class="memItemLeft" align="right" valign="top">CLI::Option *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnet_1_1config_1_1ConfigSection.html#a8c1b762eb99543f6659540639d73905b">addFlag</a> (const std::string &amp;name, const std::string &amp;description, const std::string &amp;typeName, ValueTypeT defaultValue)</td></tr>
 <tr class="memitem:a95ffd0ca5955502fb43ff5ed2b0d9da1 inherit pub_methods_classnet_1_1config_1_1ConfigSection" id="r_a95ffd0ca5955502fb43ff5ed2b0d9da1"><td class="memTemplParams" colspan="2">template&lt;typename ValueTypeT&gt; </td></tr>
 <tr class="memitem:a95ffd0ca5955502fb43ff5ed2b0d9da1 inherit pub_methods_classnet_1_1config_1_1ConfigSection template"><td class="memItemLeft" align="right" valign="top">CLI::Option *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnet_1_1config_1_1ConfigSection.html#a95ffd0ca5955502fb43ff5ed2b0d9da1">addFlag</a> (const std::string &amp;name, const std::string &amp;description, const std::string &amp;typeName, ValueTypeT defaultValue, const CLI::Validator &amp;additionalValidator)</td></tr>
-<tr class="memitem:a8bb603baa8b62771c6eaea319c0af906 inherit pub_methods_classnet_1_1config_1_1ConfigSection" id="r_a8bb603baa8b62771c6eaea319c0af906"><td class="memItemLeft" align="right" valign="top">CLI::Option *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnet_1_1config_1_1ConfigSection.html#a8bb603baa8b62771c6eaea319c0af906">addFlagFunction</a> (const std::string &amp;name, const std::function&lt; void()&gt; &amp;callback, const std::string &amp;description, const std::string &amp;typeName, const std::string &amp;defaultValue)</td></tr>
 <tr class="memitem:abec153e5e45d1177a9ff6f7ac8845893 inherit pub_methods_classnet_1_1config_1_1ConfigSection" id="r_abec153e5e45d1177a9ff6f7ac8845893"><td class="memItemLeft" align="right" valign="top">CLI::Option *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnet_1_1config_1_1ConfigSection.html#abec153e5e45d1177a9ff6f7ac8845893">addFlagFunction</a> (const std::string &amp;name, const std::function&lt; void()&gt; &amp;callback, const std::string &amp;description, const std::string &amp;typeName, const std::string &amp;defaultValue, const CLI::Validator &amp;validator)</td></tr>
 <tr class="memitem:adb093aa1f5933d7d07e039542084e02c inherit pub_methods_classnet_1_1config_1_1ConfigSection" id="r_adb093aa1f5933d7d07e039542084e02c"><td class="memItemLeft" align="right" valign="top">CLI::Option *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnet_1_1config_1_1ConfigSection.html#adb093aa1f5933d7d07e039542084e02c">getOption</a> (const std::string &amp;name) const</td></tr>
 <tr class="memitem:afe7a0030f5ef727586a4dc6d32410ce7 inherit pub_methods_classnet_1_1config_1_1ConfigSection" id="r_afe7a0030f5ef727586a4dc6d32410ce7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnet_1_1config_1_1ConfigSection.html#afe7a0030f5ef727586a4dc6d32410ce7">required</a> (CLI::Option *opt, bool req=true)</td></tr>
 <tr class="memitem:a33dedf9f70ad5934178e1c021571a45a inherit pub_methods_classnet_1_1config_1_1ConfigSection" id="r_a33dedf9f70ad5934178e1c021571a45a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnet_1_1config_1_1ConfigSection.html#a33dedf9f70ad5934178e1c021571a45a">required</a> (bool required=true)</td></tr>
 <tr class="memitem:aff5f07d523cbc2d6e63314b0053f508b inherit pub_methods_classnet_1_1config_1_1ConfigSection" id="r_aff5f07d523cbc2d6e63314b0053f508b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnet_1_1config_1_1ConfigSection.html#aff5f07d523cbc2d6e63314b0053f508b">getRequired</a> () const</td></tr>
-<tr class="memitem:abfa97a1babbf8758ebb3c3c0e22fc45d inherit pub_methods_classnet_1_1config_1_1ConfigSection" id="r_abfa97a1babbf8758ebb3c3c0e22fc45d"><td class="memTemplParams" colspan="2">template&lt;typename ValueType&gt; </td></tr>
-<tr class="memitem:abfa97a1babbf8758ebb3c3c0e22fc45d inherit pub_methods_classnet_1_1config_1_1ConfigSection template"><td class="memItemLeft" align="right" valign="top">CLI::Option *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnet_1_1config_1_1ConfigSection.html#abfa97a1babbf8758ebb3c3c0e22fc45d">addOption</a> (const std::string &amp;name, const std::string &amp;description, const std::string &amp;typeName, ValueType defaultValue)</td></tr>
+<tr class="memitem:aab21652bbba3aa23d96e75f0587728a1 inherit pub_methods_classnet_1_1config_1_1ConfigSection" id="r_aab21652bbba3aa23d96e75f0587728a1"><td class="memTemplParams" colspan="2">template&lt;typename ValueType&gt; <br />
+requires (!std::derived_from&lt;std::remove_cvref_t&lt;ValueType&gt;, CLI::Validator&gt;)</td></tr>
+<tr class="memitem:aab21652bbba3aa23d96e75f0587728a1 inherit pub_methods_classnet_1_1config_1_1ConfigSection template"><td class="memItemLeft" align="right" valign="top">CLI::Option *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnet_1_1config_1_1ConfigSection.html#aab21652bbba3aa23d96e75f0587728a1">addOption</a> (const std::string &amp;name, const std::string &amp;description, const std::string &amp;typeName, ValueType defaultValue)</td></tr>
 <tr class="memitem:acae02b69bfc82aaaf42b2aa081008719 inherit pub_methods_classnet_1_1config_1_1ConfigSection" id="r_acae02b69bfc82aaaf42b2aa081008719"><td class="memTemplParams" colspan="2">template&lt;typename ValueType&gt; </td></tr>
 <tr class="memitem:acae02b69bfc82aaaf42b2aa081008719 inherit pub_methods_classnet_1_1config_1_1ConfigSection template"><td class="memItemLeft" align="right" valign="top">CLI::Option *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnet_1_1config_1_1ConfigSection.html#acae02b69bfc82aaaf42b2aa081008719">addOption</a> (const std::string &amp;name, const std::string &amp;description, const std::string &amp;typeName, ValueType defaultValue, const CLI::Validator &amp;additionalValidator)</td></tr>
 <tr class="memitem:a1645552201a47f08f0a0a68fb1933741 inherit pub_methods_classnet_1_1config_1_1ConfigSection" id="r_a1645552201a47f08f0a0a68fb1933741"><td class="memTemplParams" colspan="2">template&lt;typename ValueType&gt; </td></tr>
 <tr class="memitem:a1645552201a47f08f0a0a68fb1933741 inherit pub_methods_classnet_1_1config_1_1ConfigSection template"><td class="memItemLeft" align="right" valign="top">CLI::Option *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnet_1_1config_1_1ConfigSection.html#a1645552201a47f08f0a0a68fb1933741">addFlag</a> (const std::string &amp;name, const std::string &amp;description, const std::string &amp;typeName, ValueType defaultValue)</td></tr>
 <tr class="memitem:a837be0588712f4f8f23109691e96469d inherit pub_methods_classnet_1_1config_1_1ConfigSection" id="r_a837be0588712f4f8f23109691e96469d"><td class="memTemplParams" colspan="2">template&lt;typename ValueType&gt; </td></tr>
 <tr class="memitem:a837be0588712f4f8f23109691e96469d inherit pub_methods_classnet_1_1config_1_1ConfigSection template"><td class="memItemLeft" align="right" valign="top">CLI::Option *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnet_1_1config_1_1ConfigSection.html#a837be0588712f4f8f23109691e96469d">addFlag</a> (const std::string &amp;name, const std::string &amp;description, const std::string &amp;typeName, ValueType defaultValue, const CLI::Validator &amp;additionalValidator)</td></tr>
-<tr class="memitem:a4b3513c553a73ec318fff95181087ce9 inherit pub_methods_classnet_1_1config_1_1ConfigSection" id="r_a4b3513c553a73ec318fff95181087ce9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnet_1_1config_1_1ConfigSection.html#a4b3513c553a73ec318fff95181087ce9">setConfigurable</a> (CLI::Option *option, bool configurable)</td></tr>
+<tr class="memitem:a50b0e969847127dcaf44809b5d28a05b inherit pub_methods_classnet_1_1config_1_1ConfigSection" id="r_a50b0e969847127dcaf44809b5d28a05b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnet_1_1config_1_1ConfigSection.html#a50b0e969847127dcaf44809b5d28a05b">setConfigurable</a> (CLI::Option *option, bool configurable) const</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="ConfigTlsServer_8h_source.html#l00061">61</a> of file <a class="el" href="ConfigTlsServer_8h_source.html">ConfigTlsServer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ConfigTlsServer_8h_source.html#l00065">65</a> of file <a class="el" href="ConfigTlsServer_8h_source.html">ConfigTlsServer.h</a>.</p>
 </div><a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Member Typedef Documentation</h2>
 <a id="aff212663eee6523f262a0979e857b2b8" name="aff212663eee6523f262a0979e857b2b8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aff212663eee6523f262a0979e857b2b8">&#9670;&#160;</a></span>Super</h2>
@@ -245,7 +235,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ConfigTlsServer_8h_source.html#l00065">65</a> of file <a class="el" href="ConfigTlsServer_8h_source.html">ConfigTlsServer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ConfigTlsServer_8h_source.html#l00069">69</a> of file <a class="el" href="ConfigTlsServer_8h_source.html">ConfigTlsServer.h</a>.</p>
 
 </div>
 </div>
@@ -261,7 +251,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ConfigTlsServer_8h_source.html#l00068">68</a> of file <a class="el" href="ConfigTlsServer_8h_source.html">ConfigTlsServer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ConfigTlsServer_8h_source.html#l00072">72</a> of file <a class="el" href="ConfigTlsServer_8h_source.html">ConfigTlsServer.h</a>.</p>
 
 </div>
 </div>
@@ -307,93 +297,92 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   74</span>                                       <span class="stringliteral">&quot;  CipherList -&gt; value:CIPHER              [\&quot;\&quot;]\n&quot;</span></div>
 <div class="line"><span class="lineno">   75</span>                                       <span class="stringliteral">&quot;  SslOptions -&gt; value:UINT                [0]\n&quot;</span></div>
 <div class="line"><span class="lineno">   76</span>                                       <span class="stringliteral">&quot;}&quot;</span>) <span class="comment">//</span></div>
-<div class="line"><span class="lineno">   77</span>                          -&gt;type_name(<span class="stringliteral">&quot;sni &lt;key&gt; value [&lt;key&gt; value] ... [%% sni &lt;key&gt; value [&lt;key&gt; value] ...]&quot;</span>)</div>
-<div class="line"><span class="lineno">   78</span>                          -&gt;default_str(<span class="stringliteral">&quot;[\&quot;\&quot; \&quot;\&quot; \&quot;\&quot; \&quot;\&quot;]&quot;</span>);</div>
-<div class="line"><span class="lineno">   79</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a67bb88c3ca0f6012dc03ca8a8d0bcfb6">sniCertsOpt</a>-&gt;get_configurable()) {</div>
-<div class="line"><span class="lineno">   80</span>            <a class="code hl_variable" href="#a67bb88c3ca0f6012dc03ca8a8d0bcfb6">sniCertsOpt</a>-&gt;group(<a class="code hl_variable" href="classnet_1_1config_1_1ConfigSection.html#a1a6991f063def43d2d0f10ef0d511182">sectionSc</a>-&gt;get_formatter()-&gt;get_label(<span class="stringliteral">&quot;Persistent Options&quot;</span>));</div>
-<div class="line"><span class="lineno">   81</span>        }</div>
-<div class="line"><span class="lineno">   82</span> </div>
-<div class="line"><span class="lineno">   83</span>        <a class="code hl_variable" href="#a67bb88c3ca0f6012dc03ca8a8d0bcfb6">sniCertsOpt</a>-&gt;default_function([<span class="keyword">this</span>]() -&gt; std::string {</div>
-<div class="line"><span class="lineno">   84</span>            std::string defaultValue;</div>
-<div class="line"><span class="lineno">   85</span> </div>
-<div class="line"><span class="lineno">   86</span>            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; [domain, sniCertConf] : <a class="code hl_variable" href="#a589bbb18ba7299fcda7f752a02354a27">defaultSniCerts</a>) {</div>
-<div class="line"><span class="lineno">   87</span>                defaultValue += (!defaultValue.empty() ? <span class="stringliteral">&quot;\&quot;%%\&quot; \&quot;&quot;</span> : <span class="stringliteral">&quot;\&quot;&quot;</span>) + domain + <span class="stringliteral">&quot;\&quot; &quot;</span>;</div>
-<div class="line"><span class="lineno">   88</span> </div>
-<div class="line"><span class="lineno">   89</span>                <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; [key, value] : sniCertConf) {</div>
-<div class="line"><span class="lineno">   90</span>                    defaultValue += <span class="stringliteral">&quot;\&quot;&quot;</span> + key + <span class="stringliteral">&quot;\&quot; &quot;</span>;</div>
-<div class="line"><span class="lineno">   91</span> </div>
-<div class="line"><span class="lineno">   92</span>                    <span class="keywordflow">if</span> (key == <span class="stringliteral">&quot;Cert&quot;</span>) {</div>
-<div class="line"><span class="lineno">   93</span>                        defaultValue += <span class="stringliteral">&quot;\&quot;&quot;</span> + std::get&lt;std::string&gt;(value) + <span class="stringliteral">&quot;\&quot; &quot;</span>;</div>
-<div class="line"><span class="lineno">   94</span>                    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (key == <span class="stringliteral">&quot;CertKey&quot;</span>) {</div>
-<div class="line"><span class="lineno">   95</span>                        defaultValue += <span class="stringliteral">&quot;\&quot;&quot;</span> + std::get&lt;std::string&gt;(value) + <span class="stringliteral">&quot;\&quot; &quot;</span>;</div>
-<div class="line"><span class="lineno">   96</span>                    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (key == <span class="stringliteral">&quot;CertKeyPassword&quot;</span>) {</div>
-<div class="line"><span class="lineno">   97</span>                        defaultValue += <span class="stringliteral">&quot;\&quot;&quot;</span> + std::get&lt;std::string&gt;(value) + <span class="stringliteral">&quot;\&quot; &quot;</span>;</div>
-<div class="line"><span class="lineno">   98</span>                    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (key == <span class="stringliteral">&quot;CaCert&quot;</span>) {</div>
-<div class="line"><span class="lineno">   99</span>                        defaultValue += <span class="stringliteral">&quot;\&quot;&quot;</span> + std::get&lt;std::string&gt;(value) + <span class="stringliteral">&quot;\&quot; &quot;</span>;</div>
-<div class="line"><span class="lineno">  100</span>                    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (key == <span class="stringliteral">&quot;CaCertDir&quot;</span>) {</div>
-<div class="line"><span class="lineno">  101</span>                        defaultValue += <span class="stringliteral">&quot;\&quot;&quot;</span> + std::get&lt;std::string&gt;(value) + <span class="stringliteral">&quot;\&quot; &quot;</span>;</div>
-<div class="line"><span class="lineno">  102</span>                    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (key == <span class="stringliteral">&quot;CaCertUseDefaultDir&quot;</span>) {</div>
-<div class="line"><span class="lineno">  103</span>                        defaultValue += std::get&lt;bool&gt;(value) ? <span class="stringliteral">&quot;\&quot;true\&quot; &quot;</span> : <span class="stringliteral">&quot;\&quot;false\&quot; &quot;</span>;</div>
-<div class="line"><span class="lineno">  104</span>                    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (key == <span class="stringliteral">&quot;CipherList&quot;</span>) {</div>
-<div class="line"><span class="lineno">  105</span>                        defaultValue += <span class="stringliteral">&quot;\&quot;&quot;</span> + std::get&lt;std::string&gt;(value) + <span class="stringliteral">&quot;\&quot; &quot;</span>;</div>
-<div class="line"><span class="lineno">  106</span>                    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (key == <span class="stringliteral">&quot;SslOptions&quot;</span>) {</div>
-<div class="line"><span class="lineno">  107</span>                        defaultValue += <span class="stringliteral">&quot;\&quot;&quot;</span> + std::to_string(std::get&lt;ssl_option_t&gt;(value)) + <span class="stringliteral">&quot;\&quot; &quot;</span>;</div>
-<div class="line"><span class="lineno">  108</span>                    }</div>
-<div class="line"><span class="lineno">  109</span>                }</div>
-<div class="line"><span class="lineno">  110</span>            }</div>
-<div class="line"><span class="lineno">  111</span> </div>
-<div class="line"><span class="lineno">  112</span>            defaultValue.pop_back();</div>
-<div class="line"><span class="lineno">  113</span> </div>
-<div class="line"><span class="lineno">  114</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;[&quot;</span> + defaultValue + <span class="stringliteral">&quot; \&quot;\&quot;]&quot;</span>;</div>
-<div class="line"><span class="lineno">  115</span>        });</div>
-<div class="line"><span class="lineno">  116</span> </div>
-<div class="line"><span class="lineno">  117</span>        <a class="code hl_variable" href="#a682744dc3b42e828002c14f8d213a2c7">forceSniOpt</a> = <a class="code hl_function" href="classnet_1_1config_1_1ConfigSection.html#a5120f8ebadc117756ff504b37540e4aa">addFlag</a>( <span class="comment">//</span></div>
-<div class="line"><span class="lineno">  118</span>            <span class="stringliteral">&quot;--force-sni{true}&quot;</span>,</div>
-<div class="line"><span class="lineno">  119</span>            <span class="stringliteral">&quot;Force using of the Server Name Indication&quot;</span>,</div>
-<div class="line"><span class="lineno">  120</span>            <span class="stringliteral">&quot;bool&quot;</span>,</div>
-<div class="line"><span class="lineno">  121</span>            <span class="stringliteral">&quot;false&quot;</span>,</div>
-<div class="line"><span class="lineno">  122</span>            CLI::IsMember({<span class="stringliteral">&quot;true&quot;</span>, <span class="stringliteral">&quot;false&quot;</span>}));</div>
-<div class="line"><span class="lineno">  123</span> </div>
-<div class="line"><span class="lineno">  124</span>        <a class="code hl_variable" href="classnet_1_1config_1_1ConfigSection.html#a1a6991f063def43d2d0f10ef0d511182">sectionSc</a>-&gt;final_callback([<span class="keyword">this</span>]() {</div>
-<div class="line"><span class="lineno">  125</span>            <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; [domain, sniMap] : <a class="code hl_variable" href="#a0b2de0562c07c002cf54939e48e22f8c">configuredSniCerts</a>) {</div>
-<div class="line"><span class="lineno">  126</span>                <span class="keywordflow">if</span> (domain.empty()) {</div>
-<div class="line"><span class="lineno">  127</span>                    <a class="code hl_variable" href="#a67bb88c3ca0f6012dc03ca8a8d0bcfb6">sniCertsOpt</a> <span class="comment">//</span></div>
-<div class="line"><span class="lineno">  128</span>                        -&gt;clear();</div>
-<div class="line"><span class="lineno">  129</span>                    sniMap.clear();</div>
-<div class="line"><span class="lineno">  130</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  131</span>                }</div>
-<div class="line"><span class="lineno">  132</span>                <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; [key, value] : sniMap) {</div>
-<div class="line"><span class="lineno">  133</span>                    <span class="keywordflow">if</span> (key != <span class="stringliteral">&quot;Cert&quot;</span> &amp;&amp;                <span class="comment">//</span></div>
-<div class="line"><span class="lineno">  134</span>                        key != <span class="stringliteral">&quot;CertKey&quot;</span> &amp;&amp;             <span class="comment">//</span></div>
-<div class="line"><span class="lineno">  135</span>                        key != <span class="stringliteral">&quot;CertKeyPassword&quot;</span> &amp;&amp;     <span class="comment">//</span></div>
-<div class="line"><span class="lineno">  136</span>                        key != <span class="stringliteral">&quot;CaCert&quot;</span> &amp;&amp;              <span class="comment">//</span></div>
-<div class="line"><span class="lineno">  137</span>                        key != <span class="stringliteral">&quot;CaCertDir&quot;</span> &amp;&amp;           <span class="comment">//</span></div>
-<div class="line"><span class="lineno">  138</span>                        key != <span class="stringliteral">&quot;CaCertUseDefaultDir&quot;</span> &amp;&amp; <span class="comment">//</span></div>
-<div class="line"><span class="lineno">  139</span>                        key != <span class="stringliteral">&quot;CipherList&quot;</span> &amp;&amp;          <span class="comment">//</span></div>
-<div class="line"><span class="lineno">  140</span>                        key != <span class="stringliteral">&quot;SslOptions&quot;</span>) {</div>
-<div class="line"><span class="lineno">  141</span>                        <span class="keywordflow">throw</span> CLI::ConversionError(<span class="stringliteral">&quot;&#39;&quot;</span> + key + <span class="stringliteral">&quot;&#39; of option &#39;--&quot;</span> + <a class="code hl_variable" href="classnet_1_1config_1_1ConfigSection.html#a1a6991f063def43d2d0f10ef0d511182">sectionSc</a>-&gt;get_parent()-&gt;get_name() + <span class="stringliteral">&quot;.&quot;</span> +</div>
-<div class="line"><span class="lineno">  142</span>                                                       <a class="code hl_variable" href="classnet_1_1config_1_1ConfigSection.html#a1a6991f063def43d2d0f10ef0d511182">sectionSc</a>-&gt;get_name() + <span class="stringliteral">&quot;.sni-cert&#39;&quot;</span>,</div>
-<div class="line"><span class="lineno">  143</span>                                                   <span class="stringliteral">&quot;&lt;key&gt;&quot;</span>);</div>
-<div class="line"><span class="lineno">  144</span>                    }</div>
-<div class="line"><span class="lineno">  145</span>                }</div>
-<div class="line"><span class="lineno">  146</span>            }</div>
-<div class="line"><span class="lineno">  147</span>        });</div>
-<div class="line"><span class="lineno">  148</span>    }</div>
-<div class="ttc" id="aclassnet_1_1config_1_1ConfigSection_html_a1a6991f063def43d2d0f10ef0d511182"><div class="ttname"><a href="classnet_1_1config_1_1ConfigSection.html#a1a6991f063def43d2d0f10ef0d511182">net::config::ConfigSection::sectionSc</a></div><div class="ttdeci">CLI::App * sectionSc</div><div class="ttdef"><b>Definition</b> <a href="ConfigSection_8h_source.html#l00146">ConfigSection.h:146</a></div></div>
+<div class="line"><span class="lineno">   77</span>                          -&gt;type_name(<span class="stringliteral">&quot;sni &lt;key&gt; value [&lt;key&gt; value] ... [%% sni &lt;key&gt; value [&lt;key&gt; value] ...]&quot;</span>);</div>
+<div class="line"><span class="lineno">   78</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a67bb88c3ca0f6012dc03ca8a8d0bcfb6">sniCertsOpt</a>-&gt;get_configurable()) {</div>
+<div class="line"><span class="lineno">   79</span>            <a class="code hl_variable" href="#a67bb88c3ca0f6012dc03ca8a8d0bcfb6">sniCertsOpt</a>-&gt;group(<a class="code hl_variable" href="classnet_1_1config_1_1ConfigSection.html#a1a6991f063def43d2d0f10ef0d511182">sectionSc</a>-&gt;get_formatter()-&gt;get_label(<span class="stringliteral">&quot;Persistent Options&quot;</span>));</div>
+<div class="line"><span class="lineno">   80</span>        }</div>
+<div class="line"><span class="lineno">   81</span> </div>
+<div class="line"><span class="lineno">   82</span>        <a class="code hl_variable" href="#a67bb88c3ca0f6012dc03ca8a8d0bcfb6">sniCertsOpt</a>-&gt;default_function([<span class="keyword">this</span>]() -&gt; std::string {</div>
+<div class="line"><span class="lineno">   83</span>            std::string defaultValue;</div>
+<div class="line"><span class="lineno">   84</span> </div>
+<div class="line"><span class="lineno">   85</span>            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; [domain, sniCertConf] : <a class="code hl_variable" href="#a589bbb18ba7299fcda7f752a02354a27">defaultSniCerts</a>) {</div>
+<div class="line"><span class="lineno">   86</span>                defaultValue += (!defaultValue.empty() ? <span class="stringliteral">&quot;%% &quot;</span> : <span class="stringliteral">&quot;&quot;</span>) + domain + <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line"><span class="lineno">   87</span> </div>
+<div class="line"><span class="lineno">   88</span>                <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; [key, value] : sniCertConf) {</div>
+<div class="line"><span class="lineno">   89</span>                    defaultValue += key + <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line"><span class="lineno">   90</span> </div>
+<div class="line"><span class="lineno">   91</span>                    <span class="keywordflow">if</span> (key == <span class="stringliteral">&quot;Cert&quot;</span>) {</div>
+<div class="line"><span class="lineno">   92</span>                        defaultValue += std::get&lt;std::string&gt;(value) + <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line"><span class="lineno">   93</span>                    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (key == <span class="stringliteral">&quot;CertKey&quot;</span>) {</div>
+<div class="line"><span class="lineno">   94</span>                        defaultValue += std::get&lt;std::string&gt;(value) + <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line"><span class="lineno">   95</span>                    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (key == <span class="stringliteral">&quot;CertKeyPassword&quot;</span>) {</div>
+<div class="line"><span class="lineno">   96</span>                        defaultValue += std::get&lt;std::string&gt;(value) + <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line"><span class="lineno">   97</span>                    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (key == <span class="stringliteral">&quot;CaCert&quot;</span>) {</div>
+<div class="line"><span class="lineno">   98</span>                        defaultValue += std::get&lt;std::string&gt;(value) + <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line"><span class="lineno">   99</span>                    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (key == <span class="stringliteral">&quot;CaCertDir&quot;</span>) {</div>
+<div class="line"><span class="lineno">  100</span>                        defaultValue += std::get&lt;std::string&gt;(value) + <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line"><span class="lineno">  101</span>                    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (key == <span class="stringliteral">&quot;CaCertUseDefaultDir&quot;</span>) {</div>
+<div class="line"><span class="lineno">  102</span>                        defaultValue += std::get&lt;bool&gt;(value) ? <span class="stringliteral">&quot;true &quot;</span> : <span class="stringliteral">&quot;false &quot;</span>;</div>
+<div class="line"><span class="lineno">  103</span>                    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (key == <span class="stringliteral">&quot;CipherList&quot;</span>) {</div>
+<div class="line"><span class="lineno">  104</span>                        defaultValue += std::get&lt;std::string&gt;(value) + <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line"><span class="lineno">  105</span>                    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (key == <span class="stringliteral">&quot;SslOptions&quot;</span>) {</div>
+<div class="line"><span class="lineno">  106</span>                        defaultValue += std::to_string(std::get&lt;ssl_option_t&gt;(value)) + <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line"><span class="lineno">  107</span>                    }</div>
+<div class="line"><span class="lineno">  108</span>                }</div>
+<div class="line"><span class="lineno">  109</span>            }</div>
+<div class="line"><span class="lineno">  110</span> </div>
+<div class="line"><span class="lineno">  111</span>            defaultValue.pop_back();</div>
+<div class="line"><span class="lineno">  112</span> </div>
+<div class="line"><span class="lineno">  113</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;[&quot;</span> + defaultValue + <span class="stringliteral">&quot;]&quot;</span>;</div>
+<div class="line"><span class="lineno">  114</span>        });</div>
+<div class="line"><span class="lineno">  115</span> </div>
+<div class="line"><span class="lineno">  116</span>        <a class="code hl_variable" href="#a682744dc3b42e828002c14f8d213a2c7">forceSniOpt</a> = <a class="code hl_function" href="classnet_1_1config_1_1ConfigSection.html#a5120f8ebadc117756ff504b37540e4aa">addFlag</a>( <span class="comment">//</span></div>
+<div class="line"><span class="lineno">  117</span>            <span class="stringliteral">&quot;--force-sni{true}&quot;</span>,</div>
+<div class="line"><span class="lineno">  118</span>            <span class="stringliteral">&quot;Force using of the Server Name Indication&quot;</span>,</div>
+<div class="line"><span class="lineno">  119</span>            <span class="stringliteral">&quot;bool&quot;</span>,</div>
+<div class="line"><span class="lineno">  120</span>            <span class="stringliteral">&quot;false&quot;</span>,</div>
+<div class="line"><span class="lineno">  121</span>            CLI::IsMember({<span class="stringliteral">&quot;true&quot;</span>, <span class="stringliteral">&quot;false&quot;</span>}));</div>
+<div class="line"><span class="lineno">  122</span> </div>
+<div class="line"><span class="lineno">  123</span>        <a class="code hl_variable" href="classnet_1_1config_1_1ConfigSection.html#a1a6991f063def43d2d0f10ef0d511182">sectionSc</a>-&gt;final_callback([<span class="keyword">this</span>]() {</div>
+<div class="line"><span class="lineno">  124</span>            <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; [domain, sniMap] : <a class="code hl_variable" href="#a0b2de0562c07c002cf54939e48e22f8c">configuredSniCerts</a>) {</div>
+<div class="line"><span class="lineno">  125</span>                <span class="keywordflow">if</span> (domain.empty()) {</div>
+<div class="line"><span class="lineno">  126</span>                    <a class="code hl_variable" href="#a67bb88c3ca0f6012dc03ca8a8d0bcfb6">sniCertsOpt</a> <span class="comment">//</span></div>
+<div class="line"><span class="lineno">  127</span>                        -&gt;clear();</div>
+<div class="line"><span class="lineno">  128</span>                    sniMap.clear();</div>
+<div class="line"><span class="lineno">  129</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  130</span>                }</div>
+<div class="line"><span class="lineno">  131</span>                <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; [key, value] : sniMap) {</div>
+<div class="line"><span class="lineno">  132</span>                    <span class="keywordflow">if</span> (key != <span class="stringliteral">&quot;Cert&quot;</span> &amp;&amp;                <span class="comment">//</span></div>
+<div class="line"><span class="lineno">  133</span>                        key != <span class="stringliteral">&quot;CertKey&quot;</span> &amp;&amp;             <span class="comment">//</span></div>
+<div class="line"><span class="lineno">  134</span>                        key != <span class="stringliteral">&quot;CertKeyPassword&quot;</span> &amp;&amp;     <span class="comment">//</span></div>
+<div class="line"><span class="lineno">  135</span>                        key != <span class="stringliteral">&quot;CaCert&quot;</span> &amp;&amp;              <span class="comment">//</span></div>
+<div class="line"><span class="lineno">  136</span>                        key != <span class="stringliteral">&quot;CaCertDir&quot;</span> &amp;&amp;           <span class="comment">//</span></div>
+<div class="line"><span class="lineno">  137</span>                        key != <span class="stringliteral">&quot;CaCertUseDefaultDir&quot;</span> &amp;&amp; <span class="comment">//</span></div>
+<div class="line"><span class="lineno">  138</span>                        key != <span class="stringliteral">&quot;CipherList&quot;</span> &amp;&amp;          <span class="comment">//</span></div>
+<div class="line"><span class="lineno">  139</span>                        key != <span class="stringliteral">&quot;SslOptions&quot;</span>) {</div>
+<div class="line"><span class="lineno">  140</span>                        <span class="keywordflow">throw</span> CLI::ConversionError(<span class="stringliteral">&quot;&#39;&quot;</span> + key + <span class="stringliteral">&quot;&#39; of option &#39;--&quot;</span> + <a class="code hl_variable" href="classnet_1_1config_1_1ConfigSection.html#a1a6991f063def43d2d0f10ef0d511182">sectionSc</a>-&gt;get_parent()-&gt;get_name() + <span class="stringliteral">&quot;.&quot;</span> +</div>
+<div class="line"><span class="lineno">  141</span>                                                       <a class="code hl_variable" href="classnet_1_1config_1_1ConfigSection.html#a1a6991f063def43d2d0f10ef0d511182">sectionSc</a>-&gt;get_name() + <span class="stringliteral">&quot;.sni-cert&#39;&quot;</span>,</div>
+<div class="line"><span class="lineno">  142</span>                                                   <span class="stringliteral">&quot;&lt;key&gt;&quot;</span>);</div>
+<div class="line"><span class="lineno">  143</span>                    }</div>
+<div class="line"><span class="lineno">  144</span>                }</div>
+<div class="line"><span class="lineno">  145</span>            }</div>
+<div class="line"><span class="lineno">  146</span>        });</div>
+<div class="line"><span class="lineno">  147</span>    }</div>
+<div class="ttc" id="aclassnet_1_1config_1_1ConfigSection_html_a1a6991f063def43d2d0f10ef0d511182"><div class="ttname"><a href="classnet_1_1config_1_1ConfigSection.html#a1a6991f063def43d2d0f10ef0d511182">net::config::ConfigSection::sectionSc</a></div><div class="ttdeci">CLI::App * sectionSc</div><div class="ttdef"><b>Definition</b> <a href="ConfigSection_8h_source.html#l00159">ConfigSection.h:159</a></div></div>
 <div class="ttc" id="aclassnet_1_1config_1_1ConfigSection_html_a5120f8ebadc117756ff504b37540e4aa"><div class="ttname"><a href="classnet_1_1config_1_1ConfigSection.html#a5120f8ebadc117756ff504b37540e4aa">net::config::ConfigSection::addFlag</a></div><div class="ttdeci">CLI::Option * addFlag(const std::string &amp;name, const std::string &amp;description)</div><div class="ttdef"><b>Definition</b> <a href="ConfigSection_8cpp_source.html#l00139">ConfigSection.cpp:139</a></div></div>
-<div class="ttc" id="aclassnet_1_1config_1_1ConfigSection_html_a839f1c45c71e402cbaebff2a4288a018"><div class="ttname"><a href="classnet_1_1config_1_1ConfigSection.html#a839f1c45c71e402cbaebff2a4288a018">net::config::ConfigSection::ConfigSection</a></div><div class="ttdeci">ConfigSection(ConfigInstance *instance, T *sectionPtr, const std::string &amp;group=&quot;Sections&quot;)</div><div class="ttdef"><b>Definition</b> <a href="ConfigSection_8hpp_source.html#l00099">ConfigSection.hpp:99</a></div></div>
-<div class="ttc" id="aclassnet_1_1config_1_1ConfigSection_html_abb79a8f4f69c1730bf7716eea73384c4"><div class="ttname"><a href="classnet_1_1config_1_1ConfigSection.html#abb79a8f4f69c1730bf7716eea73384c4">net::config::ConfigSection::instance</a></div><div class="ttdeci">ConfigInstance * instance</div><div class="ttdef"><b>Definition</b> <a href="ConfigSection_8h_source.html#l00149">ConfigSection.h:149</a></div></div>
-<div class="ttc" id="aclassnet_1_1config_1_1ConfigTlsServer_html_a0b2de0562c07c002cf54939e48e22f8c"><div class="ttname"><a href="#a0b2de0562c07c002cf54939e48e22f8c">net::config::ConfigTlsServer::configuredSniCerts</a></div><div class="ttdeci">std::map&lt; std::string, std::map&lt; std::string, std::variant&lt; std::string, bool, ssl_option_t &gt; &gt; &gt; configuredSniCerts</div><div class="ttdef"><b>Definition</b> <a href="ConfigTlsServer_8h_source.html#l00087">ConfigTlsServer.h:87</a></div></div>
-<div class="ttc" id="aclassnet_1_1config_1_1ConfigTlsServer_html_a589bbb18ba7299fcda7f752a02354a27"><div class="ttname"><a href="#a589bbb18ba7299fcda7f752a02354a27">net::config::ConfigTlsServer::defaultSniCerts</a></div><div class="ttdeci">std::map&lt; std::string, std::map&lt; std::string, std::variant&lt; std::string, bool, ssl_option_t &gt; &gt; &gt; defaultSniCerts</div><div class="ttdef"><b>Definition</b> <a href="ConfigTlsServer_8h_source.html#l00086">ConfigTlsServer.h:86</a></div></div>
-<div class="ttc" id="aclassnet_1_1config_1_1ConfigTlsServer_html_a67bb88c3ca0f6012dc03ca8a8d0bcfb6"><div class="ttname"><a href="#a67bb88c3ca0f6012dc03ca8a8d0bcfb6">net::config::ConfigTlsServer::sniCertsOpt</a></div><div class="ttdeci">CLI::Option * sniCertsOpt</div><div class="ttdef"><b>Definition</b> <a href="ConfigTlsServer_8h_source.html#l00089">ConfigTlsServer.h:89</a></div></div>
-<div class="ttc" id="aclassnet_1_1config_1_1ConfigTlsServer_html_a682744dc3b42e828002c14f8d213a2c7"><div class="ttname"><a href="#a682744dc3b42e828002c14f8d213a2c7">net::config::ConfigTlsServer::forceSniOpt</a></div><div class="ttdeci">CLI::Option * forceSniOpt</div><div class="ttdef"><b>Definition</b> <a href="ConfigTlsServer_8h_source.html#l00090">ConfigTlsServer.h:90</a></div></div>
+<div class="ttc" id="aclassnet_1_1config_1_1ConfigSection_html_a839f1c45c71e402cbaebff2a4288a018"><div class="ttname"><a href="classnet_1_1config_1_1ConfigSection.html#a839f1c45c71e402cbaebff2a4288a018">net::config::ConfigSection::ConfigSection</a></div><div class="ttdeci">ConfigSection(ConfigInstance *instance, T *sectionPtr, const std::string &amp;group=&quot;Sections&quot;)</div><div class="ttdef"><b>Definition</b> <a href="ConfigSection_8hpp_source.html#l00087">ConfigSection.hpp:87</a></div></div>
+<div class="ttc" id="aclassnet_1_1config_1_1ConfigSection_html_abb79a8f4f69c1730bf7716eea73384c4"><div class="ttname"><a href="classnet_1_1config_1_1ConfigSection.html#abb79a8f4f69c1730bf7716eea73384c4">net::config::ConfigSection::instance</a></div><div class="ttdeci">ConfigInstance * instance</div><div class="ttdef"><b>Definition</b> <a href="ConfigSection_8h_source.html#l00162">ConfigSection.h:162</a></div></div>
+<div class="ttc" id="aclassnet_1_1config_1_1ConfigTlsServer_html_a0b2de0562c07c002cf54939e48e22f8c"><div class="ttname"><a href="#a0b2de0562c07c002cf54939e48e22f8c">net::config::ConfigTlsServer::configuredSniCerts</a></div><div class="ttdeci">std::map&lt; std::string, std::map&lt; std::string, std::variant&lt; std::string, bool, ssl_option_t &gt; &gt; &gt; configuredSniCerts</div><div class="ttdef"><b>Definition</b> <a href="ConfigTlsServer_8h_source.html#l00091">ConfigTlsServer.h:91</a></div></div>
+<div class="ttc" id="aclassnet_1_1config_1_1ConfigTlsServer_html_a589bbb18ba7299fcda7f752a02354a27"><div class="ttname"><a href="#a589bbb18ba7299fcda7f752a02354a27">net::config::ConfigTlsServer::defaultSniCerts</a></div><div class="ttdeci">std::map&lt; std::string, std::map&lt; std::string, std::variant&lt; std::string, bool, ssl_option_t &gt; &gt; &gt; defaultSniCerts</div><div class="ttdef"><b>Definition</b> <a href="ConfigTlsServer_8h_source.html#l00090">ConfigTlsServer.h:90</a></div></div>
+<div class="ttc" id="aclassnet_1_1config_1_1ConfigTlsServer_html_a67bb88c3ca0f6012dc03ca8a8d0bcfb6"><div class="ttname"><a href="#a67bb88c3ca0f6012dc03ca8a8d0bcfb6">net::config::ConfigTlsServer::sniCertsOpt</a></div><div class="ttdeci">CLI::Option * sniCertsOpt</div><div class="ttdef"><b>Definition</b> <a href="ConfigTlsServer_8h_source.html#l00093">ConfigTlsServer.h:93</a></div></div>
+<div class="ttc" id="aclassnet_1_1config_1_1ConfigTlsServer_html_a682744dc3b42e828002c14f8d213a2c7"><div class="ttname"><a href="#a682744dc3b42e828002c14f8d213a2c7">net::config::ConfigTlsServer::forceSniOpt</a></div><div class="ttdeci">CLI::Option * forceSniOpt</div><div class="ttdef"><b>Definition</b> <a href="ConfigTlsServer_8h_source.html#l00094">ConfigTlsServer.h:94</a></div></div>
 <div class="ttc" id="aclassnet_1_1config_1_1ConfigTls_html_a2ef227db9c43efdeb017a9e82a7096cc"><div class="ttname"><a href="classnet_1_1config_1_1ConfigTls.html#a2ef227db9c43efdeb017a9e82a7096cc">net::config::ConfigTls::ConfigTls</a></div><div class="ttdeci">ConfigTls(net::config::ConfigSection *section)</div><div class="ttdef"><b>Definition</b> <a href="ConfigTls_8cpp_source.html#l00052">ConfigTls.cpp:52</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="classnet_1_1config_1_1ConfigSection.html#a95ffd0ca5955502fb43ff5ed2b0d9da1">net::config::ConfigSection::addFlag()</a>, <a class="el" href="ConfigSection_8hpp_source.html#l00099">net::config::ConfigSection::ConfigSection()</a>, <a class="el" href="ConfigTls_8cpp_source.html#l00052">net::config::ConfigTls::ConfigTls()</a>, <a class="el" href="ConfigTlsServer_8h_source.html#l00087">configuredSniCerts</a>, <a class="el" href="ConfigTlsServer_8h_source.html#l00086">defaultSniCerts</a>, <a class="el" href="ConfigTlsServer_8h_source.html#l00090">forceSniOpt</a>, <a class="el" href="ConfigSection_8h_source.html#l00146">net::config::ConfigSection::sectionSc</a>, and <a class="el" href="ConfigTlsServer_8h_source.html#l00089">sniCertsOpt</a>.</p>
+<p class="reference">References <a class="el" href="classnet_1_1config_1_1ConfigSection.html#a95ffd0ca5955502fb43ff5ed2b0d9da1">net::config::ConfigSection::addFlag()</a>, <a class="el" href="ConfigSection_8hpp_source.html#l00087">net::config::ConfigSection::ConfigSection()</a>, <a class="el" href="ConfigTls_8cpp_source.html#l00052">net::config::ConfigTls::ConfigTls()</a>, <a class="el" href="ConfigTlsServer_8h_source.html#l00091">configuredSniCerts</a>, <a class="el" href="ConfigTlsServer_8h_source.html#l00090">defaultSniCerts</a>, <a class="el" href="ConfigTlsServer_8h_source.html#l00094">forceSniOpt</a>, <a class="el" href="ConfigSection_8h_source.html#l00159">net::config::ConfigSection::sectionSc</a>, and <a class="el" href="ConfigTlsServer_8h_source.html#l00093">sniCertsOpt</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="classnet_1_1config_1_1ConfigTlsServer_a44171b2eb48f19d0faec39d2c7965a1a_cgraph.svg" width="100%" height="550"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="classnet_1_1config_1_1ConfigTlsServer_a44171b2eb48f19d0faec39d2c7965a1a_cgraph.svg" width="100%" height="513"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -421,9 +410,9 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ConfigTlsServer_8cpp_source.html#l00150">150</a> of file <a class="el" href="ConfigTlsServer_8cpp_source.html">ConfigTlsServer.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  150</span>                                      {</div>
-<div class="line"><span class="lineno">  151</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ConfigTlsServer_8cpp_source.html#l00149">149</a> of file <a class="el" href="ConfigTlsServer_8cpp_source.html">ConfigTlsServer.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  149</span>                                      {</div>
+<div class="line"><span class="lineno">  150</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -447,15 +436,15 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ConfigTlsServer_8cpp_source.html#l00173">173</a> of file <a class="el" href="ConfigTlsServer_8cpp_source.html">ConfigTlsServer.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  174</span>                                                                                                                              {</div>
-<div class="line"><span class="lineno">  175</span>        <a class="code hl_variable" href="#a589bbb18ba7299fcda7f752a02354a27">defaultSniCerts</a>[domain] = sniCert;</div>
-<div class="line"><span class="lineno">  176</span>        <a class="code hl_variable" href="#a67bb88c3ca0f6012dc03ca8a8d0bcfb6">sniCertsOpt</a>-&gt;capture_default_str();</div>
-<div class="line"><span class="lineno">  177</span> </div>
-<div class="line"><span class="lineno">  178</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">  179</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ConfigTlsServer_8cpp_source.html#l00172">172</a> of file <a class="el" href="ConfigTlsServer_8cpp_source.html">ConfigTlsServer.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  173</span>                                                                                                                              {</div>
+<div class="line"><span class="lineno">  174</span>        <a class="code hl_variable" href="#a589bbb18ba7299fcda7f752a02354a27">defaultSniCerts</a>[domain] = sniCert;</div>
+<div class="line"><span class="lineno">  175</span>        <a class="code hl_variable" href="#a67bb88c3ca0f6012dc03ca8a8d0bcfb6">sniCertsOpt</a>-&gt;capture_default_str();</div>
+<div class="line"><span class="lineno">  176</span> </div>
+<div class="line"><span class="lineno">  177</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">  178</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ConfigTlsServer_8h_source.html#l00086">defaultSniCerts</a>, and <a class="el" href="ConfigTlsServer_8h_source.html#l00089">sniCertsOpt</a>.</p>
+<p class="reference">References <a class="el" href="ConfigTlsServer_8h_source.html#l00090">defaultSniCerts</a>, and <a class="el" href="ConfigTlsServer_8h_source.html#l00093">sniCertsOpt</a>.</p>
 
 </div>
 </div>
@@ -474,15 +463,15 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ConfigTlsServer_8cpp_source.html#l00165">165</a> of file <a class="el" href="ConfigTlsServer_8cpp_source.html">ConfigTlsServer.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  166</span>                                                                                                         {</div>
-<div class="line"><span class="lineno">  167</span>        <a class="code hl_variable" href="#a589bbb18ba7299fcda7f752a02354a27">defaultSniCerts</a>.insert(sniCerts.begin(), sniCerts.end());</div>
-<div class="line"><span class="lineno">  168</span>        <a class="code hl_variable" href="#a67bb88c3ca0f6012dc03ca8a8d0bcfb6">sniCertsOpt</a>-&gt;capture_default_str();</div>
-<div class="line"><span class="lineno">  169</span> </div>
-<div class="line"><span class="lineno">  170</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">  171</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ConfigTlsServer_8cpp_source.html#l00164">164</a> of file <a class="el" href="ConfigTlsServer_8cpp_source.html">ConfigTlsServer.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  165</span>                                                                                                         {</div>
+<div class="line"><span class="lineno">  166</span>        <a class="code hl_variable" href="#a589bbb18ba7299fcda7f752a02354a27">defaultSniCerts</a>.insert(sniCerts.begin(), sniCerts.end());</div>
+<div class="line"><span class="lineno">  167</span>        <a class="code hl_variable" href="#a67bb88c3ca0f6012dc03ca8a8d0bcfb6">sniCertsOpt</a>-&gt;capture_default_str();</div>
+<div class="line"><span class="lineno">  168</span> </div>
+<div class="line"><span class="lineno">  169</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">  170</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ConfigTlsServer_8h_source.html#l00086">defaultSniCerts</a>, and <a class="el" href="ConfigTlsServer_8h_source.html#l00089">sniCertsOpt</a>.</p>
+<p class="reference">References <a class="el" href="ConfigTlsServer_8h_source.html#l00090">defaultSniCerts</a>, and <a class="el" href="ConfigTlsServer_8h_source.html#l00093">sniCertsOpt</a>.</p>
 
 </div>
 </div>
@@ -501,17 +490,17 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ConfigTlsServer_8cpp_source.html#l00161">161</a> of file <a class="el" href="ConfigTlsServer_8cpp_source.html">ConfigTlsServer.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  161</span>                                            {</div>
-<div class="line"><span class="lineno">  162</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#a682744dc3b42e828002c14f8d213a2c7">forceSniOpt</a>-&gt;as&lt;<span class="keywordtype">bool</span>&gt;();</div>
-<div class="line"><span class="lineno">  163</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ConfigTlsServer_8cpp_source.html#l00160">160</a> of file <a class="el" href="ConfigTlsServer_8cpp_source.html">ConfigTlsServer.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  160</span>                                            {</div>
+<div class="line"><span class="lineno">  161</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#a682744dc3b42e828002c14f8d213a2c7">forceSniOpt</a>-&gt;as&lt;<span class="keywordtype">bool</span>&gt;();</div>
+<div class="line"><span class="lineno">  162</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ConfigTlsServer_8h_source.html#l00090">forceSniOpt</a>.</p>
+<p class="reference">References <a class="el" href="ConfigTlsServer_8h_source.html#l00094">forceSniOpt</a>.</p>
 
 </div>
 </div>
-<a id="a845949ee9135c3feed4b8b53e933879d" name="a845949ee9135c3feed4b8b53e933879d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a845949ee9135c3feed4b8b53e933879d">&#9670;&#160;</a></span>getSniCerts()</h2>
+<a id="a4eebf8e4098393ec39b80fceee1c09b7" name="a4eebf8e4098393ec39b80fceee1c09b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4eebf8e4098393ec39b80fceee1c09b7">&#9670;&#160;</a></span>getSniCerts()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -520,23 +509,23 @@ Here is the call graph for this function:</div>
           <td class="memname">const std::map&lt; std::string, std::map&lt; std::string, std::variant&lt; std::string, bool, ssl_option_t &gt; &gt; &gt; &amp; net::config::ConfigTlsServer::getSniCerts </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ConfigTlsServer_8cpp_source.html#l00181">181</a> of file <a class="el" href="ConfigTlsServer_8cpp_source.html">ConfigTlsServer.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  181</span>                                                                                                                        {</div>
+<div class="fragment"><div class="line"><span class="lineno">  181</span>                                       {</div>
 <div class="line"><span class="lineno">  182</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#a0b2de0562c07c002cf54939e48e22f8c">configuredSniCerts</a>.empty() ? <a class="code hl_variable" href="#a589bbb18ba7299fcda7f752a02354a27">defaultSniCerts</a> : <a class="code hl_variable" href="#a0b2de0562c07c002cf54939e48e22f8c">configuredSniCerts</a>;</div>
 <div class="line"><span class="lineno">  183</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ConfigTlsServer_8h_source.html#l00087">configuredSniCerts</a>, and <a class="el" href="ConfigTlsServer_8h_source.html#l00086">defaultSniCerts</a>.</p>
+<p class="reference">References <a class="el" href="ConfigTlsServer_8h_source.html#l00091">configuredSniCerts</a>, and <a class="el" href="ConfigTlsServer_8h_source.html#l00090">defaultSniCerts</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="tls_2ConfigSocketServer_8hpp_source.html#l00078">net::config::stream::tls::ConfigSocketServer&lt; ConfigSocketServerBaseT &gt;::getSslCtx()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classnet_1_1config_1_1ConfigTlsServer_a845949ee9135c3feed4b8b53e933879d_icgraph.svg" width="440" height="72"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classnet_1_1config_1_1ConfigTlsServer_a4eebf8e4098393ec39b80fceee1c09b7_icgraph.svg" width="440" height="72"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -556,16 +545,16 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ConfigTlsServer_8cpp_source.html#l00153">153</a> of file <a class="el" href="ConfigTlsServer_8cpp_source.html">ConfigTlsServer.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  153</span>                                                               {</div>
-<div class="line"><span class="lineno">  154</span>        <a class="code hl_variable" href="#a682744dc3b42e828002c14f8d213a2c7">forceSniOpt</a> <span class="comment">//</span></div>
-<div class="line"><span class="lineno">  155</span>            -&gt;default_val(forceSni ? <span class="stringliteral">&quot;true&quot;</span> : <span class="stringliteral">&quot;false&quot;</span>)</div>
-<div class="line"><span class="lineno">  156</span>            -&gt;clear();</div>
-<div class="line"><span class="lineno">  157</span> </div>
-<div class="line"><span class="lineno">  158</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">  159</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ConfigTlsServer_8cpp_source.html#l00152">152</a> of file <a class="el" href="ConfigTlsServer_8cpp_source.html">ConfigTlsServer.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  152</span>                                                               {</div>
+<div class="line"><span class="lineno">  153</span>        <a class="code hl_variable" href="#a682744dc3b42e828002c14f8d213a2c7">forceSniOpt</a> <span class="comment">//</span></div>
+<div class="line"><span class="lineno">  154</span>            -&gt;default_val(forceSni ? <span class="stringliteral">&quot;true&quot;</span> : <span class="stringliteral">&quot;false&quot;</span>)</div>
+<div class="line"><span class="lineno">  155</span>            -&gt;clear();</div>
+<div class="line"><span class="lineno">  156</span> </div>
+<div class="line"><span class="lineno">  157</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">  158</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ConfigTlsServer_8h_source.html#l00090">forceSniOpt</a>.</p>
+<p class="reference">References <a class="el" href="ConfigTlsServer_8h_source.html#l00094">forceSniOpt</a>.</p>
 
 </div>
 </div>
@@ -590,7 +579,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ConfigTlsServer_8h_source.html#l00087">87</a> of file <a class="el" href="ConfigTlsServer_8h_source.html">ConfigTlsServer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ConfigTlsServer_8h_source.html#l00091">91</a> of file <a class="el" href="ConfigTlsServer_8h_source.html">ConfigTlsServer.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="ConfigTlsServer_8cpp_source.html#l00059">ConfigTlsServer()</a>, and <a class="el" href="ConfigTlsServer_8cpp_source.html#l00181">getSniCerts()</a>.</p>
 
@@ -616,9 +605,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ConfigTlsServer_8h_source.html#l00086">86</a> of file <a class="el" href="ConfigTlsServer_8h_source.html">ConfigTlsServer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ConfigTlsServer_8h_source.html#l00090">90</a> of file <a class="el" href="ConfigTlsServer_8h_source.html">ConfigTlsServer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ConfigTlsServer_8cpp_source.html#l00173">addSniCert()</a>, <a class="el" href="ConfigTlsServer_8cpp_source.html#l00165">addSniCerts()</a>, <a class="el" href="ConfigTlsServer_8cpp_source.html#l00059">ConfigTlsServer()</a>, and <a class="el" href="ConfigTlsServer_8cpp_source.html#l00181">getSniCerts()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ConfigTlsServer_8cpp_source.html#l00172">addSniCert()</a>, <a class="el" href="ConfigTlsServer_8cpp_source.html#l00164">addSniCerts()</a>, <a class="el" href="ConfigTlsServer_8cpp_source.html#l00059">ConfigTlsServer()</a>, and <a class="el" href="ConfigTlsServer_8cpp_source.html#l00181">getSniCerts()</a>.</p>
 
 </div>
 </div>
@@ -642,9 +631,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ConfigTlsServer_8h_source.html#l00090">90</a> of file <a class="el" href="ConfigTlsServer_8h_source.html">ConfigTlsServer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ConfigTlsServer_8h_source.html#l00094">94</a> of file <a class="el" href="ConfigTlsServer_8h_source.html">ConfigTlsServer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ConfigTlsServer_8cpp_source.html#l00059">ConfigTlsServer()</a>, <a class="el" href="ConfigTlsServer_8cpp_source.html#l00161">getForceSni()</a>, and <a class="el" href="ConfigTlsServer_8cpp_source.html#l00153">setForceSni()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ConfigTlsServer_8cpp_source.html#l00059">ConfigTlsServer()</a>, <a class="el" href="ConfigTlsServer_8cpp_source.html#l00160">getForceSni()</a>, and <a class="el" href="ConfigTlsServer_8cpp_source.html#l00152">setForceSni()</a>.</p>
 
 </div>
 </div>
@@ -668,9 +657,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ConfigTlsServer_8h_source.html#l00089">89</a> of file <a class="el" href="ConfigTlsServer_8h_source.html">ConfigTlsServer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ConfigTlsServer_8h_source.html#l00093">93</a> of file <a class="el" href="ConfigTlsServer_8h_source.html">ConfigTlsServer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ConfigTlsServer_8cpp_source.html#l00173">addSniCert()</a>, <a class="el" href="ConfigTlsServer_8cpp_source.html#l00165">addSniCerts()</a>, and <a class="el" href="ConfigTlsServer_8cpp_source.html#l00059">ConfigTlsServer()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ConfigTlsServer_8cpp_source.html#l00172">addSniCert()</a>, <a class="el" href="ConfigTlsServer_8cpp_source.html#l00164">addSniCerts()</a>, and <a class="el" href="ConfigTlsServer_8cpp_source.html#l00059">ConfigTlsServer()</a>.</p>
 
 </div>
 </div>

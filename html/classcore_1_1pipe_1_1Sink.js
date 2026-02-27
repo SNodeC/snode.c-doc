@@ -5,7 +5,7 @@ var classcore_1_1pipe_1_1Sink =
     [ "Sink", "classcore_1_1pipe_1_1Sink.html#a7398ddb7d2300f1af8552870d3fc43f8", null ],
     [ "~Sink", "classcore_1_1pipe_1_1Sink.html#ae2dfdb6dd8dabb991b9e03dd05a616ec", null ],
     [ "disconnect", "classcore_1_1pipe_1_1Sink.html#a9a1e49e75508e894158714e823db77e8", null ],
-    [ "isStreaming", "classcore_1_1pipe_1_1Sink.html#aadcf95f30275fc3062d977c3cfe983ad", null ],
+    [ "isStreaming", "classcore_1_1pipe_1_1Sink.html#a203afae24da8598d33393c0572e0e7d0", null ],
     [ "onSourceConnect", "classcore_1_1pipe_1_1Sink.html#a9b2113a428b672de7d0858d6e23488f2", null ],
     [ "onSourceData", "classcore_1_1pipe_1_1Sink.html#abe361ff8d262bf5a72447eea469cbdd8", null ],
     [ "onSourceEof", "classcore_1_1pipe_1_1Sink.html#a4485cdfe60dd8a6a0b167b0bd69a64fd", null ],

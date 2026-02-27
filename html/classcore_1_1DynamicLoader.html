@@ -134,7 +134,7 @@ Static Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-pri-static-methods" class="groupheader"><a id="pri-static-methods" name="pri-static-methods"></a>
 Static Private Member Functions</h2></td></tr>
 <tr class="memitem:a45633ed03f71c8731b96e7fec6621c2b" id="r_a45633ed03f71c8731b96e7fec6621c2b"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a45633ed03f71c8731b96e7fec6621c2b">canonicalizePath</a> (const std::string &amp;libFile)</td></tr>
-<tr class="memitem:a94acb7071e8e3c99bfa33146b374d1c8" id="r_a94acb7071e8e3c99bfa33146b374d1c8"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a94acb7071e8e3c99bfa33146b374d1c8">dlClose</a> (<a class="el" href="structcore_1_1DynamicLoader_1_1Library.html">Library</a> &amp;library)</td></tr>
+<tr class="memitem:ac5caf32e25a9eeb3fa463f924b0642fa" id="r_ac5caf32e25a9eeb3fa463f924b0642fa"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac5caf32e25a9eeb3fa463f924b0642fa">dlClose</a> (const <a class="el" href="structcore_1_1DynamicLoader_1_1Library.html">Library</a> &amp;library)</td></tr>
 <tr class="memitem:a32f0c49018bd2dbc53de83963dd3a3d0" id="r_a32f0c49018bd2dbc53de83963dd3a3d0"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a32f0c49018bd2dbc53de83963dd3a3d0">realExecDlClose</a> (const <a class="el" href="structcore_1_1DynamicLoader_1_1Library.html">Library</a> &amp;library)</td></tr>
 <tr class="memitem:a8c4d850882c7177f93a543b96eb450a0" id="r_a8c4d850882c7177f93a543b96eb450a0"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8c4d850882c7177f93a543b96eb450a0">execDlCloseDeleyed</a> ()</td></tr>
 <tr class="memitem:acff0a66e885a7bc718171eede89a1c9a" id="r_acff0a66e885a7bc718171eede89a1c9a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acff0a66e885a7bc718171eede89a1c9a">execDlCloseAll</a> ()</td></tr>
@@ -255,8 +255,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a94acb7071e8e3c99bfa33146b374d1c8" name="a94acb7071e8e3c99bfa33146b374d1c8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a94acb7071e8e3c99bfa33146b374d1c8">&#9670;&#160;</a></span>dlClose() <span class="overload">[1/2]</span></h2>
+<a id="ac5caf32e25a9eeb3fa463f924b0642fa" name="ac5caf32e25a9eeb3fa463f924b0642fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5caf32e25a9eeb3fa463f924b0642fa">&#9670;&#160;</a></span>dlClose() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -267,7 +267,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">int core::DynamicLoader::dlClose </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structcore_1_1DynamicLoader_1_1Library.html">Library</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>library</em></span></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="structcore_1_1DynamicLoader_1_1Library.html">Library</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>library</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -279,7 +279,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="DynamicLoader_8cpp_source.html#l00196">196</a> of file <a class="el" href="DynamicLoader_8cpp_source.html">DynamicLoader.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  196</span>                                               {</div>
+<div class="fragment"><div class="line"><span class="lineno">  196</span>                                                     {</div>
 <div class="line"><span class="lineno">  197</span>        <span class="keywordtype">int</span> ret = 0;</div>
 <div class="line"><span class="lineno">  198</span> </div>
 <div class="line"><span class="lineno">  199</span>        ret = <a class="code hl_function" href="#a32f0c49018bd2dbc53de83963dd3a3d0">realExecDlClose</a>(library);</div>
@@ -302,12 +302,12 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="classcore_1_1DynamicLoader_a94acb7071e8e3c99bfa33146b374d1c8_cgraph.svg" width="100%" height="387"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="classcore_1_1DynamicLoader_ac5caf32e25a9eeb3fa463f924b0642fa_cgraph.svg" width="100%" height="387"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="classcore_1_1DynamicLoader_a94acb7071e8e3c99bfa33146b374d1c8_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="classcore_1_1DynamicLoader_ac5caf32e25a9eeb3fa463f924b0642fa_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -749,7 +749,7 @@ Here is the caller graph for this function:</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="DynamicLoader_8h_source.html#l00065">core::DynamicLoader::Library::closePending</a>, <a class="el" href="DynamicLoader_8h_source.html#l00088">closeQueue</a>, <a class="el" href="DynamicLoader_8cpp_source.html#l00196">dlClose()</a>, <a class="el" href="DynamicLoader_8h_source.html#l00086">dlOpenedLibraries</a>, <a class="el" href="DynamicLoader_8h_source.html#l00087">dlOpenedLibrariesByHandle</a>, <a class="el" href="DynamicLoader_8h_source.html#l00063">core::DynamicLoader::Library::handle</a>, and <a class="el" href="DynamicLoader_8h_source.html#l00064">core::DynamicLoader::Library::refCount</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EventMultiplexer_8cpp_source.html#l00172">core::EventMultiplexer::releaseExpiredResources()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EventMultiplexer_8cpp_source.html#l00171">core::EventMultiplexer::releaseExpiredResources()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">

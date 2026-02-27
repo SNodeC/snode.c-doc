@@ -266,7 +266,7 @@ $(function() {
 <div class="foldopen" id="foldopen00132" data-start="{" data-end="}">
 <div class="line"><a id="l00132" name="l00132"></a><span class="lineno"><a class="line" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#a3332f36257f140f0e93108d8f866168b">  132</a></span>    std::string <a class="code hl_class" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html">SocketConnection</a>::<a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#a3332f36257f140f0e93108d8f866168b">timePointToString</a>(<span class="keyword">const</span> std::chrono::time_point&lt;std::chrono::system_clock&gt;&amp; timePoint) {</div>
 <div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>        <span class="keyword">const</span> std::time_t time = std::chrono::system_clock::to_time_t(timePoint);</div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>        std::tm* tm_ptr = std::gmtime(&amp;time);</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>        <span class="keyword">const</span> std::tm* tm_ptr = std::gmtime(&amp;time);</div>
 <div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span> </div>
 <div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>        <span class="keywordtype">char</span> buffer[100];</div>
 <div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>        std::string onlineSince = <span class="stringliteral">&quot;Formatting error&quot;</span>;</div>

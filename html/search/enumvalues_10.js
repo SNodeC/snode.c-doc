@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['text_0',['TEXT',['../classweb_1_1websocket_1_1SubProtocolContext.html#abf18d0b53484f49844a1315b9730e511a0aa452ab2256e501457b18f9937bd7c0',1,'web::websocket::SubProtocolContext']]],
-  ['trace_1',['TRACE',['../namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6',1,'core']]],
-  ['trailer_2',['TRAILER',['../classweb_1_1http_1_1Parser.html#a94ab44c0d65451be6ba3e6e389a8b7d5a935000c9ad2d5b9205bcadb4696fe3cc',1,'web::http::Parser']]]
+  ['server_0',['SERVER',['../classapps_1_1echo_1_1model_1_1EchoSocketContext.html#af2f207a1b7dd61a01a7a1dc716070edba3d27c95bfdbea691b250894d96852844',1,'apps::echo::model::EchoSocketContext::SERVER'],['../classnet_1_1config_1_1ConfigInstance.html#a21ca5568aa45bd1bb91d2fa79687a9e2a3d27c95bfdbea691b250894d96852844',1,'net::config::ConfigInstance::SERVER'],['../classweb_1_1websocket_1_1SocketContextUpgrade.html#aa97f7fa1f915b6090b7c7b3dabf8726ba3d27c95bfdbea691b250894d96852844',1,'web::websocket::SocketContextUpgrade::SERVER'],['../classweb_1_1websocket_1_1SubProtocolFactorySelector.html#aaa9000a982c5189a90dc1f14074a90bfa3d27c95bfdbea691b250894d96852844',1,'web::websocket::SubProtocolFactorySelector::SERVER']]],
+  ['standard_1',['STANDARD',['../namespaceutils_1_1CallForCommandline.html#a8c89343f5c099506cd752e794baa75b5a94e94133f4bdc1794c6b647b8ea134d0',1,'utils::CallForCommandline::STANDARD'],['../namespaceutils_1_1CallForCommandline.html#a8c89343f5c099506cd752e794baa75b5a94e94133f4bdc1794c6b647b8ea134d0',1,'utils::CallForCommandline::STANDARD'],['../namespaceutils_1_1CallForCommandline.html#a8c89343f5c099506cd752e794baa75b5a94e94133f4bdc1794c6b647b8ea134d0',1,'utils::CallForCommandline::STANDARD'],['../namespaceutils_1_1CallForCommandline.html#a8c89343f5c099506cd752e794baa75b5a94e94133f4bdc1794c6b647b8ea134d0',1,'utils::CallForCommandline::STANDARD']]],
+  ['stopping_2',['STOPPING',['../namespacecore.html#a6613a3d81c1d25590b1cd31540d08815af6cdb3c6710b50ec65ee07f740847e10',1,'core']]],
+  ['success_3',['SUCCESS',['../namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749ad0749aaba8b833466dfcbb0428e4f89c',1,'core']]]
 ];

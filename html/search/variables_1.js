@@ -14,7 +14,7 @@ var searchData=
   ['aliases_11',['aliases',['../classutils_1_1Config.html#a1f9a4af24f4b4ce368e50ff490382f6a',1,'utils::Config']]],
   ['alreadytotalprocessed_12',['alreadyTotalProcessed',['../classcore_1_1socket_1_1stream_1_1SocketContext.html#a99a392f83ca4a021d8b74b6222994672',1,'core::socket::stream::SocketContext']]],
   ['alreadytotalqueued_13',['alreadyTotalQueued',['../classcore_1_1socket_1_1stream_1_1SocketContext.html#a341d3b8d18e94cf555c876be0995c9dc',1,'core::socket::stream::SocketContext']]],
-  ['app_14',['app',['../classutils_1_1Config.html#a5ed5b843b04737fb57fade3b360afd91',1,'utils::Config::app'],['../classCLI_1_1CallForCommandline.html#a9b10c6a2058cb58175591195655878db',1,'CLI::CallForCommandline::app'],['../classCLI_1_1CallForShowConfig.html#a43f641f29f597b119aab8a79e0e7bf41',1,'CLI::CallForShowConfig::app']]],
+  ['app_14',['app',['../classutils_1_1Config.html#a5ed5b843b04737fb57fade3b360afd91',1,'utils::Config']]],
   ['applicationname_15',['applicationName',['../classutils_1_1Config.html#a16a0d7739b8905511aee90c76552772a',1,'utils::Config']]],
   ['applicationoptions_16',['applicationOptions',['../classutils_1_1Config.html#a93b000a2e6a648bd3c8ee52609636df5',1,'utils::Config']]],
   ['argc_17',['argc',['../classutils_1_1Config.html#a90c037990ad9ee8a14c559c0d360b3ad',1,'utils::Config']]],

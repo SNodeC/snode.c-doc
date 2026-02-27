@@ -22,7 +22,7 @@ var classweb_1_1http_1_1server_1_1Response =
     [ "send", "classweb_1_1http_1_1server_1_1Response.html#a6a6cd44cb3d0f3a65e38f5a4cd9cc05b", null ],
     [ "send", "classweb_1_1http_1_1server_1_1Response.html#a36844eacc201e3373c9da5bade3ac1c8", null ],
     [ "sendCompleted", "classweb_1_1http_1_1server_1_1Response.html#a78a2a745922ae71ca035ce38b07fb9bc", null ],
-    [ "sendFile", "classweb_1_1http_1_1server_1_1Response.html#ad814a8aed2be1f0bb9c46a2b2cf815c8", null ],
+    [ "sendFile", "classweb_1_1http_1_1server_1_1Response.html#af71b529e89f2b1391e656ae14921a142", null ],
     [ "sendFragment", "classweb_1_1http_1_1server_1_1Response.html#ad582a9f1649f000a7df6404a922ae772", null ],
     [ "sendFragment", "classweb_1_1http_1_1server_1_1Response.html#a46ad4502df50602f05e65420bf890350", null ],
     [ "sendHeader", "classweb_1_1http_1_1server_1_1Response.html#a8f6c40b9d266cd754cd8d3e2612d22de", null ],

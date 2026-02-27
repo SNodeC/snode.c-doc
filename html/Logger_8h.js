@@ -24,5 +24,7 @@ var Logger_8h =
       [ "Color::Code::BG_BLUE", "namespaceColor.html#a20a7b04657c1d83fae5d54514d3f1622a6048affb47a52a91de89790038b5ab27", null ],
       [ "Color::Code::BG_DEFAULT", "namespaceColor.html#a20a7b04657c1d83fae5d54514d3f1622a1b6f054082feceb002af4726d29c463f", null ]
     ] ],
-    [ "Color::operator<<", "namespaceColor.html#a0a74c83ead3176702da8b8249d9c8672", null ]
+    [ "Color::operator+", "namespaceColor.html#af34902a851833effa2093899013ed10c", null ],
+    [ "Color::operator+", "namespaceColor.html#a6d7eec98115ea6d6eab8997cacd6ac85", null ],
+    [ "Color::operator<<", "namespaceColor.html#a81c051abf856d9966cd8cc4b9f6a75f7", null ]
 ];

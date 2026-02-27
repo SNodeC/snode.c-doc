@@ -24,7 +24,5 @@ var searchData=
   ['eventsource_2eh_21',['EventSource.h',['../client_2tools_2EventSource_8h.html',1,'(Global Namespace)'],['../legacy_2in_2EventSource_8h.html',1,'(Global Namespace)'],['../legacy_2in6_2EventSource_8h.html',1,'(Global Namespace)'],['../legacy_2rc_2EventSource_8h.html',1,'(Global Namespace)'],['../legacy_2un_2EventSource_8h.html',1,'(Global Namespace)'],['../tls_2in_2EventSource_8h.html',1,'(Global Namespace)'],['../tls_2in6_2EventSource_8h.html',1,'(Global Namespace)'],['../tls_2rc_2EventSource_8h.html',1,'(Global Namespace)'],['../tls_2un_2EventSource_8h.html',1,'(Global Namespace)']]],
   ['exceptionalconditioneventreceiver_2ecpp_22',['ExceptionalConditionEventReceiver.cpp',['../ExceptionalConditionEventReceiver_8cpp.html',1,'']]],
   ['exceptionalconditioneventreceiver_2eh_23',['ExceptionalConditionEventReceiver.h',['../ExceptionalConditionEventReceiver_8h.html',1,'']]],
-  ['exceptions_2ecpp_24',['Exceptions.cpp',['../Exceptions_8cpp.html',1,'']]],
-  ['exceptions_2eh_25',['Exceptions.h',['../Exceptions_8h.html',1,'']]],
-  ['express_5fcompat_5fserver_2ecpp_26',['express_compat_server.cpp',['../express__compat__server_8cpp.html',1,'']]]
+  ['express_5fcompat_5fserver_2ecpp_24',['express_compat_server.cpp',['../express__compat__server_8cpp.html',1,'']]]
 ];

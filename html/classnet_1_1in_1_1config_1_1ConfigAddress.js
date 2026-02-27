@@ -14,7 +14,7 @@ var classnet_1_1in_1_1config_1_1ConfigAddress =
     [ "init", "classnet_1_1in_1_1config_1_1ConfigAddress.html#a7c495ecbd26cca879e29d8887f5e6f0c", null ],
     [ "setAiFlags", "classnet_1_1in_1_1config_1_1ConfigAddress.html#a8ef3e0795cda7a47f5d468d66467ed82", null ],
     [ "setAiProtocol", "classnet_1_1in_1_1config_1_1ConfigAddress.html#ac46b1794c4e5d7800018a7d1e3ffa7c3", null ],
-    [ "setAiSockType", "classnet_1_1in_1_1config_1_1ConfigAddress.html#a648ff0dad7189018a6e0a071e9330641", null ],
+    [ "setAiSockType", "classnet_1_1in_1_1config_1_1ConfigAddress.html#a0e2ee6f1e4c6da33002df90fd8a81517", null ],
     [ "setHost", "classnet_1_1in_1_1config_1_1ConfigAddress.html#a7c3072ee1154a50adb9714c9c58d0115", null ],
     [ "setHostRequired", "classnet_1_1in_1_1config_1_1ConfigAddress.html#a6f5655587e829e6cbb8382328bd02254", null ],
     [ "setNumeric", "classnet_1_1in_1_1config_1_1ConfigAddress.html#aa7a70bc6897d589081079143ab8d7906", null ],

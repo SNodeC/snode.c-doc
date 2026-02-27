@@ -4,7 +4,7 @@ var classcore_1_1DynamicLoader =
     [ "DynamicLoader", "classcore_1_1DynamicLoader.html#a45a8660b348ff01e3e83ffcc02df9092", null ],
     [ "~DynamicLoader", "classcore_1_1DynamicLoader.html#af83f9751c0b19c4ec5a8d97b4f07441b", null ],
     [ "canonicalizePath", "classcore_1_1DynamicLoader.html#a45633ed03f71c8731b96e7fec6621c2b", null ],
-    [ "dlClose", "classcore_1_1DynamicLoader.html#a94acb7071e8e3c99bfa33146b374d1c8", null ],
+    [ "dlClose", "classcore_1_1DynamicLoader.html#ac5caf32e25a9eeb3fa463f924b0642fa", null ],
     [ "dlClose", "classcore_1_1DynamicLoader.html#a42ac52cda1ec4534f1cc9e225dcb31b0", null ],
     [ "dlCloseDelayed", "classcore_1_1DynamicLoader.html#aea517617ba189573803a8c3a4c5e9575", null ],
     [ "dlError", "classcore_1_1DynamicLoader.html#a6a36ff7a2b37f6edf0dbe0ade36c6c62", null ],

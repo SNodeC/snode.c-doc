@@ -4,7 +4,7 @@ var classweb_1_1http_1_1decoder_1_1Fields =
     [ "Fields", "classweb_1_1http_1_1decoder_1_1Fields.html#ad10b924ea908431e8a8f19fa14916401", null ],
     [ "Fields", "classweb_1_1http_1_1decoder_1_1Fields.html#a8fd50c644f021c325997c0ec7d8514b1", null ],
     [ "getErrorCode", "classweb_1_1http_1_1decoder_1_1Fields.html#ab2df1a150ed33a8c28a655cc250bb7c1", null ],
-    [ "getErrorReason", "classweb_1_1http_1_1decoder_1_1Fields.html#a2f95154b6cf66b22cf710ef61bb03d02", null ],
+    [ "getErrorReason", "classweb_1_1http_1_1decoder_1_1Fields.html#a109b4994d6ed4dea376fe0ed7da80596", null ],
     [ "getHeader", "classweb_1_1http_1_1decoder_1_1Fields.html#ab2232adee9daf7e87c3c247aa485d846", null ],
     [ "isComplete", "classweb_1_1http_1_1decoder_1_1Fields.html#a9ca1568b883460950da6e3cf78f99052", null ],
     [ "isError", "classweb_1_1http_1_1decoder_1_1Fields.html#ad44d0353761ae44a6f698b04e7734004", null ],

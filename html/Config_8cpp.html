@@ -108,12 +108,11 @@ $(function() {
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="Config_8h_source.html">utils/Config.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="Daemon_8h_source.html">utils/Daemon.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="Exceptions_8h_source.html">utils/Exceptions.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="Formatter_8h_source.html">utils/Formatter.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for Config.cpp:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="Config_8cpp__incl.svg" width="576" height="115"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="Config_8cpp__incl.svg" width="416" height="115"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <p><a href="Config_8cpp_source.html">Go to the source code of this file.</a></p>
@@ -121,21 +120,53 @@ Include dependency graph for Config.cpp:</div>
 <tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:utils" id="r_utils"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutils.html">utils</a></td></tr>
+<tr class="memitem:utils_3A_3ACallForCommandline" id="r_utils_3A_3ACallForCommandline"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutils_1_1CallForCommandline.html">utils::CallForCommandline</a></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:a03943706e48069237cd57f2d35ca987e" id="r_a03943706e48069237cd57f2d35ca987e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a03943706e48069237cd57f2d35ca987e">XSTR</a>(s)</td></tr>
 <tr class="memitem:a6388870e639eee9c0a69446876f1f8cc" id="r_a6388870e639eee9c0a69446876f1f8cc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6388870e639eee9c0a69446876f1f8cc">STR</a>(s)</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:a8c89343f5c099506cd752e794baa75b5" id="r_a8c89343f5c099506cd752e794baa75b5"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutils_1_1CallForCommandline.html#a8c89343f5c099506cd752e794baa75b5">utils::CallForCommandline::Mode</a> { <br />
+&#160;&#160;<a class="el" href="namespaceutils_1_1CallForCommandline.html#a8c89343f5c099506cd752e794baa75b5aebdf9721be38d1fc1cd6db8c737d1be0">utils::CallForCommandline::REQUIRED</a>
+, <a class="el" href="namespaceutils_1_1CallForCommandline.html#a8c89343f5c099506cd752e794baa75b5a94e94133f4bdc1794c6b647b8ea134d0">utils::CallForCommandline::STANDARD</a>
+, <a class="el" href="namespaceutils_1_1CallForCommandline.html#a8c89343f5c099506cd752e794baa75b5a18ff74f43da410c5529f7d6fca84f115">utils::CallForCommandline::ACTIVE</a>
+, <a class="el" href="namespaceutils_1_1CallForCommandline.html#a8c89343f5c099506cd752e794baa75b5a3de44296982e58199afc513a715b12ba">utils::CallForCommandline::COMPLETE</a>
+, <br />
+&#160;&#160;<a class="el" href="namespaceutils_1_1CallForCommandline.html#a8c89343f5c099506cd752e794baa75b5aebdf9721be38d1fc1cd6db8c737d1be0">utils::CallForCommandline::REQUIRED</a>
+, <a class="el" href="namespaceutils_1_1CallForCommandline.html#a8c89343f5c099506cd752e794baa75b5a94e94133f4bdc1794c6b647b8ea134d0">utils::CallForCommandline::STANDARD</a>
+, <a class="el" href="namespaceutils_1_1CallForCommandline.html#a8c89343f5c099506cd752e794baa75b5a18ff74f43da410c5529f7d6fca84f115">utils::CallForCommandline::ACTIVE</a>
+, <a class="el" href="namespaceutils_1_1CallForCommandline.html#a8c89343f5c099506cd752e794baa75b5a3de44296982e58199afc513a715b12ba">utils::CallForCommandline::COMPLETE</a>
+<br />
+ }</td></tr>
+<tr class="memitem:a8c89343f5c099506cd752e794baa75b5" id="r_a8c89343f5c099506cd752e794baa75b5"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutils_1_1CallForCommandline.html#a8c89343f5c099506cd752e794baa75b5">utils::CallForCommandline::Mode</a> { <br />
+&#160;&#160;<a class="el" href="namespaceutils_1_1CallForCommandline.html#a8c89343f5c099506cd752e794baa75b5aebdf9721be38d1fc1cd6db8c737d1be0">utils::CallForCommandline::REQUIRED</a>
+, <a class="el" href="namespaceutils_1_1CallForCommandline.html#a8c89343f5c099506cd752e794baa75b5a94e94133f4bdc1794c6b647b8ea134d0">utils::CallForCommandline::STANDARD</a>
+, <a class="el" href="namespaceutils_1_1CallForCommandline.html#a8c89343f5c099506cd752e794baa75b5a18ff74f43da410c5529f7d6fca84f115">utils::CallForCommandline::ACTIVE</a>
+, <a class="el" href="namespaceutils_1_1CallForCommandline.html#a8c89343f5c099506cd752e794baa75b5a3de44296982e58199afc513a715b12ba">utils::CallForCommandline::COMPLETE</a>
+, <br />
+&#160;&#160;<a class="el" href="namespaceutils_1_1CallForCommandline.html#a8c89343f5c099506cd752e794baa75b5aebdf9721be38d1fc1cd6db8c737d1be0">utils::CallForCommandline::REQUIRED</a>
+, <a class="el" href="namespaceutils_1_1CallForCommandline.html#a8c89343f5c099506cd752e794baa75b5a94e94133f4bdc1794c6b647b8ea134d0">utils::CallForCommandline::STANDARD</a>
+, <a class="el" href="namespaceutils_1_1CallForCommandline.html#a8c89343f5c099506cd752e794baa75b5a18ff74f43da410c5529f7d6fca84f115">utils::CallForCommandline::ACTIVE</a>
+, <a class="el" href="namespaceutils_1_1CallForCommandline.html#a8c89343f5c099506cd752e794baa75b5a3de44296982e58199afc513a715b12ba">utils::CallForCommandline::COMPLETE</a>
+<br />
+ }</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:acf24bc1d3f8119c40b2b0e715e99c428" id="r_acf24bc1d3f8119c40b2b0e715e99c428"><td class="memItemLeft" align="right" valign="top">static std::shared_ptr&lt; CLI::App &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutils.html#acf24bc1d3f8119c40b2b0e715e99c428">utils::makeApp</a> ()</td></tr>
+<tr class="memitem:a1c188af94274cb5558b9273b37ef6d71" id="r_a1c188af94274cb5558b9273b37ef6d71"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutils.html#a1c188af94274cb5558b9273b37ef6d71">utils::createCommandLineTemplate</a> (CLI::App *app, <a class="el" href="namespaceutils_1_1CallForCommandline.html#a8c89343f5c099506cd752e794baa75b5">utils::CallForCommandline::Mode</a> mode)</td></tr>
 <tr class="memitem:ad6f33a47f8bc2b7f4581ade69caa2dd9" id="r_ad6f33a47f8bc2b7f4581ade69caa2dd9"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutils.html#ad6f33a47f8bc2b7f4581ade69caa2dd9">utils::bash_backslash_escape_no_whitespace</a> (std::string_view s)</td></tr>
-<tr class="memitem:ac8959e45881eac2ddd8177a68c40c588" id="r_ac8959e45881eac2ddd8177a68c40c588"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutils.html#ac8959e45881eac2ddd8177a68c40c588">utils::createCommandLineOptions</a> (std::stringstream &amp;out, CLI::App *app, <a class="el" href="classCLI_1_1CallForCommandline.html#a772a59d089ea19572527641273cb339d">CLI::CallForCommandline::Mode</a> mode)</td></tr>
-<tr class="memitem:ad8d4413504d5f4da6850cbb88a0571bf" id="r_ad8d4413504d5f4da6850cbb88a0571bf"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutils.html#ad8d4413504d5f4da6850cbb88a0571bf">utils::createCommandLineOptions</a> (CLI::App *app, <a class="el" href="classCLI_1_1CallForCommandline.html#a772a59d089ea19572527641273cb339d">CLI::CallForCommandline::Mode</a> mode)</td></tr>
-<tr class="memitem:aac7436ed2ed454cbef6765b7e381b2f7" id="r_aac7436ed2ed454cbef6765b7e381b2f7"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutils.html#aac7436ed2ed454cbef6765b7e381b2f7">utils::createCommandLineTemplate</a> (std::stringstream &amp;out, CLI::App *app, <a class="el" href="classCLI_1_1CallForCommandline.html#a772a59d089ea19572527641273cb339d">CLI::CallForCommandline::Mode</a> mode)</td></tr>
-<tr class="memitem:afc6e2169ae509cef3713b646e651c65e" id="r_afc6e2169ae509cef3713b646e651c65e"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutils.html#afc6e2169ae509cef3713b646e651c65e">utils::createCommandLineSubcommands</a> (CLI::App *app, <a class="el" href="classCLI_1_1CallForCommandline.html#a772a59d089ea19572527641273cb339d">CLI::CallForCommandline::Mode</a> mode)</td></tr>
-<tr class="memitem:a1a80f43b44109216f2c37fe9bdb3dc2d" id="r_a1a80f43b44109216f2c37fe9bdb3dc2d"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutils.html#a1a80f43b44109216f2c37fe9bdb3dc2d">utils::createCommandLineTemplate</a> (CLI::App *app, <a class="el" href="classCLI_1_1CallForCommandline.html#a772a59d089ea19572527641273cb339d">CLI::CallForCommandline::Mode</a> mode)</td></tr>
+<tr class="memitem:acb13ffd824b30510d747d213a10d82cc" id="r_acb13ffd824b30510d747d213a10d82cc"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutils.html#acb13ffd824b30510d747d213a10d82cc">utils::createCommandLineOptions</a> (std::stringstream &amp;out, CLI::App *app, <a class="el" href="namespaceutils_1_1CallForCommandline.html#a8c89343f5c099506cd752e794baa75b5">utils::CallForCommandline::Mode</a> mode)</td></tr>
+<tr class="memitem:a2bf8507e3b769fa174c114891c204509" id="r_a2bf8507e3b769fa174c114891c204509"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutils.html#a2bf8507e3b769fa174c114891c204509">utils::createCommandLineOptions</a> (CLI::App *app, <a class="el" href="namespaceutils_1_1CallForCommandline.html#a8c89343f5c099506cd752e794baa75b5">utils::CallForCommandline::Mode</a> mode)</td></tr>
+<tr class="memitem:a956ce48df3c20fdb152657c6a59d3805" id="r_a956ce48df3c20fdb152657c6a59d3805"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutils.html#a956ce48df3c20fdb152657c6a59d3805">utils::createCommandLineTemplate</a> (std::stringstream &amp;out, CLI::App *app, <a class="el" href="namespaceutils_1_1CallForCommandline.html#a8c89343f5c099506cd752e794baa75b5">utils::CallForCommandline::Mode</a> mode)</td></tr>
+<tr class="memitem:a515a4b6be40aa2e80675f4b93522a953" id="r_a515a4b6be40aa2e80675f4b93522a953"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutils.html#a515a4b6be40aa2e80675f4b93522a953">utils::createCommandLineSubcommands</a> (CLI::App *app, <a class="el" href="namespaceutils_1_1CallForCommandline.html#a8c89343f5c099506cd752e794baa75b5">utils::CallForCommandline::Mode</a> mode)</td></tr>
+<tr class="memitem:adb0786d68e593efe8097a7243b41ee8a" id="r_adb0786d68e593efe8097a7243b41ee8a"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutils.html#adb0786d68e593efe8097a7243b41ee8a">utils::getCommandLine</a> (CLI::App *commandlineTriggerApp)</td></tr>
+<tr class="memitem:a941f03e26353c783171001b9e0129971" id="r_a941f03e26353c783171001b9e0129971"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutils.html#a941f03e26353c783171001b9e0129971">utils::getConfig</a> (CLI::App *configTriggeredApp)</td></tr>
+<tr class="memitem:aecb5f758bff61439789cd44316bbfa69" id="r_aecb5f758bff61439789cd44316bbfa69"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutils.html#aecb5f758bff61439789cd44316bbfa69">utils::doWriteConfig</a> (CLI::App *app)</td></tr>
+<tr class="memitem:a3cc99a69d952d21b98f18a0042afc5be" id="r_a3cc99a69d952d21b98f18a0042afc5be"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutils.html#a3cc99a69d952d21b98f18a0042afc5be">utils::getHelp</a> (CLI::App *app, CLI::App *helpTriggerApp)</td></tr>
 <tr class="memitem:ae4dca857dbbb3a4fcaf8dd65df86d6b8" id="r_ae4dca857dbbb3a4fcaf8dd65df86d6b8"><td class="memItemLeft" align="right" valign="top">static std::shared_ptr&lt; <a class="el" href="classCLI_1_1HelpFormatter.html">CLI::HelpFormatter</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutils.html#ae4dca857dbbb3a4fcaf8dd65df86d6b8">utils::makeSectionFormatter</a> ()</td></tr>
 </table>
 <a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
@@ -155,7 +186,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><span class="preprocessor">#s</span></div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="Config_8cpp_source.html#l00097">97</a> of file <a class="el" href="Config_8cpp_source.html">Config.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Config_8cpp_source.html#l00096">96</a> of file <a class="el" href="Config_8cpp_source.html">Config.cpp</a>.</p>
 
 </div>
 </div>
@@ -176,7 +207,7 @@ Functions</h2></td></tr>
 <b>Value:</b><div class="fragment"><div class="line"><a class="code hl_define" href="echo_2model_2clients_8h.html#ac2e9bff2b922868f2b467492cb32839f">STR</a>(s)</div>
 <div class="ttc" id="aecho_2model_2clients_8h_html_ac2e9bff2b922868f2b467492cb32839f"><div class="ttname"><a href="echo_2model_2clients_8h.html#ac2e9bff2b922868f2b467492cb32839f">STR</a></div><div class="ttdeci">#define STR(a)</div><div class="ttdef"><b>Definition</b> <a href="echo_2model_2clients_8h_source.html#l00048">clients.h:48</a></div></div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="Config_8cpp_source.html#l00096">96</a> of file <a class="el" href="Config_8cpp_source.html">Config.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Config_8cpp_source.html#l00095">95</a> of file <a class="el" href="Config_8cpp_source.html">Config.cpp</a>.</p>
 
 </div>
 </div>

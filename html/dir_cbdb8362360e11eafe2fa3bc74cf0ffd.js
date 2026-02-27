@@ -9,8 +9,6 @@ var dir_cbdb8362360e11eafe2fa3bc74cf0ffd =
     [ "ConfigApp.h", "ConfigApp_8h.html", "ConfigApp_8h" ],
     [ "Daemon.cpp", "Daemon_8cpp.html", null ],
     [ "Daemon.h", "Daemon_8h.html", "Daemon_8h" ],
-    [ "Exceptions.cpp", "Exceptions_8cpp.html", null ],
-    [ "Exceptions.h", "Exceptions_8h.html", "Exceptions_8h" ],
     [ "Formatter.cpp", "Formatter_8cpp.html", null ],
     [ "Formatter.h", "Formatter_8h.html", "Formatter_8h" ],
     [ "hexdump.cpp", "hexdump_8cpp.html", "hexdump_8cpp" ],

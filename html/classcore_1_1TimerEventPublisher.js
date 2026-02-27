@@ -2,7 +2,7 @@ var classcore_1_1TimerEventPublisher =
 [
     [ "timernode_lt", "classcore_1_1TimerEventPublisher_1_1timernode__lt.html", "classcore_1_1TimerEventPublisher_1_1timernode__lt" ],
     [ "TimerEventPublisher", "classcore_1_1TimerEventPublisher.html#a2aafda81dc9e56dc8bbe93ce97f31813", null ],
-    [ "empty", "classcore_1_1TimerEventPublisher.html#a05883e2317e3c244387b654916f480e0", null ],
+    [ "empty", "classcore_1_1TimerEventPublisher.html#aae75bb1a271267a8e77b35d487a87ecb", null ],
     [ "erase", "classcore_1_1TimerEventPublisher.html#a839184da8ade044bec3945f3558c70c0", null ],
     [ "getNextTimeout", "classcore_1_1TimerEventPublisher.html#a498ad26f0eb68bacc274e81d5c29f027", null ],
     [ "insert", "classcore_1_1TimerEventPublisher.html#a09059a68bed567c951c864ad95c7c421", null ],

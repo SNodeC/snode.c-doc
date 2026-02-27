@@ -399,7 +399,7 @@ template&lt;InjectableAttribute Attribute, <a class="el" href="structutils_1_1fi
 <div class="fragment"><div class="line"><span class="lineno">  162</span>                                                                                                                       {</div>
 <div class="line"><span class="lineno">  163</span>            <span class="keywordtype">bool</span> inserted = <span class="keyword">false</span>;</div>
 <div class="line"><span class="lineno">  164</span> </div>
-<div class="line"><span class="lineno">  165</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="#abbd17a17039df8a8eeb865a3967bba0d">attributes</a>.find(<span class="keyword">typeid</span>(Attribute).name() + std::string(key) + subKey) == <a class="code hl_variable" href="#abbd17a17039df8a8eeb865a3967bba0d">attributes</a>.end() || overwrite) {</div>
+<div class="line"><span class="lineno">  165</span>            <span class="keywordflow">if</span> (!<a class="code hl_variable" href="#abbd17a17039df8a8eeb865a3967bba0d">attributes</a>.contains(<span class="keyword">typeid</span>(Attribute).name() + std::string(key) + subKey) || overwrite) {</div>
 <div class="line"><span class="lineno">  166</span>                <a class="code hl_variable" href="#abbd17a17039df8a8eeb865a3967bba0d">attributes</a>[<span class="keyword">typeid</span>(Attribute).name() + std::string(key) + subKey] =</div>
 <div class="line"><span class="lineno">  167</span>                    std::shared_ptr&lt;void&gt;(<span class="keyword">new</span> AttributeProxy&lt;Attribute&gt;(attribute));</div>
 <div class="line"><span class="lineno">  168</span>                inserted = <span class="keyword">true</span>;</div>
@@ -457,7 +457,7 @@ template&lt;InjectableAttribute Attribute, <a class="el" href="structutils_1_1fi
 <div class="fragment"><div class="line"><span class="lineno">  149</span>                                                                                                                      {</div>
 <div class="line"><span class="lineno">  150</span>            <span class="keywordtype">bool</span> inserted = <span class="keyword">false</span>;</div>
 <div class="line"><span class="lineno">  151</span> </div>
-<div class="line"><span class="lineno">  152</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="#abbd17a17039df8a8eeb865a3967bba0d">attributes</a>.find(<span class="keyword">typeid</span>(Attribute).name() + std::string(key) + subKey) == <a class="code hl_variable" href="#abbd17a17039df8a8eeb865a3967bba0d">attributes</a>.end() || overwrite) {</div>
+<div class="line"><span class="lineno">  152</span>            <span class="keywordflow">if</span> (!<a class="code hl_variable" href="#abbd17a17039df8a8eeb865a3967bba0d">attributes</a>.contains(<span class="keyword">typeid</span>(Attribute).name() + std::string(key) + subKey) || overwrite) {</div>
 <div class="line"><span class="lineno">  153</span>                <a class="code hl_variable" href="#abbd17a17039df8a8eeb865a3967bba0d">attributes</a>[<span class="keyword">typeid</span>(Attribute).name() + std::string(key) + subKey] =</div>
 <div class="line"><span class="lineno">  154</span>                    std::shared_ptr&lt;void&gt;(<span class="keyword">new</span> AttributeProxy&lt;Attribute&gt;(attribute));</div>
 <div class="line"><span class="lineno">  155</span>                inserted = <span class="keyword">true</span>;</div>

@@ -470,7 +470,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">  222</span>        std::map&lt;std::string, SSL_CTX*&gt; sans;</div>
 <div class="line"><span class="lineno">  223</span> </div>
 <div class="line"><span class="lineno">  224</span>        <span class="keywordflow">if</span> (sslCtx != <span class="keyword">nullptr</span>) {</div>
-<div class="line"><span class="lineno">  225</span>            X509* x509 = SSL_CTX_get0_certificate(sslCtx);</div>
+<div class="line"><span class="lineno">  225</span>            <span class="keyword">const</span> X509* x509 = SSL_CTX_get0_certificate(sslCtx);</div>
 <div class="line"><span class="lineno">  226</span>            <span class="keywordflow">if</span> (x509 != <span class="keyword">nullptr</span>) {</div>
 <div class="line"><span class="lineno">  227</span>                GENERAL_NAMES* subjectAltNames =</div>
 <div class="line"><span class="lineno">  228</span>                    <span class="keyword">static_cast&lt;</span>GENERAL_NAMES*<span class="keyword">&gt;</span>(X509_get_ext_d2i(x509, NID_subject_alt_name, <span class="keyword">nullptr</span>, <span class="keyword">nullptr</span>));</div>
@@ -478,7 +478,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">  230</span>                <span class="keyword">const</span> int32_t altNameCount = sk_GENERAL_NAME_num(subjectAltNames);</div>
 <div class="line"><span class="lineno">  231</span> </div>
 <div class="line"><span class="lineno">  232</span>                <span class="keywordflow">for</span> (int32_t i = 0; i &lt; altNameCount; ++i) {</div>
-<div class="line"><span class="lineno">  233</span>                    GENERAL_NAME* generalName = sk_GENERAL_NAME_value(subjectAltNames, i);</div>
+<div class="line"><span class="lineno">  233</span>                    <span class="keyword">const</span> GENERAL_NAME* generalName = sk_GENERAL_NAME_value(subjectAltNames, i);</div>
 <div class="line"><span class="lineno">  234</span>                    <span class="keywordflow">if</span> (generalName-&gt;type == GEN_DNS || generalName-&gt;type == GEN_URI || generalName-&gt;type == GEN_EMAIL) {</div>
 <div class="line"><span class="lineno">  235</span>                        <span class="keyword">const</span> std::string subjectAltName =</div>
 <div class="line"><span class="lineno">  236</span>                            std::string(<span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(ASN1_STRING_get0_data(generalName-&gt;d.dNSName)),</div>
@@ -838,11 +838,11 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="ssl__utils_8cpp_source.html#l00075">75</a> of file <a class="el" href="ssl__utils_8cpp_source.html">ssl_utils.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   75</span>                                                                      {</div>
-<div class="line"><span class="lineno">   76</span>        SSL* <a class="code hl_namespace" href="namespacecore_1_1ssl.html">ssl</a> = <span class="keyword">static_cast&lt;</span>SSL*<span class="keyword">&gt;</span>(X509_STORE_CTX_get_ex_data(ctx, SSL_get_ex_data_X509_STORE_CTX_idx()));</div>
+<div class="line"><span class="lineno">   76</span>        <span class="keyword">const</span> SSL* <a class="code hl_namespace" href="namespacecore_1_1ssl.html">ssl</a> = <span class="keyword">static_cast&lt;</span>SSL*<span class="keyword">&gt;</span>(X509_STORE_CTX_get_ex_data(ctx, SSL_get_ex_data_X509_STORE_CTX_idx()));</div>
 <div class="line"><span class="lineno">   77</span> </div>
 <div class="line"><span class="lineno">   78</span>        <span class="keyword">const</span> std::string connectionName = *<span class="keyword">static_cast&lt;</span>std::string*<span class="keyword">&gt;</span>(SSL_get_ex_data(<a class="code hl_namespace" href="namespacecore_1_1ssl.html">ssl</a>, 0));</div>
 <div class="line"><span class="lineno">   79</span> </div>
-<div class="line"><span class="lineno">   80</span>        X509* curr_cert = X509_STORE_CTX_get_current_cert(ctx);</div>
+<div class="line"><span class="lineno">   80</span>        <span class="keyword">const</span> X509* curr_cert = X509_STORE_CTX_get_current_cert(ctx);</div>
 <div class="line"><span class="lineno">   81</span>        <span class="keyword">const</span> <span class="keywordtype">int</span> depth = X509_STORE_CTX_get_error_depth(ctx);</div>
 <div class="line"><span class="lineno">   82</span> </div>
 <div class="line"><span class="lineno">   83</span>        <span class="keywordtype">char</span> subjectName[256];</div>

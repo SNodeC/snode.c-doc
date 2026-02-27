@@ -12,7 +12,7 @@ var classnet_1_1config_1_1ConfigPhysicalSocket =
     [ "getRetryOnFatal", "classnet_1_1config_1_1ConfigPhysicalSocket.html#a867d61e2dbecbf99b03d676d723bcc2c", null ],
     [ "getRetryTimeout", "classnet_1_1config_1_1ConfigPhysicalSocket.html#a4c40ecb1e1ccdb7395de93e7180b54b4", null ],
     [ "getRetryTries", "classnet_1_1config_1_1ConfigPhysicalSocket.html#a5521012a5c8c8e19de064cc8c2839dc6", null ],
-    [ "getSocketOptions", "classnet_1_1config_1_1ConfigPhysicalSocket.html#a86e85c32b7c29ca53d43625e1b35d2fc", null ],
+    [ "getSocketOptions", "classnet_1_1config_1_1ConfigPhysicalSocket.html#acaa794c18c8fd206d4a1adc19668b9fa", null ],
     [ "removeSocketOption", "classnet_1_1config_1_1ConfigPhysicalSocket.html#a8a64e58f2183e35a5afd513933907f59", null ],
     [ "setRetry", "classnet_1_1config_1_1ConfigPhysicalSocket.html#ab44215f8f61872a20db835287af1dc12", null ],
     [ "setRetryBase", "classnet_1_1config_1_1ConfigPhysicalSocket.html#acb3e8e170f68af3200a9132b65f07e60", null ],
