@@ -1,5 +1,12 @@
 var NAVTREEINDEX7 =
 {
+"classcore_1_1multiplexer_1_1poll_1_1PollFdsManager_1_1VarSizeTypeAllocator.html#ae1714b090554332a49eb085ff4efb817":[3,0,2,5,1,1,0,4],
+"classcore_1_1multiplexer_1_1poll_1_1PollFdsManager_1_1VarSizeTypeAllocator.html#ae8e819c20c5995752441b2ddd5ede1d8":[1,0,4,5,1,1,0,7],
+"classcore_1_1multiplexer_1_1poll_1_1PollFdsManager_1_1VarSizeTypeAllocator.html#ae8e819c20c5995752441b2ddd5ede1d8":[3,0,2,5,1,1,0,7],
+"classcore_1_1multiplexer_1_1poll_1_1PollFdsManager_1_1VarSizeTypeAllocator.html#afbe937f93d1e0357f088cc662164a9ec":[1,0,4,5,1,1,0,17],
+"classcore_1_1multiplexer_1_1poll_1_1PollFdsManager_1_1VarSizeTypeAllocator.html#afbe937f93d1e0357f088cc662164a9ec":[3,0,2,5,1,1,0,17],
+"classcore_1_1multiplexer_1_1poll_1_1PollFdsManager_1_1VarSizeTypeAllocator.html#afefb5278cc41326b7e1aa66790d1bf39":[1,0,4,5,1,1,0,8],
+"classcore_1_1multiplexer_1_1poll_1_1PollFdsManager_1_1VarSizeTypeAllocator.html#afefb5278cc41326b7e1aa66790d1bf39":[3,0,2,5,1,1,0,8],
 "classcore_1_1multiplexer_1_1select_1_1DescriptorEventPublisher.html":[1,0,4,5,2,1],
 "classcore_1_1multiplexer_1_1select_1_1DescriptorEventPublisher.html":[3,0,2,5,2,1],
 "classcore_1_1multiplexer_1_1select_1_1DescriptorEventPublisher.html#a0d715d70e0fdbbed7304d88a13692a59":[1,0,4,5,2,1,3],
@@ -242,12 +249,5 @@ var NAVTREEINDEX7 =
 "classcore_1_1socket_1_1SocketContext.html#a102d7821370d40e9d764e21a8bb1b0c3":[3,0,2,1,2,10],
 "classcore_1_1socket_1_1SocketContext.html#a171ec3bb2190630276ff2e6cb5fd9ccf":[1,0,4,1,2,19],
 "classcore_1_1socket_1_1SocketContext.html#a171ec3bb2190630276ff2e6cb5fd9ccf":[3,0,2,1,2,19],
-"classcore_1_1socket_1_1SocketContext.html#a1965401ba1814087fec30d3305341bec":[1,0,4,1,2,11],
-"classcore_1_1socket_1_1SocketContext.html#a1965401ba1814087fec30d3305341bec":[3,0,2,1,2,11],
-"classcore_1_1socket_1_1SocketContext.html#a34c520f17818f029395d2d2b4babc882":[1,0,4,1,2,12],
-"classcore_1_1socket_1_1SocketContext.html#a34c520f17818f029395d2d2b4babc882":[3,0,2,1,2,12],
-"classcore_1_1socket_1_1SocketContext.html#a3b9e77659efd9e86e15dbf0a65824a42":[1,0,4,1,2,17],
-"classcore_1_1socket_1_1SocketContext.html#a3b9e77659efd9e86e15dbf0a65824a42":[3,0,2,1,2,17],
-"classcore_1_1socket_1_1SocketContext.html#a4d263707531739a36a95774481bec0f0":[1,0,4,1,2,20],
-"classcore_1_1socket_1_1SocketContext.html#a4d263707531739a36a95774481bec0f0":[3,0,2,1,2,20]
+"classcore_1_1socket_1_1SocketContext.html#a1965401ba1814087fec30d3305341bec":[1,0,4,1,2,11]
 };

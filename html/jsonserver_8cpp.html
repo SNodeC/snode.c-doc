@@ -140,66 +140,66 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="jsonserver_8cpp_source.html#l00056">56</a> of file <a class="el" href="jsonserver_8cpp_source.html">jsonserver.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   56</span>                                 {</div>
-<div class="line"><span class="lineno">   57</span>    <span class="keyword">using </span><a class="code hl_typedef" href="namespaceapps_1_1http_1_1legacy.html#a11cba308cb1df1c683b8463445f4a99c">WebApp</a> = <a class="code hl_typedef" href="namespaceexpress_1_1legacy_1_1in.html#ae117911fb1d6811868691d20e494b046">express::legacy::in::WebApp</a>;</div>
-<div class="line"><span class="lineno">   58</span> </div>
-<div class="line"><span class="lineno">   59</span>    WebApp::init(argc, argv);</div>
-<div class="line"><span class="lineno">   60</span> </div>
-<div class="line"><span class="lineno">   61</span>    <span class="keyword">using </span><a class="code hl_typedef" href="namespacetls.html#adc9ca1ef132516ac61198863375b680f">SocketAddress</a> = WebApp::SocketAddress;</div>
-<div class="line"><span class="lineno">   62</span> </div>
-<div class="line"><span class="lineno">   63</span>    <span class="keyword">const</span> <a class="code hl_typedef" href="namespaceapps_1_1http_1_1legacy.html#a11cba308cb1df1c683b8463445f4a99c">WebApp</a> legacyApp(<span class="stringliteral">&quot;legacy-jsonserver&quot;</span>);</div>
-<div class="line"><span class="lineno">   64</span> </div>
-<div class="line"><span class="lineno">   65</span>    legacyApp.use(<a class="code hl_class" href="classexpress_1_1middleware_1_1JsonMiddleware.html">express::middleware::JsonMiddleware</a>());</div>
-<div class="line"><span class="lineno">   66</span> </div>
-<div class="line"><span class="lineno">   67</span>    legacyApp.listen(</div>
-<div class="line"><span class="lineno">   68</span>        8080,</div>
-<div class="line"><span class="lineno">   69</span>        [instanceName = legacyApp.getConfig().getInstanceName()](<span class="keyword">const</span> SocketAddress&amp; socketAddress, <span class="keyword">const</span> <a class="code hl_class" href="classcore_1_1socket_1_1State.html">core::socket::State</a>&amp; state) {</div>
-<div class="line"><span class="lineno">   70</span>            switch (state) {</div>
-<div class="line"><span class="lineno">   71</span>                case core::socket::State::OK:</div>
-<div class="line"><span class="lineno">   72</span>                    VLOG(1) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot;: listening on &#39;&quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
-<div class="line"><span class="lineno">   73</span>                    break;</div>
-<div class="line"><span class="lineno">   74</span>                case core::socket::State::DISABLED:</div>
-<div class="line"><span class="lineno">   75</span>                    VLOG(1) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot;: disabled&quot;</span>;</div>
-<div class="line"><span class="lineno">   76</span>                    break;</div>
-<div class="line"><span class="lineno">   77</span>                case core::socket::State::ERROR:</div>
-<div class="line"><span class="lineno">   78</span>                    LOG(ERROR) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; state.what();</div>
-<div class="line"><span class="lineno">   79</span>                    break;</div>
-<div class="line"><span class="lineno">   80</span>                case core::socket::State::FATAL:</div>
-<div class="line"><span class="lineno">   81</span>                    LOG(FATAL) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; state.what();</div>
-<div class="line"><span class="lineno">   82</span>                    break;</div>
-<div class="line"><span class="lineno">   83</span>            }</div>
-<div class="line"><span class="lineno">   84</span>        });</div>
-<div class="line"><span class="lineno">   85</span> </div>
-<div class="line"><span class="lineno">   86</span>    legacyApp.post(<span class="stringliteral">&quot;/index.html&quot;</span>, [] <a class="code hl_define" href="Router_8h.html#a8b7131df91fe7a961e2cdadcedb55232">APPLICATION</a>(req, res) {</div>
-<div class="line"><span class="lineno">   87</span>        std::string jsonString;</div>
-<div class="line"><span class="lineno">   88</span> </div>
-<div class="line"><span class="lineno">   89</span>        req-&gt;getAttribute&lt;nlohmann::json&gt;(</div>
-<div class="line"><span class="lineno">   90</span>            [&amp;jsonString](nlohmann::json&amp; json) {</div>
-<div class="line"><span class="lineno">   91</span>                jsonString = json.dump(4);</div>
-<div class="line"><span class="lineno">   92</span>                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Application received body: &quot;</span> &lt;&lt; jsonString;</div>
-<div class="line"><span class="lineno">   93</span>            },</div>
-<div class="line"><span class="lineno">   94</span>            [](<span class="keyword">const</span> std::string&amp; key) {</div>
-<div class="line"><span class="lineno">   95</span>                VLOG(1) &lt;&lt; key &lt;&lt; <span class="stringliteral">&quot; attribute not found&quot;</span>;</div>
-<div class="line"><span class="lineno">   96</span>            });</div>
-<div class="line"><span class="lineno">   97</span> </div>
-<div class="line"><span class="lineno">   98</span>        res-&gt;send(jsonString);</div>
-<div class="line"><span class="lineno">   99</span>    });</div>
-<div class="line"><span class="lineno">  100</span> </div>
-<div class="line"><span class="lineno">  101</span>    legacyApp.post([] <a class="code hl_define" href="Router_8h.html#a8b7131df91fe7a961e2cdadcedb55232">APPLICATION</a>(req, res) {</div>
-<div class="line"><span class="lineno">  102</span>        res-&gt;send(<span class="stringliteral">&quot;Wrong Url&quot;</span>);</div>
-<div class="line"><span class="lineno">  103</span>    });</div>
-<div class="line"><span class="lineno">  104</span> </div>
-<div class="line"><span class="lineno">  105</span>    <span class="keywordflow">return</span> WebApp::start();</div>
-<div class="line"><span class="lineno">  106</span>}</div>
+<p class="definition">Definition at line <a class="el" href="jsonserver_8cpp_source.html#l00055">55</a> of file <a class="el" href="jsonserver_8cpp_source.html">jsonserver.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   55</span>                                 {</div>
+<div class="line"><span class="lineno">   56</span>    <span class="keyword">using </span><a class="code hl_typedef" href="namespaceapps_1_1http_1_1legacy.html#a11cba308cb1df1c683b8463445f4a99c">WebApp</a> = <a class="code hl_typedef" href="namespaceexpress_1_1legacy_1_1in.html#ae117911fb1d6811868691d20e494b046">express::legacy::in::WebApp</a>;</div>
+<div class="line"><span class="lineno">   57</span> </div>
+<div class="line"><span class="lineno">   58</span>    WebApp::init(argc, argv);</div>
+<div class="line"><span class="lineno">   59</span> </div>
+<div class="line"><span class="lineno">   60</span>    <span class="keyword">using </span><a class="code hl_typedef" href="namespacetls.html#adc9ca1ef132516ac61198863375b680f">SocketAddress</a> = WebApp::SocketAddress;</div>
+<div class="line"><span class="lineno">   61</span> </div>
+<div class="line"><span class="lineno">   62</span>    <span class="keyword">const</span> <a class="code hl_typedef" href="namespaceapps_1_1http_1_1legacy.html#a11cba308cb1df1c683b8463445f4a99c">WebApp</a> legacyApp(<span class="stringliteral">&quot;legacy-jsonserver&quot;</span>);</div>
+<div class="line"><span class="lineno">   63</span> </div>
+<div class="line"><span class="lineno">   64</span>    legacyApp.use(<a class="code hl_class" href="classexpress_1_1middleware_1_1JsonMiddleware.html">express::middleware::JsonMiddleware</a>());</div>
+<div class="line"><span class="lineno">   65</span> </div>
+<div class="line"><span class="lineno">   66</span>    legacyApp.listen(</div>
+<div class="line"><span class="lineno">   67</span>        8080,</div>
+<div class="line"><span class="lineno">   68</span>        [instanceName = legacyApp.getConfig().getInstanceName()](<span class="keyword">const</span> SocketAddress&amp; socketAddress, <span class="keyword">const</span> <a class="code hl_class" href="classcore_1_1socket_1_1State.html">core::socket::State</a>&amp; state) {</div>
+<div class="line"><span class="lineno">   69</span>            switch (state) {</div>
+<div class="line"><span class="lineno">   70</span>                case core::socket::State::OK:</div>
+<div class="line"><span class="lineno">   71</span>                    VLOG(1) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot;: listening on &#39;&quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
+<div class="line"><span class="lineno">   72</span>                    break;</div>
+<div class="line"><span class="lineno">   73</span>                case core::socket::State::DISABLED:</div>
+<div class="line"><span class="lineno">   74</span>                    VLOG(1) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot;: disabled&quot;</span>;</div>
+<div class="line"><span class="lineno">   75</span>                    break;</div>
+<div class="line"><span class="lineno">   76</span>                case core::socket::State::ERROR:</div>
+<div class="line"><span class="lineno">   77</span>                    LOG(ERROR) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; state.what();</div>
+<div class="line"><span class="lineno">   78</span>                    break;</div>
+<div class="line"><span class="lineno">   79</span>                case core::socket::State::FATAL:</div>
+<div class="line"><span class="lineno">   80</span>                    LOG(FATAL) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; state.what();</div>
+<div class="line"><span class="lineno">   81</span>                    break;</div>
+<div class="line"><span class="lineno">   82</span>            }</div>
+<div class="line"><span class="lineno">   83</span>        });</div>
+<div class="line"><span class="lineno">   84</span> </div>
+<div class="line"><span class="lineno">   85</span>    legacyApp.post(<span class="stringliteral">&quot;/index.html&quot;</span>, [] <a class="code hl_define" href="Router_8h.html#a8b7131df91fe7a961e2cdadcedb55232">APPLICATION</a>(req, res) {</div>
+<div class="line"><span class="lineno">   86</span>        std::string jsonString;</div>
+<div class="line"><span class="lineno">   87</span> </div>
+<div class="line"><span class="lineno">   88</span>        req-&gt;getAttribute&lt;nlohmann::json&gt;(</div>
+<div class="line"><span class="lineno">   89</span>            [&amp;jsonString](nlohmann::json&amp; json) {</div>
+<div class="line"><span class="lineno">   90</span>                jsonString = json.dump(4);</div>
+<div class="line"><span class="lineno">   91</span>                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Application received body: &quot;</span> &lt;&lt; jsonString;</div>
+<div class="line"><span class="lineno">   92</span>            },</div>
+<div class="line"><span class="lineno">   93</span>            [](<span class="keyword">const</span> std::string&amp; key) {</div>
+<div class="line"><span class="lineno">   94</span>                VLOG(1) &lt;&lt; key &lt;&lt; <span class="stringliteral">&quot; attribute not found&quot;</span>;</div>
+<div class="line"><span class="lineno">   95</span>            });</div>
+<div class="line"><span class="lineno">   96</span> </div>
+<div class="line"><span class="lineno">   97</span>        res-&gt;send(jsonString);</div>
+<div class="line"><span class="lineno">   98</span>    });</div>
+<div class="line"><span class="lineno">   99</span> </div>
+<div class="line"><span class="lineno">  100</span>    legacyApp.post([] <a class="code hl_define" href="Router_8h.html#a8b7131df91fe7a961e2cdadcedb55232">APPLICATION</a>(req, res) {</div>
+<div class="line"><span class="lineno">  101</span>        res-&gt;send(<span class="stringliteral">&quot;Wrong Url&quot;</span>);</div>
+<div class="line"><span class="lineno">  102</span>    });</div>
+<div class="line"><span class="lineno">  103</span> </div>
+<div class="line"><span class="lineno">  104</span>    <span class="keywordflow">return</span> WebApp::start();</div>
+<div class="line"><span class="lineno">  105</span>}</div>
 <div class="ttc" id="aRouter_8h_html_a8b7131df91fe7a961e2cdadcedb55232"><div class="ttname"><a href="Router_8h.html#a8b7131df91fe7a961e2cdadcedb55232">APPLICATION</a></div><div class="ttdeci">#define APPLICATION(req, res)</div><div class="ttdef"><b>Definition</b> <a href="Router_8h_source.html#l00068">Router.h:68</a></div></div>
 <div class="ttc" id="aclasscore_1_1socket_1_1State_html"><div class="ttname"><a href="classcore_1_1socket_1_1State.html">core::socket::State</a></div><div class="ttdef"><b>Definition</b> <a href="socket_2State_8h_source.html#l00053">State.h:53</a></div></div>
 <div class="ttc" id="aclassexpress_1_1middleware_1_1JsonMiddleware_html"><div class="ttname"><a href="classexpress_1_1middleware_1_1JsonMiddleware.html">express::middleware::JsonMiddleware</a></div><div class="ttdef"><b>Definition</b> <a href="JsonMiddleware_8h_source.html#l00053">JsonMiddleware.h:53</a></div></div>
 <div class="ttc" id="anamespaceapps_1_1http_1_1legacy_html_a11cba308cb1df1c683b8463445f4a99c"><div class="ttname"><a href="namespaceapps_1_1http_1_1legacy.html#a11cba308cb1df1c683b8463445f4a99c">apps::http::legacy::WebApp</a></div><div class="ttdeci">express::legacy::NET::WebApp WebApp</div><div class="ttdef"><b>Definition</b> <a href="http_2model_2servers_8h_source.html#l00076">servers.h:76</a></div></div>
 <div class="ttc" id="anamespaceexpress_1_1legacy_1_1in_html_ae117911fb1d6811868691d20e494b046"><div class="ttname"><a href="namespaceexpress_1_1legacy_1_1in.html#ae117911fb1d6811868691d20e494b046">express::legacy::in::WebApp</a></div><div class="ttdeci">WebAppT&lt; web::http::legacy::in::Server &gt; WebApp</div><div class="ttdef"><b>Definition</b> <a href="legacy_2in_2WebApp_8h_source.html#l00056">WebApp.h:56</a></div></div>
-<div class="ttc" id="anamespacetls_html_adc9ca1ef132516ac61198863375b680f"><div class="ttname"><a href="namespacetls.html#adc9ca1ef132516ac61198863375b680f">tls::SocketAddress</a></div><div class="ttdeci">SocketClient::SocketAddress SocketAddress</div><div class="ttdef"><b>Definition</b> <a href="httplowlevelclient_8cpp_source.html#l00145">httplowlevelclient.cpp:145</a></div></div>
+<div class="ttc" id="anamespacetls_html_adc9ca1ef132516ac61198863375b680f"><div class="ttname"><a href="namespacetls.html#adc9ca1ef132516ac61198863375b680f">tls::SocketAddress</a></div><div class="ttdeci">SocketClient::SocketAddress SocketAddress</div><div class="ttdef"><b>Definition</b> <a href="httplowlevelclient_8cpp_source.html#l00144">httplowlevelclient.cpp:144</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="socket_2State_8h_source.html#l00056">core::socket::State::DISABLED</a>, <a class="el" href="socket_2State_8h_source.html#l00057">core::socket::State::ERROR</a>, <a class="el" href="socket_2State_8h_source.html#l00058">core::socket::State::FATAL</a>, <a class="el" href="AttributeInjector_8h_source.html#l00205">utils::MultibleAttributeInjector::getAttribute()</a>, <a class="el" href="Socket_8hpp_source.html#l00065">core::socket::Socket&lt; ConfigT &gt;::getConfig()</a>, <a class="el" href="ConfigInstance_8cpp_source.html#l00096">net::config::ConfigInstance::getInstanceName()</a>, <a class="el" href="WebApp_8cpp_source.html#l00056">express::WebApp::init()</a>, <a class="el" href="net_2in_2stream_2SocketServer_8h_source.html#l00075">net::in::stream::SocketServer&lt; SocketAcceptorT, ConfigSocketServerT, SocketContextFactoryT, Args &gt;::listen()</a>, <a class="el" href="socket_2State_8h_source.html#l00055">core::socket::State::OK</a>, <a class="el" href="express_2Response_8cpp_source.html#l00169">express::Response::send()</a>, <a class="el" href="WebApp_8cpp_source.html#l00060">express::WebApp::start()</a>, <a class="el" href="net_2in_2SocketAddress_8cpp_source.html#l00171">net::in::SocketAddress::toString()</a>, <a class="el" href="WebAppT_8h_source.html#l00076">express::WebAppT&lt; ServerT &gt;::WebAppT()</a>, and <a class="el" href="socket_2State_8cpp_source.html#l00114">core::socket::State::what()</a>.</p>
+<p class="reference">References <a class="el" href="socket_2State_8h_source.html#l00056">core::socket::State::DISABLED</a>, <a class="el" href="socket_2State_8h_source.html#l00057">core::socket::State::ERROR</a>, <a class="el" href="socket_2State_8h_source.html#l00058">core::socket::State::FATAL</a>, <a class="el" href="AttributeInjector_8h_source.html#l00205">utils::MultibleAttributeInjector::getAttribute()</a>, <a class="el" href="Socket_8hpp_source.html#l00065">core::socket::Socket&lt; ConfigT &gt;::getConfig()</a>, <a class="el" href="ConfigInstance_8cpp_source.html#l00087">net::config::ConfigInstance::getInstanceName()</a>, <a class="el" href="WebApp_8cpp_source.html#l00056">express::WebApp::init()</a>, <a class="el" href="net_2in_2stream_2SocketServer_8h_source.html#l00075">net::in::stream::SocketServer&lt; SocketAcceptorT, ConfigSocketServerT, SocketContextFactoryT, Args &gt;::listen()</a>, <a class="el" href="socket_2State_8h_source.html#l00055">core::socket::State::OK</a>, <a class="el" href="express_2Response_8cpp_source.html#l00169">express::Response::send()</a>, <a class="el" href="WebApp_8cpp_source.html#l00060">express::WebApp::start()</a>, <a class="el" href="net_2in_2SocketAddress_8cpp_source.html#l00171">net::in::SocketAddress::toString()</a>, <a class="el" href="WebAppT_8h_source.html#l00074">express::WebAppT&lt; ServerT &gt;::WebAppT()</a>, and <a class="el" href="socket_2State_8cpp_source.html#l00114">core::socket::State::what()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">

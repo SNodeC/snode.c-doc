@@ -1,5 +1,7 @@
 var classnet_1_1config_1_1stream_1_1tls_1_1ConfigSocketServer =
 [
+    [ "Instance", "classnet_1_1config_1_1stream_1_1tls_1_1ConfigSocketServer.html#a352fe9eb58d9c9f6af6c029c33276646", null ],
+    [ "Tls", "classnet_1_1config_1_1stream_1_1tls_1_1ConfigSocketServer.html#a09734c7807b98af590b9f3ef08336e6d", null ],
     [ "ConfigSocketServer", "classnet_1_1config_1_1stream_1_1tls_1_1ConfigSocketServer.html#a0db56809cbbbc27f67721753c6c3ac7c", null ],
     [ "~ConfigSocketServer", "classnet_1_1config_1_1stream_1_1tls_1_1ConfigSocketServer.html#ace925e7d34a0dcbb05c886c3fbcb76c5", null ],
     [ "clientHelloCallback", "classnet_1_1config_1_1stream_1_1tls_1_1ConfigSocketServer.html#ac70bc8a03e5dc1ac9181bd1c8fc1cce5", null ],

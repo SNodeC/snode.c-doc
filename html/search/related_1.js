@@ -8,6 +8,8 @@ var searchData=
   ['commands_3a_3asendheadercommand_5',['SendHeaderCommand',['../classweb_1_1http_1_1client_1_1MasterRequest.html#a4a0cfe0873e9c4a933049bb6af25da2e',1,'web::http::client::MasterRequest']]],
   ['commands_3a_3assecommand_6',['SseCommand',['../classweb_1_1http_1_1client_1_1MasterRequest.html#a537df746b1d23fd603db9ae3f93540e6',1,'web::http::client::MasterRequest']]],
   ['commands_3a_3aupgradecommand_7',['UpgradeCommand',['../classweb_1_1http_1_1client_1_1MasterRequest.html#a452041faaf1985484ecfd14eed56319c',1,'web::http::client::MasterRequest']]],
-  ['controller_8',['Controller',['../classexpress_1_1RootRoute.html#ac3456fd331a58b288082abca310c7a99',1,'express::RootRoute::Controller()'],['../classexpress_1_1Route.html#ac3456fd331a58b288082abca310c7a99',1,'express::Route::Controller()']]],
-  ['core_3a_3asocket_3a_3astream_3a_3asocketcontext_9',['SocketContext',['../classcore_1_1socket_1_1stream_1_1SocketConnection.html#ad252dea6dfbd8c0d459e67f9e0208a8b',1,'core::socket::stream::SocketConnection']]]
+  ['config_8',['Config',['../classutils_1_1ConfigRoot.html#ac3da7e21a05bf8852638db7e4dd1b81a',1,'utils::ConfigRoot']]],
+  ['configroot_9',['ConfigRoot',['../classutils_1_1Config.html#aaaf89b86f700bcb9a9e958b9e989cb92',1,'utils::Config']]],
+  ['controller_10',['Controller',['../classexpress_1_1RootRoute.html#ac3456fd331a58b288082abca310c7a99',1,'express::RootRoute::Controller()'],['../classexpress_1_1Route.html#ac3456fd331a58b288082abca310c7a99',1,'express::Route::Controller()']]],
+  ['core_3a_3asocket_3a_3astream_3a_3asocketcontext_11',['SocketContext',['../classcore_1_1socket_1_1stream_1_1SocketConnection.html#ad252dea6dfbd8c0d459e67f9e0208a8b',1,'core::socket::stream::SocketConnection']]]
 ];

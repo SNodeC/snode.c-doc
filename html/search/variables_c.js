@@ -18,6 +18,6 @@ var searchData=
   ['localaddress_15',['localAddress',['../classcore_1_1socket_1_1stream_1_1SocketConnectionT.html#ab1352810ff68b8ea71ec29cdbe09bb2d',1,'core::socket::stream::SocketConnectionT']]],
   ['lockfd_16',['lockFd',['../classnet_1_1un_1_1phy_1_1PhysicalSocket.html#a14dc63ccddb1a032d84902bb9b733e31',1,'net::un::phy::PhysicalSocket']]],
   ['logdirectory_17',['logDirectory',['../classutils_1_1Config.html#a9bead74cb00b850a3b56e9c44f0d6762',1,'utils::Config']]],
-  ['logfileopt_18',['logFileOpt',['../classutils_1_1Config.html#a580a6d4e05b51370c6fb3cf96691bf12',1,'utils::Config']]],
-  ['loglevelopt_19',['logLevelOpt',['../classutils_1_1Config.html#adee8c964e356a0e505592deecee3a466',1,'utils::Config']]]
+  ['logfileopt_18',['logFileOpt',['../classutils_1_1ConfigRoot.html#a265bfd60078fd34aa9f075472d3a0f74',1,'utils::ConfigRoot']]],
+  ['loglevelopt_19',['logLevelOpt',['../classutils_1_1ConfigRoot.html#ae6d2990f85b40f3c662704c65a124142',1,'utils::ConfigRoot']]]
 ];

@@ -1,6 +1,6 @@
 var classnet_1_1config_1_1ConfigAddressLocal =
 [
     [ "Super", "classnet_1_1config_1_1ConfigAddressLocal.html#acb5d7eb6a8bcc536136eecd4175cd6c5", null ],
-    [ "description", "classnet_1_1config_1_1ConfigAddressLocal.html#a70034c725d6539136a6603c376ed7dc8", null ],
-    [ "name", "classnet_1_1config_1_1ConfigAddressLocal.html#ace95246e0125025b95a84246a7689d71", null ]
+    [ "DESCRIPTION", "classnet_1_1config_1_1ConfigAddressLocal.html#a3a52d80c0c2b7116c5bd73b040922550", null ],
+    [ "NAME", "classnet_1_1config_1_1ConfigAddressLocal.html#adb1bd8903f495bf41434cdb5fb02d15f", null ]
 ];

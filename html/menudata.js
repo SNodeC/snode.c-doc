@@ -168,6 +168,7 @@ var menudata={children:[
 {text:"Typedefs",url:"functions_type.html",children:[
 {text:"c",url:"functions_type.html#index_c"},
 {text:"d",url:"functions_type_d.html#index_d"},
+{text:"i",url:"functions_type_i.html#index_i"},
 {text:"l",url:"functions_type_l.html#index_l"},
 {text:"m",url:"functions_type_m.html#index_m"},
 {text:"o",url:"functions_type_o.html#index_o"},

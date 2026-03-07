@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['value_5ftype_0',['value_type',['../classcore_1_1multiplexer_1_1poll_1_1PollFdsManager_1_1VarSizeTypeAllocator.html#a34c1ecd018eb8b6e2ce4568ed10ebcf4',1,'core::multiplexer::poll::PollFdsManager::VarSizeTypeAllocator']]],
-  ['valuetype_1',['ValueType',['../classiot_1_1mqtt_1_1types_1_1TypeBase.html#a986355a14b710f4d97debabfd8474001',1,'iot::mqtt::types::TypeBase']]],
-  ['void_5fpointer_2',['void_pointer',['../classcore_1_1multiplexer_1_1poll_1_1PollFdsManager_1_1VarSizeTypeAllocator.html#ae8e819c20c5995752441b2ddd5ede1d8',1,'core::multiplexer::poll::PollFdsManager::VarSizeTypeAllocator']]]
+  ['tls_0',['Tls',['../classnet_1_1config_1_1stream_1_1tls_1_1ConfigSocketClient.html#ac4c5db928fb197336c20929a961a6d98',1,'net::config::stream::tls::ConfigSocketClient::Tls'],['../classnet_1_1config_1_1stream_1_1tls_1_1ConfigSocketServer.html#a09734c7807b98af590b9f3ef08336e6d',1,'net::config::stream::tls::ConfigSocketServer::Tls']]],
+  ['trace_1',['Trace',['../express__compat__server_8cpp.html#a870ca37335323443a2dbb7f0777567cc',1,'express_compat_server.cpp']]]
 ];

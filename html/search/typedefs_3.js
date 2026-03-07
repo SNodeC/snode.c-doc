@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['local_0',['Local',['../classnet_1_1config_1_1stream_1_1ConfigSocketClient.html#a3b6e413155dca3f4b596a0bf63618c91',1,'net::config::stream::ConfigSocketClient::Local'],['../classnet_1_1config_1_1stream_1_1ConfigSocketServer.html#ab99329892bd1594b0b6083e85a1188e0',1,'net::config::stream::ConfigSocketServer::Local']]]
+  ['instance_0',['Instance',['../classnet_1_1config_1_1ConfigInstance.html#af59b2ebc19a23c22770f8e93a2f9616e',1,'net::config::ConfigInstance::Instance'],['../classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketServer.html#ab8eac6185d1630007680ee01fe4a0fce',1,'net::config::stream::legacy::ConfigSocketServer::Instance'],['../classnet_1_1config_1_1stream_1_1tls_1_1ConfigSocketClient.html#a3ea466c1ff1664b348d375caea6b4c3c',1,'net::config::stream::tls::ConfigSocketClient::Instance'],['../classnet_1_1config_1_1stream_1_1legacy_1_1ConfigSocketClient.html#a6cad26cc7a35d5b92e3b06e348f672b4',1,'net::config::stream::legacy::ConfigSocketClient::Instance'],['../classnet_1_1config_1_1stream_1_1tls_1_1ConfigSocketServer.html#a352fe9eb58d9c9f6af6c029c33276646',1,'net::config::stream::tls::ConfigSocketServer::Instance']]]
 ];

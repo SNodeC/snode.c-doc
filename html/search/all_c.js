@@ -6,5 +6,6 @@ var searchData=
   ['keepalivetimer_3',['keepAliveTimer',['../classiot_1_1mqtt_1_1Mqtt.html#a2079fa08e512ff3d1a42555609a4ed6f',1,'iot::mqtt::Mqtt']]],
   ['keyboardreader_4',['KeyboardReader',['../classapps_1_1towercalculator_1_1KeyboardReader.html',1,'apps::towercalculator::KeyboardReader'],['../classapps_1_1towercalculator_1_1KeyboardReader.html#a872fbe702254f91175376dcc9067e89d',1,'apps::towercalculator::KeyboardReader::KeyboardReader()']]],
   ['keyboardreader_2ecpp_5',['KeyboardReader.cpp',['../KeyboardReader_8cpp.html',1,'']]],
-  ['keyboardreader_2eh_6',['KeyboardReader.h',['../KeyboardReader_8h.html',1,'']]]
+  ['keyboardreader_2eh_6',['KeyboardReader.h',['../KeyboardReader_8h.html',1,'']]],
+  ['killopt_7',['killOpt',['../classutils_1_1ConfigRoot.html#a38be66a0eedc62848091253d93f5f48b',1,'utils::ConfigRoot']]]
 ];

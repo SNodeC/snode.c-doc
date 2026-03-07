@@ -11,9 +11,9 @@ var namespaceexpress =
     [ "RootRoute", "classexpress_1_1RootRoute.html", "classexpress_1_1RootRoute" ],
     [ "Dispatcher", "classexpress_1_1Dispatcher.html", "classexpress_1_1Dispatcher" ],
     [ "Route", "classexpress_1_1Route.html", "classexpress_1_1Route" ],
+    [ "Router", "classexpress_1_1Router.html", "classexpress_1_1Router" ],
     [ "MountPoint", "structexpress_1_1MountPoint.html", "structexpress_1_1MountPoint" ],
     [ "Next", "classexpress_1_1Next.html", "classexpress_1_1Next" ],
-    [ "Router", "classexpress_1_1Router.html", "classexpress_1_1Router" ],
     [ "WebApp", "classexpress_1_1WebApp.html", "classexpress_1_1WebApp" ],
     [ "WebAppT", "classexpress_1_1WebAppT.html", "classexpress_1_1WebAppT" ]
 ];

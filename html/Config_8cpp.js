@@ -28,10 +28,8 @@ var Config_8cpp =
     [ "utils::createCommandLineSubcommands", "namespaceutils.html#a515a4b6be40aa2e80675f4b93522a953", null ],
     [ "utils::createCommandLineTemplate", "namespaceutils.html#a1c188af94274cb5558b9273b37ef6d71", null ],
     [ "utils::createCommandLineTemplate", "namespaceutils.html#a956ce48df3c20fdb152657c6a59d3805", null ],
-    [ "utils::doWriteConfig", "namespaceutils.html#aecb5f758bff61439789cd44316bbfa69", null ],
+    [ "utils::doWriteConfig", "namespaceutils.html#a3b24999185f0cedf6c50a18325e691ba", null ],
     [ "utils::getCommandLine", "namespaceutils.html#adb0786d68e593efe8097a7243b41ee8a", null ],
     [ "utils::getConfig", "namespaceutils.html#a941f03e26353c783171001b9e0129971", null ],
-    [ "utils::getHelp", "namespaceutils.html#a3cc99a69d952d21b98f18a0042afc5be", null ],
-    [ "utils::makeApp", "namespaceutils.html#acf24bc1d3f8119c40b2b0e715e99c428", null ],
-    [ "utils::makeSectionFormatter", "namespaceutils.html#ae4dca857dbbb3a4fcaf8dd65df86d6b8", null ]
+    [ "utils::getHelp", "namespaceutils.html#a8d1d2c70edeab3cb8d7288f4843d4d09", null ]
 ];

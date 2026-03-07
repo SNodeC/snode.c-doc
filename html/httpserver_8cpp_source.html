@@ -150,7 +150,7 @@ $(function() {
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="preprocessor">#</span><span class="preprocessor">include</span> <a class="code" href="ConfigWWW_8h.html">&quot;ConfigWWW.h&quot;</a></div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&quot;apps/http/model/servers.h&quot;</span></div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&quot;express/middleware/StaticMiddleware.h&quot;</span></div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&quot;net/config/ConfigInstanceAPI.hpp&quot;</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&quot;net/config/ConfigInstance.h&quot;</span></div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="preprocessor">#</span><span class="preprocessor">ifndef</span> <span class="preprocessor">DOXYGEN_SHOULD_SKIP_THIS</span></div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
@@ -165,23 +165,23 @@ $(function() {
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">algorithm</span><span class="preprocessor">&gt;</span></div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">list</span><span class="preprocessor">&gt;</span></div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">string</span><span class="preprocessor">&gt;</span></div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="preprocessor">#</span><span class="preprocessor">endif</span> <span class="comment">/* DOXYGEN_SHOULD_SKIP_THIS */</span></div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="keyword">using</span> <span class="keyword">namespace</span> express;</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
-<div class="foldopen" id="foldopen00066" data-start="{" data-end="}">
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="httpserver_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">   66</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="configtest_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* argv[]) {</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keyword">using</span> WebApp = apps::http::STREAM::WebApp;</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="keyword">const</span> WebApp webApp(apps::http::STREAM::getWebApp(<span class="stringliteral">&quot;httpserver&quot;</span>));</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    webApp.getConfig().addSection&lt;<a class="code hl_namespace" href="namespacesection.html">section</a>::<a class="code hl_class" href="classsection_1_1ConfigWWW.html">ConfigWWW</a>&gt;();</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    WebApp::init(argc, argv);</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    webApp.use(express::<a class="code hl_namespace" href="namespaceexpress.html">middleware</a>::StaticMiddleware(webApp.getConfig().getSection&lt;<a class="code hl_namespace" href="namespacesection.html">section</a>::<a class="code hl_class" href="classsection_1_1ConfigWWW.html">ConfigWWW</a>&gt;()-&gt;getHtmlRoot()));</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="preprocessor">#</span><span class="preprocessor">endif</span> <span class="comment">/* DOXYGEN_SHOULD_SKIP_THIS */</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="keyword">using</span> <span class="keyword">namespace</span> express;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="foldopen" id="foldopen00065" data-start="{" data-end="}">
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="httpserver_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">   65</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="configtest_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* argv[]) {</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keyword">using</span> WebApp = apps::http::STREAM::WebApp;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keyword">const</span> WebApp webApp(apps::http::STREAM::getWebApp(<span class="stringliteral">&quot;httpserver&quot;</span>));</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    webApp.getConfig().net::config::ConfigInstance::newSubCommand&lt;<a class="code hl_namespace" href="namespacesubcommand.html">subcommand</a>::<a class="code hl_class" href="classsubcommand_1_1ConfigWWW.html">ConfigWWW</a>&gt;();</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    WebApp::init(argc, argv);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    webApp.use(express::<a class="code hl_namespace" href="namespaceexpress.html">middleware</a>::StaticMiddleware(</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        webApp.getConfig().net::config::ConfigInstance::getSubCommand&lt;<a class="code hl_namespace" href="namespacesubcommand.html">subcommand</a>::<a class="code hl_class" href="classsubcommand_1_1ConfigWWW.html">ConfigWWW</a>&gt;()-&gt;getHtmlRoot()));</div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    {</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="preprocessor">#</span><span class="preprocessor">if</span> <span class="preprocessor">(</span><span class="preprocessor">STREAM_TYPE</span> <span class="preprocessor">==</span> <span class="preprocessor">TLS</span><span class="preprocessor">)</span></div>
@@ -193,7 +193,7 @@ $(function() {
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>            {<span class="stringliteral">&quot;snodec.home.vchrist.at&quot;</span>, {{<span class="stringliteral">&quot;Cert&quot;</span>, cert}, {<span class="stringliteral">&quot;CertKey&quot;</span>, key}, {<span class="stringliteral">&quot;CertKeyPassword&quot;</span>, pass}}},</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>            {<span class="stringliteral">&quot;www.vchrist.at&quot;</span>, {{<span class="stringliteral">&quot;Cert&quot;</span>, cert}, {<span class="stringliteral">&quot;CertKey&quot;</span>, key}, {<span class="stringliteral">&quot;CertKeyPassword&quot;</span>, pass}}}};</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        <span class="comment">// webApp.getConfig().addSniCerts(sniCerts);</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="comment">//        webApp.getConfig().addSniCerts(sniCerts);</span></div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="preprocessor">#</span><span class="preprocessor">endif</span></div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Routes:&quot;</span>;</div>
@@ -257,10 +257,10 @@ $(function() {
 <div class="line"><span class="lineno">  147</span><span class="comment">    });</span></div>
 <div class="line"><span class="lineno">  148</span><span class="comment">#endif</span></div>
 <div class="line"><span class="lineno">  149</span><span class="comment">*/</span></div>
-<div class="ttc" id="aclasssection_1_1ConfigWWW_html"><div class="ttname"><a href="classsection_1_1ConfigWWW.html">section::ConfigWWW</a></div><div class="ttdef"><b>Definition</b> <a href="ConfigWWW_8h_source.html#l00064">ConfigWWW.h:64</a></div></div>
+<div class="ttc" id="aclasssubcommand_1_1ConfigWWW_html"><div class="ttname"><a href="classsubcommand_1_1ConfigWWW.html">subcommand::ConfigWWW</a></div><div class="ttdef"><b>Definition</b> <a href="ConfigWWW_8h_source.html#l00056">ConfigWWW.h:56</a></div></div>
 <div class="ttc" id="aconfigtest_8cpp_html_a0ddf1224851353fc92bfbff6f499fa97"><div class="ttname"><a href="configtest_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a></div><div class="ttdeci">int main(int argc, char *argv[])</div><div class="ttdef"><b>Definition</b> <a href="configtest_8cpp_source.html#l00073">configtest.cpp:73</a></div></div>
 <div class="ttc" id="anamespaceexpress_html"><div class="ttname"><a href="namespaceexpress.html">express</a></div><div class="ttdef"><b>Definition</b> <a href="StaticMiddleware_8h_source.html#l00057">StaticMiddleware.h:57</a></div></div>
-<div class="ttc" id="anamespacesection_html"><div class="ttname"><a href="namespacesection.html">section</a></div><div class="ttdef"><b>Definition</b> <a href="ConfigWWW_8cpp_source.html#l00051">ConfigWWW.cpp:51</a></div></div>
+<div class="ttc" id="anamespacesubcommand_html"><div class="ttname"><a href="namespacesubcommand.html">subcommand</a></div><div class="ttdef"><b>Definition</b> <a href="ConfigWWW_8cpp_source.html#l00048">ConfigWWW.cpp:48</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

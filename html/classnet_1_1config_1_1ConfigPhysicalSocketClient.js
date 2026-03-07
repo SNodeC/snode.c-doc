@@ -1,6 +1,5 @@
 var classnet_1_1config_1_1ConfigPhysicalSocketClient =
 [
-    [ "Socket", "classnet_1_1config_1_1ConfigPhysicalSocketClient.html#a5d050417980949132d095beb1fd7b746", null ],
     [ "Super", "classnet_1_1config_1_1ConfigPhysicalSocketClient.html#a528f88f799e64df03b79697dc71a0293", null ],
     [ "ConfigPhysicalSocketClient", "classnet_1_1config_1_1ConfigPhysicalSocketClient.html#a296312ab0c5fe6ed69e7c72e512ee7e5", null ],
     [ "~ConfigPhysicalSocketClient", "classnet_1_1config_1_1ConfigPhysicalSocketClient.html#a0ab935e43f7c0e7ab1ad48d574d90273", null ],

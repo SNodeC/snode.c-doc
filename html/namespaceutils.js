@@ -1,5 +1,6 @@
 var namespaceutils =
 [
+    [ "config", "namespaceutils_1_1config.html", null ],
     [ "CallForCommandline", "namespaceutils_1_1CallForCommandline.html", [
       [ "Mode", "namespaceutils_1_1CallForCommandline.html#a8c89343f5c099506cd752e794baa75b5", [
         [ "REQUIRED", "namespaceutils_1_1CallForCommandline.html#a8c89343f5c099506cd752e794baa75b5aebdf9721be38d1fc1cd6db8c737d1be0", null ],
@@ -30,10 +31,12 @@ var namespaceutils =
       [ "signal", "namespaceutils_1_1system.html#ae9627474e3956cfc307370792ec5bcee", null ],
       [ "time", "namespaceutils_1_1system.html#aa36252afed0ca4903feb511649270d1c", null ]
     ] ],
-    [ "AppWithPtr", "structutils_1_1AppWithPtr.html", "structutils_1_1AppWithPtr" ],
+    [ "ConfigRoot", "classutils_1_1ConfigRoot.html", "classutils_1_1ConfigRoot" ],
+    [ "Config", "classutils_1_1Config.html", "classutils_1_1Config" ],
+    [ "AppWithPtr", "classutils_1_1AppWithPtr.html", "classutils_1_1AppWithPtr" ],
+    [ "SubCommand", "classutils_1_1SubCommand.html", "classutils_1_1SubCommand" ],
     [ "Uuid", "classutils_1_1Uuid.html", "classutils_1_1Uuid" ],
     [ "Timeval", "classutils_1_1Timeval.html", "classutils_1_1Timeval" ],
-    [ "Config", "classutils_1_1Config.html", "classutils_1_1Config" ],
     [ "DaemonFailure", "classutils_1_1DaemonFailure.html", "classutils_1_1DaemonFailure" ],
     [ "DaemonError", "classutils_1_1DaemonError.html", "classutils_1_1DaemonError" ],
     [ "DaemonSignaled", "classutils_1_1DaemonSignaled.html", "classutils_1_1DaemonSignaled" ],
@@ -52,15 +55,14 @@ var namespaceutils =
     [ "createCommandLineSubcommands", "namespaceutils.html#a515a4b6be40aa2e80675f4b93522a953", null ],
     [ "createCommandLineTemplate", "namespaceutils.html#a1c188af94274cb5558b9273b37ef6d71", null ],
     [ "createCommandLineTemplate", "namespaceutils.html#a956ce48df3c20fdb152657c6a59d3805", null ],
-    [ "doWriteConfig", "namespaceutils.html#aecb5f758bff61439789cd44316bbfa69", null ],
+    [ "doWriteConfig", "namespaceutils.html#a3b24999185f0cedf6c50a18325e691ba", null ],
     [ "fixed_string", "namespaceutils.html#a087c65a976bbdbf8e3978d55cf44bcf3", null ],
     [ "getCommandLine", "namespaceutils.html#adb0786d68e593efe8097a7243b41ee8a", null ],
     [ "getConfig", "namespaceutils.html#a941f03e26353c783171001b9e0129971", null ],
-    [ "getHelp", "namespaceutils.html#a3cc99a69d952d21b98f18a0042afc5be", null ],
+    [ "getHelp", "namespaceutils.html#a8d1d2c70edeab3cb8d7288f4843d4d09", null ],
     [ "hexDump", "namespaceutils.html#a5e89a82ecd447626404d378a3ca8d38b", null ],
     [ "hexDump", "namespaceutils.html#a98a99c135c12b440426e6ea77ea2bf28", null ],
     [ "hexDump", "namespaceutils.html#ad8af90943f5b6e2c985db811abae8730", null ],
-    [ "makeApp", "namespaceutils.html#acf24bc1d3f8119c40b2b0e715e99c428", null ],
     [ "makeSectionFormatter", "namespaceutils.html#ae4dca857dbbb3a4fcaf8dd65df86d6b8", null ],
     [ "operator*", "namespaceutils.html#abbf97f2fdf33120069baf3646d96229b", null ],
     [ "operator<<", "namespaceutils.html#a94ea12976058468fed45202315c247a2", null ],

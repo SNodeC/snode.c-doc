@@ -109,7 +109,7 @@ $(function() {
 <div class="textblock"><code>#include &quot;<a class="el" href="ConfigWWW_8h_source.html">ConfigWWW.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="http_2model_2servers_8h_source.html">apps/http/model/servers.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="StaticMiddleware_8h_source.html">express/middleware/StaticMiddleware.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="ConfigInstanceAPI_8hpp_source.html">net/config/ConfigInstanceAPI.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="ConfigInstance_8h_source.html">net/config/ConfigInstance.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for httpserver.cpp:</div>
 <div class="dyncontent">
@@ -142,17 +142,18 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="httpserver_8cpp_source.html#l00066">66</a> of file <a class="el" href="httpserver_8cpp_source.html">httpserver.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   66</span>                                 {</div>
-<div class="line"><span class="lineno">   67</span>    <span class="keyword">using </span><a class="code hl_class" href="classexpress_1_1WebApp.html">WebApp</a> = apps::http::STREAM::WebApp;</div>
-<div class="line"><span class="lineno">   68</span> </div>
-<div class="line"><span class="lineno">   69</span>    <span class="keyword">const</span> <a class="code hl_class" href="classexpress_1_1WebApp.html">WebApp</a> webApp(apps::http::STREAM::getWebApp(<span class="stringliteral">&quot;httpserver&quot;</span>));</div>
-<div class="line"><span class="lineno">   70</span> </div>
-<div class="line"><span class="lineno">   71</span>    webApp.getConfig().addSection&lt;<a class="code hl_class" href="classsection_1_1ConfigWWW.html">section::ConfigWWW</a>&gt;();</div>
-<div class="line"><span class="lineno">   72</span> </div>
-<div class="line"><span class="lineno">   73</span>    <a class="code hl_function" href="classexpress_1_1WebApp.html#a0a01439a0cc8dfc86ed14f1094826b7e">WebApp::init</a>(argc, argv);</div>
-<div class="line"><span class="lineno">   74</span> </div>
-<div class="line"><span class="lineno">   75</span>    webApp.use(<a class="code hl_class" href="classexpress_1_1middleware_1_1StaticMiddleware.html">express::middleware::StaticMiddleware</a>(webApp.getConfig().getSection&lt;<a class="code hl_class" href="classsection_1_1ConfigWWW.html">section::ConfigWWW</a>&gt;()-&gt;<a class="code hl_function" href="classsection_1_1ConfigWWW.html#abeabb5210f799491a92c2c15826b7410">getHtmlRoot</a>()));</div>
+<p class="definition">Definition at line <a class="el" href="httpserver_8cpp_source.html#l00065">65</a> of file <a class="el" href="httpserver_8cpp_source.html">httpserver.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   65</span>                                 {</div>
+<div class="line"><span class="lineno">   66</span>    <span class="keyword">using </span><a class="code hl_class" href="classexpress_1_1WebApp.html">WebApp</a> = apps::http::STREAM::WebApp;</div>
+<div class="line"><span class="lineno">   67</span> </div>
+<div class="line"><span class="lineno">   68</span>    <span class="keyword">const</span> <a class="code hl_class" href="classexpress_1_1WebApp.html">WebApp</a> webApp(apps::http::STREAM::getWebApp(<span class="stringliteral">&quot;httpserver&quot;</span>));</div>
+<div class="line"><span class="lineno">   69</span> </div>
+<div class="line"><span class="lineno">   70</span>    webApp.getConfig().net::config::ConfigInstance::newSubCommand&lt;<a class="code hl_class" href="classsubcommand_1_1ConfigWWW.html">subcommand::ConfigWWW</a>&gt;();</div>
+<div class="line"><span class="lineno">   71</span> </div>
+<div class="line"><span class="lineno">   72</span>    <a class="code hl_function" href="classexpress_1_1WebApp.html#a0a01439a0cc8dfc86ed14f1094826b7e">WebApp::init</a>(argc, argv);</div>
+<div class="line"><span class="lineno">   73</span> </div>
+<div class="line"><span class="lineno">   74</span>    webApp.use(<a class="code hl_class" href="classexpress_1_1middleware_1_1StaticMiddleware.html">express::middleware::StaticMiddleware</a>(</div>
+<div class="line"><span class="lineno">   75</span>        webApp.getConfig().net::config::ConfigInstance::getSubCommand&lt;<a class="code hl_class" href="classsubcommand_1_1ConfigWWW.html">subcommand::ConfigWWW</a>&gt;()-&gt;<a class="code hl_function" href="classsubcommand_1_1ConfigWWW.html#acce04f39ea8231e1919dd4e7bee86538">getHtmlRoot</a>()));</div>
 <div class="line"><span class="lineno">   76</span> </div>
 <div class="line"><span class="lineno">   77</span>    {</div>
 <div class="line"><span class="lineno">   78</span><span class="preprocessor">#if (STREAM_TYPE == TLS)</span></div>
@@ -164,7 +165,7 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">   84</span>            {<span class="stringliteral">&quot;snodec.home.vchrist.at&quot;</span>, {{<span class="stringliteral">&quot;Cert&quot;</span>, cert}, {<span class="stringliteral">&quot;CertKey&quot;</span>, key}, {<span class="stringliteral">&quot;CertKeyPassword&quot;</span>, pass}}},</div>
 <div class="line"><span class="lineno">   85</span>            {<span class="stringliteral">&quot;www.vchrist.at&quot;</span>, {{<span class="stringliteral">&quot;Cert&quot;</span>, cert}, {<span class="stringliteral">&quot;CertKey&quot;</span>, key}, {<span class="stringliteral">&quot;CertKeyPassword&quot;</span>, pass}}}};</div>
 <div class="line"><span class="lineno">   86</span> </div>
-<div class="line"><span class="lineno">   87</span>        <span class="comment">// webApp.getConfig().addSniCerts(sniCerts);</span></div>
+<div class="line"><span class="lineno">   87</span><span class="comment">//        webApp.getConfig().addSniCerts(sniCerts);</span></div>
 <div class="line"><span class="lineno">   88</span><span class="preprocessor">#endif</span></div>
 <div class="line"><span class="lineno">   89</span> </div>
 <div class="line"><span class="lineno">   90</span>        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Routes:&quot;</span>;</div>
@@ -200,8 +201,8 @@ Functions</h2></td></tr>
 <div class="ttc" id="aclassexpress_1_1WebApp_html_a0a01439a0cc8dfc86ed14f1094826b7e"><div class="ttname"><a href="classexpress_1_1WebApp.html#a0a01439a0cc8dfc86ed14f1094826b7e">express::WebApp::init</a></div><div class="ttdeci">static void init(int argc, char *argv[])</div><div class="ttdef"><b>Definition</b> <a href="WebApp_8cpp_source.html#l00056">WebApp.cpp:56</a></div></div>
 <div class="ttc" id="aclassexpress_1_1WebApp_html_a54e6910c9466c61d0b217490b7d9bb5a"><div class="ttname"><a href="classexpress_1_1WebApp.html#a54e6910c9466c61d0b217490b7d9bb5a">express::WebApp::start</a></div><div class="ttdeci">static int start(const utils::Timeval &amp;timeOut={LONG_MAX, 0})</div><div class="ttdef"><b>Definition</b> <a href="WebApp_8cpp_source.html#l00060">WebApp.cpp:60</a></div></div>
 <div class="ttc" id="aclassexpress_1_1middleware_1_1StaticMiddleware_html"><div class="ttname"><a href="classexpress_1_1middleware_1_1StaticMiddleware.html">express::middleware::StaticMiddleware</a></div><div class="ttdef"><b>Definition</b> <a href="StaticMiddleware_8h_source.html#l00059">StaticMiddleware.h:59</a></div></div>
-<div class="ttc" id="aclasssection_1_1ConfigWWW_html"><div class="ttname"><a href="classsection_1_1ConfigWWW.html">section::ConfigWWW</a></div><div class="ttdef"><b>Definition</b> <a href="ConfigWWW_8h_source.html#l00064">ConfigWWW.h:64</a></div></div>
-<div class="ttc" id="aclasssection_1_1ConfigWWW_html_abeabb5210f799491a92c2c15826b7410"><div class="ttname"><a href="classsection_1_1ConfigWWW.html#abeabb5210f799491a92c2c15826b7410">section::ConfigWWW::getHtmlRoot</a></div><div class="ttdeci">std::string getHtmlRoot()</div><div class="ttdef"><b>Definition</b> <a href="ConfigWWW_8cpp_source.html#l00066">ConfigWWW.cpp:66</a></div></div>
+<div class="ttc" id="aclasssubcommand_1_1ConfigWWW_html"><div class="ttname"><a href="classsubcommand_1_1ConfigWWW.html">subcommand::ConfigWWW</a></div><div class="ttdef"><b>Definition</b> <a href="ConfigWWW_8h_source.html#l00056">ConfigWWW.h:56</a></div></div>
+<div class="ttc" id="aclasssubcommand_1_1ConfigWWW_html_acce04f39ea8231e1919dd4e7bee86538"><div class="ttname"><a href="classsubcommand_1_1ConfigWWW.html#acce04f39ea8231e1919dd4e7bee86538">subcommand::ConfigWWW::getHtmlRoot</a></div><div class="ttdeci">std::string getHtmlRoot()</div><div class="ttdef"><b>Definition</b> <a href="ConfigWWW_8cpp_source.html#l00065">ConfigWWW.cpp:65</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
