@@ -309,16 +309,17 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">  105</span>            <span class="keywordflow">if</span> (scheme == <span class="stringliteral">&quot;https&quot;</span>) {</div>
 <div class="line"><span class="lineno">  106</span>                eventSource = <a class="code hl_function" href="#a4343408829c956eab0c16400e9681995">EventSource</a>(scheme, <a class="code hl_class" href="classnet_1_1in6_1_1SocketAddress.html">net::in6::SocketAddress</a>(host, port), path + query);</div>
 <div class="line"><span class="lineno">  107</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  108</span>                LOG(ERROR) &lt;&lt; <span class="stringliteral">&quot;Scheme not valid: &quot;</span> &lt;&lt; scheme;</div>
+<div class="line"><span class="lineno">  108</span>                <a class="code hl_define" href="Logger_8h.html#aba7b09d6e8fbe414c23705ad24dde6ff">LOG</a>(ERROR) &lt;&lt; <span class="stringliteral">&quot;Scheme not valid: &quot;</span> &lt;&lt; scheme;</div>
 <div class="line"><span class="lineno">  109</span>            }</div>
 <div class="line"><span class="lineno">  110</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  111</span>            LOG(ERROR) &lt;&lt; <span class="stringliteral">&quot;EventSource url not accepted: &quot;</span> &lt;&lt; url;</div>
+<div class="line"><span class="lineno">  111</span>            <a class="code hl_define" href="Logger_8h.html#aba7b09d6e8fbe414c23705ad24dde6ff">LOG</a>(ERROR) &lt;&lt; <span class="stringliteral">&quot;EventSource url not accepted: &quot;</span> &lt;&lt; url;</div>
 <div class="line"><span class="lineno">  112</span>        }</div>
 <div class="line"><span class="lineno">  113</span> </div>
 <div class="line"><span class="lineno">  114</span>        <span class="keywordflow">return</span> eventSource;</div>
 <div class="line"><span class="lineno">  115</span>    }</div>
+<div class="ttc" id="aLogger_8h_html_aba7b09d6e8fbe414c23705ad24dde6ff"><div class="ttname"><a href="Logger_8h.html#aba7b09d6e8fbe414c23705ad24dde6ff">LOG</a></div><div class="ttdeci">#define LOG(level)</div><div class="ttdef"><b>Definition</b> <a href="Logger_8h_source.html#l00148">Logger.h:148</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="tls_2in6_2EventSource_8h_source.html#l00072">EventSource()</a>, and <a class="el" href="net_2in6_2SocketAddress_8cpp_source.html#l00073">net::in6::SocketAddress::SocketAddress()</a>.</p>
+<p class="reference">References <a class="el" href="Logger_8h_source.html#l00090">logger::ERROR</a>, <a class="el" href="tls_2in6_2EventSource_8h_source.html#l00072">EventSource()</a>, <a class="el" href="Logger_8cpp_source.html#l00280">logger::LogMessage::LogMessage()</a>, and <a class="el" href="net_2in6_2SocketAddress_8cpp_source.html#l00073">net::in6::SocketAddress::SocketAddress()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">

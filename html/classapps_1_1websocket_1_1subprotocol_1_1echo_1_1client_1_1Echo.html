@@ -243,18 +243,19 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="client_2echo_2Echo_8cpp_source.html#l00062">62</a> of file <a class="el" href="client_2echo_2Echo_8cpp_source.html">Echo.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   62</span>                           {</div>
-<div class="line"><span class="lineno">   63</span>        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Echo connected&quot;</span>;</div>
+<div class="line"><span class="lineno">   63</span>        <a class="code hl_define" href="Logger_8h.html#afc28ec91d066c96a3a139441e029f326">VLOG</a>(1) &lt;&lt; <span class="stringliteral">&quot;Echo connected&quot;</span>;</div>
 <div class="line"><span class="lineno">   64</span> </div>
 <div class="line"><span class="lineno">   65</span>        <a class="code hl_function" href="classweb_1_1websocket_1_1client_1_1SubProtocol.html#a5c147701d266cb68cda945509ff728d9">sendMessage</a>(<span class="stringliteral">&quot;Welcome to SimpleChat&quot;</span>);</div>
 <div class="line"><span class="lineno">   66</span>        <a class="code hl_function" href="classweb_1_1websocket_1_1client_1_1SubProtocol.html#a5c147701d266cb68cda945509ff728d9">sendMessage</a>(<span class="stringliteral">&quot;=====================&quot;</span>);</div>
 <div class="line"><span class="lineno">   67</span>    }</div>
+<div class="ttc" id="aLogger_8h_html_afc28ec91d066c96a3a139441e029f326"><div class="ttname"><a href="Logger_8h.html#afc28ec91d066c96a3a139441e029f326">VLOG</a></div><div class="ttdeci">#define VLOG(level)</div><div class="ttdef"><b>Definition</b> <a href="Logger_8h_source.html#l00164">Logger.h:164</a></div></div>
 <div class="ttc" id="aclassweb_1_1websocket_1_1client_1_1SubProtocol_html_a5c147701d266cb68cda945509ff728d9"><div class="ttname"><a href="classweb_1_1websocket_1_1client_1_1SubProtocol.html#a5c147701d266cb68cda945509ff728d9">web::websocket::client::SubProtocol::sendMessage</a></div><div class="ttdeci">void sendMessage(const char *message, std::size_t messageLength) const</div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="web_2websocket_2SubProtocol_8hpp_source.html#l00096">web::websocket::SubProtocol&lt; SocketContextUpgradeT &gt;::sendMessage()</a>.</p>
+<p class="reference">References <a class="el" href="Logger_8cpp_source.html#l00280">logger::LogMessage::LogMessage()</a>, and <a class="el" href="web_2websocket_2SubProtocol_8hpp_source.html#l00096">web::websocket::SubProtocol&lt; SocketContextUpgradeT &gt;::sendMessage()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="classapps_1_1websocket_1_1subprotocol_1_1echo_1_1client_1_1Echo_aa209113a8b98e87dd53d4fc896070a6e_cgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="classapps_1_1websocket_1_1subprotocol_1_1echo_1_1client_1_1Echo_aa209113a8b98e87dd53d4fc896070a6e_cgraph.svg" width="100%" height="394"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -286,9 +287,16 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="client_2echo_2Echo_8cpp_source.html#l00092">92</a> of file <a class="el" href="client_2echo_2Echo_8cpp_source.html">Echo.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   92</span>                              {</div>
-<div class="line"><span class="lineno">   93</span>        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Echo disconnected:&quot;</span>;</div>
+<div class="line"><span class="lineno">   93</span>        <a class="code hl_define" href="Logger_8h.html#afc28ec91d066c96a3a139441e029f326">VLOG</a>(1) &lt;&lt; <span class="stringliteral">&quot;Echo disconnected:&quot;</span>;</div>
 <div class="line"><span class="lineno">   94</span>    }</div>
 </div><!-- fragment -->
+<p class="reference">References <a class="el" href="Logger_8cpp_source.html#l00280">logger::LogMessage::LogMessage()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classapps_1_1websocket_1_1subprotocol_1_1echo_1_1client_1_1Echo_a972bac357f5642f44497a7431c7a83db_cgraph.svg" width="466" height="56"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
 </div>
 </div>
 <a id="aff1acfa1976536d1ae8f75e5a1b37a30" name="aff1acfa1976536d1ae8f75e5a1b37a30"></a>
@@ -324,11 +332,16 @@ Here is the call graph for this function:</div>
 <div class="fragment"><div class="line"><span class="lineno">   73</span>                                                                  {</div>
 <div class="line"><span class="lineno">   74</span>        <a class="code hl_variable" href="#af75ff73e129b7aa49c243daa89a1e615">data</a> += std::string(chunk, chunkLen);</div>
 <div class="line"><span class="lineno">   75</span> </div>
-<div class="line"><span class="lineno">   76</span>        VLOG(2) &lt;&lt; <span class="stringliteral">&quot;Message Fragment: &quot;</span> &lt;&lt; std::string(chunk, chunkLen);</div>
+<div class="line"><span class="lineno">   76</span>        <a class="code hl_define" href="Logger_8h.html#afc28ec91d066c96a3a139441e029f326">VLOG</a>(2) &lt;&lt; <span class="stringliteral">&quot;Message Fragment: &quot;</span> &lt;&lt; std::string(chunk, chunkLen);</div>
 <div class="line"><span class="lineno">   77</span>    }</div>
 <div class="ttc" id="aclassapps_1_1websocket_1_1subprotocol_1_1echo_1_1client_1_1Echo_html_af75ff73e129b7aa49c243daa89a1e615"><div class="ttname"><a href="#af75ff73e129b7aa49c243daa89a1e615">apps::websocket::subprotocol::echo::client::Echo::data</a></div><div class="ttdeci">std::string data</div><div class="ttdef"><b>Definition</b> <a href="client_2echo_2Echo_8h_source.html#l00074">Echo.h:74</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="client_2echo_2Echo_8h_source.html#l00074">data</a>.</p>
+<p class="reference">References <a class="el" href="client_2echo_2Echo_8h_source.html#l00074">data</a>, and <a class="el" href="Logger_8cpp_source.html#l00280">logger::LogMessage::LogMessage()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classapps_1_1websocket_1_1subprotocol_1_1echo_1_1client_1_1Echo_aff1acfa1976536d1ae8f75e5a1b37a30_cgraph.svg" width="467" height="56"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 
 </div>
 </div>
@@ -359,7 +372,7 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="client_2echo_2Echo_8cpp_source.html#l00079">79</a> of file <a class="el" href="client_2echo_2Echo_8cpp_source.html">Echo.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   79</span>                            {</div>
-<div class="line"><span class="lineno">   80</span>        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Message Data: &quot;</span> &lt;&lt; <a class="code hl_variable" href="#af75ff73e129b7aa49c243daa89a1e615">data</a>;</div>
+<div class="line"><span class="lineno">   80</span>        <a class="code hl_define" href="Logger_8h.html#afc28ec91d066c96a3a139441e029f326">VLOG</a>(1) &lt;&lt; <span class="stringliteral">&quot;Message Data: &quot;</span> &lt;&lt; <a class="code hl_variable" href="#af75ff73e129b7aa49c243daa89a1e615">data</a>;</div>
 <div class="line"><span class="lineno">   81</span> </div>
 <div class="line"><span class="lineno">   82</span>        <span class="comment">// To do ping-pong</span></div>
 <div class="line"><span class="lineno">   83</span>        <span class="comment">//        sendMessage(data);</span></div>
@@ -367,7 +380,12 @@ Here is the call graph for this function:</div>
 <div class="line"><span class="lineno">   85</span>        <a class="code hl_variable" href="#af75ff73e129b7aa49c243daa89a1e615">data</a>.clear();</div>
 <div class="line"><span class="lineno">   86</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="client_2echo_2Echo_8h_source.html#l00074">data</a>.</p>
+<p class="reference">References <a class="el" href="client_2echo_2Echo_8h_source.html#l00074">data</a>, and <a class="el" href="Logger_8cpp_source.html#l00280">logger::LogMessage::LogMessage()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classapps_1_1websocket_1_1subprotocol_1_1echo_1_1client_1_1Echo_a2b4bff0d7bb15c75ad67e28a538c7714_cgraph.svg" width="460" height="56"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 
 </div>
 </div>
@@ -398,9 +416,16 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="client_2echo_2Echo_8cpp_source.html#l00088">88</a> of file <a class="el" href="client_2echo_2Echo_8cpp_source.html">Echo.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   88</span>                                             {</div>
-<div class="line"><span class="lineno">   89</span>        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Message error: &quot;</span> &lt;&lt; errnum;</div>
+<div class="line"><span class="lineno">   89</span>        <a class="code hl_define" href="Logger_8h.html#afc28ec91d066c96a3a139441e029f326">VLOG</a>(1) &lt;&lt; <span class="stringliteral">&quot;Message error: &quot;</span> &lt;&lt; errnum;</div>
 <div class="line"><span class="lineno">   90</span>    }</div>
 </div><!-- fragment -->
+<p class="reference">References <a class="el" href="Logger_8cpp_source.html#l00280">logger::LogMessage::LogMessage()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classapps_1_1websocket_1_1subprotocol_1_1echo_1_1client_1_1Echo_af01c3b68f971433fcf8a8f9bb927a15e_cgraph.svg" width="467" height="56"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
 </div>
 </div>
 <a id="ab7f4e05f5df5a6ed91e4d81ab52d1287" name="ab7f4e05f5df5a6ed91e4d81ab52d1287"></a>
@@ -430,9 +455,16 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="client_2echo_2Echo_8cpp_source.html#l00069">69</a> of file <a class="el" href="client_2echo_2Echo_8cpp_source.html">Echo.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   69</span>                                        {</div>
-<div class="line"><span class="lineno">   70</span>        VLOG(2) &lt;&lt; <span class="stringliteral">&quot;Message Start - OpCode: &quot;</span> &lt;&lt; opCode;</div>
+<div class="line"><span class="lineno">   70</span>        <a class="code hl_define" href="Logger_8h.html#afc28ec91d066c96a3a139441e029f326">VLOG</a>(2) &lt;&lt; <span class="stringliteral">&quot;Message Start - OpCode: &quot;</span> &lt;&lt; opCode;</div>
 <div class="line"><span class="lineno">   71</span>    }</div>
 </div><!-- fragment -->
+<p class="reference">References <a class="el" href="Logger_8cpp_source.html#l00280">logger::LogMessage::LogMessage()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classapps_1_1websocket_1_1subprotocol_1_1echo_1_1client_1_1Echo_ab7f4e05f5df5a6ed91e4d81ab52d1287_cgraph.svg" width="467" height="56"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
 </div>
 </div>
 <a id="a04a6ca5e7afe62e38bec440c8c231f49" name="a04a6ca5e7afe62e38bec440c8c231f49"></a>
@@ -462,7 +494,7 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="client_2echo_2Echo_8cpp_source.html#l00096">96</a> of file <a class="el" href="client_2echo_2Echo_8cpp_source.html">Echo.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   96</span>                               {</div>
-<div class="line"><span class="lineno">   97</span>        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;SubProtocol &#39;echo&#39; exit due to &#39;&quot;</span> &lt;&lt; strsignal(sig) &lt;&lt; <span class="stringliteral">&quot;&#39; (SIG&quot;</span> &lt;&lt; <a class="code hl_function" href="namespaceutils_1_1system.html#aea0a8f4d2d6d6d0fa7fcc401c5f08f1c">utils::system::sigabbrev_np</a>(sig) &lt;&lt; <span class="stringliteral">&quot; = &quot;</span> &lt;&lt; sig</div>
+<div class="line"><span class="lineno">   97</span>        <a class="code hl_define" href="Logger_8h.html#afc28ec91d066c96a3a139441e029f326">VLOG</a>(1) &lt;&lt; <span class="stringliteral">&quot;SubProtocol &#39;echo&#39; exit due to &#39;&quot;</span> &lt;&lt; strsignal(sig) &lt;&lt; <span class="stringliteral">&quot;&#39; (SIG&quot;</span> &lt;&lt; <a class="code hl_function" href="namespaceutils_1_1system.html#aea0a8f4d2d6d6d0fa7fcc401c5f08f1c">utils::system::sigabbrev_np</a>(sig) &lt;&lt; <span class="stringliteral">&quot; = &quot;</span> &lt;&lt; sig</div>
 <div class="line"><span class="lineno">   98</span>                &lt;&lt; <span class="stringliteral">&quot;)&quot;</span>;</div>
 <div class="line"><span class="lineno">   99</span> </div>
 <div class="line"><span class="lineno">  100</span>        <a class="code hl_function" href="classweb_1_1websocket_1_1client_1_1SubProtocol.html#aabf2a8f957ce0b6534f14e532b84b34f">sendClose</a>();</div>
@@ -472,11 +504,11 @@ Here is the call graph for this function:</div>
 <div class="ttc" id="aclassweb_1_1websocket_1_1client_1_1SubProtocol_html_aabf2a8f957ce0b6534f14e532b84b34f"><div class="ttname"><a href="classweb_1_1websocket_1_1client_1_1SubProtocol.html#aabf2a8f957ce0b6534f14e532b84b34f">web::websocket::client::SubProtocol::sendClose</a></div><div class="ttdeci">void sendClose(uint16_t statusCode=1000, const char *reason=nullptr, std::size_t reasonLength=0)</div></div>
 <div class="ttc" id="anamespaceutils_1_1system_html_aea0a8f4d2d6d6d0fa7fcc401c5f08f1c"><div class="ttname"><a href="namespaceutils_1_1system.html#aea0a8f4d2d6d6d0fa7fcc401c5f08f1c">utils::system::sigabbrev_np</a></div><div class="ttdeci">std::string sigabbrev_np(int sig)</div><div class="ttdef"><b>Definition</b> <a href="signal_8cpp_source.html#l00059">signal.cpp:59</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="web_2websocket_2SubProtocol_8hpp_source.html#l00138">web::websocket::SubProtocol&lt; SocketContextUpgradeT &gt;::sendClose()</a>, and <a class="el" href="signal_8cpp_source.html#l00059">utils::system::sigabbrev_np()</a>.</p>
+<p class="reference">References <a class="el" href="Logger_8cpp_source.html#l00280">logger::LogMessage::LogMessage()</a>, <a class="el" href="web_2websocket_2SubProtocol_8hpp_source.html#l00138">web::websocket::SubProtocol&lt; SocketContextUpgradeT &gt;::sendClose()</a>, and <a class="el" href="signal_8cpp_source.html#l00059">utils::system::sigabbrev_np()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="classapps_1_1websocket_1_1subprotocol_1_1echo_1_1client_1_1Echo_a04a6ca5e7afe62e38bec440c8c231f49_cgraph.svg" width="100%" height="380"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="classapps_1_1websocket_1_1subprotocol_1_1echo_1_1client_1_1Echo_a04a6ca5e7afe62e38bec440c8c231f49_cgraph.svg" width="100%" height="432"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>

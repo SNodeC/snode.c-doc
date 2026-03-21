@@ -17,7 +17,6 @@ var classutils_1_1Config =
     [ "argv", "classutils_1_1Config.html#ad14869241d4e05ff0d2efdfab0b0dc13", null ],
     [ "configDirectory", "classutils_1_1Config.html#a5e0acbca3c4cdd26e11ec5121db2c0f3", null ],
     [ "configRoot", "classutils_1_1Config.html#ab3110191365facf2ec90cf0033058b7b", null ],
-    [ "configRootApp", "classutils_1_1Config.html#a727bcb51b494cf3c144f69e1a06ceae3", null ],
     [ "logDirectory", "classutils_1_1Config.html#a9bead74cb00b850a3b56e9c44f0d6762", null ],
     [ "pidDirectory", "classutils_1_1Config.html#a5feb48a1d063b5e33177cfb58e4de97c", null ]
 ];

@@ -340,6 +340,10 @@ var hierarchy =
     ] ],
     [ "iot::mqtt_fast::ControlPacketFactory", "classiot_1_1mqtt__fast_1_1ControlPacketFactory.html", null ],
     [ "web::http::CookieOptions", "classweb_1_1http_1_1CookieOptions.html", null ],
+    [ "spdlog::custom_flag_formatter", null, [
+      [ "anonymous_namespace{Logger.cpp}::TickFlagFormatter", "classanonymous__namespace_02Logger_8cpp_03_1_1TickFlagFormatter.html", null ],
+      [ "anonymous_namespace{Logger.cpp}::TickFlagFormatter", "classanonymous__namespace_02Logger_8cpp_03_1_1TickFlagFormatter.html", null ]
+    ] ],
     [ "utils::Daemon", "classutils_1_1Daemon.html", null ],
     [ "core::Descriptor", "classcore_1_1Descriptor.html", [
       [ "core::file::File", "classcore_1_1file_1_1File.html", [
@@ -506,6 +510,7 @@ var hierarchy =
     [ "net::in::SocketAddress::Hints", "structnet_1_1in_1_1SocketAddress_1_1Hints.html", null ],
     [ "core::DynamicLoader::Library", "structcore_1_1DynamicLoader_1_1Library.html", null ],
     [ "logger::Logger", "classlogger_1_1Logger.html", null ],
+    [ "logger::LogMessage", "classlogger_1_1LogMessage.html", null ],
     [ "std::map&lt; K, T &gt;", null, [
       [ "web::http::CiStringMap< std::string >", "classweb_1_1http_1_1CiStringMap.html", null ],
       [ "web::http::CiStringMap< web::http::CookieOptions >", "classweb_1_1http_1_1CiStringMap.html", null ],

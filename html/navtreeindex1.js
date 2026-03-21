@@ -26,6 +26,9 @@ var NAVTREEINDEX1 =
 "Logger_8cpp.html":[4,0,5,0],
 "Logger_8cpp_source.html":[4,0,5,0],
 "Logger_8h.html":[4,0,5,1],
+"Logger_8h.html#aba7b09d6e8fbe414c23705ad24dde6ff":[4,0,5,1,2],
+"Logger_8h.html#aef0131a998d265002571ac47b5b37620":[4,0,5,1,3],
+"Logger_8h.html#afc28ec91d066c96a3a139441e029f326":[4,0,5,1,4],
 "Logger_8h_source.html":[4,0,5,1],
 "MariaDBAffectedRowsCommand_8cpp.html":[4,0,2,0,0,1,0],
 "MariaDBAffectedRowsCommand_8cpp_source.html":[4,0,2,0,0,1,0],
@@ -246,8 +249,5 @@ var NAVTREEINDEX1 =
 "SendHeaderCommand_8cpp_source.html":[4,0,8,0,0,0,6],
 "SendHeaderCommand_8h.html":[4,0,8,0,0,0,7],
 "SendHeaderCommand_8h_source.html":[4,0,8,0,0,0,7],
-"Session_8cpp.html":[4,0,4,0,14],
-"Session_8cpp_source.html":[4,0,4,0,14],
-"Session_8h.html":[4,0,4,0,15],
-"Session_8h_source.html":[4,0,4,0,15]
+"Session_8cpp.html":[4,0,4,0,14]
 };

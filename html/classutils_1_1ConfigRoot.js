@@ -4,6 +4,7 @@ var classutils_1_1ConfigRoot =
     [ "~ConfigRoot", "classutils_1_1ConfigRoot.html#ae87d0bbe716228fb369f93c10b4cb2e5", null ],
     [ "addRootOptions", "classutils_1_1ConfigRoot.html#aa33a827b9032f8842f53df041fc5e41f", null ],
     [ "bootstrap", "classutils_1_1ConfigRoot.html#a6382818e73e4f19cf0c0c5c72d745b36", null ],
+    [ "operator new", "classutils_1_1ConfigRoot.html#a771f2f0b662efc06046c47ec91af3871", null ],
     [ "parse1", "classutils_1_1ConfigRoot.html#a2029f175218d75df5b9114d105642d17", null ],
     [ "parse2", "classutils_1_1ConfigRoot.html#a2d4b46c608d83837ab7ecbecf619eaf2", null ],
     [ "terminate", "classutils_1_1ConfigRoot.html#a0e8a58c846577696c5c7ef0b4c454ffd", null ],

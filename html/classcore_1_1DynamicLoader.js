@@ -10,7 +10,6 @@ var classcore_1_1DynamicLoader =
     [ "dlError", "classcore_1_1DynamicLoader.html#a6a36ff7a2b37f6edf0dbe0ade36c6c62", null ],
     [ "dlOpen", "classcore_1_1DynamicLoader.html#a72bc0a9adb80423a20b4dfc3518ee472", null ],
     [ "dlSym", "classcore_1_1DynamicLoader.html#a708b7adb431acbc8976968c59692625e", null ],
-    [ "execDlCloseAll", "classcore_1_1DynamicLoader.html#acff0a66e885a7bc718171eede89a1c9a", null ],
     [ "execDlCloseDeleyed", "classcore_1_1DynamicLoader.html#a8c4d850882c7177f93a543b96eb450a0", null ],
     [ "realExecDlClose", "classcore_1_1DynamicLoader.html#a32f0c49018bd2dbc53de83963dd3a3d0", null ],
     [ "EventLoop", "classcore_1_1DynamicLoader.html#aca25e36665670fcb6909dd8ab04b1d05", null ],

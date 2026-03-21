@@ -12,7 +12,7 @@ var classiot_1_1mqtt_1_1Mqtt =
     [ "_onPubrel", "classiot_1_1mqtt_1_1Mqtt.html#aaec02ffa110490128d50ed99456d239b", null ],
     [ "createControlPacketDeserializer", "classiot_1_1mqtt_1_1Mqtt.html#a6841e34001bad662954b31a7cf22616f", null ],
     [ "deliverPacket", "classiot_1_1mqtt_1_1Mqtt.html#a81a3e34b1bf6a9da02f3128624af0653", null ],
-    [ "deliverPublish", "classiot_1_1mqtt_1_1Mqtt.html#a6442c8adf66586d2a3065e3120fdf6c8", null ],
+    [ "distributePublish", "classiot_1_1mqtt_1_1Mqtt.html#af76dd17edc15a3abc940085c320b811d", null ],
     [ "getConnectionName", "classiot_1_1mqtt_1_1Mqtt.html#a0d13f3c55f5600372c4eeea2266e2c6e", null ],
     [ "getMqttContext", "classiot_1_1mqtt_1_1Mqtt.html#a3b99d4b1359d369e7da6c4fc2dc16d27", null ],
     [ "getPacketIdentifier", "classiot_1_1mqtt_1_1Mqtt.html#af3efc1b149dd9d0c6b0e489e088d7f31", null ],

@@ -1,6 +1,10 @@
 var Logger_8h =
 [
     [ "logger::Logger", "classlogger_1_1Logger.html", "classlogger_1_1Logger" ],
+    [ "logger::LogMessage", "classlogger_1_1LogMessage.html", "classlogger_1_1LogMessage" ],
+    [ "LOG", "Logger_8h.html#aba7b09d6e8fbe414c23705ad24dde6ff", null ],
+    [ "PLOG", "Logger_8h.html#aef0131a998d265002571ac47b5b37620", null ],
+    [ "VLOG", "Logger_8h.html#afc28ec91d066c96a3a139441e029f326", null ],
     [ "Color::Code", "namespaceColor.html#a20a7b04657c1d83fae5d54514d3f1622", [
       [ "Color::Code::FG_DEFAULT", "namespaceColor.html#a20a7b04657c1d83fae5d54514d3f1622aec939dfa85c55fe16445f3c02bb012d8", null ],
       [ "Color::Code::FG_BLACK", "namespaceColor.html#a20a7b04657c1d83fae5d54514d3f1622a10f1284e24fad88e7ac5966b6f000496", null ],
@@ -23,6 +27,15 @@ var Logger_8h =
       [ "Color::Code::BG_GREEN", "namespaceColor.html#a20a7b04657c1d83fae5d54514d3f1622a52be40da845c5ad545356e5d8573cb78", null ],
       [ "Color::Code::BG_BLUE", "namespaceColor.html#a20a7b04657c1d83fae5d54514d3f1622a6048affb47a52a91de89790038b5ab27", null ],
       [ "Color::Code::BG_DEFAULT", "namespaceColor.html#a20a7b04657c1d83fae5d54514d3f1622a1b6f054082feceb002af4726d29c463f", null ]
+    ] ],
+    [ "logger::Level", "namespacelogger.html#a04a32b05c998cdc0aaa39274d1db03cf", [
+      [ "logger::Level::TRACE", "namespacelogger.html#a04a32b05c998cdc0aaa39274d1db03cfa2d3e4144aa384b18849ab9a8abad74d6", null ],
+      [ "logger::Level::DEBUG", "namespacelogger.html#a04a32b05c998cdc0aaa39274d1db03cfadc30ec20708ef7b0f641ef78b7880a15", null ],
+      [ "logger::Level::INFO", "namespacelogger.html#a04a32b05c998cdc0aaa39274d1db03cfa551b723eafd6a31d444fcb2f5920fbd3", null ],
+      [ "logger::Level::WARNING", "namespacelogger.html#a04a32b05c998cdc0aaa39274d1db03cfa059e9861e0400dfbe05c98a841f3f96b", null ],
+      [ "logger::Level::ERROR", "namespacelogger.html#a04a32b05c998cdc0aaa39274d1db03cfabb1ca97ec761fc37101737ba0aa2e7c5", null ],
+      [ "logger::Level::FATAL", "namespacelogger.html#a04a32b05c998cdc0aaa39274d1db03cfa19da7170bea36556dde582519795f3fc", null ],
+      [ "logger::Level::VERBOSE", "namespacelogger.html#a04a32b05c998cdc0aaa39274d1db03cfaec1f06e9fb39c4ef0729b3c7c9c8e8cc", null ]
     ] ],
     [ "Color::operator+", "namespaceColor.html#af34902a851833effa2093899013ed10c", null ],
     [ "Color::operator+", "namespaceColor.html#a6d7eec98115ea6d6eab8997cacd6ac85", null ],

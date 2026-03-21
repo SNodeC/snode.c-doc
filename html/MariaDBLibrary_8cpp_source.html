@@ -168,7 +168,7 @@ $(function() {
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        std::call_once(initOnce, []() {</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> rc = mysql_library_init(0, <span class="keywordtype">nullptr</span>, <span class="keywordtype">nullptr</span>);</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>            <span class="keywordflow">if</span> (rc != 0) {</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                LOG(ERROR) &lt;&lt; <span class="stringliteral">&quot;MariaDB: mysql_library_init failed (rc=&quot;</span> &lt;&lt; rc &lt;&lt; <span class="stringliteral">&quot;)&quot;</span>;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                <a class="code hl_define" href="Logger_8h.html#aba7b09d6e8fbe414c23705ad24dde6ff">LOG</a><a class="code hl_function" href="classlogger_1_1LogMessage.html#a089741bbcda92449732c3e105088059e">(</a><a class="code hl_enumvalue" href="namespacelogger.html#a04a32b05c998cdc0aaa39274d1db03cfabb1ca97ec761fc37101737ba0aa2e7c5">ERROR</a>) &lt;&lt; <span class="stringliteral">&quot;MariaDB: mysql_library_init failed (rc=&quot;</span> &lt;&lt; rc &lt;&lt; <span class="stringliteral">&quot;)&quot;</span>;</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                <span class="comment">// Best effort: proceed; subsequent mysql_* calls may fail.</span></div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            }</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
@@ -180,8 +180,11 @@ $(function() {
 </div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>} <span class="comment">// namespace database::mariadb</span></div>
+<div class="ttc" id="aLogger_8h_html_aba7b09d6e8fbe414c23705ad24dde6ff"><div class="ttname"><a href="Logger_8h.html#aba7b09d6e8fbe414c23705ad24dde6ff">LOG</a></div><div class="ttdeci">#define LOG(level)</div><div class="ttdef"><b>Definition</b> <a href="Logger_8h_source.html#l00148">Logger.h:148</a></div></div>
 <div class="ttc" id="aclassdatabase_1_1mariadb_1_1MariaDBLibrary_html_af91ee69456c348b9a5740808070a000d"><div class="ttname"><a href="classdatabase_1_1mariadb_1_1MariaDBLibrary.html#af91ee69456c348b9a5740808070a000d">database::mariadb::MariaDBLibrary::ensureInitialized</a></div><div class="ttdeci">static void ensureInitialized()</div><div class="ttdef"><b>Definition</b> <a href="#l00056">MariaDBLibrary.cpp:56</a></div></div>
+<div class="ttc" id="aclasslogger_1_1LogMessage_html_a089741bbcda92449732c3e105088059e"><div class="ttname"><a href="classlogger_1_1LogMessage.html#a089741bbcda92449732c3e105088059e">logger::LogMessage::LogMessage</a></div><div class="ttdeci">LogMessage(Level level, int verboseLevel=-1, bool withErrno=false)</div><div class="ttdef"><b>Definition</b> <a href="Logger_8cpp_source.html#l00280">Logger.cpp:280</a></div></div>
 <div class="ttc" id="anamespacedatabase_html"><div class="ttname"><a href="namespacedatabase.html">database</a></div><div class="ttdef"><b>Definition</b> <a href="MariaDBClient_8h_source.html#l00061">MariaDBClient.h:61</a></div></div>
+<div class="ttc" id="anamespacelogger_html_a04a32b05c998cdc0aaa39274d1db03cfabb1ca97ec761fc37101737ba0aa2e7c5"><div class="ttname"><a href="namespacelogger.html#a04a32b05c998cdc0aaa39274d1db03cfabb1ca97ec761fc37101737ba0aa2e7c5">logger::Level::ERROR</a></div><div class="ttdeci">@ ERROR</div><div class="ttdef"><b>Definition</b> <a href="Logger_8h_source.html#l00090">Logger.h:90</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

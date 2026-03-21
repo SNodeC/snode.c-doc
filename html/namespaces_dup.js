@@ -1,5 +1,6 @@
 var namespaces_dup =
 [
+    [ "anonymous_namespace{Logger.cpp}", "namespaceanonymous__namespace_02Logger_8cpp_03.html", "namespaceanonymous__namespace_02Logger_8cpp_03" ],
     [ "apps", "namespaceapps.html", "namespaceapps" ],
     [ "base64", "namespacebase64.html", [
       [ "base64_decode", "namespacebase64.html#a23eca466c738d7ee3e74f2279fc18541", null ],

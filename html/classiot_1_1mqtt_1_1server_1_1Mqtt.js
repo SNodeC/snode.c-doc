@@ -11,7 +11,7 @@ var classiot_1_1mqtt_1_1server_1_1Mqtt =
     [ "_onUnsubscribe", "classiot_1_1mqtt_1_1server_1_1Mqtt.html#a66bac7f687b4dc79955f06606c7cbc6b", null ],
     [ "createControlPacketDeserializer", "classiot_1_1mqtt_1_1server_1_1Mqtt.html#a12e21ed397aa330fc7c1b4626d406749", null ],
     [ "deliverPacket", "classiot_1_1mqtt_1_1server_1_1Mqtt.html#a735107023759dab335746f633bb9de4b", null ],
-    [ "deliverPublish", "classiot_1_1mqtt_1_1server_1_1Mqtt.html#af236472dbbef1b301187025643e75f9f", null ],
+    [ "distributePublish", "classiot_1_1mqtt_1_1server_1_1Mqtt.html#abf10d3f7b9ae093728cf26ddd51afe5a", null ],
     [ "getCleanSession", "classiot_1_1mqtt_1_1server_1_1Mqtt.html#a2c10ba2bc01965c415ba9a73e5c38c23", null ],
     [ "getClientId", "classiot_1_1mqtt_1_1server_1_1Mqtt.html#a9f9cfb6f141acdd5d293853a42f8c9f6", null ],
     [ "getConnectFlags", "classiot_1_1mqtt_1_1server_1_1Mqtt.html#a3606f2b1489be42bf55f1e6982bd522f", null ],

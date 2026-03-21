@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['opcode_0',['OpCode',['../classweb_1_1websocket_1_1SubProtocolContext.html#abf18d0b53484f49844a1315b9730e511',1,'web::websocket::SubProtocolContext']]]
+  ['mode_0',['Mode',['../namespaceutils_1_1CallForCommandline.html#a8c89343f5c099506cd752e794baa75b5',1,'utils::CallForCommandline::Mode'],['../namespaceutils_1_1CallForCommandline.html#a8c89343f5c099506cd752e794baa75b5',1,'utils::CallForCommandline::Mode']]]
 ];

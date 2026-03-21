@@ -44,6 +44,7 @@ var menudata={children:[
 {text:"n",url:"namespacemembers_n.html#index_n"},
 {text:"o",url:"namespacemembers_o.html#index_o"},
 {text:"p",url:"namespacemembers_p.html#index_p"},
+{text:"q",url:"namespacemembers_q.html#index_q"},
 {text:"r",url:"namespacemembers_r.html#index_r"},
 {text:"s",url:"namespacemembers_s.html#index_s"},
 {text:"t",url:"namespacemembers_t.html#index_t"},
@@ -225,6 +226,7 @@ var menudata={children:[
 {text:"r",url:"globals.html#index_r"},
 {text:"s",url:"globals.html#index_s"},
 {text:"t",url:"globals.html#index_t"},
+{text:"v",url:"globals.html#index_v"},
 {text:"w",url:"globals.html#index_w"},
 {text:"x",url:"globals.html#index_x"}]},
 {text:"Functions",url:"globals_func.html",children:[
@@ -250,5 +252,6 @@ var menudata={children:[
 {text:"q",url:"globals_defs.html#index_q"},
 {text:"s",url:"globals_defs.html#index_s"},
 {text:"t",url:"globals_defs.html#index_t"},
+{text:"v",url:"globals_defs.html#index_v"},
 {text:"w",url:"globals_defs.html#index_w"},
 {text:"x",url:"globals_defs.html#index_x"}]}]}]}]}

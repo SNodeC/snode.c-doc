@@ -190,12 +190,13 @@ Static Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  246</span>        MimeTypes::magic = magic_open(MAGIC_MIME);</div>
 <div class="line"><span class="lineno">  247</span> </div>
 <div class="line"><span class="lineno">  248</span>        <span class="keywordflow">if</span> (magic_load(magic, <span class="keyword">nullptr</span>) != 0) {</div>
-<div class="line"><span class="lineno">  249</span>            LOG(DEBUG) &lt;&lt; <span class="stringliteral">&quot;HTTP: Cannot load magic database - &quot;</span> + std::string(magic_error(magic));</div>
+<div class="line"><span class="lineno">  249</span>            <a class="code hl_define" href="Logger_8h.html#aba7b09d6e8fbe414c23705ad24dde6ff">LOG</a>(DEBUG) &lt;&lt; <span class="stringliteral">&quot;HTTP: Cannot load magic database - &quot;</span> + std::string(magic_error(magic));</div>
 <div class="line"><span class="lineno">  250</span>            magic_close(magic);</div>
 <div class="line"><span class="lineno">  251</span>            magic = <span class="keyword">nullptr</span>;</div>
 <div class="line"><span class="lineno">  252</span>        }</div>
 <div class="line"><span class="lineno">  253</span><span class="preprocessor">#endif</span></div>
 <div class="line"><span class="lineno">  254</span>    }</div>
+<div class="ttc" id="aLogger_8h_html_aba7b09d6e8fbe414c23705ad24dde6ff"><div class="ttname"><a href="Logger_8h.html#aba7b09d6e8fbe414c23705ad24dde6ff">LOG</a></div><div class="ttdeci">#define LOG(level)</div><div class="ttdef"><b>Definition</b> <a href="Logger_8h_source.html#l00148">Logger.h:148</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>

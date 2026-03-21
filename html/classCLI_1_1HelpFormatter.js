@@ -1,5 +1,6 @@
 var classCLI_1_1HelpFormatter =
 [
+    [ "HelpFormatter", "classCLI_1_1HelpFormatter.html#afbc97477bab4682867ee883613e1a5a9", null ],
     [ "~HelpFormatter", "classCLI_1_1HelpFormatter.html#a4ab7c6e8b86929aa1e45cce529203cb7", null ],
     [ "make_description", "classCLI_1_1HelpFormatter.html#a4fcf1076043929f991a5cce1093e42d1", null ],
     [ "make_expanded", "classCLI_1_1HelpFormatter.html#aeb4cfddc4a994524ed61a39b95ca5ac0", null ],

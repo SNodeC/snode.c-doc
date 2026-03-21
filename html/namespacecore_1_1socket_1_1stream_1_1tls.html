@@ -338,31 +338,31 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">  137</span>                    sslErr = <span class="keyword">true</span>;</div>
 <div class="line"><span class="lineno">  138</span>                } <span class="keywordflow">else</span> {</div>
 <div class="line"><span class="lineno">  139</span>                    <span class="keywordflow">if</span> (!sslConfig.<a class="code hl_variable" href="structcore_1_1socket_1_1stream_1_1tls_1_1SslConfig.html#ac1dc6d7205be54da78bb505c485d3c97">caCert</a>.empty()) {</div>
-<div class="line"><span class="lineno">  140</span>                        LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; sslConfig.<a class="code hl_variable" href="structcore_1_1socket_1_1stream_1_1tls_1_1SslConfig.html#a7a0f684bd941089509d2969db44aa367">instanceName</a> &lt;&lt; <span class="stringliteral">&quot; SSL/TLS: CA certificate loaded&quot;</span>;</div>
-<div class="line"><span class="lineno">  141</span>                        LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <span class="stringliteral">&quot;  &quot;</span> &lt;&lt; sslConfig.<a class="code hl_variable" href="structcore_1_1socket_1_1stream_1_1tls_1_1SslConfig.html#ac1dc6d7205be54da78bb505c485d3c97">caCert</a>;</div>
+<div class="line"><span class="lineno">  140</span>                        <a class="code hl_define" href="Logger_8h.html#aba7b09d6e8fbe414c23705ad24dde6ff">LOG</a>(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; sslConfig.<a class="code hl_variable" href="structcore_1_1socket_1_1stream_1_1tls_1_1SslConfig.html#a7a0f684bd941089509d2969db44aa367">instanceName</a> &lt;&lt; <span class="stringliteral">&quot; SSL/TLS: CA certificate loaded&quot;</span>;</div>
+<div class="line"><span class="lineno">  141</span>                        <a class="code hl_define" href="Logger_8h.html#aba7b09d6e8fbe414c23705ad24dde6ff">LOG</a>(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <span class="stringliteral">&quot;  &quot;</span> &lt;&lt; sslConfig.<a class="code hl_variable" href="structcore_1_1socket_1_1stream_1_1tls_1_1SslConfig.html#ac1dc6d7205be54da78bb505c485d3c97">caCert</a>;</div>
 <div class="line"><span class="lineno">  142</span>                    } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  143</span>                        LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; sslConfig.<a class="code hl_variable" href="structcore_1_1socket_1_1stream_1_1tls_1_1SslConfig.html#a7a0f684bd941089509d2969db44aa367">instanceName</a> &lt;&lt; <span class="stringliteral">&quot; SSL/TLS: CA certificate not loaded from a file&quot;</span>;</div>
+<div class="line"><span class="lineno">  143</span>                        <a class="code hl_define" href="Logger_8h.html#aba7b09d6e8fbe414c23705ad24dde6ff">LOG</a>(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; sslConfig.<a class="code hl_variable" href="structcore_1_1socket_1_1stream_1_1tls_1_1SslConfig.html#a7a0f684bd941089509d2969db44aa367">instanceName</a> &lt;&lt; <span class="stringliteral">&quot; SSL/TLS: CA certificate not loaded from a file&quot;</span>;</div>
 <div class="line"><span class="lineno">  144</span>                    }</div>
 <div class="line"><span class="lineno">  145</span>                    <span class="keywordflow">if</span> (!sslConfig.<a class="code hl_variable" href="structcore_1_1socket_1_1stream_1_1tls_1_1SslConfig.html#a197643d64568161b1d9f9dd63f7a93f4">caCertDir</a>.empty()) {</div>
-<div class="line"><span class="lineno">  146</span>                        LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; sslConfig.<a class="code hl_variable" href="structcore_1_1socket_1_1stream_1_1tls_1_1SslConfig.html#a7a0f684bd941089509d2969db44aa367">instanceName</a> &lt;&lt; <span class="stringliteral">&quot; SSL/TLS: CA certificates load from&quot;</span>;</div>
-<div class="line"><span class="lineno">  147</span>                        LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <span class="stringliteral">&quot;  &quot;</span> &lt;&lt; sslConfig.<a class="code hl_variable" href="structcore_1_1socket_1_1stream_1_1tls_1_1SslConfig.html#a197643d64568161b1d9f9dd63f7a93f4">caCertDir</a>;</div>
+<div class="line"><span class="lineno">  146</span>                        <a class="code hl_define" href="Logger_8h.html#aba7b09d6e8fbe414c23705ad24dde6ff">LOG</a>(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; sslConfig.<a class="code hl_variable" href="structcore_1_1socket_1_1stream_1_1tls_1_1SslConfig.html#a7a0f684bd941089509d2969db44aa367">instanceName</a> &lt;&lt; <span class="stringliteral">&quot; SSL/TLS: CA certificates load from&quot;</span>;</div>
+<div class="line"><span class="lineno">  147</span>                        <a class="code hl_define" href="Logger_8h.html#aba7b09d6e8fbe414c23705ad24dde6ff">LOG</a>(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <span class="stringliteral">&quot;  &quot;</span> &lt;&lt; sslConfig.<a class="code hl_variable" href="structcore_1_1socket_1_1stream_1_1tls_1_1SslConfig.html#a197643d64568161b1d9f9dd63f7a93f4">caCertDir</a>;</div>
 <div class="line"><span class="lineno">  148</span>                    } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  149</span>                        LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; sslConfig.<a class="code hl_variable" href="structcore_1_1socket_1_1stream_1_1tls_1_1SslConfig.html#a7a0f684bd941089509d2969db44aa367">instanceName</a> &lt;&lt; <span class="stringliteral">&quot; SSL/TLS: CA certificates not loaded from a directory&quot;</span>;</div>
+<div class="line"><span class="lineno">  149</span>                        <a class="code hl_define" href="Logger_8h.html#aba7b09d6e8fbe414c23705ad24dde6ff">LOG</a>(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; sslConfig.<a class="code hl_variable" href="structcore_1_1socket_1_1stream_1_1tls_1_1SslConfig.html#a7a0f684bd941089509d2969db44aa367">instanceName</a> &lt;&lt; <span class="stringliteral">&quot; SSL/TLS: CA certificates not loaded from a directory&quot;</span>;</div>
 <div class="line"><span class="lineno">  150</span>                    }</div>
 <div class="line"><span class="lineno">  151</span>                }</div>
 <div class="line"><span class="lineno">  152</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  153</span>                LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; sslConfig.<a class="code hl_variable" href="structcore_1_1socket_1_1stream_1_1tls_1_1SslConfig.html#a7a0f684bd941089509d2969db44aa367">instanceName</a> &lt;&lt; <span class="stringliteral">&quot; SSL/TLS: CA certificate not loaded from a file&quot;</span>;</div>
-<div class="line"><span class="lineno">  154</span>                LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; sslConfig.<a class="code hl_variable" href="structcore_1_1socket_1_1stream_1_1tls_1_1SslConfig.html#a7a0f684bd941089509d2969db44aa367">instanceName</a> &lt;&lt; <span class="stringliteral">&quot; SSL/TLS: CA certificates not loaded from a directory&quot;</span>;</div>
+<div class="line"><span class="lineno">  153</span>                <a class="code hl_define" href="Logger_8h.html#aba7b09d6e8fbe414c23705ad24dde6ff">LOG</a>(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; sslConfig.<a class="code hl_variable" href="structcore_1_1socket_1_1stream_1_1tls_1_1SslConfig.html#a7a0f684bd941089509d2969db44aa367">instanceName</a> &lt;&lt; <span class="stringliteral">&quot; SSL/TLS: CA certificate not loaded from a file&quot;</span>;</div>
+<div class="line"><span class="lineno">  154</span>                <a class="code hl_define" href="Logger_8h.html#aba7b09d6e8fbe414c23705ad24dde6ff">LOG</a>(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; sslConfig.<a class="code hl_variable" href="structcore_1_1socket_1_1stream_1_1tls_1_1SslConfig.html#a7a0f684bd941089509d2969db44aa367">instanceName</a> &lt;&lt; <span class="stringliteral">&quot; SSL/TLS: CA certificates not loaded from a directory&quot;</span>;</div>
 <div class="line"><span class="lineno">  155</span>            }</div>
 <div class="line"><span class="lineno">  156</span>            <span class="keywordflow">if</span> (!sslErr &amp;&amp; sslConfig.<a class="code hl_variable" href="structcore_1_1socket_1_1stream_1_1tls_1_1SslConfig.html#ac3cc5993112d3183b41f58862ff7f247">caCertUseDefaultDir</a>) {</div>
 <div class="line"><span class="lineno">  157</span>                <span class="keywordflow">if</span> (SSL_CTX_set_default_verify_paths(ctx) == 0) {</div>
 <div class="line"><span class="lineno">  158</span>                    <a class="code hl_function" href="#afe89f684150f8b6288c799f430809e29">ssl_log_error</a>(sslConfig.<a class="code hl_variable" href="structcore_1_1socket_1_1stream_1_1tls_1_1SslConfig.html#a7a0f684bd941089509d2969db44aa367">instanceName</a> + <span class="stringliteral">&quot; SSL/TLS: CA certificates error load from default openssl CA directory&quot;</span>);</div>
 <div class="line"><span class="lineno">  159</span>                    sslErr = <span class="keyword">true</span>;</div>
 <div class="line"><span class="lineno">  160</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  161</span>                    LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; sslConfig.<a class="code hl_variable" href="structcore_1_1socket_1_1stream_1_1tls_1_1SslConfig.html#a7a0f684bd941089509d2969db44aa367">instanceName</a> &lt;&lt; <span class="stringliteral">&quot; SSL/TLS: CA certificates enabled load from default openssl CA directory&quot;</span>;</div>
+<div class="line"><span class="lineno">  161</span>                    <a class="code hl_define" href="Logger_8h.html#aba7b09d6e8fbe414c23705ad24dde6ff">LOG</a>(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; sslConfig.<a class="code hl_variable" href="structcore_1_1socket_1_1stream_1_1tls_1_1SslConfig.html#a7a0f684bd941089509d2969db44aa367">instanceName</a> &lt;&lt; <span class="stringliteral">&quot; SSL/TLS: CA certificates enabled load from default openssl CA directory&quot;</span>;</div>
 <div class="line"><span class="lineno">  162</span>                }</div>
 <div class="line"><span class="lineno">  163</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  164</span>                LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; sslConfig.<a class="code hl_variable" href="structcore_1_1socket_1_1stream_1_1tls_1_1SslConfig.html#a7a0f684bd941089509d2969db44aa367">instanceName</a> &lt;&lt; <span class="stringliteral">&quot; SSL/TLS: CA certificates not loaded from default openssl CA directory&quot;</span>;</div>
+<div class="line"><span class="lineno">  164</span>                <a class="code hl_define" href="Logger_8h.html#aba7b09d6e8fbe414c23705ad24dde6ff">LOG</a>(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; sslConfig.<a class="code hl_variable" href="structcore_1_1socket_1_1stream_1_1tls_1_1SslConfig.html#a7a0f684bd941089509d2969db44aa367">instanceName</a> &lt;&lt; <span class="stringliteral">&quot; SSL/TLS: CA certificates not loaded from default openssl CA directory&quot;</span>;</div>
 <div class="line"><span class="lineno">  165</span>            }</div>
 <div class="line"><span class="lineno">  166</span>            <span class="keywordflow">if</span> (!sslErr) {</div>
 <div class="line"><span class="lineno">  167</span>                SSL_CTX_set_verify_depth(ctx, 5);</div>
@@ -373,7 +373,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">  172</span>                                        : 0),</div>
 <div class="line"><span class="lineno">  173</span>                                   <a class="code hl_function" href="#a322715864c9cd97e7b46ddebffef8fa5">verify_callback</a>);</div>
 <div class="line"><span class="lineno">  174</span>                <span class="keywordflow">if</span> ((SSL_CTX_get_verify_mode(ctx) &amp; SSL_VERIFY_PEER) != 0) {</div>
-<div class="line"><span class="lineno">  175</span>                    LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; sslConfig.<a class="code hl_variable" href="structcore_1_1socket_1_1stream_1_1tls_1_1SslConfig.html#a7a0f684bd941089509d2969db44aa367">instanceName</a> &lt;&lt; <span class="stringliteral">&quot; SSL/TLS: CA requested verify&quot;</span>;</div>
+<div class="line"><span class="lineno">  175</span>                    <a class="code hl_define" href="Logger_8h.html#aba7b09d6e8fbe414c23705ad24dde6ff">LOG</a>(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; sslConfig.<a class="code hl_variable" href="structcore_1_1socket_1_1stream_1_1tls_1_1SslConfig.html#a7a0f684bd941089509d2969db44aa367">instanceName</a> &lt;&lt; <span class="stringliteral">&quot; SSL/TLS: CA requested verify&quot;</span>;</div>
 <div class="line"><span class="lineno">  176</span>                }</div>
 <div class="line"><span class="lineno">  177</span>                <span class="keywordflow">if</span> (!sslConfig.<a class="code hl_variable" href="structcore_1_1socket_1_1stream_1_1tls_1_1SslConfig.html#a3f3401de3b2fe1a46f4e792b064dc47e">cert</a>.empty()) {</div>
 <div class="line"><span class="lineno">  178</span>                    <span class="keywordflow">if</span> (SSL_CTX_use_certificate_chain_file(ctx, sslConfig.<a class="code hl_variable" href="structcore_1_1socket_1_1stream_1_1tls_1_1SslConfig.html#a3f3401de3b2fe1a46f4e792b064dc47e">cert</a>.c_str()) == 0) {</div>
@@ -391,14 +391,14 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">  190</span>                        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (SSL_CTX_check_private_key(ctx) != 1) {</div>
 <div class="line"><span class="lineno">  191</span>                            <a class="code hl_function" href="#afe89f684150f8b6288c799f430809e29">ssl_log_error</a>(sslConfig.<a class="code hl_variable" href="structcore_1_1socket_1_1stream_1_1tls_1_1SslConfig.html#a7a0f684bd941089509d2969db44aa367">instanceName</a> + <span class="stringliteral">&quot; SSL/TLS: Cert chain key error&quot;</span>);</div>
 <div class="line"><span class="lineno">  192</span> </div>
-<div class="line"><span class="lineno">  193</span>                            LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <span class="stringliteral">&quot;  &quot;</span> &lt;&lt; sslConfig.<a class="code hl_variable" href="structcore_1_1socket_1_1stream_1_1tls_1_1SslConfig.html#a42121ff2011a09ca1a2ce81c2f797f56">certKey</a>;</div>
+<div class="line"><span class="lineno">  193</span>                            <a class="code hl_define" href="Logger_8h.html#aba7b09d6e8fbe414c23705ad24dde6ff">LOG</a>(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <span class="stringliteral">&quot;  &quot;</span> &lt;&lt; sslConfig.<a class="code hl_variable" href="structcore_1_1socket_1_1stream_1_1tls_1_1SslConfig.html#a42121ff2011a09ca1a2ce81c2f797f56">certKey</a>;</div>
 <div class="line"><span class="lineno">  194</span>                            sslErr = <span class="keyword">true</span>;</div>
 <div class="line"><span class="lineno">  195</span>                        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  196</span>                            LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; sslConfig.<a class="code hl_variable" href="structcore_1_1socket_1_1stream_1_1tls_1_1SslConfig.html#a7a0f684bd941089509d2969db44aa367">instanceName</a> &lt;&lt; <span class="stringliteral">&quot; SSL/TLS: Cert chain key loaded&quot;</span>;</div>
-<div class="line"><span class="lineno">  197</span>                            LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <span class="stringliteral">&quot;  &quot;</span> &lt;&lt; sslConfig.<a class="code hl_variable" href="structcore_1_1socket_1_1stream_1_1tls_1_1SslConfig.html#a42121ff2011a09ca1a2ce81c2f797f56">certKey</a>;</div>
+<div class="line"><span class="lineno">  196</span>                            <a class="code hl_define" href="Logger_8h.html#aba7b09d6e8fbe414c23705ad24dde6ff">LOG</a>(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; sslConfig.<a class="code hl_variable" href="structcore_1_1socket_1_1stream_1_1tls_1_1SslConfig.html#a7a0f684bd941089509d2969db44aa367">instanceName</a> &lt;&lt; <span class="stringliteral">&quot; SSL/TLS: Cert chain key loaded&quot;</span>;</div>
+<div class="line"><span class="lineno">  197</span>                            <a class="code hl_define" href="Logger_8h.html#aba7b09d6e8fbe414c23705ad24dde6ff">LOG</a>(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <span class="stringliteral">&quot;  &quot;</span> &lt;&lt; sslConfig.<a class="code hl_variable" href="structcore_1_1socket_1_1stream_1_1tls_1_1SslConfig.html#a42121ff2011a09ca1a2ce81c2f797f56">certKey</a>;</div>
 <div class="line"><span class="lineno">  198</span> </div>
-<div class="line"><span class="lineno">  199</span>                            LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; sslConfig.<a class="code hl_variable" href="structcore_1_1socket_1_1stream_1_1tls_1_1SslConfig.html#a7a0f684bd941089509d2969db44aa367">instanceName</a> &lt;&lt; <span class="stringliteral">&quot; SSL/TLS: Cert chain loaded&quot;</span>;</div>
-<div class="line"><span class="lineno">  200</span>                            LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <span class="stringliteral">&quot;  &quot;</span> &lt;&lt; sslConfig.<a class="code hl_variable" href="structcore_1_1socket_1_1stream_1_1tls_1_1SslConfig.html#a3f3401de3b2fe1a46f4e792b064dc47e">cert</a>;</div>
+<div class="line"><span class="lineno">  199</span>                            <a class="code hl_define" href="Logger_8h.html#aba7b09d6e8fbe414c23705ad24dde6ff">LOG</a>(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; sslConfig.<a class="code hl_variable" href="structcore_1_1socket_1_1stream_1_1tls_1_1SslConfig.html#a7a0f684bd941089509d2969db44aa367">instanceName</a> &lt;&lt; <span class="stringliteral">&quot; SSL/TLS: Cert chain loaded&quot;</span>;</div>
+<div class="line"><span class="lineno">  200</span>                            <a class="code hl_define" href="Logger_8h.html#aba7b09d6e8fbe414c23705ad24dde6ff">LOG</a>(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; <span class="stringliteral">&quot;  &quot;</span> &lt;&lt; sslConfig.<a class="code hl_variable" href="structcore_1_1socket_1_1stream_1_1tls_1_1SslConfig.html#a3f3401de3b2fe1a46f4e792b064dc47e">cert</a>;</div>
 <div class="line"><span class="lineno">  201</span>                        }</div>
 <div class="line"><span class="lineno">  202</span>                    }</div>
 <div class="line"><span class="lineno">  203</span>                }</div>
@@ -418,6 +418,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">  217</span> </div>
 <div class="line"><span class="lineno">  218</span>        <span class="keywordflow">return</span> ctx;</div>
 <div class="line"><span class="lineno">  219</span>    }</div>
+<div class="ttc" id="aLogger_8h_html_aba7b09d6e8fbe414c23705ad24dde6ff"><div class="ttname"><a href="Logger_8h.html#aba7b09d6e8fbe414c23705ad24dde6ff">LOG</a></div><div class="ttdeci">#define LOG(level)</div><div class="ttdef"><b>Definition</b> <a href="Logger_8h_source.html#l00148">Logger.h:148</a></div></div>
 <div class="ttc" id="anamespacecore_1_1socket_1_1stream_1_1tls_html_a322715864c9cd97e7b46ddebffef8fa5"><div class="ttname"><a href="#a322715864c9cd97e7b46ddebffef8fa5">core::socket::stream::tls::verify_callback</a></div><div class="ttdeci">static int verify_callback(int preverify_ok, X509_STORE_CTX *ctx)</div><div class="ttdef"><b>Definition</b> <a href="ssl__utils_8cpp_source.html#l00075">ssl_utils.cpp:75</a></div></div>
 <div class="ttc" id="anamespacecore_1_1socket_1_1stream_1_1tls_html_a3d19258d83489ec6962a3b19da46d0c1"><div class="ttname"><a href="#a3d19258d83489ec6962a3b19da46d0c1">core::socket::stream::tls::password_callback</a></div><div class="ttdeci">static int password_callback(char *buf, int size, int a, void *u)</div><div class="ttdef"><b>Definition</b> <a href="ssl__utils_8cpp_source.html#l00065">ssl_utils.cpp:65</a></div></div>
 <div class="ttc" id="anamespacecore_1_1socket_1_1stream_1_1tls_html_afe89f684150f8b6288c799f430809e29"><div class="ttname"><a href="#afe89f684150f8b6288c799f430809e29">core::socket::stream::tls::ssl_log_error</a></div><div class="ttdeci">void ssl_log_error(const std::string &amp;message)</div><div class="ttdef"><b>Definition</b> <a href="ssl__utils_8cpp_source.html#l00341">ssl_utils.cpp:341</a></div></div>
@@ -434,13 +435,13 @@ Here is the caller graph for this function:</div>
 <div class="ttc" id="astructcore_1_1socket_1_1stream_1_1tls_1_1SslConfig_html_ac1dc6d7205be54da78bb505c485d3c97"><div class="ttname"><a href="structcore_1_1socket_1_1stream_1_1tls_1_1SslConfig.html#ac1dc6d7205be54da78bb505c485d3c97">core::socket::stream::tls::SslConfig::caCert</a></div><div class="ttdeci">std::string caCert</div><div class="ttdef"><b>Definition</b> <a href="ssl__utils_8h_source.html#l00079">ssl_utils.h:79</a></div></div>
 <div class="ttc" id="astructcore_1_1socket_1_1stream_1_1tls_1_1SslConfig_html_ac3cc5993112d3183b41f58862ff7f247"><div class="ttname"><a href="structcore_1_1socket_1_1stream_1_1tls_1_1SslConfig.html#ac3cc5993112d3183b41f58862ff7f247">core::socket::stream::tls::SslConfig::caCertUseDefaultDir</a></div><div class="ttdeci">bool caCertUseDefaultDir</div><div class="ttdef"><b>Definition</b> <a href="ssl__utils_8h_source.html#l00081">ssl_utils.h:81</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ssl__utils_8h_source.html#l00079">core::socket::stream::tls::SslConfig::caCert</a>, <a class="el" href="ssl__utils_8h_source.html#l00082">core::socket::stream::tls::SslConfig::caCertAcceptUnknown</a>, <a class="el" href="ssl__utils_8h_source.html#l00080">core::socket::stream::tls::SslConfig::caCertDir</a>, <a class="el" href="ssl__utils_8h_source.html#l00081">core::socket::stream::tls::SslConfig::caCertUseDefaultDir</a>, <a class="el" href="ssl__utils_8h_source.html#l00076">core::socket::stream::tls::SslConfig::cert</a>, <a class="el" href="ssl__utils_8h_source.html#l00077">core::socket::stream::tls::SslConfig::certKey</a>, <a class="el" href="ssl__utils_8h_source.html#l00083">core::socket::stream::tls::SslConfig::cipherList</a>, <a class="el" href="ssl__utils_8h_source.html#l00075">core::socket::stream::tls::SslConfig::instanceName</a>, <a class="el" href="ssl__utils_8h_source.html#l00078">core::socket::stream::tls::SslConfig::password</a>, <a class="el" href="ssl__utils_8cpp_source.html#l00065">password_callback()</a>, <a class="el" href="ssl__utils_8h_source.html#l00085">core::socket::stream::tls::SslConfig::server</a>, <a class="el" href="ssl__utils_8cpp_source.html#l00341">ssl_log_error()</a>, <a class="el" href="ssl__utils_8h_source.html#l00084">core::socket::stream::tls::SslConfig::sslOptions</a>, and <a class="el" href="ssl__utils_8cpp_source.html#l00075">verify_callback()</a>.</p>
+<p class="reference">References <a class="el" href="ssl__utils_8h_source.html#l00079">core::socket::stream::tls::SslConfig::caCert</a>, <a class="el" href="ssl__utils_8h_source.html#l00082">core::socket::stream::tls::SslConfig::caCertAcceptUnknown</a>, <a class="el" href="ssl__utils_8h_source.html#l00080">core::socket::stream::tls::SslConfig::caCertDir</a>, <a class="el" href="ssl__utils_8h_source.html#l00081">core::socket::stream::tls::SslConfig::caCertUseDefaultDir</a>, <a class="el" href="ssl__utils_8h_source.html#l00076">core::socket::stream::tls::SslConfig::cert</a>, <a class="el" href="ssl__utils_8h_source.html#l00077">core::socket::stream::tls::SslConfig::certKey</a>, <a class="el" href="ssl__utils_8h_source.html#l00083">core::socket::stream::tls::SslConfig::cipherList</a>, <a class="el" href="ssl__utils_8h_source.html#l00075">core::socket::stream::tls::SslConfig::instanceName</a>, <a class="el" href="Logger_8cpp_source.html#l00280">logger::LogMessage::LogMessage()</a>, <a class="el" href="ssl__utils_8h_source.html#l00078">core::socket::stream::tls::SslConfig::password</a>, <a class="el" href="ssl__utils_8cpp_source.html#l00065">password_callback()</a>, <a class="el" href="ssl__utils_8h_source.html#l00085">core::socket::stream::tls::SslConfig::server</a>, <a class="el" href="ssl__utils_8cpp_source.html#l00341">ssl_log_error()</a>, <a class="el" href="ssl__utils_8h_source.html#l00084">core::socket::stream::tls::SslConfig::sslOptions</a>, <a class="el" href="Logger_8h_source.html#l00090">logger::TRACE</a>, and <a class="el" href="ssl__utils_8cpp_source.html#l00075">verify_callback()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="tls_2ConfigSocketServer_8hpp_source.html#l00078">net::config::stream::tls::ConfigSocketServer&lt; ConfigSocketServerBaseT &gt;::getSslCtx()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="namespacecore_1_1socket_1_1stream_1_1tls_aefd777e1f1c17197ec24d244bb46c047_cgraph.svg" width="388" height="195"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="namespacecore_1_1socket_1_1stream_1_1tls_aefd777e1f1c17197ec24d244bb46c047_cgraph.svg" width="588" height="224"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -626,7 +627,7 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="namespacecore_1_1socket_1_1stream_1_1tls_adae6a3615f37e032ede0621579fee758_cgraph.svg" width="370" height="195"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="namespacecore_1_1socket_1_1stream_1_1tls_adae6a3615f37e032ede0621579fee758_cgraph.svg" width="570" height="195"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -653,16 +654,23 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="ssl__utils_8cpp_source.html#l00341">341</a> of file <a class="el" href="ssl__utils_8cpp_source.html">ssl_utils.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  341</span>                                                 {</div>
-<div class="line"><span class="lineno">  342</span>        LOG(ERROR) &lt;&lt; message;</div>
-<div class="line"><span class="lineno">  343</span>        LOG(ERROR) &lt;&lt; <span class="stringliteral">&quot;  &quot;</span> &lt;&lt; ERR_error_string(ERR_get_error(), <span class="keyword">nullptr</span>);</div>
+<div class="line"><span class="lineno">  342</span>        <a class="code hl_define" href="Logger_8h.html#aba7b09d6e8fbe414c23705ad24dde6ff">LOG</a>(ERROR) &lt;&lt; message;</div>
+<div class="line"><span class="lineno">  343</span>        <a class="code hl_define" href="Logger_8h.html#aba7b09d6e8fbe414c23705ad24dde6ff">LOG</a>(ERROR) &lt;&lt; <span class="stringliteral">&quot;  &quot;</span> &lt;&lt; ERR_error_string(ERR_get_error(), <span class="keyword">nullptr</span>);</div>
 <div class="line"><span class="lineno">  344</span> </div>
 <div class="line"><span class="lineno">  345</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> errorCode = 0;</div>
 <div class="line"><span class="lineno">  346</span>        <span class="keywordflow">while</span> ((errorCode = ERR_get_error()) != 0) {</div>
-<div class="line"><span class="lineno">  347</span>            LOG(ERROR) &lt;&lt; <span class="stringliteral">&quot;  &quot;</span> &lt;&lt; ERR_error_string(errorCode, <span class="keyword">nullptr</span>);</div>
+<div class="line"><span class="lineno">  347</span>            <a class="code hl_define" href="Logger_8h.html#aba7b09d6e8fbe414c23705ad24dde6ff">LOG</a>(ERROR) &lt;&lt; <span class="stringliteral">&quot;  &quot;</span> &lt;&lt; ERR_error_string(errorCode, <span class="keyword">nullptr</span>);</div>
 <div class="line"><span class="lineno">  348</span>        }</div>
 <div class="line"><span class="lineno">  349</span>    }</div>
 </div><!-- fragment -->
+<p class="reference">References <a class="el" href="Logger_8h_source.html#l00090">logger::ERROR</a>, and <a class="el" href="Logger_8cpp_source.html#l00280">logger::LogMessage::LogMessage()</a>.</p>
+
 <p class="reference">Referenced by <a class="el" href="ssl__utils_8cpp_source.html#l00114">ssl_ctx_new()</a>, and <a class="el" href="ssl__utils_8cpp_source.html#l00316">ssl_log()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="namespacecore_1_1socket_1_1stream_1_1tls_afe89f684150f8b6288c799f430809e29_cgraph.svg" width="364" height="56"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -688,16 +696,23 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="ssl__utils_8cpp_source.html#l00361">361</a> of file <a class="el" href="ssl__utils_8cpp_source.html">ssl_utils.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  361</span>                                                {</div>
-<div class="line"><span class="lineno">  362</span>        LOG(INFO) &lt;&lt; message;</div>
-<div class="line"><span class="lineno">  363</span>        LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;  &quot;</span> &lt;&lt; ERR_error_string(ERR_get_error(), <span class="keyword">nullptr</span>);</div>
+<div class="line"><span class="lineno">  362</span>        <a class="code hl_define" href="Logger_8h.html#aba7b09d6e8fbe414c23705ad24dde6ff">LOG</a>(INFO) &lt;&lt; message;</div>
+<div class="line"><span class="lineno">  363</span>        <a class="code hl_define" href="Logger_8h.html#aba7b09d6e8fbe414c23705ad24dde6ff">LOG</a>(INFO) &lt;&lt; <span class="stringliteral">&quot;  &quot;</span> &lt;&lt; ERR_error_string(ERR_get_error(), <span class="keyword">nullptr</span>);</div>
 <div class="line"><span class="lineno">  364</span> </div>
 <div class="line"><span class="lineno">  365</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> errorCode = 0;</div>
 <div class="line"><span class="lineno">  366</span>        <span class="keywordflow">while</span> ((errorCode = ERR_get_error()) != 0) {</div>
-<div class="line"><span class="lineno">  367</span>            LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;  &quot;</span> &lt;&lt; ERR_error_string(errorCode, <span class="keyword">nullptr</span>);</div>
+<div class="line"><span class="lineno">  367</span>            <a class="code hl_define" href="Logger_8h.html#aba7b09d6e8fbe414c23705ad24dde6ff">LOG</a>(INFO) &lt;&lt; <span class="stringliteral">&quot;  &quot;</span> &lt;&lt; ERR_error_string(errorCode, <span class="keyword">nullptr</span>);</div>
 <div class="line"><span class="lineno">  368</span>        }</div>
 <div class="line"><span class="lineno">  369</span>    }</div>
 </div><!-- fragment -->
+<p class="reference">References <a class="el" href="Logger_8h_source.html#l00090">logger::INFO</a>, and <a class="el" href="Logger_8cpp_source.html#l00280">logger::LogMessage::LogMessage()</a>.</p>
+
 <p class="reference">Referenced by <a class="el" href="ssl__utils_8cpp_source.html#l00316">ssl_log()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="namespacecore_1_1socket_1_1stream_1_1tls_a6f3a1ef614b0412d91d64f823826f189_cgraph.svg" width="364" height="56"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -723,16 +738,23 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="ssl__utils_8cpp_source.html#l00351">351</a> of file <a class="el" href="ssl__utils_8cpp_source.html">ssl_utils.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  351</span>                                                   {</div>
-<div class="line"><span class="lineno">  352</span>        LOG(WARNING) &lt;&lt; message;</div>
-<div class="line"><span class="lineno">  353</span>        LOG(WARNING) &lt;&lt; <span class="stringliteral">&quot;  &quot;</span> &lt;&lt; ERR_error_string(ERR_get_error(), <span class="keyword">nullptr</span>);</div>
+<div class="line"><span class="lineno">  352</span>        <a class="code hl_define" href="Logger_8h.html#aba7b09d6e8fbe414c23705ad24dde6ff">LOG</a>(WARNING) &lt;&lt; message;</div>
+<div class="line"><span class="lineno">  353</span>        <a class="code hl_define" href="Logger_8h.html#aba7b09d6e8fbe414c23705ad24dde6ff">LOG</a>(WARNING) &lt;&lt; <span class="stringliteral">&quot;  &quot;</span> &lt;&lt; ERR_error_string(ERR_get_error(), <span class="keyword">nullptr</span>);</div>
 <div class="line"><span class="lineno">  354</span> </div>
 <div class="line"><span class="lineno">  355</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> errorCode = 0;</div>
 <div class="line"><span class="lineno">  356</span>        <span class="keywordflow">while</span> ((errorCode = ERR_get_error()) != 0) {</div>
-<div class="line"><span class="lineno">  357</span>            LOG(WARNING) &lt;&lt; <span class="stringliteral">&quot;  &quot;</span> &lt;&lt; ERR_error_string(errorCode, <span class="keyword">nullptr</span>);</div>
+<div class="line"><span class="lineno">  357</span>            <a class="code hl_define" href="Logger_8h.html#aba7b09d6e8fbe414c23705ad24dde6ff">LOG</a>(WARNING) &lt;&lt; <span class="stringliteral">&quot;  &quot;</span> &lt;&lt; ERR_error_string(errorCode, <span class="keyword">nullptr</span>);</div>
 <div class="line"><span class="lineno">  358</span>        }</div>
 <div class="line"><span class="lineno">  359</span>    }</div>
 </div><!-- fragment -->
+<p class="reference">References <a class="el" href="Logger_8cpp_source.html#l00280">logger::LogMessage::LogMessage()</a>, and <a class="el" href="Logger_8h_source.html#l00090">logger::WARNING</a>.</p>
+
 <p class="reference">Referenced by <a class="el" href="ssl__utils_8cpp_source.html#l00316">ssl_log()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="namespacecore_1_1socket_1_1stream_1_1tls_a3a133b1b35c394931d65dfe02977c810_cgraph.svg" width="368" height="56"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -852,15 +874,15 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">   87</span>        X509_NAME_oneline(X509_get_issuer_name(curr_cert), issuerName, 256);</div>
 <div class="line"><span class="lineno">   88</span> </div>
 <div class="line"><span class="lineno">   89</span>        <span class="keywordflow">if</span> (preverify_ok != 0) {</div>
-<div class="line"><span class="lineno">   90</span>            LOG(DEBUG) &lt;&lt; connectionName &lt;&lt; <span class="stringliteral">&quot;: SSL/TLS verify success at depth=&quot;</span> &lt;&lt; depth;</div>
-<div class="line"><span class="lineno">   91</span>            LOG(DEBUG) &lt;&lt; <span class="stringliteral">&quot;   Issuer: &quot;</span> &lt;&lt; issuerName;</div>
-<div class="line"><span class="lineno">   92</span>            LOG(DEBUG) &lt;&lt; <span class="stringliteral">&quot;  Subject: &quot;</span> &lt;&lt; subjectName;</div>
+<div class="line"><span class="lineno">   90</span>            <a class="code hl_define" href="Logger_8h.html#aba7b09d6e8fbe414c23705ad24dde6ff">LOG</a>(DEBUG) &lt;&lt; connectionName &lt;&lt; <span class="stringliteral">&quot;: SSL/TLS verify success at depth=&quot;</span> &lt;&lt; depth;</div>
+<div class="line"><span class="lineno">   91</span>            <a class="code hl_define" href="Logger_8h.html#aba7b09d6e8fbe414c23705ad24dde6ff">LOG</a>(DEBUG) &lt;&lt; <span class="stringliteral">&quot;   Issuer: &quot;</span> &lt;&lt; issuerName;</div>
+<div class="line"><span class="lineno">   92</span>            <a class="code hl_define" href="Logger_8h.html#aba7b09d6e8fbe414c23705ad24dde6ff">LOG</a>(DEBUG) &lt;&lt; <span class="stringliteral">&quot;  Subject: &quot;</span> &lt;&lt; subjectName;</div>
 <div class="line"><span class="lineno">   93</span>        } <span class="keywordflow">else</span> {</div>
 <div class="line"><span class="lineno">   94</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> err = X509_STORE_CTX_get_error(ctx);</div>
 <div class="line"><span class="lineno">   95</span> </div>
-<div class="line"><span class="lineno">   96</span>            LOG(DEBUG) &lt;&lt; connectionName &lt;&lt; <span class="stringliteral">&quot;: SSL/TLS verify error at depth=&quot;</span> &lt;&lt; depth &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; X509_verify_cert_error_string(err);</div>
-<div class="line"><span class="lineno">   97</span>            LOG(DEBUG) &lt;&lt; <span class="stringliteral">&quot;   Issuer: &quot;</span> &lt;&lt; issuerName;</div>
-<div class="line"><span class="lineno">   98</span>            LOG(DEBUG) &lt;&lt; <span class="stringliteral">&quot;  Subject: &quot;</span> &lt;&lt; subjectName;</div>
+<div class="line"><span class="lineno">   96</span>            <a class="code hl_define" href="Logger_8h.html#aba7b09d6e8fbe414c23705ad24dde6ff">LOG</a>(DEBUG) &lt;&lt; connectionName &lt;&lt; <span class="stringliteral">&quot;: SSL/TLS verify error at depth=&quot;</span> &lt;&lt; depth &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; X509_verify_cert_error_string(err);</div>
+<div class="line"><span class="lineno">   97</span>            <a class="code hl_define" href="Logger_8h.html#aba7b09d6e8fbe414c23705ad24dde6ff">LOG</a>(DEBUG) &lt;&lt; <span class="stringliteral">&quot;   Issuer: &quot;</span> &lt;&lt; issuerName;</div>
+<div class="line"><span class="lineno">   98</span>            <a class="code hl_define" href="Logger_8h.html#aba7b09d6e8fbe414c23705ad24dde6ff">LOG</a>(DEBUG) &lt;&lt; <span class="stringliteral">&quot;  Subject: &quot;</span> &lt;&lt; subjectName;</div>
 <div class="line"><span class="lineno">   99</span> </div>
 <div class="line"><span class="lineno">  100</span>            <span class="comment">/*</span></div>
 <div class="line"><span class="lineno">  101</span><span class="comment">             * At this point, err contains the last verification error. We can use</span></div>
@@ -872,7 +894,14 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">  107</span>        <span class="keywordflow">return</span> preverify_ok;</div>
 <div class="line"><span class="lineno">  108</span>    }</div>
 </div><!-- fragment -->
+<p class="reference">References <a class="el" href="Logger_8h_source.html#l00090">logger::DEBUG</a>, and <a class="el" href="Logger_8cpp_source.html#l00280">logger::LogMessage::LogMessage()</a>.</p>
+
 <p class="reference">Referenced by <a class="el" href="ssl__utils_8cpp_source.html#l00114">ssl_ctx_new()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="namespacecore_1_1socket_1_1stream_1_1tls_a322715864c9cd97e7b46ddebffef8fa5_cgraph.svg" width="364" height="56"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">

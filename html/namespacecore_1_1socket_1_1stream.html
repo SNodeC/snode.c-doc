@@ -164,10 +164,10 @@ template&lt;typename <a class="el" href="classcore_1_1socket_1_1stream_1_1Socket
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="core_2socket_2stream_2SocketClient_8h_source.html#l00403">403</a> of file <a class="el" href="core_2socket_2stream_2SocketClient_8h_source.html">SocketClient.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  403</span>                                                                                           {</div>
-<div class="line"><span class="lineno">  404</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classcore_1_1socket_1_1stream_1_1SocketClient.html">SocketClient</a>(instanceName, std::forward&lt;Args&gt;(socketContextFactoryArgs)...);</div>
-<div class="line"><span class="lineno">  405</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="core_2socket_2stream_2SocketClient_8h_source.html#l00417">417</a> of file <a class="el" href="core_2socket_2stream_2SocketClient_8h_source.html">SocketClient.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  417</span>                                                                                           {</div>
+<div class="line"><span class="lineno">  418</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classcore_1_1socket_1_1stream_1_1SocketClient.html">SocketClient</a>(instanceName, std::forward&lt;Args&gt;(socketContextFactoryArgs)...);</div>
+<div class="line"><span class="lineno">  419</span>    }</div>
 <div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketClient_html"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1SocketClient.html">core::socket::stream::SocketClient</a></div><div class="ttdef"><b>Definition</b> <a href="core_2socket_2stream_2SocketClient_8h_source.html#l00073">SocketClient.h:73</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -198,14 +198,14 @@ template&lt;typename <a class="el" href="classcore_1_1socket_1_1stream_1_1Socket
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="core_2socket_2stream_2SocketClient_8h_source.html#l00392">392</a> of file <a class="el" href="core_2socket_2stream_2SocketClient_8h_source.html">SocketClient.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  394</span>                                                            {</div>
-<div class="line"><span class="lineno">  395</span>        <span class="keyword">const</span> <a class="code hl_class" href="classcore_1_1socket_1_1stream_1_1SocketClient.html">SocketClient</a> socketClient(instanceName, std::forward&lt;Args&gt;(socketContextFactoryArgs)...);</div>
-<div class="line"><span class="lineno">  396</span> </div>
-<div class="line"><span class="lineno">  397</span>        configurator(socketClient.getConfig());</div>
-<div class="line"><span class="lineno">  398</span> </div>
-<div class="line"><span class="lineno">  399</span>        <span class="keywordflow">return</span> socketClient;</div>
-<div class="line"><span class="lineno">  400</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="core_2socket_2stream_2SocketClient_8h_source.html#l00406">406</a> of file <a class="el" href="core_2socket_2stream_2SocketClient_8h_source.html">SocketClient.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  408</span>                                                            {</div>
+<div class="line"><span class="lineno">  409</span>        <span class="keyword">const</span> <a class="code hl_class" href="classcore_1_1socket_1_1stream_1_1SocketClient.html">SocketClient</a> socketClient(instanceName, std::forward&lt;Args&gt;(socketContextFactoryArgs)...);</div>
+<div class="line"><span class="lineno">  410</span> </div>
+<div class="line"><span class="lineno">  411</span>        configurator(socketClient.getConfig());</div>
+<div class="line"><span class="lineno">  412</span> </div>
+<div class="line"><span class="lineno">  413</span>        <span class="keywordflow">return</span> socketClient;</div>
+<div class="line"><span class="lineno">  414</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -239,24 +239,33 @@ template&lt;typename <a class="el" href="classcore_1_1socket_1_1SocketAddress.ht
 <div class="line"><span class="lineno">   66</span>        <span class="keywordflow">if</span> (physicalSocket.getSockName(localSockAddr, localSockAddrLen) == 0) {</div>
 <div class="line"><span class="lineno">   67</span>            <span class="keywordflow">try</span> {</div>
 <div class="line"><span class="lineno">   68</span>                localPeerAddress = config-&gt;Local::getSocketAddress(localSockAddr, localSockAddrLen);</div>
-<div class="line"><span class="lineno">   69</span>                LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; config-&gt;getInstanceName() &lt;&lt; <span class="stringliteral">&quot; [&quot;</span> &lt;&lt; physicalSocket.getFd() &lt;&lt; <span class="stringliteral">&quot;]&quot;</span> &lt;&lt; std::setw(25)</div>
+<div class="line"><span class="lineno">   69</span>                <a class="code hl_define" href="Logger_8h.html#aba7b09d6e8fbe414c23705ad24dde6ff">LOG</a>(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; config-&gt;getInstanceName() &lt;&lt; <span class="stringliteral">&quot; [&quot;</span> &lt;&lt; physicalSocket.getFd() &lt;&lt; <span class="stringliteral">&quot;]&quot;</span> &lt;&lt; std::setw(25)</div>
 <div class="line"><span class="lineno">   70</span>                           &lt;&lt; <span class="stringliteral">&quot;  PeerAddress (local): &quot;</span> &lt;&lt; localPeerAddress.<a class="code hl_function" href="classcore_1_1socket_1_1SocketAddress.html#a46b6e56ceceba959ca208ef4acf00137">toString</a>();</div>
 <div class="line"><span class="lineno">   71</span>            } <span class="keywordflow">catch</span> (<span class="keyword">const</span> <span class="keyword">typename</span> <a class="code hl_class" href="classcore_1_1socket_1_1SocketAddress_1_1BadSocketAddress.html">SocketAddress::BadSocketAddress</a>&amp; badSocketAddress) {</div>
-<div class="line"><span class="lineno">   72</span>                LOG(WARNING) &lt;&lt; config-&gt;getInstanceName() &lt;&lt; <span class="stringliteral">&quot; [&quot;</span> &lt;&lt; physicalSocket.getFd() &lt;&lt; <span class="stringliteral">&quot;]&quot;</span> &lt;&lt; std::setw(25)</div>
+<div class="line"><span class="lineno">   72</span>                <a class="code hl_define" href="Logger_8h.html#aba7b09d6e8fbe414c23705ad24dde6ff">LOG</a>(WARNING) &lt;&lt; config-&gt;getInstanceName() &lt;&lt; <span class="stringliteral">&quot; [&quot;</span> &lt;&lt; physicalSocket.getFd() &lt;&lt; <span class="stringliteral">&quot;]&quot;</span> &lt;&lt; std::setw(25)</div>
 <div class="line"><span class="lineno">   73</span>                             &lt;&lt; <span class="stringliteral">&quot;  PeerAddress (local): &quot;</span> &lt;&lt; badSocketAddress.what();</div>
 <div class="line"><span class="lineno">   74</span>            }</div>
 <div class="line"><span class="lineno">   75</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   76</span>            PLOG(WARNING) &lt;&lt; config-&gt;getInstanceName() &lt;&lt; <span class="stringliteral">&quot; [&quot;</span> &lt;&lt; physicalSocket.getFd() &lt;&lt; <span class="stringliteral">&quot;]&quot;</span> &lt;&lt; std::setw(25)</div>
+<div class="line"><span class="lineno">   76</span>            <a class="code hl_define" href="Logger_8h.html#aef0131a998d265002571ac47b5b37620">PLOG</a>(WARNING) &lt;&lt; config-&gt;getInstanceName() &lt;&lt; <span class="stringliteral">&quot; [&quot;</span> &lt;&lt; physicalSocket.getFd() &lt;&lt; <span class="stringliteral">&quot;]&quot;</span> &lt;&lt; std::setw(25)</div>
 <div class="line"><span class="lineno">   77</span>                          &lt;&lt; <span class="stringliteral">&quot; PeerAddress (local) not retrievable&quot;</span>;</div>
 <div class="line"><span class="lineno">   78</span>        }</div>
 <div class="line"><span class="lineno">   79</span> </div>
 <div class="line"><span class="lineno">   80</span>        <span class="keywordflow">return</span> localPeerAddress;</div>
 <div class="line"><span class="lineno">   81</span>    }</div>
+<div class="ttc" id="aLogger_8h_html_aba7b09d6e8fbe414c23705ad24dde6ff"><div class="ttname"><a href="Logger_8h.html#aba7b09d6e8fbe414c23705ad24dde6ff">LOG</a></div><div class="ttdeci">#define LOG(level)</div><div class="ttdef"><b>Definition</b> <a href="Logger_8h_source.html#l00148">Logger.h:148</a></div></div>
+<div class="ttc" id="aLogger_8h_html_aef0131a998d265002571ac47b5b37620"><div class="ttname"><a href="Logger_8h.html#aef0131a998d265002571ac47b5b37620">PLOG</a></div><div class="ttdeci">#define PLOG(level)</div><div class="ttdef"><b>Definition</b> <a href="Logger_8h_source.html#l00152">Logger.h:152</a></div></div>
 <div class="ttc" id="aclasscore_1_1socket_1_1SocketAddress_1_1BadSocketAddress_html"><div class="ttname"><a href="classcore_1_1socket_1_1SocketAddress_1_1BadSocketAddress.html">core::socket::SocketAddress::BadSocketAddress</a></div><div class="ttdef"><b>Definition</b> <a href="core_2socket_2SocketAddress_8h_source.html#l00059">SocketAddress.h:59</a></div></div>
 <div class="ttc" id="aclasscore_1_1socket_1_1SocketAddress_html"><div class="ttname"><a href="classcore_1_1socket_1_1SocketAddress.html">core::socket::SocketAddress</a></div><div class="ttdef"><b>Definition</b> <a href="core_2socket_2SocketAddress_8h_source.html#l00057">SocketAddress.h:57</a></div></div>
 <div class="ttc" id="aclasscore_1_1socket_1_1SocketAddress_html_a46b6e56ceceba959ca208ef4acf00137"><div class="ttname"><a href="classcore_1_1socket_1_1SocketAddress.html#a46b6e56ceceba959ca208ef4acf00137">core::socket::SocketAddress::toString</a></div><div class="ttdeci">virtual std::string toString(bool expanded=true) const =0</div></div>
 <div class="ttc" id="anamespacecore_html_a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6"><div class="ttname"><a href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">core::TickStatus::TRACE</a></div><div class="ttdeci">@ TRACE</div><div class="ttdef"><b>Definition</b> <a href="TickStatus_8h_source.html#l00051">TickStatus.h:51</a></div></div>
 </div><!-- fragment -->
+<p class="reference">References <a class="el" href="Logger_8cpp_source.html#l00280">logger::LogMessage::LogMessage()</a>, <a class="el" href="Logger_8h_source.html#l00090">logger::TRACE</a>, and <a class="el" href="Logger_8h_source.html#l00090">logger::WARNING</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="namespacecore_1_1socket_1_1stream_afe631ab6ff33cc38df894fa7ef3c8f81_cgraph.svg" width="390" height="56"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
 </div>
 </div>
 <a id="a1c2a8be99fe91523dcc41ce0e97085f7" name="a1c2a8be99fe91523dcc41ce0e97085f7"></a>
@@ -289,20 +298,27 @@ template&lt;typename <a class="el" href="classcore_1_1socket_1_1SocketAddress.ht
 <div class="line"><span class="lineno">   89</span>        <span class="keywordflow">if</span> (physicalSocket.getPeerName(remoteSockAddr, remoteSockAddrLen) == 0) {</div>
 <div class="line"><span class="lineno">   90</span>            <span class="keywordflow">try</span> {</div>
 <div class="line"><span class="lineno">   91</span>                remotePeerAddress = config-&gt;Remote::getSocketAddress(remoteSockAddr, remoteSockAddrLen);</div>
-<div class="line"><span class="lineno">   92</span>                LOG(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; config-&gt;getInstanceName() &lt;&lt; <span class="stringliteral">&quot; [&quot;</span> &lt;&lt; physicalSocket.getFd() &lt;&lt; <span class="stringliteral">&quot;]&quot;</span> &lt;&lt; std::setw(25)</div>
+<div class="line"><span class="lineno">   92</span>                <a class="code hl_define" href="Logger_8h.html#aba7b09d6e8fbe414c23705ad24dde6ff">LOG</a>(<a class="code hl_enumvalue" href="namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>) &lt;&lt; config-&gt;getInstanceName() &lt;&lt; <span class="stringliteral">&quot; [&quot;</span> &lt;&lt; physicalSocket.getFd() &lt;&lt; <span class="stringliteral">&quot;]&quot;</span> &lt;&lt; std::setw(25)</div>
 <div class="line"><span class="lineno">   93</span>                           &lt;&lt; <span class="stringliteral">&quot;  PeerAddress (remote): &quot;</span> &lt;&lt; remotePeerAddress.<a class="code hl_function" href="classcore_1_1socket_1_1SocketAddress.html#a46b6e56ceceba959ca208ef4acf00137">toString</a>();</div>
 <div class="line"><span class="lineno">   94</span>            } <span class="keywordflow">catch</span> (<span class="keyword">const</span> <span class="keyword">typename</span> <a class="code hl_class" href="classcore_1_1socket_1_1SocketAddress_1_1BadSocketAddress.html">SocketAddress::BadSocketAddress</a>&amp; badSocketAddress) {</div>
-<div class="line"><span class="lineno">   95</span>                LOG(WARNING) &lt;&lt; config-&gt;getInstanceName() &lt;&lt; <span class="stringliteral">&quot; [&quot;</span> &lt;&lt; physicalSocket.getFd() &lt;&lt; <span class="stringliteral">&quot;]&quot;</span> &lt;&lt; std::setw(25)</div>
+<div class="line"><span class="lineno">   95</span>                <a class="code hl_define" href="Logger_8h.html#aba7b09d6e8fbe414c23705ad24dde6ff">LOG</a>(WARNING) &lt;&lt; config-&gt;getInstanceName() &lt;&lt; <span class="stringliteral">&quot; [&quot;</span> &lt;&lt; physicalSocket.getFd() &lt;&lt; <span class="stringliteral">&quot;]&quot;</span> &lt;&lt; std::setw(25)</div>
 <div class="line"><span class="lineno">   96</span>                             &lt;&lt; <span class="stringliteral">&quot;  PeerAddress (remote): &quot;</span> &lt;&lt; badSocketAddress.what();</div>
 <div class="line"><span class="lineno">   97</span>            }</div>
 <div class="line"><span class="lineno">   98</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   99</span>            PLOG(WARNING) &lt;&lt; config-&gt;getInstanceName() &lt;&lt; <span class="stringliteral">&quot; [&quot;</span> &lt;&lt; physicalSocket.getFd() &lt;&lt; <span class="stringliteral">&quot;]&quot;</span> &lt;&lt; std::setw(25)</div>
+<div class="line"><span class="lineno">   99</span>            <a class="code hl_define" href="Logger_8h.html#aef0131a998d265002571ac47b5b37620">PLOG</a>(WARNING) &lt;&lt; config-&gt;getInstanceName() &lt;&lt; <span class="stringliteral">&quot; [&quot;</span> &lt;&lt; physicalSocket.getFd() &lt;&lt; <span class="stringliteral">&quot;]&quot;</span> &lt;&lt; std::setw(25)</div>
 <div class="line"><span class="lineno">  100</span>                          &lt;&lt; <span class="stringliteral">&quot; PeerAddress (remote) not retrievble&quot;</span>;</div>
 <div class="line"><span class="lineno">  101</span>        }</div>
 <div class="line"><span class="lineno">  102</span> </div>
 <div class="line"><span class="lineno">  103</span>        <span class="keywordflow">return</span> remotePeerAddress;</div>
 <div class="line"><span class="lineno">  104</span>    }</div>
 </div><!-- fragment -->
+<p class="reference">References <a class="el" href="Logger_8cpp_source.html#l00280">logger::LogMessage::LogMessage()</a>, <a class="el" href="Logger_8h_source.html#l00090">logger::TRACE</a>, and <a class="el" href="Logger_8h_source.html#l00090">logger::WARNING</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="namespacecore_1_1socket_1_1stream_a1c2a8be99fe91523dcc41ce0e97085f7_cgraph.svg" width="407" height="56"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
 </div>
 </div>
 <a id="af7e042d68b8b8065c11332824c38c98d" name="af7e042d68b8b8065c11332824c38c98d"></a>
@@ -326,10 +342,10 @@ template&lt;typename <a class="el" href="classcore_1_1socket_1_1stream_1_1Socket
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="core_2socket_2stream_2SocketServer_8h_source.html#l00376">376</a> of file <a class="el" href="core_2socket_2stream_2SocketServer_8h_source.html">SocketServer.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  376</span>                                                                                           {</div>
-<div class="line"><span class="lineno">  377</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classcore_1_1socket_1_1stream_1_1SocketServer.html">SocketServer</a>(instanceName, std::forward&lt;Args&gt;(socketContextFactoryArgs)...);</div>
-<div class="line"><span class="lineno">  378</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="core_2socket_2stream_2SocketServer_8h_source.html#l00383">383</a> of file <a class="el" href="core_2socket_2stream_2SocketServer_8h_source.html">SocketServer.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  383</span>                                                                                           {</div>
+<div class="line"><span class="lineno">  384</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classcore_1_1socket_1_1stream_1_1SocketServer.html">SocketServer</a>(instanceName, std::forward&lt;Args&gt;(socketContextFactoryArgs)...);</div>
+<div class="line"><span class="lineno">  385</span>    }</div>
 <div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketServer_html"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1SocketServer.html">core::socket::stream::SocketServer</a></div><div class="ttdef"><b>Definition</b> <a href="core_2socket_2stream_2SocketServer_8h_source.html#l00068">SocketServer.h:68</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -360,14 +376,14 @@ template&lt;typename <a class="el" href="classcore_1_1socket_1_1stream_1_1Socket
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="core_2socket_2stream_2SocketServer_8h_source.html#l00365">365</a> of file <a class="el" href="core_2socket_2stream_2SocketServer_8h_source.html">SocketServer.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  367</span>                                                            {</div>
-<div class="line"><span class="lineno">  368</span>        <span class="keyword">const</span> <a class="code hl_class" href="classcore_1_1socket_1_1stream_1_1SocketServer.html">SocketServer</a> socketServer(instanceName, std::forward&lt;Args&gt;(socketContextFactoryArgs)...);</div>
-<div class="line"><span class="lineno">  369</span> </div>
-<div class="line"><span class="lineno">  370</span>        configurator(socketServer.getConfig());</div>
-<div class="line"><span class="lineno">  371</span> </div>
-<div class="line"><span class="lineno">  372</span>        <span class="keywordflow">return</span> socketServer;</div>
-<div class="line"><span class="lineno">  373</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="core_2socket_2stream_2SocketServer_8h_source.html#l00372">372</a> of file <a class="el" href="core_2socket_2stream_2SocketServer_8h_source.html">SocketServer.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  374</span>                                                            {</div>
+<div class="line"><span class="lineno">  375</span>        <span class="keyword">const</span> <a class="code hl_class" href="classcore_1_1socket_1_1stream_1_1SocketServer.html">SocketServer</a> socketServer(instanceName, std::forward&lt;Args&gt;(socketContextFactoryArgs)...);</div>
+<div class="line"><span class="lineno">  376</span> </div>
+<div class="line"><span class="lineno">  377</span>        configurator(socketServer.getConfig());</div>
+<div class="line"><span class="lineno">  378</span> </div>
+<div class="line"><span class="lineno">  379</span>        <span class="keywordflow">return</span> socketServer;</div>
+<div class="line"><span class="lineno">  380</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>

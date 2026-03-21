@@ -73,5 +73,5 @@ var namespacecore =
       [ "TRACE", "namespacecore.html#a47acf5c7d3fb3967a2547c74082e9749a2d3e4144aa384b18849ab9a8abad74d6", null ]
     ] ],
     [ "eventLoopState", "namespacecore.html#ac748365ac1e79353b3d6218a60216bd4", null ],
-    [ "getTickCounterAsString", "namespacecore.html#afa4820103fc04304728d100f70b0216c", null ]
+    [ "getTickCounterAsString", "namespacecore.html#aaa94b728a3c54e71e23032dde8ed4cdb", null ]
 ];

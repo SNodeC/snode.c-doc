@@ -203,14 +203,25 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Daemon_8cpp_source.html#l00200">200</a> of file <a class="el" href="Daemon_8cpp_source.html">Daemon.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  200</span>                                                          {</div>
-<div class="line"><span class="lineno">  201</span>        (void) seteuid(getuid());             <span class="comment">// In case we are here seteguid can not fail</span></div>
-<div class="line"><span class="lineno">  202</span>        (void) setegid(getgid());             <span class="comment">// In case we are here setegid can not fail</span></div>
-<div class="line"><span class="lineno">  203</span>        std::filesystem::remove(pidFileName); <span class="comment">// In case we are here std::Filesystem::remove can not fail</span></div>
-<div class="line"><span class="lineno">  204</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Daemon_8cpp_source.html#l00202">202</a> of file <a class="el" href="Daemon_8cpp_source.html">Daemon.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  202</span>                                                          {</div>
+<div class="line"><span class="lineno">  203</span>        <span class="keywordflow">if</span> (seteuid(getuid()) != 0) {</div>
+<div class="line"><span class="lineno">  204</span>            <span class="keywordflow">throw</span> DaemonError(<span class="stringliteral">&quot;seteuid()&quot;</span>);</div>
+<div class="line"><span class="lineno">  205</span>        }</div>
+<div class="line"><span class="lineno">  206</span>        <span class="keywordflow">if</span> (setegid(getgid()) != 0) {</div>
+<div class="line"><span class="lineno">  207</span>            <span class="keywordflow">throw</span> DaemonError(<span class="stringliteral">&quot;setegid()&quot;</span>);</div>
+<div class="line"><span class="lineno">  208</span>        }</div>
+<div class="line"><span class="lineno">  209</span>        std::filesystem::remove(pidFileName); <span class="comment">// In case we are here std::Filesystem::remove can not fail</span></div>
+<div class="line"><span class="lineno">  210</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="Daemon_8cpp_source.html#l00158">stopDaemon()</a>, and <a class="el" href="Config_8cpp_source.html#l00528">utils::ConfigRoot::terminate()</a>.</p>
+<p class="reference">References <a class="el" href="Daemon_8cpp_source.html#l00068">utils::DaemonError::DaemonError()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Daemon_8cpp_source.html#l00160">stopDaemon()</a>, and <a class="el" href="Config_8cpp_source.html#l00525">utils::ConfigRoot::terminate()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classutils_1_1Daemon_ade68cf0c06a22b8d0446244b82d75ba8_cgraph.svg" width="606" height="56"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -321,25 +332,27 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">  141</span>            <span class="keywordflow">throw</span> DaemonError(<span class="stringliteral">&quot;seteuid()&quot;</span>);</div>
 <div class="line"><span class="lineno">  142</span>        } <span class="comment">/* Set new file permissions */</span></div>
 <div class="line"><span class="lineno">  143</span>        umask(0);</div>
-<div class="line"><span class="lineno">  144</span>        chdir(<span class="stringliteral">&quot;/&quot;</span>);</div>
-<div class="line"><span class="lineno">  145</span> </div>
-<div class="line"><span class="lineno">  146</span>        <a class="code hl_function" href="namespacecore_1_1system.html#a2aa41abc7d6ba9da2e5035b74608919a">close</a>(STDIN_FILENO);</div>
-<div class="line"><span class="lineno">  147</span>        <a class="code hl_function" href="namespacecore_1_1system.html#a2aa41abc7d6ba9da2e5035b74608919a">close</a>(STDOUT_FILENO);</div>
-<div class="line"><span class="lineno">  148</span>        <a class="code hl_function" href="namespacecore_1_1system.html#a2aa41abc7d6ba9da2e5035b74608919a">close</a>(STDERR_FILENO);</div>
-<div class="line"><span class="lineno">  149</span> </div>
-<div class="line"><span class="lineno">  150</span>        <span class="keywordflow">if</span> (std::freopen(<span class="stringliteral">&quot;/dev/null&quot;</span>, <span class="stringliteral">&quot;r&quot;</span>, stdin) == <span class="keyword">nullptr</span>) {</div>
-<div class="line"><span class="lineno">  151</span>        }</div>
-<div class="line"><span class="lineno">  152</span>        <span class="keywordflow">if</span> (std::freopen(<span class="stringliteral">&quot;/dev/null&quot;</span>, <span class="stringliteral">&quot;w+&quot;</span>, stdout) == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><span class="lineno">  144</span>        <span class="keywordflow">if</span> (chdir(<span class="stringliteral">&quot;/&quot;</span>) != 0) {</div>
+<div class="line"><span class="lineno">  145</span>            <span class="keywordflow">throw</span> DaemonError(<span class="stringliteral">&quot;chdir()&quot;</span>);</div>
+<div class="line"><span class="lineno">  146</span>        }</div>
+<div class="line"><span class="lineno">  147</span> </div>
+<div class="line"><span class="lineno">  148</span>        <a class="code hl_function" href="namespacecore_1_1system.html#a2aa41abc7d6ba9da2e5035b74608919a">close</a>(STDIN_FILENO);</div>
+<div class="line"><span class="lineno">  149</span>        <a class="code hl_function" href="namespacecore_1_1system.html#a2aa41abc7d6ba9da2e5035b74608919a">close</a>(STDOUT_FILENO);</div>
+<div class="line"><span class="lineno">  150</span>        <a class="code hl_function" href="namespacecore_1_1system.html#a2aa41abc7d6ba9da2e5035b74608919a">close</a>(STDERR_FILENO);</div>
+<div class="line"><span class="lineno">  151</span> </div>
+<div class="line"><span class="lineno">  152</span>        <span class="keywordflow">if</span> (std::freopen(<span class="stringliteral">&quot;/dev/null&quot;</span>, <span class="stringliteral">&quot;r&quot;</span>, stdin) == <span class="keyword">nullptr</span>) {</div>
 <div class="line"><span class="lineno">  153</span>        }</div>
-<div class="line"><span class="lineno">  154</span>        <span class="keywordflow">if</span> (std::freopen(<span class="stringliteral">&quot;/dev/null&quot;</span>, <span class="stringliteral">&quot;w+&quot;</span>, stderr) == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><span class="lineno">  154</span>        <span class="keywordflow">if</span> (std::freopen(<span class="stringliteral">&quot;/dev/null&quot;</span>, <span class="stringliteral">&quot;w+&quot;</span>, stdout) == <span class="keyword">nullptr</span>) {</div>
 <div class="line"><span class="lineno">  155</span>        }</div>
-<div class="line"><span class="lineno">  156</span>    }</div>
+<div class="line"><span class="lineno">  156</span>        <span class="keywordflow">if</span> (std::freopen(<span class="stringliteral">&quot;/dev/null&quot;</span>, <span class="stringliteral">&quot;w+&quot;</span>, stderr) == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><span class="lineno">  157</span>        }</div>
+<div class="line"><span class="lineno">  158</span>    }</div>
 <div class="ttc" id="anamespacecore_1_1system_html_a2aa41abc7d6ba9da2e5035b74608919a"><div class="ttname"><a href="namespacecore_1_1system.html#a2aa41abc7d6ba9da2e5035b74608919a">core::system::close</a></div><div class="ttdeci">int close(int fd)</div><div class="ttdef"><b>Definition</b> <a href="unistd_8cpp_source.html#l00067">unistd.cpp:67</a></div></div>
 <div class="ttc" id="anamespaceutils_1_1system_html_ae9627474e3956cfc307370792ec5bcee"><div class="ttname"><a href="namespaceutils_1_1system.html#ae9627474e3956cfc307370792ec5bcee">utils::system::signal</a></div><div class="ttdeci">sighandler_t signal(int sig, sighandler_t handler)</div><div class="ttdef"><b>Definition</b> <a href="signal_8cpp_source.html#l00054">signal.cpp:54</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Daemon_8cpp_source.html#l00068">utils::DaemonError::DaemonError()</a>, <a class="el" href="Daemon_8cpp_source.html#l00061">utils::DaemonFailure::DaemonFailure()</a>, and <a class="el" href="Daemon_8cpp_source.html#l00206">utils::DaemonSignaled::DaemonSignaled()</a>.</p>
+<p class="reference">References <a class="el" href="Daemon_8cpp_source.html#l00068">utils::DaemonError::DaemonError()</a>, <a class="el" href="Daemon_8cpp_source.html#l00061">utils::DaemonFailure::DaemonFailure()</a>, and <a class="el" href="Daemon_8cpp_source.html#l00212">utils::DaemonSignaled::DaemonSignaled()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Config_8cpp_source.html#l00500">utils::ConfigRoot::bootstrap()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Config_8cpp_source.html#l00497">utils::ConfigRoot::bootstrap()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -376,58 +389,58 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Daemon_8cpp_source.html#l00158">158</a> of file <a class="el" href="Daemon_8cpp_source.html">Daemon.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  158</span>                                                         {</div>
-<div class="line"><span class="lineno">  159</span>        <span class="keywordflow">if</span> (pidFileName.empty()) {</div>
-<div class="line"><span class="lineno">  160</span>            <span class="keywordflow">throw</span> DaemonFailure(<span class="stringliteral">&quot;No pid file given&quot;</span>);</div>
-<div class="line"><span class="lineno">  161</span>        } <span class="comment">/* Try to read PID of daemon to from lockfile and kill the daemon */</span></div>
-<div class="line"><span class="lineno">  162</span>        std::ifstream pidFile(pidFileName, std::ifstream::in);</div>
-<div class="line"><span class="lineno">  163</span> </div>
-<div class="line"><span class="lineno">  164</span>        <span class="keywordflow">if</span> (!pidFile.good()) {</div>
-<div class="line"><span class="lineno">  165</span>            pidFile.close();</div>
-<div class="line"><span class="lineno">  166</span>            <span class="keywordflow">throw</span> DaemonError(<span class="stringliteral">&quot;Reading pid file &#39;&quot;</span> + pidFileName + <span class="stringliteral">&quot;&#39;&quot;</span>);</div>
-<div class="line"><span class="lineno">  167</span>        }</div>
-<div class="line"><span class="lineno">  168</span>        pid_t pid = 0;</div>
-<div class="line"><span class="lineno">  169</span>        pidFile &gt;&gt; pid;</div>
-<div class="line"><span class="lineno">  170</span>        pidFile.close();</div>
-<div class="line"><span class="lineno">  171</span> </div>
-<div class="line"><span class="lineno">  172</span>        <span class="keyword">const</span> <span class="keywordtype">int</span> pidfd = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(syscall(SYS_pidfd_open, pid, 0)); <span class="comment">// NOLINT</span></div>
+<p class="definition">Definition at line <a class="el" href="Daemon_8cpp_source.html#l00160">160</a> of file <a class="el" href="Daemon_8cpp_source.html">Daemon.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  160</span>                                                         {</div>
+<div class="line"><span class="lineno">  161</span>        <span class="keywordflow">if</span> (pidFileName.empty()) {</div>
+<div class="line"><span class="lineno">  162</span>            <span class="keywordflow">throw</span> DaemonFailure(<span class="stringliteral">&quot;No pid file given&quot;</span>);</div>
+<div class="line"><span class="lineno">  163</span>        } <span class="comment">/* Try to read PID of daemon to from lockfile and kill the daemon */</span></div>
+<div class="line"><span class="lineno">  164</span>        std::ifstream pidFile(pidFileName, std::ifstream::in);</div>
+<div class="line"><span class="lineno">  165</span> </div>
+<div class="line"><span class="lineno">  166</span>        <span class="keywordflow">if</span> (!pidFile.good()) {</div>
+<div class="line"><span class="lineno">  167</span>            pidFile.close();</div>
+<div class="line"><span class="lineno">  168</span>            <span class="keywordflow">throw</span> DaemonError(<span class="stringliteral">&quot;Reading pid file &#39;&quot;</span> + pidFileName + <span class="stringliteral">&quot;&#39;&quot;</span>);</div>
+<div class="line"><span class="lineno">  169</span>        }</div>
+<div class="line"><span class="lineno">  170</span>        pid_t pid = 0;</div>
+<div class="line"><span class="lineno">  171</span>        pidFile &gt;&gt; pid;</div>
+<div class="line"><span class="lineno">  172</span>        pidFile.close();</div>
 <div class="line"><span class="lineno">  173</span> </div>
-<div class="line"><span class="lineno">  174</span>        <span class="keywordflow">if</span> (pidfd == -1) {</div>
-<div class="line"><span class="lineno">  175</span>            <a class="code hl_function" href="#ade68cf0c06a22b8d0446244b82d75ba8">erasePidFile</a>(pidFileName);</div>
-<div class="line"><span class="lineno">  176</span>            <span class="keywordflow">throw</span> DaemonFailure(<span class="stringliteral">&quot;Daemon not running&quot;</span>);</div>
-<div class="line"><span class="lineno">  177</span>        }</div>
-<div class="line"><span class="lineno">  178</span>        <span class="keywordflow">if</span> (kill(pid, SIGTERM) != 0) {</div>
-<div class="line"><span class="lineno">  179</span>            <span class="keywordflow">throw</span> DaemonError(<span class="stringliteral">&quot;kill()&quot;</span>);</div>
-<div class="line"><span class="lineno">  180</span>        }</div>
-<div class="line"><span class="lineno">  181</span>        <span class="keyword">struct </span>pollfd pollfd{};</div>
-<div class="line"><span class="lineno">  182</span>        pollfd.fd = pidfd;</div>
-<div class="line"><span class="lineno">  183</span>        pollfd.events = POLLIN;</div>
-<div class="line"><span class="lineno">  184</span> </div>
-<div class="line"><span class="lineno">  185</span>        <span class="keyword">const</span> <span class="keywordtype">int</span> ready = <a class="code hl_function" href="namespacecore_1_1system.html#ab33bc3708f662ee03fc101d59ebbea94">core::system::poll</a>(&amp;pollfd, 1, 5000);</div>
-<div class="line"><span class="lineno">  186</span>        <a class="code hl_function" href="namespacecore_1_1system.html#a2aa41abc7d6ba9da2e5035b74608919a">close</a>(pidfd);</div>
-<div class="line"><span class="lineno">  187</span> </div>
-<div class="line"><span class="lineno">  188</span>        <span class="keywordflow">if</span> (ready == -1) {</div>
-<div class="line"><span class="lineno">  189</span>            <span class="keywordflow">throw</span> DaemonError(<span class="stringliteral">&quot;poll()&quot;</span>);</div>
-<div class="line"><span class="lineno">  190</span>        }</div>
-<div class="line"><span class="lineno">  191</span>        <span class="keywordflow">if</span> (ready == 0) {</div>
-<div class="line"><span class="lineno">  192</span>            kill(pid, SIGKILL);</div>
-<div class="line"><span class="lineno">  193</span>            <a class="code hl_function" href="#ade68cf0c06a22b8d0446244b82d75ba8">erasePidFile</a>(pidFileName);</div>
-<div class="line"><span class="lineno">  194</span>            <span class="keywordflow">throw</span> DaemonFailure(<span class="stringliteral">&quot;Daemon not responding - killed&quot;</span>);</div>
-<div class="line"><span class="lineno">  195</span>        }</div>
-<div class="line"><span class="lineno">  196</span> </div>
-<div class="line"><span class="lineno">  197</span>        <span class="keywordflow">return</span> pid;</div>
-<div class="line"><span class="lineno">  198</span>    }</div>
-<div class="ttc" id="aclassutils_1_1Daemon_html_ade68cf0c06a22b8d0446244b82d75ba8"><div class="ttname"><a href="#ade68cf0c06a22b8d0446244b82d75ba8">utils::Daemon::erasePidFile</a></div><div class="ttdeci">static void erasePidFile(const std::string &amp;pidFileName)</div><div class="ttdef"><b>Definition</b> <a href="Daemon_8cpp_source.html#l00200">Daemon.cpp:200</a></div></div>
+<div class="line"><span class="lineno">  174</span>        <span class="keyword">const</span> <span class="keywordtype">int</span> pidfd = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(syscall(SYS_pidfd_open, pid, 0)); <span class="comment">// NOLINT</span></div>
+<div class="line"><span class="lineno">  175</span> </div>
+<div class="line"><span class="lineno">  176</span>        <span class="keywordflow">if</span> (pidfd == -1) {</div>
+<div class="line"><span class="lineno">  177</span>            <a class="code hl_function" href="#ade68cf0c06a22b8d0446244b82d75ba8">erasePidFile</a>(pidFileName);</div>
+<div class="line"><span class="lineno">  178</span>            <span class="keywordflow">throw</span> DaemonFailure(<span class="stringliteral">&quot;Daemon not running&quot;</span>);</div>
+<div class="line"><span class="lineno">  179</span>        }</div>
+<div class="line"><span class="lineno">  180</span>        <span class="keywordflow">if</span> (kill(pid, SIGTERM) != 0) {</div>
+<div class="line"><span class="lineno">  181</span>            <span class="keywordflow">throw</span> DaemonError(<span class="stringliteral">&quot;kill()&quot;</span>);</div>
+<div class="line"><span class="lineno">  182</span>        }</div>
+<div class="line"><span class="lineno">  183</span>        <span class="keyword">struct </span>pollfd pollfd{};</div>
+<div class="line"><span class="lineno">  184</span>        pollfd.fd = pidfd;</div>
+<div class="line"><span class="lineno">  185</span>        pollfd.events = POLLIN;</div>
+<div class="line"><span class="lineno">  186</span> </div>
+<div class="line"><span class="lineno">  187</span>        <span class="keyword">const</span> <span class="keywordtype">int</span> ready = <a class="code hl_function" href="namespacecore_1_1system.html#ab33bc3708f662ee03fc101d59ebbea94">core::system::poll</a>(&amp;pollfd, 1, 5000);</div>
+<div class="line"><span class="lineno">  188</span>        <a class="code hl_function" href="namespacecore_1_1system.html#a2aa41abc7d6ba9da2e5035b74608919a">close</a>(pidfd);</div>
+<div class="line"><span class="lineno">  189</span> </div>
+<div class="line"><span class="lineno">  190</span>        <span class="keywordflow">if</span> (ready == -1) {</div>
+<div class="line"><span class="lineno">  191</span>            <span class="keywordflow">throw</span> DaemonError(<span class="stringliteral">&quot;poll()&quot;</span>);</div>
+<div class="line"><span class="lineno">  192</span>        }</div>
+<div class="line"><span class="lineno">  193</span>        <span class="keywordflow">if</span> (ready == 0) {</div>
+<div class="line"><span class="lineno">  194</span>            kill(pid, SIGKILL);</div>
+<div class="line"><span class="lineno">  195</span>            <a class="code hl_function" href="#ade68cf0c06a22b8d0446244b82d75ba8">erasePidFile</a>(pidFileName);</div>
+<div class="line"><span class="lineno">  196</span>            <span class="keywordflow">throw</span> DaemonFailure(<span class="stringliteral">&quot;Daemon not responding - killed&quot;</span>);</div>
+<div class="line"><span class="lineno">  197</span>        }</div>
+<div class="line"><span class="lineno">  198</span> </div>
+<div class="line"><span class="lineno">  199</span>        <span class="keywordflow">return</span> pid;</div>
+<div class="line"><span class="lineno">  200</span>    }</div>
+<div class="ttc" id="aclassutils_1_1Daemon_html_ade68cf0c06a22b8d0446244b82d75ba8"><div class="ttname"><a href="#ade68cf0c06a22b8d0446244b82d75ba8">utils::Daemon::erasePidFile</a></div><div class="ttdeci">static void erasePidFile(const std::string &amp;pidFileName)</div><div class="ttdef"><b>Definition</b> <a href="Daemon_8cpp_source.html#l00202">Daemon.cpp:202</a></div></div>
 <div class="ttc" id="anamespacecore_1_1system_html_ab33bc3708f662ee03fc101d59ebbea94"><div class="ttname"><a href="namespacecore_1_1system.html#ab33bc3708f662ee03fc101d59ebbea94">core::system::poll</a></div><div class="ttdeci">int poll(pollfd *fds, nfds_t nfds, int timeout)</div><div class="ttdef"><b>Definition</b> <a href="poll_8cpp_source.html#l00054">poll.cpp:54</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Daemon_8cpp_source.html#l00068">utils::DaemonError::DaemonError()</a>, <a class="el" href="Daemon_8cpp_source.html#l00061">utils::DaemonFailure::DaemonFailure()</a>, and <a class="el" href="Daemon_8cpp_source.html#l00200">erasePidFile()</a>.</p>
+<p class="reference">References <a class="el" href="Daemon_8cpp_source.html#l00068">utils::DaemonError::DaemonError()</a>, <a class="el" href="Daemon_8cpp_source.html#l00061">utils::DaemonFailure::DaemonFailure()</a>, and <a class="el" href="Daemon_8cpp_source.html#l00202">erasePidFile()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Config_8cpp_source.html#l00468">utils::ConfigRoot::parse1()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Config_8cpp_source.html#l00463">utils::ConfigRoot::parse1()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classutils_1_1Daemon_a7cbab79ec761ede555ef18235dad6061_cgraph.svg" width="666" height="158"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="classutils_1_1Daemon_a7cbab79ec761ede555ef18235dad6061_cgraph.svg" width="100%" height="365"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>

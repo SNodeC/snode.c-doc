@@ -444,15 +444,15 @@ Echo-Server <span class="tt">SocketContext</span></h4>
 <div class="line"> </div>
 <div class="line"><span class="keyword">private</span>:</div>
 <div class="line">    <span class="keywordtype">void</span> <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a716a54b882173251b584439499ca0446">onConnected</a>()<span class="keyword"> override </span>{ <span class="comment">// Called in case a connection has been established successfully.</span></div>
-<div class="line">        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Echo connected to &quot;</span> &lt;&lt; <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a02f0b93ac0ea376dabd6921c7589a8cf">getSocketConnection</a>()-&gt;<a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#a8676b9150b85fb2d2e5ef1d8daee0480">getRemoteAddress</a>().<a class="code hl_function" href="classcore_1_1socket_1_1SocketAddress.html#a46b6e56ceceba959ca208ef4acf00137">toString</a>();</div>
+<div class="line">        <a class="code hl_define" href="Logger_8h.html#afc28ec91d066c96a3a139441e029f326">VLOG</a>(1) &lt;&lt; <span class="stringliteral">&quot;Echo connected to &quot;</span> &lt;&lt; <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a02f0b93ac0ea376dabd6921c7589a8cf">getSocketConnection</a>()-&gt;<a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#a8676b9150b85fb2d2e5ef1d8daee0480">getRemoteAddress</a>().<a class="code hl_function" href="classcore_1_1socket_1_1SocketAddress.html#a46b6e56ceceba959ca208ef4acf00137">toString</a>();</div>
 <div class="line">    }</div>
 <div class="line"> </div>
 <div class="line">    <span class="keywordtype">void</span> <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketContext.html#ab9c932c5c1b706ffb84d97634514d20e">onDisconnected</a>()<span class="keyword"> override </span>{ <span class="comment">// Called in case the connection has been closed.</span></div>
-<div class="line">        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Echo disconnected from &quot;</span> &lt;&lt; <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a02f0b93ac0ea376dabd6921c7589a8cf">getSocketConnection</a>()-&gt;<a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#a8676b9150b85fb2d2e5ef1d8daee0480">getRemoteAddress</a>().<a class="code hl_function" href="classcore_1_1socket_1_1SocketAddress.html#a46b6e56ceceba959ca208ef4acf00137">toString</a>();</div>
+<div class="line">        <a class="code hl_define" href="Logger_8h.html#afc28ec91d066c96a3a139441e029f326">VLOG</a>(1) &lt;&lt; <span class="stringliteral">&quot;Echo disconnected from &quot;</span> &lt;&lt; <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a02f0b93ac0ea376dabd6921c7589a8cf">getSocketConnection</a>()-&gt;<a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#a8676b9150b85fb2d2e5ef1d8daee0480">getRemoteAddress</a>().<a class="code hl_function" href="classcore_1_1socket_1_1SocketAddress.html#a46b6e56ceceba959ca208ef4acf00137">toString</a>();</div>
 <div class="line">    }</div>
 <div class="line"> </div>
 <div class="line">    <span class="keywordtype">bool</span> <a class="code hl_function" href="classcore_1_1socket_1_1SocketContext.html#ad5a47157710544f1d90f1ebdf15fe49e">onSignal</a>(<span class="keywordtype">int</span> signum)<span class="keyword"> override </span>{ <span class="comment">// Called in case a signal has been received</span></div>
-<div class="line">        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Echo disconnected due to signal=&quot;</span> &lt;&lt; signum;</div>
+<div class="line">        <a class="code hl_define" href="Logger_8h.html#afc28ec91d066c96a3a139441e029f326">VLOG</a>(1) &lt;&lt; <span class="stringliteral">&quot;Echo disconnected due to signal=&quot;</span> &lt;&lt; signum;</div>
 <div class="line">        <span class="keywordflow">return</span> <span class="keyword">true</span>; <span class="comment">// Close the connection</span></div>
 <div class="line">    }</div>
 <div class="line"> </div>
@@ -467,7 +467,7 @@ Echo-Server <span class="tt">SocketContext</span></h4>
 <div class="line">                                                          <span class="comment">// onReceivedFromPeer will be called again.</span></div>
 <div class="line">                                                          <span class="comment">// No error can occure here.</span></div>
 <div class="line">        <span class="keywordflow">if</span> (chunkLen &gt; 0) {</div>
-<div class="line">            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Data to reflect: &quot;</span> &lt;&lt; std::string(chunk, chunkLen);</div>
+<div class="line">            <a class="code hl_define" href="Logger_8h.html#afc28ec91d066c96a3a139441e029f326">VLOG</a>(1) &lt;&lt; <span class="stringliteral">&quot;Data to reflect: &quot;</span> &lt;&lt; std::string(chunk, chunkLen);</div>
 <div class="line">            <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a7e80affcdada3ef5f1c52c283d65a89c">sendToPeer</a>(chunk, chunkLen); <span class="comment">// Reflect the received data back to the client.</span></div>
 <div class="line">                                         <span class="comment">// Out of memory is the only error which can occure here.</span></div>
 <div class="line">        }</div>
@@ -476,6 +476,7 @@ Echo-Server <span class="tt">SocketContext</span></h4>
 <div class="line">    }</div>
 <div class="line">};</div>
 <div class="ttc" id="aLogger_8h_html"><div class="ttname"><a href="Logger_8h.html">Logger.h</a></div></div>
+<div class="ttc" id="aLogger_8h_html_afc28ec91d066c96a3a139441e029f326"><div class="ttname"><a href="Logger_8h.html#afc28ec91d066c96a3a139441e029f326">VLOG</a></div><div class="ttdeci">#define VLOG(level)</div><div class="ttdef"><b>Definition</b> <a href="Logger_8h_source.html#l00164">Logger.h:164</a></div></div>
 <div class="ttc" id="aSocketConnection_8h_html"><div class="ttname"><a href="SocketConnection_8h.html">SocketConnection.h</a></div></div>
 <div class="ttc" id="aclasscore_1_1socket_1_1SocketAddress_html_a46b6e56ceceba959ca208ef4acf00137"><div class="ttname"><a href="classcore_1_1socket_1_1SocketAddress.html#a46b6e56ceceba959ca208ef4acf00137">core::socket::SocketAddress::toString</a></div><div class="ttdeci">virtual std::string toString(bool expanded=true) const =0</div></div>
 <div class="ttc" id="aclasscore_1_1socket_1_1SocketContext_html_a34c520f17818f029395d2d2b4babc882"><div class="ttname"><a href="classcore_1_1socket_1_1SocketContext.html#a34c520f17818f029395d2d2b4babc882">core::socket::SocketContext::onReceivedFromPeer</a></div><div class="ttdeci">virtual std::size_t onReceivedFromPeer()=0</div></div>
@@ -507,18 +508,18 @@ Echo-Client <span class="tt">SocketContext</span></h4>
 <div class="line"> </div>
 <div class="line"><span class="keyword">private</span>:</div>
 <div class="line">    <span class="keywordtype">void</span> <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a716a54b882173251b584439499ca0446">onConnected</a>()<span class="keyword"> override </span>{ <span class="comment">// Called in case a connection has been established successfully.</span></div>
-<div class="line">        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Echo connected to &quot;</span> &lt;&lt; <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a02f0b93ac0ea376dabd6921c7589a8cf">getSocketConnection</a>()-&gt;<a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#a8676b9150b85fb2d2e5ef1d8daee0480">getRemoteAddress</a>().<a class="code hl_function" href="classcore_1_1socket_1_1SocketAddress.html#a46b6e56ceceba959ca208ef4acf00137">toString</a>();</div>
+<div class="line">        <a class="code hl_define" href="Logger_8h.html#afc28ec91d066c96a3a139441e029f326">VLOG</a>(1) &lt;&lt; <span class="stringliteral">&quot;Echo connected to &quot;</span> &lt;&lt; <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a02f0b93ac0ea376dabd6921c7589a8cf">getSocketConnection</a>()-&gt;<a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#a8676b9150b85fb2d2e5ef1d8daee0480">getRemoteAddress</a>().<a class="code hl_function" href="classcore_1_1socket_1_1SocketAddress.html#a46b6e56ceceba959ca208ef4acf00137">toString</a>();</div>
 <div class="line"> </div>
-<div class="line">        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Initiating data exchange&quot;</span>;</div>
+<div class="line">        <a class="code hl_define" href="Logger_8h.html#afc28ec91d066c96a3a139441e029f326">VLOG</a>(1) &lt;&lt; <span class="stringliteral">&quot;Initiating data exchange&quot;</span>;</div>
 <div class="line">        <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a7e80affcdada3ef5f1c52c283d65a89c">sendToPeer</a>(<span class="stringliteral">&quot;Hello peer! It&#39;s nice talking to you\n&quot;</span>); <span class="comment">// Initiate the ping-pong data exchange.</span></div>
 <div class="line">    }</div>
 <div class="line"> </div>
 <div class="line">    <span class="keywordtype">void</span> <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketContext.html#ab9c932c5c1b706ffb84d97634514d20e">onDisconnected</a>()<span class="keyword"> override </span>{ <span class="comment">// Called in case the connection has been closed.</span></div>
-<div class="line">        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Echo disconnected from &quot;</span> &lt;&lt; <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a02f0b93ac0ea376dabd6921c7589a8cf">getSocketConnection</a>()-&gt;<a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#a8676b9150b85fb2d2e5ef1d8daee0480">getRemoteAddress</a>().<a class="code hl_function" href="classcore_1_1socket_1_1SocketAddress.html#a46b6e56ceceba959ca208ef4acf00137">toString</a>();</div>
+<div class="line">        <a class="code hl_define" href="Logger_8h.html#afc28ec91d066c96a3a139441e029f326">VLOG</a>(1) &lt;&lt; <span class="stringliteral">&quot;Echo disconnected from &quot;</span> &lt;&lt; <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a02f0b93ac0ea376dabd6921c7589a8cf">getSocketConnection</a>()-&gt;<a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketConnection.html#a8676b9150b85fb2d2e5ef1d8daee0480">getRemoteAddress</a>().<a class="code hl_function" href="classcore_1_1socket_1_1SocketAddress.html#a46b6e56ceceba959ca208ef4acf00137">toString</a>();</div>
 <div class="line">    }</div>
 <div class="line"> </div>
 <div class="line">    <span class="keywordtype">bool</span> <a class="code hl_function" href="classcore_1_1socket_1_1SocketContext.html#ad5a47157710544f1d90f1ebdf15fe49e">onSignal</a>(<span class="keywordtype">int</span> signum)<span class="keyword"> override </span>{ <span class="comment">// Called in case a signal has been received</span></div>
-<div class="line">        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Echo disconnected due to signal=&quot;</span> &lt;&lt; signum;</div>
+<div class="line">        <a class="code hl_define" href="Logger_8h.html#afc28ec91d066c96a3a139441e029f326">VLOG</a>(1) &lt;&lt; <span class="stringliteral">&quot;Echo disconnected due to signal=&quot;</span> &lt;&lt; signum;</div>
 <div class="line">        <span class="keywordflow">return</span> <span class="keyword">true</span>; <span class="comment">// Close the connection</span></div>
 <div class="line">    }</div>
 <div class="line"> </div>
@@ -533,7 +534,7 @@ Echo-Client <span class="tt">SocketContext</span></h4>
 <div class="line">                                                          <span class="comment">// onReceivedFromPeer will be called again.</span></div>
 <div class="line">                                                          <span class="comment">// No error can occure here.</span></div>
 <div class="line">        <span class="keywordflow">if</span> (chunkLen &gt; 0) {</div>
-<div class="line">            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Data to reflect: &quot;</span> &lt;&lt; std::string(chunk, chunkLen);</div>
+<div class="line">            <a class="code hl_define" href="Logger_8h.html#afc28ec91d066c96a3a139441e029f326">VLOG</a>(1) &lt;&lt; <span class="stringliteral">&quot;Data to reflect: &quot;</span> &lt;&lt; std::string(chunk, chunkLen);</div>
 <div class="line">            <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a7e80affcdada3ef5f1c52c283d65a89c">sendToPeer</a>(chunk, chunkLen); <span class="comment">// Reflect the received data back to the server.</span></div>
 <div class="line">                                         <span class="comment">// Out of memory is the only error which can occure here.</span></div>
 <div class="line">        }</div>
@@ -580,16 +581,16 @@ Echo-Server Main Application</h4>
 <div class="line">    echoServer.listen(8001, 5, [](<span class="keyword">const</span> SocketAddress&amp; socketAddress, <span class="keyword">const</span> <a class="code hl_class" href="classcore_1_1socket_1_1State.html">core::socket::State</a>&amp; state) -&gt; <span class="keywordtype">void</span> {</div>
 <div class="line">        <span class="keywordflow">switch</span> (state) {</div>
 <div class="line">            <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a744e04217104f055ae728e8d884f25de">core::socket::State::OK</a>:</div>
-<div class="line">                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;EchoServer: connected to &#39;&quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
+<div class="line">                <a class="code hl_define" href="Logger_8h.html#afc28ec91d066c96a3a139441e029f326">VLOG</a>(1) &lt;&lt; <span class="stringliteral">&quot;EchoServer: connected to &#39;&quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
 <div class="line">                <span class="keywordflow">break</span>;</div>
 <div class="line">            <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a26b8a9154524cfbba2729255cb184331">core::socket::State::DISABLED</a>:</div>
-<div class="line">                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;EchoServer: disabled&quot;</span>;</div>
+<div class="line">                <a class="code hl_define" href="Logger_8h.html#afc28ec91d066c96a3a139441e029f326">VLOG</a>(1) &lt;&lt; <span class="stringliteral">&quot;EchoServer: disabled&quot;</span>;</div>
 <div class="line">                <span class="keywordflow">break</span>;</div>
 <div class="line">            <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a3dcc747a68a4c163fcf1c57d9852cab3">core::socket::State::ERROR</a>:</div>
-<div class="line">                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;EchoServer: &quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; state.<a class="code hl_function" href="classcore_1_1socket_1_1State.html#a55b6abd55034b331fae4c9e085007dfa">what</a>();</div>
+<div class="line">                <a class="code hl_define" href="Logger_8h.html#afc28ec91d066c96a3a139441e029f326">VLOG</a>(1) &lt;&lt; <span class="stringliteral">&quot;EchoServer: &quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; state.<a class="code hl_function" href="classcore_1_1socket_1_1State.html#a55b6abd55034b331fae4c9e085007dfa">what</a>();</div>
 <div class="line">                <span class="keywordflow">break</span>;</div>
 <div class="line">            <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a5d0a9047c96edac9ffd9cd12574328c0">core::socket::State::FATAL</a>:</div>
-<div class="line">                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;EchoServer: &quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; state.<a class="code hl_function" href="classcore_1_1socket_1_1State.html#a55b6abd55034b331fae4c9e085007dfa">what</a>();</div>
+<div class="line">                <a class="code hl_define" href="Logger_8h.html#afc28ec91d066c96a3a139441e029f326">VLOG</a>(1) &lt;&lt; <span class="stringliteral">&quot;EchoServer: &quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; state.<a class="code hl_function" href="classcore_1_1socket_1_1State.html#a55b6abd55034b331fae4c9e085007dfa">what</a>();</div>
 <div class="line">                <span class="keywordflow">break</span>;</div>
 <div class="line">        }</div>
 <div class="line">    });</div>
@@ -635,22 +636,23 @@ Echo-Client Main Application</h4>
 <div class="line">    echoClient.connect(<span class="stringliteral">&quot;localhost&quot;</span>, 8001, [](<span class="keyword">const</span> SocketAddress&amp; socketAddress, <span class="keyword">const</span> <a class="code hl_class" href="classcore_1_1socket_1_1State.html">core::socket::State</a>&amp; state) -&gt; <span class="keywordtype">void</span> {</div>
 <div class="line">        <span class="keywordflow">switch</span> (state) {</div>
 <div class="line">            <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a744e04217104f055ae728e8d884f25de">core::socket::State::OK</a>:</div>
-<div class="line">                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;EchoClient: connected to &#39;&quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
+<div class="line">                <a class="code hl_define" href="Logger_8h.html#afc28ec91d066c96a3a139441e029f326">VLOG</a>(1) &lt;&lt; <span class="stringliteral">&quot;EchoClient: connected to &#39;&quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
 <div class="line">                <span class="keywordflow">break</span>;</div>
 <div class="line">            <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a26b8a9154524cfbba2729255cb184331">core::socket::State::DISABLED</a>:</div>
-<div class="line">                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;EchoClient: disabled&quot;</span>;</div>
+<div class="line">                <a class="code hl_define" href="Logger_8h.html#afc28ec91d066c96a3a139441e029f326">VLOG</a>(1) &lt;&lt; <span class="stringliteral">&quot;EchoClient: disabled&quot;</span>;</div>
 <div class="line">                <span class="keywordflow">break</span>;</div>
 <div class="line">            <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a3dcc747a68a4c163fcf1c57d9852cab3">core::socket::State::ERROR</a>:</div>
-<div class="line">                LOG(ERROR) &lt;&lt; <span class="stringliteral">&quot;EchoClient: &quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; state.<a class="code hl_function" href="classcore_1_1socket_1_1State.html#a55b6abd55034b331fae4c9e085007dfa">what</a>();</div>
+<div class="line">                <a class="code hl_define" href="Logger_8h.html#aba7b09d6e8fbe414c23705ad24dde6ff">LOG</a>(ERROR) &lt;&lt; <span class="stringliteral">&quot;EchoClient: &quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; state.<a class="code hl_function" href="classcore_1_1socket_1_1State.html#a55b6abd55034b331fae4c9e085007dfa">what</a>();</div>
 <div class="line">                <span class="keywordflow">break</span>;</div>
 <div class="line">            <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a5d0a9047c96edac9ffd9cd12574328c0">core::socket::State::FATAL</a>:</div>
-<div class="line">                LOG(FATAL) &lt;&lt; <span class="stringliteral">&quot;EchoClient: &quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; state.<a class="code hl_function" href="classcore_1_1socket_1_1State.html#a55b6abd55034b331fae4c9e085007dfa">what</a>();</div>
+<div class="line">                <a class="code hl_define" href="Logger_8h.html#aba7b09d6e8fbe414c23705ad24dde6ff">LOG</a>(FATAL) &lt;&lt; <span class="stringliteral">&quot;EchoClient: &quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; state.<a class="code hl_function" href="classcore_1_1socket_1_1State.html#a55b6abd55034b331fae4c9e085007dfa">what</a>();</div>
 <div class="line">                <span class="keywordflow">break</span>;</div>
 <div class="line">        }</div>
 <div class="line">    });</div>
 <div class="line"> </div>
 <div class="line">    <span class="keywordflow">return</span> <a class="code hl_function" href="classcore_1_1SNodeC.html#ac3d0dcb6c216ae72d9bbb77fe080e461">core::SNodeC::start</a>(); <span class="comment">// Start the event loop, daemonize if requested.</span></div>
 <div class="line">}</div>
+<div class="ttc" id="aLogger_8h_html_aba7b09d6e8fbe414c23705ad24dde6ff"><div class="ttname"><a href="Logger_8h.html#aba7b09d6e8fbe414c23705ad24dde6ff">LOG</a></div><div class="ttdeci">#define LOG(level)</div><div class="ttdef"><b>Definition</b> <a href="Logger_8h_source.html#l00148">Logger.h:148</a></div></div>
 <div class="ttc" id="anet_2in_2stream_2legacy_2SocketClient_8h_html"><div class="ttname"><a href="net_2in_2stream_2legacy_2SocketClient_8h.html">SocketClient.h</a></div></div>
 </div><!-- fragment --><p>If we would have created a <em>named client instance</em>, a special <span class="tt">connect()</span> method can be used that only expects the <em>lambda</em> as argument. In that case the configuration of this instance is required to be done using <em>command line arguments</em> and/or a <em>configuration file</em>.</p>
 <h3 class="doxsection"><a class="anchor" id="cmakeliststxt-file-for-building-and-installing-our-echoserver-and-echoclient"></a>
@@ -767,7 +769,6 @@ Libraries</h3>
 <h4 class="doxsection"><a class="anchor" id="mandatory-1"></a>
 Mandatory</h4>
 <ul>
-<li>Easylogging++ (v9.97.0 or later) development files (<a href="https://github.com/amrayn/easyloggingpp/">https://github.com/amrayn/easyloggingpp/</a>)</li>
 <li>OpenSSL (v1.1, v3.0, or v3.1) development files (<a href="https://www.openssl.org/">https://www.openssl.org/</a>)</li>
 <li>Nlohmann-JSON (v3.11.2 or later) development files (<a href="https://json.nlohmann.me/">https://json.nlohmann.me/</a>)</li>
 </ul>
@@ -783,6 +784,7 @@ In-Framework</h4>
 <p>This libraries are already integrated directly in SNode.C. Thus they need not be installed by hand</p>
 <ul>
 <li>CLI11 (<a href="https://github.com/CLIUtils/CLI11/">https://github.com/CLIUtils/CLI11/</a>)</li>
+<li>spdlog (<a href="https://github.com/gabime/spdlog/">https://github.com/gabime/spdlog/</a>)</li>
 </ul>
 <h2 class="doxsection"><a class="anchor" id="installation-on-debian-style-systems-x86-64-arm"></a>
 Installation on Debian Style Systems (x86-64, Arm)</h2>
@@ -792,7 +794,7 @@ Requirements and Dependencies</h3>
 <div class="fragment"><div class="line">sudo apt update</div>
 <div class="line">sudo apt install git cmake make ninja-build g++ clang pkg-config</div>
 <div class="line">sudo apt install iwyu clang-format cmake-format doxygen</div>
-<div class="line">sudo apt install libeasyloggingpp-dev libssl-dev nlohmann-json3-dev</div>
+<div class="line">sudo apt install libssl-dev nlohmann-json3-dev</div>
 <div class="line">sudo apt install libbluetooth-dev libmagic-dev libmariadb-dev</div>
 </div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="snodec"></a>
 SNode.C</h3>
@@ -1223,13 +1225,13 @@ Attaching the Callbacks during Instance Creation</h4>
 <div class="line"><span class="keyword">using </span>SocketConnection = EchoServer::SocketConnection;</div>
 <div class="line"> </div>
 <div class="line">EchoServer echoServer([] (SocketConnection* socketConnection) -&gt; <span class="keywordtype">void</span> {</div>
-<div class="line">                          VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Connection to peer estableshed&quot;</span>;</div>
+<div class="line">                          <a class="code hl_define" href="Logger_8h.html#afc28ec91d066c96a3a139441e029f326">VLOG</a>(1) &lt;&lt; <span class="stringliteral">&quot;Connection to peer estableshed&quot;</span>;</div>
 <div class="line">                      },</div>
 <div class="line">                      [] (SocketConnection* socketConnection) -&gt; <span class="keywordtype">void</span> {</div>
-<div class="line">                          VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Connection to peer ready to be used&quot;</span>;</div>
+<div class="line">                          <a class="code hl_define" href="Logger_8h.html#afc28ec91d066c96a3a139441e029f326">VLOG</a>(1) &lt;&lt; <span class="stringliteral">&quot;Connection to peer ready to be used&quot;</span>;</div>
 <div class="line">                      },</div>
 <div class="line">                      [] (<a class="code hl_typedef" href="namespaceapps_1_1http_1_1legacy.html#a30976a44df49fb6d754fc5db457052ea">SocketConnection</a>* socketConnection) -&gt; <span class="keywordtype">void</span> {</div>
-<div class="line">                          VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Connection to peer closed&quot;</span>;</div>
+<div class="line">                          <a class="code hl_define" href="Logger_8h.html#afc28ec91d066c96a3a139441e029f326">VLOG</a>(1) &lt;&lt; <span class="stringliteral">&quot;Connection to peer closed&quot;</span>;</div>
 <div class="line">                      });</div>
 <div class="line"> </div>
 <div class="line">echoServer.listen(...);</div>
@@ -1240,13 +1242,13 @@ Attaching the Callbacks during Instance Creation</h4>
 <div class="line"><span class="keyword">using </span>SocketConnection = EchoClient::SocketConnection;</div>
 <div class="line"> </div>
 <div class="line">EchoClient echoClient([] (SocketConnection* socketConnection) -&gt; <span class="keywordtype">void</span> {</div>
-<div class="line">                          VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Connection to peer estableshed&quot;</span>;</div>
+<div class="line">                          <a class="code hl_define" href="Logger_8h.html#afc28ec91d066c96a3a139441e029f326">VLOG</a>(1) &lt;&lt; <span class="stringliteral">&quot;Connection to peer estableshed&quot;</span>;</div>
 <div class="line">                      },</div>
 <div class="line">                      [] (SocketConnection* socketConnection) -&gt; <span class="keywordtype">void</span> {</div>
-<div class="line">                          VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Connection to peer ready to be used&quot;</span>;</div>
+<div class="line">                          <a class="code hl_define" href="Logger_8h.html#afc28ec91d066c96a3a139441e029f326">VLOG</a>(1) &lt;&lt; <span class="stringliteral">&quot;Connection to peer ready to be used&quot;</span>;</div>
 <div class="line">                      },</div>
 <div class="line">                      [] (<a class="code hl_typedef" href="namespaceapps_1_1http_1_1legacy.html#a30976a44df49fb6d754fc5db457052ea">SocketConnection</a>* socketConnection) -&gt; <span class="keywordtype">void</span> {</div>
-<div class="line">                          VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Connection to peer closed&quot;</span>;</div>
+<div class="line">                          <a class="code hl_define" href="Logger_8h.html#afc28ec91d066c96a3a139441e029f326">VLOG</a>(1) &lt;&lt; <span class="stringliteral">&quot;Connection to peer closed&quot;</span>;</div>
 <div class="line">                      });</div>
 <div class="line"> </div>
 <div class="line">echoClient.connect(...);</div>
@@ -1266,15 +1268,15 @@ Attaching the Callbacks to already existing Instances</h4>
 <div class="line">EchoServer echoServer;</div>
 <div class="line"> </div>
 <div class="line">echoServer.setOnConnect([] (SocketConnection* socketConnection) -&gt; <span class="keywordtype">void</span> {</div>
-<div class="line">    VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Connection to peer established&quot;</span>;</div>
+<div class="line">    <a class="code hl_define" href="Logger_8h.html#afc28ec91d066c96a3a139441e029f326">VLOG</a>(1) &lt;&lt; <span class="stringliteral">&quot;Connection to peer established&quot;</span>;</div>
 <div class="line">});</div>
 <div class="line"> </div>
 <div class="line">echoServer.setOnConnected([] (SocketConnection* socketConnection) -&gt; <span class="keywordtype">void</span> {</div>
-<div class="line">    VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Connection to peer ready to be used&quot;</span>;</div>
+<div class="line">    <a class="code hl_define" href="Logger_8h.html#afc28ec91d066c96a3a139441e029f326">VLOG</a>(1) &lt;&lt; <span class="stringliteral">&quot;Connection to peer ready to be used&quot;</span>;</div>
 <div class="line">});</div>
 <div class="line">    </div>
 <div class="line">echoServer.setOnDisconnected([] (SocketConnection* socketConnection) -&gt; <span class="keywordtype">void</span> {</div>
-<div class="line">    VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Connection to peer closed&quot;</span>;</div>
+<div class="line">    <a class="code hl_define" href="Logger_8h.html#afc28ec91d066c96a3a139441e029f326">VLOG</a>(1) &lt;&lt; <span class="stringliteral">&quot;Connection to peer closed&quot;</span>;</div>
 <div class="line">});</div>
 <div class="line"> </div>
 <div class="line">echoServer.listen(...);</div>
@@ -1286,15 +1288,15 @@ Attaching the Callbacks to already existing Instances</h4>
 <div class="line">EchoClient echoClient;</div>
 <div class="line"> </div>
 <div class="line">echoClient.setOnConnect([] (SocketConnection* socketConnection) -&gt; <span class="keywordtype">void</span> {</div>
-<div class="line">    VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Connection to peer established&quot;</span>;</div>
+<div class="line">    <a class="code hl_define" href="Logger_8h.html#afc28ec91d066c96a3a139441e029f326">VLOG</a>(1) &lt;&lt; <span class="stringliteral">&quot;Connection to peer established&quot;</span>;</div>
 <div class="line">});</div>
 <div class="line"> </div>
 <div class="line">echoClient.setOnConnected([] (SocketConnection* socketConnection) -&gt; <span class="keywordtype">void</span> {</div>
-<div class="line">    VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Connection to peer ready to be used&quot;</span>;</div>
+<div class="line">    <a class="code hl_define" href="Logger_8h.html#afc28ec91d066c96a3a139441e029f326">VLOG</a>(1) &lt;&lt; <span class="stringliteral">&quot;Connection to peer ready to be used&quot;</span>;</div>
 <div class="line">});</div>
 <div class="line">    </div>
 <div class="line">echoClient.setOnDisconnected([] (SocketConnection* socketConnection) -&gt; <span class="keywordtype">void</span> {</div>
-<div class="line">    VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Connection to peer closed&quot;</span>;</div>
+<div class="line">    <a class="code hl_define" href="Logger_8h.html#afc28ec91d066c96a3a139441e029f326">VLOG</a>(1) &lt;&lt; <span class="stringliteral">&quot;Connection to peer closed&quot;</span>;</div>
 <div class="line">});</div>
 <div class="line"> </div>
 <div class="line">echoClient.connect(...);</div>
@@ -2259,16 +2261,16 @@ Using More Than One Instance in an Application</h1>
 <div class="line">                           <span class="keyword">const</span> <a class="code hl_class" href="classcore_1_1socket_1_1State.html">core::socket::State</a>&amp; state) -&gt; <span class="keywordtype">void</span> {</div>
 <div class="line">        <span class="keywordflow">switch</span> (state) {</div>
 <div class="line">            <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a744e04217104f055ae728e8d884f25de">core::socket::State::OK</a>:</div>
-<div class="line">                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;EchoServerIn: listening on &#39;&quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
+<div class="line">                <a class="code hl_define" href="Logger_8h.html#afc28ec91d066c96a3a139441e029f326">VLOG</a>(1) &lt;&lt; <span class="stringliteral">&quot;EchoServerIn: listening on &#39;&quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
 <div class="line">                <span class="keywordflow">break</span>;</div>
 <div class="line">            <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a26b8a9154524cfbba2729255cb184331">core::socket::State::DISABLED</a>:</div>
-<div class="line">                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;EchoServerIn: disabled&quot;</span>;</div>
+<div class="line">                <a class="code hl_define" href="Logger_8h.html#afc28ec91d066c96a3a139441e029f326">VLOG</a>(1) &lt;&lt; <span class="stringliteral">&quot;EchoServerIn: disabled&quot;</span>;</div>
 <div class="line">                <span class="keywordflow">break</span>;</div>
 <div class="line">            <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a3dcc747a68a4c163fcf1c57d9852cab3">core::socket::State::ERROR</a>:</div>
-<div class="line">                LOG(ERROR) &lt;&lt; <span class="stringliteral">&quot;EchoServerIn: &quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; state.<a class="code hl_function" href="classcore_1_1socket_1_1State.html#a55b6abd55034b331fae4c9e085007dfa">what</a>();</div>
+<div class="line">                <a class="code hl_define" href="Logger_8h.html#aba7b09d6e8fbe414c23705ad24dde6ff">LOG</a>(ERROR) &lt;&lt; <span class="stringliteral">&quot;EchoServerIn: &quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; state.<a class="code hl_function" href="classcore_1_1socket_1_1State.html#a55b6abd55034b331fae4c9e085007dfa">what</a>();</div>
 <div class="line">                <span class="keywordflow">break</span>;</div>
 <div class="line">            <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a5d0a9047c96edac9ffd9cd12574328c0">core::socket::State::FATAL</a>:</div>
-<div class="line">                LOG(FATAL) &lt;&lt; <span class="stringliteral">&quot;EchoServerIn: &quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; state.<a class="code hl_function" href="classcore_1_1socket_1_1State.html#a55b6abd55034b331fae4c9e085007dfa">what</a>();</div>
+<div class="line">                <a class="code hl_define" href="Logger_8h.html#aba7b09d6e8fbe414c23705ad24dde6ff">LOG</a>(FATAL) &lt;&lt; <span class="stringliteral">&quot;EchoServerIn: &quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; state.<a class="code hl_function" href="classcore_1_1socket_1_1State.html#a55b6abd55034b331fae4c9e085007dfa">what</a>();</div>
 <div class="line">                <span class="keywordflow">break</span>;</div>
 <div class="line">        }</div>
 <div class="line">    });</div>
@@ -2282,16 +2284,16 @@ Using More Than One Instance in an Application</h1>
 <div class="line">                           <span class="keyword">const</span> <a class="code hl_class" href="classcore_1_1socket_1_1State.html">core::socket::State</a>&amp; state) -&gt; <span class="keywordtype">void</span> {</div>
 <div class="line">        <span class="keywordflow">switch</span> (state) {</div>
 <div class="line">            <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a744e04217104f055ae728e8d884f25de">core::socket::State::OK</a>:</div>
-<div class="line">                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;EchoServerUn: listening on &#39;&quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
+<div class="line">                <a class="code hl_define" href="Logger_8h.html#afc28ec91d066c96a3a139441e029f326">VLOG</a>(1) &lt;&lt; <span class="stringliteral">&quot;EchoServerUn: listening on &#39;&quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
 <div class="line">                <span class="keywordflow">break</span>;</div>
 <div class="line">            <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a26b8a9154524cfbba2729255cb184331">core::socket::State::DISABLED</a>:</div>
-<div class="line">                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;EchoServerUn: disabled&quot;</span>;</div>
+<div class="line">                <a class="code hl_define" href="Logger_8h.html#afc28ec91d066c96a3a139441e029f326">VLOG</a>(1) &lt;&lt; <span class="stringliteral">&quot;EchoServerUn: disabled&quot;</span>;</div>
 <div class="line">                <span class="keywordflow">break</span>;</div>
 <div class="line">            <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a3dcc747a68a4c163fcf1c57d9852cab3">core::socket::State::ERROR</a>:</div>
-<div class="line">                LOG(ERROR) &lt;&lt; <span class="stringliteral">&quot;EchoServerUn: &quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; state.<a class="code hl_function" href="classcore_1_1socket_1_1State.html#a55b6abd55034b331fae4c9e085007dfa">what</a>();</div>
+<div class="line">                <a class="code hl_define" href="Logger_8h.html#aba7b09d6e8fbe414c23705ad24dde6ff">LOG</a>(ERROR) &lt;&lt; <span class="stringliteral">&quot;EchoServerUn: &quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; state.<a class="code hl_function" href="classcore_1_1socket_1_1State.html#a55b6abd55034b331fae4c9e085007dfa">what</a>();</div>
 <div class="line">                <span class="keywordflow">break</span>;</div>
 <div class="line">            <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a5d0a9047c96edac9ffd9cd12574328c0">core::socket::State::FATAL</a>:</div>
-<div class="line">                LOG(FATAL) &lt;&lt; <span class="stringliteral">&quot;EchoServerUn: &quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; state.<a class="code hl_function" href="classcore_1_1socket_1_1State.html#a55b6abd55034b331fae4c9e085007dfa">what</a>();</div>
+<div class="line">                <a class="code hl_define" href="Logger_8h.html#aba7b09d6e8fbe414c23705ad24dde6ff">LOG</a>(FATAL) &lt;&lt; <span class="stringliteral">&quot;EchoServerUn: &quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; state.<a class="code hl_function" href="classcore_1_1socket_1_1State.html#a55b6abd55034b331fae4c9e085007dfa">what</a>();</div>
 <div class="line">                <span class="keywordflow">break</span>;</div>
 <div class="line">        }</div>
 <div class="line">    });</div>
@@ -2310,16 +2312,16 @@ Using More Than One Instance in an Application</h1>
 <div class="line">                           <span class="keyword">const</span> <a class="code hl_class" href="classcore_1_1socket_1_1State.html">core::socket::State</a>&amp; state) -&gt; <span class="keywordtype">void</span> {</div>
 <div class="line">        <span class="keywordflow">switch</span> (state) {</div>
 <div class="line">            <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a744e04217104f055ae728e8d884f25de">core::socket::State::OK</a>:</div>
-<div class="line">                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;EchoServerRc: listening on &#39;&quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
+<div class="line">                <a class="code hl_define" href="Logger_8h.html#afc28ec91d066c96a3a139441e029f326">VLOG</a>(1) &lt;&lt; <span class="stringliteral">&quot;EchoServerRc: listening on &#39;&quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
 <div class="line">                <span class="keywordflow">break</span>;</div>
 <div class="line">            <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a26b8a9154524cfbba2729255cb184331">core::socket::State::DISABLED</a>:</div>
-<div class="line">                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;EchoServerRc: disabled&quot;</span>;</div>
+<div class="line">                <a class="code hl_define" href="Logger_8h.html#afc28ec91d066c96a3a139441e029f326">VLOG</a>(1) &lt;&lt; <span class="stringliteral">&quot;EchoServerRc: disabled&quot;</span>;</div>
 <div class="line">                <span class="keywordflow">break</span>;</div>
 <div class="line">            <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a3dcc747a68a4c163fcf1c57d9852cab3">core::socket::State::ERROR</a>:</div>
-<div class="line">                LOG(ERROR) &lt;&lt; <span class="stringliteral">&quot;EchoServerRc: &quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; state.<a class="code hl_function" href="classcore_1_1socket_1_1State.html#a55b6abd55034b331fae4c9e085007dfa">what</a>();</div>
+<div class="line">                <a class="code hl_define" href="Logger_8h.html#aba7b09d6e8fbe414c23705ad24dde6ff">LOG</a>(ERROR) &lt;&lt; <span class="stringliteral">&quot;EchoServerRc: &quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; state.<a class="code hl_function" href="classcore_1_1socket_1_1State.html#a55b6abd55034b331fae4c9e085007dfa">what</a>();</div>
 <div class="line">                <span class="keywordflow">break</span>;</div>
 <div class="line">            <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a5d0a9047c96edac9ffd9cd12574328c0">core::socket::State::FATAL</a>:</div>
-<div class="line">                LOG(FATAL) &lt;&lt; <span class="stringliteral">&quot;EchoServerRc: &quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; state.<a class="code hl_function" href="classcore_1_1socket_1_1State.html#a55b6abd55034b331fae4c9e085007dfa">what</a>();</div>
+<div class="line">                <a class="code hl_define" href="Logger_8h.html#aba7b09d6e8fbe414c23705ad24dde6ff">LOG</a>(FATAL) &lt;&lt; <span class="stringliteral">&quot;EchoServerRc: &quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; state.<a class="code hl_function" href="classcore_1_1socket_1_1State.html#a55b6abd55034b331fae4c9e085007dfa">what</a>();</div>
 <div class="line">                <span class="keywordflow">break</span>;</div>
 <div class="line">        }</div>
 <div class="line">    });</div>
@@ -2343,16 +2345,16 @@ Using More Than One Instance in an Application</h1>
 <div class="line">                            <span class="keyword">const</span> <a class="code hl_class" href="classcore_1_1socket_1_1State.html">core::socket::State</a>&amp; state) -&gt; <span class="keywordtype">void</span> {</div>
 <div class="line">        <span class="keywordflow">switch</span> (state) {</div>
 <div class="line">            <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a744e04217104f055ae728e8d884f25de">core::socket::State::OK</a>:</div>
-<div class="line">                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;EchoClientIn: connected to &#39;&quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
+<div class="line">                <a class="code hl_define" href="Logger_8h.html#afc28ec91d066c96a3a139441e029f326">VLOG</a>(1) &lt;&lt; <span class="stringliteral">&quot;EchoClientIn: connected to &#39;&quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
 <div class="line">                <span class="keywordflow">break</span>;</div>
 <div class="line">            <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a26b8a9154524cfbba2729255cb184331">core::socket::State::DISABLED</a>:</div>
-<div class="line">                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;EchoClientIn: disabled&quot;</span>;</div>
+<div class="line">                <a class="code hl_define" href="Logger_8h.html#afc28ec91d066c96a3a139441e029f326">VLOG</a>(1) &lt;&lt; <span class="stringliteral">&quot;EchoClientIn: disabled&quot;</span>;</div>
 <div class="line">                <span class="keywordflow">break</span>;</div>
 <div class="line">            <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a3dcc747a68a4c163fcf1c57d9852cab3">core::socket::State::ERROR</a>:</div>
-<div class="line">                LOG(ERROR) &lt;&lt; <span class="stringliteral">&quot;EchoClientIn: &quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; state.<a class="code hl_function" href="classcore_1_1socket_1_1State.html#a55b6abd55034b331fae4c9e085007dfa">what</a>();</div>
+<div class="line">                <a class="code hl_define" href="Logger_8h.html#aba7b09d6e8fbe414c23705ad24dde6ff">LOG</a>(ERROR) &lt;&lt; <span class="stringliteral">&quot;EchoClientIn: &quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; state.<a class="code hl_function" href="classcore_1_1socket_1_1State.html#a55b6abd55034b331fae4c9e085007dfa">what</a>();</div>
 <div class="line">                <span class="keywordflow">break</span>;</div>
 <div class="line">            <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a5d0a9047c96edac9ffd9cd12574328c0">core::socket::State::FATAL</a>:</div>
-<div class="line">                LOG(FATAL) &lt;&lt; <span class="stringliteral">&quot;EchoClientIn: &quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; state.<a class="code hl_function" href="classcore_1_1socket_1_1State.html#a55b6abd55034b331fae4c9e085007dfa">what</a>();</div>
+<div class="line">                <a class="code hl_define" href="Logger_8h.html#aba7b09d6e8fbe414c23705ad24dde6ff">LOG</a>(FATAL) &lt;&lt; <span class="stringliteral">&quot;EchoClientIn: &quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; state.<a class="code hl_function" href="classcore_1_1socket_1_1State.html#a55b6abd55034b331fae4c9e085007dfa">what</a>();</div>
 <div class="line">                <span class="keywordflow">break</span>;</div>
 <div class="line">        }</div>
 <div class="line">    });</div>
@@ -2367,16 +2369,16 @@ Using More Than One Instance in an Application</h1>
 <div class="line">                            <span class="keyword">const</span> <a class="code hl_class" href="classcore_1_1socket_1_1State.html">core::socket::State</a>&amp; state) -&gt; <span class="keywordtype">void</span> {</div>
 <div class="line">        <span class="keywordflow">switch</span> (state) {</div>
 <div class="line">            <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a744e04217104f055ae728e8d884f25de">core::socket::State::OK</a>:</div>
-<div class="line">                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;EchoClientUn: connected to &#39;&quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
+<div class="line">                <a class="code hl_define" href="Logger_8h.html#afc28ec91d066c96a3a139441e029f326">VLOG</a>(1) &lt;&lt; <span class="stringliteral">&quot;EchoClientUn: connected to &#39;&quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
 <div class="line">                <span class="keywordflow">break</span>;</div>
 <div class="line">            <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a26b8a9154524cfbba2729255cb184331">core::socket::State::DISABLED</a>:</div>
-<div class="line">                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;EchoClientUn: disabled&quot;</span>;</div>
+<div class="line">                <a class="code hl_define" href="Logger_8h.html#afc28ec91d066c96a3a139441e029f326">VLOG</a>(1) &lt;&lt; <span class="stringliteral">&quot;EchoClientUn: disabled&quot;</span>;</div>
 <div class="line">                <span class="keywordflow">break</span>;</div>
 <div class="line">            <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a3dcc747a68a4c163fcf1c57d9852cab3">core::socket::State::ERROR</a>:</div>
-<div class="line">                LOG(ERROR) &lt;&lt; <span class="stringliteral">&quot;EchoClientUn: &quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; state.<a class="code hl_function" href="classcore_1_1socket_1_1State.html#a55b6abd55034b331fae4c9e085007dfa">what</a>();</div>
+<div class="line">                <a class="code hl_define" href="Logger_8h.html#aba7b09d6e8fbe414c23705ad24dde6ff">LOG</a>(ERROR) &lt;&lt; <span class="stringliteral">&quot;EchoClientUn: &quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; state.<a class="code hl_function" href="classcore_1_1socket_1_1State.html#a55b6abd55034b331fae4c9e085007dfa">what</a>();</div>
 <div class="line">                <span class="keywordflow">break</span>;</div>
 <div class="line">            <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a5d0a9047c96edac9ffd9cd12574328c0">core::socket::State::FATAL</a>:</div>
-<div class="line">                LOG(FATAL) &lt;&lt; <span class="stringliteral">&quot;EchoClientUn: &quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; state.<a class="code hl_function" href="classcore_1_1socket_1_1State.html#a55b6abd55034b331fae4c9e085007dfa">what</a>();</div>
+<div class="line">                <a class="code hl_define" href="Logger_8h.html#aba7b09d6e8fbe414c23705ad24dde6ff">LOG</a>(FATAL) &lt;&lt; <span class="stringliteral">&quot;EchoClientUn: &quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; state.<a class="code hl_function" href="classcore_1_1socket_1_1State.html#a55b6abd55034b331fae4c9e085007dfa">what</a>();</div>
 <div class="line">                <span class="keywordflow">break</span>;</div>
 <div class="line">        }</div>
 <div class="line">    });</div>
@@ -2397,16 +2399,16 @@ Using More Than One Instance in an Application</h1>
 <div class="line">                            <span class="keyword">const</span> <a class="code hl_class" href="classcore_1_1socket_1_1State.html">core::socket::State</a>&amp; state) -&gt; <span class="keywordtype">void</span> {</div>
 <div class="line">        <span class="keywordflow">switch</span> (state) {</div>
 <div class="line">            <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a744e04217104f055ae728e8d884f25de">core::socket::State::OK</a>:</div>
-<div class="line">                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;EchoClientRc: connected to &#39;&quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
+<div class="line">                <a class="code hl_define" href="Logger_8h.html#afc28ec91d066c96a3a139441e029f326">VLOG</a>(1) &lt;&lt; <span class="stringliteral">&quot;EchoClientRc: connected to &#39;&quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
 <div class="line">                <span class="keywordflow">break</span>;</div>
 <div class="line">            <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a26b8a9154524cfbba2729255cb184331">core::socket::State::DISABLED</a>:</div>
-<div class="line">                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;EchoClientRc: disabled&quot;</span>;</div>
+<div class="line">                <a class="code hl_define" href="Logger_8h.html#afc28ec91d066c96a3a139441e029f326">VLOG</a>(1) &lt;&lt; <span class="stringliteral">&quot;EchoClientRc: disabled&quot;</span>;</div>
 <div class="line">                <span class="keywordflow">break</span>;</div>
 <div class="line">            <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a3dcc747a68a4c163fcf1c57d9852cab3">core::socket::State::ERROR</a>:</div>
-<div class="line">                LOG(ERROR) &lt;&lt; <span class="stringliteral">&quot;EchoClientRc: &quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; state.<a class="code hl_function" href="classcore_1_1socket_1_1State.html#a55b6abd55034b331fae4c9e085007dfa">what</a>();</div>
+<div class="line">                <a class="code hl_define" href="Logger_8h.html#aba7b09d6e8fbe414c23705ad24dde6ff">LOG</a>(ERROR) &lt;&lt; <span class="stringliteral">&quot;EchoClientRc: &quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; state.<a class="code hl_function" href="classcore_1_1socket_1_1State.html#a55b6abd55034b331fae4c9e085007dfa">what</a>();</div>
 <div class="line">                <span class="keywordflow">break</span>;</div>
 <div class="line">            <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a5d0a9047c96edac9ffd9cd12574328c0">core::socket::State::FATAL</a>:</div>
-<div class="line">                LOG(FATAL) &lt;&lt; <span class="stringliteral">&quot;EchoClientRc: &quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; state.<a class="code hl_function" href="classcore_1_1socket_1_1State.html#a55b6abd55034b331fae4c9e085007dfa">what</a>();</div>
+<div class="line">                <a class="code hl_define" href="Logger_8h.html#aba7b09d6e8fbe414c23705ad24dde6ff">LOG</a>(FATAL) &lt;&lt; <span class="stringliteral">&quot;EchoClientRc: &quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; state.<a class="code hl_function" href="classcore_1_1socket_1_1State.html#a55b6abd55034b331fae4c9e085007dfa">what</a>();</div>
 <div class="line">                <span class="keywordflow">break</span>;</div>
 <div class="line">        }</div>
 <div class="line">    });</div>
@@ -2467,23 +2469,23 @@ HTTP/S Web-Server for Static HTML-Pages</h2>
 <div class="line">    configLegacyApp.<a class="code hl_function" href="classutils_1_1SubCommand.html#a1c4830f530e6b8e5a8117b5a9ba11066">required</a>(legacyHtmlRoot);</div>
 <div class="line"> </div>
 <div class="line">    legacyApp.setOnConnected([legacyApp, legacyHtmlRoot](SocketConnection* socketConnection) -&gt; <span class="keywordtype">void</span> { <span class="comment">// onConnect</span></div>
-<div class="line">        LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;OnConnected &quot;</span> &lt;&lt; legacyApp.getConfig().getInstanceName();</div>
+<div class="line">        <a class="code hl_define" href="Logger_8h.html#aba7b09d6e8fbe414c23705ad24dde6ff">LOG</a>(INFO) &lt;&lt; <span class="stringliteral">&quot;OnConnected &quot;</span> &lt;&lt; legacyApp.getConfig().getInstanceName();</div>
 <div class="line">        legacyApp.use(<a class="code hl_class" href="classexpress_1_1middleware_1_1StaticMiddleware.html">express::middleware::StaticMiddleware</a>(legacyHtmlRoot-&gt;as&lt;std::string&gt;()));</div>
 <div class="line">    });</div>
 <div class="line"> </div>
 <div class="line">    legacyApp.listen(8080, [](<span class="keyword">const</span> SocketAddressRc&amp; socketAddress, <span class="keyword">const</span> <a class="code hl_class" href="classcore_1_1socket_1_1State.html">core::socket::State</a>&amp; state) -&gt; <span class="keywordtype">void</span> {</div>
 <div class="line">        <span class="keywordflow">switch</span> (state) {</div>
 <div class="line">            <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a744e04217104f055ae728e8d884f25de">core::socket::State::OK</a>:</div>
-<div class="line">                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;LegacyWebApp: listening on &#39;&quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
+<div class="line">                <a class="code hl_define" href="Logger_8h.html#afc28ec91d066c96a3a139441e029f326">VLOG</a>(1) &lt;&lt; <span class="stringliteral">&quot;LegacyWebApp: listening on &#39;&quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
 <div class="line">                <span class="keywordflow">break</span>;</div>
 <div class="line">            <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a26b8a9154524cfbba2729255cb184331">core::socket::State::DISABLED</a>:</div>
-<div class="line">                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;LegacyWebApp: disabled&quot;</span>;</div>
+<div class="line">                <a class="code hl_define" href="Logger_8h.html#afc28ec91d066c96a3a139441e029f326">VLOG</a>(1) &lt;&lt; <span class="stringliteral">&quot;LegacyWebApp: disabled&quot;</span>;</div>
 <div class="line">                <span class="keywordflow">break</span>;</div>
 <div class="line">            <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a3dcc747a68a4c163fcf1c57d9852cab3">core::socket::State::ERROR</a>:</div>
-<div class="line">                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;LegacyWebApp: non critical error occurred&quot;</span>;</div>
+<div class="line">                <a class="code hl_define" href="Logger_8h.html#afc28ec91d066c96a3a139441e029f326">VLOG</a>(1) &lt;&lt; <span class="stringliteral">&quot;LegacyWebApp: non critical error occurred&quot;</span>;</div>
 <div class="line">                <span class="keywordflow">break</span>;</div>
 <div class="line">            <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a5d0a9047c96edac9ffd9cd12574328c0">core::socket::State::FATAL</a>:</div>
-<div class="line">                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;LegacyWebApp: critical error occurred&quot;</span>;</div>
+<div class="line">                <a class="code hl_define" href="Logger_8h.html#afc28ec91d066c96a3a139441e029f326">VLOG</a>(1) &lt;&lt; <span class="stringliteral">&quot;LegacyWebApp: critical error occurred&quot;</span>;</div>
 <div class="line">                <span class="keywordflow">break</span>;</div>
 <div class="line">        }</div>
 <div class="line">    });</div>
@@ -2500,7 +2502,7 @@ HTTP/S Web-Server for Static HTML-Pages</h2>
 <div class="line">    configTlsApp.<a class="code hl_function" href="classutils_1_1SubCommand.html#a1c4830f530e6b8e5a8117b5a9ba11066">required</a>(tlsHtmlRoot);</div>
 <div class="line"> </div>
 <div class="line">    tlsApp.setOnConnected([tlsApp, tlsHtmlRoot](SocketConnection* socketConnection) -&gt; <span class="keywordtype">void</span> { <span class="comment">// onConnect</span></div>
-<div class="line">        LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;OnConnected &quot;</span> &lt;&lt; tlsApp.getConfig().getInstanceName();</div>
+<div class="line">        <a class="code hl_define" href="Logger_8h.html#aba7b09d6e8fbe414c23705ad24dde6ff">LOG</a>(INFO) &lt;&lt; <span class="stringliteral">&quot;OnConnected &quot;</span> &lt;&lt; tlsApp.getConfig().getInstanceName();</div>
 <div class="line">        tlsApp.use(<a class="code hl_class" href="classexpress_1_1middleware_1_1StaticMiddleware.html">express::middleware::StaticMiddleware</a>(tlsHtmlRoot-&gt;as&lt;std::string&gt;()));</div>
 <div class="line">    });</div>
 <div class="line"> </div>
@@ -2511,16 +2513,16 @@ HTTP/S Web-Server for Static HTML-Pages</h2>
 <div class="line">    tlsApp.listen(8088, [](<span class="keyword">const</span> SocketAddressRc&amp; socketAddress, <span class="keyword">const</span> <a class="code hl_class" href="classcore_1_1socket_1_1State.html">core::socket::State</a>&amp; state) -&gt; <span class="keywordtype">void</span> {</div>
 <div class="line">        <span class="keywordflow">switch</span> (state) {</div>
 <div class="line">            <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a744e04217104f055ae728e8d884f25de">core::socket::State::OK</a>:</div>
-<div class="line">                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;TLSWebApp: listening on &#39;&quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
+<div class="line">                <a class="code hl_define" href="Logger_8h.html#afc28ec91d066c96a3a139441e029f326">VLOG</a>(1) &lt;&lt; <span class="stringliteral">&quot;TLSWebApp: listening on &#39;&quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
 <div class="line">                <span class="keywordflow">break</span>;</div>
 <div class="line">            <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a26b8a9154524cfbba2729255cb184331">core::socket::State::DISABLED</a>:</div>
-<div class="line">                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;TLSWebApp: disabled&quot;</span>;</div>
+<div class="line">                <a class="code hl_define" href="Logger_8h.html#afc28ec91d066c96a3a139441e029f326">VLOG</a>(1) &lt;&lt; <span class="stringliteral">&quot;TLSWebApp: disabled&quot;</span>;</div>
 <div class="line">                <span class="keywordflow">break</span>;</div>
 <div class="line">            <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a3dcc747a68a4c163fcf1c57d9852cab3">core::socket::State::ERROR</a>:</div>
-<div class="line">                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;TLSWebApp: non critical error occurred&quot;</span>;</div>
+<div class="line">                <a class="code hl_define" href="Logger_8h.html#afc28ec91d066c96a3a139441e029f326">VLOG</a>(1) &lt;&lt; <span class="stringliteral">&quot;TLSWebApp: non critical error occurred&quot;</span>;</div>
 <div class="line">                <span class="keywordflow">break</span>;</div>
 <div class="line">            <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a5d0a9047c96edac9ffd9cd12574328c0">core::socket::State::FATAL</a>:</div>
-<div class="line">                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;TLSWebApp: critical error occurred&quot;</span>;</div>
+<div class="line">                <a class="code hl_define" href="Logger_8h.html#afc28ec91d066c96a3a139441e029f326">VLOG</a>(1) &lt;&lt; <span class="stringliteral">&quot;TLSWebApp: critical error occurred&quot;</span>;</div>
 <div class="line">                <span class="keywordflow">break</span>;</div>
 <div class="line">        }</div>
 <div class="line">    });</div>
@@ -2533,7 +2535,7 @@ HTTP/S Web-Server for Static HTML-Pages</h2>
 <div class="ttc" id="aclassexpress_1_1WebApp_html_a54e6910c9466c61d0b217490b7d9bb5a"><div class="ttname"><a href="classexpress_1_1WebApp.html#a54e6910c9466c61d0b217490b7d9bb5a">express::WebApp::start</a></div><div class="ttdeci">static int start(const utils::Timeval &amp;timeOut={LONG_MAX, 0})</div><div class="ttdef"><b>Definition</b> <a href="WebApp_8cpp_source.html#l00060">WebApp.cpp:60</a></div></div>
 <div class="ttc" id="aclassexpress_1_1middleware_1_1StaticMiddleware_html"><div class="ttname"><a href="classexpress_1_1middleware_1_1StaticMiddleware.html">express::middleware::StaticMiddleware</a></div><div class="ttdef"><b>Definition</b> <a href="StaticMiddleware_8h_source.html#l00059">StaticMiddleware.h:59</a></div></div>
 <div class="ttc" id="aclassnet_1_1config_1_1ConfigSection_html"><div class="ttname"><a href="classnet_1_1config_1_1ConfigSection.html">net::config::ConfigSection</a></div><div class="ttdef"><b>Definition</b> <a href="ConfigSection_8h_source.html#l00061">ConfigSection.h:61</a></div></div>
-<div class="ttc" id="aclassutils_1_1SubCommand_html_a1c4830f530e6b8e5a8117b5a9ba11066"><div class="ttname"><a href="classutils_1_1SubCommand.html#a1c4830f530e6b8e5a8117b5a9ba11066">utils::SubCommand::required</a></div><div class="ttdeci">SubCommand * required(bool required=true, bool force=true)</div><div class="ttdef"><b>Definition</b> <a href="SubCommand_8cpp_source.html#l00231">SubCommand.cpp:231</a></div></div>
+<div class="ttc" id="aclassutils_1_1SubCommand_html_a1c4830f530e6b8e5a8117b5a9ba11066"><div class="ttname"><a href="classutils_1_1SubCommand.html#a1c4830f530e6b8e5a8117b5a9ba11066">utils::SubCommand::required</a></div><div class="ttdeci">SubCommand * required(bool required=true, bool force=true)</div><div class="ttdef"><b>Definition</b> <a href="SubCommand_8cpp_source.html#l00232">SubCommand.cpp:232</a></div></div>
 <div class="ttc" id="alegacy_2in_2WebApp_8h_html"><div class="ttname"><a href="legacy_2in_2WebApp_8h.html">WebApp.h</a></div></div>
 <div class="ttc" id="anamespaceexpress_1_1legacy_1_1in_html_ae117911fb1d6811868691d20e494b046"><div class="ttname"><a href="namespaceexpress_1_1legacy_1_1in.html#ae117911fb1d6811868691d20e494b046">express::legacy::in::WebApp</a></div><div class="ttdeci">WebAppT&lt; web::http::legacy::in::Server &gt; WebApp</div><div class="ttdef"><b>Definition</b> <a href="legacy_2in_2WebApp_8h_source.html#l00056">WebApp.h:56</a></div></div>
 <div class="ttc" id="anamespaceexpress_1_1tls_1_1in_html_a7fcb8097ef9b37166901c5561ccabd8f"><div class="ttname"><a href="namespaceexpress_1_1tls_1_1in.html#a7fcb8097ef9b37166901c5561ccabd8f">express::tls::in::WebApp</a></div><div class="ttdeci">WebAppT&lt; web::http::tls::in::Server &gt; WebApp</div><div class="ttdef"><b>Definition</b> <a href="tls_2in_2WebApp_8h_source.html#l00054">WebApp.h:54</a></div></div>
@@ -2604,16 +2606,16 @@ Receive Data via HTTP-Post Request</h2>
 <div class="line">    legacyApp.listen(8080, [](<span class="keyword">const</span> SocketAddressRc&amp; socketAddress, <span class="keyword">const</span> <a class="code hl_class" href="classcore_1_1socket_1_1State.html">core::socket::State</a>&amp; state) -&gt; <span class="keywordtype">void</span> {</div>
 <div class="line">        <span class="keywordflow">switch</span> (state) {</div>
 <div class="line">            <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a744e04217104f055ae728e8d884f25de">core::socket::State::OK</a>:</div>
-<div class="line">                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;LegacyWebApp: listening on &#39;&quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
+<div class="line">                <a class="code hl_define" href="Logger_8h.html#afc28ec91d066c96a3a139441e029f326">VLOG</a>(1) &lt;&lt; <span class="stringliteral">&quot;LegacyWebApp: listening on &#39;&quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
 <div class="line">                <span class="keywordflow">break</span>;</div>
 <div class="line">            <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a26b8a9154524cfbba2729255cb184331">core::socket::State::DISABLED</a>:</div>
-<div class="line">                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;LegacyWebApp: disabled&quot;</span>;</div>
+<div class="line">                <a class="code hl_define" href="Logger_8h.html#afc28ec91d066c96a3a139441e029f326">VLOG</a>(1) &lt;&lt; <span class="stringliteral">&quot;LegacyWebApp: disabled&quot;</span>;</div>
 <div class="line">                <span class="keywordflow">break</span>;</div>
 <div class="line">            <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a3dcc747a68a4c163fcf1c57d9852cab3">core::socket::State::ERROR</a>:</div>
-<div class="line">                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;LegacyWebApp: non critical error occurred&quot;</span>;</div>
+<div class="line">                <a class="code hl_define" href="Logger_8h.html#afc28ec91d066c96a3a139441e029f326">VLOG</a>(1) &lt;&lt; <span class="stringliteral">&quot;LegacyWebApp: non critical error occurred&quot;</span>;</div>
 <div class="line">                <span class="keywordflow">break</span>;</div>
 <div class="line">            <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a5d0a9047c96edac9ffd9cd12574328c0">core::socket::State::FATAL</a>:</div>
-<div class="line">                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;LegacyWebApp: critical error occurred&quot;</span>;</div>
+<div class="line">                <a class="code hl_define" href="Logger_8h.html#afc28ec91d066c96a3a139441e029f326">VLOG</a>(1) &lt;&lt; <span class="stringliteral">&quot;LegacyWebApp: critical error occurred&quot;</span>;</div>
 <div class="line">                <span class="keywordflow">break</span>;</div>
 <div class="line">        }</div>
 <div class="line">    });</div>
@@ -2632,16 +2634,16 @@ Receive Data via HTTP-Post Request</h2>
 <div class="line">    tlsApp.listen(8088, [](<span class="keyword">const</span> SocketAddressRc&amp; socketAddress, <span class="keyword">const</span> <a class="code hl_class" href="classcore_1_1socket_1_1State.html">core::socket::State</a>&amp; state) -&gt; <span class="keywordtype">void</span> {</div>
 <div class="line">        <span class="keywordflow">switch</span> (state) {</div>
 <div class="line">            <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a744e04217104f055ae728e8d884f25de">core::socket::State::OK</a>:</div>
-<div class="line">                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;TLSWebApp: listening on &#39;&quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
+<div class="line">                <a class="code hl_define" href="Logger_8h.html#afc28ec91d066c96a3a139441e029f326">VLOG</a>(1) &lt;&lt; <span class="stringliteral">&quot;TLSWebApp: listening on &#39;&quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
 <div class="line">                <span class="keywordflow">break</span>;</div>
 <div class="line">            <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a26b8a9154524cfbba2729255cb184331">core::socket::State::DISABLED</a>:</div>
-<div class="line">                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;TLSWebApp: disabled&quot;</span>;</div>
+<div class="line">                <a class="code hl_define" href="Logger_8h.html#afc28ec91d066c96a3a139441e029f326">VLOG</a>(1) &lt;&lt; <span class="stringliteral">&quot;TLSWebApp: disabled&quot;</span>;</div>
 <div class="line">                <span class="keywordflow">break</span>;</div>
 <div class="line">            <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a3dcc747a68a4c163fcf1c57d9852cab3">core::socket::State::ERROR</a>:</div>
-<div class="line">                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;TLSWebApp: non critical error occurred&quot;</span>;</div>
+<div class="line">                <a class="code hl_define" href="Logger_8h.html#afc28ec91d066c96a3a139441e029f326">VLOG</a>(1) &lt;&lt; <span class="stringliteral">&quot;TLSWebApp: non critical error occurred&quot;</span>;</div>
 <div class="line">                <span class="keywordflow">break</span>;</div>
 <div class="line">            <span class="keywordflow">case</span> <a class="code hl_variable" href="classcore_1_1socket_1_1State.html#a5d0a9047c96edac9ffd9cd12574328c0">core::socket::State::FATAL</a>:</div>
-<div class="line">                VLOG(1) &lt;&lt; <span class="stringliteral">&quot;TLSWebApp: critical error occurred&quot;</span>;</div>
+<div class="line">                <a class="code hl_define" href="Logger_8h.html#afc28ec91d066c96a3a139441e029f326">VLOG</a>(1) &lt;&lt; <span class="stringliteral">&quot;TLSWebApp: critical error occurred&quot;</span>;</div>
 <div class="line">                <span class="keywordflow">break</span>;</div>
 <div class="line">        }</div>
 <div class="line">    });</div>

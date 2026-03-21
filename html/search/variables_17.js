@@ -5,9 +5,10 @@ var searchData=
   ['willqos_2',['willQoS',['../classiot_1_1mqtt__fast_1_1packets_1_1Connect.html#acb01ac4155a8669f38086719796a8a26',1,'iot::mqtt_fast::packets::Connect::willQoS'],['../classiot_1_1mqtt_1_1packets_1_1Connect.html#a408b1ac88aa6e7acd3267d26be3e523b',1,'iot::mqtt::packets::Connect::willQoS'],['../classiot_1_1mqtt_1_1server_1_1Mqtt.html#a701d3fe480dbe5daf74f2f47719a9975',1,'iot::mqtt::server::Mqtt::willQoS']]],
   ['willretain_3',['willRetain',['../classiot_1_1mqtt__fast_1_1packets_1_1Connect.html#ad9a3f8626a1062e8c8862523a0abb0e4',1,'iot::mqtt_fast::packets::Connect::willRetain'],['../classiot_1_1mqtt_1_1packets_1_1Connect.html#a8c950847d8626c8bd6e156944d102c7b',1,'iot::mqtt::packets::Connect::willRetain'],['../classiot_1_1mqtt_1_1server_1_1Mqtt.html#af23b0b3fee5fa118d412407e3eab3d04',1,'iot::mqtt::server::Mqtt::willRetain']]],
   ['willtopic_4',['willTopic',['../classiot_1_1mqtt__fast_1_1packets_1_1Connect.html#a18a99a9fdb90d969ffbd0f3a1beab055',1,'iot::mqtt_fast::packets::Connect::willTopic'],['../classiot_1_1mqtt_1_1packets_1_1Connect.html#a91c94484459461def1de1727bd02ba89',1,'iot::mqtt::packets::Connect::willTopic'],['../classiot_1_1mqtt_1_1server_1_1Mqtt.html#acef92eabd8b8f3c640dc62fbfb9a136e',1,'iot::mqtt::server::Mqtt::willTopic']]],
-  ['writeblocksizeopt_5',['writeBlockSizeOpt',['../classnet_1_1config_1_1ConfigConnection.html#a89bff9147ab75ecb81395fe28b72e8e9',1,'net::config::ConfigConnection']]],
-  ['writebuffer_6',['writeBuffer',['../classcore_1_1pipe_1_1PipeSource.html#a43492505e91c1e2886552595985d38f2',1,'core::pipe::PipeSource']]],
-  ['writeconfigopt_7',['writeConfigOpt',['../classutils_1_1ConfigRoot.html#aa65adc4ab32fe1e76bff994e1b48f2dc',1,'utils::ConfigRoot']]],
-  ['writepuffer_8',['writePuffer',['../classcore_1_1socket_1_1stream_1_1SocketWriter.html#a7e551f8894cd5e8b8dad84fef1ddb6b8',1,'core::socket::stream::SocketWriter']]],
-  ['writetimeoutopt_9',['writeTimeoutOpt',['../classnet_1_1config_1_1ConfigConnection.html#a7106fa21c67dfeb3fe640b2d3f76e381',1,'net::config::ConfigConnection']]]
+  ['witherrno_5',['withErrno',['../classlogger_1_1LogMessage.html#a01ae6a8fc1a09d4f954249e4b5c81602',1,'logger::LogMessage']]],
+  ['writeblocksizeopt_6',['writeBlockSizeOpt',['../classnet_1_1config_1_1ConfigConnection.html#a89bff9147ab75ecb81395fe28b72e8e9',1,'net::config::ConfigConnection']]],
+  ['writebuffer_7',['writeBuffer',['../classcore_1_1pipe_1_1PipeSource.html#a43492505e91c1e2886552595985d38f2',1,'core::pipe::PipeSource']]],
+  ['writeconfigopt_8',['writeConfigOpt',['../classutils_1_1ConfigRoot.html#aa65adc4ab32fe1e76bff994e1b48f2dc',1,'utils::ConfigRoot']]],
+  ['writepuffer_9',['writePuffer',['../classcore_1_1socket_1_1stream_1_1SocketWriter.html#a7e551f8894cd5e8b8dad84fef1ddb6b8',1,'core::socket::stream::SocketWriter']]],
+  ['writetimeoutopt_10',['writeTimeoutOpt',['../classnet_1_1config_1_1ConfigConnection.html#a7106fa21c67dfeb3fe640b2d3f76e381',1,'net::config::ConfigConnection']]]
 ];

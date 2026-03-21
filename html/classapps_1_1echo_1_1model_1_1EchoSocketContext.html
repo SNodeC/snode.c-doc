@@ -286,20 +286,21 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="EchoSocketContext_8cpp_source.html#l00059">59</a> of file <a class="el" href="EchoSocketContext_8cpp_source.html">EchoSocketContext.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   59</span>                                        {</div>
-<div class="line"><span class="lineno">   60</span>        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Echo connected&quot;</span>;</div>
+<div class="line"><span class="lineno">   60</span>        <a class="code hl_define" href="Logger_8h.html#afc28ec91d066c96a3a139441e029f326">VLOG</a>(1) &lt;&lt; <span class="stringliteral">&quot;Echo connected&quot;</span>;</div>
 <div class="line"><span class="lineno">   61</span> </div>
 <div class="line"><span class="lineno">   62</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#aff211343268758bb0f913638ad346d9a">role</a> == <a class="code hl_enumvalue" href="#af2f207a1b7dd61a01a7a1dc716070edbaef10c650df47bffd6399e5e78da2a9b1">Role::CLIENT</a>) {</div>
 <div class="line"><span class="lineno">   63</span>            <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a7e80affcdada3ef5f1c52c283d65a89c">sendToPeer</a>(<span class="stringliteral">&quot;Hello peer! Nice to see you!!!&quot;</span>);</div>
 <div class="line"><span class="lineno">   64</span>        }</div>
 <div class="line"><span class="lineno">   65</span>    }</div>
+<div class="ttc" id="aLogger_8h_html_afc28ec91d066c96a3a139441e029f326"><div class="ttname"><a href="Logger_8h.html#afc28ec91d066c96a3a139441e029f326">VLOG</a></div><div class="ttdeci">#define VLOG(level)</div><div class="ttdef"><b>Definition</b> <a href="Logger_8h_source.html#l00164">Logger.h:164</a></div></div>
 <div class="ttc" id="aclassapps_1_1echo_1_1model_1_1EchoSocketContext_html_af2f207a1b7dd61a01a7a1dc716070edbaef10c650df47bffd6399e5e78da2a9b1"><div class="ttname"><a href="#af2f207a1b7dd61a01a7a1dc716070edbaef10c650df47bffd6399e5e78da2a9b1">apps::echo::model::EchoSocketContext::Role::CLIENT</a></div><div class="ttdeci">@ CLIENT</div><div class="ttdef"><b>Definition</b> <a href="EchoSocketContext_8h_source.html#l00062">EchoSocketContext.h:62</a></div></div>
 <div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketContext_html_a7e80affcdada3ef5f1c52c283d65a89c"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a7e80affcdada3ef5f1c52c283d65a89c">core::socket::stream::SocketContext::sendToPeer</a></div><div class="ttdeci">void sendToPeer(const char *chunk, std::size_t chunkLen) const final</div><div class="ttdef"><b>Definition</b> <a href="core_2socket_2stream_2SocketContext_8cpp_source.html#l00069">SocketContext.cpp:69</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="EchoSocketContext_8h_source.html#l00062">CLIENT</a>, <a class="el" href="EchoSocketContext_8h_source.html#l00074">role</a>, and <a class="el" href="core_2socket_2SocketContext_8cpp_source.html#l00053">core::socket::SocketContext::sendToPeer()</a>.</p>
+<p class="reference">References <a class="el" href="EchoSocketContext_8h_source.html#l00062">CLIENT</a>, <a class="el" href="Logger_8cpp_source.html#l00280">logger::LogMessage::LogMessage()</a>, <a class="el" href="EchoSocketContext_8h_source.html#l00074">role</a>, and <a class="el" href="core_2socket_2SocketContext_8cpp_source.html#l00053">core::socket::SocketContext::sendToPeer()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="classapps_1_1echo_1_1model_1_1EchoSocketContext_a53c2ab68fab284ed5b0dd8e013934c27_cgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="classapps_1_1echo_1_1model_1_1EchoSocketContext_a53c2ab68fab284ed5b0dd8e013934c27_cgraph.svg" width="100%" height="394"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -331,9 +332,16 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="EchoSocketContext_8cpp_source.html#l00067">67</a> of file <a class="el" href="EchoSocketContext_8cpp_source.html">EchoSocketContext.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   67</span>                                           {</div>
-<div class="line"><span class="lineno">   68</span>        VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Echo disconnected&quot;</span>;</div>
+<div class="line"><span class="lineno">   68</span>        <a class="code hl_define" href="Logger_8h.html#afc28ec91d066c96a3a139441e029f326">VLOG</a>(1) &lt;&lt; <span class="stringliteral">&quot;Echo disconnected&quot;</span>;</div>
 <div class="line"><span class="lineno">   69</span>    }</div>
 </div><!-- fragment -->
+<p class="reference">References <a class="el" href="Logger_8cpp_source.html#l00280">logger::LogMessage::LogMessage()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classapps_1_1echo_1_1model_1_1EchoSocketContext_abaca2caf16ae6eb7b1bc0abaf887ca11_cgraph.svg" width="468" height="56"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
 </div>
 </div>
 <a id="ac4cded8642412b3ff4f92953bb758731" name="ac4cded8642412b3ff4f92953bb758731"></a>
@@ -368,7 +376,7 @@ Here is the call graph for this function:</div>
 <div class="line"><span class="lineno">   78</span>        <span class="keyword">const</span> std::size_t chunklen = <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a44451ba310b773b9fab6b9ce485a45dd">readFromPeer</a>(chunk, 4096);</div>
 <div class="line"><span class="lineno">   79</span> </div>
 <div class="line"><span class="lineno">   80</span>        <span class="keywordflow">if</span> (chunklen &gt; 0) {</div>
-<div class="line"><span class="lineno">   81</span>            VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Data to reflect: &quot;</span> &lt;&lt; std::string(chunk, chunklen);</div>
+<div class="line"><span class="lineno">   81</span>            <a class="code hl_define" href="Logger_8h.html#afc28ec91d066c96a3a139441e029f326">VLOG</a>(1) &lt;&lt; <span class="stringliteral">&quot;Data to reflect: &quot;</span> &lt;&lt; std::string(chunk, chunklen);</div>
 <div class="line"><span class="lineno">   82</span>            <a class="code hl_function" href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a7e80affcdada3ef5f1c52c283d65a89c">sendToPeer</a>(chunk, chunklen);</div>
 <div class="line"><span class="lineno">   83</span>        }</div>
 <div class="line"><span class="lineno">   84</span> </div>
@@ -376,11 +384,11 @@ Here is the call graph for this function:</div>
 <div class="line"><span class="lineno">   86</span>    }</div>
 <div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1SocketContext_html_a44451ba310b773b9fab6b9ce485a45dd"><div class="ttname"><a href="classcore_1_1socket_1_1stream_1_1SocketContext.html#a44451ba310b773b9fab6b9ce485a45dd">core::socket::stream::SocketContext::readFromPeer</a></div><div class="ttdeci">std::size_t readFromPeer()</div><div class="ttdef"><b>Definition</b> <a href="core_2socket_2stream_2SocketContext_8cpp_source.html#l00081">SocketContext.cpp:81</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="core_2socket_2stream_2SocketContext_8cpp_source.html#l00085">core::socket::stream::SocketContext::readFromPeer()</a>, and <a class="el" href="core_2socket_2stream_2SocketContext_8cpp_source.html#l00069">core::socket::stream::SocketContext::sendToPeer()</a>.</p>
+<p class="reference">References <a class="el" href="Logger_8cpp_source.html#l00280">logger::LogMessage::LogMessage()</a>, <a class="el" href="core_2socket_2stream_2SocketContext_8cpp_source.html#l00085">core::socket::stream::SocketContext::readFromPeer()</a>, and <a class="el" href="core_2socket_2stream_2SocketContext_8cpp_source.html#l00069">core::socket::stream::SocketContext::sendToPeer()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="classapps_1_1echo_1_1model_1_1EchoSocketContext_ac4cded8642412b3ff4f92953bb758731_cgraph.svg" width="100%" height="394"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="classapps_1_1echo_1_1model_1_1EchoSocketContext_ac4cded8642412b3ff4f92953bb758731_cgraph.svg" width="100%" height="446"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>

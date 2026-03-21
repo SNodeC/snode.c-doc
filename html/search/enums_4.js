@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['mode_0',['Mode',['../namespaceutils_1_1CallForCommandline.html#a8c89343f5c099506cd752e794baa75b5',1,'utils::CallForCommandline::Mode'],['../namespaceutils_1_1CallForCommandline.html#a8c89343f5c099506cd752e794baa75b5',1,'utils::CallForCommandline::Mode']]]
+  ['level_0',['Level',['../namespacelogger.html#a04a32b05c998cdc0aaa39274d1db03cf',1,'logger']]]
 ];
