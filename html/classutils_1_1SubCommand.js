@@ -1,7 +1,7 @@
 var classutils_1_1SubCommand =
 [
-    [ "SubCommand", "classutils_1_1SubCommand.html#a31cd221661f6ac5034e8dcdece2b692f", null ],
-    [ "SubCommand", "classutils_1_1SubCommand.html#a2bc95c0753f5ed3406dad59496237611", null ],
+    [ "SubCommand", "classutils_1_1SubCommand.html#a47f13c69cce4e0e5c23c6290525dfd79", null ],
+    [ "SubCommand", "classutils_1_1SubCommand.html#aea7d1331c2dadf2d036a5349ca0fe55a", null ],
     [ "SubCommand", "classutils_1_1SubCommand.html#aa6cbd3f9ed053dfa0f959f1095e7d665", null ],
     [ "SubCommand", "classutils_1_1SubCommand.html#aeceec2305cc41c2d3c182c4a8a6601eb", null ],
     [ "~SubCommand", "classutils_1_1SubCommand.html#a86b50c63e25814245b923a8836f895fd", null ],
@@ -15,6 +15,7 @@ var classutils_1_1SubCommand =
     [ "addOptionFunction", "classutils_1_1SubCommand.html#aac4167d6f75e03a6ff3a3a6975bf6e36", null ],
     [ "addOptionVariable", "classutils_1_1SubCommand.html#afe7cd1fb76f224a2a552129b381bca5b", null ],
     [ "addOptionVariable", "classutils_1_1SubCommand.html#a101df20f912929dd38c5ef85eb48b54c", null ],
+    [ "addSubCommandApp", "classutils_1_1SubCommand.html#ad4141179a7c8ebca4ce0df05d14c25fa", null ],
     [ "allowExtras", "classutils_1_1SubCommand.html#a14501cce9dd7106b3c4ce9ac65cdfda6", null ],
     [ "configToStr", "classutils_1_1SubCommand.html#ac7d56f10b4f735e30e27e655d0fd3ebd", null ],
     [ "description", "classutils_1_1SubCommand.html#a084c6a057e8376cf1a8eec9150bb5ee8", null ],

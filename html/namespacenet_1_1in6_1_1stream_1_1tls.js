@@ -5,6 +5,6 @@ var namespacenet_1_1in6_1_1stream_1_1tls =
     [ "SocketServer", "namespacenet_1_1in6_1_1stream_1_1tls.html#aca75f0ac8997d4a1dd4f79dc901e9d45", null ],
     [ "Client", "namespacenet_1_1in6_1_1stream_1_1tls.html#a5cc8befca824daca6b01b3f366b494b5", null ],
     [ "Client", "namespacenet_1_1in6_1_1stream_1_1tls.html#a2a61d89872e9af122907368f0ae00106", null ],
-    [ "Server", "namespacenet_1_1in6_1_1stream_1_1tls.html#a49426ee0c407ced58c2eaf24aa02fca3", null ],
+    [ "Server", "namespacenet_1_1in6_1_1stream_1_1tls.html#aa4a555b465130072c0fc169a1ab316a1", null ],
     [ "Server", "namespacenet_1_1in6_1_1stream_1_1tls.html#a1f98834d10d9b0185ac97ebbbcb4d81e", null ]
 ];

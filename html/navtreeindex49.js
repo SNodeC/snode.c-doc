@@ -1,5 +1,9 @@
 var NAVTREEINDEX49 =
 {
+"net_2in6_2stream_2legacy_2SocketServer_8h.html":[4,0,6,2,2,1,4],
+"net_2in6_2stream_2legacy_2SocketServer_8h_source.html":[4,0,6,2,2,1,4],
+"net_2in6_2stream_2tls_2SocketClient_8h.html":[4,0,6,2,2,2,2],
+"net_2in6_2stream_2tls_2SocketClient_8h_source.html":[4,0,6,2,2,2,2],
 "net_2in6_2stream_2tls_2SocketServer_8h.html":[4,0,6,2,2,2,4],
 "net_2in6_2stream_2tls_2SocketServer_8h_source.html":[4,0,6,2,2,2,4],
 "net_2in_2SocketAddress_8cpp.html":[4,0,6,1,3],
@@ -226,14 +230,14 @@ var NAVTREEINDEX49 =
 "ssl__utils_8cpp_source.html":[4,0,1,4,0,1,11],
 "ssl__utils_8h.html":[4,0,1,4,0,1,12],
 "ssl__utils_8h_source.html":[4,0,1,4,0,1,12],
-"structcore_1_1DescriptorEventReceiver_1_1TIMEOUT.html":[1,0,5,12,0],
-"structcore_1_1DescriptorEventReceiver_1_1TIMEOUT.html":[3,0,3,10,0],
-"structcore_1_1DescriptorEventReceiver_1_1TIMEOUT.html#a66faca140de0c0f8dbdd6d0757ac1ee2":[1,0,5,12,0,2],
-"structcore_1_1DescriptorEventReceiver_1_1TIMEOUT.html#a66faca140de0c0f8dbdd6d0757ac1ee2":[3,0,3,10,0,2],
-"structcore_1_1DescriptorEventReceiver_1_1TIMEOUT.html#a8d4a97f68c2045b102dd2f81cb1126ff":[1,0,5,12,0,1],
-"structcore_1_1DescriptorEventReceiver_1_1TIMEOUT.html#a8d4a97f68c2045b102dd2f81cb1126ff":[3,0,3,10,0,1],
-"structcore_1_1DescriptorEventReceiver_1_1TIMEOUT.html#ae33816f3fd69b66c15d9bae818d540d5":[1,0,5,12,0,0],
-"structcore_1_1DescriptorEventReceiver_1_1TIMEOUT.html#ae33816f3fd69b66c15d9bae818d540d5":[3,0,3,10,0,0],
+"structcore_1_1DescriptorEventReceiver_1_1TIMEOUT.html":[1,0,5,11,0],
+"structcore_1_1DescriptorEventReceiver_1_1TIMEOUT.html":[3,0,3,9,0],
+"structcore_1_1DescriptorEventReceiver_1_1TIMEOUT.html#a66faca140de0c0f8dbdd6d0757ac1ee2":[1,0,5,11,0,2],
+"structcore_1_1DescriptorEventReceiver_1_1TIMEOUT.html#a66faca140de0c0f8dbdd6d0757ac1ee2":[3,0,3,9,0,2],
+"structcore_1_1DescriptorEventReceiver_1_1TIMEOUT.html#a8d4a97f68c2045b102dd2f81cb1126ff":[1,0,5,11,0,1],
+"structcore_1_1DescriptorEventReceiver_1_1TIMEOUT.html#a8d4a97f68c2045b102dd2f81cb1126ff":[3,0,3,9,0,1],
+"structcore_1_1DescriptorEventReceiver_1_1TIMEOUT.html#ae33816f3fd69b66c15d9bae818d540d5":[1,0,5,11,0,0],
+"structcore_1_1DescriptorEventReceiver_1_1TIMEOUT.html#ae33816f3fd69b66c15d9bae818d540d5":[3,0,3,9,0,0],
 "structcore_1_1DynamicLoader_1_1Library.html":[1,0,5,17,0],
 "structcore_1_1DynamicLoader_1_1Library.html":[3,0,3,15,0],
 "structcore_1_1DynamicLoader_1_1Library.html#a6b508a25c20b1bbf194bd435f1a939da":[1,0,5,17,0,1],
@@ -245,9 +249,5 @@ var NAVTREEINDEX49 =
 "structcore_1_1DynamicLoader_1_1Library.html#aea20af339e1a4f87e4c78c30bcf4b052":[1,0,5,17,0,0],
 "structcore_1_1DynamicLoader_1_1Library.html#aea20af339e1a4f87e4c78c30bcf4b052":[3,0,3,15,0,0],
 "structcore_1_1DynamicLoader_1_1Library.html#af910ffb5cfa52da4be1c2abc72e875f8":[1,0,5,17,0,2],
-"structcore_1_1DynamicLoader_1_1Library.html#af910ffb5cfa52da4be1c2abc72e875f8":[3,0,3,15,0,2],
-"structcore_1_1multiplexer_1_1poll_1_1PollFdsManager_1_1PollFdIndex.html":[1,0,5,5,1,1,1],
-"structcore_1_1multiplexer_1_1poll_1_1PollFdsManager_1_1PollFdIndex.html":[3,0,3,5,1,1,1],
-"structcore_1_1multiplexer_1_1poll_1_1PollFdsManager_1_1PollFdIndex.html#a3724e2af3a90ee5d90e1a09851d84ab6":[1,0,5,5,1,1,1,1],
-"structcore_1_1multiplexer_1_1poll_1_1PollFdsManager_1_1PollFdIndex.html#a3724e2af3a90ee5d90e1a09851d84ab6":[3,0,3,5,1,1,1,1]
+"structcore_1_1DynamicLoader_1_1Library.html#af910ffb5cfa52da4be1c2abc72e875f8":[3,0,3,15,0,2]
 };

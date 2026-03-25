@@ -1,9 +1,5 @@
 var NAVTREEINDEX25 =
 {
-"classiot_1_1mqtt__fast_1_1packets_1_1Unsuback.html#a0eda116906009266e61e676ed9d8e33f":[3,0,6,0,0,12,0],
-"classiot_1_1mqtt__fast_1_1packets_1_1Unsuback.html#a92d915d7837b6fbadfe47a6479cec50a":[1,0,9,0,0,12,3],
-"classiot_1_1mqtt__fast_1_1packets_1_1Unsuback.html#a92d915d7837b6fbadfe47a6479cec50a":[3,0,6,0,0,12,3],
-"classiot_1_1mqtt__fast_1_1packets_1_1Unsuback.html#aa60d78cd781918dd64eac69d9045fa92":[1,0,9,0,0,12,2],
 "classiot_1_1mqtt__fast_1_1packets_1_1Unsuback.html#aa60d78cd781918dd64eac69d9045fa92":[3,0,6,0,0,12,2],
 "classiot_1_1mqtt__fast_1_1packets_1_1Unsuback.html#ad088157543657d0a0347c9a8a933bdeb":[1,0,9,0,0,12,1],
 "classiot_1_1mqtt__fast_1_1packets_1_1Unsuback.html#ad088157543657d0a0347c9a8a933bdeb":[3,0,6,0,0,12,1],
@@ -249,5 +245,9 @@ var NAVTREEINDEX25 =
 "classnet_1_1config_1_1ConfigAddressBase.html#a45ab0d3290162c4403186dd3e8775656":[3,0,8,1,10,2],
 "classnet_1_1config_1_1ConfigAddressBase.html#a5d85a1f4c11886fc0510d453fe0fedcb":[1,0,12,1,10,0],
 "classnet_1_1config_1_1ConfigAddressBase.html#a5d85a1f4c11886fc0510d453fe0fedcb":[3,0,8,1,10,0],
-"classnet_1_1config_1_1ConfigAddressBase.html#a8fee79ecd017f1249ad0b596b162ee05":[1,0,12,1,10,1]
+"classnet_1_1config_1_1ConfigAddressBase.html#a8fee79ecd017f1249ad0b596b162ee05":[1,0,12,1,10,1],
+"classnet_1_1config_1_1ConfigAddressBase.html#a8fee79ecd017f1249ad0b596b162ee05":[3,0,8,1,10,1],
+"classnet_1_1config_1_1ConfigAddressBase.html#abbe62a930b2f8c7f9fbf9508e7dcde61":[1,0,12,1,10,4],
+"classnet_1_1config_1_1ConfigAddressBase.html#abbe62a930b2f8c7f9fbf9508e7dcde61":[3,0,8,1,10,4],
+"classnet_1_1config_1_1ConfigAddressLocal.html":[1,0,12,1,11]
 };

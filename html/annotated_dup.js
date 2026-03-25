@@ -42,8 +42,8 @@ var annotated_dup =
       [ "timer", "namespacecore_1_1timer.html", [
         [ "Timer", "classcore_1_1timer_1_1Timer.html", "classcore_1_1timer_1_1Timer" ],
         [ "IntervalTimer", "classcore_1_1timer_1_1IntervalTimer.html", "classcore_1_1timer_1_1IntervalTimer" ],
-        [ "SingleshotTimer", "classcore_1_1timer_1_1SingleshotTimer.html", "classcore_1_1timer_1_1SingleshotTimer" ],
-        [ "IntervalTimerStopable", "classcore_1_1timer_1_1IntervalTimerStopable.html", "classcore_1_1timer_1_1IntervalTimerStopable" ]
+        [ "IntervalTimerStopable", "classcore_1_1timer_1_1IntervalTimerStopable.html", "classcore_1_1timer_1_1IntervalTimerStopable" ],
+        [ "SingleshotTimer", "classcore_1_1timer_1_1SingleshotTimer.html", "classcore_1_1timer_1_1SingleshotTimer" ]
       ] ],
       [ "socket", "namespacecore_1_1socket.html", [
         [ "stream", "namespacecore_1_1socket_1_1stream.html", [
@@ -64,8 +64,8 @@ var annotated_dup =
             [ "SocketAcceptor", "classcore_1_1socket_1_1stream_1_1tls_1_1SocketAcceptor.html", "classcore_1_1socket_1_1stream_1_1tls_1_1SocketAcceptor" ],
             [ "SslConfig", "structcore_1_1socket_1_1stream_1_1tls_1_1SslConfig.html", "structcore_1_1socket_1_1stream_1_1tls_1_1SslConfig" ]
           ] ],
-          [ "AutoConnectControl", "classcore_1_1socket_1_1stream_1_1AutoConnectControl.html", "classcore_1_1socket_1_1stream_1_1AutoConnectControl" ],
           [ "SocketContext", "classcore_1_1socket_1_1stream_1_1SocketContext.html", "classcore_1_1socket_1_1stream_1_1SocketContext" ],
+          [ "AutoConnectControl", "classcore_1_1socket_1_1stream_1_1AutoConnectControl.html", "classcore_1_1socket_1_1stream_1_1AutoConnectControl" ],
           [ "SocketConnection", "classcore_1_1socket_1_1stream_1_1SocketConnection.html", "classcore_1_1socket_1_1stream_1_1SocketConnection" ],
           [ "SocketConnectionT", "classcore_1_1socket_1_1stream_1_1SocketConnectionT.html", "classcore_1_1socket_1_1stream_1_1SocketConnectionT" ],
           [ "SocketContextFactory", "classcore_1_1socket_1_1stream_1_1SocketContextFactory.html", "classcore_1_1socket_1_1stream_1_1SocketContextFactory" ],
@@ -101,8 +101,8 @@ var annotated_dup =
       ] ],
       [ "multiplexer", "namespacecore_1_1multiplexer.html", [
         [ "epoll", "namespacecore_1_1multiplexer_1_1epoll.html", [
-          [ "DescriptorEventPublisher", "classcore_1_1multiplexer_1_1epoll_1_1DescriptorEventPublisher.html", "classcore_1_1multiplexer_1_1epoll_1_1DescriptorEventPublisher" ],
-          [ "EventMultiplexer", "classcore_1_1multiplexer_1_1epoll_1_1EventMultiplexer.html", "classcore_1_1multiplexer_1_1epoll_1_1EventMultiplexer" ]
+          [ "EventMultiplexer", "classcore_1_1multiplexer_1_1epoll_1_1EventMultiplexer.html", "classcore_1_1multiplexer_1_1epoll_1_1EventMultiplexer" ],
+          [ "DescriptorEventPublisher", "classcore_1_1multiplexer_1_1epoll_1_1DescriptorEventPublisher.html", "classcore_1_1multiplexer_1_1epoll_1_1DescriptorEventPublisher" ]
         ] ],
         [ "poll", "namespacecore_1_1multiplexer_1_1poll.html", [
           [ "DescriptorEventPublisher", "classcore_1_1multiplexer_1_1poll_1_1DescriptorEventPublisher.html", "classcore_1_1multiplexer_1_1poll_1_1DescriptorEventPublisher" ],
@@ -117,9 +117,9 @@ var annotated_dup =
       ] ],
       [ "SNodeC", "classcore_1_1SNodeC.html", "classcore_1_1SNodeC" ],
       [ "Descriptor", "classcore_1_1Descriptor.html", "classcore_1_1Descriptor" ],
-      [ "DescriptorEventPublisher", "classcore_1_1DescriptorEventPublisher.html", "classcore_1_1DescriptorEventPublisher" ],
       [ "Observer", "classcore_1_1Observer.html", "classcore_1_1Observer" ],
       [ "DescriptorEventReceiver", "classcore_1_1DescriptorEventReceiver.html", "classcore_1_1DescriptorEventReceiver" ],
+      [ "DescriptorEventPublisher", "classcore_1_1DescriptorEventPublisher.html", "classcore_1_1DescriptorEventPublisher" ],
       [ "Event", "classcore_1_1Event.html", "classcore_1_1Event" ],
       [ "EventLoop", "classcore_1_1EventLoop.html", "classcore_1_1EventLoop" ],
       [ "EventMultiplexer", "classcore_1_1EventMultiplexer.html", "classcore_1_1EventMultiplexer" ],
@@ -139,18 +139,18 @@ var annotated_dup =
             [ "MariaDBExecCommand", "classdatabase_1_1mariadb_1_1commands_1_1async_1_1MariaDBExecCommand.html", "classdatabase_1_1mariadb_1_1commands_1_1async_1_1MariaDBExecCommand" ],
             [ "MariaDBFetchRowCommand", "classdatabase_1_1mariadb_1_1commands_1_1async_1_1MariaDBFetchRowCommand.html", "classdatabase_1_1mariadb_1_1commands_1_1async_1_1MariaDBFetchRowCommand" ],
             [ "MariaDBFreeResultCommand", "classdatabase_1_1mariadb_1_1commands_1_1async_1_1MariaDBFreeResultCommand.html", "classdatabase_1_1mariadb_1_1commands_1_1async_1_1MariaDBFreeResultCommand" ],
-            [ "MariaDBQueryCommand", "classdatabase_1_1mariadb_1_1commands_1_1async_1_1MariaDBQueryCommand.html", "classdatabase_1_1mariadb_1_1commands_1_1async_1_1MariaDBQueryCommand" ],
-            [ "MariaDBRollbackCommand", "classdatabase_1_1mariadb_1_1commands_1_1async_1_1MariaDBRollbackCommand.html", "classdatabase_1_1mariadb_1_1commands_1_1async_1_1MariaDBRollbackCommand" ]
+            [ "MariaDBRollbackCommand", "classdatabase_1_1mariadb_1_1commands_1_1async_1_1MariaDBRollbackCommand.html", "classdatabase_1_1mariadb_1_1commands_1_1async_1_1MariaDBRollbackCommand" ],
+            [ "MariaDBQueryCommand", "classdatabase_1_1mariadb_1_1commands_1_1async_1_1MariaDBQueryCommand.html", "classdatabase_1_1mariadb_1_1commands_1_1async_1_1MariaDBQueryCommand" ]
           ] ],
           [ "sync", "namespacedatabase_1_1mariadb_1_1commands_1_1sync.html", [
+            [ "MariaDBAffectedRowsCommand", "classdatabase_1_1mariadb_1_1commands_1_1sync_1_1MariaDBAffectedRowsCommand.html", "classdatabase_1_1mariadb_1_1commands_1_1sync_1_1MariaDBAffectedRowsCommand" ],
             [ "MariaDBFieldCountCommand", "classdatabase_1_1mariadb_1_1commands_1_1sync_1_1MariaDBFieldCountCommand.html", "classdatabase_1_1mariadb_1_1commands_1_1sync_1_1MariaDBFieldCountCommand" ],
-            [ "MariaDBUseResultCommand", "classdatabase_1_1mariadb_1_1commands_1_1sync_1_1MariaDBUseResultCommand.html", "classdatabase_1_1mariadb_1_1commands_1_1sync_1_1MariaDBUseResultCommand" ],
-            [ "MariaDBAffectedRowsCommand", "classdatabase_1_1mariadb_1_1commands_1_1sync_1_1MariaDBAffectedRowsCommand.html", "classdatabase_1_1mariadb_1_1commands_1_1sync_1_1MariaDBAffectedRowsCommand" ]
+            [ "MariaDBUseResultCommand", "classdatabase_1_1mariadb_1_1commands_1_1sync_1_1MariaDBUseResultCommand.html", "classdatabase_1_1mariadb_1_1commands_1_1sync_1_1MariaDBUseResultCommand" ]
           ] ]
         ] ],
+        [ "MariaDBCommandSequence", "classdatabase_1_1mariadb_1_1MariaDBCommandSequence.html", "classdatabase_1_1mariadb_1_1MariaDBCommandSequence" ],
         [ "MariaDBState", "structdatabase_1_1mariadb_1_1MariaDBState.html", "structdatabase_1_1mariadb_1_1MariaDBState" ],
         [ "MariaDBClient", "classdatabase_1_1mariadb_1_1MariaDBClient.html", "classdatabase_1_1mariadb_1_1MariaDBClient" ],
-        [ "MariaDBCommandSequence", "classdatabase_1_1mariadb_1_1MariaDBCommandSequence.html", "classdatabase_1_1mariadb_1_1MariaDBCommandSequence" ],
         [ "MariaDBClientASyncAPI", "classdatabase_1_1mariadb_1_1MariaDBClientASyncAPI.html", "classdatabase_1_1mariadb_1_1MariaDBClientASyncAPI" ],
         [ "MariaDBClientSyncAPI", "classdatabase_1_1mariadb_1_1MariaDBClientSyncAPI.html", "classdatabase_1_1mariadb_1_1MariaDBClientSyncAPI" ],
         [ "MariaDBConnectionDetails", "structdatabase_1_1mariadb_1_1MariaDBConnectionDetails.html", "structdatabase_1_1mariadb_1_1MariaDBConnectionDetails" ],
@@ -271,16 +271,16 @@ var annotated_dup =
             [ "Broker", "classiot_1_1mqtt_1_1server_1_1broker_1_1Broker.html", "classiot_1_1mqtt_1_1server_1_1broker_1_1Broker" ]
           ] ],
           [ "packets", "namespaceiot_1_1mqtt_1_1server_1_1packets.html", [
-            [ "Pubrec", "classiot_1_1mqtt_1_1server_1_1packets_1_1Pubrec.html", "classiot_1_1mqtt_1_1server_1_1packets_1_1Pubrec" ],
-            [ "Pubrel", "classiot_1_1mqtt_1_1server_1_1packets_1_1Pubrel.html", "classiot_1_1mqtt_1_1server_1_1packets_1_1Pubrel" ],
-            [ "Subscribe", "classiot_1_1mqtt_1_1server_1_1packets_1_1Subscribe.html", "classiot_1_1mqtt_1_1server_1_1packets_1_1Subscribe" ],
             [ "Unsubscribe", "classiot_1_1mqtt_1_1server_1_1packets_1_1Unsubscribe.html", "classiot_1_1mqtt_1_1server_1_1packets_1_1Unsubscribe" ],
             [ "Connect", "classiot_1_1mqtt_1_1server_1_1packets_1_1Connect.html", "classiot_1_1mqtt_1_1server_1_1packets_1_1Connect" ],
             [ "Disconnect", "classiot_1_1mqtt_1_1server_1_1packets_1_1Disconnect.html", "classiot_1_1mqtt_1_1server_1_1packets_1_1Disconnect" ],
             [ "Pingreq", "classiot_1_1mqtt_1_1server_1_1packets_1_1Pingreq.html", "classiot_1_1mqtt_1_1server_1_1packets_1_1Pingreq" ],
             [ "Puback", "classiot_1_1mqtt_1_1server_1_1packets_1_1Puback.html", "classiot_1_1mqtt_1_1server_1_1packets_1_1Puback" ],
             [ "Pubcomp", "classiot_1_1mqtt_1_1server_1_1packets_1_1Pubcomp.html", "classiot_1_1mqtt_1_1server_1_1packets_1_1Pubcomp" ],
-            [ "Publish", "classiot_1_1mqtt_1_1server_1_1packets_1_1Publish.html", "classiot_1_1mqtt_1_1server_1_1packets_1_1Publish" ]
+            [ "Publish", "classiot_1_1mqtt_1_1server_1_1packets_1_1Publish.html", "classiot_1_1mqtt_1_1server_1_1packets_1_1Publish" ],
+            [ "Pubrec", "classiot_1_1mqtt_1_1server_1_1packets_1_1Pubrec.html", "classiot_1_1mqtt_1_1server_1_1packets_1_1Pubrec" ],
+            [ "Pubrel", "classiot_1_1mqtt_1_1server_1_1packets_1_1Pubrel.html", "classiot_1_1mqtt_1_1server_1_1packets_1_1Pubrel" ],
+            [ "Subscribe", "classiot_1_1mqtt_1_1server_1_1packets_1_1Subscribe.html", "classiot_1_1mqtt_1_1server_1_1packets_1_1Subscribe" ]
           ] ],
           [ "ControlPacketDeserializer", "classiot_1_1mqtt_1_1server_1_1ControlPacketDeserializer.html", "classiot_1_1mqtt_1_1server_1_1ControlPacketDeserializer" ],
           [ "Mqtt", "classiot_1_1mqtt_1_1server_1_1Mqtt.html", "classiot_1_1mqtt_1_1server_1_1Mqtt" ],

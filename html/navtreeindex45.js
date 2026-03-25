@@ -1,5 +1,9 @@
 var NAVTREEINDEX45 =
 {
+"l2_2stream_2legacy_2config_2ConfigSocketServer_8h_source.html":[4,0,6,3,2,1,0,3],
+"l2_2stream_2tls_2SocketClient_8cpp.html":[4,0,6,3,2,2,1],
+"l2_2stream_2tls_2SocketClient_8cpp_source.html":[4,0,6,3,2,2,1],
+"l2_2stream_2tls_2SocketServer_8cpp.html":[4,0,6,3,2,2,3],
 "l2_2stream_2tls_2SocketServer_8cpp_source.html":[4,0,6,3,2,2,3],
 "l2_2stream_2tls_2config_2ConfigSocketClient_8cpp.html":[4,0,6,3,2,2,0,0],
 "l2_2stream_2tls_2config_2ConfigSocketClient_8cpp_source.html":[4,0,6,3,2,2,0,0],
@@ -245,9 +249,5 @@ var NAVTREEINDEX45 =
 "mqtt_2packets_2Connect_8h.html#a7c621dd360dd439f0d6d8dc5d951a619":[4,0,4,0,1,3,1],
 "mqtt_2packets_2Connect_8h.html#aecd18993e95038469fe82fa1c644a83c":[4,0,4,0,1,3,2],
 "mqtt_2packets_2Connect_8h_source.html":[4,0,4,0,1,3],
-"mqtt_2packets_2Disconnect_8cpp.html":[4,0,4,0,1,4],
-"mqtt_2packets_2Disconnect_8cpp_source.html":[4,0,4,0,1,4],
-"mqtt_2packets_2Disconnect_8h.html":[4,0,4,0,1,5],
-"mqtt_2packets_2Disconnect_8h_source.html":[4,0,4,0,1,5],
-"mqtt_2packets_2Pingreq_8cpp.html":[4,0,4,0,1,6]
+"mqtt_2packets_2Disconnect_8cpp.html":[4,0,4,0,1,4]
 };

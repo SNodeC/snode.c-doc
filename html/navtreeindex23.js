@@ -1,9 +1,5 @@
 var NAVTREEINDEX23 =
 {
-"classiot_1_1mqtt_1_1types_1_1TypeBase.html#a6288ae837cfbeb927c4157eca69275df":[3,0,6,1,2,6,12],
-"classiot_1_1mqtt_1_1types_1_1TypeBase.html#a7922b7bf103de52ed0a5a803ad6e80a6":[1,0,9,1,2,6,15],
-"classiot_1_1mqtt_1_1types_1_1TypeBase.html#a7922b7bf103de52ed0a5a803ad6e80a6":[3,0,6,1,2,6,15],
-"classiot_1_1mqtt_1_1types_1_1TypeBase.html#a7e6939bfafb586b2c2990b485bc5218a":[1,0,9,1,2,6,10],
 "classiot_1_1mqtt_1_1types_1_1TypeBase.html#a7e6939bfafb586b2c2990b485bc5218a":[3,0,6,1,2,6,10],
 "classiot_1_1mqtt_1_1types_1_1TypeBase.html#a986355a14b710f4d97debabfd8474001":[1,0,9,1,2,6,0],
 "classiot_1_1mqtt_1_1types_1_1TypeBase.html#a986355a14b710f4d97debabfd8474001":[3,0,6,1,2,6,0],
@@ -249,5 +245,9 @@ var NAVTREEINDEX23 =
 "classiot_1_1mqtt__fast_1_1SocketContext.html#a6887af9dbb7a6b83172882f37c3f5a6d":[3,0,6,0,4,34],
 "classiot_1_1mqtt__fast_1_1SocketContext.html#a6fac032b8941dd653c922d1611889c1a":[1,0,9,0,4,32],
 "classiot_1_1mqtt__fast_1_1SocketContext.html#a6fac032b8941dd653c922d1611889c1a":[3,0,6,0,4,32],
-"classiot_1_1mqtt__fast_1_1SocketContext.html#a706fca7ff17f03f9949000d2d8a410aa":[1,0,9,0,4,28]
+"classiot_1_1mqtt__fast_1_1SocketContext.html#a706fca7ff17f03f9949000d2d8a410aa":[1,0,9,0,4,28],
+"classiot_1_1mqtt__fast_1_1SocketContext.html#a706fca7ff17f03f9949000d2d8a410aa":[3,0,6,0,4,28],
+"classiot_1_1mqtt__fast_1_1SocketContext.html#a74d9588a176633c578d4afc3cb0ab55f":[1,0,9,0,4,15],
+"classiot_1_1mqtt__fast_1_1SocketContext.html#a74d9588a176633c578d4afc3cb0ab55f":[3,0,6,0,4,15],
+"classiot_1_1mqtt__fast_1_1SocketContext.html#a7612709066ae62f86b563f62057902be":[1,0,9,0,4,14]
 };

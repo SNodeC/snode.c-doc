@@ -149,7 +149,7 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">   56</span>    <span class="keyword">const</span> <a class="code hl_typedef" href="namespacetls.html#a7213d52536dfd43348a3c7d2a6f08f0c">SocketClient</a> client = apps::echo::model::STREAM::getClient();</div>
 <div class="line"><span class="lineno">   57</span> </div>
 <div class="line"><span class="lineno">   58</span>    client.connect(</div>
-<div class="line"><span class="lineno">   59</span>        [instanceName = client.getConfig().getInstanceName()](<span class="keyword">const</span> SocketAddress&amp; socketAddress, <span class="keyword">const</span> <a class="code hl_class" href="classcore_1_1socket_1_1State.html">core::socket::State</a>&amp; state) {</div>
+<div class="line"><span class="lineno">   59</span>        [instanceName = client.getConfig()-&gt;getInstanceName()](<span class="keyword">const</span> SocketAddress&amp; socketAddress, <span class="keyword">const</span> <a class="code hl_class" href="classcore_1_1socket_1_1State.html">core::socket::State</a>&amp; state) {</div>
 <div class="line"><span class="lineno">   60</span>            switch (state) {</div>
 <div class="line"><span class="lineno">   61</span>                case core::socket::State::OK:</div>
 <div class="line"><span class="lineno">   62</span>                    VLOG(1) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot;: connected to &#39;&quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>

@@ -6,9 +6,9 @@ var classnet_1_1config_1_1ConfigPhysicalSocketServer =
     [ "getAcceptsPerTick", "classnet_1_1config_1_1ConfigPhysicalSocketServer.html#a94941180b7331b848961417fd688a18b", null ],
     [ "getAcceptTimeout", "classnet_1_1config_1_1ConfigPhysicalSocketServer.html#a33a77d049f706570bf6e1eea628647ba", null ],
     [ "getBacklog", "classnet_1_1config_1_1ConfigPhysicalSocketServer.html#a024bcff766725e0298fc6c8f570aee10", null ],
-    [ "setAcceptsPerTick", "classnet_1_1config_1_1ConfigPhysicalSocketServer.html#ad7c4fb1daa0587a25a046878d549c83e", null ],
-    [ "setAcceptTimeout", "classnet_1_1config_1_1ConfigPhysicalSocketServer.html#a80d164f5dd531b48d2fc114725172e83", null ],
-    [ "setBacklog", "classnet_1_1config_1_1ConfigPhysicalSocketServer.html#a921dd8da2942531bd72d22f4fa7ef7c1", null ],
+    [ "setAcceptsPerTick", "classnet_1_1config_1_1ConfigPhysicalSocketServer.html#aab488efd3a05517bfffea44c39284f8f", null ],
+    [ "setAcceptTimeout", "classnet_1_1config_1_1ConfigPhysicalSocketServer.html#a1766a0e4cf3740499ff539760c614d4b", null ],
+    [ "setBacklog", "classnet_1_1config_1_1ConfigPhysicalSocketServer.html#a7371b4ebf585739944e6059b1060248f", null ],
     [ "acceptsPerTickOpt", "classnet_1_1config_1_1ConfigPhysicalSocketServer.html#a8d1324f3e22511daf4b58388e6c39c23", null ],
     [ "acceptTimeoutOpt", "classnet_1_1config_1_1ConfigPhysicalSocketServer.html#a3d620b8d43008a713ed3eda9fc6ce118", null ],
     [ "backlogOpt", "classnet_1_1config_1_1ConfigPhysicalSocketServer.html#ad2468cc073e490582e76618ec91d8b6b", null ]

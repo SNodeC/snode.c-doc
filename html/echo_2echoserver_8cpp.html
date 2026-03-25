@@ -156,14 +156,14 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">   73</span>        {<span class="stringliteral">&quot;snodec.home.vchrist.at&quot;</span>, {{<span class="stringliteral">&quot;Cert&quot;</span>, cert}, {<span class="stringliteral">&quot;CertKey&quot;</span>, key}, {<span class="stringliteral">&quot;CertKeyPassword&quot;</span>, pass}}},</div>
 <div class="line"><span class="lineno">   74</span>        {<span class="stringliteral">&quot;www.vchrist.at&quot;</span>, {{<span class="stringliteral">&quot;Cert&quot;</span>, cert}, {<span class="stringliteral">&quot;CertKey&quot;</span>, key}, {<span class="stringliteral">&quot;CertKeyPassword&quot;</span>, pass}}}};</div>
 <div class="line"><span class="lineno">   75</span> </div>
-<div class="line"><span class="lineno">   76</span>    server.getConfig().addSniCerts(sniCerts);</div>
+<div class="line"><span class="lineno">   76</span>    server.getConfig()-&gt;addSniCerts(sniCerts);</div>
 <div class="line"><span class="lineno">   77</span><span class="preprocessor">#endif</span></div>
 <div class="line"><span class="lineno">   78</span> </div>
-<div class="line"><span class="lineno">   79</span>    server.getConfig().setDisabled();</div>
-<div class="line"><span class="lineno">   80</span>    server.getConfig().setDisabled(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   79</span>    server.getConfig()-&gt;setDisabled();</div>
+<div class="line"><span class="lineno">   80</span>    server.getConfig()-&gt;setDisabled(<span class="keyword">false</span>);</div>
 <div class="line"><span class="lineno">   81</span> </div>
-<div class="line"><span class="lineno">   82</span>    server.listen([instanceName = server.getConfig().getInstanceName()](<span class="keyword">const</span> SocketServer::SocketAddress&amp; socketAddress,</div>
-<div class="line"><span class="lineno">   83</span>                                                                        <span class="keyword">const</span> <a class="code hl_class" href="classcore_1_1socket_1_1State.html">core::socket::State</a>&amp; state) {</div>
+<div class="line"><span class="lineno">   82</span>    server.listen([instanceName = server.getConfig()-&gt;getInstanceName()](<span class="keyword">const</span> SocketServer::SocketAddress&amp; socketAddress,</div>
+<div class="line"><span class="lineno">   83</span>                                                                         <span class="keyword">const</span> <a class="code hl_class" href="classcore_1_1socket_1_1State.html">core::socket::State</a>&amp; state) {</div>
 <div class="line"><span class="lineno">   84</span>        switch (state) {</div>
 <div class="line"><span class="lineno">   85</span>            case core::socket::State::OK:</div>
 <div class="line"><span class="lineno">   86</span>                VLOG(1) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot;: listening on &#39;&quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>

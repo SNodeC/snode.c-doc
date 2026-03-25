@@ -1,5 +1,9 @@
 var NAVTREEINDEX42 =
 {
+"classweb_1_1websocket_1_1server_1_1SubProtocolFactorySelector.html#a9dd2fcc62c697ec9b7314a77a00d9d20":[3,0,11,1,1,3,6],
+"classweb_1_1websocket_1_1server_1_1SubProtocolFactorySelector.html#af5d7d529a2382d67ecb39abaf61f5f9b":[1,0,16,1,1,3,5],
+"classweb_1_1websocket_1_1server_1_1SubProtocolFactorySelector.html#af5d7d529a2382d67ecb39abaf61f5f9b":[3,0,11,1,1,3,5],
+"classweb_1_1websocket_1_1server_1_1SubProtocolFactorySelector.html#afb192588195a6b26a60879cb3e4b8f45":[1,0,16,1,1,3,8],
 "classweb_1_1websocket_1_1server_1_1SubProtocolFactorySelector.html#afb192588195a6b26a60879cb3e4b8f45":[3,0,11,1,1,3,8],
 "client_2Client_8h.html":[4,0,8,0,0,2],
 "client_2Client_8h_source.html":[4,0,8,0,0,2],
@@ -245,9 +249,5 @@ var NAVTREEINDEX42 =
 "express_2Request_8cpp.html":[4,0,3,12],
 "express_2Request_8cpp_source.html":[4,0,3,12],
 "express_2Request_8h.html":[4,0,3,13],
-"express_2Request_8h_source.html":[4,0,3,13],
-"express_2Response_8cpp.html":[4,0,3,14],
-"express_2Response_8cpp_source.html":[4,0,3,14],
-"express_2Response_8h.html":[4,0,3,15],
-"express_2Response_8h_source.html":[4,0,3,15]
+"express_2Request_8h_source.html":[4,0,3,13]
 };

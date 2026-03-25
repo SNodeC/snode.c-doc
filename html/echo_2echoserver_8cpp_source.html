@@ -182,14 +182,14 @@ $(function() {
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        {<span class="stringliteral">&quot;snodec.home.vchrist.at&quot;</span>, {{<span class="stringliteral">&quot;Cert&quot;</span>, cert}, {<span class="stringliteral">&quot;CertKey&quot;</span>, key}, {<span class="stringliteral">&quot;CertKeyPassword&quot;</span>, pass}}},</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        {<span class="stringliteral">&quot;www.vchrist.at&quot;</span>, {{<span class="stringliteral">&quot;Cert&quot;</span>, cert}, {<span class="stringliteral">&quot;CertKey&quot;</span>, key}, {<span class="stringliteral">&quot;CertKeyPassword&quot;</span>, pass}}}};</div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    server.getConfig().addSniCerts(sniCerts);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    server.getConfig()-&gt;addSniCerts(sniCerts);</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="preprocessor">#</span><span class="preprocessor">endif</span></div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    server.getConfig().setDisabled();</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    server.getConfig().setDisabled(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    server.getConfig()-&gt;setDisabled();</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    server.getConfig()-&gt;setDisabled(<span class="keyword">false</span>);</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    server.listen([instanceName = server.getConfig().getInstanceName()](<span class="keyword">const</span> SocketServer::SocketAddress&amp; socketAddress,</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>                                                                        <span class="keyword">const</span> core::socket::State&amp; state) {</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    server.listen([instanceName = server.getConfig()-&gt;getInstanceName()](<span class="keyword">const</span> SocketServer::SocketAddress&amp; socketAddress,</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>                                                                         <span class="keyword">const</span> core::socket::State&amp; state) {</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        <span class="keywordflow">switch</span> (state) {</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>            <span class="keywordflow">case</span> core::socket::State::OK:</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>                <a class="code hl_define" href="Logger_8h.html#afc28ec91d066c96a3a139441e029f326">VLOG</a>(1) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot;: listening on &#39;&quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>

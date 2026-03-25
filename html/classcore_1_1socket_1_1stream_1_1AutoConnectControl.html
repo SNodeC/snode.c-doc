@@ -109,11 +109,6 @@ $(function() {
 
 <p><code>#include &lt;<a class="el" href="AutoConnectControl_8h_source.html">AutoConnectControl.h</a>&gt;</code></p>
 <div class="dynheader">
-Inheritance diagram for core::socket::stream::AutoConnectControl:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classcore_1_1socket_1_1stream_1_1AutoConnectControl__inherit__graph.svg" width="251" height="148"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-<div class="dynheader">
 Collaboration diagram for core::socket::stream::AutoConnectControl:</div>
 <div class="dyncontent">
 <div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="classcore_1_1socket_1_1stream_1_1AutoConnectControl__coll__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
@@ -132,6 +127,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a14ebaeea43f5c89ff82dddbe5c20bec0" id="r_a14ebaeea43f5c89ff82dddbe5c20bec0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a14ebaeea43f5c89ff82dddbe5c20bec0">stopReconnectAndRetry</a> ()</td></tr>
 <tr class="memitem:a98fb191a75cfbe0041de4da108c57560" id="r_a98fb191a75cfbe0041de4da108c57560"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a98fb191a75cfbe0041de4da108c57560">isRetryEnabled</a> () const</td></tr>
 <tr class="memitem:a4c4c30d6f917969a400c053931a7a503" id="r_a4c4c30d6f917969a400c053931a7a503"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4c4c30d6f917969a400c053931a7a503">isReconnectEnabled</a> () const</td></tr>
+<tr class="memitem:aa40e68167c464299219748e979d58f82" id="r_aa40e68167c464299219748e979d58f82"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a3d692f361a219a435340babbdc2032cc">AutoConnectControl</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa40e68167c464299219748e979d58f82">setOnDestroy</a> (const std::function&lt; void(<a class="el" href="#a3d692f361a219a435340babbdc2032cc">AutoConnectControl</a> *)&gt; &amp;<a class="el" href="#aa90d3d0e68102dd417edac043114f6bf">onDestroy</a>)</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
@@ -144,10 +140,9 @@ Private Member Functions</h2></td></tr>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a1c6e42c17b552616558555b65a9f1cbf" id="r_a1c6e42c17b552616558555b65a9f1cbf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1c6e42c17b552616558555b65a9f1cbf">retryEnabled</a> {true}</td></tr>
 <tr class="memitem:af1f385f9f469a40da7be8fa0a8820062" id="r_af1f385f9f469a40da7be8fa0a8820062"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af1f385f9f469a40da7be8fa0a8820062">reconnectEnabled</a> {true}</td></tr>
-<tr class="memitem:a6e20ede40fdb00db9a06947e935c36c0" id="r_a6e20ede40fdb00db9a06947e935c36c0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6e20ede40fdb00db9a06947e935c36c0">cancelRetryScheduled</a> {false}</td></tr>
-<tr class="memitem:a83b38ab882e8845182a9afcd2bf0a276" id="r_a83b38ab882e8845182a9afcd2bf0a276"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a83b38ab882e8845182a9afcd2bf0a276">cancelReconnectScheduled</a> {false}</td></tr>
 <tr class="memitem:add76ad43b4e0acf908f0dda99d912aaa" id="r_add76ad43b4e0acf908f0dda99d912aaa"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classcore_1_1timer_1_1Timer.html">core::timer::Timer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#add76ad43b4e0acf908f0dda99d912aaa">retryTimer</a></td></tr>
 <tr class="memitem:ace7d5699be96ddae783f1f1ecc40909e" id="r_ace7d5699be96ddae783f1f1ecc40909e"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classcore_1_1timer_1_1Timer.html">core::timer::Timer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ace7d5699be96ddae783f1f1ecc40909e">reconnectTimer</a></td></tr>
+<tr class="memitem:aa90d3d0e68102dd417edac043114f6bf" id="r_aa90d3d0e68102dd417edac043114f6bf"><td class="memItemLeft" align="right" valign="top">std::function&lt; void(<a class="el" href="#a3d692f361a219a435340babbdc2032cc">AutoConnectControl</a> *)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa90d3d0e68102dd417edac043114f6bf">onDestroy</a></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-friends" class="groupheader"><a id="friends" name="friends"></a>
 Friends</h2></td></tr>
@@ -165,9 +160,6 @@ Friends</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">core::socket::stream::AutoConnectControl::AutoConnectControl </td>
@@ -176,12 +168,16 @@ Friends</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="AutoConnectControl_8cpp_source.html#l00052">52</a> of file <a class="el" href="AutoConnectControl_8cpp_source.html">AutoConnectControl.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   53</span>        : <a class="code hl_variable" href="#aa90d3d0e68102dd417edac043114f6bf">onDestroy</a>([](<a class="code hl_function" href="#a3d692f361a219a435340babbdc2032cc">AutoConnectControl</a>*) {</div>
+<div class="line"><span class="lineno">   54</span>        }) {</div>
+<div class="line"><span class="lineno">   55</span>    }</div>
+<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1AutoConnectControl_html_a3d692f361a219a435340babbdc2032cc"><div class="ttname"><a href="#a3d692f361a219a435340babbdc2032cc">core::socket::stream::AutoConnectControl::AutoConnectControl</a></div><div class="ttdeci">AutoConnectControl()</div><div class="ttdef"><b>Definition</b> <a href="AutoConnectControl_8cpp_source.html#l00052">AutoConnectControl.cpp:52</a></div></div>
+<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1AutoConnectControl_html_aa90d3d0e68102dd417edac043114f6bf"><div class="ttname"><a href="#aa90d3d0e68102dd417edac043114f6bf">core::socket::stream::AutoConnectControl::onDestroy</a></div><div class="ttdeci">std::function&lt; void(AutoConnectControl *)&gt; onDestroy</div><div class="ttdef"><b>Definition</b> <a href="AutoConnectControl_8h_source.html#l00104">AutoConnectControl.h:104</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="AutoConnectControl_8h_source.html#l00104">onDestroy</a>.</p>
 
 </div>
 </div>
@@ -240,9 +236,6 @@ Friends</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">core::socket::stream::AutoConnectControl::~AutoConnectControl </td>
@@ -251,12 +244,14 @@ Friends</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="AutoConnectControl_8cpp_source.html#l00057">57</a> of file <a class="el" href="AutoConnectControl_8cpp_source.html">AutoConnectControl.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   57</span>                                            {</div>
+<div class="line"><span class="lineno">   58</span>        <a class="code hl_variable" href="#aa90d3d0e68102dd417edac043114f6bf">onDestroy</a>(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   59</span>    };</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="AutoConnectControl_8h_source.html#l00104">onDestroy</a>.</p>
 
 </div>
 </div>
@@ -288,17 +283,17 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AutoConnectControl_8cpp_source.html#l00090">90</a> of file <a class="el" href="AutoConnectControl_8cpp_source.html">AutoConnectControl.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   90</span>                                                                                                           {</div>
-<div class="line"><span class="lineno">   91</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#af1f385f9f469a40da7be8fa0a8820062">reconnectEnabled</a>) {</div>
-<div class="line"><span class="lineno">   92</span>            <a class="code hl_variable" href="#ace7d5699be96ddae783f1f1ecc40909e">reconnectTimer</a> = std::make_unique&lt;core::timer::Timer&gt;(<a class="code hl_function" href="classcore_1_1timer_1_1Timer.html#a9847ce4e56baf9141cc880aa7e20c71a">core::timer::Timer::singleshotTimer</a>(dispatcher, timeoutSeconds));</div>
-<div class="line"><span class="lineno">   93</span>        }</div>
-<div class="line"><span class="lineno">   94</span>    }</div>
-<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1AutoConnectControl_html_ace7d5699be96ddae783f1f1ecc40909e"><div class="ttname"><a href="#ace7d5699be96ddae783f1f1ecc40909e">core::socket::stream::AutoConnectControl::reconnectTimer</a></div><div class="ttdeci">std::unique_ptr&lt; core::timer::Timer &gt; reconnectTimer</div><div class="ttdef"><b>Definition</b> <a href="AutoConnectControl_8h_source.html#l00103">AutoConnectControl.h:103</a></div></div>
-<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1AutoConnectControl_html_af1f385f9f469a40da7be8fa0a8820062"><div class="ttname"><a href="#af1f385f9f469a40da7be8fa0a8820062">core::socket::stream::AutoConnectControl::reconnectEnabled</a></div><div class="ttdeci">bool reconnectEnabled</div><div class="ttdef"><b>Definition</b> <a href="AutoConnectControl_8h_source.html#l00097">AutoConnectControl.h:97</a></div></div>
+<p class="definition">Definition at line <a class="el" href="AutoConnectControl_8cpp_source.html#l00105">105</a> of file <a class="el" href="AutoConnectControl_8cpp_source.html">AutoConnectControl.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  105</span>                                                                                                           {</div>
+<div class="line"><span class="lineno">  106</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#af1f385f9f469a40da7be8fa0a8820062">reconnectEnabled</a>) {</div>
+<div class="line"><span class="lineno">  107</span>            <a class="code hl_variable" href="#ace7d5699be96ddae783f1f1ecc40909e">reconnectTimer</a> = std::make_unique&lt;core::timer::Timer&gt;(<a class="code hl_function" href="classcore_1_1timer_1_1Timer.html#a9847ce4e56baf9141cc880aa7e20c71a">core::timer::Timer::singleshotTimer</a>(dispatcher, timeoutSeconds));</div>
+<div class="line"><span class="lineno">  108</span>        }</div>
+<div class="line"><span class="lineno">  109</span>    }</div>
+<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1AutoConnectControl_html_ace7d5699be96ddae783f1f1ecc40909e"><div class="ttname"><a href="#ace7d5699be96ddae783f1f1ecc40909e">core::socket::stream::AutoConnectControl::reconnectTimer</a></div><div class="ttdeci">std::unique_ptr&lt; core::timer::Timer &gt; reconnectTimer</div><div class="ttdef"><b>Definition</b> <a href="AutoConnectControl_8h_source.html#l00102">AutoConnectControl.h:102</a></div></div>
+<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1AutoConnectControl_html_af1f385f9f469a40da7be8fa0a8820062"><div class="ttname"><a href="#af1f385f9f469a40da7be8fa0a8820062">core::socket::stream::AutoConnectControl::reconnectEnabled</a></div><div class="ttdeci">bool reconnectEnabled</div><div class="ttdef"><b>Definition</b> <a href="AutoConnectControl_8h_source.html#l00099">AutoConnectControl.h:99</a></div></div>
 <div class="ttc" id="aclasscore_1_1timer_1_1Timer_html_a9847ce4e56baf9141cc880aa7e20c71a"><div class="ttname"><a href="classcore_1_1timer_1_1Timer.html#a9847ce4e56baf9141cc880aa7e20c71a">core::timer::Timer::singleshotTimer</a></div><div class="ttdeci">static Timer singleshotTimer(const std::function&lt; void()&gt; &amp;dispatcher, const utils::Timeval &amp;timeout)</div><div class="ttdef"><b>Definition</b> <a href="timer_2Timer_8cpp_source.html#l00057">Timer.cpp:57</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="AutoConnectControl_8h_source.html#l00097">reconnectEnabled</a>, <a class="el" href="AutoConnectControl_8h_source.html#l00103">reconnectTimer</a>, and <a class="el" href="timer_2Timer_8cpp_source.html#l00057">core::timer::Timer::singleshotTimer()</a>.</p>
+<p class="reference">References <a class="el" href="AutoConnectControl_8h_source.html#l00099">reconnectEnabled</a>, <a class="el" href="AutoConnectControl_8h_source.html#l00102">reconnectTimer</a>, and <a class="el" href="timer_2Timer_8cpp_source.html#l00057">core::timer::Timer::singleshotTimer()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -334,16 +329,16 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AutoConnectControl_8cpp_source.html#l00084">84</a> of file <a class="el" href="AutoConnectControl_8cpp_source.html">AutoConnectControl.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   84</span>                                                                                                       {</div>
-<div class="line"><span class="lineno">   85</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a1c6e42c17b552616558555b65a9f1cbf">retryEnabled</a>) {</div>
-<div class="line"><span class="lineno">   86</span>            <a class="code hl_variable" href="#add76ad43b4e0acf908f0dda99d912aaa">retryTimer</a> = std::make_unique&lt;core::timer::Timer&gt;(<a class="code hl_function" href="classcore_1_1timer_1_1Timer.html#a9847ce4e56baf9141cc880aa7e20c71a">core::timer::Timer::singleshotTimer</a>(dispatcher, timeoutSeconds));</div>
-<div class="line"><span class="lineno">   87</span>        }</div>
-<div class="line"><span class="lineno">   88</span>    }</div>
-<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1AutoConnectControl_html_a1c6e42c17b552616558555b65a9f1cbf"><div class="ttname"><a href="#a1c6e42c17b552616558555b65a9f1cbf">core::socket::stream::AutoConnectControl::retryEnabled</a></div><div class="ttdeci">bool retryEnabled</div><div class="ttdef"><b>Definition</b> <a href="AutoConnectControl_8h_source.html#l00096">AutoConnectControl.h:96</a></div></div>
-<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1AutoConnectControl_html_add76ad43b4e0acf908f0dda99d912aaa"><div class="ttname"><a href="#add76ad43b4e0acf908f0dda99d912aaa">core::socket::stream::AutoConnectControl::retryTimer</a></div><div class="ttdeci">std::unique_ptr&lt; core::timer::Timer &gt; retryTimer</div><div class="ttdef"><b>Definition</b> <a href="AutoConnectControl_8h_source.html#l00102">AutoConnectControl.h:102</a></div></div>
+<p class="definition">Definition at line <a class="el" href="AutoConnectControl_8cpp_source.html#l00099">99</a> of file <a class="el" href="AutoConnectControl_8cpp_source.html">AutoConnectControl.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   99</span>                                                                                                       {</div>
+<div class="line"><span class="lineno">  100</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a1c6e42c17b552616558555b65a9f1cbf">retryEnabled</a>) {</div>
+<div class="line"><span class="lineno">  101</span>            <a class="code hl_variable" href="#add76ad43b4e0acf908f0dda99d912aaa">retryTimer</a> = std::make_unique&lt;core::timer::Timer&gt;(<a class="code hl_function" href="classcore_1_1timer_1_1Timer.html#a9847ce4e56baf9141cc880aa7e20c71a">core::timer::Timer::singleshotTimer</a>(dispatcher, timeoutSeconds));</div>
+<div class="line"><span class="lineno">  102</span>        }</div>
+<div class="line"><span class="lineno">  103</span>    }</div>
+<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1AutoConnectControl_html_a1c6e42c17b552616558555b65a9f1cbf"><div class="ttname"><a href="#a1c6e42c17b552616558555b65a9f1cbf">core::socket::stream::AutoConnectControl::retryEnabled</a></div><div class="ttdeci">bool retryEnabled</div><div class="ttdef"><b>Definition</b> <a href="AutoConnectControl_8h_source.html#l00098">AutoConnectControl.h:98</a></div></div>
+<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1AutoConnectControl_html_add76ad43b4e0acf908f0dda99d912aaa"><div class="ttname"><a href="#add76ad43b4e0acf908f0dda99d912aaa">core::socket::stream::AutoConnectControl::retryTimer</a></div><div class="ttdeci">std::unique_ptr&lt; core::timer::Timer &gt; retryTimer</div><div class="ttdef"><b>Definition</b> <a href="AutoConnectControl_8h_source.html#l00101">AutoConnectControl.h:101</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="AutoConnectControl_8h_source.html#l00096">retryEnabled</a>, <a class="el" href="AutoConnectControl_8h_source.html#l00102">retryTimer</a>, and <a class="el" href="timer_2Timer_8cpp_source.html#l00057">core::timer::Timer::singleshotTimer()</a>.</p>
+<p class="reference">References <a class="el" href="AutoConnectControl_8h_source.html#l00098">retryEnabled</a>, <a class="el" href="AutoConnectControl_8h_source.html#l00101">retryTimer</a>, and <a class="el" href="timer_2Timer_8cpp_source.html#l00057">core::timer::Timer::singleshotTimer()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -375,17 +370,17 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AutoConnectControl_8cpp_source.html#l00103">103</a> of file <a class="el" href="AutoConnectControl_8cpp_source.html">AutoConnectControl.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  103</span>                                                  {</div>
-<div class="line"><span class="lineno">  104</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#ace7d5699be96ddae783f1f1ecc40909e">reconnectTimer</a>) {</div>
-<div class="line"><span class="lineno">  105</span>            <a class="code hl_variable" href="#ace7d5699be96ddae783f1f1ecc40909e">reconnectTimer</a>-&gt;cancel();</div>
-<div class="line"><span class="lineno">  106</span>            <a class="code hl_variable" href="#ace7d5699be96ddae783f1f1ecc40909e">reconnectTimer</a>.reset();</div>
-<div class="line"><span class="lineno">  107</span>        }</div>
-<div class="line"><span class="lineno">  108</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="AutoConnectControl_8cpp_source.html#l00118">118</a> of file <a class="el" href="AutoConnectControl_8cpp_source.html">AutoConnectControl.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  118</span>                                                  {</div>
+<div class="line"><span class="lineno">  119</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#ace7d5699be96ddae783f1f1ecc40909e">reconnectTimer</a>) {</div>
+<div class="line"><span class="lineno">  120</span>            <a class="code hl_variable" href="#ace7d5699be96ddae783f1f1ecc40909e">reconnectTimer</a>-&gt;cancel();</div>
+<div class="line"><span class="lineno">  121</span>            <a class="code hl_variable" href="#ace7d5699be96ddae783f1f1ecc40909e">reconnectTimer</a>.reset();</div>
+<div class="line"><span class="lineno">  122</span>        }</div>
+<div class="line"><span class="lineno">  123</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Timer_8cpp_source.html#l00084">core::Timer::cancel()</a>, and <a class="el" href="AutoConnectControl_8h_source.html#l00103">reconnectTimer</a>.</p>
+<p class="reference">References <a class="el" href="Timer_8cpp_source.html#l00084">core::Timer::cancel()</a>, and <a class="el" href="AutoConnectControl_8h_source.html#l00102">reconnectTimer</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="AutoConnectControl_8cpp_source.html#l00062">stopReconnect()</a>, and <a class="el" href="AutoConnectControl_8cpp_source.html#l00068">stopReconnectAndRetry()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="AutoConnectControl_8cpp_source.html#l00067">stopReconnect()</a>, and <a class="el" href="AutoConnectControl_8cpp_source.html#l00073">stopReconnectAndRetry()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -422,17 +417,17 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AutoConnectControl_8cpp_source.html#l00096">96</a> of file <a class="el" href="AutoConnectControl_8cpp_source.html">AutoConnectControl.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   96</span>                                              {</div>
-<div class="line"><span class="lineno">   97</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#add76ad43b4e0acf908f0dda99d912aaa">retryTimer</a>) {</div>
-<div class="line"><span class="lineno">   98</span>            <a class="code hl_variable" href="#add76ad43b4e0acf908f0dda99d912aaa">retryTimer</a>-&gt;cancel();</div>
-<div class="line"><span class="lineno">   99</span>            <a class="code hl_variable" href="#add76ad43b4e0acf908f0dda99d912aaa">retryTimer</a>.reset();</div>
-<div class="line"><span class="lineno">  100</span>        }</div>
-<div class="line"><span class="lineno">  101</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="AutoConnectControl_8cpp_source.html#l00111">111</a> of file <a class="el" href="AutoConnectControl_8cpp_source.html">AutoConnectControl.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  111</span>                                              {</div>
+<div class="line"><span class="lineno">  112</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#add76ad43b4e0acf908f0dda99d912aaa">retryTimer</a>) {</div>
+<div class="line"><span class="lineno">  113</span>            <a class="code hl_variable" href="#add76ad43b4e0acf908f0dda99d912aaa">retryTimer</a>-&gt;cancel();</div>
+<div class="line"><span class="lineno">  114</span>            <a class="code hl_variable" href="#add76ad43b4e0acf908f0dda99d912aaa">retryTimer</a>.reset();</div>
+<div class="line"><span class="lineno">  115</span>        }</div>
+<div class="line"><span class="lineno">  116</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Timer_8cpp_source.html#l00084">core::Timer::cancel()</a>, and <a class="el" href="AutoConnectControl_8h_source.html#l00102">retryTimer</a>.</p>
+<p class="reference">References <a class="el" href="Timer_8cpp_source.html#l00084">core::Timer::cancel()</a>, and <a class="el" href="AutoConnectControl_8h_source.html#l00101">retryTimer</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="AutoConnectControl_8cpp_source.html#l00068">stopReconnectAndRetry()</a>, and <a class="el" href="AutoConnectControl_8cpp_source.html#l00056">stopRetry()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="AutoConnectControl_8cpp_source.html#l00073">stopReconnectAndRetry()</a>, and <a class="el" href="AutoConnectControl_8cpp_source.html#l00061">stopRetry()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -461,12 +456,12 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AutoConnectControl_8cpp_source.html#l00080">80</a> of file <a class="el" href="AutoConnectControl_8cpp_source.html">AutoConnectControl.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   80</span>                                                      {</div>
-<div class="line"><span class="lineno">   81</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#af1f385f9f469a40da7be8fa0a8820062">reconnectEnabled</a>;</div>
-<div class="line"><span class="lineno">   82</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="AutoConnectControl_8cpp_source.html#l00085">85</a> of file <a class="el" href="AutoConnectControl_8cpp_source.html">AutoConnectControl.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   85</span>                                                      {</div>
+<div class="line"><span class="lineno">   86</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#af1f385f9f469a40da7be8fa0a8820062">reconnectEnabled</a>;</div>
+<div class="line"><span class="lineno">   87</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="AutoConnectControl_8h_source.html#l00097">reconnectEnabled</a>.</p>
+<p class="reference">References <a class="el" href="AutoConnectControl_8h_source.html#l00099">reconnectEnabled</a>.</p>
 
 </div>
 </div>
@@ -485,12 +480,12 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AutoConnectControl_8cpp_source.html#l00076">76</a> of file <a class="el" href="AutoConnectControl_8cpp_source.html">AutoConnectControl.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   76</span>                                                  {</div>
-<div class="line"><span class="lineno">   77</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#a1c6e42c17b552616558555b65a9f1cbf">retryEnabled</a>;</div>
-<div class="line"><span class="lineno">   78</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="AutoConnectControl_8cpp_source.html#l00081">81</a> of file <a class="el" href="AutoConnectControl_8cpp_source.html">AutoConnectControl.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   81</span>                                                  {</div>
+<div class="line"><span class="lineno">   82</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#a1c6e42c17b552616558555b65a9f1cbf">retryEnabled</a>;</div>
+<div class="line"><span class="lineno">   83</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="AutoConnectControl_8h_source.html#l00096">retryEnabled</a>.</p>
+<p class="reference">References <a class="el" href="AutoConnectControl_8h_source.html#l00098">retryEnabled</a>.</p>
 
 </div>
 </div>
@@ -544,6 +539,36 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a id="aa40e68167c464299219748e979d58f82" name="aa40e68167c464299219748e979d58f82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa40e68167c464299219748e979d58f82">&#9670;&#160;</a></span>setOnDestroy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a3d692f361a219a435340babbdc2032cc">AutoConnectControl</a> * core::socket::stream::AutoConnectControl::setOnDestroy </td>
+          <td>(</td>
+          <td class="paramtype">const std::function&lt; void(<a class="el" href="#a3d692f361a219a435340babbdc2032cc">AutoConnectControl</a> *)&gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>onDestroy</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="AutoConnectControl_8cpp_source.html#l00089">89</a> of file <a class="el" href="AutoConnectControl_8cpp_source.html">AutoConnectControl.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   89</span>                                                                                                                {</div>
+<div class="line"><span class="lineno">   90</span>        <span class="keyword">const</span> std::function&lt;void(<a class="code hl_function" href="#a3d692f361a219a435340babbdc2032cc">AutoConnectControl</a>*)&gt; oldOnDestroy = this-&gt;<a class="code hl_variable" href="#aa90d3d0e68102dd417edac043114f6bf">onDestroy</a>;</div>
+<div class="line"><span class="lineno">   91</span> </div>
+<div class="line"><span class="lineno">   92</span>        this-&gt;<a class="code hl_variable" href="#aa90d3d0e68102dd417edac043114f6bf">onDestroy</a> = [oldOnDestroy, <a class="code hl_variable" href="#aa90d3d0e68102dd417edac043114f6bf">onDestroy</a>](<a class="code hl_function" href="#a3d692f361a219a435340babbdc2032cc">AutoConnectControl</a>* control) {</div>
+<div class="line"><span class="lineno">   93</span>            oldOnDestroy(control);</div>
+<div class="line"><span class="lineno">   94</span>            <a class="code hl_variable" href="#aa90d3d0e68102dd417edac043114f6bf">onDestroy</a>(control);</div>
+<div class="line"><span class="lineno">   95</span>        };</div>
+<div class="line"><span class="lineno">   96</span>        <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">   97</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="AutoConnectControl_8h_source.html#l00104">onDestroy</a>.</p>
+
+</div>
+</div>
 <a id="a6e4b5efe54c1641329dfae65c4fa33fd" name="a6e4b5efe54c1641329dfae65c4fa33fd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6e4b5efe54c1641329dfae65c4fa33fd">&#9670;&#160;</a></span>stopReconnect()</h2>
 
@@ -559,15 +584,15 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AutoConnectControl_8cpp_source.html#l00062">62</a> of file <a class="el" href="AutoConnectControl_8cpp_source.html">AutoConnectControl.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   62</span>                                           {</div>
-<div class="line"><span class="lineno">   63</span>        <a class="code hl_variable" href="#af1f385f9f469a40da7be8fa0a8820062">reconnectEnabled</a> = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   64</span> </div>
-<div class="line"><span class="lineno">   65</span>        <a class="code hl_function" href="#a7c90bc885ae5268ee528a1488f6e3f37">cancelReconnectTimer</a>();</div>
-<div class="line"><span class="lineno">   66</span>    }</div>
-<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1AutoConnectControl_html_a7c90bc885ae5268ee528a1488f6e3f37"><div class="ttname"><a href="#a7c90bc885ae5268ee528a1488f6e3f37">core::socket::stream::AutoConnectControl::cancelReconnectTimer</a></div><div class="ttdeci">void cancelReconnectTimer()</div><div class="ttdef"><b>Definition</b> <a href="AutoConnectControl_8cpp_source.html#l00103">AutoConnectControl.cpp:103</a></div></div>
+<p class="definition">Definition at line <a class="el" href="AutoConnectControl_8cpp_source.html#l00067">67</a> of file <a class="el" href="AutoConnectControl_8cpp_source.html">AutoConnectControl.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   67</span>                                           {</div>
+<div class="line"><span class="lineno">   68</span>        <a class="code hl_variable" href="#af1f385f9f469a40da7be8fa0a8820062">reconnectEnabled</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   69</span> </div>
+<div class="line"><span class="lineno">   70</span>        <a class="code hl_function" href="#a7c90bc885ae5268ee528a1488f6e3f37">cancelReconnectTimer</a>();</div>
+<div class="line"><span class="lineno">   71</span>    }</div>
+<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1AutoConnectControl_html_a7c90bc885ae5268ee528a1488f6e3f37"><div class="ttname"><a href="#a7c90bc885ae5268ee528a1488f6e3f37">core::socket::stream::AutoConnectControl::cancelReconnectTimer</a></div><div class="ttdeci">void cancelReconnectTimer()</div><div class="ttdef"><b>Definition</b> <a href="AutoConnectControl_8cpp_source.html#l00118">AutoConnectControl.cpp:118</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="AutoConnectControl_8cpp_source.html#l00103">cancelReconnectTimer()</a>, and <a class="el" href="AutoConnectControl_8h_source.html#l00097">reconnectEnabled</a>.</p>
+<p class="reference">References <a class="el" href="AutoConnectControl_8cpp_source.html#l00118">cancelReconnectTimer()</a>, and <a class="el" href="AutoConnectControl_8h_source.html#l00099">reconnectEnabled</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -591,17 +616,17 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AutoConnectControl_8cpp_source.html#l00068">68</a> of file <a class="el" href="AutoConnectControl_8cpp_source.html">AutoConnectControl.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   68</span>                                                   {</div>
-<div class="line"><span class="lineno">   69</span>        <a class="code hl_variable" href="#a1c6e42c17b552616558555b65a9f1cbf">retryEnabled</a> = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   70</span>        <a class="code hl_variable" href="#af1f385f9f469a40da7be8fa0a8820062">reconnectEnabled</a> = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   71</span> </div>
-<div class="line"><span class="lineno">   72</span>        <a class="code hl_function" href="#a7c6715a6f12a39efc07574ac6f7edb12">cancelRetryTimer</a>();</div>
-<div class="line"><span class="lineno">   73</span>        <a class="code hl_function" href="#a7c90bc885ae5268ee528a1488f6e3f37">cancelReconnectTimer</a>();</div>
-<div class="line"><span class="lineno">   74</span>    }</div>
-<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1AutoConnectControl_html_a7c6715a6f12a39efc07574ac6f7edb12"><div class="ttname"><a href="#a7c6715a6f12a39efc07574ac6f7edb12">core::socket::stream::AutoConnectControl::cancelRetryTimer</a></div><div class="ttdeci">void cancelRetryTimer()</div><div class="ttdef"><b>Definition</b> <a href="AutoConnectControl_8cpp_source.html#l00096">AutoConnectControl.cpp:96</a></div></div>
+<p class="definition">Definition at line <a class="el" href="AutoConnectControl_8cpp_source.html#l00073">73</a> of file <a class="el" href="AutoConnectControl_8cpp_source.html">AutoConnectControl.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   73</span>                                                   {</div>
+<div class="line"><span class="lineno">   74</span>        <a class="code hl_variable" href="#a1c6e42c17b552616558555b65a9f1cbf">retryEnabled</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   75</span>        <a class="code hl_variable" href="#af1f385f9f469a40da7be8fa0a8820062">reconnectEnabled</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   76</span> </div>
+<div class="line"><span class="lineno">   77</span>        <a class="code hl_function" href="#a7c6715a6f12a39efc07574ac6f7edb12">cancelRetryTimer</a>();</div>
+<div class="line"><span class="lineno">   78</span>        <a class="code hl_function" href="#a7c90bc885ae5268ee528a1488f6e3f37">cancelReconnectTimer</a>();</div>
+<div class="line"><span class="lineno">   79</span>    }</div>
+<div class="ttc" id="aclasscore_1_1socket_1_1stream_1_1AutoConnectControl_html_a7c6715a6f12a39efc07574ac6f7edb12"><div class="ttname"><a href="#a7c6715a6f12a39efc07574ac6f7edb12">core::socket::stream::AutoConnectControl::cancelRetryTimer</a></div><div class="ttdeci">void cancelRetryTimer()</div><div class="ttdef"><b>Definition</b> <a href="AutoConnectControl_8cpp_source.html#l00111">AutoConnectControl.cpp:111</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="AutoConnectControl_8cpp_source.html#l00103">cancelReconnectTimer()</a>, <a class="el" href="AutoConnectControl_8cpp_source.html#l00096">cancelRetryTimer()</a>, <a class="el" href="AutoConnectControl_8h_source.html#l00097">reconnectEnabled</a>, and <a class="el" href="AutoConnectControl_8h_source.html#l00096">retryEnabled</a>.</p>
+<p class="reference">References <a class="el" href="AutoConnectControl_8cpp_source.html#l00118">cancelReconnectTimer()</a>, <a class="el" href="AutoConnectControl_8cpp_source.html#l00111">cancelRetryTimer()</a>, <a class="el" href="AutoConnectControl_8h_source.html#l00099">reconnectEnabled</a>, and <a class="el" href="AutoConnectControl_8h_source.html#l00098">retryEnabled</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -625,14 +650,14 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AutoConnectControl_8cpp_source.html#l00056">56</a> of file <a class="el" href="AutoConnectControl_8cpp_source.html">AutoConnectControl.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   56</span>                                       {</div>
-<div class="line"><span class="lineno">   57</span>        <a class="code hl_variable" href="#a1c6e42c17b552616558555b65a9f1cbf">retryEnabled</a> = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   58</span> </div>
-<div class="line"><span class="lineno">   59</span>        <a class="code hl_function" href="#a7c6715a6f12a39efc07574ac6f7edb12">cancelRetryTimer</a>();</div>
-<div class="line"><span class="lineno">   60</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="AutoConnectControl_8cpp_source.html#l00061">61</a> of file <a class="el" href="AutoConnectControl_8cpp_source.html">AutoConnectControl.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   61</span>                                       {</div>
+<div class="line"><span class="lineno">   62</span>        <a class="code hl_variable" href="#a1c6e42c17b552616558555b65a9f1cbf">retryEnabled</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   63</span> </div>
+<div class="line"><span class="lineno">   64</span>        <a class="code hl_function" href="#a7c6715a6f12a39efc07574ac6f7edb12">cancelRetryTimer</a>();</div>
+<div class="line"><span class="lineno">   65</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="AutoConnectControl_8cpp_source.html#l00096">cancelRetryTimer()</a>, and <a class="el" href="AutoConnectControl_8h_source.html#l00096">retryEnabled</a>.</p>
+<p class="reference">References <a class="el" href="AutoConnectControl_8cpp_source.html#l00111">cancelRetryTimer()</a>, and <a class="el" href="AutoConnectControl_8h_source.html#l00098">retryEnabled</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -664,7 +689,7 @@ template&lt;typename SocketConnectorT, typename SocketContextFactoryT, typename.
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AutoConnectControl_8h_source.html#l00108">108</a> of file <a class="el" href="AutoConnectControl_8h_source.html">AutoConnectControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AutoConnectControl_8h_source.html#l00109">109</a> of file <a class="el" href="AutoConnectControl_8h_source.html">AutoConnectControl.h</a>.</p>
 
 </div>
 </div>
@@ -690,13 +715,13 @@ template&lt;typename SocketAcceptorT, typename SocketContextFactoryT, typename..
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AutoConnectControl_8h_source.html#l00113">113</a> of file <a class="el" href="AutoConnectControl_8h_source.html">AutoConnectControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AutoConnectControl_8h_source.html#l00114">114</a> of file <a class="el" href="AutoConnectControl_8h_source.html">AutoConnectControl.h</a>.</p>
 
 </div>
 </div>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
-<a id="a83b38ab882e8845182a9afcd2bf0a276" name="a83b38ab882e8845182a9afcd2bf0a276"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a83b38ab882e8845182a9afcd2bf0a276">&#9670;&#160;</a></span>cancelReconnectScheduled</h2>
+<a id="aa90d3d0e68102dd417edac043114f6bf" name="aa90d3d0e68102dd417edac043114f6bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa90d3d0e68102dd417edac043114f6bf">&#9670;&#160;</a></span>onDestroy</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -705,7 +730,7 @@ template&lt;typename SocketAcceptorT, typename SocketContextFactoryT, typename..
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool core::socket::stream::AutoConnectControl::cancelReconnectScheduled {false}</td>
+          <td class="memname">std::function&lt;void(<a class="el" href="#a3d692f361a219a435340babbdc2032cc">AutoConnectControl</a>*)&gt; core::socket::stream::AutoConnectControl::onDestroy</td>
         </tr>
       </table>
   </td>
@@ -715,34 +740,10 @@ template&lt;typename SocketAcceptorT, typename SocketContextFactoryT, typename..
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AutoConnectControl_8h_source.html#l00100">100</a> of file <a class="el" href="AutoConnectControl_8h_source.html">AutoConnectControl.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  100</span>{<span class="keyword">false</span>};</div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="a6e20ede40fdb00db9a06947e935c36c0" name="a6e20ede40fdb00db9a06947e935c36c0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6e20ede40fdb00db9a06947e935c36c0">&#9670;&#160;</a></span>cancelRetryScheduled</h2>
+<p class="definition">Definition at line <a class="el" href="AutoConnectControl_8h_source.html#l00104">104</a> of file <a class="el" href="AutoConnectControl_8h_source.html">AutoConnectControl.h</a>.</p>
 
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool core::socket::stream::AutoConnectControl::cancelRetryScheduled {false}</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
+<p class="reference">Referenced by <a class="el" href="AutoConnectControl_8cpp_source.html#l00052">AutoConnectControl()</a>, <a class="el" href="AutoConnectControl_8cpp_source.html#l00089">setOnDestroy()</a>, and <a class="el" href="AutoConnectControl_8cpp_source.html#l00057">~AutoConnectControl()</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="AutoConnectControl_8h_source.html#l00099">99</a> of file <a class="el" href="AutoConnectControl_8h_source.html">AutoConnectControl.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   99</span>{<span class="keyword">false</span>};</div>
-</div><!-- fragment -->
 </div>
 </div>
 <a id="af1f385f9f469a40da7be8fa0a8820062" name="af1f385f9f469a40da7be8fa0a8820062"></a>
@@ -765,10 +766,10 @@ template&lt;typename SocketAcceptorT, typename SocketContextFactoryT, typename..
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AutoConnectControl_8h_source.html#l00097">97</a> of file <a class="el" href="AutoConnectControl_8h_source.html">AutoConnectControl.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   97</span>{<span class="keyword">true</span>};</div>
+<p class="definition">Definition at line <a class="el" href="AutoConnectControl_8h_source.html#l00099">99</a> of file <a class="el" href="AutoConnectControl_8h_source.html">AutoConnectControl.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   99</span>{<span class="keyword">true</span>};</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="AutoConnectControl_8cpp_source.html#l00090">armReconnectTimer()</a>, <a class="el" href="AutoConnectControl_8cpp_source.html#l00080">isReconnectEnabled()</a>, <a class="el" href="AutoConnectControl_8cpp_source.html#l00062">stopReconnect()</a>, and <a class="el" href="AutoConnectControl_8cpp_source.html#l00068">stopReconnectAndRetry()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="AutoConnectControl_8cpp_source.html#l00105">armReconnectTimer()</a>, <a class="el" href="AutoConnectControl_8cpp_source.html#l00085">isReconnectEnabled()</a>, <a class="el" href="AutoConnectControl_8cpp_source.html#l00067">stopReconnect()</a>, and <a class="el" href="AutoConnectControl_8cpp_source.html#l00073">stopReconnectAndRetry()</a>.</p>
 
 </div>
 </div>
@@ -792,9 +793,9 @@ template&lt;typename SocketAcceptorT, typename SocketContextFactoryT, typename..
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AutoConnectControl_8h_source.html#l00103">103</a> of file <a class="el" href="AutoConnectControl_8h_source.html">AutoConnectControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AutoConnectControl_8h_source.html#l00102">102</a> of file <a class="el" href="AutoConnectControl_8h_source.html">AutoConnectControl.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="AutoConnectControl_8cpp_source.html#l00090">armReconnectTimer()</a>, and <a class="el" href="AutoConnectControl_8cpp_source.html#l00103">cancelReconnectTimer()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="AutoConnectControl_8cpp_source.html#l00105">armReconnectTimer()</a>, and <a class="el" href="AutoConnectControl_8cpp_source.html#l00118">cancelReconnectTimer()</a>.</p>
 
 </div>
 </div>
@@ -818,10 +819,10 @@ template&lt;typename SocketAcceptorT, typename SocketContextFactoryT, typename..
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AutoConnectControl_8h_source.html#l00096">96</a> of file <a class="el" href="AutoConnectControl_8h_source.html">AutoConnectControl.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   96</span>{<span class="keyword">true</span>};</div>
+<p class="definition">Definition at line <a class="el" href="AutoConnectControl_8h_source.html#l00098">98</a> of file <a class="el" href="AutoConnectControl_8h_source.html">AutoConnectControl.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   98</span>{<span class="keyword">true</span>};</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="AutoConnectControl_8cpp_source.html#l00084">armRetryTimer()</a>, <a class="el" href="AutoConnectControl_8cpp_source.html#l00076">isRetryEnabled()</a>, <a class="el" href="AutoConnectControl_8cpp_source.html#l00068">stopReconnectAndRetry()</a>, and <a class="el" href="AutoConnectControl_8cpp_source.html#l00056">stopRetry()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="AutoConnectControl_8cpp_source.html#l00099">armRetryTimer()</a>, <a class="el" href="AutoConnectControl_8cpp_source.html#l00081">isRetryEnabled()</a>, <a class="el" href="AutoConnectControl_8cpp_source.html#l00073">stopReconnectAndRetry()</a>, and <a class="el" href="AutoConnectControl_8cpp_source.html#l00061">stopRetry()</a>.</p>
 
 </div>
 </div>
@@ -845,9 +846,9 @@ template&lt;typename SocketAcceptorT, typename SocketContextFactoryT, typename..
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AutoConnectControl_8h_source.html#l00102">102</a> of file <a class="el" href="AutoConnectControl_8h_source.html">AutoConnectControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AutoConnectControl_8h_source.html#l00101">101</a> of file <a class="el" href="AutoConnectControl_8h_source.html">AutoConnectControl.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="AutoConnectControl_8cpp_source.html#l00084">armRetryTimer()</a>, and <a class="el" href="AutoConnectControl_8cpp_source.html#l00096">cancelRetryTimer()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="AutoConnectControl_8cpp_source.html#l00099">armRetryTimer()</a>, and <a class="el" href="AutoConnectControl_8cpp_source.html#l00111">cancelRetryTimer()</a>.</p>
 
 </div>
 </div>

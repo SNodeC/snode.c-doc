@@ -1,5 +1,9 @@
 var NAVTREEINDEX40 =
 {
+"classweb_1_1websocket_1_1SocketContextUpgrade.html#a38dfdce9ae721f940f473b9789b84b66":[3,0,11,1,3,6],
+"classweb_1_1websocket_1_1SocketContextUpgrade.html#a50d9eaf2a9f40764933df4a87acb182e":[1,0,16,1,3,33],
+"classweb_1_1websocket_1_1SocketContextUpgrade.html#a50d9eaf2a9f40764933df4a87acb182e":[3,0,11,1,3,33],
+"classweb_1_1websocket_1_1SocketContextUpgrade.html#a52bddad35ee4798d113dd90ecce5242c":[1,0,16,1,3,22],
 "classweb_1_1websocket_1_1SocketContextUpgrade.html#a52bddad35ee4798d113dd90ecce5242c":[3,0,11,1,3,22],
 "classweb_1_1websocket_1_1SocketContextUpgrade.html#a649e6ce0b4d606e0dba826618af55755":[1,0,16,1,3,27],
 "classweb_1_1websocket_1_1SocketContextUpgrade.html#a649e6ce0b4d606e0dba826618af55755":[3,0,11,1,3,27],
@@ -245,9 +249,5 @@ var NAVTREEINDEX40 =
 "classweb_1_1websocket_1_1SubProtocolFactorySelector.html#aaa9000a982c5189a90dc1f14074a90bf":[3,0,11,1,8,1],
 "classweb_1_1websocket_1_1SubProtocolFactorySelector.html#aaa9000a982c5189a90dc1f14074a90bfa3d27c95bfdbea691b250894d96852844":[1,0,16,1,8,1,0],
 "classweb_1_1websocket_1_1SubProtocolFactorySelector.html#aaa9000a982c5189a90dc1f14074a90bfa3d27c95bfdbea691b250894d96852844":[3,0,11,1,8,1,0],
-"classweb_1_1websocket_1_1SubProtocolFactorySelector.html#aaa9000a982c5189a90dc1f14074a90bfaef10c650df47bffd6399e5e78da2a9b1":[1,0,16,1,8,1,1],
-"classweb_1_1websocket_1_1SubProtocolFactorySelector.html#aaa9000a982c5189a90dc1f14074a90bfaef10c650df47bffd6399e5e78da2a9b1":[3,0,11,1,8,1,1],
-"classweb_1_1websocket_1_1SubProtocolFactorySelector.html#ac9b112b29b013f7f5c3ba4bc6573508c":[1,0,16,1,8,7],
-"classweb_1_1websocket_1_1SubProtocolFactorySelector.html#ac9b112b29b013f7f5c3ba4bc6573508c":[3,0,11,1,8,7],
-"classweb_1_1websocket_1_1SubProtocolFactorySelector.html#adabe0be7e3b7fe27ffe9ffc93d0d9281":[1,0,16,1,8,8]
+"classweb_1_1websocket_1_1SubProtocolFactorySelector.html#aaa9000a982c5189a90dc1f14074a90bfaef10c650df47bffd6399e5e78da2a9b1":[1,0,16,1,8,1,1]
 };

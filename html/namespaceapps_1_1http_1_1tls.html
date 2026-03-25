@@ -514,7 +514,7 @@ Here is the call graph for this function:</div>
 <div class="fragment"><div class="line"><span class="lineno">   96</span>                                                   {</div>
 <div class="line"><span class="lineno">   97</span>        <a class="code hl_typedef" href="#a7c9fffa839dbfc50da6026621b9f2a9a">WebApp</a> webApp(name, <a class="code hl_function" href="http_2model_2servers_8h.html#aed80b929c5eb7ce39f27c73b5f05fa96">getRouter</a>());</div>
 <div class="line"><span class="lineno">   98</span> </div>
-<div class="line"><span class="lineno">   99</span>        <span class="keyword">const</span> std::string&amp; instanceName = webApp.getConfig().getInstanceName();</div>
+<div class="line"><span class="lineno">   99</span>        <span class="keyword">const</span> std::string&amp; instanceName = webApp.getConfig()-&gt;getInstanceName();</div>
 <div class="line"><span class="lineno">  100</span> </div>
 <div class="line"><span class="lineno">  101</span>        webApp.setOnConnect([instanceName](<a class="code hl_typedef" href="#a52e2f28be8bf7deffddb01c6da3b7c65">SocketConnection</a>* socketConnection) { <span class="comment">// onConnect</span></div>
 <div class="line"><span class="lineno">  102</span>            <a class="code hl_define" href="Logger_8h.html#afc28ec91d066c96a3a139441e029f326">VLOG</a>(1) &lt;&lt; <span class="stringliteral">&quot;OnConnect &quot;</span> &lt;&lt; instanceName;</div>

@@ -165,7 +165,7 @@ $(function() {
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keyword">const</span> SocketClient client = apps::echo::model::STREAM::getClient();</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    client.connect(</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        [instanceName = client.getConfig().getInstanceName()](<span class="keyword">const</span> SocketAddress&amp; socketAddress, <span class="keyword">const</span> core::socket::State&amp; state) {</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        [instanceName = client.getConfig()-&gt;getInstanceName()](<span class="keyword">const</span> SocketAddress&amp; socketAddress, <span class="keyword">const</span> core::socket::State&amp; state) {</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            <span class="keywordflow">switch</span> (state) {</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>                <span class="keywordflow">case</span> core::socket::State::OK:</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                    <a class="code hl_define" href="Logger_8h.html#afc28ec91d066c96a3a139441e029f326">VLOG</a>(1) &lt;&lt; instanceName &lt;&lt; <span class="stringliteral">&quot;: connected to &#39;&quot;</span> &lt;&lt; socketAddress.toString() &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>

@@ -1,5 +1,9 @@
 var NAVTREEINDEX46 =
 {
+"mqtt_2packets_2Disconnect_8cpp_source.html":[4,0,4,0,1,4],
+"mqtt_2packets_2Disconnect_8h.html":[4,0,4,0,1,5],
+"mqtt_2packets_2Disconnect_8h_source.html":[4,0,4,0,1,5],
+"mqtt_2packets_2Pingreq_8cpp.html":[4,0,4,0,1,6],
 "mqtt_2packets_2Pingreq_8cpp_source.html":[4,0,4,0,1,6],
 "mqtt_2packets_2Pingreq_8h.html":[4,0,4,0,1,7],
 "mqtt_2packets_2Pingreq_8h_source.html":[4,0,4,0,1,7],
@@ -216,10 +220,10 @@ var NAVTREEINDEX46 =
 "namespacecore_1_1pipe.html":[1,0,5,2],
 "namespacecore_1_1socket.html":[1,0,5,1],
 "namespacecore_1_1socket_1_1stream.html":[1,0,5,1,0],
+"namespacecore_1_1socket_1_1stream.html#a04f021a071c524916bdfd003c9f0f7f7":[1,0,5,1,0,19],
 "namespacecore_1_1socket_1_1stream.html#a1c2a8be99fe91523dcc41ce0e97085f7":[1,0,5,1,0,17],
-"namespacecore_1_1socket_1_1stream.html#ab1c80abfd897354e39405a2262153b2f":[1,0,5,1,0,19],
+"namespacecore_1_1socket_1_1stream.html#abd05e2c439f6c51a184da6b427bb1f86":[1,0,5,1,0,15],
 "namespacecore_1_1socket_1_1stream.html#aebec07caeb27d0a80d1929382921d7a6":[1,0,5,1,0,14],
-"namespacecore_1_1socket_1_1stream.html#aecb4c38cfb5bd5a8e1f1a65c4e2c2e91":[1,0,5,1,0,15],
 "namespacecore_1_1socket_1_1stream.html#af7e042d68b8b8065c11332824c38c98d":[1,0,5,1,0,18],
 "namespacecore_1_1socket_1_1stream.html#afe631ab6ff33cc38df894fa7ef3c8f81":[1,0,5,1,0,16],
 "namespacecore_1_1socket_1_1stream_1_1legacy.html":[1,0,5,1,0,0],
@@ -245,9 +249,5 @@ var NAVTREEINDEX46 =
 "namespacecore_1_1system.html#a0596afbc44422b1cbf85c796d53f374b":[1,0,5,7,11],
 "namespacecore_1_1system.html#a09a73e9e38f3f98d7ca380cd663facef":[1,0,5,7,32],
 "namespacecore_1_1system.html#a09b439f42917e350a4c7124993e05723":[1,0,5,7,9],
-"namespacecore_1_1system.html#a09b7b5fd5a49db5b0abee54dfda17ba1":[1,0,5,7,18],
-"namespacecore_1_1system.html#a1f27caa888ac8809434c3338df8eeae1":[1,0,5,7,4],
-"namespacecore_1_1system.html#a2aa41abc7d6ba9da2e5035b74608919a":[1,0,5,7,3],
-"namespacecore_1_1system.html#a37ca251adecc564c59a9420200b20a9f":[1,0,5,7,28],
-"namespacecore_1_1system.html#a38a2ef544196b684eb5850c42e8ee770":[1,0,5,7,27]
+"namespacecore_1_1system.html#a09b7b5fd5a49db5b0abee54dfda17ba1":[1,0,5,7,18]
 };

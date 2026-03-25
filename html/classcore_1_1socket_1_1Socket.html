@@ -125,7 +125,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:acef242f0fa4e852ef943fbe8ee716015" id="r_acef242f0fa4e852ef943fbe8ee716015"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acef242f0fa4e852ef943fbe8ee716015">Socket</a> (Socket &amp;&amp;) noexcept=delete</td></tr>
 <tr class="memitem:a1bf36fc09db3cac5fc8e53a067a94b9b" id="r_a1bf36fc09db3cac5fc8e53a067a94b9b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#ae816a15281c2e2338d47d546762f0d67">Socket</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1bf36fc09db3cac5fc8e53a067a94b9b">operator=</a> (<a class="el" href="#ae816a15281c2e2338d47d546762f0d67">Socket</a> &amp;&amp;) noexcept=delete</td></tr>
 <tr class="memitem:a1f2ecd8e699b57a1d98665923ac21072" id="r_a1f2ecd8e699b57a1d98665923ac21072"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1f2ecd8e699b57a1d98665923ac21072">~Socket</a> ()</td></tr>
-<tr class="memitem:ac9b7df3682b2a24b5c7fce9bcff1c441" id="r_ac9b7df3682b2a24b5c7fce9bcff1c441"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a8322727680d1b398830d8d88faf79b8a">Config</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac9b7df3682b2a24b5c7fce9bcff1c441">getConfig</a> () const</td></tr>
+<tr class="memitem:af5de8ea2fcfff69f73564bbead6aed98" id="r_af5de8ea2fcfff69f73564bbead6aed98"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a8322727680d1b398830d8d88faf79b8a">Config</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af5de8ea2fcfff69f73564bbead6aed98">getConfig</a> () const</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -306,8 +306,8 @@ template&lt;typename <a class="el" href="#a8322727680d1b398830d8d88faf79b8a">Con
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
-<a id="ac9b7df3682b2a24b5c7fce9bcff1c441" name="ac9b7df3682b2a24b5c7fce9bcff1c441"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac9b7df3682b2a24b5c7fce9bcff1c441">&#9670;&#160;</a></span>getConfig()</h2>
+<a id="af5de8ea2fcfff69f73564bbead6aed98" name="af5de8ea2fcfff69f73564bbead6aed98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5de8ea2fcfff69f73564bbead6aed98">&#9670;&#160;</a></span>getConfig()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -315,7 +315,7 @@ template&lt;typename <a class="el" href="#a8322727680d1b398830d8d88faf79b8a">Con
 template&lt;typename <a class="el" href="#a8322727680d1b398830d8d88faf79b8a">Config</a>&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a8322727680d1b398830d8d88faf79b8a">Config</a> &amp; <a class="el" href="classcore_1_1socket_1_1Socket.html">core::socket::Socket</a>&lt; <a class="el" href="#a8322727680d1b398830d8d88faf79b8a">Config</a> &gt;::getConfig </td>
+          <td class="memname"><a class="el" href="#a8322727680d1b398830d8d88faf79b8a">Config</a> * <a class="el" href="classcore_1_1socket_1_1Socket.html">core::socket::Socket</a>&lt; <a class="el" href="#a8322727680d1b398830d8d88faf79b8a">Config</a> &gt;::getConfig </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -325,7 +325,7 @@ template&lt;typename <a class="el" href="#a8322727680d1b398830d8d88faf79b8a">Con
 
 <p class="definition">Definition at line <a class="el" href="Socket_8hpp_source.html#l00065">65</a> of file <a class="el" href="Socket_8hpp_source.html">Socket.hpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   65</span>                                            {</div>
-<div class="line"><span class="lineno">   66</span>        <span class="keywordflow">return</span> *<a class="code hl_variable" href="#a29362f3a3b5843f706daf077fa6b1a3d">config</a>;</div>
+<div class="line"><span class="lineno">   66</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#a29362f3a3b5843f706daf077fa6b1a3d">config</a>.get();</div>
 <div class="line"><span class="lineno">   67</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="core_2socket_2Socket_8h_source.html#l00075">config</a>.</p>
@@ -334,7 +334,7 @@ template&lt;typename <a class="el" href="#a8322727680d1b398830d8d88faf79b8a">Con
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="classcore_1_1socket_1_1Socket_ac9b7df3682b2a24b5c7fce9bcff1c441_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="classcore_1_1socket_1_1Socket_af5de8ea2fcfff69f73564bbead6aed98_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>

@@ -6,9 +6,9 @@ var classnet_1_1config_1_1ConfigPhysicalSocketClient =
     [ "getConnectTimeout", "classnet_1_1config_1_1ConfigPhysicalSocketClient.html#aece3e0ba3508d3598128aad29dd5b964", null ],
     [ "getReconnect", "classnet_1_1config_1_1ConfigPhysicalSocketClient.html#a748b5f0c4ace1bdd56b9cc144f8fa6ae", null ],
     [ "getReconnectTime", "classnet_1_1config_1_1ConfigPhysicalSocketClient.html#ac8031cb19fba30718cb904a0a2643f4f", null ],
-    [ "setConnectTimeout", "classnet_1_1config_1_1ConfigPhysicalSocketClient.html#afe17922bae268098ea4f9320cb2af127", null ],
-    [ "setReconnect", "classnet_1_1config_1_1ConfigPhysicalSocketClient.html#a97000317b2334ce755b1ed4ff8d4147c", null ],
-    [ "setReconnectTime", "classnet_1_1config_1_1ConfigPhysicalSocketClient.html#a730700837616c29b44463c9647a33f58", null ],
+    [ "setConnectTimeout", "classnet_1_1config_1_1ConfigPhysicalSocketClient.html#aad538c596bc6388cd6f2737818845d08", null ],
+    [ "setReconnect", "classnet_1_1config_1_1ConfigPhysicalSocketClient.html#a119e26f1228b809223d8e1bb57c1c68f", null ],
+    [ "setReconnectTime", "classnet_1_1config_1_1ConfigPhysicalSocketClient.html#a35ae278a04f5841b1e3b897e0c3e3dc7", null ],
     [ "connectTimeoutOpt", "classnet_1_1config_1_1ConfigPhysicalSocketClient.html#a3858c239cc99483753e00e58e0d23578", null ],
     [ "reconnectOpt", "classnet_1_1config_1_1ConfigPhysicalSocketClient.html#a61fa538483379a77311a6537876c7556", null ],
     [ "reconnectTimeOpt", "classnet_1_1config_1_1ConfigPhysicalSocketClient.html#a1c64c9855b712f23383f826358539d5f", null ]

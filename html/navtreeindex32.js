@@ -1,5 +1,7 @@
 var NAVTREEINDEX32 =
 {
+"classnet_1_1un_1_1dgram_1_1Socket.html#a06ee2dd2b27156aa5fe8a17ecab2a3ef":[3,0,8,6,1,0,4],
+"classnet_1_1un_1_1dgram_1_1Socket.html#a240ff2eab8ff9d072a5dfd221b892453":[1,0,12,6,1,0,1],
 "classnet_1_1un_1_1dgram_1_1Socket.html#a240ff2eab8ff9d072a5dfd221b892453":[3,0,8,6,1,0,1],
 "classnet_1_1un_1_1dgram_1_1Socket.html#a2dd21ee3777c7cc0c1f7eae92ad2c5aa":[1,0,12,6,1,0,0],
 "classnet_1_1un_1_1dgram_1_1Socket.html#a2dd21ee3777c7cc0c1f7eae92ad2c5aa":[3,0,8,6,1,0,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX32 =
 "classutils_1_1Daemon.html#ade68cf0c06a22b8d0446244b82d75ba8":[3,0,10,9,2],
 "classutils_1_1DaemonError.html":[1,0,15,10],
 "classutils_1_1DaemonError.html":[3,0,10,7],
-"classutils_1_1DaemonError.html#a536d8180bb28a0af1eda660a931d2ff2":[1,0,15,10,1],
-"classutils_1_1DaemonError.html#a536d8180bb28a0af1eda660a931d2ff2":[3,0,10,7,1],
-"classutils_1_1DaemonError.html#aa27072592459227b351e18e3e5ed39b3":[1,0,15,10,0]
+"classutils_1_1DaemonError.html#a536d8180bb28a0af1eda660a931d2ff2":[1,0,15,10,1]
 };

@@ -4,6 +4,7 @@ var hierarchy =
       [ "utils::AppWithPtr", "classutils_1_1AppWithPtr.html", null ]
     ] ],
     [ "utils::AttributeProxy&lt; Attribute &gt;", "classutils_1_1AttributeProxy.html", null ],
+    [ "core::socket::stream::AutoConnectControl", "classcore_1_1socket_1_1stream_1_1AutoConnectControl.html", null ],
     [ "iot::mqtt::server::broker::Broker", "classiot_1_1mqtt_1_1server_1_1broker_1_1Broker.html", null ],
     [ "web::http::decoder::Chunked::Chunk", "classweb_1_1http_1_1decoder_1_1Chunked_1_1Chunk.html", null ],
     [ "web::http::ciLess", "structweb_1_1http_1_1ciLess.html", null ],
@@ -399,7 +400,6 @@ var hierarchy =
       [ "web::http::client::tools::EventSourceT< web::http::tls::un::Client >", "classweb_1_1http_1_1client_1_1tools_1_1EventSourceT.html", [
         [ "web::http::tls::un::EventSource", "classweb_1_1http_1_1tls_1_1un_1_1EventSource.html", null ]
       ] ],
-      [ "core::socket::stream::AutoConnectControl", "classcore_1_1socket_1_1stream_1_1AutoConnectControl.html", null ],
       [ "web::http::client::tools::EventSourceT< Client >", "classweb_1_1http_1_1client_1_1tools_1_1EventSourceT.html", null ]
     ] ],
     [ "core::multiplexer::epoll::DescriptorEventPublisher::EPollEvents", "classcore_1_1multiplexer_1_1epoll_1_1DescriptorEventPublisher_1_1EPollEvents.html", null ],

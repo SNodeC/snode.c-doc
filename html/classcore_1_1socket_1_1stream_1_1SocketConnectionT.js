@@ -12,7 +12,7 @@ var classcore_1_1socket_1_1stream_1_1SocketConnectionT =
     [ "close", "classcore_1_1socket_1_1stream_1_1SocketConnectionT.html#a7b12c41b547c6bd90374615475f43531", null ],
     [ "doWriteShutdown", "classcore_1_1socket_1_1stream_1_1SocketConnectionT.html#a4bf2a6e5b74369d76c6fc6acb2893305", null ],
     [ "getBindAddress", "classcore_1_1socket_1_1stream_1_1SocketConnectionT.html#a48ab4e8797b235e14ba28de5ecb76de5", null ],
-    [ "getConfig", "classcore_1_1socket_1_1stream_1_1SocketConnectionT.html#ab8eef4acdfc7260eadf72002d3b3c6fa", null ],
+    [ "getConfig", "classcore_1_1socket_1_1stream_1_1SocketConnectionT.html#a255df92ca374b5e385f58e42b8bd6908", null ],
     [ "getFd", "classcore_1_1socket_1_1stream_1_1SocketConnectionT.html#a35ff575b2a928f12b30621dc00d1e766", null ],
     [ "getLocalAddress", "classcore_1_1socket_1_1stream_1_1SocketConnectionT.html#ae08ffe2387dbae1715ee99f342d09c6f", null ],
     [ "getRemoteAddress", "classcore_1_1socket_1_1stream_1_1SocketConnectionT.html#a5b392d8b0451ebe0d8cb0f6d8371e568", null ],
