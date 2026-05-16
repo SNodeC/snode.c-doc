@@ -7,6 +7,7 @@ var dir_9741969ad79fc4087a97a0753cba2960 =
     [ "httplowlevelclient.cpp", "httplowlevelclient_8cpp.html", "httplowlevelclient_8cpp" ],
     [ "httpserver.cpp", "httpserver_8cpp.html", "httpserver_8cpp" ],
     [ "testbasicauthentication.cpp", "testbasicauthentication_8cpp.html", "testbasicauthentication_8cpp" ],
+    [ "testexpressnext.cpp", "testexpressnext_8cpp.html", "testexpressnext_8cpp" ],
     [ "verysimpleserver.cpp", "verysimpleserver_8cpp.html", "verysimpleserver_8cpp" ],
     [ "vhostserver.cpp", "vhostserver_8cpp.html", "vhostserver_8cpp" ]
 ];

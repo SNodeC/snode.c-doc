@@ -395,7 +395,7 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">  653</span>                    });</div>
 <div class="line"><span class="lineno">  654</span>            },</div>
 <div class="line"><span class="lineno">  655</span>            []([[maybe_unused]] <span class="keyword">const</span> std::shared_ptr&lt;Request&gt;&amp; req) {</div>
-<div class="line"><span class="lineno">  656</span>                <a class="code hl_define" href="Logger_8h.html#afc28ec91d066c96a3a139441e029f326">VLOG</a>(1) &lt;&lt; req-&gt;getSocketContext()-&gt;getSocketConnection()-&gt;getConnectionName() &lt;&lt; <span class="stringliteral">&quot;: OnRequestEnd&quot;</span>;</div>
+<div class="line"><span class="lineno">  656</span>                <a class="code hl_define" href="Logger_8h.html#afc28ec91d066c96a3a139441e029f326">VLOG</a>(1) &lt;&lt; req-&gt;getConnectionName() &lt;&lt; <span class="stringliteral">&quot;: OnRequestEnd&quot;</span>;</div>
 <div class="line"><span class="lineno">  657</span>            });</div>
 <div class="line"><span class="lineno">  658</span> </div>
 <div class="line"><span class="lineno">  659</span>        client.setOnConnect([](<a class="code hl_typedef" href="#a52e2f28be8bf7deffddb01c6da3b7c65">SocketConnection</a>* socketConnection) { <span class="comment">// onConnect</span></div>

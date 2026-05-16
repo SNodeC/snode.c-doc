@@ -4,14 +4,16 @@ var namespacecore_1_1socket_1_1stream =
     [ "tls", "namespacecore_1_1socket_1_1stream_1_1tls.html", "namespacecore_1_1socket_1_1stream_1_1tls" ],
     [ "stream", "namespacecore_1_1socket_1_1stream_1_1stream.html", null ],
     [ "SocketContext", "classcore_1_1socket_1_1stream_1_1SocketContext.html", "classcore_1_1socket_1_1stream_1_1SocketContext" ],
-    [ "AutoConnectControl", "classcore_1_1socket_1_1stream_1_1AutoConnectControl.html", "classcore_1_1socket_1_1stream_1_1AutoConnectControl" ],
     [ "SocketConnection", "classcore_1_1socket_1_1stream_1_1SocketConnection.html", "classcore_1_1socket_1_1stream_1_1SocketConnection" ],
     [ "SocketConnectionT", "classcore_1_1socket_1_1stream_1_1SocketConnectionT.html", "classcore_1_1socket_1_1stream_1_1SocketConnectionT" ],
+    [ "ClientFlowController", "classcore_1_1socket_1_1stream_1_1ClientFlowController.html", "classcore_1_1socket_1_1stream_1_1ClientFlowController" ],
+    [ "ServerFlowController", "classcore_1_1socket_1_1stream_1_1ServerFlowController.html", "classcore_1_1socket_1_1stream_1_1ServerFlowController" ],
     [ "SocketContextFactory", "classcore_1_1socket_1_1stream_1_1SocketContextFactory.html", "classcore_1_1socket_1_1stream_1_1SocketContextFactory" ],
     [ "SocketReader", "classcore_1_1socket_1_1stream_1_1SocketReader.html", "classcore_1_1socket_1_1stream_1_1SocketReader" ],
     [ "SocketWriter", "classcore_1_1socket_1_1stream_1_1SocketWriter.html", "classcore_1_1socket_1_1stream_1_1SocketWriter" ],
     [ "SocketConnector", "classcore_1_1socket_1_1stream_1_1SocketConnector.html", "classcore_1_1socket_1_1stream_1_1SocketConnector" ],
     [ "SocketAcceptor", "classcore_1_1socket_1_1stream_1_1SocketAcceptor.html", "classcore_1_1socket_1_1stream_1_1SocketAcceptor" ],
+    [ "FlowController", "classcore_1_1socket_1_1stream_1_1FlowController.html", "classcore_1_1socket_1_1stream_1_1FlowController" ],
     [ "SocketClient", "classcore_1_1socket_1_1stream_1_1SocketClient.html", "classcore_1_1socket_1_1stream_1_1SocketClient" ],
     [ "SocketServer", "classcore_1_1socket_1_1stream_1_1SocketServer.html", "classcore_1_1socket_1_1stream_1_1SocketServer" ],
     [ "Client", "namespacecore_1_1socket_1_1stream.html#aebec07caeb27d0a80d1929382921d7a6", null ],
@@ -19,5 +21,6 @@ var namespacecore_1_1socket_1_1stream =
     [ "getLocalSocketAddress", "namespacecore_1_1socket_1_1stream.html#afe631ab6ff33cc38df894fa7ef3c8f81", null ],
     [ "getRemoteSocketAddress", "namespacecore_1_1socket_1_1stream.html#a1c2a8be99fe91523dcc41ce0e97085f7", null ],
     [ "Server", "namespacecore_1_1socket_1_1stream.html#af7e042d68b8b8065c11332824c38c98d", null ],
-    [ "Server", "namespacecore_1_1socket_1_1stream.html#a04f021a071c524916bdfd003c9f0f7f7", null ]
+    [ "Server", "namespacecore_1_1socket_1_1stream.html#a04f021a071c524916bdfd003c9f0f7f7", null ],
+    [ "FlowController< ConcreteFlowController >::idCounter", "namespacecore_1_1socket_1_1stream.html#af3d8860dcca1cfb1bfe1f5ff40cad1ba", null ]
 ];

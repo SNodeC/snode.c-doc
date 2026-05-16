@@ -13,7 +13,6 @@ var classweb_1_1websocket_1_1SubProtocolFactorySelector =
     [ "load", "classweb_1_1websocket_1_1SubProtocolFactorySelector.html#ac9b112b29b013f7f5c3ba4bc6573508c", null ],
     [ "load", "classweb_1_1websocket_1_1SubProtocolFactorySelector.html#adabe0be7e3b7fe27ffe9ffc93d0d9281", null ],
     [ "operator=", "classweb_1_1websocket_1_1SubProtocolFactorySelector.html#a9f9ed3ffac74c58868557da0a21ed39c", null ],
-    [ "select", "classweb_1_1websocket_1_1SubProtocolFactorySelector.html#a0c159187439e54c38cfaa47a3ecd6639", null ],
     [ "select", "classweb_1_1websocket_1_1SubProtocolFactorySelector.html#af0ecde506108cbb3b84b43d81a3c923e", null ],
     [ "unload", "classweb_1_1websocket_1_1SubProtocolFactorySelector.html#a03d5218e36465c314a898157877c4ec3", null ],
     [ "linkedSubProtocolFactories", "classweb_1_1websocket_1_1SubProtocolFactorySelector.html#ae71856f91e3f5c2baa0fcc4bceef22cb", null ],

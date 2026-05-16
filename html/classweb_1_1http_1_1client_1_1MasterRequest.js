@@ -6,6 +6,7 @@ var classweb_1_1http_1_1client_1_1MasterRequest =
     [ "~MasterRequest", "classweb_1_1http_1_1client_1_1MasterRequest.html#ac970ce7263a85def61f7921ff4673517", null ],
     [ "deliverResponse", "classweb_1_1http_1_1client_1_1MasterRequest.html#a886183f4b7d376742afeda185dd76ee2", null ],
     [ "deliverResponseParseError", "classweb_1_1http_1_1client_1_1MasterRequest.html#a7d4cb6b0f9b8c878ca0dc6f3b7d4b2e4", null ],
+    [ "disconnect", "classweb_1_1http_1_1client_1_1MasterRequest.html#a5b9555cd80c8bd64e2ccaecb72104915", null ],
     [ "end", "classweb_1_1http_1_1client_1_1MasterRequest.html#adadd049ccf51366ea5a63670c3e0f671", null ],
     [ "executeEnd", "classweb_1_1http_1_1client_1_1MasterRequest.html#a5a4555c3a9739f4a0d59cdc9a36e20d0", null ],
     [ "executeSendFile", "classweb_1_1http_1_1client_1_1MasterRequest.html#ae9dd91322f1941fc2ab3d6550d19cff0", null ],
@@ -13,8 +14,11 @@ var classweb_1_1http_1_1client_1_1MasterRequest =
     [ "executeSendHeader", "classweb_1_1http_1_1client_1_1MasterRequest.html#a7f32119bf4e8e9e72f20490f758adcad", null ],
     [ "executeSse", "classweb_1_1http_1_1client_1_1MasterRequest.html#a1ea559bfb830f79c1cd10b4b92f20c42", null ],
     [ "executeUpgrade", "classweb_1_1http_1_1client_1_1MasterRequest.html#a4600b84fb7091dfb6204cb85cf000424", null ],
+    [ "getMasterRequest", "classweb_1_1http_1_1client_1_1MasterRequest.html#ab08838fb72c43d1af54994d30ad5d609", null ],
+    [ "getSocketContext", "classweb_1_1http_1_1client_1_1MasterRequest.html#af9c051e8493f948abf569bbad4261213", null ],
     [ "init", "classweb_1_1http_1_1client_1_1MasterRequest.html#abeec129231adf3cc3d12c1d1469af860", null ],
     [ "initiate", "classweb_1_1http_1_1client_1_1MasterRequest.html#af22c5a647f9beb7c6be6d50815c77255", null ],
+    [ "isConnected", "classweb_1_1http_1_1client_1_1MasterRequest.html#a6b46389034ad8176e2ffee32c0718989", null ],
     [ "onSourceConnect", "classweb_1_1http_1_1client_1_1MasterRequest.html#a6ae973069c0d022fe5266ea4977f3942", null ],
     [ "onSourceData", "classweb_1_1http_1_1client_1_1MasterRequest.html#a61b1df135c8d98e3e9440ae1a7230806", null ],
     [ "onSourceEof", "classweb_1_1http_1_1client_1_1MasterRequest.html#ab085a910aa719a549805774591147c28", null ],
@@ -30,6 +34,7 @@ var classweb_1_1http_1_1client_1_1MasterRequest =
     [ "sendFragment", "classweb_1_1http_1_1client_1_1MasterRequest.html#ae984fd34c3f4e1214685f37315137518", null ],
     [ "sendFragment", "classweb_1_1http_1_1client_1_1MasterRequest.html#ad904c1d0fe6e3580305e72e00b636a12", null ],
     [ "sendHeader", "classweb_1_1http_1_1client_1_1MasterRequest.html#a6054da7c06effb64c2515b1a148d81ba", null ],
+    [ "setMasterRequest", "classweb_1_1http_1_1client_1_1MasterRequest.html#ad62a5647a74296e55a1b0346ac6f107c", null ],
     [ "upgrade", "classweb_1_1http_1_1client_1_1MasterRequest.html#a928c1cf1c0d6e4ede9a4263b60a253a9", null ],
     [ "commands::EndCommand", "classweb_1_1http_1_1client_1_1MasterRequest.html#ac2da8447a2370c79e0213393ccb9ddf1", null ],
     [ "commands::SendFileCommand", "classweb_1_1http_1_1client_1_1MasterRequest.html#a88ba1673d16fe920b72d7d1424c60a21", null ],
@@ -40,7 +45,9 @@ var classweb_1_1http_1_1client_1_1MasterRequest =
     [ "SocketContext", "classweb_1_1http_1_1client_1_1MasterRequest.html#ab7996d16e63168521871184317240dbd", null ],
     [ "tools::EventSourceT", "classweb_1_1http_1_1client_1_1MasterRequest.html#afd26318b2b53edd0454e38baf358f526", null ],
     [ "contentLengthSent", "classweb_1_1http_1_1client_1_1MasterRequest.html#aa4494b7ebf114850a6265248701157ce", null ],
+    [ "masterRequest", "classweb_1_1http_1_1client_1_1MasterRequest.html#af52466defeb45e6df29930506cf16809", null ],
     [ "onResponseParseError", "classweb_1_1http_1_1client_1_1MasterRequest.html#a742ee0910ce7ea649e6fe17750874efc", null ],
     [ "onResponseReceived", "classweb_1_1http_1_1client_1_1MasterRequest.html#a8828c9241847b4a892d7f86b14c3c728", null ],
-    [ "requestCommands", "classweb_1_1http_1_1client_1_1MasterRequest.html#ab046231201efe67a2755dc53f8e05500", null ]
+    [ "requestCommands", "classweb_1_1http_1_1client_1_1MasterRequest.html#ab046231201efe67a2755dc53f8e05500", null ],
+    [ "socketContext", "classweb_1_1http_1_1client_1_1MasterRequest.html#a681f28d42819432950e69d1eaa7af73f", null ]
 ];

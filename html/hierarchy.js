@@ -4,7 +4,6 @@ var hierarchy =
       [ "utils::AppWithPtr", "classutils_1_1AppWithPtr.html", null ]
     ] ],
     [ "utils::AttributeProxy&lt; Attribute &gt;", "classutils_1_1AttributeProxy.html", null ],
-    [ "core::socket::stream::AutoConnectControl", "classcore_1_1socket_1_1stream_1_1AutoConnectControl.html", null ],
     [ "iot::mqtt::server::broker::Broker", "classiot_1_1mqtt_1_1server_1_1broker_1_1Broker.html", null ],
     [ "web::http::decoder::Chunked::Chunk", "classweb_1_1http_1_1decoder_1_1Chunked_1_1Chunk.html", null ],
     [ "web::http::ciLess", "structweb_1_1http_1_1ciLess.html", null ],
@@ -415,11 +414,11 @@ var hierarchy =
       [ "apps::towercalculator::TowerCalculator", "classapps_1_1towercalculator_1_1TowerCalculator.html", null ],
       [ "core::DescriptorEventReceiver", "classcore_1_1DescriptorEventReceiver.html", [
         [ "core::eventreceiver::AcceptEventReceiver", "classcore_1_1eventreceiver_1_1AcceptEventReceiver.html", [
-          [ "core::socket::stream::SocketAcceptor< PhysicalServerSocketT, ConfigT, core::socket::stream::legacy::SocketConnection >", "classcore_1_1socket_1_1stream_1_1SocketAcceptor.html", [
-            [ "core::socket::stream::legacy::SocketAcceptor< PhysicalServerSocketT, ConfigT >", "classcore_1_1socket_1_1stream_1_1legacy_1_1SocketAcceptor.html", null ]
-          ] ],
           [ "core::socket::stream::SocketAcceptor< PhysicalSocketServerT, ConfigT, core::socket::stream::tls::SocketConnection >", "classcore_1_1socket_1_1stream_1_1SocketAcceptor.html", [
             [ "core::socket::stream::tls::SocketAcceptor< PhysicalSocketServerT, ConfigT >", "classcore_1_1socket_1_1stream_1_1tls_1_1SocketAcceptor.html", null ]
+          ] ],
+          [ "core::socket::stream::SocketAcceptor< PhysicalServerSocketT, ConfigT, core::socket::stream::legacy::SocketConnection >", "classcore_1_1socket_1_1stream_1_1SocketAcceptor.html", [
+            [ "core::socket::stream::legacy::SocketAcceptor< PhysicalServerSocketT, ConfigT >", "classcore_1_1socket_1_1stream_1_1legacy_1_1SocketAcceptor.html", null ]
           ] ],
           [ "core::socket::stream::SocketAcceptor< PhysicalSocketServerT, ConfigT, SocketConnectionT >", "classcore_1_1socket_1_1stream_1_1SocketAcceptor.html", null ]
         ] ],
@@ -502,6 +501,13 @@ var hierarchy =
     [ "web::http::decoder::Fields", "classweb_1_1http_1_1decoder_1_1Fields.html", null ],
     [ "utils::fixed_string&lt; N &gt;", "structutils_1_1fixed__string.html", null ],
     [ "iot::mqtt::FixedHeader", "classiot_1_1mqtt_1_1FixedHeader.html", null ],
+    [ "core::socket::stream::FlowController&lt; ConcreteFlowController &gt;", "classcore_1_1socket_1_1stream_1_1FlowController.html", null ],
+    [ "core::socket::stream::FlowController&lt; ClientFlowController &gt;", "classcore_1_1socket_1_1stream_1_1FlowController.html", [
+      [ "core::socket::stream::ClientFlowController", "classcore_1_1socket_1_1stream_1_1ClientFlowController.html", null ]
+    ] ],
+    [ "core::socket::stream::FlowController&lt; ServerFlowController &gt;", "classcore_1_1socket_1_1stream_1_1FlowController.html", [
+      [ "core::socket::stream::ServerFlowController", "classcore_1_1socket_1_1stream_1_1ServerFlowController.html", null ]
+    ] ],
     [ "CLI::Formatter", null, [
       [ "CLI::HelpFormatter", "classCLI_1_1HelpFormatter.html", null ]
     ] ],
@@ -563,6 +569,7 @@ var hierarchy =
       [ "express::Request", "classexpress_1_1Request.html", null ]
     ] ],
     [ "express::Next", "classexpress_1_1Next.html", null ],
+    [ "NextTester", "classNextTester.html", null ],
     [ "core::Observer", "classcore_1_1Observer.html", [
       [ "core::DescriptorEventReceiver", "classcore_1_1DescriptorEventReceiver.html", null ]
     ] ],
@@ -724,14 +731,14 @@ var hierarchy =
             [ "express::WebAppT< web::http::tls::in6::Server >", "classexpress_1_1WebAppT.html", null ]
           ] ]
         ] ],
-        [ "net::in::stream::SocketServer< core::socket::stream::legacy::SocketAcceptor, net::in::stream::legacy::config::ConfigSocketServer, SocketContextFactoryT, Args... >", "classnet_1_1in_1_1stream_1_1SocketServer.html", [
-          [ "web::http::server::Server< net::in::stream::legacy::SocketServer >", "classweb_1_1http_1_1server_1_1Server.html", [
-            [ "express::WebAppT< web::http::legacy::in::Server >", "classexpress_1_1WebAppT.html", null ]
-          ] ]
-        ] ],
         [ "net::in::stream::SocketServer< core::socket::stream::tls::SocketAcceptor, net::in::stream::tls::config::ConfigSocketServer, SocketContextFactoryT, Args... >", "classnet_1_1in_1_1stream_1_1SocketServer.html", [
           [ "web::http::server::Server< net::in::stream::tls::SocketServer >", "classweb_1_1http_1_1server_1_1Server.html", [
             [ "express::WebAppT< web::http::tls::in::Server >", "classexpress_1_1WebAppT.html", null ]
+          ] ]
+        ] ],
+        [ "net::in::stream::SocketServer< core::socket::stream::legacy::SocketAcceptor, net::in::stream::legacy::config::ConfigSocketServer, SocketContextFactoryT, Args... >", "classnet_1_1in_1_1stream_1_1SocketServer.html", [
+          [ "web::http::server::Server< net::in::stream::legacy::SocketServer >", "classweb_1_1http_1_1server_1_1Server.html", [
+            [ "express::WebAppT< web::http::legacy::in::Server >", "classexpress_1_1WebAppT.html", null ]
           ] ]
         ] ],
         [ "net::l2::stream::SocketServer< core::socket::stream::legacy::SocketAcceptor, net::l2::stream::legacy::config::ConfigSocketServer, SocketContextFactoryT, Args... >", "classnet_1_1l2_1_1stream_1_1SocketServer.html", null ],
@@ -844,6 +851,7 @@ var hierarchy =
         [ "apps::echo::model::EchoSocketContext", "classapps_1_1echo_1_1model_1_1EchoSocketContext.html", null ],
         [ "apps::http::SimpleSocketProtocol", "classapps_1_1http_1_1SimpleSocketProtocol.html", null ],
         [ "apps::http::SimpleSocketProtocol", "classapps_1_1http_1_1SimpleSocketProtocol.html", null ],
+        [ "apps::tlslegacy::TlsLegacySocketContext", "classapps_1_1tlslegacy_1_1TlsLegacySocketContext.html", null ],
         [ "iot::mqtt::SocketContext", "classiot_1_1mqtt_1_1SocketContext.html", null ],
         [ "iot::mqtt_fast::SocketContext", "classiot_1_1mqtt__fast_1_1SocketContext.html", null ],
         [ "web::http::SocketContextUpgrade< RequestT, ResponseT >", "classweb_1_1http_1_1SocketContextUpgrade.html", [
@@ -869,6 +877,8 @@ var hierarchy =
       [ "apps::echo::model::EchoServerSocketContextFactory", "classapps_1_1echo_1_1model_1_1EchoServerSocketContextFactory.html", null ],
       [ "apps::http::SimpleSocketProtocolFactory", "classapps_1_1http_1_1SimpleSocketProtocolFactory.html", null ],
       [ "apps::http::SimpleSocketProtocolFactory", "classapps_1_1http_1_1SimpleSocketProtocolFactory.html", null ],
+      [ "apps::tlslegacy::TlsLegacyClientSocketContextFactory", "classapps_1_1tlslegacy_1_1TlsLegacyClientSocketContextFactory.html", null ],
+      [ "apps::tlslegacy::TlsLegacyServerSocketContextFactory", "classapps_1_1tlslegacy_1_1TlsLegacyServerSocketContextFactory.html", null ],
       [ "iot::mqtt::server::SharedSocketContextFactory", "classiot_1_1mqtt_1_1server_1_1SharedSocketContextFactory.html", null ],
       [ "iot::mqtt::server::SocketContextFactory", "classiot_1_1mqtt_1_1server_1_1SocketContextFactory.html", null ],
       [ "web::http::SocketContextUpgradeFactory< RequestT, ResponseT >", "classweb_1_1http_1_1SocketContextUpgradeFactory.html", null ],
@@ -1052,6 +1062,7 @@ var hierarchy =
       [ "web::websocket::server::SubProtocolFactorySelector", "classweb_1_1websocket_1_1server_1_1SubProtocolFactorySelector.html", null ]
     ] ],
     [ "iot::mqtt::server::broker::SubscriptionTree", "classiot_1_1mqtt_1_1server_1_1broker_1_1SubscriptionTree.html", null ],
+    [ "TestCase", "structTestCase.html", null ],
     [ "core::DescriptorEventReceiver::TIMEOUT", "structcore_1_1DescriptorEventReceiver_1_1TIMEOUT.html", null ],
     [ "core::Timer", "classcore_1_1Timer.html", [
       [ "core::timer::Timer", "classcore_1_1timer_1_1Timer.html", null ]

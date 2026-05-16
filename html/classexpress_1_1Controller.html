@@ -202,12 +202,12 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">   58</span>        , <a class="code hl_variable" href="#a9049d63aa8d3eed02292270f34f68920">response</a>(std::make_shared&lt;Response&gt;(<a class="code hl_variable" href="#a9049d63aa8d3eed02292270f34f68920">response</a>))</div>
 <div class="line"><span class="lineno">   59</span>        , <a class="code hl_variable" href="#a17db5359b163b2424d6006166d89e55e">lastTick</a>(<a class="code hl_function" href="classcore_1_1EventLoop.html#aef20810c9fcf4c7b33a5b6dbab1973b9">core::EventLoop::getTickCounter</a>()) {</div>
 <div class="line"><span class="lineno">   60</span>    }</div>
-<div class="ttc" id="aclasscore_1_1EventLoop_html_aef20810c9fcf4c7b33a5b6dbab1973b9"><div class="ttname"><a href="classcore_1_1EventLoop.html#aef20810c9fcf4c7b33a5b6dbab1973b9">core::EventLoop::getTickCounter</a></div><div class="ttdeci">static unsigned long getTickCounter()</div><div class="ttdef"><b>Definition</b> <a href="EventLoop_8cpp_source.html#l00084">EventLoop.cpp:84</a></div></div>
+<div class="ttc" id="aclasscore_1_1EventLoop_html_aef20810c9fcf4c7b33a5b6dbab1973b9"><div class="ttname"><a href="classcore_1_1EventLoop.html#aef20810c9fcf4c7b33a5b6dbab1973b9">core::EventLoop::getTickCounter</a></div><div class="ttdeci">static unsigned long getTickCounter()</div><div class="ttdef"><b>Definition</b> <a href="EventLoop_8cpp_source.html#l00083">EventLoop.cpp:83</a></div></div>
 <div class="ttc" id="aclassexpress_1_1Controller_html_a17db5359b163b2424d6006166d89e55e"><div class="ttname"><a href="#a17db5359b163b2424d6006166d89e55e">express::Controller::lastTick</a></div><div class="ttdeci">unsigned long lastTick</div><div class="ttdef"><b>Definition</b> <a href="Controller_8h_source.html#l00097">Controller.h:97</a></div></div>
 <div class="ttc" id="aclassexpress_1_1Controller_html_a9049d63aa8d3eed02292270f34f68920"><div class="ttname"><a href="#a9049d63aa8d3eed02292270f34f68920">express::Controller::response</a></div><div class="ttdeci">std::shared_ptr&lt; Response &gt; response</div><div class="ttdef"><b>Definition</b> <a href="Controller_8h_source.html#l00090">Controller.h:90</a></div></div>
 <div class="ttc" id="aclassexpress_1_1Controller_html_acd3c1a937659b4eb99d42de242bd5498"><div class="ttname"><a href="#acd3c1a937659b4eb99d42de242bd5498">express::Controller::request</a></div><div class="ttdeci">std::shared_ptr&lt; Request &gt; request</div><div class="ttdef"><b>Definition</b> <a href="Controller_8h_source.html#l00089">Controller.h:89</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="EventLoop_8cpp_source.html#l00084">core::EventLoop::getTickCounter()</a>, <a class="el" href="Controller_8h_source.html#l00097">lastTick</a>, <a class="el" href="Controller_8h_source.html#l00089">request</a>, and <a class="el" href="Controller_8h_source.html#l00090">response</a>.</p>
+<p class="reference">References <a class="el" href="EventLoop_8cpp_source.html#l00083">core::EventLoop::getTickCounter()</a>, <a class="el" href="Controller_8h_source.html#l00097">lastTick</a>, <a class="el" href="Controller_8h_source.html#l00089">request</a>, and <a class="el" href="Controller_8h_source.html#l00090">response</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="WebAppT_8h_source.html#l00078">express::WebAppT&lt; web::http::legacy::in6::Server &gt;::WebAppT()</a>.</p>
 <div class="dynheader">
@@ -300,7 +300,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">  140</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span> ((<a class="code hl_variable" href="#a2c8a785f7f6f98c96ff7d0a898ede357">flags</a> &amp; <a class="code hl_enumvalue" href="#acbbd6f9ce9c84b3a72a50f0aedaa6c48a96db53e6bdc559125ed34f56beb7ae78">Controller::NEXT_ROUTER</a>) == 0) {</div>
 <div class="line"><span class="lineno">  141</span>                    dispatched = <a class="code hl_variable" href="#a6e798412906acba32e0422e3a87caafa">currentRoute</a>-&gt;dispatchNext(*<span class="keyword">this</span>, strictRouting, caseInsensitiveRouting, mergeParams);</div>
 <div class="line"><span class="lineno">  142</span>                }</div>
-<div class="line"><span class="lineno">  143</span>            } <span class="keywordflow">else</span> { <span class="comment">// ? Optimization: Dispatch only parent route matched path</span></div>
+<div class="line"><span class="lineno">  143</span>            } <span class="keywordflow">else</span> { <span class="comment">// Parent routes rebuild their matched state during async replay before reaching this broad fallback</span></div>
 <div class="line"><span class="lineno">  144</span>                dispatched = <a class="code hl_variable" href="#a6e798412906acba32e0422e3a87caafa">currentRoute</a>-&gt;dispatchNext(*<span class="keyword">this</span>, strictRouting, caseInsensitiveRouting, mergeParams);</div>
 <div class="line"><span class="lineno">  145</span>            }</div>
 <div class="line"><span class="lineno">  146</span>        }</div>
@@ -311,7 +311,7 @@ Here is the caller graph for this function:</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="Controller_8h_source.html#l00095">currentRoute</a>, <a class="el" href="Route_8cpp_source.html#l00094">express::Route::dispatchNext()</a>, <a class="el" href="Controller_8h_source.html#l00099">flags</a>, <a class="el" href="Controller_8h_source.html#l00094">lastRoute</a>, <a class="el" href="Controller_8h_source.html#l00086">NEXT</a>, <a class="el" href="Controller_8h_source.html#l00086">NEXT_ROUTE</a>, and <a class="el" href="Controller_8h_source.html#l00086">NEXT_ROUTER</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Route_8cpp_source.html#l00082">express::Route::dispatch()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ApplicationDispatcher_8cpp_source.html#l00068">express::dispatcher::ApplicationDispatcher::dispatch()</a>, <a class="el" href="MiddlewareDispatcher_8cpp_source.html#l00068">express::dispatcher::MiddlewareDispatcher::dispatch()</a>, and <a class="el" href="Route_8cpp_source.html#l00082">express::Route::dispatch()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -347,11 +347,11 @@ Here is the caller graph for this function:</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="Controller_8h_source.html#l00099">flags</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ApplicationDispatcher_8cpp_source.html#l00068">express::dispatcher::ApplicationDispatcher::dispatch()</a>, <a class="el" href="MiddlewareDispatcher_8cpp_source.html#l00068">express::dispatcher::MiddlewareDispatcher::dispatch()</a>, and <a class="el" href="RouterDispatcher_8cpp_source.html#l00067">express::dispatcher::RouterDispatcher::dispatch()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ApplicationDispatcher_8cpp_source.html#l00068">express::dispatcher::ApplicationDispatcher::dispatch()</a>, and <a class="el" href="MiddlewareDispatcher_8cpp_source.html#l00068">express::dispatcher::MiddlewareDispatcher::dispatch()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classexpress_1_1Controller_adc00f14eb275a0ef34ce9ffc7abfb4a6_icgraph.svg" width="379" height="243"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classexpress_1_1Controller_adc00f14eb275a0ef34ce9ffc7abfb4a6_icgraph.svg" width="379" height="158"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -450,7 +450,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">  119</span>        }</div>
 <div class="line"><span class="lineno">  120</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Controller_8h_source.html#l00095">currentRoute</a>, <a class="el" href="RootRoute_8cpp_source.html#l00101">express::RootRoute::dispatch()</a>, <a class="el" href="Controller_8h_source.html#l00099">flags</a>, <a class="el" href="EventLoop_8cpp_source.html#l00084">core::EventLoop::getTickCounter()</a>, <a class="el" href="Controller_8h_source.html#l00094">lastRoute</a>, <a class="el" href="Controller_8h_source.html#l00097">lastTick</a>, <a class="el" href="Controller_8h_source.html#l00086">NEXT</a>, <a class="el" href="Controller_8h_source.html#l00086">NEXT_ROUTE</a>, <a class="el" href="Controller_8h_source.html#l00086">NEXT_ROUTER</a>, and <a class="el" href="Controller_8h_source.html#l00092">rootRoute</a>.</p>
+<p class="reference">References <a class="el" href="Controller_8h_source.html#l00095">currentRoute</a>, <a class="el" href="RootRoute_8cpp_source.html#l00101">express::RootRoute::dispatch()</a>, <a class="el" href="Controller_8h_source.html#l00099">flags</a>, <a class="el" href="EventLoop_8cpp_source.html#l00083">core::EventLoop::getTickCounter()</a>, <a class="el" href="Controller_8h_source.html#l00094">lastRoute</a>, <a class="el" href="Controller_8h_source.html#l00097">lastTick</a>, <a class="el" href="Controller_8h_source.html#l00086">NEXT</a>, <a class="el" href="Controller_8h_source.html#l00086">NEXT_ROUTE</a>, <a class="el" href="Controller_8h_source.html#l00086">NEXT_ROUTER</a>, and <a class="el" href="Controller_8h_source.html#l00092">rootRoute</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="Next_8cpp_source.html#l00056">express::Next::operator()()</a>.</p>
 <div class="dynheader">

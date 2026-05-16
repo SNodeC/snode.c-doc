@@ -117,7 +117,7 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a2fb128871e11fe983884f466d01bee94" id="r_a2fb128871e11fe983884f466d01bee94"><td class="memItemLeft" align="right" valign="top">class StaticMiddleware &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2fb128871e11fe983884f466d01bee94">StaticMiddleware</a> (const std::string &amp;root)</td></tr>
+<tr class="memitem:a124b8c3f79257081799697484d432ba4" id="r_a124b8c3f79257081799697484d432ba4"><td class="memItemLeft" align="right" valign="top">class StaticMiddleware &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a124b8c3f79257081799697484d432ba4">StaticMiddleware</a> (const std::string &amp;root, bool fallThrough=true)</td></tr>
 <tr class="memitem:ae7c0a9d2496da8f4bb727cbc33bd4779" id="r_ae7c0a9d2496da8f4bb727cbc33bd4779"><td class="memItemLeft" align="right" valign="top">class BasicAuthentication &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae7c0a9d2496da8f4bb727cbc33bd4779">BasicAuthentication</a> (const std::string &amp;userName, const std::string &amp;password, const std::string &amp;realm)</td></tr>
 <tr class="memitem:aafc55af11280a46aa664c858db1088e9" id="r_aafc55af11280a46aa664c858db1088e9"><td class="memItemLeft" align="right" valign="top">class VHost &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aafc55af11280a46aa664c858db1088e9">VHost</a> (const std::string &amp;host)</td></tr>
 <tr class="memitem:a35fbbb0ab8dc42ea09af1abfd9962624" id="r_a35fbbb0ab8dc42ea09af1abfd9962624"><td class="memItemLeft" align="right" valign="top">class JsonMiddleware &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a35fbbb0ab8dc42ea09af1abfd9962624">JsonMiddleware</a> ()</td></tr>
@@ -240,8 +240,8 @@ Here is the caller graph for this function:</div>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="a2fb128871e11fe983884f466d01bee94" name="a2fb128871e11fe983884f466d01bee94"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2fb128871e11fe983884f466d01bee94">&#9670;&#160;</a></span>StaticMiddleware()</h2>
+<a id="a124b8c3f79257081799697484d432ba4" name="a124b8c3f79257081799697484d432ba4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a124b8c3f79257081799697484d432ba4">&#9670;&#160;</a></span>StaticMiddleware()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -249,17 +249,21 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">class StaticMiddleware &amp; express::middleware::StaticMiddleware </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>root</em></span></td><td>)</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>root</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>fallThrough</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="StaticMiddleware_8cpp_source.html#l00177">177</a> of file <a class="el" href="StaticMiddleware_8cpp_source.html">StaticMiddleware.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  177</span>                                                                    {</div>
-<div class="line"><span class="lineno">  178</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classexpress_1_1middleware_1_1StaticMiddleware.html#abf7aad109677706e3b41004be8ac2f53">StaticMiddleware::instance</a>(root);</div>
-<div class="line"><span class="lineno">  179</span>    }</div>
-<div class="ttc" id="aclassexpress_1_1middleware_1_1StaticMiddleware_html_abf7aad109677706e3b41004be8ac2f53"><div class="ttname"><a href="classexpress_1_1middleware_1_1StaticMiddleware.html#abf7aad109677706e3b41004be8ac2f53">express::middleware::StaticMiddleware::instance</a></div><div class="ttdeci">static class StaticMiddleware &amp; instance(const std::string &amp;root)</div><div class="ttdef"><b>Definition</b> <a href="StaticMiddleware_8cpp_source.html#l00165">StaticMiddleware.cpp:165</a></div></div>
+<p class="definition">Definition at line <a class="el" href="StaticMiddleware_8cpp_source.html#l00188">188</a> of file <a class="el" href="StaticMiddleware_8cpp_source.html">StaticMiddleware.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  188</span>                                                                                      {</div>
+<div class="line"><span class="lineno">  189</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classexpress_1_1middleware_1_1StaticMiddleware.html#ae6369a888cef16772596e139bb4c659a">StaticMiddleware::instance</a>(root, fallThrough);</div>
+<div class="line"><span class="lineno">  190</span>    }</div>
+<div class="ttc" id="aclassexpress_1_1middleware_1_1StaticMiddleware_html_ae6369a888cef16772596e139bb4c659a"><div class="ttname"><a href="classexpress_1_1middleware_1_1StaticMiddleware.html#ae6369a888cef16772596e139bb4c659a">express::middleware::StaticMiddleware::instance</a></div><div class="ttdeci">static class StaticMiddleware &amp; instance(const std::string &amp;root, bool fallThrough)</div><div class="ttdef"><b>Definition</b> <a href="StaticMiddleware_8cpp_source.html#l00176">StaticMiddleware.cpp:176</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>

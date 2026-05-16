@@ -6,6 +6,6 @@ var namespacedatabase_1_1mariadb_1_1commands_1_1async =
     [ "MariaDBExecCommand", "classdatabase_1_1mariadb_1_1commands_1_1async_1_1MariaDBExecCommand.html", "classdatabase_1_1mariadb_1_1commands_1_1async_1_1MariaDBExecCommand" ],
     [ "MariaDBFetchRowCommand", "classdatabase_1_1mariadb_1_1commands_1_1async_1_1MariaDBFetchRowCommand.html", "classdatabase_1_1mariadb_1_1commands_1_1async_1_1MariaDBFetchRowCommand" ],
     [ "MariaDBFreeResultCommand", "classdatabase_1_1mariadb_1_1commands_1_1async_1_1MariaDBFreeResultCommand.html", "classdatabase_1_1mariadb_1_1commands_1_1async_1_1MariaDBFreeResultCommand" ],
-    [ "MariaDBRollbackCommand", "classdatabase_1_1mariadb_1_1commands_1_1async_1_1MariaDBRollbackCommand.html", "classdatabase_1_1mariadb_1_1commands_1_1async_1_1MariaDBRollbackCommand" ],
-    [ "MariaDBQueryCommand", "classdatabase_1_1mariadb_1_1commands_1_1async_1_1MariaDBQueryCommand.html", "classdatabase_1_1mariadb_1_1commands_1_1async_1_1MariaDBQueryCommand" ]
+    [ "MariaDBQueryCommand", "classdatabase_1_1mariadb_1_1commands_1_1async_1_1MariaDBQueryCommand.html", "classdatabase_1_1mariadb_1_1commands_1_1async_1_1MariaDBQueryCommand" ],
+    [ "MariaDBRollbackCommand", "classdatabase_1_1mariadb_1_1commands_1_1async_1_1MariaDBRollbackCommand.html", "classdatabase_1_1mariadb_1_1commands_1_1async_1_1MariaDBRollbackCommand" ]
 ];

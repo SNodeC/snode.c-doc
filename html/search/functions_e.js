@@ -8,5 +8,7 @@ var searchData=
   ['next_5',['next',['../classexpress_1_1Controller.html#a37349835c6e195cd3b2f264cfcf97fae',1,'express::Controller']]],
   ['nextcommand_6',['nextCommand',['../classdatabase_1_1mariadb_1_1MariaDBCommandSequence.html#a9f9dfcb269dc2d6f98a5b275b0ddb799',1,'database::mariadb::MariaDBCommandSequence']]],
   ['nextroutercalled_7',['nextRouterCalled',['../classexpress_1_1Controller.html#ab421146d658db1d61463bdc91d6dc8dd',1,'express::Controller']]],
-  ['normalize_8',['normalize',['../classutils_1_1Timeval.html#af8b19ac507d5120c815d07da9f5146b1',1,'utils::Timeval']]]
+  ['nexttester_8',['NextTester',['../classNextTester.html#ab1516af6ca2a67ca0e64ab3fae9ee065',1,'NextTester::NextTester()'],['../classNextTester.html#ab1516af6ca2a67ca0e64ab3fae9ee065',1,'NextTester::NextTester()']]],
+  ['normalize_9',['normalize',['../classutils_1_1Timeval.html#af8b19ac507d5120c815d07da9f5146b1',1,'utils::Timeval']]],
+  ['notifyflowterminated_10',['notifyFlowTerminated',['../classcore_1_1socket_1_1stream_1_1FlowController.html#ae083a9ac0e55484d7a5ee5c1eecd47e7',1,'core::socket::stream::FlowController']]]
 ];
